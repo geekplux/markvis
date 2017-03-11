@@ -9,6 +9,10 @@ I'm **testing**!
 
 ## Test
 
+
+    console.log('inline code');
+
+
 \`\`\`js
 console.log('language javascript')
 \`\`\`
