@@ -1,5 +1,6 @@
 'use strict';
 
+
 module.exports = function visPlugin (md, options) {
   options = options || {};
 
@@ -8,12 +9,16 @@ module.exports = function visPlugin (md, options) {
   }
 
   function render (tokens, idx, _options, env, self) {
-
     if (tokens[idx].nesting === 1) {
-      console.log('render vis');
+      tokens[idx].attrPush([ 'id', 'vis' ]);
       tokens[idx].attrPush([ 'class', 'vis' ]);
     }
 
+    try {
+      var doc = JSON.parse(JSON.stringify(tokens[idx].content));
+    } catch (e) {
+      console.error(e);
+    }
     return self.renderToken(tokens, idx, _options, env, self);
   }
 
@@ -41,6 +46,7 @@ module.exports = function visPlugin (md, options) {
     token.block  = true;
     token.info   = params;
     token.map    = [ startLine, endLine ];
+    token.content = state.getLines(startLine + 1, endLine - 1, state.blkIndent, true);
 
     state.md.block.tokenize(state, startLine + 1, endLine);
 
