@@ -17,7 +17,9 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "d3-node": "^0.2.0"
+    "d3-node": "^0.2.0",
+    "d3node-linechart": "^0.0.4",
+    "js-yaml": "^3.8.2"
   },
   "devDependencies": {
     "markdown-it": "^8.2.2"
