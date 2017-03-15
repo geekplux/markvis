@@ -1,4 +1,4 @@
-# markedvis
+# markvis
 
 make visualization in markdown.
 
