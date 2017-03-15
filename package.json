@@ -4,7 +4,7 @@
   "description": "generation of visualization in markdown",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test/test.js"
   },
   "author": "geekplux",
   "keywords": [
@@ -17,7 +17,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "vega-lite": "^1.3.1"
+    "d3-node": "^0.2.0"
   },
   "devDependencies": {
     "markdown-it": "^8.2.2"

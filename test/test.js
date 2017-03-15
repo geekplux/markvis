@@ -1,6 +1,6 @@
 const fs = require('fs');
 const md = require('markdown-it')();
-const vis = require('./index.js');
+const vis = require('../index.js');
 
 const testStr = md.use(vis).render(`
 # Hello World

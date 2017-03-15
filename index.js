@@ -5,12 +5,11 @@ const render = require('./lib/render');
 module.exports = function visPlugin (md, options) {
   options = options || {};
 
-  function validate (params) {
+  function validate(params) {
     return params.trim().split(' ', 2)[0] === 'vis';
   }
 
-
-  function vis (state, startLine, endLine/*, silent*/) {
+  function vis(state, startLine, endLine/*, silent*/) {
     var marker, len, params, nextLine, mem, token, markup,
     haveEndMarker = false,
     pos = state.bMarks[startLine] + state.tShift[startLine],
