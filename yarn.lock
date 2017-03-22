@@ -800,6 +800,10 @@ load-json-file@^1.0.0:
     pinkie-promise "^2.0.0"
     strip-bom "^2.0.0"
 
+markdown-it-fence@^0.0.1:
+  version "0.0.1"
+  resolved "http://registry.npm.taobao.org/markdown-it-fence/download/markdown-it-fence-0.0.1.tgz#2449d26e9f33fc97962bfd50307940314ffae8e4"
+
 markdown-it@^8.2.2:
   version "8.2.2"
   resolved "http://registry.npm.taobao.org/markdown-it/download/markdown-it-8.2.2.tgz#e39593d976f9c4b7ee7f338a3a1e9e10c3db4e36"
