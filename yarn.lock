@@ -380,6 +380,13 @@ d3@4.4.0:
     d3-voronoi "1.1.0"
     d3-zoom "1.1.0"
 
+d3node-barchart@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/d3node-barchart/-/d3node-barchart-0.0.5.tgz#a1afb5f87c9eb7dcd92b444798a9ee140ac81789"
+  dependencies:
+    d3-node "^1.0.1"
+    d3node-output "0.0.1"
+
 d3node-linechart@^0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/d3node-linechart/-/d3node-linechart-0.0.5.tgz#79f27720c2e1b08a59e6dbde377da7276bf4ebee"
