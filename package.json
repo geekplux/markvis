@@ -4,9 +4,12 @@
   "description": "generation of visualization in markdown",
   "main": "index.js",
   "scripts": {
-    "test": "node test/test.js"
+    "test": "node test/test.js",
+    "test:cov": "jest --coverage && npm run lint",
+    "lint": "xo",
+    "build": "bili --name index"
   },
-  "author": "geekplux",
+  "author": "GeekPlux <geekplux@gmail.com> (http://geekplux.com/)",
   "keywords": [
     "visualization",
     "markdown",
@@ -16,6 +19,25 @@
     "markdown-it-plugin"
   ],
   "license": "MIT",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "es2015"
+        ]
+      }
+    }
+  },
+  "xo": {
+    "extends": "geekplux",
+    "esnext": true,
+    "envs": [
+      "jest"
+    ]
+  },
   "dependencies": {
     "d3-node": "^1.0.1",
     "d3node-barchart": "^0.0.5",
@@ -24,6 +46,11 @@
     "markdown-it-fence": "^0.0.2"
   },
   "devDependencies": {
-    "markdown-it": "^8.2.2"
+    "babel-preset-es2015": "^6.22.0",
+    "bili": "^0.14.0",
+    "eslint-config-geekplux": "^1.0.0",
+    "jest-cli": "^19.0.2",
+    "markdown-it": "^8.2.2",
+    "xo": "^0.17.1"
   }
 }

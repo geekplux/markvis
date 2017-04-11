@@ -1,6 +1,6 @@
-const fs = require('fs');
-const md = require('markdown-it')();
-const vis = require('../index.js');
+const fs = require('fs')
+const md = require('markdown-it')()
+const vis = require('../index.js')
 
 const testStr = md.use(vis).render(`
 # Hello World
@@ -46,11 +46,11 @@ data: [
 ]
 \`\`\`
 
-`);
+`)
 
-console.log(testStr);
+console.log(testStr)
 
-fs.writeFile('./test/test.html', testStr, (err) => {
-  if (err) throw err;
-  console.log('test saved!');
-});
+fs.writeFile('./test/test.html', testStr, err => {
+  if (err) throw err
+  console.log('test saved!')
+})
