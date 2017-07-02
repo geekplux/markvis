@@ -20,6 +20,8 @@ md.use(vis).render(`
 `)
 ```
 
+there are [Examples](./test/test.js)
+
 ## Contributing
 
 1. Fork it!
