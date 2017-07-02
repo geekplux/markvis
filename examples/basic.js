@@ -78,7 +78,7 @@ data: [
 
 console.log(testStr)
 
-fs.writeFile('./test/test.html', testStr, err => {
+fs.writeFile('./examples/basic.html', testStr, err => {
   if (err) throw err
   console.log('test saved!')
 })
