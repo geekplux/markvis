@@ -14,13 +14,18 @@ npm install markvis --save
 ```js
 const md = require('markdown-it')()
 const vis = require('markvis')
+const d3 = require('d3')  // in browser environment
+const d3node = require('d3-node') // in node environment
 
 md.use(vis).render(`
   your makrdown content
-`)
+`, {
+  d3,    // in browser environment
+  d3node // in node environment
+})
 ```
 
-there are [Examples](./test/test.js)
+there are [Examples](./test/test.js) which in node environment.
 
 ## Contributing
 

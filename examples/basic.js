@@ -1,4 +1,5 @@
 const fs = require('fs')
+const d3node = require('d3-node')
 const md = require('markdown-it')()
 const vis = require('../index.js')
 
@@ -74,7 +75,9 @@ data: [
   { key: 7, value: 6 }
 ]
 \`\`\`
-`)
+`, {
+  d3node
+})
 
 console.log(testStr)
 
