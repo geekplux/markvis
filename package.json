@@ -40,12 +40,11 @@
     ]
   },
   "dependencies": {
-    "d3-node": "^1.0.1",
-    "d3node-linechart": "^0.0.5",
-    "d3node-piechart": "^0.0.5",
+    "d3": "^4.9.1",
+    "d3-node": "^1.0.3",
     "js-yaml": "^3.8.2",
     "markdown-it-fence": "^0.0.2",
-    "markvis-bar": "^0.0.2"
+    "markvis-bar": "^0.0.3"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.22.0",

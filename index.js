@@ -6,6 +6,6 @@ const render = require('./lib/render')
 module.exports = function (md, options) {
   return mdFence(md, 'vis', {
     marker: '`',
-    render
+    render: render(options)
   })
 }
