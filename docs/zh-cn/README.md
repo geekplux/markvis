@@ -1,58 +1,55 @@
 <p align="center">
-  <img width="250" src="./docs/markvis-logo.png" alt="logo" />
+  <img width="250" src="./markvis-logo.png" alt="logo" />
 </p>
 
 # Markvis
 
-> Make visualization in markdown.
+> 在 markdown 中生成可视化。
 
 [![NPM version](https://img.shields.io/npm/v/markvis.svg?style=flat-square)](https://npmjs.com/package/markvis) [![NPM downloads](https://img.shields.io/npm/dm/markvis.svg?style=flat-square)](https://npmjs.com/package/markvis) [![Build](https://travis-ci.org/geekplux/markvis.svg?style=flat-square)](https://travis-ci.org/geekplux/markvis) [![Coverage](https://coveralls.io/repos/github/geekplux/markvis/badge.svg?style=flat-square)](https://coveralls.io/github/geekplux/markvis) [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat-square)](https://geekplux.github.io/donate)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgeekplux%2Fmarkvis.svg?type=shield)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgeekplux%2Fmarkvis?ref=badge_shield)
 
-- [Documentation](https://markvis.js.org)
-- [Online Editor](https://markvis-editor.js.org)
+- [文档](https://markvis.js.org)
+- [在线试用](https://markvis-editor.js.org)
 
-## Preview
+## 预览
 
-![](./docs/preview.png)
+![](./preview.png)
 
-# Quick Start
+# 快速开始
 
-## Install
+## 安装
 
 ```bash
 yarn add markvis --save
 npm install markvis --save
 ```
 
-## Usage
+## 使用
 
 ```js
 const md = require('markdown-it')()
 const vis = require('markvis')
-const d3 = require('d3')  // in browser environment
-const d3node = require('d3-node') // in node environment
+const d3 = require('d3')  // 浏览器环境
+const d3node = require('d3-node') // node 环境
 
 md.use(vis).render(`
   your makrdown content
 `, {
-  d3,    // in browser environment
-  d3node // in node environment
+  d3,    // 浏览器环境
+  d3node // node 环境
 })
 ```
 
-there are [Examples](https://github.com/geekplux/markvis/tree/master/examples) which in node environment.
+这里有几个 [例子](https://github.com/geekplux/markvis/tree/master/examples) 是在node 环境下的.
 
-# Motivation
+# 动机
 
-Very often we need to insert some data into our articles to make them more convincing, and since we are more sensible of information in charts than statistics, how to easily and conveniently embed a chart in an article is important. However, common method is to export a chart as an image, then upload it to an Image Hosting and get a url, finally paste the url to editor, which is a tedious process from writer's perspective.
-
-Also, it makes the image loading time become much longer than that of the DOM elements, which may be/is a bad experience from reader's  perspective.
-
+有时候写文章需要插入一些数据来增强说服力，但是单纯的数字又不直观，所以可视化图表是必须的。紧接着就会出现一个问题：如何把图表添加到文章中。通常的做法是用一些现成的工具生成图片，然后把图片贴到文章中。这样一来就非常繁琐，尤其是用markdown写作时你还得把图片先上传到一个图床中。另一方面，访客阅读文章时，图片的加载比网页元素肯定更耗时。一旦加载过慢就会给阅读造成非常不好的体验。
 
 # API
 
-There are many options you can config and below is some in common. But you'd better to config the options which related to chart style in chart options, such as [markvis-bar](https://github.com/geekplux/markvis-bar), [markvis-line](https://github.com/geekplux/markvis-line), [markvis-pie](https://github.com/geekplux/markvis-pie).
+!> markvis 有许多配置项。但涉及到图表样式的配置，我推荐你最好直接设置图表的配置项，比如： [markvis-bar](https://github.com/geekplux/markvis-bar), [markvis-line](https://github.com/geekplux/markvis-line), [markvis-pie](https://github.com/geekplux/markvis-pie).
 
 ## options
 
@@ -60,61 +57,61 @@ There are many options you can config and below is some in common. But you'd bet
 
 - Type: `Array`
 
-Data from file or web processed by d3 library.
+要加载的数据。
 
 ##### d3
 
 - Type: `Object`
 
-[d3](https://github.com/d3/d3) library which used in **browser** environment.
+[d3](https://github.com/d3/d3) 库，用在 **浏览器** 环境中。
 
 ##### d3node
 
 - Type: `Function`
 
-[d3-node](https://github.com/d3-node/d3-node) constructor which used in **node** environment.
+[d3-node](https://github.com/d3-node/d3-node) 的构造函数，用在 **node** 环境中。
 
 ##### container
 
 - Type: `String`
 - Default: `<div id="container"><h2>Bar Chart</h2><div id="chart"></div></div>`
 
-DOM contained the visualization result.
+加载你图表的容器元素。
 
 ##### selector
 
 - Type: `String`
 - Default: `'#chart'`
 
-DOM selector in container.
+选择器。
 
 ##### style
 
 - Type: `String`<br>
 - Default: `''`
 
-Chart style.
+图表样式。
 
 ##### width
 
 - Type: `Number`<br>
 - Default: `960`
 
-SVG width for chart.
+SVG 元素的宽度。
 
 ##### height
 
 - Type: `Number`<br>
 - Default: `500`
 
-SVG height for chart.
+SVG 元素的高度。
 
 ##### margin
 
 - Type: `Object`<br>
 - Default: `{ top: 20, right: 20, bottom: 20, left: 20 }`
 
-Margin of the first <g> wrapper in SVG, usually used to add axis.
+SVG 中第一个 <g> 标签的外边距，通常用于添加坐标轴。
 
 
 # Contributing

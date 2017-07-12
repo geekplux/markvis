@@ -41,7 +41,7 @@ md.use(vis).render(`
 })
 ```
 
-there are [Examples](./test/test.js) which in node environment.
+there are [Examples](https://github.com/geekplux/markvis/tree/master/examples) which in node environment.
 
 # Motivation
 
@@ -52,57 +52,64 @@ Also, it makes the image loading time become much longer than that of the DOM el
 
 # API
 
-There are many options you can config and below is some in common. But you'd better to config the options which related to chart style in chart options, such as [markvis-bar](https://github.com/geekplux/markvis-bar), [markvis-line](https://github.com/geekplux/markvis-line), [markvis-pie](https://github.com/geekplux/markvis-pie).
+!> There are many options you can config and below is some in common. But you'd better to config the options which related to chart style in chart options, such as [markvis-bar](https://github.com/geekplux/markvis-bar), [markvis-line](https://github.com/geekplux/markvis-line), [markvis-pie](https://github.com/geekplux/markvis-pie).
 
 ## options
 
-##### data
+### data
 
 - Type: `Array`
 
 Data from file or web processed by d3 library.
 
-##### d3
+### d3
 
 - Type: `Object`
 
 [d3](https://github.com/d3/d3) library which used in **browser** environment.
 
-##### d3node
+### d3node
 
 - Type: `Function`
 
 [d3-node](https://github.com/d3-node/d3-node) constructor which used in **node** environment.
 
-##### selector
+### container
+
+- Type: `String`
+- Default: `<div id="container"><h2>Bar Chart</h2><div id="chart"></div></div>`
+
+DOM contained the visualization result.
+
+### selector
 
 - Type: `String`
 - Default: `'#chart'`
 
 DOM selector in container.
 
-##### style
+### style
 
 - Type: `String`<br>
 - Default: `''`
 
 Chart style.
 
-##### width
+### width
 
 - Type: `Number`<br>
 - Default: `960`
 
 SVG width for chart.
 
-##### height
+### height
 
 - Type: `Number`<br>
 - Default: `500`
 
 SVG height for chart.
 
-##### margin
+### margin
 
 - Type: `Object`<br>
 - Default: `{ top: 20, right: 20, bottom: 20, left: 20 }`
