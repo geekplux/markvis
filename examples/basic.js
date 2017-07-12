@@ -1,7 +1,7 @@
 const fs = require('fs')
 const d3node = require('d3-node')
 const md = require('markdown-it')()
-const vis = require('../index.js')
+const vis = require('../src/index.js')
 
 const testStr = md.use(vis).render(`
 # Hello World
