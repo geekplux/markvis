@@ -1,42 +1,39 @@
-const yaml = require('js-yaml');
-const markvisBar = require('markvis-bar');
-const markvisLine = require('markvis-line');
-const markvisPie = require('markvis-pie');
+'use strict';
+
+var yaml = require('js-yaml');
+var markvisBar = require('markvis-bar');
+var markvisLine = require('markvis-line');
+var markvisPie = require('markvis-pie');
 
 function render(options) {
-  return function (tokens, idx, _options, env, self) {
-    const token = tokens[idx];
-    // if (token.hidden) return '';
+  return function (tokens, idx, _options, env) {
+    var token = tokens[idx];
 
-    let doc;
+    var doc = void 0;
 
-    // load content
     try {
       doc = yaml.load(token.content);
     } catch (err) {
       throw err;
     }
 
-    const defaultChart = {
+    var defaultChart = {
       bar: markvisBar,
       line: markvisLine,
       pie: markvisPie
     };
 
-    let chart = defaultChart;
+    var chart = defaultChart;
 
-    // insert custom chart if any
-    if (options.hasOwnProperty('chart')) {
+    if (options && Object.prototype.hasOwnProperty.call(options, 'chart')) {
       chart = Object.assign({}, defaultChart, options.chart);
     }
 
-    const renderer = chart[doc.layout];
+    var renderer = chart[doc.layout];
 
-    // all options merged
-    const opts = Object.assign({}, options, env, doc);
+    var opts = Object.assign({}, options, env, doc);
 
-    // render the content
-    const result = renderer ? renderer(opts) : token.content;
+    var result = renderer ? renderer(opts) : token.content;
 
     return result;
   };
