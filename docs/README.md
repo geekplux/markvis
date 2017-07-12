@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="250" src="https://raw.githubusercontent.com/geekplux/markvis/master/docs/markvis-logo.svg" alt="logo" />
+  <img width="250" src="./markvis-logo.png" alt="logo" />
 </p>
 
 # Markvis
@@ -14,7 +14,7 @@
 
 ## Preview
 
-![](./docs/preview.png)
+![](./preview.png)
 
 # Quick Start
 
