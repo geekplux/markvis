@@ -74,6 +74,18 @@ Data from file or web processed by d3 library.
 
 [d3-node](https://github.com/d3-node/d3-node) constructor which used in **node** environment.
 
+##### layout
+
+- Type: `String`
+
+Name of chart layout. You can customize any chart layout you want.
+
+##### render
+
+- Type: `Function`
+
+Customized renderer to render a new layout you want.
+
 ##### container
 
 - Type: `String`

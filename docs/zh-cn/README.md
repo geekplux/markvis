@@ -53,60 +53,72 @@ md.use(vis).render(`
 
 ## options
 
-##### data
+### data
 
 - Type: `Array`
 
 要加载的数据。
 
-##### d3
+### d3
 
 - Type: `Object`
 
 [d3](https://github.com/d3/d3) 库，用在 **浏览器** 环境中。
 
-##### d3node
+### d3node
 
 - Type: `Function`
 
 [d3-node](https://github.com/d3-node/d3-node) 的构造函数，用在 **node** 环境中。
 
-##### container
+### layout
+
+- Type: `String`
+
+你想要自定义的图表布局的名称。
+
+### render
+
+- Type: `Function`
+
+为你的自定义图表添加渲染器。
+
+### container
 
 - Type: `String`
 - Default: `<div id="container"><h2>Bar Chart</h2><div id="chart"></div></div>`
 
 加载你图表的容器元素。
 
-##### selector
+### selector
 
 - Type: `String`
 - Default: `'#chart'`
 
 选择器。
 
-##### style
+### style
 
 - Type: `String`<br>
 - Default: `''`
 
 图表样式。
 
-##### width
+### width
 
 - Type: `Number`<br>
 - Default: `960`
 
 SVG 元素的宽度。
 
-##### height
+### height
 
 - Type: `Number`<br>
 - Default: `500`
 
 SVG 元素的高度。
 
-##### margin
+### margin
 
 - Type: `Object`<br>
 - Default: `{ top: 20, right: 20, bottom: 20, left: 20 }`
