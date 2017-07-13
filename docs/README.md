@@ -45,9 +45,9 @@ there are [Examples](https://github.com/geekplux/markvis/tree/master/examples) w
 
 # Motivation
 
-Very often we need to insert some data into our articles to make them more convincing, and since we are more sensible of information in charts than statistics, how to easily and conveniently embed a chart in an article is important. However, common method is to export a chart as an image, then upload it to an Image Hosting and get a url, finally paste the url to editor, which is a tedious process from writer's perspective.
+We often publish articles enriched with data, since data make them more convincing and easy to interpret. Hence, techniques that enable the embedding of visualization into texts are of great importance. 
 
-Also, it makes the image loading time become much longer than that of the DOM elements, which may be/is a bad experience from reader's  perspective.
+However, the most frequently used method now is to export charts as images, upload them into cloud, and then paste them into the editor.  It is a tedious process from the perspective of a writer. Besides, image loading costs much more time than that of DOM elements, which leads to poor experience from the perspective of a reader.
 
 
 # API
