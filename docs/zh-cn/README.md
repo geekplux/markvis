@@ -34,7 +34,7 @@ const d3 = require('d3')  // 浏览器环境
 const d3node = require('d3-node') // node 环境
 
 md.use(vis).render(`
-  your makrdown content
+  your markdown content
 `, {
   d3,    // 浏览器环境
   d3node // node 环境

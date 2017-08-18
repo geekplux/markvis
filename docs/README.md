@@ -34,7 +34,7 @@ const d3 = require('d3')  // in browser environment
 const d3node = require('d3-node') // in node environment
 
 md.use(vis).render(`
-  your makrdown content
+  your markdown content
 `, {
   d3,    // in browser environment
   d3node // in node environment
