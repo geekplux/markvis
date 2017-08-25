@@ -21,7 +21,7 @@
 ## Install
 
 ```bash
-yarn add markvis --save
+yarn add markvis
 npm install markvis --save
 ```
 
