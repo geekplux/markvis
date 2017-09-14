@@ -9,6 +9,8 @@
 [![NPM version](https://img.shields.io/npm/v/markvis.svg?style=flat-square)](https://npmjs.com/package/markvis) [![NPM downloads](https://img.shields.io/npm/dm/markvis.svg?style=flat-square)](https://npmjs.com/package/markvis) [![Build](https://travis-ci.org/geekplux/markvis.svg?style=flat-square)](https://travis-ci.org/geekplux/markvis) [![Coverage](https://coveralls.io/repos/github/geekplux/markvis/badge.svg?style=flat-square)](https://coveralls.io/github/geekplux/markvis) [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat-square)](https://geekplux.github.io/donate)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgeekplux%2Fmarkvis.svg?type=shield)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgeekplux%2Fmarkvis?ref=badge_shield)
 
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/RizFLaSm9aGhe9yCXFhKnPx1/geekplux/markvis'>  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/RizFLaSm9aGhe9yCXFhKnPx1/geekplux/markvis.svg' /></a>
+
 - [文档](https://markvis.js.org)
 - [在线试用](https://markvis-editor.js.org)
 
@@ -145,4 +147,3 @@ Authored and maintained by geekplux with help from contributors ([list](https://
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgeekplux%2Fmarkvis.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgeekplux%2Fmarkvis?ref=badge_large)
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/RizFLaSm9aGhe9yCXFhKnPx1/geekplux/markvis'>  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/RizFLaSm9aGhe9yCXFhKnPx1/geekplux/markvis.svg' /></a>
