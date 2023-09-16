@@ -34,10 +34,10 @@
   "license": "MIT",
   "dependencies": {
     "js-yaml": "^3.8.2",
-    "markdown-it-fence": "^0.0.2",
+    "markdown-it-fence": "^0.1.3",
     "markvis-bar": "^0.0.9",
     "markvis-line": "^0.0.6",
-    "markvis-pie": "^0.0.6"
+    "markvis-pie": "^0.0.7"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
