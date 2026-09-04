@@ -10,6 +10,8 @@ GitHub will not grow a native chart fence. Use markvis bake on README.md and doc
 
 Drop in packages/browser/dist/markvis.min.js (or .mjs). Zero network. Finds pre/code with language chart, markvis, or vis and replaces with the same SVG as Node.
 
+After clone: install deps, build the browser package (see package name @markvis/browser in the monorepo), then open apps/playground/dropin.html. dist is gitignored — without that build the script 404s. For the live editor, start the playground Vite app.
+
 Demo: apps/playground/dropin.html.
 
 HTML comment plus GFM table charts only survive if the host already emitted them into the DOM; the browser script does not re-parse Markdown.
