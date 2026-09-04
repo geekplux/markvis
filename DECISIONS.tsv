@@ -5,3 +5,7 @@ date	wave	decision
 2026-09-04	W1	W1 research-brief filed
 2026-09-04	W0	U2 cancelled; legacy modernization is not 2.0; constitution overlay; product = Chart IR + deterministic SVG
 2026-09-04	W0	0.0.13 tree frozen under legacy/; packages/apps are empty workspace stubs; forbidden d3 stack not in workspace
+2026-09-04	W0	accepted 5e11fce; W1 brief + W2 SPEC already on disk; open W3
+2026-09-04	do not use Observable Plot as v2 core	Plot is a JS layered-grammar API, not a Markdown fence/IR; would pull a d3-adjacent runtime into default render	https://github.com/observablehq/plot
+2026-09-04	W3	accepted 52 valid + 18 invalid; seeds 01-08 byte-match SPEC; open W4 IR+parser
+2026-09-04	W4	zod Chart IR + text parser; 52 valid + 18 invalid fixtures; table fallback; no render/d3 deps

@@ -6,15 +6,15 @@ previous U2 cancelled; legacy modernization is not 2.0.
 
 - Workdir: /workspace/markvis
 - Branch: v2
-- Updated: 2026-09-04 (Coder) W0 follow-up
+- Updated: 2026-09-04 (Coder) W4 IR + parser
 
 ## Waves
 
 - [x] W0 纠偏
-- [ ] W1 研究
-- [ ] W2 规格
-- [ ] W3 例子
-- [ ] W4 IR + parser
+- [x] W1 研究 (docs/research-brief.md on disk; conclusion matches VISION)
+- [x] W2 规格 (SPEC.md Writer draft accepted)
+- [x] W3 例子 (52 valid + 18 invalid; seeds 01-08 match SPEC)
+- [x] W4 IR + parser (zod Chart IR; fence/comment/CSV/GFM parser; 70 fixtures)
 - [ ] W5 schema
 - [ ] W6 render-svg
 - [ ] W7 CLI
@@ -25,8 +25,7 @@ previous U2 cancelled; legacy modernization is not 2.0.
 - [ ] W12 加厚
 
 ## Active
-
-W0 done. Next: W1 研究.
+W5 -> Coder (schema from IR). Writer holds W10 docs.
 
 ## W0 proof
 
@@ -100,3 +99,19 @@ Commands:
 - `pnpm install` → exit 0 (9 workspace projects; root links @markvis/{cli,ir,markdown-it,parser,remark,render-svg})
 - `rg "d3-node|markvis-bar|markvis-line|markvis-pie" packages apps` → exit 1 (no matches)
 - `git log -1 --format=%s` → feat(repo): W0 legacy move + monorepo scaffold (exit 0)
+
+## W4 proof
+
+Commits:
+- 83be9bb342fc762cbae9b0dfe84b252886f94326 docs(examples): add 52 valid and 18 invalid chart fixtures
+- ea6b25bd9e17d71a1e2f18c2a67d210b3862e77d feat(parser): add Chart IR (zod) and fence parser
+
+`@markvis/ir`: zod Chart IR for bar|line|area|scatter|pie|hist. `@markvis/parser`: tags chart/markvis/vis; HTML comment + GFM; CSV and GFM tables; SPEC error codes; table fallback never drops rows; input row order kept; pie values as-is. Zero render deps. Did not implement render-svg, CLI, or playground.
+
+Commands:
+
+- `node -v` → v20.19.2 (exit 0)
+- `pnpm -v` → 9.15.9 (exit 0)
+- `pnpm test` → exit 0 (87 tests: 52 valid + 18 invalid fixtures + IR/unit)
+- `rg "d3-node|markvis-bar|markvis-line|markvis-pie" packages apps` → exit 1 (no matches)
+- `rg "from ['\"]legacy|require\\(['\"]legacy" packages` → exit 1 (no matches)

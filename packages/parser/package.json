@@ -3,5 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "description": "markvis fence / GFM / HTML-comment parser (W4)"
+  "description": "markvis fence / GFM / HTML-comment parser (W4)",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "dependencies": {
+    "@markvis/ir": "workspace:*"
+  }
 }

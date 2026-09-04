@@ -17,8 +17,8 @@
   "main": "./index.js",
   "exports": {
     ".": "./index.js",
-    "./ir": "./packages/ir/index.js",
-    "./parser": "./packages/parser/index.js",
+    "./ir": "./packages/ir/src/index.ts",
+    "./parser": "./packages/parser/src/index.ts",
     "./render-svg": "./packages/render-svg/index.js",
     "./cli": "./packages/cli/index.js",
     "./remark": "./packages/remark/index.js",
@@ -27,7 +27,9 @@
   "bin": {
     "markvis": "./packages/cli/bin.js"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "vitest run"
+  },
   "dependencies": {
     "@markvis/cli": "workspace:*",
     "@markvis/ir": "workspace:*",
@@ -35,5 +37,10 @@
     "@markvis/parser": "workspace:*",
     "@markvis/remark": "workspace:*",
     "@markvis/render-svg": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.0"
   }
 }
