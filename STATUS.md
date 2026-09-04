@@ -1,7 +1,7 @@
 # STATUS.md
 
 ## Snapshot
-- tip: (after feat(vscode): preview)
+- tip: ba37588
 - W14a accepted; B1-B7 done
 - Active: B8 integrate.md (Docusaurus stub already in docs/integrate.md)
 - Next: B8
