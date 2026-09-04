@@ -22,7 +22,8 @@
     "./render-svg": "./packages/render-svg/src/index.ts",
     "./cli": "./packages/cli/src/index.ts",
     "./remark": "./packages/remark/src/index.ts",
-    "./markdown-it": "./packages/markdown-it/src/index.ts"
+    "./markdown-it": "./packages/markdown-it/src/index.ts",
+    "./browser": "./packages/browser/src/index.ts"
   },
   "bin": {
     "markvis": "./packages/cli/bin.js"
@@ -35,6 +36,7 @@
     "eval-prompts": "tsx scripts/eval-prompts.ts"
   },
   "dependencies": {
+    "@markvis/browser": "workspace:*",
     "@markvis/cli": "workspace:*",
     "@markvis/ir": "workspace:*",
     "@markvis/markdown-it": "workspace:*",

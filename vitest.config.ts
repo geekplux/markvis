@@ -22,6 +22,9 @@ export default defineConfig({
       "@markvis/markdown-it": fileURLToPath(
         new URL("./packages/markdown-it/src/index.ts", import.meta.url),
       ),
+      "@markvis/browser": fileURLToPath(
+        new URL("./packages/browser/src/index.ts", import.meta.url),
+      ),
     },
   },
   test: {
@@ -37,6 +40,8 @@ export default defineConfig({
       "packages/remark/test/**/*.test.ts",
       "packages/markdown-it/src/**/*.test.ts",
       "packages/markdown-it/test/**/*.test.ts",
+      "packages/browser/src/**/*.test.ts",
+      "packages/browser/test/**/*.test.ts",
       "apps/playground/src/**/*.test.ts",
       "apps/playground/test/**/*.test.ts",
       "scripts/**/*.test.ts",

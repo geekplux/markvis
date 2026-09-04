@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@markvis/browser':
+        specifier: workspace:*
+        version: link:packages/browser
       '@markvis/cli':
         specifier: workspace:*
         version: link:packages/cli
@@ -51,6 +54,19 @@ importers:
       '@markvis/render-svg':
         specifier: workspace:*
         version: link:../../packages/render-svg
+    devDependencies:
+      vite:
+        specifier: ^6.3.5
+        version: 6.4.3(@types/node@26.4.1)(lightningcss@1.33.0)(tsx@4.23.13)
+
+  packages/browser:
+    dependencies:
+      '@markvis/parser':
+        specifier: workspace:*
+        version: link:../parser
+      '@markvis/render-svg':
+        specifier: workspace:*
+        version: link:../render-svg
     devDependencies:
       vite:
         specifier: ^6.3.5

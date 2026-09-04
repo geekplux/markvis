@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>markvis drop-in</title>
+    <style>
+      body {
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        max-width: 52rem;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>markvis drop-in</h1>
+    <p>
+      Same IIFE as <code>packages/browser/dist/markvis.min.js</code>. Auto-replaces
+      <code>language-chart</code> / <code>language-markvis</code> /
+      <code>language-vis</code>.
+    </p>
+    <pre><code class="language-chart">markvis: 2
+type: bar
+title: Feb led Q3 at 180
+unit: USD k
+x: month
+y: revenue
+
+month,revenue
+Jan,120
+Feb,180
+Mar,150
+</code></pre>
+    <script src="../../packages/browser/dist/markvis.min.js"></script>
+  </body>
+</html>

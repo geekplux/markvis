@@ -1,0 +1,26 @@
+{
+  "name": "@markvis/browser",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Zero-network browser drop-in: language-chart|markvis|vis -> SVG (W14b B1)",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@markvis/parser": "workspace:*",
+    "@markvis/render-svg": "workspace:*"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}

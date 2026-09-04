@@ -1,5 +1,6 @@
 import { EXAMPLES } from "./examples.js";
 import { htmlTable, previewSource, type PlaygroundView } from "./preview.js";
+import { dropinSnippet } from "./snippet.js";
 import "./style.css";
 
 function mustEl<T extends HTMLElement>(id: string): T {
@@ -48,6 +49,7 @@ function main(): void {
   const editor = mustEl<HTMLTextAreaElement>("fence");
   const copyFenceBtn = mustEl<HTMLButtonElement>("copy-fence");
   const copySvgBtn = mustEl<HTMLButtonElement>("copy-svg");
+  const copySnippetBtn = mustEl<HTMLButtonElement>("copy-snippet");
   const copied = mustEl<HTMLSpanElement>("copied");
   const first = EXAMPLES[0];
   if (!first) {
@@ -105,6 +107,13 @@ function main(): void {
     }
     void copyText(view.svg).then(
       () => flash("Copied SVG"),
+      () => flash("Copy failed"),
+    );
+  });
+
+  copySnippetBtn.addEventListener("click", () => {
+    void copyText(dropinSnippet(editor.value)).then(
+      () => flash("Copied snippet"),
       () => flash("Copy failed"),
     );
   });

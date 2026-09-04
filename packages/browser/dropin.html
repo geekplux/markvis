@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>markvis drop-in</title>
+    <style>
+      body {
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        max-width: 52rem;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      pre {
+        background: #f4f4f5;
+        padding: 0.75rem;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>markvis drop-in</h1>
+    <p>
+      Load <code>dist/markvis.min.js</code>. Blocks with
+      <code>language-chart</code>, <code>language-markvis</code>, or
+      <code>language-vis</code> become SVG. No network. No d3.
+    </p>
+    <h2>language-chart</h2>
+    <pre><code class="language-chart">markvis: 2
+type: bar
+title: Feb led Q3 at 180
+unit: USD k
+x: month
+y: revenue
+
+month,revenue
+Jan,120
+Feb,180
+Mar,150
+</code></pre>
+    <h2>language-vis</h2>
+    <pre class="language-vis">markvis: 2
+type: line
+title: vis tag
+x: month
+y: n
+
+month,n
+A,1
+B,3
+C,2
+</pre>
+    <h2>language-markvis</h2>
+    <pre><code class="language-markvis">markvis: 2
+type: pie
+title: share
+x: name
+y: value
+
+name,value
+a,40
+b,60
+</code></pre>
+    <script src="./dist/markvis.min.js"></script>
+  </body>
+</html>

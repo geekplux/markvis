@@ -43,3 +43,4 @@ date	wave	decision
 2026-09-04	W14a	empty wake1: tip 44fff8e; wait Designer revise Unit A (transparent canvas + shadcn/lieflat upsides); Coder hold; no README bake
 2026-09-04	W14a	Unit B chrome: cartesian/pie drop AXIS/HAIRLINE/TICK_MARK/SLICE_GAP; INK+HAIRLINE_OPACITY 0.10 grid, STRUCTURE_OPACITY 0.28 baseline/leaders/pie; no axis box no tick marks; regen out+gallery; pnpm test 0
 2026-09-04	W14a	GeekPlux OK on Pass C 11b6d26; open B1(+B2) browser+drop-in
+2026-09-04	W14b	B1(+B2) @markvis/browser Vite IIFE markvis.min.js + markvis.mjs; crypto shim; auto-replace language-chart|markvis|vis; dropin.html; playground Copy snippet; no d3; dist gitignored like playground
