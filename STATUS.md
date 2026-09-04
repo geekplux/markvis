@@ -1,7 +1,7 @@
 # STATUS.md
 
 ## Snapshot
-- tip: (pending feat(hosts) commit)
+- tip: 9a17b02
 - W14a accepted; B1-B6 done
 - Active: B7 vscode
 - Next: B8 integrate.md (Docusaurus stub already in docs/integrate.md)
