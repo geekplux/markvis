@@ -62,3 +62,4 @@ date	wave	decision
 2026-09-04	S2	accepted 13dcda0 52-card gallery; open S3 playground productize
 2026-09-04	S3	productize apps/playground: paper #FAFAF9 not mint/docsify; left fence right figure; example switcher; Copy fence/SVG; Open in gallery /examples?id=; ?example= deep link; parser+render unchanged; no d3/types
 2026-09-04	S3	accepted 1acfb42 playground + 8c0421a Writer home/ai; open S5 Pages from v2
+2026-09-04	S5	pages.yml: v2 pnpm --filter web build; deploy apps/web/.vitepress/dist; CNAME markvis.js.org; Settings GitHub Actions not master docsify; no markvis-editor; no docsify

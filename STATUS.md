@@ -1,9 +1,11 @@
 # STATUS.md
 
 ## Snapshot
-- tip: 8c0421a
-- S1-S4 done (web gallery playground Writer copy)
-- Active: S5 GitHub Pages FROM v2 (replace docsify on markvis.js.org)
+- S1-S4 done
+- S5 GitHub Pages FROM v2 (pages.yml + docs/pages.md)
 
 ## Active
-S5 -> @Coder Pages workflow from apps/web on v2
+S5: `.github/workflows/pages.yml` on v2. `pnpm --filter web build` → `apps/web/.vitepress/dist`. CNAME markvis.js.org. GeekPlux Settings: `docs/pages.md` (Source = GitHub Actions, not master docsify). No markvis-editor. No docsify. check.yml unchanged.
+
+## Commands
+- `pnpm --filter web build` exit 0 (vitepress 1.6.4, 3.04s)

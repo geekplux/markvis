@@ -2,6 +2,10 @@
 
 How markvis shows up where Mermaid shows up — by bake and adapters, not by waiting for GitHub.com.
 
+## Public site
+
+markvis.js.org is the VitePress site in apps/web, built from branch v2. GitHub Pages source must be GitHub Actions (not master docsify). One-time Settings: [pages.md](./pages.md). Do not change markvis-editor.js.org.
+
 ## GitHub README
 
 GitHub will not grow a native chart fence. Use markvis bake on README.md and docs/landing.md. Keeps the fence; inserts a markdown image after it. Second bake is a no-op. CI workflow bake.yml runs on v2 push and PR.
