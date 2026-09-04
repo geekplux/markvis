@@ -1,4 +1,4 @@
-/** Ledger default SVG look. Tokens only — no `theme:` field. See docs/visual-spec.md. */
+/** Ledger default SVG look. Tokens only — no theme field. See docs/visual-spec.md. */
 
 export const SVG_WIDTH = 720;
 export const SVG_HEIGHT = 480;
