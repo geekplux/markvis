@@ -6,7 +6,7 @@ previous U2 cancelled; legacy modernization is not 2.0.
 
 - Workdir: /workspace/markvis
 - Branch: v2
-- Updated: 2026-09-04 (Writer) W10 AI surface docs
+- Updated: 2026-09-04 (Coder) W10 eval-prompts
 
 ## Waves
 
@@ -20,12 +20,12 @@ previous U2 cancelled; legacy modernization is not 2.0.
 - [x] W7 CLI (markvis check | render | preview | stats | to-table)
 - [x] W8 宿主 (remark + markdown-it adapters; HTML has svg and table)
 - [x] W9 playground (Vite; left fence / right SVG+table; Copy; examples/valid)
-- [x] W10 AI 面 (SKILL / llms / prompts / model-errors; eval-prompts pending Coder)
+- [x] W10 AI 面 (SKILL / llms / prompts / model-errors; eval-prompts gold-fence check)
 - [ ] W11 工程硬化
 - [ ] W12 加厚
 
 ## Active
-W10 docs landed. @Coder: `scripts/eval-prompts` + package script + STATUS exits.
+W10 closed. Next: W11 工程硬化.
 
 ## W10 proof (Writer)
 
@@ -34,6 +34,31 @@ W10 docs landed. @Coder: `scripts/eval-prompts` + package script + STATUS exits.
 - `examples/prompts.md` — 30 natural → fence
 - `docs/model-errors.md` — seed table
 - No new types / fields
+
+## W10 proof (Coder)
+
+`scripts/eval-prompts.ts` stubs model emit: parse 30 gold fences from `examples/prompts.md` (fence + HTML comment forms) and run `markvis check` on temp files. `pnpm eval-prompts` wires it. Failures print `record failures in docs/model-errors.md`. No LLM, no new types, no d3. Did not implement W11.
+
+Files:
+
+package.json
+scripts/eval-prompts.ts
+scripts/eval-prompts.test.ts
+vitest.config.ts
+STATUS.md
+DECISIONS.tsv
+
+Commands:
+
+- `node -v` → v20.19.2 (exit 0)
+- `pnpm -v` → 9.15.9 (exit 0)
+- `pnpm test` → exit 0 (366 tests)
+- `pnpm eval-prompts` → exit 0 (`eval-prompts stub: 30 gold fences`; `30 ok`)
+- `pnpm markvis check examples/valid` → exit 0 (52 ok)
+- `pnpm markvis check examples/invalid` → exit 1 (0 ok, 18 error)
+- `pnpm markvis stats examples/valid/01-bar-basic.md` → exit 0 (`bar 3 120 180 -`)
+- `rg "d3-node|markvis-bar|markvis-line|markvis-pie" packages apps` → exit 1 (no matches)
+- `rg "from ['\"]legacy|require\\(['\"]legacy" packages` → exit 1 (no matches)
 
 ## W0 proof
 

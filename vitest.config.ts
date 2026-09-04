@@ -39,6 +39,7 @@ export default defineConfig({
       "packages/markdown-it/test/**/*.test.ts",
       "apps/playground/src/**/*.test.ts",
       "apps/playground/test/**/*.test.ts",
+      "scripts/**/*.test.ts",
     ],
     exclude: ["**/node_modules/**", "legacy/**"],
   },

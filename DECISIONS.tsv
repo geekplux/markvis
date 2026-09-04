@@ -19,3 +19,4 @@ date	wave	decision
 2026-09-04	W9	Vite playground; left fence / right SVG+table; Copy fence and Copy SVG; examples/valid switcher; browser runs parser+render-svg; node:crypto shimmed for chart ids
 2026-09-04	W9	accepted 66c27b2; playground build; open W10 AI surface
 2026-09-04	W10	SKILL.md + llms.txt + llms-full.txt + examples/prompts.md (30) + docs/model-errors.md seed; no new types; Coder owns eval-prompts next
+2026-09-04	W10	eval-prompts stubs model emit: extract 30 gold fences from examples/prompts.md and run markvis check; no LLM; no new types

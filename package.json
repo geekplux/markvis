@@ -31,7 +31,8 @@
     "test": "vitest run",
     "markvis": "node ./packages/cli/bin.js",
     "schema:generate": "tsx packages/ir/scripts/generate-schema.ts",
-    "schema:check": "vitest run packages/ir/src/json-schema.test.ts"
+    "schema:check": "vitest run packages/ir/src/json-schema.test.ts",
+    "eval-prompts": "tsx scripts/eval-prompts.ts"
   },
   "dependencies": {
     "@markvis/cli": "workspace:*",
