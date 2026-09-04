@@ -1,21 +1,22 @@
 # STATUS.md
 
 ## Snapshot
-- tip: ba37588
-- W14a accepted; B1-B7 done
-- Active: B8 integrate.md (Docusaurus stub already in docs/integrate.md)
-- Next: B8
+- tip: 706b397
+- W14a + W14b B1-B8 done
+- §6 acceptance: GREEN (Architect re-ran)
 
-## Commands
-- pnpm test → 0 (408 tests)
-- pnpm markvis check examples/valid → 0
-- pnpm markvis check examples/invalid → non-zero
-- pnpm --filter playground build → 0
-- node smoke vscode dist extendMarkdownIt → svg in html (0)
+## §6 proof
+- branch v2
+- gallery.html present
+- vitest 408 → 0
+- check valid → 0 (52)
+- check invalid → 1 (18)
+- bake README twice → second no-diff
+- markvis.min.js present
+- visual-spec.md + integrate.md present
+- vscode-markvis-preview present
+- forbidden rg clean
+- GeekPlux accepted five figures (Pass C)
 
 ## Active
-## Writer B8
-
-- docs/integrate.md; linked from landing + README
-
-B8 integrate.md -> @Writer
+STOP. Loop may pause. Awaiting GeekPlux if any follow-up.
