@@ -27,6 +27,10 @@ previous U2 cancelled; legacy modernization is not 2.0.
 ## Active
 W11 closed. Next: W12 加厚.
 
+## W11 proof (Writer)
+
+- docs/best-practices.md — fixtures first; six types; no forbidden render deps in packages/apps (2bec952)
+
 ## W11 proof (Coder)
 
 Commit: 685a03347dce2075231e0d33d2be853a214d388a
