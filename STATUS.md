@@ -1,20 +1,9 @@
 # STATUS.md
 
 ## Snapshot
-- tip: 38883c3 + S1 VitePress apps/web
-- valid examples: 52
-- Active: S1 Coder done — VitePress scaffold, no Pages, no docsify
-- Next: S2 gallery UX (not this commit)
+- tip: e23bdce
+- S1 VitePress scaffold done
+- Active: S2 /examples gallery per docs/gallery-spec.md
 
 ## Active
-S1 complete -> S2 Designer examples gallery
-
-## Commands (this round)
-| command | exit |
-| --- | --- |
-| pnpm install --frozen-lockfile | 0 |
-| pnpm test | 0 |
-| pnpm markvis check examples/valid | 0 |
-| pnpm markvis check examples/invalid | 1 (required) |
-| pnpm --filter playground build | 0 |
-| pnpm --filter web build | 0 |
+S2 -> @Coder
