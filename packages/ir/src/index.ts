@@ -13,10 +13,12 @@ export type ChartType = (typeof CHART_TYPES)[number];
 
 export const ChartTypeSchema = z.enum(CHART_TYPES);
 
-export const TableSchema = z.object({
-  columns: z.array(z.string()).min(1),
-  rows: z.array(z.array(z.string())).min(1),
-});
+export const TableSchema = z
+  .object({
+    columns: z.array(z.string()).min(1),
+    rows: z.array(z.array(z.string())).min(1),
+  })
+  .strict();
 
 export type Table = z.infer<typeof TableSchema>;
 

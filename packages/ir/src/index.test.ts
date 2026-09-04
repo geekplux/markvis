@@ -105,4 +105,16 @@ describe("@markvis/ir", () => {
     });
     expect(result.success).toBe(false);
   });
+
+  it("does not invent table fields", () => {
+    const result = ChartIRSchema.safeParse({
+      markvis: 2,
+      type: "bar",
+      title: "Q3",
+      x: "month",
+      y: "revenue",
+      table: { ...barTable, extra: true },
+    });
+    expect(result.success).toBe(false);
+  });
 });

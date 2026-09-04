@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/geekplux/markvis/schema/markvis-2.schema.json",
+  "title": "markvis Chart IR",
+  "description": "Generated from @markvis/ir ChartIRSchema. Do not hand-edit; run pnpm schema:generate.",
+  "type": "object",
+  "properties": {
+    "markvis": {
+      "type": "number",
+      "const": 2
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "bar",
+        "line",
+        "area",
+        "scatter",
+        "pie",
+        "hist"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "unit": {
+      "type": "string",
+      "minLength": 1
+    },
+    "x": {
+      "type": "string",
+      "minLength": 1
+    },
+    "y": {
+      "type": "string",
+      "minLength": 1
+    },
+    "series": {
+      "type": "string",
+      "minLength": 1
+    },
+    "table": {
+      "type": "object",
+      "properties": {
+        "columns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "columns",
+        "rows"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "markvis",
+    "type",
+    "title",
+    "x",
+    "table"
+  ],
+  "additionalProperties": false
+}

@@ -28,7 +28,9 @@
     "markvis": "./packages/cli/bin.js"
   },
   "scripts": {
-    "test": "vitest run"
+    "test": "vitest run",
+    "schema:generate": "tsx packages/ir/scripts/generate-schema.ts",
+    "schema:check": "vitest run packages/ir/src/json-schema.test.ts"
   },
   "dependencies": {
     "@markvis/cli": "workspace:*",
@@ -40,6 +42,7 @@
   },
   "devDependencies": {
     "@types/node": "^26.4.1",
+    "tsx": "^4.23.13",
     "typescript": "^7.0.2",
     "vitest": "^5.0.0"
   }
