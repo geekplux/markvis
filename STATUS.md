@@ -244,8 +244,9 @@ Commands:
 
 ## W9 proof
 
-Commit: (recorded after feat commit)
+Commit: 66c27b270815d603dafafd7ee83e8ab22818c17d
 Message: feat(playground): add Vite split-view try page
+Parent: 2d0d8d219316732873b855babcee95a5f7658b4e
 
 Vite playground in `apps/playground`. Left textarea is the fence; right pane is SVG plus the data table. Top `<select>` binds `examples/valid` (52 files, globbed at build). Copy fence / Copy SVG. Invalid input paints recovered table plus one error line; empty input is `E_EMPTY_FENCE`, never a blank page. Same `@markvis/parser` and `@markvis/render-svg` in the browser; `node:crypto` is a SHA-256 shim so chart ids match Node. Zero backend. Did not implement W10 AI surface.
 
