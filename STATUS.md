@@ -168,8 +168,9 @@ Commands:
 
 ## W7 proof
 
-Commit: (see git log feat(cli))
+Commit: 319094cd32ae5f93cbfab1ff6391a725d9e69d81
 Message: feat(cli): add check, render, preview, stats, and to-table
+Parent: a8b1d57ff356c2508aa3330e5ce14a4cc9c6b5c9
 
 `@markvis/cli` + root `markvis` bin: `check`, `render`, `preview`, `stats`, `to-table`. `check` collects `.md` files and runs `parseMarkdown`; valid exits 0, invalid non-zero. `stats` prints type n min max series. `render` writes deterministic SVG. `preview` writes a local left-source / right-SVG-or-table HTML file. `to-table` prints GFM and, on error, recovered rows plus one error line. Vitest covers the CLI. No playground. No d3/legacy.
 
