@@ -2,45 +2,41 @@
   <title id="mv-27e517a09c0d778f-title">Campaign months</title>
   <desc id="mv-27e517a09c0d778f-desc">line chart. Campaign months. x=month. y=signups. 4 rows.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Campaign months</text>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Campaign months</text>
   <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="56" x2="696" y1="432" y2="432"/>
-    <line x1="56" x2="696" y1="355.2" y2="355.2"/>
-    <line x1="56" x2="696" y1="278.4" y2="278.4"/>
-    <line x1="56" x2="696" y1="201.6" y2="201.6"/>
-    <line x1="56" x2="696" y1="124.8" y2="124.8"/>
-    <line x1="56" x2="696" y1="48" y2="48"/>
+    <line x1="48" x2="700" y1="370.4" y2="370.4"/>
+    <line x1="48" x2="700" y1="286.8" y2="286.8"/>
+    <line x1="48" x2="700" y1="119.6" y2="119.6"/>
+    <line x1="48" x2="700" y1="36" y2="36"/>
   </g>
-  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
   <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
-    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">10</text>
-    <line x1="52" x2="56" y1="355.2" y2="355.2" stroke="#A8A29E"/>
-    <text x="44" y="355.2" text-anchor="end" dominant-baseline="middle">20</text>
-    <line x1="52" x2="56" y1="278.4" y2="278.4" stroke="#A8A29E"/>
-    <text x="44" y="278.4" text-anchor="end" dominant-baseline="middle">30</text>
-    <line x1="52" x2="56" y1="201.6" y2="201.6" stroke="#A8A29E"/>
-    <text x="44" y="201.6" text-anchor="end" dominant-baseline="middle">40</text>
-    <line x1="52" x2="56" y1="124.8" y2="124.8" stroke="#A8A29E"/>
-    <text x="44" y="124.8" text-anchor="end" dominant-baseline="middle">50</text>
-    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
-    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">60</text>
-    <line x1="136" x2="136" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="136" y="448" text-anchor="middle" font-size="10" data-full-label="Mar">Mar</text>
-    <line x1="296" x2="296" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="296" y="448" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
-    <line x1="456" x2="456" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="456" y="448" text-anchor="middle" font-size="10" data-full-label="Dec">Dec</text>
-    <line x1="616" x2="616" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="616" y="448" text-anchor="middle" font-size="10" data-full-label="Jun">Jun</text>
+    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
+    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">10</text>
+    <line x1="44" x2="48" y1="370.4" y2="370.4" stroke="#A8A29E"/>
+    <text x="38" y="370.4" text-anchor="end" dominant-baseline="middle">20</text>
+    <line x1="44" x2="48" y1="286.8" y2="286.8" stroke="#A8A29E"/>
+    <text x="38" y="286.8" text-anchor="end" dominant-baseline="middle">30</text>
+    <line x1="44" x2="48" y1="203.2" y2="203.2" stroke="#A8A29E"/>
+    <text x="38" y="203.2" text-anchor="end" dominant-baseline="middle">40</text>
+    <line x1="44" x2="48" y1="119.6" y2="119.6" stroke="#A8A29E"/>
+    <text x="38" y="119.6" text-anchor="end" dominant-baseline="middle">50</text>
+    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">60</text>
+    <line x1="129.5" x2="129.5" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="129.5" y="468" text-anchor="middle" font-size="10" data-full-label="Mar">Mar</text>
+    <line x1="292.5" x2="292.5" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="292.5" y="468" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
+    <line x1="455.5" x2="455.5" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="455.5" y="468" text-anchor="middle" font-size="10" data-full-label="Dec">Dec</text>
+    <line x1="618.5" x2="618.5" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="618.5" y="468" text-anchor="middle" font-size="10" data-full-label="Jun">Jun</text>
   </g>
-  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">signups</text>
-  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">month</text>
   <g fill="none">
-    <path d="M136 201.6 L296 339.84 L456 86.4 L616 278.4" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="signups"/>
-    <circle cx="136" cy="201.6" r="2.5" fill="#2B6CB0" stroke="none" data-series="signups"/>
-    <circle cx="296" cy="339.84" r="2.5" fill="#2B6CB0" stroke="none" data-series="signups"/>
-    <circle cx="456" cy="86.4" r="2.5" fill="#2B6CB0" stroke="none" data-series="signups"/>
-    <circle cx="616" cy="278.4" r="2.5" fill="#2B6CB0" stroke="none" data-series="signups"/>
+    <path d="M129.5 203.2 L292.5 353.68 L455.5 77.8 L618.5 286.8" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="signups"/>
+    <circle cx="129.5" cy="203.2" r="2.5" fill="#2B6CB0" stroke="none" data-series="signups"/>
+    <circle cx="292.5" cy="353.68" r="2.5" fill="#2B6CB0" stroke="none" data-series="signups"/>
+    <circle cx="455.5" cy="77.8" r="2.5" fill="#2B6CB0" stroke="none" data-series="signups"/>
+    <circle cx="618.5" cy="286.8" r="2.5" fill="#2B6CB0" stroke="none" data-series="signups"/>
   </g>
 </svg>

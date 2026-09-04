@@ -2,40 +2,32 @@
   <title id="mv-e8e10366955f9441-title">Headcount</title>
   <desc id="mv-e8e10366955f9441-desc">bar chart. Headcount. x=team. y=n. 3 rows.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Headcount</text>
-  <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="56" x2="696" y1="432" y2="432"/>
-    <line x1="56" x2="696" y1="304" y2="304"/>
-    <line x1="56" x2="696" y1="176" y2="176"/>
-    <line x1="56" x2="696" y1="48" y2="48"/>
-  </g>
-  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Headcount</text>
+  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
   <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
-    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="52" x2="56" y1="304" y2="304" stroke="#A8A29E"/>
-    <text x="44" y="304" text-anchor="end" dominant-baseline="middle">10</text>
-    <line x1="52" x2="56" y1="176" y2="176" stroke="#A8A29E"/>
-    <text x="44" y="176" text-anchor="end" dominant-baseline="middle">20</text>
-    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
-    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">30</text>
-    <line x1="162.67" x2="162.67" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="162.67" y="448" text-anchor="middle" font-size="10" data-full-label="Eng">Eng</text>
-    <line x1="376" x2="376" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="376" y="448" text-anchor="middle" font-size="10" data-full-label="Design">Design</text>
-    <line x1="589.33" x2="589.33" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="589.33" y="448" text-anchor="middle" font-size="10" data-full-label="Ops">Ops</text>
-  </g>
-  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">n</text>
-  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">team</text>
-  <g>
-    <path d="M77.33 432 L77.33 126.8 Q77.33 124.8 79.33 124.8 L246 124.8 Q248 124.8 248 126.8 L248 432 Z" fill="#2B6CB0" data-x="Eng" data-series="n" data-y="24"/>
-    <path d="M290.67 432 L290.67 357.2 Q290.67 355.2 292.67 355.2 L459.33 355.2 Q461.33 355.2 461.33 357.2 L461.33 432 Z" fill="#2B6CB0" data-x="Design" data-series="n" data-y="6"/>
-    <path d="M504 432 L504 318.8 Q504 316.8 506 316.8 L672.67 316.8 Q674.67 316.8 674.67 318.8 L674.67 432 Z" fill="#2B6CB0" data-x="Ops" data-series="n" data-y="9"/>
+    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
+    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="44" x2="48" y1="314.67" y2="314.67" stroke="#A8A29E"/>
+    <text x="38" y="314.67" text-anchor="end" dominant-baseline="middle">10</text>
+    <line x1="44" x2="48" y1="175.33" y2="175.33" stroke="#A8A29E"/>
+    <text x="38" y="175.33" text-anchor="end" dominant-baseline="middle">20</text>
+    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">30</text>
+    <line x1="156.67" x2="156.67" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="156.67" y="468" text-anchor="middle" font-size="10" data-full-label="Eng">Eng</text>
+    <line x1="374" x2="374" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="Design">Design</text>
+    <line x1="591.33" x2="591.33" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="591.33" y="468" text-anchor="middle" font-size="10" data-full-label="Ops">Ops</text>
   </g>
   <g>
-    <text x="162.67" y="116.8" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Eng">24</text>
-    <text x="376" y="347.2" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Design">6</text>
-    <text x="589.33" y="308.8" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Ops">9</text>
+    <path d="M120.67 454 L120.67 121.6 Q120.67 119.6 122.67 119.6 L190.67 119.6 Q192.67 119.6 192.67 121.6 L192.67 454 Z" fill="#2B6CB0" data-x="Eng" data-series="n" data-y="24"/>
+    <path d="M338 454 L338 372.4 Q338 370.4 340 370.4 L408 370.4 Q410 370.4 410 372.4 L410 454 Z" fill="#2B6CB0" data-x="Design" data-series="n" data-y="6"/>
+    <path d="M555.33 454 L555.33 330.6 Q555.33 328.6 557.33 328.6 L625.33 328.6 Q627.33 328.6 627.33 330.6 L627.33 454 Z" fill="#2B6CB0" data-x="Ops" data-series="n" data-y="9"/>
+  </g>
+  <g>
+    <text x="156.67" y="111.6" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="Eng">24</text>
+    <text x="374" y="362.4" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="Design">6</text>
+    <text x="591.33" y="320.6" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="Ops">9</text>
   </g>
 </svg>

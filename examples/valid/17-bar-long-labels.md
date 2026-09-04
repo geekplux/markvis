@@ -2,7 +2,7 @@
 
 ```chart
 type: bar
-title: Initiative spend
+title: North America leads spend at 420,000
 unit: USD
 x: initiative
 y: spend

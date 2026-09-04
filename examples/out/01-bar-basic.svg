@@ -1,44 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Q3 Revenue (USD k), 3 rows" aria-labelledby="mv-bfd963ca6a323a6c-title" aria-describedby="mv-bfd963ca6a323a6c-desc" data-markvis="2" data-chart-type="bar" data-id="mv-bfd963ca6a323a6c" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
-  <title id="mv-bfd963ca6a323a6c-title">Q3 Revenue</title>
-  <desc id="mv-bfd963ca6a323a6c-desc">bar chart. Q3 Revenue. x=month. y=revenue. unit=USD k. 3 rows.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Feb led Q3 at 180 (USD k), 3 rows" aria-labelledby="mv-4b5fc99486f348de-title" aria-describedby="mv-4b5fc99486f348de-desc" data-markvis="2" data-chart-type="bar" data-id="mv-4b5fc99486f348de" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
+  <title id="mv-4b5fc99486f348de-title">Feb led Q3 at 180</title>
+  <desc id="mv-4b5fc99486f348de-desc">bar chart. Feb led Q3 at 180. x=month. y=revenue. unit=USD k. 3 rows.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Q3 Revenue<tspan font-size="12" font-weight="400" fill="#78716C"> · USD k</tspan></text>
-  <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="56" x2="696" y1="432" y2="432"/>
-    <line x1="56" x2="696" y1="336" y2="336"/>
-    <line x1="56" x2="696" y1="240" y2="240"/>
-    <line x1="56" x2="696" y1="144" y2="144"/>
-    <line x1="56" x2="696" y1="48" y2="48"/>
-  </g>
-  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Feb led Q3 at 180<tspan font-size="12" font-weight="400" fill="#78716C"> · USD k</tspan></text>
+  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
   <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
-    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="52" x2="56" y1="336" y2="336" stroke="#A8A29E"/>
-    <text x="44" y="336" text-anchor="end" dominant-baseline="middle">50</text>
-    <line x1="52" x2="56" y1="240" y2="240" stroke="#A8A29E"/>
-    <text x="44" y="240" text-anchor="end" dominant-baseline="middle">100</text>
-    <line x1="52" x2="56" y1="144" y2="144" stroke="#A8A29E"/>
-    <text x="44" y="144" text-anchor="end" dominant-baseline="middle">150</text>
-    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
-    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">200</text>
-    <line x1="162.67" x2="162.67" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="162.67" y="448" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
-    <line x1="376" x2="376" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="376" y="448" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
-    <line x1="589.33" x2="589.33" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="589.33" y="448" text-anchor="middle" font-size="10" data-full-label="Mar">Mar</text>
-  </g>
-  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">revenue</text>
-  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">month</text>
-  <g>
-    <path d="M77.33 432 L77.33 203.6 Q77.33 201.6 79.33 201.6 L246 201.6 Q248 201.6 248 203.6 L248 432 Z" fill="#2B6CB0" data-x="Jan" data-series="revenue" data-y="120"/>
-    <path d="M290.67 432 L290.67 88.4 Q290.67 86.4 292.67 86.4 L459.33 86.4 Q461.33 86.4 461.33 88.4 L461.33 432 Z" fill="#2B6CB0" data-x="Feb" data-series="revenue" data-y="180"/>
-    <path d="M504 432 L504 146 Q504 144 506 144 L672.67 144 Q674.67 144 674.67 146 L674.67 432 Z" fill="#2B6CB0" data-x="Mar" data-series="revenue" data-y="150"/>
+    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
+    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="44" x2="48" y1="349.5" y2="349.5" stroke="#A8A29E"/>
+    <text x="38" y="349.5" text-anchor="end" dominant-baseline="middle">50</text>
+    <line x1="44" x2="48" y1="245" y2="245" stroke="#A8A29E"/>
+    <text x="38" y="245" text-anchor="end" dominant-baseline="middle">100</text>
+    <line x1="44" x2="48" y1="140.5" y2="140.5" stroke="#A8A29E"/>
+    <text x="38" y="140.5" text-anchor="end" dominant-baseline="middle">150</text>
+    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">200</text>
+    <line x1="156.67" x2="156.67" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="156.67" y="468" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
+    <line x1="374" x2="374" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
+    <line x1="591.33" x2="591.33" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="591.33" y="468" text-anchor="middle" font-size="10" data-full-label="Mar">Mar</text>
   </g>
   <g>
-    <text x="162.67" y="193.6" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Jan">120</text>
-    <text x="376" y="78.4" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Feb">180</text>
-    <text x="589.33" y="136" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Mar">150</text>
+    <path d="M120.67 454 L120.67 205.2 Q120.67 203.2 122.67 203.2 L190.67 203.2 Q192.67 203.2 192.67 205.2 L192.67 454 Z" fill="#2B6CB0" data-x="Jan" data-series="revenue" data-y="120"/>
+    <path d="M338 454 L338 79.8 Q338 77.8 340 77.8 L408 77.8 Q410 77.8 410 79.8 L410 454 Z" fill="#2B6CB0" data-x="Feb" data-series="revenue" data-y="180"/>
+    <path d="M555.33 454 L555.33 142.5 Q555.33 140.5 557.33 140.5 L625.33 140.5 Q627.33 140.5 627.33 142.5 L627.33 454 Z" fill="#2B6CB0" data-x="Mar" data-series="revenue" data-y="150"/>
+  </g>
+  <g>
+    <text x="156.67" y="195.2" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="Jan">120</text>
+    <text x="374" y="69.8" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="Feb">180</text>
+    <text x="591.33" y="132.5" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="Mar">150</text>
   </g>
 </svg>

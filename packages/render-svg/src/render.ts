@@ -1,7 +1,7 @@
 import type { ChartIR } from "@markvis/ir";
 import { renderCartesian } from "./cartesian.js";
 import { paperRect } from "./figure.js";
-import { FONT, SVG_HEIGHT, SVG_WIDTH } from "./layout.js";
+import { FONT, SVG_WIDTH } from "./layout.js";
 import { renderPie } from "./pie.js";
 import { INK } from "./tokens.js";
 import { attrs, chartId, escapeXml } from "./xml.js";
@@ -48,13 +48,13 @@ export function description(chart: ChartIR): string {
 
 export function renderSvg(chart: ChartIR): string {
   const id = chartId(chart);
-  const inner =
+  const painted =
     chart.type === "pie" ? renderPie(chart, id) : renderCartesian(chart, id);
   const open = `<svg ${attrs({
     xmlns: "http://www.w3.org/2000/svg",
     width: SVG_WIDTH,
-    height: SVG_HEIGHT,
-    viewBox: `0 0 ${SVG_WIDTH} ${SVG_HEIGHT}`,
+    height: painted.height,
+    viewBox: `0 0 ${SVG_WIDTH} ${painted.height}`,
     role: "img",
     "aria-label": ariaLabel(chart),
     "aria-labelledby": `${id}-title`,
@@ -71,7 +71,7 @@ export function renderSvg(chart: ChartIR): string {
     `  <title id="${id}-title">${escapeXml(chart.title)}</title>`,
     `  <desc id="${id}-desc">${escapeXml(description(chart))}</desc>`,
     paperRect(),
-    ...inner,
+    ...painted.lines,
     `</svg>`,
   ];
   return `${lines.join("\n")}\n`;

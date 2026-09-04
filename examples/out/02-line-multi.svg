@@ -1,43 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Users, 4 rows, series plan" aria-labelledby="mv-fd8d64e9c11a97bb-title" aria-describedby="mv-fd8d64e9c11a97bb-desc" data-markvis="2" data-chart-type="line" data-id="mv-fd8d64e9c11a97bb" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
-  <title id="mv-fd8d64e9c11a97bb-title">Users</title>
-  <desc id="mv-fd8d64e9c11a97bb-desc">line chart. Users. x=month. y=count. series=plan. 4 rows.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Free still leads pro, 4 rows, series plan" aria-labelledby="mv-8c6df151fda9c0b6-title" aria-describedby="mv-8c6df151fda9c0b6-desc" data-markvis="2" data-chart-type="line" data-id="mv-8c6df151fda9c0b6" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
+  <title id="mv-8c6df151fda9c0b6-title">Free still leads pro</title>
+  <desc id="mv-8c6df151fda9c0b6-desc">line chart. Free still leads pro. x=month. y=count. series=plan. 4 rows.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Users</text>
-  <g font-size="11" font-weight="400" fill="#1C1917">
-    <rect x="56" y="43" width="10" height="10" fill="#2B6CB0" rx="1"/>
-    <text x="70" y="52" data-legend="free">free</text>
-    <rect x="113.28" y="43" width="10" height="10" fill="#C65D2E" rx="1"/>
-    <text x="127.28" y="52" data-legend="pro">pro</text>
-  </g>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Free still leads pro</text>
   <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="56" x2="696" y1="432" y2="432"/>
-    <line x1="56" x2="696" y1="312" y2="312"/>
-    <line x1="56" x2="696" y1="192" y2="192"/>
-    <line x1="56" x2="696" y1="72" y2="72"/>
+    <line x1="48" x2="684.72" y1="314.67" y2="314.67"/>
+    <line x1="48" x2="684.72" y1="175.33" y2="175.33"/>
+    <line x1="48" x2="684.72" y1="36" y2="36"/>
   </g>
-  <path d="M56 72 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <path d="M48 36 L48 454 L684.72 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
   <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
-    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="52" x2="56" y1="312" y2="312" stroke="#A8A29E"/>
-    <text x="44" y="312" text-anchor="end" dominant-baseline="middle">20</text>
-    <line x1="52" x2="56" y1="192" y2="192" stroke="#A8A29E"/>
-    <text x="44" y="192" text-anchor="end" dominant-baseline="middle">40</text>
-    <line x1="52" x2="56" y1="72" y2="72" stroke="#A8A29E"/>
-    <text x="44" y="72" text-anchor="end" dominant-baseline="middle">60</text>
-    <line x1="216" x2="216" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="216" y="448" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
-    <line x1="536" x2="536" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="536" y="448" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
+    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
+    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="44" x2="48" y1="314.67" y2="314.67" stroke="#A8A29E"/>
+    <text x="38" y="314.67" text-anchor="end" dominant-baseline="middle">20</text>
+    <line x1="44" x2="48" y1="175.33" y2="175.33" stroke="#A8A29E"/>
+    <text x="38" y="175.33" text-anchor="end" dominant-baseline="middle">40</text>
+    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">60</text>
+    <line x1="207.18" x2="207.18" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="207.18" y="468" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
+    <line x1="525.54" x2="525.54" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="525.54" y="468" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
   </g>
-  <text x="12" y="252" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 252)">count</text>
-  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">month</text>
   <g fill="none">
-    <path d="M216 192 L536 102" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="free"/>
-    <circle cx="216" cy="192" r="2.5" fill="#2B6CB0" stroke="none" data-series="free"/>
-    <circle cx="536" cy="102" r="2.5" fill="#2B6CB0" stroke="none" data-series="free"/>
-    <path d="M216 360 L536 324" fill="none" stroke="#C65D2E" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="pro"/>
-    <circle cx="216" cy="360" r="2.5" fill="#C65D2E" stroke="none" data-series="pro"/>
-    <circle cx="536" cy="324" r="2.5" fill="#C65D2E" stroke="none" data-series="pro"/>
+    <path d="M207.18 175.33 L525.54 70.83" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="free"/>
+    <circle cx="207.18" cy="175.33" r="2.5" fill="#2B6CB0" stroke="none" data-series="free"/>
+    <circle cx="525.54" cy="70.83" r="2.5" fill="#2B6CB0" stroke="none" data-series="free"/>
+    <path d="M207.18 370.4 L525.54 328.6" fill="none" stroke="#C65D2E" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="pro"/>
+    <circle cx="207.18" cy="370.4" r="2.5" fill="#C65D2E" stroke="none" data-series="pro"/>
+    <circle cx="525.54" cy="328.6" r="2.5" fill="#C65D2E" stroke="none" data-series="pro"/>
+  </g>
+  <g font-size="11" font-weight="500">
+    <text x="533.54" y="70.83" text-anchor="start" dominant-baseline="middle" fill="#2B6CB0" data-end-label="free">free</text>
+    <text x="533.54" y="328.6" text-anchor="start" dominant-baseline="middle" fill="#C65D2E" data-end-label="pro">pro</text>
   </g>
 </svg>

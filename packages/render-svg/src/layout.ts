@@ -1,18 +1,24 @@
 import { formatNumber } from "./scale.js";
 import { textWidth } from "./text.js";
 import {
-  AXIS_NAME_GUTTER_X,
-  AXIS_NAME_GUTTER_Y,
+  BAR_LABEL_MID_MIN_W,
+  BAR_LABEL_MIN_WIDTH,
+  BAR_LABEL_N_OFF,
+  BAR_LABEL_N_ON,
   FONT,
   LABEL_MIN_GAP,
   LABEL_ROTATE_DEG,
   MARGIN,
   PALETTE,
+  PLOT_MIN_RATIO,
   ROTATE_LINE_HEIGHT,
   SVG_HEIGHT,
+  SVG_HEIGHT_MAX,
   SVG_WIDTH,
+  TICK_MARK,
   TICK_TEXT_GAP,
   TITLE_BASELINE,
+  TITLE_TO_PLOT,
   TYPE,
 } from "./tokens.js";
 
@@ -24,6 +30,11 @@ export type PlotBox = {
   top: number;
   bottom: number;
   width: number;
+  height: number;
+};
+
+export type Painted = {
+  lines: string[];
   height: number;
 };
 
@@ -43,6 +54,18 @@ export type LegendLayout = {
 export type CategoryLayout = {
   rotate: boolean;
   show: boolean[];
+};
+
+export type Frame = {
+  width: number;
+  height: number;
+  plot: PlotBox;
+  rotateX: boolean;
+  show: boolean[];
+  left: number;
+  right: number;
+  top: number;
+  bottom: number;
 };
 
 export function layoutLegend(
@@ -125,48 +148,97 @@ export function categoryLayout(
   };
 }
 
-export function cartesianMargins(opts: {
-  yTickLabels: string[];
-  xLabels: string[];
-  yAxisTitle: string;
-  xAxisTitle: string;
-  legendHeight: number;
-  rotateX: boolean;
-}): { left: number; right: number; top: number; bottom: number } {
+export function tickLeftMargin(yTickLabels: string[]): number {
   const yTickWidth = Math.max(
     0,
-    ...opts.yTickLabels.map((label) => textWidth(label, TYPE.tick.size)),
+    ...yTickLabels.map((label) => textWidth(label, TYPE.tick.size)),
   );
-  const yGutter = opts.yAxisTitle ? AXIS_NAME_GUTTER_Y : 0;
-  const left = Math.max(
-    MARGIN.left,
-    yTickWidth + TICK_TEXT_GAP + yGutter,
-  );
+  return Math.max(MARGIN.left, yTickWidth + TICK_TEXT_GAP);
+}
 
-  const titleBottom = TITLE_BASELINE + 6;
-  let titleBlock = titleBottom;
-  if (opts.legendHeight > 0) {
-    titleBlock = titleBottom + 8 + opts.legendHeight;
+export function categoryBottomMargin(
+  labels: string[],
+  rotate: boolean,
+): number {
+  if (labels.length === 0) {
+    return TYPE.tick.size + TICK_MARK + 12;
   }
-  const top = Math.max(MARGIN.top, titleBlock + 12);
-
-  let bottom = MARGIN.bottom;
-  if (opts.rotateX) {
+  if (rotate) {
     const longest = Math.max(
       0,
-      ...opts.xLabels.map((label) => textWidth(label, TYPE.tick.size)),
+      ...labels.map((label) => textWidth(label, TYPE.tick.size)),
     );
     const rad = (Math.abs(LABEL_ROTATE_DEG) * Math.PI) / 180;
-    bottom = Math.sin(rad) * longest + 20;
-    if (opts.xAxisTitle) {
-      bottom += AXIS_NAME_GUTTER_X;
-    }
-  } else {
-    const labelExtent = TYPE.tick.size + 4;
-    const xGutter = opts.xAxisTitle ? AXIS_NAME_GUTTER_X : 0;
-    bottom = Math.max(MARGIN.bottom, labelExtent + 12 + xGutter);
+    return Math.sin(rad) * longest + 12;
   }
-  return { left, right: MARGIN.right, top, bottom };
+  return TYPE.tick.size + TICK_MARK + 12;
+}
+
+export function titleBlockTop(legendHeight: number): number {
+  if (legendHeight > 0) {
+    return TITLE_BASELINE + 8 + legendHeight + TITLE_TO_PLOT;
+  }
+  return TITLE_BASELINE + TITLE_TO_PLOT;
+}
+
+export function fitFrameHeight(top: number, bottom: number): number {
+  const chrome = top + bottom;
+  const needed = chrome / (1 - PLOT_MIN_RATIO);
+  const rounded = Math.ceil(needed);
+  return Math.min(SVG_HEIGHT_MAX, Math.max(SVG_HEIGHT, rounded));
+}
+
+export function layoutFrame(opts: {
+  yTickLabels: string[];
+  categoryLabels: string[];
+  legendHeight: number;
+  rightMin?: number;
+}): Frame {
+  const width = SVG_WIDTH;
+  const left = tickLeftMargin(opts.yTickLabels);
+  const right = Math.max(MARGIN.right, opts.rightMin ?? MARGIN.right);
+  const top = titleBlockTop(opts.legendHeight);
+  const draftW = Math.max(width - left - right, 1);
+  const nCat = Math.max(opts.categoryLabels.length, 1);
+  const catLay =
+    opts.categoryLabels.length > 0
+      ? categoryLayout(opts.categoryLabels, draftW / nCat)
+      : { rotate: false, show: [] as boolean[] };
+  const bottom = categoryBottomMargin(opts.categoryLabels, catLay.rotate);
+  const height = fitFrameHeight(top, bottom);
+  const plot: PlotBox = {
+    left,
+    right: width - right,
+    top,
+    bottom: height - bottom,
+    width: width - left - right,
+    height: height - top - bottom,
+  };
+  return {
+    width,
+    height,
+    plot,
+    rotateX: catLay.rotate,
+    show: catLay.show,
+    left,
+    right,
+    top,
+    bottom,
+  };
+}
+
+/** Dual encoding: labels XOR interior y-grid on bar/hist. */
+export function showBarValueLabels(nCat: number, barWidth: number): boolean {
+  if (barWidth < BAR_LABEL_MIN_WIDTH) {
+    return false;
+  }
+  if (nCat <= BAR_LABEL_N_ON) {
+    return true;
+  }
+  if (nCat > BAR_LABEL_N_OFF) {
+    return false;
+  }
+  return barWidth >= BAR_LABEL_MID_MIN_W;
 }
 
 export function formatTickLabel(n: number): string {

@@ -302,7 +302,7 @@ describe("preview", () => {
     expect(html).toContain("preview-layout");
     expect(html).toContain("type: bar");
     expect(html).toContain("<svg ");
-    expect(html).toContain("Q3 Revenue");
+    expect(html).toContain("Feb led Q3 at 180");
     expect(html).toContain("<table");
     expect(html).toContain("Jan");
   });

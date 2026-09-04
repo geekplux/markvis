@@ -2,41 +2,38 @@
   <title id="mv-8875d89f8ee9e0ca-title">Pipeline area</title>
   <desc id="mv-8875d89f8ee9e0ca-desc">area chart. Pipeline area. x=week. y=deals. 3 rows.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Pipeline area</text>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Pipeline area</text>
   <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="56" x2="696" y1="432" y2="432"/>
-    <line x1="56" x2="696" y1="304" y2="304"/>
-    <line x1="56" x2="696" y1="176" y2="176"/>
-    <line x1="56" x2="696" y1="48" y2="48"/>
+    <line x1="48" x2="700" y1="314.67" y2="314.67"/>
+    <line x1="48" x2="700" y1="175.33" y2="175.33"/>
+    <line x1="48" x2="700" y1="36" y2="36"/>
   </g>
-  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
   <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
-    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="52" x2="56" y1="304" y2="304" stroke="#A8A29E"/>
-    <text x="44" y="304" text-anchor="end" dominant-baseline="middle">5</text>
-    <line x1="52" x2="56" y1="176" y2="176" stroke="#A8A29E"/>
-    <text x="44" y="176" text-anchor="end" dominant-baseline="middle">10</text>
-    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
-    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">15</text>
-    <line x1="64" x2="64" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="64" y="448" text-anchor="middle" font-size="10" data-full-label="0">0</text>
-    <line x1="220" x2="220" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="220" y="448" text-anchor="middle" font-size="10" data-full-label="1">1</text>
-    <line x1="376" x2="376" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="376" y="448" text-anchor="middle" font-size="10" data-full-label="2">2</text>
-    <line x1="532" x2="532" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="532" y="448" text-anchor="middle" font-size="10" data-full-label="3">3</text>
-    <line x1="688" x2="688" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="688" y="448" text-anchor="middle" font-size="10" data-full-label="4">4</text>
+    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
+    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="44" x2="48" y1="314.67" y2="314.67" stroke="#A8A29E"/>
+    <text x="38" y="314.67" text-anchor="end" dominant-baseline="middle">5</text>
+    <line x1="44" x2="48" y1="175.33" y2="175.33" stroke="#A8A29E"/>
+    <text x="38" y="175.33" text-anchor="end" dominant-baseline="middle">10</text>
+    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">15</text>
+    <line x1="56" x2="56" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="56" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <line x1="215" x2="215" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="215" y="468" text-anchor="middle" font-size="10" data-full-label="1">1</text>
+    <line x1="374" x2="374" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="2">2</text>
+    <line x1="533" x2="533" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="533" y="468" text-anchor="middle" font-size="10" data-full-label="3">3</text>
+    <line x1="692" x2="692" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="692" y="468" text-anchor="middle" font-size="10" data-full-label="4">4</text>
   </g>
-  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">deals</text>
-  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">week</text>
   <g fill="none">
-    <path d="M220 227.2 L376 150.4 L532 201.6 L532 432 L220 432 Z" fill="#2B6CB0" fill-opacity="0.16" stroke="none" data-series="deals"/>
-    <path d="M220 227.2 L376 150.4 L532 201.6" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="deals"/>
-    <circle cx="220" cy="227.2" r="2.5" fill="#2B6CB0" stroke="none" data-series="deals"/>
-    <circle cx="376" cy="150.4" r="2.5" fill="#2B6CB0" stroke="none" data-series="deals"/>
-    <circle cx="532" cy="201.6" r="2.5" fill="#2B6CB0" stroke="none" data-series="deals"/>
+    <path d="M215 231.07 L374 147.47 L533 203.2 L533 454 L215 454 Z" fill="#2B6CB0" fill-opacity="0.14" stroke="none" data-series="deals"/>
+    <path d="M215 231.07 L374 147.47 L533 203.2" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="deals"/>
+    <circle cx="215" cy="231.07" r="2.5" fill="#2B6CB0" stroke="none" data-series="deals"/>
+    <circle cx="374" cy="147.47" r="2.5" fill="#2B6CB0" stroke="none" data-series="deals"/>
+    <circle cx="533" cy="203.2" r="2.5" fill="#2B6CB0" stroke="none" data-series="deals"/>
   </g>
 </svg>

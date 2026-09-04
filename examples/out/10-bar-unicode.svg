@@ -2,41 +2,34 @@
   <title id="mv-bd2bd148888ba047-title">City scores</title>
   <desc id="mv-bd2bd148888ba047-desc">bar chart. City scores. x=city. y=score. 4 rows.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">City scores</text>
-  <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="56" x2="696" y1="432" y2="432"/>
-    <line x1="56" x2="696" y1="240" y2="240"/>
-    <line x1="56" x2="696" y1="48" y2="48"/>
-  </g>
-  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">City scores</text>
+  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
   <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
-    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="52" x2="56" y1="240" y2="240" stroke="#A8A29E"/>
-    <text x="44" y="240" text-anchor="end" dominant-baseline="middle">50</text>
-    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
-    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">100</text>
-    <line x1="136" x2="136" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="136" y="448" text-anchor="middle" font-size="10" data-full-label="北京">北京</text>
-    <line x1="296" x2="296" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="296" y="448" text-anchor="middle" font-size="10" data-full-label="東京">東京</text>
-    <line x1="456" x2="456" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="456" y="448" text-anchor="middle" font-size="10" data-full-label="서울">서울</text>
-    <line x1="616" x2="616" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="616" y="448" text-anchor="middle" font-size="10" data-full-label="München">München</text>
-  </g>
-  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">score</text>
-  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">city</text>
-  <g>
-    <path d="M72 432 L72 96.08 Q72 94.08 74 94.08 L198 94.08 Q200 94.08 200 96.08 L200 432 Z" fill="#2B6CB0" data-x="北京" data-series="score" data-y="88"/>
-    <path d="M232 432 L232 80.72 Q232 78.72 234 78.72 L358 78.72 Q360 78.72 360 80.72 L360 432 Z" fill="#2B6CB0" data-x="東京" data-series="score" data-y="92"/>
-    <path d="M392 432 L392 107.6 Q392 105.6 394 105.6 L518 105.6 Q520 105.6 520 107.6 L520 432 Z" fill="#2B6CB0" data-x="서울" data-series="score" data-y="85"/>
-    <path d="M552 432 L552 130.64 Q552 128.64 554 128.64 L678 128.64 Q680 128.64 680 130.64 L680 432 Z" fill="#2B6CB0" data-x="München" data-series="score" data-y="79"/>
+    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
+    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="44" x2="48" y1="245" y2="245" stroke="#A8A29E"/>
+    <text x="38" y="245" text-anchor="end" dominant-baseline="middle">50</text>
+    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">100</text>
+    <line x1="129.5" x2="129.5" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="129.5" y="468" text-anchor="middle" font-size="10" data-full-label="北京">北京</text>
+    <line x1="292.5" x2="292.5" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="292.5" y="468" text-anchor="middle" font-size="10" data-full-label="東京">東京</text>
+    <line x1="455.5" x2="455.5" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="455.5" y="468" text-anchor="middle" font-size="10" data-full-label="서울">서울</text>
+    <line x1="618.5" x2="618.5" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="618.5" y="468" text-anchor="middle" font-size="10" data-full-label="München">München</text>
   </g>
   <g>
-    <text x="136" y="86.08" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="北京">88</text>
-    <text x="296" y="70.72" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="東京">92</text>
-    <text x="456" y="97.6" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="서울">85</text>
-    <text x="616" y="120.64" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="München">79</text>
+    <path d="M93.5 454 L93.5 88.16 Q93.5 86.16 95.5 86.16 L163.5 86.16 Q165.5 86.16 165.5 88.16 L165.5 454 Z" fill="#2B6CB0" data-x="北京" data-series="score" data-y="88"/>
+    <path d="M256.5 454 L256.5 71.44 Q256.5 69.44 258.5 69.44 L326.5 69.44 Q328.5 69.44 328.5 71.44 L328.5 454 Z" fill="#2B6CB0" data-x="東京" data-series="score" data-y="92"/>
+    <path d="M419.5 454 L419.5 100.7 Q419.5 98.7 421.5 98.7 L489.5 98.7 Q491.5 98.7 491.5 100.7 L491.5 454 Z" fill="#2B6CB0" data-x="서울" data-series="score" data-y="85"/>
+    <path d="M582.5 454 L582.5 125.78 Q582.5 123.78 584.5 123.78 L652.5 123.78 Q654.5 123.78 654.5 125.78 L654.5 454 Z" fill="#2B6CB0" data-x="München" data-series="score" data-y="79"/>
+  </g>
+  <g>
+    <text x="129.5" y="78.16" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="北京">88</text>
+    <text x="292.5" y="61.44" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="東京">92</text>
+    <text x="455.5" y="90.7" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="서울">85</text>
+    <text x="618.5" y="115.78" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="München">79</text>
   </g>
 </svg>

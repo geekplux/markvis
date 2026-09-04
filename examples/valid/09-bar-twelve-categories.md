@@ -2,7 +2,7 @@
 
 ```chart
 type: bar
-title: Monthly tickets
+title: Jul peaked at 22
 x: month
 y: tickets
 

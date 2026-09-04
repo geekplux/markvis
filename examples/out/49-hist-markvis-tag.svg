@@ -2,40 +2,38 @@
   <title id="mv-30825b4c8866fce5-title">Retry counts</title>
   <desc id="mv-30825b4c8866fce5-desc">hist chart. Retry counts. x=retries. 7 rows. x is binned with Sturges equal-width bins.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Retry counts</text>
-  <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="56" x2="696" y1="432" y2="432"/>
-    <line x1="56" x2="696" y1="304" y2="304"/>
-    <line x1="56" x2="696" y1="176" y2="176"/>
-    <line x1="56" x2="696" y1="48" y2="48"/>
-  </g>
-  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Retry counts</text>
+  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
   <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
-    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="52" x2="56" y1="304" y2="304" stroke="#A8A29E"/>
-    <text x="44" y="304" text-anchor="end" dominant-baseline="middle">1</text>
-    <line x1="52" x2="56" y1="176" y2="176" stroke="#A8A29E"/>
-    <text x="44" y="176" text-anchor="end" dominant-baseline="middle">2</text>
-    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
-    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">3</text>
-    <line x1="56" x2="56" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="56" y="448" text-anchor="middle" font-size="10" data-full-label="0">0</text>
-    <line x1="216" x2="216" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="216" y="448" text-anchor="middle" font-size="10" data-full-label="1">1</text>
-    <line x1="376" x2="376" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="376" y="448" text-anchor="middle" font-size="10" data-full-label="2">2</text>
-    <line x1="536" x2="536" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="536" y="448" text-anchor="middle" font-size="10" data-full-label="3">3</text>
-    <line x1="696" x2="696" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="696" y="448" text-anchor="middle" font-size="10" data-full-label="4">4</text>
+    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
+    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="44" x2="48" y1="314.67" y2="314.67" stroke="#A8A29E"/>
+    <text x="38" y="314.67" text-anchor="end" dominant-baseline="middle">1</text>
+    <line x1="44" x2="48" y1="175.33" y2="175.33" stroke="#A8A29E"/>
+    <text x="38" y="175.33" text-anchor="end" dominant-baseline="middle">2</text>
+    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">3</text>
+    <line x1="48" x2="48" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="48" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <line x1="211" x2="211" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="211" y="468" text-anchor="middle" font-size="10" data-full-label="1">1</text>
+    <line x1="374" x2="374" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="2">2</text>
+    <line x1="537" x2="537" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="537" y="468" text-anchor="middle" font-size="10" data-full-label="3">3</text>
+    <line x1="700" x2="700" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="700" y="468" text-anchor="middle" font-size="10" data-full-label="4">4</text>
   </g>
-  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">count</text>
-  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">retries</text>
   <g>
-    <path d="M72 432 L72 178 Q72 176 74 176 L198 176 Q200 176 200 178 L200 432 Z" fill="#2B6CB0" data-bin-left="0" data-bin-right="1" data-weight="2" data-count="2"/>
-    <path d="M232 432 L232 50 Q232 48 234 48 L358 48 Q360 48 360 50 L360 432 Z" fill="#2B6CB0" data-bin-left="1" data-bin-right="2" data-weight="3" data-count="3"/>
-    <path d="M392 432 L392 306 Q392 304 394 304 L518 304 Q520 304 520 306 L520 432 Z" fill="#2B6CB0" data-bin-left="2" data-bin-right="3" data-weight="1" data-count="1"/>
-    <path d="M552 432 L552 306 Q552 304 554 304 L678 304 Q680 304 680 306 L680 432 Z" fill="#2B6CB0" data-bin-left="3" data-bin-right="4" data-weight="1" data-count="1"/>
+    <path d="M93.5 454 L93.5 177.33 Q93.5 175.33 95.5 175.33 L163.5 175.33 Q165.5 175.33 165.5 177.33 L165.5 454 Z" fill="#2B6CB0" data-bin-left="0" data-bin-right="1" data-weight="2" data-count="2"/>
+    <path d="M256.5 454 L256.5 38 Q256.5 36 258.5 36 L326.5 36 Q328.5 36 328.5 38 L328.5 454 Z" fill="#2B6CB0" data-bin-left="1" data-bin-right="2" data-weight="3" data-count="3"/>
+    <path d="M419.5 454 L419.5 316.67 Q419.5 314.67 421.5 314.67 L489.5 314.67 Q491.5 314.67 491.5 316.67 L491.5 454 Z" fill="#2B6CB0" data-bin-left="2" data-bin-right="3" data-weight="1" data-count="1"/>
+    <path d="M582.5 454 L582.5 316.67 Q582.5 314.67 584.5 314.67 L652.5 314.67 Q654.5 314.67 654.5 316.67 L654.5 454 Z" fill="#2B6CB0" data-bin-left="3" data-bin-right="4" data-weight="1" data-count="1"/>
+  </g>
+  <g>
+    <text x="129.5" y="167.33" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="0–1">2</text>
+    <text x="292.5" y="28" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="1–2">3</text>
+    <text x="455.5" y="306.67" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="2–3">1</text>
+    <text x="618.5" y="306.67" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="3–4">1</text>
   </g>
 </svg>

@@ -1,12 +1,19 @@
 import type { ChartIR } from "@markvis/ir";
 import { loadRows } from "./data.js";
-import { drawTitle } from "./figure.js";
-import { cartesianMargins, SVG_HEIGHT, SVG_WIDTH } from "./layout.js";
+import { drawTitle, visibleTitle } from "./figure.js";
+import {
+  fitFrameHeight,
+  titleBlockTop,
+  SVG_WIDTH,
+  type Painted,
+} from "./layout.js";
 import { seriesStyle } from "./palette.js";
 import { formatNumber } from "./scale.js";
 import { textWidth } from "./text.js";
 import {
   AXIS,
+  MARGIN,
+  PIE_ELBOW,
   PIE_LABEL_GAP,
   PIE_LABEL_MIN_SEP,
   PIE_LEADER,
@@ -52,6 +59,7 @@ type LabelPos = {
   y0: number;
   x1: number;
   y1: number;
+  elbowX: number;
   lx: number;
   ly: number;
 };
@@ -77,6 +85,7 @@ function placeLabels(
         y0: 0,
         x1: 0,
         y1: 0,
+        elbowX: 0,
         lx: 0,
         ly: 0,
       };
@@ -89,7 +98,8 @@ function placeLabels(
     item.y0 = cy + r * Math.sin(mid);
     item.x1 = cx + r1 * Math.cos(mid);
     item.y1 = cy + r1 * Math.sin(mid);
-    item.lx = item.x1 + item.side * PIE_LABEL_GAP;
+    item.elbowX = item.x1 + item.side * PIE_ELBOW;
+    item.lx = item.elbowX + item.side * PIE_LABEL_GAP;
     item.ly = item.y1;
   };
 
@@ -129,7 +139,29 @@ function placeLabels(
   return items;
 }
 
-export function renderPie(chart: ChartIR, _id: string): string[] {
+function pieBox(
+  left: number,
+  right: number,
+  top: number,
+  bottom: number,
+  height: number,
+): { cx: number; cy: number; r: number; left: number; top: number } {
+  const plotLeft = left;
+  const plotRight = SVG_WIDTH - right;
+  const plotTop = top;
+  const plotBottom = height - bottom;
+  const plotW = plotRight - plotLeft;
+  const plotH = plotBottom - plotTop;
+  return {
+    left: plotLeft,
+    top: plotTop,
+    cx: (plotLeft + plotRight) / 2,
+    cy: (plotTop + plotBottom) / 2,
+    r: Math.min(plotW, plotH) * PIE_RADIUS_RATIO,
+  };
+}
+
+export function renderPie(chart: ChartIR, _id: string): Painted {
   const rows = loadRows(chart);
   const raw: Omit<Slice, "a0" | "a1" | "mid">[] = rows.map((row, i) => {
     const style = seriesStyle(i);
@@ -142,23 +174,12 @@ export function renderPie(chart: ChartIR, _id: string): string[] {
   });
   const sum = raw.reduce((acc, slice) => acc + slice.value, 0);
 
-  const margins = cartesianMargins({
-    yTickLabels: [],
-    xLabels: [],
-    yAxisTitle: "",
-    xAxisTitle: "",
-    legendHeight: 0,
-    rotateX: false,
-  });
-  const plotLeft = margins.left;
-  const plotRight = SVG_WIDTH - margins.right;
-  const plotTop = margins.top;
-  const plotBottom = SVG_HEIGHT - margins.bottom;
-  const plotW = plotRight - plotLeft;
-  const plotH = plotBottom - plotTop;
-  const cx = (plotLeft + plotRight) / 2;
-  const cy = (plotTop + plotBottom) / 2;
-  const r = Math.min(plotW, plotH) * PIE_RADIUS_RATIO;
+  let left = MARGIN.left;
+  let right = MARGIN.right;
+  let top = titleBlockTop(0);
+  let bottom = MARGIN.right;
+  let height = fitFrameHeight(top, bottom);
+  let box = pieBox(left, right, top, bottom, height);
 
   const slices: Slice[] = [];
   let angle = -Math.PI / 2;
@@ -176,8 +197,42 @@ export function renderPie(chart: ChartIR, _id: string): string[] {
     }
   }
 
-  const labels = placeLabels(slices, cx, cy, r);
-  const lines: string[] = [drawTitle(chart)];
+  let labels = placeLabels(slices, box.cx, box.cy, box.r);
+  for (let pass = 0; pass < 3; pass++) {
+    let overflowLeft = 0;
+    let overflowRight = 0;
+    let overflowBottom = 0;
+    let overflowTop = 0;
+    for (const item of labels) {
+      const textLeft = item.side > 0 ? item.lx : item.lx - item.width;
+      const textRight = item.side > 0 ? item.lx + item.width : item.lx;
+      overflowLeft = Math.max(overflowLeft, 8 - textLeft);
+      overflowRight = Math.max(overflowRight, textRight - (SVG_WIDTH - 8));
+      overflowBottom = Math.max(
+        overflowBottom,
+        item.ly + TYPE.value.size / 2 + 4 - (height - 4),
+      );
+      overflowTop = Math.max(overflowTop, 4 - (item.ly - TYPE.value.size / 2));
+    }
+    if (
+      overflowLeft <= 0.5 &&
+      overflowRight <= 0.5 &&
+      overflowBottom <= 0.5 &&
+      overflowTop <= 0.5
+    ) {
+      break;
+    }
+    left += Math.max(0, overflowLeft);
+    right += Math.max(0, overflowRight);
+    bottom += Math.max(0, overflowBottom);
+    top += Math.max(0, overflowTop);
+    height = fitFrameHeight(top, bottom);
+    box = pieBox(left, right, top, bottom, height);
+    labels = placeLabels(slices, box.cx, box.cy, box.r);
+  }
+
+  const { cx, cy, r } = box;
+  const lines: string[] = [drawTitle(visibleTitle(chart), box.left, chart.unit)];
 
   lines.push(`  <g ${attrs({ "aria-hidden": "true" })}>`);
   if (sum <= 0) {
@@ -235,7 +290,7 @@ export function renderPie(chart: ChartIR, _id: string): string[] {
     for (const item of labels) {
       lines.push(
         `    <polyline ${attrs({
-          points: `${fmtPx(item.x0)},${fmtPx(item.y0)} ${fmtPx(item.x1)},${fmtPx(item.y1)} ${fmtPx(item.x1 + item.side * 8)},${fmtPx(item.y1)}`,
+          points: `${fmtPx(item.x0)},${fmtPx(item.y0)} ${fmtPx(item.x1)},${fmtPx(item.y1)} ${fmtPx(item.elbowX)},${fmtPx(item.y1)}`,
         })}/>`,
       );
     }
@@ -248,11 +303,9 @@ export function renderPie(chart: ChartIR, _id: string): string[] {
       })}>`,
     );
     for (const item of labels) {
-      const leaderEndX = item.x1 + item.side * 8;
-      const lx = leaderEndX + item.side * PIE_LABEL_GAP;
       lines.push(
         `    <text ${attrs({
-          x: fmtPx(lx),
+          x: fmtPx(item.lx),
           y: fmtPx(item.ly),
           "text-anchor": item.side > 0 ? "start" : "end",
           "dominant-baseline": "middle",
@@ -263,5 +316,5 @@ export function renderPie(chart: ChartIR, _id: string): string[] {
     lines.push(`  </g>`);
   }
 
-  return lines;
+  return { lines, height };
 }

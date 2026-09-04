@@ -2,56 +2,50 @@
   <title id="mv-67e5b3692fd68d60-title">MAU by region</title>
   <desc id="mv-67e5b3692fd68d60-desc">line chart. MAU by region. x=week. y=mau. series=region. 6 rows.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">MAU by region</text>
-  <g font-size="11" font-weight="400" fill="#1C1917">
-    <rect x="61" y="43" width="10" height="10" fill="#2B6CB0" rx="1"/>
-    <text x="75" y="52" data-legend="us">us</text>
-    <rect x="104.64" y="43" width="10" height="10" fill="#C65D2E" rx="1"/>
-    <text x="118.64" y="52" data-legend="eu">eu</text>
-  </g>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">MAU by region</text>
   <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="61" x2="696" y1="432" y2="432"/>
-    <line x1="61" x2="696" y1="360" y2="360"/>
-    <line x1="61" x2="696" y1="288" y2="288"/>
-    <line x1="61" x2="696" y1="216" y2="216"/>
-    <line x1="61" x2="696" y1="144" y2="144"/>
-    <line x1="61" x2="696" y1="72" y2="72"/>
+    <line x1="48" x2="698.36" y1="370.4" y2="370.4"/>
+    <line x1="48" x2="698.36" y1="286.8" y2="286.8"/>
+    <line x1="48" x2="698.36" y1="119.6" y2="119.6"/>
+    <line x1="48" x2="698.36" y1="36" y2="36"/>
   </g>
-  <path d="M61 72 L61 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <path d="M48 36 L48 454 L698.36 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
   <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="57" x2="61" y1="432" y2="432" stroke="#A8A29E"/>
-    <text x="49" y="432" text-anchor="end" dominant-baseline="middle">700</text>
-    <line x1="57" x2="61" y1="360" y2="360" stroke="#A8A29E"/>
-    <text x="49" y="360" text-anchor="end" dominant-baseline="middle">800</text>
-    <line x1="57" x2="61" y1="288" y2="288" stroke="#A8A29E"/>
-    <text x="49" y="288" text-anchor="end" dominant-baseline="middle">900</text>
-    <line x1="57" x2="61" y1="216" y2="216" stroke="#A8A29E"/>
-    <text x="49" y="216" text-anchor="end" dominant-baseline="middle">1,000</text>
-    <line x1="57" x2="61" y1="144" y2="144" stroke="#A8A29E"/>
-    <text x="49" y="144" text-anchor="end" dominant-baseline="middle">1,100</text>
-    <line x1="57" x2="61" y1="72" y2="72" stroke="#A8A29E"/>
-    <text x="49" y="72" text-anchor="end" dominant-baseline="middle">1,200</text>
-    <line x1="69" x2="69" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="69" y="448" text-anchor="middle" font-size="10" data-full-label="0">0</text>
-    <line x1="223.75" x2="223.75" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="223.75" y="448" text-anchor="middle" font-size="10" data-full-label="1">1</text>
-    <line x1="378.5" x2="378.5" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="378.5" y="448" text-anchor="middle" font-size="10" data-full-label="2">2</text>
-    <line x1="533.25" x2="533.25" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="533.25" y="448" text-anchor="middle" font-size="10" data-full-label="3">3</text>
-    <line x1="688" x2="688" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="688" y="448" text-anchor="middle" font-size="10" data-full-label="4">4</text>
+    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
+    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">700</text>
+    <line x1="44" x2="48" y1="370.4" y2="370.4" stroke="#A8A29E"/>
+    <text x="38" y="370.4" text-anchor="end" dominant-baseline="middle">800</text>
+    <line x1="44" x2="48" y1="286.8" y2="286.8" stroke="#A8A29E"/>
+    <text x="38" y="286.8" text-anchor="end" dominant-baseline="middle">900</text>
+    <line x1="44" x2="48" y1="203.2" y2="203.2" stroke="#A8A29E"/>
+    <text x="38" y="203.2" text-anchor="end" dominant-baseline="middle">1,000</text>
+    <line x1="44" x2="48" y1="119.6" y2="119.6" stroke="#A8A29E"/>
+    <text x="38" y="119.6" text-anchor="end" dominant-baseline="middle">1,100</text>
+    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">1,200</text>
+    <line x1="56" x2="56" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="56" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <line x1="214.59" x2="214.59" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="214.59" y="468" text-anchor="middle" font-size="10" data-full-label="1">1</text>
+    <line x1="373.18" x2="373.18" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="373.18" y="468" text-anchor="middle" font-size="10" data-full-label="2">2</text>
+    <line x1="531.77" x2="531.77" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="531.77" y="468" text-anchor="middle" font-size="10" data-full-label="3">3</text>
+    <line x1="690.36" x2="690.36" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="690.36" y="468" text-anchor="middle" font-size="10" data-full-label="4">4</text>
   </g>
-  <text x="12" y="252" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 252)">mau</text>
-  <text x="378.5" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">week</text>
   <g fill="none">
-    <path d="M223.75 216 L378.5 144 L533.25 180" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="us"/>
-    <circle cx="223.75" cy="216" r="2.5" fill="#2B6CB0" stroke="none" data-series="us"/>
-    <circle cx="378.5" cy="144" r="2.5" fill="#2B6CB0" stroke="none" data-series="us"/>
-    <circle cx="533.25" cy="180" r="2.5" fill="#2B6CB0" stroke="none" data-series="us"/>
-    <path d="M223.75 360 L378.5 345.6 L533.25 288" fill="none" stroke="#C65D2E" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="eu"/>
-    <circle cx="223.75" cy="360" r="2.5" fill="#C65D2E" stroke="none" data-series="eu"/>
-    <circle cx="378.5" cy="345.6" r="2.5" fill="#C65D2E" stroke="none" data-series="eu"/>
-    <circle cx="533.25" cy="288" r="2.5" fill="#C65D2E" stroke="none" data-series="eu"/>
+    <path d="M214.59 203.2 L373.18 119.6 L531.77 161.4" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="us"/>
+    <circle cx="214.59" cy="203.2" r="2.5" fill="#2B6CB0" stroke="none" data-series="us"/>
+    <circle cx="373.18" cy="119.6" r="2.5" fill="#2B6CB0" stroke="none" data-series="us"/>
+    <circle cx="531.77" cy="161.4" r="2.5" fill="#2B6CB0" stroke="none" data-series="us"/>
+    <path d="M214.59 370.4 L373.18 353.68 L531.77 286.8" fill="none" stroke="#C65D2E" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="eu"/>
+    <circle cx="214.59" cy="370.4" r="2.5" fill="#C65D2E" stroke="none" data-series="eu"/>
+    <circle cx="373.18" cy="353.68" r="2.5" fill="#C65D2E" stroke="none" data-series="eu"/>
+    <circle cx="531.77" cy="286.8" r="2.5" fill="#C65D2E" stroke="none" data-series="eu"/>
+  </g>
+  <g font-size="11" font-weight="500">
+    <text x="539.77" y="161.4" text-anchor="start" dominant-baseline="middle" fill="#2B6CB0" data-end-label="us">us</text>
+    <text x="539.77" y="286.8" text-anchor="start" dominant-baseline="middle" fill="#C65D2E" data-end-label="eu">eu</text>
   </g>
 </svg>

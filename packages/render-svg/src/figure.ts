@@ -1,23 +1,31 @@
 import type { ChartIR } from "@markvis/ir";
-import { PAPER, SVG_WIDTH, TITLE_BASELINE, TYPE } from "./tokens.js";
-import { attrs, escapeXml } from "./xml.js";
+import { PAPER, TITLE_BASELINE, TYPE } from "./tokens.js";
+import { attrs, escapeXml, fmtPx } from "./xml.js";
 
 export function paperRect(): string {
   return `  <rect width="100%" height="100%" fill="${PAPER}"/>`;
 }
 
-/** Visible title; unit rides the same line as `Title · USD k`. */
-export function drawTitle(chart: ChartIR, unit?: string): string {
-  const shownUnit = unit ?? chart.unit;
-  const unitSpan = shownUnit
-    ? `<tspan font-size="${TYPE.unit.size}" font-weight="${TYPE.unit.weight}" fill="${TYPE.unit.fill}"> · ${escapeXml(shownUnit)}</tspan>`
+/** Visible title from IR; never a chart-type word. Empty → y field. */
+export function visibleTitle(chart: ChartIR): string {
+  const title = chart.title.trim();
+  if (title.length > 0) {
+    return title;
+  }
+  return chart.y ?? "";
+}
+
+/** Left-aligned to plot left. Unit rides the same line as `Title · USD`. */
+export function drawTitle(title: string, x: number, unit?: string): string {
+  const unitSpan = unit
+    ? `<tspan font-size="${TYPE.unit.size}" font-weight="${TYPE.unit.weight}" fill="${TYPE.unit.fill}"> · ${escapeXml(unit)}</tspan>`
     : "";
   return `  <text ${attrs({
-    x: SVG_WIDTH / 2,
+    x: fmtPx(x),
     y: TITLE_BASELINE,
-    "text-anchor": "middle",
+    "text-anchor": "start",
     "font-size": TYPE.title.size,
     "font-weight": TYPE.title.weight,
     fill: TYPE.title.fill,
-  })}>${escapeXml(chart.title)}${unitSpan}</text>`;
+  })}>${escapeXml(title)}${unitSpan}</text>`;
 }

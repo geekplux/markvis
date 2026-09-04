@@ -2,53 +2,49 @@
   <title id="mv-8494e418aaaed1dc-title">Score vs hours</title>
   <desc id="mv-8494e418aaaed1dc-desc">scatter chart. Score vs hours. x=hours. y=score. series=cohort. 5 rows.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Score vs hours</text>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Score vs hours</text>
   <g font-size="11" font-weight="400" fill="#1C1917">
-    <rect x="56" y="43" width="10" height="10" fill="#2B6CB0" rx="1"/>
-    <text x="70" y="52" data-legend="A">A</text>
-    <rect x="92.82" y="43" width="10" height="10" fill="#C65D2E" rx="1"/>
-    <text x="106.82" y="52" data-legend="B">B</text>
+    <rect x="48" y="33" width="10" height="10" fill="#2B6CB0" rx="1"/>
+    <text x="62" y="42" data-legend="A">A</text>
+    <rect x="84.82" y="33" width="10" height="10" fill="#C65D2E" rx="1"/>
+    <text x="98.82" y="42" data-legend="B">B</text>
   </g>
   <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="56" x2="696" y1="432" y2="432"/>
-    <line x1="56" x2="696" y1="360" y2="360"/>
-    <line x1="56" x2="696" y1="288" y2="288"/>
-    <line x1="56" x2="696" y1="216" y2="216"/>
-    <line x1="56" x2="696" y1="144" y2="144"/>
-    <line x1="56" x2="696" y1="72" y2="72"/>
+    <line x1="48" x2="700" y1="375.2" y2="375.2"/>
+    <line x1="48" x2="700" y1="296.4" y2="296.4"/>
+    <line x1="48" x2="700" y1="138.8" y2="138.8"/>
+    <line x1="48" x2="700" y1="60" y2="60"/>
   </g>
-  <path d="M56 72 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <path d="M48 60 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
   <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
-    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">30</text>
-    <line x1="52" x2="56" y1="360" y2="360" stroke="#A8A29E"/>
-    <text x="44" y="360" text-anchor="end" dominant-baseline="middle">40</text>
-    <line x1="52" x2="56" y1="288" y2="288" stroke="#A8A29E"/>
-    <text x="44" y="288" text-anchor="end" dominant-baseline="middle">50</text>
-    <line x1="52" x2="56" y1="216" y2="216" stroke="#A8A29E"/>
-    <text x="44" y="216" text-anchor="end" dominant-baseline="middle">60</text>
-    <line x1="52" x2="56" y1="144" y2="144" stroke="#A8A29E"/>
-    <text x="44" y="144" text-anchor="end" dominant-baseline="middle">70</text>
-    <line x1="52" x2="56" y1="72" y2="72" stroke="#A8A29E"/>
-    <text x="44" y="72" text-anchor="end" dominant-baseline="middle">80</text>
-    <line x1="64" x2="64" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="64" y="448" text-anchor="middle" font-size="10" data-full-label="0">0</text>
-    <line x1="220" x2="220" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="220" y="448" text-anchor="middle" font-size="10" data-full-label="2">2</text>
-    <line x1="376" x2="376" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="376" y="448" text-anchor="middle" font-size="10" data-full-label="4">4</text>
-    <line x1="532" x2="532" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="532" y="448" text-anchor="middle" font-size="10" data-full-label="6">6</text>
-    <line x1="688" x2="688" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="688" y="448" text-anchor="middle" font-size="10" data-full-label="8">8</text>
+    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
+    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">30</text>
+    <line x1="44" x2="48" y1="375.2" y2="375.2" stroke="#A8A29E"/>
+    <text x="38" y="375.2" text-anchor="end" dominant-baseline="middle">40</text>
+    <line x1="44" x2="48" y1="296.4" y2="296.4" stroke="#A8A29E"/>
+    <text x="38" y="296.4" text-anchor="end" dominant-baseline="middle">50</text>
+    <line x1="44" x2="48" y1="217.6" y2="217.6" stroke="#A8A29E"/>
+    <text x="38" y="217.6" text-anchor="end" dominant-baseline="middle">60</text>
+    <line x1="44" x2="48" y1="138.8" y2="138.8" stroke="#A8A29E"/>
+    <text x="38" y="138.8" text-anchor="end" dominant-baseline="middle">70</text>
+    <line x1="44" x2="48" y1="60" y2="60" stroke="#A8A29E"/>
+    <text x="38" y="60" text-anchor="end" dominant-baseline="middle">80</text>
+    <line x1="56" x2="56" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="56" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <line x1="215" x2="215" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="215" y="468" text-anchor="middle" font-size="10" data-full-label="2">2</text>
+    <line x1="374" x2="374" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="4">4</text>
+    <line x1="533" x2="533" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="533" y="468" text-anchor="middle" font-size="10" data-full-label="6">6</text>
+    <line x1="692" x2="692" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="692" y="468" text-anchor="middle" font-size="10" data-full-label="8">8</text>
   </g>
-  <text x="12" y="252" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 252)">score</text>
-  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">hours</text>
   <g>
-    <circle cx="220" cy="360" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="2" data-y="40" data-series="A"/>
-    <circle cx="376" cy="252" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="4" data-y="55" data-series="A"/>
-    <circle cx="298" cy="288" r="3" fill="#C65D2E" fill-opacity="0.85" stroke="none" data-x="3" data-y="50" data-series="B"/>
-    <circle cx="454" cy="144" r="3" fill="#C65D2E" fill-opacity="0.85" stroke="none" data-x="5" data-y="70" data-series="B"/>
-    <circle cx="532" cy="129.6" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="6" data-y="72" data-series="A"/>
+    <circle cx="215" cy="375.2" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="2" data-y="40" data-series="A"/>
+    <circle cx="374" cy="257" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="4" data-y="55" data-series="A"/>
+    <circle cx="294.5" cy="296.4" r="3" fill="#C65D2E" fill-opacity="0.85" stroke="none" data-x="3" data-y="50" data-series="B"/>
+    <circle cx="453.5" cy="138.8" r="3" fill="#C65D2E" fill-opacity="0.85" stroke="none" data-x="5" data-y="70" data-series="B"/>
+    <circle cx="533" cy="123.04" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="6" data-y="72" data-series="A"/>
   </g>
 </svg>

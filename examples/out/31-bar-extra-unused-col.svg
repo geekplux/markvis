@@ -2,43 +2,34 @@
   <title id="mv-84c91d359417bba8-title">NPS</title>
   <desc id="mv-84c91d359417bba8-desc">bar chart. NPS. x=segment. y=score. 3 rows.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">NPS</text>
-  <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="56" x2="696" y1="432" y2="432"/>
-    <line x1="56" x2="696" y1="336" y2="336"/>
-    <line x1="56" x2="696" y1="240" y2="240"/>
-    <line x1="56" x2="696" y1="144" y2="144"/>
-    <line x1="56" x2="696" y1="48" y2="48"/>
-  </g>
-  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">NPS</text>
+  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
   <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
-    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="52" x2="56" y1="336" y2="336" stroke="#A8A29E"/>
-    <text x="44" y="336" text-anchor="end" dominant-baseline="middle">20</text>
-    <line x1="52" x2="56" y1="240" y2="240" stroke="#A8A29E"/>
-    <text x="44" y="240" text-anchor="end" dominant-baseline="middle">40</text>
-    <line x1="52" x2="56" y1="144" y2="144" stroke="#A8A29E"/>
-    <text x="44" y="144" text-anchor="end" dominant-baseline="middle">60</text>
-    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
-    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">80</text>
-    <line x1="162.67" x2="162.67" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="162.67" y="448" text-anchor="middle" font-size="10" data-full-label="Enterprise">Enterprise</text>
-    <line x1="376" x2="376" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="376" y="448" text-anchor="middle" font-size="10" data-full-label="SMB">SMB</text>
-    <line x1="589.33" x2="589.33" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="589.33" y="448" text-anchor="middle" font-size="10" data-full-label="Consumer">Consumer</text>
-  </g>
-  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">score</text>
-  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">segment</text>
-  <g>
-    <path d="M77.33 432 L77.33 88.4 Q77.33 86.4 79.33 86.4 L246 86.4 Q248 86.4 248 88.4 L248 432 Z" fill="#2B6CB0" data-x="Enterprise" data-series="score" data-y="72"/>
-    <path d="M290.67 432 L290.67 141.2 Q290.67 139.2 292.67 139.2 L459.33 139.2 Q461.33 139.2 461.33 141.2 L461.33 432 Z" fill="#2B6CB0" data-x="SMB" data-series="score" data-y="61"/>
-    <path d="M504 432 L504 170 Q504 168 506 168 L672.67 168 Q674.67 168 674.67 170 L674.67 432 Z" fill="#2B6CB0" data-x="Consumer" data-series="score" data-y="55"/>
+    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
+    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="44" x2="48" y1="349.5" y2="349.5" stroke="#A8A29E"/>
+    <text x="38" y="349.5" text-anchor="end" dominant-baseline="middle">20</text>
+    <line x1="44" x2="48" y1="245" y2="245" stroke="#A8A29E"/>
+    <text x="38" y="245" text-anchor="end" dominant-baseline="middle">40</text>
+    <line x1="44" x2="48" y1="140.5" y2="140.5" stroke="#A8A29E"/>
+    <text x="38" y="140.5" text-anchor="end" dominant-baseline="middle">60</text>
+    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">80</text>
+    <line x1="156.67" x2="156.67" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="156.67" y="468" text-anchor="middle" font-size="10" data-full-label="Enterprise">Enterprise</text>
+    <line x1="374" x2="374" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="SMB">SMB</text>
+    <line x1="591.33" x2="591.33" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="591.33" y="468" text-anchor="middle" font-size="10" data-full-label="Consumer">Consumer</text>
   </g>
   <g>
-    <text x="162.67" y="78.4" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Enterprise">72</text>
-    <text x="376" y="131.2" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="SMB">61</text>
-    <text x="589.33" y="160" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Consumer">55</text>
+    <path d="M120.67 454 L120.67 79.8 Q120.67 77.8 122.67 77.8 L190.67 77.8 Q192.67 77.8 192.67 79.8 L192.67 454 Z" fill="#2B6CB0" data-x="Enterprise" data-series="score" data-y="72"/>
+    <path d="M338 454 L338 137.28 Q338 135.28 340 135.28 L408 135.28 Q410 135.28 410 137.28 L410 454 Z" fill="#2B6CB0" data-x="SMB" data-series="score" data-y="61"/>
+    <path d="M555.33 454 L555.33 168.63 Q555.33 166.63 557.33 166.63 L625.33 166.63 Q627.33 166.63 627.33 168.63 L627.33 454 Z" fill="#2B6CB0" data-x="Consumer" data-series="score" data-y="55"/>
+  </g>
+  <g>
+    <text x="156.67" y="69.8" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="Enterprise">72</text>
+    <text x="374" y="127.28" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="SMB">61</text>
+    <text x="591.33" y="158.63" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="Consumer">55</text>
   </g>
 </svg>

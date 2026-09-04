@@ -2,17 +2,17 @@
   <title id="mv-2339d258a0310de9-title">pie omitted title</title>
   <desc id="mv-2339d258a0310de9-desc">pie chart. pie omitted title. x=label. y=n. 2 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">pie omitted title</text>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">pie omitted title</text>
   <g aria-hidden="true">
-    <path d="M376 240 L376 101.76 A138.24 138.24 0 1 1 294.74 351.84 Z" fill="#2B6CB0" stroke="#F7F4EF" stroke-width="1.5" data-label="yes" data-raw-value="60"/>
-    <path d="M376 240 L294.74 351.84 A138.24 138.24 0 0 1 376 101.76 Z" fill="#C65D2E" stroke="#F7F4EF" stroke-width="1.5" data-label="no" data-raw-value="40"/>
+    <path d="M374 248 L374 103.84 A144.16 144.16 0 1 1 289.26 364.63 Z" fill="#2B6CB0" stroke="#F7F4EF" stroke-width="1.5" data-label="yes" data-raw-value="60"/>
+    <path d="M374 248 L289.26 364.63 A144.16 144.16 0 0 1 374 103.84 Z" fill="#C65D2E" stroke="#F7F4EF" stroke-width="1.5" data-label="no" data-raw-value="40"/>
   </g>
   <g fill="none" stroke="#A8A29E" stroke-width="1">
-    <polyline points="507.47,282.72 522.69,287.66 530.69,287.66"/>
-    <polyline points="244.53,197.28 229.31,192.34 221.31,192.34"/>
+    <polyline points="511.1,292.55 526.32,297.49 534.32,297.49"/>
+    <polyline points="236.9,203.45 221.68,198.51 213.68,198.51"/>
   </g>
-  <g font-size="10" font-weight="500" fill="#1C1917">
-    <text x="542.69" y="287.66" text-anchor="start" dominant-baseline="middle" data-label="yes">yes · 60</text>
-    <text x="209.31" y="192.34" text-anchor="end" dominant-baseline="middle" data-label="no">no · 40</text>
+  <g font-size="11" font-weight="500" fill="#1C1917">
+    <text x="546.32" y="297.49" text-anchor="start" dominant-baseline="middle" data-label="yes">yes · 60</text>
+    <text x="201.68" y="198.51" text-anchor="end" dominant-baseline="middle" data-label="no">no · 40</text>
   </g>
 </svg>

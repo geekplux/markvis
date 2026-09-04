@@ -2,47 +2,43 @@
   <title id="mv-f3e428352746c151-title">Offset check</title>
   <desc id="mv-f3e428352746c151-desc">scatter chart. Offset check. x=dx. y=dy. 4 rows.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Offset check</text>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Offset check</text>
   <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="56" x2="696" y1="432" y2="432"/>
-    <line x1="56" x2="696" y1="355.2" y2="355.2"/>
-    <line x1="56" x2="696" y1="278.4" y2="278.4"/>
-    <line x1="56" x2="696" y1="201.6" y2="201.6"/>
-    <line x1="56" x2="696" y1="124.8" y2="124.8"/>
-    <line x1="56" x2="696" y1="48" y2="48"/>
+    <line x1="48" x2="700" y1="370.4" y2="370.4"/>
+    <line x1="48" x2="700" y1="286.8" y2="286.8"/>
+    <line x1="48" x2="700" y1="119.6" y2="119.6"/>
+    <line x1="48" x2="700" y1="36" y2="36"/>
   </g>
-  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
-  <line x1="56" x2="696" y1="355.2" y2="355.2" stroke="#A8A29E" stroke-width="1"/>
+  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <line x1="48" x2="700" y1="370.4" y2="370.4" stroke="#A8A29E" stroke-width="1"/>
   <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
-    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">-1</text>
-    <line x1="52" x2="56" y1="355.2" y2="355.2" stroke="#A8A29E"/>
-    <text x="44" y="355.2" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="52" x2="56" y1="278.4" y2="278.4" stroke="#A8A29E"/>
-    <text x="44" y="278.4" text-anchor="end" dominant-baseline="middle">1</text>
-    <line x1="52" x2="56" y1="201.6" y2="201.6" stroke="#A8A29E"/>
-    <text x="44" y="201.6" text-anchor="end" dominant-baseline="middle">2</text>
-    <line x1="52" x2="56" y1="124.8" y2="124.8" stroke="#A8A29E"/>
-    <text x="44" y="124.8" text-anchor="end" dominant-baseline="middle">3</text>
-    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
-    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">4</text>
-    <line x1="64" x2="64" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="64" y="448" text-anchor="middle" font-size="10" data-full-label="-1">-1</text>
-    <line x1="220" x2="220" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="220" y="448" text-anchor="middle" font-size="10" data-full-label="0">0</text>
-    <line x1="376" x2="376" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="376" y="448" text-anchor="middle" font-size="10" data-full-label="1">1</text>
-    <line x1="532" x2="532" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="532" y="448" text-anchor="middle" font-size="10" data-full-label="2">2</text>
-    <line x1="688" x2="688" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="688" y="448" text-anchor="middle" font-size="10" data-full-label="3">3</text>
+    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
+    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">-1</text>
+    <line x1="44" x2="48" y1="370.4" y2="370.4" stroke="#A8A29E"/>
+    <text x="38" y="370.4" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="44" x2="48" y1="286.8" y2="286.8" stroke="#A8A29E"/>
+    <text x="38" y="286.8" text-anchor="end" dominant-baseline="middle">1</text>
+    <line x1="44" x2="48" y1="203.2" y2="203.2" stroke="#A8A29E"/>
+    <text x="38" y="203.2" text-anchor="end" dominant-baseline="middle">2</text>
+    <line x1="44" x2="48" y1="119.6" y2="119.6" stroke="#A8A29E"/>
+    <text x="38" y="119.6" text-anchor="end" dominant-baseline="middle">3</text>
+    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">4</text>
+    <line x1="56" x2="56" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="56" y="468" text-anchor="middle" font-size="10" data-full-label="-1">-1</text>
+    <line x1="215" x2="215" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="215" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <line x1="374" x2="374" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="1">1</text>
+    <line x1="533" x2="533" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="533" y="468" text-anchor="middle" font-size="10" data-full-label="2">2</text>
+    <line x1="692" x2="692" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="692" y="468" text-anchor="middle" font-size="10" data-full-label="3">3</text>
   </g>
-  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">dy</text>
-  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">dx</text>
   <g>
-    <circle cx="220" cy="355.2" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="0" data-y="0" data-series="dy"/>
-    <circle cx="376" cy="355.2" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="1" data-y="0" data-series="dy"/>
-    <circle cx="220" cy="278.4" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="0" data-y="1" data-series="dy"/>
-    <circle cx="532" cy="124.8" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="2" data-y="3" data-series="dy"/>
+    <circle cx="215" cy="370.4" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="0" data-y="0" data-series="dy"/>
+    <circle cx="374" cy="370.4" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="1" data-y="0" data-series="dy"/>
+    <circle cx="215" cy="286.8" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="0" data-y="1" data-series="dy"/>
+    <circle cx="533" cy="119.6" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="2" data-y="3" data-series="dy"/>
   </g>
 </svg>

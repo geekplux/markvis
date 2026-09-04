@@ -2,20 +2,20 @@
   <title id="mv-9578aeee57345aa7-title">Mix</title>
   <desc id="mv-9578aeee57345aa7-desc">pie chart. Mix. x=name. y=value. unit=%. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Mix<tspan font-size="12" font-weight="400" fill="#78716C"> · %</tspan></text>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Mix<tspan font-size="12" font-weight="400" fill="#78716C"> · %</tspan></text>
   <g aria-hidden="true">
-    <path d="M376 240 L376 101.76 A138.24 138.24 0 0 1 396.6 376.7 Z" fill="#2B6CB0" stroke="#F7F4EF" stroke-width="1.5" data-label="Core" data-raw-value="50"/>
-    <path d="M376 240 L396.6 376.7 A138.24 138.24 0 0 1 238.15 229.67 Z" fill="#C65D2E" stroke="#F7F4EF" stroke-width="1.5" data-label="Addons" data-raw-value="30"/>
-    <path d="M376 240 L238.15 229.67 A138.24 138.24 0 0 1 376 101.76 Z" fill="#2F8F6B" stroke="#F7F4EF" stroke-width="1.5" data-label="Other" data-raw-value="25"/>
+    <path d="M374 248 L374 103.84 A144.16 144.16 0 0 1 395.49 390.55 Z" fill="#2B6CB0" stroke="#F7F4EF" stroke-width="1.5" data-label="Core" data-raw-value="50"/>
+    <path d="M374 248 L395.49 390.55 A144.16 144.16 0 0 1 230.24 237.23 Z" fill="#C65D2E" stroke="#F7F4EF" stroke-width="1.5" data-label="Addons" data-raw-value="30"/>
+    <path d="M374 248 L230.24 237.23 A144.16 144.16 0 0 1 374 103.84 Z" fill="#2F8F6B" stroke="#F7F4EF" stroke-width="1.5" data-label="Other" data-raw-value="25"/>
   </g>
   <g fill="none" stroke="#A8A29E" stroke-width="1">
-    <polyline points="513.85,229.67 529.81,228.47 537.81,228.47"/>
-    <polyline points="281.97,341.34 271.09,353.07 263.09,353.07"/>
-    <polyline points="281.97,138.66 271.09,126.93 263.09,126.93"/>
+    <polyline points="517.76,237.23 533.71,236.03 541.71,236.03"/>
+    <polyline points="275.95,353.68 265.06,365.41 257.06,365.41"/>
+    <polyline points="275.95,142.32 265.06,130.59 257.06,130.59"/>
   </g>
-  <g font-size="10" font-weight="500" fill="#1C1917">
-    <text x="549.81" y="228.47" text-anchor="start" dominant-baseline="middle" data-label="Core">Core · 50</text>
-    <text x="251.09" y="353.07" text-anchor="end" dominant-baseline="middle" data-label="Addons">Addons · 30</text>
-    <text x="251.09" y="126.93" text-anchor="end" dominant-baseline="middle" data-label="Other">Other · 25</text>
+  <g font-size="11" font-weight="500" fill="#1C1917">
+    <text x="553.71" y="236.03" text-anchor="start" dominant-baseline="middle" data-label="Core">Core · 50</text>
+    <text x="245.06" y="365.41" text-anchor="end" dominant-baseline="middle" data-label="Addons">Addons · 30</text>
+    <text x="245.06" y="130.59" text-anchor="end" dominant-baseline="middle" data-label="Other">Other · 25</text>
   </g>
 </svg>

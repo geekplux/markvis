@@ -2,44 +2,41 @@
   <title id="mv-4d47220ef6c9f6a1-title">Backlog</title>
   <desc id="mv-4d47220ef6c9f6a1-desc">area chart. Backlog. x=sprint. y=stories. 4 rows.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Backlog</text>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Backlog</text>
   <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="56" x2="696" y1="432" y2="432"/>
-    <line x1="56" x2="696" y1="304" y2="304"/>
-    <line x1="56" x2="696" y1="176" y2="176"/>
-    <line x1="56" x2="696" y1="48" y2="48"/>
+    <line x1="48" x2="700" y1="314.67" y2="314.67"/>
+    <line x1="48" x2="700" y1="175.33" y2="175.33"/>
+    <line x1="48" x2="700" y1="36" y2="36"/>
   </g>
-  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
   <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
-    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="52" x2="56" y1="304" y2="304" stroke="#A8A29E"/>
-    <text x="44" y="304" text-anchor="end" dominant-baseline="middle">10</text>
-    <line x1="52" x2="56" y1="176" y2="176" stroke="#A8A29E"/>
-    <text x="44" y="176" text-anchor="end" dominant-baseline="middle">20</text>
-    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
-    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">30</text>
-    <line x1="64" x2="64" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="64" y="448" text-anchor="middle" font-size="10" data-full-label="0">0</text>
-    <line x1="188.8" x2="188.8" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="188.8" y="448" text-anchor="middle" font-size="10" data-full-label="1">1</text>
-    <line x1="313.6" x2="313.6" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="313.6" y="448" text-anchor="middle" font-size="10" data-full-label="2">2</text>
-    <line x1="438.4" x2="438.4" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="438.4" y="448" text-anchor="middle" font-size="10" data-full-label="3">3</text>
-    <line x1="563.2" x2="563.2" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="563.2" y="448" text-anchor="middle" font-size="10" data-full-label="4">4</text>
-    <line x1="688" x2="688" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="688" y="448" text-anchor="middle" font-size="10" data-full-label="5">5</text>
+    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
+    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="44" x2="48" y1="314.67" y2="314.67" stroke="#A8A29E"/>
+    <text x="38" y="314.67" text-anchor="end" dominant-baseline="middle">10</text>
+    <line x1="44" x2="48" y1="175.33" y2="175.33" stroke="#A8A29E"/>
+    <text x="38" y="175.33" text-anchor="end" dominant-baseline="middle">20</text>
+    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">30</text>
+    <line x1="56" x2="56" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="56" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <line x1="183.2" x2="183.2" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="183.2" y="468" text-anchor="middle" font-size="10" data-full-label="1">1</text>
+    <line x1="310.4" x2="310.4" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="310.4" y="468" text-anchor="middle" font-size="10" data-full-label="2">2</text>
+    <line x1="437.6" x2="437.6" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="437.6" y="468" text-anchor="middle" font-size="10" data-full-label="3">3</text>
+    <line x1="564.8" x2="564.8" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="564.8" y="468" text-anchor="middle" font-size="10" data-full-label="4">4</text>
+    <line x1="692" x2="692" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="692" y="468" text-anchor="middle" font-size="10" data-full-label="5">5</text>
   </g>
-  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">stories</text>
-  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">sprint</text>
   <g fill="none">
-    <path d="M188.8 176 L313.6 124.8 L438.4 201.6 L563.2 150.4 L563.2 432 L188.8 432 Z" fill="#2B6CB0" fill-opacity="0.16" stroke="none" data-series="stories"/>
-    <path d="M188.8 176 L313.6 124.8 L438.4 201.6 L563.2 150.4" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="stories"/>
-    <circle cx="188.8" cy="176" r="2.5" fill="#2B6CB0" stroke="none" data-series="stories"/>
-    <circle cx="313.6" cy="124.8" r="2.5" fill="#2B6CB0" stroke="none" data-series="stories"/>
-    <circle cx="438.4" cy="201.6" r="2.5" fill="#2B6CB0" stroke="none" data-series="stories"/>
-    <circle cx="563.2" cy="150.4" r="2.5" fill="#2B6CB0" stroke="none" data-series="stories"/>
+    <path d="M183.2 175.33 L310.4 119.6 L437.6 203.2 L564.8 147.47 L564.8 454 L183.2 454 Z" fill="#2B6CB0" fill-opacity="0.14" stroke="none" data-series="stories"/>
+    <path d="M183.2 175.33 L310.4 119.6 L437.6 203.2 L564.8 147.47" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="stories"/>
+    <circle cx="183.2" cy="175.33" r="2.5" fill="#2B6CB0" stroke="none" data-series="stories"/>
+    <circle cx="310.4" cy="119.6" r="2.5" fill="#2B6CB0" stroke="none" data-series="stories"/>
+    <circle cx="437.6" cy="203.2" r="2.5" fill="#2B6CB0" stroke="none" data-series="stories"/>
+    <circle cx="564.8" cy="147.47" r="2.5" fill="#2B6CB0" stroke="none" data-series="stories"/>
   </g>
 </svg>

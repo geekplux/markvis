@@ -2,17 +2,17 @@
   <title id="mv-b436e4d1f77c6b72-title">Feature flags</title>
   <desc id="mv-b436e4d1f77c6b72-desc">pie chart. Feature flags. x=flag. y=count. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Feature flags</text>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Feature flags</text>
   <g aria-hidden="true">
-    <path d="M376 240 L376 101.76 A138.24 138.24 0 1 1 244.53 282.72 Z" fill="#2B6CB0" stroke="#F7F4EF" stroke-width="1.5" data-label="on" data-raw-value="70"/>
-    <path d="M376 240 L244.53 282.72 A138.24 138.24 0 0 1 376 101.76 Z" fill="#C65D2E" stroke="#F7F4EF" stroke-width="1.5" data-label="off" data-raw-value="30"/>
+    <path d="M374 248 L374 103.84 A144.16 144.16 0 1 1 236.9 292.55 Z" fill="#2B6CB0" stroke="#F7F4EF" stroke-width="1.5" data-label="on" data-raw-value="70"/>
+    <path d="M374 248 L236.9 292.55 A144.16 144.16 0 0 1 374 103.84 Z" fill="#C65D2E" stroke="#F7F4EF" stroke-width="1.5" data-label="off" data-raw-value="30"/>
   </g>
   <g fill="none" stroke="#A8A29E" stroke-width="1">
-    <polyline points="487.84,321.26 500.78,330.66 508.78,330.66"/>
-    <polyline points="264.16,158.74 251.22,149.34 243.22,149.34"/>
+    <polyline points="490.63,332.74 503.57,342.14 511.57,342.14"/>
+    <polyline points="257.37,163.26 244.43,153.86 236.43,153.86"/>
   </g>
-  <g font-size="10" font-weight="500" fill="#1C1917">
-    <text x="520.78" y="330.66" text-anchor="start" dominant-baseline="middle" data-label="on">on · 70</text>
-    <text x="231.22" y="149.34" text-anchor="end" dominant-baseline="middle" data-label="off">off · 30</text>
+  <g font-size="11" font-weight="500" fill="#1C1917">
+    <text x="523.57" y="342.14" text-anchor="start" dominant-baseline="middle" data-label="on">on · 70</text>
+    <text x="224.43" y="153.86" text-anchor="end" dominant-baseline="middle" data-label="off">off · 30</text>
   </g>
 </svg>

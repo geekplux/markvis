@@ -2,7 +2,7 @@
 
 ```markvis
 type: pie
-title: Share
+title: A leads at 40
 x: name
 y: value
 

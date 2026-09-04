@@ -2,42 +2,38 @@
   <title id="mv-3157f3bcbd9c6378-title">Error rate</title>
   <desc id="mv-3157f3bcbd9c6378-desc">line chart. Error rate. x=day. y=errors. 3 rows.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Error rate</text>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Error rate</text>
   <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="56" x2="696" y1="432" y2="432"/>
-    <line x1="56" x2="696" y1="355.2" y2="355.2"/>
-    <line x1="56" x2="696" y1="278.4" y2="278.4"/>
-    <line x1="56" x2="696" y1="201.6" y2="201.6"/>
-    <line x1="56" x2="696" y1="124.8" y2="124.8"/>
-    <line x1="56" x2="696" y1="48" y2="48"/>
+    <line x1="48" x2="700" y1="370.4" y2="370.4"/>
+    <line x1="48" x2="700" y1="286.8" y2="286.8"/>
+    <line x1="48" x2="700" y1="119.6" y2="119.6"/>
+    <line x1="48" x2="700" y1="36" y2="36"/>
   </g>
-  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
   <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
-    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">1</text>
-    <line x1="52" x2="56" y1="355.2" y2="355.2" stroke="#A8A29E"/>
-    <text x="44" y="355.2" text-anchor="end" dominant-baseline="middle">2</text>
-    <line x1="52" x2="56" y1="278.4" y2="278.4" stroke="#A8A29E"/>
-    <text x="44" y="278.4" text-anchor="end" dominant-baseline="middle">3</text>
-    <line x1="52" x2="56" y1="201.6" y2="201.6" stroke="#A8A29E"/>
-    <text x="44" y="201.6" text-anchor="end" dominant-baseline="middle">4</text>
-    <line x1="52" x2="56" y1="124.8" y2="124.8" stroke="#A8A29E"/>
-    <text x="44" y="124.8" text-anchor="end" dominant-baseline="middle">5</text>
-    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
-    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">6</text>
-    <line x1="162.67" x2="162.67" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="162.67" y="448" text-anchor="middle" font-size="10" data-full-label="Mon">Mon</text>
-    <line x1="376" x2="376" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="376" y="448" text-anchor="middle" font-size="10" data-full-label="Tue">Tue</text>
-    <line x1="589.33" x2="589.33" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="589.33" y="448" text-anchor="middle" font-size="10" data-full-label="Wed">Wed</text>
+    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
+    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">1</text>
+    <line x1="44" x2="48" y1="370.4" y2="370.4" stroke="#A8A29E"/>
+    <text x="38" y="370.4" text-anchor="end" dominant-baseline="middle">2</text>
+    <line x1="44" x2="48" y1="286.8" y2="286.8" stroke="#A8A29E"/>
+    <text x="38" y="286.8" text-anchor="end" dominant-baseline="middle">3</text>
+    <line x1="44" x2="48" y1="203.2" y2="203.2" stroke="#A8A29E"/>
+    <text x="38" y="203.2" text-anchor="end" dominant-baseline="middle">4</text>
+    <line x1="44" x2="48" y1="119.6" y2="119.6" stroke="#A8A29E"/>
+    <text x="38" y="119.6" text-anchor="end" dominant-baseline="middle">5</text>
+    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">6</text>
+    <line x1="156.67" x2="156.67" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="156.67" y="468" text-anchor="middle" font-size="10" data-full-label="Mon">Mon</text>
+    <line x1="374" x2="374" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="Tue">Tue</text>
+    <line x1="591.33" x2="591.33" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="591.33" y="468" text-anchor="middle" font-size="10" data-full-label="Wed">Wed</text>
   </g>
-  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">errors</text>
-  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">day</text>
   <g fill="none">
-    <path d="M162.67 278.4 L376 124.8 L589.33 355.2" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="errors"/>
-    <circle cx="162.67" cy="278.4" r="2.5" fill="#2B6CB0" stroke="none" data-series="errors"/>
-    <circle cx="376" cy="124.8" r="2.5" fill="#2B6CB0" stroke="none" data-series="errors"/>
-    <circle cx="589.33" cy="355.2" r="2.5" fill="#2B6CB0" stroke="none" data-series="errors"/>
+    <path d="M156.67 286.8 L374 119.6 L591.33 370.4" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="errors"/>
+    <circle cx="156.67" cy="286.8" r="2.5" fill="#2B6CB0" stroke="none" data-series="errors"/>
+    <circle cx="374" cy="119.6" r="2.5" fill="#2B6CB0" stroke="none" data-series="errors"/>
+    <circle cx="591.33" cy="370.4" r="2.5" fill="#2B6CB0" stroke="none" data-series="errors"/>
   </g>
 </svg>

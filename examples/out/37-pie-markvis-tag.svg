@@ -2,23 +2,23 @@
   <title id="mv-45904bfc459355d0-title">Support topics</title>
   <desc id="mv-45904bfc459355d0-desc">pie chart. Support topics. x=topic. y=tickets. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Support topics</text>
+  <text x="131.26" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Support topics</text>
   <g aria-hidden="true">
-    <path d="M376 240 L376 101.76 A138.24 138.24 0 0 1 457.26 351.84 Z" fill="#2B6CB0" stroke="#F7F4EF" stroke-width="1.5" data-label="Billing and invoice disputes" data-raw-value="40"/>
-    <path d="M376 240 L457.26 351.84 A138.24 138.24 0 0 1 264.16 321.26 Z" fill="#C65D2E" stroke="#F7F4EF" stroke-width="1.5" data-label="Account access and MFA reset" data-raw-value="25"/>
-    <path d="M376 240 L264.16 321.26 A138.24 138.24 0 0 1 264.16 158.74 Z" fill="#2F8F6B" stroke="#F7F4EF" stroke-width="1.5" data-label="Product how-to questions" data-raw-value="20"/>
-    <path d="M376 240 L264.16 158.74 A138.24 138.24 0 0 1 376 101.76 Z" fill="#B08900" stroke="#F7F4EF" stroke-width="1.5" data-label="Other miscellaneous" data-raw-value="15"/>
+    <path d="M350.28 248 L350.28 103.84 A144.16 144.16 0 0 1 435.01 364.63 Z" fill="#2B6CB0" stroke="#F7F4EF" stroke-width="1.5" data-label="Billing and invoice disputes" data-raw-value="40"/>
+    <path d="M350.28 248 L435.01 364.63 A144.16 144.16 0 0 1 233.65 332.74 Z" fill="#C65D2E" stroke="#F7F4EF" stroke-width="1.5" data-label="Account access and MFA reset" data-raw-value="25"/>
+    <path d="M350.28 248 L233.65 332.74 A144.16 144.16 0 0 1 233.65 163.26 Z" fill="#2F8F6B" stroke="#F7F4EF" stroke-width="1.5" data-label="Product how-to questions" data-raw-value="20"/>
+    <path d="M350.28 248 L233.65 163.26 A144.16 144.16 0 0 1 350.28 103.84 Z" fill="#B08900" stroke="#F7F4EF" stroke-width="1.5" data-label="Other miscellaneous" data-raw-value="15"/>
   </g>
   <g fill="none" stroke="#A8A29E" stroke-width="1">
-    <polyline points="507.47,197.28 522.69,192.34 530.69,192.34"/>
-    <polyline points="354.37,376.54 351.87,392.34 343.87,392.34"/>
-    <polyline points="237.76,240 221.76,240 213.76,240"/>
-    <polyline points="313.24,116.83 305.98,102.57 297.98,102.57"/>
+    <polyline points="487.38,203.45 502.6,198.51 510.6,198.51"/>
+    <polyline points="327.73,390.39 325.22,406.19 317.22,406.19"/>
+    <polyline points="206.12,248 190.12,248 182.12,248"/>
+    <polyline points="284.83,119.55 277.57,105.3 269.57,105.3"/>
   </g>
-  <g font-size="10" font-weight="500" fill="#1C1917">
-    <text x="542.69" y="192.34" text-anchor="start" dominant-baseline="middle" data-label="Billing and invoice disputes">Billing and invoice disputes · 40</text>
-    <text x="331.87" y="392.34" text-anchor="end" dominant-baseline="middle" data-label="Account access and MFA reset">Account access and MFA reset · 25</text>
-    <text x="201.76" y="240" text-anchor="end" dominant-baseline="middle" data-label="Product how-to questions">Product how-to questions · 20</text>
-    <text x="285.98" y="102.57" text-anchor="end" dominant-baseline="middle" data-label="Other miscellaneous">Other miscellaneous · 15</text>
+  <g font-size="11" font-weight="500" fill="#1C1917">
+    <text x="522.6" y="198.51" text-anchor="start" dominant-baseline="middle" data-label="Billing and invoice disputes">Billing and invoice disputes · 40</text>
+    <text x="305.22" y="406.19" text-anchor="end" dominant-baseline="middle" data-label="Account access and MFA reset">Account access and MFA reset · 25</text>
+    <text x="170.12" y="248" text-anchor="end" dominant-baseline="middle" data-label="Product how-to questions">Product how-to questions · 20</text>
+    <text x="257.57" y="105.3" text-anchor="end" dominant-baseline="middle" data-label="Other miscellaneous">Other miscellaneous · 15</text>
   </g>
 </svg>

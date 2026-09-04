@@ -2,48 +2,42 @@
   <title id="mv-c099937507374395-title">Sales</title>
   <desc id="mv-c099937507374395-desc">line chart. Sales. x=month. y=amount. series=city. 4 rows.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Sales</text>
-  <g font-size="11" font-weight="400" fill="#1C1917">
-    <rect x="56" y="43" width="10" height="10" fill="#2B6CB0" rx="1"/>
-    <text x="70" y="52" data-legend="北京">北京</text>
-    <rect x="108" y="43" width="10" height="10" fill="#C65D2E" rx="1"/>
-    <text x="122" y="52" data-legend="東京">東京</text>
-  </g>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Sales</text>
   <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="56" x2="696" y1="432" y2="432"/>
-    <line x1="56" x2="696" y1="360" y2="360"/>
-    <line x1="56" x2="696" y1="288" y2="288"/>
-    <line x1="56" x2="696" y1="216" y2="216"/>
-    <line x1="56" x2="696" y1="144" y2="144"/>
-    <line x1="56" x2="696" y1="72" y2="72"/>
+    <line x1="48" x2="690" y1="370.4" y2="370.4"/>
+    <line x1="48" x2="690" y1="286.8" y2="286.8"/>
+    <line x1="48" x2="690" y1="119.6" y2="119.6"/>
+    <line x1="48" x2="690" y1="36" y2="36"/>
   </g>
-  <path d="M56 72 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <path d="M48 36 L48 454 L690 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
   <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
-    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">90</text>
-    <line x1="52" x2="56" y1="360" y2="360" stroke="#A8A29E"/>
-    <text x="44" y="360" text-anchor="end" dominant-baseline="middle">100</text>
-    <line x1="52" x2="56" y1="288" y2="288" stroke="#A8A29E"/>
-    <text x="44" y="288" text-anchor="end" dominant-baseline="middle">110</text>
-    <line x1="52" x2="56" y1="216" y2="216" stroke="#A8A29E"/>
-    <text x="44" y="216" text-anchor="end" dominant-baseline="middle">120</text>
-    <line x1="52" x2="56" y1="144" y2="144" stroke="#A8A29E"/>
-    <text x="44" y="144" text-anchor="end" dominant-baseline="middle">130</text>
-    <line x1="52" x2="56" y1="72" y2="72" stroke="#A8A29E"/>
-    <text x="44" y="72" text-anchor="end" dominant-baseline="middle">140</text>
-    <line x1="216" x2="216" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="216" y="448" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
-    <line x1="536" x2="536" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="536" y="448" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
+    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
+    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">90</text>
+    <line x1="44" x2="48" y1="370.4" y2="370.4" stroke="#A8A29E"/>
+    <text x="38" y="370.4" text-anchor="end" dominant-baseline="middle">100</text>
+    <line x1="44" x2="48" y1="286.8" y2="286.8" stroke="#A8A29E"/>
+    <text x="38" y="286.8" text-anchor="end" dominant-baseline="middle">110</text>
+    <line x1="44" x2="48" y1="203.2" y2="203.2" stroke="#A8A29E"/>
+    <text x="38" y="203.2" text-anchor="end" dominant-baseline="middle">120</text>
+    <line x1="44" x2="48" y1="119.6" y2="119.6" stroke="#A8A29E"/>
+    <text x="38" y="119.6" text-anchor="end" dominant-baseline="middle">130</text>
+    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">140</text>
+    <line x1="208.5" x2="208.5" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="208.5" y="468" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
+    <line x1="529.5" x2="529.5" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="529.5" y="468" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
   </g>
-  <text x="12" y="252" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 252)">amount</text>
-  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">month</text>
   <g fill="none">
-    <path d="M216 360 L536 288" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="北京"/>
-    <circle cx="216" cy="360" r="2.5" fill="#2B6CB0" stroke="none" data-series="北京"/>
-    <circle cx="536" cy="288" r="2.5" fill="#2B6CB0" stroke="none" data-series="北京"/>
-    <path d="M216 216 L536 144" fill="none" stroke="#C65D2E" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="東京"/>
-    <circle cx="216" cy="216" r="2.5" fill="#C65D2E" stroke="none" data-series="東京"/>
-    <circle cx="536" cy="144" r="2.5" fill="#C65D2E" stroke="none" data-series="東京"/>
+    <path d="M208.5 370.4 L529.5 286.8" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="北京"/>
+    <circle cx="208.5" cy="370.4" r="2.5" fill="#2B6CB0" stroke="none" data-series="北京"/>
+    <circle cx="529.5" cy="286.8" r="2.5" fill="#2B6CB0" stroke="none" data-series="北京"/>
+    <path d="M208.5 203.2 L529.5 119.6" fill="none" stroke="#C65D2E" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="東京"/>
+    <circle cx="208.5" cy="203.2" r="2.5" fill="#C65D2E" stroke="none" data-series="東京"/>
+    <circle cx="529.5" cy="119.6" r="2.5" fill="#C65D2E" stroke="none" data-series="東京"/>
+  </g>
+  <g font-size="11" font-weight="500">
+    <text x="537.5" y="286.8" text-anchor="start" dominant-baseline="middle" fill="#2B6CB0" data-end-label="北京">北京</text>
+    <text x="537.5" y="119.6" text-anchor="start" dominant-baseline="middle" fill="#C65D2E" data-end-label="東京">東京</text>
   </g>
 </svg>

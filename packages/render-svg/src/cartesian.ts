@@ -7,15 +7,14 @@ import {
   usesLinearX,
   type DataRow,
 } from "./data.js";
-import { drawTitle } from "./figure.js";
+import { drawTitle, visibleTitle } from "./figure.js";
 import { binHistogram, histSamplesFromChart, type HistBin } from "./hist.js";
 import {
-  cartesianMargins,
-  categoryLayout,
+  layoutFrame,
   layoutLegend,
-  SVG_HEIGHT,
+  showBarValueLabels,
   SVG_WIDTH,
-  type CategoryLayout,
+  type Painted,
   type PlotBox,
 } from "./layout.js";
 import { seriesStyle } from "./palette.js";
@@ -30,19 +29,26 @@ import {
   yExtent,
   type CompactScale,
 } from "./scale.js";
+import { textWidth } from "./text.js";
 import {
   AREA_OPACITY,
   AXIS,
-  BAR_GAP,
+  BAR_GAP_FEW,
+  BAR_GAP_MANY,
   BAR_LABEL_INSIDE_H,
-  BAR_LABEL_MIN_WIDTH,
   BAR_LABEL_OFFSET,
+  BAR_MAX_WIDTH,
+  BAR_MAX_WIDTH_N,
   BAR_RX,
+  END_LABEL_GAP,
+  END_LABEL_MIN_SEP,
+  END_LABEL_SERIES_MAX,
   GROUP_GAP_PX,
   HAIRLINE,
   LABEL_ROTATE_DEG,
   LINE_POINT_R,
   LINE_STROKE,
+  MAX_INTERIOR_GRID,
   POINT_SKIP_AFTER,
   SCATTER_OPACITY,
   SCATTER_R,
@@ -66,21 +72,16 @@ type Prepared = {
   catStep: number;
   plot: PlotBox;
   legend: ReturnType<typeof layoutLegend>;
-  yAxisTitle: string;
-  xAxisTitle: string;
   rotateX: boolean;
   bins: HistBin[];
   compact: CompactScale | null;
   titleUnit: string | undefined;
   styles: { color: string; opacity: number }[];
+  height: number;
+  showValueLabels: boolean;
+  showInteriorGrid: boolean;
+  useEndLabels: boolean;
 };
-
-function fieldYAxisTitle(chart: ChartIR): string {
-  if (chart.type === "hist") {
-    return chart.y ?? "count";
-  }
-  return chart.y ?? "";
-}
 
 function polyline(points: { x: number; y: number }[]): string {
   return points
@@ -89,6 +90,58 @@ function polyline(points: { x: number; y: number }[]): string {
       return `${cmd}${fmtPx(point.x)} ${fmtPx(point.y)}`;
     })
     .join(" ");
+}
+
+function bandGapRatio(nCat: number): number {
+  return nCat <= 6 ? BAR_GAP_FEW : BAR_GAP_MANY;
+}
+
+export function barSlot(
+  nCat: number,
+  nS: number,
+  catStep: number,
+  plotLeft: number,
+  ci: number,
+  si: number,
+): { x: number; barW: number } {
+  const inner = Math.max(catStep * (1 - bandGapRatio(nCat)), 1);
+  const seriesGap = nS > 1 ? GROUP_GAP_PX : 0;
+  let barW = Math.max(0.5, (inner - seriesGap * (nS - 1)) / nS);
+  if (nCat <= BAR_MAX_WIDTH_N) {
+    barW = Math.min(barW, BAR_MAX_WIDTH);
+  }
+  const groupW = barW * nS + seriesGap * (nS - 1);
+  const groupStart = plotLeft + ci * catStep + (catStep - groupW) / 2;
+  return { x: groupStart + si * (barW + seriesGap), barW };
+}
+
+function typicalBarWidth(nCat: number, nS: number, catStep: number): number {
+  return barSlot(nCat, nS, catStep, 0, 0, 0).barW;
+}
+
+function usesEndLabels(chart: ChartIR, seriesCount: number): boolean {
+  if (chart.type !== "line" && chart.type !== "area") {
+    return false;
+  }
+  return seriesCount >= 2 && seriesCount <= END_LABEL_SERIES_MAX;
+}
+
+function usesColorLegend(chart: ChartIR, seriesCount: number): boolean {
+  if (seriesCount <= 1) {
+    return false;
+  }
+  if (chart.type === "line" || chart.type === "area") {
+    return seriesCount > END_LABEL_SERIES_MAX;
+  }
+  return true;
+}
+
+function endLabelRightMin(series: string[]): number {
+  const widest = Math.max(
+    0,
+    ...series.map((name) => textWidth(name, TYPE.value.size)),
+  );
+  return END_LABEL_GAP + widest;
 }
 
 function prepare(chart: ChartIR): Prepared {
@@ -116,20 +169,9 @@ function prepare(chart: ChartIR): Prepared {
   const yTickLabels = yTickNums.map((n) => formatTick(n, compact));
 
   const styles = series.map((_, i) => seriesStyle(i));
-  const showLegend = !histMode && series.length > 1;
-  const legendDraft = showLegend
-    ? layoutLegend(
-        series,
-        styles.map((s) => s.color),
-        styles.map((s) => s.opacity),
-        72,
-        TITLE_BASELINE + 22,
-        SVG_WIDTH - 96,
-      )
-    : { items: [], height: 0 };
-
-  const yTitle = fieldYAxisTitle(chart);
-  const xTitle = chart.x;
+  const showLegend = usesColorLegend(chart, series.length);
+  const useEndLabels = usesEndLabels(chart, series.length);
+  const rightMin = useEndLabels ? endLabelRightMin(series) : 0;
 
   const xLabelTexts = linearX
     ? histMode
@@ -144,66 +186,58 @@ function prepare(chart: ChartIR): Prepared {
       : []
     : categories;
 
-  const draftMargins = cartesianMargins({
-    yTickLabels,
-    xLabels: linearX && !histMode ? ["0"] : categories,
-    yAxisTitle: yTitle,
-    xAxisTitle: xTitle,
-    legendHeight: legendDraft.height,
-    rotateX: false,
-  });
-  const draftWidth = SVG_WIDTH - draftMargins.left - draftMargins.right;
-  const nCat = Math.max(categories.length, 1);
-  const draftStep = draftWidth / nCat;
-  const catLay: CategoryLayout =
-    linearX && !histMode
-      ? { rotate: false, show: categories.map(() => true) }
-      : categoryLayout(
-          xLabelTexts.length ? xLabelTexts : categories,
-          draftStep,
-        );
+  const legendDraft = showLegend
+    ? layoutLegend(
+        series,
+        styles.map((s) => s.color),
+        styles.map((s) => s.opacity),
+        48,
+        TITLE_BASELINE + 18,
+        SVG_WIDTH - 96,
+      )
+    : { items: [], height: 0 };
 
-  const margins = cartesianMargins({
+  let frame = layoutFrame({
     yTickLabels,
-    xLabels: linearX && !histMode ? ["0"] : categories,
-    yAxisTitle: yTitle,
-    xAxisTitle: xTitle,
+    categoryLabels: xLabelTexts.length ? xLabelTexts : linearX ? [] : categories,
     legendHeight: legendDraft.height,
-    rotateX: catLay.rotate,
+    rightMin,
   });
-
-  const plot: PlotBox = {
-    left: margins.left,
-    right: SVG_WIDTH - margins.right,
-    top: margins.top,
-    bottom: SVG_HEIGHT - margins.bottom,
-    width: SVG_WIDTH - margins.left - margins.right,
-    height: SVG_HEIGHT - margins.top - margins.bottom,
-  };
 
   const legend = showLegend
     ? layoutLegend(
         series,
         styles.map((s) => s.color),
         styles.map((s) => s.opacity),
-        plot.left,
-        TITLE_BASELINE + 22,
-        plot.width,
+        frame.plot.left,
+        TITLE_BASELINE + 18,
+        frame.plot.width,
       )
     : legendDraft;
 
   if (legend.height !== legendDraft.height && showLegend) {
-    const remargins = cartesianMargins({
+    frame = layoutFrame({
       yTickLabels,
-      xLabels: linearX && !histMode ? ["0"] : categories,
-      yAxisTitle: yTitle,
-      xAxisTitle: xTitle,
+      categoryLabels: xLabelTexts.length
+        ? xLabelTexts
+        : linearX
+          ? []
+          : categories,
       legendHeight: legend.height,
-      rotateX: catLay.rotate,
+      rightMin,
     });
-    plot.top = remargins.top;
-    plot.height = plot.bottom - plot.top;
   }
+
+  const plot = frame.plot;
+  const nCat = Math.max(histMode ? bins.length : categories.length, 1);
+  const catStep = plot.width / nCat;
+  const nS = Math.max(series.length, 1);
+  const barW = typicalBarWidth(nCat, nS, catStep);
+  const labelBars =
+    (chart.type === "bar" || chart.type === "hist") &&
+    showBarValueLabels(nCat, barW);
+  const showInteriorGrid =
+    chart.type === "bar" || chart.type === "hist" ? !labelBars : true;
 
   const yScale = scaleLinear([yMin, yMax], [plot.bottom, plot.top]);
   const yTicks = yTickNums.map((n) => ({
@@ -213,9 +247,8 @@ function prepare(chart: ChartIR): Prepared {
 
   let xScaleNum = scaleLinear([0, 1], [plot.left, plot.right]);
   let xTicks: { pos: number; label: string; show: boolean }[] = [];
-  const catStep = plot.width / nCat;
   const catCenter = (i: number) => plot.left + (i + 0.5) * catStep;
-  const showAt = (i: number) => catLay.show[i] ?? true;
+  const showAt = (i: number) => frame.show[i] ?? true;
 
   if (histMode && bins.length > 0) {
     const lo = bins[0]!.left;
@@ -263,13 +296,15 @@ function prepare(chart: ChartIR): Prepared {
     catStep,
     plot,
     legend,
-    yAxisTitle: yTitle,
-    xAxisTitle: xTitle,
-    rotateX: catLay.rotate,
+    rotateX: frame.rotateX,
     bins,
     compact,
     titleUnit: unitWithCompact(chart.unit, compact),
     styles,
+    height: frame.height,
+    showValueLabels: labelBars,
+    showInteriorGrid,
+    useEndLabels,
   };
 }
 
@@ -308,23 +343,54 @@ function drawLegend(prepared: Prepared): string[] {
   return lines;
 }
 
-function drawGridAndAxes(prepared: Prepared): string[] {
-  const { plot, xTicks, yTicks, rotateX, yAxisTitle, xAxisTitle } = prepared;
-  const lines: string[] = [];
-  lines.push(
-    `  <g ${attrs({ fill: "none", stroke: HAIRLINE, "stroke-width": 1 })}>`,
+function interiorGridTicks(
+  yTicks: { pos: number; label: string }[],
+  plotBottom: number,
+): { pos: number; label: string }[] {
+  const interior = yTicks.filter(
+    (tick) => Math.abs(tick.pos - plotBottom) > 0.5,
   );
-  for (const tick of yTicks) {
-    lines.push(
-      `    <line ${attrs({
-        x1: fmtPx(plot.left),
-        x2: fmtPx(plot.right),
-        y1: fmtPx(tick.pos),
-        y2: fmtPx(tick.pos),
-      })}/>`,
-    );
+  if (interior.length <= MAX_INTERIOR_GRID) {
+    return interior;
   }
-  lines.push(`  </g>`);
+  const picked: { pos: number; label: string }[] = [];
+  const seen = new Set<number>();
+  for (let i = 0; i < MAX_INTERIOR_GRID; i++) {
+    const idx = Math.round(
+      (i * (interior.length - 1)) / (MAX_INTERIOR_GRID - 1),
+    );
+    const tick = interior[idx]!;
+    if (seen.has(tick.pos)) {
+      continue;
+    }
+    seen.add(tick.pos);
+    picked.push(tick);
+  }
+  return picked;
+}
+
+function drawGridAndAxes(prepared: Prepared): string[] {
+  const { plot, xTicks, yTicks, rotateX } = prepared;
+  const lines: string[] = [];
+  if (prepared.showInteriorGrid) {
+    const gridTicks = interiorGridTicks(yTicks, plot.bottom);
+    if (gridTicks.length > 0) {
+      lines.push(
+        `  <g ${attrs({ fill: "none", stroke: HAIRLINE, "stroke-width": 1 })}>`,
+      );
+      for (const tick of gridTicks) {
+        lines.push(
+          `    <line ${attrs({
+            x1: fmtPx(plot.left),
+            x2: fmtPx(plot.right),
+            y1: fmtPx(tick.pos),
+            y2: fmtPx(tick.pos),
+          })}/>`,
+        );
+      }
+      lines.push(`  </g>`);
+    }
+  }
 
   lines.push(
     `  <path ${attrs({
@@ -394,7 +460,7 @@ function drawGridAndAxes(prepared: Prepared): string[] {
     }
     if (rotateX) {
       const tx = fmtPx(tick.pos);
-      const ty = fmtPx(plot.bottom + 10);
+      const ty = fmtPx(plot.bottom + 8);
       lines.push(
         `    <text ${attrs({
           x: tx,
@@ -410,7 +476,7 @@ function drawGridAndAxes(prepared: Prepared): string[] {
       lines.push(
         `    <text ${attrs({
           x: fmtPx(tick.pos),
-          y: fmtPx(plot.bottom + 16),
+          y: fmtPx(plot.bottom + TICK_MARK + TYPE.tick.size),
           "text-anchor": "middle",
           "font-size": TYPE.tick.size,
           "data-full-label": tick.label,
@@ -419,34 +485,6 @@ function drawGridAndAxes(prepared: Prepared): string[] {
     }
   }
   lines.push(`  </g>`);
-
-  if (yAxisTitle) {
-    const cx = 12;
-    const cy = (plot.top + plot.bottom) / 2;
-    lines.push(
-      `  <text ${attrs({
-        x: fmtPx(cx),
-        y: fmtPx(cy),
-        "text-anchor": "middle",
-        "font-size": TYPE.axisName.size,
-        "font-weight": TYPE.axisName.weight,
-        fill: TYPE.axisName.fill,
-        transform: `rotate(-90 ${fmtPx(cx)} ${fmtPx(cy)})`,
-      })}>${escapeXml(yAxisTitle)}</text>`,
-    );
-  }
-  if (xAxisTitle) {
-    lines.push(
-      `  <text ${attrs({
-        x: fmtPx((plot.left + plot.right) / 2),
-        y: SVG_HEIGHT - 12,
-        "text-anchor": "middle",
-        "font-size": TYPE.axisName.size,
-        "font-weight": TYPE.axisName.weight,
-        fill: TYPE.axisName.fill,
-      })}>${escapeXml(xAxisTitle)}</text>`,
-    );
-  }
   return lines;
 }
 
@@ -466,19 +504,41 @@ function roundedBarPath(
     return `M${x0} ${fmtPx(y + h)} L${x1} ${fmtPx(y + h)} L${x1} ${y0} L${x0} ${y0} Z`;
   }
   const rr = fmtPx(r);
+  void rr;
   if (roundAwayFromBaselineUp) {
     return `M${x0} ${y1} L${x0} ${fmtPx(y + r)} Q${x0} ${y0} ${fmtPx(x + r)} ${y0} L${fmtPx(x + w - r)} ${y0} Q${x1} ${y0} ${x1} ${fmtPx(y + r)} L${x1} ${y1} Z`;
   }
   return `M${x0} ${y0} L${x1} ${y0} L${x1} ${fmtPx(y + h - r)} Q${x1} ${y1} ${fmtPx(x + w - r)} ${y1} L${fmtPx(x + r)} ${y1} Q${x0} ${y1} ${x0} ${fmtPx(y + h - r)} Z`;
 }
 
+function valueLabelY(
+  roundUp: boolean,
+  y: number,
+  h: number,
+  y0: number,
+): number {
+  if (h >= BAR_LABEL_INSIDE_H) {
+    return roundUp ? y - BAR_LABEL_OFFSET : y + h + BAR_LABEL_OFFSET + 8;
+  }
+  if (h < 8) {
+    return roundUp ? y0 - BAR_LABEL_OFFSET : y0 + BAR_LABEL_OFFSET + 8;
+  }
+  return roundUp ? y + 12 : y + h - 6;
+}
+
 function drawBars(prepared: Prepared): string[] {
-  const { plot, series, categories, rows, catStep, yScale, styles } = prepared;
+  const {
+    plot,
+    series,
+    categories,
+    rows,
+    catStep,
+    yScale,
+    styles,
+    showValueLabels,
+  } = prepared;
   const nS = Math.max(series.length, 1);
-  const bandGap = catStep * BAR_GAP;
-  const inner = Math.max(catStep - bandGap, 1);
-  const seriesGap = nS > 1 ? GROUP_GAP_PX : 0;
-  const barW = Math.max(0.5, (inner - seriesGap * (nS - 1)) / nS);
+  const nCat = categories.length;
   const y0 = yScale(0);
   const lines: string[] = [`  <g>`];
   const labels: string[] = [];
@@ -487,7 +547,7 @@ function drawBars(prepared: Prepared): string[] {
     for (let si = 0; si < series.length; si++) {
       const ser = series[si]!;
       const val = groupedValue(rows, ser, cat);
-      const x = plot.left + ci * catStep + bandGap / 2 + si * (barW + seriesGap);
+      const { x, barW } = barSlot(nCat, nS, catStep, plot.left, ci, si);
       const y1 = yScale(val);
       const y = Math.min(y0, y1);
       const h = Math.abs(y1 - y0);
@@ -503,25 +563,12 @@ function drawBars(prepared: Prepared): string[] {
           "data-y": String(val),
         })}/>`,
       );
-      if (barW < BAR_LABEL_MIN_WIDTH) {
+      if (!showValueLabels) {
         continue;
       }
       const text = formatNumber(val);
       const cx = x + barW / 2;
-      let ly: number;
-      if (h < 12) {
-        ly = roundUp ? y - BAR_LABEL_OFFSET : y + h + BAR_LABEL_OFFSET + 8;
-      } else if (h < BAR_LABEL_INSIDE_H) {
-        ly = roundUp ? y + 12 : y + h - 6;
-      } else {
-        ly = roundUp ? y - BAR_LABEL_OFFSET : y + h + BAR_LABEL_OFFSET + 8;
-      }
-      if (roundUp && ly < plot.top + 10 && h >= 12) {
-        ly = y + 12;
-      }
-      if (!roundUp && ly > plot.bottom - 4 && h >= 12) {
-        ly = y + h - 6;
-      }
+      const ly = valueLabelY(roundUp, y, h, y0);
       labels.push(
         `    <text ${attrs({
           x: fmtPx(cx),
@@ -558,6 +605,88 @@ function xPos(
 
 function opacityAttr(opacity: number): number | undefined {
   return opacity === 1 ? undefined : opacity;
+}
+
+function lastPointBySeries(
+  prepared: Prepared,
+): { name: string; x: number; y: number; color: string }[] {
+  const catIndex = new Map(prepared.categories.map((c, i) => [c, i]));
+  const out: { name: string; x: number; y: number; color: string }[] = [];
+  for (let si = 0; si < prepared.series.length; si++) {
+    const ser = prepared.series[si]!;
+    let last: { x: number; y: number } | undefined;
+    for (const row of prepared.rows) {
+      if (row.series !== ser) {
+        continue;
+      }
+      last = {
+        x: xPos(prepared, row, catIndex),
+        y: prepared.yScale(row.y),
+      };
+    }
+    if (!last) {
+      continue;
+    }
+    out.push({
+      name: ser,
+      x: last.x,
+      y: last.y,
+      color: prepared.styles[si]!.color,
+    });
+  }
+  return out;
+}
+
+function dodgeEndLabelYs(
+  items: { name: string; x: number; y: number; color: string }[],
+): number[] {
+  const order = items
+    .map((item, i) => ({ i, y: item.y }))
+    .sort((a, b) => a.y - b.y);
+  const ys = items.map((item) => item.y);
+  for (let n = 0; n < order.length - 1; n++) {
+    const a = order[n]!;
+    const b = order[n + 1]!;
+    const gap = ys[b.i]! - ys[a.i]!;
+    if (gap < END_LABEL_MIN_SEP) {
+      const nudge = (END_LABEL_MIN_SEP - gap) / 2;
+      ys[a.i]! -= nudge;
+      ys[b.i]! += nudge;
+    }
+  }
+  return ys;
+}
+
+function drawEndLabels(prepared: Prepared): string[] {
+  if (!prepared.useEndLabels) {
+    return [];
+  }
+  const items = lastPointBySeries(prepared);
+  if (items.length === 0) {
+    return [];
+  }
+  const ys = dodgeEndLabelYs(items);
+  const lines: string[] = [
+    `  <g ${attrs({
+      "font-size": TYPE.value.size,
+      "font-weight": TYPE.value.weight,
+    })}>`,
+  ];
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i]!;
+    lines.push(
+      `    <text ${attrs({
+        x: fmtPx(item.x + END_LABEL_GAP),
+        y: fmtPx(ys[i]!),
+        "text-anchor": "start",
+        "dominant-baseline": "middle",
+        fill: item.color,
+        "data-end-label": item.name,
+      })}>${escapeXml(item.name)}</text>`,
+    );
+  }
+  lines.push(`  </g>`);
+  return lines;
 }
 
 function drawLineOrArea(prepared: Prepared, area: boolean): string[] {
@@ -622,6 +751,7 @@ function drawLineOrArea(prepared: Prepared, area: boolean): string[] {
     }
   }
   lines.push(`  </g>`);
+  lines.push(...drawEndLabels(prepared));
   return lines;
 }
 
@@ -656,17 +786,18 @@ function drawScatter(prepared: Prepared): string[] {
 }
 
 function drawHist(prepared: Prepared): string[] {
-  const { bins, xScaleNum, yScale, styles } = prepared;
+  const { bins, xScaleNum, yScale, styles, showValueLabels } = prepared;
   const y0 = yScale(0);
   const style = styles[0]!;
+  const nCat = Math.max(bins.length, 1);
   const lines: string[] = [`  <g>`];
-  for (const bin of bins) {
+  const labels: string[] = [];
+  for (let i = 0; i < bins.length; i++) {
+    const bin = bins[i]!;
     const xLeft = xScaleNum(bin.left);
     const xRight = xScaleNum(bin.right);
     const band = xRight - xLeft;
-    const gap = band * BAR_GAP;
-    const barW = Math.max(band - gap, 0.5);
-    const x = xLeft + gap / 2;
+    const { x, barW } = barSlot(nCat, 1, band, xLeft, 0, 0);
     const y1 = yScale(bin.weight);
     const y = Math.min(y0, y1);
     const h = Math.abs(y1 - y0);
@@ -681,15 +812,35 @@ function drawHist(prepared: Prepared): string[] {
         "data-count": String(bin.count),
       })}/>`,
     );
+    if (!showValueLabels) {
+      continue;
+    }
+    const roundUp = bin.weight >= 0;
+    labels.push(
+      `    <text ${attrs({
+        x: fmtPx(x + barW / 2),
+        y: fmtPx(valueLabelY(roundUp, y, h, y0)),
+        "text-anchor": "middle",
+        "font-size": TYPE.value.size,
+        "font-weight": TYPE.value.weight,
+        fill: TYPE.value.fill,
+        "data-value-label": `${bin.left}–${bin.right}`,
+      })}>${escapeXml(formatNumber(bin.weight))}</text>`,
+    );
   }
   lines.push(`  </g>`);
+  if (labels.length > 0) {
+    lines.push(`  <g>`);
+    lines.push(...labels);
+    lines.push(`  </g>`);
+  }
   return lines;
 }
 
-export function renderCartesian(chart: ChartIR, _id: string): string[] {
+export function renderCartesian(chart: ChartIR, _id: string): Painted {
   const prepared = prepare(chart);
   const lines: string[] = [
-    drawTitle(chart, prepared.titleUnit),
+    drawTitle(visibleTitle(chart), prepared.plot.left, prepared.titleUnit),
     ...drawLegend(prepared),
   ];
   lines.push(...drawGridAndAxes(prepared));
@@ -704,5 +855,5 @@ export function renderCartesian(chart: ChartIR, _id: string): string[] {
   } else if (chart.type === "hist") {
     lines.push(...drawHist(prepared));
   }
-  return lines;
+  return { lines, height: prepared.height };
 }

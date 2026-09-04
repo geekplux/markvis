@@ -2,38 +2,35 @@
   <title id="mv-8243731268240691-title">Temp vs humidity</title>
   <desc id="mv-8243731268240691-desc">scatter chart. Temp vs humidity. x=temp_c. y=humidity. 4 rows.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Temp vs humidity</text>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Temp vs humidity</text>
   <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="56" x2="696" y1="432" y2="432"/>
-    <line x1="56" x2="696" y1="304" y2="304"/>
-    <line x1="56" x2="696" y1="176" y2="176"/>
-    <line x1="56" x2="696" y1="48" y2="48"/>
+    <line x1="48" x2="700" y1="314.67" y2="314.67"/>
+    <line x1="48" x2="700" y1="175.33" y2="175.33"/>
+    <line x1="48" x2="700" y1="36" y2="36"/>
   </g>
-  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
   <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
-    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">30</text>
-    <line x1="52" x2="56" y1="304" y2="304" stroke="#A8A29E"/>
-    <text x="44" y="304" text-anchor="end" dominant-baseline="middle">40</text>
-    <line x1="52" x2="56" y1="176" y2="176" stroke="#A8A29E"/>
-    <text x="44" y="176" text-anchor="end" dominant-baseline="middle">50</text>
-    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
-    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">60</text>
-    <line x1="64" x2="64" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="64" y="448" text-anchor="middle" font-size="10" data-full-label="15">15</text>
-    <line x1="272" x2="272" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="272" y="448" text-anchor="middle" font-size="10" data-full-label="20">20</text>
-    <line x1="480" x2="480" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="480" y="448" text-anchor="middle" font-size="10" data-full-label="25">25</text>
-    <line x1="688" x2="688" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="688" y="448" text-anchor="middle" font-size="10" data-full-label="30">30</text>
+    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
+    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">30</text>
+    <line x1="44" x2="48" y1="314.67" y2="314.67" stroke="#A8A29E"/>
+    <text x="38" y="314.67" text-anchor="end" dominant-baseline="middle">40</text>
+    <line x1="44" x2="48" y1="175.33" y2="175.33" stroke="#A8A29E"/>
+    <text x="38" y="175.33" text-anchor="end" dominant-baseline="middle">50</text>
+    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">60</text>
+    <line x1="56" x2="56" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="56" y="468" text-anchor="middle" font-size="10" data-full-label="15">15</text>
+    <line x1="268" x2="268" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="268" y="468" text-anchor="middle" font-size="10" data-full-label="20">20</text>
+    <line x1="480" x2="480" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="480" y="468" text-anchor="middle" font-size="10" data-full-label="25">25</text>
+    <line x1="692" x2="692" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="692" y="468" text-anchor="middle" font-size="10" data-full-label="30">30</text>
   </g>
-  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">humidity</text>
-  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">temp_c</text>
   <g>
-    <circle cx="188.8" cy="112" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="18" data-y="55" data-series="humidity"/>
-    <circle cx="355.2" cy="201.6" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="22" data-y="48" data-series="humidity"/>
-    <circle cx="480" cy="304" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="25" data-y="40" data-series="humidity"/>
-    <circle cx="604.8" cy="368" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="28" data-y="35" data-series="humidity"/>
+    <circle cx="183.2" cy="105.67" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="18" data-y="55" data-series="humidity"/>
+    <circle cx="352.8" cy="203.2" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="22" data-y="48" data-series="humidity"/>
+    <circle cx="480" cy="314.67" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="25" data-y="40" data-series="humidity"/>
+    <circle cx="607.2" cy="384.33" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="28" data-y="35" data-series="humidity"/>
   </g>
 </svg>

@@ -2,39 +2,36 @@
   <title id="mv-b825f9aa966142d9-title">Height vs weight</title>
   <desc id="mv-b825f9aa966142d9-desc">scatter chart. Height vs weight. x=height_cm. y=weight_kg. 3 rows.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Height vs weight</text>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Height vs weight</text>
   <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="56" x2="696" y1="432" y2="432"/>
-    <line x1="56" x2="696" y1="304" y2="304"/>
-    <line x1="56" x2="696" y1="176" y2="176"/>
-    <line x1="56" x2="696" y1="48" y2="48"/>
+    <line x1="48" x2="700" y1="314.67" y2="314.67"/>
+    <line x1="48" x2="700" y1="175.33" y2="175.33"/>
+    <line x1="48" x2="700" y1="36" y2="36"/>
   </g>
-  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
   <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
-    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">50</text>
-    <line x1="52" x2="56" y1="304" y2="304" stroke="#A8A29E"/>
-    <text x="44" y="304" text-anchor="end" dominant-baseline="middle">60</text>
-    <line x1="52" x2="56" y1="176" y2="176" stroke="#A8A29E"/>
-    <text x="44" y="176" text-anchor="end" dominant-baseline="middle">70</text>
-    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
-    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">80</text>
-    <line x1="64" x2="64" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="64" y="448" text-anchor="middle" font-size="10" data-full-label="150">150</text>
-    <line x1="220" x2="220" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="220" y="448" text-anchor="middle" font-size="10" data-full-label="160">160</text>
-    <line x1="376" x2="376" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="376" y="448" text-anchor="middle" font-size="10" data-full-label="170">170</text>
-    <line x1="532" x2="532" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="532" y="448" text-anchor="middle" font-size="10" data-full-label="180">180</text>
-    <line x1="688" x2="688" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="688" y="448" text-anchor="middle" font-size="10" data-full-label="190">190</text>
+    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
+    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">50</text>
+    <line x1="44" x2="48" y1="314.67" y2="314.67" stroke="#A8A29E"/>
+    <text x="38" y="314.67" text-anchor="end" dominant-baseline="middle">60</text>
+    <line x1="44" x2="48" y1="175.33" y2="175.33" stroke="#A8A29E"/>
+    <text x="38" y="175.33" text-anchor="end" dominant-baseline="middle">70</text>
+    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">80</text>
+    <line x1="56" x2="56" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="56" y="468" text-anchor="middle" font-size="10" data-full-label="150">150</text>
+    <line x1="215" x2="215" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="215" y="468" text-anchor="middle" font-size="10" data-full-label="160">160</text>
+    <line x1="374" x2="374" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="170">170</text>
+    <line x1="533" x2="533" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="533" y="468" text-anchor="middle" font-size="10" data-full-label="180">180</text>
+    <line x1="692" x2="692" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="692" y="468" text-anchor="middle" font-size="10" data-full-label="190">190</text>
   </g>
-  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">weight_kg</text>
-  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">height_cm</text>
   <g>
-    <circle cx="220" cy="368" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="160" data-y="55" data-series="weight_kg"/>
-    <circle cx="454" cy="176" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="175" data-y="70" data-series="weight_kg"/>
-    <circle cx="563.2" cy="73.6" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="182" data-y="78" data-series="weight_kg"/>
+    <circle cx="215" cy="384.33" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="160" data-y="55" data-series="weight_kg"/>
+    <circle cx="453.5" cy="175.33" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="175" data-y="70" data-series="weight_kg"/>
+    <circle cx="564.8" cy="63.87" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="182" data-y="78" data-series="weight_kg"/>
   </g>
 </svg>

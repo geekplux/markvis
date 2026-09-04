@@ -1,77 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Monthly tickets, 12 rows" aria-labelledby="mv-4e9b543d7bc64357-title" aria-describedby="mv-4e9b543d7bc64357-desc" data-markvis="2" data-chart-type="bar" data-id="mv-4e9b543d7bc64357" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
-  <title id="mv-4e9b543d7bc64357-title">Monthly tickets</title>
-  <desc id="mv-4e9b543d7bc64357-desc">bar chart. Monthly tickets. x=month. y=tickets. 12 rows.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Jul peaked at 22, 12 rows" aria-labelledby="mv-f2ca0b65d8753e21-title" aria-describedby="mv-f2ca0b65d8753e21-desc" data-markvis="2" data-chart-type="bar" data-id="mv-f2ca0b65d8753e21" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
+  <title id="mv-f2ca0b65d8753e21-title">Jul peaked at 22</title>
+  <desc id="mv-f2ca0b65d8753e21-desc">bar chart. Jul peaked at 22. x=month. y=tickets. 12 rows.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Monthly tickets</text>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Jul peaked at 22</text>
   <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="56" x2="696" y1="432" y2="432"/>
-    <line x1="56" x2="696" y1="304" y2="304"/>
-    <line x1="56" x2="696" y1="176" y2="176"/>
-    <line x1="56" x2="696" y1="48" y2="48"/>
+    <line x1="48" x2="700" y1="314.67" y2="314.67"/>
+    <line x1="48" x2="700" y1="175.33" y2="175.33"/>
+    <line x1="48" x2="700" y1="36" y2="36"/>
   </g>
-  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
   <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
-    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="52" x2="56" y1="304" y2="304" stroke="#A8A29E"/>
-    <text x="44" y="304" text-anchor="end" dominant-baseline="middle">10</text>
-    <line x1="52" x2="56" y1="176" y2="176" stroke="#A8A29E"/>
-    <text x="44" y="176" text-anchor="end" dominant-baseline="middle">20</text>
-    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
-    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">30</text>
-    <line x1="82.67" x2="82.67" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="82.67" y="448" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
-    <line x1="136" x2="136" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="136" y="448" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
-    <line x1="189.33" x2="189.33" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="189.33" y="448" text-anchor="middle" font-size="10" data-full-label="Mar">Mar</text>
-    <line x1="242.67" x2="242.67" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="242.67" y="448" text-anchor="middle" font-size="10" data-full-label="Apr">Apr</text>
-    <line x1="296" x2="296" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="296" y="448" text-anchor="middle" font-size="10" data-full-label="May">May</text>
-    <line x1="349.33" x2="349.33" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="349.33" y="448" text-anchor="middle" font-size="10" data-full-label="Jun">Jun</text>
-    <line x1="402.67" x2="402.67" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="402.67" y="448" text-anchor="middle" font-size="10" data-full-label="Jul">Jul</text>
-    <line x1="456" x2="456" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="456" y="448" text-anchor="middle" font-size="10" data-full-label="Aug">Aug</text>
-    <line x1="509.33" x2="509.33" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="509.33" y="448" text-anchor="middle" font-size="10" data-full-label="Sep">Sep</text>
-    <line x1="562.67" x2="562.67" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="562.67" y="448" text-anchor="middle" font-size="10" data-full-label="Oct">Oct</text>
-    <line x1="616" x2="616" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="616" y="448" text-anchor="middle" font-size="10" data-full-label="Nov">Nov</text>
-    <line x1="669.33" x2="669.33" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="669.33" y="448" text-anchor="middle" font-size="10" data-full-label="Dec">Dec</text>
-  </g>
-  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">tickets</text>
-  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">month</text>
-  <g>
-    <path d="M61.33 432 L61.33 306 Q61.33 304 63.33 304 L102 304 Q104 304 104 306 L104 432 Z" fill="#2B6CB0" data-x="Jan" data-series="tickets" data-y="10"/>
-    <path d="M114.67 432 L114.67 280.4 Q114.67 278.4 116.67 278.4 L155.33 278.4 Q157.33 278.4 157.33 280.4 L157.33 432 Z" fill="#2B6CB0" data-x="Feb" data-series="tickets" data-y="12"/>
-    <path d="M168 432 L168 318.8 Q168 316.8 170 316.8 L208.67 316.8 Q210.67 316.8 210.67 318.8 L210.67 432 Z" fill="#2B6CB0" data-x="Mar" data-series="tickets" data-y="9"/>
-    <path d="M221.33 432 L221.33 242 Q221.33 240 223.33 240 L262 240 Q264 240 264 242 L264 432 Z" fill="#2B6CB0" data-x="Apr" data-series="tickets" data-y="15"/>
-    <path d="M274.67 432 L274.67 254.8 Q274.67 252.8 276.67 252.8 L315.33 252.8 Q317.33 252.8 317.33 254.8 L317.33 432 Z" fill="#2B6CB0" data-x="May" data-series="tickets" data-y="14"/>
-    <path d="M328 432 L328 203.6 Q328 201.6 330 201.6 L368.67 201.6 Q370.67 201.6 370.67 203.6 L370.67 432 Z" fill="#2B6CB0" data-x="Jun" data-series="tickets" data-y="18"/>
-    <path d="M381.33 432 L381.33 152.4 Q381.33 150.4 383.33 150.4 L422 150.4 Q424 150.4 424 152.4 L424 432 Z" fill="#2B6CB0" data-x="Jul" data-series="tickets" data-y="22"/>
-    <path d="M434.67 432 L434.67 178 Q434.67 176 436.67 176 L475.33 176 Q477.33 176 477.33 178 L477.33 432 Z" fill="#2B6CB0" data-x="Aug" data-series="tickets" data-y="20"/>
-    <path d="M488 432 L488 216.4 Q488 214.4 490 214.4 L528.67 214.4 Q530.67 214.4 530.67 216.4 L530.67 432 Z" fill="#2B6CB0" data-x="Sep" data-series="tickets" data-y="17"/>
-    <path d="M541.33 432 L541.33 190.8 Q541.33 188.8 543.33 188.8 L582 188.8 Q584 188.8 584 190.8 L584 432 Z" fill="#2B6CB0" data-x="Oct" data-series="tickets" data-y="19"/>
-    <path d="M594.67 432 L594.67 229.2 Q594.67 227.2 596.67 227.2 L635.33 227.2 Q637.33 227.2 637.33 229.2 L637.33 432 Z" fill="#2B6CB0" data-x="Nov" data-series="tickets" data-y="16"/>
-    <path d="M648 432 L648 165.2 Q648 163.2 650 163.2 L688.67 163.2 Q690.67 163.2 690.67 165.2 L690.67 432 Z" fill="#2B6CB0" data-x="Dec" data-series="tickets" data-y="21"/>
+    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
+    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="44" x2="48" y1="314.67" y2="314.67" stroke="#A8A29E"/>
+    <text x="38" y="314.67" text-anchor="end" dominant-baseline="middle">10</text>
+    <line x1="44" x2="48" y1="175.33" y2="175.33" stroke="#A8A29E"/>
+    <text x="38" y="175.33" text-anchor="end" dominant-baseline="middle">20</text>
+    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">30</text>
+    <line x1="75.17" x2="75.17" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="75.17" y="468" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
+    <line x1="129.5" x2="129.5" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="129.5" y="468" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
+    <line x1="183.83" x2="183.83" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="183.83" y="468" text-anchor="middle" font-size="10" data-full-label="Mar">Mar</text>
+    <line x1="238.17" x2="238.17" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="238.17" y="468" text-anchor="middle" font-size="10" data-full-label="Apr">Apr</text>
+    <line x1="292.5" x2="292.5" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="292.5" y="468" text-anchor="middle" font-size="10" data-full-label="May">May</text>
+    <line x1="346.83" x2="346.83" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="346.83" y="468" text-anchor="middle" font-size="10" data-full-label="Jun">Jun</text>
+    <line x1="401.17" x2="401.17" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="401.17" y="468" text-anchor="middle" font-size="10" data-full-label="Jul">Jul</text>
+    <line x1="455.5" x2="455.5" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="455.5" y="468" text-anchor="middle" font-size="10" data-full-label="Aug">Aug</text>
+    <line x1="509.83" x2="509.83" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="509.83" y="468" text-anchor="middle" font-size="10" data-full-label="Sep">Sep</text>
+    <line x1="564.17" x2="564.17" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="564.17" y="468" text-anchor="middle" font-size="10" data-full-label="Oct">Oct</text>
+    <line x1="618.5" x2="618.5" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="618.5" y="468" text-anchor="middle" font-size="10" data-full-label="Nov">Nov</text>
+    <line x1="672.83" x2="672.83" y1="454" y2="458" stroke="#A8A29E"/>
+    <text x="672.83" y="468" text-anchor="middle" font-size="10" data-full-label="Dec">Dec</text>
   </g>
   <g>
-    <text x="82.67" y="296" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Jan">10</text>
-    <text x="136" y="270.4" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Feb">12</text>
-    <text x="189.33" y="308.8" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Mar">9</text>
-    <text x="242.67" y="232" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Apr">15</text>
-    <text x="296" y="244.8" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="May">14</text>
-    <text x="349.33" y="193.6" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Jun">18</text>
-    <text x="402.67" y="142.4" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Jul">22</text>
-    <text x="456" y="168" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Aug">20</text>
-    <text x="509.33" y="206.4" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Sep">17</text>
-    <text x="562.67" y="180.8" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Oct">19</text>
-    <text x="616" y="219.2" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Nov">16</text>
-    <text x="669.33" y="155.2" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Dec">21</text>
+    <path d="M52.89 454 L52.89 316.67 Q52.89 314.67 54.89 314.67 L95.44 314.67 Q97.44 314.67 97.44 316.67 L97.44 454 Z" fill="#2B6CB0" data-x="Jan" data-series="tickets" data-y="10"/>
+    <path d="M107.22 454 L107.22 288.8 Q107.22 286.8 109.22 286.8 L149.78 286.8 Q151.78 286.8 151.78 288.8 L151.78 454 Z" fill="#2B6CB0" data-x="Feb" data-series="tickets" data-y="12"/>
+    <path d="M161.56 454 L161.56 330.6 Q161.56 328.6 163.56 328.6 L204.11 328.6 Q206.11 328.6 206.11 330.6 L206.11 454 Z" fill="#2B6CB0" data-x="Mar" data-series="tickets" data-y="9"/>
+    <path d="M215.89 454 L215.89 247 Q215.89 245 217.89 245 L258.44 245 Q260.44 245 260.44 247 L260.44 454 Z" fill="#2B6CB0" data-x="Apr" data-series="tickets" data-y="15"/>
+    <path d="M270.22 454 L270.22 260.93 Q270.22 258.93 272.22 258.93 L312.78 258.93 Q314.78 258.93 314.78 260.93 L314.78 454 Z" fill="#2B6CB0" data-x="May" data-series="tickets" data-y="14"/>
+    <path d="M324.56 454 L324.56 205.2 Q324.56 203.2 326.56 203.2 L367.11 203.2 Q369.11 203.2 369.11 205.2 L369.11 454 Z" fill="#2B6CB0" data-x="Jun" data-series="tickets" data-y="18"/>
+    <path d="M378.89 454 L378.89 149.47 Q378.89 147.47 380.89 147.47 L421.44 147.47 Q423.44 147.47 423.44 149.47 L423.44 454 Z" fill="#2B6CB0" data-x="Jul" data-series="tickets" data-y="22"/>
+    <path d="M433.22 454 L433.22 177.33 Q433.22 175.33 435.22 175.33 L475.78 175.33 Q477.78 175.33 477.78 177.33 L477.78 454 Z" fill="#2B6CB0" data-x="Aug" data-series="tickets" data-y="20"/>
+    <path d="M487.56 454 L487.56 219.13 Q487.56 217.13 489.56 217.13 L530.11 217.13 Q532.11 217.13 532.11 219.13 L532.11 454 Z" fill="#2B6CB0" data-x="Sep" data-series="tickets" data-y="17"/>
+    <path d="M541.89 454 L541.89 191.27 Q541.89 189.27 543.89 189.27 L584.44 189.27 Q586.44 189.27 586.44 191.27 L586.44 454 Z" fill="#2B6CB0" data-x="Oct" data-series="tickets" data-y="19"/>
+    <path d="M596.22 454 L596.22 233.07 Q596.22 231.07 598.22 231.07 L638.78 231.07 Q640.78 231.07 640.78 233.07 L640.78 454 Z" fill="#2B6CB0" data-x="Nov" data-series="tickets" data-y="16"/>
+    <path d="M650.56 454 L650.56 163.4 Q650.56 161.4 652.56 161.4 L693.11 161.4 Q695.11 161.4 695.11 163.4 L695.11 454 Z" fill="#2B6CB0" data-x="Dec" data-series="tickets" data-y="21"/>
   </g>
 </svg>

@@ -2,7 +2,7 @@
 
 ```chart
 type: line
-title: Users
+title: Free still leads pro
 x: month
 y: count
 series: plan

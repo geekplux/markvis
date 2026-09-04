@@ -161,7 +161,10 @@ describe("cartesian rules", () => {
     expect(svg).toContain('fill="#F7F4EF"');
     expect(svg).toContain("Q3 Revenue");
     expect(svg).toContain(" · USD k");
+    expect(svg).toContain('text-anchor="start"');
+    expect(svg).toContain('font-size="17"');
     expect(svg).not.toContain("revenue (USD k)");
+    expect(svg).not.toContain("rotate(-90");
   });
 });
 
