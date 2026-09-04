@@ -1,7 +1,7 @@
 # STATUS.md
 
 ## Snapshot
-- tip: 82edf2f (pre-S2)
+- tip: 13dcda0
 - S2 /examples gallery implemented from examples/valid + examples/out
 - No new types / theme / d3 / animation product
 
