@@ -1,22 +1,11 @@
 # STATUS.md
 
 ## Snapshot
-- tip: b09449b
-- W14b B3 bake: `markvis bake` file|dir; SVG + md image after fence; keep fence; idempotent
-- commands: `pnpm --filter @markvis/cli exec vitest run test/cli.test.ts` exit 0 (35 passed)
-- Active: W14b B4 bake.yml
-
-## Waves
-- [x] W14a Ledger transparent canvas
-- [x] W14b B1 packages/browser
-- [x] W14b B2 drop-in demo
-- [x] Writer landing+README embeds
-- [x] W14b B3 bake
-- [ ] W14b B4-B8
+- tip: 4f4303d
+- W14a accepted (transparent Ledger)
+- B1+B2+B3 done
+- Active: B4 bake.yml
+- Still open: B5/B6 hosts, B7 vscode, B8 integrate.md
 
 ## Active
-## Writer after B3
-
-- landing + README: bake note (`markvis bake`, idempotent)
-
-B4 -> hold until Architect assigns (bake.yml)
+B4 -> @Coder .github/workflows/bake.yml
