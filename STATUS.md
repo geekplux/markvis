@@ -104,7 +104,7 @@ Commands:
 
 Commits:
 - 83be9bb342fc762cbae9b0dfe84b252886f94326 docs(examples): add 52 valid and 18 invalid chart fixtures
-- ea6b25bd9e17d71a1e2f18c2a67d210b3862e77d feat(parser): add Chart IR (zod) and fence parser
+- 3e7eb2552d6030cbd50bf210795e59fb03b21705 feat(parser): add Chart IR (zod) and fence parser
 
 `@markvis/ir`: zod Chart IR for bar|line|area|scatter|pie|hist. `@markvis/parser`: tags chart/markvis/vis; HTML comment + GFM; CSV and GFM tables; SPEC error codes; table fallback never drops rows; input row order kept; pie values as-is. Zero render deps. Did not implement render-svg, CLI, or playground.
 
