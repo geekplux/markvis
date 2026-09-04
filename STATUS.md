@@ -37,6 +37,10 @@ W10 closed. Next: W11 工程硬化.
 
 ## W10 proof (Coder)
 
+Commit: eb043e5a2e5f83015cf210e25f0a73b18012a243
+Message: feat(eval): add scripts/eval-prompts gold-fence check
+Parent: 7e0b34b4aec770bb0538569d018f87030d9ba834
+
 `scripts/eval-prompts.ts` stubs model emit: parse 30 gold fences from `examples/prompts.md` (fence + HTML comment forms) and run `markvis check` on temp files. `pnpm eval-prompts` wires it. Failures print `record failures in docs/model-errors.md`. No LLM, no new types, no d3. Did not implement W11.
 
 Files:
