@@ -1,0 +1,65 @@
+# Bake README.md and docs/landing.md so GitHub (no JS) shows figures.
+# `markvis bake` keeps chart fences, writes sibling SVGs, and inserts
+# a markdown image after each fence. It is idempotent: a second bake
+# is a no-op, so a follow-up push from this job does not loop.
+#
+# If bake updates md/svg, this job commits and pushes:
+#   chore: bake README.md docs/landing.md
+# Fork PRs cannot push with GITHUB_TOKEN; those runs bake only
+# (no commit). Authors on v2 / same-repo PRs get the commit.
+# Does not replace check.yml. No theme, no d3, no new types.
+name: bake
+
+on:
+  push:
+    branches: [v2]
+  pull_request:
+    branches: [v2]
+
+jobs:
+  bake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.9
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Bake README and landing
+        run: pnpm markvis bake README.md docs/landing.md
+
+      - name: Commit baked SVG/md if needed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md docs/landing.md
+          git add -- '*.svg' '**/*.svg' || true
+          if git diff --cached --quiet; then
+            echo "bake: no md/svg changes"
+            exit 0
+          fi
+          if [ "${{ github.event_name }}" = "pull_request" ] && [ "${{ github.event.pull_request.head.repo.full_name }}" != "${{ github.repository }}" ]; then
+            echo "bake: fork PR — skip commit (GITHUB_TOKEN cannot push the fork)"
+            git diff --cached --stat
+            exit 0
+          fi
+          git commit -m "chore: bake README.md docs/landing.md"
+          git push
