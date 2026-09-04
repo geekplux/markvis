@@ -15,4 +15,8 @@
 - [ ] W14b B4-B8
 
 ## Active
+## Writer after B3
+
+- landing + README: bake note (`markvis bake`, idempotent)
+
 B4 -> hold until Architect assigns (bake.yml)

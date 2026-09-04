@@ -47,3 +47,4 @@ date	wave	decision
 2026-09-04	W14b	Writer: landing+README first screen with 3 svg embeds after B1; bake/integrate later
 2026-09-04	W14b	B3 assign: CLI markvis bake file|dir; SVG + md image after fence; keep fence; idempotent; tests one/two/already-baked; no theme/d3; hold B4 until B3 green
 2026-09-04	W14b	B3: CLI bake in packages/cli; per fence SVG + md image after fence; keep fence; bake twice no diff; tests one/two/already-baked; no theme/d3
+2026-09-04	W14b	Writer: bake note on landing+README after B3

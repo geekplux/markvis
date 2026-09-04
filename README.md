@@ -12,6 +12,6 @@ Fence / GFM table / HTML comment → parser → Chart IR → deterministic SVG (
 
 Try: [docs/landing.md](./docs/landing.md) · [playground](./apps/playground) · [drop-in](./apps/playground/dropin.html) · [gallery](./examples/gallery.html) · [SPEC](./SPEC.md) · [visual-spec](./docs/visual-spec.md)
 
-Browser: `packages/browser/dist/markvis.min.js` (zero network). Bake + host integrate docs come next.
+Browser: `packages/browser/dist/markvis.min.js` (zero network). GitHub README figures: `markvis bake README.md` (idempotent; keeps the fence, writes SVG + image after it).
 
 0.0.13 (frozen): [legacy/](./legacy/).
