@@ -17,3 +17,5 @@ date	wave	decision
 2026-09-04	W8	remark + markdown-it thin adapters over parser/render-svg; valid HTML figure = svg + figcaption + table; invalid = table + one error line; no playground
 2026-09-04	W8	accepted 5ff0f46; remark + markdown-it hosts; open W9 playground
 2026-09-04	W9	Vite playground; left fence / right SVG+table; Copy fence and Copy SVG; examples/valid switcher; browser runs parser+render-svg; node:crypto shimmed for chart ids
+2026-09-04	W9	accepted 66c27b2; playground build; open W10 AI surface
+2026-09-04	W10	SKILL.md + llms.txt + llms-full.txt + examples/prompts.md (30) + docs/model-errors.md seed; no new types; Coder owns eval-prompts next
