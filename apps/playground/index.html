@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>markvis playground</title>
+  </head>
+  <body>
+    <noscript>
+      <p class="noscript">
+        Enable JavaScript. This page runs the same parser and SVG renderer in
+        the browser; there is no backend.
+      </p>
+    </noscript>
+    <header class="toolbar">
+      <h1>markvis playground</h1>
+      <label>
+        Example
+        <select id="example"></select>
+      </label>
+      <button type="button" id="copy-fence">Copy fence</button>
+      <button type="button" id="copy-svg">Copy SVG</button>
+      <span class="copied" id="copied" aria-live="polite"></span>
+    </header>
+    <div class="layout">
+      <section class="source">
+        <label for="fence">Fence</label>
+        <textarea id="fence" spellcheck="false"></textarea>
+      </section>
+      <section class="preview">
+        <h2>Preview</h2>
+        <p class="error" id="error" hidden></p>
+        <div id="svg-host"></div>
+        <div id="table-host"></div>
+      </section>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

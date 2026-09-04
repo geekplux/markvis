@@ -3,5 +3,18 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "description": "Vite playground: fence in, SVG + table out (W9)"
+  "description": "Vite playground: fence in, SVG + table out (W9)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@markvis/ir": "workspace:*",
+    "@markvis/parser": "workspace:*",
+    "@markvis/render-svg": "workspace:*"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
 }

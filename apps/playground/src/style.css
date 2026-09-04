@@ -1,0 +1,171 @@
+:root {
+  color-scheme: light;
+  --bg: #f8fafc;
+  --panel: #ffffff;
+  --ink: #0f172a;
+  --muted: #475569;
+  --line: #e2e8f0;
+  --accent: #0f172a;
+  --error: #b91c1c;
+  --code-bg: #0f172a;
+  --code-ink: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.toolbar h1 {
+  font-size: 14px;
+  margin: 0 12px 0 0;
+  font-weight: 650;
+}
+
+.toolbar label {
+  font-size: 13px;
+  color: var(--muted);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.toolbar select {
+  font: inherit;
+  max-width: 280px;
+}
+
+.toolbar button {
+  font: inherit;
+  font-size: 13px;
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.toolbar button:hover:not(:disabled) {
+  background: var(--bg);
+}
+
+.toolbar button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.copied {
+  font-size: 12px;
+  color: var(--muted);
+  min-height: 1em;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex: 1;
+  min-height: 0;
+}
+
+section {
+  min-height: 0;
+  overflow: auto;
+}
+
+section.source {
+  background: var(--code-bg);
+  color: var(--code-ink);
+  display: flex;
+  flex-direction: column;
+}
+
+section.source label {
+  font-size: 12px;
+  padding: 10px 16px 0;
+}
+
+#fence {
+  flex: 1;
+  width: 100%;
+  min-height: 280px;
+  margin: 0;
+  padding: 12px 16px 16px;
+  border: 0;
+  resize: none;
+  background: transparent;
+  color: inherit;
+  font: 12px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+section.preview {
+  padding: 16px;
+  background: var(--panel);
+}
+
+section.preview h2 {
+  font-size: 14px;
+  margin: 0 0 12px;
+}
+
+.error {
+  color: var(--error);
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.error[hidden] {
+  display: none;
+}
+
+#svg-host svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  margin-top: 16px;
+  font-size: 13px;
+}
+
+th,
+td {
+  border: 1px solid #cbd5e1;
+  padding: 4px 8px;
+  text-align: left;
+}
+
+.noscript {
+  padding: 16px;
+}
+
+@media (max-width: 800px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

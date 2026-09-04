@@ -6,7 +6,7 @@ previous U2 cancelled; legacy modernization is not 2.0.
 
 - Workdir: /workspace/markvis
 - Branch: v2
-- Updated: 2026-09-04 (Coder) W8 hosts
+- Updated: 2026-09-04 (Coder) W9 playground
 
 ## Waves
 
@@ -19,13 +19,13 @@ previous U2 cancelled; legacy modernization is not 2.0.
 - [x] W6 render-svg
 - [x] W7 CLI (markvis check | render | preview | stats | to-table)
 - [x] W8 宿主 (remark + markdown-it adapters; HTML has svg and table)
-- [ ] W9 playground
+- [x] W9 playground (Vite; left fence / right SVG+table; Copy; examples/valid)
 - [ ] W10 AI 面
 - [ ] W11 工程硬化
 - [ ] W12 加厚
 
 ## Active
-W9 -> Coder (playground). Writer holds W10 docs.
+W10 -> Writer (SKILL / llms.txt / prompts). Coder idle until W10 files or W11.
 
 ## W0 proof
 
@@ -239,5 +239,44 @@ Commands:
 - `pnpm markvis check examples/valid` → exit 0 (52 ok)
 - `pnpm markvis check examples/invalid` → exit 1 (0 ok, 18 error)
 - `pnpm markvis stats examples/valid/01-bar-basic.md` → exit 0 (`bar 3 120 180 -`)
+- `rg "d3-node|markvis-bar|markvis-line|markvis-pie" packages apps` → exit 1 (no matches)
+- `rg "from ['\"]legacy|require\\(['\"]legacy" packages` → exit 1 (no matches)
+
+## W9 proof
+
+Commit: (recorded after feat commit)
+Message: feat(playground): add Vite split-view try page
+
+Vite playground in `apps/playground`. Left textarea is the fence; right pane is SVG plus the data table. Top `<select>` binds `examples/valid` (52 files, globbed at build). Copy fence / Copy SVG. Invalid input paints recovered table plus one error line; empty input is `E_EMPTY_FENCE`, never a blank page. Same `@markvis/parser` and `@markvis/render-svg` in the browser; `node:crypto` is a SHA-256 shim so chart ids match Node. Zero backend. Did not implement W10 AI surface.
+
+Files:
+
+apps/playground/index.html
+apps/playground/package.json
+apps/playground/tsconfig.json
+apps/playground/vite.config.ts
+apps/playground/src/crypto-shim.ts
+apps/playground/src/examples.ts
+apps/playground/src/main.ts
+apps/playground/src/preview.ts
+apps/playground/src/style.css
+apps/playground/src/vite-env.d.ts
+apps/playground/test/crypto-shim.test.ts
+apps/playground/test/examples.test.ts
+apps/playground/test/preview.test.ts
+pnpm-lock.yaml
+vitest.config.ts
+STATUS.md
+DECISIONS.tsv
+
+Commands:
+
+- `node -v` → v20.19.2 (exit 0)
+- `pnpm -v` → 9.15.9 (exit 0)
+- `pnpm test` → exit 0 (360 tests)
+- `pnpm markvis check examples/valid` → exit 0 (52 ok)
+- `pnpm markvis check examples/invalid` → exit 1 (0 ok, 18 error)
+- `pnpm markvis stats examples/valid/01-bar-basic.md` → exit 0 (`bar 3 120 180 -`)
+- `pnpm --filter playground build` → exit 0
 - `rg "d3-node|markvis-bar|markvis-line|markvis-pie" packages apps` → exit 1 (no matches)
 - `rg "from ['\"]legacy|require\\(['\"]legacy" packages` → exit 1 (no matches)

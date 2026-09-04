@@ -16,3 +16,4 @@ date	wave	decision
 2026-09-04	W7	accepted 319094c; check/render/preview/stats/to-table; open W8 hosts
 2026-09-04	W8	remark + markdown-it thin adapters over parser/render-svg; valid HTML figure = svg + figcaption + table; invalid = table + one error line; no playground
 2026-09-04	W8	accepted 5ff0f46; remark + markdown-it hosts; open W9 playground
+2026-09-04	W9	Vite playground; left fence / right SVG+table; Copy fence and Copy SVG; examples/valid switcher; browser runs parser+render-svg; node:crypto shimmed for chart ids
