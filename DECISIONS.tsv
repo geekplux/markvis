@@ -45,3 +45,4 @@ date	wave	decision
 2026-09-04	W14a	GeekPlux OK on Pass C 11b6d26; open B1(+B2) browser+drop-in
 2026-09-04	W14b	B1(+B2) @markvis/browser Vite IIFE markvis.min.js + markvis.mjs; crypto shim; auto-replace language-chart|markvis|vis; dropin.html; playground Copy snippet; no d3; dist gitignored like playground
 2026-09-04	W14b	Writer: landing+README first screen with 3 svg embeds after B1; bake/integrate later
+2026-09-04	W14b	B3 assign: CLI markvis bake file|dir; SVG + md image after fence; keep fence; idempotent; tests one/two/already-baked; no theme/d3; hold B4 until B3 green
