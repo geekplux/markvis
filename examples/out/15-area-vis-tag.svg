@@ -1,46 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: Backlog, 4 rows" aria-labelledby="mv-4d47220ef6c9f6a1-title" aria-describedby="mv-4d47220ef6c9f6a1-desc" data-markvis="2" data-chart-type="area" data-id="mv-4d47220ef6c9f6a1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: Backlog, 4 rows" aria-labelledby="mv-4d47220ef6c9f6a1-title" aria-describedby="mv-4d47220ef6c9f6a1-desc" data-markvis="2" data-chart-type="area" data-id="mv-4d47220ef6c9f6a1" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
   <title id="mv-4d47220ef6c9f6a1-title">Backlog</title>
   <desc id="mv-4d47220ef6c9f6a1-desc">area chart. Backlog. x=sprint. y=stories. 4 rows.</desc>
-  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Backlog</text>
-  <g fill="none" stroke="#e6e6e6" stroke-width="1">
-    <line x1="64" x2="696" y1="416" y2="416"/>
-    <line x1="64" x2="696" y1="289.33" y2="289.33"/>
-    <line x1="64" x2="696" y1="162.67" y2="162.67"/>
-    <line x1="64" x2="696" y1="36" y2="36"/>
-    <line x1="72" x2="72" y1="36" y2="416"/>
-    <line x1="195.2" x2="195.2" y1="36" y2="416"/>
-    <line x1="318.4" x2="318.4" y1="36" y2="416"/>
-    <line x1="441.6" x2="441.6" y1="36" y2="416"/>
-    <line x1="564.8" x2="564.8" y1="36" y2="416"/>
-    <line x1="688" x2="688" y1="36" y2="416"/>
+  <rect width="100%" height="100%" fill="#F7F4EF"/>
+  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Backlog</text>
+  <g fill="none" stroke="#E7E5E4" stroke-width="1">
+    <line x1="56" x2="696" y1="432" y2="432"/>
+    <line x1="56" x2="696" y1="304" y2="304"/>
+    <line x1="56" x2="696" y1="176" y2="176"/>
+    <line x1="56" x2="696" y1="48" y2="48"/>
   </g>
-  <path d="M64 36 L64 416 L696 416" fill="none" stroke="#444444" stroke-width="1"/>
-  <g fill="#333333" font-size="10">
-    <line x1="60" x2="64" y1="416" y2="416" stroke="#444444"/>
-    <text x="56" y="416" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="60" x2="64" y1="289.33" y2="289.33" stroke="#444444"/>
-    <text x="56" y="289.33" text-anchor="end" dominant-baseline="middle">10</text>
-    <line x1="60" x2="64" y1="162.67" y2="162.67" stroke="#444444"/>
-    <text x="56" y="162.67" text-anchor="end" dominant-baseline="middle">20</text>
-    <line x1="60" x2="64" y1="36" y2="36" stroke="#444444"/>
-    <text x="56" y="36" text-anchor="end" dominant-baseline="middle">30</text>
-    <line x1="72" x2="72" y1="416" y2="420" stroke="#444444"/>
-    <text x="72" y="432" text-anchor="middle" font-size="10" data-full-label="0">0</text>
-    <line x1="195.2" x2="195.2" y1="416" y2="420" stroke="#444444"/>
-    <text x="195.2" y="432" text-anchor="middle" font-size="10" data-full-label="1">1</text>
-    <line x1="318.4" x2="318.4" y1="416" y2="420" stroke="#444444"/>
-    <text x="318.4" y="432" text-anchor="middle" font-size="10" data-full-label="2">2</text>
-    <line x1="441.6" x2="441.6" y1="416" y2="420" stroke="#444444"/>
-    <text x="441.6" y="432" text-anchor="middle" font-size="10" data-full-label="3">3</text>
-    <line x1="564.8" x2="564.8" y1="416" y2="420" stroke="#444444"/>
-    <text x="564.8" y="432" text-anchor="middle" font-size="10" data-full-label="4">4</text>
-    <line x1="688" x2="688" y1="416" y2="420" stroke="#444444"/>
-    <text x="688" y="432" text-anchor="middle" font-size="10" data-full-label="5">5</text>
+  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <g fill="#57534E" font-size="10" font-weight="400">
+    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
+    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="52" x2="56" y1="304" y2="304" stroke="#A8A29E"/>
+    <text x="44" y="304" text-anchor="end" dominant-baseline="middle">10</text>
+    <line x1="52" x2="56" y1="176" y2="176" stroke="#A8A29E"/>
+    <text x="44" y="176" text-anchor="end" dominant-baseline="middle">20</text>
+    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
+    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">30</text>
+    <line x1="64" x2="64" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="64" y="448" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <line x1="188.8" x2="188.8" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="188.8" y="448" text-anchor="middle" font-size="10" data-full-label="1">1</text>
+    <line x1="313.6" x2="313.6" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="313.6" y="448" text-anchor="middle" font-size="10" data-full-label="2">2</text>
+    <line x1="438.4" x2="438.4" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="438.4" y="448" text-anchor="middle" font-size="10" data-full-label="3">3</text>
+    <line x1="563.2" x2="563.2" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="563.2" y="448" text-anchor="middle" font-size="10" data-full-label="4">4</text>
+    <line x1="688" x2="688" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="688" y="448" text-anchor="middle" font-size="10" data-full-label="5">5</text>
   </g>
-  <text x="14" y="226" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 226)">stories</text>
-  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">sprint</text>
+  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">stories</text>
+  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">sprint</text>
   <g fill="none">
-    <path d="M195.2 162.67 L318.4 112 L441.6 188 L564.8 137.33 L564.8 416 L195.2 416 Z" fill="#0072B2" fill-opacity="0.28" stroke="none" data-series="stories"/>
-    <path d="M195.2 162.67 L318.4 112 L441.6 188 L564.8 137.33" fill="none" stroke="#0072B2" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="stories"/>
+    <path d="M188.8 176 L313.6 124.8 L438.4 201.6 L563.2 150.4 L563.2 432 L188.8 432 Z" fill="#2B6CB0" fill-opacity="0.16" stroke="none" data-series="stories"/>
+    <path d="M188.8 176 L313.6 124.8 L438.4 201.6 L563.2 150.4" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="stories"/>
+    <circle cx="188.8" cy="176" r="2.5" fill="#2B6CB0" stroke="none" data-series="stories"/>
+    <circle cx="313.6" cy="124.8" r="2.5" fill="#2B6CB0" stroke="none" data-series="stories"/>
+    <circle cx="438.4" cy="201.6" r="2.5" fill="#2B6CB0" stroke="none" data-series="stories"/>
+    <circle cx="563.2" cy="150.4" r="2.5" fill="#2B6CB0" stroke="none" data-series="stories"/>
   </g>
 </svg>

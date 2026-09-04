@@ -1,21 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Browser share, 4 slices" aria-labelledby="mv-2efd1bdbc9efdff5-title" aria-describedby="mv-2efd1bdbc9efdff5-desc" data-markvis="2" data-chart-type="pie" data-id="mv-2efd1bdbc9efdff5" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Browser share, 4 slices" aria-labelledby="mv-2efd1bdbc9efdff5-title" aria-describedby="mv-2efd1bdbc9efdff5-desc" data-markvis="2" data-chart-type="pie" data-id="mv-2efd1bdbc9efdff5" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
   <title id="mv-2efd1bdbc9efdff5-title">Browser share</title>
   <desc id="mv-2efd1bdbc9efdff5-desc">pie chart. Browser share. x=browser. y=users. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="360" y="26" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Browser share</text>
+  <rect width="100%" height="100%" fill="#F7F4EF"/>
+  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Browser share</text>
   <g aria-hidden="true">
-    <path d="M260 270 L260 120 A150 150 0 1 1 241.2 418.82 Z" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-label="Chrome" data-raw-value="52"/>
-    <path d="M260 270 L241.2 418.82 A150 150 0 0 1 117.34 223.65 Z" fill="#D55E00" stroke="#ffffff" stroke-width="1" data-label="Safari" data-raw-value="28"/>
-    <path d="M260 270 L117.34 223.65 A150 150 0 0 1 187.74 138.55 Z" fill="#009E73" stroke="#ffffff" stroke-width="1" data-label="Firefox" data-raw-value="12"/>
-    <path d="M260 270 L187.74 138.55 A150 150 0 0 1 260 120 Z" fill="#CC79A7" stroke="#ffffff" stroke-width="1" data-label="Other" data-raw-value="8"/>
+    <path d="M376 240 L376 101.76 A138.24 138.24 0 1 1 358.67 377.15 Z" fill="#2B6CB0" stroke="#F7F4EF" stroke-width="1.5" data-label="Chrome" data-raw-value="52"/>
+    <path d="M376 240 L358.67 377.15 A138.24 138.24 0 0 1 244.53 197.28 Z" fill="#C65D2E" stroke="#F7F4EF" stroke-width="1.5" data-label="Safari" data-raw-value="28"/>
+    <path d="M376 240 L244.53 197.28 A138.24 138.24 0 0 1 309.4 118.86 Z" fill="#2F8F6B" stroke="#F7F4EF" stroke-width="1.5" data-label="Firefox" data-raw-value="12"/>
+    <path d="M376 240 L309.4 118.86 A138.24 138.24 0 0 1 376 101.76 Z" fill="#B08900" stroke="#F7F4EF" stroke-width="1.5" data-label="Other" data-raw-value="8"/>
   </g>
-  <g font-size="12" fill="#222222">
-    <rect x="446" y="221" width="10" height="10" fill="#0072B2" rx="1"/>
-    <text x="462" y="230" data-legend="Chrome">Chrome (52)</text>
-    <rect x="446" y="241" width="10" height="10" fill="#D55E00" rx="1"/>
-    <text x="462" y="250" data-legend="Safari">Safari (28)</text>
-    <rect x="446" y="261" width="10" height="10" fill="#009E73" rx="1"/>
-    <text x="462" y="270" data-legend="Firefox">Firefox (12)</text>
-    <rect x="446" y="281" width="10" height="10" fill="#CC79A7" rx="1"/>
-    <text x="462" y="290" data-legend="Other">Other (8)</text>
+  <g fill="none" stroke="#A8A29E" stroke-width="1">
+    <polyline points="513.97,248.68 529.94,249.68 537.94,249.68"/>
+    <polyline points="259.28,314.07 245.77,322.65 237.77,322.65"/>
+    <polyline points="269.48,151.88 257.16,141.68 249.16,141.68"/>
+    <polyline points="341.62,106.1 337.64,90.61 329.64,90.61"/>
+  </g>
+  <g font-size="10" font-weight="500" fill="#1C1917">
+    <text x="549.94" y="249.68" text-anchor="start" dominant-baseline="middle" data-label="Chrome">Chrome · 52</text>
+    <text x="225.77" y="322.65" text-anchor="end" dominant-baseline="middle" data-label="Safari">Safari · 28</text>
+    <text x="237.16" y="141.68" text-anchor="end" dominant-baseline="middle" data-label="Firefox">Firefox · 12</text>
+    <text x="317.64" y="90.61" text-anchor="end" dominant-baseline="middle" data-label="Other">Other · 8</text>
   </g>
 </svg>

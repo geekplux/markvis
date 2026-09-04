@@ -1,18 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Share, 3 slices" aria-labelledby="mv-c498686277d5cf5b-title" aria-describedby="mv-c498686277d5cf5b-desc" data-markvis="2" data-chart-type="pie" data-id="mv-c498686277d5cf5b" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Share, 3 slices" aria-labelledby="mv-c498686277d5cf5b-title" aria-describedby="mv-c498686277d5cf5b-desc" data-markvis="2" data-chart-type="pie" data-id="mv-c498686277d5cf5b" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
   <title id="mv-c498686277d5cf5b-title">Share</title>
   <desc id="mv-c498686277d5cf5b-desc">pie chart. Share. x=name. y=value. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="360" y="26" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Share</text>
+  <rect width="100%" height="100%" fill="#F7F4EF"/>
+  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Share</text>
   <g aria-hidden="true">
-    <path d="M260 270 L260 120 A150 150 0 0 1 362.03 379.96 Z" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-label="A" data-raw-value="40"/>
-    <path d="M260 270 L362.03 379.96 A150 150 0 0 1 113.76 303.38 Z" fill="#D55E00" stroke="#ffffff" stroke-width="1" data-label="B" data-raw-value="35"/>
-    <path d="M260 270 L113.76 303.38 A150 150 0 0 1 260 120 Z" fill="#009E73" stroke="#ffffff" stroke-width="1" data-label="C" data-raw-value="30"/>
+    <path d="M376 240 L376 101.76 A138.24 138.24 0 0 1 470.03 341.34 Z" fill="#2B6CB0" stroke="#F7F4EF" stroke-width="1.5" data-label="A" data-raw-value="40"/>
+    <path d="M376 240 L470.03 341.34 A138.24 138.24 0 0 1 241.23 270.76 Z" fill="#C65D2E" stroke="#F7F4EF" stroke-width="1.5" data-label="B" data-raw-value="35"/>
+    <path d="M376 240 L241.23 270.76 A138.24 138.24 0 0 1 376 101.76 Z" fill="#2F8F6B" stroke="#F7F4EF" stroke-width="1.5" data-label="C" data-raw-value="30"/>
   </g>
-  <g font-size="12" fill="#222222">
-    <rect x="446" y="231" width="10" height="10" fill="#0072B2" rx="1"/>
-    <text x="462" y="240" data-legend="A">A (40)</text>
-    <rect x="446" y="251" width="10" height="10" fill="#D55E00" rx="1"/>
-    <text x="462" y="260" data-legend="B">B (35)</text>
-    <rect x="446" y="271" width="10" height="10" fill="#009E73" rx="1"/>
-    <text x="462" y="280" data-legend="C">C (30)</text>
+  <g fill="none" stroke="#A8A29E" stroke-width="1">
+    <polyline points="504.68,189.5 519.58,183.65 527.58,183.65"/>
+    <polyline points="335.25,372.1 330.54,387.39 322.54,387.39"/>
+    <polyline points="267.92,153.81 255.41,143.83 247.41,143.83"/>
+  </g>
+  <g font-size="10" font-weight="500" fill="#1C1917">
+    <text x="539.58" y="183.65" text-anchor="start" dominant-baseline="middle" data-label="A">A · 40</text>
+    <text x="310.54" y="387.39" text-anchor="end" dominant-baseline="middle" data-label="B">B · 35</text>
+    <text x="235.41" y="143.83" text-anchor="end" dominant-baseline="middle" data-label="C">C · 30</text>
   </g>
 </svg>

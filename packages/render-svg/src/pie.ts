@@ -1,8 +1,20 @@
 import type { ChartIR } from "@markvis/ir";
 import { loadRows } from "./data.js";
-import { SVG_HEIGHT, SVG_WIDTH } from "./layout.js";
-import { seriesColor } from "./palette.js";
+import { drawTitle } from "./figure.js";
+import { cartesianMargins, SVG_HEIGHT, SVG_WIDTH } from "./layout.js";
+import { seriesStyle } from "./palette.js";
+import { formatNumber } from "./scale.js";
 import { textWidth } from "./text.js";
+import {
+  AXIS,
+  PIE_LABEL_GAP,
+  PIE_LABEL_MIN_SEP,
+  PIE_LEADER,
+  PIE_RADIUS_RATIO,
+  PIE_STROKE,
+  SLICE_GAP,
+  TYPE,
+} from "./tokens.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
 
 function slicePath(
@@ -20,52 +32,167 @@ function slicePath(
   return `M${fmtPx(cx)} ${fmtPx(cy)} L${fmtPx(x0)} ${fmtPx(y0)} A${fmtPx(r)} ${fmtPx(r)} 0 ${large} 1 ${fmtPx(x1)} ${fmtPx(y1)} Z`;
 }
 
+type Slice = {
+  label: string;
+  value: number;
+  color: string;
+  opacity: number;
+  a0: number;
+  a1: number;
+  mid: number;
+};
+
+type LabelPos = {
+  slice: Slice;
+  extraR: number;
+  side: 1 | -1;
+  text: string;
+  width: number;
+  x0: number;
+  y0: number;
+  x1: number;
+  y1: number;
+  lx: number;
+  ly: number;
+};
+
+function placeLabels(
+  slices: Slice[],
+  cx: number,
+  cy: number,
+  r: number,
+): LabelPos[] {
+  const items: LabelPos[] = slices
+    .filter((slice) => slice.value > 0)
+    .map((slice) => {
+      const side: 1 | -1 = Math.cos(slice.mid) >= 0 ? 1 : -1;
+      const text = `${slice.label} · ${formatNumber(slice.value)}`;
+      return {
+        slice,
+        extraR: 0,
+        side,
+        text,
+        width: textWidth(text, TYPE.value.size),
+        x0: 0,
+        y0: 0,
+        x1: 0,
+        y1: 0,
+        lx: 0,
+        ly: 0,
+      };
+    });
+
+  const layoutOne = (item: LabelPos): void => {
+    const mid = item.slice.mid;
+    const r1 = r + PIE_LEADER + item.extraR;
+    item.x0 = cx + r * Math.cos(mid);
+    item.y0 = cy + r * Math.sin(mid);
+    item.x1 = cx + r1 * Math.cos(mid);
+    item.y1 = cy + r1 * Math.sin(mid);
+    item.lx = item.x1 + item.side * PIE_LABEL_GAP;
+    item.ly = item.y1;
+  };
+
+  for (const item of items) {
+    layoutOne(item);
+  }
+
+  for (let pass = 0; pass < 16; pass++) {
+    let moved = false;
+    for (let i = 0; i < items.length; i++) {
+      for (let j = i + 1; j < items.length; j++) {
+        const a = items[i]!;
+        const b = items[j]!;
+        if (a.side !== b.side) {
+          continue;
+        }
+        const dx = a.lx - b.lx;
+        const dy = a.ly - b.ly;
+        const dist = Math.hypot(dx, dy);
+        if (dist < PIE_LABEL_MIN_SEP) {
+          const farther =
+            Math.abs(a.slice.mid + Math.PI / 2) >=
+            Math.abs(b.slice.mid + Math.PI / 2)
+              ? a
+              : b;
+          farther.extraR += 6;
+          layoutOne(farther);
+          moved = true;
+        }
+      }
+    }
+    if (!moved) {
+      break;
+    }
+  }
+
+  return items;
+}
+
 export function renderPie(chart: ChartIR, _id: string): string[] {
   const rows = loadRows(chart);
-  const slices = rows.map((row, i) => ({
-    label: row.xLabel,
-    value: Math.max(0, row.y),
-    color: seriesColor(i),
-  }));
-  const sum = slices.reduce((acc, slice) => acc + slice.value, 0);
+  const raw: Omit<Slice, "a0" | "a1" | "mid">[] = rows.map((row, i) => {
+    const style = seriesStyle(i);
+    return {
+      label: row.xLabel,
+      value: Math.max(0, row.y),
+      color: style.color,
+      opacity: style.opacity,
+    };
+  });
+  const sum = raw.reduce((acc, slice) => acc + slice.value, 0);
 
-  const cx = 260;
-  const cy = 270;
-  const r = 150;
-  const lines: string[] = [];
+  const margins = cartesianMargins({
+    yTickLabels: [],
+    xLabels: [],
+    yAxisTitle: "",
+    xAxisTitle: "",
+    legendHeight: 0,
+    rotateX: false,
+  });
+  const plotLeft = margins.left;
+  const plotRight = SVG_WIDTH - margins.right;
+  const plotTop = margins.top;
+  const plotBottom = SVG_HEIGHT - margins.bottom;
+  const plotW = plotRight - plotLeft;
+  const plotH = plotBottom - plotTop;
+  const cx = (plotLeft + plotRight) / 2;
+  const cy = (plotTop + plotBottom) / 2;
+  const r = Math.min(plotW, plotH) * PIE_RADIUS_RATIO;
 
-  lines.push(
-    `  <text ${attrs({
-      x: SVG_WIDTH / 2,
-      y: 26,
-      "text-anchor": "middle",
-      "font-size": 16,
-      "font-weight": 600,
-      fill: "#111111",
-    })}>${escapeXml(chart.title)}</text>`,
-  );
-
-  const legendX = cx + r + 36;
-  let legendY = Math.max(56, cy - (slices.length * 20) / 2);
-  if (legendY + slices.length * 20 > SVG_HEIGHT - 16) {
-    legendY = 56;
+  const slices: Slice[] = [];
+  let angle = -Math.PI / 2;
+  if (sum > 0) {
+    for (const slice of raw) {
+      const sweep = (slice.value / sum) * Math.PI * 2;
+      const next = angle + sweep;
+      slices.push({
+        ...slice,
+        a0: angle,
+        a1: next,
+        mid: angle + sweep / 2,
+      });
+      angle = next;
+    }
   }
+
+  const labels = placeLabels(slices, cx, cy, r);
+  const lines: string[] = [drawTitle(chart)];
 
   lines.push(`  <g ${attrs({ "aria-hidden": "true" })}>`);
   if (sum <= 0) {
     lines.push(
       `    <circle ${attrs({
-        cx,
-        cy,
-        r,
+        cx: fmtPx(cx),
+        cy: fmtPx(cy),
+        r: fmtPx(r),
         fill: "none",
-        stroke: "#cccccc",
+        stroke: AXIS,
         "stroke-width": 1.5,
         "data-empty": "true",
       })}/>`,
     );
   } else {
-    let angle = -Math.PI / 2;
     for (const slice of slices) {
       if (slice.value <= 0) {
         continue;
@@ -73,66 +200,68 @@ export function renderPie(chart: ChartIR, _id: string): string[] {
       if (slice.value === sum) {
         lines.push(
           `    <circle ${attrs({
-            cx,
-            cy,
-            r,
+            cx: fmtPx(cx),
+            cy: fmtPx(cy),
+            r: fmtPx(r),
             fill: slice.color,
-            stroke: "#ffffff",
-            "stroke-width": 1,
+            "fill-opacity": slice.opacity === 1 ? undefined : slice.opacity,
+            stroke: SLICE_GAP,
+            "stroke-width": PIE_STROKE,
             "data-label": slice.label,
             "data-raw-value": String(slice.value),
           })}/>`,
         );
-        angle += Math.PI * 2;
         continue;
       }
-      const sweep = (slice.value / sum) * Math.PI * 2;
-      const next = angle + sweep;
       lines.push(
         `    <path ${attrs({
-          d: slicePath(cx, cy, r, angle, next),
+          d: slicePath(cx, cy, r, slice.a0, slice.a1),
           fill: slice.color,
-          stroke: "#ffffff",
-          "stroke-width": 1,
+          "fill-opacity": slice.opacity === 1 ? undefined : slice.opacity,
+          stroke: SLICE_GAP,
+          "stroke-width": PIE_STROKE,
           "data-label": slice.label,
           "data-raw-value": String(slice.value),
         })}/>`,
       );
-      angle = next;
     }
   }
   lines.push(`  </g>`);
 
-  lines.push(`  <g ${attrs({ "font-size": 12, fill: "#222222" })}>`);
-  for (let i = 0; i < slices.length; i++) {
-    const slice = slices[i]!;
-    const y = legendY + i * 20;
-    const swatchY = y - 9;
+  if (labels.length > 0) {
     lines.push(
-      `    <rect ${attrs({
-        x: legendX,
-        y: swatchY,
-        width: 10,
-        height: 10,
-        fill: slice.color,
-        rx: 1,
-      })}/>`,
+      `  <g ${attrs({ fill: "none", stroke: AXIS, "stroke-width": 1 })}>`,
     );
-    const label = `${slice.label} (${String(slice.value)})`;
-    const maxW = SVG_WIDTH - legendX - 28;
-    let shown = label;
-    if (textWidth(shown, 12) > maxW) {
-      shown = slice.label;
+    for (const item of labels) {
+      lines.push(
+        `    <polyline ${attrs({
+          points: `${fmtPx(item.x0)},${fmtPx(item.y0)} ${fmtPx(item.x1)},${fmtPx(item.y1)} ${fmtPx(item.x1 + item.side * 8)},${fmtPx(item.y1)}`,
+        })}/>`,
+      );
     }
+    lines.push(`  </g>`);
     lines.push(
-      `    <text ${attrs({
-        x: legendX + 16,
-        y,
-        "data-legend": slice.label,
-      })}>${escapeXml(shown)}</text>`,
+      `  <g ${attrs({
+        "font-size": TYPE.value.size,
+        "font-weight": TYPE.value.weight,
+        fill: TYPE.value.fill,
+      })}>`,
     );
+    for (const item of labels) {
+      const leaderEndX = item.x1 + item.side * 8;
+      const lx = leaderEndX + item.side * PIE_LABEL_GAP;
+      lines.push(
+        `    <text ${attrs({
+          x: fmtPx(lx),
+          y: fmtPx(item.ly),
+          "text-anchor": item.side > 0 ? "start" : "end",
+          "dominant-baseline": "middle",
+          "data-label": item.slice.label,
+        })}>${escapeXml(item.text)}</text>`,
+      );
+    }
+    lines.push(`  </g>`);
   }
-  lines.push(`  </g>`);
 
   return lines;
 }

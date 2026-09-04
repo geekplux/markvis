@@ -1,3 +1,5 @@
+import { COMPACT_SPAN } from "./tokens.js";
+
 export function cleanFloat(n: number): number {
   if (!Number.isFinite(n)) {
     return 0;
@@ -68,6 +70,18 @@ export function scaleLinear(
   };
 }
 
+function withCommas(digits: string): string {
+  if (digits.length <= 3) {
+    return digits;
+  }
+  const parts: string[] = [];
+  for (let i = digits.length; i > 0; i -= 3) {
+    parts.unshift(digits.slice(Math.max(0, i - 3), i));
+  }
+  return parts.join(",");
+}
+
+/** Integer ≥ 1000 → thousands separators. Never `1.2k` / `200k` here. */
 export function formatNumber(n: number): string {
   if (!Number.isFinite(n)) {
     return "";
@@ -77,18 +91,74 @@ export function formatNumber(n: number): string {
   }
   const sign = n < 0 ? "-" : "";
   const abs = Math.abs(n);
-  const rules: { min: number; div: number; suffix: string }[] = [
-    { min: 1e12, div: 1e12, suffix: "T" },
-    { min: 1e9, div: 1e9, suffix: "B" },
-    { min: 1e6, div: 1e6, suffix: "M" },
-    { min: 1e3, div: 1e3, suffix: "k" },
-  ];
-  for (const rule of rules) {
-    if (abs >= rule.min) {
-      return sign + trimFixed(abs / rule.div) + rule.suffix;
-    }
+  if (Math.abs(abs - Math.round(abs)) < 1e-9) {
+    return sign + withCommas(String(Math.round(abs)));
   }
-  return sign + trimFixed(abs);
+  const trimmed = trimFixed(abs);
+  const dot = trimmed.indexOf(".");
+  if (dot === -1) {
+    return sign + withCommas(trimmed);
+  }
+  const intPart = trimmed.slice(0, dot);
+  const frac = trimmed.slice(dot);
+  return sign + (intPart.length > 3 ? withCommas(intPart) : intPart) + frac;
+}
+
+export type CompactScale = {
+  divisor: number;
+  suffix: "k" | "M";
+};
+
+/**
+ * Compact `k`/`M` only when the axis span ≥ 10,000 and every tick is a
+ * round thousand. Ticks then show the divided number; suffix goes on the title.
+ */
+export function compactScale(
+  ticks: number[],
+  span: number,
+): CompactScale | null {
+  if (!(span >= COMPACT_SPAN) || ticks.length === 0) {
+    return null;
+  }
+  const allRoundThousand = ticks.every(
+    (tick) => Math.abs(tick % 1000) < 1e-9,
+  );
+  if (!allRoundThousand) {
+    return null;
+  }
+  const allRoundMillion = ticks.every(
+    (tick) => Math.abs(tick % 1e6) < 1e-9,
+  );
+  if (span >= 1e6 && allRoundMillion) {
+    return { divisor: 1e6, suffix: "M" };
+  }
+  return { divisor: 1000, suffix: "k" };
+}
+
+export function formatTick(n: number, compact: CompactScale | null): string {
+  if (compact) {
+    return formatNumber(n / compact.divisor);
+  }
+  return formatNumber(n);
+}
+
+export function unitWithCompact(
+  unit: string | undefined,
+  compact: CompactScale | null,
+): string | undefined {
+  if (!compact) {
+    return unit;
+  }
+  if (!unit) {
+    return compact.suffix;
+  }
+  const trimmed = unit.trim();
+  const parts = trimmed.split(/\s+/);
+  const last = parts[parts.length - 1];
+  if (last === compact.suffix) {
+    return trimmed;
+  }
+  return `${trimmed} ${compact.suffix}`;
 }
 
 function trimFixed(n: number): string {

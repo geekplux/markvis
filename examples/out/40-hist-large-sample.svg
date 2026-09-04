@@ -1,52 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="hist chart: Idle seconds, 11 rows" aria-labelledby="mv-c5d04bd8a48eb41f-title" aria-describedby="mv-c5d04bd8a48eb41f-desc" data-markvis="2" data-chart-type="hist" data-id="mv-c5d04bd8a48eb41f" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="hist chart: Idle seconds, 11 rows" aria-labelledby="mv-c5d04bd8a48eb41f-title" aria-describedby="mv-c5d04bd8a48eb41f-desc" data-markvis="2" data-chart-type="hist" data-id="mv-c5d04bd8a48eb41f" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
   <title id="mv-c5d04bd8a48eb41f-title">Idle seconds</title>
   <desc id="mv-c5d04bd8a48eb41f-desc">hist chart. Idle seconds. x=sec. 11 rows. x is binned with Sturges equal-width bins.</desc>
-  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Idle seconds</text>
-  <g fill="none" stroke="#e6e6e6" stroke-width="1">
-    <line x1="64" x2="696" y1="416" y2="416"/>
-    <line x1="64" x2="696" y1="321" y2="321"/>
-    <line x1="64" x2="696" y1="226" y2="226"/>
-    <line x1="64" x2="696" y1="131" y2="131"/>
-    <line x1="64" x2="696" y1="36" y2="36"/>
-    <line x1="64" x2="64" y1="36" y2="416"/>
-    <line x1="190.4" x2="190.4" y1="36" y2="416"/>
-    <line x1="316.8" x2="316.8" y1="36" y2="416"/>
-    <line x1="443.2" x2="443.2" y1="36" y2="416"/>
-    <line x1="569.6" x2="569.6" y1="36" y2="416"/>
-    <line x1="696" x2="696" y1="36" y2="416"/>
+  <rect width="100%" height="100%" fill="#F7F4EF"/>
+  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Idle seconds</text>
+  <g fill="none" stroke="#E7E5E4" stroke-width="1">
+    <line x1="56" x2="696" y1="432" y2="432"/>
+    <line x1="56" x2="696" y1="336" y2="336"/>
+    <line x1="56" x2="696" y1="240" y2="240"/>
+    <line x1="56" x2="696" y1="144" y2="144"/>
+    <line x1="56" x2="696" y1="48" y2="48"/>
   </g>
-  <path d="M64 36 L64 416 L696 416" fill="none" stroke="#444444" stroke-width="1"/>
-  <g fill="#333333" font-size="10">
-    <line x1="60" x2="64" y1="416" y2="416" stroke="#444444"/>
-    <text x="56" y="416" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="60" x2="64" y1="321" y2="321" stroke="#444444"/>
-    <text x="56" y="321" text-anchor="end" dominant-baseline="middle">1</text>
-    <line x1="60" x2="64" y1="226" y2="226" stroke="#444444"/>
-    <text x="56" y="226" text-anchor="end" dominant-baseline="middle">2</text>
-    <line x1="60" x2="64" y1="131" y2="131" stroke="#444444"/>
-    <text x="56" y="131" text-anchor="end" dominant-baseline="middle">3</text>
-    <line x1="60" x2="64" y1="36" y2="36" stroke="#444444"/>
-    <text x="56" y="36" text-anchor="end" dominant-baseline="middle">4</text>
-    <line x1="64" x2="64" y1="416" y2="420" stroke="#444444"/>
-    <text x="64" y="432" text-anchor="middle" font-size="10" data-full-label="0">0</text>
-    <line x1="190.4" x2="190.4" y1="416" y2="420" stroke="#444444"/>
-    <text x="190.4" y="432" text-anchor="middle" font-size="10" data-full-label="4">4</text>
-    <line x1="316.8" x2="316.8" y1="416" y2="420" stroke="#444444"/>
-    <text x="316.8" y="432" text-anchor="middle" font-size="10" data-full-label="8">8</text>
-    <line x1="443.2" x2="443.2" y1="416" y2="420" stroke="#444444"/>
-    <text x="443.2" y="432" text-anchor="middle" font-size="10" data-full-label="12">12</text>
-    <line x1="569.6" x2="569.6" y1="416" y2="420" stroke="#444444"/>
-    <text x="569.6" y="432" text-anchor="middle" font-size="10" data-full-label="16">16</text>
-    <line x1="696" x2="696" y1="416" y2="420" stroke="#444444"/>
-    <text x="696" y="432" text-anchor="middle" font-size="10" data-full-label="20">20</text>
+  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <g fill="#57534E" font-size="10" font-weight="400">
+    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
+    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="52" x2="56" y1="336" y2="336" stroke="#A8A29E"/>
+    <text x="44" y="336" text-anchor="end" dominant-baseline="middle">1</text>
+    <line x1="52" x2="56" y1="240" y2="240" stroke="#A8A29E"/>
+    <text x="44" y="240" text-anchor="end" dominant-baseline="middle">2</text>
+    <line x1="52" x2="56" y1="144" y2="144" stroke="#A8A29E"/>
+    <text x="44" y="144" text-anchor="end" dominant-baseline="middle">3</text>
+    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
+    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">4</text>
+    <line x1="56" x2="56" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="56" y="448" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <line x1="184" x2="184" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="184" y="448" text-anchor="middle" font-size="10" data-full-label="4">4</text>
+    <line x1="312" x2="312" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="312" y="448" text-anchor="middle" font-size="10" data-full-label="8">8</text>
+    <line x1="440" x2="440" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="440" y="448" text-anchor="middle" font-size="10" data-full-label="12">12</text>
+    <line x1="568" x2="568" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="568" y="448" text-anchor="middle" font-size="10" data-full-label="16">16</text>
+    <line x1="696" x2="696" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="696" y="448" text-anchor="middle" font-size="10" data-full-label="20">20</text>
   </g>
-  <text x="14" y="226" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 226)">count</text>
-  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">sec</text>
-  <g shape-rendering="crispEdges">
-    <rect x="64" y="36" width="125.9" height="380" fill="#0072B2" data-bin-left="0" data-bin-right="4" data-weight="4" data-count="4"/>
-    <rect x="190.4" y="321" width="125.9" height="95" fill="#0072B2" data-bin-left="4" data-bin-right="8" data-weight="1" data-count="1"/>
-    <rect x="316.8" y="131" width="125.9" height="285" fill="#0072B2" data-bin-left="8" data-bin-right="12" data-weight="3" data-count="3"/>
-    <rect x="443.2" y="226" width="125.9" height="190" fill="#0072B2" data-bin-left="12" data-bin-right="16" data-weight="2" data-count="2"/>
-    <rect x="569.6" y="321" width="125.9" height="95" fill="#0072B2" data-bin-left="16" data-bin-right="20" data-weight="1" data-count="1"/>
+  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">count</text>
+  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">sec</text>
+  <g>
+    <path d="M68.8 432 L68.8 50 Q68.8 48 70.8 48 L169.2 48 Q171.2 48 171.2 50 L171.2 432 Z" fill="#2B6CB0" data-bin-left="0" data-bin-right="4" data-weight="4" data-count="4"/>
+    <path d="M196.8 432 L196.8 338 Q196.8 336 198.8 336 L297.2 336 Q299.2 336 299.2 338 L299.2 432 Z" fill="#2B6CB0" data-bin-left="4" data-bin-right="8" data-weight="1" data-count="1"/>
+    <path d="M324.8 432 L324.8 146 Q324.8 144 326.8 144 L425.2 144 Q427.2 144 427.2 146 L427.2 432 Z" fill="#2B6CB0" data-bin-left="8" data-bin-right="12" data-weight="3" data-count="3"/>
+    <path d="M452.8 432 L452.8 242 Q452.8 240 454.8 240 L553.2 240 Q555.2 240 555.2 242 L555.2 432 Z" fill="#2B6CB0" data-bin-left="12" data-bin-right="16" data-weight="2" data-count="2"/>
+    <path d="M580.8 432 L580.8 338 Q580.8 336 582.8 336 L681.2 336 Q683.2 336 683.2 338 L683.2 432 Z" fill="#2B6CB0" data-bin-left="16" data-bin-right="20" data-weight="1" data-count="1"/>
   </g>
 </svg>

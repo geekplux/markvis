@@ -1,40 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Seats by plan, 4 rows, series plan" aria-labelledby="mv-afe6bc691d584b59-title" aria-describedby="mv-afe6bc691d584b59-desc" data-markvis="2" data-chart-type="bar" data-id="mv-afe6bc691d584b59" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Seats by plan, 4 rows, series plan" aria-labelledby="mv-afe6bc691d584b59-title" aria-describedby="mv-afe6bc691d584b59-desc" data-markvis="2" data-chart-type="bar" data-id="mv-afe6bc691d584b59" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
   <title id="mv-afe6bc691d584b59-title">Seats by plan</title>
   <desc id="mv-afe6bc691d584b59-desc">bar chart. Seats by plan. x=month. y=seats. series=plan. 4 rows.</desc>
-  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Seats by plan</text>
-  <g font-size="11" fill="#222222">
-    <rect x="64" y="31" width="10" height="10" fill="#0072B2" rx="1"/>
-    <text x="78" y="40" data-legend="free">free</text>
-    <rect x="121.28" y="31" width="10" height="10" fill="#D55E00" rx="1"/>
-    <text x="135.28" y="40" data-legend="pro">pro</text>
+  <rect width="100%" height="100%" fill="#F7F4EF"/>
+  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Seats by plan</text>
+  <g font-size="11" font-weight="400" fill="#1C1917">
+    <rect x="56" y="43" width="10" height="10" fill="#2B6CB0" rx="1"/>
+    <text x="70" y="52" data-legend="free">free</text>
+    <rect x="113.28" y="43" width="10" height="10" fill="#C65D2E" rx="1"/>
+    <text x="127.28" y="52" data-legend="pro">pro</text>
   </g>
-  <g fill="none" stroke="#e6e6e6" stroke-width="1">
-    <line x1="64" x2="696" y1="416" y2="416"/>
-    <line x1="64" x2="696" y1="297.33" y2="297.33"/>
-    <line x1="64" x2="696" y1="178.67" y2="178.67"/>
-    <line x1="64" x2="696" y1="60" y2="60"/>
+  <g fill="none" stroke="#E7E5E4" stroke-width="1">
+    <line x1="56" x2="696" y1="432" y2="432"/>
+    <line x1="56" x2="696" y1="312" y2="312"/>
+    <line x1="56" x2="696" y1="192" y2="192"/>
+    <line x1="56" x2="696" y1="72" y2="72"/>
   </g>
-  <path d="M64 60 L64 416 L696 416" fill="none" stroke="#444444" stroke-width="1"/>
-  <g fill="#333333" font-size="10">
-    <line x1="60" x2="64" y1="416" y2="416" stroke="#444444"/>
-    <text x="56" y="416" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="60" x2="64" y1="297.33" y2="297.33" stroke="#444444"/>
-    <text x="56" y="297.33" text-anchor="end" dominant-baseline="middle">50</text>
-    <line x1="60" x2="64" y1="178.67" y2="178.67" stroke="#444444"/>
-    <text x="56" y="178.67" text-anchor="end" dominant-baseline="middle">100</text>
-    <line x1="60" x2="64" y1="60" y2="60" stroke="#444444"/>
-    <text x="56" y="60" text-anchor="end" dominant-baseline="middle">150</text>
-    <line x1="222" x2="222" y1="416" y2="420" stroke="#444444"/>
-    <text x="222" y="432" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
-    <line x1="538" x2="538" y1="416" y2="420" stroke="#444444"/>
-    <text x="538" y="432" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
+  <path d="M56 72 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <g fill="#57534E" font-size="10" font-weight="400">
+    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
+    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="52" x2="56" y1="312" y2="312" stroke="#A8A29E"/>
+    <text x="44" y="312" text-anchor="end" dominant-baseline="middle">50</text>
+    <line x1="52" x2="56" y1="192" y2="192" stroke="#A8A29E"/>
+    <text x="44" y="192" text-anchor="end" dominant-baseline="middle">100</text>
+    <line x1="52" x2="56" y1="72" y2="72" stroke="#A8A29E"/>
+    <text x="44" y="72" text-anchor="end" dominant-baseline="middle">150</text>
+    <line x1="216" x2="216" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="216" y="448" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
+    <line x1="536" x2="536" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="536" y="448" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
   </g>
-  <text x="14" y="238" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 238)">seats</text>
-  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">month</text>
-  <g shape-rendering="crispEdges">
-    <rect x="98.76" y="178.67" width="122.24" height="237.33" fill="#0072B2" data-x="Jan" data-series="free" data-y="100"/>
-    <rect x="222" y="368.53" width="122.24" height="47.47" fill="#D55E00" data-x="Jan" data-series="pro" data-y="20"/>
-    <rect x="414.76" y="154.93" width="122.24" height="261.07" fill="#0072B2" data-x="Feb" data-series="free" data-y="110"/>
-    <rect x="538" y="349.55" width="122.24" height="66.45" fill="#D55E00" data-x="Feb" data-series="pro" data-y="28"/>
+  <text x="12" y="252" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 252)">seats</text>
+  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">month</text>
+  <g>
+    <path d="M88 432 L88 194 Q88 192 90 192 L213 192 Q215 192 215 194 L215 432 Z" fill="#2B6CB0" data-x="Jan" data-series="free" data-y="100"/>
+    <path d="M217 432 L217 386 Q217 384 219 384 L342 384 Q344 384 344 386 L344 432 Z" fill="#C65D2E" data-x="Jan" data-series="pro" data-y="20"/>
+    <path d="M408 432 L408 170 Q408 168 410 168 L533 168 Q535 168 535 170 L535 432 Z" fill="#2B6CB0" data-x="Feb" data-series="free" data-y="110"/>
+    <path d="M537 432 L537 366.8 Q537 364.8 539 364.8 L662 364.8 Q664 364.8 664 366.8 L664 432 Z" fill="#C65D2E" data-x="Feb" data-series="pro" data-y="28"/>
+  </g>
+  <g>
+    <text x="151.5" y="184" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Jan">100</text>
+    <text x="280.5" y="376" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Jan">20</text>
+    <text x="471.5" y="160" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Feb">110</text>
+    <text x="600.5" y="356.8" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Feb">28</text>
   </g>
 </svg>

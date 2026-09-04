@@ -1,38 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Costs (USD), 3 rows" aria-labelledby="mv-f634eb2fc08b17eb-title" aria-describedby="mv-f634eb2fc08b17eb-desc" data-markvis="2" data-chart-type="bar" data-id="mv-f634eb2fc08b17eb" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Costs (USD), 3 rows" aria-labelledby="mv-f634eb2fc08b17eb-title" aria-describedby="mv-f634eb2fc08b17eb-desc" data-markvis="2" data-chart-type="bar" data-id="mv-f634eb2fc08b17eb" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
   <title id="mv-f634eb2fc08b17eb-title">Costs</title>
   <desc id="mv-f634eb2fc08b17eb-desc">bar chart. Costs. x=item. y=cost. unit=USD. 3 rows.</desc>
-  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Costs</text>
-  <g fill="none" stroke="#e6e6e6" stroke-width="1">
-    <line x1="64" x2="696" y1="416" y2="416"/>
-    <line x1="64" x2="696" y1="321" y2="321"/>
-    <line x1="64" x2="696" y1="226" y2="226"/>
-    <line x1="64" x2="696" y1="131" y2="131"/>
-    <line x1="64" x2="696" y1="36" y2="36"/>
+  <rect width="100%" height="100%" fill="#F7F4EF"/>
+  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Costs<tspan font-size="12" font-weight="400" fill="#78716C"> · USD</tspan></text>
+  <g fill="none" stroke="#E7E5E4" stroke-width="1">
+    <line x1="56" x2="696" y1="432" y2="432"/>
+    <line x1="56" x2="696" y1="336" y2="336"/>
+    <line x1="56" x2="696" y1="240" y2="240"/>
+    <line x1="56" x2="696" y1="144" y2="144"/>
+    <line x1="56" x2="696" y1="48" y2="48"/>
   </g>
-  <path d="M64 36 L64 416 L696 416" fill="none" stroke="#444444" stroke-width="1"/>
-  <g fill="#333333" font-size="10">
-    <line x1="60" x2="64" y1="416" y2="416" stroke="#444444"/>
-    <text x="56" y="416" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="60" x2="64" y1="321" y2="321" stroke="#444444"/>
-    <text x="56" y="321" text-anchor="end" dominant-baseline="middle">100</text>
-    <line x1="60" x2="64" y1="226" y2="226" stroke="#444444"/>
-    <text x="56" y="226" text-anchor="end" dominant-baseline="middle">200</text>
-    <line x1="60" x2="64" y1="131" y2="131" stroke="#444444"/>
-    <text x="56" y="131" text-anchor="end" dominant-baseline="middle">300</text>
-    <line x1="60" x2="64" y1="36" y2="36" stroke="#444444"/>
-    <text x="56" y="36" text-anchor="end" dominant-baseline="middle">400</text>
-    <line x1="169.33" x2="169.33" y1="416" y2="420" stroke="#444444"/>
-    <text x="169.33" y="432" text-anchor="middle" font-size="10" data-full-label="Hosting">Hosting</text>
-    <line x1="380" x2="380" y1="416" y2="420" stroke="#444444"/>
-    <text x="380" y="432" text-anchor="middle" font-size="10" data-full-label="CDN">CDN</text>
-    <line x1="590.67" x2="590.67" y1="416" y2="420" stroke="#444444"/>
-    <text x="590.67" y="432" text-anchor="middle" font-size="10" data-full-label="Logs">Logs</text>
+  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <g fill="#57534E" font-size="10" font-weight="400">
+    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
+    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="52" x2="56" y1="336" y2="336" stroke="#A8A29E"/>
+    <text x="44" y="336" text-anchor="end" dominant-baseline="middle">100</text>
+    <line x1="52" x2="56" y1="240" y2="240" stroke="#A8A29E"/>
+    <text x="44" y="240" text-anchor="end" dominant-baseline="middle">200</text>
+    <line x1="52" x2="56" y1="144" y2="144" stroke="#A8A29E"/>
+    <text x="44" y="144" text-anchor="end" dominant-baseline="middle">300</text>
+    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
+    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">400</text>
+    <line x1="162.67" x2="162.67" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="162.67" y="448" text-anchor="middle" font-size="10" data-full-label="Hosting">Hosting</text>
+    <line x1="376" x2="376" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="376" y="448" text-anchor="middle" font-size="10" data-full-label="CDN">CDN</text>
+    <line x1="589.33" x2="589.33" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="589.33" y="448" text-anchor="middle" font-size="10" data-full-label="Logs">Logs</text>
   </g>
-  <text x="14" y="226" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 226)">cost (USD)</text>
-  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">item</text>
-  <g shape-rendering="crispEdges">
-    <rect x="87.17" y="36" width="163.32" height="380" fill="#0072B2" data-x="Hosting" data-series="cost" data-y="400"/>
-    <rect x="297.84" y="302" width="163.32" height="114" fill="#0072B2" data-x="CDN" data-series="cost" data-y="120"/>
-    <rect x="508.51" y="340" width="163.32" height="76" fill="#0072B2" data-x="Logs" data-series="cost" data-y="80"/>
+  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">cost</text>
+  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">item</text>
+  <g>
+    <path d="M77.33 432 L77.33 50 Q77.33 48 79.33 48 L246 48 Q248 48 248 50 L248 432 Z" fill="#2B6CB0" data-x="Hosting" data-series="cost" data-y="400"/>
+    <path d="M290.67 432 L290.67 318.8 Q290.67 316.8 292.67 316.8 L459.33 316.8 Q461.33 316.8 461.33 318.8 L461.33 432 Z" fill="#2B6CB0" data-x="CDN" data-series="cost" data-y="120"/>
+    <path d="M504 432 L504 357.2 Q504 355.2 506 355.2 L672.67 355.2 Q674.67 355.2 674.67 357.2 L674.67 432 Z" fill="#2B6CB0" data-x="Logs" data-series="cost" data-y="80"/>
+  </g>
+  <g>
+    <text x="162.67" y="60" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Hosting">400</text>
+    <text x="376" y="308.8" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="CDN">120</text>
+    <text x="589.33" y="347.2" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Logs">80</text>
   </g>
 </svg>

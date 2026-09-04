@@ -7,24 +7,50 @@ import {
   usesLinearX,
   type DataRow,
 } from "./data.js";
+import { drawTitle } from "./figure.js";
 import { binHistogram, histSamplesFromChart, type HistBin } from "./hist.js";
 import {
   cartesianMargins,
+  categoryLayout,
   layoutLegend,
-  shouldRotateX,
   SVG_HEIGHT,
   SVG_WIDTH,
+  type CategoryLayout,
   type PlotBox,
 } from "./layout.js";
-import { seriesColor } from "./palette.js";
+import { seriesStyle } from "./palette.js";
 import {
+  compactScale,
   formatNumber,
+  formatTick,
   niceTicks,
   scaleLinear,
+  unitWithCompact,
   xExtent,
   yExtent,
+  type CompactScale,
 } from "./scale.js";
-import { truncateLabel } from "./text.js";
+import {
+  AREA_OPACITY,
+  AXIS,
+  BAR_GAP,
+  BAR_LABEL_INSIDE_H,
+  BAR_LABEL_MIN_WIDTH,
+  BAR_LABEL_OFFSET,
+  BAR_RX,
+  GROUP_GAP_PX,
+  HAIRLINE,
+  LABEL_ROTATE_DEG,
+  LINE_POINT_R,
+  LINE_STROKE,
+  POINT_SKIP_AFTER,
+  SCATTER_OPACITY,
+  SCATTER_R,
+  TICK_MARK,
+  TICK_TEXT_GAP,
+  TITLE_BASELINE,
+  TYPE,
+} from "./tokens.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
 
 type Prepared = {
@@ -32,7 +58,7 @@ type Prepared = {
   series: string[];
   categories: string[];
   linearX: boolean;
-  xTicks: { pos: number; label: string }[];
+  xTicks: { pos: number; label: string; show: boolean }[];
   yTicks: { pos: number; label: string }[];
   xScaleNum: (v: number) => number;
   yScale: (v: number) => number;
@@ -44,17 +70,16 @@ type Prepared = {
   xAxisTitle: string;
   rotateX: boolean;
   bins: HistBin[];
+  compact: CompactScale | null;
+  titleUnit: string | undefined;
+  styles: { color: string; opacity: number }[];
 };
 
-function yAxisTitle(chart: ChartIR): string {
-  const base = chart.type === "hist" ? (chart.y ?? "count") : (chart.y ?? "");
-  if (base && chart.unit && chart.unit !== base) {
-    return `${base} (${chart.unit})`;
+function fieldYAxisTitle(chart: ChartIR): string {
+  if (chart.type === "hist") {
+    return chart.y ?? "count";
   }
-  if (base) {
-    return base;
-  }
-  return chart.unit ?? "";
+  return chart.y ?? "";
 }
 
 function polyline(points: { x: number; y: number }[]): string {
@@ -70,9 +95,7 @@ function prepare(chart: ChartIR): Prepared {
   const histMode = chart.type === "hist";
   const rows = histMode ? [] : loadRows(chart);
   const bins = histMode ? binHistogram(histSamplesFromChart(chart)) : [];
-  const series = histMode
-    ? [chart.y ?? "count"]
-    : seriesNames(rows);
+  const series = histMode ? [chart.y ?? "count"] : seriesNames(rows);
   const categories = histMode
     ? bins.map(
         (bin) => `${formatNumber(bin.left)}–${formatNumber(bin.right)}`,
@@ -89,7 +112,24 @@ function prepare(chart: ChartIR): Prepared {
   const yTickNums = niceTicks(yDom[0], yDom[1]);
   const yMin = yTickNums[0] ?? yDom[0];
   const yMax = yTickNums[yTickNums.length - 1] ?? yDom[1];
-  const yTickLabels = yTickNums.map((n) => formatNumber(n));
+  const compact = compactScale(yTickNums, yMax - yMin);
+  const yTickLabels = yTickNums.map((n) => formatTick(n, compact));
+
+  const styles = series.map((_, i) => seriesStyle(i));
+  const showLegend = !histMode && series.length > 1;
+  const legendDraft = showLegend
+    ? layoutLegend(
+        series,
+        styles.map((s) => s.color),
+        styles.map((s) => s.opacity),
+        72,
+        TITLE_BASELINE + 22,
+        SVG_WIDTH - 96,
+      )
+    : { items: [], height: 0 };
+
+  const yTitle = fieldYAxisTitle(chart);
+  const xTitle = chart.x;
 
   const xLabelTexts = linearX
     ? histMode
@@ -103,26 +143,33 @@ function prepare(chart: ChartIR): Prepared {
         )
       : []
     : categories;
-  const rotateX = shouldRotateX(
-    linearX && !histMode ? ["0000"] : xLabelTexts.length ? xLabelTexts : categories,
-  );
 
-  const showLegend =
-    !histMode && (series.length > 1 || chart.series !== undefined);
-  const legendColors = series.map((_, i) => seriesColor(i));
-  const legendDraft = showLegend
-    ? layoutLegend(series, legendColors, 72, 40, SVG_WIDTH - 96)
-    : { items: [], height: 0 };
+  const draftMargins = cartesianMargins({
+    yTickLabels,
+    xLabels: linearX && !histMode ? ["0"] : categories,
+    yAxisTitle: yTitle,
+    xAxisTitle: xTitle,
+    legendHeight: legendDraft.height,
+    rotateX: false,
+  });
+  const draftWidth = SVG_WIDTH - draftMargins.left - draftMargins.right;
+  const nCat = Math.max(categories.length, 1);
+  const draftStep = draftWidth / nCat;
+  const catLay: CategoryLayout =
+    linearX && !histMode
+      ? { rotate: false, show: categories.map(() => true) }
+      : categoryLayout(
+          xLabelTexts.length ? xLabelTexts : categories,
+          draftStep,
+        );
 
-  const yTitle = yAxisTitle(chart);
-  const xTitle = chart.x;
   const margins = cartesianMargins({
     yTickLabels,
     xLabels: linearX && !histMode ? ["0"] : categories,
     yAxisTitle: yTitle,
     xAxisTitle: xTitle,
     legendHeight: legendDraft.height,
-    rotateX: linearX && !histMode ? false : rotateX,
+    rotateX: catLay.rotate,
   });
 
   const plot: PlotBox = {
@@ -134,28 +181,41 @@ function prepare(chart: ChartIR): Prepared {
     height: SVG_HEIGHT - margins.top - margins.bottom,
   };
 
-  const legend =
-    showLegend
-      ? layoutLegend(
-          series,
-          legendColors,
-          plot.left,
-          40,
-          plot.width,
-        )
-      : legendDraft;
+  const legend = showLegend
+    ? layoutLegend(
+        series,
+        styles.map((s) => s.color),
+        styles.map((s) => s.opacity),
+        plot.left,
+        TITLE_BASELINE + 22,
+        plot.width,
+      )
+    : legendDraft;
+
+  if (legend.height !== legendDraft.height && showLegend) {
+    const remargins = cartesianMargins({
+      yTickLabels,
+      xLabels: linearX && !histMode ? ["0"] : categories,
+      yAxisTitle: yTitle,
+      xAxisTitle: xTitle,
+      legendHeight: legend.height,
+      rotateX: catLay.rotate,
+    });
+    plot.top = remargins.top;
+    plot.height = plot.bottom - plot.top;
+  }
 
   const yScale = scaleLinear([yMin, yMax], [plot.bottom, plot.top]);
   const yTicks = yTickNums.map((n) => ({
     pos: yScale(n),
-    label: formatNumber(n),
+    label: formatTick(n, compact),
   }));
 
   let xScaleNum = scaleLinear([0, 1], [plot.left, plot.right]);
-  let xTicks: { pos: number; label: string }[] = [];
-  const nCat = Math.max(categories.length, 1);
+  let xTicks: { pos: number; label: string; show: boolean }[] = [];
   const catStep = plot.width / nCat;
   const catCenter = (i: number) => plot.left + (i + 0.5) * catStep;
+  const showAt = (i: number) => catLay.show[i] ?? true;
 
   if (histMode && bins.length > 0) {
     const lo = bins[0]!.left;
@@ -163,9 +223,10 @@ function prepare(chart: ChartIR): Prepared {
     xScaleNum = scaleLinear([lo, hi], [plot.left, plot.right]);
     const edges = bins.map((bin) => bin.left);
     edges.push(bins[bins.length - 1]!.right);
-    xTicks = edges.map((edge) => ({
+    xTicks = edges.map((edge, i) => ({
       pos: xScaleNum(edge),
       label: formatNumber(edge),
+      show: showAt(i),
     }));
   } else if (linearX) {
     const xs = rows
@@ -179,11 +240,13 @@ function prepare(chart: ChartIR): Prepared {
     xTicks = xTickNums.map((n) => ({
       pos: xScaleNum(n),
       label: formatNumber(n),
+      show: true,
     }));
   } else {
     xTicks = categories.map((label, i) => ({
       pos: catCenter(i),
       label,
+      show: showAt(i),
     }));
   }
 
@@ -202,27 +265,25 @@ function prepare(chart: ChartIR): Prepared {
     legend,
     yAxisTitle: yTitle,
     xAxisTitle: xTitle,
-    rotateX: linearX && !histMode ? false : rotateX,
+    rotateX: catLay.rotate,
     bins,
+    compact,
+    titleUnit: unitWithCompact(chart.unit, compact),
+    styles,
   };
-}
-
-function drawTitle(chart: ChartIR): string {
-  return `  <text ${attrs({
-    x: SVG_WIDTH / 2,
-    y: 24,
-    "text-anchor": "middle",
-    "font-size": 16,
-    "font-weight": 600,
-    fill: "#111111",
-  })}>${escapeXml(chart.title)}</text>`;
 }
 
 function drawLegend(prepared: Prepared): string[] {
   if (prepared.legend.items.length === 0) {
     return [];
   }
-  const lines: string[] = [`  <g ${attrs({ "font-size": 11, fill: "#222222" })}>`];
+  const lines: string[] = [
+    `  <g ${attrs({
+      "font-size": TYPE.legend.size,
+      "font-weight": TYPE.legend.weight,
+      fill: TYPE.legend.fill,
+    })}>`,
+  ];
   for (const item of prepared.legend.items) {
     lines.push(
       `    <rect ${attrs({
@@ -231,6 +292,7 @@ function drawLegend(prepared: Prepared): string[] {
         width: 10,
         height: 10,
         fill: item.color,
+        "fill-opacity": item.opacity === 1 ? undefined : item.opacity,
         rx: 1,
       })}/>`,
     );
@@ -249,7 +311,9 @@ function drawLegend(prepared: Prepared): string[] {
 function drawGridAndAxes(prepared: Prepared): string[] {
   const { plot, xTicks, yTicks, rotateX, yAxisTitle, xAxisTitle } = prepared;
   const lines: string[] = [];
-  lines.push(`  <g ${attrs({ fill: "none", stroke: "#e6e6e6", "stroke-width": 1 })}>`);
+  lines.push(
+    `  <g ${attrs({ fill: "none", stroke: HAIRLINE, "stroke-width": 1 })}>`,
+  );
   for (const tick of yTicks) {
     lines.push(
       `    <line ${attrs({
@@ -260,62 +324,74 @@ function drawGridAndAxes(prepared: Prepared): string[] {
       })}/>`,
     );
   }
-  if (prepared.linearX) {
-    for (const tick of xTicks) {
-      lines.push(
-        `    <line ${attrs({
-          x1: fmtPx(tick.pos),
-          x2: fmtPx(tick.pos),
-          y1: fmtPx(plot.top),
-          y2: fmtPx(plot.bottom),
-        })}/>`,
-      );
-    }
-  }
   lines.push(`  </g>`);
 
   lines.push(
     `  <path ${attrs({
       d: `M${fmtPx(plot.left)} ${fmtPx(plot.top)} L${fmtPx(plot.left)} ${fmtPx(plot.bottom)} L${fmtPx(plot.right)} ${fmtPx(plot.bottom)}`,
       fill: "none",
-      stroke: "#444444",
+      stroke: AXIS,
       "stroke-width": 1,
     })}/>`,
   );
 
-  lines.push(`  <g ${attrs({ fill: "#333333", "font-size": 10 })}>`);
+  const zeroTick = yTicks.find((tick) => tick.label === "0");
+  if (
+    zeroTick &&
+    Math.abs(zeroTick.pos - plot.bottom) > 0.5 &&
+    Math.abs(zeroTick.pos - plot.top) > 0.5
+  ) {
+    lines.push(
+      `  <line ${attrs({
+        x1: fmtPx(plot.left),
+        x2: fmtPx(plot.right),
+        y1: fmtPx(zeroTick.pos),
+        y2: fmtPx(zeroTick.pos),
+        stroke: AXIS,
+        "stroke-width": 1,
+      })}/>`,
+    );
+  }
+
+  lines.push(
+    `  <g ${attrs({
+      fill: TYPE.tick.fill,
+      "font-size": TYPE.tick.size,
+      "font-weight": TYPE.tick.weight,
+    })}>`,
+  );
   for (const tick of yTicks) {
     lines.push(
       `    <line ${attrs({
-        x1: fmtPx(plot.left - 4),
+        x1: fmtPx(plot.left - TICK_MARK),
         x2: fmtPx(plot.left),
         y1: fmtPx(tick.pos),
         y2: fmtPx(tick.pos),
-        stroke: "#444444",
+        stroke: AXIS,
       })}/>`,
     );
     lines.push(
       `    <text ${attrs({
-        x: fmtPx(plot.left - 8),
+        x: fmtPx(plot.left - TICK_TEXT_GAP),
         y: fmtPx(tick.pos),
         "text-anchor": "end",
         "dominant-baseline": "middle",
       })}>${escapeXml(tick.label)}</text>`,
     );
   }
-  const xFont = rotateX ? 9 : 10;
   for (const tick of xTicks) {
     lines.push(
       `    <line ${attrs({
         x1: fmtPx(tick.pos),
         x2: fmtPx(tick.pos),
         y1: fmtPx(plot.bottom),
-        y2: fmtPx(plot.bottom + 4),
-        stroke: "#444444",
+        y2: fmtPx(plot.bottom + TICK_MARK),
+        stroke: AXIS,
       })}/>`,
     );
-    const maxPx = rotateX ? 110 : Math.max(24, prepared.catStep - 4);
-    const shown = truncateLabel(tick.label, maxPx, xFont);
+    if (!tick.show) {
+      continue;
+    }
     if (rotateX) {
       const tx = fmtPx(tick.pos);
       const ty = fmtPx(plot.bottom + 10);
@@ -325,10 +401,10 @@ function drawGridAndAxes(prepared: Prepared): string[] {
           y: ty,
           "text-anchor": "end",
           "dominant-baseline": "middle",
-          "font-size": xFont,
-          transform: `rotate(-55 ${tx} ${ty})`,
+          "font-size": TYPE.tick.size,
+          transform: `rotate(${LABEL_ROTATE_DEG} ${tx} ${ty})`,
           "data-full-label": tick.label,
-        })}>${escapeXml(shown)}</text>`,
+        })}>${escapeXml(tick.label)}</text>`,
       );
     } else {
       lines.push(
@@ -336,24 +412,25 @@ function drawGridAndAxes(prepared: Prepared): string[] {
           x: fmtPx(tick.pos),
           y: fmtPx(plot.bottom + 16),
           "text-anchor": "middle",
-          "font-size": xFont,
+          "font-size": TYPE.tick.size,
           "data-full-label": tick.label,
-        })}>${escapeXml(shown)}</text>`,
+        })}>${escapeXml(tick.label)}</text>`,
       );
     }
   }
   lines.push(`  </g>`);
 
   if (yAxisTitle) {
-    const cx = 14;
+    const cx = 12;
     const cy = (plot.top + plot.bottom) / 2;
     lines.push(
       `  <text ${attrs({
         x: fmtPx(cx),
         y: fmtPx(cy),
         "text-anchor": "middle",
-        "font-size": 11,
-        fill: "#444444",
+        "font-size": TYPE.axisName.size,
+        "font-weight": TYPE.axisName.weight,
+        fill: TYPE.axisName.fill,
         transform: `rotate(-90 ${fmtPx(cx)} ${fmtPx(cy)})`,
       })}>${escapeXml(yAxisTitle)}</text>`,
     );
@@ -362,52 +439,116 @@ function drawGridAndAxes(prepared: Prepared): string[] {
     lines.push(
       `  <text ${attrs({
         x: fmtPx((plot.left + plot.right) / 2),
-        y: SVG_HEIGHT - 10,
+        y: SVG_HEIGHT - 12,
         "text-anchor": "middle",
-        "font-size": 11,
-        fill: "#444444",
+        "font-size": TYPE.axisName.size,
+        "font-weight": TYPE.axisName.weight,
+        fill: TYPE.axisName.fill,
       })}>${escapeXml(xAxisTitle)}</text>`,
     );
   }
   return lines;
 }
 
+function roundedBarPath(
+  x: number,
+  y: number,
+  w: number,
+  h: number,
+  roundAwayFromBaselineUp: boolean,
+): string {
+  const r = Math.min(BAR_RX, w / 2, Math.max(h, 0));
+  const x0 = fmtPx(x);
+  const y0 = fmtPx(y);
+  const x1 = fmtPx(x + w);
+  const y1 = fmtPx(y + h);
+  if (h <= 0.01 || r <= 0) {
+    return `M${x0} ${fmtPx(y + h)} L${x1} ${fmtPx(y + h)} L${x1} ${y0} L${x0} ${y0} Z`;
+  }
+  const rr = fmtPx(r);
+  if (roundAwayFromBaselineUp) {
+    return `M${x0} ${y1} L${x0} ${fmtPx(y + r)} Q${x0} ${y0} ${fmtPx(x + r)} ${y0} L${fmtPx(x + w - r)} ${y0} Q${x1} ${y0} ${x1} ${fmtPx(y + r)} L${x1} ${y1} Z`;
+  }
+  return `M${x0} ${y0} L${x1} ${y0} L${x1} ${fmtPx(y + h - r)} Q${x1} ${y1} ${fmtPx(x + w - r)} ${y1} L${fmtPx(x + r)} ${y1} Q${x0} ${y1} ${x0} ${fmtPx(y + h - r)} Z`;
+}
+
 function drawBars(prepared: Prepared): string[] {
-  const { plot, series, categories, rows, catStep, yScale } = prepared;
+  const { plot, series, categories, rows, catStep, yScale, styles } = prepared;
   const nS = Math.max(series.length, 1);
-  const groupPad = catStep * 0.22;
-  const inner = Math.max(catStep - groupPad, 1);
-  const barW = inner / nS;
-  const lines: string[] = [`  <g ${attrs({ "shape-rendering": "crispEdges" })}>`];
+  const bandGap = catStep * BAR_GAP;
+  const inner = Math.max(catStep - bandGap, 1);
+  const seriesGap = nS > 1 ? GROUP_GAP_PX : 0;
+  const barW = Math.max(0.5, (inner - seriesGap * (nS - 1)) / nS);
+  const y0 = yScale(0);
+  const lines: string[] = [`  <g>`];
+  const labels: string[] = [];
   for (let ci = 0; ci < categories.length; ci++) {
     const cat = categories[ci]!;
     for (let si = 0; si < series.length; si++) {
       const ser = series[si]!;
       const val = groupedValue(rows, ser, cat);
-      const x = plot.left + ci * catStep + groupPad / 2 + si * barW;
-      const y0 = yScale(0);
+      const x = plot.left + ci * catStep + bandGap / 2 + si * (barW + seriesGap);
       const y1 = yScale(val);
       const y = Math.min(y0, y1);
       const h = Math.abs(y1 - y0);
+      const style = styles[si]!;
+      const roundUp = val >= 0;
       lines.push(
-        `    <rect ${attrs({
-          x: fmtPx(x),
-          y: fmtPx(y),
-          width: fmtPx(Math.max(barW - 1, 0.5)),
-          height: fmtPx(h),
-          fill: seriesColor(si),
+        `    <path ${attrs({
+          d: roundedBarPath(x, y, barW, h, roundUp),
+          fill: style.color,
+          "fill-opacity": style.opacity === 1 ? undefined : style.opacity,
           "data-x": cat,
           "data-series": ser,
           "data-y": String(val),
         })}/>`,
       );
+      if (barW < BAR_LABEL_MIN_WIDTH) {
+        continue;
+      }
+      const text = formatNumber(val);
+      const cx = x + barW / 2;
+      let ly: number;
+      if (h < 12) {
+        ly = roundUp ? y - BAR_LABEL_OFFSET : y + h + BAR_LABEL_OFFSET + 8;
+      } else if (h < BAR_LABEL_INSIDE_H) {
+        ly = roundUp ? y + 12 : y + h - 6;
+      } else {
+        ly = roundUp ? y - BAR_LABEL_OFFSET : y + h + BAR_LABEL_OFFSET + 8;
+      }
+      if (roundUp && ly < plot.top + 10 && h >= 12) {
+        ly = y + 12;
+      }
+      if (!roundUp && ly > plot.bottom - 4 && h >= 12) {
+        ly = y + h - 6;
+      }
+      labels.push(
+        `    <text ${attrs({
+          x: fmtPx(cx),
+          y: fmtPx(ly),
+          "text-anchor": "middle",
+          "font-size": TYPE.value.size,
+          "font-weight": TYPE.value.weight,
+          fill: TYPE.value.fill,
+          "data-value-label": cat,
+        })}>${escapeXml(text)}</text>`,
+      );
     }
   }
   lines.push(`  </g>`);
+  if (labels.length > 0) {
+    lines.push(`  <g>`);
+    lines.push(...labels);
+    lines.push(`  </g>`);
+  }
   return lines;
 }
 
-function xPos(prepared: Prepared, row: DataRow, catIndex: Map<string, number>): number {
+function xPos(
+  prepared: Prepared,
+  row: DataRow,
+  catIndex: Map<string, number>,
+): number {
   if (prepared.linearX && row.xNum !== undefined) {
     return prepared.xScaleNum(row.xNum);
   }
@@ -415,11 +556,12 @@ function xPos(prepared: Prepared, row: DataRow, catIndex: Map<string, number>): 
   return prepared.catCenter(i);
 }
 
-function drawLineOrArea(
-  prepared: Prepared,
-  area: boolean,
-): string[] {
-  const { rows, series, yScale } = prepared;
+function opacityAttr(opacity: number): number | undefined {
+  return opacity === 1 ? undefined : opacity;
+}
+
+function drawLineOrArea(prepared: Prepared, area: boolean): string[] {
+  const { rows, series, yScale, styles } = prepared;
   const catIndex = new Map(prepared.categories.map((c, i) => [c, i]));
   const zero = yScale(0);
   const lines: string[] = [`  <g fill="none">`];
@@ -435,7 +577,7 @@ function drawLineOrArea(
     if (pts.length === 0) {
       continue;
     }
-    const color = seriesColor(si);
+    const style = styles[si]!;
     const d = polyline(pts);
     if (area) {
       const first = pts[0]!;
@@ -444,8 +586,8 @@ function drawLineOrArea(
       lines.push(
         `    <path ${attrs({
           d: fillD,
-          fill: color,
-          "fill-opacity": 0.28,
+          fill: style.color,
+          "fill-opacity": AREA_OPACITY * style.opacity,
           stroke: "none",
           "data-series": ser,
         })}/>`,
@@ -455,22 +597,38 @@ function drawLineOrArea(
       `    <path ${attrs({
         d,
         fill: "none",
-        stroke: color,
-        "stroke-width": 2,
+        stroke: style.color,
+        "stroke-width": LINE_STROKE,
         "stroke-linejoin": "round",
         "stroke-linecap": "round",
+        "stroke-opacity": opacityAttr(style.opacity),
         "data-series": ser,
       })}/>`,
     );
+    if (pts.length <= POINT_SKIP_AFTER) {
+      for (const pt of pts) {
+        lines.push(
+          `    <circle ${attrs({
+            cx: fmtPx(pt.x),
+            cy: fmtPx(pt.y),
+            r: LINE_POINT_R,
+            fill: style.color,
+            "fill-opacity": opacityAttr(style.opacity),
+            stroke: "none",
+            "data-series": ser,
+          })}/>`,
+        );
+      }
+    }
   }
   lines.push(`  </g>`);
   return lines;
 }
 
 function drawScatter(prepared: Prepared): string[] {
-  const { rows, series, yScale } = prepared;
+  const { rows, series, yScale, styles } = prepared;
   const catIndex = new Map(prepared.categories.map((c, i) => [c, i]));
-  const colorOf = new Map(series.map((name, i) => [name, seriesColor(i)]));
+  const styleOf = new Map(series.map((name, i) => [name, styles[i]!]));
   const lines: string[] = [`  <g>`];
   for (const row of rows) {
     if (row.xNum === undefined && prepared.linearX) {
@@ -478,14 +636,15 @@ function drawScatter(prepared: Prepared): string[] {
     }
     const cx = xPos(prepared, row, catIndex);
     const cy = yScale(row.y);
+    const style = styleOf.get(row.series) ?? styles[0]!;
     lines.push(
       `    <circle ${attrs({
         cx: fmtPx(cx),
         cy: fmtPx(cy),
-        r: 4,
-        fill: colorOf.get(row.series) ?? seriesColor(0),
-        stroke: "#ffffff",
-        "stroke-width": 1,
+        r: SCATTER_R,
+        fill: style.color,
+        "fill-opacity": SCATTER_OPACITY * style.opacity,
+        stroke: "none",
         "data-x": row.xLabel,
         "data-y": String(row.y),
         "data-series": row.series,
@@ -497,23 +656,25 @@ function drawScatter(prepared: Prepared): string[] {
 }
 
 function drawHist(prepared: Prepared): string[] {
-  const { bins, xScaleNum, yScale } = prepared;
+  const { bins, xScaleNum, yScale, styles } = prepared;
   const y0 = yScale(0);
-  const color = seriesColor(0);
-  const lines: string[] = [`  <g ${attrs({ "shape-rendering": "crispEdges" })}>`];
+  const style = styles[0]!;
+  const lines: string[] = [`  <g>`];
   for (const bin of bins) {
-    const x = xScaleNum(bin.left);
-    const x2 = xScaleNum(bin.right);
+    const xLeft = xScaleNum(bin.left);
+    const xRight = xScaleNum(bin.right);
+    const band = xRight - xLeft;
+    const gap = band * BAR_GAP;
+    const barW = Math.max(band - gap, 0.5);
+    const x = xLeft + gap / 2;
     const y1 = yScale(bin.weight);
     const y = Math.min(y0, y1);
     const h = Math.abs(y1 - y0);
     lines.push(
-      `    <rect ${attrs({
-        x: fmtPx(x),
-        y: fmtPx(y),
-        width: fmtPx(Math.max(x2 - x - 0.5, 0.5)),
-        height: fmtPx(h),
-        fill: color,
+      `    <path ${attrs({
+        d: roundedBarPath(x, y, barW, h, bin.weight >= 0),
+        fill: style.color,
+        "fill-opacity": opacityAttr(style.opacity),
         "data-bin-left": String(bin.left),
         "data-bin-right": String(bin.right),
         "data-weight": String(bin.weight),
@@ -527,7 +688,10 @@ function drawHist(prepared: Prepared): string[] {
 
 export function renderCartesian(chart: ChartIR, _id: string): string[] {
   const prepared = prepare(chart);
-  const lines: string[] = [drawTitle(chart), ...drawLegend(prepared)];
+  const lines: string[] = [
+    drawTitle(chart, prepared.titleUnit),
+    ...drawLegend(prepared),
+  ];
   lines.push(...drawGridAndAxes(prepared));
   if (chart.type === "bar") {
     lines.push(...drawBars(prepared));

@@ -1,35 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: City scores, 4 rows" aria-labelledby="mv-bd2bd148888ba047-title" aria-describedby="mv-bd2bd148888ba047-desc" data-markvis="2" data-chart-type="bar" data-id="mv-bd2bd148888ba047" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: City scores, 4 rows" aria-labelledby="mv-bd2bd148888ba047-title" aria-describedby="mv-bd2bd148888ba047-desc" data-markvis="2" data-chart-type="bar" data-id="mv-bd2bd148888ba047" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
   <title id="mv-bd2bd148888ba047-title">City scores</title>
   <desc id="mv-bd2bd148888ba047-desc">bar chart. City scores. x=city. y=score. 4 rows.</desc>
-  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">City scores</text>
-  <g fill="none" stroke="#e6e6e6" stroke-width="1">
-    <line x1="64" x2="696" y1="416" y2="416"/>
-    <line x1="64" x2="696" y1="226" y2="226"/>
-    <line x1="64" x2="696" y1="36" y2="36"/>
+  <rect width="100%" height="100%" fill="#F7F4EF"/>
+  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">City scores</text>
+  <g fill="none" stroke="#E7E5E4" stroke-width="1">
+    <line x1="56" x2="696" y1="432" y2="432"/>
+    <line x1="56" x2="696" y1="240" y2="240"/>
+    <line x1="56" x2="696" y1="48" y2="48"/>
   </g>
-  <path d="M64 36 L64 416 L696 416" fill="none" stroke="#444444" stroke-width="1"/>
-  <g fill="#333333" font-size="10">
-    <line x1="60" x2="64" y1="416" y2="416" stroke="#444444"/>
-    <text x="56" y="416" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="60" x2="64" y1="226" y2="226" stroke="#444444"/>
-    <text x="56" y="226" text-anchor="end" dominant-baseline="middle">50</text>
-    <line x1="60" x2="64" y1="36" y2="36" stroke="#444444"/>
-    <text x="56" y="36" text-anchor="end" dominant-baseline="middle">100</text>
-    <line x1="143" x2="143" y1="416" y2="420" stroke="#444444"/>
-    <text x="143" y="432" text-anchor="middle" font-size="10" data-full-label="北京">北京</text>
-    <line x1="301" x2="301" y1="416" y2="420" stroke="#444444"/>
-    <text x="301" y="432" text-anchor="middle" font-size="10" data-full-label="東京">東京</text>
-    <line x1="459" x2="459" y1="416" y2="420" stroke="#444444"/>
-    <text x="459" y="432" text-anchor="middle" font-size="10" data-full-label="서울">서울</text>
-    <line x1="617" x2="617" y1="416" y2="420" stroke="#444444"/>
-    <text x="617" y="432" text-anchor="middle" font-size="10" data-full-label="München">München</text>
+  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <g fill="#57534E" font-size="10" font-weight="400">
+    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
+    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="52" x2="56" y1="240" y2="240" stroke="#A8A29E"/>
+    <text x="44" y="240" text-anchor="end" dominant-baseline="middle">50</text>
+    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
+    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">100</text>
+    <line x1="136" x2="136" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="136" y="448" text-anchor="middle" font-size="10" data-full-label="北京">北京</text>
+    <line x1="296" x2="296" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="296" y="448" text-anchor="middle" font-size="10" data-full-label="東京">東京</text>
+    <line x1="456" x2="456" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="456" y="448" text-anchor="middle" font-size="10" data-full-label="서울">서울</text>
+    <line x1="616" x2="616" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="616" y="448" text-anchor="middle" font-size="10" data-full-label="München">München</text>
   </g>
-  <text x="14" y="226" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 226)">score</text>
-  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">city</text>
-  <g shape-rendering="crispEdges">
-    <rect x="81.38" y="81.6" width="122.24" height="334.4" fill="#0072B2" data-x="北京" data-series="score" data-y="88"/>
-    <rect x="239.38" y="66.4" width="122.24" height="349.6" fill="#0072B2" data-x="東京" data-series="score" data-y="92"/>
-    <rect x="397.38" y="93" width="122.24" height="323" fill="#0072B2" data-x="서울" data-series="score" data-y="85"/>
-    <rect x="555.38" y="115.8" width="122.24" height="300.2" fill="#0072B2" data-x="München" data-series="score" data-y="79"/>
+  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">score</text>
+  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">city</text>
+  <g>
+    <path d="M72 432 L72 96.08 Q72 94.08 74 94.08 L198 94.08 Q200 94.08 200 96.08 L200 432 Z" fill="#2B6CB0" data-x="北京" data-series="score" data-y="88"/>
+    <path d="M232 432 L232 80.72 Q232 78.72 234 78.72 L358 78.72 Q360 78.72 360 80.72 L360 432 Z" fill="#2B6CB0" data-x="東京" data-series="score" data-y="92"/>
+    <path d="M392 432 L392 107.6 Q392 105.6 394 105.6 L518 105.6 Q520 105.6 520 107.6 L520 432 Z" fill="#2B6CB0" data-x="서울" data-series="score" data-y="85"/>
+    <path d="M552 432 L552 130.64 Q552 128.64 554 128.64 L678 128.64 Q680 128.64 680 130.64 L680 432 Z" fill="#2B6CB0" data-x="München" data-series="score" data-y="79"/>
+  </g>
+  <g>
+    <text x="136" y="86.08" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="北京">88</text>
+    <text x="296" y="70.72" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="東京">92</text>
+    <text x="456" y="97.6" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="서울">85</text>
+    <text x="616" y="120.64" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="München">79</text>
   </g>
 </svg>

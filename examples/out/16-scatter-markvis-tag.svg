@@ -1,42 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="scatter chart: Temp vs humidity, 4 rows" aria-labelledby="mv-8243731268240691-title" aria-describedby="mv-8243731268240691-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-8243731268240691" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="scatter chart: Temp vs humidity, 4 rows" aria-labelledby="mv-8243731268240691-title" aria-describedby="mv-8243731268240691-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-8243731268240691" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
   <title id="mv-8243731268240691-title">Temp vs humidity</title>
   <desc id="mv-8243731268240691-desc">scatter chart. Temp vs humidity. x=temp_c. y=humidity. 4 rows.</desc>
-  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Temp vs humidity</text>
-  <g fill="none" stroke="#e6e6e6" stroke-width="1">
-    <line x1="64" x2="696" y1="416" y2="416"/>
-    <line x1="64" x2="696" y1="289.33" y2="289.33"/>
-    <line x1="64" x2="696" y1="162.67" y2="162.67"/>
-    <line x1="64" x2="696" y1="36" y2="36"/>
-    <line x1="72" x2="72" y1="36" y2="416"/>
-    <line x1="277.33" x2="277.33" y1="36" y2="416"/>
-    <line x1="482.67" x2="482.67" y1="36" y2="416"/>
-    <line x1="688" x2="688" y1="36" y2="416"/>
+  <rect width="100%" height="100%" fill="#F7F4EF"/>
+  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Temp vs humidity</text>
+  <g fill="none" stroke="#E7E5E4" stroke-width="1">
+    <line x1="56" x2="696" y1="432" y2="432"/>
+    <line x1="56" x2="696" y1="304" y2="304"/>
+    <line x1="56" x2="696" y1="176" y2="176"/>
+    <line x1="56" x2="696" y1="48" y2="48"/>
   </g>
-  <path d="M64 36 L64 416 L696 416" fill="none" stroke="#444444" stroke-width="1"/>
-  <g fill="#333333" font-size="10">
-    <line x1="60" x2="64" y1="416" y2="416" stroke="#444444"/>
-    <text x="56" y="416" text-anchor="end" dominant-baseline="middle">30</text>
-    <line x1="60" x2="64" y1="289.33" y2="289.33" stroke="#444444"/>
-    <text x="56" y="289.33" text-anchor="end" dominant-baseline="middle">40</text>
-    <line x1="60" x2="64" y1="162.67" y2="162.67" stroke="#444444"/>
-    <text x="56" y="162.67" text-anchor="end" dominant-baseline="middle">50</text>
-    <line x1="60" x2="64" y1="36" y2="36" stroke="#444444"/>
-    <text x="56" y="36" text-anchor="end" dominant-baseline="middle">60</text>
-    <line x1="72" x2="72" y1="416" y2="420" stroke="#444444"/>
-    <text x="72" y="432" text-anchor="middle" font-size="10" data-full-label="15">15</text>
-    <line x1="277.33" x2="277.33" y1="416" y2="420" stroke="#444444"/>
-    <text x="277.33" y="432" text-anchor="middle" font-size="10" data-full-label="20">20</text>
-    <line x1="482.67" x2="482.67" y1="416" y2="420" stroke="#444444"/>
-    <text x="482.67" y="432" text-anchor="middle" font-size="10" data-full-label="25">25</text>
-    <line x1="688" x2="688" y1="416" y2="420" stroke="#444444"/>
-    <text x="688" y="432" text-anchor="middle" font-size="10" data-full-label="30">30</text>
+  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <g fill="#57534E" font-size="10" font-weight="400">
+    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
+    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">30</text>
+    <line x1="52" x2="56" y1="304" y2="304" stroke="#A8A29E"/>
+    <text x="44" y="304" text-anchor="end" dominant-baseline="middle">40</text>
+    <line x1="52" x2="56" y1="176" y2="176" stroke="#A8A29E"/>
+    <text x="44" y="176" text-anchor="end" dominant-baseline="middle">50</text>
+    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
+    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">60</text>
+    <line x1="64" x2="64" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="64" y="448" text-anchor="middle" font-size="10" data-full-label="15">15</text>
+    <line x1="272" x2="272" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="272" y="448" text-anchor="middle" font-size="10" data-full-label="20">20</text>
+    <line x1="480" x2="480" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="480" y="448" text-anchor="middle" font-size="10" data-full-label="25">25</text>
+    <line x1="688" x2="688" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="688" y="448" text-anchor="middle" font-size="10" data-full-label="30">30</text>
   </g>
-  <text x="14" y="226" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 226)">humidity</text>
-  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">temp_c</text>
+  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">humidity</text>
+  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">temp_c</text>
   <g>
-    <circle cx="195.2" cy="99.33" r="4" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-x="18" data-y="55" data-series="humidity"/>
-    <circle cx="359.47" cy="188" r="4" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-x="22" data-y="48" data-series="humidity"/>
-    <circle cx="482.67" cy="289.33" r="4" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-x="25" data-y="40" data-series="humidity"/>
-    <circle cx="605.87" cy="352.67" r="4" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-x="28" data-y="35" data-series="humidity"/>
+    <circle cx="188.8" cy="112" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="18" data-y="55" data-series="humidity"/>
+    <circle cx="355.2" cy="201.6" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="22" data-y="48" data-series="humidity"/>
+    <circle cx="480" cy="304" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="25" data-y="40" data-series="humidity"/>
+    <circle cx="604.8" cy="368" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="28" data-y="35" data-series="humidity"/>
   </g>
 </svg>

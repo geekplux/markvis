@@ -1,44 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="scatter chart: Height vs weight, 3 rows" aria-labelledby="mv-b825f9aa966142d9-title" aria-describedby="mv-b825f9aa966142d9-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-b825f9aa966142d9" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="scatter chart: Height vs weight, 3 rows" aria-labelledby="mv-b825f9aa966142d9-title" aria-describedby="mv-b825f9aa966142d9-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-b825f9aa966142d9" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
   <title id="mv-b825f9aa966142d9-title">Height vs weight</title>
   <desc id="mv-b825f9aa966142d9-desc">scatter chart. Height vs weight. x=height_cm. y=weight_kg. 3 rows.</desc>
-  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Height vs weight</text>
-  <g fill="none" stroke="#e6e6e6" stroke-width="1">
-    <line x1="64" x2="696" y1="416" y2="416"/>
-    <line x1="64" x2="696" y1="289.33" y2="289.33"/>
-    <line x1="64" x2="696" y1="162.67" y2="162.67"/>
-    <line x1="64" x2="696" y1="36" y2="36"/>
-    <line x1="72" x2="72" y1="36" y2="416"/>
-    <line x1="226" x2="226" y1="36" y2="416"/>
-    <line x1="380" x2="380" y1="36" y2="416"/>
-    <line x1="534" x2="534" y1="36" y2="416"/>
-    <line x1="688" x2="688" y1="36" y2="416"/>
+  <rect width="100%" height="100%" fill="#F7F4EF"/>
+  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Height vs weight</text>
+  <g fill="none" stroke="#E7E5E4" stroke-width="1">
+    <line x1="56" x2="696" y1="432" y2="432"/>
+    <line x1="56" x2="696" y1="304" y2="304"/>
+    <line x1="56" x2="696" y1="176" y2="176"/>
+    <line x1="56" x2="696" y1="48" y2="48"/>
   </g>
-  <path d="M64 36 L64 416 L696 416" fill="none" stroke="#444444" stroke-width="1"/>
-  <g fill="#333333" font-size="10">
-    <line x1="60" x2="64" y1="416" y2="416" stroke="#444444"/>
-    <text x="56" y="416" text-anchor="end" dominant-baseline="middle">50</text>
-    <line x1="60" x2="64" y1="289.33" y2="289.33" stroke="#444444"/>
-    <text x="56" y="289.33" text-anchor="end" dominant-baseline="middle">60</text>
-    <line x1="60" x2="64" y1="162.67" y2="162.67" stroke="#444444"/>
-    <text x="56" y="162.67" text-anchor="end" dominant-baseline="middle">70</text>
-    <line x1="60" x2="64" y1="36" y2="36" stroke="#444444"/>
-    <text x="56" y="36" text-anchor="end" dominant-baseline="middle">80</text>
-    <line x1="72" x2="72" y1="416" y2="420" stroke="#444444"/>
-    <text x="72" y="432" text-anchor="middle" font-size="10" data-full-label="150">150</text>
-    <line x1="226" x2="226" y1="416" y2="420" stroke="#444444"/>
-    <text x="226" y="432" text-anchor="middle" font-size="10" data-full-label="160">160</text>
-    <line x1="380" x2="380" y1="416" y2="420" stroke="#444444"/>
-    <text x="380" y="432" text-anchor="middle" font-size="10" data-full-label="170">170</text>
-    <line x1="534" x2="534" y1="416" y2="420" stroke="#444444"/>
-    <text x="534" y="432" text-anchor="middle" font-size="10" data-full-label="180">180</text>
-    <line x1="688" x2="688" y1="416" y2="420" stroke="#444444"/>
-    <text x="688" y="432" text-anchor="middle" font-size="10" data-full-label="190">190</text>
+  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <g fill="#57534E" font-size="10" font-weight="400">
+    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
+    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">50</text>
+    <line x1="52" x2="56" y1="304" y2="304" stroke="#A8A29E"/>
+    <text x="44" y="304" text-anchor="end" dominant-baseline="middle">60</text>
+    <line x1="52" x2="56" y1="176" y2="176" stroke="#A8A29E"/>
+    <text x="44" y="176" text-anchor="end" dominant-baseline="middle">70</text>
+    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
+    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">80</text>
+    <line x1="64" x2="64" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="64" y="448" text-anchor="middle" font-size="10" data-full-label="150">150</text>
+    <line x1="220" x2="220" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="220" y="448" text-anchor="middle" font-size="10" data-full-label="160">160</text>
+    <line x1="376" x2="376" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="376" y="448" text-anchor="middle" font-size="10" data-full-label="170">170</text>
+    <line x1="532" x2="532" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="532" y="448" text-anchor="middle" font-size="10" data-full-label="180">180</text>
+    <line x1="688" x2="688" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="688" y="448" text-anchor="middle" font-size="10" data-full-label="190">190</text>
   </g>
-  <text x="14" y="226" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 226)">weight_kg</text>
-  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">height_cm</text>
+  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">weight_kg</text>
+  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">height_cm</text>
   <g>
-    <circle cx="226" cy="352.67" r="4" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-x="160" data-y="55" data-series="weight_kg"/>
-    <circle cx="457" cy="162.67" r="4" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-x="175" data-y="70" data-series="weight_kg"/>
-    <circle cx="564.8" cy="61.33" r="4" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-x="182" data-y="78" data-series="weight_kg"/>
+    <circle cx="220" cy="368" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="160" data-y="55" data-series="weight_kg"/>
+    <circle cx="454" cy="176" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="175" data-y="70" data-series="weight_kg"/>
+    <circle cx="563.2" cy="73.6" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="182" data-y="78" data-series="weight_kg"/>
   </g>
 </svg>

@@ -1,38 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: NPS, 3 rows" aria-labelledby="mv-84c91d359417bba8-title" aria-describedby="mv-84c91d359417bba8-desc" data-markvis="2" data-chart-type="bar" data-id="mv-84c91d359417bba8" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: NPS, 3 rows" aria-labelledby="mv-84c91d359417bba8-title" aria-describedby="mv-84c91d359417bba8-desc" data-markvis="2" data-chart-type="bar" data-id="mv-84c91d359417bba8" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
   <title id="mv-84c91d359417bba8-title">NPS</title>
   <desc id="mv-84c91d359417bba8-desc">bar chart. NPS. x=segment. y=score. 3 rows.</desc>
-  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">NPS</text>
-  <g fill="none" stroke="#e6e6e6" stroke-width="1">
-    <line x1="64" x2="696" y1="379.82" y2="379.82"/>
-    <line x1="64" x2="696" y1="293.87" y2="293.87"/>
-    <line x1="64" x2="696" y1="207.91" y2="207.91"/>
-    <line x1="64" x2="696" y1="121.96" y2="121.96"/>
-    <line x1="64" x2="696" y1="36" y2="36"/>
+  <rect width="100%" height="100%" fill="#F7F4EF"/>
+  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">NPS</text>
+  <g fill="none" stroke="#E7E5E4" stroke-width="1">
+    <line x1="56" x2="696" y1="432" y2="432"/>
+    <line x1="56" x2="696" y1="336" y2="336"/>
+    <line x1="56" x2="696" y1="240" y2="240"/>
+    <line x1="56" x2="696" y1="144" y2="144"/>
+    <line x1="56" x2="696" y1="48" y2="48"/>
   </g>
-  <path d="M64 36 L64 379.82 L696 379.82" fill="none" stroke="#444444" stroke-width="1"/>
-  <g fill="#333333" font-size="10">
-    <line x1="60" x2="64" y1="379.82" y2="379.82" stroke="#444444"/>
-    <text x="56" y="379.82" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="60" x2="64" y1="293.87" y2="293.87" stroke="#444444"/>
-    <text x="56" y="293.87" text-anchor="end" dominant-baseline="middle">20</text>
-    <line x1="60" x2="64" y1="207.91" y2="207.91" stroke="#444444"/>
-    <text x="56" y="207.91" text-anchor="end" dominant-baseline="middle">40</text>
-    <line x1="60" x2="64" y1="121.96" y2="121.96" stroke="#444444"/>
-    <text x="56" y="121.96" text-anchor="end" dominant-baseline="middle">60</text>
-    <line x1="60" x2="64" y1="36" y2="36" stroke="#444444"/>
-    <text x="56" y="36" text-anchor="end" dominant-baseline="middle">80</text>
-    <line x1="169.33" x2="169.33" y1="379.82" y2="383.82" stroke="#444444"/>
-    <text x="169.33" y="389.82" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 169.33 389.82)" data-full-label="Enterprise">Enterprise</text>
-    <line x1="380" x2="380" y1="379.82" y2="383.82" stroke="#444444"/>
-    <text x="380" y="389.82" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 380 389.82)" data-full-label="SMB">SMB</text>
-    <line x1="590.67" x2="590.67" y1="379.82" y2="383.82" stroke="#444444"/>
-    <text x="590.67" y="389.82" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 590.67 389.82)" data-full-label="Consumer">Consumer</text>
+  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <g fill="#57534E" font-size="10" font-weight="400">
+    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
+    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="52" x2="56" y1="336" y2="336" stroke="#A8A29E"/>
+    <text x="44" y="336" text-anchor="end" dominant-baseline="middle">20</text>
+    <line x1="52" x2="56" y1="240" y2="240" stroke="#A8A29E"/>
+    <text x="44" y="240" text-anchor="end" dominant-baseline="middle">40</text>
+    <line x1="52" x2="56" y1="144" y2="144" stroke="#A8A29E"/>
+    <text x="44" y="144" text-anchor="end" dominant-baseline="middle">60</text>
+    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
+    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">80</text>
+    <line x1="162.67" x2="162.67" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="162.67" y="448" text-anchor="middle" font-size="10" data-full-label="Enterprise">Enterprise</text>
+    <line x1="376" x2="376" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="376" y="448" text-anchor="middle" font-size="10" data-full-label="SMB">SMB</text>
+    <line x1="589.33" x2="589.33" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="589.33" y="448" text-anchor="middle" font-size="10" data-full-label="Consumer">Consumer</text>
   </g>
-  <text x="14" y="207.91" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 207.91)">score</text>
-  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">segment</text>
-  <g shape-rendering="crispEdges">
-    <rect x="87.17" y="70.38" width="163.32" height="309.44" fill="#0072B2" data-x="Enterprise" data-series="score" data-y="72"/>
-    <rect x="297.84" y="117.66" width="163.32" height="262.17" fill="#0072B2" data-x="SMB" data-series="score" data-y="61"/>
-    <rect x="508.51" y="143.45" width="163.32" height="236.38" fill="#0072B2" data-x="Consumer" data-series="score" data-y="55"/>
+  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">score</text>
+  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">segment</text>
+  <g>
+    <path d="M77.33 432 L77.33 88.4 Q77.33 86.4 79.33 86.4 L246 86.4 Q248 86.4 248 88.4 L248 432 Z" fill="#2B6CB0" data-x="Enterprise" data-series="score" data-y="72"/>
+    <path d="M290.67 432 L290.67 141.2 Q290.67 139.2 292.67 139.2 L459.33 139.2 Q461.33 139.2 461.33 141.2 L461.33 432 Z" fill="#2B6CB0" data-x="SMB" data-series="score" data-y="61"/>
+    <path d="M504 432 L504 170 Q504 168 506 168 L672.67 168 Q674.67 168 674.67 170 L674.67 432 Z" fill="#2B6CB0" data-x="Consumer" data-series="score" data-y="55"/>
+  </g>
+  <g>
+    <text x="162.67" y="78.4" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Enterprise">72</text>
+    <text x="376" y="131.2" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="SMB">61</text>
+    <text x="589.33" y="160" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Consumer">55</text>
   </g>
 </svg>

@@ -1,38 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Storage (GB), 3 rows" aria-labelledby="mv-1d695852b8382825-title" aria-describedby="mv-1d695852b8382825-desc" data-markvis="2" data-chart-type="bar" data-id="mv-1d695852b8382825" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Storage (GB), 3 rows" aria-labelledby="mv-1d695852b8382825-title" aria-describedby="mv-1d695852b8382825-desc" data-markvis="2" data-chart-type="bar" data-id="mv-1d695852b8382825" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
   <title id="mv-1d695852b8382825-title">Storage</title>
   <desc id="mv-1d695852b8382825-desc">bar chart. Storage. x=bucket. y=size. unit=GB. 3 rows.</desc>
-  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Storage</text>
-  <g fill="none" stroke="#e6e6e6" stroke-width="1">
-    <line x1="64" x2="696" y1="383.84" y2="383.84"/>
-    <line x1="64" x2="696" y1="296.88" y2="296.88"/>
-    <line x1="64" x2="696" y1="209.92" y2="209.92"/>
-    <line x1="64" x2="696" y1="122.96" y2="122.96"/>
-    <line x1="64" x2="696" y1="36" y2="36"/>
+  <rect width="100%" height="100%" fill="#F7F4EF"/>
+  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Storage<tspan font-size="12" font-weight="400" fill="#78716C"> · GB</tspan></text>
+  <g fill="none" stroke="#E7E5E4" stroke-width="1">
+    <line x1="61" x2="696" y1="432" y2="432"/>
+    <line x1="61" x2="696" y1="336" y2="336"/>
+    <line x1="61" x2="696" y1="240" y2="240"/>
+    <line x1="61" x2="696" y1="144" y2="144"/>
+    <line x1="61" x2="696" y1="48" y2="48"/>
   </g>
-  <path d="M64 36 L64 383.84 L696 383.84" fill="none" stroke="#444444" stroke-width="1"/>
-  <g fill="#333333" font-size="10">
-    <line x1="60" x2="64" y1="383.84" y2="383.84" stroke="#444444"/>
-    <text x="56" y="383.84" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="60" x2="64" y1="296.88" y2="296.88" stroke="#444444"/>
-    <text x="56" y="296.88" text-anchor="end" dominant-baseline="middle">2k</text>
-    <line x1="60" x2="64" y1="209.92" y2="209.92" stroke="#444444"/>
-    <text x="56" y="209.92" text-anchor="end" dominant-baseline="middle">4k</text>
-    <line x1="60" x2="64" y1="122.96" y2="122.96" stroke="#444444"/>
-    <text x="56" y="122.96" text-anchor="end" dominant-baseline="middle">6k</text>
-    <line x1="60" x2="64" y1="36" y2="36" stroke="#444444"/>
-    <text x="56" y="36" text-anchor="end" dominant-baseline="middle">8k</text>
-    <line x1="169.33" x2="169.33" y1="383.84" y2="387.84" stroke="#444444"/>
-    <text x="169.33" y="393.84" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 169.33 393.84)" data-full-label="raw">raw</text>
-    <line x1="380" x2="380" y1="383.84" y2="387.84" stroke="#444444"/>
-    <text x="380" y="393.84" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 380 393.84)" data-full-label="processed">processed</text>
-    <line x1="590.67" x2="590.67" y1="383.84" y2="387.84" stroke="#444444"/>
-    <text x="590.67" y="393.84" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 590.67 393.84)" data-full-label="archive">archive</text>
+  <path d="M61 48 L61 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <g fill="#57534E" font-size="10" font-weight="400">
+    <line x1="57" x2="61" y1="432" y2="432" stroke="#A8A29E"/>
+    <text x="49" y="432" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="57" x2="61" y1="336" y2="336" stroke="#A8A29E"/>
+    <text x="49" y="336" text-anchor="end" dominant-baseline="middle">2,000</text>
+    <line x1="57" x2="61" y1="240" y2="240" stroke="#A8A29E"/>
+    <text x="49" y="240" text-anchor="end" dominant-baseline="middle">4,000</text>
+    <line x1="57" x2="61" y1="144" y2="144" stroke="#A8A29E"/>
+    <text x="49" y="144" text-anchor="end" dominant-baseline="middle">6,000</text>
+    <line x1="57" x2="61" y1="48" y2="48" stroke="#A8A29E"/>
+    <text x="49" y="48" text-anchor="end" dominant-baseline="middle">8,000</text>
+    <line x1="166.83" x2="166.83" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="166.83" y="448" text-anchor="middle" font-size="10" data-full-label="raw">raw</text>
+    <line x1="378.5" x2="378.5" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="378.5" y="448" text-anchor="middle" font-size="10" data-full-label="processed">processed</text>
+    <line x1="590.17" x2="590.17" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="590.17" y="448" text-anchor="middle" font-size="10" data-full-label="archive">archive</text>
   </g>
-  <text x="14" y="209.92" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 209.92)">size (GB)</text>
-  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">bucket</text>
-  <g shape-rendering="crispEdges">
-    <rect x="87.17" y="331.67" width="163.32" height="52.18" fill="#0072B2" data-x="raw" data-series="size" data-y="1200"/>
-    <rect x="297.84" y="364.28" width="163.32" height="19.57" fill="#0072B2" data-x="processed" data-series="size" data-y="450"/>
-    <rect x="508.51" y="36" width="163.32" height="347.84" fill="#0072B2" data-x="archive" data-series="size" data-y="8000"/>
+  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">size</text>
+  <text x="378.5" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">bucket</text>
+  <g>
+    <path d="M82.17 432 L82.17 376.4 Q82.17 374.4 84.17 374.4 L249.5 374.4 Q251.5 374.4 251.5 376.4 L251.5 432 Z" fill="#2B6CB0" data-x="raw" data-series="size" data-y="1200"/>
+    <path d="M293.83 432 L293.83 412.4 Q293.83 410.4 295.83 410.4 L461.17 410.4 Q463.17 410.4 463.17 412.4 L463.17 432 Z" fill="#2B6CB0" data-x="processed" data-series="size" data-y="450"/>
+    <path d="M505.5 432 L505.5 50 Q505.5 48 507.5 48 L672.83 48 Q674.83 48 674.83 50 L674.83 432 Z" fill="#2B6CB0" data-x="archive" data-series="size" data-y="8000"/>
+  </g>
+  <g>
+    <text x="166.83" y="366.4" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="raw">1,200</text>
+    <text x="378.5" y="422.4" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="processed">450</text>
+    <text x="590.17" y="60" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="archive">8,000</text>
   </g>
 </svg>

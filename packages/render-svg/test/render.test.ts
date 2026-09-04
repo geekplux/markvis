@@ -34,16 +34,16 @@ function barChart(overrides: Partial<ChartIR> = {}): ChartIR {
 }
 
 describe("palette", () => {
-  it("has eight colorblind-friendly Okabe–Ito colors, not a red-green pair", () => {
+  it("has eight dialed-down Okabe–Ito colors, not a red-green pair", () => {
     expect(PALETTE).toEqual([
-      "#0072B2",
-      "#D55E00",
-      "#009E73",
-      "#CC79A7",
-      "#56B4E9",
-      "#E69F00",
-      "#000000",
-      "#F0E442",
+      "#2B6CB0",
+      "#C65D2E",
+      "#2F8F6B",
+      "#B08900",
+      "#6B5B95",
+      "#8B6B4A",
+      "#C44C6A",
+      "#4A7C8C",
     ]);
     expect(PALETTE).not.toContain("#FF0000");
     expect(PALETTE).not.toContain("#00FF00");
@@ -148,8 +148,8 @@ describe("cartesian rules", () => {
     expect(svg).toContain('data-series="pro"');
     expect(svg).toContain('data-legend="free"');
     expect(svg).toContain('data-legend="pro"');
-    const rects = [...svg.matchAll(/<rect\b[^>]*data-x=/g)];
-    expect(rects).toHaveLength(4);
+    const marks = [...svg.matchAll(/<(?:rect|path)\b[^>]*data-x=/g)];
+    expect(marks).toHaveLength(4);
   });
 
   it("draws grid, axes, and palette colors on a bar chart", () => {
@@ -157,6 +157,11 @@ describe("cartesian rules", () => {
     expect(svg).toContain("<line ");
     expect(svg).toContain('data-chart-type="bar"');
     expect(svg).toContain(PALETTE[0]);
+    expect(svg).not.toContain('shape-rendering="crispEdges"');
+    expect(svg).toContain('fill="#F7F4EF"');
+    expect(svg).toContain("Q3 Revenue");
+    expect(svg).toContain(" · USD k");
+    expect(svg).not.toContain("revenue (USD k)");
   });
 });
 
@@ -217,11 +222,13 @@ describe("hist", () => {
 });
 
 describe("ticks", () => {
-  it("formats large numbers without locale", () => {
+  it("formats integers ≥ 1000 with thousands separators, not compact suffixes", () => {
     expect(formatNumber(0)).toBe("0");
-    expect(formatNumber(1500000)).toBe("1.5M");
-    expect(formatNumber(45000000000)).toBe("45B");
     expect(formatNumber(12)).toBe("12");
+    expect(formatNumber(1200)).toBe("1,200");
+    expect(formatNumber(1500000)).toBe("1,500,000");
+    expect(formatNumber(45000000000)).toBe("45,000,000,000");
+    expect(formatNumber(420000)).toBe("420,000");
   });
 
   it("covers a zero-based bar domain", () => {

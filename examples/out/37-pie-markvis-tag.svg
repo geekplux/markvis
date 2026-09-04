@@ -1,21 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Support topics, 4 slices" aria-labelledby="mv-45904bfc459355d0-title" aria-describedby="mv-45904bfc459355d0-desc" data-markvis="2" data-chart-type="pie" data-id="mv-45904bfc459355d0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Support topics, 4 slices" aria-labelledby="mv-45904bfc459355d0-title" aria-describedby="mv-45904bfc459355d0-desc" data-markvis="2" data-chart-type="pie" data-id="mv-45904bfc459355d0" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
   <title id="mv-45904bfc459355d0-title">Support topics</title>
   <desc id="mv-45904bfc459355d0-desc">pie chart. Support topics. x=topic. y=tickets. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="360" y="26" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Support topics</text>
+  <rect width="100%" height="100%" fill="#F7F4EF"/>
+  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Support topics</text>
   <g aria-hidden="true">
-    <path d="M260 270 L260 120 A150 150 0 0 1 348.17 391.35 Z" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-label="Billing and invoice disputes" data-raw-value="40"/>
-    <path d="M260 270 L348.17 391.35 A150 150 0 0 1 138.65 358.17 Z" fill="#D55E00" stroke="#ffffff" stroke-width="1" data-label="Account access and MFA reset" data-raw-value="25"/>
-    <path d="M260 270 L138.65 358.17 A150 150 0 0 1 138.65 181.83 Z" fill="#009E73" stroke="#ffffff" stroke-width="1" data-label="Product how-to questions" data-raw-value="20"/>
-    <path d="M260 270 L138.65 181.83 A150 150 0 0 1 260 120 Z" fill="#CC79A7" stroke="#ffffff" stroke-width="1" data-label="Other miscellaneous" data-raw-value="15"/>
+    <path d="M376 240 L376 101.76 A138.24 138.24 0 0 1 457.26 351.84 Z" fill="#2B6CB0" stroke="#F7F4EF" stroke-width="1.5" data-label="Billing and invoice disputes" data-raw-value="40"/>
+    <path d="M376 240 L457.26 351.84 A138.24 138.24 0 0 1 264.16 321.26 Z" fill="#C65D2E" stroke="#F7F4EF" stroke-width="1.5" data-label="Account access and MFA reset" data-raw-value="25"/>
+    <path d="M376 240 L264.16 321.26 A138.24 138.24 0 0 1 264.16 158.74 Z" fill="#2F8F6B" stroke="#F7F4EF" stroke-width="1.5" data-label="Product how-to questions" data-raw-value="20"/>
+    <path d="M376 240 L264.16 158.74 A138.24 138.24 0 0 1 376 101.76 Z" fill="#B08900" stroke="#F7F4EF" stroke-width="1.5" data-label="Other miscellaneous" data-raw-value="15"/>
   </g>
-  <g font-size="12" fill="#222222">
-    <rect x="446" y="221" width="10" height="10" fill="#0072B2" rx="1"/>
-    <text x="462" y="230" data-legend="Billing and invoice disputes">Billing and invoice disputes (40)</text>
-    <rect x="446" y="241" width="10" height="10" fill="#D55E00" rx="1"/>
-    <text x="462" y="250" data-legend="Account access and MFA reset">Account access and MFA reset (25)</text>
-    <rect x="446" y="261" width="10" height="10" fill="#009E73" rx="1"/>
-    <text x="462" y="270" data-legend="Product how-to questions">Product how-to questions (20)</text>
-    <rect x="446" y="281" width="10" height="10" fill="#CC79A7" rx="1"/>
-    <text x="462" y="290" data-legend="Other miscellaneous">Other miscellaneous (15)</text>
+  <g fill="none" stroke="#A8A29E" stroke-width="1">
+    <polyline points="507.47,197.28 522.69,192.34 530.69,192.34"/>
+    <polyline points="354.37,376.54 351.87,392.34 343.87,392.34"/>
+    <polyline points="237.76,240 221.76,240 213.76,240"/>
+    <polyline points="313.24,116.83 305.98,102.57 297.98,102.57"/>
+  </g>
+  <g font-size="10" font-weight="500" fill="#1C1917">
+    <text x="542.69" y="192.34" text-anchor="start" dominant-baseline="middle" data-label="Billing and invoice disputes">Billing and invoice disputes · 40</text>
+    <text x="331.87" y="392.34" text-anchor="end" dominant-baseline="middle" data-label="Account access and MFA reset">Account access and MFA reset · 25</text>
+    <text x="201.76" y="240" text-anchor="end" dominant-baseline="middle" data-label="Product how-to questions">Product how-to questions · 20</text>
+    <text x="285.98" y="102.57" text-anchor="end" dominant-baseline="middle" data-label="Other miscellaneous">Other miscellaneous · 15</text>
   </g>
 </svg>

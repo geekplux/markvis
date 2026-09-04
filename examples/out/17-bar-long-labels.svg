@@ -1,35 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Initiative spend (USD), 3 rows" aria-labelledby="mv-af3a6804215f6296-title" aria-describedby="mv-af3a6804215f6296-desc" data-markvis="2" data-chart-type="bar" data-id="mv-af3a6804215f6296" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Initiative spend (USD), 3 rows" aria-labelledby="mv-af3a6804215f6296-title" aria-describedby="mv-af3a6804215f6296-desc" data-markvis="2" data-chart-type="bar" data-id="mv-af3a6804215f6296" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
   <title id="mv-af3a6804215f6296-title">Initiative spend</title>
   <desc id="mv-af3a6804215f6296-desc">bar chart. Initiative spend. x=initiative. y=spend. unit=USD. 3 rows.</desc>
-  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Initiative spend</text>
-  <g fill="none" stroke="#e6e6e6" stroke-width="1">
-    <line x1="64.8" x2="696" y1="333.6" y2="333.6"/>
-    <line x1="64.8" x2="696" y1="234.4" y2="234.4"/>
-    <line x1="64.8" x2="696" y1="135.2" y2="135.2"/>
-    <line x1="64.8" x2="696" y1="36" y2="36"/>
+  <rect width="100%" height="100%" fill="#F7F4EF"/>
+  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Initiative spend<tspan font-size="12" font-weight="400" fill="#78716C"> · USD k</tspan></text>
+  <g fill="none" stroke="#E7E5E4" stroke-width="1">
+    <line x1="56" x2="696" y1="220.54" y2="220.54"/>
+    <line x1="56" x2="696" y1="163.02" y2="163.02"/>
+    <line x1="56" x2="696" y1="105.51" y2="105.51"/>
+    <line x1="56" x2="696" y1="48" y2="48"/>
   </g>
-  <path d="M64.8 36 L64.8 333.6 L696 333.6" fill="none" stroke="#444444" stroke-width="1"/>
-  <g fill="#333333" font-size="10">
-    <line x1="60.8" x2="64.8" y1="333.6" y2="333.6" stroke="#444444"/>
-    <text x="56.8" y="333.6" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="60.8" x2="64.8" y1="234.4" y2="234.4" stroke="#444444"/>
-    <text x="56.8" y="234.4" text-anchor="end" dominant-baseline="middle">200k</text>
-    <line x1="60.8" x2="64.8" y1="135.2" y2="135.2" stroke="#444444"/>
-    <text x="56.8" y="135.2" text-anchor="end" dominant-baseline="middle">400k</text>
-    <line x1="60.8" x2="64.8" y1="36" y2="36" stroke="#444444"/>
-    <text x="56.8" y="36" text-anchor="end" dominant-baseline="middle">600k</text>
-    <line x1="170" x2="170" y1="333.6" y2="337.6" stroke="#444444"/>
-    <text x="170" y="343.6" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 170 343.6)" data-full-label="North America enterprise expansion Q3">North America ente…</text>
-    <line x1="380.4" x2="380.4" y1="333.6" y2="337.6" stroke="#444444"/>
-    <text x="380.4" y="343.6" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 380.4 343.6)" data-full-label="APAC partner enablement and training program">APAC partner enabl…</text>
-    <line x1="590.8" x2="590.8" y1="333.6" y2="337.6" stroke="#444444"/>
-    <text x="590.8" y="343.6" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 590.8 343.6)" data-full-label="Legacy platform decommission wave 2">Legacy platform de…</text>
+  <path d="M56 48 L56 220.54 L696 220.54" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <g fill="#57534E" font-size="10" font-weight="400">
+    <line x1="52" x2="56" y1="220.54" y2="220.54" stroke="#A8A29E"/>
+    <text x="44" y="220.54" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="52" x2="56" y1="163.02" y2="163.02" stroke="#A8A29E"/>
+    <text x="44" y="163.02" text-anchor="end" dominant-baseline="middle">200</text>
+    <line x1="52" x2="56" y1="105.51" y2="105.51" stroke="#A8A29E"/>
+    <text x="44" y="105.51" text-anchor="end" dominant-baseline="middle">400</text>
+    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
+    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">600</text>
+    <line x1="162.67" x2="162.67" y1="220.54" y2="224.54" stroke="#A8A29E"/>
+    <text x="162.67" y="230.54" text-anchor="end" dominant-baseline="middle" font-size="10" transform="rotate(-55 162.67 230.54)" data-full-label="North America enterprise expansion Q3">North America enterprise expansion Q3</text>
+    <line x1="376" x2="376" y1="220.54" y2="224.54" stroke="#A8A29E"/>
+    <text x="376" y="230.54" text-anchor="end" dominant-baseline="middle" font-size="10" transform="rotate(-55 376 230.54)" data-full-label="APAC partner enablement and training program">APAC partner enablement and training program</text>
+    <line x1="589.33" x2="589.33" y1="220.54" y2="224.54" stroke="#A8A29E"/>
+    <text x="589.33" y="230.54" text-anchor="end" dominant-baseline="middle" font-size="10" transform="rotate(-55 589.33 230.54)" data-full-label="Legacy platform decommission wave 2">Legacy platform decommission wave 2</text>
   </g>
-  <text x="14" y="184.8" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 184.8)">spend (USD)</text>
-  <text x="380.4" y="470" text-anchor="middle" font-size="11" fill="#444444">initiative</text>
-  <g shape-rendering="crispEdges">
-    <rect x="87.94" y="125.28" width="163.11" height="208.32" fill="#0072B2" data-x="North America enterprise expansion Q3" data-series="spend" data-y="420000"/>
-    <rect x="298.34" y="241.84" width="163.11" height="91.76" fill="#0072B2" data-x="APAC partner enablement and training program" data-series="spend" data-y="185000"/>
-    <rect x="508.74" y="286.48" width="163.11" height="47.12" fill="#0072B2" data-x="Legacy platform decommission wave 2" data-series="spend" data-y="95000"/>
+  <text x="12" y="134.27" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 134.27)">spend</text>
+  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">initiative</text>
+  <g>
+    <path d="M77.33 220.54 L77.33 101.76 Q77.33 99.76 79.33 99.76 L246 99.76 Q248 99.76 248 101.76 L248 220.54 Z" fill="#2B6CB0" data-x="North America enterprise expansion Q3" data-series="spend" data-y="420000"/>
+    <path d="M290.67 220.54 L290.67 169.34 Q290.67 167.34 292.67 167.34 L459.33 167.34 Q461.33 167.34 461.33 169.34 L461.33 220.54 Z" fill="#2B6CB0" data-x="APAC partner enablement and training program" data-series="spend" data-y="185000"/>
+    <path d="M504 220.54 L504 195.22 Q504 193.22 506 193.22 L672.67 193.22 Q674.67 193.22 674.67 195.22 L674.67 220.54 Z" fill="#2B6CB0" data-x="Legacy platform decommission wave 2" data-series="spend" data-y="95000"/>
+  </g>
+  <g>
+    <text x="162.67" y="91.76" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="North America enterprise expansion Q3">420,000</text>
+    <text x="376" y="159.34" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="APAC partner enablement and training program">185,000</text>
+    <text x="589.33" y="205.22" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="Legacy platform decommission wave 2">95,000</text>
   </g>
 </svg>

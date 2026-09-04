@@ -1,65 +1,81 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: SKU units, 13 rows" aria-labelledby="mv-e0508ac6059d14cd-title" aria-describedby="mv-e0508ac6059d14cd-desc" data-markvis="2" data-chart-type="bar" data-id="mv-e0508ac6059d14cd" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: SKU units, 13 rows" aria-labelledby="mv-e0508ac6059d14cd-title" aria-describedby="mv-e0508ac6059d14cd-desc" data-markvis="2" data-chart-type="bar" data-id="mv-e0508ac6059d14cd" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
   <title id="mv-e0508ac6059d14cd-title">SKU units</title>
   <desc id="mv-e0508ac6059d14cd-desc">bar chart. SKU units. x=sku. y=units. 13 rows.</desc>
-  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">SKU units</text>
-  <g fill="none" stroke="#e6e6e6" stroke-width="1">
-    <line x1="64" x2="696" y1="407.95" y2="407.95"/>
-    <line x1="64" x2="696" y1="283.96" y2="283.96"/>
-    <line x1="64" x2="696" y1="159.98" y2="159.98"/>
-    <line x1="64" x2="696" y1="36" y2="36"/>
+  <rect width="100%" height="100%" fill="#F7F4EF"/>
+  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">SKU units</text>
+  <g fill="none" stroke="#E7E5E4" stroke-width="1">
+    <line x1="56" x2="696" y1="432" y2="432"/>
+    <line x1="56" x2="696" y1="304" y2="304"/>
+    <line x1="56" x2="696" y1="176" y2="176"/>
+    <line x1="56" x2="696" y1="48" y2="48"/>
   </g>
-  <path d="M64 36 L64 407.95 L696 407.95" fill="none" stroke="#444444" stroke-width="1"/>
-  <g fill="#333333" font-size="10">
-    <line x1="60" x2="64" y1="407.95" y2="407.95" stroke="#444444"/>
-    <text x="56" y="407.95" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="60" x2="64" y1="283.96" y2="283.96" stroke="#444444"/>
-    <text x="56" y="283.96" text-anchor="end" dominant-baseline="middle">5</text>
-    <line x1="60" x2="64" y1="159.98" y2="159.98" stroke="#444444"/>
-    <text x="56" y="159.98" text-anchor="end" dominant-baseline="middle">10</text>
-    <line x1="60" x2="64" y1="36" y2="36" stroke="#444444"/>
-    <text x="56" y="36" text-anchor="end" dominant-baseline="middle">15</text>
-    <line x1="88.31" x2="88.31" y1="407.95" y2="411.95" stroke="#444444"/>
-    <text x="88.31" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 88.31 417.95)" data-full-label="A01">A01</text>
-    <line x1="136.92" x2="136.92" y1="407.95" y2="411.95" stroke="#444444"/>
-    <text x="136.92" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 136.92 417.95)" data-full-label="A02">A02</text>
-    <line x1="185.54" x2="185.54" y1="407.95" y2="411.95" stroke="#444444"/>
-    <text x="185.54" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 185.54 417.95)" data-full-label="A03">A03</text>
-    <line x1="234.15" x2="234.15" y1="407.95" y2="411.95" stroke="#444444"/>
-    <text x="234.15" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 234.15 417.95)" data-full-label="A04">A04</text>
-    <line x1="282.77" x2="282.77" y1="407.95" y2="411.95" stroke="#444444"/>
-    <text x="282.77" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 282.77 417.95)" data-full-label="A05">A05</text>
-    <line x1="331.38" x2="331.38" y1="407.95" y2="411.95" stroke="#444444"/>
-    <text x="331.38" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 331.38 417.95)" data-full-label="A06">A06</text>
-    <line x1="380" x2="380" y1="407.95" y2="411.95" stroke="#444444"/>
-    <text x="380" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 380 417.95)" data-full-label="A07">A07</text>
-    <line x1="428.62" x2="428.62" y1="407.95" y2="411.95" stroke="#444444"/>
-    <text x="428.62" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 428.62 417.95)" data-full-label="A08">A08</text>
-    <line x1="477.23" x2="477.23" y1="407.95" y2="411.95" stroke="#444444"/>
-    <text x="477.23" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 477.23 417.95)" data-full-label="A09">A09</text>
-    <line x1="525.85" x2="525.85" y1="407.95" y2="411.95" stroke="#444444"/>
-    <text x="525.85" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 525.85 417.95)" data-full-label="A10">A10</text>
-    <line x1="574.46" x2="574.46" y1="407.95" y2="411.95" stroke="#444444"/>
-    <text x="574.46" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 574.46 417.95)" data-full-label="A11">A11</text>
-    <line x1="623.08" x2="623.08" y1="407.95" y2="411.95" stroke="#444444"/>
-    <text x="623.08" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 623.08 417.95)" data-full-label="A12">A12</text>
-    <line x1="671.69" x2="671.69" y1="407.95" y2="411.95" stroke="#444444"/>
-    <text x="671.69" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 671.69 417.95)" data-full-label="A13">A13</text>
+  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <g fill="#57534E" font-size="10" font-weight="400">
+    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
+    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="52" x2="56" y1="304" y2="304" stroke="#A8A29E"/>
+    <text x="44" y="304" text-anchor="end" dominant-baseline="middle">5</text>
+    <line x1="52" x2="56" y1="176" y2="176" stroke="#A8A29E"/>
+    <text x="44" y="176" text-anchor="end" dominant-baseline="middle">10</text>
+    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
+    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">15</text>
+    <line x1="80.62" x2="80.62" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="80.62" y="448" text-anchor="middle" font-size="10" data-full-label="A01">A01</text>
+    <line x1="129.85" x2="129.85" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="129.85" y="448" text-anchor="middle" font-size="10" data-full-label="A02">A02</text>
+    <line x1="179.08" x2="179.08" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="179.08" y="448" text-anchor="middle" font-size="10" data-full-label="A03">A03</text>
+    <line x1="228.31" x2="228.31" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="228.31" y="448" text-anchor="middle" font-size="10" data-full-label="A04">A04</text>
+    <line x1="277.54" x2="277.54" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="277.54" y="448" text-anchor="middle" font-size="10" data-full-label="A05">A05</text>
+    <line x1="326.77" x2="326.77" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="326.77" y="448" text-anchor="middle" font-size="10" data-full-label="A06">A06</text>
+    <line x1="376" x2="376" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="376" y="448" text-anchor="middle" font-size="10" data-full-label="A07">A07</text>
+    <line x1="425.23" x2="425.23" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="425.23" y="448" text-anchor="middle" font-size="10" data-full-label="A08">A08</text>
+    <line x1="474.46" x2="474.46" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="474.46" y="448" text-anchor="middle" font-size="10" data-full-label="A09">A09</text>
+    <line x1="523.69" x2="523.69" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="523.69" y="448" text-anchor="middle" font-size="10" data-full-label="A10">A10</text>
+    <line x1="572.92" x2="572.92" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="572.92" y="448" text-anchor="middle" font-size="10" data-full-label="A11">A11</text>
+    <line x1="622.15" x2="622.15" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="622.15" y="448" text-anchor="middle" font-size="10" data-full-label="A12">A12</text>
+    <line x1="671.38" x2="671.38" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="671.38" y="448" text-anchor="middle" font-size="10" data-full-label="A13">A13</text>
   </g>
-  <text x="14" y="221.97" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 221.97)">units</text>
-  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">sku</text>
-  <g shape-rendering="crispEdges">
-    <rect x="69.35" y="283.96" width="36.92" height="123.98" fill="#0072B2" data-x="A01" data-series="units" data-y="5"/>
-    <rect x="117.96" y="209.58" width="36.92" height="198.37" fill="#0072B2" data-x="A02" data-series="units" data-y="8"/>
-    <rect x="166.58" y="333.56" width="36.92" height="74.39" fill="#0072B2" data-x="A03" data-series="units" data-y="3"/>
-    <rect x="215.19" y="110.39" width="36.92" height="297.56" fill="#0072B2" data-x="A04" data-series="units" data-y="12"/>
-    <rect x="263.81" y="234.37" width="36.92" height="173.58" fill="#0072B2" data-x="A05" data-series="units" data-y="7"/>
-    <rect x="312.42" y="184.78" width="36.92" height="223.17" fill="#0072B2" data-x="A06" data-series="units" data-y="9"/>
-    <rect x="361.04" y="308.76" width="36.92" height="99.19" fill="#0072B2" data-x="A07" data-series="units" data-y="4"/>
-    <rect x="409.66" y="135.19" width="36.92" height="272.76" fill="#0072B2" data-x="A08" data-series="units" data-y="11"/>
-    <rect x="458.27" y="259.17" width="36.92" height="148.78" fill="#0072B2" data-x="A09" data-series="units" data-y="6"/>
-    <rect x="506.89" y="159.98" width="36.92" height="247.96" fill="#0072B2" data-x="A10" data-series="units" data-y="10"/>
-    <rect x="555.5" y="358.35" width="36.92" height="49.59" fill="#0072B2" data-x="A11" data-series="units" data-y="2"/>
-    <rect x="604.12" y="60.8" width="36.92" height="347.15" fill="#0072B2" data-x="A12" data-series="units" data-y="14"/>
-    <rect x="652.73" y="383.15" width="36.92" height="24.8" fill="#0072B2" data-x="A13" data-series="units" data-y="1"/>
+  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">units</text>
+  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">sku</text>
+  <g>
+    <path d="M60.92 432 L60.92 306 Q60.92 304 62.92 304 L98.31 304 Q100.31 304 100.31 306 L100.31 432 Z" fill="#2B6CB0" data-x="A01" data-series="units" data-y="5"/>
+    <path d="M110.15 432 L110.15 229.2 Q110.15 227.2 112.15 227.2 L147.54 227.2 Q149.54 227.2 149.54 229.2 L149.54 432 Z" fill="#2B6CB0" data-x="A02" data-series="units" data-y="8"/>
+    <path d="M159.38 432 L159.38 357.2 Q159.38 355.2 161.38 355.2 L196.77 355.2 Q198.77 355.2 198.77 357.2 L198.77 432 Z" fill="#2B6CB0" data-x="A03" data-series="units" data-y="3"/>
+    <path d="M208.62 432 L208.62 126.8 Q208.62 124.8 210.62 124.8 L246 124.8 Q248 124.8 248 126.8 L248 432 Z" fill="#2B6CB0" data-x="A04" data-series="units" data-y="12"/>
+    <path d="M257.85 432 L257.85 254.8 Q257.85 252.8 259.85 252.8 L295.23 252.8 Q297.23 252.8 297.23 254.8 L297.23 432 Z" fill="#2B6CB0" data-x="A05" data-series="units" data-y="7"/>
+    <path d="M307.08 432 L307.08 203.6 Q307.08 201.6 309.08 201.6 L344.46 201.6 Q346.46 201.6 346.46 203.6 L346.46 432 Z" fill="#2B6CB0" data-x="A06" data-series="units" data-y="9"/>
+    <path d="M356.31 432 L356.31 331.6 Q356.31 329.6 358.31 329.6 L393.69 329.6 Q395.69 329.6 395.69 331.6 L395.69 432 Z" fill="#2B6CB0" data-x="A07" data-series="units" data-y="4"/>
+    <path d="M405.54 432 L405.54 152.4 Q405.54 150.4 407.54 150.4 L442.92 150.4 Q444.92 150.4 444.92 152.4 L444.92 432 Z" fill="#2B6CB0" data-x="A08" data-series="units" data-y="11"/>
+    <path d="M454.77 432 L454.77 280.4 Q454.77 278.4 456.77 278.4 L492.15 278.4 Q494.15 278.4 494.15 280.4 L494.15 432 Z" fill="#2B6CB0" data-x="A09" data-series="units" data-y="6"/>
+    <path d="M504 432 L504 178 Q504 176 506 176 L541.38 176 Q543.38 176 543.38 178 L543.38 432 Z" fill="#2B6CB0" data-x="A10" data-series="units" data-y="10"/>
+    <path d="M553.23 432 L553.23 382.8 Q553.23 380.8 555.23 380.8 L590.62 380.8 Q592.62 380.8 592.62 382.8 L592.62 432 Z" fill="#2B6CB0" data-x="A11" data-series="units" data-y="2"/>
+    <path d="M602.46 432 L602.46 75.6 Q602.46 73.6 604.46 73.6 L639.85 73.6 Q641.85 73.6 641.85 75.6 L641.85 432 Z" fill="#2B6CB0" data-x="A12" data-series="units" data-y="14"/>
+    <path d="M651.69 432 L651.69 408.4 Q651.69 406.4 653.69 406.4 L689.08 406.4 Q691.08 406.4 691.08 408.4 L691.08 432 Z" fill="#2B6CB0" data-x="A13" data-series="units" data-y="1"/>
+  </g>
+  <g>
+    <text x="80.62" y="296" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="A01">5</text>
+    <text x="129.85" y="219.2" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="A02">8</text>
+    <text x="179.08" y="347.2" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="A03">3</text>
+    <text x="228.31" y="116.8" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="A04">12</text>
+    <text x="277.54" y="244.8" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="A05">7</text>
+    <text x="326.77" y="193.6" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="A06">9</text>
+    <text x="376" y="321.6" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="A07">4</text>
+    <text x="425.23" y="142.4" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="A08">11</text>
+    <text x="474.46" y="270.4" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="A09">6</text>
+    <text x="523.69" y="168" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="A10">10</text>
+    <text x="572.92" y="372.8" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="A11">2</text>
+    <text x="622.15" y="65.6" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="A12">14</text>
+    <text x="671.38" y="418.4" text-anchor="middle" font-size="10" font-weight="500" fill="#1C1917" data-value-label="A13">1</text>
   </g>
 </svg>

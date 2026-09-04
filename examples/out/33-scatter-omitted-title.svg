@@ -1,54 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="scatter chart: scatter omitted title, 4 rows" aria-labelledby="mv-3d91d9f25d74086c-title" aria-describedby="mv-3d91d9f25d74086c-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-3d91d9f25d74086c" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="scatter chart: scatter omitted title, 4 rows" aria-labelledby="mv-3d91d9f25d74086c-title" aria-describedby="mv-3d91d9f25d74086c-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-3d91d9f25d74086c" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
   <title id="mv-3d91d9f25d74086c-title">scatter omitted title</title>
   <desc id="mv-3d91d9f25d74086c-desc">scatter chart. scatter omitted title. x=x. y=y. 4 rows.</desc>
-  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">scatter omitted title</text>
-  <g fill="none" stroke="#e6e6e6" stroke-width="1">
-    <line x1="64" x2="696" y1="416" y2="416"/>
-    <line x1="64" x2="696" y1="340" y2="340"/>
-    <line x1="64" x2="696" y1="264" y2="264"/>
-    <line x1="64" x2="696" y1="188" y2="188"/>
-    <line x1="64" x2="696" y1="112" y2="112"/>
-    <line x1="64" x2="696" y1="36" y2="36"/>
-    <line x1="72" x2="72" y1="36" y2="416"/>
-    <line x1="195.2" x2="195.2" y1="36" y2="416"/>
-    <line x1="318.4" x2="318.4" y1="36" y2="416"/>
-    <line x1="441.6" x2="441.6" y1="36" y2="416"/>
-    <line x1="564.8" x2="564.8" y1="36" y2="416"/>
-    <line x1="688" x2="688" y1="36" y2="416"/>
+  <rect width="100%" height="100%" fill="#F7F4EF"/>
+  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">scatter omitted title</text>
+  <g fill="none" stroke="#E7E5E4" stroke-width="1">
+    <line x1="56" x2="696" y1="432" y2="432"/>
+    <line x1="56" x2="696" y1="355.2" y2="355.2"/>
+    <line x1="56" x2="696" y1="278.4" y2="278.4"/>
+    <line x1="56" x2="696" y1="201.6" y2="201.6"/>
+    <line x1="56" x2="696" y1="124.8" y2="124.8"/>
+    <line x1="56" x2="696" y1="48" y2="48"/>
   </g>
-  <path d="M64 36 L64 416 L696 416" fill="none" stroke="#444444" stroke-width="1"/>
-  <g fill="#333333" font-size="10">
-    <line x1="60" x2="64" y1="416" y2="416" stroke="#444444"/>
-    <text x="56" y="416" text-anchor="end" dominant-baseline="middle">1.5</text>
-    <line x1="60" x2="64" y1="340" y2="340" stroke="#444444"/>
-    <text x="56" y="340" text-anchor="end" dominant-baseline="middle">2</text>
-    <line x1="60" x2="64" y1="264" y2="264" stroke="#444444"/>
-    <text x="56" y="264" text-anchor="end" dominant-baseline="middle">2.5</text>
-    <line x1="60" x2="64" y1="188" y2="188" stroke="#444444"/>
-    <text x="56" y="188" text-anchor="end" dominant-baseline="middle">3</text>
-    <line x1="60" x2="64" y1="112" y2="112" stroke="#444444"/>
-    <text x="56" y="112" text-anchor="end" dominant-baseline="middle">3.5</text>
-    <line x1="60" x2="64" y1="36" y2="36" stroke="#444444"/>
-    <text x="56" y="36" text-anchor="end" dominant-baseline="middle">4</text>
-    <line x1="72" x2="72" y1="416" y2="420" stroke="#444444"/>
-    <text x="72" y="432" text-anchor="middle" font-size="10" data-full-label="0.5">0.5</text>
-    <line x1="195.2" x2="195.2" y1="416" y2="420" stroke="#444444"/>
-    <text x="195.2" y="432" text-anchor="middle" font-size="10" data-full-label="1">1</text>
-    <line x1="318.4" x2="318.4" y1="416" y2="420" stroke="#444444"/>
-    <text x="318.4" y="432" text-anchor="middle" font-size="10" data-full-label="1.5">1.5</text>
-    <line x1="441.6" x2="441.6" y1="416" y2="420" stroke="#444444"/>
-    <text x="441.6" y="432" text-anchor="middle" font-size="10" data-full-label="2">2</text>
-    <line x1="564.8" x2="564.8" y1="416" y2="420" stroke="#444444"/>
-    <text x="564.8" y="432" text-anchor="middle" font-size="10" data-full-label="2.5">2.5</text>
-    <line x1="688" x2="688" y1="416" y2="420" stroke="#444444"/>
-    <text x="688" y="432" text-anchor="middle" font-size="10" data-full-label="3">3</text>
+  <path d="M56 48 L56 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <g fill="#57534E" font-size="10" font-weight="400">
+    <line x1="52" x2="56" y1="432" y2="432" stroke="#A8A29E"/>
+    <text x="44" y="432" text-anchor="end" dominant-baseline="middle">1.5</text>
+    <line x1="52" x2="56" y1="355.2" y2="355.2" stroke="#A8A29E"/>
+    <text x="44" y="355.2" text-anchor="end" dominant-baseline="middle">2</text>
+    <line x1="52" x2="56" y1="278.4" y2="278.4" stroke="#A8A29E"/>
+    <text x="44" y="278.4" text-anchor="end" dominant-baseline="middle">2.5</text>
+    <line x1="52" x2="56" y1="201.6" y2="201.6" stroke="#A8A29E"/>
+    <text x="44" y="201.6" text-anchor="end" dominant-baseline="middle">3</text>
+    <line x1="52" x2="56" y1="124.8" y2="124.8" stroke="#A8A29E"/>
+    <text x="44" y="124.8" text-anchor="end" dominant-baseline="middle">3.5</text>
+    <line x1="52" x2="56" y1="48" y2="48" stroke="#A8A29E"/>
+    <text x="44" y="48" text-anchor="end" dominant-baseline="middle">4</text>
+    <line x1="64" x2="64" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="64" y="448" text-anchor="middle" font-size="10" data-full-label="0.5">0.5</text>
+    <line x1="188.8" x2="188.8" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="188.8" y="448" text-anchor="middle" font-size="10" data-full-label="1">1</text>
+    <line x1="313.6" x2="313.6" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="313.6" y="448" text-anchor="middle" font-size="10" data-full-label="1.5">1.5</text>
+    <line x1="438.4" x2="438.4" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="438.4" y="448" text-anchor="middle" font-size="10" data-full-label="2">2</text>
+    <line x1="563.2" x2="563.2" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="563.2" y="448" text-anchor="middle" font-size="10" data-full-label="2.5">2.5</text>
+    <line x1="688" x2="688" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="688" y="448" text-anchor="middle" font-size="10" data-full-label="3">3</text>
   </g>
-  <text x="14" y="226" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 226)">y</text>
-  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">x</text>
+  <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">y</text>
+  <text x="376" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">x</text>
   <g>
-    <circle cx="195.2" cy="324.8" r="4" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-x="1.0" data-y="2.1" data-series="y"/>
-    <circle cx="318.4" cy="218.4" r="4" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-x="1.5" data-y="2.8" data-series="y"/>
-    <circle cx="441.6" cy="188" r="4" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-x="2.0" data-y="3" data-series="y"/>
-    <circle cx="564.8" cy="127.2" r="4" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-x="2.5" data-y="3.4" data-series="y"/>
+    <circle cx="188.8" cy="339.84" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="1.0" data-y="2.1" data-series="y"/>
+    <circle cx="313.6" cy="232.32" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="1.5" data-y="2.8" data-series="y"/>
+    <circle cx="438.4" cy="201.6" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="2.0" data-y="3" data-series="y"/>
+    <circle cx="563.2" cy="140.16" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="2.5" data-y="3.4" data-series="y"/>
   </g>
 </svg>
