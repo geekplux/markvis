@@ -22,11 +22,10 @@ previous U2 cancelled; legacy modernization is not 2.0.
 - [x] W9 playground (Vite; left fence / right SVG+table; Copy; examples/valid)
 - [x] W10 AI 面 (SKILL / llms / prompts / model-errors; eval-prompts gold-fence check)
 - [x] W11 工程硬化
-- [ ] W12 加厚 (gallery + landing + a11y/perf budget; mcp / compat-legacy / PR-comment SVG still open)
+- [x] W12 stop-gate (gallery + landing + README 2.0). Parked thicken: mcp / compat-legacy / PR-comment SVG
 
 ## Active
-
-W12 thicken in progress. Gallery + a11y + perf budget landed. Left: compat-legacy, GitHub Action PR-comment SVG, packages/mcp, README 2.0 entry.
+STOP-GATE met 2026-09-04. Acceptance green. Loop may stop. Parked W12 leftovers: mcp, compat-legacy, PR-comment SVG (not blocking).
 
 ## W12 proof (Writer)
 
