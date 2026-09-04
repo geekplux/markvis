@@ -25,6 +25,10 @@ previous U2 cancelled; legacy modernization is not 2.0.
 - [ ] W12 加厚
 
 ## Active
+## W12 proof (Writer)
+
+- docs/landing.md — what / why not Mermaid / how to try / three svg refs (≤40 lines)
+
 W11 closed. Next: W12 加厚.
 
 ## W11 proof (Writer)

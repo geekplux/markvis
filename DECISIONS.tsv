@@ -24,3 +24,5 @@ date	wave	decision
 2026-09-04	W11	check.yml = install + test + check valid + invalid non-zero + playground build; AGENTS frozen: no new types, no d3; vitest covers parser/render-svg/cli
 2026-09-04	W11	accepted 685a033; CI gate + frozen AGENTS; open W12 thicken
 2026-09-04	W11	docs/best-practices.md: fixtures first, six types only, no forbidden render deps in packages/apps
+2026-09-04	W11	accepted 685a033 + best-practices; open W12 thicken (gallery+landing+README first)
+2026-09-04	W12	docs/landing.md: what/why-not-Mermaid/try/three svg refs
