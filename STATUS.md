@@ -6,7 +6,7 @@ previous U2 cancelled; legacy modernization is not 2.0.
 
 - Workdir: /workspace/markvis
 - Branch: v2
-- Updated: 2026-09-04 (Coder) W11 harden
+- Updated: 2026-09-04 (Coder) W12 gallery + a11y + perf budget
 
 ## Waves
 
@@ -22,14 +22,50 @@ previous U2 cancelled; legacy modernization is not 2.0.
 - [x] W9 playground (Vite; left fence / right SVG+table; Copy; examples/valid)
 - [x] W10 AI 面 (SKILL / llms / prompts / model-errors; eval-prompts gold-fence check)
 - [x] W11 工程硬化
-- [ ] W12 加厚
+- [ ] W12 加厚 (gallery + landing + a11y/perf budget; mcp / compat-legacy / PR-comment SVG still open)
 
 ## Active
+
+W12 thicken in progress. Gallery + a11y + perf budget landed. Left: compat-legacy, GitHub Action PR-comment SVG, packages/mcp, README 2.0 entry.
+
 ## W12 proof (Writer)
 
 - docs/landing.md — what / why not Mermaid / how to try / three svg refs (≤40 lines)
 
-W11 closed. Next: W12 加厚.
+## W12 proof (Coder)
+
+Parent: 90d169c
+Message: feat(cli): generate examples/gallery.html from SVG snapshots
+
+`markvis gallery` reads `examples/out/*.svg` and writes `examples/gallery.html` (inline SVG catalog; `--out` optional, defaults to sibling `gallery.html`). All 52 snapshot SVGs already had non-empty `<title>` and `<desc>`; tests now require that plus Okabe–Ito (not a red-green pair). Optional 1000-row CSV `check`+`render` budget is 500ms (measured ~5–11ms CLI / ~5ms parse+render on Node v20.19.2). Did not add mcp, compat-legacy, or PR-comment SVG. No d3.
+
+Files:
+
+examples/gallery.html
+packages/cli/package.json
+packages/cli/src/cli.ts
+packages/cli/src/files.ts
+packages/cli/src/gallery.ts
+packages/cli/src/index.ts
+packages/cli/test/cli.test.ts
+packages/cli/test/perf.test.ts
+packages/render-svg/test/fixtures.test.ts
+packages/render-svg/test/render.test.ts
+STATUS.md
+DECISIONS.tsv
+
+Commands:
+
+- `node -v` → v20.19.2 (exit 0)
+- `pnpm -v` → 9.15.9 (exit 0)
+- `pnpm test` → exit 0 (382 tests)
+- `pnpm markvis check examples/valid` → exit 0 (52 ok)
+- `pnpm markvis check examples/invalid` → exit 1 (0 ok, 18 error)
+- `pnpm markvis stats examples/valid/01-bar-basic.md` → exit 0 (`bar 3 120 180 -`)
+- `pnpm markvis gallery examples/out --out examples/gallery.html` → exit 0 (52 figures)
+- `pnpm --filter playground build` → exit 0
+- `rg "d3-node|markvis-bar|markvis-line|markvis-pie" packages apps` → exit 1 (no matches)
+- `rg "from ['\"]legacy|require\\(['\"]legacy" packages` → exit 1 (no matches)
 
 ## W11 proof (Writer)
 

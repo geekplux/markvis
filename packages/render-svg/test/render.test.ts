@@ -34,11 +34,20 @@ function barChart(overrides: Partial<ChartIR> = {}): ChartIR {
 }
 
 describe("palette", () => {
-  it("has eight colorblind-friendly colors", () => {
-    expect(PALETTE).toHaveLength(8);
-    for (const color of PALETTE) {
-      expect(color).toMatch(/^#[0-9A-Fa-f]{6}$/);
-    }
+  it("has eight colorblind-friendly Okabe–Ito colors, not a red-green pair", () => {
+    expect(PALETTE).toEqual([
+      "#0072B2",
+      "#D55E00",
+      "#009E73",
+      "#CC79A7",
+      "#56B4E9",
+      "#E69F00",
+      "#000000",
+      "#F0E442",
+    ]);
+    expect(PALETTE).not.toContain("#FF0000");
+    expect(PALETTE).not.toContain("#00FF00");
+    expect(new Set(PALETTE).size).toBe(8);
   });
 });
 
@@ -67,8 +76,12 @@ describe("svg semantics", () => {
     expect(svg).toContain("aria-label=");
     expect(svg).toContain("aria-labelledby=");
     expect(svg).toContain("aria-describedby=");
-    expect(svg).toMatch(/<title id="mv-[a-f0-9]+-title">/);
-    expect(svg).toMatch(/<desc id="mv-[a-f0-9]+-desc">/);
+    expect(svg).toMatch(/<title id="mv-[a-f0-9]+-title">Q3 Revenue<\/title>/);
+    expect(svg).toMatch(/<desc id="mv-[a-f0-9]+-desc">[^<]+<\/desc>/);
+    const title = svg.match(/<title\b[^>]*>([^<]*)<\/title>/);
+    const desc = svg.match(/<desc\b[^>]*>([^<]*)<\/desc>/);
+    expect(title?.[1]?.trim().length).toBeGreaterThan(0);
+    expect(desc?.[1]?.trim().length).toBeGreaterThan(0);
     expect(svg).toContain('data-chart-type="bar"');
   });
 

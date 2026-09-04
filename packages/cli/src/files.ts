@@ -35,6 +35,46 @@ export function collectMarkdownFiles(inputs: string[], cwd: string): string[] {
   return [...new Set(out)].sort();
 }
 
+export function collectSvgFiles(inputs: string[], cwd: string): string[] {
+  if (inputs.length === 0) {
+    throw new CliError("missing path");
+  }
+  const out: string[] = [];
+  for (const input of inputs) {
+    const abs = resolve(cwd, input);
+    let st;
+    try {
+      st = statSync(abs);
+    } catch {
+      throw new CliError(`path not found: ${abs}`);
+    }
+    if (st.isFile()) {
+      if (extname(abs).toLowerCase() !== ".svg") {
+        throw new CliError(`not an svg file: ${abs}`);
+      }
+      out.push(abs);
+      continue;
+    }
+    if (!st.isDirectory()) {
+      throw new CliError(`not an svg file: ${abs}`);
+    }
+    const names = readdirSync(abs).sort();
+    for (const name of names) {
+      if (name.startsWith(".")) {
+        continue;
+      }
+      if (extname(name).toLowerCase() !== ".svg") {
+        continue;
+      }
+      const child = join(abs, name);
+      if (statSync(child).isFile()) {
+        out.push(child);
+      }
+    }
+  }
+  return [...new Set(out)].sort();
+}
+
 function walk(path: string, out: string[]): void {
   let st;
   try {

@@ -1,6 +1,13 @@
 export { runCli, USAGE, VERSION } from "./cli.js";
 export type { CliContext } from "./cli.js";
-export { collectMarkdownFiles, displayPath, CliError } from "./files.js";
+export {
+  collectMarkdownFiles,
+  collectSvgFiles,
+  displayPath,
+  CliError,
+} from "./files.js";
+export { buildGalleryHtml } from "./gallery.js";
+export type { GalleryItem } from "./gallery.js";
 export { chartStats } from "./stats.js";
 export type { ChartStats } from "./stats.js";
 export {

@@ -38,8 +38,12 @@ describe("valid fixture SVGs", () => {
     expect(svg.startsWith("<svg ")).toBe(true);
     expect(svg.endsWith("</svg>\n")).toBe(true);
     expect(svg).toContain(`data-chart-type="${chart.type}"`);
-    expect(svg).toContain("<title ");
-    expect(svg).toContain("<desc ");
+    const title = svg.match(/<title\b[^>]*>([^<]*)<\/title>/);
+    const desc = svg.match(/<desc\b[^>]*>([^<]*)<\/desc>/);
+    expect(title?.[1]?.trim().length, `${file} empty <title>`).toBeGreaterThan(
+      0,
+    );
+    expect(desc?.[1]?.trim().length, `${file} empty <desc>`).toBeGreaterThan(0);
     expect(svg).toContain("aria-label=");
     expect(svg).toContain('role="img"');
 

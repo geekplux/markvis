@@ -7,6 +7,7 @@ import { renderSvg } from "@markvis/render-svg";
 import {
   CliError,
   collectMarkdownFiles,
+  collectSvgFiles,
   displayPath,
 } from "./files.js";
 import {
@@ -15,6 +16,7 @@ import {
   formatStatsRow,
   tableToGfm,
 } from "./format.js";
+import { buildGalleryHtml } from "./gallery.js";
 import { buildPreviewHtml } from "./preview.js";
 import { chartStats } from "./stats.js";
 
@@ -28,9 +30,10 @@ Commands:
   preview     Side-by-side HTML for one markdown file
   stats       Print file, type, n, min, max, series
   to-table    Print GFM table; on error, table plus one error line
+  gallery     Write HTML catalog of SVG files (from examples/out)
 
 Options:
-  -o, --out <path>  render: output directory; preview: html file
+  -o, --out <path>  render: output directory; preview/gallery: html file
   --no-open         preview: do not open the html
   -h, --help
   -v, --version
@@ -42,6 +45,7 @@ const COMMANDS = new Set([
   "preview",
   "stats",
   "to-table",
+  "gallery",
 ]);
 
 export type CliContext = {
@@ -298,6 +302,46 @@ function cmdPreview(
   return result.ok ? 0 : 1;
 }
 
+function galleryDefaultOut(paths: string[], cwd: string): string {
+  if (paths.length !== 1) {
+    throw new CliError("gallery: pass --out FILE");
+  }
+  const abs = resolve(cwd, paths[0]!);
+  let st;
+  try {
+    st = statSync(abs);
+  } catch {
+    throw new CliError(`path not found: ${abs}`);
+  }
+  if (!st.isDirectory()) {
+    throw new CliError("gallery: pass --out FILE");
+  }
+  return join(dirname(abs), "gallery.html");
+}
+
+function cmdGallery(
+  paths: string[],
+  flags: Flags,
+  ctx: CliContext,
+): number {
+  const files = collectSvgFiles(paths, ctx.cwd);
+  if (files.length === 0) {
+    throw new CliError("no svg files");
+  }
+  const items = files.map((abs) => ({
+    name: basename(abs),
+    svg: readFileSync(abs, "utf8"),
+  }));
+  const html = buildGalleryHtml(items);
+  const outPath = flags.out
+    ? resolve(ctx.cwd, flags.out)
+    : galleryDefaultOut(paths, ctx.cwd);
+  mkdirSync(dirname(outPath), { recursive: true });
+  writeFileSync(outPath, html, "utf8");
+  ctx.stdout.write(`wrote ${displayPath(outPath, ctx.cwd)}\n`);
+  return 0;
+}
+
 export function runCli(argv: string[], ctx: Partial<CliContext> = {}): number {
   const io = resolveContext(ctx);
   try {
@@ -328,6 +372,8 @@ export function runCli(argv: string[], ctx: Partial<CliContext> = {}): number {
         return cmdRender(paths, flags, io);
       case "preview":
         return cmdPreview(paths, flags, io);
+      case "gallery":
+        return cmdGallery(paths, flags, io);
       default:
         throw new CliError(`unknown command: ${command}`);
     }
