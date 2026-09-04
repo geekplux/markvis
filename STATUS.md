@@ -1,7 +1,7 @@
 # STATUS.md
 
 ## Snapshot
-- tip: 60ede8c feat(render-svg) visual-spec (v2)
+- tip: dac55e0 (origin/v2)
 - gallery.html: regenerated from examples/out
 - Active: W14a Coder render-svg done
 - Next: GeekPlux review of 01 02 05 09 17; then W14b
