@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Latency p99 (ms), 3 rows" aria-labelledby="mv-17c122f090a29571-title" aria-describedby="mv-17c122f090a29571-desc" data-markvis="2" data-chart-type="bar" data-id="mv-17c122f090a29571" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+  <title id="mv-17c122f090a29571-title">Latency p99</title>
+  <desc id="mv-17c122f090a29571-desc">bar chart. Latency p99. x=service. y=p99. unit=ms. 3 rows.</desc>
+  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Latency p99</text>
+  <g fill="none" stroke="#e6e6e6" stroke-width="1">
+    <line x1="64" x2="696" y1="416" y2="416"/>
+    <line x1="64" x2="696" y1="289.33" y2="289.33"/>
+    <line x1="64" x2="696" y1="162.67" y2="162.67"/>
+    <line x1="64" x2="696" y1="36" y2="36"/>
+  </g>
+  <path d="M64 36 L64 416 L696 416" fill="none" stroke="#444444" stroke-width="1"/>
+  <g fill="#333333" font-size="10">
+    <line x1="60" x2="64" y1="416" y2="416" stroke="#444444"/>
+    <text x="56" y="416" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="60" x2="64" y1="289.33" y2="289.33" stroke="#444444"/>
+    <text x="56" y="289.33" text-anchor="end" dominant-baseline="middle">50</text>
+    <line x1="60" x2="64" y1="162.67" y2="162.67" stroke="#444444"/>
+    <text x="56" y="162.67" text-anchor="end" dominant-baseline="middle">100</text>
+    <line x1="60" x2="64" y1="36" y2="36" stroke="#444444"/>
+    <text x="56" y="36" text-anchor="end" dominant-baseline="middle">150</text>
+    <line x1="169.33" x2="169.33" y1="416" y2="420" stroke="#444444"/>
+    <text x="169.33" y="432" text-anchor="middle" font-size="10" data-full-label="api">api</text>
+    <line x1="380" x2="380" y1="416" y2="420" stroke="#444444"/>
+    <text x="380" y="432" text-anchor="middle" font-size="10" data-full-label="auth">auth</text>
+    <line x1="590.67" x2="590.67" y1="416" y2="420" stroke="#444444"/>
+    <text x="590.67" y="432" text-anchor="middle" font-size="10" data-full-label="cdn">cdn</text>
+  </g>
+  <text x="14" y="226" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 226)">p99 (ms)</text>
+  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">service</text>
+  <g shape-rendering="crispEdges">
+    <rect x="87.17" y="112" width="163.32" height="304" fill="#0072B2" data-x="api" data-series="p99" data-y="120"/>
+    <rect x="297.84" y="213.33" width="163.32" height="202.67" fill="#0072B2" data-x="auth" data-series="p99" data-y="80"/>
+    <rect x="508.51" y="302" width="163.32" height="114" fill="#0072B2" data-x="cdn" data-series="p99" data-y="45"/>
+  </g>
+</svg>

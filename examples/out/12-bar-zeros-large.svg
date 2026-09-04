@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Traffic spikes (hits), 6 rows" aria-labelledby="mv-effd8776b175b41d-title" aria-describedby="mv-effd8776b175b41d-desc" data-markvis="2" data-chart-type="bar" data-id="mv-effd8776b175b41d" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+  <title id="mv-effd8776b175b41d-title">Traffic spikes</title>
+  <desc id="mv-effd8776b175b41d-desc">bar chart. Traffic spikes. x=hour. y=hits. unit=hits. 6 rows.</desc>
+  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Traffic spikes</text>
+  <g fill="none" stroke="#e6e6e6" stroke-width="1">
+    <line x1="64.8" x2="696" y1="416" y2="416"/>
+    <line x1="64.8" x2="696" y1="289.33" y2="289.33"/>
+    <line x1="64.8" x2="696" y1="162.67" y2="162.67"/>
+    <line x1="64.8" x2="696" y1="36" y2="36"/>
+  </g>
+  <path d="M64.8 36 L64.8 416 L696 416" fill="none" stroke="#444444" stroke-width="1"/>
+  <g fill="#333333" font-size="10">
+    <line x1="60.8" x2="64.8" y1="416" y2="416" stroke="#444444"/>
+    <text x="56.8" y="416" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="60.8" x2="64.8" y1="289.33" y2="289.33" stroke="#444444"/>
+    <text x="56.8" y="289.33" text-anchor="end" dominant-baseline="middle">500k</text>
+    <line x1="60.8" x2="64.8" y1="162.67" y2="162.67" stroke="#444444"/>
+    <text x="56.8" y="162.67" text-anchor="end" dominant-baseline="middle">1M</text>
+    <line x1="60.8" x2="64.8" y1="36" y2="36" stroke="#444444"/>
+    <text x="56.8" y="36" text-anchor="end" dominant-baseline="middle">1.5M</text>
+    <line x1="117.4" x2="117.4" y1="416" y2="420" stroke="#444444"/>
+    <text x="117.4" y="432" text-anchor="middle" font-size="10" data-full-label="00">00</text>
+    <line x1="222.6" x2="222.6" y1="416" y2="420" stroke="#444444"/>
+    <text x="222.6" y="432" text-anchor="middle" font-size="10" data-full-label="01">01</text>
+    <line x1="327.8" x2="327.8" y1="416" y2="420" stroke="#444444"/>
+    <text x="327.8" y="432" text-anchor="middle" font-size="10" data-full-label="02">02</text>
+    <line x1="433" x2="433" y1="416" y2="420" stroke="#444444"/>
+    <text x="433" y="432" text-anchor="middle" font-size="10" data-full-label="03">03</text>
+    <line x1="538.2" x2="538.2" y1="416" y2="420" stroke="#444444"/>
+    <text x="538.2" y="432" text-anchor="middle" font-size="10" data-full-label="04">04</text>
+    <line x1="643.4" x2="643.4" y1="416" y2="420" stroke="#444444"/>
+    <text x="643.4" y="432" text-anchor="middle" font-size="10" data-full-label="05">05</text>
+  </g>
+  <text x="14" y="226" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 226)">hits</text>
+  <text x="380.4" y="470" text-anchor="middle" font-size="11" fill="#444444">hour</text>
+  <g shape-rendering="crispEdges">
+    <rect x="76.37" y="416" width="81.06" height="0" fill="#0072B2" data-x="00" data-series="hits" data-y="0"/>
+    <rect x="181.57" y="416" width="81.06" height="0" fill="#0072B2" data-x="01" data-series="hits" data-y="0"/>
+    <rect x="286.77" y="416" width="81.06" height="0" fill="#0072B2" data-x="02" data-series="hits" data-y="12"/>
+    <rect x="391.97" y="36" width="81.06" height="380" fill="#0072B2" data-x="03" data-series="hits" data-y="1500000"/>
+    <rect x="497.17" y="167.73" width="81.06" height="248.27" fill="#0072B2" data-x="04" data-series="hits" data-y="980000"/>
+    <rect x="602.37" y="416" width="81.06" height="0" fill="#0072B2" data-x="05" data-series="hits" data-y="3"/>
+  </g>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Monthly tickets, 12 rows" aria-labelledby="mv-4e9b543d7bc64357-title" aria-describedby="mv-4e9b543d7bc64357-desc" data-markvis="2" data-chart-type="bar" data-id="mv-4e9b543d7bc64357" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+  <title id="mv-4e9b543d7bc64357-title">Monthly tickets</title>
+  <desc id="mv-4e9b543d7bc64357-desc">bar chart. Monthly tickets. x=month. y=tickets. 12 rows.</desc>
+  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Monthly tickets</text>
+  <g fill="none" stroke="#e6e6e6" stroke-width="1">
+    <line x1="64" x2="696" y1="407.95" y2="407.95"/>
+    <line x1="64" x2="696" y1="283.96" y2="283.96"/>
+    <line x1="64" x2="696" y1="159.98" y2="159.98"/>
+    <line x1="64" x2="696" y1="36" y2="36"/>
+  </g>
+  <path d="M64 36 L64 407.95 L696 407.95" fill="none" stroke="#444444" stroke-width="1"/>
+  <g fill="#333333" font-size="10">
+    <line x1="60" x2="64" y1="407.95" y2="407.95" stroke="#444444"/>
+    <text x="56" y="407.95" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="60" x2="64" y1="283.96" y2="283.96" stroke="#444444"/>
+    <text x="56" y="283.96" text-anchor="end" dominant-baseline="middle">10</text>
+    <line x1="60" x2="64" y1="159.98" y2="159.98" stroke="#444444"/>
+    <text x="56" y="159.98" text-anchor="end" dominant-baseline="middle">20</text>
+    <line x1="60" x2="64" y1="36" y2="36" stroke="#444444"/>
+    <text x="56" y="36" text-anchor="end" dominant-baseline="middle">30</text>
+    <line x1="90.33" x2="90.33" y1="407.95" y2="411.95" stroke="#444444"/>
+    <text x="90.33" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 90.33 417.95)" data-full-label="Jan">Jan</text>
+    <line x1="143" x2="143" y1="407.95" y2="411.95" stroke="#444444"/>
+    <text x="143" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 143 417.95)" data-full-label="Feb">Feb</text>
+    <line x1="195.67" x2="195.67" y1="407.95" y2="411.95" stroke="#444444"/>
+    <text x="195.67" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 195.67 417.95)" data-full-label="Mar">Mar</text>
+    <line x1="248.33" x2="248.33" y1="407.95" y2="411.95" stroke="#444444"/>
+    <text x="248.33" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 248.33 417.95)" data-full-label="Apr">Apr</text>
+    <line x1="301" x2="301" y1="407.95" y2="411.95" stroke="#444444"/>
+    <text x="301" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 301 417.95)" data-full-label="May">May</text>
+    <line x1="353.67" x2="353.67" y1="407.95" y2="411.95" stroke="#444444"/>
+    <text x="353.67" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 353.67 417.95)" data-full-label="Jun">Jun</text>
+    <line x1="406.33" x2="406.33" y1="407.95" y2="411.95" stroke="#444444"/>
+    <text x="406.33" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 406.33 417.95)" data-full-label="Jul">Jul</text>
+    <line x1="459" x2="459" y1="407.95" y2="411.95" stroke="#444444"/>
+    <text x="459" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 459 417.95)" data-full-label="Aug">Aug</text>
+    <line x1="511.67" x2="511.67" y1="407.95" y2="411.95" stroke="#444444"/>
+    <text x="511.67" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 511.67 417.95)" data-full-label="Sep">Sep</text>
+    <line x1="564.33" x2="564.33" y1="407.95" y2="411.95" stroke="#444444"/>
+    <text x="564.33" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 564.33 417.95)" data-full-label="Oct">Oct</text>
+    <line x1="617" x2="617" y1="407.95" y2="411.95" stroke="#444444"/>
+    <text x="617" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 617 417.95)" data-full-label="Nov">Nov</text>
+    <line x1="669.67" x2="669.67" y1="407.95" y2="411.95" stroke="#444444"/>
+    <text x="669.67" y="417.95" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 669.67 417.95)" data-full-label="Dec">Dec</text>
+  </g>
+  <text x="14" y="221.97" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 221.97)">tickets</text>
+  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">month</text>
+  <g shape-rendering="crispEdges">
+    <rect x="69.79" y="283.96" width="40.08" height="123.98" fill="#0072B2" data-x="Jan" data-series="tickets" data-y="10"/>
+    <rect x="122.46" y="259.17" width="40.08" height="148.78" fill="#0072B2" data-x="Feb" data-series="tickets" data-y="12"/>
+    <rect x="175.13" y="296.36" width="40.08" height="111.58" fill="#0072B2" data-x="Mar" data-series="tickets" data-y="9"/>
+    <rect x="227.79" y="221.97" width="40.08" height="185.97" fill="#0072B2" data-x="Apr" data-series="tickets" data-y="15"/>
+    <rect x="280.46" y="234.37" width="40.08" height="173.58" fill="#0072B2" data-x="May" data-series="tickets" data-y="14"/>
+    <rect x="333.13" y="184.78" width="40.08" height="223.17" fill="#0072B2" data-x="Jun" data-series="tickets" data-y="18"/>
+    <rect x="385.79" y="135.19" width="40.08" height="272.76" fill="#0072B2" data-x="Jul" data-series="tickets" data-y="22"/>
+    <rect x="438.46" y="159.98" width="40.08" height="247.96" fill="#0072B2" data-x="Aug" data-series="tickets" data-y="20"/>
+    <rect x="491.13" y="197.18" width="40.08" height="210.77" fill="#0072B2" data-x="Sep" data-series="tickets" data-y="17"/>
+    <rect x="543.79" y="172.38" width="40.08" height="235.57" fill="#0072B2" data-x="Oct" data-series="tickets" data-y="19"/>
+    <rect x="596.46" y="209.58" width="40.08" height="198.37" fill="#0072B2" data-x="Nov" data-series="tickets" data-y="16"/>
+    <rect x="649.13" y="147.58" width="40.08" height="260.36" fill="#0072B2" data-x="Dec" data-series="tickets" data-y="21"/>
+  </g>
+</svg>

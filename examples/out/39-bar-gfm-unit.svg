@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Storage (GB), 3 rows" aria-labelledby="mv-1d695852b8382825-title" aria-describedby="mv-1d695852b8382825-desc" data-markvis="2" data-chart-type="bar" data-id="mv-1d695852b8382825" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+  <title id="mv-1d695852b8382825-title">Storage</title>
+  <desc id="mv-1d695852b8382825-desc">bar chart. Storage. x=bucket. y=size. unit=GB. 3 rows.</desc>
+  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Storage</text>
+  <g fill="none" stroke="#e6e6e6" stroke-width="1">
+    <line x1="64" x2="696" y1="383.84" y2="383.84"/>
+    <line x1="64" x2="696" y1="296.88" y2="296.88"/>
+    <line x1="64" x2="696" y1="209.92" y2="209.92"/>
+    <line x1="64" x2="696" y1="122.96" y2="122.96"/>
+    <line x1="64" x2="696" y1="36" y2="36"/>
+  </g>
+  <path d="M64 36 L64 383.84 L696 383.84" fill="none" stroke="#444444" stroke-width="1"/>
+  <g fill="#333333" font-size="10">
+    <line x1="60" x2="64" y1="383.84" y2="383.84" stroke="#444444"/>
+    <text x="56" y="383.84" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="60" x2="64" y1="296.88" y2="296.88" stroke="#444444"/>
+    <text x="56" y="296.88" text-anchor="end" dominant-baseline="middle">2k</text>
+    <line x1="60" x2="64" y1="209.92" y2="209.92" stroke="#444444"/>
+    <text x="56" y="209.92" text-anchor="end" dominant-baseline="middle">4k</text>
+    <line x1="60" x2="64" y1="122.96" y2="122.96" stroke="#444444"/>
+    <text x="56" y="122.96" text-anchor="end" dominant-baseline="middle">6k</text>
+    <line x1="60" x2="64" y1="36" y2="36" stroke="#444444"/>
+    <text x="56" y="36" text-anchor="end" dominant-baseline="middle">8k</text>
+    <line x1="169.33" x2="169.33" y1="383.84" y2="387.84" stroke="#444444"/>
+    <text x="169.33" y="393.84" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 169.33 393.84)" data-full-label="raw">raw</text>
+    <line x1="380" x2="380" y1="383.84" y2="387.84" stroke="#444444"/>
+    <text x="380" y="393.84" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 380 393.84)" data-full-label="processed">processed</text>
+    <line x1="590.67" x2="590.67" y1="383.84" y2="387.84" stroke="#444444"/>
+    <text x="590.67" y="393.84" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 590.67 393.84)" data-full-label="archive">archive</text>
+  </g>
+  <text x="14" y="209.92" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 209.92)">size (GB)</text>
+  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">bucket</text>
+  <g shape-rendering="crispEdges">
+    <rect x="87.17" y="331.67" width="163.32" height="52.18" fill="#0072B2" data-x="raw" data-series="size" data-y="1200"/>
+    <rect x="297.84" y="364.28" width="163.32" height="19.57" fill="#0072B2" data-x="processed" data-series="size" data-y="450"/>
+    <rect x="508.51" y="36" width="163.32" height="347.84" fill="#0072B2" data-x="archive" data-series="size" data-y="8000"/>
+  </g>
+</svg>

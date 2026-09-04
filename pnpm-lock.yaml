@@ -65,7 +65,11 @@ importers:
 
   packages/remark: {}
 
-  packages/render-svg: {}
+  packages/render-svg:
+    dependencies:
+      '@markvis/ir':
+        specifier: workspace:*
+        version: link:../ir
 
 packages:
 

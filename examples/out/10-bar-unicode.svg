@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: City scores, 4 rows" aria-labelledby="mv-bd2bd148888ba047-title" aria-describedby="mv-bd2bd148888ba047-desc" data-markvis="2" data-chart-type="bar" data-id="mv-bd2bd148888ba047" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+  <title id="mv-bd2bd148888ba047-title">City scores</title>
+  <desc id="mv-bd2bd148888ba047-desc">bar chart. City scores. x=city. y=score. 4 rows.</desc>
+  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">City scores</text>
+  <g fill="none" stroke="#e6e6e6" stroke-width="1">
+    <line x1="64" x2="696" y1="416" y2="416"/>
+    <line x1="64" x2="696" y1="226" y2="226"/>
+    <line x1="64" x2="696" y1="36" y2="36"/>
+  </g>
+  <path d="M64 36 L64 416 L696 416" fill="none" stroke="#444444" stroke-width="1"/>
+  <g fill="#333333" font-size="10">
+    <line x1="60" x2="64" y1="416" y2="416" stroke="#444444"/>
+    <text x="56" y="416" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="60" x2="64" y1="226" y2="226" stroke="#444444"/>
+    <text x="56" y="226" text-anchor="end" dominant-baseline="middle">50</text>
+    <line x1="60" x2="64" y1="36" y2="36" stroke="#444444"/>
+    <text x="56" y="36" text-anchor="end" dominant-baseline="middle">100</text>
+    <line x1="143" x2="143" y1="416" y2="420" stroke="#444444"/>
+    <text x="143" y="432" text-anchor="middle" font-size="10" data-full-label="北京">北京</text>
+    <line x1="301" x2="301" y1="416" y2="420" stroke="#444444"/>
+    <text x="301" y="432" text-anchor="middle" font-size="10" data-full-label="東京">東京</text>
+    <line x1="459" x2="459" y1="416" y2="420" stroke="#444444"/>
+    <text x="459" y="432" text-anchor="middle" font-size="10" data-full-label="서울">서울</text>
+    <line x1="617" x2="617" y1="416" y2="420" stroke="#444444"/>
+    <text x="617" y="432" text-anchor="middle" font-size="10" data-full-label="München">München</text>
+  </g>
+  <text x="14" y="226" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 226)">score</text>
+  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">city</text>
+  <g shape-rendering="crispEdges">
+    <rect x="81.38" y="81.6" width="122.24" height="334.4" fill="#0072B2" data-x="北京" data-series="score" data-y="88"/>
+    <rect x="239.38" y="66.4" width="122.24" height="349.6" fill="#0072B2" data-x="東京" data-series="score" data-y="92"/>
+    <rect x="397.38" y="93" width="122.24" height="323" fill="#0072B2" data-x="서울" data-series="score" data-y="85"/>
+    <rect x="555.38" y="115.8" width="122.24" height="300.2" fill="#0072B2" data-x="München" data-series="score" data-y="79"/>
+  </g>
+</svg>

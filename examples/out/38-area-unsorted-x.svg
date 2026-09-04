@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: Events, 4 rows" aria-labelledby="mv-efefd2281411d836-title" aria-describedby="mv-efefd2281411d836-desc" data-markvis="2" data-chart-type="area" data-id="mv-efefd2281411d836" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+  <title id="mv-efefd2281411d836-title">Events</title>
+  <desc id="mv-efefd2281411d836-desc">area chart. Events. x=month. y=count. 4 rows.</desc>
+  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Events</text>
+  <g fill="none" stroke="#e6e6e6" stroke-width="1">
+    <line x1="64" x2="696" y1="416" y2="416"/>
+    <line x1="64" x2="696" y1="321" y2="321"/>
+    <line x1="64" x2="696" y1="226" y2="226"/>
+    <line x1="64" x2="696" y1="131" y2="131"/>
+    <line x1="64" x2="696" y1="36" y2="36"/>
+  </g>
+  <path d="M64 36 L64 416 L696 416" fill="none" stroke="#444444" stroke-width="1"/>
+  <g fill="#333333" font-size="10">
+    <line x1="60" x2="64" y1="416" y2="416" stroke="#444444"/>
+    <text x="56" y="416" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="60" x2="64" y1="321" y2="321" stroke="#444444"/>
+    <text x="56" y="321" text-anchor="end" dominant-baseline="middle">10</text>
+    <line x1="60" x2="64" y1="226" y2="226" stroke="#444444"/>
+    <text x="56" y="226" text-anchor="end" dominant-baseline="middle">20</text>
+    <line x1="60" x2="64" y1="131" y2="131" stroke="#444444"/>
+    <text x="56" y="131" text-anchor="end" dominant-baseline="middle">30</text>
+    <line x1="60" x2="64" y1="36" y2="36" stroke="#444444"/>
+    <text x="56" y="36" text-anchor="end" dominant-baseline="middle">40</text>
+    <line x1="143" x2="143" y1="416" y2="420" stroke="#444444"/>
+    <text x="143" y="432" text-anchor="middle" font-size="10" data-full-label="Sep">Sep</text>
+    <line x1="301" x2="301" y1="416" y2="420" stroke="#444444"/>
+    <text x="301" y="432" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
+    <line x1="459" x2="459" y1="416" y2="420" stroke="#444444"/>
+    <text x="459" y="432" text-anchor="middle" font-size="10" data-full-label="Jul">Jul</text>
+    <line x1="617" x2="617" y1="416" y2="420" stroke="#444444"/>
+    <text x="617" y="432" text-anchor="middle" font-size="10" data-full-label="Apr">Apr</text>
+  </g>
+  <text x="14" y="226" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 226)">count</text>
+  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">month</text>
+  <g fill="none">
+    <path d="M143 36 L301 321 L459 131 L617 226 L617 416 L143 416 Z" fill="#0072B2" fill-opacity="0.28" stroke="none" data-series="count"/>
+    <path d="M143 36 L301 321 L459 131 L617 226" fill="none" stroke="#0072B2" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="count"/>
+  </g>
+</svg>

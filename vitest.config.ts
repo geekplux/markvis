@@ -10,6 +10,9 @@ export default defineConfig({
       "@markvis/parser": fileURLToPath(
         new URL("./packages/parser/src/index.ts", import.meta.url),
       ),
+      "@markvis/render-svg": fileURLToPath(
+        new URL("./packages/render-svg/src/index.ts", import.meta.url),
+      ),
     },
   },
   test: {
@@ -17,6 +20,8 @@ export default defineConfig({
       "packages/ir/src/**/*.test.ts",
       "packages/parser/src/**/*.test.ts",
       "packages/parser/test/**/*.test.ts",
+      "packages/render-svg/src/**/*.test.ts",
+      "packages/render-svg/test/**/*.test.ts",
     ],
     exclude: ["**/node_modules/**", "legacy/**"],
   },

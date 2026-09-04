@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: pie omitted title, 2 slices" aria-labelledby="mv-2339d258a0310de9-title" aria-describedby="mv-2339d258a0310de9-desc" data-markvis="2" data-chart-type="pie" data-id="mv-2339d258a0310de9" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+  <title id="mv-2339d258a0310de9-title">pie omitted title</title>
+  <desc id="mv-2339d258a0310de9-desc">pie chart. pie omitted title. x=label. y=n. 2 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="360" y="26" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">pie omitted title</text>
+  <g aria-hidden="true">
+    <path d="M260 270 L260 120 A150 150 0 1 1 171.83 391.35 Z" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-label="yes" data-raw-value="60"/>
+    <path d="M260 270 L171.83 391.35 A150 150 0 0 1 260 120 Z" fill="#D55E00" stroke="#ffffff" stroke-width="1" data-label="no" data-raw-value="40"/>
+  </g>
+  <g font-size="12" fill="#222222">
+    <rect x="446" y="241" width="10" height="10" fill="#0072B2" rx="1"/>
+    <text x="462" y="250" data-legend="yes">yes (60)</text>
+    <rect x="446" y="261" width="10" height="10" fill="#D55E00" rx="1"/>
+    <text x="462" y="270" data-legend="no">no (40)</text>
+  </g>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: Memory (MB), 4 rows" aria-labelledby="mv-22019faaf664920a-title" aria-describedby="mv-22019faaf664920a-desc" data-markvis="2" data-chart-type="area" data-id="mv-22019faaf664920a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+  <title id="mv-22019faaf664920a-title">Memory</title>
+  <desc id="mv-22019faaf664920a-desc">area chart. Memory. x=t. y=rss. unit=MB. 4 rows.</desc>
+  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Memory</text>
+  <g fill="none" stroke="#e6e6e6" stroke-width="1">
+    <line x1="64" x2="696" y1="416" y2="416"/>
+    <line x1="64" x2="696" y1="289.33" y2="289.33"/>
+    <line x1="64" x2="696" y1="162.67" y2="162.67"/>
+    <line x1="64" x2="696" y1="36" y2="36"/>
+    <line x1="72" x2="72" y1="36" y2="416"/>
+    <line x1="195.2" x2="195.2" y1="36" y2="416"/>
+    <line x1="318.4" x2="318.4" y1="36" y2="416"/>
+    <line x1="441.6" x2="441.6" y1="36" y2="416"/>
+    <line x1="564.8" x2="564.8" y1="36" y2="416"/>
+    <line x1="688" x2="688" y1="36" y2="416"/>
+  </g>
+  <path d="M64 36 L64 416 L696 416" fill="none" stroke="#444444" stroke-width="1"/>
+  <g fill="#333333" font-size="10">
+    <line x1="60" x2="64" y1="416" y2="416" stroke="#444444"/>
+    <text x="56" y="416" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="60" x2="64" y1="289.33" y2="289.33" stroke="#444444"/>
+    <text x="56" y="289.33" text-anchor="end" dominant-baseline="middle">50</text>
+    <line x1="60" x2="64" y1="162.67" y2="162.67" stroke="#444444"/>
+    <text x="56" y="162.67" text-anchor="end" dominant-baseline="middle">100</text>
+    <line x1="60" x2="64" y1="36" y2="36" stroke="#444444"/>
+    <text x="56" y="36" text-anchor="end" dominant-baseline="middle">150</text>
+    <line x1="72" x2="72" y1="416" y2="420" stroke="#444444"/>
+    <text x="72" y="432" text-anchor="middle" font-size="10" data-full-label="-1">-1</text>
+    <line x1="195.2" x2="195.2" y1="416" y2="420" stroke="#444444"/>
+    <text x="195.2" y="432" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <line x1="318.4" x2="318.4" y1="416" y2="420" stroke="#444444"/>
+    <text x="318.4" y="432" text-anchor="middle" font-size="10" data-full-label="1">1</text>
+    <line x1="441.6" x2="441.6" y1="416" y2="420" stroke="#444444"/>
+    <text x="441.6" y="432" text-anchor="middle" font-size="10" data-full-label="2">2</text>
+    <line x1="564.8" x2="564.8" y1="416" y2="420" stroke="#444444"/>
+    <text x="564.8" y="432" text-anchor="middle" font-size="10" data-full-label="3">3</text>
+    <line x1="688" x2="688" y1="416" y2="420" stroke="#444444"/>
+    <text x="688" y="432" text-anchor="middle" font-size="10" data-full-label="4">4</text>
+  </g>
+  <text x="14" y="226" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 226)">rss (MB)</text>
+  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">t</text>
+  <g fill="none">
+    <path d="M195.2 112 L318.4 99.33 L441.6 86.67 L564.8 91.73 L564.8 416 L195.2 416 Z" fill="#0072B2" fill-opacity="0.28" stroke="none" data-series="rss"/>
+    <path d="M195.2 112 L318.4 99.33 L441.6 86.67 L564.8 91.73" fill="none" stroke="#0072B2" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="rss"/>
+  </g>
+</svg>

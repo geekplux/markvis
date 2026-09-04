@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Sales, 4 rows, series city" aria-labelledby="mv-c099937507374395-title" aria-describedby="mv-c099937507374395-desc" data-markvis="2" data-chart-type="line" data-id="mv-c099937507374395" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+  <title id="mv-c099937507374395-title">Sales</title>
+  <desc id="mv-c099937507374395-desc">line chart. Sales. x=month. y=amount. series=city. 4 rows.</desc>
+  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Sales</text>
+  <g font-size="11" fill="#222222">
+    <rect x="64" y="31" width="10" height="10" fill="#0072B2" rx="1"/>
+    <text x="78" y="40" data-legend="北京">北京</text>
+    <rect x="116" y="31" width="10" height="10" fill="#D55E00" rx="1"/>
+    <text x="130" y="40" data-legend="東京">東京</text>
+  </g>
+  <g fill="none" stroke="#e6e6e6" stroke-width="1">
+    <line x1="64" x2="696" y1="416" y2="416"/>
+    <line x1="64" x2="696" y1="344.8" y2="344.8"/>
+    <line x1="64" x2="696" y1="273.6" y2="273.6"/>
+    <line x1="64" x2="696" y1="202.4" y2="202.4"/>
+    <line x1="64" x2="696" y1="131.2" y2="131.2"/>
+    <line x1="64" x2="696" y1="60" y2="60"/>
+  </g>
+  <path d="M64 60 L64 416 L696 416" fill="none" stroke="#444444" stroke-width="1"/>
+  <g fill="#333333" font-size="10">
+    <line x1="60" x2="64" y1="416" y2="416" stroke="#444444"/>
+    <text x="56" y="416" text-anchor="end" dominant-baseline="middle">90</text>
+    <line x1="60" x2="64" y1="344.8" y2="344.8" stroke="#444444"/>
+    <text x="56" y="344.8" text-anchor="end" dominant-baseline="middle">100</text>
+    <line x1="60" x2="64" y1="273.6" y2="273.6" stroke="#444444"/>
+    <text x="56" y="273.6" text-anchor="end" dominant-baseline="middle">110</text>
+    <line x1="60" x2="64" y1="202.4" y2="202.4" stroke="#444444"/>
+    <text x="56" y="202.4" text-anchor="end" dominant-baseline="middle">120</text>
+    <line x1="60" x2="64" y1="131.2" y2="131.2" stroke="#444444"/>
+    <text x="56" y="131.2" text-anchor="end" dominant-baseline="middle">130</text>
+    <line x1="60" x2="64" y1="60" y2="60" stroke="#444444"/>
+    <text x="56" y="60" text-anchor="end" dominant-baseline="middle">140</text>
+    <line x1="222" x2="222" y1="416" y2="420" stroke="#444444"/>
+    <text x="222" y="432" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
+    <line x1="538" x2="538" y1="416" y2="420" stroke="#444444"/>
+    <text x="538" y="432" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
+  </g>
+  <text x="14" y="238" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 238)">amount</text>
+  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">month</text>
+  <g fill="none">
+    <path d="M222 344.8 L538 273.6" fill="none" stroke="#0072B2" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="北京"/>
+    <path d="M222 202.4 L538 131.2" fill="none" stroke="#D55E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="東京"/>
+  </g>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Net change (USD), 4 rows" aria-labelledby="mv-5d2238cb2845f3fb-title" aria-describedby="mv-5d2238cb2845f3fb-desc" data-markvis="2" data-chart-type="bar" data-id="mv-5d2238cb2845f3fb" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+  <title id="mv-5d2238cb2845f3fb-title">Net change</title>
+  <desc id="mv-5d2238cb2845f3fb-desc">bar chart. Net change. x=dept. y=delta. unit=USD. 4 rows.</desc>
+  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Net change</text>
+  <g fill="none" stroke="#e6e6e6" stroke-width="1">
+    <line x1="64" x2="696" y1="416" y2="416"/>
+    <line x1="64" x2="696" y1="321" y2="321"/>
+    <line x1="64" x2="696" y1="226" y2="226"/>
+    <line x1="64" x2="696" y1="131" y2="131"/>
+    <line x1="64" x2="696" y1="36" y2="36"/>
+  </g>
+  <path d="M64 36 L64 416 L696 416" fill="none" stroke="#444444" stroke-width="1"/>
+  <g fill="#333333" font-size="10">
+    <line x1="60" x2="64" y1="416" y2="416" stroke="#444444"/>
+    <text x="56" y="416" text-anchor="end" dominant-baseline="middle">-50</text>
+    <line x1="60" x2="64" y1="321" y2="321" stroke="#444444"/>
+    <text x="56" y="321" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="60" x2="64" y1="226" y2="226" stroke="#444444"/>
+    <text x="56" y="226" text-anchor="end" dominant-baseline="middle">50</text>
+    <line x1="60" x2="64" y1="131" y2="131" stroke="#444444"/>
+    <text x="56" y="131" text-anchor="end" dominant-baseline="middle">100</text>
+    <line x1="60" x2="64" y1="36" y2="36" stroke="#444444"/>
+    <text x="56" y="36" text-anchor="end" dominant-baseline="middle">150</text>
+    <line x1="143" x2="143" y1="416" y2="420" stroke="#444444"/>
+    <text x="143" y="432" text-anchor="middle" font-size="10" data-full-label="Sales">Sales</text>
+    <line x1="301" x2="301" y1="416" y2="420" stroke="#444444"/>
+    <text x="301" y="432" text-anchor="middle" font-size="10" data-full-label="Support">Support</text>
+    <line x1="459" x2="459" y1="416" y2="420" stroke="#444444"/>
+    <text x="459" y="432" text-anchor="middle" font-size="10" data-full-label="R&amp;D">R&amp;D</text>
+    <line x1="617" x2="617" y1="416" y2="420" stroke="#444444"/>
+    <text x="617" y="432" text-anchor="middle" font-size="10" data-full-label="Ops">Ops</text>
+  </g>
+  <text x="14" y="226" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 226)">delta (USD)</text>
+  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">dept</text>
+  <g shape-rendering="crispEdges">
+    <rect x="81.38" y="93" width="122.24" height="228" fill="#0072B2" data-x="Sales" data-series="delta" data-y="120"/>
+    <rect x="239.38" y="321" width="122.24" height="76" fill="#0072B2" data-x="Support" data-series="delta" data-y="-40"/>
+    <rect x="397.38" y="169" width="122.24" height="152" fill="#0072B2" data-x="R&amp;D" data-series="delta" data-y="80"/>
+    <rect x="555.38" y="321" width="122.24" height="28.5" fill="#0072B2" data-x="Ops" data-series="delta" data-y="-15"/>
+  </g>
+</svg>

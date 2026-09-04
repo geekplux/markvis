@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="scatter chart: Population vs GDP, 3 rows" aria-labelledby="mv-2296686ee285e589-title" aria-describedby="mv-2296686ee285e589-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-2296686ee285e589" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+  <title id="mv-2296686ee285e589-title">Population vs GDP</title>
+  <desc id="mv-2296686ee285e589-desc">scatter chart. Population vs GDP. x=pop. y=gdp. 3 rows.</desc>
+  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Population vs GDP</text>
+  <g fill="none" stroke="#e6e6e6" stroke-width="1">
+    <line x1="71" x2="696" y1="416" y2="416"/>
+    <line x1="71" x2="696" y1="321" y2="321"/>
+    <line x1="71" x2="696" y1="226" y2="226"/>
+    <line x1="71" x2="696" y1="131" y2="131"/>
+    <line x1="71" x2="696" y1="36" y2="36"/>
+    <line x1="79" x2="79" y1="36" y2="416"/>
+    <line x1="282" x2="282" y1="36" y2="416"/>
+    <line x1="485" x2="485" y1="36" y2="416"/>
+    <line x1="688" x2="688" y1="36" y2="416"/>
+  </g>
+  <path d="M71 36 L71 416 L696 416" fill="none" stroke="#444444" stroke-width="1"/>
+  <g fill="#333333" font-size="10">
+    <line x1="67" x2="71" y1="416" y2="416" stroke="#444444"/>
+    <text x="63" y="416" text-anchor="end" dominant-baseline="middle">-100B</text>
+    <line x1="67" x2="71" y1="321" y2="321" stroke="#444444"/>
+    <text x="63" y="321" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="67" x2="71" y1="226" y2="226" stroke="#444444"/>
+    <text x="63" y="226" text-anchor="end" dominant-baseline="middle">100B</text>
+    <line x1="67" x2="71" y1="131" y2="131" stroke="#444444"/>
+    <text x="63" y="131" text-anchor="end" dominant-baseline="middle">200B</text>
+    <line x1="67" x2="71" y1="36" y2="36" stroke="#444444"/>
+    <text x="63" y="36" text-anchor="end" dominant-baseline="middle">300B</text>
+    <line x1="79" x2="79" y1="416" y2="420" stroke="#444444"/>
+    <text x="79" y="432" text-anchor="middle" font-size="10" data-full-label="-5M">-5M</text>
+    <line x1="282" x2="282" y1="416" y2="420" stroke="#444444"/>
+    <text x="282" y="432" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <line x1="485" x2="485" y1="416" y2="420" stroke="#444444"/>
+    <text x="485" y="432" text-anchor="middle" font-size="10" data-full-label="5M">5M</text>
+    <line x1="688" x2="688" y1="416" y2="420" stroke="#444444"/>
+    <text x="688" y="432" text-anchor="middle" font-size="10" data-full-label="10M">10M</text>
+  </g>
+  <text x="14" y="226" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 226)">gdp</text>
+  <text x="383.5" y="470" text-anchor="middle" font-size="11" fill="#444444">pop</text>
+  <g>
+    <circle cx="322.6" cy="278.25" r="4" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-x="1000000" data-y="45000000000" data-series="gdp"/>
+    <circle cx="627.1" cy="121.5" r="4" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-x="8500000" data-y="210000000000" data-series="gdp"/>
+    <circle cx="302.3" cy="309.6" r="4" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-x="500000" data-y="12000000000" data-series="gdp"/>
+  </g>
+</svg>

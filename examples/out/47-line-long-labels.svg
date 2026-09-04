@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Milestone burn, 3 rows" aria-labelledby="mv-75331df514bdc1ab-title" aria-describedby="mv-75331df514bdc1ab-desc" data-markvis="2" data-chart-type="line" data-id="mv-75331df514bdc1ab" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+  <title id="mv-75331df514bdc1ab-title">Milestone burn</title>
+  <desc id="mv-75331df514bdc1ab-desc">line chart. Milestone burn. x=milestone. y=points. 3 rows.</desc>
+  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Milestone burn</text>
+  <g fill="none" stroke="#e6e6e6" stroke-width="1">
+    <line x1="64" x2="696" y1="333.6" y2="333.6"/>
+    <line x1="64" x2="696" y1="259.2" y2="259.2"/>
+    <line x1="64" x2="696" y1="184.8" y2="184.8"/>
+    <line x1="64" x2="696" y1="110.4" y2="110.4"/>
+    <line x1="64" x2="696" y1="36" y2="36"/>
+  </g>
+  <path d="M64 36 L64 333.6 L696 333.6" fill="none" stroke="#444444" stroke-width="1"/>
+  <g fill="#333333" font-size="10">
+    <line x1="60" x2="64" y1="333.6" y2="333.6" stroke="#444444"/>
+    <text x="56" y="333.6" text-anchor="end" dominant-baseline="middle">20</text>
+    <line x1="60" x2="64" y1="259.2" y2="259.2" stroke="#444444"/>
+    <text x="56" y="259.2" text-anchor="end" dominant-baseline="middle">40</text>
+    <line x1="60" x2="64" y1="184.8" y2="184.8" stroke="#444444"/>
+    <text x="56" y="184.8" text-anchor="end" dominant-baseline="middle">60</text>
+    <line x1="60" x2="64" y1="110.4" y2="110.4" stroke="#444444"/>
+    <text x="56" y="110.4" text-anchor="end" dominant-baseline="middle">80</text>
+    <line x1="60" x2="64" y1="36" y2="36" stroke="#444444"/>
+    <text x="56" y="36" text-anchor="end" dominant-baseline="middle">100</text>
+    <line x1="169.33" x2="169.33" y1="333.6" y2="337.6" stroke="#444444"/>
+    <text x="169.33" y="343.6" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 169.33 343.6)" data-full-label="Kickoff and discovery workshop">Kickoff and discov…</text>
+    <line x1="380" x2="380" y1="333.6" y2="337.6" stroke="#444444"/>
+    <text x="380" y="343.6" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 380 343.6)" data-full-label="Alpha internal dogfood release">Alpha internal dog…</text>
+    <line x1="590.67" x2="590.67" y1="333.6" y2="337.6" stroke="#444444"/>
+    <text x="590.67" y="343.6" text-anchor="end" dominant-baseline="middle" font-size="9" transform="rotate(-55 590.67 343.6)" data-full-label="Public beta launch week">Public beta launch…</text>
+  </g>
+  <text x="14" y="184.8" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 184.8)">points</text>
+  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">milestone</text>
+  <g fill="none">
+    <path d="M169.33 259.2 L380 166.2 L590.67 73.2" fill="none" stroke="#0072B2" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="points"/>
+  </g>
+</svg>

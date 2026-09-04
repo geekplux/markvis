@@ -6,7 +6,7 @@ previous U2 cancelled; legacy modernization is not 2.0.
 
 - Workdir: /workspace/markvis
 - Branch: v2
-- Updated: 2026-09-04 (Coder) W5 schema from IR
+- Updated: 2026-09-04 (Coder) W6 render-svg
 
 ## Waves
 
@@ -16,7 +16,7 @@ previous U2 cancelled; legacy modernization is not 2.0.
 - [x] W3 例子 (52 valid + 18 invalid; seeds 01-08 match SPEC)
 - [x] W4 IR + parser (zod Chart IR; fence/comment/CSV/GFM parser; 70 fixtures)
 - [x] W5 schema (schema/markvis-2.schema.json from ChartIRSchema; pnpm schema:check)
-- [ ] W6 render-svg
+- [x] W6 render-svg
 - [ ] W7 CLI
 - [ ] W8 宿主
 - [ ] W9 playground
@@ -25,7 +25,7 @@ previous U2 cancelled; legacy modernization is not 2.0.
 - [ ] W12 加厚
 
 ## Active
-W6 -> Coder (render-svg). Writer holds W10 docs.
+W7 -> Coder (CLI). Writer holds W10 docs.
 
 ## W0 proof
 
@@ -145,5 +145,23 @@ Commands:
 - `pnpm test` → exit 0 (91 tests)
 - `pnpm schema:check` → exit 0 (3 tests)
 - hand-edit `schema/markvis-2.schema.json` then `pnpm schema:check` → exit 1
+- `rg "d3-node|markvis-bar|markvis-line|markvis-pie" packages apps` → exit 1 (no matches)
+- `rg "from ['\"]legacy|require\\(['\"]legacy" packages` → exit 1 (no matches)
+
+## W6 proof
+
+Commit: (recorded after feat(render-svg) lands)
+Message: feat(render-svg): add deterministic SVG renderer for six chart types
+Parent: 66c2b94986421e19c60f11bc77221747e3d2f841
+
+`@markvis/render-svg`: `renderSvg(chart: ChartIR): string`. Six types (bar/line/area/scatter/pie/hist). Cartesian axes, ticks, grid, title, legend when series/multi, Okabe–Ito 8-color palette, aria-label + title/desc. Pie slices from raw values (not normalized to 100). Hist bins with documented Sturges equal-width algorithm; optional y is weight. Ids = sha256 of canonical IR (`node:crypto`). Same IR → identical SVG bytes. Snapshots: 52 files in `examples/out/*.svg`. No d3/jsdom/legacy. Did not implement CLI, playground, or hosts.
+
+Commands:
+
+- `node -v` → v20.19.2 (exit 0)
+- `pnpm -v` → 9.15.9 (exit 0)
+- `pnpm test` → exit 0 (158 tests)
+- `ls examples/out/*.svg | wc -l` → 52
+- same IR twice (`01-bar-basic`) → identical bytes (exit 0)
 - `rg "d3-node|markvis-bar|markvis-line|markvis-pie" packages apps` → exit 1 (no matches)
 - `rg "from ['\"]legacy|require\\(['\"]legacy" packages` → exit 1 (no matches)

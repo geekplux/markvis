@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Headcount, 3 rows" aria-labelledby="mv-e8e10366955f9441-title" aria-describedby="mv-e8e10366955f9441-desc" data-markvis="2" data-chart-type="bar" data-id="mv-e8e10366955f9441" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+  <title id="mv-e8e10366955f9441-title">Headcount</title>
+  <desc id="mv-e8e10366955f9441-desc">bar chart. Headcount. x=team. y=n. 3 rows.</desc>
+  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Headcount</text>
+  <g fill="none" stroke="#e6e6e6" stroke-width="1">
+    <line x1="64" x2="696" y1="416" y2="416"/>
+    <line x1="64" x2="696" y1="289.33" y2="289.33"/>
+    <line x1="64" x2="696" y1="162.67" y2="162.67"/>
+    <line x1="64" x2="696" y1="36" y2="36"/>
+  </g>
+  <path d="M64 36 L64 416 L696 416" fill="none" stroke="#444444" stroke-width="1"/>
+  <g fill="#333333" font-size="10">
+    <line x1="60" x2="64" y1="416" y2="416" stroke="#444444"/>
+    <text x="56" y="416" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="60" x2="64" y1="289.33" y2="289.33" stroke="#444444"/>
+    <text x="56" y="289.33" text-anchor="end" dominant-baseline="middle">10</text>
+    <line x1="60" x2="64" y1="162.67" y2="162.67" stroke="#444444"/>
+    <text x="56" y="162.67" text-anchor="end" dominant-baseline="middle">20</text>
+    <line x1="60" x2="64" y1="36" y2="36" stroke="#444444"/>
+    <text x="56" y="36" text-anchor="end" dominant-baseline="middle">30</text>
+    <line x1="169.33" x2="169.33" y1="416" y2="420" stroke="#444444"/>
+    <text x="169.33" y="432" text-anchor="middle" font-size="10" data-full-label="Eng">Eng</text>
+    <line x1="380" x2="380" y1="416" y2="420" stroke="#444444"/>
+    <text x="380" y="432" text-anchor="middle" font-size="10" data-full-label="Design">Design</text>
+    <line x1="590.67" x2="590.67" y1="416" y2="420" stroke="#444444"/>
+    <text x="590.67" y="432" text-anchor="middle" font-size="10" data-full-label="Ops">Ops</text>
+  </g>
+  <text x="14" y="226" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 226)">n</text>
+  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">team</text>
+  <g shape-rendering="crispEdges">
+    <rect x="87.17" y="112" width="163.32" height="304" fill="#0072B2" data-x="Eng" data-series="n" data-y="24"/>
+    <rect x="297.84" y="340" width="163.32" height="76" fill="#0072B2" data-x="Design" data-series="n" data-y="6"/>
+    <rect x="508.51" y="302" width="163.32" height="114" fill="#0072B2" data-x="Ops" data-series="n" data-y="9"/>
+  </g>
+</svg>

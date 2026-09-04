@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: MAU by region, 6 rows, series region" aria-labelledby="mv-67e5b3692fd68d60-title" aria-describedby="mv-67e5b3692fd68d60-desc" data-markvis="2" data-chart-type="line" data-id="mv-67e5b3692fd68d60" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+  <title id="mv-67e5b3692fd68d60-title">MAU by region</title>
+  <desc id="mv-67e5b3692fd68d60-desc">line chart. MAU by region. x=week. y=mau. series=region. 6 rows.</desc>
+  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">MAU by region</text>
+  <g font-size="11" fill="#222222">
+    <rect x="64.8" y="31" width="10" height="10" fill="#0072B2" rx="1"/>
+    <text x="78.8" y="40" data-legend="us">us</text>
+    <rect x="108.44" y="31" width="10" height="10" fill="#D55E00" rx="1"/>
+    <text x="122.44" y="40" data-legend="eu">eu</text>
+  </g>
+  <g fill="none" stroke="#e6e6e6" stroke-width="1">
+    <line x1="64.8" x2="696" y1="416" y2="416"/>
+    <line x1="64.8" x2="696" y1="344.8" y2="344.8"/>
+    <line x1="64.8" x2="696" y1="273.6" y2="273.6"/>
+    <line x1="64.8" x2="696" y1="202.4" y2="202.4"/>
+    <line x1="64.8" x2="696" y1="131.2" y2="131.2"/>
+    <line x1="64.8" x2="696" y1="60" y2="60"/>
+    <line x1="72.8" x2="72.8" y1="60" y2="416"/>
+    <line x1="226.6" x2="226.6" y1="60" y2="416"/>
+    <line x1="380.4" x2="380.4" y1="60" y2="416"/>
+    <line x1="534.2" x2="534.2" y1="60" y2="416"/>
+    <line x1="688" x2="688" y1="60" y2="416"/>
+  </g>
+  <path d="M64.8 60 L64.8 416 L696 416" fill="none" stroke="#444444" stroke-width="1"/>
+  <g fill="#333333" font-size="10">
+    <line x1="60.8" x2="64.8" y1="416" y2="416" stroke="#444444"/>
+    <text x="56.8" y="416" text-anchor="end" dominant-baseline="middle">700</text>
+    <line x1="60.8" x2="64.8" y1="344.8" y2="344.8" stroke="#444444"/>
+    <text x="56.8" y="344.8" text-anchor="end" dominant-baseline="middle">800</text>
+    <line x1="60.8" x2="64.8" y1="273.6" y2="273.6" stroke="#444444"/>
+    <text x="56.8" y="273.6" text-anchor="end" dominant-baseline="middle">900</text>
+    <line x1="60.8" x2="64.8" y1="202.4" y2="202.4" stroke="#444444"/>
+    <text x="56.8" y="202.4" text-anchor="end" dominant-baseline="middle">1k</text>
+    <line x1="60.8" x2="64.8" y1="131.2" y2="131.2" stroke="#444444"/>
+    <text x="56.8" y="131.2" text-anchor="end" dominant-baseline="middle">1.1k</text>
+    <line x1="60.8" x2="64.8" y1="60" y2="60" stroke="#444444"/>
+    <text x="56.8" y="60" text-anchor="end" dominant-baseline="middle">1.2k</text>
+    <line x1="72.8" x2="72.8" y1="416" y2="420" stroke="#444444"/>
+    <text x="72.8" y="432" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <line x1="226.6" x2="226.6" y1="416" y2="420" stroke="#444444"/>
+    <text x="226.6" y="432" text-anchor="middle" font-size="10" data-full-label="1">1</text>
+    <line x1="380.4" x2="380.4" y1="416" y2="420" stroke="#444444"/>
+    <text x="380.4" y="432" text-anchor="middle" font-size="10" data-full-label="2">2</text>
+    <line x1="534.2" x2="534.2" y1="416" y2="420" stroke="#444444"/>
+    <text x="534.2" y="432" text-anchor="middle" font-size="10" data-full-label="3">3</text>
+    <line x1="688" x2="688" y1="416" y2="420" stroke="#444444"/>
+    <text x="688" y="432" text-anchor="middle" font-size="10" data-full-label="4">4</text>
+  </g>
+  <text x="14" y="238" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 238)">mau</text>
+  <text x="380.4" y="470" text-anchor="middle" font-size="11" fill="#444444">week</text>
+  <g fill="none">
+    <path d="M226.6 202.4 L380.4 131.2 L534.2 166.8" fill="none" stroke="#0072B2" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="us"/>
+    <path d="M226.6 344.8 L380.4 330.56 L534.2 273.6" fill="none" stroke="#D55E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="eu"/>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="scatter chart: Offset check, 4 rows" aria-labelledby="mv-f3e428352746c151-title" aria-describedby="mv-f3e428352746c151-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-f3e428352746c151" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+  <title id="mv-f3e428352746c151-title">Offset check</title>
+  <desc id="mv-f3e428352746c151-desc">scatter chart. Offset check. x=dx. y=dy. 4 rows.</desc>
+  <text x="360" y="24" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Offset check</text>
+  <g fill="none" stroke="#e6e6e6" stroke-width="1">
+    <line x1="64" x2="696" y1="416" y2="416"/>
+    <line x1="64" x2="696" y1="340" y2="340"/>
+    <line x1="64" x2="696" y1="264" y2="264"/>
+    <line x1="64" x2="696" y1="188" y2="188"/>
+    <line x1="64" x2="696" y1="112" y2="112"/>
+    <line x1="64" x2="696" y1="36" y2="36"/>
+    <line x1="72" x2="72" y1="36" y2="416"/>
+    <line x1="226" x2="226" y1="36" y2="416"/>
+    <line x1="380" x2="380" y1="36" y2="416"/>
+    <line x1="534" x2="534" y1="36" y2="416"/>
+    <line x1="688" x2="688" y1="36" y2="416"/>
+  </g>
+  <path d="M64 36 L64 416 L696 416" fill="none" stroke="#444444" stroke-width="1"/>
+  <g fill="#333333" font-size="10">
+    <line x1="60" x2="64" y1="416" y2="416" stroke="#444444"/>
+    <text x="56" y="416" text-anchor="end" dominant-baseline="middle">-1</text>
+    <line x1="60" x2="64" y1="340" y2="340" stroke="#444444"/>
+    <text x="56" y="340" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="60" x2="64" y1="264" y2="264" stroke="#444444"/>
+    <text x="56" y="264" text-anchor="end" dominant-baseline="middle">1</text>
+    <line x1="60" x2="64" y1="188" y2="188" stroke="#444444"/>
+    <text x="56" y="188" text-anchor="end" dominant-baseline="middle">2</text>
+    <line x1="60" x2="64" y1="112" y2="112" stroke="#444444"/>
+    <text x="56" y="112" text-anchor="end" dominant-baseline="middle">3</text>
+    <line x1="60" x2="64" y1="36" y2="36" stroke="#444444"/>
+    <text x="56" y="36" text-anchor="end" dominant-baseline="middle">4</text>
+    <line x1="72" x2="72" y1="416" y2="420" stroke="#444444"/>
+    <text x="72" y="432" text-anchor="middle" font-size="10" data-full-label="-1">-1</text>
+    <line x1="226" x2="226" y1="416" y2="420" stroke="#444444"/>
+    <text x="226" y="432" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <line x1="380" x2="380" y1="416" y2="420" stroke="#444444"/>
+    <text x="380" y="432" text-anchor="middle" font-size="10" data-full-label="1">1</text>
+    <line x1="534" x2="534" y1="416" y2="420" stroke="#444444"/>
+    <text x="534" y="432" text-anchor="middle" font-size="10" data-full-label="2">2</text>
+    <line x1="688" x2="688" y1="416" y2="420" stroke="#444444"/>
+    <text x="688" y="432" text-anchor="middle" font-size="10" data-full-label="3">3</text>
+  </g>
+  <text x="14" y="226" text-anchor="middle" font-size="11" fill="#444444" transform="rotate(-90 14 226)">dy</text>
+  <text x="380" y="470" text-anchor="middle" font-size="11" fill="#444444">dx</text>
+  <g>
+    <circle cx="226" cy="340" r="4" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-x="0" data-y="0" data-series="dy"/>
+    <circle cx="380" cy="340" r="4" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-x="1" data-y="0" data-series="dy"/>
+    <circle cx="226" cy="264" r="4" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-x="0" data-y="1" data-series="dy"/>
+    <circle cx="534" cy="112" r="4" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-x="2" data-y="3" data-series="dy"/>
+  </g>
+</svg>

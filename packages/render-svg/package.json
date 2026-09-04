@@ -3,5 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "description": "Deterministic SVG renderer (W6)"
+  "description": "Deterministic SVG renderer for markvis Chart IR (W6)",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "dependencies": {
+    "@markvis/ir": "workspace:*"
+  }
 }

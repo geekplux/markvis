@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Support topics, 4 slices" aria-labelledby="mv-45904bfc459355d0-title" aria-describedby="mv-45904bfc459355d0-desc" data-markvis="2" data-chart-type="pie" data-id="mv-45904bfc459355d0" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#222222">
+  <title id="mv-45904bfc459355d0-title">Support topics</title>
+  <desc id="mv-45904bfc459355d0-desc">pie chart. Support topics. x=topic. y=tickets. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="360" y="26" text-anchor="middle" font-size="16" font-weight="600" fill="#111111">Support topics</text>
+  <g aria-hidden="true">
+    <path d="M260 270 L260 120 A150 150 0 0 1 348.17 391.35 Z" fill="#0072B2" stroke="#ffffff" stroke-width="1" data-label="Billing and invoice disputes" data-raw-value="40"/>
+    <path d="M260 270 L348.17 391.35 A150 150 0 0 1 138.65 358.17 Z" fill="#D55E00" stroke="#ffffff" stroke-width="1" data-label="Account access and MFA reset" data-raw-value="25"/>
+    <path d="M260 270 L138.65 358.17 A150 150 0 0 1 138.65 181.83 Z" fill="#009E73" stroke="#ffffff" stroke-width="1" data-label="Product how-to questions" data-raw-value="20"/>
+    <path d="M260 270 L138.65 181.83 A150 150 0 0 1 260 120 Z" fill="#CC79A7" stroke="#ffffff" stroke-width="1" data-label="Other miscellaneous" data-raw-value="15"/>
+  </g>
+  <g font-size="12" fill="#222222">
+    <rect x="446" y="221" width="10" height="10" fill="#0072B2" rx="1"/>
+    <text x="462" y="230" data-legend="Billing and invoice disputes">Billing and invoice disputes (40)</text>
+    <rect x="446" y="241" width="10" height="10" fill="#D55E00" rx="1"/>
+    <text x="462" y="250" data-legend="Account access and MFA reset">Account access and MFA reset (25)</text>
+    <rect x="446" y="261" width="10" height="10" fill="#009E73" rx="1"/>
+    <text x="462" y="270" data-legend="Product how-to questions">Product how-to questions (20)</text>
+    <rect x="446" y="281" width="10" height="10" fill="#CC79A7" rx="1"/>
+    <text x="462" y="290" data-legend="Other miscellaneous">Other miscellaneous (15)</text>
+  </g>
+</svg>
