@@ -1,39 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: Pipeline, 3 rows" aria-labelledby="mv-e207fc707e409bcc-title" aria-describedby="mv-e207fc707e409bcc-desc" data-markvis="2" data-chart-type="area" data-id="mv-e207fc707e409bcc" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: Pipeline, 3 rows" aria-labelledby="mv-e207fc707e409bcc-title" aria-describedby="mv-e207fc707e409bcc-desc" data-markvis="2" data-chart-type="area" data-id="mv-e207fc707e409bcc" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-e207fc707e409bcc-title">Pipeline</title>
   <desc id="mv-e207fc707e409bcc-desc">area chart. Pipeline. x=week. y=deals. 3 rows.</desc>
-  <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Pipeline</text>
-  <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="48" x2="700" y1="314.67" y2="314.67"/>
-    <line x1="48" x2="700" y1="175.33" y2="175.33"/>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Pipeline</text>
+  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
+    <line x1="48" x2="700" y1="317.33" y2="317.33"/>
+    <line x1="48" x2="700" y1="176.67" y2="176.67"/>
     <line x1="48" x2="700" y1="36" y2="36"/>
   </g>
-  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
-  <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
-    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="44" x2="48" y1="314.67" y2="314.67" stroke="#A8A29E"/>
-    <text x="38" y="314.67" text-anchor="end" dominant-baseline="middle">5</text>
-    <line x1="44" x2="48" y1="175.33" y2="175.33" stroke="#A8A29E"/>
-    <text x="38" y="175.33" text-anchor="end" dominant-baseline="middle">10</text>
-    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="317.33" text-anchor="end" dominant-baseline="middle">5</text>
+    <text x="38" y="176.67" text-anchor="end" dominant-baseline="middle">10</text>
     <text x="38" y="36" text-anchor="end" dominant-baseline="middle">15</text>
-    <line x1="56" x2="56" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="56" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
-    <line x1="215" x2="215" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="215" y="468" text-anchor="middle" font-size="10" data-full-label="1">1</text>
-    <line x1="374" x2="374" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="2">2</text>
-    <line x1="533" x2="533" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="533" y="468" text-anchor="middle" font-size="10" data-full-label="3">3</text>
-    <line x1="692" x2="692" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="692" y="468" text-anchor="middle" font-size="10" data-full-label="4">4</text>
   </g>
   <g fill="none">
-    <path d="M215 231.07 L374 147.47 L533 203.2 L533 454 L215 454 Z" fill="#2B6CB0" fill-opacity="0.14" stroke="none" data-series="deals"/>
-    <path d="M215 231.07 L374 147.47 L533 203.2" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="deals"/>
-    <circle cx="215" cy="231.07" r="2.5" fill="#2B6CB0" stroke="none" data-series="deals"/>
-    <circle cx="374" cy="147.47" r="2.5" fill="#2B6CB0" stroke="none" data-series="deals"/>
-    <circle cx="533" cy="203.2" r="2.5" fill="#2B6CB0" stroke="none" data-series="deals"/>
+    <path d="M215 232.93 L374 148.53 L533 204.8 L533 458 L215 458 Z" fill="#3B82F6" fill-opacity="0.22" stroke="none" data-series="deals"/>
+    <path d="M215 232.93 L374 148.53 L533 204.8" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="deals"/>
+    <circle cx="215" cy="232.93" r="2.5" fill="#3B82F6" stroke="none" data-series="deals"/>
+    <circle cx="374" cy="148.53" r="2.5" fill="#3B82F6" stroke="none" data-series="deals"/>
+    <circle cx="533" cy="204.8" r="2.5" fill="#3B82F6" stroke="none" data-series="deals"/>
   </g>
 </svg>

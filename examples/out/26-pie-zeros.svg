@@ -1,17 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Feature flags, 3 slices" aria-labelledby="mv-b436e4d1f77c6b72-title" aria-describedby="mv-b436e4d1f77c6b72-desc" data-markvis="2" data-chart-type="pie" data-id="mv-b436e4d1f77c6b72" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Feature flags, 3 slices" aria-labelledby="mv-b436e4d1f77c6b72-title" aria-describedby="mv-b436e4d1f77c6b72-desc" data-markvis="2" data-chart-type="pie" data-id="mv-b436e4d1f77c6b72" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-b436e4d1f77c6b72-title">Feature flags</title>
   <desc id="mv-b436e4d1f77c6b72-desc">pie chart. Feature flags. x=flag. y=count. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Feature flags</text>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Feature flags</text>
   <g aria-hidden="true">
-    <path d="M374 248 L374 103.84 A144.16 144.16 0 1 1 236.9 292.55 Z" fill="#2B6CB0" stroke="#F7F4EF" stroke-width="1.5" data-label="on" data-raw-value="70"/>
-    <path d="M374 248 L236.9 292.55 A144.16 144.16 0 0 1 374 103.84 Z" fill="#C65D2E" stroke="#F7F4EF" stroke-width="1.5" data-label="off" data-raw-value="30"/>
+    <path d="M374 248 L374 103.84 A144.16 144.16 0 1 1 236.9 292.55 Z" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="on" data-raw-value="70"/>
+    <path d="M374 248 L236.9 292.55 A144.16 144.16 0 0 1 374 103.84 Z" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="off" data-raw-value="30"/>
   </g>
-  <g fill="none" stroke="#A8A29E" stroke-width="1">
+  <g fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1">
     <polyline points="490.63,332.74 503.57,342.14 511.57,342.14"/>
     <polyline points="257.37,163.26 244.43,153.86 236.43,153.86"/>
   </g>
-  <g font-size="11" font-weight="500" fill="#1C1917">
+  <g font-size="11" font-weight="500" fill="#171717">
     <text x="523.57" y="342.14" text-anchor="start" dominant-baseline="middle" data-label="on">on · 70</text>
     <text x="224.43" y="153.86" text-anchor="end" dominant-baseline="middle" data-label="off">off · 30</text>
   </g>

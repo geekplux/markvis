@@ -15,7 +15,6 @@ import {
   SVG_HEIGHT,
   SVG_HEIGHT_MAX,
   SVG_WIDTH,
-  TICK_MARK,
   TICK_TEXT_GAP,
   TITLE_BASELINE,
   TITLE_TO_PLOT,
@@ -161,7 +160,7 @@ export function categoryBottomMargin(
   rotate: boolean,
 ): number {
   if (labels.length === 0) {
-    return TYPE.tick.size + TICK_MARK + 12;
+    return TYPE.tick.size + 12;
   }
   if (rotate) {
     const longest = Math.max(
@@ -171,7 +170,7 @@ export function categoryBottomMargin(
     const rad = (Math.abs(LABEL_ROTATE_DEG) * Math.PI) / 180;
     return Math.sin(rad) * longest + 12;
   }
-  return TYPE.tick.size + TICK_MARK + 12;
+  return TYPE.tick.size + 12;
 }
 
 export function titleBlockTop(legendHeight: number): number {

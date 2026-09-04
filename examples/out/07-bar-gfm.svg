@@ -1,33 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Headcount, 3 rows" aria-labelledby="mv-e8e10366955f9441-title" aria-describedby="mv-e8e10366955f9441-desc" data-markvis="2" data-chart-type="bar" data-id="mv-e8e10366955f9441" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Headcount, 3 rows" aria-labelledby="mv-e8e10366955f9441-title" aria-describedby="mv-e8e10366955f9441-desc" data-markvis="2" data-chart-type="bar" data-id="mv-e8e10366955f9441" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-e8e10366955f9441-title">Headcount</title>
   <desc id="mv-e8e10366955f9441-desc">bar chart. Headcount. x=team. y=n. 3 rows.</desc>
-  <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Headcount</text>
-  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
-  <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
-    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="44" x2="48" y1="314.67" y2="314.67" stroke="#A8A29E"/>
-    <text x="38" y="314.67" text-anchor="end" dominant-baseline="middle">10</text>
-    <line x1="44" x2="48" y1="175.33" y2="175.33" stroke="#A8A29E"/>
-    <text x="38" y="175.33" text-anchor="end" dominant-baseline="middle">20</text>
-    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Headcount</text>
+  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="317.33" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="38" y="176.67" text-anchor="end" dominant-baseline="middle">20</text>
     <text x="38" y="36" text-anchor="end" dominant-baseline="middle">30</text>
-    <line x1="156.67" x2="156.67" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="156.67" y="468" text-anchor="middle" font-size="10" data-full-label="Eng">Eng</text>
-    <line x1="374" x2="374" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="Design">Design</text>
-    <line x1="591.33" x2="591.33" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="591.33" y="468" text-anchor="middle" font-size="10" data-full-label="Ops">Ops</text>
   </g>
   <g>
-    <path d="M120.67 454 L120.67 121.6 Q120.67 119.6 122.67 119.6 L190.67 119.6 Q192.67 119.6 192.67 121.6 L192.67 454 Z" fill="#2B6CB0" data-x="Eng" data-series="n" data-y="24"/>
-    <path d="M338 454 L338 372.4 Q338 370.4 340 370.4 L408 370.4 Q410 370.4 410 372.4 L410 454 Z" fill="#2B6CB0" data-x="Design" data-series="n" data-y="6"/>
-    <path d="M555.33 454 L555.33 330.6 Q555.33 328.6 557.33 328.6 L625.33 328.6 Q627.33 328.6 627.33 330.6 L627.33 454 Z" fill="#2B6CB0" data-x="Ops" data-series="n" data-y="9"/>
+    <path d="M120.67 458 L120.67 123.4 Q120.67 120.4 123.67 120.4 L189.67 120.4 Q192.67 120.4 192.67 123.4 L192.67 458 Z" fill="#3B82F6" data-x="Eng" data-series="n" data-y="24"/>
+    <path d="M338 458 L338 376.6 Q338 373.6 341 373.6 L407 373.6 Q410 373.6 410 376.6 L410 458 Z" fill="#3B82F6" data-x="Design" data-series="n" data-y="6"/>
+    <path d="M555.33 458 L555.33 334.4 Q555.33 331.4 558.33 331.4 L624.33 331.4 Q627.33 331.4 627.33 334.4 L627.33 458 Z" fill="#3B82F6" data-x="Ops" data-series="n" data-y="9"/>
   </g>
   <g>
-    <text x="156.67" y="111.6" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="Eng">24</text>
-    <text x="374" y="362.4" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="Design">6</text>
-    <text x="591.33" y="320.6" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="Ops">9</text>
+    <text x="156.67" y="112.4" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Eng">24</text>
+    <text x="374" y="365.6" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Design">6</text>
+    <text x="591.33" y="323.4" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Ops">9</text>
   </g>
 </svg>

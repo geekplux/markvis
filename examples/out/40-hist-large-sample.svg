@@ -1,45 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="hist chart: Idle seconds, 11 rows" aria-labelledby="mv-c5d04bd8a48eb41f-title" aria-describedby="mv-c5d04bd8a48eb41f-desc" data-markvis="2" data-chart-type="hist" data-id="mv-c5d04bd8a48eb41f" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="hist chart: Idle seconds, 11 rows" aria-labelledby="mv-c5d04bd8a48eb41f-title" aria-describedby="mv-c5d04bd8a48eb41f-desc" data-markvis="2" data-chart-type="hist" data-id="mv-c5d04bd8a48eb41f" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-c5d04bd8a48eb41f-title">Idle seconds</title>
   <desc id="mv-c5d04bd8a48eb41f-desc">hist chart. Idle seconds. x=sec. 11 rows. x is binned with Sturges equal-width bins.</desc>
-  <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Idle seconds</text>
-  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
-  <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
-    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="44" x2="48" y1="349.5" y2="349.5" stroke="#A8A29E"/>
-    <text x="38" y="349.5" text-anchor="end" dominant-baseline="middle">1</text>
-    <line x1="44" x2="48" y1="245" y2="245" stroke="#A8A29E"/>
-    <text x="38" y="245" text-anchor="end" dominant-baseline="middle">2</text>
-    <line x1="44" x2="48" y1="140.5" y2="140.5" stroke="#A8A29E"/>
-    <text x="38" y="140.5" text-anchor="end" dominant-baseline="middle">3</text>
-    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Idle seconds</text>
+  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="352.5" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="38" y="247" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="38" y="141.5" text-anchor="end" dominant-baseline="middle">3</text>
     <text x="38" y="36" text-anchor="end" dominant-baseline="middle">4</text>
-    <line x1="48" x2="48" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="48" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
-    <line x1="178.4" x2="178.4" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="178.4" y="468" text-anchor="middle" font-size="10" data-full-label="4">4</text>
-    <line x1="308.8" x2="308.8" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="308.8" y="468" text-anchor="middle" font-size="10" data-full-label="8">8</text>
-    <line x1="439.2" x2="439.2" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="439.2" y="468" text-anchor="middle" font-size="10" data-full-label="12">12</text>
-    <line x1="569.6" x2="569.6" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="569.6" y="468" text-anchor="middle" font-size="10" data-full-label="16">16</text>
-    <line x1="700" x2="700" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="700" y="468" text-anchor="middle" font-size="10" data-full-label="20">20</text>
   </g>
   <g>
-    <path d="M66.26 454 L66.26 38 Q66.26 36 68.26 36 L158.14 36 Q160.14 36 160.14 38 L160.14 454 Z" fill="#2B6CB0" data-bin-left="0" data-bin-right="4" data-weight="4" data-count="4"/>
-    <path d="M196.66 454 L196.66 351.5 Q196.66 349.5 198.66 349.5 L288.54 349.5 Q290.54 349.5 290.54 351.5 L290.54 454 Z" fill="#2B6CB0" data-bin-left="4" data-bin-right="8" data-weight="1" data-count="1"/>
-    <path d="M327.06 454 L327.06 142.5 Q327.06 140.5 329.06 140.5 L418.94 140.5 Q420.94 140.5 420.94 142.5 L420.94 454 Z" fill="#2B6CB0" data-bin-left="8" data-bin-right="12" data-weight="3" data-count="3"/>
-    <path d="M457.46 454 L457.46 247 Q457.46 245 459.46 245 L549.34 245 Q551.34 245 551.34 247 L551.34 454 Z" fill="#2B6CB0" data-bin-left="12" data-bin-right="16" data-weight="2" data-count="2"/>
-    <path d="M587.86 454 L587.86 351.5 Q587.86 349.5 589.86 349.5 L679.74 349.5 Q681.74 349.5 681.74 351.5 L681.74 454 Z" fill="#2B6CB0" data-bin-left="16" data-bin-right="20" data-weight="1" data-count="1"/>
+    <path d="M66.26 458 L66.26 39 Q66.26 36 69.26 36 L157.14 36 Q160.14 36 160.14 39 L160.14 458 Z" fill="#3B82F6" data-bin-left="0" data-bin-right="4" data-weight="4" data-count="4"/>
+    <path d="M196.66 458 L196.66 355.5 Q196.66 352.5 199.66 352.5 L287.54 352.5 Q290.54 352.5 290.54 355.5 L290.54 458 Z" fill="#3B82F6" data-bin-left="4" data-bin-right="8" data-weight="1" data-count="1"/>
+    <path d="M327.06 458 L327.06 144.5 Q327.06 141.5 330.06 141.5 L417.94 141.5 Q420.94 141.5 420.94 144.5 L420.94 458 Z" fill="#3B82F6" data-bin-left="8" data-bin-right="12" data-weight="3" data-count="3"/>
+    <path d="M457.46 458 L457.46 250 Q457.46 247 460.46 247 L548.34 247 Q551.34 247 551.34 250 L551.34 458 Z" fill="#3B82F6" data-bin-left="12" data-bin-right="16" data-weight="2" data-count="2"/>
+    <path d="M587.86 458 L587.86 355.5 Q587.86 352.5 590.86 352.5 L678.74 352.5 Q681.74 352.5 681.74 355.5 L681.74 458 Z" fill="#3B82F6" data-bin-left="16" data-bin-right="20" data-weight="1" data-count="1"/>
   </g>
   <g>
-    <text x="113.2" y="28" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="0–4">4</text>
-    <text x="243.6" y="341.5" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="4–8">1</text>
-    <text x="374" y="132.5" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="8–12">3</text>
-    <text x="504.4" y="237" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="12–16">2</text>
-    <text x="634.8" y="341.5" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="16–20">1</text>
+    <text x="113.2" y="28" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="0–4">4</text>
+    <text x="243.6" y="344.5" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="4–8">1</text>
+    <text x="374" y="133.5" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="8–12">3</text>
+    <text x="504.4" y="239" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="12–16">2</text>
+    <text x="634.8" y="344.5" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="16–20">1</text>
   </g>
 </svg>

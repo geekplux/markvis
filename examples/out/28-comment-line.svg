@@ -1,39 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Error rate, 3 rows" aria-labelledby="mv-3157f3bcbd9c6378-title" aria-describedby="mv-3157f3bcbd9c6378-desc" data-markvis="2" data-chart-type="line" data-id="mv-3157f3bcbd9c6378" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Error rate, 3 rows" aria-labelledby="mv-3157f3bcbd9c6378-title" aria-describedby="mv-3157f3bcbd9c6378-desc" data-markvis="2" data-chart-type="line" data-id="mv-3157f3bcbd9c6378" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-3157f3bcbd9c6378-title">Error rate</title>
   <desc id="mv-3157f3bcbd9c6378-desc">line chart. Error rate. x=day. y=errors. 3 rows.</desc>
-  <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Error rate</text>
-  <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="48" x2="700" y1="370.4" y2="370.4"/>
-    <line x1="48" x2="700" y1="286.8" y2="286.8"/>
-    <line x1="48" x2="700" y1="119.6" y2="119.6"/>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Error rate</text>
+  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
+    <line x1="48" x2="700" y1="373.6" y2="373.6"/>
+    <line x1="48" x2="700" y1="204.8" y2="204.8"/>
     <line x1="48" x2="700" y1="36" y2="36"/>
   </g>
-  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
-  <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
-    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">1</text>
-    <line x1="44" x2="48" y1="370.4" y2="370.4" stroke="#A8A29E"/>
-    <text x="38" y="370.4" text-anchor="end" dominant-baseline="middle">2</text>
-    <line x1="44" x2="48" y1="286.8" y2="286.8" stroke="#A8A29E"/>
-    <text x="38" y="286.8" text-anchor="end" dominant-baseline="middle">3</text>
-    <line x1="44" x2="48" y1="203.2" y2="203.2" stroke="#A8A29E"/>
-    <text x="38" y="203.2" text-anchor="end" dominant-baseline="middle">4</text>
-    <line x1="44" x2="48" y1="119.6" y2="119.6" stroke="#A8A29E"/>
-    <text x="38" y="119.6" text-anchor="end" dominant-baseline="middle">5</text>
-    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="38" y="373.6" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="38" y="289.2" text-anchor="end" dominant-baseline="middle">3</text>
+    <text x="38" y="204.8" text-anchor="end" dominant-baseline="middle">4</text>
+    <text x="38" y="120.4" text-anchor="end" dominant-baseline="middle">5</text>
     <text x="38" y="36" text-anchor="end" dominant-baseline="middle">6</text>
-    <line x1="156.67" x2="156.67" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="156.67" y="468" text-anchor="middle" font-size="10" data-full-label="Mon">Mon</text>
-    <line x1="374" x2="374" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="Tue">Tue</text>
-    <line x1="591.33" x2="591.33" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="591.33" y="468" text-anchor="middle" font-size="10" data-full-label="Wed">Wed</text>
   </g>
   <g fill="none">
-    <path d="M156.67 286.8 L374 119.6 L591.33 370.4" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="errors"/>
-    <circle cx="156.67" cy="286.8" r="2.5" fill="#2B6CB0" stroke="none" data-series="errors"/>
-    <circle cx="374" cy="119.6" r="2.5" fill="#2B6CB0" stroke="none" data-series="errors"/>
-    <circle cx="591.33" cy="370.4" r="2.5" fill="#2B6CB0" stroke="none" data-series="errors"/>
+    <path d="M156.67 289.2 L374 120.4 L591.33 373.6" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="errors"/>
+    <circle cx="156.67" cy="289.2" r="2.5" fill="#3B82F6" stroke="none" data-series="errors"/>
+    <circle cx="374" cy="120.4" r="2.5" fill="#3B82F6" stroke="none" data-series="errors"/>
+    <circle cx="591.33" cy="373.6" r="2.5" fill="#3B82F6" stroke="none" data-series="errors"/>
   </g>
 </svg>

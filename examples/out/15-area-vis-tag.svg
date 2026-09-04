@@ -1,42 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: Backlog, 4 rows" aria-labelledby="mv-4d47220ef6c9f6a1-title" aria-describedby="mv-4d47220ef6c9f6a1-desc" data-markvis="2" data-chart-type="area" data-id="mv-4d47220ef6c9f6a1" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: Backlog, 4 rows" aria-labelledby="mv-4d47220ef6c9f6a1-title" aria-describedby="mv-4d47220ef6c9f6a1-desc" data-markvis="2" data-chart-type="area" data-id="mv-4d47220ef6c9f6a1" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-4d47220ef6c9f6a1-title">Backlog</title>
   <desc id="mv-4d47220ef6c9f6a1-desc">area chart. Backlog. x=sprint. y=stories. 4 rows.</desc>
-  <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Backlog</text>
-  <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="48" x2="700" y1="314.67" y2="314.67"/>
-    <line x1="48" x2="700" y1="175.33" y2="175.33"/>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Backlog</text>
+  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
+    <line x1="48" x2="700" y1="317.33" y2="317.33"/>
+    <line x1="48" x2="700" y1="176.67" y2="176.67"/>
     <line x1="48" x2="700" y1="36" y2="36"/>
   </g>
-  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
-  <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
-    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="44" x2="48" y1="314.67" y2="314.67" stroke="#A8A29E"/>
-    <text x="38" y="314.67" text-anchor="end" dominant-baseline="middle">10</text>
-    <line x1="44" x2="48" y1="175.33" y2="175.33" stroke="#A8A29E"/>
-    <text x="38" y="175.33" text-anchor="end" dominant-baseline="middle">20</text>
-    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="317.33" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="38" y="176.67" text-anchor="end" dominant-baseline="middle">20</text>
     <text x="38" y="36" text-anchor="end" dominant-baseline="middle">30</text>
-    <line x1="56" x2="56" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="56" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
-    <line x1="183.2" x2="183.2" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="183.2" y="468" text-anchor="middle" font-size="10" data-full-label="1">1</text>
-    <line x1="310.4" x2="310.4" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="310.4" y="468" text-anchor="middle" font-size="10" data-full-label="2">2</text>
-    <line x1="437.6" x2="437.6" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="437.6" y="468" text-anchor="middle" font-size="10" data-full-label="3">3</text>
-    <line x1="564.8" x2="564.8" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="564.8" y="468" text-anchor="middle" font-size="10" data-full-label="4">4</text>
-    <line x1="692" x2="692" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="692" y="468" text-anchor="middle" font-size="10" data-full-label="5">5</text>
   </g>
   <g fill="none">
-    <path d="M183.2 175.33 L310.4 119.6 L437.6 203.2 L564.8 147.47 L564.8 454 L183.2 454 Z" fill="#2B6CB0" fill-opacity="0.14" stroke="none" data-series="stories"/>
-    <path d="M183.2 175.33 L310.4 119.6 L437.6 203.2 L564.8 147.47" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="stories"/>
-    <circle cx="183.2" cy="175.33" r="2.5" fill="#2B6CB0" stroke="none" data-series="stories"/>
-    <circle cx="310.4" cy="119.6" r="2.5" fill="#2B6CB0" stroke="none" data-series="stories"/>
-    <circle cx="437.6" cy="203.2" r="2.5" fill="#2B6CB0" stroke="none" data-series="stories"/>
-    <circle cx="564.8" cy="147.47" r="2.5" fill="#2B6CB0" stroke="none" data-series="stories"/>
+    <path d="M183.2 176.67 L310.4 120.4 L437.6 204.8 L564.8 148.53 L564.8 458 L183.2 458 Z" fill="#3B82F6" fill-opacity="0.22" stroke="none" data-series="stories"/>
+    <path d="M183.2 176.67 L310.4 120.4 L437.6 204.8 L564.8 148.53" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="stories"/>
+    <circle cx="183.2" cy="176.67" r="2.5" fill="#3B82F6" stroke="none" data-series="stories"/>
+    <circle cx="310.4" cy="120.4" r="2.5" fill="#3B82F6" stroke="none" data-series="stories"/>
+    <circle cx="437.6" cy="204.8" r="2.5" fill="#3B82F6" stroke="none" data-series="stories"/>
+    <circle cx="564.8" cy="148.53" r="2.5" fill="#3B82F6" stroke="none" data-series="stories"/>
   </g>
 </svg>

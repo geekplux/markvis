@@ -1,46 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: FPS, 4 rows" aria-labelledby="mv-92a52784c2dfb64f-title" aria-describedby="mv-92a52784c2dfb64f-desc" data-markvis="2" data-chart-type="line" data-id="mv-92a52784c2dfb64f" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: FPS, 4 rows" aria-labelledby="mv-92a52784c2dfb64f-title" aria-describedby="mv-92a52784c2dfb64f-desc" data-markvis="2" data-chart-type="line" data-id="mv-92a52784c2dfb64f" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-92a52784c2dfb64f-title">FPS</title>
   <desc id="mv-92a52784c2dfb64f-desc">line chart. FPS. x=frame. y=fps. 4 rows.</desc>
-  <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">FPS</text>
-  <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="48" x2="700" y1="370.4" y2="370.4"/>
-    <line x1="48" x2="700" y1="286.8" y2="286.8"/>
-    <line x1="48" x2="700" y1="119.6" y2="119.6"/>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">FPS</text>
+  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
+    <line x1="48" x2="700" y1="373.6" y2="373.6"/>
+    <line x1="48" x2="700" y1="204.8" y2="204.8"/>
     <line x1="48" x2="700" y1="36" y2="36"/>
   </g>
-  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
-  <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
-    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">57</text>
-    <line x1="44" x2="48" y1="370.4" y2="370.4" stroke="#A8A29E"/>
-    <text x="38" y="370.4" text-anchor="end" dominant-baseline="middle">58</text>
-    <line x1="44" x2="48" y1="286.8" y2="286.8" stroke="#A8A29E"/>
-    <text x="38" y="286.8" text-anchor="end" dominant-baseline="middle">59</text>
-    <line x1="44" x2="48" y1="203.2" y2="203.2" stroke="#A8A29E"/>
-    <text x="38" y="203.2" text-anchor="end" dominant-baseline="middle">60</text>
-    <line x1="44" x2="48" y1="119.6" y2="119.6" stroke="#A8A29E"/>
-    <text x="38" y="119.6" text-anchor="end" dominant-baseline="middle">61</text>
-    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">57</text>
+    <text x="38" y="373.6" text-anchor="end" dominant-baseline="middle">58</text>
+    <text x="38" y="289.2" text-anchor="end" dominant-baseline="middle">59</text>
+    <text x="38" y="204.8" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="38" y="120.4" text-anchor="end" dominant-baseline="middle">61</text>
     <text x="38" y="36" text-anchor="end" dominant-baseline="middle">62</text>
-    <line x1="56" x2="56" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="56" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
-    <line x1="183.2" x2="183.2" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="183.2" y="468" text-anchor="middle" font-size="10" data-full-label="1">1</text>
-    <line x1="310.4" x2="310.4" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="310.4" y="468" text-anchor="middle" font-size="10" data-full-label="2">2</text>
-    <line x1="437.6" x2="437.6" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="437.6" y="468" text-anchor="middle" font-size="10" data-full-label="3">3</text>
-    <line x1="564.8" x2="564.8" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="564.8" y="468" text-anchor="middle" font-size="10" data-full-label="4">4</text>
-    <line x1="692" x2="692" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="692" y="468" text-anchor="middle" font-size="10" data-full-label="5">5</text>
   </g>
   <g fill="none">
-    <path d="M183.2 203.2 L310.4 370.4 L437.6 286.8 L564.8 119.6" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="fps"/>
-    <circle cx="183.2" cy="203.2" r="2.5" fill="#2B6CB0" stroke="none" data-series="fps"/>
-    <circle cx="310.4" cy="370.4" r="2.5" fill="#2B6CB0" stroke="none" data-series="fps"/>
-    <circle cx="437.6" cy="286.8" r="2.5" fill="#2B6CB0" stroke="none" data-series="fps"/>
-    <circle cx="564.8" cy="119.6" r="2.5" fill="#2B6CB0" stroke="none" data-series="fps"/>
+    <path d="M183.2 204.8 L310.4 373.6 L437.6 289.2 L564.8 120.4" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="fps"/>
+    <circle cx="183.2" cy="204.8" r="2.5" fill="#3B82F6" stroke="none" data-series="fps"/>
+    <circle cx="310.4" cy="373.6" r="2.5" fill="#3B82F6" stroke="none" data-series="fps"/>
+    <circle cx="437.6" cy="289.2" r="2.5" fill="#3B82F6" stroke="none" data-series="fps"/>
+    <circle cx="564.8" cy="120.4" r="2.5" fill="#3B82F6" stroke="none" data-series="fps"/>
   </g>
 </svg>

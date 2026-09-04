@@ -1,9 +1,7 @@
 import type { ChartIR } from "@markvis/ir";
 import { renderCartesian } from "./cartesian.js";
-import { paperRect } from "./figure.js";
 import { FONT, SVG_WIDTH } from "./layout.js";
 import { renderPie } from "./pie.js";
-import { INK } from "./tokens.js";
 import { attrs, chartId, escapeXml } from "./xml.js";
 
 export function ariaLabel(chart: ChartIR): string {
@@ -64,13 +62,11 @@ export function renderSvg(chart: ChartIR): string {
     "data-id": id,
     "font-family": FONT,
     "font-size": 12,
-    fill: INK,
   })}>`;
   const lines = [
     open,
     `  <title id="${id}-title">${escapeXml(chart.title)}</title>`,
     `  <desc id="${id}-desc">${escapeXml(description(chart))}</desc>`,
-    paperRect(),
     ...painted.lines,
     `</svg>`,
   ];

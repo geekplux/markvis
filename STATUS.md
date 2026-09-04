@@ -1,13 +1,17 @@
 # STATUS.md
 
 ## Snapshot
-- tip: 44fff8e
-- GeekPlux: Pass B REJECTED (still ugly)
+- tip: 00fff7c
+- GeekPlux: Pass B REJECTED (still ugly) — Unit B chrome landed for review
 - Locked: default SVG canvas TRANSPARENT (no paper fill) for MD hosts
-- Active: wait Designer revise Unit A (designer-language.md + visual-spec.md; optional critique-c)
-- Coder: hold render until revised spec lands
+- Active: Coder Unit B — cartesian/pie use INK + HAIRLINE_OPACITY 0.10 / STRUCTURE_OPACITY 0.28
 - No README bake
-- Loop: empty wake1 — second empty → @GeekPlux
 
 ## Active
-Designer: revise Ledger toward shadcn quiet chrome / sparse grids / soft series + lieflat editorial density; keep measured tokens, dual-encoding ban, conclusion titles; static SVG only; six types; no theme:
+Coder: Ledger transparent canvas in render-svg (docs/visual-spec.md). No axis box, no tick marks. Hairline horizontal grid. Structure baseline / pie separators / leaders.
+
+## Last commands
+- `pnpm exec vitest run -u` exit 0 (391)
+- `pnpm markvis render examples/valid -o examples/out` exit 0
+- `pnpm markvis gallery examples/out -o examples/gallery.html` exit 0
+- `pnpm test` exit 0 (391)

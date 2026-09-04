@@ -11,7 +11,7 @@ import { seriesStyle } from "./palette.js";
 import { formatNumber } from "./scale.js";
 import { textWidth } from "./text.js";
 import {
-  AXIS,
+  INK,
   MARGIN,
   PIE_ELBOW,
   PIE_LABEL_GAP,
@@ -19,7 +19,7 @@ import {
   PIE_LEADER,
   PIE_RADIUS_RATIO,
   PIE_STROKE,
-  SLICE_GAP,
+  STRUCTURE_OPACITY,
   TYPE,
 } from "./tokens.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
@@ -242,7 +242,8 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
         cy: fmtPx(cy),
         r: fmtPx(r),
         fill: "none",
-        stroke: AXIS,
+        stroke: INK,
+        "stroke-opacity": STRUCTURE_OPACITY,
         "stroke-width": 1.5,
         "data-empty": "true",
       })}/>`,
@@ -260,7 +261,8 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
             r: fmtPx(r),
             fill: slice.color,
             "fill-opacity": slice.opacity === 1 ? undefined : slice.opacity,
-            stroke: SLICE_GAP,
+            stroke: INK,
+            "stroke-opacity": STRUCTURE_OPACITY,
             "stroke-width": PIE_STROKE,
             "data-label": slice.label,
             "data-raw-value": String(slice.value),
@@ -273,7 +275,8 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
           d: slicePath(cx, cy, r, slice.a0, slice.a1),
           fill: slice.color,
           "fill-opacity": slice.opacity === 1 ? undefined : slice.opacity,
-          stroke: SLICE_GAP,
+          stroke: INK,
+          "stroke-opacity": STRUCTURE_OPACITY,
           "stroke-width": PIE_STROKE,
           "data-label": slice.label,
           "data-raw-value": String(slice.value),
@@ -285,7 +288,12 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
 
   if (labels.length > 0) {
     lines.push(
-      `  <g ${attrs({ fill: "none", stroke: AXIS, "stroke-width": 1 })}>`,
+      `  <g ${attrs({
+        fill: "none",
+        stroke: INK,
+        "stroke-opacity": STRUCTURE_OPACITY,
+        "stroke-width": 1,
+      })}>`,
     );
     for (const item of labels) {
       lines.push(

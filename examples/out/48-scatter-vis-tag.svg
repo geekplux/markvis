@@ -1,44 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="scatter chart: Offset check, 4 rows" aria-labelledby="mv-f3e428352746c151-title" aria-describedby="mv-f3e428352746c151-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-f3e428352746c151" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="scatter chart: Offset check, 4 rows" aria-labelledby="mv-f3e428352746c151-title" aria-describedby="mv-f3e428352746c151-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-f3e428352746c151" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-f3e428352746c151-title">Offset check</title>
   <desc id="mv-f3e428352746c151-desc">scatter chart. Offset check. x=dx. y=dy. 4 rows.</desc>
-  <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Offset check</text>
-  <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="48" x2="700" y1="370.4" y2="370.4"/>
-    <line x1="48" x2="700" y1="286.8" y2="286.8"/>
-    <line x1="48" x2="700" y1="119.6" y2="119.6"/>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Offset check</text>
+  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
+    <line x1="48" x2="700" y1="373.6" y2="373.6"/>
+    <line x1="48" x2="700" y1="204.8" y2="204.8"/>
     <line x1="48" x2="700" y1="36" y2="36"/>
   </g>
-  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
-  <line x1="48" x2="700" y1="370.4" y2="370.4" stroke="#A8A29E" stroke-width="1"/>
-  <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
-    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">-1</text>
-    <line x1="44" x2="48" y1="370.4" y2="370.4" stroke="#A8A29E"/>
-    <text x="38" y="370.4" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="44" x2="48" y1="286.8" y2="286.8" stroke="#A8A29E"/>
-    <text x="38" y="286.8" text-anchor="end" dominant-baseline="middle">1</text>
-    <line x1="44" x2="48" y1="203.2" y2="203.2" stroke="#A8A29E"/>
-    <text x="38" y="203.2" text-anchor="end" dominant-baseline="middle">2</text>
-    <line x1="44" x2="48" y1="119.6" y2="119.6" stroke="#A8A29E"/>
-    <text x="38" y="119.6" text-anchor="end" dominant-baseline="middle">3</text>
-    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <line x1="48" x2="700" y1="373.6" y2="373.6" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">-1</text>
+    <text x="38" y="373.6" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="289.2" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="38" y="204.8" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="38" y="120.4" text-anchor="end" dominant-baseline="middle">3</text>
     <text x="38" y="36" text-anchor="end" dominant-baseline="middle">4</text>
-    <line x1="56" x2="56" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="56" y="468" text-anchor="middle" font-size="10" data-full-label="-1">-1</text>
-    <line x1="215" x2="215" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="215" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
-    <line x1="374" x2="374" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="1">1</text>
-    <line x1="533" x2="533" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="533" y="468" text-anchor="middle" font-size="10" data-full-label="2">2</text>
-    <line x1="692" x2="692" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="692" y="468" text-anchor="middle" font-size="10" data-full-label="3">3</text>
   </g>
   <g>
-    <circle cx="215" cy="370.4" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="0" data-y="0" data-series="dy"/>
-    <circle cx="374" cy="370.4" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="1" data-y="0" data-series="dy"/>
-    <circle cx="215" cy="286.8" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="0" data-y="1" data-series="dy"/>
-    <circle cx="533" cy="119.6" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="2" data-y="3" data-series="dy"/>
+    <circle cx="215" cy="373.6" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="0" data-y="0" data-series="dy"/>
+    <circle cx="374" cy="373.6" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="1" data-y="0" data-series="dy"/>
+    <circle cx="215" cy="289.2" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="0" data-y="1" data-series="dy"/>
+    <circle cx="533" cy="120.4" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="2" data-y="3" data-series="dy"/>
   </g>
 </svg>

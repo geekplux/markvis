@@ -34,16 +34,16 @@ function barChart(overrides: Partial<ChartIR> = {}): ChartIR {
 }
 
 describe("palette", () => {
-  it("has eight dialed-down Okabe–Ito colors, not a red-green pair", () => {
+  it("has eight series hues, not a red-green pair", () => {
     expect(PALETTE).toEqual([
-      "#2B6CB0",
-      "#C65D2E",
-      "#2F8F6B",
-      "#B08900",
-      "#6B5B95",
-      "#8B6B4A",
-      "#C44C6A",
-      "#4A7C8C",
+      "#3B82F6",
+      "#F97316",
+      "#10B981",
+      "#A855F7",
+      "#EAB308",
+      "#14B8A6",
+      "#F43F5E",
+      "#64748B",
     ]);
     expect(PALETTE).not.toContain("#FF0000");
     expect(PALETTE).not.toContain("#00FF00");
@@ -152,13 +152,16 @@ describe("cartesian rules", () => {
     expect(marks).toHaveLength(4);
   });
 
-  it("draws grid, axes, and palette colors on a bar chart", () => {
+  it("draws baseline, no axis box, and palette colors on a bar chart", () => {
     const svg = renderSvg(barChart());
-    expect(svg).toContain("<line ");
+    expect(svg).not.toContain("<line ");
+    expect(svg).toContain('stroke="#171717"');
+    expect(svg).toContain('stroke-opacity="0.28"');
     expect(svg).toContain('data-chart-type="bar"');
     expect(svg).toContain(PALETTE[0]);
     expect(svg).not.toContain('shape-rendering="crispEdges"');
-    expect(svg).toContain('fill="#F7F4EF"');
+    expect(svg).not.toContain('fill="#F7F4EF"');
+    expect(svg).not.toMatch(/<rect width="100%" height="100%"/);
     expect(svg).toContain("Q3 Revenue");
     expect(svg).toContain(" · USD k");
     expect(svg).toContain('text-anchor="start"');

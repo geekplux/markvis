@@ -1,10 +1,6 @@
 import type { ChartIR } from "@markvis/ir";
-import { PAPER, TITLE_BASELINE, TYPE } from "./tokens.js";
+import { TITLE_BASELINE, TYPE } from "./tokens.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
-
-export function paperRect(): string {
-  return `  <rect width="100%" height="100%" fill="${PAPER}"/>`;
-}
 
 /** Visible title from IR; never a chart-type word. Empty → y field. */
 export function visibleTitle(chart: ChartIR): string {

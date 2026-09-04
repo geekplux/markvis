@@ -8,19 +8,19 @@ export const PLOT_MIN_RATIO = 0.55;
 export const FONT =
   'ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif';
 
-export const PAPER = "#F7F4EF";
-export const INK = "#1C1917";
-export const MUTE = "#78716C";
-export const HAIRLINE = "#E7E5E4";
-export const AXIS = "#A8A29E";
-export const TICK = "#57534E";
+export const INK = "#171717";
+export const QUIET = "#737373";
+/** Hairline: ink at this opacity (horizontal grid only). */
+export const HAIRLINE_OPACITY = "0.10";
+/** Structure: ink at this opacity (baseline, leaders, pie slice separators). */
+export const STRUCTURE_OPACITY = "0.28";
 
 export const TYPE = {
   title: { size: 17, weight: 600, fill: INK },
-  unit: { size: 12, weight: 400, fill: MUTE },
+  unit: { size: 12, weight: 400, fill: QUIET },
   value: { size: 11, weight: 500, fill: INK },
-  tick: { size: 10, weight: 400, fill: TICK },
-  note: { size: 11, weight: 400, fill: MUTE },
+  tick: { size: 10, weight: 400, fill: QUIET },
+  note: { size: 11, weight: 400, fill: QUIET },
   legend: { size: 11, weight: 400, fill: INK },
 } as const;
 
@@ -33,32 +33,30 @@ export const MARGIN = {
 
 /** Extra hues only for extra series / pie slices. Cap 8, then reuse at WRAP_OPACITY. */
 export const PALETTE = [
-  "#2B6CB0",
-  "#C65D2E",
-  "#2F8F6B",
-  "#B08900",
-  "#6B5B95",
-  "#8B6B4A",
-  "#C44C6A",
-  "#4A7C8C",
+  "#3B82F6",
+  "#F97316",
+  "#10B981",
+  "#A855F7",
+  "#EAB308",
+  "#14B8A6",
+  "#F43F5E",
+  "#64748B",
 ] as const;
 
 export const WRAP_OPACITY = 0.7;
-export const SLICE_GAP = PAPER;
 
 export const TITLE_BASELINE = 24;
 export const TITLE_TO_PLOT = 12;
 export const TICK_TEXT_GAP = 10;
-export const TICK_MARK = 4;
 export const LABEL_ROTATE_DEG = -55;
 export const LABEL_MIN_GAP = 2;
 export const ROTATE_LINE_HEIGHT = 12;
-export const MAX_INTERIOR_GRID = 4;
+export const MAX_INTERIOR_GRID = 3;
 
 export const BAR_GAP_FEW = 0.28;
 export const BAR_GAP_MANY = 0.18;
 export const GROUP_GAP_PX = 2;
-export const BAR_RX = 2;
+export const BAR_RX = 3;
 export const BAR_MAX_WIDTH = 72;
 export const BAR_MAX_WIDTH_N = 4;
 export const BAR_LABEL_MIN_WIDTH = 14;
@@ -71,7 +69,7 @@ export const BAR_LABEL_MID_MIN_W = 18;
 export const LINE_STROKE = 1.75;
 export const LINE_POINT_R = 2.5;
 export const POINT_SKIP_AFTER = 40;
-export const AREA_OPACITY = 0.14;
+export const AREA_OPACITY = 0.22;
 export const END_LABEL_SERIES_MAX = 4;
 export const END_LABEL_GAP = 8;
 export const END_LABEL_MIN_SEP = 14;

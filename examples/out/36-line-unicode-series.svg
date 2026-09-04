@@ -1,43 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Sales, 4 rows, series city" aria-labelledby="mv-c099937507374395-title" aria-describedby="mv-c099937507374395-desc" data-markvis="2" data-chart-type="line" data-id="mv-c099937507374395" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Sales, 4 rows, series city" aria-labelledby="mv-c099937507374395-title" aria-describedby="mv-c099937507374395-desc" data-markvis="2" data-chart-type="line" data-id="mv-c099937507374395" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-c099937507374395-title">Sales</title>
   <desc id="mv-c099937507374395-desc">line chart. Sales. x=month. y=amount. series=city. 4 rows.</desc>
-  <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Sales</text>
-  <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="48" x2="690" y1="370.4" y2="370.4"/>
-    <line x1="48" x2="690" y1="286.8" y2="286.8"/>
-    <line x1="48" x2="690" y1="119.6" y2="119.6"/>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Sales</text>
+  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
+    <line x1="48" x2="690" y1="373.6" y2="373.6"/>
+    <line x1="48" x2="690" y1="204.8" y2="204.8"/>
     <line x1="48" x2="690" y1="36" y2="36"/>
   </g>
-  <path d="M48 36 L48 454 L690 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
-  <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
-    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">90</text>
-    <line x1="44" x2="48" y1="370.4" y2="370.4" stroke="#A8A29E"/>
-    <text x="38" y="370.4" text-anchor="end" dominant-baseline="middle">100</text>
-    <line x1="44" x2="48" y1="286.8" y2="286.8" stroke="#A8A29E"/>
-    <text x="38" y="286.8" text-anchor="end" dominant-baseline="middle">110</text>
-    <line x1="44" x2="48" y1="203.2" y2="203.2" stroke="#A8A29E"/>
-    <text x="38" y="203.2" text-anchor="end" dominant-baseline="middle">120</text>
-    <line x1="44" x2="48" y1="119.6" y2="119.6" stroke="#A8A29E"/>
-    <text x="38" y="119.6" text-anchor="end" dominant-baseline="middle">130</text>
-    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+  <path d="M48 458 L690 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">90</text>
+    <text x="38" y="373.6" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="38" y="289.2" text-anchor="end" dominant-baseline="middle">110</text>
+    <text x="38" y="204.8" text-anchor="end" dominant-baseline="middle">120</text>
+    <text x="38" y="120.4" text-anchor="end" dominant-baseline="middle">130</text>
     <text x="38" y="36" text-anchor="end" dominant-baseline="middle">140</text>
-    <line x1="208.5" x2="208.5" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="208.5" y="468" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
-    <line x1="529.5" x2="529.5" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="529.5" y="468" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
   </g>
   <g fill="none">
-    <path d="M208.5 370.4 L529.5 286.8" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="北京"/>
-    <circle cx="208.5" cy="370.4" r="2.5" fill="#2B6CB0" stroke="none" data-series="北京"/>
-    <circle cx="529.5" cy="286.8" r="2.5" fill="#2B6CB0" stroke="none" data-series="北京"/>
-    <path d="M208.5 203.2 L529.5 119.6" fill="none" stroke="#C65D2E" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="東京"/>
-    <circle cx="208.5" cy="203.2" r="2.5" fill="#C65D2E" stroke="none" data-series="東京"/>
-    <circle cx="529.5" cy="119.6" r="2.5" fill="#C65D2E" stroke="none" data-series="東京"/>
+    <path d="M208.5 373.6 L529.5 289.2" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="北京"/>
+    <circle cx="208.5" cy="373.6" r="2.5" fill="#3B82F6" stroke="none" data-series="北京"/>
+    <circle cx="529.5" cy="289.2" r="2.5" fill="#3B82F6" stroke="none" data-series="北京"/>
+    <path d="M208.5 204.8 L529.5 120.4" fill="none" stroke="#F97316" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="東京"/>
+    <circle cx="208.5" cy="204.8" r="2.5" fill="#F97316" stroke="none" data-series="東京"/>
+    <circle cx="529.5" cy="120.4" r="2.5" fill="#F97316" stroke="none" data-series="東京"/>
   </g>
   <g font-size="11" font-weight="500">
-    <text x="537.5" y="286.8" text-anchor="start" dominant-baseline="middle" fill="#2B6CB0" data-end-label="北京">北京</text>
-    <text x="537.5" y="119.6" text-anchor="start" dominant-baseline="middle" fill="#C65D2E" data-end-label="東京">東京</text>
+    <text x="537.5" y="289.2" text-anchor="start" dominant-baseline="middle" fill="#3B82F6" data-end-label="北京">北京</text>
+    <text x="537.5" y="120.4" text-anchor="start" dominant-baseline="middle" fill="#F97316" data-end-label="東京">東京</text>
   </g>
 </svg>

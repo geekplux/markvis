@@ -1,41 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: Events, 4 rows" aria-labelledby="mv-efefd2281411d836-title" aria-describedby="mv-efefd2281411d836-desc" data-markvis="2" data-chart-type="area" data-id="mv-efefd2281411d836" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: Events, 4 rows" aria-labelledby="mv-efefd2281411d836-title" aria-describedby="mv-efefd2281411d836-desc" data-markvis="2" data-chart-type="area" data-id="mv-efefd2281411d836" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-efefd2281411d836-title">Events</title>
   <desc id="mv-efefd2281411d836-desc">area chart. Events. x=month. y=count. 4 rows.</desc>
-  <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Events</text>
-  <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="48" x2="700" y1="349.5" y2="349.5"/>
-    <line x1="48" x2="700" y1="245" y2="245"/>
-    <line x1="48" x2="700" y1="140.5" y2="140.5"/>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Events</text>
+  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
+    <line x1="48" x2="700" y1="352.5" y2="352.5"/>
+    <line x1="48" x2="700" y1="141.5" y2="141.5"/>
     <line x1="48" x2="700" y1="36" y2="36"/>
   </g>
-  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
-  <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
-    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="44" x2="48" y1="349.5" y2="349.5" stroke="#A8A29E"/>
-    <text x="38" y="349.5" text-anchor="end" dominant-baseline="middle">10</text>
-    <line x1="44" x2="48" y1="245" y2="245" stroke="#A8A29E"/>
-    <text x="38" y="245" text-anchor="end" dominant-baseline="middle">20</text>
-    <line x1="44" x2="48" y1="140.5" y2="140.5" stroke="#A8A29E"/>
-    <text x="38" y="140.5" text-anchor="end" dominant-baseline="middle">30</text>
-    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="352.5" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="38" y="247" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="38" y="141.5" text-anchor="end" dominant-baseline="middle">30</text>
     <text x="38" y="36" text-anchor="end" dominant-baseline="middle">40</text>
-    <line x1="129.5" x2="129.5" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="129.5" y="468" text-anchor="middle" font-size="10" data-full-label="Sep">Sep</text>
-    <line x1="292.5" x2="292.5" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="292.5" y="468" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
-    <line x1="455.5" x2="455.5" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="455.5" y="468" text-anchor="middle" font-size="10" data-full-label="Jul">Jul</text>
-    <line x1="618.5" x2="618.5" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="618.5" y="468" text-anchor="middle" font-size="10" data-full-label="Apr">Apr</text>
   </g>
   <g fill="none">
-    <path d="M129.5 36 L292.5 349.5 L455.5 140.5 L618.5 245 L618.5 454 L129.5 454 Z" fill="#2B6CB0" fill-opacity="0.14" stroke="none" data-series="count"/>
-    <path d="M129.5 36 L292.5 349.5 L455.5 140.5 L618.5 245" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="count"/>
-    <circle cx="129.5" cy="36" r="2.5" fill="#2B6CB0" stroke="none" data-series="count"/>
-    <circle cx="292.5" cy="349.5" r="2.5" fill="#2B6CB0" stroke="none" data-series="count"/>
-    <circle cx="455.5" cy="140.5" r="2.5" fill="#2B6CB0" stroke="none" data-series="count"/>
-    <circle cx="618.5" cy="245" r="2.5" fill="#2B6CB0" stroke="none" data-series="count"/>
+    <path d="M129.5 36 L292.5 352.5 L455.5 141.5 L618.5 247 L618.5 458 L129.5 458 Z" fill="#3B82F6" fill-opacity="0.22" stroke="none" data-series="count"/>
+    <path d="M129.5 36 L292.5 352.5 L455.5 141.5 L618.5 247" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="count"/>
+    <circle cx="129.5" cy="36" r="2.5" fill="#3B82F6" stroke="none" data-series="count"/>
+    <circle cx="292.5" cy="352.5" r="2.5" fill="#3B82F6" stroke="none" data-series="count"/>
+    <circle cx="455.5" cy="141.5" r="2.5" fill="#3B82F6" stroke="none" data-series="count"/>
+    <circle cx="618.5" cy="247" r="2.5" fill="#3B82F6" stroke="none" data-series="count"/>
   </g>
 </svg>

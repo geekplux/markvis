@@ -1,21 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Browser share, 4 slices" aria-labelledby="mv-2efd1bdbc9efdff5-title" aria-describedby="mv-2efd1bdbc9efdff5-desc" data-markvis="2" data-chart-type="pie" data-id="mv-2efd1bdbc9efdff5" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Browser share, 4 slices" aria-labelledby="mv-2efd1bdbc9efdff5-title" aria-describedby="mv-2efd1bdbc9efdff5-desc" data-markvis="2" data-chart-type="pie" data-id="mv-2efd1bdbc9efdff5" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-2efd1bdbc9efdff5-title">Browser share</title>
   <desc id="mv-2efd1bdbc9efdff5-desc">pie chart. Browser share. x=browser. y=users. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Browser share</text>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Browser share</text>
   <g aria-hidden="true">
-    <path d="M374 248 L374 103.84 A144.16 144.16 0 1 1 355.93 391.02 Z" fill="#2B6CB0" stroke="#F7F4EF" stroke-width="1.5" data-label="Chrome" data-raw-value="52"/>
-    <path d="M374 248 L355.93 391.02 A144.16 144.16 0 0 1 236.9 203.45 Z" fill="#C65D2E" stroke="#F7F4EF" stroke-width="1.5" data-label="Safari" data-raw-value="28"/>
-    <path d="M374 248 L236.9 203.45 A144.16 144.16 0 0 1 304.55 121.67 Z" fill="#2F8F6B" stroke="#F7F4EF" stroke-width="1.5" data-label="Firefox" data-raw-value="12"/>
-    <path d="M374 248 L304.55 121.67 A144.16 144.16 0 0 1 374 103.84 Z" fill="#B08900" stroke="#F7F4EF" stroke-width="1.5" data-label="Other" data-raw-value="8"/>
+    <path d="M374 248 L374 103.84 A144.16 144.16 0 1 1 355.93 391.02 Z" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Chrome" data-raw-value="52"/>
+    <path d="M374 248 L355.93 391.02 A144.16 144.16 0 0 1 236.9 203.45 Z" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Safari" data-raw-value="28"/>
+    <path d="M374 248 L236.9 203.45 A144.16 144.16 0 0 1 304.55 121.67 Z" fill="#10B981" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Firefox" data-raw-value="12"/>
+    <path d="M374 248 L304.55 121.67 A144.16 144.16 0 0 1 374 103.84 Z" fill="#A855F7" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Other" data-raw-value="8"/>
   </g>
-  <g fill="none" stroke="#A8A29E" stroke-width="1">
+  <g fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1">
     <polyline points="517.88,257.05 533.84,258.06 541.84,258.06"/>
     <polyline points="252.28,325.24 238.77,333.82 230.77,333.82"/>
     <polyline points="262.92,156.11 250.59,145.91 242.59,145.91"/>
     <polyline points="338.15,108.37 334.17,92.87 326.17,92.87"/>
   </g>
-  <g font-size="11" font-weight="500" fill="#1C1917">
+  <g font-size="11" font-weight="500" fill="#171717">
     <text x="553.84" y="258.06" text-anchor="start" dominant-baseline="middle" data-label="Chrome">Chrome · 52</text>
     <text x="218.77" y="333.82" text-anchor="end" dominant-baseline="middle" data-label="Safari">Safari · 28</text>
     <text x="230.59" y="145.91" text-anchor="end" dominant-baseline="middle" data-label="Firefox">Firefox · 12</text>

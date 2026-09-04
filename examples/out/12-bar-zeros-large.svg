@@ -1,45 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Traffic spikes (hits), 6 rows" aria-labelledby="mv-effd8776b175b41d-title" aria-describedby="mv-effd8776b175b41d-desc" data-markvis="2" data-chart-type="bar" data-id="mv-effd8776b175b41d" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Traffic spikes (hits), 6 rows" aria-labelledby="mv-effd8776b175b41d-title" aria-describedby="mv-effd8776b175b41d-desc" data-markvis="2" data-chart-type="bar" data-id="mv-effd8776b175b41d" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-effd8776b175b41d-title">Traffic spikes</title>
   <desc id="mv-effd8776b175b41d-desc">bar chart. Traffic spikes. x=hour. y=hits. unit=hits. 6 rows.</desc>
-  <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="65.8" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Traffic spikes<tspan font-size="12" font-weight="400" fill="#78716C"> · hits</tspan></text>
-  <path d="M65.8 36 L65.8 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
-  <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="61.8" x2="65.8" y1="454" y2="454" stroke="#A8A29E"/>
-    <text x="55.8" y="454" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="61.8" x2="65.8" y1="314.67" y2="314.67" stroke="#A8A29E"/>
-    <text x="55.8" y="314.67" text-anchor="end" dominant-baseline="middle">500,000</text>
-    <line x1="61.8" x2="65.8" y1="175.33" y2="175.33" stroke="#A8A29E"/>
-    <text x="55.8" y="175.33" text-anchor="end" dominant-baseline="middle">1,000,000</text>
-    <line x1="61.8" x2="65.8" y1="36" y2="36" stroke="#A8A29E"/>
+  <text x="65.8" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Traffic spikes<tspan font-size="12" font-weight="400" fill="#737373"> · hits</tspan></text>
+  <path d="M65.8 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="55.8" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="55.8" y="317.33" text-anchor="end" dominant-baseline="middle">500,000</text>
+    <text x="55.8" y="176.67" text-anchor="end" dominant-baseline="middle">1,000,000</text>
     <text x="55.8" y="36" text-anchor="end" dominant-baseline="middle">1,500,000</text>
-    <line x1="118.65" x2="118.65" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="118.65" y="468" text-anchor="middle" font-size="10" data-full-label="00">00</text>
-    <line x1="224.35" x2="224.35" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="224.35" y="468" text-anchor="middle" font-size="10" data-full-label="01">01</text>
-    <line x1="330.05" x2="330.05" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="330.05" y="468" text-anchor="middle" font-size="10" data-full-label="02">02</text>
-    <line x1="435.75" x2="435.75" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="435.75" y="468" text-anchor="middle" font-size="10" data-full-label="03">03</text>
-    <line x1="541.45" x2="541.45" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="541.45" y="468" text-anchor="middle" font-size="10" data-full-label="04">04</text>
-    <line x1="647.15" x2="647.15" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="647.15" y="468" text-anchor="middle" font-size="10" data-full-label="05">05</text>
   </g>
   <g>
-    <path d="M80.6 454 L156.7 454 L156.7 454 L80.6 454 Z" fill="#2B6CB0" data-x="00" data-series="hits" data-y="0"/>
-    <path d="M186.3 454 L262.4 454 L262.4 454 L186.3 454 Z" fill="#2B6CB0" data-x="01" data-series="hits" data-y="0"/>
-    <path d="M292 454 L368.1 454 L368.1 454 L292 454 Z" fill="#2B6CB0" data-x="02" data-series="hits" data-y="12"/>
-    <path d="M397.7 454 L397.7 38 Q397.7 36 399.7 36 L471.8 36 Q473.8 36 473.8 38 L473.8 454 Z" fill="#2B6CB0" data-x="03" data-series="hits" data-y="1500000"/>
-    <path d="M503.4 454 L503.4 182.91 Q503.4 180.91 505.4 180.91 L577.5 180.91 Q579.5 180.91 579.5 182.91 L579.5 454 Z" fill="#2B6CB0" data-x="04" data-series="hits" data-y="980000"/>
-    <path d="M609.1 454 L685.2 454 L685.2 454 L609.1 454 Z" fill="#2B6CB0" data-x="05" data-series="hits" data-y="3"/>
+    <path d="M80.6 458 L156.7 458 L156.7 458 L80.6 458 Z" fill="#3B82F6" data-x="00" data-series="hits" data-y="0"/>
+    <path d="M186.3 458 L262.4 458 L262.4 458 L186.3 458 Z" fill="#3B82F6" data-x="01" data-series="hits" data-y="0"/>
+    <path d="M292 458 L368.1 458 L368.1 458 L292 458 Z" fill="#3B82F6" data-x="02" data-series="hits" data-y="12"/>
+    <path d="M397.7 458 L397.7 39 Q397.7 36 400.7 36 L470.8 36 Q473.8 36 473.8 39 L473.8 458 Z" fill="#3B82F6" data-x="03" data-series="hits" data-y="1500000"/>
+    <path d="M503.4 458 L503.4 185.29 Q503.4 182.29 506.4 182.29 L576.5 182.29 Q579.5 182.29 579.5 185.29 L579.5 458 Z" fill="#3B82F6" data-x="04" data-series="hits" data-y="980000"/>
+    <path d="M609.1 458 L685.2 458 L685.2 458 L609.1 458 Z" fill="#3B82F6" data-x="05" data-series="hits" data-y="3"/>
   </g>
   <g>
-    <text x="118.65" y="446" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="00">0</text>
-    <text x="224.35" y="446" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="01">0</text>
-    <text x="330.05" y="446" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="02">12</text>
-    <text x="435.75" y="28" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="03">1,500,000</text>
-    <text x="541.45" y="172.91" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="04">980,000</text>
-    <text x="647.15" y="446" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="05">3</text>
+    <text x="118.65" y="450" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="00">0</text>
+    <text x="224.35" y="450" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="01">0</text>
+    <text x="330.05" y="450" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="02">12</text>
+    <text x="435.75" y="28" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="03">1,500,000</text>
+    <text x="541.45" y="174.29" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="04">980,000</text>
+    <text x="647.15" y="450" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="05">3</text>
   </g>
 </svg>

@@ -1,42 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Campaign months, 4 rows" aria-labelledby="mv-27e517a09c0d778f-title" aria-describedby="mv-27e517a09c0d778f-desc" data-markvis="2" data-chart-type="line" data-id="mv-27e517a09c0d778f" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Campaign months, 4 rows" aria-labelledby="mv-27e517a09c0d778f-title" aria-describedby="mv-27e517a09c0d778f-desc" data-markvis="2" data-chart-type="line" data-id="mv-27e517a09c0d778f" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-27e517a09c0d778f-title">Campaign months</title>
   <desc id="mv-27e517a09c0d778f-desc">line chart. Campaign months. x=month. y=signups. 4 rows.</desc>
-  <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Campaign months</text>
-  <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="48" x2="700" y1="370.4" y2="370.4"/>
-    <line x1="48" x2="700" y1="286.8" y2="286.8"/>
-    <line x1="48" x2="700" y1="119.6" y2="119.6"/>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Campaign months</text>
+  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
+    <line x1="48" x2="700" y1="373.6" y2="373.6"/>
+    <line x1="48" x2="700" y1="204.8" y2="204.8"/>
     <line x1="48" x2="700" y1="36" y2="36"/>
   </g>
-  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
-  <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
-    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">10</text>
-    <line x1="44" x2="48" y1="370.4" y2="370.4" stroke="#A8A29E"/>
-    <text x="38" y="370.4" text-anchor="end" dominant-baseline="middle">20</text>
-    <line x1="44" x2="48" y1="286.8" y2="286.8" stroke="#A8A29E"/>
-    <text x="38" y="286.8" text-anchor="end" dominant-baseline="middle">30</text>
-    <line x1="44" x2="48" y1="203.2" y2="203.2" stroke="#A8A29E"/>
-    <text x="38" y="203.2" text-anchor="end" dominant-baseline="middle">40</text>
-    <line x1="44" x2="48" y1="119.6" y2="119.6" stroke="#A8A29E"/>
-    <text x="38" y="119.6" text-anchor="end" dominant-baseline="middle">50</text>
-    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="38" y="373.6" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="38" y="289.2" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="38" y="204.8" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="38" y="120.4" text-anchor="end" dominant-baseline="middle">50</text>
     <text x="38" y="36" text-anchor="end" dominant-baseline="middle">60</text>
-    <line x1="129.5" x2="129.5" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="129.5" y="468" text-anchor="middle" font-size="10" data-full-label="Mar">Mar</text>
-    <line x1="292.5" x2="292.5" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="292.5" y="468" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
-    <line x1="455.5" x2="455.5" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="455.5" y="468" text-anchor="middle" font-size="10" data-full-label="Dec">Dec</text>
-    <line x1="618.5" x2="618.5" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="618.5" y="468" text-anchor="middle" font-size="10" data-full-label="Jun">Jun</text>
   </g>
   <g fill="none">
-    <path d="M129.5 203.2 L292.5 353.68 L455.5 77.8 L618.5 286.8" fill="none" stroke="#2B6CB0" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="signups"/>
-    <circle cx="129.5" cy="203.2" r="2.5" fill="#2B6CB0" stroke="none" data-series="signups"/>
-    <circle cx="292.5" cy="353.68" r="2.5" fill="#2B6CB0" stroke="none" data-series="signups"/>
-    <circle cx="455.5" cy="77.8" r="2.5" fill="#2B6CB0" stroke="none" data-series="signups"/>
-    <circle cx="618.5" cy="286.8" r="2.5" fill="#2B6CB0" stroke="none" data-series="signups"/>
+    <path d="M129.5 204.8 L292.5 356.72 L455.5 78.2 L618.5 289.2" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="signups"/>
+    <circle cx="129.5" cy="204.8" r="2.5" fill="#3B82F6" stroke="none" data-series="signups"/>
+    <circle cx="292.5" cy="356.72" r="2.5" fill="#3B82F6" stroke="none" data-series="signups"/>
+    <circle cx="455.5" cy="78.2" r="2.5" fill="#3B82F6" stroke="none" data-series="signups"/>
+    <circle cx="618.5" cy="289.2" r="2.5" fill="#3B82F6" stroke="none" data-series="signups"/>
   </g>
 </svg>

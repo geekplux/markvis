@@ -1,33 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Latency p99 (ms), 3 rows" aria-labelledby="mv-17c122f090a29571-title" aria-describedby="mv-17c122f090a29571-desc" data-markvis="2" data-chart-type="bar" data-id="mv-17c122f090a29571" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Latency p99 (ms), 3 rows" aria-labelledby="mv-17c122f090a29571-title" aria-describedby="mv-17c122f090a29571-desc" data-markvis="2" data-chart-type="bar" data-id="mv-17c122f090a29571" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-17c122f090a29571-title">Latency p99</title>
   <desc id="mv-17c122f090a29571-desc">bar chart. Latency p99. x=service. y=p99. unit=ms. 3 rows.</desc>
-  <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Latency p99<tspan font-size="12" font-weight="400" fill="#78716C"> · ms</tspan></text>
-  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
-  <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
-    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="44" x2="48" y1="314.67" y2="314.67" stroke="#A8A29E"/>
-    <text x="38" y="314.67" text-anchor="end" dominant-baseline="middle">50</text>
-    <line x1="44" x2="48" y1="175.33" y2="175.33" stroke="#A8A29E"/>
-    <text x="38" y="175.33" text-anchor="end" dominant-baseline="middle">100</text>
-    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Latency p99<tspan font-size="12" font-weight="400" fill="#737373"> · ms</tspan></text>
+  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="317.33" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="38" y="176.67" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="38" y="36" text-anchor="end" dominant-baseline="middle">150</text>
-    <line x1="156.67" x2="156.67" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="156.67" y="468" text-anchor="middle" font-size="10" data-full-label="api">api</text>
-    <line x1="374" x2="374" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="auth">auth</text>
-    <line x1="591.33" x2="591.33" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="591.33" y="468" text-anchor="middle" font-size="10" data-full-label="cdn">cdn</text>
   </g>
   <g>
-    <path d="M120.67 454 L120.67 121.6 Q120.67 119.6 122.67 119.6 L190.67 119.6 Q192.67 119.6 192.67 121.6 L192.67 454 Z" fill="#2B6CB0" data-x="api" data-series="p99" data-y="120"/>
-    <path d="M338 454 L338 233.07 Q338 231.07 340 231.07 L408 231.07 Q410 231.07 410 233.07 L410 454 Z" fill="#2B6CB0" data-x="auth" data-series="p99" data-y="80"/>
-    <path d="M555.33 454 L555.33 330.6 Q555.33 328.6 557.33 328.6 L625.33 328.6 Q627.33 328.6 627.33 330.6 L627.33 454 Z" fill="#2B6CB0" data-x="cdn" data-series="p99" data-y="45"/>
+    <path d="M120.67 458 L120.67 123.4 Q120.67 120.4 123.67 120.4 L189.67 120.4 Q192.67 120.4 192.67 123.4 L192.67 458 Z" fill="#3B82F6" data-x="api" data-series="p99" data-y="120"/>
+    <path d="M338 458 L338 235.93 Q338 232.93 341 232.93 L407 232.93 Q410 232.93 410 235.93 L410 458 Z" fill="#3B82F6" data-x="auth" data-series="p99" data-y="80"/>
+    <path d="M555.33 458 L555.33 334.4 Q555.33 331.4 558.33 331.4 L624.33 331.4 Q627.33 331.4 627.33 334.4 L627.33 458 Z" fill="#3B82F6" data-x="cdn" data-series="p99" data-y="45"/>
   </g>
   <g>
-    <text x="156.67" y="111.6" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="api">120</text>
-    <text x="374" y="223.07" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="auth">80</text>
-    <text x="591.33" y="320.6" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="cdn">45</text>
+    <text x="156.67" y="112.4" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="api">120</text>
+    <text x="374" y="224.93" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="auth">80</text>
+    <text x="591.33" y="323.4" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="cdn">45</text>
   </g>
 </svg>

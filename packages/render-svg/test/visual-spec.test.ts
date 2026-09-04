@@ -7,7 +7,14 @@ import { parseMarkdown } from "@markvis/parser";
 import { PALETTE, renderSvg } from "../src/index.js";
 import { compactScale, formatTick } from "../src/scale.js";
 import { showBarValueLabels } from "../src/layout.js";
-import { FONT, PAPER, PLOT_MIN_RATIO, TYPE } from "../src/tokens.js";
+import {
+  FONT,
+  HAIRLINE_OPACITY,
+  INK,
+  PLOT_MIN_RATIO,
+  STRUCTURE_OPACITY,
+  TYPE,
+} from "../src/tokens.js";
 import { barSlot } from "../src/cartesian.js";
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -39,16 +46,22 @@ function plotBox(svg: string): {
   height: number;
   share: number;
 } {
-  const m = svg.match(
-    /<path d="M([\d.]+) ([\d.]+) L\1 ([\d.]+) L([\d.]+) \3"/,
-  );
+  const m = svg.match(/<path d="M([\d.]+) ([\d.]+) L([\d.]+) \2"/);
   if (!m) {
-    throw new Error("axis path not found");
+    throw new Error("baseline path not found");
   }
   const left = Number(m[1]);
-  const top = Number(m[2]);
-  const bottom = Number(m[3]);
-  const right = Number(m[4]);
+  const bottom = Number(m[2]);
+  const right = Number(m[3]);
+  const yPos = [
+    ...svg.matchAll(
+      /<text x="[\d.]+" y="([\d.]+)" text-anchor="end" dominant-baseline="middle">/g,
+    ),
+  ].map((x) => Number(x[1]));
+  if (yPos.length === 0) {
+    throw new Error("y ticks not found");
+  }
+  const top = Math.min(...yPos);
   const height = frameHeight(svg);
   return {
     left,
@@ -81,18 +94,19 @@ function titleEl(svg: string): { x: number; anchor: string; size: string } {
 }
 
 describe("visual-spec tokens", () => {
-  it("keeps paper as the first painted child and the frozen font stack", () => {
+  it("keeps a transparent canvas and the frozen font stack", () => {
     const svg = svgOf("01-bar-basic.md");
     const rest = afterTitleDesc(svg);
-    expect(rest.startsWith(`  <rect width="100%" height="100%" fill="${PAPER}"/>`)).toBe(
-      true,
-    );
+    expect(rest).not.toMatch(/<rect width="100%" height="100%"/);
+    expect(rest.trimStart().startsWith("<text ")).toBe(true);
     expect(svg).toContain(`font-family="${FONT.replace(/"/g, "&quot;")}"`);
     expect(svg).toContain('role="img"');
     expect(svg).toMatch(/<title id="mv-[a-f0-9]+-title">/);
     expect(svg).toMatch(/<desc id="mv-[a-f0-9]+-desc">/);
     expect(svg).not.toContain("theme");
-    expect(TYPE.title).toEqual({ size: 17, weight: 600, fill: "#1C1917" });
+    expect(TYPE.title).toEqual({ size: 17, weight: 600, fill: INK });
+    expect(svg).toContain(`stroke="${INK}"`);
+    expect(svg).toContain(`stroke-opacity="${STRUCTURE_OPACITY}"`);
   });
 
   it("01 bar: conclusion title, 17/600 left, 72px cap, labels XOR grid", () => {
@@ -136,14 +150,15 @@ describe("visual-spec tokens", () => {
     expect(plot.share).toBeGreaterThanOrEqual(PLOT_MIN_RATIO);
   });
 
-  it("05 pie: paper slice stroke, outside name · value, conclusion title, no side legend", () => {
+  it("05 pie: structure slice stroke, outside name · value, conclusion title, no side legend", () => {
     const svg = svgOf("05-pie-raw.md");
     const title = titleEl(svg);
     expect(svg).toContain("A leads at 40");
     expect(svg).not.toContain(">Share<");
     expect(title.anchor).toBe("start");
     expect(title.size).toBe("17");
-    expect(svg).toContain(`stroke="${PAPER}"`);
+    expect(svg).toContain(`stroke="${INK}"`);
+    expect(svg).toContain(`stroke-opacity="${STRUCTURE_OPACITY}"`);
     expect(svg).toContain("A · 40");
     expect(svg).toContain("B · 35");
     expect(svg).toContain("C · 30");
@@ -160,7 +175,8 @@ describe("visual-spec tokens", () => {
     expect(svg).not.toContain("rotate(-55");
     expect(svg).not.toContain("…");
     expect(svg).not.toContain("data-value-label=");
-    expect(svg).toContain('stroke="#E7E5E4"');
+    expect(svg).toContain(`stroke="${INK}"`);
+    expect(svg).toContain(`stroke-opacity="${HAIRLINE_OPACITY}"`);
     expect(plot.share).toBeGreaterThanOrEqual(PLOT_MIN_RATIO);
     for (const month of [
       "Jan",

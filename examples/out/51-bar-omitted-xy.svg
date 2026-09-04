@@ -1,33 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Defaults, 3 rows" aria-labelledby="mv-51bf7ec1689ddbd6-title" aria-describedby="mv-51bf7ec1689ddbd6-desc" data-markvis="2" data-chart-type="bar" data-id="mv-51bf7ec1689ddbd6" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" fill="#1C1917">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Defaults, 3 rows" aria-labelledby="mv-51bf7ec1689ddbd6-title" aria-describedby="mv-51bf7ec1689ddbd6-desc" data-markvis="2" data-chart-type="bar" data-id="mv-51bf7ec1689ddbd6" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-51bf7ec1689ddbd6-title">Defaults</title>
   <desc id="mv-51bf7ec1689ddbd6-desc">bar chart. Defaults. x=category. y=value. 3 rows.</desc>
-  <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#1C1917">Defaults</text>
-  <path d="M48 36 L48 454 L700 454" fill="none" stroke="#A8A29E" stroke-width="1"/>
-  <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="44" x2="48" y1="454" y2="454" stroke="#A8A29E"/>
-    <text x="38" y="454" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="44" x2="48" y1="314.67" y2="314.67" stroke="#A8A29E"/>
-    <text x="38" y="314.67" text-anchor="end" dominant-baseline="middle">1</text>
-    <line x1="44" x2="48" y1="175.33" y2="175.33" stroke="#A8A29E"/>
-    <text x="38" y="175.33" text-anchor="end" dominant-baseline="middle">2</text>
-    <line x1="44" x2="48" y1="36" y2="36" stroke="#A8A29E"/>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Defaults</text>
+  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="317.33" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="38" y="176.67" text-anchor="end" dominant-baseline="middle">2</text>
     <text x="38" y="36" text-anchor="end" dominant-baseline="middle">3</text>
-    <line x1="156.67" x2="156.67" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="156.67" y="468" text-anchor="middle" font-size="10" data-full-label="alpha">alpha</text>
-    <line x1="374" x2="374" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="beta">beta</text>
-    <line x1="591.33" x2="591.33" y1="454" y2="458" stroke="#A8A29E"/>
     <text x="591.33" y="468" text-anchor="middle" font-size="10" data-full-label="gamma">gamma</text>
   </g>
   <g>
-    <path d="M120.67 454 L120.67 316.67 Q120.67 314.67 122.67 314.67 L190.67 314.67 Q192.67 314.67 192.67 316.67 L192.67 454 Z" fill="#2B6CB0" data-x="alpha" data-series="value" data-y="1"/>
-    <path d="M338 454 L338 177.33 Q338 175.33 340 175.33 L408 175.33 Q410 175.33 410 177.33 L410 454 Z" fill="#2B6CB0" data-x="beta" data-series="value" data-y="2"/>
-    <path d="M555.33 454 L555.33 38 Q555.33 36 557.33 36 L625.33 36 Q627.33 36 627.33 38 L627.33 454 Z" fill="#2B6CB0" data-x="gamma" data-series="value" data-y="3"/>
+    <path d="M120.67 458 L120.67 320.33 Q120.67 317.33 123.67 317.33 L189.67 317.33 Q192.67 317.33 192.67 320.33 L192.67 458 Z" fill="#3B82F6" data-x="alpha" data-series="value" data-y="1"/>
+    <path d="M338 458 L338 179.67 Q338 176.67 341 176.67 L407 176.67 Q410 176.67 410 179.67 L410 458 Z" fill="#3B82F6" data-x="beta" data-series="value" data-y="2"/>
+    <path d="M555.33 458 L555.33 39 Q555.33 36 558.33 36 L624.33 36 Q627.33 36 627.33 39 L627.33 458 Z" fill="#3B82F6" data-x="gamma" data-series="value" data-y="3"/>
   </g>
   <g>
-    <text x="156.67" y="306.67" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="alpha">1</text>
-    <text x="374" y="167.33" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="beta">2</text>
-    <text x="591.33" y="28" text-anchor="middle" font-size="11" font-weight="500" fill="#1C1917" data-value-label="gamma">3</text>
+    <text x="156.67" y="309.33" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="alpha">1</text>
+    <text x="374" y="168.67" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="beta">2</text>
+    <text x="591.33" y="28" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="gamma">3</text>
   </g>
 </svg>

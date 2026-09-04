@@ -32,7 +32,6 @@ import {
 import { textWidth } from "./text.js";
 import {
   AREA_OPACITY,
-  AXIS,
   BAR_GAP_FEW,
   BAR_GAP_MANY,
   BAR_LABEL_INSIDE_H,
@@ -44,7 +43,8 @@ import {
   END_LABEL_MIN_SEP,
   END_LABEL_SERIES_MAX,
   GROUP_GAP_PX,
-  HAIRLINE,
+  HAIRLINE_OPACITY,
+  INK,
   LABEL_ROTATE_DEG,
   LINE_POINT_R,
   LINE_STROKE,
@@ -52,7 +52,7 @@ import {
   POINT_SKIP_AFTER,
   SCATTER_OPACITY,
   SCATTER_R,
-  TICK_MARK,
+  STRUCTURE_OPACITY,
   TICK_TEXT_GAP,
   TITLE_BASELINE,
   TYPE,
@@ -376,7 +376,12 @@ function drawGridAndAxes(prepared: Prepared): string[] {
     const gridTicks = interiorGridTicks(yTicks, plot.bottom);
     if (gridTicks.length > 0) {
       lines.push(
-        `  <g ${attrs({ fill: "none", stroke: HAIRLINE, "stroke-width": 1 })}>`,
+        `  <g ${attrs({
+          fill: "none",
+          stroke: INK,
+          "stroke-opacity": HAIRLINE_OPACITY,
+          "stroke-width": 1,
+        })}>`,
       );
       for (const tick of gridTicks) {
         lines.push(
@@ -394,9 +399,10 @@ function drawGridAndAxes(prepared: Prepared): string[] {
 
   lines.push(
     `  <path ${attrs({
-      d: `M${fmtPx(plot.left)} ${fmtPx(plot.top)} L${fmtPx(plot.left)} ${fmtPx(plot.bottom)} L${fmtPx(plot.right)} ${fmtPx(plot.bottom)}`,
+      d: `M${fmtPx(plot.left)} ${fmtPx(plot.bottom)} L${fmtPx(plot.right)} ${fmtPx(plot.bottom)}`,
       fill: "none",
-      stroke: AXIS,
+      stroke: INK,
+      "stroke-opacity": STRUCTURE_OPACITY,
       "stroke-width": 1,
     })}/>`,
   );
@@ -413,7 +419,8 @@ function drawGridAndAxes(prepared: Prepared): string[] {
         x2: fmtPx(plot.right),
         y1: fmtPx(zeroTick.pos),
         y2: fmtPx(zeroTick.pos),
-        stroke: AXIS,
+        stroke: INK,
+        "stroke-opacity": STRUCTURE_OPACITY,
         "stroke-width": 1,
       })}/>`,
     );
@@ -428,15 +435,6 @@ function drawGridAndAxes(prepared: Prepared): string[] {
   );
   for (const tick of yTicks) {
     lines.push(
-      `    <line ${attrs({
-        x1: fmtPx(plot.left - TICK_MARK),
-        x2: fmtPx(plot.left),
-        y1: fmtPx(tick.pos),
-        y2: fmtPx(tick.pos),
-        stroke: AXIS,
-      })}/>`,
-    );
-    lines.push(
       `    <text ${attrs({
         x: fmtPx(plot.left - TICK_TEXT_GAP),
         y: fmtPx(tick.pos),
@@ -446,15 +444,6 @@ function drawGridAndAxes(prepared: Prepared): string[] {
     );
   }
   for (const tick of xTicks) {
-    lines.push(
-      `    <line ${attrs({
-        x1: fmtPx(tick.pos),
-        x2: fmtPx(tick.pos),
-        y1: fmtPx(plot.bottom),
-        y2: fmtPx(plot.bottom + TICK_MARK),
-        stroke: AXIS,
-      })}/>`,
-    );
     if (!tick.show) {
       continue;
     }
@@ -476,7 +465,7 @@ function drawGridAndAxes(prepared: Prepared): string[] {
       lines.push(
         `    <text ${attrs({
           x: fmtPx(tick.pos),
-          y: fmtPx(plot.bottom + TICK_MARK + TYPE.tick.size),
+          y: fmtPx(plot.bottom + TYPE.tick.size),
           "text-anchor": "middle",
           "font-size": TYPE.tick.size,
           "data-full-label": tick.label,
