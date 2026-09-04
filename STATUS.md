@@ -1,18 +1,31 @@
-# Markvis 2.0 — Status
+# Markvis 2.0 - Status
+
+Updated: 2026-09-04 (Architect)
+Workdir: /workspace/markvis
+Branch: v2
+
+## Phase A checklist
+
+1. [x] Baseline green (Node 20, pnpm test) — commit 0210954
+2. [ ] Public contract typed
+3. [ ] Modern module shape + example proof
+4. [ ] Chart render boundary
+5. [ ] apps/playground local
+6. [ ] In-repo docs match code
 
 ## Current unit
-U1: In /workspace/markvis, pnpm install + make pnpm test pass on Node 20. Fix only install/test blockers. No types/ESM yet. Proof: pnpm test exit 0; PR if tree changed; update STATUS.md.
 
-## Checklist
-1. [x] Baseline green on Node 20+
-2. [ ] Public contract typed
-3. [ ] Modern module shape
-4. [ ] Chart boundary
-5. [ ] Docs match code
+U2 - Public contract typed: Add TypeScript (.d.ts or .ts) for the plugin entry and fence options (d3 | d3node, layout, render, size/style, bar/line/pie). Types must match runtime. Do not do ESM migration or playground in this unit. Proof: `tsc --no-Emit` (or equivalent) clean; existing pnpm test still passes. Run via grok only; no large code in channel.
 
-## U1 notes
-- Node v20.19.2; package manager 9.15.9
-- Updated __tests__/index.js golden HTML for current d3/jsdom SVG output (axis attrs + pie colors)
-- Fixed examples/basic.js require path (drop .js ext for xo)
-- Refreshed lockfile from install
-- PR: TBD
+## Done
+
+U1 — baseline green on Node 20
+- Node v20.19.2; pnpm 9.15.9
+- Proof: `pnpm install` exit 0; `pnpm test` exit 0 (jest 2/2 + xo)
+- Golden HTML refreshed for current d3/jsdom SVG; xo require path in examples/basic.js; lockfile refresh
+- Commits: 0210954 on v2; d716ab3 + c5507d0 on u1-baseline-node20
+- PR: https://github.com/geekplux/markvis/pull/16 (base: master)
+
+## Next
+
+U3 module shape, U4 chart boundary, U5 playground, U6 docs.
