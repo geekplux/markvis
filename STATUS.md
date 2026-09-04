@@ -1,10 +1,10 @@
 # STATUS.md
 
 ## Snapshot
-- tip: 8ac5b57 (origin/v2)
+- tip: 46c969b (origin/v2)
 - gallery.html: regenerated from examples/out
-- Active: W14a scale fix done — hold B1 for GeekPlux/Designer sign-off
-- Next: sign-off 01 02 05 09 17 + gallery vs visual-spec; then W14b B1(+B2)
+- Active: W14a done — hold B1 for GeekPlux aesthetic veto (Designer OK)
+- Next: GeekPlux OK (or ugly+fix) then W14b B1(+B2)
 
 ## Waves
 - [x] W0-W12 stop-gate
@@ -14,7 +14,7 @@
 - [ ] W14b B1-B8
 
 ## Active
-W14a complete including Designer full-USD path for ex17. Hold B1 for sign-off.
+W14a complete. Designer OK on 01/02/05/09/17 + gallery. Empty wake1 — waiting GeekPlux aesthetic veto before B1(+B2).
 
 ## Commands (W14a scale fix)
 ```
@@ -31,4 +31,4 @@ pnpm markvis check examples/invalid
 ```
 
 ## W14a stop
-spot-check 01 02 05 09 17 vs visual-spec; full-USD one scale on 17.
+Designer OK; GeekPlux aesthetic veto open.
