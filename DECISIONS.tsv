@@ -28,3 +28,4 @@ date	wave	decision
 2026-09-04	W12	docs/landing.md: what/why-not-Mermaid/try/three svg refs
 2026-09-04	W12	gallery CLI writes examples/gallery.html from examples/out; a11y title/desc + Okabe–Ito locked; 1000-row check+render budget 500ms (measured ~5–11ms); leave mcp/compat-legacy/PR-comment SVG
 2026-09-04	W12	stop-gate met: gallery+landing+README; acceptance green; park mcp/compat-legacy/PR-SVG; @GeekPlux
+2026-09-04	W14	START overlay; sync d41795f; GOAL W14a+W14b; assign Designer visual-spec
