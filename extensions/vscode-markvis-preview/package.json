@@ -1,0 +1,22 @@
+{
+  "name": "markvis-preview",
+  "displayName": "markvis preview",
+  "description": "Render markvis chart / markvis / vis fences as SVG in the Markdown preview. Sideload only — not published to the Marketplace.",
+  "version": "0.0.1",
+  "publisher": "geekplux",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Markdown"],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "markdown.markdownItPlugins": true,
+    "markdown.previewStyles": ["./preview.css"]
+  },
+  "scripts": {
+    "compile": "esbuild src/extension.ts --bundle --platform=node --format=cjs --outfile=dist/extension.js --external:vscode"
+  }
+}

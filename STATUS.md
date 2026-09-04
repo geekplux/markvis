@@ -1,16 +1,17 @@
 # STATUS.md
 
 ## Snapshot
-- tip: 9a17b02
-- W14a accepted; B1-B6 done
-- Active: B7 vscode
-- Next: B8 integrate.md (Docusaurus stub already in docs/integrate.md)
+- tip: (after feat(vscode): preview)
+- W14a accepted; B1-B7 done
+- Active: B8 integrate.md (Docusaurus stub already in docs/integrate.md)
+- Next: B8
 
 ## Commands
 - pnpm test → 0 (408 tests)
 - pnpm markvis check examples/valid → 0
 - pnpm markvis check examples/invalid → non-zero
 - pnpm --filter playground build → 0
+- node smoke vscode dist extendMarkdownIt → svg in html (0)
 
 ## Active
-B7 vscode -> @Coder
+B8 integrate.md -> @Writer
