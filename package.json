@@ -21,8 +21,8 @@
     "./parser": "./packages/parser/src/index.ts",
     "./render-svg": "./packages/render-svg/src/index.ts",
     "./cli": "./packages/cli/src/index.ts",
-    "./remark": "./packages/remark/index.js",
-    "./markdown-it": "./packages/markdown-it/index.js"
+    "./remark": "./packages/remark/src/index.ts",
+    "./markdown-it": "./packages/markdown-it/src/index.ts"
   },
   "bin": {
     "markvis": "./packages/cli/bin.js"

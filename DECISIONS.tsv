@@ -13,3 +13,5 @@ date	wave	decision
 2026-09-04	W5	accepted 72b9fe5; schema from IR + drift check; open W6 render-svg
 2026-09-04	W6	accepted 2807f3d; 52 SVG snapshots; open W7 CLI
 2026-09-04	W7	CLI check/render/preview/stats/to-table; preview is local HTML split view; no playground
+2026-09-04	W7	accepted 319094c; check/render/preview/stats/to-table; open W8 hosts
+2026-09-04	W8	remark + markdown-it thin adapters over parser/render-svg; valid HTML figure = svg + figcaption + table; invalid = table + one error line; no playground

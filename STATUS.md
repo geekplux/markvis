@@ -6,7 +6,7 @@ previous U2 cancelled; legacy modernization is not 2.0.
 
 - Workdir: /workspace/markvis
 - Branch: v2
-- Updated: 2026-09-04 (Coder) W7 CLI
+- Updated: 2026-09-04 (Coder) W8 hosts
 
 ## Waves
 
@@ -18,14 +18,14 @@ previous U2 cancelled; legacy modernization is not 2.0.
 - [x] W5 schema (schema/markvis-2.schema.json from ChartIRSchema; pnpm schema:check)
 - [x] W6 render-svg
 - [x] W7 CLI (markvis check | render | preview | stats | to-table)
-- [ ] W8 宿主
+- [x] W8 宿主 (remark + markdown-it adapters; HTML has svg and table)
 - [ ] W9 playground
 - [ ] W10 AI 面
 - [ ] W11 工程硬化
 - [ ] W12 加厚
 
 ## Active
-W8 -> Coder (remark + markdown-it hosts). Writer holds W10 docs.
+W9 -> Coder (playground). Writer holds W10 docs.
 
 ## W0 proof
 
@@ -197,6 +197,45 @@ Commands:
 - `node -v` → v20.19.2 (exit 0)
 - `pnpm -v` → 9.15.9 (exit 0)
 - `pnpm test` → exit 0 (184 tests)
+- `pnpm markvis check examples/valid` → exit 0 (52 ok)
+- `pnpm markvis check examples/invalid` → exit 1 (0 ok, 18 error)
+- `pnpm markvis stats examples/valid/01-bar-basic.md` → exit 0 (`bar 3 120 180 -`)
+- `rg "d3-node|markvis-bar|markvis-line|markvis-pie" packages apps` → exit 1 (no matches)
+- `rg "from ['\"]legacy|require\\(['\"]legacy" packages` → exit 1 (no matches)
+
+## W8 proof
+
+Commit: pending
+Message: feat(hosts): add remark and markdown-it adapters
+Parent: fa3c31afa9f90e9cf854f5cecbd0d79cabe459e8
+
+`@markvis/remark` and `@markvis/markdown-it`: thin adapters over `@markvis/parser` + `@markvis/render-svg`. Valid charts emit `figure` with SVG, `figcaption` (title), and data table. Invalid charts emit recovered table plus one error line with the stable code; rows are not dropped. Tags `chart` / `markvis` / `vis` and the HTML comment + GFM form are handled. Without the plugin, fences stay code blocks. Vitest covers both hosts against 52 valid + 18 invalid fixtures. No playground. No d3/legacy.
+
+Files:
+
+package.json
+packages/markdown-it/package.json
+packages/markdown-it/src/html.ts
+packages/markdown-it/src/index.ts
+packages/markdown-it/src/plugin.ts
+packages/markdown-it/test/markdown-it.test.ts
+packages/markdown-it/tsconfig.json
+packages/remark/package.json
+packages/remark/src/html.ts
+packages/remark/src/index.ts
+packages/remark/src/plugin.ts
+packages/remark/test/remark.test.ts
+packages/remark/tsconfig.json
+pnpm-lock.yaml
+vitest.config.ts
+STATUS.md
+DECISIONS.tsv
+
+Commands:
+
+- `node -v` → v20.19.2 (exit 0)
+- `pnpm -v` → 9.15.9 (exit 0)
+- `pnpm test` → exit 0 (341 tests)
 - `pnpm markvis check examples/valid` → exit 0 (52 ok)
 - `pnpm markvis check examples/invalid` → exit 1 (0 ok, 18 error)
 - `pnpm markvis stats examples/valid/01-bar-basic.md` → exit 0 (`bar 3 120 180 -`)

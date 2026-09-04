@@ -16,6 +16,12 @@ export default defineConfig({
       "@markvis/cli": fileURLToPath(
         new URL("./packages/cli/src/index.ts", import.meta.url),
       ),
+      "@markvis/remark": fileURLToPath(
+        new URL("./packages/remark/src/index.ts", import.meta.url),
+      ),
+      "@markvis/markdown-it": fileURLToPath(
+        new URL("./packages/markdown-it/src/index.ts", import.meta.url),
+      ),
     },
   },
   test: {
@@ -27,6 +33,10 @@ export default defineConfig({
       "packages/render-svg/test/**/*.test.ts",
       "packages/cli/src/**/*.test.ts",
       "packages/cli/test/**/*.test.ts",
+      "packages/remark/src/**/*.test.ts",
+      "packages/remark/test/**/*.test.ts",
+      "packages/markdown-it/src/**/*.test.ts",
+      "packages/markdown-it/test/**/*.test.ts",
     ],
     exclude: ["**/node_modules/**", "legacy/**"],
   },
