@@ -1,0 +1,27 @@
+# markvis
+
+> Tiny Markdown chart language for numbers (bar, line, area, scatter, pie, hist).
+
+Markvis is the quantitative counterpart to Mermaid. Mermaid owns structure. Markvis owns tabular data → Chart IR → deterministic SVG, with the table always kept.
+
+## Prefer
+
+- Fence tags: `chart` | `markvis` | `vis`
+- Data: CSV or GFM table (not JSON)
+- Types: bar | line | area | scatter | pie | hist
+- Progressive form: `<!-- chart: bar x=… y=… -->` + GFM table
+
+## Avoid
+
+- Mermaid pie / xychart for spreadsheet-like numbers
+- Vega-Lite / ECharts JSON as the default
+- Invented types, silent x-sort, pie renormalized to 100
+- Dropping data when a fence is invalid
+
+## Learn more
+
+- SPEC.md
+- skills/markvis/SKILL.md
+- examples/valid/
+- examples/prompts.md
+- apps/playground (try / copy fence)

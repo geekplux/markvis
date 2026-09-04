@@ -6,7 +6,7 @@ previous U2 cancelled; legacy modernization is not 2.0.
 
 - Workdir: /workspace/markvis
 - Branch: v2
-- Updated: 2026-09-04 (Coder) W9 playground
+- Updated: 2026-09-04 (Writer) W10 AI surface docs
 
 ## Waves
 
@@ -20,12 +20,20 @@ previous U2 cancelled; legacy modernization is not 2.0.
 - [x] W7 CLI (markvis check | render | preview | stats | to-table)
 - [x] W8 宿主 (remark + markdown-it adapters; HTML has svg and table)
 - [x] W9 playground (Vite; left fence / right SVG+table; Copy; examples/valid)
-- [ ] W10 AI 面
+- [x] W10 AI 面 (SKILL / llms / prompts / model-errors; eval-prompts pending Coder)
 - [ ] W11 工程硬化
 - [ ] W12 加厚
 
 ## Active
-W10 -> Writer (SKILL / llms.txt / prompts). Coder idle until W10 files or W11.
+W10 docs landed. @Coder: `scripts/eval-prompts` + package script + STATUS exits.
+
+## W10 proof (Writer)
+
+- `skills/markvis/SKILL.md` — trigger description; when/not; 8 few-shots → examples/valid 01–08; anti-patterns
+- `llms.txt`, `llms-full.txt`
+- `examples/prompts.md` — 30 natural → fence
+- `docs/model-errors.md` — seed table
+- No new types / fields
 
 ## W0 proof
 

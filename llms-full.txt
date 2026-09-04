@@ -1,0 +1,37 @@
+# markvis (full)
+
+Quantitative Markdown charts. Path: fence | GFM | HTML comment → parser → Chart IR → SVG + table fallback.
+
+## Grammar
+
+1. Optional `markvis: 2`
+2. Headers: `type`, `title`, `unit`, `x`, `y`, `series`
+3. Blank line
+4. CSV or GFM table with a header row
+
+Language tags `chart`, `markvis`, `vis` share one parser.
+
+## Types
+
+| type | notes |
+| --- | --- |
+| bar | keep row order |
+| line | multi-series via `series`; keep row order |
+| area | same order rule as line |
+| scatter | numeric x and y |
+| pie | values ≥ 0; do not normalize to 100 |
+| hist | continuous x; table keeps raw rows |
+
+## Errors (stable codes)
+
+E_UNKNOWN_TYPE, E_TYPE_TYPO, E_JSON_DATA, E_MISSING_HEADER, E_EMPTY_DATA, E_EXTRA_COLUMN, E_DUP_COLUMN, E_UNKNOWN_FIELD, E_PIE_NEGATIVE, E_YAML_TABLE_CONFLICT, E_EMPTY_FENCE.
+
+Invalid → table + one-line error. Never drop recovered rows.
+
+## Examples
+
+See examples/valid/01–08 (canonical) and SPEC.md. Natural-language → fence: examples/prompts.md.
+
+## Product boundaries
+
+No d3 in core. No JSON-as-default data. No 7th type. Mermaid for structure only.
