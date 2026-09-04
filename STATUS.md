@@ -1,17 +1,15 @@
 # STATUS.md
 
 ## Snapshot
-- tip: 11b6d26
-- GeekPlux: Pass B REJECTED (still ugly) — Unit B chrome landed for review
-- Locked: default SVG canvas TRANSPARENT (no paper fill) for MD hosts
-- Active: Coder Unit B — cartesian/pie use INK + HAIRLINE_OPACITY 0.10 / STRUCTURE_OPACITY 0.28
-- No README bake
+- tip: 6305664
+- W14a ACCEPTED by GeekPlux (Pass C transparent Ledger)
+- Active: W14b B1(+B2) browser + drop-in
+
+## Waves
+- [x] W14a Ledger transparent canvas
+- [ ] W14b B1 packages/browser
+- [ ] W14b B2 drop-in demo
+- [ ] W14b B3-B8
 
 ## Active
-Coder: Ledger transparent canvas in render-svg (docs/visual-spec.md). No axis box, no tick marks. Hairline horizontal grid. Structure baseline / pie separators / leaders.
-
-## Last commands
-- `pnpm exec vitest run -u` exit 0 (391)
-- `pnpm markvis render examples/valid -o examples/out` exit 0
-- `pnpm markvis gallery examples/out -o examples/gallery.html` exit 0
-- `pnpm test` exit 0 (391)
+B1(+B2) -> @Coder
