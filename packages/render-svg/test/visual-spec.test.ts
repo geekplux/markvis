@@ -97,7 +97,7 @@ describe("visual-spec tokens", () => {
     }
   });
 
-  it("17 long labels rotate −55° without ellipsis; ticks compact; values full", () => {
+  it("17 long labels rotate −55° without ellipsis; full-USD scale", () => {
     const svg = svgOf("17-bar-long-labels.md");
     expect(svg).toContain("rotate(-55");
     expect(svg).not.toContain("…");
@@ -105,22 +105,26 @@ describe("visual-spec tokens", () => {
     expect(svg).toContain("APAC partner enablement and training program");
     expect(svg).toContain("Legacy platform decommission wave 2");
     expect(svg).toContain("420,000");
+    expect(svg).toContain("200,000");
+    expect(svg).toContain("400,000");
+    expect(svg).toContain(" · USD</tspan>");
+    expect(svg).not.toContain(" · USD k");
     expect(svg).not.toContain(">200k<");
     expect(svg).not.toContain(">400k<");
-    expect(svg).toContain(" · USD k");
   });
 });
 
 describe("compact ticks", () => {
-  it("uses k when span ≥ 10,000 and ticks are round thousands", () => {
+  it("prefers full numbers over auto-k so title/ticks/values share one scale", () => {
     const ticks = [0, 200000, 400000, 600000];
     const compact = compactScale(ticks, 600000);
-    expect(compact).toEqual({ divisor: 1000, suffix: "k" });
+    expect(compact).toBeNull();
     expect(ticks.map((n) => formatTick(n, compact))).toEqual([
       "0",
-      "200",
-      "400",
-      "600",
+      "200,000",
+      "400,000",
+      "600,000",
     ]);
+    expect(formatTick(420000, null)).toBe("420,000");
   });
 });

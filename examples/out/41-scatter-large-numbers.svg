@@ -2,41 +2,41 @@
   <title id="mv-2296686ee285e589-title">Population vs GDP</title>
   <desc id="mv-2296686ee285e589-desc">scatter chart. Population vs GDP. x=pop. y=gdp. 3 rows.</desc>
   <rect width="100%" height="100%" fill="#F7F4EF"/>
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Population vs GDP<tspan font-size="12" font-weight="400" fill="#78716C"> · M</tspan></text>
+  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="600" fill="#1C1917">Population vs GDP</text>
   <g fill="none" stroke="#E7E5E4" stroke-width="1">
-    <line x1="79.6" x2="696" y1="432" y2="432"/>
-    <line x1="79.6" x2="696" y1="336" y2="336"/>
-    <line x1="79.6" x2="696" y1="240" y2="240"/>
-    <line x1="79.6" x2="696" y1="144" y2="144"/>
-    <line x1="79.6" x2="696" y1="48" y2="48"/>
+    <line x1="129.2" x2="696" y1="432" y2="432"/>
+    <line x1="129.2" x2="696" y1="336" y2="336"/>
+    <line x1="129.2" x2="696" y1="240" y2="240"/>
+    <line x1="129.2" x2="696" y1="144" y2="144"/>
+    <line x1="129.2" x2="696" y1="48" y2="48"/>
   </g>
-  <path d="M79.6 48 L79.6 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
-  <line x1="79.6" x2="696" y1="336" y2="336" stroke="#A8A29E" stroke-width="1"/>
+  <path d="M129.2 48 L129.2 432 L696 432" fill="none" stroke="#A8A29E" stroke-width="1"/>
+  <line x1="129.2" x2="696" y1="336" y2="336" stroke="#A8A29E" stroke-width="1"/>
   <g fill="#57534E" font-size="10" font-weight="400">
-    <line x1="75.6" x2="79.6" y1="432" y2="432" stroke="#A8A29E"/>
-    <text x="67.6" y="432" text-anchor="end" dominant-baseline="middle">-100,000</text>
-    <line x1="75.6" x2="79.6" y1="336" y2="336" stroke="#A8A29E"/>
-    <text x="67.6" y="336" text-anchor="end" dominant-baseline="middle">0</text>
-    <line x1="75.6" x2="79.6" y1="240" y2="240" stroke="#A8A29E"/>
-    <text x="67.6" y="240" text-anchor="end" dominant-baseline="middle">100,000</text>
-    <line x1="75.6" x2="79.6" y1="144" y2="144" stroke="#A8A29E"/>
-    <text x="67.6" y="144" text-anchor="end" dominant-baseline="middle">200,000</text>
-    <line x1="75.6" x2="79.6" y1="48" y2="48" stroke="#A8A29E"/>
-    <text x="67.6" y="48" text-anchor="end" dominant-baseline="middle">300,000</text>
-    <line x1="87.6" x2="87.6" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="87.6" y="448" text-anchor="middle" font-size="10" data-full-label="-5,000,000">-5,000,000</text>
-    <line x1="287.73" x2="287.73" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="287.73" y="448" text-anchor="middle" font-size="10" data-full-label="0">0</text>
-    <line x1="487.87" x2="487.87" y1="432" y2="436" stroke="#A8A29E"/>
-    <text x="487.87" y="448" text-anchor="middle" font-size="10" data-full-label="5,000,000">5,000,000</text>
+    <line x1="125.2" x2="129.2" y1="432" y2="432" stroke="#A8A29E"/>
+    <text x="117.2" y="432" text-anchor="end" dominant-baseline="middle">-100,000,000,000</text>
+    <line x1="125.2" x2="129.2" y1="336" y2="336" stroke="#A8A29E"/>
+    <text x="117.2" y="336" text-anchor="end" dominant-baseline="middle">0</text>
+    <line x1="125.2" x2="129.2" y1="240" y2="240" stroke="#A8A29E"/>
+    <text x="117.2" y="240" text-anchor="end" dominant-baseline="middle">100,000,000,000</text>
+    <line x1="125.2" x2="129.2" y1="144" y2="144" stroke="#A8A29E"/>
+    <text x="117.2" y="144" text-anchor="end" dominant-baseline="middle">200,000,000,000</text>
+    <line x1="125.2" x2="129.2" y1="48" y2="48" stroke="#A8A29E"/>
+    <text x="117.2" y="48" text-anchor="end" dominant-baseline="middle">300,000,000,000</text>
+    <line x1="137.2" x2="137.2" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="137.2" y="448" text-anchor="middle" font-size="10" data-full-label="-5,000,000">-5,000,000</text>
+    <line x1="320.8" x2="320.8" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="320.8" y="448" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <line x1="504.4" x2="504.4" y1="432" y2="436" stroke="#A8A29E"/>
+    <text x="504.4" y="448" text-anchor="middle" font-size="10" data-full-label="5,000,000">5,000,000</text>
     <line x1="688" x2="688" y1="432" y2="436" stroke="#A8A29E"/>
     <text x="688" y="448" text-anchor="middle" font-size="10" data-full-label="10,000,000">10,000,000</text>
   </g>
   <text x="12" y="240" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C" transform="rotate(-90 12 240)">gdp</text>
-  <text x="387.8" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">pop</text>
+  <text x="412.6" y="468" text-anchor="middle" font-size="11" font-weight="500" fill="#78716C">pop</text>
   <g>
-    <circle cx="327.76" cy="292.8" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="1000000" data-y="45000000000" data-series="gdp"/>
-    <circle cx="627.96" cy="134.4" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="8500000" data-y="210000000000" data-series="gdp"/>
-    <circle cx="307.75" cy="324.48" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="500000" data-y="12000000000" data-series="gdp"/>
+    <circle cx="357.52" cy="292.8" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="1000000" data-y="45000000000" data-series="gdp"/>
+    <circle cx="632.92" cy="134.4" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="8500000" data-y="210000000000" data-series="gdp"/>
+    <circle cx="339.16" cy="324.48" r="3" fill="#2B6CB0" fill-opacity="0.85" stroke="none" data-x="500000" data-y="12000000000" data-series="gdp"/>
   </g>
 </svg>

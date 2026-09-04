@@ -110,29 +110,19 @@ export type CompactScale = {
 };
 
 /**
- * Compact `k`/`M` only when the axis span ≥ 10,000 and every tick is a
- * round thousand. Ticks then show the divided number; suffix goes on the title.
+ * Prefer full numbers + authored unit over auto-k/M.
+ * Title unit, y-ticks, and bar value labels share one scale: ticks use
+ * `formatNumber` (e.g. `200,000`), title keeps the authored unit (`USD`),
+ * values stay full (`420,000`). Auto-appending `k`/`M` is disabled — it made
+ * title/ticks say `USD k` / `200` while labels stayed `420,000`.
+ * `formatTick` / `unitWithCompact` still honor an explicit CompactScale.
  */
 export function compactScale(
-  ticks: number[],
-  span: number,
+  _ticks: number[],
+  _span: number,
 ): CompactScale | null {
-  if (!(span >= COMPACT_SPAN) || ticks.length === 0) {
-    return null;
-  }
-  const allRoundThousand = ticks.every(
-    (tick) => Math.abs(tick % 1000) < 1e-9,
-  );
-  if (!allRoundThousand) {
-    return null;
-  }
-  const allRoundMillion = ticks.every(
-    (tick) => Math.abs(tick % 1e6) < 1e-9,
-  );
-  if (span >= 1e6 && allRoundMillion) {
-    return { divisor: 1e6, suffix: "M" };
-  }
-  return { divisor: 1000, suffix: "k" };
+  void COMPACT_SPAN;
+  return null;
 }
 
 export function formatTick(n: number, compact: CompactScale | null): string {

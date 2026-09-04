@@ -85,8 +85,8 @@ No clipped ticks. No label–label collision: if category labels would overlap a
 ## Numbers
 
 - Integer ≥ 1000 → thousands separators: `1,200` not `1200`, not `1.2k`, not `200k`.
-- Tick formatter: same rule. Compact `k`/`M` only when the axis span ≥ 10,000 and every tick is a round thousand; then unit in the title (`USD k`), ticks as `0 / 200 / 400`.
-- Value labels on bars: full separated number (`420,000`), unit only in title.
+- Tick formatter: same rule. Prefer full numbers + authored unit over auto-k/M — title `· USD`, ticks `0 / 200,000 / 400,000`, value labels `420,000`. Do not invent `USD k` / divided ticks when the fixture unit is `USD`. Authored units like `USD k` stay as written.
+- Value labels on bars: full separated number (`420,000`), unit only in title. Title, ticks, and values share one scale.
 
 ---
 
