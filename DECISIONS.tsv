@@ -15,3 +15,4 @@ date	wave	decision
 2026-09-04	W7	CLI check/render/preview/stats/to-table; preview is local HTML split view; no playground
 2026-09-04	W7	accepted 319094c; check/render/preview/stats/to-table; open W8 hosts
 2026-09-04	W8	remark + markdown-it thin adapters over parser/render-svg; valid HTML figure = svg + figcaption + table; invalid = table + one error line; no playground
+2026-09-04	W8	accepted 5ff0f46; remark + markdown-it hosts; open W9 playground

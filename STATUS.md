@@ -205,7 +205,7 @@ Commands:
 
 ## W8 proof
 
-Commit: pending
+Commit: 5ff0f46d847ba60490ff7fa3aaedb5c46d8d2016
 Message: feat(hosts): add remark and markdown-it adapters
 Parent: fa3c31afa9f90e9cf854f5cecbd0d79cabe459e8
 
