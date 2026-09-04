@@ -31,3 +31,4 @@ date	wave	decision
 2026-09-04	W14	START overlay; sync d41795f; GOAL W14a+W14b; assign Designer visual-spec
 2026-09-04	W14a	visual-spec.md is the default SVG look; no theme field; tokens only
 2026-09-04	W14a	Coder: packages/render-svg implements visual-spec; paper #F7F4EF; dialed Okabe–Ito; compact k/M on title not ticks; 01 02 05 09 17 match spec; snapshots+gallery regenerated; no d3; no playground rebuild
+2026-09-04	W14a	done tip 4e34b50/fb9812a (render dac55e0, spec cc8eeb4); hold B1 until GeekPlux/Designer sign-off of 01 02 05 09 17 + gallery vs visual-spec; wake1 loop
