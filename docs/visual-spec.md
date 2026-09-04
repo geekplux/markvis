@@ -152,11 +152,11 @@ Keep title, desc, role=img, labelledby/describedby, data-markvis, stable ids, se
 
 ## Out of scope
 
-theme field, dark mode, paper / full-frame canvas fill, animation, tooltips, new types, marketing chrome, HTML posters, d3, vertical grids, axis boxes, tick lines, spline interpolation.
+`theme:`, dark mode, paper / full-frame canvas fill, animation, tooltips, new types, marketing chrome, HTML posters, d3, vertical grids, axis boxes, tick lines, spline interpolation.
 
 ## Done when
 
 1. designer-language.md and this file match Ledger transparent canvas.
 2. Acceptance SVGs pass measured critique with no paper rect.
 3. Tests green and gallery regenerated.
-4. Owner has not rejected the five.
+4. Product owner has not rejected the five.
