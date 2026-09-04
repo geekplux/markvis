@@ -1,10 +1,16 @@
 # STATUS.md
 
 ## Snapshot
-- tip: fc4da8a
-- W14a accepted; B1-B4 done
-- Active: B5/B6 host packages + examples/hosts
-- Next: B7 vscode then B8 integrate.md
+- tip: (pending feat(hosts) commit)
+- W14a accepted; B1-B6 done
+- Active: B7 vscode
+- Next: B8 integrate.md (Docusaurus stub already in docs/integrate.md)
+
+## Commands
+- pnpm test → 0 (408 tests)
+- pnpm markvis check examples/valid → 0
+- pnpm markvis check examples/invalid → non-zero
+- pnpm --filter playground build → 0
 
 ## Active
-B5/B6 -> @Coder
+B7 vscode -> @Coder

@@ -3,12 +3,17 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "description": "Thin remark adapter over parser and render-svg (W8)",
+  "license": "MIT",
+  "description": "Thin remark adapter: chart fences to SVG + table",
   "exports": {
     ".": "./src/index.ts"
   },
   "main": "./src/index.ts",
   "types": "./src/index.ts",
+  "files": [
+    "src",
+    "README.md"
+  ],
   "dependencies": {
     "@markvis/parser": "workspace:*",
     "@markvis/render-svg": "workspace:*"

@@ -46,6 +46,9 @@
   },
   "devDependencies": {
     "@types/node": "^26.4.1",
+    "markdown-it": "^14.1.0",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "tsx": "^4.23.13",
     "typescript": "^7.0.2",
     "vitest": "^5.0.0"
