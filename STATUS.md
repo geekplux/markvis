@@ -34,8 +34,9 @@ W12 thicken in progress. Gallery + a11y + perf budget landed. Left: compat-legac
 
 ## W12 proof (Coder)
 
-Parent: 90d169c
+Commit: 61ad93402efbaa1ad9db0b244d2f38820b503b7e
 Message: feat(cli): generate examples/gallery.html from SVG snapshots
+Parent: 90d169ca958bd5ee343fb8732036ddef7db81bb7
 
 `markvis gallery` reads `examples/out/*.svg` and writes `examples/gallery.html` (inline SVG catalog; `--out` optional, defaults to sibling `gallery.html`). All 52 snapshot SVGs already had non-empty `<title>` and `<desc>`; tests now require that plus Okabe–Ito (not a red-green pair). Optional 1000-row CSV `check`+`render` budget is 500ms (measured ~5–11ms CLI / ~5ms parse+render on Node v20.19.2). Did not add mcp, compat-legacy, or PR-comment SVG. No d3.
 
