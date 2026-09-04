@@ -4,6 +4,35 @@ Read CONSTITUTION.md, VISION.md, and GOAL.md first. They win over this file.
 Branch: v2. Truth on disk only. No Notion. No pstack in chat.
 Coder only via grok -p on branch v2.
 
+## Language frozen (Grok Build — do not reopen)
+
+Language is frozen. Do not add a chart type. Do not add d3.
+
+Types only: `bar` | `line` | `area` | `scatter` | `pie` | `hist`.
+Tags only: `chart` / `markvis` / `vis` → one parser.
+Fields only: `markvis`, `type`, `title`, `unit`, `x`, `y`, `series`.
+Data: CSV or GFM table. No JSON as default data. No JS in a fence.
+`heatmap` / `donut` / stacked-bar-as-type / `treemap` / `sankey` / `map`: NO.
+
+Forbidden in `packages/` and `apps/` (dependencies, imports, tests):
+`d3`, `d3-node`, `markvis-bar`, `markvis-line`, `markvis-pie`,
+`markdown-it-fence`, `babel-preset-es2015`, `jsdom-as-renderer`.
+Do not pull jsdom, Vega-Lite, ECharts, or Observable Plot to render SVG.
+legacy/ may keep old deps. `packages/*` tests must not import `legacy`.
+
+A PR that adds a type or a forbidden dep is rejected.
+Product forks (JSON core, 7th type) default NO — one DECISIONS row, no debate.
+
+CI contract is `.github/workflows/check.yml` and must stay:
+
+    pnpm install
+    pnpm test
+    pnpm markvis check examples/valid
+    pnpm markvis check examples/invalid          # exit must be non-zero
+    pnpm --filter playground build
+
+vitest must keep covering `@markvis/parser`, `@markvis/render-svg`, and `@markvis/cli`.
+
 ## Stack allow / forbid (CONSTITUTION section 2)
 
 允许：
@@ -14,12 +43,14 @@ Coder only via grok -p on branch v2.
 - 文档站级 Markdown 宿主：remark 插件 + markdown-it 插件（薄适配，核心不准绑其中一个）
 - 试用页：Vite + 浏览器里跑同一份 parser 和 render-svg，零后端
 - SVG：手写确定性字符串或最小自研 layout，禁止运行时拉 d3/d3-node/jsdom 才能出图
-- CI 以后：GitHub Actions，先本地能跑同样命令
+- CI：GitHub Actions `.github/workflows/check.yml`；本地必须能跑同样命令
 - 包管理：@markvis/ir @markvis/parser @markvis/render-svg @markvis/cli @markvis/remark @markvis/markdown-it
 - 根包 markvis 只做 re-export 和 CLI bin
 
-禁止出现在 packages/ 和 apps/ 的 dependencies：
+禁止出现在 packages/ 和 apps/ 的 dependencies（加任何一项即拒）：
 d3, d3-node, markvis-bar, markvis-line, markvis-pie, markdown-it-fence, babel-preset-es2015, jsdom-as-renderer
+
+禁止加第 7 种 type。禁止把 d3 当默认渲染器。禁止运行时拉 d3/d3-node/jsdom 才能出图。
 
 legacy/ 可以保留旧依赖，但 packages/* 的测试不准 import legacy。
 
@@ -57,6 +88,8 @@ skills/markvis/SKILL.md
 
 ## Frozen language (CONSTITUTION section 4)
 
+已冻结。禁止加 type。禁止加字段。禁止加 d3。
+
 语言标签：chart / markvis / vis 同一个 parser。
 
 头：
@@ -92,6 +125,7 @@ Coder
 - 最小改动。先测试后实现。parser/renderer 没有测试的 PR 不算完成。
 - 一次一个包。不要同时重构 CLI 和改语法。
 - commit 信息：feat(parser): ... / test(render-svg): ...
+- 禁止加 type。禁止加 d3。禁止改冻结语法。
 - 禁止 force-push master。禁止 npm publish。
 - 跑完必须把命令和退出码写进 STATUS。
 - Grok Build 里非平凡改动才 /poteto-mode。脚手架不必开评审团。

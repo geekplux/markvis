@@ -20,3 +20,5 @@ date	wave	decision
 2026-09-04	W9	accepted 66c27b2; playground build; open W10 AI surface
 2026-09-04	W10	SKILL.md + llms.txt + llms-full.txt + examples/prompts.md (30) + docs/model-errors.md seed; no new types; Coder owns eval-prompts next
 2026-09-04	W10	eval-prompts stubs model emit: extract 30 gold fences from examples/prompts.md and run markvis check; no LLM; no new types
+2026-09-04	W10	accepted aac6b2f / eb043e5; 30 prompts ok; open W11 harden
+2026-09-04	W11	check.yml = install + test + check valid + invalid non-zero + playground build; AGENTS frozen: no new types, no d3; vitest covers parser/render-svg/cli

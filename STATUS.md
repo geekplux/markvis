@@ -6,7 +6,7 @@ previous U2 cancelled; legacy modernization is not 2.0.
 
 - Workdir: /workspace/markvis
 - Branch: v2
-- Updated: 2026-09-04 (Coder) W10 eval-prompts
+- Updated: 2026-09-04 (Coder) W11 harden
 
 ## Waves
 
@@ -21,11 +21,40 @@ previous U2 cancelled; legacy modernization is not 2.0.
 - [x] W8 宿主 (remark + markdown-it adapters; HTML has svg and table)
 - [x] W9 playground (Vite; left fence / right SVG+table; Copy; examples/valid)
 - [x] W10 AI 面 (SKILL / llms / prompts / model-errors; eval-prompts gold-fence check)
-- [ ] W11 工程硬化
+- [x] W11 工程硬化
 - [ ] W12 加厚
 
 ## Active
-W10 closed. Next: W11 工程硬化.
+W11 closed. Next: W12 加厚.
+
+## W11 proof (Coder)
+
+Commit: (recorded after chore)
+Message: chore(ci): add check workflow and freeze AGENTS
+Parent: aac6b2f4846815e13eabf1d5d3084e98b7146415
+
+`.github/workflows/check.yml`: install + `pnpm test` + `check examples/valid` + `check examples/invalid` (must be non-zero) + `pnpm --filter playground build`. Node 20, pnpm 9.15.9. AGENTS.md frozen for Grok Build: no new types, no d3. `scripts/harden.test.ts` locks the CI contract and that vitest covers parser, render-svg, and cli. `docs/best-practices.md` is the human contribution gate. Did not implement W12.
+
+Files:
+
+.github/workflows/check.yml
+AGENTS.md
+docs/best-practices.md
+scripts/harden.test.ts
+STATUS.md
+DECISIONS.tsv
+
+Commands:
+
+- `node -v` → v20.19.2 (exit 0)
+- `pnpm -v` → 9.15.9 (exit 0)
+- `pnpm test` → exit 0 (376 tests)
+- `pnpm markvis check examples/valid` → exit 0 (52 ok)
+- `pnpm markvis check examples/invalid` → exit 1 (0 ok, 18 error)
+- `pnpm markvis stats examples/valid/01-bar-basic.md` → exit 0 (`bar 3 120 180 -`)
+- `pnpm --filter playground build` → exit 0
+- `rg "d3-node|markvis-bar|markvis-line|markvis-pie" packages apps` → exit 1 (no matches)
+- `rg "from ['\"]legacy|require\\(['\"]legacy" packages` → exit 1 (no matches)
 
 ## W10 proof (Writer)
 
