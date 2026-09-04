@@ -1,10 +1,10 @@
 # STATUS.md
 
 ## Snapshot
-- tip: dac55e0 (origin/v2)
+- tip: 4e34b50 (origin/v2; render-svg tip dac55e0)
 - gallery.html: regenerated from examples/out
-- Active: W14a Coder render-svg done
-- Next: GeekPlux review of 01 02 05 09 17; then W14b
+- Active: W14a done — hold B1 for GeekPlux/Designer sign-off
+- Next: sign-off 01 02 05 09 17 + gallery vs visual-spec; then W14b B1(+B2)
 
 ## Waves
 - [x] W0-W12 stop-gate
@@ -13,7 +13,7 @@
 - [ ] W14b B1-B8
 
 ## Active
-W14a Coder done. Default SVG implements docs/visual-spec.md in packages/render-svg only. No theme field. No d3. No playground rebuild.
+W14a complete. Hold: do not start B1(+B2) until GeekPlux or Designer signs off spot-checks 01 02 05 09 17 + gallery against docs/visual-spec.md.
 
 ## Commands (W14a Coder)
 ```
