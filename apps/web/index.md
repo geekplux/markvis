@@ -2,7 +2,7 @@
 layout: home
 hero:
   name: markvis
-  text: Quantitative charts in Markdown — the fence is the data.
+  text: Quantitative charts in Markdown. Mermaid is structure; markvis is numbers.
   actions:
     - theme: brand
       text: Open playground
@@ -15,22 +15,13 @@ hero:
       link: https://github.com/geekplux/markvis
 ---
 
-## Figures
+## Proof
 
-<svg width="240" height="120" viewBox="0 0 240 120" role="img" aria-label="Bar chart placeholder">
-  <rect width="240" height="120" fill="#f4f4f5" />
-  <text x="120" y="64" text-anchor="middle" fill="#71717a" font-size="14">SVG placeholder</text>
-</svg>
+![Feb led Q3](/home/01-bar-basic.svg)
 
-<svg width="240" height="120" viewBox="0 0 240 120" role="img" aria-label="Line chart placeholder">
-  <rect width="240" height="120" fill="#f4f4f5" />
-  <text x="120" y="64" text-anchor="middle" fill="#71717a" font-size="14">SVG placeholder</text>
-</svg>
+![Pro pulled ahead](/home/02-line-multi.svg)
 
-<svg width="240" height="120" viewBox="0 0 240 120" role="img" aria-label="Pie chart placeholder">
-  <rect width="240" height="120" fill="#f4f4f5" />
-  <text x="120" y="64" text-anchor="middle" fill="#71717a" font-size="14">SVG placeholder</text>
-</svg>
+![Shares stay raw](/home/05-pie-raw.svg)
 
 ## Fence
 
@@ -47,3 +38,5 @@ Jan,120
 Feb,180
 Mar,150
 ```
+
+0.0.13 is frozen under `legacy/`. Work and the site ship from branch `v2`.
