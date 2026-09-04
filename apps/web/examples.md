@@ -1,3 +1,9 @@
-# Examples
+---
+layout: page
+sidebar: false
+title: Examples
+---
 
-Stub. Gallery density is S2.
+<ClientOnly>
+  <Gallery />
+</ClientOnly>

@@ -1,8 +1,20 @@
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { defineConfig } from "vitepress";
+
+const root = dirname(fileURLToPath(import.meta.url));
+const repoRoot = resolve(root, "../../..");
 
 export default defineConfig({
   title: "markvis",
   description: "Quantitative charts in Markdown — the fence is the data.",
+  vite: {
+    server: {
+      fs: {
+        allow: [repoRoot],
+      },
+    },
+  },
   themeConfig: {
     nav: [
       { text: "Play", link: "/play" },

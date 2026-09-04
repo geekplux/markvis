@@ -44,6 +44,8 @@ export default defineConfig({
       "packages/browser/test/**/*.test.ts",
       "apps/playground/src/**/*.test.ts",
       "apps/playground/test/**/*.test.ts",
+      "apps/web/src/**/*.test.ts",
+      "apps/web/test/**/*.test.ts",
       "scripts/**/*.test.ts",
     ],
     exclude: ["**/node_modules/**", "legacy/**"],
