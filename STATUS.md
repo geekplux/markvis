@@ -1,7 +1,7 @@
 # STATUS.md
 
 ## Snapshot
-- tip: (after feat(browser))
+- tip: 2a1b97a
 - W14b B1(+B2) packages/browser IIFE+ESM + drop-in + playground Copy snippet
 - Active: W14b B3-B8
 
