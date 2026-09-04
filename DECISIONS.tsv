@@ -23,3 +23,4 @@ date	wave	decision
 2026-09-04	W10	accepted aac6b2f / eb043e5; 30 prompts ok; open W11 harden
 2026-09-04	W11	check.yml = install + test + check valid + invalid non-zero + playground build; AGENTS frozen: no new types, no d3; vitest covers parser/render-svg/cli
 2026-09-04	W11	accepted 685a033; CI gate + frozen AGENTS; open W12 thicken
+2026-09-04	W11	docs/best-practices.md: fixtures first, six types only, no forbidden render deps in packages/apps
