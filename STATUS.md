@@ -11,8 +11,9 @@ U1: In /workspace/markvis, pnpm install + make pnpm test pass on Node 20. Fix on
 5. [ ] Docs match code
 
 ## U1 notes
-- Node v20.19.2; package manager 9.15.9
+- Node v20.19.2; pnpm 9.15.9
 - Updated __tests__/index.js golden HTML for current d3/jsdom SVG output (axis attrs + pie colors)
 - Fixed examples/basic.js require path (drop .js ext for xo)
 - Refreshed lockfile from install
+- Proof: `pnpm install` exit 0; `pnpm test` exit 0 (jest 2/2 + xo)
 - PR: https://github.com/geekplux/markvis/pull/16 (base: master; repo has no main)
