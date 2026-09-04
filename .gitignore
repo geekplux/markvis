@@ -1,5 +1,6 @@
 node_modules
-
+dist
+coverage
+*.log
 test.html
-
-*log
+.DS_Store

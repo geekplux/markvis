@@ -1,0 +1,7 @@
+date	wave	decision
+2026-09-04	W0	default renderer = custom deterministic SVG, not Vega-Lite wrapper
+2026-09-04	W0	do not use Mermaid pie/xychart as the numeric language
+2026-09-04	W0	do not revive 2017 markvis d3 + per-chart packages core
+2026-09-04	W1	W1 research-brief filed
+2026-09-04	W0	U2 cancelled; legacy modernization is not 2.0; constitution overlay; product = Chart IR + deterministic SVG
+2026-09-04	W0	0.0.13 tree frozen under legacy/; packages/apps are empty workspace stubs; forbidden d3 stack not in workspace
