@@ -1,146 +1,141 @@
-# visual-spec — default SVG look (W14a)
+# visual-spec — Ledger → markvis (W14a rewrite)
 
-One default. No `theme:`. Tokens only. Implement in `packages/render-svg`.
+Language: **Ledger** (`docs/designer-language.md`). Critique: `docs/visual-critique.md`.
 
-Read against: `examples/gallery.html`, `out/01-bar-basic`, `02-line-multi`, `05-pie-raw`, `09-bar-twelve-categories`, `17-bar-long-labels`.
+Constraints: static deterministic SVG · six types only · **no** `theme:` · **no** HTML poster · **no** animation · **no** d3 · implement only in `packages/render-svg` · regenerate `examples/out/*` + `examples/gallery.html` · update vitest snapshots in the same unit.
+
+Fixture sources for 01 / 02 / 05 / 09 / 17 may receive **title-only** edits so the IR title is a conclusion (never a chart-type word). No other product escape hatches.
 
 ---
 
-## Canvas
+## Locked tokens
 
 | Token | Value |
 | --- | --- |
-| Frame | `720×480` viewBox (keep) |
-| Paper | `#F7F4EF` fill on a root `<rect width="100%" height="100%"/>` — never naked transparent |
+| Frame default | `720` wide · height `480` minimum; **grow height** up to `640` when label-driven bottom margin would drop plot height below `0.55 × height` |
+| Paper | `#F7F4EF` full-frame `<rect>` first paint after title/desc |
 | Ink | `#1C1917` |
-| Mute | `#78716C` |
-| Hairline | `#E7E5E4` |
-| Axis | `#A8A29E` |
+| Quiet | `#78716C` |
+| Tick text | `#57534E` |
+| Hairline | `#E7E5E4` stroke `1` |
+| Structure | `#A8A29E` stroke `1` |
+| S1 accent | `#2B6CB0` |
+| S2 | `#C65D2E` |
+| S3 | `#2F8F6B` |
+| S4 | `#B08900` |
+| S5 | `#6B5B95` |
+| S6 | `#8B6B4A` |
+| S7 | `#C44C6A` |
+| S8 | `#4A7C8C` |
 | Font | `ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif` |
 
-Plot sits on paper. Grid and axes are quieter than marks.
+Single series = S1 only. Extra hues only for extra series / pie slices. Cap 8; then reuse S1… at `opacity 0.7`.
 
 ---
 
-## Type scale
+## Type grades (3)
 
 | Role | Size | Weight | Fill |
 | --- | --- | --- | --- |
-| Title | `18px` | `600` | `#1C1917` |
-| Axis name | `11px` | `500` | `#78716C` |
-| Tick / category | `10px` | `400` | `#57534E` |
-| Value label | `10px` | `500` | `#1C1917` |
-| Legend | `11px` | `400` | `#1C1917` |
-| Unit beside title | `12px` | `400` | `#78716C` |
+| Title | `17px` | `600` | ink |
+| Unit (title tspan) | `12px` | `400` | quiet |
+| Value / end-label | `11px` | `500` | ink |
+| Tick / category | `10px` | `400` | tick text |
+| Note (rare) | `11px` | `400` | quiet |
 
-Title stays centered under the top margin. Unit rides the title line as `Title · USD k` (or `(USD)`), never repeated on every tick.
-
----
-
-## Color (Okabe–Ito, dialed down)
-
-Single series = accent only. Extra hues only for extra series / pie slices. Never rainbow.
-
-| Slot | Hex | Use |
-| --- | --- | --- |
-| Accent / S1 | `#2B6CB0` | single-series bars, first line, first pie slice |
-| S2 | `#C65D2E` | second series |
-| S3 | `#2F8F6B` | third |
-| S4 | `#B08900` | fourth |
-| S5 | `#6B5B95` | fifth |
-| S6 | `#8B6B4A` | sixth |
-| S7 | `#C44C6A` | seventh |
-| S8 | `#4A7C8C` | eighth |
-| Slice gap | `#F7F4EF` | pie stroke = paper (not pure white) |
-
-Stop at 8 series. More → reuse S1… with 70% opacity, do not invent new hues.
+No axis-name layer by default (see Title / chrome).
 
 ---
 
-## Grid & axes
+## Title rule
 
-- Y grid: horizontal hairlines only, `stroke #E7E5E4`, `stroke-width 1`. No vertical grid.
-- Axis path: `stroke #A8A29E`, `stroke-width 1`. Tick marks 4px, same stroke.
-- Baseline (y=0) same as axis, not thicker.
-- Marks must read louder than axes. If a mark color fails contrast on paper, darken the mark — do not thicken the axis.
+- Render the IR title string only. **Never** prefix/suffix chart type (`bar`, `line`, `pie`, “Share” as type).
+- Title **left-aligned** to plot left (`text-anchor="start"` at plot `x`).
+- Unit rides title as ` · USD` / ` · USD k` only when unit exists; never on every tick.
+- Fixture titles for the five acceptance SVGs **must be conclusions**, e.g.:
+  - 01: claim Feb led (with number)
+  - 02: claim free leads pro
+  - 05: claim A leads at 40
+  - 09: claim Jul peak
+  - 17: claim North America leads spend
+- If IR title empty: fall back to ``${yField}${unit ? ` · ${unit}` : ''}`` — still not a chart type.
 
 ---
 
-## Margins (from labels, not fixed leftovers)
+## Chrome suppression
 
-Default inset before measuring labels: `top 48`, `right 24`, `bottom 48`, `left 56`.
+- **Do not draw** rotated y-axis name or x-axis name when the title already names the measure (default: **omit both**).
+- Y-grid: hairlines at major ticks **except** the baseline (axis owns the baseline). ≤4 gridlines.
+- Dual encoding:
+  - `n_categories ≤ 6` (bar/hist): **value labels on** · **omit interior y-grid** (axis + ticks only)
+  - `n_categories > 8`: **value labels off** · keep ticks + interior grid
+  - `7–8`: value labels on if bar width ≥ `18px`, else off
 
-Then grow:
+---
 
-- **Left** = max(56, y-tick text width + 12 + axis-name gutter 18).
-- **Bottom** = max(48, category label extent + 12 + axis-name gutter 16).
-  - If category labels rotate −55°, bottom = `sin(55°) × longestLabelWidth + 20`.
-- **Top** = title block (title + optional unit + legend row) + 12. Legend sits under title, left-aligned to plot left — not overlapping the plot.
-- **Right** = max(24, overhang of value labels or pie leaders).
+## Margins & plot share
 
-No clipped ticks. No label–label collision: if category labels would overlap at 0°, rotate −55°; if still overlapping, drop every other label and keep `data-full-label` for a11y. Do not ellipsis mid-word on the drawn label when the full string fits at −55° inside the grown bottom margin (`17` currently truncates — stop that).
+1. Start from content: title block (title + optional unit) top; ticks left; categories bottom.
+2. Left = max(`48`, tickTextWidth + `10`).
+3. Bottom = category label extent + `12` (rotation included). If horizontal labels fit with ≥`2px` gap, do not rotate.
+4. Top = title baseline + `12` (no legend row if end-labels used).
+5. Right = max(`20`, end-label overhang / pie leader overhang).
+6. **After** margins: if `(plotBottom - plotTop) / height < 0.55`, increase `height` (and viewBox) until true, cap `640`. Do not solve label overflow by crushing the plot.
 
 ---
 
 ## Numbers
 
-- Integer ≥ 1000 → thousands separators: `1,200` not `1200`, not `1.2k`, not `200k`.
-- Tick formatter: same rule. Prefer full numbers + authored unit over auto-k/M — title `· USD`, ticks `0 / 200,000 / 400,000`, value labels `420,000`. Do not invent `USD k` / divided ticks when the fixture unit is `USD`. Authored units like `USD k` stay as written.
-- Value labels on bars: full separated number (`420,000`), unit only in title. Title, ticks, and values share one scale.
+- Thousands separators on values ≥ `1000` (`420,000`).
+- One scale only: title unit, ticks, and value labels share the same unit system. No auto-`k` on ticks while labels stay full.
+- Prefer full numbers on ticks when value labels are full.
 
 ---
 
-## Bar
+## Bar / hist
 
-- Category gap: `20%` of band. Bar width fills the rest. Grouped bars: `2px` gap between series in a band.
-- Corner: `rx=2` on the top two corners only (bottom flush to baseline). Drop `shape-rendering="crispEdges"` so radius renders.
-- Fill: accent (or series color). No stroke on bars.
-- Value label: centered on bar, `8px` above the top (or inside near top if bar height < 28). One label per bar. Skip label if bar width < 14.
-- Single series: one accent. No legend.
+- Gap = `28%` of band when `n ≤ 6`; `18%` when `n > 6`.
+- Grouped series: `2px` inner gap.
+- **Max bar width `72px`** when `n ≤ 4` (center the bar in the band). Stop stadium slabs.
+- Top radius only: `rx = 2`. No `crispEdges`.
+- Fill S1 (or series color). No bar stroke.
+- Value label: `8px` above top if height ≥ `28`; else inside near top. Skip if bar width < `14`.
 
 ## Line / area
 
-- Stroke `1.75px`, `round` join/cap.
-- Points: filled circles `r=2.5`, same series color, no stroke. Skip points when a series has > 40 vertices.
-- Area: same hue at `fill-opacity 0.16`, stroke on the top edge only.
-- Multi-series: legend under title; colors S1… in order.
+- Stroke `1.75px`, round cap/join.
+- Points `r = 2.5` if vertices ≤ `40`; else no points.
+- Area: series fill `opacity 0.14`, stroke on top edge.
+- **≤4 series:** end-label at last point (series name, `11px/500`, series color) — **no color legend**.
+- **>4 series:** compact legend under title, left-aligned to plot left.
 
 ## Scatter
 
-- Points `r=3`, series color, `fill-opacity 0.85`, no stroke.
-- Optional light hairline axes only (same tokens). No connecting path.
-
-## Hist
-
-- Same as bar tokens (gap, radius, accent). No value labels on bins by default (density reads as area). Bin edges on ticks.
+- Points `r = 3`, `fill-opacity 0.85`, no stroke. No connectors.
 
 ## Pie
 
-- Do **not** normalize to 100. Slice angle ∝ raw value (keep current IR rule).
-- Radius: `min(plotW, plotH) × 0.36`. Center in plot (not shifted for a side legend).
-- Slice stroke: paper `#F7F4EF`, `1.5px`.
-- Labels: **outside** — `name · value` (separated), `10px/500`. Thin leaders: `stroke #A8A29E`, `1px`, from slice mid-angle to label; label sits `12px` beyond leader end. Prefer left/right clusters to avoid overlap; nudge radially, never stack on the pie.
-- No side color legend when outside labels are present.
-- Keep `data-raw-value` and the desc note that sizes are raw.
+- Do not normalize to 100. Angle ∝ raw value.
+- Radius `0.34 × min(plotW, plotH)`. Center in the **plot box**, not the frame (title already took top).
+- Slice stroke = paper `1.5px`.
+- Outside labels `name · value` + structure leaders `1px`. No side legend when outside labels exist.
+- Title still must be a conclusion, not “Share”.
 
 ---
 
-## A11y & determinism (keep)
+## A11y & determinism
 
-- `<title>` + `<desc>` + `role="img"` + `aria-labelledby` / `aria-describedby` (already on gallery).
-- `data-markvis`, `data-chart-type`, `data-id`, series/x/y data attrs stay.
-- Same IR → same SVG bytes. No random ids that change every render (ids may hash from content; keep stable).
-- Paper rect is the first child after title/desc so captures still show background.
+Keep `<title>`, `<desc>`, `role="img"`, labelledby/describedby, `data-markvis`, stable ids, series/x/y attrs. Same IR → same bytes.
 
 ---
 
 ## Out of scope
 
-- Second theme, dark mode, `theme:` field.
-- Animation, tooltips, brush.
-- New chart types.
-- Marketing chrome in the SVG.
+`theme:`, dark mode, animation, tooltips, new types, marketing chrome, HTML posters, d3.
 
 ## Done when
 
-Regenerated `examples/out/01-bar-basic.svg`, `02-line-multi.svg`, `05-pie-raw.svg`, `09-bar-twelve-categories.svg`, `17-bar-long-labels.svg` plus `examples/gallery.html` match this file. Vitest snapshots updated in the same unit. GeekPlux has not rejected those five figures.
+1. `docs/designer-language.md` and this file match Ledger.
+2. Regenerated 01 / 02 / 05 / 09 / 17 pass a second measured critique (plot share, title conclusions, dual-encoding rule, bar width cap, end-labels).
+3. `pnpm test` green; gallery regenerated.
+4. GeekPlux has not rejected the five.
