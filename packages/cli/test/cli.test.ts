@@ -77,6 +77,7 @@ describe("usage", () => {
       "stats",
       "to-table",
       "gallery",
+      "bake",
     ]) {
       expect(stdout).toContain(command);
     }
@@ -411,6 +412,122 @@ describe("gallery", () => {
     const { code, stderr } = capture(["gallery", "missing-out"]);
     expect(code).not.toBe(0);
     expect(stderr).toMatch(/not found/);
+  });
+});
+
+describe("bake", () => {
+  const oneFence = `<!-- intent: one fence -->
+
+\`\`\`chart
+markvis: 2
+type: bar
+title: Q3
+x: month
+y: revenue
+
+month,revenue
+Jan,120
+Feb,180
+Mar,150
+\`\`\`
+`;
+
+  const twoFences = `## two
+
+\`\`\`chart
+markvis: 2
+type: bar
+title: First
+x: month
+y: revenue
+
+month,revenue
+Jan,1
+Feb,2
+\`\`\`
+
+\`\`\`chart
+markvis: 2
+type: line
+title: Second
+x: month
+y: revenue
+
+month,revenue
+Jan,3
+Feb,4
+\`\`\`
+`;
+
+  it("writes SVG and inserts a markdown image after one fence, keeping the fence", () => {
+    const dir = tmp();
+    const mdPath = join(dir, "one.md");
+    writeFileSync(mdPath, oneFence);
+    const { code, stdout } = capture(["bake", mdPath], dir);
+    expect(code).toBe(0);
+    expect(stdout).toContain("baked\t");
+    const md = readFileSync(mdPath, "utf8");
+    expect(md).toContain("```chart");
+    expect(md).toContain("month,revenue");
+    expect(md).toMatch(/```\n+!\[Q3\]\(\.\/one\.svg\)\n/);
+    expect(existsSync(join(dir, "one.svg"))).toBe(true);
+    const svg = readFileSync(join(dir, "one.svg"), "utf8");
+    expect(svg.startsWith("<svg ")).toBe(true);
+  });
+
+  it("writes one SVG per fence in a two-fence file", () => {
+    const dir = tmp();
+    const mdPath = join(dir, "two.md");
+    writeFileSync(mdPath, twoFences);
+    const { code } = capture(["bake", mdPath], dir);
+    expect(code).toBe(0);
+    const md = readFileSync(mdPath, "utf8");
+    expect(md).toContain("```chart");
+    expect(md).toContain("![First](./two-1.svg)");
+    expect(md).toContain("![Second](./two-2.svg)");
+    const firstFenceEnd = md.indexOf("Feb,2");
+    const firstImg = md.indexOf("![First](./two-1.svg)");
+    const secondFence = md.indexOf("title: Second");
+    const secondImg = md.indexOf("![Second](./two-2.svg)");
+    expect(firstImg).toBeGreaterThan(firstFenceEnd);
+    expect(firstImg).toBeLessThan(secondFence);
+    expect(secondImg).toBeGreaterThan(secondFence);
+    expect(existsSync(join(dir, "two-1.svg"))).toBe(true);
+    expect(existsSync(join(dir, "two-2.svg"))).toBe(true);
+  });
+
+  it("is idempotent: bake twice yields no md or svg diff", () => {
+    const dir = tmp();
+    const mdPath = join(dir, "one.md");
+    writeFileSync(mdPath, oneFence);
+    expect(capture(["bake", mdPath], dir).code).toBe(0);
+    const mdOnce = readFileSync(mdPath, "utf8");
+    const svgOnce = readFileSync(join(dir, "one.svg"), "utf8");
+    const second = capture(["bake", mdPath], dir);
+    expect(second.code).toBe(0);
+    expect(second.stdout).toContain("unchanged");
+    expect(readFileSync(mdPath, "utf8")).toBe(mdOnce);
+    expect(readFileSync(join(dir, "one.svg"), "utf8")).toBe(svgOnce);
+    expect(mdOnce.match(/!\[Q3\]\(\.\/one\.svg\)/g)?.length).toBe(1);
+  });
+
+  it("does not insert a second image when already baked", () => {
+    const dir = tmp();
+    const mdPath = join(dir, "one.md");
+    writeFileSync(
+      mdPath,
+      `${oneFence}\n![Q3](./one.svg)\n`,
+    );
+    writeFileSync(join(dir, "one.svg"), "<svg></svg>\n");
+    const { code, stdout } = capture(["bake", mdPath], dir);
+    expect(code).toBe(0);
+    expect(stdout).toContain("unchanged");
+    const md = readFileSync(mdPath, "utf8");
+    expect(md.match(/!\[Q3\]\(\.\/one\.svg\)/g)?.length).toBe(1);
+    expect(md).toContain("```chart");
+    const svg = readFileSync(join(dir, "one.svg"), "utf8");
+    expect(svg.startsWith("<svg ")).toBe(true);
+    expect(svg).not.toBe("<svg></svg>\n");
   });
 });
 

@@ -1,3 +1,5 @@
+export { bakeMarkdown, writeBake } from "./bake.js";
+export type { BakeChartResult, BakeFileResult } from "./bake.js";
 export { runCli, USAGE, VERSION } from "./cli.js";
 export type { CliContext } from "./cli.js";
 export {

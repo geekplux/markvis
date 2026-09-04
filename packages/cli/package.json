@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "description": "markvis CLI: check / render / preview / stats / to-table / gallery",
+  "description": "markvis CLI: check / render / preview / stats / to-table / gallery / bake",
   "bin": {
     "markvis": "./bin.js"
   },

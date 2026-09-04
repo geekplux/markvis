@@ -16,6 +16,7 @@ import {
   formatStatsRow,
   tableToGfm,
 } from "./format.js";
+import { bakeMarkdown, writeBake } from "./bake.js";
 import { buildGalleryHtml } from "./gallery.js";
 import { buildPreviewHtml } from "./preview.js";
 import { chartStats } from "./stats.js";
@@ -31,6 +32,7 @@ Commands:
   stats       Print file, type, n, min, max, series
   to-table    Print GFM table; on error, table plus one error line
   gallery     Write HTML catalog of SVG files (from examples/out)
+  bake        Write SVG next to each chart fence; insert md image; keep fence
 
 Options:
   -o, --out <path>  render: output directory; preview/gallery: html file
@@ -46,6 +48,7 @@ const COMMANDS = new Set([
   "stats",
   "to-table",
   "gallery",
+  "bake",
 ]);
 
 export type CliContext = {
@@ -342,6 +345,29 @@ function cmdGallery(
   return 0;
 }
 
+function cmdBake(paths: string[], ctx: CliContext): number {
+  const files = collectMarkdownFiles(paths, ctx.cwd);
+  if (files.length === 0) {
+    throw new CliError("no markdown files");
+  }
+  let errCount = 0;
+  for (const abs of files) {
+    const file = displayPath(abs, ctx.cwd);
+    const source = readFileSync(abs, "utf8");
+    const baked = bakeMarkdown(source, abs);
+    writeBake(baked);
+    if (baked.errors.length > 0) {
+      errCount += 1;
+      ctx.stdout.write(`error\t${file}\t${baked.errors.join(",")}\n`);
+      continue;
+    }
+    ctx.stdout.write(
+      `baked\t${file}\t${baked.charts.length}\t${baked.mdChanged ? "updated" : "unchanged"}\n`,
+    );
+  }
+  return errCount === 0 ? 0 : 1;
+}
+
 export function runCli(argv: string[], ctx: Partial<CliContext> = {}): number {
   const io = resolveContext(ctx);
   try {
@@ -374,6 +400,8 @@ export function runCli(argv: string[], ctx: Partial<CliContext> = {}): number {
         return cmdPreview(paths, flags, io);
       case "gallery":
         return cmdGallery(paths, flags, io);
+      case "bake":
+        return cmdBake(paths, io);
       default:
         throw new CliError(`unknown command: ${command}`);
     }
