@@ -1,4 +1,9 @@
 import { EXAMPLES } from "./examples.js";
+import {
+  exampleIdFromSearch,
+  galleryHref,
+  playgroundSearch,
+} from "./links.js";
 import { htmlTable, previewSource, type PlaygroundView } from "./preview.js";
 import { dropinSnippet } from "./snippet.js";
 import "./style.css";
@@ -50,6 +55,7 @@ function main(): void {
   const copyFenceBtn = mustEl<HTMLButtonElement>("copy-fence");
   const copySvgBtn = mustEl<HTMLButtonElement>("copy-svg");
   const copySnippetBtn = mustEl<HTMLButtonElement>("copy-snippet");
+  const galleryLink = mustEl<HTMLAnchorElement>("open-gallery");
   const copied = mustEl<HTMLSpanElement>("copied");
   const first = EXAMPLES[0];
   if (!first) {
@@ -64,18 +70,33 @@ function main(): void {
 
   for (const example of EXAMPLES) {
     const option = document.createElement("option");
-    option.value = example.filename;
-    option.textContent = example.filename;
+    option.value = example.id;
+    option.textContent = example.id;
     select.append(option);
   }
 
-  let filename = first.filename;
-  let view = previewSource(first.source, filename);
+  const fromQuery = exampleIdFromSearch(window.location.search);
+  const initial =
+    EXAMPLES.find((item) => item.id === fromQuery) ?? first;
+  let filename = initial.filename;
+  let view = previewSource(initial.source, filename);
 
-  function load(source: string, name: string): void {
+  function syncUrl(id: string): void {
+    const next = playgroundSearch(id);
+    if (`${window.location.search}` === next) {
+      return;
+    }
+    const url = `${window.location.pathname}${next}${window.location.hash}`;
+    window.history.replaceState(null, "", url);
+  }
+
+  function load(source: string, name: string, id: string): void {
     filename = name;
     editor.value = source;
     view = previewSource(source, filename);
+    galleryLink.href = galleryHref(id);
+    select.value = id;
+    syncUrl(id);
     paint(view);
   }
 
@@ -85,8 +106,8 @@ function main(): void {
 
   select.addEventListener("change", () => {
     const picked =
-      EXAMPLES.find((item) => item.filename === select.value) ?? first;
-    load(picked.source, picked.filename);
+      EXAMPLES.find((item) => item.id === select.value) ?? first;
+    load(picked.source, picked.filename, picked.id);
   });
 
   editor.addEventListener("input", () => {
@@ -118,8 +139,7 @@ function main(): void {
     );
   });
 
-  select.value = first.filename;
-  load(first.source, first.filename);
+  load(initial.source, initial.filename, initial.id);
 }
 
 main();

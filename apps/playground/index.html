@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>markvis playground</title>
+    <title>Play · markvis</title>
   </head>
   <body>
     <noscript>
@@ -13,13 +13,15 @@
       </p>
     </noscript>
     <header class="toolbar">
-      <h1>markvis playground</h1>
+      <h1>Play</h1>
+      <p class="sub">Left fence · right figure · same parser as CLI</p>
       <label>
         Example
         <select id="example"></select>
       </label>
       <button type="button" id="copy-fence">Copy fence</button>
       <button type="button" id="copy-svg">Copy SVG</button>
+      <a class="gallery-link" id="open-gallery" href="/examples">Open in gallery</a>
       <button type="button" id="copy-snippet">Copy snippet</button>
       <span class="copied" id="copied" aria-live="polite"></span>
     </header>
@@ -29,7 +31,7 @@
         <textarea id="fence" spellcheck="false"></textarea>
       </section>
       <section class="preview">
-        <h2>Preview</h2>
+        <h2>Figure</h2>
         <p class="error" id="error" hidden></p>
         <div id="svg-host"></div>
         <div id="table-host"></div>
