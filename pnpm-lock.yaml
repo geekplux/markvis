@@ -42,7 +42,20 @@ importers:
 
   apps/playground: {}
 
-  packages/cli: {}
+  packages/cli:
+    dependencies:
+      '@markvis/ir':
+        specifier: workspace:*
+        version: link:../ir
+      '@markvis/parser':
+        specifier: workspace:*
+        version: link:../parser
+      '@markvis/render-svg':
+        specifier: workspace:*
+        version: link:../render-svg
+      tsx:
+        specifier: ^4.23.13
+        version: 4.23.13
 
   packages/compat-legacy: {}
 

@@ -10,3 +10,6 @@ date	wave	decision
 2026-09-04	W3	accepted 52 valid + 18 invalid; seeds 01-08 byte-match SPEC; open W4 IR+parser
 2026-09-04	W4	zod Chart IR + text parser; 52 valid + 18 invalid fixtures; table fallback; no render/d3 deps
 2026-09-04	W5	JSON Schema generated from @markvis/ir ChartIRSchema via zod-to-json-schema; pnpm schema:check fails on hand-edit
+2026-09-04	W5	accepted 72b9fe5; schema from IR + drift check; open W6 render-svg
+2026-09-04	W6	accepted 2807f3d; 52 SVG snapshots; open W7 CLI
+2026-09-04	W7	CLI check/render/preview/stats/to-table; preview is local HTML split view; no playground

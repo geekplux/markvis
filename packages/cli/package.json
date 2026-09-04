@@ -3,5 +3,19 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "description": "markvis CLI: check / render / preview / stats / to-table (W7)"
+  "description": "markvis CLI: check / render / preview / stats / to-table (W7)",
+  "bin": {
+    "markvis": "./bin.js"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "dependencies": {
+    "@markvis/ir": "workspace:*",
+    "@markvis/parser": "workspace:*",
+    "@markvis/render-svg": "workspace:*",
+    "tsx": "^4.23.13"
+  }
 }

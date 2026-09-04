@@ -6,7 +6,7 @@ previous U2 cancelled; legacy modernization is not 2.0.
 
 - Workdir: /workspace/markvis
 - Branch: v2
-- Updated: 2026-09-04 (Coder) W6 render-svg
+- Updated: 2026-09-04 (Coder) W7 CLI
 
 ## Waves
 
@@ -17,7 +17,7 @@ previous U2 cancelled; legacy modernization is not 2.0.
 - [x] W4 IR + parser (zod Chart IR; fence/comment/CSV/GFM parser; 70 fixtures)
 - [x] W5 schema (schema/markvis-2.schema.json from ChartIRSchema; pnpm schema:check)
 - [x] W6 render-svg
-- [ ] W7 CLI
+- [x] W7 CLI (markvis check | render | preview | stats | to-table)
 - [ ] W8 宿主
 - [ ] W9 playground
 - [ ] W10 AI 面
@@ -25,7 +25,7 @@ previous U2 cancelled; legacy modernization is not 2.0.
 - [ ] W12 加厚
 
 ## Active
-W7 -> Coder (CLI). Writer holds W10 docs.
+W8 -> Coder (remark + markdown-it hosts). Writer holds W10 docs.
 
 ## W0 proof
 
@@ -163,5 +163,41 @@ Commands:
 - `pnpm test` → exit 0 (158 tests)
 - `ls examples/out/*.svg | wc -l` → 52
 - same IR twice (`01-bar-basic`) → identical bytes (exit 0)
+- `rg "d3-node|markvis-bar|markvis-line|markvis-pie" packages apps` → exit 1 (no matches)
+- `rg "from ['\"]legacy|require\\(['\"]legacy" packages` → exit 1 (no matches)
+
+## W7 proof
+
+Commit: (see git log feat(cli))
+Message: feat(cli): add check, render, preview, stats, and to-table
+
+`@markvis/cli` + root `markvis` bin: `check`, `render`, `preview`, `stats`, `to-table`. `check` collects `.md` files and runs `parseMarkdown`; valid exits 0, invalid non-zero. `stats` prints type n min max series. `render` writes deterministic SVG. `preview` writes a local left-source / right-SVG-or-table HTML file. `to-table` prints GFM and, on error, recovered rows plus one error line. Vitest covers the CLI. No playground. No d3/legacy.
+
+Files:
+
+package.json
+packages/cli/bin.js
+packages/cli/package.json
+packages/cli/src/cli.ts
+packages/cli/src/files.ts
+packages/cli/src/format.ts
+packages/cli/src/index.ts
+packages/cli/src/preview.ts
+packages/cli/src/stats.ts
+packages/cli/test/cli.test.ts
+packages/cli/tsconfig.json
+pnpm-lock.yaml
+vitest.config.ts
+STATUS.md
+DECISIONS.tsv
+
+Commands:
+
+- `node -v` → v20.19.2 (exit 0)
+- `pnpm -v` → 9.15.9 (exit 0)
+- `pnpm test` → exit 0 (184 tests)
+- `pnpm markvis check examples/valid` → exit 0 (52 ok)
+- `pnpm markvis check examples/invalid` → exit 1 (0 ok, 18 error)
+- `pnpm markvis stats examples/valid/01-bar-basic.md` → exit 0 (`bar 3 120 180 -`)
 - `rg "d3-node|markvis-bar|markvis-line|markvis-pie" packages apps` → exit 1 (no matches)
 - `rg "from ['\"]legacy|require\\(['\"]legacy" packages` → exit 1 (no matches)

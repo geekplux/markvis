@@ -20,7 +20,7 @@
     "./ir": "./packages/ir/src/index.ts",
     "./parser": "./packages/parser/src/index.ts",
     "./render-svg": "./packages/render-svg/src/index.ts",
-    "./cli": "./packages/cli/index.js",
+    "./cli": "./packages/cli/src/index.ts",
     "./remark": "./packages/remark/index.js",
     "./markdown-it": "./packages/markdown-it/index.js"
   },
@@ -29,6 +29,7 @@
   },
   "scripts": {
     "test": "vitest run",
+    "markvis": "node ./packages/cli/bin.js",
     "schema:generate": "tsx packages/ir/scripts/generate-schema.ts",
     "schema:check": "vitest run packages/ir/src/json-schema.test.ts"
   },
