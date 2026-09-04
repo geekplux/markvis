@@ -1,14 +1,9 @@
 # STATUS.md
 
 ## Snapshot
-- tip: bd1677b synced origin/v2
-- GeekPlux: W14a look REJECTED (ugly)
-- Active: Designer Unit A only
-- Coder: hold render until Unit A on disk
-- No bake of README/landing until five figures accepted
+- tip: 69f87b2 Unit A on disk (Ledger)
+- Active: Unit B Coder render-svg
+- Hold: README/landing bake until GeekPlux accepts five
 
 ## Active
-Unit A -> @Designer: docs/designer-language.md + docs/visual-critique.md + docs/visual-spec.md
-
-## Hold
-B1+ only if they do not freeze ugly SVGs into README. Prefer idle until visual accept.
+Unit B -> @Coder packages/render-svg + regen out/gallery; title-only fixture edits OK
