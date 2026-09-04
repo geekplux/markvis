@@ -17,4 +17,8 @@
 - `pnpm --filter playground build` → 0
 
 ## Active
+## Writer after B1
+
+- docs/landing.md + README first screen: one sentence, 3 svg embeds (01/02/05), drop-in link; no bake note; no integrate.md yet
+
 B3 -> @Coder

@@ -1,23 +1,19 @@
 # markvis
 
-Quantitative charts in Markdown. The fence is the data.
+Quantitative charts in Markdown — the fence is the data (CSV or GFM), Mermaid keeps structure.
 
-Mermaid owns structure (flow, sequence, state). markvis owns numbers: bar, line, area, scatter, pie, hist from CSV or a GFM table. Same source renders SVG and keeps the table for readers without a plugin.
+## Figures
 
-## Try it
+![Feb led Q3](../examples/out/01-bar-basic.svg)
 
-1. Open apps/playground (Vite try page) and paste a fence, or pick an examples/valid seed.
-2. Or: markvis check examples/valid — then markvis render on one file.
-3. Skill trigger: skills/markvis/SKILL.md. Short model brief: llms.txt.
+![Pro pulled ahead](../examples/out/02-line-multi.svg)
 
-## Sample SVGs
+![Shares stay raw](../examples/out/05-pie-raw.svg)
 
-- examples/out/01-bar-basic.svg
-- examples/out/02-line-multi.svg
-- examples/out/05-pie-raw.svg
+## Try
 
-## Boundaries
+1. Playground: `apps/playground` (or open `apps/playground/dropin.html` for the zero-network script).
+2. CLI: `markvis check examples/valid` then `markvis render` on one file.
+3. Agents: `skills/markvis/SKILL.md`, `llms.txt`.
 
-Six types only. No JSON-as-default data. Invalid fences degrade to table plus one error line — data does not disappear. Old 0.0.13 tree lives under legacy/.
-
-See SPEC.md, docs/best-practices.md, and examples/prompts.md.
+Gallery: `examples/gallery.html`. Spec: `SPEC.md`. Look: `docs/visual-spec.md` (Ledger, transparent canvas).
