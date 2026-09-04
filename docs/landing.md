@@ -19,3 +19,5 @@ Quantitative charts in Markdown — the fence is the data (CSV or GFM), Mermaid 
 Gallery: `examples/gallery.html`. Spec: `SPEC.md`. Look: `docs/visual-spec.md` (Ledger, transparent canvas).
 
 Bake for hosts that only show images (e.g. GitHub README): `markvis bake path/to.md` — keeps the fence, inserts `![…](….svg)` after it; second bake is a no-op.
+
+Hosts: docs/integrate.md.

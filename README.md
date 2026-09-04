@@ -10,7 +10,7 @@ Quantitative charts in Markdown — the fence is the data; Mermaid keeps structu
 
 Fence / GFM table / HTML comment → parser → Chart IR → deterministic SVG (table always kept). Tags: `chart` | `markvis` | `vis`. Types: bar · line · area · scatter · pie · hist.
 
-Try: [docs/landing.md](./docs/landing.md) · [playground](./apps/playground) · [drop-in](./apps/playground/dropin.html) · [gallery](./examples/gallery.html) · [SPEC](./SPEC.md) · [visual-spec](./docs/visual-spec.md)
+Try: [docs/landing.md](./docs/landing.md) · [playground](./apps/playground) · [drop-in](./apps/playground/dropin.html) · [gallery](./examples/gallery.html) · [SPEC](./SPEC.md) · [visual-spec](./docs/visual-spec.md) · [integrate](./docs/integrate.md)
 
 Browser: `packages/browser/dist/markvis.min.js` (zero network). GitHub README figures: `markvis bake README.md` (idempotent; keeps the fence, writes SVG + image after it).
 

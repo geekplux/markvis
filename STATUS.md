@@ -14,4 +14,8 @@
 - node smoke vscode dist extendMarkdownIt → svg in html (0)
 
 ## Active
+## Writer B8
+
+- docs/integrate.md; linked from landing + README
+
 B8 integrate.md -> @Writer
