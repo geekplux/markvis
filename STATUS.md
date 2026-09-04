@@ -1,7 +1,7 @@
 # STATUS.md
 
 ## Snapshot
-- tip: 00fff7c
+- tip: 11b6d26
 - GeekPlux: Pass B REJECTED (still ugly) — Unit B chrome landed for review
 - Locked: default SVG canvas TRANSPARENT (no paper fill) for MD hosts
 - Active: Coder Unit B — cartesian/pie use INK + HAIRLINE_OPACITY 0.10 / STRUCTURE_OPACITY 0.28
