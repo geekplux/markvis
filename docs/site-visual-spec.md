@@ -85,23 +85,23 @@ Keep `?id=` side rail. Detail: full SVG cap `720px` uncropped · conclusion `20p
 
 - Full viewport under site nav (iframe OK). Inside playground:
 - Background paper `#F7F4EF`.
-- Left editor at least 40% · right figure at least 40% · gap `1px` rule.
-- Toolbar quiet: example switcher + Copy fence + Copy SVG + Open in gallery — `12px/500`, no debug or local-pnpm sentences.
+- Left editor at least 40% · right figure at least 40% · gap 1px rule.
+- Toolbar quiet: example switcher + Copy fence + Copy SVG + Open in gallery — 12px/500, no debug or local-pnpm sentences.
 - Figure pane: transparent SVG on paper.
 
 ---
 
 ## Integrate / Spec / AI
 
-- Same paper + ink. Body `16px/400`, measure `640–720px`.
-- H1 `28px/600`. H2 `18px/600`. Code blocks same inset as home fence.
+- Same paper + ink. Body 16px/400, measure 640-720px.
+- H1 28px/600. H2 18px/600. Code blocks same inset as home fence.
 - No Mermaid.
 
 ---
 
 ## Implementation notes for Coder
 
-1. Override VitePress theme CSS (`--vp-c-bg`, `--vp-c-brand-1`, hero) to paper/ink/accent — must not read as default VP blue.
+1. Override VitePress theme CSS (--vp-c-bg, --vp-c-brand-1, hero) to paper/ink/accent — must not read as default VP blue.
 2. Home: no Proof heading; three uncropped SVGs + one caption each.
 3. Gallery cards: remove double title; remove fixed 140px overflow hidden crop; show full chart.
 4. Fixture slug / omitted titles: title-only valid edits + regen out (smallest set).
@@ -112,12 +112,10 @@ Keep `?id=` side rail. Detail: full SVG cap `720px` uncropped · conclusion `20p
 
 ## Acceptance
 
-- Incognito `/` `/play` `/examples`: not stock VitePress; no Mermaid; `/play` edits fence and SVG updates.
+- Incognito / /play /examples: not stock VitePress; no Mermaid; /play edits fence and SVG updates.
 - Example cards: whole plot visible; one caption; no fixture slugs.
 - Home: wordmark, max 2-line sentence, two buttons, 3 uncropped figures, one fence.
 - GeekPlux visual veto.
-
----
 
 ## Out of scope
 
