@@ -1,6 +1,6 @@
 # Integrate
 
-How markvis shows up where Mermaid shows up — by bake and adapters, not by waiting for GitHub.com.
+How markvis shows up in READMEs, previews, and hosts — by bake and adapters, not by waiting for a native platform fence.
 
 ## Public site
 

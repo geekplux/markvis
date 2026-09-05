@@ -2,28 +2,21 @@
 layout: home
 hero:
   name: markvis
-  text: Quantitative charts in Markdown. Mermaid is structure; markvis is numbers.
+  text: Charts in Markdown. The fence is the data.
   actions:
     - theme: brand
-      text: Open playground
+      text: Playground
       link: /play
     - theme: alt
       text: Examples
       link: /examples
-    - theme: alt
-      text: GitHub
-      link: https://github.com/geekplux/markvis
 ---
-
-## Proof
 
 ![Feb led Q3](/home/01-bar-basic.svg)
 
 ![Pro pulled ahead](/home/02-line-multi.svg)
 
 ![Shares stay raw](/home/05-pie-raw.svg)
-
-## Fence
 
 ```chart
 markvis: 2
@@ -39,4 +32,4 @@ Feb,180
 Mar,150
 ```
 
-0.0.13 is frozen under `legacy/`. Work and the site ship from branch `v2`.
+0.0.13 is frozen under legacy/. The site ships from branch v2.

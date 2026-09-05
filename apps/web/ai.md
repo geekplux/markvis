@@ -1,10 +1,10 @@
 # AI
 
-Agents should emit a markvis fence, not Mermaid pie, not a PNG, not Vega JSON as the default.
+Agents should emit a markvis fence — not a flowchart DSL, not a PNG, not Vega JSON as the default.
 
 ## Trigger
 
-Use for quantitative charts in Markdown from tabular data. Tags: chart / markvis / vis. Types: bar, line, area, scatter, pie, hist.
+Use for charts in Markdown from tabular data. Tags: chart / markvis / vis. Types: bar, line, area, scatter, pie, hist.
 
 Skill: https://github.com/geekplux/markvis/blob/v2/skills/markvis/SKILL.md
 Brief: https://github.com/geekplux/markvis/blob/v2/llms.txt
@@ -17,7 +17,7 @@ Brief: https://github.com/geekplux/markvis/blob/v2/llms.txt
 
 ## Avoid
 
-- Mermaid for spreadsheet numbers
+- Flowchart tools for spreadsheet numbers
 - A seventh chart type
 - Silent x-sort
 

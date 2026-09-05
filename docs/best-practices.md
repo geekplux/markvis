@@ -16,7 +16,7 @@ Human contrib rules for markvis 2.0. SPEC.md and CONSTITUTION.md win on conflict
 - Invent a 7th type, silent x-sort, or JSON-as-default data.
 - Drop recovered rows on invalid fences (table + one-line error).
 - Import legacy/ from new package tests.
-- Treat Mermaid as the path for spreadsheet numbers.
+- Use a flowchart tool for flows — not for spreadsheet numbers.
 
 ## Docs touchpoints
 

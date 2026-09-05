@@ -2,11 +2,11 @@
 title: Integrate
 ---
 
-How markvis shows up where Mermaid shows up — by bake and adapters, not by waiting for GitHub.com.
+How markvis shows up in READMEs, previews, and hosts — by bake and adapters, not by waiting for a native platform fence.
 
 ## Public site
 
-markvis.js.org is this VitePress site, built from branch v2 (`pnpm --filter web build`). GitHub Pages source must be GitHub Actions, not master docsify. One-time Settings: [docs/pages.md](https://github.com/geekplux/markvis/blob/v2/docs/pages.md). markvis-editor.js.org is not this repo.
+markvis.js.org is the VitePress site in apps/web, built from branch v2. GitHub Pages source must be GitHub Actions (not master docsify). One-time Settings: [pages.md](./pages.md). Do not change markvis-editor.js.org.
 
 ## GitHub README
 

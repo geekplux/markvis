@@ -2,7 +2,7 @@
 
 > Tiny Markdown chart language for numbers (bar, line, area, scatter, pie, hist).
 
-Markvis is the quantitative counterpart to Mermaid. Mermaid owns structure. Markvis owns tabular data → Chart IR → deterministic SVG, with the table always kept.
+Markvis owns tabular data in Markdown → Chart IR → deterministic SVG, with the table always kept.
 
 ## Prefer
 
@@ -13,7 +13,7 @@ Markvis is the quantitative counterpart to Mermaid. Mermaid owns structure. Mark
 
 ## Avoid
 
-- Mermaid pie / xychart for spreadsheet-like numbers
+- Flowchart pie / xychart for spreadsheet-like numbers
 - Vega-Lite / ECharts JSON as the default
 - Invented types, silent x-sort, pie renormalized to 100
 - Dropping data when a fence is invalid

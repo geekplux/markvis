@@ -1,6 +1,6 @@
 # markvis 2.0
 
-Quantitative charts in Markdown — the fence is the data; Mermaid keeps structure.
+Charts in Markdown. The fence is the data.
 
 ![Feb led Q3](./examples/out/01-bar-basic.svg)
 

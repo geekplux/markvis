@@ -5,6 +5,10 @@
 - Next: Writer Mermaid purge → Designer site-visual-spec → Coder apply chrome
 
 ## Active
+## Writer P2
+
+- Mermaid stripped from public web + README + landing/integrate + skill/llms; research-brief kept internal
+
 P1 shipped: VitePress /play full-viewport iframe of apps/playground
 web build: pnpm --filter playground run build:embed → public/play-app then vitepress
 ?example= forwarded; Open in gallery target=_top

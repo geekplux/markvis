@@ -1,6 +1,6 @@
 ---
 name: markvis
-description: Use when the user wants a quantitative chart in Markdown (bar, line, area, scatter, pie, hist) from tabular data — emit a markvis fence (chart|markvis|vis), never Mermaid pie/xychart, never a PNG, never Vega-Lite JSON as the default.
+description: Use when the user wants a quantitative chart in Markdown (bar, line, area, scatter, pie, hist) from tabular data — emit a markvis fence (chart|markvis|vis), never a flowchart pie/xychart, never a PNG, never Vega-Lite JSON as the default.
 ---
 
 # markvis
@@ -15,7 +15,7 @@ Quantitative charts in Markdown. Source is the data (CSV or GFM table). Tags `ch
 
 ## When not to use
 
-- Flowcharts, sequence, state, ER → Mermaid.
+- Flowcharts, sequence, state, ER → a structure diagram tool.
 - Invented PNG / screenshot as the source of truth.
 - Vega-Lite / ECharts JSON as the default artifact (optional later `engine:`, not core).
 - A 7th chart type (`donut`, `heatmap`, `stacked-bar` as its own type).
@@ -57,7 +57,7 @@ Copy from `examples/valid/` (keep fences identical):
 
 | Don’t | Do |
 | --- | --- |
-| Mermaid `pie` / `xychart` for tables | markvis fence |
+| Flowchart `pie` / `xychart` for tables | markvis fence |
 | JSON array as the data body | CSV or GFM table |
 | Sort categories “to look nice” | Keep input row order |
 | Force pie slices to 100 | Leave values as-is |
