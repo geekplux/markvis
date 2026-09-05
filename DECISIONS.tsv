@@ -64,3 +64,4 @@ date	wave	decision
 2026-09-04	S3	accepted 1acfb42 playground + 8c0421a Writer home/ai; open S5 Pages from v2
 2026-09-04	S5	pages.yml: v2 pnpm --filter web build; deploy apps/web/.vitepress/dist; CNAME markvis.js.org; Settings GitHub Actions not master docsify; no markvis-editor; no docsify
 2026-09-05	S5	Pages: github-pages env must allow v2; CF-proxied js.org leave Enforce HTTPS off + CF SSL Full; Source stays GitHub Actions
+2026-09-05	P0	live site rejected; /play stub first; no Mermaid on public; site-visual-spec next
