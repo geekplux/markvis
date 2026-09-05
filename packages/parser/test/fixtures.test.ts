@@ -54,8 +54,8 @@ describe("fixture inventory", () => {
     expect(validFiles).toHaveLength(52);
   });
 
-  it("covers 18 invalid fixtures", () => {
-    expect(invalidFiles).toHaveLength(18);
+  it("covers 19 invalid fixtures", () => {
+    expect(invalidFiles).toHaveLength(19);
   });
 });
 
@@ -234,6 +234,74 @@ describe("language rules", () => {
       ["A", "40"],
       ["B", "-5"],
       ["C", "20"],
+    ]);
+  });
+
+  it("defaults omitted theme to folio", () => {
+    const source = [
+      "```chart",
+      "type: bar",
+      "title: Default theme",
+      "x: month",
+      "y: revenue",
+      "",
+      "month,revenue",
+      "Jan,120",
+      "Feb,180",
+      "```",
+      "",
+    ].join("\n");
+    const result = parseMarkdown(source);
+    expect(result.ok).toBe(true);
+    if (!result.ok) {
+      return;
+    }
+    expect(result.chart.theme).toBe("folio");
+  });
+
+  it.each(["folio", "highcharts", "shadcn", "docs"] as const)(
+    "accepts theme %s",
+    (theme) => {
+      const source = [
+        "```chart",
+        "type: bar",
+        `theme: ${theme}`,
+        "title: Themed",
+        "x: month",
+        "y: revenue",
+        "",
+        "month,revenue",
+        "Jan,120",
+        "Feb,180",
+        "```",
+        "",
+      ].join("\n");
+      const result = parseMarkdown(source);
+      expect(result.ok).toBe(true);
+      if (!result.ok) {
+        return;
+      }
+      expect(result.chart.theme).toBe(theme);
+    },
+  );
+
+  it("rejects unknown theme with E_UNKNOWN_THEME and table fallback", () => {
+    const source = readFileSync(
+      join(invalidDir, "19-unknown-theme.md"),
+      "utf8",
+    );
+    const result = parseMarkdown(source, { filename: "19-unknown-theme.md" });
+    expect(result.ok).toBe(false);
+    if (result.ok) {
+      return;
+    }
+    expect(result.error.code).toBe("E_UNKNOWN_THEME");
+    expect(result.error.message).toContain("E_UNKNOWN_THEME");
+    expect(result.error.message.includes("\n")).toBe(false);
+    expect(result.table.columns).toEqual(["month", "revenue"]);
+    expect(result.table.rows).toEqual([
+      ["Jan", "120"],
+      ["Feb", "180"],
     ]);
   });
 });

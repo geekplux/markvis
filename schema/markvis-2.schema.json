@@ -24,6 +24,16 @@
       "type": "string",
       "minLength": 1
     },
+    "theme": {
+      "type": "string",
+      "enum": [
+        "folio",
+        "highcharts",
+        "shadcn",
+        "docs"
+      ],
+      "default": "folio"
+    },
     "unit": {
       "type": "string",
       "minLength": 1

@@ -141,10 +141,11 @@ describe("check", () => {
     const errors = stdout
       .split("\n")
       .filter((line) => line.startsWith("error\t"));
-    expect(errors).toHaveLength(18);
+    expect(errors).toHaveLength(19);
     expect(stdout).toContain("E_UNKNOWN_TYPE");
     expect(stdout).toContain("E_PIE_NEGATIVE");
-    expect(stderr).toContain("18 error");
+    expect(stdout).toContain("E_UNKNOWN_THEME");
+    expect(stderr).toContain("19 error");
   });
 
   it("exits non-zero when a path is missing", () => {

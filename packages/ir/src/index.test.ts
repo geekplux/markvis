@@ -2,7 +2,9 @@ import { describe, expect, it } from "vitest";
 import {
   CHART_TYPES,
   ChartIRSchema,
+  THEMES,
   columnValues,
+  isChartTheme,
   isChartType,
 } from "./index.js";
 
@@ -114,6 +116,49 @@ describe("@markvis/ir", () => {
       x: "month",
       y: "revenue",
       table: { ...barTable, extra: true },
+    });
+    expect(result.success).toBe(false);
+  });
+
+  it("defaults omitted theme to folio", () => {
+    const ir = ChartIRSchema.parse({
+      markvis: 2,
+      type: "bar",
+      title: "Q3 Revenue",
+      x: "month",
+      y: "revenue",
+      table: barTable,
+    });
+    expect(ir.theme).toBe("folio");
+  });
+
+  it("accepts the four themes", () => {
+    expect([...THEMES]).toEqual(["folio", "highcharts", "shadcn", "docs"]);
+    for (const theme of THEMES) {
+      const ir = ChartIRSchema.parse({
+        markvis: 2,
+        type: "bar",
+        title: "Q3",
+        theme,
+        x: "month",
+        y: "revenue",
+        table: barTable,
+      });
+      expect(ir.theme).toBe(theme);
+      expect(isChartTheme(theme)).toBe(true);
+    }
+    expect(isChartTheme("neon")).toBe(false);
+  });
+
+  it("rejects an unknown theme", () => {
+    const result = ChartIRSchema.safeParse({
+      markvis: 2,
+      type: "bar",
+      title: "Q3",
+      theme: "neon",
+      x: "month",
+      y: "revenue",
+      table: barTable,
     });
     expect(result.success).toBe(false);
   });

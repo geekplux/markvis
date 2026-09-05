@@ -13,6 +13,12 @@ export type ChartType = (typeof CHART_TYPES)[number];
 
 export const ChartTypeSchema = z.enum(CHART_TYPES);
 
+export const THEMES = ["folio", "highcharts", "shadcn", "docs"] as const;
+
+export type ChartTheme = (typeof THEMES)[number];
+
+export const ChartThemeSchema = z.enum(THEMES);
+
 export const TableSchema = z
   .object({
     columns: z.array(z.string()).min(1),
@@ -27,6 +33,7 @@ export const ChartIRSchema = z
     markvis: z.literal(2),
     type: ChartTypeSchema,
     title: z.string().min(1),
+    theme: ChartThemeSchema.default("folio"),
     unit: z.string().min(1).optional(),
     x: z.string().min(1),
     y: z.string().min(1).optional(),
@@ -69,6 +76,10 @@ export type ChartIR = z.output<typeof ChartIRSchema>;
 
 export function isChartType(value: string): value is ChartType {
   return (CHART_TYPES as readonly string[]).includes(value);
+}
+
+export function isChartTheme(value: string): value is ChartTheme {
+  return (THEMES as readonly string[]).includes(value);
 }
 
 export function columnValues(

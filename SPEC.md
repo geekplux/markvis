@@ -51,6 +51,7 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`. Same meani
 | `markvis` | no | `2` | Language version. |
 | `type` | yes | — | `bar` \| `line` \| `area` \| `scatter` \| `pie` \| `hist` only. |
 | `title` | no | derived | From filename or first column / `y` if omitted. |
+| `theme` | no | `folio` | `folio` \| `highcharts` \| `shadcn` \| `docs` only. |
 | `unit` | no | — | Display suffix for values. |
 | `x` | typed | first category / numeric col | Independent axis or labels. |
 | `y` | typed | first numeric col | Measure. |
@@ -94,8 +95,13 @@ Zeros are legal. Negatives are legal on bar/line/area/scatter; illegal on `pie`.
 | `E_PIE_NEGATIVE` | Pie value < 0. |
 | `E_YAML_TABLE_CONFLICT` | Header fields disagree with progressive table mapping. |
 | `E_EMPTY_FENCE` | Fence body empty. |
+| `E_UNKNOWN_THEME` | `theme` not in `folio` \| `highcharts` \| `shadcn` \| `docs`. |
 
 Unknown failures still degrade to table + one line; prefer a listed code when it fits.
+
+## Themes
+
+Optional fence header `theme:` selects a named look. Allowed values: `folio` (default), `highcharts`, `shadcn`, `docs`. Omit the field to get `folio`. An unknown value is a stable parse error (`E_UNKNOWN_THEME`) with table fallback — never a silent default swap. Themes are IR metadata only in this unit; they do not add chart types or pull Highcharts/d3/Unovis.
 
 ## Eight copy-paste examples
 

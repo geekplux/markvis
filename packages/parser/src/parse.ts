@@ -1,8 +1,10 @@
 import {
   ChartIRSchema,
   CHART_TYPES,
+  isChartTheme,
   isChartType,
   type ChartIR,
+  type ChartTheme,
   type ChartType,
 } from "@markvis/ir";
 import { extractCharts, type ChartForm } from "./extract.js";
@@ -30,6 +32,7 @@ export const ERROR_CODES = [
   "E_PIE_NEGATIVE",
   "E_YAML_TABLE_CONFLICT",
   "E_EMPTY_FENCE",
+  "E_UNKNOWN_THEME",
 ] as const;
 
 export type ErrorCode = (typeof ERROR_CODES)[number];
@@ -263,6 +266,7 @@ function deriveTitle(opts: {
 function buildIR(fields: {
   type: ChartType;
   title: string;
+  theme: ChartTheme;
   unit?: string | undefined;
   x: string;
   y?: string | undefined;
@@ -273,6 +277,7 @@ function buildIR(fields: {
     markvis: 2 as const,
     type: fields.type,
     title: fields.title,
+    theme: fields.theme,
     x: fields.x,
     table: fields.table,
     ...(fields.unit ? { unit: fields.unit } : {}),
@@ -381,6 +386,20 @@ function parseBody(
   }
   const type = typeRaw as ChartType;
 
+  const themeRaw = headers["theme"]?.trim() ?? "";
+  let theme: ChartTheme = "folio";
+  if (themeRaw !== "") {
+    if (!isChartTheme(themeRaw)) {
+      return fail(
+        "E_UNKNOWN_THEME",
+        "theme is not one of folio|highcharts|shadcn|docs",
+        parsed,
+        raw,
+      );
+    }
+    theme = themeRaw;
+  }
+
   const specified = {
     x: headers["x"]?.trim() || undefined,
     y: headers["y"]?.trim() || undefined,
@@ -449,6 +468,7 @@ function parseBody(
   const chart = buildIR({
     type,
     title,
+    theme,
     unit,
     x,
     y,
