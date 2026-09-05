@@ -10,6 +10,7 @@ import {
   chartId,
   folio,
   highcharts,
+  shadcn,
   renderSvg,
   themeTokens,
 } from "../src/index.js";
@@ -253,7 +254,6 @@ describe("folio tokens", () => {
     expect(folio.INK).toBe("#171717");
     expect(folio.PALETTE).toEqual(PALETTE);
     expect(themeTokens("folio")).toBe(folio);
-    expect(themeTokens("shadcn")).toBe(folio);
     expect(themeTokens("docs")).toBe(folio);
   });
 });
@@ -304,6 +304,54 @@ describe("highcharts tokens", () => {
   });
 });
 
+
+describe("shadcn tokens", () => {
+  it("is a rounded, chart-1..5, card-quiet pack", () => {
+    expect(themeTokens("shadcn")).toBe(shadcn);
+    expect(shadcn.BAR_RX).toBeGreaterThan(folio.BAR_RX);
+    expect(shadcn.PALETTE).toHaveLength(5);
+    expect(shadcn.PALETTE[0]).not.toBe(folio.PALETTE[0]);
+    expect(Number(shadcn.STRUCTURE_OPACITY)).toBeLessThan(
+      Number(folio.STRUCTURE_OPACITY),
+    );
+    expect(Number(shadcn.HAIRLINE_OPACITY)).toBeLessThan(
+      Number(folio.HAIRLINE_OPACITY),
+    );
+    expect(shadcn.TYPE.tick.fill).toBe(shadcn.QUIET);
+  });
+
+  it("renders a different SVG than folio for the same bar IR", () => {
+    const a = renderSvg(barChart({ theme: "folio" }));
+    const b = renderSvg(barChart({ theme: "shadcn" }));
+    expect(a).not.toBe(b);
+    expect(b).toContain(shadcn.PALETTE[0]!);
+    expect(b).toContain(
+      'font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif"',
+    );
+  });
+
+  it("matches examples/out/themes/shadcn/01-bar-basic.svg", () => {
+    const repoRoot = join(here, "../../..");
+    const source = readFileSync(
+      join(repoRoot, "examples/valid/01-bar-basic.md"),
+      "utf8",
+    );
+    const result = parseMarkdown(source, { filename: "01-bar-basic.md" });
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    const chart = ChartIRSchema.parse({ ...result.chart, theme: "shadcn" });
+    const svg = renderSvg(chart);
+    const outDir = join(repoRoot, "examples/out/themes/shadcn");
+    const outPath = join(outDir, "01-bar-basic.svg");
+    if (process.env["UPDATE_SNAPSHOTS"] === "1") {
+      mkdirSync(outDir, { recursive: true });
+      writeFileSync(outPath, svg, "utf8");
+    }
+    const committed = readFileSync(outPath, "utf8");
+    expect(svg).toBe(committed);
+  });
+});
+
 describe("source discipline", () => {
   it("does not use clocks or random in renderer sources", () => {
     const dirs = [join(here, "../src"), join(here, "../themes")];
@@ -324,6 +372,7 @@ describe("source discipline", () => {
       expect(source, file).not.toMatch(/legacy/);
       expect(source, file).not.toMatch(/highcharts\.com/);
       expect(source, file).not.toMatch(/\bunovis\b/i);
+      expect(source, file).not.toMatch(/\brecharts\b/i);
     }
   });
 });

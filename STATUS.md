@@ -9,12 +9,13 @@
 ## Active
 C2 done (superseded by C3 on themes/).
 C3 done: highcharts token pack wired; snapshot examples/out/themes/01-bar-basic.svg.
+C4 done: shadcn token pack wired; snapshot examples/out/themes/shadcn/01-bar-basic.svg.
 
 ## Hour order
-C1 ✓ → C2 ✓ → C3 ✓ → C4/C5 packs → C6 playground switcher → C7 mobile 390 → C8 homepage from site-copy.md → C9 examples theme toggle → C10 launch kit
+C1 ✓ → C2 ✓ → C3 ✓ → C4 ✓ → C5 packs → C6 playground switcher → C7 mobile 390 → C8 homepage from site-copy.md → C9 examples theme toggle → C10 launch kit
 
 ## Commands
-pnpm test → 0 (443)
+pnpm test → 0 (446)
 pnpm markvis check examples/valid → 0
 pnpm markvis check examples/invalid → 1
 pnpm --filter playground build → 0
