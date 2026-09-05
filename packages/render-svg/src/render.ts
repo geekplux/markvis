@@ -2,6 +2,8 @@ import type { ChartIR } from "@markvis/ir";
 import { renderCartesian } from "./cartesian.js";
 import { renderPie } from "./pie.js";
 import { themeTokens } from "./theme.js";
+import { applyThemeTokens } from "./tokens.js";
+import { folio } from "../themes/folio.js";
 import { attrs, chartId, escapeXml } from "./xml.js";
 
 export function ariaLabel(chart: ChartIR): string {
@@ -46,30 +48,35 @@ export function description(chart: ChartIR): string {
 
 export function renderSvg(chart: ChartIR): string {
   const t = themeTokens(chart.theme);
-  const id = chartId(chart);
-  const painted =
-    chart.type === "pie" ? renderPie(chart, id) : renderCartesian(chart, id);
-  const open = `<svg ${attrs({
-    xmlns: "http://www.w3.org/2000/svg",
-    width: t.SVG_WIDTH,
-    height: painted.height,
-    viewBox: `0 0 ${t.SVG_WIDTH} ${painted.height}`,
-    role: "img",
-    "aria-label": ariaLabel(chart),
-    "aria-labelledby": `${id}-title`,
-    "aria-describedby": `${id}-desc`,
-    "data-markvis": 2,
-    "data-chart-type": chart.type,
-    "data-id": id,
-    "font-family": t.FONT,
-    "font-size": 12,
-  })}>`;
-  const lines = [
-    open,
-    `  <title id="${id}-title">${escapeXml(chart.title)}</title>`,
-    `  <desc id="${id}-desc">${escapeXml(description(chart))}</desc>`,
-    ...painted.lines,
-    `</svg>`,
-  ];
-  return `${lines.join("\n")}\n`;
+  applyThemeTokens(t);
+  try {
+    const id = chartId(chart);
+    const painted =
+      chart.type === "pie" ? renderPie(chart, id) : renderCartesian(chart, id);
+    const open = `<svg ${attrs({
+      xmlns: "http://www.w3.org/2000/svg",
+      width: t.SVG_WIDTH,
+      height: painted.height,
+      viewBox: `0 0 ${t.SVG_WIDTH} ${painted.height}`,
+      role: "img",
+      "aria-label": ariaLabel(chart),
+      "aria-labelledby": `${id}-title`,
+      "aria-describedby": `${id}-desc`,
+      "data-markvis": 2,
+      "data-chart-type": chart.type,
+      "data-id": id,
+      "font-family": t.FONT,
+      "font-size": 12,
+    })}>`;
+    const lines = [
+      open,
+      `  <title id="${id}-title">${escapeXml(chart.title)}</title>`,
+      `  <desc id="${id}-desc">${escapeXml(description(chart))}</desc>`,
+      ...painted.lines,
+      `</svg>`,
+    ];
+    return `${lines.join("\n")}\n`;
+  } finally {
+    applyThemeTokens(folio);
+  }
 }

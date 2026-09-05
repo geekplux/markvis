@@ -1,64 +1,116 @@
-/** Named constants for the default look. Source of truth: themes/folio.ts. */
+/** Named constants for the active look. Source of truth: themes/*.ts via applyThemeTokens. */
 
-import { folio } from "../themes/folio.js";
+import { folio, type ThemeTokens } from "../themes/folio.js";
 
-export const SVG_WIDTH = folio.SVG_WIDTH;
-export const SVG_HEIGHT = folio.SVG_HEIGHT;
-export const SVG_HEIGHT_MAX = folio.SVG_HEIGHT_MAX;
-export const PLOT_MIN_RATIO = folio.PLOT_MIN_RATIO;
+export let SVG_WIDTH = folio.SVG_WIDTH;
+export let SVG_HEIGHT = folio.SVG_HEIGHT;
+export let SVG_HEIGHT_MAX = folio.SVG_HEIGHT_MAX;
+export let PLOT_MIN_RATIO = folio.PLOT_MIN_RATIO;
 
-export const FONT = folio.FONT;
+export let FONT = folio.FONT;
 
-export const INK = folio.INK;
-export const QUIET = folio.QUIET;
-export const HAIRLINE_OPACITY = folio.HAIRLINE_OPACITY;
-export const STRUCTURE_OPACITY = folio.STRUCTURE_OPACITY;
+export let INK = folio.INK;
+export let QUIET = folio.QUIET;
+export let HAIRLINE_OPACITY = folio.HAIRLINE_OPACITY;
+export let STRUCTURE_OPACITY = folio.STRUCTURE_OPACITY;
 
-export const TYPE = folio.TYPE;
+export let TYPE = folio.TYPE;
 
-export const MARGIN = folio.MARGIN;
+export let MARGIN = folio.MARGIN;
 
-export const PALETTE = folio.PALETTE;
+export let PALETTE = folio.PALETTE;
 
-export const WRAP_OPACITY = folio.WRAP_OPACITY;
+export let WRAP_OPACITY = folio.WRAP_OPACITY;
 
-export const TITLE_BASELINE = folio.TITLE_BASELINE;
-export const TITLE_TO_PLOT = folio.TITLE_TO_PLOT;
-export const TICK_TEXT_GAP = folio.TICK_TEXT_GAP;
-export const LABEL_ROTATE_DEG = folio.LABEL_ROTATE_DEG;
-export const LABEL_MIN_GAP = folio.LABEL_MIN_GAP;
-export const ROTATE_LINE_HEIGHT = folio.ROTATE_LINE_HEIGHT;
-export const MAX_INTERIOR_GRID = folio.MAX_INTERIOR_GRID;
+export let TITLE_BASELINE = folio.TITLE_BASELINE;
+export let TITLE_TO_PLOT = folio.TITLE_TO_PLOT;
+export let TICK_TEXT_GAP = folio.TICK_TEXT_GAP;
+export let LABEL_ROTATE_DEG = folio.LABEL_ROTATE_DEG;
+export let LABEL_MIN_GAP = folio.LABEL_MIN_GAP;
+export let ROTATE_LINE_HEIGHT = folio.ROTATE_LINE_HEIGHT;
+export let MAX_INTERIOR_GRID = folio.MAX_INTERIOR_GRID;
 
-export const BAR_GAP_FEW = folio.BAR_GAP_FEW;
-export const BAR_GAP_MANY = folio.BAR_GAP_MANY;
-export const GROUP_GAP_PX = folio.GROUP_GAP_PX;
-export const BAR_RX = folio.BAR_RX;
-export const BAR_MAX_WIDTH = folio.BAR_MAX_WIDTH;
-export const BAR_MAX_WIDTH_N = folio.BAR_MAX_WIDTH_N;
-export const BAR_LABEL_MIN_WIDTH = folio.BAR_LABEL_MIN_WIDTH;
-export const BAR_LABEL_INSIDE_H = folio.BAR_LABEL_INSIDE_H;
-export const BAR_LABEL_OFFSET = folio.BAR_LABEL_OFFSET;
-export const BAR_LABEL_N_ON = folio.BAR_LABEL_N_ON;
-export const BAR_LABEL_N_OFF = folio.BAR_LABEL_N_OFF;
-export const BAR_LABEL_MID_MIN_W = folio.BAR_LABEL_MID_MIN_W;
+export let BAR_GAP_FEW = folio.BAR_GAP_FEW;
+export let BAR_GAP_MANY = folio.BAR_GAP_MANY;
+export let GROUP_GAP_PX = folio.GROUP_GAP_PX;
+export let BAR_RX = folio.BAR_RX;
+export let BAR_MAX_WIDTH = folio.BAR_MAX_WIDTH;
+export let BAR_MAX_WIDTH_N = folio.BAR_MAX_WIDTH_N;
+export let BAR_LABEL_MIN_WIDTH = folio.BAR_LABEL_MIN_WIDTH;
+export let BAR_LABEL_INSIDE_H = folio.BAR_LABEL_INSIDE_H;
+export let BAR_LABEL_OFFSET = folio.BAR_LABEL_OFFSET;
+export let BAR_LABEL_N_ON = folio.BAR_LABEL_N_ON;
+export let BAR_LABEL_N_OFF = folio.BAR_LABEL_N_OFF;
+export let BAR_LABEL_MID_MIN_W = folio.BAR_LABEL_MID_MIN_W;
 
-export const LINE_STROKE = folio.LINE_STROKE;
-export const LINE_POINT_R = folio.LINE_POINT_R;
-export const POINT_SKIP_AFTER = folio.POINT_SKIP_AFTER;
-export const AREA_OPACITY = folio.AREA_OPACITY;
-export const END_LABEL_SERIES_MAX = folio.END_LABEL_SERIES_MAX;
-export const END_LABEL_GAP = folio.END_LABEL_GAP;
-export const END_LABEL_MIN_SEP = folio.END_LABEL_MIN_SEP;
+export let LINE_STROKE = folio.LINE_STROKE;
+export let LINE_POINT_R = folio.LINE_POINT_R;
+export let POINT_SKIP_AFTER = folio.POINT_SKIP_AFTER;
+export let AREA_OPACITY = folio.AREA_OPACITY;
+export let END_LABEL_SERIES_MAX = folio.END_LABEL_SERIES_MAX;
+export let END_LABEL_GAP = folio.END_LABEL_GAP;
+export let END_LABEL_MIN_SEP = folio.END_LABEL_MIN_SEP;
 
-export const SCATTER_R = folio.SCATTER_R;
-export const SCATTER_OPACITY = folio.SCATTER_OPACITY;
+export let SCATTER_R = folio.SCATTER_R;
+export let SCATTER_OPACITY = folio.SCATTER_OPACITY;
 
-export const PIE_RADIUS_RATIO = folio.PIE_RADIUS_RATIO;
-export const PIE_STROKE = folio.PIE_STROKE;
-export const PIE_LEADER = folio.PIE_LEADER;
-export const PIE_LABEL_GAP = folio.PIE_LABEL_GAP;
-export const PIE_LABEL_MIN_SEP = folio.PIE_LABEL_MIN_SEP;
-export const PIE_ELBOW = folio.PIE_ELBOW;
+export let PIE_RADIUS_RATIO = folio.PIE_RADIUS_RATIO;
+export let PIE_STROKE = folio.PIE_STROKE;
+export let PIE_LEADER = folio.PIE_LEADER;
+export let PIE_LABEL_GAP = folio.PIE_LABEL_GAP;
+export let PIE_LABEL_MIN_SEP = folio.PIE_LABEL_MIN_SEP;
+export let PIE_ELBOW = folio.PIE_ELBOW;
 
-export const COMPACT_SPAN = folio.COMPACT_SPAN;
+export let COMPACT_SPAN = folio.COMPACT_SPAN;
+
+/** Apply a theme pack to the live token bindings used by layout/paint. */
+export function applyThemeTokens(t: ThemeTokens): void {
+  SVG_WIDTH = t.SVG_WIDTH;
+  SVG_HEIGHT = t.SVG_HEIGHT;
+  SVG_HEIGHT_MAX = t.SVG_HEIGHT_MAX;
+  PLOT_MIN_RATIO = t.PLOT_MIN_RATIO;
+  FONT = t.FONT;
+  INK = t.INK;
+  QUIET = t.QUIET;
+  HAIRLINE_OPACITY = t.HAIRLINE_OPACITY;
+  STRUCTURE_OPACITY = t.STRUCTURE_OPACITY;
+  TYPE = t.TYPE;
+  MARGIN = t.MARGIN;
+  PALETTE = t.PALETTE;
+  WRAP_OPACITY = t.WRAP_OPACITY;
+  TITLE_BASELINE = t.TITLE_BASELINE;
+  TITLE_TO_PLOT = t.TITLE_TO_PLOT;
+  TICK_TEXT_GAP = t.TICK_TEXT_GAP;
+  LABEL_ROTATE_DEG = t.LABEL_ROTATE_DEG;
+  LABEL_MIN_GAP = t.LABEL_MIN_GAP;
+  ROTATE_LINE_HEIGHT = t.ROTATE_LINE_HEIGHT;
+  MAX_INTERIOR_GRID = t.MAX_INTERIOR_GRID;
+  BAR_GAP_FEW = t.BAR_GAP_FEW;
+  BAR_GAP_MANY = t.BAR_GAP_MANY;
+  GROUP_GAP_PX = t.GROUP_GAP_PX;
+  BAR_RX = t.BAR_RX;
+  BAR_MAX_WIDTH = t.BAR_MAX_WIDTH;
+  BAR_MAX_WIDTH_N = t.BAR_MAX_WIDTH_N;
+  BAR_LABEL_MIN_WIDTH = t.BAR_LABEL_MIN_WIDTH;
+  BAR_LABEL_INSIDE_H = t.BAR_LABEL_INSIDE_H;
+  BAR_LABEL_OFFSET = t.BAR_LABEL_OFFSET;
+  BAR_LABEL_N_ON = t.BAR_LABEL_N_ON;
+  BAR_LABEL_N_OFF = t.BAR_LABEL_N_OFF;
+  BAR_LABEL_MID_MIN_W = t.BAR_LABEL_MID_MIN_W;
+  LINE_STROKE = t.LINE_STROKE;
+  LINE_POINT_R = t.LINE_POINT_R;
+  POINT_SKIP_AFTER = t.POINT_SKIP_AFTER;
+  AREA_OPACITY = t.AREA_OPACITY;
+  END_LABEL_SERIES_MAX = t.END_LABEL_SERIES_MAX;
+  END_LABEL_GAP = t.END_LABEL_GAP;
+  END_LABEL_MIN_SEP = t.END_LABEL_MIN_SEP;
+  SCATTER_R = t.SCATTER_R;
+  SCATTER_OPACITY = t.SCATTER_OPACITY;
+  PIE_RADIUS_RATIO = t.PIE_RADIUS_RATIO;
+  PIE_STROKE = t.PIE_STROKE;
+  PIE_LEADER = t.PIE_LEADER;
+  PIE_LABEL_GAP = t.PIE_LABEL_GAP;
+  PIE_LABEL_MIN_SEP = t.PIE_LABEL_MIN_SEP;
+  PIE_ELBOW = t.PIE_ELBOW;
+  COMPACT_SPAN = t.COMPACT_SPAN;
+}

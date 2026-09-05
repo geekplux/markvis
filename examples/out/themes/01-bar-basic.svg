@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="bar chart: Feb led Q3 at 180 (USD k), 3 rows" aria-labelledby="mv-4b5fc99486f348de-title" aria-describedby="mv-4b5fc99486f348de-desc" data-markvis="2" data-chart-type="bar" data-id="mv-4b5fc99486f348de" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-4b5fc99486f348de-title">Feb led Q3 at 180</title>
+  <desc id="mv-4b5fc99486f348de-desc">bar chart. Feb led Q3 at 180. x=month. y=revenue. unit=USD k. 3 rows.</desc>
+  <text x="44" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Feb led Q3 at 180<tspan font-size="12" font-weight="400" fill="#666666"> · USD k</tspan></text>
+  <path d="M44 417 L704 417" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <g fill="#666666" font-size="11" font-weight="400">
+    <text x="36" y="417" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="36" y="322.25" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="36" y="227.5" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="36" y="132.75" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="36" y="38" text-anchor="end" dominant-baseline="middle">200</text>
+    <text x="154" y="428" text-anchor="middle" font-size="11" data-full-label="Jan">Jan</text>
+    <text x="374" y="428" text-anchor="middle" font-size="11" data-full-label="Feb">Feb</text>
+    <text x="594" y="428" text-anchor="middle" font-size="11" data-full-label="Mar">Mar</text>
+  </g>
+  <g>
+    <path d="M122 417 L186 417 L186 189.6 L122 189.6 Z" fill="#7cb5ec" data-x="Jan" data-series="revenue" data-y="120"/>
+    <path d="M342 417 L406 417 L406 75.9 L342 75.9 Z" fill="#7cb5ec" data-x="Feb" data-series="revenue" data-y="180"/>
+    <path d="M562 417 L626 417 L626 132.75 L562 132.75 Z" fill="#7cb5ec" data-x="Mar" data-series="revenue" data-y="150"/>
+  </g>
+  <g>
+    <text x="154" y="181.6" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="Jan">120</text>
+    <text x="374" y="67.9" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="Feb">180</text>
+    <text x="594" y="124.75" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="Mar">150</text>
+  </g>
+</svg>

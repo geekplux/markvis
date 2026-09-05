@@ -1,13 +1,15 @@
-import { readdirSync, readFileSync } from "node:fs";
+import { mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import { ChartIRSchema, type ChartIR } from "@markvis/ir";
+import { parseMarkdown } from "@markvis/parser";
 import {
   PALETTE,
   binHistogram,
   chartId,
   folio,
+  highcharts,
   renderSvg,
   themeTokens,
 } from "../src/index.js";
@@ -251,15 +253,54 @@ describe("folio tokens", () => {
     expect(folio.INK).toBe("#171717");
     expect(folio.PALETTE).toEqual(PALETTE);
     expect(themeTokens("folio")).toBe(folio);
-    expect(themeTokens("highcharts")).toBe(folio);
     expect(themeTokens("shadcn")).toBe(folio);
     expect(themeTokens("docs")).toBe(folio);
   });
+});
 
-  it("renders the same SVG for named themes (no redesign)", () => {
+describe("highcharts tokens", () => {
+  it("is a denser, stronger-grid, legend-friendly pack", () => {
+    expect(themeTokens("highcharts")).toBe(highcharts);
+    expect(highcharts.PLOT_MIN_RATIO).toBeGreaterThan(folio.PLOT_MIN_RATIO);
+    expect(Number(highcharts.HAIRLINE_OPACITY)).toBeGreaterThan(
+      Number(folio.HAIRLINE_OPACITY),
+    );
+    expect(highcharts.MAX_INTERIOR_GRID).toBeGreaterThan(
+      folio.MAX_INTERIOR_GRID,
+    );
+    expect(highcharts.TYPE.legend.size).toBeGreaterThan(folio.TYPE.legend.size);
+    expect(highcharts.TITLE_TO_PLOT).toBeGreaterThan(folio.TITLE_TO_PLOT);
+    expect(highcharts.PALETTE[0]).not.toBe(folio.PALETTE[0]);
+  });
+
+  it("renders a different SVG than folio for the same bar IR", () => {
     const a = renderSvg(barChart({ theme: "folio" }));
     const b = renderSvg(barChart({ theme: "highcharts" }));
-    expect(a).toBe(b);
+    expect(a).not.toBe(b);
+    expect(b).toContain(highcharts.PALETTE[0]!);
+    expect(b).toContain(
+      'font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif"',
+    );
+  });
+
+  it("matches examples/out/themes/01-bar-basic.svg", () => {
+    const repoRoot = join(here, "../../..");
+    const source = readFileSync(
+      join(repoRoot, "examples/valid/01-bar-basic.md"),
+      "utf8",
+    );
+    const result = parseMarkdown(source, { filename: "01-bar-basic.md" });
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    const chart = ChartIRSchema.parse({ ...result.chart, theme: "highcharts" });
+    const svg = renderSvg(chart);
+    const outPath = join(repoRoot, "examples/out/themes/01-bar-basic.svg");
+    if (process.env["UPDATE_SNAPSHOTS"] === "1") {
+      mkdirSync(join(repoRoot, "examples/out/themes"), { recursive: true });
+      writeFileSync(outPath, svg, "utf8");
+    }
+    const committed = readFileSync(outPath, "utf8");
+    expect(svg).toBe(committed);
   });
 });
 

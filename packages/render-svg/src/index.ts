@@ -3,5 +3,6 @@ export { PALETTE } from "./palette.js";
 export { binHistogram, histSamplesFromChart } from "./hist.js";
 export { chartId } from "./xml.js";
 export { folio } from "../themes/folio.js";
+export { highcharts } from "../themes/highcharts.js";
 export { themeTokens } from "./theme.js";
 export type { ThemeTokens } from "./theme.js";
