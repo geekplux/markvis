@@ -11,6 +11,7 @@ import {
   folio,
   highcharts,
   shadcn,
+  docs,
   renderSvg,
   themeTokens,
 } from "../src/index.js";
@@ -254,7 +255,6 @@ describe("folio tokens", () => {
     expect(folio.INK).toBe("#171717");
     expect(folio.PALETTE).toEqual(PALETTE);
     expect(themeTokens("folio")).toBe(folio);
-    expect(themeTokens("docs")).toBe(folio);
   });
 });
 
@@ -342,6 +342,55 @@ describe("shadcn tokens", () => {
     const chart = ChartIRSchema.parse({ ...result.chart, theme: "shadcn" });
     const svg = renderSvg(chart);
     const outDir = join(repoRoot, "examples/out/themes/shadcn");
+    const outPath = join(outDir, "01-bar-basic.svg");
+    if (process.env["UPDATE_SNAPSHOTS"] === "1") {
+      mkdirSync(outDir, { recursive: true });
+      writeFileSync(outPath, svg, "utf8");
+    }
+    const committed = readFileSync(outPath, "utf8");
+    expect(svg).toBe(committed);
+  });
+});
+
+describe("docs tokens", () => {
+  it("is a zinc/slate, thin-tick, quiet-fill pack for VitePress page figures", () => {
+    expect(themeTokens("docs")).toBe(docs);
+    expect(docs.INK).toBe("#18181B");
+    expect(docs.QUIET).toBe("#64748B");
+    expect(docs.TYPE.tick.fill).toBe(docs.QUIET);
+    expect(Number(docs.HAIRLINE_OPACITY)).toBeLessThan(
+      Number(folio.HAIRLINE_OPACITY),
+    );
+    expect(Number(docs.STRUCTURE_OPACITY)).toBeLessThan(
+      Number(folio.STRUCTURE_OPACITY),
+    );
+    expect(docs.AREA_OPACITY).toBeLessThan(folio.AREA_OPACITY);
+    expect(docs.BAR_RX).toBe(0);
+    expect(docs.PALETTE[0]).not.toBe(folio.PALETTE[0]);
+  });
+
+  it("renders a different SVG than folio for the same bar IR", () => {
+    const a = renderSvg(barChart({ theme: "folio" }));
+    const b = renderSvg(barChart({ theme: "docs" }));
+    expect(a).not.toBe(b);
+    expect(b).toContain(docs.PALETTE[0]!);
+    expect(b).toContain(
+      'font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif"',
+    );
+  });
+
+  it("matches examples/out/themes/docs/01-bar-basic.svg", () => {
+    const repoRoot = join(here, "../../..");
+    const source = readFileSync(
+      join(repoRoot, "examples/valid/01-bar-basic.md"),
+      "utf8",
+    );
+    const result = parseMarkdown(source, { filename: "01-bar-basic.md" });
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    const chart = ChartIRSchema.parse({ ...result.chart, theme: "docs" });
+    const svg = renderSvg(chart);
+    const outDir = join(repoRoot, "examples/out/themes/docs");
     const outPath = join(outDir, "01-bar-basic.svg");
     if (process.env["UPDATE_SNAPSHOTS"] === "1") {
       mkdirSync(outDir, { recursive: true });
