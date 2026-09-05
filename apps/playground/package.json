@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:embed": "vite build --base /play-app/ --outDir ../web/public/play-app",
     "preview": "vite preview"
   },
   "dependencies": {

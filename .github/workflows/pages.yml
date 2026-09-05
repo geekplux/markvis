@@ -39,7 +39,7 @@ jobs:
       - name: Install
         run: pnpm install --frozen-lockfile
 
-      - name: Build web
+      - name: Build web (embeds playground into public/play-app)
         run: pnpm --filter web build
 
       - name: Configure Pages

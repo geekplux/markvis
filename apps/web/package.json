@@ -5,8 +5,8 @@
   "type": "module",
   "description": "Public VitePress site",
   "scripts": {
-    "dev": "vitepress dev",
-    "build": "vitepress build",
+    "dev": "pnpm --filter playground run build:embed && vitepress dev",
+    "build": "pnpm --filter playground run build:embed && vitepress build",
     "preview": "vitepress preview"
   },
   "devDependencies": {

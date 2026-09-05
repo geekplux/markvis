@@ -32,6 +32,21 @@ async function copyText(text: string): Promise<void> {
   ta.remove();
 }
 
+function searchForExample(): string {
+  const own = window.location.search;
+  if (exampleIdFromSearch(own)) {
+    return own;
+  }
+  try {
+    if (window.parent !== window) {
+      return window.parent.location.search;
+    }
+  } catch {
+    return own;
+  }
+  return own;
+}
+
 function paint(view: PlaygroundView): void {
   const errorEl = mustEl<HTMLParagraphElement>("error");
   const svgHost = mustEl<HTMLDivElement>("svg-host");
@@ -75,7 +90,7 @@ function main(): void {
     select.append(option);
   }
 
-  const fromQuery = exampleIdFromSearch(window.location.search);
+  const fromQuery = exampleIdFromSearch(searchForExample());
   const initial =
     EXAMPLES.find((item) => item.id === fromQuery) ?? first;
   let filename = initial.filename;
@@ -83,11 +98,25 @@ function main(): void {
 
   function syncUrl(id: string): void {
     const next = playgroundSearch(id);
-    if (`${window.location.search}` === next) {
-      return;
+    if (`${window.location.search}` !== next) {
+      window.history.replaceState(
+        null,
+        "",
+        `${window.location.pathname}${next}${window.location.hash}`,
+      );
     }
-    const url = `${window.location.pathname}${next}${window.location.hash}`;
-    window.history.replaceState(null, "", url);
+    try {
+      if (window.parent !== window) {
+        const parent = window.parent.location;
+        window.parent.history.replaceState(
+          null,
+          "",
+          `${parent.pathname}${next}${parent.hash}`,
+        );
+      }
+    } catch {
+      // iframe without parent history access
+    }
   }
 
   function load(source: string, name: string, id: string): void {
