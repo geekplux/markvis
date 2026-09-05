@@ -103,18 +103,6 @@
   max-height: none;
 }
 
-.gallery-card-title {
-  margin-top: 8px;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 1.3;
-  color: #171717;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
 .gallery-detail {
   position: relative;
   z-index: 2;
@@ -134,11 +122,11 @@
   overflow: auto;
 }
 
-.gallery-full :deep(svg) {
+.gallery-full svg {
   display: block;
   width: 100%;
-  max-width: 720px;
   height: auto;
+  max-width: 100%;
 }
 
 .gallery-actions {

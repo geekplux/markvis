@@ -132,7 +132,6 @@ onUnmounted(() => {
           @click="openItem(item.id)"
         >
           <div class="gallery-thumb" v-html="item.svg" />
-          <div class="gallery-card-title">{{ item.title }}</div>
         </button>
       </div>
 

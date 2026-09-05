@@ -209,13 +209,6 @@ body {
   max-width: 360px;
 }
 
-.folio-figures figcaption {
-  margin-top: 8px;
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--folio-quiet);
-}
-
 .folio-home .vp-code-group,
 .folio-home div[class*="language-"] {
   background: #efebe4 !important;

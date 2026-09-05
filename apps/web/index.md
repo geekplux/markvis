@@ -19,16 +19,13 @@ pageClass: folio-home-page
 
 <div class="folio-figures">
   <figure>
-    <img src="/home/01-bar-basic.svg" alt="" />
-    <figcaption>Feb led Q3 at 180</figcaption>
+    <img src="/home/01-bar-basic.svg" alt="Feb led Q3 at 180" />
   </figure>
   <figure>
-    <img src="/home/02-line-multi.svg" alt="" />
-    <figcaption>Pro pulled ahead</figcaption>
+    <img src="/home/02-line-multi.svg" alt="Pro pulled ahead" />
   </figure>
   <figure>
-    <img src="/home/05-pie-raw.svg" alt="" />
-    <figcaption>Shares stay raw</figcaption>
+    <img src="/home/05-pie-raw.svg" alt="Shares stay raw" />
   </figure>
 </div>
 

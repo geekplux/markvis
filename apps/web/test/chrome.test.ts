@@ -17,8 +17,14 @@ describe("site visual chrome", () => {
     expect(home).not.toMatch(/layout:\s*home/);
     expect(home).toContain("Charts in Markdown. The fence is the data.");
     expect(home).toContain("class=\"folio-figures\"");
-    expect(home).toContain("<figcaption>");
+    expect(home).not.toContain("<figcaption>");
     expect(home).not.toMatch(/theme:/);
+  });
+
+  it("gallery cards keep aria-label and drop visible titles", () => {
+    const vue = read("components/Gallery.vue");
+    expect(vue).toContain(":aria-label=\"item.title\"");
+    expect(vue).not.toContain("gallery-card-title");
   });
 
   it("gallery cards do not crop thumbs", () => {
@@ -30,6 +36,11 @@ describe("site visual chrome", () => {
     expect(css).toMatch(/\.gallery-thumb svg[\s\S]*width:\s*100%/);
     expect(css).toMatch(/\.gallery-thumb svg[\s\S]*height:\s*auto/);
     expect(css).toMatch(/\.gallery-thumb svg[\s\S]*max-width:\s*100%/);
+    expect(css).not.toContain("gallery-card-title");
+    expect(css).not.toContain(":deep");
+    expect(css).toMatch(/\.gallery-full svg[\s\S]*width:\s*100%/);
+    expect(css).toMatch(/\.gallery-full svg[\s\S]*height:\s*auto/);
+    expect(css).toMatch(/\.gallery-full svg[\s\S]*max-width:\s*100%/);
     expect(css).toContain("#f7f4ef");
   });
 
@@ -45,7 +56,8 @@ describe("site visual chrome", () => {
   it("playground keeps two panes", () => {
     const css = read("../playground/src/style.css");
     expect(css).toMatch(/grid-template-columns:\s*1fr 1fr/);
-    expect(css).toContain("#f7f4ef");
+    expect(css).toMatch(/section\.preview[\s\S]*background:\s*#f7f4ef/);
+    expect(css).not.toMatch(/section\.preview[\s\S]*background:\s*(#fff|#ffffff|var\(--panel\))/);
     expect(css).not.toMatch(/theme:/);
   });
 });
