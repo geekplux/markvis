@@ -4,10 +4,14 @@
 - Site chrome: paper/folio VitePress layout; home figures no figcaption; gallery cards aria-label only; play two panes iframe
 - Gallery thumbs + detail: SVG width 100% / height auto / max-width 100% (no :deep, no 720px cap)
 - Play preview pane #f7f4ef not white
-- No chart `theme:`
+- Chart `theme:` folio|highcharts|shadcn|docs (default folio; unknown → E_UNKNOWN_THEME)
 
 ## Active
-fix(web): captions + play pane + detail scale
+## Writer hour burn
+
+- docs/site-copy.md + docs/launch/SHOW_HN.md + TWEET.md (draft only; no Mermaid)
+
+C1: optional theme field (parser/IR)
 
 ## Commands
 pnpm test → 0 (427)
