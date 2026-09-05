@@ -22,12 +22,12 @@ onMounted(() => {
 <style scoped>
 .play-embed {
   position: fixed;
-  top: var(--vp-nav-height, 64px);
+  top: var(--vp-nav-height, 52px);
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 6;
-  background: #fafaf9;
+  background: #f7f4ef;
 }
 
 .play-embed-frame {

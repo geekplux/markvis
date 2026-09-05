@@ -1,22 +1,36 @@
 ---
-layout: home
-hero:
-  name: markvis
-  text: Charts in Markdown. The fence is the data.
-  actions:
-    - theme: brand
-      text: Playground
-      link: /play
-    - theme: alt
-      text: Examples
-      link: /examples
+layout: page
+sidebar: false
+aside: false
+title: markvis
+pageClass: folio-home-page
 ---
 
-![Feb led Q3](/home/01-bar-basic.svg)
+<div class="folio-home">
 
-![Pro pulled ahead](/home/02-line-multi.svg)
+<p class="folio-mark">markvis</p>
 
-![Shares stay raw](/home/05-pie-raw.svg)
+<p class="folio-lede">Charts in Markdown. The fence is the data.</p>
+
+<p class="folio-actions">
+  <a class="folio-btn primary" href="/play">Playground</a>
+  <a class="folio-btn secondary" href="/examples">Examples</a>
+</p>
+
+<div class="folio-figures">
+  <figure>
+    <img src="/home/01-bar-basic.svg" alt="" />
+    <figcaption>Feb led Q3 at 180</figcaption>
+  </figure>
+  <figure>
+    <img src="/home/02-line-multi.svg" alt="" />
+    <figcaption>Pro pulled ahead</figcaption>
+  </figure>
+  <figure>
+    <img src="/home/05-pie-raw.svg" alt="" />
+    <figcaption>Shares stay raw</figcaption>
+  </figure>
+</div>
 
 ```chart
 markvis: 2
@@ -32,4 +46,6 @@ Feb,180
 Mar,150
 ```
 
-0.0.13 is frozen under legacy/. The site ships from branch v2.
+<p class="folio-foot">0.0.13 is frozen under legacy/. The site ships from branch v2.</p>
+
+</div>

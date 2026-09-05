@@ -4,7 +4,7 @@
   margin: 0 auto;
   padding: 32px 24px 64px;
   color: #171717;
-  background: #fafaf9;
+  background: #f7f4ef;
 }
 
 .gallery-title {
@@ -33,7 +33,7 @@
   height: 28px;
   padding: 0 12px;
   border-radius: 999px;
-  border: 1px solid rgba(23, 23, 23, 0.1);
+  border: 1px solid rgba(23, 23, 23, 0.12);
   background: transparent;
   color: #737373;
   font-size: 12px;
@@ -52,7 +52,7 @@
 .gallery-close:focus-visible,
 .gallery-actions button:focus-visible,
 .gallery-play:focus-visible {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid #2563eb;
   outline-offset: 2px;
 }
 
@@ -68,17 +68,17 @@
 
 .gallery-grid {
   display: grid;
-  gap: 16px;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
 
 .gallery-card {
   display: block;
   width: 100%;
   text-align: left;
-  padding: 12px;
+  padding: 12px 12px 10px;
   background: #ffffff;
-  border: 1px solid rgba(23, 23, 23, 0.1);
+  border: 1px solid rgba(23, 23, 23, 0.12);
   border-radius: 0;
   box-shadow: none;
   cursor: pointer;
@@ -90,9 +90,8 @@
 }
 
 .gallery-thumb {
-  height: 140px;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
   background: transparent;
 }
 
@@ -100,7 +99,7 @@
   display: block;
   width: 100%;
   height: auto;
-  max-height: 140px;
+  max-height: none;
 }
 
 .gallery-card-title {
@@ -120,7 +119,7 @@
   z-index: 2;
   min-width: 0;
   background: #ffffff;
-  border: 1px solid rgba(23, 23, 23, 0.1);
+  border: 1px solid rgba(23, 23, 23, 0.12);
   padding: 16px;
 }
 
@@ -154,7 +153,7 @@
 .gallery-play {
   height: 28px;
   padding: 0 12px;
-  border: 1px solid rgba(23, 23, 23, 0.1);
+  border: 1px solid rgba(23, 23, 23, 0.12);
   background: #ffffff;
   color: #171717;
   font-size: 12px;
@@ -177,7 +176,7 @@
   line-height: 1.4;
   overflow: auto;
   background: #fafaf9;
-  border: 1px solid rgba(23, 23, 23, 0.1);
+  border: 1px solid rgba(23, 23, 23, 0.12);
   white-space: pre-wrap;
 }
 

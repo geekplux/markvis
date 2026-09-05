@@ -1,11 +1,11 @@
 :root {
   color-scheme: light;
-  --bg: #fafaf9;
+  --bg: #f7f4ef;
   --panel: #ffffff;
   --ink: #171717;
   --muted: #737373;
-  --line: rgba(23, 23, 23, 0.1);
-  --accent: #3b82f6;
+  --line: rgba(23, 23, 23, 0.12);
+  --accent: #2563eb;
   --error: #b91c1c;
   --code-bg: #171717;
   --code-ink: #fafaf9;

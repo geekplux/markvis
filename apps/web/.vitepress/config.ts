@@ -15,7 +15,9 @@ export default defineConfig({
       },
     },
   },
+  appearance: false,
   themeConfig: {
+    siteTitle: "markvis",
     nav: [
       { text: "Play", link: "/play" },
       { text: "Examples", link: "/examples" },

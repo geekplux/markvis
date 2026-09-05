@@ -1,0 +1,258 @@
+:root {
+  --folio-paper: #f7f4ef;
+  --folio-ink: #171717;
+  --folio-quiet: #737373;
+  --folio-rule: rgba(23, 23, 23, 0.12);
+  --folio-accent: #2563eb;
+  --vp-c-bg: #f7f4ef;
+  --vp-c-bg-alt: #f7f4ef;
+  --vp-c-bg-elv: #f7f4ef;
+  --vp-c-bg-soft: #efebe4;
+  --vp-c-text-1: #171717;
+  --vp-c-text-2: #737373;
+  --vp-c-brand-1: #2563eb;
+  --vp-c-brand-2: #2563eb;
+  --vp-c-brand-3: #2563eb;
+  --vp-nav-height: 52px;
+  --vp-home-hero-name-color: #171717;
+  --vp-home-hero-name-background: transparent;
+  --vp-font-family-base: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    sans-serif;
+}
+
+html,
+body {
+  background: var(--folio-paper);
+  color: var(--folio-ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.VPNav,
+.VPNavBar,
+.VPNavBar .wrapper,
+.VPNavBar .container,
+.VPNavBar .content,
+.VPNavBar .divider {
+  background: var(--folio-paper) !important;
+  background-color: var(--folio-paper) !important;
+}
+
+.VPNavBar {
+  height: 52px;
+  border-bottom: 1px solid var(--folio-rule);
+  box-shadow: none !important;
+}
+
+.VPNavBar .divider,
+.VPNavBar.has-sidebar .divider {
+  display: none;
+}
+
+.VPNavBarTitle .title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--folio-ink) !important;
+  background: none !important;
+  -webkit-text-fill-color: var(--folio-ink) !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+}
+
+.VPNavBarMenu {
+  gap: 20px;
+}
+
+.VPNavBarMenuLink {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: var(--folio-quiet) !important;
+  line-height: 52px !important;
+}
+
+.VPNavBarMenuLink.active,
+.VPNavBarMenuLink.is-active {
+  color: var(--folio-ink) !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 8px;
+  text-decoration-color: rgba(23, 23, 23, 0.28);
+}
+
+.VPNavBarMenuLink:focus-visible,
+.folio-btn:focus-visible {
+  outline: 2px solid var(--folio-accent);
+  outline-offset: 2px;
+}
+
+.VPSidebar,
+.VPLocalNav,
+.VPDocAside {
+  display: none !important;
+}
+
+.VPContent {
+  padding-top: var(--vp-nav-height) !important;
+  background: var(--folio-paper);
+}
+
+.VPDoc {
+  padding: 32px 24px 64px !important;
+}
+
+.VPDoc .container,
+.VPDoc .content-container,
+.VPDoc .content {
+  max-width: 720px !important;
+}
+
+.folio-examples .VPDoc .container,
+.folio-examples .VPDoc .content-container,
+.folio-examples .VPDoc .content {
+  max-width: 1120px !important;
+}
+
+.folio-home-page .VPDoc,
+.folio-examples .VPDoc {
+  padding: 0 !important;
+}
+
+.folio-home-page .VPFooter,
+.folio-home-page .VPDocFooter,
+.folio-play .VPDoc,
+.folio-play .VPFooter,
+.folio-play .VPDocFooter {
+  display: none !important;
+}
+
+.folio-play .VPContent {
+  padding-top: 0 !important;
+}
+
+.VPHome,
+.VPHero,
+.VPFeatures {
+  display: none !important;
+}
+
+.folio-home {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+.folio-mark {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--folio-ink);
+}
+
+.folio-lede {
+  margin: 12px 0 20px;
+  max-width: 36rem;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--folio-ink);
+}
+
+.folio-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 32px;
+}
+
+.folio-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.folio-btn.primary {
+  background: var(--folio-accent);
+  color: #ffffff;
+  border: 1px solid var(--folio-accent);
+}
+
+.folio-btn.secondary {
+  background: transparent;
+  color: var(--folio-ink);
+  border: 1px solid rgba(23, 23, 23, 0.28);
+}
+
+.folio-figures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0 0 32px;
+}
+
+.folio-figures figure {
+  margin: 0;
+  flex: 1 1 160px;
+  max-width: 360px;
+}
+
+.folio-figures img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 360px;
+}
+
+.folio-figures figcaption {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--folio-quiet);
+}
+
+.folio-home .vp-code-group,
+.folio-home div[class*="language-"] {
+  background: #efebe4 !important;
+  border: 1px solid var(--folio-rule);
+  border-radius: 0 !important;
+  margin: 0 0 24px !important;
+  box-shadow: none !important;
+}
+
+.folio-home div[class*="language-"] pre,
+.folio-home div[class*="language-"] code {
+  background: transparent !important;
+  font-size: 12px !important;
+  padding: 12px !important;
+}
+
+.folio-foot {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--folio-quiet);
+}
+
+.VPFooter {
+  background: var(--folio-paper) !important;
+  border-top: 1px solid var(--folio-rule) !important;
+}
+
+.VPFooter .message,
+.VPFooter .copyright {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--folio-quiet);
+}
+
+@media (max-width: 720px) {
+  .folio-figures {
+    flex-direction: column;
+  }
+}

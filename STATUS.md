@@ -1,20 +1,16 @@
 # STATUS.md
 
 ## Snapshot
-- P1 /play embeds real playground (iframe /play-app)
-- Next: Writer Mermaid purge → Designer site-visual-spec → Coder apply chrome
+- Site chrome: paper/folio VitePress layout; home figures on page; examples cards uncropped one caption; play two panes iframe
+- No chart `theme:`
 
 ## Active
-## Writer P2
-
-- Mermaid stripped from public web + README + landing/integrate + skill/llms; research-brief kept internal
-
-P1 shipped: VitePress /play full-viewport iframe of apps/playground
-web build: pnpm --filter playground run build:embed → public/play-app then vitepress
-?example= forwarded; Open in gallery target=_top
+Coder apply docs/site-visual-spec.md on v2 87c2487 — shipped
 
 ## Commands
-pnpm test → 0 (422)
+pnpm test → 0 (426)
+pnpm markvis check examples/valid → 0
+pnpm markvis check examples/invalid → 1
 pnpm --filter playground build → 0
 pnpm --filter playground run build:embed → 0
 pnpm --filter web build → 0
