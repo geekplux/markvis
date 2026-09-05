@@ -2,6 +2,7 @@
 
 ```chart
 type: scatter
+title: y rises with x
 x: x
 y: y
 
@@ -11,3 +12,4 @@ x,y
 2.0,3.0
 2.5,3.4
 ```
+

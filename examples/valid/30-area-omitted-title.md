@@ -2,6 +2,7 @@
 
 ```chart
 type: area
+title: Day 4 peaked at 120
 x: day
 y: active
 
@@ -11,3 +12,4 @@ day,active
 3,105
 4,120
 ```
+

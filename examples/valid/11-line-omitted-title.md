@@ -2,6 +2,7 @@
 
 ```chart
 type: line
+title: Tue peaked at 120
 x: day
 y: visitors
 
@@ -10,3 +11,4 @@ Mon,100
 Tue,120
 Wed,90
 ```
+
