@@ -7,14 +7,13 @@
 - Chart `theme:` folio|highcharts|shadcn|docs (default folio; unknown → E_UNKNOWN_THEME)
 
 ## Active
-C1 done @ 9d4ab18 (parser/IR/schema + invalid/19). Writer site-copy + launch drafts @ 0c43c7d.
-C2 next: extract folio tokens into packages/render-svg/themes/folio.ts; renderer consumes folio; no visual redesign; no other packs yet.
+C2 done: default look in packages/render-svg/themes/folio.ts; renderSvg uses themeTokens (named themes still folio bytes). No packs/redesign.
 
 ## Hour order
-C1 ✓ → C2 → C3/C4/C5 packs → C6 playground switcher → C7 mobile 390 → C8 homepage from site-copy.md → C9 examples theme toggle → C10 launch kit
+C1 ✓ → C2 ✓ → C3/C4/C5 packs → C6 playground switcher → C7 mobile 390 → C8 homepage from site-copy.md → C9 examples theme toggle → C10 launch kit
 
 ## Commands
-pnpm test → 0 (439)
+pnpm test → 0 (441)
 pnpm markvis check examples/valid → 0
 pnpm markvis check examples/invalid → 1
 pnpm --filter playground build → 0

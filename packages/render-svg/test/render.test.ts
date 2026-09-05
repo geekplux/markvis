@@ -7,7 +7,9 @@ import {
   PALETTE,
   binHistogram,
   chartId,
+  folio,
   renderSvg,
+  themeTokens,
 } from "../src/index.js";
 import { niceTicks, formatNumber } from "../src/scale.js";
 
@@ -244,19 +246,43 @@ describe("ticks", () => {
   });
 });
 
+describe("folio tokens", () => {
+  it("is the current default look", () => {
+    expect(folio.INK).toBe("#171717");
+    expect(folio.PALETTE).toEqual(PALETTE);
+    expect(themeTokens("folio")).toBe(folio);
+    expect(themeTokens("highcharts")).toBe(folio);
+    expect(themeTokens("shadcn")).toBe(folio);
+    expect(themeTokens("docs")).toBe(folio);
+  });
+
+  it("renders the same SVG for named themes (no redesign)", () => {
+    const a = renderSvg(barChart({ theme: "folio" }));
+    const b = renderSvg(barChart({ theme: "highcharts" }));
+    expect(a).toBe(b);
+  });
+});
+
 describe("source discipline", () => {
   it("does not use clocks or random in renderer sources", () => {
-    const srcDir = join(here, "../src");
-    const files = readdirSync(srcDir).filter((name) => name.endsWith(".ts"));
+    const dirs = [join(here, "../src"), join(here, "../themes")];
+    const files: string[] = [];
+    for (const dir of dirs) {
+      for (const name of readdirSync(dir).filter((n) => n.endsWith(".ts"))) {
+        files.push(join(dir, name));
+      }
+    }
     expect(files.length).toBeGreaterThan(0);
     for (const file of files) {
-      const source = readFileSync(join(srcDir, file), "utf8");
+      const source = readFileSync(file, "utf8");
       expect(source, file).not.toMatch(/Date\.now/);
       expect(source, file).not.toMatch(/Math\.random/);
       expect(source, file).not.toMatch(/randomUUID/);
       expect(source, file).not.toMatch(/\bd3\b/);
       expect(source, file).not.toMatch(/jsdom/);
       expect(source, file).not.toMatch(/legacy/);
+      expect(source, file).not.toMatch(/highcharts\.com/);
+      expect(source, file).not.toMatch(/\bunovis\b/i);
     }
   });
 });

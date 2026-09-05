@@ -1,7 +1,7 @@
 import type { ChartIR } from "@markvis/ir";
 import { renderCartesian } from "./cartesian.js";
-import { FONT, SVG_WIDTH } from "./layout.js";
 import { renderPie } from "./pie.js";
+import { themeTokens } from "./theme.js";
 import { attrs, chartId, escapeXml } from "./xml.js";
 
 export function ariaLabel(chart: ChartIR): string {
@@ -45,14 +45,15 @@ export function description(chart: ChartIR): string {
 }
 
 export function renderSvg(chart: ChartIR): string {
+  const t = themeTokens(chart.theme);
   const id = chartId(chart);
   const painted =
     chart.type === "pie" ? renderPie(chart, id) : renderCartesian(chart, id);
   const open = `<svg ${attrs({
     xmlns: "http://www.w3.org/2000/svg",
-    width: SVG_WIDTH,
+    width: t.SVG_WIDTH,
     height: painted.height,
-    viewBox: `0 0 ${SVG_WIDTH} ${painted.height}`,
+    viewBox: `0 0 ${t.SVG_WIDTH} ${painted.height}`,
     role: "img",
     "aria-label": ariaLabel(chart),
     "aria-labelledby": `${id}-title`,
@@ -60,7 +61,7 @@ export function renderSvg(chart: ChartIR): string {
     "data-markvis": 2,
     "data-chart-type": chart.type,
     "data-id": id,
-    "font-family": FONT,
+    "font-family": t.FONT,
     "font-size": 12,
   })}>`;
   const lines = [

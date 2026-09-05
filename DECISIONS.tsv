@@ -70,3 +70,4 @@ date	wave	decision
 2026-09-05	P3	site-visual-spec chrome: paper #F7F4EF, quiet 52px nav, home folio figures, examples no crop one caption, play two panes; no chart theme
 2026-09-05	hour	Writer: site-copy.md + launch SHOW_HN/TWEET drafts; no Mermaid; C8 pastes site-copy onto home
 2026-09-05	hour	C1 accepted 9d4ab18 theme field; open C2 folio token extract
+2026-09-05	hour	C2: default look in packages/render-svg/themes/folio.ts; renderSvg uses themeTokens (all names still folio); no redesign; no Highcharts/d3/Unovis deps
