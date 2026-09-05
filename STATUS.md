@@ -2,10 +2,11 @@
 
 ## Snapshot
 - Site chrome: paper/folio VitePress layout; home figures on page; examples cards uncropped one caption; play two panes iframe
+- Gallery thumbs: SVG width 100% / height auto / max-width 100% (no 720px overflow)
 - No chart `theme:`
 
 ## Active
-Coder apply docs/site-visual-spec.md on v2 87c2487 — shipped
+fix(web) gallery thumb scale — shipped
 
 ## Commands
 pnpm test → 0 (426)

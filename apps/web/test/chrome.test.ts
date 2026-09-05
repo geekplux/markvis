@@ -27,6 +27,9 @@ describe("site visual chrome", () => {
     expect(css).toMatch(/minmax\(260px,\s*1fr\)/);
     expect(css).toMatch(/overflow:\s*visible/);
     expect(css).toMatch(/max-height:\s*none/);
+    expect(css).toMatch(/\.gallery-thumb svg[\s\S]*width:\s*100%/);
+    expect(css).toMatch(/\.gallery-thumb svg[\s\S]*height:\s*auto/);
+    expect(css).toMatch(/\.gallery-thumb svg[\s\S]*max-width:\s*100%/);
     expect(css).toContain("#f7f4ef");
   });
 

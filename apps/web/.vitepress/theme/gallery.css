@@ -95,10 +95,11 @@
   background: transparent;
 }
 
-.gallery-thumb :deep(svg) {
+.gallery-thumb svg {
   display: block;
   width: 100%;
   height: auto;
+  max-width: 100%;
   max-height: none;
 }
 
