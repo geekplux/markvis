@@ -11,19 +11,32 @@ function read(rel: string): string {
 }
 
 describe("site visual chrome", () => {
-  it("home is folio page not VitePress layout home", () => {
+  it("home mounts site-copy sections on folio page layout", () => {
     const home = read("index.md");
     expect(home).toMatch(/layout:\s*page/);
     expect(home).not.toMatch(/layout:\s*home/);
     expect(home).toContain("Charts in Markdown. The fence is the data.");
-    expect(home).toContain("class=\"folio-figures\"");
-    expect(home).not.toContain("<figcaption>");
+    expect(home).toContain("folio-what");
+    expect(home).toContain("folio-who");
+    expect(home).toContain("folio-proof");
+    expect(home).toContain('class="folio-figures"');
+    expect(home).toContain("folio-start");
+    expect(home).toContain("folio-use");
+    expect(home).toContain("folio-themes");
+    expect(home).toContain("folio-foot");
+    expect(home).toContain("<figcaption>");
+    expect(home).toContain("Feb led Q3");
+    expect(home).toContain("Pro pulled ahead");
+    expect(home).toContain("Shares stay raw");
+    expect(home).toContain("README / post authors");
+    expect(home).toContain("markvis bake");
+    expect(home).toContain("@markvis/remark");
     expect(home).not.toMatch(/theme:/);
   });
 
   it("gallery cards keep aria-label and drop visible titles", () => {
     const vue = read("components/Gallery.vue");
-    expect(vue).toContain(":aria-label=\"item.title\"");
+    expect(vue).toContain(':aria-label="item.title"');
     expect(vue).not.toContain("gallery-card-title");
   });
 
@@ -44,10 +57,18 @@ describe("site visual chrome", () => {
     expect(css).toContain("#f7f4ef");
   });
 
-  it("nav and paper tokens match site-visual-spec", () => {
+  it("site chrome is white product surface per HOME.md", () => {
     const css = read(".vitepress/theme/site.css");
-    expect(css).toContain("#f7f4ef");
+    expect(css).not.toMatch(/#f7f4ef/i);
+    expect(css).not.toMatch(/#efebe4/i);
+    expect(css).toMatch(/--vp-c-bg:\s*#ffffff/);
+    expect(css).toMatch(/background:\s*#ffffff/);
     expect(css).toContain("#2563eb");
+    expect(css).toContain("#171717");
+    expect(css).toContain("#64748b");
+    expect(css).toContain("#f4f4f5");
+    expect(css).toMatch(/max-width:\s*1040px/);
+    expect(css).toMatch(/height:\s*44px/);
     expect(css).toMatch(/height:\s*52px/);
     expect(css).toMatch(/font-size:\s*15px/);
     expect(css).not.toMatch(/theme:/);
@@ -56,7 +77,9 @@ describe("site visual chrome", () => {
   it("playground keeps two panes with PLAY chrome", () => {
     const css = read("../playground/src/style.css");
     const html = read("../playground/index.html");
-    expect(css).toMatch(/grid-template-columns:\s*minmax\(40%,\s*1fr\)\s+minmax\(40%,\s*1fr\)/);
+    expect(css).toMatch(
+      /grid-template-columns:\s*minmax\(40%,\s*1fr\)\s+minmax\(40%,\s*1fr\)/,
+    );
     expect(css).toMatch(/section\.preview[\s\S]*background:\s*#ffffff/);
     expect(css).not.toMatch(/section\.preview[\s\S]*background:\s*#f7f4ef/);
     expect(css).toMatch(/--editor-bg:\s*#fafafa/);

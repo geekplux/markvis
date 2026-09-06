@@ -1,15 +1,16 @@
 :root {
-  --folio-paper: #f7f4ef;
+  --folio-paper: #ffffff;
   --folio-ink: #171717;
-  --folio-quiet: #737373;
+  --folio-quiet: #64748b;
   --folio-rule: rgba(23, 23, 23, 0.12);
   --folio-accent: #2563eb;
-  --vp-c-bg: #f7f4ef;
-  --vp-c-bg-alt: #f7f4ef;
-  --vp-c-bg-elv: #f7f4ef;
-  --vp-c-bg-soft: #efebe4;
+  --folio-fence: #f4f4f5;
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #ffffff;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #f4f4f5;
   --vp-c-text-1: #171717;
-  --vp-c-text-2: #737373;
+  --vp-c-text-2: #64748b;
   --vp-c-brand-1: #2563eb;
   --vp-c-brand-2: #2563eb;
   --vp-c-brand-3: #2563eb;
@@ -22,7 +23,7 @@
 
 html,
 body {
-  background: var(--folio-paper);
+  background: #ffffff;
   color: var(--folio-ink);
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
@@ -33,8 +34,8 @@ body {
 .VPNavBar .container,
 .VPNavBar .content,
 .VPNavBar .divider {
-  background: var(--folio-paper) !important;
-  background-color: var(--folio-paper) !important;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
 }
 
 .VPNavBar {
@@ -92,7 +93,7 @@ body {
 
 .VPContent {
   padding-top: var(--vp-nav-height) !important;
-  background: var(--folio-paper);
+  background: #ffffff;
 }
 
 .VPDoc {
@@ -102,7 +103,7 @@ body {
 .VPDoc .container,
 .VPDoc .content-container,
 .VPDoc .content {
-  max-width: 720px !important;
+  max-width: 1040px !important;
 }
 
 .folio-examples .VPDoc .container,
@@ -126,6 +127,7 @@ body {
 
 .folio-play .VPContent {
   padding-top: 0 !important;
+  background: #ffffff;
 }
 
 .VPHome,
@@ -135,23 +137,29 @@ body {
 }
 
 .folio-home {
-  max-width: 720px;
+  max-width: 1040px;
   margin: 0 auto;
-  padding: 32px 24px 48px;
+  padding: 48px 24px 64px;
+  color: var(--folio-ink);
+  background: transparent;
+}
+
+.folio-hero {
+  margin: 0 0 56px;
 }
 
 .folio-mark {
   margin: 0;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 600;
   line-height: 1.2;
   color: var(--folio-ink);
 }
 
 .folio-lede {
-  margin: 12px 0 20px;
-  max-width: 36rem;
-  font-size: 16px;
+  margin: 12px 0 24px;
+  max-width: 40rem;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.45;
   color: var(--folio-ink);
@@ -161,16 +169,16 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin: 0 0 32px;
+  margin: 0;
 }
 
 .folio-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 36px;
-  padding: 0 16px;
-  border-radius: 2px;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 6px;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
@@ -189,31 +197,110 @@ body {
   border: 1px solid rgba(23, 23, 23, 0.28);
 }
 
-.folio-figures {
-  display: flex;
-  flex-wrap: wrap;
+.folio-section {
+  margin: 0 0 56px;
+}
+
+.folio-h2 {
+  margin: 0 0 16px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--folio-ink);
+}
+
+.folio-bullets {
+  margin: 0;
+  padding-left: 1.25rem;
+  max-width: 40rem;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--folio-ink);
+}
+
+.folio-bullets li + li {
+  margin-top: 8px;
+}
+
+.folio-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
-  margin: 0 0 32px;
+}
+
+.folio-card {
+  margin: 0;
+  padding: 16px;
+  border: 1px solid var(--folio-rule);
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.folio-card-title {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--folio-ink);
+}
+
+.folio-card-body {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--folio-quiet);
+}
+
+.folio-figures {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
 }
 
 .folio-figures figure {
   margin: 0;
-  flex: 1 1 160px;
-  max-width: 360px;
+  min-width: 0;
 }
 
 .folio-figures img {
   display: block;
   width: 100%;
   height: auto;
-  max-width: 360px;
+  background: transparent;
+}
+
+.folio-figures figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--folio-quiet);
+}
+
+.folio-steps {
+  margin: 0 0 20px;
+  padding-left: 1.25rem;
+  max-width: 40rem;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--folio-ink);
+}
+
+.folio-steps li + li {
+  margin-top: 8px;
+}
+
+.folio-steps a {
+  color: var(--folio-accent);
 }
 
 .folio-home .vp-code-group,
 .folio-home div[class*="language-"] {
-  background: #efebe4 !important;
+  background: var(--folio-fence) !important;
   border: 1px solid var(--folio-rule);
-  border-radius: 0 !important;
+  border-radius: 6px !important;
   margin: 0 0 24px !important;
   box-shadow: none !important;
 }
@@ -225,15 +312,63 @@ body {
   padding: 12px !important;
 }
 
+.folio-home div[class*="language-"] pre {
+  overflow-x: auto;
+}
+
+.folio-use .vp-doc table,
+.folio-home table {
+  width: 100%;
+  display: table;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 0;
+}
+
+.folio-home table th,
+.folio-home table td {
+  border: 1px solid var(--folio-rule);
+  padding: 10px 12px;
+  text-align: left;
+  color: var(--folio-ink);
+}
+
+.folio-home table th {
+  font-weight: 600;
+  background: var(--folio-fence);
+}
+
+.folio-home table code {
+  font-size: 13px;
+}
+
+.folio-themes-line {
+  margin: 0;
+  max-width: 40rem;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--folio-ink);
+}
+
+.folio-themes-line a {
+  color: var(--folio-accent);
+}
+
 .folio-foot {
   margin: 0;
-  font-size: 12px;
+  padding-top: 8px;
+  font-size: 13px;
   font-weight: 400;
+  line-height: 1.5;
   color: var(--folio-quiet);
 }
 
+.folio-foot a {
+  color: var(--folio-accent);
+}
+
 .VPFooter {
-  background: var(--folio-paper) !important;
+  background: #ffffff !important;
   border-top: 1px solid var(--folio-rule) !important;
 }
 
@@ -244,8 +379,28 @@ body {
   color: var(--folio-quiet);
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
+  .folio-cards,
   .folio-figures {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 390px) {
+  .folio-home {
+    padding: 32px 24px 48px;
+  }
+
+  .folio-hero,
+  .folio-section {
+    margin-bottom: 32px;
+  }
+
+  .folio-actions {
     flex-direction: column;
+  }
+
+  .folio-btn {
+    width: 100%;
   }
 }
