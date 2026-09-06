@@ -40,10 +40,9 @@ describe("site visual chrome", () => {
     expect(vue).not.toContain("gallery-card-title");
   });
 
-  it("gallery cards do not crop thumbs", () => {
+  it("gallery mobile grid + white chrome per EXAMPLES.md", () => {
     const css = read(".vitepress/theme/gallery.css");
     expect(css).not.toMatch(/max-height:\s*140px/);
-    expect(css).toMatch(/minmax\(260px,\s*1fr\)/);
     expect(css).toMatch(/overflow:\s*visible/);
     expect(css).toMatch(/max-height:\s*none/);
     expect(css).toMatch(/\.gallery-thumb svg[\s\S]*width:\s*100%/);
@@ -54,7 +53,25 @@ describe("site visual chrome", () => {
     expect(css).toMatch(/\.gallery-full svg[\s\S]*width:\s*100%/);
     expect(css).toMatch(/\.gallery-full svg[\s\S]*height:\s*auto/);
     expect(css).toMatch(/\.gallery-full svg[\s\S]*max-width:\s*100%/);
-    expect(css).toContain("#f7f4ef");
+    // U3: drop beige wash — chrome only
+    expect(css).not.toMatch(/#f7f4ef/i);
+    expect(css).toMatch(/\.gallery-page[\s\S]*background:\s*#ffffff/);
+    // chips ≥36–44
+    expect(css).toMatch(/\.gallery-chip[\s\S]*height:\s*40px/);
+    expect(css).toMatch(/\.gallery-chip[\s\S]*min-height:\s*36px/);
+    // grid breakpoints: 1 / 2 / 3 / 4
+    expect(css).toMatch(
+      /\.gallery-grid[\s\S]*grid-template-columns:\s*1fr/,
+    );
+    expect(css).toMatch(
+      /@media\s*\(min-width:\s*600px\)[\s\S]*grid-template-columns:\s*repeat\(2/,
+    );
+    expect(css).toMatch(
+      /@media\s*\(min-width:\s*900px\)[\s\S]*grid-template-columns:\s*repeat\(3/,
+    );
+    expect(css).toMatch(
+      /@media\s*\(min-width:\s*1200px\)[\s\S]*grid-template-columns:\s*repeat\(4/,
+    );
   });
 
   it("site chrome is white product surface per HOME.md", () => {
@@ -72,9 +89,14 @@ describe("site visual chrome", () => {
     expect(css).toMatch(/height:\s*52px/);
     expect(css).toMatch(/font-size:\s*15px/);
     expect(css).not.toMatch(/theme:/);
+    // U3 mobile: stack or 2-up hero buttons; tap ≥44
+    expect(css).toMatch(/@media\s*\(max-width:\s*768px\)/);
+    expect(css).toMatch(/@media\s*\(max-width:\s*390px\)/);
+    expect(css).toMatch(/\.folio-btn[\s\S]*height:\s*44px/);
+    expect(css).toMatch(/max-width:\s*1200px/);
   });
 
-  it("playground keeps two panes with PLAY chrome", () => {
+  it("playground keeps two panes with PLAY chrome + mobile toolbar", () => {
     const css = read("../playground/src/style.css");
     const html = read("../playground/index.html");
     expect(css).toMatch(
@@ -88,6 +110,9 @@ describe("site visual chrome", () => {
     expect(css).toMatch(/min-height:\s*44px/);
     expect(css).toMatch(/flex-wrap:\s*nowrap/);
     expect(css).toMatch(/overflow-x:\s*auto/);
+    // U3: stack panes ≤768; toolbar stays one scroll row
+    expect(css).toMatch(/@media\s*\(max-width:\s*768px\)[\s\S]*grid-template-columns:\s*1fr/);
+    expect(css).toMatch(/\.toolbar[\s\S]*flex-wrap:\s*nowrap/);
     expect(html).toContain('id="theme"');
     expect(html).toContain('value="folio"');
     expect(html).toContain('value="highcharts"');

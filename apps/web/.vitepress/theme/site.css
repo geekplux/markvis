@@ -109,7 +109,7 @@ body {
 .folio-examples .VPDoc .container,
 .folio-examples .VPDoc .content-container,
 .folio-examples .VPDoc .content {
-  max-width: 1120px !important;
+  max-width: 1200px !important;
 }
 
 .folio-home-page .VPDoc,
@@ -379,14 +379,14 @@ body {
   color: var(--folio-quiet);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 899px) {
   .folio-cards,
   .folio-figures {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 768px) {
   .folio-home {
     padding: 32px 24px 48px;
   }
@@ -397,10 +397,32 @@ body {
   }
 
   .folio-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .folio-btn {
+    flex: 1 1 calc(50% - 6px);
+    min-width: 0;
+    min-height: 44px;
+    height: 44px;
+  }
+
+  .folio-home table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 390px) {
+  .folio-actions {
     flex-direction: column;
   }
 
   .folio-btn {
     width: 100%;
+    flex: 1 1 100%;
   }
 }

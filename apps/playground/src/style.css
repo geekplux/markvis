@@ -197,7 +197,7 @@ td {
   padding: 16px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .layout {
     grid-template-columns: 1fr;
   }
@@ -205,5 +205,15 @@ td {
   section.source {
     border-right: 0;
     border-bottom: 1px solid var(--line);
+  }
+
+  .toolbar {
+    height: 48px;
+    min-height: 48px;
+    max-height: 48px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
   }
 }

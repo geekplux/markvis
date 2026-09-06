@@ -1,10 +1,10 @@
 .gallery-page {
   position: relative;
-  max-width: 1120px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 32px 24px 64px;
   color: #171717;
-  background: #f7f4ef;
+  background: #ffffff;
 }
 
 .gallery-title {
@@ -30,8 +30,9 @@
 }
 
 .gallery-chip {
-  height: 28px;
-  padding: 0 12px;
+  height: 40px;
+  min-height: 36px;
+  padding: 0 14px;
   border-radius: 999px;
   border: 1px solid rgba(23, 23, 23, 0.12);
   background: transparent;
@@ -39,6 +40,7 @@
   font-size: 12px;
   font-weight: 500;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .gallery-chip.active {
@@ -69,7 +71,7 @@
 .gallery-grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: 1fr;
 }
 
 .gallery-card {
@@ -78,11 +80,12 @@
   text-align: left;
   padding: 12px 12px 10px;
   background: #ffffff;
-  border: 1px solid rgba(23, 23, 23, 0.12);
-  border-radius: 0;
+  border: 1px solid #e4e4e7;
+  border-radius: 8px;
   box-shadow: none;
   cursor: pointer;
   color: inherit;
+  box-sizing: border-box;
 }
 
 .gallery-card:hover {
@@ -108,7 +111,8 @@
   z-index: 2;
   min-width: 0;
   background: #ffffff;
-  border: 1px solid rgba(23, 23, 23, 0.12);
+  border: 1px solid #e4e4e7;
+  border-radius: 8px;
   padding: 16px;
 }
 
@@ -140,9 +144,10 @@
 .gallery-actions button,
 .gallery-close,
 .gallery-play {
-  height: 28px;
+  height: 36px;
+  min-height: 36px;
   padding: 0 12px;
-  border: 1px solid rgba(23, 23, 23, 0.12);
+  border: 1px solid #e4e4e7;
   background: #ffffff;
   color: #171717;
   font-size: 12px;
@@ -151,6 +156,7 @@
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .gallery-copied {
@@ -165,7 +171,7 @@
   line-height: 1.4;
   overflow: auto;
   background: #fafaf9;
-  border: 1px solid rgba(23, 23, 23, 0.12);
+  border: 1px solid #e4e4e7;
   white-space: pre-wrap;
 }
 
@@ -182,8 +188,32 @@
   margin-bottom: 8px;
 }
 
-@media (max-width: 900px) {
+@media (min-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 899px) {
   .gallery-layout.open {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-page {
+    padding: 24px 16px 48px;
   }
 }
