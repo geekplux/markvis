@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Feb led Q3 at 180 (USD k), 3 rows" aria-labelledby="mv-4b5fc99486f348de-title" aria-describedby="mv-4b5fc99486f348de-desc" data-markvis="2" data-chart-type="bar" data-id="mv-4b5fc99486f348de" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-4b5fc99486f348de-title">Feb led Q3 at 180</title>
+  <desc id="mv-4b5fc99486f348de-desc">bar chart. Feb led Q3 at 180. x=month. y=revenue. unit=USD k. 3 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Feb led Q3 at 180<tspan font-size="12" font-weight="400" fill="#737373"> · USD k</tspan></text>
+  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="352.5" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="38" y="247" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="38" y="141.5" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">200</text>
+    <text x="156.67" y="468" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
+    <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
+    <text x="591.33" y="468" text-anchor="middle" font-size="10" data-full-label="Mar">Mar</text>
+  </g>
+  <g>
+    <path d="M120.67 458 L120.67 207.8 Q120.67 204.8 123.67 204.8 L189.67 204.8 Q192.67 204.8 192.67 207.8 L192.67 458 Z" fill="#3B82F6" data-x="Jan" data-series="revenue" data-y="120"/>
+    <path d="M338 458 L338 81.2 Q338 78.2 341 78.2 L407 78.2 Q410 78.2 410 81.2 L410 458 Z" fill="#3B82F6" data-x="Feb" data-series="revenue" data-y="180"/>
+    <path d="M555.33 458 L555.33 144.5 Q555.33 141.5 558.33 141.5 L624.33 141.5 Q627.33 141.5 627.33 144.5 L627.33 458 Z" fill="#3B82F6" data-x="Mar" data-series="revenue" data-y="150"/>
+  </g>
+  <g>
+    <text x="156.67" y="196.8" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Jan">120</text>
+    <text x="374" y="70.2" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Feb">180</text>
+    <text x="591.33" y="133.5" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Mar">150</text>
+  </g>
+</svg>

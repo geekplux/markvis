@@ -256,6 +256,27 @@ describe("folio tokens", () => {
     expect(folio.PALETTE).toEqual(PALETTE);
     expect(themeTokens("folio")).toBe(folio);
   });
+
+  it("matches examples/out/themes/folio/01-bar-basic.svg", () => {
+    const repoRoot = join(here, "../../..");
+    const source = readFileSync(
+      join(repoRoot, "examples/valid/01-bar-basic.md"),
+      "utf8",
+    );
+    const result = parseMarkdown(source, { filename: "01-bar-basic.md" });
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    const chart = ChartIRSchema.parse({ ...result.chart, theme: "folio" });
+    const svg = renderSvg(chart);
+    const outDir = join(repoRoot, "examples/out/themes/folio");
+    const outPath = join(outDir, "01-bar-basic.svg");
+    if (process.env["UPDATE_SNAPSHOTS"] === "1") {
+      mkdirSync(outDir, { recursive: true });
+      writeFileSync(outPath, svg, "utf8");
+    }
+    const committed = readFileSync(outPath, "utf8");
+    expect(svg).toBe(committed);
+  });
 });
 
 describe("highcharts tokens", () => {
@@ -283,7 +304,7 @@ describe("highcharts tokens", () => {
     );
   });
 
-  it("matches examples/out/themes/01-bar-basic.svg", () => {
+  it("matches examples/out/themes/highcharts/01-bar-basic.svg", () => {
     const repoRoot = join(here, "../../..");
     const source = readFileSync(
       join(repoRoot, "examples/valid/01-bar-basic.md"),
@@ -294,9 +315,9 @@ describe("highcharts tokens", () => {
     if (!result.ok) return;
     const chart = ChartIRSchema.parse({ ...result.chart, theme: "highcharts" });
     const svg = renderSvg(chart);
-    const outPath = join(repoRoot, "examples/out/themes/01-bar-basic.svg");
+    const outPath = join(repoRoot, "examples/out/themes/highcharts/01-bar-basic.svg");
     if (process.env["UPDATE_SNAPSHOTS"] === "1") {
-      mkdirSync(join(repoRoot, "examples/out/themes"), { recursive: true });
+      mkdirSync(join(repoRoot, "examples/out/themes/highcharts"), { recursive: true });
       writeFileSync(outPath, svg, "utf8");
     }
     const committed = readFileSync(outPath, "utf8");
