@@ -2,7 +2,7 @@
 
 ```chart
 type: line
-title: MAU by region
+title: US still leads EU
 x: week
 y: mau
 series: region

@@ -2,7 +2,7 @@
 
 ```chart
 type: pie
-title: Feature flags
+title: On leads at 70
 x: flag
 y: count
 

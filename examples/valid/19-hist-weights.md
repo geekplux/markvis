@@ -2,7 +2,7 @@
 
 ```chart
 type: hist
-title: Age distribution
+title: Mid-20s carry the weight
 x: age
 y: weight
 

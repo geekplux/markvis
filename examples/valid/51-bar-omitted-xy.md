@@ -2,7 +2,7 @@
 
 ```chart
 type: bar
-title: Defaults
+title: Gamma leads at 3
 
 category,value
 alpha,1

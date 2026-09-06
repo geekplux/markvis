@@ -2,7 +2,7 @@
 
 ```vis
 type: area
-title: Pipeline
+title: Week 2 led pipeline at 11
 x: week
 y: deals
 

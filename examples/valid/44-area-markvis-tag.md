@@ -2,7 +2,7 @@
 
 ```markvis
 type: area
-title: Memory
+title: RSS climbed then eased
 unit: MB
 x: t
 y: rss

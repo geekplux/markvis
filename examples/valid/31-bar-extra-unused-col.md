@@ -2,7 +2,7 @@
 
 ```chart
 type: bar
-title: NPS
+title: Enterprise leads NPS at 72
 x: segment
 y: score
 

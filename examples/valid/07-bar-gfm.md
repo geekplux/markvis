@@ -2,7 +2,7 @@
 
 ```chart
 type: bar
-title: Headcount
+title: Eng leads headcount at 24
 x: team
 y: n
 

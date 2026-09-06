@@ -2,7 +2,7 @@
 
 ```chart
 type: bar
-title: City scores
+title: 東京 leads at 92
 x: city
 y: score
 

@@ -2,7 +2,7 @@
 
 ```markvis
 type: pie
-title: Support topics
+title: Billing leads tickets at 40
 x: topic
 y: tickets
 

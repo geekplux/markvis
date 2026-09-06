@@ -2,7 +2,7 @@
 
 ```chart
 type: area
-title: Queue depth
+title: Queue a stays deeper
 x: minute
 y: depth
 series: queue

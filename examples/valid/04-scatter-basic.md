@@ -2,7 +2,7 @@
 
 ```chart
 type: scatter
-title: Height vs weight
+title: Weight rises with height
 x: height_cm
 y: weight_kg
 

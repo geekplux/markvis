@@ -2,7 +2,7 @@
 
 ```chart
 type: bar
-title: Latency p99
+title: API leads p99 at 120 ms
 unit: ms
 x: service
 y: p99

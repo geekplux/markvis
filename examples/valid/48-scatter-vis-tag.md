@@ -2,7 +2,7 @@
 
 ```vis
 type: scatter
-title: Offset check
+title: Most points sit on the axes
 x: dx
 y: dy
 

@@ -1,6 +1,6 @@
 <!-- intent: Progressive HTML comment form followed by GFM table -->
 
-<!-- chart: bar x=month y=revenue title="Q3 Revenue" -->
+<!-- chart: bar x=month y=revenue title="Feb led Q3 at 180" -->
 | month | revenue |
 | --- | --- |
 | Jan | 120 |

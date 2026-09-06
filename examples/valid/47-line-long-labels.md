@@ -2,7 +2,7 @@
 
 ```chart
 type: line
-title: Milestone burn
+title: Points climb through beta
 x: milestone
 y: points
 

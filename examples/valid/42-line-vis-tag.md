@@ -2,7 +2,7 @@
 
 ```vis
 type: line
-title: FPS
+title: FPS holds near 60
 x: frame
 y: fps
 

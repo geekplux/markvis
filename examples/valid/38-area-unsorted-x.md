@@ -2,7 +2,7 @@
 
 ```chart
 type: area
-title: Events
+title: Sep led events at 40
 x: month
 y: count
 

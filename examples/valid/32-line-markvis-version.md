@@ -3,7 +3,7 @@
 ```chart
 markvis: 2
 type: line
-title: Retention
+title: Retention fell to 70 by week 4
 x: week
 y: rate
 unit: pct

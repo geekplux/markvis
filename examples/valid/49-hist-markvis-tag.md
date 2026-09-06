@@ -2,7 +2,7 @@
 
 ```markvis
 type: hist
-title: Retry counts
+title: Most retries stay at 0–1
 x: retries
 
 retries

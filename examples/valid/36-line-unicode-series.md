@@ -2,7 +2,7 @@
 
 ```chart
 type: line
-title: Sales
+title: 東京 still leads 北京
 x: month
 y: amount
 series: city

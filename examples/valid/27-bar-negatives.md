@@ -2,7 +2,7 @@
 
 ```chart
 type: bar
-title: Net change
+title: Sales led the net at +120
 unit: USD
 x: dept
 y: delta

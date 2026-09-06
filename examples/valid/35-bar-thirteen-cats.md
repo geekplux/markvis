@@ -2,7 +2,7 @@
 
 ```chart
 type: bar
-title: SKU units
+title: A12 led units at 14
 x: sku
 y: units
 

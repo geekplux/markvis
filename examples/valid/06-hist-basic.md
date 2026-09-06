@@ -2,7 +2,7 @@
 
 ```chart
 type: hist
-title: Latency ms
+title: Most samples stay under 20 ms
 x: ms
 
 ms

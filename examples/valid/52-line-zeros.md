@@ -2,7 +2,7 @@
 
 ```chart
 type: line
-title: Outages
+title: Tue took 12 minutes
 x: day
 y: minutes
 

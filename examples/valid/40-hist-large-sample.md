@@ -2,7 +2,7 @@
 
 ```chart
 type: hist
-title: Idle seconds
+title: Idle clusters near zero
 x: sec
 
 sec

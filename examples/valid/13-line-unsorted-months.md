@@ -2,7 +2,7 @@
 
 ```chart
 type: line
-title: Campaign months
+title: Dec led signups at 55
 x: month
 y: signups
 

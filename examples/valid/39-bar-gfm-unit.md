@@ -2,7 +2,7 @@
 
 ```chart
 type: bar
-title: Storage
+title: Archive leads at 8000 GB
 unit: GB
 x: bucket
 y: size

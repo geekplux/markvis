@@ -2,7 +2,7 @@
 
 ```vis
 type: hist
-title: Payload sizes
+title: 8 kb shows up most
 x: kb
 
 kb

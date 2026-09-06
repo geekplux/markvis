@@ -2,7 +2,7 @@
 
 ```chart
 type: line
-title: Temperature
+title: Noon peaked at 22°C
 x: hour
 y: celsius
 

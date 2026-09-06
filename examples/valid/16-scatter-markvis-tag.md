@@ -2,7 +2,7 @@
 
 ```markvis
 type: scatter
-title: Temp vs humidity
+title: Humidity falls as temp rises
 x: temp_c
 y: humidity
 

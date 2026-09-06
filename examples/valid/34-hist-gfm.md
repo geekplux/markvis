@@ -2,7 +2,7 @@
 
 ```chart
 type: hist
-title: Dice rolls
+title: Twos show twice
 x: roll
 
 | roll |
