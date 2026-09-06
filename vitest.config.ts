@@ -35,6 +35,7 @@ export default defineConfig({
       "packages/ir/src/**/*.test.ts",
       "packages/parser/src/**/*.test.ts",
       "packages/parser/test/**/*.test.ts",
+      "packages/themes/**/*.test.ts",
       "packages/render-svg/src/**/*.test.ts",
       "packages/render-svg/test/**/*.test.ts",
       "packages/cli/src/**/*.test.ts",
