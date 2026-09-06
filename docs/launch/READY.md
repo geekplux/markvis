@@ -42,8 +42,8 @@ pages.yml does not deploy a red build: shared check via workflow_call; Pages bui
 
 | Role | Sign | When |
 | --- | --- | --- |
-| Verifier | | Every box evidence-ticked |
-| PM | | After Verifier; one summary; stop |
+| Verifier | signed 2026-09-06 | tip 9f746fa; live + suite evidence |
+| PM | signed 2026-09-06 | after Verifier; summary in channel; stop |
 | GeekPlux | | Browser tick before any public launch |
 
 No Show HN from this file. No branch flip from this file.
