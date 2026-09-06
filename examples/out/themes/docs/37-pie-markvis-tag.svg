@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Billing leads tickets at 40, 4 slices" aria-labelledby="mv-c7320d6a0a846c42-title" aria-describedby="mv-c7320d6a0a846c42-desc" data-markvis="2" data-chart-type="pie" data-id="mv-c7320d6a0a846c42" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-c7320d6a0a846c42-title">Billing leads tickets at 40</title>
+  <desc id="mv-c7320d6a0a846c42-desc">pie chart. Billing leads tickets at 40. x=topic. y=tickets. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="77.53" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Billing leads tickets at 40</text>
+  <g aria-hidden="true">
+    <path d="M351.59 248 L351.59 101.12 A146.88 146.88 0 0 1 437.92 366.83 Z" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1.5" data-label="Billing and invoice disputes" data-raw-value="40"/>
+    <path d="M351.59 248 L437.92 366.83 A146.88 146.88 0 0 1 232.76 334.33 Z" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1.5" data-label="Account access and MFA reset" data-raw-value="25"/>
+    <path d="M351.59 248 L232.76 334.33 A146.88 146.88 0 0 1 232.76 161.67 Z" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1.5" data-label="Product how-to questions" data-raw-value="20"/>
+    <path d="M351.59 248 L232.76 161.67 A146.88 146.88 0 0 1 351.59 101.12 Z" fill="#334155" stroke="#18181B" stroke-opacity="0.16" stroke-width="1.5" data-label="Other miscellaneous" data-raw-value="15"/>
+  </g>
+  <g fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1">
+    <polyline points="491.28,202.61 506.49,197.67 514.49,197.67"/>
+    <polyline points="328.61,393.07 326.11,408.87 318.11,408.87"/>
+    <polyline points="204.71,248 188.71,248 180.71,248"/>
+    <polyline points="284.9,117.13 277.64,102.87 269.64,102.87"/>
+  </g>
+  <g font-size="10" font-weight="500" fill="#18181B">
+    <text x="526.49" y="197.67" text-anchor="start" dominant-baseline="middle" data-label="Billing and invoice disputes">Billing and invoice disputes · 40</text>
+    <text x="306.11" y="408.87" text-anchor="end" dominant-baseline="middle" data-label="Account access and MFA reset">Account access and MFA reset · 25</text>
+    <text x="168.71" y="248" text-anchor="end" dominant-baseline="middle" data-label="Product how-to questions">Product how-to questions · 20</text>
+    <text x="257.64" y="102.87" text-anchor="end" dominant-baseline="middle" data-label="Other miscellaneous">Other miscellaneous · 15</text>
+  </g>
+</svg>

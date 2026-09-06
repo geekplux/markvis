@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: A leads at 40, 3 slices" aria-labelledby="mv-b5d15cbc51f2b051-title" aria-describedby="mv-b5d15cbc51f2b051-desc" data-markvis="2" data-chart-type="pie" data-id="mv-b5d15cbc51f2b051" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-b5d15cbc51f2b051-title">A leads at 40</title>
+  <desc id="mv-b5d15cbc51f2b051-desc">pie chart. A leads at 40. x=name. y=value. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">A leads at 40</text>
+  <g aria-hidden="true">
+    <path d="M372 248 L372 101.12 A146.88 146.88 0 0 1 471.9 355.67 Z" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1.5" data-label="A" data-raw-value="40"/>
+    <path d="M372 248 L471.9 355.67 A146.88 146.88 0 0 1 228.8 280.68 Z" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1.5" data-label="B" data-raw-value="35"/>
+    <path d="M372 248 L228.8 280.68 A146.88 146.88 0 0 1 372 101.12 Z" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1.5" data-label="C" data-raw-value="30"/>
+  </g>
+  <g fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1">
+    <polyline points="508.73,194.34 523.62,188.49 531.62,188.49"/>
+    <polyline points="328.71,388.35 323.99,403.64 315.99,403.64"/>
+    <polyline points="257.16,156.42 244.66,146.45 236.66,146.45"/>
+  </g>
+  <g font-size="10" font-weight="500" fill="#18181B">
+    <text x="543.62" y="188.49" text-anchor="start" dominant-baseline="middle" data-label="A">A · 40</text>
+    <text x="303.99" y="403.64" text-anchor="end" dominant-baseline="middle" data-label="B">B · 35</text>
+    <text x="224.66" y="146.45" text-anchor="end" dominant-baseline="middle" data-label="C">C · 30</text>
+  </g>
+</svg>

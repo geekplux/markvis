@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="bar chart: Hosting leads cost at 400 (USD), 3 rows" aria-labelledby="mv-82d9079c0b36b357-title" aria-describedby="mv-82d9079c0b36b357-desc" data-markvis="2" data-chart-type="bar" data-id="mv-82d9079c0b36b357" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-82d9079c0b36b357-title">Hosting leads cost at 400</title>
+  <desc id="mv-82d9079c0b36b357-desc">bar chart. Hosting leads cost at 400. x=item. y=cost. unit=USD. 3 rows.</desc>
+  <text x="44" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Hosting leads cost at 400<tspan font-size="12" font-weight="400" fill="#666666"> · USD</tspan></text>
+  <path d="M44 417 L704 417" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <g fill="#666666" font-size="11" font-weight="400">
+    <text x="36" y="417" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="36" y="322.25" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="36" y="227.5" text-anchor="end" dominant-baseline="middle">200</text>
+    <text x="36" y="132.75" text-anchor="end" dominant-baseline="middle">300</text>
+    <text x="36" y="38" text-anchor="end" dominant-baseline="middle">400</text>
+    <text x="154" y="428" text-anchor="middle" font-size="11" data-full-label="Hosting">Hosting</text>
+    <text x="374" y="428" text-anchor="middle" font-size="11" data-full-label="CDN">CDN</text>
+    <text x="594" y="428" text-anchor="middle" font-size="11" data-full-label="Logs">Logs</text>
+  </g>
+  <g>
+    <path d="M122 417 L186 417 L186 38 L122 38 Z" fill="#7cb5ec" data-x="Hosting" data-series="cost" data-y="400"/>
+    <path d="M342 417 L406 417 L406 303.3 L342 303.3 Z" fill="#7cb5ec" data-x="CDN" data-series="cost" data-y="120"/>
+    <path d="M562 417 L626 417 L626 341.2 L562 341.2 Z" fill="#7cb5ec" data-x="Logs" data-series="cost" data-y="80"/>
+  </g>
+  <g>
+    <text x="154" y="30" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="Hosting">400</text>
+    <text x="374" y="295.3" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="CDN">120</text>
+    <text x="594" y="333.2" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="Logs">80</text>
+  </g>
+</svg>

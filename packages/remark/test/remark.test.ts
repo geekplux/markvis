@@ -65,7 +65,7 @@ describe("remarkMarkvis", () => {
     expect(html).toContain("<svg");
     expect(html).toContain("<table");
     expect(html).toContain("<td>Mar</td>");
-    expect(html).toContain("<figcaption>Q3 Revenue</figcaption>");
+    expect(html).toContain("<figcaption>Feb led Q3 at 180</figcaption>");
   });
 
   it("accepts vis and markvis fence tags", () => {

@@ -12,9 +12,19 @@ const svgModules = import.meta.glob("../../../examples/out/*.svg", {
   eager: true,
 }) as Record<string, string>;
 
-const maps = mapsFromGlobs(markdownModules, svgModules);
+const themedSvgModules = import.meta.glob(
+  "../../../examples/out/themes/*/*.svg",
+  {
+    query: "?raw",
+    import: "default",
+    eager: true,
+  },
+) as Record<string, string>;
+
+const maps = mapsFromGlobs(markdownModules, svgModules, themedSvgModules);
 
 export const GALLERY_ITEMS: GalleryItem[] = catalogFromMaps(
   maps.markdownByStem,
   maps.svgByStem,
+  maps.themedSvgByThemeStem,
 );

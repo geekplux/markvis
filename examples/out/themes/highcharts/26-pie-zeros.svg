@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="pie chart: On leads at 70, 3 slices" aria-labelledby="mv-840fc044c6e0680e-title" aria-describedby="mv-840fc044c6e0680e-desc" data-markvis="2" data-chart-type="pie" data-id="mv-840fc044c6e0680e" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-840fc044c6e0680e-title">On leads at 70</title>
+  <desc id="mv-840fc044c6e0680e-desc">pie chart. On leads at 70. x=flag. y=count. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="44" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">On leads at 70</text>
+  <g aria-hidden="true">
+    <path d="M374 231 L374 99.76 A131.24 131.24 0 1 1 249.18 271.56 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="on" data-raw-value="70"/>
+    <path d="M374 231 L249.18 271.56 A131.24 131.24 0 0 1 374 99.76 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="off" data-raw-value="30"/>
+  </g>
+  <g fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1">
+    <polyline points="480.18,308.14 493.12,317.55 501.12,317.55"/>
+    <polyline points="267.82,153.86 254.88,144.45 246.88,144.45"/>
+  </g>
+  <g font-size="11" font-weight="500" fill="#333333">
+    <text x="513.12" y="317.55" text-anchor="start" dominant-baseline="middle" data-label="on">on · 70</text>
+    <text x="234.88" y="144.45" text-anchor="end" dominant-baseline="middle" data-label="off">off · 30</text>
+  </g>
+</svg>

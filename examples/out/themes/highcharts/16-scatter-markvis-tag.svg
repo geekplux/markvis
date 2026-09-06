@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="scatter chart: Humidity falls as temp rises, 4 rows" aria-labelledby="mv-1cdb2454b08a8f62-title" aria-describedby="mv-1cdb2454b08a8f62-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-1cdb2454b08a8f62" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-1cdb2454b08a8f62-title">Humidity falls as temp rises</title>
+  <desc id="mv-1cdb2454b08a8f62-desc">scatter chart. Humidity falls as temp rises. x=temp_c. y=humidity. 4 rows.</desc>
+  <text x="44" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Humidity falls as temp rises</text>
+  <g fill="none" stroke="#333333" stroke-opacity="0.22" stroke-width="1">
+    <line x1="44" x2="704" y1="290.67" y2="290.67"/>
+    <line x1="44" x2="704" y1="164.33" y2="164.33"/>
+    <line x1="44" x2="704" y1="38" y2="38"/>
+  </g>
+  <path d="M44 417 L704 417" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <g fill="#666666" font-size="11" font-weight="400">
+    <text x="36" y="417" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="36" y="290.67" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="36" y="164.33" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="36" y="38" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="52" y="428" text-anchor="middle" font-size="11" data-full-label="15">15</text>
+    <text x="266.67" y="428" text-anchor="middle" font-size="11" data-full-label="20">20</text>
+    <text x="481.33" y="428" text-anchor="middle" font-size="11" data-full-label="25">25</text>
+    <text x="696" y="428" text-anchor="middle" font-size="11" data-full-label="30">30</text>
+  </g>
+  <g>
+    <circle cx="180.8" cy="101.17" r="3" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="18" data-y="55" data-series="humidity"/>
+    <circle cx="352.53" cy="189.6" r="3" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="22" data-y="48" data-series="humidity"/>
+    <circle cx="481.33" cy="290.67" r="3" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="25" data-y="40" data-series="humidity"/>
+    <circle cx="610.13" cy="353.83" r="3" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="28" data-y="35" data-series="humidity"/>
+  </g>
+</svg>

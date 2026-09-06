@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="scatter chart: y rises with x, 4 rows" aria-labelledby="mv-9ccfe06238dd91bf-title" aria-describedby="mv-9ccfe06238dd91bf-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-9ccfe06238dd91bf" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-9ccfe06238dd91bf-title">y rises with x</title>
+  <desc id="mv-9ccfe06238dd91bf-desc">scatter chart. y rises with x. x=x. y=y. 4 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">y rises with x</text>
+  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
+    <line x1="48" x2="700" y1="373.6" y2="373.6"/>
+    <line x1="48" x2="700" y1="204.8" y2="204.8"/>
+    <line x1="48" x2="700" y1="36" y2="36"/>
+  </g>
+  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">1.5</text>
+    <text x="38" y="373.6" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="38" y="289.2" text-anchor="end" dominant-baseline="middle">2.5</text>
+    <text x="38" y="204.8" text-anchor="end" dominant-baseline="middle">3</text>
+    <text x="38" y="120.4" text-anchor="end" dominant-baseline="middle">3.5</text>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">4</text>
+    <text x="56" y="468" text-anchor="middle" font-size="10" data-full-label="0.5">0.5</text>
+    <text x="183.2" y="468" text-anchor="middle" font-size="10" data-full-label="1">1</text>
+    <text x="310.4" y="468" text-anchor="middle" font-size="10" data-full-label="1.5">1.5</text>
+    <text x="437.6" y="468" text-anchor="middle" font-size="10" data-full-label="2">2</text>
+    <text x="564.8" y="468" text-anchor="middle" font-size="10" data-full-label="2.5">2.5</text>
+    <text x="692" y="468" text-anchor="middle" font-size="10" data-full-label="3">3</text>
+  </g>
+  <g>
+    <circle cx="183.2" cy="356.72" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="1.0" data-y="2.1" data-series="y"/>
+    <circle cx="310.4" cy="238.56" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="1.5" data-y="2.8" data-series="y"/>
+    <circle cx="437.6" cy="204.8" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="2.0" data-y="3" data-series="y"/>
+    <circle cx="564.8" cy="137.28" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="2.5" data-y="3.4" data-series="y"/>
+  </g>
+</svg>

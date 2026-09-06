@@ -38,6 +38,13 @@ describe("site visual chrome", () => {
     const vue = read("components/Gallery.vue");
     expect(vue).toContain(':aria-label="item.title"');
     expect(vue).not.toContain("gallery-card-title");
+    expect(vue).toContain('aria-label="Chart theme"');
+    expect(vue).toContain("themeFilter");
+    expect(vue).toContain("svgsByTheme");
+    expect(vue).toContain("THEME_CHIPS");
+    expect(vue).toContain("Open in Play");
+    expect(vue).toContain("playHref");
+    expect(vue).toContain("data-theme");
   });
 
   it("gallery mobile grid + white chrome per EXAMPLES.md", () => {

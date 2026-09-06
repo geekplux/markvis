@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="pie chart: Budget overrun, 3 slices" aria-labelledby="mv-45d354a539c72d2e-title" aria-describedby="mv-45d354a539c72d2e-desc" data-markvis="2" data-chart-type="pie" data-id="mv-45d354a539c72d2e" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-45d354a539c72d2e-title">Budget overrun</title>
+  <desc id="mv-45d354a539c72d2e-desc">pie chart. Budget overrun. x=bucket. y=pct. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="44" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Budget overrun</text>
+  <g aria-hidden="true">
+    <path d="M374 231 L374 99.76 A131.24 131.24 0 0 1 430.94 349.24 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Infra" data-raw-value="45"/>
+    <path d="M374 231 L430.94 349.24 A131.24 131.24 0 0 1 243.13 221.19 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Product" data-raw-value="35"/>
+    <path d="M374 231 L243.13 221.19 A131.24 131.24 0 0 1 374 99.76 Z" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Ops" data-raw-value="25"/>
+  </g>
+  <g fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1">
+    <polyline points="501.95,201.8 517.55,198.24 525.55,198.24"/>
+    <polyline points="300.07,339.44 291.06,352.66 283.06,352.66"/>
+    <polyline points="284.73,134.79 273.85,123.07 265.85,123.07"/>
+  </g>
+  <g font-size="11" font-weight="500" fill="#333333">
+    <text x="537.55" y="198.24" text-anchor="start" dominant-baseline="middle" data-label="Infra">Infra · 45</text>
+    <text x="271.06" y="352.66" text-anchor="end" dominant-baseline="middle" data-label="Product">Product · 35</text>
+    <text x="253.85" y="123.07" text-anchor="end" dominant-baseline="middle" data-label="Ops">Ops · 25</text>
+  </g>
+</svg>

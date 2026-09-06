@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="hist chart: Most samples stay under 20 ms, 6 rows" aria-labelledby="mv-6b0bf4639d30686e-title" aria-describedby="mv-6b0bf4639d30686e-desc" data-markvis="2" data-chart-type="hist" data-id="mv-6b0bf4639d30686e" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-6b0bf4639d30686e-title">Most samples stay under 20 ms</title>
+  <desc id="mv-6b0bf4639d30686e-desc">hist chart. Most samples stay under 20 ms. x=ms. 6 rows. x is binned with Sturges equal-width bins.</desc>
+  <text x="44" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Most samples stay under 20 ms</text>
+  <path d="M44 417 L704 417" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <g fill="#666666" font-size="11" font-weight="400">
+    <text x="36" y="417" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="36" y="322.25" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="36" y="227.5" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="36" y="132.75" text-anchor="end" dominant-baseline="middle">3</text>
+    <text x="36" y="38" text-anchor="end" dominant-baseline="middle">4</text>
+    <text x="44" y="428" text-anchor="middle" font-size="11" data-full-label="12">12</text>
+    <text x="209" y="428" text-anchor="middle" font-size="11" data-full-label="19.5">19.5</text>
+    <text x="374" y="428" text-anchor="middle" font-size="11" data-full-label="27">27</text>
+    <text x="539" y="428" text-anchor="middle" font-size="11" data-full-label="34.5">34.5</text>
+    <text x="704" y="428" text-anchor="middle" font-size="11" data-full-label="42">42</text>
+  </g>
+  <g>
+    <path d="M94.5 417 L158.5 417 L158.5 38 L94.5 38 Z" fill="#7cb5ec" data-bin-left="12" data-bin-right="19.5" data-weight="4" data-count="4"/>
+    <path d="M259.5 417 L323.5 417 L323.5 417 L259.5 417 Z" fill="#7cb5ec" data-bin-left="19.5" data-bin-right="27" data-weight="0" data-count="0"/>
+    <path d="M424.5 417 L488.5 417 L488.5 417 L424.5 417 Z" fill="#7cb5ec" data-bin-left="27" data-bin-right="34.5" data-weight="0" data-count="0"/>
+    <path d="M589.5 417 L653.5 417 L653.5 227.5 L589.5 227.5 Z" fill="#7cb5ec" data-bin-left="34.5" data-bin-right="42" data-weight="2" data-count="2"/>
+  </g>
+  <g>
+    <text x="126.5" y="30" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="12–19.5">4</text>
+    <text x="291.5" y="409" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="19.5–27">0</text>
+    <text x="456.5" y="409" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="27–34.5">0</text>
+    <text x="621.5" y="219.5" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="34.5–42">2</text>
+  </g>
+</svg>

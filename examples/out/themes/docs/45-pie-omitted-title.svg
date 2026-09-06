@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Yes leads at 60, 2 slices" aria-labelledby="mv-68d9c244fd51a166-title" aria-describedby="mv-68d9c244fd51a166-desc" data-markvis="2" data-chart-type="pie" data-id="mv-68d9c244fd51a166" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-68d9c244fd51a166-title">Yes leads at 60</title>
+  <desc id="mv-68d9c244fd51a166-desc">pie chart. Yes leads at 60. x=label. y=n. 2 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Yes leads at 60</text>
+  <g aria-hidden="true">
+    <path d="M372 248 L372 101.12 A146.88 146.88 0 1 1 285.67 366.83 Z" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1.5" data-label="yes" data-raw-value="60"/>
+    <path d="M372 248 L285.67 366.83 A146.88 146.88 0 0 1 372 101.12 Z" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1.5" data-label="no" data-raw-value="40"/>
+  </g>
+  <g fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1">
+    <polyline points="511.69,293.39 526.91,298.33 534.91,298.33"/>
+    <polyline points="232.31,202.61 217.09,197.67 209.09,197.67"/>
+  </g>
+  <g font-size="10" font-weight="500" fill="#18181B">
+    <text x="546.91" y="298.33" text-anchor="start" dominant-baseline="middle" data-label="yes">yes · 60</text>
+    <text x="197.09" y="197.67" text-anchor="end" dominant-baseline="middle" data-label="no">no · 40</text>
+  </g>
+</svg>

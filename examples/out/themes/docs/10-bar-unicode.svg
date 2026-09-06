@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: 東京 leads at 92, 4 rows" aria-labelledby="mv-c11fe51e607a9324-title" aria-describedby="mv-c11fe51e607a9324-desc" data-markvis="2" data-chart-type="bar" data-id="mv-c11fe51e607a9324" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-c11fe51e607a9324-title">東京 leads at 92</title>
+  <desc id="mv-c11fe51e607a9324-desc">bar chart. 東京 leads at 92. x=city. y=score. 4 rows.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">東京 leads at 92</text>
+  <path d="M40 458 L704 458" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <g fill="#64748B" font-size="10" font-weight="400">
+    <text x="32" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="32" y="245" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="32" y="32" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="123" y="468" text-anchor="middle" font-size="10" data-full-label="北京">北京</text>
+    <text x="289" y="468" text-anchor="middle" font-size="10" data-full-label="東京">東京</text>
+    <text x="455" y="468" text-anchor="middle" font-size="10" data-full-label="서울">서울</text>
+    <text x="621" y="468" text-anchor="middle" font-size="10" data-full-label="München">München</text>
+  </g>
+  <g>
+    <path d="M91 458 L155 458 L155 83.12 L91 83.12 Z" fill="#475569" data-x="北京" data-series="score" data-y="88"/>
+    <path d="M257 458 L321 458 L321 66.08 L257 66.08 Z" fill="#475569" data-x="東京" data-series="score" data-y="92"/>
+    <path d="M423 458 L487 458 L487 95.9 L423 95.9 Z" fill="#475569" data-x="서울" data-series="score" data-y="85"/>
+    <path d="M589 458 L653 458 L653 121.46 L589 121.46 Z" fill="#475569" data-x="München" data-series="score" data-y="79"/>
+  </g>
+  <g>
+    <text x="123" y="75.12" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="北京">88</text>
+    <text x="289" y="58.08" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="東京">92</text>
+    <text x="455" y="87.9" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="서울">85</text>
+    <text x="621" y="113.46" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="München">79</text>
+  </g>
+</svg>

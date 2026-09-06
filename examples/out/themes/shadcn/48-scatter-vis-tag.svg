@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="scatter chart: Most points sit on the axes, 4 rows" aria-labelledby="mv-f6777e3877ae8317-title" aria-describedby="mv-f6777e3877ae8317-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-f6777e3877ae8317" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-f6777e3877ae8317-title">Most points sit on the axes</title>
+  <desc id="mv-f6777e3877ae8317-desc">scatter chart. Most points sit on the axes. x=dx. y=dy. 4 rows.</desc>
+  <text x="44" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">Most points sit on the axes</text>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1">
+    <line x1="44" x2="702" y1="372.8" y2="372.8"/>
+    <line x1="44" x2="702" y1="204.4" y2="204.4"/>
+    <line x1="44" x2="702" y1="36" y2="36"/>
+  </g>
+  <path d="M44 457 L702 457" fill="none" stroke="#0A0A0A" stroke-opacity="0.18" stroke-width="1"/>
+  <line x1="44" x2="702" y1="372.8" y2="372.8" stroke="#0A0A0A" stroke-opacity="0.18" stroke-width="1"/>
+  <g fill="#737373" font-size="11" font-weight="400">
+    <text x="36" y="457" text-anchor="end" dominant-baseline="middle">-1</text>
+    <text x="36" y="372.8" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="36" y="288.6" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="36" y="204.4" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="36" y="120.2" text-anchor="end" dominant-baseline="middle">3</text>
+    <text x="36" y="36" text-anchor="end" dominant-baseline="middle">4</text>
+    <text x="52" y="468" text-anchor="middle" font-size="11" data-full-label="-1">-1</text>
+    <text x="212.5" y="468" text-anchor="middle" font-size="11" data-full-label="0">0</text>
+    <text x="373" y="468" text-anchor="middle" font-size="11" data-full-label="1">1</text>
+    <text x="533.5" y="468" text-anchor="middle" font-size="11" data-full-label="2">2</text>
+    <text x="694" y="468" text-anchor="middle" font-size="11" data-full-label="3">3</text>
+  </g>
+  <g>
+    <circle cx="212.5" cy="372.8" r="3" fill="#F54900" fill-opacity="0.85" stroke="none" data-x="0" data-y="0" data-series="dy"/>
+    <circle cx="373" cy="372.8" r="3" fill="#F54900" fill-opacity="0.85" stroke="none" data-x="1" data-y="0" data-series="dy"/>
+    <circle cx="212.5" cy="288.6" r="3" fill="#F54900" fill-opacity="0.85" stroke="none" data-x="0" data-y="1" data-series="dy"/>
+    <circle cx="533.5" cy="120.2" r="3" fill="#F54900" fill-opacity="0.85" stroke="none" data-x="2" data-y="3" data-series="dy"/>
+  </g>
+</svg>

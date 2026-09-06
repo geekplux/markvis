@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Tue peaked at 120, 3 rows" aria-labelledby="mv-fbd0c63fa52e6506-title" aria-describedby="mv-fbd0c63fa52e6506-desc" data-markvis="2" data-chart-type="line" data-id="mv-fbd0c63fa52e6506" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-fbd0c63fa52e6506-title">Tue peaked at 120</title>
+  <desc id="mv-fbd0c63fa52e6506-desc">line chart. Tue peaked at 120. x=day. y=visitors. 3 rows.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Tue peaked at 120</text>
+  <g fill="none" stroke="#18181B" stroke-opacity="0.06" stroke-width="1">
+    <line x1="40" x2="704" y1="372.8" y2="372.8"/>
+    <line x1="40" x2="704" y1="202.4" y2="202.4"/>
+    <line x1="40" x2="704" y1="32" y2="32"/>
+  </g>
+  <path d="M40 458 L704 458" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <g fill="#64748B" font-size="10" font-weight="400">
+    <text x="32" y="458" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="32" y="372.8" text-anchor="end" dominant-baseline="middle">90</text>
+    <text x="32" y="287.6" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="32" y="202.4" text-anchor="end" dominant-baseline="middle">110</text>
+    <text x="32" y="117.2" text-anchor="end" dominant-baseline="middle">120</text>
+    <text x="32" y="32" text-anchor="end" dominant-baseline="middle">130</text>
+    <text x="150.67" y="468" text-anchor="middle" font-size="10" data-full-label="Mon">Mon</text>
+    <text x="372" y="468" text-anchor="middle" font-size="10" data-full-label="Tue">Tue</text>
+    <text x="593.33" y="468" text-anchor="middle" font-size="10" data-full-label="Wed">Wed</text>
+  </g>
+  <g fill="none">
+    <path d="M150.67 287.6 L372 117.2 L593.33 372.8" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="visitors"/>
+    <circle cx="150.67" cy="287.6" r="2" fill="#475569" stroke="none" data-series="visitors"/>
+    <circle cx="372" cy="117.2" r="2" fill="#475569" stroke="none" data-series="visitors"/>
+    <circle cx="593.33" cy="372.8" r="2" fill="#475569" stroke="none" data-series="visitors"/>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Jul peaked at 22, 12 rows" aria-labelledby="mv-f2ca0b65d8753e21-title" aria-describedby="mv-f2ca0b65d8753e21-desc" data-markvis="2" data-chart-type="bar" data-id="mv-f2ca0b65d8753e21" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-f2ca0b65d8753e21-title">Jul peaked at 22</title>
+  <desc id="mv-f2ca0b65d8753e21-desc">bar chart. Jul peaked at 22. x=month. y=tickets. 12 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Jul peaked at 22</text>
+  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
+    <line x1="48" x2="700" y1="317.33" y2="317.33"/>
+    <line x1="48" x2="700" y1="176.67" y2="176.67"/>
+    <line x1="48" x2="700" y1="36" y2="36"/>
+  </g>
+  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="317.33" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="38" y="176.67" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="75.17" y="468" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
+    <text x="129.5" y="468" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
+    <text x="183.83" y="468" text-anchor="middle" font-size="10" data-full-label="Mar">Mar</text>
+    <text x="238.17" y="468" text-anchor="middle" font-size="10" data-full-label="Apr">Apr</text>
+    <text x="292.5" y="468" text-anchor="middle" font-size="10" data-full-label="May">May</text>
+    <text x="346.83" y="468" text-anchor="middle" font-size="10" data-full-label="Jun">Jun</text>
+    <text x="401.17" y="468" text-anchor="middle" font-size="10" data-full-label="Jul">Jul</text>
+    <text x="455.5" y="468" text-anchor="middle" font-size="10" data-full-label="Aug">Aug</text>
+    <text x="509.83" y="468" text-anchor="middle" font-size="10" data-full-label="Sep">Sep</text>
+    <text x="564.17" y="468" text-anchor="middle" font-size="10" data-full-label="Oct">Oct</text>
+    <text x="618.5" y="468" text-anchor="middle" font-size="10" data-full-label="Nov">Nov</text>
+    <text x="672.83" y="468" text-anchor="middle" font-size="10" data-full-label="Dec">Dec</text>
+  </g>
+  <g>
+    <path d="M52.89 458 L52.89 320.33 Q52.89 317.33 55.89 317.33 L94.44 317.33 Q97.44 317.33 97.44 320.33 L97.44 458 Z" fill="#3B82F6" data-x="Jan" data-series="tickets" data-y="10"/>
+    <path d="M107.22 458 L107.22 292.2 Q107.22 289.2 110.22 289.2 L148.78 289.2 Q151.78 289.2 151.78 292.2 L151.78 458 Z" fill="#3B82F6" data-x="Feb" data-series="tickets" data-y="12"/>
+    <path d="M161.56 458 L161.56 334.4 Q161.56 331.4 164.56 331.4 L203.11 331.4 Q206.11 331.4 206.11 334.4 L206.11 458 Z" fill="#3B82F6" data-x="Mar" data-series="tickets" data-y="9"/>
+    <path d="M215.89 458 L215.89 250 Q215.89 247 218.89 247 L257.44 247 Q260.44 247 260.44 250 L260.44 458 Z" fill="#3B82F6" data-x="Apr" data-series="tickets" data-y="15"/>
+    <path d="M270.22 458 L270.22 264.07 Q270.22 261.07 273.22 261.07 L311.78 261.07 Q314.78 261.07 314.78 264.07 L314.78 458 Z" fill="#3B82F6" data-x="May" data-series="tickets" data-y="14"/>
+    <path d="M324.56 458 L324.56 207.8 Q324.56 204.8 327.56 204.8 L366.11 204.8 Q369.11 204.8 369.11 207.8 L369.11 458 Z" fill="#3B82F6" data-x="Jun" data-series="tickets" data-y="18"/>
+    <path d="M378.89 458 L378.89 151.53 Q378.89 148.53 381.89 148.53 L420.44 148.53 Q423.44 148.53 423.44 151.53 L423.44 458 Z" fill="#3B82F6" data-x="Jul" data-series="tickets" data-y="22"/>
+    <path d="M433.22 458 L433.22 179.67 Q433.22 176.67 436.22 176.67 L474.78 176.67 Q477.78 176.67 477.78 179.67 L477.78 458 Z" fill="#3B82F6" data-x="Aug" data-series="tickets" data-y="20"/>
+    <path d="M487.56 458 L487.56 221.87 Q487.56 218.87 490.56 218.87 L529.11 218.87 Q532.11 218.87 532.11 221.87 L532.11 458 Z" fill="#3B82F6" data-x="Sep" data-series="tickets" data-y="17"/>
+    <path d="M541.89 458 L541.89 193.73 Q541.89 190.73 544.89 190.73 L583.44 190.73 Q586.44 190.73 586.44 193.73 L586.44 458 Z" fill="#3B82F6" data-x="Oct" data-series="tickets" data-y="19"/>
+    <path d="M596.22 458 L596.22 235.93 Q596.22 232.93 599.22 232.93 L637.78 232.93 Q640.78 232.93 640.78 235.93 L640.78 458 Z" fill="#3B82F6" data-x="Nov" data-series="tickets" data-y="16"/>
+    <path d="M650.56 458 L650.56 165.6 Q650.56 162.6 653.56 162.6 L692.11 162.6 Q695.11 162.6 695.11 165.6 L695.11 458 Z" fill="#3B82F6" data-x="Dec" data-series="tickets" data-y="21"/>
+  </g>
+</svg>

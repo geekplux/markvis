@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Free still outnumbers pro, 4 rows, series plan" aria-labelledby="mv-ace1c56e14a48b48-title" aria-describedby="mv-ace1c56e14a48b48-desc" data-markvis="2" data-chart-type="bar" data-id="mv-ace1c56e14a48b48" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-ace1c56e14a48b48-title">Free still outnumbers pro</title>
+  <desc id="mv-ace1c56e14a48b48-desc">bar chart. Free still outnumbers pro. x=month. y=seats. series=plan. 4 rows.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Free still outnumbers pro</text>
+  <g font-size="11" font-weight="500" fill="#18181B">
+    <rect x="40" y="29" width="10" height="10" fill="#475569" rx="1"/>
+    <text x="54" y="38" data-legend="free">free</text>
+    <rect x="97.28" y="29" width="10" height="10" fill="#64748B" rx="1"/>
+    <text x="111.28" y="38" data-legend="pro">pro</text>
+  </g>
+  <path d="M40 458 L704 458" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <g fill="#64748B" font-size="10" font-weight="400">
+    <text x="32" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="32" y="324" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="32" y="190" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="32" y="56" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="206" y="468" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
+    <text x="538" y="468" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
+  </g>
+  <g>
+    <path d="M141 458 L205 458 L205 190 L141 190 Z" fill="#475569" data-x="Jan" data-series="free" data-y="100"/>
+    <path d="M207 458 L271 458 L271 404.4 L207 404.4 Z" fill="#64748B" data-x="Jan" data-series="pro" data-y="20"/>
+    <path d="M473 458 L537 458 L537 163.2 L473 163.2 Z" fill="#475569" data-x="Feb" data-series="free" data-y="110"/>
+    <path d="M539 458 L603 458 L603 382.96 L539 382.96 Z" fill="#64748B" data-x="Feb" data-series="pro" data-y="28"/>
+  </g>
+  <g>
+    <text x="173" y="182" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="Jan">100</text>
+    <text x="239" y="396.4" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="Jan">20</text>
+    <text x="505" y="155.2" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="Feb">110</text>
+    <text x="571" y="374.96" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="Feb">28</text>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="pie chart: Core leads at 50% (%), 3 slices" aria-labelledby="mv-9395583b1f0bdce1-title" aria-describedby="mv-9395583b1f0bdce1-desc" data-markvis="2" data-chart-type="pie" data-id="mv-9395583b1f0bdce1" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-9395583b1f0bdce1-title">Core leads at 50%</title>
+  <desc id="mv-9395583b1f0bdce1-desc">pie chart. Core leads at 50%. x=name. y=value. unit=%. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="44" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Core leads at 50%<tspan font-size="12" font-weight="400" fill="#666666"> · %</tspan></text>
+  <g aria-hidden="true">
+    <path d="M374 231 L374 99.76 A131.24 131.24 0 0 1 393.56 360.77 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Core" data-raw-value="50"/>
+    <path d="M374 231 L393.56 360.77 A131.24 131.24 0 0 1 243.13 221.19 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Addons" data-raw-value="30"/>
+    <path d="M374 231 L243.13 221.19 A131.24 131.24 0 0 1 374 99.76 Z" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Other" data-raw-value="25"/>
+  </g>
+  <g fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1">
+    <polyline points="504.87,221.19 520.83,220 528.83,220"/>
+    <polyline points="284.73,327.21 273.85,338.93 265.85,338.93"/>
+    <polyline points="284.73,134.79 273.85,123.07 265.85,123.07"/>
+  </g>
+  <g font-size="11" font-weight="500" fill="#333333">
+    <text x="540.83" y="220" text-anchor="start" dominant-baseline="middle" data-label="Core">Core · 50</text>
+    <text x="253.85" y="338.93" text-anchor="end" dominant-baseline="middle" data-label="Addons">Addons · 30</text>
+    <text x="253.85" y="123.07" text-anchor="end" dominant-baseline="middle" data-label="Other">Other · 25</text>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="scatter chart: Weight rises with height, 3 rows" aria-labelledby="mv-39f4c903b9abd5fd-title" aria-describedby="mv-39f4c903b9abd5fd-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-39f4c903b9abd5fd" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-39f4c903b9abd5fd-title">Weight rises with height</title>
+  <desc id="mv-39f4c903b9abd5fd-desc">scatter chart. Weight rises with height. x=height_cm. y=weight_kg. 3 rows.</desc>
+  <text x="44" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Weight rises with height</text>
+  <g fill="none" stroke="#333333" stroke-opacity="0.22" stroke-width="1">
+    <line x1="44" x2="704" y1="290.67" y2="290.67"/>
+    <line x1="44" x2="704" y1="164.33" y2="164.33"/>
+    <line x1="44" x2="704" y1="38" y2="38"/>
+  </g>
+  <path d="M44 417 L704 417" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <g fill="#666666" font-size="11" font-weight="400">
+    <text x="36" y="417" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="36" y="290.67" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="36" y="164.33" text-anchor="end" dominant-baseline="middle">70</text>
+    <text x="36" y="38" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="52" y="428" text-anchor="middle" font-size="11" data-full-label="150">150</text>
+    <text x="213" y="428" text-anchor="middle" font-size="11" data-full-label="160">160</text>
+    <text x="374" y="428" text-anchor="middle" font-size="11" data-full-label="170">170</text>
+    <text x="535" y="428" text-anchor="middle" font-size="11" data-full-label="180">180</text>
+    <text x="696" y="428" text-anchor="middle" font-size="11" data-full-label="190">190</text>
+  </g>
+  <g>
+    <circle cx="213" cy="353.83" r="3" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="160" data-y="55" data-series="weight_kg"/>
+    <circle cx="454.5" cy="164.33" r="3" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="175" data-y="70" data-series="weight_kg"/>
+    <circle cx="567.2" cy="63.27" r="3" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="182" data-y="78" data-series="weight_kg"/>
+  </g>
+</svg>

@@ -3,6 +3,7 @@ import {
   exampleIdFromSearch,
   galleryHref,
   playgroundSearch,
+  themeFromSearch,
 } from "./links.js";
 import { htmlTable, previewSource, type PlaygroundView } from "./preview.js";
 import { dropinSnippet } from "./snippet.js";
@@ -39,7 +40,7 @@ async function copyText(text: string): Promise<void> {
 
 function searchForExample(): string {
   const own = window.location.search;
-  if (exampleIdFromSearch(own)) {
+  if (exampleIdFromSearch(own) || themeFromSearch(own)) {
     return own;
   }
   try {
@@ -96,14 +97,20 @@ function main(): void {
     select.append(option);
   }
 
-  const fromQuery = exampleIdFromSearch(searchForExample());
+  const query = searchForExample();
+  const fromQuery = exampleIdFromSearch(query);
+  const themeQuery = themeFromSearch(query);
   const initial =
     EXAMPLES.find((item) => item.id === fromQuery) ?? first;
   let filename = initial.filename;
   let view = previewSource(initial.source, filename);
 
+  function currentTheme(): ChartTheme {
+    return themeSelect.value as ChartTheme;
+  }
+
   function syncUrl(id: string): void {
-    const next = playgroundSearch(id);
+    const next = playgroundSearch(id, currentTheme());
     if (`${window.location.search}` !== next) {
       window.history.replaceState(
         null,
@@ -129,12 +136,16 @@ function main(): void {
     themeSelect.value = readThemeFromFence(source);
   }
 
-  function load(source: string, name: string, id: string): void {
+  function load(source: string, name: string, id: string, theme?: ChartTheme | null): void {
     filename = name;
-    editor.value = source;
-    syncThemeSelect(source);
-    view = previewSource(source, filename);
-    galleryLink.href = galleryHref(id);
+    let nextSource = source;
+    if (theme) {
+      nextSource = rewriteThemeInFence(source, theme);
+    }
+    editor.value = nextSource;
+    syncThemeSelect(nextSource);
+    view = previewSource(nextSource, filename);
+    galleryLink.href = galleryHref(id, currentTheme());
     select.value = id;
     syncUrl(id);
     paint(view);
@@ -149,13 +160,15 @@ function main(): void {
     const next = rewriteThemeInFence(editor.value, theme);
     editor.value = next;
     view = previewSource(next, filename);
+    galleryLink.href = galleryHref(select.value, theme);
+    syncUrl(select.value);
     paint(view);
   });
 
   select.addEventListener("change", () => {
     const picked =
       EXAMPLES.find((item) => item.id === select.value) ?? first;
-    load(picked.source, picked.filename, picked.id);
+    load(picked.source, picked.filename, picked.id, currentTheme());
   });
 
   editor.addEventListener("input", () => {
@@ -188,7 +201,7 @@ function main(): void {
     );
   });
 
-  load(initial.source, initial.filename, initial.id);
+  load(initial.source, initial.filename, initial.id, themeQuery);
 }
 
 main();

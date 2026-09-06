@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="bar chart: Eng leads headcount at 24, 3 rows" aria-labelledby="mv-c1348897d63eff69-title" aria-describedby="mv-c1348897d63eff69-desc" data-markvis="2" data-chart-type="bar" data-id="mv-c1348897d63eff69" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-c1348897d63eff69-title">Eng leads headcount at 24</title>
+  <desc id="mv-c1348897d63eff69-desc">bar chart. Eng leads headcount at 24. x=team. y=n. 3 rows.</desc>
+  <text x="44" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Eng leads headcount at 24</text>
+  <path d="M44 417 L704 417" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <g fill="#666666" font-size="11" font-weight="400">
+    <text x="36" y="417" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="36" y="290.67" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="36" y="164.33" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="36" y="38" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="154" y="428" text-anchor="middle" font-size="11" data-full-label="Eng">Eng</text>
+    <text x="374" y="428" text-anchor="middle" font-size="11" data-full-label="Design">Design</text>
+    <text x="594" y="428" text-anchor="middle" font-size="11" data-full-label="Ops">Ops</text>
+  </g>
+  <g>
+    <path d="M122 417 L186 417 L186 113.8 L122 113.8 Z" fill="#7cb5ec" data-x="Eng" data-series="n" data-y="24"/>
+    <path d="M342 417 L406 417 L406 341.2 L342 341.2 Z" fill="#7cb5ec" data-x="Design" data-series="n" data-y="6"/>
+    <path d="M562 417 L626 417 L626 303.3 L562 303.3 Z" fill="#7cb5ec" data-x="Ops" data-series="n" data-y="9"/>
+  </g>
+  <g>
+    <text x="154" y="105.8" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="Eng">24</text>
+    <text x="374" y="333.2" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="Design">6</text>
+    <text x="594" y="295.3" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="Ops">9</text>
+  </g>
+</svg>

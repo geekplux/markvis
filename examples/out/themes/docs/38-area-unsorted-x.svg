@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: Sep led events at 40, 4 rows" aria-labelledby="mv-9d452c57d11455b1-title" aria-describedby="mv-9d452c57d11455b1-desc" data-markvis="2" data-chart-type="area" data-id="mv-9d452c57d11455b1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-9d452c57d11455b1-title">Sep led events at 40</title>
+  <desc id="mv-9d452c57d11455b1-desc">area chart. Sep led events at 40. x=month. y=count. 4 rows.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Sep led events at 40</text>
+  <g fill="none" stroke="#18181B" stroke-opacity="0.06" stroke-width="1">
+    <line x1="40" x2="704" y1="351.5" y2="351.5"/>
+    <line x1="40" x2="704" y1="138.5" y2="138.5"/>
+    <line x1="40" x2="704" y1="32" y2="32"/>
+  </g>
+  <path d="M40 458 L704 458" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <g fill="#64748B" font-size="10" font-weight="400">
+    <text x="32" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="32" y="351.5" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="32" y="245" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="32" y="138.5" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="32" y="32" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="123" y="468" text-anchor="middle" font-size="10" data-full-label="Sep">Sep</text>
+    <text x="289" y="468" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
+    <text x="455" y="468" text-anchor="middle" font-size="10" data-full-label="Jul">Jul</text>
+    <text x="621" y="468" text-anchor="middle" font-size="10" data-full-label="Apr">Apr</text>
+  </g>
+  <g fill="none">
+    <path d="M123 32 L289 351.5 L455 138.5 L621 245 L621 458 L123 458 Z" fill="#475569" fill-opacity="0.12" stroke="none" data-series="count"/>
+    <path d="M123 32 L289 351.5 L455 138.5 L621 245" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="count"/>
+    <circle cx="123" cy="32" r="2" fill="#475569" stroke="none" data-series="count"/>
+    <circle cx="289" cy="351.5" r="2" fill="#475569" stroke="none" data-series="count"/>
+    <circle cx="455" cy="138.5" r="2" fill="#475569" stroke="none" data-series="count"/>
+    <circle cx="621" cy="245" r="2" fill="#475569" stroke="none" data-series="count"/>
+  </g>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="line chart: Dec led signups at 55, 4 rows" aria-labelledby="mv-beb56f80ad11c78e-title" aria-describedby="mv-beb56f80ad11c78e-desc" data-markvis="2" data-chart-type="line" data-id="mv-beb56f80ad11c78e" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-beb56f80ad11c78e-title">Dec led signups at 55</title>
+  <desc id="mv-beb56f80ad11c78e-desc">line chart. Dec led signups at 55. x=month. y=signups. 4 rows.</desc>
+  <text x="44" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Dec led signups at 55</text>
+  <g fill="none" stroke="#333333" stroke-opacity="0.22" stroke-width="1">
+    <line x1="44" x2="704" y1="341.2" y2="341.2"/>
+    <line x1="44" x2="704" y1="265.4" y2="265.4"/>
+    <line x1="44" x2="704" y1="189.6" y2="189.6"/>
+    <line x1="44" x2="704" y1="113.8" y2="113.8"/>
+    <line x1="44" x2="704" y1="38" y2="38"/>
+  </g>
+  <path d="M44 417 L704 417" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <g fill="#666666" font-size="11" font-weight="400">
+    <text x="36" y="417" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="36" y="341.2" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="36" y="265.4" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="36" y="189.6" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="36" y="113.8" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="36" y="38" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="126.5" y="428" text-anchor="middle" font-size="11" data-full-label="Mar">Mar</text>
+    <text x="291.5" y="428" text-anchor="middle" font-size="11" data-full-label="Jan">Jan</text>
+    <text x="456.5" y="428" text-anchor="middle" font-size="11" data-full-label="Dec">Dec</text>
+    <text x="621.5" y="428" text-anchor="middle" font-size="11" data-full-label="Jun">Jun</text>
+  </g>
+  <g fill="none">
+    <path d="M126.5 189.6 L291.5 326.04 L456.5 75.9 L621.5 265.4" fill="none" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="signups"/>
+    <circle cx="126.5" cy="189.6" r="3" fill="#7cb5ec" stroke="none" data-series="signups"/>
+    <circle cx="291.5" cy="326.04" r="3" fill="#7cb5ec" stroke="none" data-series="signups"/>
+    <circle cx="456.5" cy="75.9" r="3" fill="#7cb5ec" stroke="none" data-series="signups"/>
+    <circle cx="621.5" cy="265.4" r="3" fill="#7cb5ec" stroke="none" data-series="signups"/>
+  </g>
+</svg>

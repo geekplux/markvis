@@ -196,7 +196,7 @@ describe("language rules", () => {
       return;
     }
     expect(result.chart.type).toBe("bar");
-    expect(result.chart.title).toBe("Q3 Revenue");
+    expect(result.chart.title).toBe("Feb led Q3 at 180");
     expect(columnValues(result.chart.table, "month")).toEqual([
       "Jan",
       "Feb",

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: US still leads EU, 6 rows, series region" aria-labelledby="mv-e1001338f4d6a6a3-title" aria-describedby="mv-e1001338f4d6a6a3-desc" data-markvis="2" data-chart-type="line" data-id="mv-e1001338f4d6a6a3" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-e1001338f4d6a6a3-title">US still leads EU</title>
+  <desc id="mv-e1001338f4d6a6a3-desc">line chart. US still leads EU. x=week. y=mau. series=region. 6 rows.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">US still leads EU</text>
+  <g fill="none" stroke="#18181B" stroke-opacity="0.06" stroke-width="1">
+    <line x1="40" x2="699.6" y1="372.8" y2="372.8"/>
+    <line x1="40" x2="699.6" y1="202.4" y2="202.4"/>
+    <line x1="40" x2="699.6" y1="32" y2="32"/>
+  </g>
+  <path d="M40 458 L699.6 458" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <g fill="#64748B" font-size="10" font-weight="400">
+    <text x="32" y="458" text-anchor="end" dominant-baseline="middle">700</text>
+    <text x="32" y="372.8" text-anchor="end" dominant-baseline="middle">800</text>
+    <text x="32" y="287.6" text-anchor="end" dominant-baseline="middle">900</text>
+    <text x="32" y="202.4" text-anchor="end" dominant-baseline="middle">1,000</text>
+    <text x="32" y="117.2" text-anchor="end" dominant-baseline="middle">1,100</text>
+    <text x="32" y="32" text-anchor="end" dominant-baseline="middle">1,200</text>
+    <text x="48" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <text x="208.9" y="468" text-anchor="middle" font-size="10" data-full-label="1">1</text>
+    <text x="369.8" y="468" text-anchor="middle" font-size="10" data-full-label="2">2</text>
+    <text x="530.7" y="468" text-anchor="middle" font-size="10" data-full-label="3">3</text>
+    <text x="691.6" y="468" text-anchor="middle" font-size="10" data-full-label="4">4</text>
+  </g>
+  <g fill="none">
+    <path d="M208.9 202.4 L369.8 117.2 L530.7 159.8" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="us"/>
+    <circle cx="208.9" cy="202.4" r="2" fill="#475569" stroke="none" data-series="us"/>
+    <circle cx="369.8" cy="117.2" r="2" fill="#475569" stroke="none" data-series="us"/>
+    <circle cx="530.7" cy="159.8" r="2" fill="#475569" stroke="none" data-series="us"/>
+    <path d="M208.9 372.8 L369.8 355.76 L530.7 287.6" fill="none" stroke="#64748B" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="eu"/>
+    <circle cx="208.9" cy="372.8" r="2" fill="#64748B" stroke="none" data-series="eu"/>
+    <circle cx="369.8" cy="355.76" r="2" fill="#64748B" stroke="none" data-series="eu"/>
+    <circle cx="530.7" cy="287.6" r="2" fill="#64748B" stroke="none" data-series="eu"/>
+  </g>
+  <g font-size="10" font-weight="500">
+    <text x="538.7" y="159.8" text-anchor="start" dominant-baseline="middle" fill="#475569" data-end-label="us">us</text>
+    <text x="538.7" y="287.6" text-anchor="start" dominant-baseline="middle" fill="#64748B" data-end-label="eu">eu</text>
+  </g>
+</svg>

@@ -15,6 +15,15 @@ describe("play embed", () => {
     );
   });
 
+  it("forwards example+theme together", () => {
+    expect(exampleQuery("?example=01-bar-basic&theme=highcharts")).toBe(
+      "?example=01-bar-basic&theme=highcharts",
+    );
+    expect(playAppIframeSrc("?example=05-pie-raw&theme=shadcn")).toBe(
+      "/play-app/index.html?example=05-pie-raw&theme=shadcn",
+    );
+  });
+
   it("accepts gallery ?id= as example", () => {
     expect(playAppIframeSrc("?id=05-pie-raw.md")).toBe(
       "/play-app/index.html?example=05-pie-raw",

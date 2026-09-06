@@ -1,21 +1,31 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref } from "vue";
-import { CHART_TYPES, type ChartType, type GalleryItem } from "../src/catalog";
+import {
+  CHART_TYPES,
+  THEMES,
+  fenceForTheme,
+  playHref,
+  type ChartTheme,
+  type ChartType,
+  type GalleryItem,
+} from "../src/catalog";
 import { GALLERY_ITEMS } from "../src/items";
 
 const TYPES: Array<"all" | ChartType> = ["all", ...CHART_TYPES];
+const THEME_CHIPS: ChartTheme[] = [...THEMES];
 
-const filter = ref<"all" | ChartType>("all");
+const typeFilter = ref<"all" | ChartType>("all");
+const themeFilter = ref<ChartTheme>("folio");
 const selectedId = ref<string | null>(null);
 const copyNote = ref("");
 
 const items = GALLERY_ITEMS;
 
 const visible = computed(() => {
-  if (filter.value === "all") {
+  if (typeFilter.value === "all") {
     return items;
   }
-  return items.filter((item) => item.type === filter.value);
+  return items.filter((item) => item.type === typeFilter.value);
 });
 
 const selected = computed<GalleryItem | null>(() => {
@@ -25,17 +35,47 @@ const selected = computed<GalleryItem | null>(() => {
   return items.find((item) => item.id === selectedId.value) ?? null;
 });
 
-const subline = computed(() => {
-  if (filter.value === "all") {
-    return `${visible.value.length} figures · six types · from examples/valid`;
+const selectedSvg = computed(() => {
+  if (!selected.value) {
+    return "";
   }
-  return `${visible.value.length} figures · ${filter.value}`;
+  return selected.value.svgsByTheme[themeFilter.value];
 });
+
+const selectedFence = computed(() => {
+  if (!selected.value) {
+    return "";
+  }
+  return fenceForTheme(selected.value.fence, themeFilter.value);
+});
+
+const selectedPlayHref = computed(() => {
+  if (!selected.value) {
+    return "/play";
+  }
+  return playHref(selected.value.id, themeFilter.value);
+});
+
+const subline = computed(() => {
+  const theme = themeFilter.value;
+  if (typeFilter.value === "all") {
+    return `${visible.value.length} figures · ${theme} · six types · from examples/valid`;
+  }
+  return `${visible.value.length} figures · ${typeFilter.value} · ${theme}`;
+});
+
+function svgFor(item: GalleryItem): string {
+  return item.svgsByTheme[themeFilter.value];
+}
 
 function readUrl(): void {
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
   selectedId.value = id && items.some((item) => item.id === id) ? id : null;
+  const theme = params.get("theme");
+  if (theme && THEME_CHIPS.includes(theme as ChartTheme)) {
+    themeFilter.value = theme as ChartTheme;
+  }
 }
 
 function writeUrl(id: string | null): void {
@@ -44,6 +84,11 @@ function writeUrl(id: string | null): void {
     url.searchParams.set("id", id);
   } else {
     url.searchParams.delete("id");
+  }
+  if (themeFilter.value !== "folio") {
+    url.searchParams.set("theme", themeFilter.value);
+  } else {
+    url.searchParams.delete("theme");
   }
   window.history.replaceState(null, "", url.pathname + url.search + url.hash);
 }
@@ -56,6 +101,11 @@ function openItem(id: string): void {
 function closeDetail(): void {
   selectedId.value = null;
   writeUrl(null);
+}
+
+function setTheme(theme: ChartTheme): void {
+  themeFilter.value = theme;
+  writeUrl(selectedId.value);
 }
 
 function onKey(event: KeyboardEvent): void {
@@ -111,11 +161,26 @@ onUnmounted(() => {
         :key="chip"
         type="button"
         class="gallery-chip"
-        :class="{ active: filter === chip }"
-        :aria-pressed="filter === chip"
-        @click="filter = chip"
+        :class="{ active: typeFilter === chip }"
+        :aria-pressed="typeFilter === chip"
+        @click="typeFilter = chip"
       >
         {{ chip === "all" ? "All" : chip }}
+      </button>
+    </div>
+
+    <div class="gallery-filters" role="tablist" aria-label="Chart theme">
+      <button
+        v-for="chip in THEME_CHIPS"
+        :key="chip"
+        type="button"
+        class="gallery-chip"
+        :class="{ active: themeFilter === chip }"
+        :aria-pressed="themeFilter === chip"
+        :data-theme="chip"
+        @click="setTheme(chip)"
+      >
+        {{ chip }}
       </button>
     </div>
 
@@ -128,10 +193,11 @@ onUnmounted(() => {
           class="gallery-card"
           :data-type="item.type"
           :data-id="item.id"
+          :data-theme="themeFilter"
           :aria-label="item.title"
           @click="openItem(item.id)"
         >
-          <div class="gallery-thumb" v-html="item.svg" />
+          <div class="gallery-thumb" v-html="svgFor(item)" />
         </button>
       </div>
 
@@ -140,26 +206,26 @@ onUnmounted(() => {
           Close
         </button>
         <h2 class="gallery-detail-title">{{ selected.title }}</h2>
-        <div class="gallery-full" v-html="selected.svg" />
+        <div class="gallery-full" v-html="selectedSvg" />
         <div class="gallery-actions">
           <button
             type="button"
-            @click="copyText(selected.fence, 'Copied fence')"
+            @click="copyText(selectedFence, 'Copied fence')"
           >
             Copy fence
           </button>
           <button
             type="button"
-            @click="copyText(selected.svg, 'Copied SVG')"
+            @click="copyText(selectedSvg, 'Copied SVG')"
           >
             Copy SVG
           </button>
-          <a class="gallery-play" :href="`/play?example=${selected.id}`">
-            Open in playground
+          <a class="gallery-play" :href="selectedPlayHref">
+            Open in Play
           </a>
           <span v-if="copyNote" class="gallery-copied">{{ copyNote }}</span>
         </div>
-        <pre class="gallery-fence">{{ selected.fence }}</pre>
+        <pre class="gallery-fence">{{ selectedFence }}</pre>
       </aside>
     </div>
 

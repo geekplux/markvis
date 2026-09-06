@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: Day 4 peaked at 120, 4 rows" aria-labelledby="mv-ca251feb4fc55566-title" aria-describedby="mv-ca251feb4fc55566-desc" data-markvis="2" data-chart-type="area" data-id="mv-ca251feb4fc55566" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-ca251feb4fc55566-title">Day 4 peaked at 120</title>
+  <desc id="mv-ca251feb4fc55566-desc">area chart. Day 4 peaked at 120. x=day. y=active. 4 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Day 4 peaked at 120</text>
+  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
+    <line x1="48" x2="700" y1="317.33" y2="317.33"/>
+    <line x1="48" x2="700" y1="176.67" y2="176.67"/>
+    <line x1="48" x2="700" y1="36" y2="36"/>
+  </g>
+  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="317.33" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="38" y="176.67" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="56" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <text x="183.2" y="468" text-anchor="middle" font-size="10" data-full-label="1">1</text>
+    <text x="310.4" y="468" text-anchor="middle" font-size="10" data-full-label="2">2</text>
+    <text x="437.6" y="468" text-anchor="middle" font-size="10" data-full-label="3">3</text>
+    <text x="564.8" y="468" text-anchor="middle" font-size="10" data-full-label="4">4</text>
+    <text x="692" y="468" text-anchor="middle" font-size="10" data-full-label="5">5</text>
+  </g>
+  <g fill="none">
+    <path d="M183.2 176.67 L310.4 148.53 L437.6 162.6 L564.8 120.4 L564.8 458 L183.2 458 Z" fill="#3B82F6" fill-opacity="0.22" stroke="none" data-series="active"/>
+    <path d="M183.2 176.67 L310.4 148.53 L437.6 162.6 L564.8 120.4" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="active"/>
+    <circle cx="183.2" cy="176.67" r="2.5" fill="#3B82F6" stroke="none" data-series="active"/>
+    <circle cx="310.4" cy="148.53" r="2.5" fill="#3B82F6" stroke="none" data-series="active"/>
+    <circle cx="437.6" cy="162.6" r="2.5" fill="#3B82F6" stroke="none" data-series="active"/>
+    <circle cx="564.8" cy="120.4" r="2.5" fill="#3B82F6" stroke="none" data-series="active"/>
+  </g>
+</svg>

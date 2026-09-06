@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="640" viewBox="0 0 720 640" role="img" aria-label="bar chart: North America leads spend at 420,000 (USD), 3 rows" aria-labelledby="mv-e9d00e87d5c9a6d2-title" aria-describedby="mv-e9d00e87d5c9a6d2-desc" data-markvis="2" data-chart-type="bar" data-id="mv-e9d00e87d5c9a6d2" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-e9d00e87d5c9a6d2-title">North America leads spend at 420,000</title>
+  <desc id="mv-e9d00e87d5c9a6d2-desc">bar chart. North America leads spend at 420,000. x=initiative. y=spend. unit=USD. 3 rows.</desc>
+  <text x="55.74" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">North America leads spend at 420,000<tspan font-size="12" font-weight="400" fill="#666666"> · USD</tspan></text>
+  <path d="M55.74 382.19 L704 382.19" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <g fill="#666666" font-size="11" font-weight="400">
+    <text x="47.74" y="382.19" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="47.74" y="267.46" text-anchor="end" dominant-baseline="middle">200,000</text>
+    <text x="47.74" y="152.73" text-anchor="end" dominant-baseline="middle">400,000</text>
+    <text x="47.74" y="38" text-anchor="end" dominant-baseline="middle">600,000</text>
+    <text x="163.78" y="390.19" text-anchor="end" dominant-baseline="middle" font-size="11" transform="rotate(-55 163.78 390.19)" data-full-label="North America enterprise expansion Q3">North America enterprise expansion Q3</text>
+    <text x="379.87" y="390.19" text-anchor="end" dominant-baseline="middle" font-size="11" transform="rotate(-55 379.87 390.19)" data-full-label="APAC partner enablement and training program">APAC partner enablement and training program</text>
+    <text x="595.96" y="390.19" text-anchor="end" dominant-baseline="middle" font-size="11" transform="rotate(-55 595.96 390.19)" data-full-label="Legacy platform decommission wave 2">Legacy platform decommission wave 2</text>
+  </g>
+  <g>
+    <path d="M131.78 382.19 L195.78 382.19 L195.78 141.26 L131.78 141.26 Z" fill="#7cb5ec" data-x="North America enterprise expansion Q3" data-series="spend" data-y="420000"/>
+    <path d="M347.87 382.19 L411.87 382.19 L411.87 276.06 L347.87 276.06 Z" fill="#7cb5ec" data-x="APAC partner enablement and training program" data-series="spend" data-y="185000"/>
+    <path d="M563.96 382.19 L627.96 382.19 L627.96 327.69 L563.96 327.69 Z" fill="#7cb5ec" data-x="Legacy platform decommission wave 2" data-series="spend" data-y="95000"/>
+  </g>
+  <g>
+    <text x="163.78" y="133.26" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="North America enterprise expansion Q3">420,000</text>
+    <text x="379.87" y="268.06" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="APAC partner enablement and training program">185,000</text>
+    <text x="595.96" y="319.69" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="Legacy platform decommission wave 2">95,000</text>
+  </g>
+</svg>

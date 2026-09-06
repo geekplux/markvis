@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Free still leads pro, 4 rows, series plan" aria-labelledby="mv-8c6df151fda9c0b6-title" aria-describedby="mv-8c6df151fda9c0b6-desc" data-markvis="2" data-chart-type="line" data-id="mv-8c6df151fda9c0b6" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-8c6df151fda9c0b6-title">Free still leads pro</title>
+  <desc id="mv-8c6df151fda9c0b6-desc">line chart. Free still leads pro. x=month. y=count. series=plan. 4 rows.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Free still leads pro</text>
+  <g fill="none" stroke="#18181B" stroke-opacity="0.06" stroke-width="1">
+    <line x1="40" x2="687.2" y1="316" y2="316"/>
+    <line x1="40" x2="687.2" y1="174" y2="174"/>
+    <line x1="40" x2="687.2" y1="32" y2="32"/>
+  </g>
+  <path d="M40 458 L687.2 458" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <g fill="#64748B" font-size="10" font-weight="400">
+    <text x="32" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="32" y="316" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="32" y="174" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="32" y="32" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="201.8" y="468" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
+    <text x="525.4" y="468" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
+  </g>
+  <g fill="none">
+    <path d="M201.8 174 L525.4 67.5" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="free"/>
+    <circle cx="201.8" cy="174" r="2" fill="#475569" stroke="none" data-series="free"/>
+    <circle cx="525.4" cy="67.5" r="2" fill="#475569" stroke="none" data-series="free"/>
+    <path d="M201.8 372.8 L525.4 330.2" fill="none" stroke="#64748B" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="pro"/>
+    <circle cx="201.8" cy="372.8" r="2" fill="#64748B" stroke="none" data-series="pro"/>
+    <circle cx="525.4" cy="330.2" r="2" fill="#64748B" stroke="none" data-series="pro"/>
+  </g>
+  <g font-size="10" font-weight="500">
+    <text x="533.4" y="67.5" text-anchor="start" dominant-baseline="middle" fill="#475569" data-end-label="free">free</text>
+    <text x="533.4" y="330.2" text-anchor="start" dominant-baseline="middle" fill="#64748B" data-end-label="pro">pro</text>
+  </g>
+</svg>

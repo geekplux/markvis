@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="line chart: 東京 still leads 北京, 4 rows, series city" aria-labelledby="mv-7c86021fb3846ba3-title" aria-describedby="mv-7c86021fb3846ba3-desc" data-markvis="2" data-chart-type="line" data-id="mv-7c86021fb3846ba3" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-7c86021fb3846ba3-title">東京 still leads 北京</title>
+  <desc id="mv-7c86021fb3846ba3-desc">line chart. 東京 still leads 北京. x=month. y=amount. series=city. 4 rows.</desc>
+  <text x="44" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">東京 still leads 北京</text>
+  <g fill="none" stroke="#333333" stroke-opacity="0.22" stroke-width="1">
+    <line x1="44" x2="690" y1="341.2" y2="341.2"/>
+    <line x1="44" x2="690" y1="265.4" y2="265.4"/>
+    <line x1="44" x2="690" y1="189.6" y2="189.6"/>
+    <line x1="44" x2="690" y1="113.8" y2="113.8"/>
+    <line x1="44" x2="690" y1="38" y2="38"/>
+  </g>
+  <path d="M44 417 L690 417" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <g fill="#666666" font-size="11" font-weight="400">
+    <text x="36" y="417" text-anchor="end" dominant-baseline="middle">90</text>
+    <text x="36" y="341.2" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="36" y="265.4" text-anchor="end" dominant-baseline="middle">110</text>
+    <text x="36" y="189.6" text-anchor="end" dominant-baseline="middle">120</text>
+    <text x="36" y="113.8" text-anchor="end" dominant-baseline="middle">130</text>
+    <text x="36" y="38" text-anchor="end" dominant-baseline="middle">140</text>
+    <text x="205.5" y="428" text-anchor="middle" font-size="11" data-full-label="Jan">Jan</text>
+    <text x="528.5" y="428" text-anchor="middle" font-size="11" data-full-label="Feb">Feb</text>
+  </g>
+  <g fill="none">
+    <path d="M205.5 341.2 L528.5 265.4" fill="none" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="北京"/>
+    <circle cx="205.5" cy="341.2" r="3" fill="#7cb5ec" stroke="none" data-series="北京"/>
+    <circle cx="528.5" cy="265.4" r="3" fill="#7cb5ec" stroke="none" data-series="北京"/>
+    <path d="M205.5 189.6 L528.5 113.8" fill="none" stroke="#434348" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="東京"/>
+    <circle cx="205.5" cy="189.6" r="3" fill="#434348" stroke="none" data-series="東京"/>
+    <circle cx="528.5" cy="113.8" r="3" fill="#434348" stroke="none" data-series="東京"/>
+  </g>
+  <g font-size="11" font-weight="500">
+    <text x="536.5" y="265.4" text-anchor="start" dominant-baseline="middle" fill="#7cb5ec" data-end-label="北京">北京</text>
+    <text x="536.5" y="113.8" text-anchor="start" dominant-baseline="middle" fill="#434348" data-end-label="東京">東京</text>
+  </g>
+</svg>

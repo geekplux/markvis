@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Traffic spikes (hits), 6 rows" aria-labelledby="mv-effd8776b175b41d-title" aria-describedby="mv-effd8776b175b41d-desc" data-markvis="2" data-chart-type="bar" data-id="mv-effd8776b175b41d" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-effd8776b175b41d-title">Traffic spikes</title>
+  <desc id="mv-effd8776b175b41d-desc">bar chart. Traffic spikes. x=hour. y=hits. unit=hits. 6 rows.</desc>
+  <text x="63.8" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Traffic spikes<tspan font-size="11" font-weight="400" fill="#64748B"> · hits</tspan></text>
+  <path d="M63.8 458 L704 458" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <g fill="#64748B" font-size="10" font-weight="400">
+    <text x="55.8" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="55.8" y="316" text-anchor="end" dominant-baseline="middle">500,000</text>
+    <text x="55.8" y="174" text-anchor="end" dominant-baseline="middle">1,000,000</text>
+    <text x="55.8" y="32" text-anchor="end" dominant-baseline="middle">1,500,000</text>
+    <text x="117.15" y="468" text-anchor="middle" font-size="10" data-full-label="00">00</text>
+    <text x="223.85" y="468" text-anchor="middle" font-size="10" data-full-label="01">01</text>
+    <text x="330.55" y="468" text-anchor="middle" font-size="10" data-full-label="02">02</text>
+    <text x="437.25" y="468" text-anchor="middle" font-size="10" data-full-label="03">03</text>
+    <text x="543.95" y="468" text-anchor="middle" font-size="10" data-full-label="04">04</text>
+    <text x="650.65" y="468" text-anchor="middle" font-size="10" data-full-label="05">05</text>
+  </g>
+  <g>
+    <path d="M79.81 458 L154.5 458 L154.5 458 L79.81 458 Z" fill="#475569" data-x="00" data-series="hits" data-y="0"/>
+    <path d="M186.51 458 L261.2 458 L261.2 458 L186.51 458 Z" fill="#475569" data-x="01" data-series="hits" data-y="0"/>
+    <path d="M293.21 458 L367.9 458 L367.9 458 L293.21 458 Z" fill="#475569" data-x="02" data-series="hits" data-y="12"/>
+    <path d="M399.91 458 L474.6 458 L474.6 32 L399.91 32 Z" fill="#475569" data-x="03" data-series="hits" data-y="1500000"/>
+    <path d="M506.61 458 L581.3 458 L581.3 179.68 L506.61 179.68 Z" fill="#475569" data-x="04" data-series="hits" data-y="980000"/>
+    <path d="M613.3 458 L687.99 458 L687.99 458 L613.3 458 Z" fill="#475569" data-x="05" data-series="hits" data-y="3"/>
+  </g>
+  <g>
+    <text x="117.15" y="450" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="00">0</text>
+    <text x="223.85" y="450" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="01">0</text>
+    <text x="330.55" y="450" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="02">12</text>
+    <text x="437.25" y="24" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="03">1,500,000</text>
+    <text x="543.95" y="171.68" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="04">980,000</text>
+    <text x="650.65" y="450" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="05">3</text>
+  </g>
+</svg>

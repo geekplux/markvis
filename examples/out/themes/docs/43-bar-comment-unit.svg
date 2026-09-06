@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Hosting leads cost at 400 (USD), 3 rows" aria-labelledby="mv-82d9079c0b36b357-title" aria-describedby="mv-82d9079c0b36b357-desc" data-markvis="2" data-chart-type="bar" data-id="mv-82d9079c0b36b357" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-82d9079c0b36b357-title">Hosting leads cost at 400</title>
+  <desc id="mv-82d9079c0b36b357-desc">bar chart. Hosting leads cost at 400. x=item. y=cost. unit=USD. 3 rows.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Hosting leads cost at 400<tspan font-size="11" font-weight="400" fill="#64748B"> · USD</tspan></text>
+  <path d="M40 458 L704 458" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <g fill="#64748B" font-size="10" font-weight="400">
+    <text x="32" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="32" y="351.5" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="32" y="245" text-anchor="end" dominant-baseline="middle">200</text>
+    <text x="32" y="138.5" text-anchor="end" dominant-baseline="middle">300</text>
+    <text x="32" y="32" text-anchor="end" dominant-baseline="middle">400</text>
+    <text x="150.67" y="468" text-anchor="middle" font-size="10" data-full-label="Hosting">Hosting</text>
+    <text x="372" y="468" text-anchor="middle" font-size="10" data-full-label="CDN">CDN</text>
+    <text x="593.33" y="468" text-anchor="middle" font-size="10" data-full-label="Logs">Logs</text>
+  </g>
+  <g>
+    <path d="M118.67 458 L182.67 458 L182.67 32 L118.67 32 Z" fill="#475569" data-x="Hosting" data-series="cost" data-y="400"/>
+    <path d="M340 458 L404 458 L404 330.2 L340 330.2 Z" fill="#475569" data-x="CDN" data-series="cost" data-y="120"/>
+    <path d="M561.33 458 L625.33 458 L625.33 372.8 L561.33 372.8 Z" fill="#475569" data-x="Logs" data-series="cost" data-y="80"/>
+  </g>
+  <g>
+    <text x="150.67" y="24" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="Hosting">400</text>
+    <text x="372" y="322.2" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="CDN">120</text>
+    <text x="593.33" y="364.8" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="Logs">80</text>
+  </g>
+</svg>

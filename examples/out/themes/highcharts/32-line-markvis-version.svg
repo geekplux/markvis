@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="line chart: Retention fell to 70 by week 4 (pct), 4 rows" aria-labelledby="mv-1e4c16b29ddcbf07-title" aria-describedby="mv-1e4c16b29ddcbf07-desc" data-markvis="2" data-chart-type="line" data-id="mv-1e4c16b29ddcbf07" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-1e4c16b29ddcbf07-title">Retention fell to 70 by week 4</title>
+  <desc id="mv-1e4c16b29ddcbf07-desc">line chart. Retention fell to 70 by week 4. x=week. y=rate. unit=pct. 4 rows.</desc>
+  <text x="44" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Retention fell to 70 by week 4<tspan font-size="12" font-weight="400" fill="#666666"> · pct</tspan></text>
+  <g fill="none" stroke="#333333" stroke-opacity="0.22" stroke-width="1">
+    <line x1="44" x2="704" y1="341.2" y2="341.2"/>
+    <line x1="44" x2="704" y1="265.4" y2="265.4"/>
+    <line x1="44" x2="704" y1="189.6" y2="189.6"/>
+    <line x1="44" x2="704" y1="113.8" y2="113.8"/>
+    <line x1="44" x2="704" y1="38" y2="38"/>
+  </g>
+  <path d="M44 417 L704 417" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <g fill="#666666" font-size="11" font-weight="400">
+    <text x="36" y="417" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="36" y="341.2" text-anchor="end" dominant-baseline="middle">70</text>
+    <text x="36" y="265.4" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="36" y="189.6" text-anchor="end" dominant-baseline="middle">90</text>
+    <text x="36" y="113.8" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="36" y="38" text-anchor="end" dominant-baseline="middle">110</text>
+    <text x="52" y="428" text-anchor="middle" font-size="11" data-full-label="0">0</text>
+    <text x="180.8" y="428" text-anchor="middle" font-size="11" data-full-label="1">1</text>
+    <text x="309.6" y="428" text-anchor="middle" font-size="11" data-full-label="2">2</text>
+    <text x="438.4" y="428" text-anchor="middle" font-size="11" data-full-label="3">3</text>
+    <text x="567.2" y="428" text-anchor="middle" font-size="11" data-full-label="4">4</text>
+    <text x="696" y="428" text-anchor="middle" font-size="11" data-full-label="5">5</text>
+  </g>
+  <g fill="none">
+    <path d="M180.8 113.8 L309.6 250.24 L438.4 310.88 L567.2 341.2" fill="none" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="rate"/>
+    <circle cx="180.8" cy="113.8" r="3" fill="#7cb5ec" stroke="none" data-series="rate"/>
+    <circle cx="309.6" cy="250.24" r="3" fill="#7cb5ec" stroke="none" data-series="rate"/>
+    <circle cx="438.4" cy="310.88" r="3" fill="#7cb5ec" stroke="none" data-series="rate"/>
+    <circle cx="567.2" cy="341.2" r="3" fill="#7cb5ec" stroke="none" data-series="rate"/>
+  </g>
+</svg>

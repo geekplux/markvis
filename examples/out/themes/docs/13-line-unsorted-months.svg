@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Dec led signups at 55, 4 rows" aria-labelledby="mv-beb56f80ad11c78e-title" aria-describedby="mv-beb56f80ad11c78e-desc" data-markvis="2" data-chart-type="line" data-id="mv-beb56f80ad11c78e" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-beb56f80ad11c78e-title">Dec led signups at 55</title>
+  <desc id="mv-beb56f80ad11c78e-desc">line chart. Dec led signups at 55. x=month. y=signups. 4 rows.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Dec led signups at 55</text>
+  <g fill="none" stroke="#18181B" stroke-opacity="0.06" stroke-width="1">
+    <line x1="40" x2="704" y1="372.8" y2="372.8"/>
+    <line x1="40" x2="704" y1="202.4" y2="202.4"/>
+    <line x1="40" x2="704" y1="32" y2="32"/>
+  </g>
+  <path d="M40 458 L704 458" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <g fill="#64748B" font-size="10" font-weight="400">
+    <text x="32" y="458" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="32" y="372.8" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="32" y="287.6" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="32" y="202.4" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="32" y="117.2" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="32" y="32" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="123" y="468" text-anchor="middle" font-size="10" data-full-label="Mar">Mar</text>
+    <text x="289" y="468" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
+    <text x="455" y="468" text-anchor="middle" font-size="10" data-full-label="Dec">Dec</text>
+    <text x="621" y="468" text-anchor="middle" font-size="10" data-full-label="Jun">Jun</text>
+  </g>
+  <g fill="none">
+    <path d="M123 202.4 L289 355.76 L455 74.6 L621 287.6" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="signups"/>
+    <circle cx="123" cy="202.4" r="2" fill="#475569" stroke="none" data-series="signups"/>
+    <circle cx="289" cy="355.76" r="2" fill="#475569" stroke="none" data-series="signups"/>
+    <circle cx="455" cy="74.6" r="2" fill="#475569" stroke="none" data-series="signups"/>
+    <circle cx="621" cy="287.6" r="2" fill="#475569" stroke="none" data-series="signups"/>
+  </g>
+</svg>

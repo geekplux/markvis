@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="area chart: RSS climbed then eased (MB), 4 rows" aria-labelledby="mv-65fa4577cb354284-title" aria-describedby="mv-65fa4577cb354284-desc" data-markvis="2" data-chart-type="area" data-id="mv-65fa4577cb354284" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-65fa4577cb354284-title">RSS climbed then eased</title>
+  <desc id="mv-65fa4577cb354284-desc">area chart. RSS climbed then eased. x=t. y=rss. unit=MB. 4 rows.</desc>
+  <text x="44" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">RSS climbed then eased<tspan font-size="12" font-weight="400" fill="#666666"> · MB</tspan></text>
+  <g fill="none" stroke="#333333" stroke-opacity="0.22" stroke-width="1">
+    <line x1="44" x2="704" y1="290.67" y2="290.67"/>
+    <line x1="44" x2="704" y1="164.33" y2="164.33"/>
+    <line x1="44" x2="704" y1="38" y2="38"/>
+  </g>
+  <path d="M44 417 L704 417" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <g fill="#666666" font-size="11" font-weight="400">
+    <text x="36" y="417" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="36" y="290.67" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="36" y="164.33" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="36" y="38" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="52" y="428" text-anchor="middle" font-size="11" data-full-label="-1">-1</text>
+    <text x="180.8" y="428" text-anchor="middle" font-size="11" data-full-label="0">0</text>
+    <text x="309.6" y="428" text-anchor="middle" font-size="11" data-full-label="1">1</text>
+    <text x="438.4" y="428" text-anchor="middle" font-size="11" data-full-label="2">2</text>
+    <text x="567.2" y="428" text-anchor="middle" font-size="11" data-full-label="3">3</text>
+    <text x="696" y="428" text-anchor="middle" font-size="11" data-full-label="4">4</text>
+  </g>
+  <g fill="none">
+    <path d="M180.8 113.8 L309.6 101.17 L438.4 88.53 L567.2 93.59 L567.2 417 L180.8 417 Z" fill="#7cb5ec" fill-opacity="0.28" stroke="none" data-series="rss"/>
+    <path d="M180.8 113.8 L309.6 101.17 L438.4 88.53 L567.2 93.59" fill="none" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="rss"/>
+    <circle cx="180.8" cy="113.8" r="3" fill="#7cb5ec" stroke="none" data-series="rss"/>
+    <circle cx="309.6" cy="101.17" r="3" fill="#7cb5ec" stroke="none" data-series="rss"/>
+    <circle cx="438.4" cy="88.53" r="3" fill="#7cb5ec" stroke="none" data-series="rss"/>
+    <circle cx="567.2" cy="93.59" r="3" fill="#7cb5ec" stroke="none" data-series="rss"/>
+  </g>
+</svg>

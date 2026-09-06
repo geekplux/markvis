@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="bar chart: Free still outnumbers pro, 4 rows, series plan" aria-labelledby="mv-ace1c56e14a48b48-title" aria-describedby="mv-ace1c56e14a48b48-desc" data-markvis="2" data-chart-type="bar" data-id="mv-ace1c56e14a48b48" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-ace1c56e14a48b48-title">Free still outnumbers pro</title>
+  <desc id="mv-ace1c56e14a48b48-desc">bar chart. Free still outnumbers pro. x=month. y=seats. series=plan. 4 rows.</desc>
+  <text x="44" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Free still outnumbers pro</text>
+  <g font-size="12" font-weight="500" fill="#333333">
+    <rect x="44" y="31" width="10" height="10" fill="#7cb5ec" rx="1"/>
+    <text x="58" y="40" data-legend="free">free</text>
+    <rect x="103.76" y="31" width="10" height="10" fill="#434348" rx="1"/>
+    <text x="117.76" y="40" data-legend="pro">pro</text>
+  </g>
+  <path d="M44 417 L704 417" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <g fill="#666666" font-size="11" font-weight="400">
+    <text x="36" y="417" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="36" y="298.67" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="36" y="180.33" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="36" y="62" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="209" y="428" text-anchor="middle" font-size="11" data-full-label="Jan">Jan</text>
+    <text x="539" y="428" text-anchor="middle" font-size="11" data-full-label="Feb">Feb</text>
+  </g>
+  <g>
+    <path d="M144 417 L208 417 L208 180.33 L144 180.33 Z" fill="#7cb5ec" data-x="Jan" data-series="free" data-y="100"/>
+    <path d="M210 417 L274 417 L274 369.67 L210 369.67 Z" fill="#434348" data-x="Jan" data-series="pro" data-y="20"/>
+    <path d="M474 417 L538 417 L538 156.67 L474 156.67 Z" fill="#7cb5ec" data-x="Feb" data-series="free" data-y="110"/>
+    <path d="M540 417 L604 417 L604 350.73 L540 350.73 Z" fill="#434348" data-x="Feb" data-series="pro" data-y="28"/>
+  </g>
+  <g>
+    <text x="176" y="172.33" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="Jan">100</text>
+    <text x="242" y="361.67" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="Jan">20</text>
+    <text x="506" y="148.67" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="Feb">110</text>
+    <text x="572" y="342.73" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="Feb">28</text>
+  </g>
+</svg>

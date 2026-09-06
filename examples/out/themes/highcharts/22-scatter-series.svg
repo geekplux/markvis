@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="scatter chart: Scores rise with hours, 5 rows, series cohort" aria-labelledby="mv-fa2daafa0afbcb40-title" aria-describedby="mv-fa2daafa0afbcb40-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-fa2daafa0afbcb40" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-fa2daafa0afbcb40-title">Scores rise with hours</title>
+  <desc id="mv-fa2daafa0afbcb40-desc">scatter chart. Scores rise with hours. x=hours. y=score. series=cohort. 5 rows.</desc>
+  <text x="44" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Scores rise with hours</text>
+  <g font-size="12" font-weight="500" fill="#333333">
+    <rect x="44" y="31" width="10" height="10" fill="#7cb5ec" rx="1"/>
+    <text x="58" y="40" data-legend="A">A</text>
+    <rect x="81.44" y="31" width="10" height="10" fill="#434348" rx="1"/>
+    <text x="95.44" y="40" data-legend="B">B</text>
+  </g>
+  <g fill="none" stroke="#333333" stroke-opacity="0.22" stroke-width="1">
+    <line x1="44" x2="704" y1="346" y2="346"/>
+    <line x1="44" x2="704" y1="275" y2="275"/>
+    <line x1="44" x2="704" y1="204" y2="204"/>
+    <line x1="44" x2="704" y1="133" y2="133"/>
+    <line x1="44" x2="704" y1="62" y2="62"/>
+  </g>
+  <path d="M44 417 L704 417" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <g fill="#666666" font-size="11" font-weight="400">
+    <text x="36" y="417" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="36" y="346" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="36" y="275" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="36" y="204" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="36" y="133" text-anchor="end" dominant-baseline="middle">70</text>
+    <text x="36" y="62" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="52" y="428" text-anchor="middle" font-size="11" data-full-label="0">0</text>
+    <text x="213" y="428" text-anchor="middle" font-size="11" data-full-label="2">2</text>
+    <text x="374" y="428" text-anchor="middle" font-size="11" data-full-label="4">4</text>
+    <text x="535" y="428" text-anchor="middle" font-size="11" data-full-label="6">6</text>
+    <text x="696" y="428" text-anchor="middle" font-size="11" data-full-label="8">8</text>
+  </g>
+  <g>
+    <circle cx="213" cy="346" r="3" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="2" data-y="40" data-series="A"/>
+    <circle cx="374" cy="239.5" r="3" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="4" data-y="55" data-series="A"/>
+    <circle cx="293.5" cy="275" r="3" fill="#434348" fill-opacity="0.85" stroke="none" data-x="3" data-y="50" data-series="B"/>
+    <circle cx="454.5" cy="133" r="3" fill="#434348" fill-opacity="0.85" stroke="none" data-x="5" data-y="70" data-series="B"/>
+    <circle cx="535" cy="118.8" r="3" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="6" data-y="72" data-series="A"/>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="bar chart: Jul peaked at 22, 12 rows" aria-labelledby="mv-f2ca0b65d8753e21-title" aria-describedby="mv-f2ca0b65d8753e21-desc" data-markvis="2" data-chart-type="bar" data-id="mv-f2ca0b65d8753e21" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-f2ca0b65d8753e21-title">Jul peaked at 22</title>
+  <desc id="mv-f2ca0b65d8753e21-desc">bar chart. Jul peaked at 22. x=month. y=tickets. 12 rows.</desc>
+  <text x="44" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Jul peaked at 22</text>
+  <g fill="none" stroke="#333333" stroke-opacity="0.22" stroke-width="1">
+    <line x1="44" x2="704" y1="290.67" y2="290.67"/>
+    <line x1="44" x2="704" y1="164.33" y2="164.33"/>
+    <line x1="44" x2="704" y1="38" y2="38"/>
+  </g>
+  <path d="M44 417 L704 417" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <g fill="#666666" font-size="11" font-weight="400">
+    <text x="36" y="417" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="36" y="290.67" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="36" y="164.33" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="36" y="38" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="71.5" y="428" text-anchor="middle" font-size="11" data-full-label="Jan">Jan</text>
+    <text x="126.5" y="428" text-anchor="middle" font-size="11" data-full-label="Feb">Feb</text>
+    <text x="181.5" y="428" text-anchor="middle" font-size="11" data-full-label="Mar">Mar</text>
+    <text x="236.5" y="428" text-anchor="middle" font-size="11" data-full-label="Apr">Apr</text>
+    <text x="291.5" y="428" text-anchor="middle" font-size="11" data-full-label="May">May</text>
+    <text x="346.5" y="428" text-anchor="middle" font-size="11" data-full-label="Jun">Jun</text>
+    <text x="401.5" y="428" text-anchor="middle" font-size="11" data-full-label="Jul">Jul</text>
+    <text x="456.5" y="428" text-anchor="middle" font-size="11" data-full-label="Aug">Aug</text>
+    <text x="511.5" y="428" text-anchor="middle" font-size="11" data-full-label="Sep">Sep</text>
+    <text x="566.5" y="428" text-anchor="middle" font-size="11" data-full-label="Oct">Oct</text>
+    <text x="621.5" y="428" text-anchor="middle" font-size="11" data-full-label="Nov">Nov</text>
+    <text x="676.5" y="428" text-anchor="middle" font-size="11" data-full-label="Dec">Dec</text>
+  </g>
+  <g>
+    <path d="M47.85 417 L95.15 417 L95.15 290.67 L47.85 290.67 Z" fill="#7cb5ec" data-x="Jan" data-series="tickets" data-y="10"/>
+    <path d="M102.85 417 L150.15 417 L150.15 265.4 L102.85 265.4 Z" fill="#7cb5ec" data-x="Feb" data-series="tickets" data-y="12"/>
+    <path d="M157.85 417 L205.15 417 L205.15 303.3 L157.85 303.3 Z" fill="#7cb5ec" data-x="Mar" data-series="tickets" data-y="9"/>
+    <path d="M212.85 417 L260.15 417 L260.15 227.5 L212.85 227.5 Z" fill="#7cb5ec" data-x="Apr" data-series="tickets" data-y="15"/>
+    <path d="M267.85 417 L315.15 417 L315.15 240.13 L267.85 240.13 Z" fill="#7cb5ec" data-x="May" data-series="tickets" data-y="14"/>
+    <path d="M322.85 417 L370.15 417 L370.15 189.6 L322.85 189.6 Z" fill="#7cb5ec" data-x="Jun" data-series="tickets" data-y="18"/>
+    <path d="M377.85 417 L425.15 417 L425.15 139.07 L377.85 139.07 Z" fill="#7cb5ec" data-x="Jul" data-series="tickets" data-y="22"/>
+    <path d="M432.85 417 L480.15 417 L480.15 164.33 L432.85 164.33 Z" fill="#7cb5ec" data-x="Aug" data-series="tickets" data-y="20"/>
+    <path d="M487.85 417 L535.15 417 L535.15 202.23 L487.85 202.23 Z" fill="#7cb5ec" data-x="Sep" data-series="tickets" data-y="17"/>
+    <path d="M542.85 417 L590.15 417 L590.15 176.97 L542.85 176.97 Z" fill="#7cb5ec" data-x="Oct" data-series="tickets" data-y="19"/>
+    <path d="M597.85 417 L645.15 417 L645.15 214.87 L597.85 214.87 Z" fill="#7cb5ec" data-x="Nov" data-series="tickets" data-y="16"/>
+    <path d="M652.85 417 L700.15 417 L700.15 151.7 L652.85 151.7 Z" fill="#7cb5ec" data-x="Dec" data-series="tickets" data-y="21"/>
+  </g>
+</svg>

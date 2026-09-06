@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="hist chart: Twos show twice, 7 rows" aria-labelledby="mv-fd4df5b287a007ce-title" aria-describedby="mv-fd4df5b287a007ce-desc" data-markvis="2" data-chart-type="hist" data-id="mv-fd4df5b287a007ce" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-fd4df5b287a007ce-title">Twos show twice</title>
+  <desc id="mv-fd4df5b287a007ce-desc">hist chart. Twos show twice. x=roll. 7 rows. x is binned with Sturges equal-width bins.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Twos show twice</text>
+  <path d="M40 458 L704 458" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <g fill="#64748B" font-size="10" font-weight="400">
+    <text x="32" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="32" y="316" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="32" y="174" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="32" y="32" text-anchor="end" dominant-baseline="middle">3</text>
+    <text x="40" y="468" text-anchor="middle" font-size="10" data-full-label="1">1</text>
+    <text x="206" y="468" text-anchor="middle" font-size="10" data-full-label="2.25">2.25</text>
+    <text x="372" y="468" text-anchor="middle" font-size="10" data-full-label="3.5">3.5</text>
+    <text x="538" y="468" text-anchor="middle" font-size="10" data-full-label="4.75">4.75</text>
+    <text x="704" y="468" text-anchor="middle" font-size="10" data-full-label="6">6</text>
+  </g>
+  <g>
+    <path d="M91 458 L155 458 L155 32 L91 32 Z" fill="#475569" data-bin-left="1" data-bin-right="2.25" data-weight="3" data-count="3"/>
+    <path d="M257 458 L321 458 L321 316 L257 316 Z" fill="#475569" data-bin-left="2.25" data-bin-right="3.5" data-weight="1" data-count="1"/>
+    <path d="M423 458 L487 458 L487 316 L423 316 Z" fill="#475569" data-bin-left="3.5" data-bin-right="4.75" data-weight="1" data-count="1"/>
+    <path d="M589 458 L653 458 L653 174 L589 174 Z" fill="#475569" data-bin-left="4.75" data-bin-right="6" data-weight="2" data-count="2"/>
+  </g>
+  <g>
+    <text x="123" y="24" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="1–2.25">3</text>
+    <text x="289" y="308" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="2.25–3.5">1</text>
+    <text x="455" y="308" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="3.5–4.75">1</text>
+    <text x="621" y="166" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="4.75–6">2</text>
+  </g>
+</svg>

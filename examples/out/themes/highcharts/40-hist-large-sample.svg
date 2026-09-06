@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="hist chart: Idle clusters near zero, 11 rows" aria-labelledby="mv-70aa9b42b2d28f99-title" aria-describedby="mv-70aa9b42b2d28f99-desc" data-markvis="2" data-chart-type="hist" data-id="mv-70aa9b42b2d28f99" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-70aa9b42b2d28f99-title">Idle clusters near zero</title>
+  <desc id="mv-70aa9b42b2d28f99-desc">hist chart. Idle clusters near zero. x=sec. 11 rows. x is binned with Sturges equal-width bins.</desc>
+  <text x="44" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Idle clusters near zero</text>
+  <path d="M44 417 L704 417" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <g fill="#666666" font-size="11" font-weight="400">
+    <text x="36" y="417" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="36" y="322.25" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="36" y="227.5" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="36" y="132.75" text-anchor="end" dominant-baseline="middle">3</text>
+    <text x="36" y="38" text-anchor="end" dominant-baseline="middle">4</text>
+    <text x="44" y="428" text-anchor="middle" font-size="11" data-full-label="0">0</text>
+    <text x="176" y="428" text-anchor="middle" font-size="11" data-full-label="4">4</text>
+    <text x="308" y="428" text-anchor="middle" font-size="11" data-full-label="8">8</text>
+    <text x="440" y="428" text-anchor="middle" font-size="11" data-full-label="12">12</text>
+    <text x="572" y="428" text-anchor="middle" font-size="11" data-full-label="16">16</text>
+    <text x="704" y="428" text-anchor="middle" font-size="11" data-full-label="20">20</text>
+  </g>
+  <g>
+    <path d="M58.52 417 L161.48 417 L161.48 38 L58.52 38 Z" fill="#7cb5ec" data-bin-left="0" data-bin-right="4" data-weight="4" data-count="4"/>
+    <path d="M190.52 417 L293.48 417 L293.48 322.25 L190.52 322.25 Z" fill="#7cb5ec" data-bin-left="4" data-bin-right="8" data-weight="1" data-count="1"/>
+    <path d="M322.52 417 L425.48 417 L425.48 132.75 L322.52 132.75 Z" fill="#7cb5ec" data-bin-left="8" data-bin-right="12" data-weight="3" data-count="3"/>
+    <path d="M454.52 417 L557.48 417 L557.48 227.5 L454.52 227.5 Z" fill="#7cb5ec" data-bin-left="12" data-bin-right="16" data-weight="2" data-count="2"/>
+    <path d="M586.52 417 L689.48 417 L689.48 322.25 L586.52 322.25 Z" fill="#7cb5ec" data-bin-left="16" data-bin-right="20" data-weight="1" data-count="1"/>
+  </g>
+  <g>
+    <text x="110" y="30" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="0–4">4</text>
+    <text x="242" y="314.25" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="4–8">1</text>
+    <text x="374" y="124.75" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="8–12">3</text>
+    <text x="506" y="219.5" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="12–16">2</text>
+    <text x="638" y="314.25" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="16–20">1</text>
+  </g>
+</svg>

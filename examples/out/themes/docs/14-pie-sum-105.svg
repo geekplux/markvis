@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Budget overrun, 3 slices" aria-labelledby="mv-45d354a539c72d2e-title" aria-describedby="mv-45d354a539c72d2e-desc" data-markvis="2" data-chart-type="pie" data-id="mv-45d354a539c72d2e" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-45d354a539c72d2e-title">Budget overrun</title>
+  <desc id="mv-45d354a539c72d2e-desc">pie chart. Budget overrun. x=bucket. y=pct. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Budget overrun</text>
+  <g aria-hidden="true">
+    <path d="M372 248 L372 101.12 A146.88 146.88 0 0 1 435.73 380.33 Z" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1.5" data-label="Infra" data-raw-value="45"/>
+    <path d="M372 248 L435.73 380.33 A146.88 146.88 0 0 1 225.53 237.02 Z" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1.5" data-label="Product" data-raw-value="35"/>
+    <path d="M372 248 L225.53 237.02 A146.88 146.88 0 0 1 372 101.12 Z" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1.5" data-label="Ops" data-raw-value="25"/>
+  </g>
+  <g fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1">
+    <polyline points="515.2,215.32 530.8,211.76 538.8,211.76"/>
+    <polyline points="289.26,369.36 280.25,382.58 272.25,382.58"/>
+    <polyline points="272.1,140.33 261.21,128.6 253.21,128.6"/>
+  </g>
+  <g font-size="10" font-weight="500" fill="#18181B">
+    <text x="550.8" y="211.76" text-anchor="start" dominant-baseline="middle" data-label="Infra">Infra · 45</text>
+    <text x="260.25" y="382.58" text-anchor="end" dominant-baseline="middle" data-label="Product">Product · 35</text>
+    <text x="241.21" y="128.6" text-anchor="end" dominant-baseline="middle" data-label="Ops">Ops · 25</text>
+  </g>
+</svg>

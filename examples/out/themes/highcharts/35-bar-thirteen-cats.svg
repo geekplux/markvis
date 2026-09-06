@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="bar chart: A12 led units at 14, 13 rows" aria-labelledby="mv-69ede10d06c80cdc-title" aria-describedby="mv-69ede10d06c80cdc-desc" data-markvis="2" data-chart-type="bar" data-id="mv-69ede10d06c80cdc" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-69ede10d06c80cdc-title">A12 led units at 14</title>
+  <desc id="mv-69ede10d06c80cdc-desc">bar chart. A12 led units at 14. x=sku. y=units. 13 rows.</desc>
+  <text x="44" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">A12 led units at 14</text>
+  <g fill="none" stroke="#333333" stroke-opacity="0.22" stroke-width="1">
+    <line x1="44" x2="704" y1="290.67" y2="290.67"/>
+    <line x1="44" x2="704" y1="164.33" y2="164.33"/>
+    <line x1="44" x2="704" y1="38" y2="38"/>
+  </g>
+  <path d="M44 417 L704 417" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <g fill="#666666" font-size="11" font-weight="400">
+    <text x="36" y="417" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="36" y="290.67" text-anchor="end" dominant-baseline="middle">5</text>
+    <text x="36" y="164.33" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="36" y="38" text-anchor="end" dominant-baseline="middle">15</text>
+    <text x="69.38" y="428" text-anchor="middle" font-size="11" data-full-label="A01">A01</text>
+    <text x="120.15" y="428" text-anchor="middle" font-size="11" data-full-label="A02">A02</text>
+    <text x="170.92" y="428" text-anchor="middle" font-size="11" data-full-label="A03">A03</text>
+    <text x="221.69" y="428" text-anchor="middle" font-size="11" data-full-label="A04">A04</text>
+    <text x="272.46" y="428" text-anchor="middle" font-size="11" data-full-label="A05">A05</text>
+    <text x="323.23" y="428" text-anchor="middle" font-size="11" data-full-label="A06">A06</text>
+    <text x="374" y="428" text-anchor="middle" font-size="11" data-full-label="A07">A07</text>
+    <text x="424.77" y="428" text-anchor="middle" font-size="11" data-full-label="A08">A08</text>
+    <text x="475.54" y="428" text-anchor="middle" font-size="11" data-full-label="A09">A09</text>
+    <text x="526.31" y="428" text-anchor="middle" font-size="11" data-full-label="A10">A10</text>
+    <text x="577.08" y="428" text-anchor="middle" font-size="11" data-full-label="A11">A11</text>
+    <text x="627.85" y="428" text-anchor="middle" font-size="11" data-full-label="A12">A12</text>
+    <text x="678.62" y="428" text-anchor="middle" font-size="11" data-full-label="A13">A13</text>
+  </g>
+  <g>
+    <path d="M47.55 417 L91.22 417 L91.22 290.67 L47.55 290.67 Z" fill="#7cb5ec" data-x="A01" data-series="units" data-y="5"/>
+    <path d="M98.32 417 L141.98 417 L141.98 214.87 L98.32 214.87 Z" fill="#7cb5ec" data-x="A02" data-series="units" data-y="8"/>
+    <path d="M149.09 417 L192.75 417 L192.75 341.2 L149.09 341.2 Z" fill="#7cb5ec" data-x="A03" data-series="units" data-y="3"/>
+    <path d="M199.86 417 L243.52 417 L243.52 113.8 L199.86 113.8 Z" fill="#7cb5ec" data-x="A04" data-series="units" data-y="12"/>
+    <path d="M250.63 417 L294.29 417 L294.29 240.13 L250.63 240.13 Z" fill="#7cb5ec" data-x="A05" data-series="units" data-y="7"/>
+    <path d="M301.4 417 L345.06 417 L345.06 189.6 L301.4 189.6 Z" fill="#7cb5ec" data-x="A06" data-series="units" data-y="9"/>
+    <path d="M352.17 417 L395.83 417 L395.83 315.93 L352.17 315.93 Z" fill="#7cb5ec" data-x="A07" data-series="units" data-y="4"/>
+    <path d="M402.94 417 L446.6 417 L446.6 139.07 L402.94 139.07 Z" fill="#7cb5ec" data-x="A08" data-series="units" data-y="11"/>
+    <path d="M453.71 417 L497.37 417 L497.37 265.4 L453.71 265.4 Z" fill="#7cb5ec" data-x="A09" data-series="units" data-y="6"/>
+    <path d="M504.48 417 L548.14 417 L548.14 164.33 L504.48 164.33 Z" fill="#7cb5ec" data-x="A10" data-series="units" data-y="10"/>
+    <path d="M555.25 417 L598.91 417 L598.91 366.47 L555.25 366.47 Z" fill="#7cb5ec" data-x="A11" data-series="units" data-y="2"/>
+    <path d="M606.02 417 L649.68 417 L649.68 63.27 L606.02 63.27 Z" fill="#7cb5ec" data-x="A12" data-series="units" data-y="14"/>
+    <path d="M656.78 417 L700.45 417 L700.45 391.73 L656.78 391.73 Z" fill="#7cb5ec" data-x="A13" data-series="units" data-y="1"/>
+  </g>
+</svg>

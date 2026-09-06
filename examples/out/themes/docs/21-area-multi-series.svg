@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: Queue a stays deeper, 6 rows, series queue" aria-labelledby="mv-62a59a241ade70e7-title" aria-describedby="mv-62a59a241ade70e7-desc" data-markvis="2" data-chart-type="area" data-id="mv-62a59a241ade70e7" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-62a59a241ade70e7-title">Queue a stays deeper</title>
+  <desc id="mv-62a59a241ade70e7-desc">area chart. Queue a stays deeper. x=minute. y=depth. series=queue. 6 rows.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Queue a stays deeper</text>
+  <g fill="none" stroke="#18181B" stroke-opacity="0.06" stroke-width="1">
+    <line x1="40" x2="704" y1="351.5" y2="351.5"/>
+    <line x1="40" x2="704" y1="138.5" y2="138.5"/>
+    <line x1="40" x2="704" y1="32" y2="32"/>
+  </g>
+  <path d="M40 458 L704 458" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <g fill="#64748B" font-size="10" font-weight="400">
+    <text x="32" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="32" y="351.5" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="32" y="245" text-anchor="end" dominant-baseline="middle">4</text>
+    <text x="32" y="138.5" text-anchor="end" dominant-baseline="middle">6</text>
+    <text x="32" y="32" text-anchor="end" dominant-baseline="middle">8</text>
+    <text x="48" y="468" text-anchor="middle" font-size="10" data-full-label="-1">-1</text>
+    <text x="210" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <text x="372" y="468" text-anchor="middle" font-size="10" data-full-label="1">1</text>
+    <text x="534" y="468" text-anchor="middle" font-size="10" data-full-label="2">2</text>
+    <text x="696" y="468" text-anchor="middle" font-size="10" data-full-label="3">3</text>
+  </g>
+  <g fill="none">
+    <path d="M210 191.75 L372 85.25 L534 138.5 L534 458 L210 458 Z" fill="#475569" fill-opacity="0.12" stroke="none" data-series="a"/>
+    <path d="M210 191.75 L372 85.25 L534 138.5" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="a"/>
+    <circle cx="210" cy="191.75" r="2" fill="#475569" stroke="none" data-series="a"/>
+    <circle cx="372" cy="85.25" r="2" fill="#475569" stroke="none" data-series="a"/>
+    <circle cx="534" cy="138.5" r="2" fill="#475569" stroke="none" data-series="a"/>
+    <path d="M210 351.5 L372 298.25 L534 245 L534 458 L210 458 Z" fill="#64748B" fill-opacity="0.12" stroke="none" data-series="b"/>
+    <path d="M210 351.5 L372 298.25 L534 245" fill="none" stroke="#64748B" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="b"/>
+    <circle cx="210" cy="351.5" r="2" fill="#64748B" stroke="none" data-series="b"/>
+    <circle cx="372" cy="298.25" r="2" fill="#64748B" stroke="none" data-series="b"/>
+    <circle cx="534" cy="245" r="2" fill="#64748B" stroke="none" data-series="b"/>
+  </g>
+  <g font-size="10" font-weight="500">
+    <text x="542" y="138.5" text-anchor="start" dominant-baseline="middle" fill="#475569" data-end-label="a">a</text>
+    <text x="542" y="245" text-anchor="start" dominant-baseline="middle" fill="#64748B" data-end-label="b">b</text>
+  </g>
+</svg>

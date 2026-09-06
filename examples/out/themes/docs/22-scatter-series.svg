@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="scatter chart: Scores rise with hours, 5 rows, series cohort" aria-labelledby="mv-fa2daafa0afbcb40-title" aria-describedby="mv-fa2daafa0afbcb40-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-fa2daafa0afbcb40" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-fa2daafa0afbcb40-title">Scores rise with hours</title>
+  <desc id="mv-fa2daafa0afbcb40-desc">scatter chart. Scores rise with hours. x=hours. y=score. series=cohort. 5 rows.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Scores rise with hours</text>
+  <g font-size="11" font-weight="500" fill="#18181B">
+    <rect x="40" y="29" width="10" height="10" fill="#475569" rx="1"/>
+    <text x="54" y="38" data-legend="A">A</text>
+    <rect x="76.82" y="29" width="10" height="10" fill="#64748B" rx="1"/>
+    <text x="90.82" y="38" data-legend="B">B</text>
+  </g>
+  <g fill="none" stroke="#18181B" stroke-opacity="0.06" stroke-width="1">
+    <line x1="40" x2="704" y1="377.6" y2="377.6"/>
+    <line x1="40" x2="704" y1="216.8" y2="216.8"/>
+    <line x1="40" x2="704" y1="56" y2="56"/>
+  </g>
+  <path d="M40 458 L704 458" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <g fill="#64748B" font-size="10" font-weight="400">
+    <text x="32" y="458" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="32" y="377.6" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="32" y="297.2" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="32" y="216.8" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="32" y="136.4" text-anchor="end" dominant-baseline="middle">70</text>
+    <text x="32" y="56" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="48" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <text x="210" y="468" text-anchor="middle" font-size="10" data-full-label="2">2</text>
+    <text x="372" y="468" text-anchor="middle" font-size="10" data-full-label="4">4</text>
+    <text x="534" y="468" text-anchor="middle" font-size="10" data-full-label="6">6</text>
+    <text x="696" y="468" text-anchor="middle" font-size="10" data-full-label="8">8</text>
+  </g>
+  <g>
+    <circle cx="210" cy="377.6" r="2.5" fill="#475569" fill-opacity="0.75" stroke="none" data-x="2" data-y="40" data-series="A"/>
+    <circle cx="372" cy="257" r="2.5" fill="#475569" fill-opacity="0.75" stroke="none" data-x="4" data-y="55" data-series="A"/>
+    <circle cx="291" cy="297.2" r="2.5" fill="#64748B" fill-opacity="0.75" stroke="none" data-x="3" data-y="50" data-series="B"/>
+    <circle cx="453" cy="136.4" r="2.5" fill="#64748B" fill-opacity="0.75" stroke="none" data-x="5" data-y="70" data-series="B"/>
+    <circle cx="534" cy="120.32" r="2.5" fill="#475569" fill-opacity="0.75" stroke="none" data-x="6" data-y="72" data-series="A"/>
+  </g>
+</svg>
