@@ -53,11 +53,22 @@ describe("site visual chrome", () => {
     expect(css).not.toMatch(/theme:/);
   });
 
-  it("playground keeps two panes", () => {
+  it("playground keeps two panes with PLAY chrome", () => {
     const css = read("../playground/src/style.css");
-    expect(css).toMatch(/grid-template-columns:\s*1fr 1fr/);
-    expect(css).toMatch(/section\.preview[\s\S]*background:\s*#f7f4ef/);
-    expect(css).not.toMatch(/section\.preview[\s\S]*background:\s*(#fff|#ffffff|var\(--panel\))/);
-    expect(css).not.toMatch(/theme:/);
+    const html = read("../playground/index.html");
+    expect(css).toMatch(/grid-template-columns:\s*minmax\(40%,\s*1fr\)\s+minmax\(40%,\s*1fr\)/);
+    expect(css).toMatch(/section\.preview[\s\S]*background:\s*#ffffff/);
+    expect(css).not.toMatch(/section\.preview[\s\S]*background:\s*#f7f4ef/);
+    expect(css).toMatch(/--editor-bg:\s*#fafafa/);
+    expect(css).not.toMatch(/--code-bg:\s*#171717/);
+    expect(css).toMatch(/height:\s*48px/);
+    expect(css).toMatch(/min-height:\s*44px/);
+    expect(css).toMatch(/flex-wrap:\s*nowrap/);
+    expect(css).toMatch(/overflow-x:\s*auto/);
+    expect(html).toContain('id="theme"');
+    expect(html).toContain('value="folio"');
+    expect(html).toContain('value="highcharts"');
+    expect(html).toContain('value="shadcn"');
+    expect(html).toContain('value="docs"');
   });
 });

@@ -6,6 +6,11 @@ import {
 } from "./links.js";
 import { htmlTable, previewSource, type PlaygroundView } from "./preview.js";
 import { dropinSnippet } from "./snippet.js";
+import {
+  readThemeFromFence,
+  rewriteThemeInFence,
+  type ChartTheme,
+} from "./theme.js";
 import "./style.css";
 
 function mustEl<T extends HTMLElement>(id: string): T {
@@ -65,6 +70,7 @@ function paint(view: PlaygroundView): void {
 }
 
 function main(): void {
+  const themeSelect = mustEl<HTMLSelectElement>("theme");
   const select = mustEl<HTMLSelectElement>("example");
   const editor = mustEl<HTMLTextAreaElement>("fence");
   const copyFenceBtn = mustEl<HTMLButtonElement>("copy-fence");
@@ -119,9 +125,14 @@ function main(): void {
     }
   }
 
+  function syncThemeSelect(source: string): void {
+    themeSelect.value = readThemeFromFence(source);
+  }
+
   function load(source: string, name: string, id: string): void {
     filename = name;
     editor.value = source;
+    syncThemeSelect(source);
     view = previewSource(source, filename);
     galleryLink.href = galleryHref(id);
     select.value = id;
@@ -133,6 +144,14 @@ function main(): void {
     copied.textContent = label;
   }
 
+  themeSelect.addEventListener("change", () => {
+    const theme = themeSelect.value as ChartTheme;
+    const next = rewriteThemeInFence(editor.value, theme);
+    editor.value = next;
+    view = previewSource(next, filename);
+    paint(view);
+  });
+
   select.addEventListener("change", () => {
     const picked =
       EXAMPLES.find((item) => item.id === select.value) ?? first;
@@ -142,6 +161,7 @@ function main(): void {
   editor.addEventListener("input", () => {
     view = previewSource(editor.value, filename);
     paint(view);
+    syncThemeSelect(editor.value);
   });
 
   copyFenceBtn.addEventListener("click", () => {

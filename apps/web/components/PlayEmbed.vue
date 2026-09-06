@@ -27,7 +27,7 @@ onMounted(() => {
   right: 0;
   bottom: 0;
   z-index: 6;
-  background: #f7f4ef;
+  background: #ffffff;
 }
 
 .play-embed-frame {

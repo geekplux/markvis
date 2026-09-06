@@ -14,14 +14,22 @@
     </noscript>
     <header class="toolbar">
       <h1>Play</h1>
-      <p class="sub">Left fence · right figure · same parser as CLI</p>
+      <label>
+        Theme
+        <select id="theme">
+          <option value="folio">Folio</option>
+          <option value="highcharts">Highcharts-style</option>
+          <option value="shadcn">shadcn-style</option>
+          <option value="docs">Docs</option>
+        </select>
+      </label>
       <label>
         Example
         <select id="example"></select>
       </label>
       <button type="button" id="copy-fence">Copy fence</button>
       <button type="button" id="copy-svg">Copy SVG</button>
-      <a class="gallery-link" id="open-gallery" href="/examples" target="_top">Open in gallery</a>
+      <a class="gallery-link" id="open-gallery" href="/examples" target="_top">Open gallery</a>
       <button type="button" id="copy-snippet">Copy snippet</button>
       <span class="copied" id="copied" aria-live="polite"></span>
     </header>
