@@ -2,9 +2,11 @@ export { renderSvg } from "./render.js";
 export { PALETTE } from "./palette.js";
 export { binHistogram, histSamplesFromChart } from "./hist.js";
 export { chartId } from "./xml.js";
-export { folio } from "../themes/folio.js";
-export { highcharts } from "../themes/highcharts.js";
-export { shadcn } from "../themes/shadcn.js";
-export { docs } from "../themes/docs.js";
+export {
+  folio,
+  highcharts,
+  shadcn,
+  docs,
+} from "@markvis/themes";
 export { themeTokens } from "./theme.js";
 export type { ThemeTokens } from "./theme.js";

@@ -1,0 +1,19 @@
+{
+  "name": "@markvis/themes",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "markvis theme token packs and registry (U4)",
+  "exports": {
+    ".": "./registry.ts",
+    "./folio": "./folio/theme.ts",
+    "./highcharts": "./highcharts/theme.ts",
+    "./shadcn": "./shadcn/theme.ts",
+    "./docs": "./docs/theme.ts"
+  },
+  "main": "./registry.ts",
+  "types": "./registry.ts",
+  "dependencies": {
+    "@markvis/ir": "workspace:*"
+  }
+}

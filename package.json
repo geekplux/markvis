@@ -23,7 +23,8 @@
     "./cli": "./packages/cli/src/index.ts",
     "./remark": "./packages/remark/src/index.ts",
     "./markdown-it": "./packages/markdown-it/src/index.ts",
-    "./browser": "./packages/browser/src/index.ts"
+    "./browser": "./packages/browser/src/index.ts",
+    "./themes": "./packages/themes/registry.ts"
   },
   "bin": {
     "markvis": "./packages/cli/bin.js"
@@ -42,7 +43,8 @@
     "@markvis/markdown-it": "workspace:*",
     "@markvis/parser": "workspace:*",
     "@markvis/remark": "workspace:*",
-    "@markvis/render-svg": "workspace:*"
+    "@markvis/render-svg": "workspace:*",
+    "@markvis/themes": "workspace:*"
   },
   "devDependencies": {
     "@types/node": "^26.4.1",

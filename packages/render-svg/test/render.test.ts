@@ -403,7 +403,16 @@ describe("docs tokens", () => {
 
 describe("source discipline", () => {
   it("does not use clocks or random in renderer sources", () => {
-    const dirs = [join(here, "../src"), join(here, "../themes")];
+    const repoRoot = join(here, "../../..");
+    const dirs = [
+      join(here, "../src"),
+      join(here, "../themes"),
+      join(repoRoot, "packages/themes"),
+      join(repoRoot, "packages/themes/folio"),
+      join(repoRoot, "packages/themes/highcharts"),
+      join(repoRoot, "packages/themes/shadcn"),
+      join(repoRoot, "packages/themes/docs"),
+    ];
     const files: string[] = [];
     for (const dir of dirs) {
       for (const name of readdirSync(dir).filter((n) => n.endsWith(".ts"))) {

@@ -21,7 +21,7 @@ PM names the next build unit; Designer must have filed the matching design file 
 
 ## P2 — themes, examples, triage
 
-- [ ] packages/themes/ split + registry (Architect shape then Coder)
+- [x] packages/themes/ split + registry (Architect shape then Coder)
 - [ ] Examples rewrite + new proud cards + /examples UI (Writer titles / Designer / Coder)
 - [ ] Issue + PR templates (GOAL section 6 fields then Writer then Coder)
 

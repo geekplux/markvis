@@ -1,6 +1,6 @@
-/** Named constants for the active look. Source of truth: themes/*.ts via applyThemeTokens. */
+/** Named constants for the active look. Source of truth: @markvis/themes via applyThemeTokens. */
 
-import { folio, type ThemeTokens } from "../themes/folio.js";
+import { folio, type ThemeTokens } from "@markvis/themes";
 
 export let SVG_WIDTH = folio.SVG_WIDTH;
 export let SVG_HEIGHT = folio.SVG_HEIGHT;

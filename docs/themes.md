@@ -1,6 +1,6 @@
 # themes.md — markvis theme token packs
 
-Scope: optional fence `theme: folio|highcharts|shadcn|docs`. Omitted = folio. Unknown = error + table fallback. Themes are token packs in `packages/render-svg/themes/*.ts` only. No Highcharts/d3/Unovis/Recharts deps. No new chart types. Public UI labels may say Folio / Highcharts-style / shadcn-style / Docs — avoid trademark claims in marketing copy.
+Scope: optional fence `theme: folio|highcharts|shadcn|docs`. Omitted = folio. Unknown = error + table fallback. Themes are token packs in `packages/themes/<id>/theme.ts`, resolved by `packages/themes/registry.ts`. No Highcharts/d3/Unovis/Recharts deps. No new chart types. Public UI labels may say Folio / Highcharts-style / shadcn-style / Docs — avoid trademark claims in marketing copy.
 
 Default site figures stay folio.
 
@@ -14,7 +14,7 @@ Playground theme switcher and examples theme toggle are Coder C6/C9. This file i
 
 Ledger editorial default: transparent canvas on the Markdown host, hairline grid, value labels when the dual-encoding rule allows, one accent for one series. Ink near-black; quiet gray for units and ticks. No paper plate.
 
-### Locked tokens (from `folio.ts`)
+### Locked tokens (from `packages/themes/folio/theme.ts`)
 
 | Token | Value |
 | --- | --- |
@@ -68,7 +68,7 @@ Instruction: keep folio chart locks — transparent canvas, hairline grid, value
 
 Denser plot, stronger grid, legend-friendly series chrome. Highcharts-demo-inspired look as tokens only — same keys as folio, no vendor deps.
 
-### Locked tokens (from `highcharts.ts`)
+### Locked tokens (from `packages/themes/highcharts/theme.ts`)
 
 | Token | Value |
 | --- | --- |
@@ -130,7 +130,7 @@ Denser plot, stronger grid, legend-friendly series chrome. Highcharts-demo-inspi
 
 Rounded marks, categorical chart-1..5 hues (light-theme oklch → hex), quiet axes — muted ticks and soft structure so the figure sits on a card surface without loud chrome.
 
-### Locked tokens (from `shadcn.ts`)
+### Locked tokens (from `packages/themes/shadcn/theme.ts`)
 
 | Token | Value |
 | --- | --- |
@@ -189,7 +189,7 @@ Rounded marks, categorical chart-1..5 hues (light-theme oklch → hex), quiet ax
 
 Zinc/slate ink, thin ticks, no loud fill — page-figure language that reads native on a docs site surface (Vite/VitePress-adjacent), still as tokens only.
 
-### Locked tokens (from `docs.ts`)
+### Locked tokens (from `packages/themes/docs/theme.ts`)
 
 | Token | Value |
 | --- | --- |
@@ -217,7 +217,7 @@ Zinc/slate ink, thin ticks, no loud fill — page-figure language that reads nat
 | Scatter `r` / opacity | `2.5` / `0.75` |
 | Font | `Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif` |
 
-Status: `docs.ts` is present on disk with the values above (not stub-equal to folio). If C5 still lands wiring/export polish, keep these measured locks; do not silently revert to folio hex.
+Status: `packages/themes/docs/theme.ts` is present on disk with the values above (not stub-equal to folio). If C5 still lands wiring/export polish, keep these measured locks; do not silently revert to folio hex.
 
 ### Differentiator vs folio (measured)
 
@@ -252,3 +252,26 @@ Status: `docs.ts` is present on disk with the values above (not stub-equal to fo
 - Area fills at folio `0.22` or highcharts `0.28`
 - Strong demo grids (highcharts `0.22` hairline)
 - Claiming VitePress/Vite product affiliation or adding their chart libs
+
+
+---
+
+## Contribution path
+
+Add a theme pack under `packages/themes/<id>/`:
+
+```
+packages/themes/<id>/
+  theme.ts          # token table (same keys as folio); or theme.json
+  README.md         # intent + fence id
+  examples/         # ≥ bar, line, pie fences with theme: <id>
+```
+
+1. Implement `theme.ts` with the same `ThemeTokens` keys as folio (no vendor chart deps).
+2. Register the pack in `packages/themes/registry.ts` (`themeRegistry` + exports). Missing packs fail loudly via `resolveThemePack`.
+3. Add the id to `THEMES` in `@markvis/ir` so the parser accepts the fence string (omit → folio; unknown → `E_UNKNOWN_THEME` + table).
+4. Wire playground / examples UI labels separately; this package is token truth only.
+5. Keep snapshots under `examples/out/themes/` green when visuals change intentionally (`UPDATE_SNAPSHOTS=1`).
+
+`@markvis/render-svg` imports the registry only (`themeTokens` → `resolveThemePack`). Do not add Highcharts/d3/Unovis/Recharts runtime deps.
+

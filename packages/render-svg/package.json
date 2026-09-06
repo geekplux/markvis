@@ -10,6 +10,7 @@
   "main": "./src/index.ts",
   "types": "./src/index.ts",
   "dependencies": {
-    "@markvis/ir": "workspace:*"
+    "@markvis/ir": "workspace:*",
+    "@markvis/themes": "workspace:*"
   }
 }

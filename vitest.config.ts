@@ -10,6 +10,9 @@ export default defineConfig({
       "@markvis/parser": fileURLToPath(
         new URL("./packages/parser/src/index.ts", import.meta.url),
       ),
+      "@markvis/themes": fileURLToPath(
+        new URL("./packages/themes/registry.ts", import.meta.url),
+      ),
       "@markvis/render-svg": fileURLToPath(
         new URL("./packages/render-svg/src/index.ts", import.meta.url),
       ),

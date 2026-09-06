@@ -29,6 +29,9 @@ importers:
       '@markvis/render-svg':
         specifier: workspace:*
         version: link:packages/render-svg
+      '@markvis/themes':
+        specifier: workspace:*
+        version: link:packages/themes
     devDependencies:
       '@types/node':
         specifier: ^26.4.1
@@ -152,6 +155,15 @@ importers:
         version: 16.0.1
 
   packages/render-svg:
+    dependencies:
+      '@markvis/ir':
+        specifier: workspace:*
+        version: link:../ir
+      '@markvis/themes':
+        specifier: workspace:*
+        version: link:../themes
+
+  packages/themes:
     dependencies:
       '@markvis/ir':
         specifier: workspace:*

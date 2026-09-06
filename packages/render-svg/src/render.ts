@@ -3,7 +3,7 @@ import { renderCartesian } from "./cartesian.js";
 import { renderPie } from "./pie.js";
 import { themeTokens } from "./theme.js";
 import { applyThemeTokens } from "./tokens.js";
-import { folio } from "../themes/folio.js";
+import { folio } from "@markvis/themes";
 import { attrs, chartId, escapeXml } from "./xml.js";
 
 export function ariaLabel(chart: ChartIR): string {

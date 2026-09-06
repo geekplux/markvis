@@ -74,3 +74,4 @@ date	wave	decision
 2026-09-05	hour	C3: themes/highcharts.ts pack; themeTokens(highcharts); applyThemeTokens; snapshot examples/out/themes/01-bar-basic.svg; no Highcharts/d3/Unovis deps
 2026-09-05	hour	C4: themes/shadcn.ts pack; themeTokens(shadcn); rounded marks + chart-1..5 + card-quiet axes; snapshot examples/out/themes/shadcn/01-bar-basic.svg; no Recharts/Unovis/d3 deps
 2026-09-05	hour	C5: themes/docs.ts pack; themeTokens(docs); zinc/slate ink + thin ticks + quiet fill; snapshot examples/out/themes/docs/01-bar-basic.svg; no VitePress/d3 deps
+2026-09-06	hour	U4: packages/themes/{folio,highcharts,shadcn,docs}/theme.ts + registry.ts; render-svg imports registry only; omit→folio; unknown→E_UNKNOWN_THEME; no Highcharts/d3/Unovis deps
