@@ -1,8 +1,9 @@
 # Site copy
 
-Source for the public homepage. English. Public voice only. Coder pastes onto `/` (C8).
+Source for the public homepage. English. Public voice only.
+Coder mounts onto `/` per `docs/design/HOME.md` (white product home — not beige wash).
 
-## Hero
+## 1. Hero
 
 markvis
 
@@ -10,37 +11,46 @@ Charts in Markdown. The fence is the data.
 
 Buttons: Playground · Examples
 
-## What it does
+## 2. What it does
 
-- Write a chart as a Markdown fence (or GFM table). The rows are the source of truth.
-- Render deterministic SVG — same input, same bytes.
-- Keep the table when a host has no plugin, so readers never lose the numbers.
+- The fence (or GFM table) is the source — the rows stay in the file.
+- Same input yields the same SVG.
+- No plugin still shows the table, so readers never lose the numbers.
 
-## Who benefits
+## 3. Who it helps
 
-- README authors who want figures without uploading PNGs
-- AI-written Markdown that can edit a row and redraw
-- Docs workflows that refuse a screenshot as the source of truth
+**README / post authors** — figures without uploading a PNG that drifts from the data.
 
-## 30-second start
+**Agent-written Markdown** — edit a row, redraw the chart; the agent never paints pixels.
 
-1. Open the Playground and paste a fence, or pick an example.
-2. Or: `markvis check examples/valid` then `markvis render` on one file.
-3. For GitHub READMEs: `markvis bake README.md` (keeps the fence, inserts the image).
+**No-screenshot workflows** — refuse a bitmap as the source of truth.
 
-## Use it
+## 4. Proof
+
+Three uncropped SVGs (folio). One quiet caption each — never duplicate the SVG title as a heading.
+
+1. Feb led Q3 — `examples/out/01-bar-basic.svg`
+2. Pro pulled ahead — `examples/out/02-line-multi.svg`
+3. Shares stay raw — `examples/out/05-pie-raw.svg`
+
+## 5. 30-second start
+
+1. Open [Playground](https://markvis.js.org/play) — paste a fence or pick an example.
+2. Or bake a README: `markvis bake README.md` (keeps the fence, inserts the image).
+
+## 6. Use it
 
 | Where | How |
 | --- | --- |
 | GitHub README | `markvis bake` — images show with no JS |
-| Any page | drop in `markvis.min.js` (zero network) |
+| Any page | `markvis.min.js` (zero network) |
 | remark | `@markvis/remark` |
 | markdown-it | `@markvis/markdown-it` |
 
-Types: bar · line · area · scatter · pie · hist. Tags: `chart` | `markvis` | `vis`.
+## 7. Themes
 
-Optional look: `theme: folio` (default) · `highcharts` · `shadcn` · `docs`.
+Four looks via a fence header (`folio` default): folio · highcharts · shadcn · docs — try them on [Examples](/examples).
 
-## Footer
+## 8. Footer
 
-0.0.13 is frozen under `legacy/`. This site ships from branch `v2`.
+MIT · [GitHub](https://github.com/geekplux/markvis) · 0.0.13 frozen under `legacy/` · site from branch `v2`

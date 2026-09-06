@@ -1,17 +1,17 @@
-# markvis 2.0
+# markvis
 
 Charts in Markdown. The fence is the data.
 
-![Feb led Q3](./examples/out/01-bar-basic.svg)
+**Try:** [https://markvis.js.org/play](https://markvis.js.org/play) · [examples](https://markvis.js.org/examples.html)
+
+![February led Q3](./examples/out/01-bar-basic.svg)
 
 ![Pro pulled ahead](./examples/out/02-line-multi.svg)
 
 ![Shares stay raw](./examples/out/05-pie-raw.svg)
 
-Fence / GFM table / HTML comment → parser → Chart IR → deterministic SVG (table always kept). Tags: `chart` | `markvis` | `vis`. Types: bar · line · area · scatter · pie · hist.
+Tags: `chart` | `markvis` | `vis`. Types: bar · line · area · scatter · pie · hist.
 
-Try: [docs/landing.md](./docs/landing.md) · [playground](./apps/playground) · [drop-in](./apps/playground/dropin.html) · [gallery](./examples/gallery.html) · [SPEC](./SPEC.md) · [visual-spec](./docs/visual-spec.md) · [integrate](./docs/integrate.md)
+Bake for GitHub: `markvis bake README.md`. Browser: `packages/browser/dist/markvis.min.js`. Spec · integrate · themes: [docs](./docs/site-copy.md).
 
-Browser: `packages/browser/dist/markvis.min.js` (zero network). GitHub README figures: `markvis bake README.md` (idempotent; keeps the fence, writes SVG + image after it).
-
-0.0.13 (frozen): [legacy/](./legacy/).
+0.0.13 (frozen): [legacy/](./legacy/). Branch `v2`.

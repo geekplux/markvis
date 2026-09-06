@@ -1,6 +1,6 @@
 # Integrate
 
-How markvis shows up in READMEs, previews, and hosts — by bake and adapters, not by waiting for a native platform fence.
+Put a figure in a README or a docs site without uploading a PNG — bake, drop-in script, or a thin host plugin.
 
 ## Public site
 
