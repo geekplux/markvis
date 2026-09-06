@@ -1,0 +1,33 @@
+name: Idea
+description: A product or docs idea that is not a bug, theme, or example fixture.
+title: "[idea] "
+labels: ["idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Markvis stays a tiny Markdown chart language.
+        Fence is the data; same input yields the same SVG; table fallback without a plugin.
+        Ideas that need a new chart family or JSON-as-default usually get declined.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Who hits this, and what do they do today instead?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Smallest change that would help.
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: Stays inside the six chart types
+        - label: No new core chart library
+        - label: Keeps alpha-only packaging

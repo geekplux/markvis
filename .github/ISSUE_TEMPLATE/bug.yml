@@ -1,0 +1,65 @@
+name: Bug
+description: Something rendered wrong, crashed, or mismatched the fence.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Prefer a **full fence** over a description. Paste the SVG or a screenshot if you can.
+  - type: input
+    id: branch
+    attributes:
+      label: Branch / version
+      description: e.g. `v2` tip SHA, or `markvis` CLI version.
+      placeholder: v2 @ abc1234
+    validations:
+      required: true
+  - type: textarea
+    id: fence
+    attributes:
+      label: Full fence
+      description: The exact Markdown fence (or GFM / comment form) that reproduces.
+      render: markdown
+      placeholder: |
+        ```chart
+        type: bar
+        title: …
+        theme: folio
+
+        month,value
+        Jan,1
+        ```
+    validations:
+      required: true
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Theme id
+      options:
+        - folio
+        - highcharts
+        - shadcn
+        - docs
+        - omitted (default folio)
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected
+      description: What should happen (one or two sentences).
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual
+      description: What happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: artifact
+    attributes:
+      label: SVG or screenshot
+      description: Paste SVG source, or drop a screenshot. Optional but speeds triage.

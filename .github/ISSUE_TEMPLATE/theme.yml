@@ -1,0 +1,39 @@
+name: Theme pack
+description: Propose a new theme id under packages/themes/.
+title: "[theme] "
+labels: ["theme"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Themes are **token packs only** (`folio` · `highcharts` · `shadcn` · `docs`). No new chart types. No new renderer deps.
+  - type: input
+    id: theme_id
+    attributes:
+      label: Proposed theme id
+      description: Lowercase kebab or single word (registry key).
+      placeholder: e.g. newspaper
+    validations:
+      required: true
+  - type: textarea
+    id: tokens
+    attributes:
+      label: Token intent
+      description: Colors, type, chrome density — what this pack should feel like in one short paragraph.
+    validations:
+      required: true
+  - type: textarea
+    id: fences
+    attributes:
+      label: Three example fences
+      description: bar, line, and pie (or three variants) with `theme: <id>`.
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: license
+    attributes:
+      label: License / provenance
+      description: Original tokens? Inspired by a public UI? Note any trademark or license constraints.
+    validations:
+      required: true
