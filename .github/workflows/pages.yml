@@ -1,6 +1,7 @@
 # Public site: VitePress apps/web on branch v2 → GitHub Pages.
 # Replaces master docsify for markvis.js.org. Does not touch markvis-editor.
 # Settings (GeekPlux): see docs/pages.md — Source must be GitHub Actions.
+# Gate: reusable check via workflow_call so Pages never deploys if check fails.
 name: pages
 
 on:
@@ -18,7 +19,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  check:
+    uses: ./.github/workflows/check.yml
+
   build:
+    needs: check
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:

@@ -1,5 +1,7 @@
 # markvis
 
+[![check](https://github.com/geekplux/markvis/actions/workflows/check.yml/badge.svg?branch=v2)](https://github.com/geekplux/markvis/actions/workflows/check.yml)
+
 Charts in Markdown. The fence is the data.
 
 **Try:** [https://markvis.js.org/play](https://markvis.js.org/play) · [examples](https://markvis.js.org/examples.html)

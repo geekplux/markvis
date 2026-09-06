@@ -2,9 +2,11 @@ name: check
 
 on:
   push:
-    branches: [v2]
+    branches: [v2, main, master]
   pull_request:
-    branches: [v2]
+    branches: [v2, main, master]
+
+  workflow_call:
 
 jobs:
   check:
@@ -45,3 +47,12 @@ jobs:
 
       - name: Playground build
         run: pnpm --filter playground build
+
+      - name: Web build
+        run: pnpm --filter web build
+
+      - name: Assert theme snapshots
+        run: |
+          for t in folio highcharts shadcn docs; do
+            test -f "examples/out/themes/${t}/01-bar-basic.svg"
+          done
