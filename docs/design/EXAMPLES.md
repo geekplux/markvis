@@ -1,48 +1,67 @@
-# EXAMPLES — product surface
+# EXAMPLES — Field gallery
 
-Highcharts-demo density sales floor. Not a fixture browser. White page, sharp cards. Charts stay folio (Ledger) by default; do not restyle chart marks for marketing.
+Same family as home. Not a second yellow hero. Not the white VitePress essay that sits under `/` today.
 
-## Intent
+Charts stay folio unless a theme chip is on. Do not restyle chart marks to match the field.
 
-Structure/restraint only (vite.dev / bun.sh / astro.build). Finished figures, many variants — density without chrome noise.
+Measured from live `/examples` CSS on tip `f7ebeb0` (`assets/style.DCT935Iz.css`), 2026-09-09.
 
-## Delete
+## Observation — live `/examples`
 
-- Page paper `#F7F4EF` wash
-- White cards on beige (looks like temporary skin)
+1. Page `.gallery-page` is `#FFFFFF`, max-width `1200px`, padding `32px 24px 64px`. Home is field `#FFDB2A`. The gallery does not share the nav.
+2. Title `.gallery-title` is `28px/600` `#171717`. Sub is `14px/400` `#737373`. Home headlines are `44px/700`.
+3. Filters `.gallery-chip` are pills: height `40px`, radius `999px`, `12px/500`, border `rgba(23,23,23,0.12)`. Active fill `#171717`. Home chips are radius `0`, `11px` mono uppercase, fill `#0E130F`.
+4. Grid is `1` column, then `2` at `600px`, `3` at `900px`, `4` at `1200px`. The lock is `1 / 2 / 4` at `390 / 768 / 1200`. The `3`-column step is the drift.
+5. Card background `#FFFFFF`, padding `12px 12px 10px`. Detail rail radius `8px`, border `#E4E4E7`. Focus ring `#2563EB`. Home banned that blue on the product surface.
+6. Thumb SVG is `width:100%`, `height:auto`, `max-height:none`. Keep that. Do not crop.
+7. Focus and hover still speak docs-blue. The page reads as the old white gallery with a new home upstairs.
 
-## Live faults
+## Instruction — Coder
 
-Measured 2026-09-06 check:
+Keep the gallery data, type filter, theme filter, and click-to-fence behavior. Change chrome only. Do not touch `/`.
 
-1. Page max 1120, pad 32/24/64 on `#F7F4EF`
-2. Grid 3 col 344px gap 20 desktop; 1 col 327 mobile — no 2-col at 768, no 4-col at 1200
-3. Chips 28px high — tap <44
-4. Filter wraps to 64px tall at 390
-5. Cards `#fff` border ink@0.12 on beige
-6. 52 cards; 0 HTML captions (aria only) — titles inside SVG; OK if conclusion titles; ban stem slugs
-7. No theme filter yet
-8. Thumbs scale OK (318 SVG = 318 thumb)
-9. No horiz scroll
-10. Heading 28 / sub 14
+Tokens, locked to home:
 
-## Target
+| role | value |
+| --- | --- |
+| nav field | `#FFDB2A` |
+| ink | `#080B08` |
+| paper | `#EDEBE5` |
+| page | `#FFFFFF` |
+| chip | `#0E130F` |
+| rule | `rgba(8,11,8,0.28)` |
+| radius | `0` |
+| shadow | none |
+| accent blue | none |
 
-- **Page bg:** `#FFFFFF`
-- **Max width:** 1200
-- **Filters:** type + theme; chip height 36–44; gap 8; active = ink fill / white text
-- **Grid:** 1 col <600 · 2 col 600–899 · 4 col ≥1200 · 3 col 900–1199 (or 4 at ≥1100)
-- **Card:** bg `#fff`, border 1px `#E4E4E7`, radius 8, pad 12; hover border `#2563EB` or ink
-- **Thumb:** svg width 100% height auto overflow visible
-- **Caption:** one conclusion 13/600 under OR aria-only if SVG title visible — never stem slug
-- **Click:** rail or modal — full SVG scaled, fence, Copy, Open in Play with theme+example
-- **Density:** Highcharts energy — finished figures, many variants
+Desktop:
 
-## Mobile
+1. Same nav as home. Height `72px`. Field behind the nav only. Wordmark `16px/400` ink. Links `11px` mono uppercase. Playground action fill ink, text field, height `48px`.
+2. Page below the nav is `#FFFFFF`. Do not paint the grid yellow. Side padding `24px`. Content max-width `1200px`.
+3. Heading `Examples` at `44px/700` ink, tracking `-.04em`, line-height `1.05`. One sub line `15px/400` muted `#979D97`, max `42ch`. Writer owns that sentence if it is missing. Do not invent a second hero panel.
+4. Filters: type, then theme. Chip height `44px`, padding `0 14px`, radius `0`, `11px` mono uppercase, tracking `.12em`. Idle: transparent, `1px` rule. Active: fill ink, text `#FFDB2A`. Gap `8px`. No pills.
+5. Grid: `1` column under `768px`, `2` columns from `768px`, `4` columns from `1200px`. Gap `16px`. Delete the `3`-column step.
+6. Card: background `#FFFFFF`, radius `0`, border `1px` rule, padding `12px`. No shadow. Hover: border ink. No lift. Thumb SVG `width:100%`, `height:auto`, overflow visible. One caption under the figure, `13px/600` ink, a conclusion, never a stem slug. If the SVG title is already that sentence, do not repeat it.
+7. Click opens the existing large figure + fence + Open in Play. Rail background `#FFFFFF`, radius `0`, border rule. SVG in the rail uncropped, same scale rule as the thumb.
 
-- **390:** 1 col, chips wrap OK if ≥36px tall, no page horiz scroll
-- **768:** 2 col
+390:
+
+- Nav links collapse to one menu trigger, height `44px`, same as home.
+- Filters wrap. Chip height stays `44px`.
+- One column. Cards full width. No horizontal page scroll. `scrollWidth` equals `clientWidth`.
+- Detail stacks under the grid, not a `360px` side rail.
+
+Delete on `/examples` only:
+
+- Radius `999px` pills.
+- Radius `8px` cards and detail.
+- `#2563EB` focus. Use `2px` ink outline, offset `2px`.
+- The `3`-column grid.
+- Do not bring back `#F7F4EF`.
 
 ## Acceptance
 
-Not beige; type+theme filters; elegant grid; Designer OK screenshots.
+- Same nav as `/`. Yellow bar, black Playground action.
+- White grid, square cards, mono filter chips, no pills, no blue.
+- `1 / 2 / 4` columns at `390 / 768 / 1200`.
+- A card never crops the plot. Caption is a conclusion, or absent if the SVG title is already visible.
