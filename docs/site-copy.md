@@ -19,11 +19,11 @@ Buttons: Playground · Examples
 
 ## 3. Who it helps
 
-**README / post authors** — figures without uploading a PNG that drifts from the data.
+**Any Markdown host** — preview or rendered view. The fence is the figure.
 
-**Agent-written Markdown** — edit a row, redraw the chart; the agent never paints pixels.
+**AI replies** — a figure when the numbers need to be seen. Agents will call this more than people.
 
-**No-screenshot workflows** — refuse a bitmap as the source of truth.
+**Themes** — one fence fits different hosts.
 
 ## 4. Proof
 

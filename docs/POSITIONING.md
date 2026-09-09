@@ -1,42 +1,11 @@
 # Positioning
 
-Internal. Public homepage stands alone — no competitor names there.
+Internal. Locked with GeekPlux. Public pages do not name competitors.
 
-## What it is
+Markvis is an open-source library. You install it with npm or a script tag. It is not a docs site, and it is not a chart suite.
 
-markvis is the figure layer for Markdown: the file is the data, the fence is the chart, git and agents both edit the same source.
+It runs in any Markdown preview or rendered view. The fence is the source. The same text produces the same SVG. Without a plugin, the table still shows.
 
-Not another chart library. A Markdown contract that yields deterministic SVG and still shows a table when no plugin runs.
+The audience is any host that renders Markdown, and any AI reply that needs a figure. Agents will call it more often than humans. Themes exist so one fence fits different hosts. Revenue is later. Adoption is the job.
 
-## Who hurts today
-
-- README / post authors who need a figure and end up uploading a PNG
-- Technical writers whose numbers drift from the screenshot
-- People whose Markdown is written or edited by an agent and cannot draw a chart by hand
-
-## What they do instead
-
-Screenshot from a notebook. Paste Excel. Link a gist. Skip the figure. Or depend on a host plugin that disappears in plain Markdown.
-
-## Why switch
-
-- Numbers stay in the file — reviewable, diffable, agent-editable
-- No plugin still shows the table; readers never lose the data
-- Same fence yields the same SVG (deterministic)
-
-## What we are not
-
-- A dashboard suite
-- A Highcharts / ECharts / Recharts clone
-- A notebook or BI tool
-- A seventh chart-type kitchen sink
-
-## Star OSS this month (done criteria)
-
-1. Homepage strangers screenshot (product home, not beige stub)
-2. Playground people paste into and leave open (theme switch works)
-3. Examples people copy (proud cards, type + theme filters)
-4. CI green on v2 (badge on README)
-5. Contribution path for themes (packages/themes/<id>/)
-
-GeekPlux still flips default branch and posts Show HN. This backlog does not launch.
+Do not lead with README authors. Do not mention competitors on public pages.
