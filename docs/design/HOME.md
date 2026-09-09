@@ -23,7 +23,7 @@ Do not copy the Motion wordmark, the MOTION+ control, or the Framer line. Steal 
 - Field `oklch(.88 .18 96)` converts to `#FBD509`. Nav sits on that field. Nav min-height `72px`, padding `12px 30px`, grid `minmax(180px, 1fr) auto minmax(180px, 1fr)`.
 - Links `11px` mono, weight 560, tracking `.12em`, uppercase, min-height `44px`, padding `8px 12px`.
 - Hero field min-height `720px`, background the field, content edge `clamp(24px, 5vw, 68px)`.
-- Inset panel background ink `oklch(.145 .01 148)` converts to `#080B08`. Width `min(470px, calc(100% - 48px))`. Min-height `390px`. Padding `clamp(28px, 4vw, 48px)`. Radius `0`. No shadow.
+- Inset panel computed `#080B08`, width `520px` at 1280, padding `48px`. Radius `0`. No shadow. First headline voice is field yellow. Second voice is paper. Desktop CTAs are a row. At `390` they stack.
 - Panel type paper `oklch(.94 .008 96)` → `#EDEBE5`. Muted `oklch(.69 .012 148)` → `#979D97`.
 - Meta row `11px` mono, uppercase, tracking `.12em`, space-between.
 - Title `clamp(36px, 4.4vw, 44px)`, weight 660, tracking `-.04em`, line-height `1.05`, color paper. The name is one voice. The long line is the second voice, same size, on the panel.
