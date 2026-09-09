@@ -111,19 +111,29 @@ Do not copy the Motion wordmark, MOTION+ label, or Framer line. Playground stays
 
 ## Rest of the page — simpler, same family
 
-The first screen is not the page. Live `/` after the panel is a five-card band, three figures, and one footer line. That is the miss.
+Recorded after load and a full scroll, 2026-09-09. The reference page is a yellow hero, then a dark body, then a light footer. markvis keeps that rhythm and cuts the rest.
 
-Do not clone a second product. Same tokens. Fewer sections. No partner logos. No changelog. No extra product names in commit text.
+Reference sections after the hero, in order. Do not build these:
 
-Order after the panel, locked:
+- dark 4 by 2 interactive feature grid
+- example card grid with favourite marks
+- three docs-product cards
+- workflow split with a second product
+- showcase carousel
+- changelog plus magazine
+- partner and sponsor strips
+- score callout
+- newsletter
 
-1. Hairline row. Already specified. `gap: 1px`. Title `11px` mono uppercase in `#FFDB2A`. Not five floating cards.
-2. Figure atlas. White page `#FFFFFF`. Section index `01` at `11px` mono uppercase, ink. Heading `44px/700` ink, tracking `-.04em`. One line under it, `15px` muted, max `42ch`. Then three cells, one row at `>=900px`, stack at `390`. Cell: paper `#EDEBE5`, radius `0`, padding `16px`, no shadow. Index `01` `02` `03` in `11px` mono. Figure is the existing folio SVG, `width:100%`, `height:auto`, uncropped. No extra caption if the SVG title is visible. No heading word Proof.
-3. Examples strip. Field `#FFDB2A`, full bleed, padding `48px clamp(24px, 5vw, 68px)`. Left: heading `Examples.` `44px/700` ink. One line muted ink at `70%`. Link `Browse examples` with trailing `>`, `11px` mono uppercase, to `/examples`. Right: four uncropped folio thumbs in a row, gap `12px`, paper cells. At `390` the thumbs go `2x2`.
-4. Start band. Ink `#080B08`, full bleed, padding `48px` the same inset. Two columns at `>=768px`, stack at `390`. Left: `Start.` `44px/700` paper. One line muted. Button Get started, fill `#FFDB2A`, text ink, height `48px`, trailing `>`. Right: three rows, `11px` mono uppercase paper, hairline `1px` between them: `npm` / `script` / `skill`. One muted line under each. Writer already has those lines. Do not add a fourth install path.
-5. Agent band. Page `#FFFFFF`. Index `02`. Heading `44px/700` ink. One line. Two text links, `11px` mono uppercase: `/llms.txt` and `/ai`. No panel. No new product.
-6. Footer. Field `#FFDB2A`. Height of content, not a card. Four links: Docs, Examples, Play, GitHub. Then one line: `MIT` and `0.0.13` under `legacy/`. `13px` ink. Padding `32px` the same inset. Delete the one-line footer that sits on white.
+markvis page after the panel, locked. Body is ink, not a second yellow field.
 
-390: no horizontal page scroll. Atlas and start stack. Examples thumbs `2x2`. Tap targets `>= 44px`.
+1. Hairline row. `gap: 1px`. Cells `#0E130F`. Title `11px` mono uppercase in `#FFDB2A`.
+2. Figure atlas. Background `#0E1312`. Index `01`, `11px` mono uppercase, `#FFDB2A`. Heading `44px/700` paper `#EDEBE5`. One line muted, max `42ch`. Three cells, one row at `>=900px`, stack at `390`. Cell paper `#EDEBE5`, radius `0`, padding `16px`. Existing folio SVGs, `width:100%`, `height:auto`, uncropped. No Proof heading.
+3. Examples strip. Same ink `#0E1312`. Heading `Examples.` `44px/700` paper. Link `Browse examples` with trailing `>`, to `/examples`. Four thumbs, paper cells, gap `12px`. At `390`, `2x2`. Not a yellow band.
+4. Start band. Same ink. Two columns at `>=768px`, stack at `390`. `Start.` `44px/700` paper. Button Get started, fill `#FFDB2A`, text ink, height `48px`, trailing `>`. Right: `npm` / `script` / `skill`, hairline `1px` between rows.
+5. Agent links. Same ink. Index `02`. Heading `44px/700` paper. Two links, `11px` mono uppercase: `/llms.txt` and `/ai`.
+6. Footer. Light `#F8F8F6`, not yellow. Four links: Docs, Examples, Play, GitHub. Then `MIT` and `0.0.13` under `legacy/`. `13px` ink. Padding `32px` the same inset.
 
-Do not add: wordmark art, a plus product, partner logos, a blog, or a score tool.
+390: no horizontal page scroll. Atlas and start stack. Thumbs `2x2`. Tap targets `>= 44px`.
+
+Do not add a plus product, partner logos, a blog, a carousel, or a score tool.
