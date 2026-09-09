@@ -2,7 +2,7 @@
 title: Spec
 ---
 
-Language: repo root SPEC.md on branch v2.
+Language: repo root SPEC.md on branch v2. This is the file an agent fetches to emit a valid fence.
 
 Tags chart / markvis / vis share one parser. Optional markvis: 2, then type, title, unit, x, y, series. Blank line. CSV or one GFM table.
 

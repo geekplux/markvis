@@ -10,11 +10,11 @@ Markvis — charts in Markdown (the fence is the data)
 
 I rebuilt markvis so a chart lives in the same Markdown file as the numbers.
 
-Pain today: README authors upload a PNG, the data drifts, and agents cannot edit a figure. Status quo is screenshot, skip the chart, or depend on a host plugin that vanishes in plain Markdown.
+Pain today: a Markdown view shows a wall of numbers, or a PNG that drifts. Agents can emit a fence. They cannot paint a figure. Status quo is screenshot, skip the chart, or wait for a host to add a plugin.
 
-markvis: write a fence or a GFM table → deterministic SVG. No plugin still shows the table. Same fence, same bytes. Six types (bar line area scatter pie hist). Optional theme header: folio (default), highcharts, shadcn, docs — token packs, no heavy chart libs in core.
+markvis: an open-source library. Write a fence or a GFM table, get the same SVG every time. No plugin still shows the table. Six types (bar line area scatter pie hist). Optional theme header: folio (default), highcharts, shadcn, docs — so one fence fits different hosts.
 
-Try: https://markvis.js.org/play · gallery: https://markvis.js.org/examples.html · bake for GitHub READMEs.
+Try: https://markvis.js.org/play · gallery: https://markvis.js.org/examples.html · bake so any viewer shows the SVG, or drop in the one-file script.
 
 Branch v2. Old 0.0.13 stays under legacy/. Happy to take fences that look wrong.
 

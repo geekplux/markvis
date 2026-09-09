@@ -4,6 +4,8 @@
 
 Charts in Markdown. The fence is the data.
 
+Open-source library. Install with npm or a script tag. Any Markdown preview or rendered view. Agents emit a fence; a viewer shows the SVG. Same text, same SVG. No plugin, the table still shows.
+
 **Try:** [https://markvis.js.org/play](https://markvis.js.org/play) · [examples](https://markvis.js.org/examples.html)
 
 ![February led Q3](./examples/out/01-bar-basic.svg)
@@ -14,6 +16,6 @@ Charts in Markdown. The fence is the data.
 
 Tags: `chart` | `markvis` | `vis`. Types: bar · line · area · scatter · pie · hist.
 
-Bake for GitHub: `markvis bake README.md`. Browser: `packages/browser/dist/markvis.min.js`. Spec · integrate · themes: [docs](./docs/site-copy.md).
+Bake so any image viewer shows the figure: `markvis bake README.md`. One-file script: `packages/browser/dist/markvis.min.js`. Spec · integrate · themes: [docs](./docs/site-copy.md).
 
 0.0.13 (frozen): [legacy/](./legacy/). Branch `v2`.

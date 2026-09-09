@@ -30,16 +30,16 @@ pageClass: folio-home-page
 <h2 id="folio-who-h" class="folio-h2">Who it helps</h2>
 <div class="folio-cards">
   <article class="folio-card">
-    <h3 class="folio-card-title">README / post authors</h3>
-    <p class="folio-card-body">figures without uploading a PNG that drifts from the data.</p>
+    <h3 class="folio-card-title">Any Markdown view</h3>
+    <p class="folio-card-body">preview or rendered page. The fence is the figure.</p>
   </article>
   <article class="folio-card">
-    <h3 class="folio-card-title">Agent-written Markdown</h3>
-    <p class="folio-card-body">edit a row, redraw the chart; the agent never paints pixels.</p>
+    <h3 class="folio-card-title">AI replies</h3>
+    <p class="folio-card-body">a figure when the numbers need to be seen. Agents will call this more than people.</p>
   </article>
   <article class="folio-card">
-    <h3 class="folio-card-title">No-screenshot workflows</h3>
-    <p class="folio-card-body">refuse a bitmap as the source of truth.</p>
+    <h3 class="folio-card-title">Themes</h3>
+    <p class="folio-card-body">one fence fits different hosts.</p>
   </article>
 </div>
 </section>
@@ -66,7 +66,7 @@ pageClass: folio-home-page
 <h2 id="folio-start-h" class="folio-h2">30-second start</h2>
 <ol class="folio-steps">
   <li>Open <a href="/play">Playground</a> — paste a fence or pick an example.</li>
-  <li>Or bake a README: <code>markvis bake README.md</code> (keeps the fence, inserts the image).</li>
+  <li>Or bake any Markdown file: <code>markvis bake README.md</code> (keeps the fence, inserts the image).</li>
 </ol>
 
 ```chart
@@ -90,8 +90,8 @@ Mar,150
 
 | Where | How |
 | --- | --- |
-| GitHub README | `markvis bake` — images show with no JS |
-| Any page | `markvis.min.js` (zero network) |
+| Any viewer that only shows images | `markvis bake` — fence stays, image inserted |
+| Any page that runs script | `markvis.min.js` (zero network) |
 | remark | `@markvis/remark` |
 | markdown-it | `@markvis/markdown-it` |
 

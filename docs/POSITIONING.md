@@ -1,11 +1,13 @@
 # Positioning
 
-Internal. Locked with GeekPlux. Public pages do not name competitors.
+Public lock. No competitor names.
 
-Markvis is an open-source library. You install it with npm or a script tag. It is not a docs site, and it is not a chart suite.
+Markvis is an open-source library. Install it with npm or a script tag. It is not a docs site, and it is not a chart suite.
 
-It runs in any Markdown preview or rendered view. The fence is the source. The same text produces the same SVG. Without a plugin, the table still shows.
+The fence is the source. The same text always produces the same SVG. Without a plugin, the table still shows.
 
-The audience is any host that renders Markdown, and any AI reply that needs a figure. Agents will call it more often than humans. Themes exist so one fence fits different hosts. Revenue is later. Adoption is the job.
+The audience is any Markdown preview or rendered view, and any AI reply that needs a figure. Agents will call it more than people. Themes exist so one fence fits different hosts.
 
-Do not lead with README authors. Do not mention competitors on public pages.
+Two paths need no host permission: bake an SVG so any viewer shows the figure, or drop in a one-file script where the host already runs JavaScript.
+
+Success: an agent finds the spec, emits a fence, and gets a figure without a human fixing the text.

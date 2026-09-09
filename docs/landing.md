@@ -1,6 +1,6 @@
 # markvis
 
-Charts in Markdown. The fence is the data (CSV or GFM).
+Charts in Markdown. The fence is the data (CSV or GFM). Open-source library for any Markdown preview or rendered view, and for an AI reply that needs a figure.
 
 ## Figures
 
@@ -18,6 +18,6 @@ Charts in Markdown. The fence is the data (CSV or GFM).
 
 Gallery: examples/gallery.html. Spec: SPEC.md. Look: docs/visual-spec.md (Ledger, transparent canvas).
 
-Bake for hosts that only show images (e.g. GitHub README): markvis bake path/to.md — keeps the fence, inserts an image after it; second bake is a no-op.
+Bake so any image viewer shows the figure (the fence stays in the file): markvis bake path/to.md — keeps the fence, inserts an image after it; second bake is a no-op.
 
 Hosts: docs/integrate.md.

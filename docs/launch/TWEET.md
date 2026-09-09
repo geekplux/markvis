@@ -11,4 +11,4 @@ https://markvis.js.org/play
 3. Gallery: finished figures you can copy, not a folder of test SVGs.
 https://markvis.js.org/examples.html
 
-4. GitHub READMEs: markvis bake keeps the fence and inserts the image. v2 · six types · optional themes.
+4. Bake so any viewer shows the SVG. Or an agent emits the fence. v2 · six types · themes so one fence fits different hosts.

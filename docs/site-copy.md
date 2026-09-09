@@ -19,7 +19,7 @@ Buttons: Playground · Examples
 
 ## 3. Who it helps
 
-**Any Markdown host** — preview or rendered view. The fence is the figure.
+**Any Markdown view** — preview or rendered page. The fence is the figure.
 
 **AI replies** — a figure when the numbers need to be seen. Agents will call this more than people.
 
@@ -36,14 +36,14 @@ Three uncropped SVGs (folio). One quiet caption each — never duplicate the SVG
 ## 5. 30-second start
 
 1. Open [Playground](https://markvis.js.org/play) — paste a fence or pick an example.
-2. Or bake a README: `markvis bake README.md` (keeps the fence, inserts the image).
+2. Or bake any Markdown file: `markvis bake README.md` (keeps the fence, inserts the image). Any viewer that shows images already works.
 
 ## 6. Use it
 
 | Where | How |
 | --- | --- |
-| GitHub README | `markvis bake` — images show with no JS |
-| Any page | `markvis.min.js` (zero network) |
+| Any viewer that only shows images | `markvis bake` — fence stays, image inserted |
+| Any page that runs script | `markvis.min.js` (zero network) |
 | remark | `@markvis/remark` |
 | markdown-it | `@markvis/markdown-it` |
 
