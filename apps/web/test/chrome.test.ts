@@ -22,11 +22,14 @@ describe("site visual chrome", () => {
     expect(home).toContain(
       "Charts in Markdown for any preview, any agent reply.",
     );
+    expect(home).toContain("OPEN SOURCE / MIT LICENSE");
     expect(home).toContain("Get started");
     expect(home).toContain("Browse examples");
+    expect(home).toContain("&gt; available for");
     expect(home).toContain("npm");
     expect(home).toContain("script");
     expect(home).toContain("skill");
+    expect(home).not.toContain("Proof");
     expect(home).toContain("library you can drop in");
     expect(home).toContain("Any Markdown view");
     expect(home).toContain("same fence, same SVG");
@@ -35,7 +38,7 @@ describe("site visual chrome", () => {
     expect(home).not.toContain("README / post authors");
     expect(home).not.toContain("folio-what");
     expect(home).not.toContain("folio-who");
-    expect(home).toContain("<figcaption>");
+    expect(home).not.toContain("<figcaption>");
     expect(home).toContain("Feb led Q3");
     expect(home).toContain("Pro pulled ahead");
     expect(home).toContain("Shares stay raw");
@@ -116,6 +119,11 @@ describe("site visual chrome", () => {
     expect(home).toMatch(/\.home-panel/);
     expect(home).toMatch(/min-height:\s*720px/);
     expect(home).toMatch(/@media\s*\(max-width:\s*390px\)/);
+    expect(home).toMatch(/\.home-btn[\s\S]*justify-content:\s*space-between/);
+    expect(home).toMatch(/\.home-btn[\s\S]*padding:\s*12px 18px/);
+    expect(home).toMatch(/\.home-band[\s\S]*gap:\s*1px/);
+    expect(home).toMatch(/\.home-chip-label/);
+    expect(home).not.toMatch(/\.home-proof-h/);
   });
 
   it("playground keeps two panes with PLAY chrome + mobile toolbar", () => {

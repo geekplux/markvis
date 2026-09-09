@@ -23,15 +23,16 @@ pageClass: folio-home-page
 
 <section class="home-field">
   <div class="home-panel">
-    <p class="home-meta"><span>OPEN SOURCE</span><span>v2</span></p>
+    <p class="home-meta"><span>OPEN SOURCE / MIT LICENSE</span><span>v2</span></p>
     <h1 class="home-headline">
       <span class="home-name">markvis.</span>
       <span class="home-line">Charts in Markdown for any preview, any agent reply.</span>
     </h1>
     <p class="home-actions">
-      <a class="home-btn filled" href="/play">Get started</a>
-      <a class="home-btn outline" href="/examples">Browse examples</a>
+      <a class="home-btn filled" href="/play"><span>Get started</span><span aria-hidden="true">&gt;</span></a>
+      <a class="home-btn outline" href="/examples"><span>Browse examples</span><span aria-hidden="true">&gt;</span></a>
     </p>
+    <p class="home-chip-label">&gt; available for</p>
     <p class="home-chips">
       <span class="home-chip">npm</span>
       <span class="home-chip">script</span>
@@ -63,20 +64,16 @@ pageClass: folio-home-page
   </article>
 </section>
 
-<section class="home-proof" aria-labelledby="home-proof-h">
-<h2 id="home-proof-h" class="home-proof-h">Proof</h2>
+<section class="home-proof" aria-label="Figures">
 <div class="home-figures">
   <figure>
     <img src="/home/01-bar-basic.svg" alt="Bar chart: Feb led Q3" />
-    <figcaption>Feb led Q3</figcaption>
   </figure>
   <figure>
     <img src="/home/02-line-multi.svg" alt="Line chart: Pro pulled ahead" />
-    <figcaption>Pro pulled ahead</figcaption>
   </figure>
   <figure>
     <img src="/home/05-pie-raw.svg" alt="Pie chart: Shares stay raw" />
-    <figcaption>Shares stay raw</figcaption>
   </figure>
 </div>
 </section>

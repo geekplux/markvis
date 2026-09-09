@@ -220,10 +220,11 @@
 .home-btn {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 48px;
   min-height: 48px;
   padding: 12px 18px;
+  gap: 18px;
   box-sizing: border-box;
   font-family: var(--home-mono);
   font-size: 11px;
@@ -246,6 +247,16 @@
   background: transparent;
   color: var(--home-paper);
   border: 1px solid rgba(237, 235, 229, 0.28);
+}
+
+.home-chip-label {
+  margin: 0;
+  font-family: var(--home-mono);
+  font-size: 11px;
+  font-weight: 560;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--home-muted);
 }
 
 .home-chips {
@@ -278,15 +289,15 @@
 .home-band {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 24px;
+  gap: 1px;
   padding: 48px clamp(24px, 5vw, 68px);
-  background: #080b08;
+  background: var(--home-rule);
   color: var(--home-paper);
 }
 
 .home-band article {
   margin: 0;
-  padding: 20px;
+  padding: 22px;
   background: #0e130f;
   border-radius: 0;
   box-shadow: none;
@@ -294,10 +305,13 @@
 
 .home-band h2 {
   margin: 0 0 8px;
-  font-size: 13px;
-  font-weight: 600;
+  font-family: var(--home-mono);
+  font-size: 11px;
+  font-weight: 560;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   line-height: 1.3;
-  color: var(--home-paper);
+  color: #ffdb2a;
 }
 
 .home-band p {
@@ -316,15 +330,6 @@
   background: var(--home-field);
 }
 
-.home-proof-h {
-  margin: 0 0 24px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--home-ink);
-}
-
 .home-figures {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -334,6 +339,9 @@
 .home-figures figure {
   margin: 0;
   min-width: 0;
+  padding: 22px;
+  background: #edebe5;
+  border-radius: 0;
 }
 
 .home-figures img {
@@ -373,7 +381,7 @@
 
   .home-band {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 1px;
   }
 }
 
@@ -441,7 +449,7 @@
 
   .home-band {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 1px;
     padding: 48px 16px;
   }
 }
