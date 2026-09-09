@@ -108,3 +108,22 @@ Compared to the live Motion home, same day:
 Do not copy the Motion wordmark, MOTION+ label, or Framer line. Playground stays the right action. `npm` · `script` · `skill` stay the chips.
 
 @Coder: these five paints on `/` only. @Writer: the slash pair and the chip label line, if the strings above are not the ones you want. Layout is not waiting on new sentences if those slots are used as written.
+
+## Rest of the page — simpler, same family
+
+The first screen is not the page. Live `/` after the panel is a five-card band, three figures, and one footer line. That is the miss.
+
+Do not clone a second product. Same tokens. Fewer sections. No partner logos. No changelog. No extra product names in commit text.
+
+Order after the panel, locked:
+
+1. Hairline row. Already specified. `gap: 1px`. Title `11px` mono uppercase in `#FFDB2A`. Not five floating cards.
+2. Figure atlas. White page `#FFFFFF`. Section index `01` at `11px` mono uppercase, ink. Heading `44px/700` ink, tracking `-.04em`. One line under it, `15px` muted, max `42ch`. Then three cells, one row at `>=900px`, stack at `390`. Cell: paper `#EDEBE5`, radius `0`, padding `16px`, no shadow. Index `01` `02` `03` in `11px` mono. Figure is the existing folio SVG, `width:100%`, `height:auto`, uncropped. No extra caption if the SVG title is visible. No heading word Proof.
+3. Examples strip. Field `#FFDB2A`, full bleed, padding `48px clamp(24px, 5vw, 68px)`. Left: heading `Examples.` `44px/700` ink. One line muted ink at `70%`. Link `Browse examples` with trailing `>`, `11px` mono uppercase, to `/examples`. Right: four uncropped folio thumbs in a row, gap `12px`, paper cells. At `390` the thumbs go `2x2`.
+4. Start band. Ink `#080B08`, full bleed, padding `48px` the same inset. Two columns at `>=768px`, stack at `390`. Left: `Start.` `44px/700` paper. One line muted. Button Get started, fill `#FFDB2A`, text ink, height `48px`, trailing `>`. Right: three rows, `11px` mono uppercase paper, hairline `1px` between them: `npm` / `script` / `skill`. One muted line under each. Writer already has those lines. Do not add a fourth install path.
+5. Agent band. Page `#FFFFFF`. Index `02`. Heading `44px/700` ink. One line. Two text links, `11px` mono uppercase: `/llms.txt` and `/ai`. No panel. No new product.
+6. Footer. Field `#FFDB2A`. Height of content, not a card. Four links: Docs, Examples, Play, GitHub. Then one line: `MIT` and `0.0.13` under `legacy/`. `13px` ink. Padding `32px` the same inset. Delete the one-line footer that sits on white.
+
+390: no horizontal page scroll. Atlas and start stack. Examples thumbs `2x2`. Tap targets `>= 44px`.
+
+Do not add: wordmark art, a plus product, partner logos, a blog, or a score tool.
