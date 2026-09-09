@@ -1,44 +1,32 @@
-# PLAY — Field tool
+# PLAY — same family, still a tool
 
-Same nav and type as `/`. Layout is an editor, not a marketing panel. The figure must render. A pretty shell that does not draw is a fail.
-
-Charts stay folio until the theme control rewrites the fence. Do not restyle marks for the site.
-
-Measured faults still in the product path: nav `52px` white, accent `#2563EB`, figure pane was `#F7F4EF`, toolbar controls under `44px`. Those are the miss. Do not bring beige back.
+Yellow nav. Dark chrome. Figure pane stays paper so the SVG reads. Must render.
 
 ## Instruction — Coder
 
-Keep the real playground. Fence left, figure right. Theme switch rewrites the fence header and re-renders. Do not touch `/` paint.
-
-Chrome, locked to home:
+Keep the real playground. Fence left, figure right. Theme switch rewrites the fence and re-renders. Do not touch `/`.
 
 | role | value |
 | --- | --- |
 | nav field | `#FFDB2A` |
-| ink | `#080B08` |
-| paper | `#EDEBE5` |
-| page | `#FFFFFF` |
-| rule | `rgba(8,11,8,0.28)` |
+| chrome | `#0E1312` |
+| figure pane | `#EDEBE5` |
+| footer | none on this route |
+| rule | `rgba(237,235,229,0.16)` |
 | radius | `0` |
-| shadow | none |
 | accent blue | none |
 
-1. Same nav as home. Height `72px`. Field bar. Playground action is the current page: fill ink, text field. Do not also show a second Play link as active blue.
-2. Body under the nav is `#FFFFFF`. Two panes, `1px` rule between them. Left fence, right figure. Each pane at least `40%` at `>=768px`.
-3. Toolbar is one row, height `48px`, padding-inline `16px`, bg `#FFFFFF`, border-bottom the rule. Controls min-height `44px`, radius `0`, `11px` mono uppercase. Theme, example, Copy fence, Copy SVG, Open in examples. Idle: transparent, `1px` rule. One primary if needed: fill `#FFDB2A`, text ink. No `#2563EB`.
-4. Editor surface `#FFFFFF`. Fence text `13px` mono ink. Do not paint the whole pane `#080B08`.
-5. Figure pane `#EDEBE5` so a transparent SVG reads. SVG `width:100%`, `height:auto`, uncropped.
+1. Same nav as home. Playground is the current page: fill `#080B08`, text `#FFDB2A`.
+2. Body under the nav is `#0E1312`. Two panes, `1px` rule between them. Left fence, right figure. Each at least `40%` at `>=768px`.
+3. Toolbar one row, height `48px`, background `#0E1312`, border-bottom the rule. Controls min-height `44px`, radius `0`, `11px` mono uppercase, paper type. Theme, example, Copy fence, Copy SVG, Open in examples. Primary if needed: fill `#FFDB2A`, text ink.
+4. Editor surface `#0E130F`. Fence text `13px` mono paper. Do not paint the figure pane dark.
+5. Figure pane `#EDEBE5`. SVG `width:100%`, `height:auto`, uncropped.
 6. Theme control sets `folio` | `highcharts` | `shadcn` | `docs` and re-renders. If it does not draw, the chrome is a fail.
 
-390:
-
-- Stack figure under the fence.
-- Toolbar is one horizontal scroll row, not a wrap of three. Control height `44px`.
-- No horizontal page scroll. `scrollWidth` equals `clientWidth`.
+390: stack figure under the fence. Toolbar scrolls inside itself, does not wrap to three rows. No horizontal page scroll.
 
 ## Acceptance
 
-- Same yellow nav as `/`.
-- Edit a fence, see an SVG.
-- Theme switch changes the figure.
-- At `390` the toolbar scrolls inside itself. No beige. No blue.
+- Same yellow nav as `/`. Dark chrome. Paper figure.
+- Edit a fence, see an SVG. Theme switch changes the figure.
+- No beige. No blue. No white page.

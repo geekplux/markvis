@@ -1,41 +1,31 @@
-# DOCS — Field family
+# DOCS — same family as home
 
-Spec, Integrate, AI, Themes. Same site as `/`. Not a second theme. Not VitePress blue on a white bar under a yellow home.
-
-Measured from shipped `apps/web/.vitepress/theme/site.css` on `f47e651`: nav height `52px`, page `#FFFFFF`, accent `#2563EB`, links `13px/500` `#64748B`. Home nav is field `#FFDB2A`, height `72px`, radius `0`, no blue.
+Spec, Integrate, AI, Themes. Yellow nav. Dark article. Light footer. Not a white docs site under the home bar.
 
 ## Instruction — Coder
 
-One nav on every docs route. Do not restyle chart marks. Do not paint the doc body yellow.
-
-Shared chrome, locked:
+Do not restyle `/`. Do not restyle chart marks. Do not paint the article yellow.
 
 | role | value |
 | --- | --- |
 | nav field | `#FFDB2A` |
-| ink | `#080B08` |
+| body | `#0E1312` |
 | paper | `#EDEBE5` |
-| page | `#FFFFFF` |
-| rule | `rgba(8,11,8,0.28)` |
+| footer | `#F8F8F6` |
+| rule | `rgba(237,235,229,0.16)` |
 | radius | `0` |
-| shadow | none |
 | accent blue | none |
 
-1. Nav matches home. Height `72px`. Field behind the bar. Wordmark `markvis` `16px/400` ink, not uppercase. Links Docs, Examples, Play, AI: `11px` mono uppercase, tracking `.12em`, min-height `44px`. Playground action fill ink, text field, height `48px`.
-2. At `390`, links collapse to one menu trigger height `44px`. Same as home.
-3. Doc body stays `#FFFFFF`. Sidebar allowed. Sidebar bg `#FFFFFF`, width unchanged. Active item: ink, `1px` underline, no blue fill.
-4. Headings ink `#080B08`. Body `#080B08`. Quiet `#979D97`. Links ink, underline offset `3px`. No `#2563EB`.
-5. Code blocks: bg `#F4F4F5`, ink, radius `0`. Copy-paste blocks on Integrate stay four fences plus the Skill paragraph. Do not redesign the words.
-6. Focus: `2px` ink outline, offset `2px`.
+1. Nav matches home. Height `72px`. Field bar. Playground fill `#080B08`, text `#FFDB2A`, height `48px`.
+2. Article and sidebar background `#0E1312`. Type paper `#EDEBE5`. Quiet `#979D97`. Links paper, underline offset `3px`. No `#2563EB`.
+3. Sidebar active: paper, `1px` underline. No white sidebar. No yellow wash behind the article.
+4. Code blocks: `#0E130F`, paper type, radius `0`.
+5. Footer `#F8F8F6`, ink type, same four links as home. Not a white VitePress footer.
+6. Focus: `2px` paper outline, offset `2px`.
 
-Delete on docs routes:
-
-- White `52px` nav bar.
-- `#2563EB` links, buttons, focus.
-- `#F7F4EF`.
+390: menu trigger `44px`. No horizontal page scroll.
 
 ## Acceptance
 
-- `/spec`, `/integrate`, `/ai`, `/themes` share the yellow home nav.
-- The article is white. No yellow wash behind the sidebar.
-- No blue. Radius `0` on nav, chips, and code blocks.
+- `/spec`, `/integrate`, `/ai`, `/themes` share the home nav, the dark body, and the light footer.
+- No white page. No blue.
