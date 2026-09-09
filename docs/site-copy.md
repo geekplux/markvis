@@ -1,56 +1,51 @@
 # Site copy
 
-Source for the public homepage. English. Public voice only.
-Coder mounts onto `/` per `docs/design/HOME.md` (white product home — not beige wash).
+Source for `/`. English. Public voice only.
+Coder mounts onto `/` per `docs/design/HOME.md` at `f8603ce` (field `#FFDB2A`, ink panel `#080B08`).
+Not the white 1040px column. No competitor names. Do not lead with README authors.
 
-## 1. Hero
+## Nav
 
-markvis
+Wordmark: markvis
 
-Charts in Markdown. The fence is the data.
+Links: Docs · Examples · Play · AI
 
-Buttons: Playground · Examples
+Action: Playground → `/play`
 
-## 2. What it does
+## Panel
 
-- The fence (or GFM table) is the source — the rows stay in the file.
-- Same input yields the same SVG.
-- No plugin still shows the table, so readers never lose the numbers.
+Meta left: OPEN SOURCE
 
-## 3. Who it helps
+Meta right: v2
 
-**Any Markdown view** — preview or rendered page. The fence is the figure.
+Name: markvis.
 
-**AI replies** — a figure when the numbers need to be seen. Agents will call this more than people.
+Long line: Charts in Markdown for any preview, any agent reply.
 
-**Themes** — one fence fits different hosts.
+Filled: Get started → `/play`
 
-## 4. Proof
+Outline: Browse examples → `/examples`
 
-Three uncropped SVGs (folio). One quiet caption each — never duplicate the SVG title as a heading.
+Chips: npm · script · skill
+
+## Band
+
+Five columns. Title is locked. Line under each is this copy.
+
+1. library you can drop in — npm, a script tag, or a Skill. One name: markvis.
+2. Any Markdown view — preview or rendered page. The fence is the figure.
+3. same fence, same SVG — same text, same figure. No plugin, the table stays.
+4. AI replies — agents emit the fence. A figure, not a paragraph of numbers.
+5. Themes — one fence fits the host. folio is the default.
+
+## After the band
+
+Proof only, if kept. Folio, uncropped. One caption each. Not in the panel. No fence sample in the panel.
 
 1. Feb led Q3 — `examples/out/01-bar-basic.svg`
 2. Pro pulled ahead — `examples/out/02-line-multi.svg`
 3. Shares stay raw — `examples/out/05-pie-raw.svg`
 
-## 5. 30-second start
-
-1. Open [Playground](https://markvis.js.org/play) — paste a fence or pick an example.
-2. Or bake any Markdown file: `markvis bake README.md` (keeps the fence, inserts the image). Any viewer that shows images already works.
-
-## 6. Use it
-
-| Where | How |
-| --- | --- |
-| Any viewer that only shows images | `markvis bake` — fence stays, image inserted |
-| Any page that runs script | `markvis.min.js` (zero network) |
-| remark | `@markvis/remark` |
-| markdown-it | `@markvis/markdown-it` |
-
-## 7. Themes
-
-Four looks via a fence header (`folio` default): folio · highcharts · shadcn · docs — try them on [Examples](/examples).
-
-## 8. Footer
+## Footer
 
 MIT · [GitHub](https://github.com/geekplux/markvis) · 0.0.13 frozen under `legacy/` · site from branch `v2`
