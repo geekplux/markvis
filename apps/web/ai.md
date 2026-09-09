@@ -9,7 +9,7 @@ Agents emit a markvis fence (`chart` / `markvis` / `vis`), never a flowchart DSL
 Use when a Markdown preview, a rendered view, or an AI reply needs a figure from a table.
 
 Skill: https://github.com/geekplux/markvis/blob/v2/skills/markvis/SKILL.md  
-Brief: https://github.com/geekplux/markvis/blob/v2/llms.txt
+Brief: https://markvis.js.org/llms.txt
 
 ## Prefer
 

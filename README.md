@@ -8,6 +8,8 @@ Open-source library. Install with npm or a script tag. Any Markdown preview or r
 
 **Try:** [https://markvis.js.org/play](https://markvis.js.org/play) · [examples](https://markvis.js.org/examples.html)
 
+**Spec:** [https://markvis.js.org/llms.txt](https://markvis.js.org/llms.txt)
+
 ![February led Q3](./examples/out/01-bar-basic.svg)
 
 ![Pro pulled ahead](./examples/out/02-line-multi.svg)
