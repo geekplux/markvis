@@ -37,6 +37,7 @@
 .folio-docs,
 .folio-play {
   background: #0e1312;
+  overflow-x: hidden;
 }
 
 .folio-examples .VPContent,
@@ -147,11 +148,14 @@
   z-index: 40;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 768px) {
   .family-nav {
-    grid-template-columns: 1fr auto auto;
-    padding-inline: 16px;
-    height: 72px;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    overflow-x: hidden;
+  }
+
+  .family-nav .home-wordmark {
+    min-width: 0;
   }
 
   .family-nav .home-nav-menu {
@@ -173,6 +177,11 @@
 
   .family-nav .home-nav-toggle:checked ~ .home-nav-links {
     display: flex;
+  }
+
+  .family-nav .home-nav-action {
+    padding: 0 12px;
+    height: 48px;
   }
 }
 

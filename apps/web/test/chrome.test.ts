@@ -103,7 +103,9 @@ describe("site visual chrome", () => {
     expect(family).toMatch(/\.family-nav \.home-nav-action[\s\S]*color:\s*#ffdb2a/i);
     expect(family).toMatch(/#080b08/i);
     expect(family).not.toMatch(/#2563eb/i);
-    expect(family).toMatch(/max-width:\s*390px/);
+    expect(family).toMatch(/max-width:\s*768px/);
+    expect(family).toMatch(/minmax\(0,\s*1fr\)\s*auto auto/);
+    expect(family).not.toMatch(/max-width:\s*390px[\s\S]*home-nav-links/);
     expect(nav).toContain('href="/"');
     expect(nav).toContain("markvis");
     expect(nav).toContain('href="/spec"');
@@ -137,7 +139,9 @@ describe("site visual chrome", () => {
     expect(home).not.toMatch(/#2563eb/i);
     expect(home).toMatch(/\.home-panel/);
     expect(home).toMatch(/min-height:\s*720px/);
+    expect(home).toMatch(/@media\s*\(max-width:\s*768px\)/);
     expect(home).toMatch(/@media\s*\(max-width:\s*390px\)/);
+    expect(home).toMatch(/minmax\(0,\s*1fr\)\s*auto auto/);
     expect(home).toMatch(/\.home-btn[\s\S]*justify-content:\s*space-between/);
     expect(home).toMatch(/\.home-btn[\s\S]*padding:\s*12px 18px/);
     expect(home).toMatch(/\.home-band[\s\S]*gap:\s*1px/);

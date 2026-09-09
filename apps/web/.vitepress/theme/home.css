@@ -48,6 +48,7 @@
 .home-nav {
   display: grid;
   grid-template-columns: minmax(180px, 1fr) auto minmax(180px, 1fr);
+  overflow-x: hidden;
   align-items: center;
   height: 72px;
   min-height: 72px;
@@ -583,11 +584,14 @@
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 768px) {
   .home-nav {
-    grid-template-columns: 1fr auto auto;
-    padding-inline: 16px;
-    height: 72px;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    overflow-x: hidden;
+  }
+
+  .home-wordmark {
+    min-width: 0;
   }
 
   .home-nav-menu {
@@ -611,6 +615,13 @@
     display: flex;
   }
 
+  .home-nav-action {
+    padding: 0 12px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 390px) {
   .home-field {
     min-height: 720px;
     padding-inline: 16px;
