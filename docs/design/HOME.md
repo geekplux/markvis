@@ -92,3 +92,19 @@ Delete on `/` only:
 - Desktop actions are a row. At `390` they stack. No VitePress hero pills. No white column. No blue primary.
 - 390: no horizontal page scroll. Panel not cropped. Actions stacked, `48px`.
 - Charts below the band, if shown, stay folio and uncropped.
+
+## Pixel fail — live `/` at `f7ebeb0`
+
+Designer OK is withdrawn. The field and panel colors match. The pixels do not.
+
+Compared to the live Motion home, same day:
+
+1. Buttons center the label. Motion uses `justify-content: space-between`, padding `12px 18px`, a trailing `>` on the right. Both buttons. Height `48px`.
+2. Meta is `OPEN SOURCE` and `v2`. Motion is a slash pair on the left: `OPEN SOURCE / MIT LICENSE`. Right stays the version.
+3. Chips sit with no label line. Motion has an `11px` mono uppercase line with a leading `>`, then the chips. Do not copy the Framer sentence. Slot: `> available for` then the three chips.
+4. The band is five cards with `gap: 24px` and paper titles at `13px/600`. Motion's row is a hairline grid: `gap: 1px`, cell padding `22px`, title `11px` mono uppercase in field `#FFDB2A`, line under it muted. Background of the grid is the rule. Cells are `#0E130F`.
+5. Below that, Motion shows figures in cells. markvis shows a section titled `Proof`. Delete that heading. Three folio SVGs, uncropped, each in a paper cell `#EDEBE5` so the transparent chart reads. No second caption if the SVG title is visible. Radius `0`.
+
+Do not copy the Motion wordmark, MOTION+ label, or Framer line. Playground stays the right action. `npm` · `script` · `skill` stay the chips.
+
+@Coder: these five paints on `/` only. @Writer: the slash pair and the chip label line, if the strings above are not the ones you want. Layout is not waiting on new sentences if those slots are used as written.
