@@ -3,8 +3,8 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px;
-  color: #080b08;
-  background: #ffffff;
+  color: #edebe5;
+  background: #0e1312;
 }
 
 .gallery-title {
@@ -13,7 +13,7 @@
   font-weight: 700;
   letter-spacing: -0.04em;
   line-height: 1.05;
-  color: #080b08;
+  color: #edebe5;
 }
 
 .gallery-sub {
@@ -36,9 +36,9 @@
   min-height: 44px;
   padding: 0 14px;
   border-radius: 0;
-  border: 1px solid rgba(8, 11, 8, 0.28);
+  border: 1px solid rgba(237, 235, 229, 0.28);
   background: transparent;
-  color: #080b08;
+  color: #edebe5;
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 11px;
   font-weight: 560;
@@ -49,9 +49,9 @@
 }
 
 .gallery-chip.active {
-  background: #080b08;
-  border-color: #080b08;
-  color: #ffdb2a;
+  background: #ffdb2a;
+  border-color: #ffdb2a;
+  color: #080b08;
 }
 
 .gallery-chip:focus-visible,
@@ -59,7 +59,7 @@
 .gallery-close:focus-visible,
 .gallery-actions button:focus-visible,
 .gallery-play:focus-visible {
-  outline: 2px solid #080b08;
+  outline: 2px solid #edebe5;
   outline-offset: 2px;
 }
 
@@ -84,17 +84,17 @@
   width: 100%;
   text-align: left;
   padding: 12px;
-  background: #ffffff;
-  border: 1px solid rgba(8, 11, 8, 0.28);
+  background: #edebe5;
+  border: 1px solid rgba(237, 235, 229, 0.16);
   border-radius: 0;
   box-shadow: none;
   cursor: pointer;
-  color: inherit;
+  color: #080b08;
   box-sizing: border-box;
 }
 
 .gallery-card:hover {
-  border-color: #080b08;
+  border-color: #edebe5;
 }
 
 .gallery-thumb {
@@ -115,8 +115,8 @@
   position: relative;
   z-index: 2;
   min-width: 0;
-  background: #ffffff;
-  border: 1px solid rgba(8, 11, 8, 0.28);
+  background: #edebe5;
+  border: 1px solid rgba(237, 235, 229, 0.16);
   border-radius: 0;
   padding: 16px;
 }

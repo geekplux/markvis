@@ -1,14 +1,14 @@
 :root {
   color-scheme: light;
-  --bg: #ffffff;
-  --panel: #ffffff;
-  --ink: #080b08;
+  --bg: #0e1312;
+  --panel: #0e1312;
+  --ink: #edebe5;
   --muted: #979d97;
-  --line: rgba(8, 11, 8, 0.28);
+  --line: rgba(237, 235, 229, 0.16);
   --accent: #080b08;
   --error: #b91c1c;
-  --editor-bg: #ffffff;
-  --editor-ink: #080b08;
+  --editor-bg: #0e130f;
+  --editor-ink: #edebe5;
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
@@ -41,7 +41,7 @@ body {
   max-height: 48px;
   padding: 0 16px;
   border-bottom: 1px solid var(--line);
-  background: #ffffff;
+  background: #0e1312;
   overflow-x: auto;
   overflow-y: hidden;
   flex-shrink: 0;

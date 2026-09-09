@@ -4,6 +4,7 @@ import { h } from "vue";
 import Gallery from "../../components/Gallery.vue";
 import PlayEmbed from "../../components/PlayEmbed.vue";
 import SiteNav from "../../components/SiteNav.vue";
+import FamilyFoot from "../../components/FamilyFoot.vue";
 import "./site.css";
 import "./gallery.css";
 import "./home.css";
@@ -14,6 +15,7 @@ export default {
   Layout() {
     return h(DefaultTheme.Layout, null, {
       "layout-top": () => h(SiteNav),
+      "layout-bottom": () => h(FamilyFoot),
     });
   },
   enhanceApp({ app }) {

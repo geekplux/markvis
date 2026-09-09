@@ -6,7 +6,7 @@
   --family-field: #ffdb2a;
   --family-ink: #080b08;
   --family-paper: #edebe5;
-  --family-page: #ffffff;
+  --family-page: #0e1312;
   --family-muted: #979d97;
   --family-rule: rgba(8, 11, 8, 0.28);
   --family-chip: #0e130f;
@@ -33,37 +33,49 @@
   display: none !important;
 }
 
+.folio-examples,
+.folio-docs,
+.folio-play {
+  background: #0e1312;
+}
+
 .folio-examples .VPContent,
 .folio-play .VPContent,
 .folio-docs .VPContent {
   padding-top: 0 !important;
-  background: #ffffff;
+  background: #0e1312;
+}
+
+.folio-examples .VPFooter,
+.folio-docs .VPFooter,
+.folio-play .VPFooter {
+  display: none !important;
 }
 
 .folio-docs .VPSidebar,
 .folio-docs .VPLocalNav {
   display: flex !important;
-  background: #ffffff !important;
-  background-color: #ffffff !important;
+  background: #0e1312 !important;
+  background-color: #0e1312 !important;
   box-shadow: none !important;
   border-radius: 0;
 }
 
 .folio-docs .VPSidebarItem .item,
 .folio-docs .VPSidebarItem .text {
-  color: #080b08 !important;
+  color: #edebe5 !important;
   border-radius: 0;
   background: transparent !important;
 }
 
 .folio-docs .VPSidebarItem.is-active > .item .text,
 .folio-docs .VPSidebarItem.is-active > .item {
-  color: #080b08 !important;
+  color: #edebe5 !important;
   background: transparent !important;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
-  text-decoration-color: #080b08;
+  text-decoration-color: #edebe5;
 }
 
 .folio-docs .vp-doc h1,
@@ -73,8 +85,9 @@
 .folio-docs .vp-doc p,
 .folio-docs .vp-doc li,
 .folio-docs .vp-doc td,
-.folio-docs .vp-doc th {
-  color: #080b08;
+.folio-docs .vp-doc th,
+.folio-docs .vp-doc a {
+  color: #edebe5;
 }
 
 .folio-docs .vp-doc .VPDocFooter,
@@ -85,7 +98,7 @@
 }
 
 .folio-docs .vp-doc a {
-  color: #080b08;
+  color: #edebe5;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -93,21 +106,21 @@
 .folio-docs .vp-doc div[class*="language-"],
 .folio-docs .vp-doc .vp-code-group,
 .folio-docs .vp-doc pre {
-  background: #f4f4f5 !important;
+  background: #0e130f !important;
   border-radius: 0 !important;
   box-shadow: none !important;
 }
 
 .folio-docs .vp-doc div[class*="language-"] code,
 .folio-docs .vp-doc pre code {
-  color: #080b08;
+  color: #edebe5;
 }
 
 .folio-docs .vp-doc :focus-visible,
 .folio-examples :focus-visible,
 .folio-play :focus-visible,
 .family-nav :focus-visible {
-  outline: 2px solid #080b08;
+  outline: 2px solid #edebe5;
   outline-offset: 2px;
 }
 
@@ -161,4 +174,29 @@
   .family-nav .home-nav-toggle:checked ~ .home-nav-links {
     display: flex;
   }
+}
+
+.family-foot {
+  background: #f8f8f6;
+  padding: 32px clamp(24px, 5vw, 68px);
+  font-size: 13px;
+  color: #080b08;
+}
+
+.family-foot nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+}
+
+.family-foot a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #080b08;
+  text-decoration: none;
+}
+
+.family-foot p {
+  margin: 8px 0 0;
 }

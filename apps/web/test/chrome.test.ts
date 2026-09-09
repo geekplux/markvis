@@ -81,7 +81,7 @@ describe("site visual chrome", () => {
     expect(css).not.toMatch(/#f7f4ef/i);
     expect(css).not.toMatch(/#2563eb/i);
     expect(css).not.toMatch(/999px/);
-    expect(css).toMatch(/\.gallery-page[\s\S]*background:\s*#ffffff/);
+    expect(css).toMatch(/\.gallery-page[\s\S]*background:\s*#0e1312/);
     expect(css).toMatch(/\.gallery-page[\s\S]*padding:\s*24px/);
     expect(css).toMatch(/\.gallery-chip[\s\S]*height:\s*44px/);
     expect(css).toMatch(/\.gallery-chip[\s\S]*border-radius:\s*0/);
@@ -116,7 +116,7 @@ describe("site visual chrome", () => {
     expect(nav).toContain("Playground");
   });
 
-  it("docs chrome stays white; home.css locks field + ink panel", () => {
+  it("docs body is ink; home.css locks field + ink panel", () => {
     const site = read(".vitepress/theme/site.css");
     const home = read(".vitepress/theme/home.css");
     expect(site).not.toMatch(/#f7f4ef/i);
@@ -152,9 +152,10 @@ describe("site visual chrome", () => {
       /grid-template-columns:\s*minmax\(40%,\s*1fr\)\s+minmax\(40%,\s*1fr\)/,
     );
     expect(css).toMatch(/section\.preview[\s\S]*background:\s*#edebe5/);
+    expect(css).toMatch(/--bg:\s*#0e1312/);
     expect(css).not.toMatch(/section\.preview[\s\S]*background:\s*#f7f4ef/);
     expect(css).not.toMatch(/#2563eb/i);
-    expect(css).toMatch(/--editor-bg:\s*#ffffff/);
+    expect(css).toMatch(/--editor-bg:\s*#0e130f/);
     expect(css).not.toMatch(/--code-bg:\s*#171717/);
     expect(css).toMatch(/font-size:\s*11px/);
     expect(css).toMatch(/text-transform:\s*uppercase/);
