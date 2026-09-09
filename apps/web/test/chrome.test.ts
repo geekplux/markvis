@@ -106,6 +106,9 @@ describe("site visual chrome", () => {
     expect(nav).toContain("markvis");
     expect(nav).toContain('href="/spec"');
     expect(nav).toContain('href="/examples"');
+    expect(nav).toContain("folio-examples");
+    expect(nav).toContain("pageClass");
+    expect(nav).not.toContain("useRoute");
     expect(nav).toContain('href="/play"');
     expect(nav).toContain('href="/ai"');
     expect(nav).toContain("Playground");

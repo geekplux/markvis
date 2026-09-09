@@ -1,11 +1,20 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import { useRoute } from "vitepress";
+import { useData } from "vitepress";
 
-const route = useRoute();
+const { frontmatter, page } = useData();
+
+function routeKey(raw: string): string {
+  const path = raw.split("?")[0].split("#")[0].replace(/\.html$/, "").replace(/\/$/, "");
+  return path || "/";
+}
 
 const show = computed(() => {
-  const path = route.path.replace(/\/$/, "") || "/";
+  const cls = String(frontmatter.value.pageClass ?? "");
+  if (cls === "folio-examples" || cls === "folio-play" || cls === "folio-docs") {
+    return true;
+  }
+  const path = routeKey(String(page.value.relativePath ? "/" + page.value.relativePath.replace(/\.md$/, "") : ""));
   return (
     path === "/examples" ||
     path === "/spec" ||
