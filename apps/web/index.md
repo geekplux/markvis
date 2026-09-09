@@ -64,22 +64,80 @@ pageClass: folio-home-page
   </article>
 </section>
 
-<section class="home-proof" aria-label="Figures">
-<div class="home-figures">
-  <figure>
-    <img src="/home/01-bar-basic.svg" alt="Bar chart: Feb led Q3" />
-  </figure>
-  <figure>
-    <img src="/home/02-line-multi.svg" alt="Line chart: Pro pulled ahead" />
-  </figure>
-  <figure>
-    <img src="/home/05-pie-raw.svg" alt="Pie chart: Shares stay raw" />
-  </figure>
-</div>
+<section class="home-atlas" aria-label="Figures">
+  <p class="home-index">01</p>
+  <h2 class="home-section-title">Figures.</h2>
+  <p class="home-lead">Same text, same figure.</p>
+  <div class="home-figures">
+    <figure>
+      <span class="home-index">01</span>
+      <img src="/home/01-bar-basic.svg" alt="Bar chart: Feb led Q3" />
+    </figure>
+    <figure>
+      <span class="home-index">02</span>
+      <img src="/home/02-line-multi.svg" alt="Line chart: Pro pulled ahead" />
+    </figure>
+    <figure>
+      <span class="home-index">03</span>
+      <img src="/home/05-pie-raw.svg" alt="Pie chart: Shares stay raw" />
+    </figure>
+  </div>
+</section>
+
+<section class="home-strip" aria-label="Examples">
+  <div class="home-strip-copy">
+    <h2 class="home-section-title">Examples.</h2>
+    <p class="home-lead ink">preview or rendered page. The fence is the figure.</p>
+    <a class="home-textlink" href="/examples"><span>Browse examples</span><span aria-hidden="true">&gt;</span></a>
+  </div>
+  <div class="home-thumbs">
+    <figure><img src="/home/01-bar-basic.svg" alt="Bar chart: Feb led Q3" /></figure>
+    <figure><img src="/home/02-line-multi.svg" alt="Line chart: Pro pulled ahead" /></figure>
+    <figure><img src="/home/05-pie-raw.svg" alt="Pie chart: Shares stay raw" /></figure>
+    <figure><img src="/home/03-area-basic.svg" alt="Area chart" /></figure>
+  </div>
+</section>
+
+<section class="home-start" aria-label="Start">
+  <div class="home-start-copy">
+    <h2 class="home-section-title paper">Start.</h2>
+    <p class="home-lead muted">npm, a script tag, or a Skill. One name: markvis.</p>
+    <a class="home-btn filled" href="/play"><span>Get started</span><span aria-hidden="true">&gt;</span></a>
+  </div>
+  <div class="home-start-rows">
+    <div>
+      <p>npm</p>
+      <p>One name: markvis.</p>
+    </div>
+    <div>
+      <p>script</p>
+      <p>a script tag.</p>
+    </div>
+    <div>
+      <p>skill</p>
+      <p>a Skill.</p>
+    </div>
+  </div>
+</section>
+
+<section class="home-agent" aria-label="Agents">
+  <p class="home-index">02</p>
+  <h2 class="home-section-title">Agents.</h2>
+  <p class="home-lead">agents emit the fence. A figure, not a paragraph of numbers.</p>
+  <p class="home-agent-links">
+    <a href="/llms.txt">/llms.txt</a>
+    <a href="/ai">/ai</a>
+  </p>
 </section>
 
 <footer class="home-foot">
-MIT · <a href="https://github.com/geekplux/markvis">GitHub</a> · 0.0.13 frozen under <code>legacy/</code> · site from branch <code>v2</code>
+  <nav aria-label="Footer">
+    <a href="/spec">Docs</a>
+    <a href="/examples">Examples</a>
+    <a href="/play">Play</a>
+    <a href="https://github.com/geekplux/markvis">GitHub</a>
+  </nav>
+  <p>MIT · 0.0.13 under <code>legacy/</code></p>
 </footer>
 
 </div>
