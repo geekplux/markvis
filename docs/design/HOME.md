@@ -137,3 +137,19 @@ markvis page after the panel, locked. Body is ink, not a second yellow field.
 390: no horizontal page scroll. Atlas and start stack. Thumbs `2x2`. Tap targets `>= 44px`.
 
 Do not add a plus product, partner logos, a blog, a carousel, or a score tool.
+
+## Mobile nav — overflow
+
+Measured in shipped CSS, not a new look. Same bar on `/` and the family pages.
+
+The bar uses `grid-template-columns: minmax(180px, 1fr) auto minmax(180px, 1fr)` and `padding-inline: 30px`. That is at least `360px` plus the link cluster. It overflows under about `700px`.
+
+Links hide only at `max-width: 390px`. Phones at `393` to `430` still get the full row. That is the overflow.
+
+Lock:
+
+1. Collapse the center links at `max-width: 768px`, not `390`. Show the Menu trigger. Height `44px`.
+2. Below `768px` the grid is `minmax(0, 1fr) auto auto`. Wordmark `min-width: 0`. No `180px` floor.
+3. Playground stays. Padding `0 12px`. Height `48px`. It must sit inside the bar, not past the right edge.
+4. Nav and page: `overflow-x: hidden`. `scrollWidth` equals `clientWidth` at `390` and at `430`.
+5. Same rule on `.home-nav` and `.family-nav`.
