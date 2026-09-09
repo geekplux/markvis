@@ -1,39 +1,44 @@
-# PLAY — product surface
+# PLAY — Field tool
 
-Tool someone leaves open. Not a debug bar. Charts stay folio (Ledger) by default; do not restyle chart marks for marketing.
+Same nav and type as `/`. Layout is an editor, not a marketing panel. The figure must render. A pretty shell that does not draw is a fail.
 
-## Intent
+Charts stay folio until the theme control rewrites the fence. Do not restyle marks for the site.
 
-Shares docs chrome (white), not black slab vs beige. Structure/restraint only (vite.dev / bun.sh / astro.build).
+Measured faults still in the product path: nav `52px` white, accent `#2563EB`, figure pane was `#F7F4EF`, toolbar controls under `44px`. Those are the miss. Do not bring beige back.
 
-## Delete
+## Instruction — Coder
 
-- Preview pane forced `#F7F4EF` paper
-- Toolbar white slab fighting beige VP
-- 25px control heights
+Keep the real playground. Fence left, figure right. Theme switch rewrites the fence header and re-renders. Do not touch `/` paint.
 
-## Live faults
+Chrome, locked to home:
 
-Measured 2026-09-06 check:
+| role | value |
+| --- | --- |
+| nav field | `#FFDB2A` |
+| ink | `#080B08` |
+| paper | `#EDEBE5` |
+| page | `#FFFFFF` |
+| rule | `rgba(8,11,8,0.28)` |
+| radius | `0` |
+| shadow | none |
+| accent blue | none |
 
-1. Toolbar desktop 1280×46; mobile 375×133 wraps 3 rows
-2. Controls: select 188×19; buttons ~25px high — fail 44px tap
-3. Editor `#171717` vs preview `#F7F4EF` — random black slab vs beige
-4. Panes 640/640 desktop; mobile single column 375
-5. No theme switcher yet (C6)
-6. Outer VP nav 52px then embed
-7. Mobile source internal overflow OK; outer no horiz scroll
+1. Same nav as home. Height `72px`. Field bar. Playground action is the current page: fill ink, text field. Do not also show a second Play link as active blue.
+2. Body under the nav is `#FFFFFF`. Two panes, `1px` rule between them. Left fence, right figure. Each pane at least `40%` at `>=768px`.
+3. Toolbar is one row, height `48px`, padding-inline `16px`, bg `#FFFFFF`, border-bottom the rule. Controls min-height `44px`, radius `0`, `11px` mono uppercase. Theme, example, Copy fence, Copy SVG, Open in examples. Idle: transparent, `1px` rule. One primary if needed: fill `#FFDB2A`, text ink. No `#2563EB`.
+4. Editor surface `#FFFFFF`. Fence text `13px` mono ink. Do not paint the whole pane `#080B08`.
+5. Figure pane `#EDEBE5` so a transparent SVG reads. SVG `width:100%`, `height:auto`, uncropped.
+6. Theme control sets `folio` | `highcharts` | `shadcn` | `docs` and re-renders. If it does not draw, the chrome is a fail.
 
-## Target
+390:
 
-- **Chrome:** page/nav white (`#fff` / VP default)
-- **Layout:** left editor ≥40%, right figure ≥40%, 1px `#E4E4E7` divider
-- **Editor bg:** `#FAFAFA` or `#FFFFFF` with zinc border — NOT `#171717` full pane (code can keep dark syntax theme inside editor only if using a code editor widget; otherwise light fence textarea 14px mono)
-- **Figure pane bg:** `#FFFFFF`; SVG transparent
-- **Toolbar:** ONE horizontal scroll row OR compact menu; height 48; controls min-height 44; gap 8; theme select + example select + Copy fence + Copy SVG + Open gallery
-- **Theme control** rewrites fence theme: `folio` | `highcharts` | `shadcn` | `docs` and re-renders
-- **390:** stack figure under editor OR tabs; toolbar scroll-x; no wrap mess
+- Stack figure under the fence.
+- Toolbar is one horizontal scroll row, not a wrap of three. Control height `44px`.
+- No horizontal page scroll. `scrollWidth` equals `clientWidth`.
 
 ## Acceptance
 
-Theme switch works; 390 toolbar not 3-row wrap; no beige/black clash.
+- Same yellow nav as `/`.
+- Edit a fence, see an SVG.
+- Theme switch changes the figure.
+- At `390` the toolbar scrolls inside itself. No beige. No blue.
