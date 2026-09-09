@@ -2,24 +2,26 @@
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 32px 24px 64px;
-  color: #171717;
+  padding: 24px;
+  color: #080b08;
   background: #ffffff;
 }
 
 .gallery-title {
   margin: 0;
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 1.2;
-  color: #171717;
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: #080b08;
 }
 
 .gallery-sub {
   margin: 8px 0 20px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
-  color: #737373;
+  color: #979d97;
+  max-width: 42ch;
 }
 
 .gallery-filters {
@@ -30,23 +32,26 @@
 }
 
 .gallery-chip {
-  height: 40px;
-  min-height: 36px;
+  height: 44px;
+  min-height: 44px;
   padding: 0 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(23, 23, 23, 0.12);
+  border-radius: 0;
+  border: 1px solid rgba(8, 11, 8, 0.28);
   background: transparent;
-  color: #737373;
-  font-size: 12px;
-  font-weight: 500;
+  color: #080b08;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11px;
+  font-weight: 560;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   cursor: pointer;
   box-sizing: border-box;
 }
 
 .gallery-chip.active {
-  background: #171717;
-  border-color: #171717;
-  color: #fafaf9;
+  background: #080b08;
+  border-color: #080b08;
+  color: #ffdb2a;
 }
 
 .gallery-chip:focus-visible,
@@ -54,7 +59,7 @@
 .gallery-close:focus-visible,
 .gallery-actions button:focus-visible,
 .gallery-play:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid #080b08;
   outline-offset: 2px;
 }
 
@@ -70,7 +75,7 @@
 
 .gallery-grid {
   display: grid;
-  gap: 20px;
+  gap: 16px;
   grid-template-columns: 1fr;
 }
 
@@ -78,10 +83,10 @@
   display: block;
   width: 100%;
   text-align: left;
-  padding: 12px 12px 10px;
+  padding: 12px;
   background: #ffffff;
-  border: 1px solid #e4e4e7;
-  border-radius: 8px;
+  border: 1px solid rgba(8, 11, 8, 0.28);
+  border-radius: 0;
   box-shadow: none;
   cursor: pointer;
   color: inherit;
@@ -89,7 +94,7 @@
 }
 
 .gallery-card:hover {
-  border-color: rgba(23, 23, 23, 0.28);
+  border-color: #080b08;
 }
 
 .gallery-thumb {
@@ -111,8 +116,8 @@
   z-index: 2;
   min-width: 0;
   background: #ffffff;
-  border: 1px solid #e4e4e7;
-  border-radius: 8px;
+  border: 1px solid rgba(8, 11, 8, 0.28);
+  border-radius: 0;
   padding: 16px;
 }
 
@@ -188,15 +193,9 @@
   margin-bottom: 8px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 900px) {
-  .gallery-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -206,14 +205,12 @@
   }
 }
 
-@media (max-width: 899px) {
+@media (max-width: 390px) {
   .gallery-layout.open {
     grid-template-columns: 1fr;
   }
-}
 
-@media (max-width: 768px) {
   .gallery-page {
-    padding: 24px 16px 48px;
+    padding: 24px;
   }
 }

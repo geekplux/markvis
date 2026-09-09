@@ -1,3 +1,9 @@
+---
+title: AI
+pageClass: folio-docs
+sidebar: true
+---
+
 # AI
 
 An agent finds the spec, emits a fence, and gets a figure. No human fixes the text. Not a PNG.

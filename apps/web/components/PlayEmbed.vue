@@ -22,7 +22,7 @@ onMounted(() => {
 <style scoped>
 .play-embed {
   position: fixed;
-  top: var(--vp-nav-height, 52px);
+  top: 72px;
   left: 0;
   right: 0;
   bottom: 0;

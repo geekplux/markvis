@@ -1,0 +1,155 @@
+/* Family routes: same nav as home. Body stays white. Do not paint `/`. */
+
+.folio-examples,
+.folio-play,
+.folio-docs {
+  --family-field: #ffdb2a;
+  --family-ink: #080b08;
+  --family-paper: #edebe5;
+  --family-page: #ffffff;
+  --family-muted: #979d97;
+  --family-rule: rgba(8, 11, 8, 0.28);
+  --family-chip: #0e130f;
+  --family-fence: #f4f4f5;
+  --family-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --vp-nav-height: 72px;
+  --vp-c-brand-1: #080b08;
+  --vp-c-brand-2: #080b08;
+  --vp-c-brand-3: #080b08;
+  --folio-accent: #080b08;
+  --folio-ink: #080b08;
+  --folio-quiet: #979d97;
+}
+
+.folio-examples .VPNav,
+.folio-play .VPNav,
+.folio-docs .VPNav,
+.folio-examples .VPNavBar,
+.folio-play .VPNavBar,
+.folio-docs .VPNavBar,
+.folio-examples .VPNavScreen,
+.folio-play .VPNavScreen,
+.folio-docs .VPNavScreen {
+  display: none !important;
+}
+
+.folio-examples .VPContent,
+.folio-play .VPContent,
+.folio-docs .VPContent {
+  padding-top: 0 !important;
+  background: #ffffff;
+}
+
+.folio-docs .VPSidebar,
+.folio-docs .VPLocalNav {
+  display: flex !important;
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  box-shadow: none !important;
+  border-radius: 0;
+}
+
+.folio-docs .VPSidebarItem .item,
+.folio-docs .VPSidebarItem .text {
+  color: #080b08 !important;
+  border-radius: 0;
+  background: transparent !important;
+}
+
+.folio-docs .VPSidebarItem.is-active > .item .text,
+.folio-docs .VPSidebarItem.is-active > .item {
+  color: #080b08 !important;
+  background: transparent !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  text-decoration-color: #080b08;
+}
+
+.folio-docs .vp-doc h1,
+.folio-docs .vp-doc h2,
+.folio-docs .vp-doc h3,
+.folio-docs .vp-doc h4,
+.folio-docs .vp-doc p,
+.folio-docs .vp-doc li,
+.folio-docs .vp-doc td,
+.folio-docs .vp-doc th {
+  color: #080b08;
+}
+
+.folio-docs .vp-doc .VPDocFooter,
+.folio-docs .vp-doc .prev-next,
+.folio-docs .vp-doc p.muted,
+.folio-docs .vp-doc .custom-block {
+  color: #979d97;
+}
+
+.folio-docs .vp-doc a {
+  color: #080b08;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.folio-docs .vp-doc div[class*="language-"],
+.folio-docs .vp-doc .vp-code-group,
+.folio-docs .vp-doc pre {
+  background: #f4f4f5 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.folio-docs .vp-doc div[class*="language-"] code,
+.folio-docs .vp-doc pre code {
+  color: #080b08;
+}
+
+.folio-docs .vp-doc :focus-visible,
+.folio-examples :focus-visible,
+.folio-play :focus-visible,
+.family-nav :focus-visible {
+  outline: 2px solid #080b08;
+  outline-offset: 2px;
+}
+
+.family-nav {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) auto minmax(180px, 1fr);
+  align-items: center;
+  height: 72px;
+  min-height: 72px;
+  padding-inline: 30px;
+  background: #ffdb2a;
+  box-shadow: none;
+  border-radius: 0;
+  position: relative;
+  z-index: 40;
+}
+
+@media (max-width: 390px) {
+  .family-nav {
+    grid-template-columns: 1fr auto auto;
+    padding-inline: 16px;
+    height: 72px;
+  }
+
+  .family-nav .home-nav-menu {
+    display: inline-flex;
+  }
+
+  .family-nav .home-nav-links {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    background: #ffdb2a;
+    padding: 8px 16px 16px;
+    z-index: 41;
+  }
+
+  .family-nav .home-nav-toggle:checked ~ .home-nav-links {
+    display: flex;
+  }
+}

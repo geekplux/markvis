@@ -5,6 +5,15 @@ import { defineConfig } from "vitepress";
 const root = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(root, "../../..");
 
+function docsSidebar() {
+  return [
+    { text: "Spec", link: "/spec" },
+    { text: "Integrate", link: "/integrate" },
+    { text: "AI", link: "/ai" },
+    { text: "Themes", link: "/themes" },
+  ];
+}
+
 export default defineConfig({
   title: "markvis",
   description: "Quantitative charts in Markdown — the fence is the data.",
@@ -26,7 +35,12 @@ export default defineConfig({
       { text: "AI", link: "/ai" },
       { text: "GitHub", link: "https://github.com/geekplux/markvis" },
     ],
-    sidebar: false,
+    sidebar: {
+      "/spec": docsSidebar(),
+      "/integrate": docsSidebar(),
+      "/ai": docsSidebar(),
+      "/themes": docsSidebar(),
+    },
     footer: {
       message: "0.0.13 lives under legacy/",
       copyright: "MIT · github.com/geekplux/markvis",

@@ -1,5 +1,7 @@
 ---
 title: Spec
+pageClass: folio-docs
+sidebar: true
 ---
 
 Language: repo root SPEC.md on branch v2. This is the file an agent fetches to emit a valid fence.

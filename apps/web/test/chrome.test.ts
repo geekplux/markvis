@@ -65,6 +65,8 @@ describe("site visual chrome", () => {
 
   it("gallery mobile grid + white chrome per EXAMPLES.md", () => {
     const css = read(".vitepress/theme/gallery.css");
+    const family = read(".vitepress/theme/family.css");
+    const nav = read("components/SiteNav.vue");
     expect(css).not.toMatch(/max-height:\s*140px/);
     expect(css).toMatch(/overflow:\s*visible/);
     expect(css).toMatch(/max-height:\s*none/);
@@ -76,25 +78,37 @@ describe("site visual chrome", () => {
     expect(css).toMatch(/\.gallery-full svg[\s\S]*width:\s*100%/);
     expect(css).toMatch(/\.gallery-full svg[\s\S]*height:\s*auto/);
     expect(css).toMatch(/\.gallery-full svg[\s\S]*max-width:\s*100%/);
-    // U3: drop beige wash — chrome only
     expect(css).not.toMatch(/#f7f4ef/i);
+    expect(css).not.toMatch(/#2563eb/i);
+    expect(css).not.toMatch(/999px/);
     expect(css).toMatch(/\.gallery-page[\s\S]*background:\s*#ffffff/);
-    // chips ≥36–44
-    expect(css).toMatch(/\.gallery-chip[\s\S]*height:\s*40px/);
-    expect(css).toMatch(/\.gallery-chip[\s\S]*min-height:\s*36px/);
-    // grid breakpoints: 1 / 2 / 3 / 4
+    expect(css).toMatch(/\.gallery-page[\s\S]*padding:\s*24px/);
+    expect(css).toMatch(/\.gallery-chip[\s\S]*height:\s*44px/);
+    expect(css).toMatch(/\.gallery-chip[\s\S]*border-radius:\s*0/);
+    expect(css).toMatch(/\.gallery-chip[\s\S]*font-size:\s*11px/);
+    expect(css).toMatch(/\.gallery-chip[\s\S]*text-transform:\s*uppercase/);
     expect(css).toMatch(
       /\.gallery-grid[\s\S]*grid-template-columns:\s*1fr/,
     );
+    expect(css).not.toMatch(/repeat\(3/);
     expect(css).toMatch(
-      /@media\s*\(min-width:\s*600px\)[\s\S]*grid-template-columns:\s*repeat\(2/,
-    );
-    expect(css).toMatch(
-      /@media\s*\(min-width:\s*900px\)[\s\S]*grid-template-columns:\s*repeat\(3/,
+      /@media\s*\(min-width:\s*768px\)[\s\S]*grid-template-columns:\s*repeat\(2/,
     );
     expect(css).toMatch(
       /@media\s*\(min-width:\s*1200px\)[\s\S]*grid-template-columns:\s*repeat\(4/,
     );
+    expect(family).toMatch(/height:\s*72px/);
+    expect(family).toMatch(/#ffdb2a/i);
+    expect(family).toMatch(/#080b08/i);
+    expect(family).not.toMatch(/#2563eb/i);
+    expect(family).toMatch(/max-width:\s*390px/);
+    expect(nav).toContain('href="/"');
+    expect(nav).toContain("markvis");
+    expect(nav).toContain('href="/spec"');
+    expect(nav).toContain('href="/examples"');
+    expect(nav).toContain('href="/play"');
+    expect(nav).toContain('href="/ai"');
+    expect(nav).toContain("Playground");
   });
 
   it("docs chrome stays white; home.css locks field + ink panel", () => {
@@ -132,10 +146,14 @@ describe("site visual chrome", () => {
     expect(css).toMatch(
       /grid-template-columns:\s*minmax\(40%,\s*1fr\)\s+minmax\(40%,\s*1fr\)/,
     );
-    expect(css).toMatch(/section\.preview[\s\S]*background:\s*#ffffff/);
+    expect(css).toMatch(/section\.preview[\s\S]*background:\s*#edebe5/);
     expect(css).not.toMatch(/section\.preview[\s\S]*background:\s*#f7f4ef/);
-    expect(css).toMatch(/--editor-bg:\s*#fafafa/);
+    expect(css).not.toMatch(/#2563eb/i);
+    expect(css).toMatch(/--editor-bg:\s*#ffffff/);
     expect(css).not.toMatch(/--code-bg:\s*#171717/);
+    expect(css).toMatch(/font-size:\s*11px/);
+    expect(css).toMatch(/text-transform:\s*uppercase/);
+    expect(css).toMatch(/#svg-host svg[\s\S]*width:\s*100%/);
     expect(css).toMatch(/height:\s*48px/);
     expect(css).toMatch(/min-height:\s*44px/);
     expect(css).toMatch(/flex-wrap:\s*nowrap/);

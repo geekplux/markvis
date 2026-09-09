@@ -2,13 +2,14 @@
   color-scheme: light;
   --bg: #ffffff;
   --panel: #ffffff;
-  --ink: #171717;
-  --muted: #737373;
-  --line: #e4e4e7;
-  --accent: #2563eb;
+  --ink: #080b08;
+  --muted: #979d97;
+  --line: rgba(8, 11, 8, 0.28);
+  --accent: #080b08;
   --error: #b91c1c;
-  --editor-bg: #fafafa;
-  --editor-ink: #171717;
+  --editor-bg: #ffffff;
+  --editor-ink: #080b08;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
 * {
@@ -38,25 +39,32 @@ body {
   height: 48px;
   min-height: 48px;
   max-height: 48px;
-  padding: 0 12px;
+  padding: 0 16px;
   border-bottom: 1px solid var(--line);
-  background: var(--panel);
+  background: #ffffff;
   overflow-x: auto;
   overflow-y: hidden;
   flex-shrink: 0;
 }
 
 .toolbar h1 {
-  font-size: 15px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 560;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   margin: 0;
-  font-weight: 600;
   white-space: nowrap;
   flex-shrink: 0;
 }
 
 .toolbar label {
-  font-size: 13px;
-  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 560;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
   display: flex;
   gap: 8px;
   align-items: center;
@@ -67,12 +75,16 @@ body {
 .toolbar select,
 .toolbar button,
 .toolbar a.gallery-link {
-  font: inherit;
-  font-size: 13px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 560;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   min-height: 44px;
+  height: 44px;
   padding: 0 12px;
   border: 1px solid var(--line);
-  background: var(--panel);
+  background: transparent;
   border-radius: 0;
   cursor: pointer;
   color: var(--ink);
@@ -150,12 +162,12 @@ section.source label {
   resize: none;
   background: transparent;
   color: inherit;
-  font: 14px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font: 13px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
 section.preview {
   padding: 16px;
-  background: #ffffff;
+  background: #edebe5;
 }
 
 section.preview h2 {
@@ -174,6 +186,7 @@ section.preview h2 {
 }
 
 #svg-host svg {
+  width: 100%;
   max-width: 100%;
   height: auto;
   display: block;
@@ -215,5 +228,16 @@ td {
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 390px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
   }
 }

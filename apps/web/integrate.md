@@ -1,5 +1,7 @@
 ---
 title: Integrate
+pageClass: folio-docs
+sidebar: true
 ---
 
 Put a figure in any Markdown preview or rendered view. Bake an SVG so any viewer shows it, or drop in a one-file script where the host already runs JavaScript. No plugin still shows the table.
