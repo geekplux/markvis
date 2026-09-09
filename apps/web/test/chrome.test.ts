@@ -13,27 +13,37 @@ function read(rel: string): string {
 describe("site visual chrome", () => {
   it("home mounts site-copy sections on folio page layout", () => {
     const home = read("index.md");
+    const css = read(".vitepress/theme/home.css");
+    const theme = read(".vitepress/theme/index.ts");
     expect(home).toMatch(/layout:\s*page/);
     expect(home).not.toMatch(/layout:\s*home/);
-    expect(home).toContain("Charts in Markdown. The fence is the data.");
-    expect(home).toContain("folio-what");
-    expect(home).toContain("folio-who");
-    expect(home).toContain("folio-proof");
-    expect(home).toContain('class="folio-figures"');
-    expect(home).toContain("folio-start");
-    expect(home).toContain("folio-use");
-    expect(home).toContain("folio-themes");
-    expect(home).toContain("folio-foot");
+    expect(home).toMatch(/pageClass:\s*folio-home-page/);
+    expect(home).toContain("markvis.");
+    expect(home).toContain(
+      "Charts in Markdown for any preview, any agent reply.",
+    );
+    expect(home).toContain("Get started");
+    expect(home).toContain("Browse examples");
+    expect(home).toContain("npm");
+    expect(home).toContain("script");
+    expect(home).toContain("skill");
+    expect(home).toContain("library you can drop in");
+    expect(home).toContain("Any Markdown view");
+    expect(home).toContain("same fence, same SVG");
+    expect(home).toContain("AI replies");
+    expect(home).toContain("Themes");
+    expect(home).not.toContain("README / post authors");
+    expect(home).not.toContain("folio-what");
+    expect(home).not.toContain("folio-who");
     expect(home).toContain("<figcaption>");
     expect(home).toContain("Feb led Q3");
     expect(home).toContain("Pro pulled ahead");
     expect(home).toContain("Shares stay raw");
-    expect(home).toContain("Any Markdown view");
-    expect(home).toContain("AI replies");
-    expect(home).toContain("Themes");
-    expect(home).not.toContain("README / post authors");
-    expect(home).toContain("markvis bake");
-    expect(home).toContain("@markvis/remark");
+    expect(home).not.toMatch(/```chart/);
+    expect(home).not.toMatch(/month,revenue/);
+    expect(css).toMatch(/#ffdb2a/i);
+    expect(css).toMatch(/#080b08/i);
+    expect(theme).toContain("./home.css");
     expect(home).not.toMatch(/theme:/);
   });
 
@@ -84,26 +94,28 @@ describe("site visual chrome", () => {
     );
   });
 
-  it("site chrome is white product surface per HOME.md", () => {
-    const css = read(".vitepress/theme/site.css");
-    expect(css).not.toMatch(/#f7f4ef/i);
-    expect(css).not.toMatch(/#efebe4/i);
-    expect(css).toMatch(/--vp-c-bg:\s*#ffffff/);
-    expect(css).toMatch(/background:\s*#ffffff/);
-    expect(css).toContain("#2563eb");
-    expect(css).toContain("#171717");
-    expect(css).toContain("#64748b");
-    expect(css).toContain("#f4f4f5");
-    expect(css).toMatch(/max-width:\s*1040px/);
-    expect(css).toMatch(/height:\s*44px/);
-    expect(css).toMatch(/height:\s*52px/);
-    expect(css).toMatch(/font-size:\s*15px/);
-    expect(css).not.toMatch(/theme:/);
-    // U3 mobile: stack or 2-up hero buttons; tap ≥44
-    expect(css).toMatch(/@media\s*\(max-width:\s*768px\)/);
-    expect(css).toMatch(/@media\s*\(max-width:\s*390px\)/);
-    expect(css).toMatch(/\.folio-btn[\s\S]*height:\s*44px/);
-    expect(css).toMatch(/max-width:\s*1200px/);
+  it("docs chrome stays white; home.css locks field + ink panel", () => {
+    const site = read(".vitepress/theme/site.css");
+    const home = read(".vitepress/theme/home.css");
+    expect(site).not.toMatch(/#f7f4ef/i);
+    expect(site).not.toMatch(/#efebe4/i);
+    expect(site).toMatch(/--vp-c-bg:\s*#ffffff/);
+    expect(site).toMatch(/background:\s*#ffffff/);
+    expect(site).toContain("#171717");
+    expect(site).toContain("#64748b");
+    expect(site).toContain("#f4f4f5");
+    expect(site).toMatch(/max-width:\s*1040px/);
+    expect(site).toMatch(/height:\s*52px/);
+    expect(site).toMatch(/font-size:\s*15px/);
+    expect(site).not.toMatch(/theme:/);
+    expect(site).toMatch(/max-width:\s*1200px/);
+    expect(home).toMatch(/#ffdb2a/i);
+    expect(home).toMatch(/#080b08/i);
+    expect(home).not.toMatch(/#f7f4ef/i);
+    expect(home).not.toMatch(/#2563eb/i);
+    expect(home).toMatch(/\.home-panel/);
+    expect(home).toMatch(/min-height:\s*720px/);
+    expect(home).toMatch(/@media\s*\(max-width:\s*390px\)/);
   });
 
   it("playground keeps two panes with PLAY chrome + mobile toolbar", () => {

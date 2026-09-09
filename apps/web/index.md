@@ -6,47 +6,66 @@ title: markvis
 pageClass: folio-home-page
 ---
 
-<div class="folio-home">
+<div class="home-root">
 
-<section class="folio-hero">
-<p class="folio-mark">markvis</p>
-<p class="folio-lede">Charts in Markdown. The fence is the data.</p>
-<p class="folio-actions">
-  <a class="folio-btn primary" href="/play">Playground</a>
-  <a class="folio-btn secondary" href="/examples">Examples</a>
-</p>
+<nav class="home-nav" aria-label="Home">
+  <a class="home-wordmark" href="/">markvis</a>
+  <input type="checkbox" id="home-nav-toggle" class="home-nav-toggle" />
+  <label class="home-nav-menu" for="home-nav-toggle">Menu</label>
+  <div class="home-nav-links">
+    <a href="/spec">Docs</a>
+    <a href="/examples">Examples</a>
+    <a href="/play">Play</a>
+    <a href="/ai">AI</a>
+  </div>
+  <a class="home-nav-action" href="/play">Playground</a>
+</nav>
+
+<section class="home-field">
+  <div class="home-panel">
+    <p class="home-meta"><span>OPEN SOURCE</span><span>v2</span></p>
+    <h1 class="home-headline">
+      <span class="home-name">markvis.</span>
+      <span class="home-line">Charts in Markdown for any preview, any agent reply.</span>
+    </h1>
+    <p class="home-actions">
+      <a class="home-btn filled" href="/play">Get started</a>
+      <a class="home-btn outline" href="/examples">Browse examples</a>
+    </p>
+    <p class="home-chips">
+      <span class="home-chip">npm</span>
+      <span class="home-chip">script</span>
+      <span class="home-chip">skill</span>
+    </p>
+  </div>
 </section>
 
-<section class="folio-section folio-what" aria-labelledby="folio-what-h">
-<h2 id="folio-what-h" class="folio-h2">What it does</h2>
-<ul class="folio-bullets">
-  <li>The fence (or GFM table) is the source — the rows stay in the file.</li>
-  <li>Same input yields the same SVG.</li>
-  <li>No plugin still shows the table, so readers never lose the numbers.</li>
-</ul>
+<section class="home-band" aria-label="What markvis is">
+  <article>
+    <h2>library you can drop in</h2>
+    <p>npm, a script tag, or a Skill. One name: markvis.</p>
+  </article>
+  <article>
+    <h2>Any Markdown view</h2>
+    <p>preview or rendered page. The fence is the figure.</p>
+  </article>
+  <article>
+    <h2>same fence, same SVG</h2>
+    <p>same text, same figure. No plugin, the table stays.</p>
+  </article>
+  <article>
+    <h2>AI replies</h2>
+    <p>agents emit the fence. A figure, not a paragraph of numbers.</p>
+  </article>
+  <article>
+    <h2>Themes</h2>
+    <p>one fence fits the host. folio is the default.</p>
+  </article>
 </section>
 
-<section class="folio-section folio-who" aria-labelledby="folio-who-h">
-<h2 id="folio-who-h" class="folio-h2">Who it helps</h2>
-<div class="folio-cards">
-  <article class="folio-card">
-    <h3 class="folio-card-title">Any Markdown view</h3>
-    <p class="folio-card-body">preview or rendered page. The fence is the figure.</p>
-  </article>
-  <article class="folio-card">
-    <h3 class="folio-card-title">AI replies</h3>
-    <p class="folio-card-body">a figure when the numbers need to be seen. Agents will call this more than people.</p>
-  </article>
-  <article class="folio-card">
-    <h3 class="folio-card-title">Themes</h3>
-    <p class="folio-card-body">one fence fits different hosts.</p>
-  </article>
-</div>
-</section>
-
-<section class="folio-section folio-proof" aria-labelledby="folio-proof-h">
-<h2 id="folio-proof-h" class="folio-h2">Proof</h2>
-<div class="folio-figures">
+<section class="home-proof" aria-labelledby="home-proof-h">
+<h2 id="home-proof-h" class="home-proof-h">Proof</h2>
+<div class="home-figures">
   <figure>
     <img src="/home/01-bar-basic.svg" alt="Bar chart: Feb led Q3" />
     <figcaption>Feb led Q3</figcaption>
@@ -62,47 +81,7 @@ pageClass: folio-home-page
 </div>
 </section>
 
-<section class="folio-section folio-start" aria-labelledby="folio-start-h">
-<h2 id="folio-start-h" class="folio-h2">30-second start</h2>
-<ol class="folio-steps">
-  <li>Open <a href="/play">Playground</a> — paste a fence or pick an example.</li>
-  <li>Or bake any Markdown file: <code>markvis bake README.md</code> (keeps the fence, inserts the image).</li>
-</ol>
-
-```chart
-markvis: 2
-type: bar
-title: Feb led Q3 at 180
-unit: USD k
-x: month
-y: revenue
-
-month,revenue
-Jan,120
-Feb,180
-Mar,150
-```
-
-</section>
-
-<section class="folio-section folio-use" aria-labelledby="folio-use-h">
-<h2 id="folio-use-h" class="folio-h2">Use it</h2>
-
-| Where | How |
-| --- | --- |
-| Any viewer that only shows images | `markvis bake` — fence stays, image inserted |
-| Any page that runs script | `markvis.min.js` (zero network) |
-| remark | `@markvis/remark` |
-| markdown-it | `@markvis/markdown-it` |
-
-</section>
-
-<section class="folio-section folio-themes" aria-labelledby="folio-themes-h">
-<h2 id="folio-themes-h" class="folio-h2">Themes</h2>
-<p class="folio-themes-line">Four looks via a fence header (<code>folio</code> default): folio · highcharts · shadcn · docs — try them on <a href="/examples">Examples</a>.</p>
-</section>
-
-<footer class="folio-foot">
+<footer class="home-foot">
 MIT · <a href="https://github.com/geekplux/markvis">GitHub</a> · 0.0.13 frozen under <code>legacy/</code> · site from branch <code>v2</code>
 </footer>
 
