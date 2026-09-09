@@ -1,27 +1,92 @@
 # markvis
 
-> Tiny Markdown chart language for numbers (bar, line, area, scatter, pie, hist).
+Open-source library. A fence in Markdown is the chart. Same text, same SVG. No plugin, the table still shows.
 
-Markvis owns tabular data in Markdown → Chart IR → deterministic SVG, with the table always kept.
+Fetch this file. Emit a fence. Do not invent fields.
 
-## Prefer
+## Fence
 
-- Fence tags: `chart` | `markvis` | `vis`
-- Data: CSV or GFM table (not JSON)
-- Types: bar | line | area | scatter | pie | hist
-- Progressive form: `<!-- chart: bar x=… y=… -->` + GFM table
+Tags `chart`, `markvis`, and `vis` are the same language.
 
-## Avoid
+Order:
 
-- Flowchart pie / xychart for spreadsheet-like numbers
-- Vega-Lite / ECharts JSON as the default
-- Invented types, silent x-sort, pie renormalized to 100
-- Dropping data when a fence is invalid
+1. Optional `markvis: 2`
+2. One `key: value` per line
+3. Blank line
+4. Data: CSV, or one GFM table
 
-## Learn more
+Fields:
 
-- SPEC.md
-- skills/markvis/SKILL.md
-- examples/valid/
-- examples/prompts.md
-- apps/playground (try / copy fence)
+- `type` required. Only `bar` `line` `area` `scatter` `pie` `hist`.
+- `title` optional. A conclusion, not a slug.
+- `theme` optional. Omit means `folio`. Allowed: `folio` `highcharts` `shadcn` `docs`. Any other value is `E_UNKNOWN_THEME`: show the table, not a silent swap.
+- `unit` optional.
+- `x` `y` `series` name real columns. `series` splits series.
+- Data required. Not JSON.
+
+Also valid: an HTML comment immediately followed by a GFM table.
+
+`<!-- chart: bar x=month y=revenue title="Feb led Q3 at 180" -->`
+
+Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`. Same meaning as fence headers.
+
+## Types
+
+- `bar` — category x, number y. Keep row order. Do not sort.
+- `line` — ordered x, number y. Optional `series`. Keep row order.
+- `area` — same as line, filled.
+- `scatter` — number x, number y. One mark per row.
+- `pie` — label x, number y >= 0. Do not force the slices to 100.
+- `hist` — number x. Table keeps the raw rows.
+
+On any error: keep the rows, show the table, add one line with the error code. Never drop the numbers.
+
+## Copy these
+
+### Bar
+
+```chart
+markvis: 2
+type: bar
+title: Feb led Q3 at 180
+unit: USD k
+x: month
+y: revenue
+
+month,revenue
+Jan,120
+Feb,180
+Mar,150
+```
+
+### Line
+
+```chart
+type: line
+title: Free still leads pro
+x: month
+y: count
+series: plan
+
+month,plan,count
+Jan,free,40
+Jan,pro,12
+Feb,free,55
+Feb,pro,18
+```
+
+### Pie
+
+```markvis
+type: pie
+title: A leads at 40
+x: name
+y: value
+
+name,value
+A,40
+B,35
+C,30
+```
+
+Emit the fence. Do not emit a PNG. Do not add a seventh type.
