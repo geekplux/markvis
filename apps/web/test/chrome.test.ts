@@ -28,7 +28,10 @@ describe("site visual chrome", () => {
     expect(home).toContain("Feb led Q3");
     expect(home).toContain("Pro pulled ahead");
     expect(home).toContain("Shares stay raw");
-    expect(home).toContain("README / post authors");
+    expect(home).toContain("Any Markdown view");
+    expect(home).toContain("AI replies");
+    expect(home).toContain("Themes");
+    expect(home).not.toContain("README / post authors");
     expect(home).toContain("markvis bake");
     expect(home).toContain("@markvis/remark");
     expect(home).not.toMatch(/theme:/);
