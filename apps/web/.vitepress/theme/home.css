@@ -368,8 +368,19 @@
 }
 
 .home-atlas {
-  background: #ffffff;
+  background: #0e1312;
   padding: 48px clamp(24px, 5vw, 68px);
+}
+
+.home-atlas .home-index,
+.home-agent .home-index {
+  color: #ffdb2a;
+}
+
+.home-atlas .home-section-title,
+.home-strip .home-section-title,
+.home-agent .home-section-title {
+  color: #edebe5;
 }
 
 .home-atlas .home-figures {
@@ -404,8 +415,16 @@
   grid-template-columns: minmax(220px, 360px) 1fr;
   gap: 32px;
   align-items: center;
-  background: #ffdb2a;
+  background: #0e1312;
   padding: 48px clamp(24px, 5vw, 68px);
+}
+
+.home-strip .home-lead {
+  color: rgba(237, 235, 229, 0.7);
+}
+
+.home-strip .home-textlink {
+  color: #edebe5;
 }
 
 .home-thumbs {
@@ -433,7 +452,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
-  background: #080b08;
+  background: #0e1312;
   padding: 48px clamp(24px, 5vw, 68px);
 }
 
@@ -448,7 +467,7 @@
 }
 
 .home-start-rows > div {
-  background: #080b08;
+  background: #0e1312;
   padding: 16px 0;
 }
 
@@ -469,8 +488,12 @@
 }
 
 .home-agent {
-  background: #ffffff;
+  background: #0e1312;
   padding: 48px clamp(24px, 5vw, 68px);
+}
+
+.home-agent .home-lead {
+  color: var(--home-muted);
 }
 
 .home-agent-links {
@@ -488,7 +511,7 @@
   font-weight: 560;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--home-ink);
+  color: #edebe5;
   text-decoration: none;
 }
 
@@ -523,7 +546,7 @@
 }
 
 .home-foot {
-  background: #ffdb2a;
+  background: #f8f8f6;
   padding: 32px clamp(24px, 5vw, 68px);
   font-size: 13px;
   font-weight: 400;
