@@ -99,6 +99,8 @@ describe("site visual chrome", () => {
     );
     expect(family).toMatch(/height:\s*72px/);
     expect(family).toMatch(/#ffdb2a/i);
+    expect(family).toMatch(/\.family-nav \.home-nav-action[\s\S]*background:\s*#080b08/i);
+    expect(family).toMatch(/\.family-nav \.home-nav-action[\s\S]*color:\s*#ffdb2a/i);
     expect(family).toMatch(/#080b08/i);
     expect(family).not.toMatch(/#2563eb/i);
     expect(family).toMatch(/max-width:\s*390px/);

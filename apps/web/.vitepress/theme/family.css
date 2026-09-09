@@ -111,6 +111,15 @@
   outline-offset: 2px;
 }
 
+.family-nav .home-nav-action {
+  background: #080b08;
+  color: #ffdb2a;
+  height: 48px;
+  min-height: 48px;
+  border-radius: 0;
+  text-decoration: none;
+}
+
 .family-nav {
   display: grid;
   grid-template-columns: minmax(180px, 1fr) auto minmax(180px, 1fr);
