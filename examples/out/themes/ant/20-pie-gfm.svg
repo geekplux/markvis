@@ -2,7 +2,9 @@
   <title id="mv-86e0beabec419c7d-title">Chrome leads at 52</title>
   <desc id="mv-86e0beabec419c7d-desc">pie chart. Chrome leads at 52. x=browser. y=users. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="48" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Chrome leads at 52</text>
-  <g aria-hidden="true">
+  <rect x="48" y="46" width="658" height="360" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="48" y="46" width="658" height="360" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0">
     <path d="M377 226 L377 103.6 A122.4 122.4 0 1 1 361.66 347.43 Z" fill="#5AD8A6" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="Chrome" data-raw-value="52"/>
     <path d="M377 226 L361.66 347.43 A122.4 122.4 0 0 1 260.59 188.18 Z" fill="#E8684A" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="Safari" data-raw-value="28"/>
     <path d="M377 226 L260.59 188.18 A122.4 122.4 0 0 1 318.03 118.74 Z" fill="#5D7092" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="Firefox" data-raw-value="12"/>

@@ -34,9 +34,9 @@
     <text x="692" y="438" text-anchor="middle" font-size="11" data-full-label="3">3</text>
   </g>
   <g>
-    <circle cx="183.2" cy="333.16" r="3" fill="#8884d8" fill-opacity="0.85" stroke="none" data-x="1.0" data-y="2.1" data-series="y"/>
-    <circle cx="310.4" cy="223.68" r="3" fill="#8884d8" fill-opacity="0.85" stroke="none" data-x="1.5" data-y="2.8" data-series="y"/>
-    <circle cx="437.6" cy="192.4" r="3" fill="#8884d8" fill-opacity="0.85" stroke="none" data-x="2.0" data-y="3" data-series="y"/>
-    <circle cx="564.8" cy="129.84" r="3" fill="#8884d8" fill-opacity="0.85" stroke="none" data-x="2.5" data-y="3.4" data-series="y"/>
+    <circle cx="183.2" cy="333.16" r="3" fill="#ffffff" stroke="#8884d8" stroke-width="1.5" stroke-opacity="0.85" data-x="1.0" data-y="2.1" data-series="y" data-scatter-mark="ring"/>
+    <circle cx="310.4" cy="223.68" r="3" fill="#ffffff" stroke="#8884d8" stroke-width="1.5" stroke-opacity="0.85" data-x="1.5" data-y="2.8" data-series="y" data-scatter-mark="ring"/>
+    <circle cx="437.6" cy="192.4" r="3" fill="#ffffff" stroke="#8884d8" stroke-width="1.5" stroke-opacity="0.85" data-x="2.0" data-y="3" data-series="y" data-scatter-mark="ring"/>
+    <circle cx="564.8" cy="129.84" r="3" fill="#ffffff" stroke="#8884d8" stroke-width="1.5" stroke-opacity="0.85" data-x="2.5" data-y="3.4" data-series="y" data-scatter-mark="ring"/>
   </g>
 </svg>

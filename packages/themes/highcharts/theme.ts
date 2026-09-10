@@ -80,8 +80,9 @@ export const highcharts = {
   END_LABEL_GAP: folio.END_LABEL_GAP,
   END_LABEL_MIN_SEP: folio.END_LABEL_MIN_SEP,
 
-  SCATTER_R: folio.SCATTER_R,
+  SCATTER_R: 3.5,
   SCATTER_OPACITY: folio.SCATTER_OPACITY,
+  SCATTER_MARK: "circle",
 
   PIE_RADIUS_RATIO: folio.PIE_RADIUS_RATIO,
   PIE_STROKE: folio.PIE_STROKE,
@@ -89,6 +90,8 @@ export const highcharts = {
   PIE_LABEL_GAP: folio.PIE_LABEL_GAP,
   PIE_LABEL_MIN_SEP: folio.PIE_LABEL_MIN_SEP,
   PIE_ELBOW: folio.PIE_ELBOW,
+  PIE_LABEL_MODE: "legend",
+  PIE_INNER_RATIO: 0,
 
   COMPACT_SPAN: folio.COMPACT_SPAN,
 

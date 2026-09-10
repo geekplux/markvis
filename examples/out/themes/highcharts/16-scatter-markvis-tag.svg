@@ -25,9 +25,9 @@
     <text x="387" y="426" text-anchor="middle" dominant-baseline="hanging" data-axis="x">temp_c</text>
   </g>
   <g>
-    <circle cx="204" cy="98.17" r="3" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="18" data-y="55" data-series="humidity"/>
-    <circle cx="366.67" cy="182.4" r="3" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="22" data-y="48" data-series="humidity"/>
-    <circle cx="488.67" cy="278.67" r="3" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="25" data-y="40" data-series="humidity"/>
-    <circle cx="610.67" cy="338.83" r="3" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="28" data-y="35" data-series="humidity"/>
+    <circle cx="204" cy="98.17" r="3.5" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="18" data-y="55" data-series="humidity"/>
+    <circle cx="366.67" cy="182.4" r="3.5" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="22" data-y="48" data-series="humidity"/>
+    <circle cx="488.67" cy="278.67" r="3.5" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="25" data-y="40" data-series="humidity"/>
+    <circle cx="610.67" cy="338.83" r="3.5" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="28" data-y="35" data-series="humidity"/>
   </g>
 </svg>

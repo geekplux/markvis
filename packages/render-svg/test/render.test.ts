@@ -954,6 +954,224 @@ describe("B&W theme skeletons", () => {
   });
 });
 
+
+function pieChart(theme: ChartIR["theme"]): ChartIR {
+  return ChartIRSchema.parse({
+    markvis: 2,
+    type: "pie",
+    title: "A leads at 40",
+    theme,
+    x: "name",
+    y: "value",
+    table: {
+      columns: ["name", "value"],
+      rows: [
+        ["A", "40"],
+        ["B", "35"],
+        ["C", "30"],
+      ],
+    },
+  });
+}
+
+function scatterChart(theme: ChartIR["theme"], multi = false): ChartIR {
+  const rows = multi
+    ? [
+        ["1", "2", "s1"],
+        ["2", "3", "s1"],
+        ["3", "1", "s2"],
+        ["4", "4", "s2"],
+      ]
+    : [
+        ["1", "2"],
+        ["2", "3"],
+        ["3", "1"],
+        ["4", "4"],
+      ];
+  return ChartIRSchema.parse({
+    markvis: 2,
+    type: "scatter",
+    title: "Scatter",
+    theme,
+    x: "x",
+    y: "y",
+    ...(multi ? { series: "series" } : {}),
+    table: {
+      columns: multi ? ["x", "y", "series"] : ["x", "y"],
+      rows,
+    },
+  });
+}
+
+describe("pie + scatter theme forks (THEMES.md)", () => {
+  it("folio: leaders, no hole, no legend; scatter solid open sheet", () => {
+    expect(folio.PIE_LABEL_MODE).toBe("leaders");
+    expect(folio.PIE_INNER_RATIO).toBe(0);
+    expect(folio.SCATTER_MARK).toBe("circle");
+    const pie = renderSvg(pieChart("folio"));
+    expect(pie).toContain('data-pie-label-mode="leaders"');
+    expect(pie).toContain('data-pie-inner-ratio="0"');
+    expect(pie).toContain("<polyline ");
+    expect(pie).not.toContain("data-legend=");
+    expect(pie).not.toContain('data-donut="1"');
+    expect(pie).not.toContain("data-plot-border=");
+    const scatter = renderSvg(scatterChart("folio"));
+    expect(scatter).not.toContain('data-scatter-mark="ring"');
+    expect(scatter).not.toContain("data-plot-border=");
+    expect(scatter).toMatch(/<circle[^>]*\br="3"/);
+  });
+
+  it("highcharts: pie legend no leaders + plot box; scatter r≥3.5 + axis titles", () => {
+    expect(highcharts.PIE_LABEL_MODE).toBe("legend");
+    expect(highcharts.PIE_INNER_RATIO).toBe(0);
+    expect(highcharts.SCATTER_R).toBeGreaterThanOrEqual(3.5);
+    expect(Number(highcharts.STRUCTURE_OPACITY)).toBeGreaterThanOrEqual(0.4);
+    const pie = renderSvg(pieChart("highcharts"));
+    expect(pie).toContain('data-pie-label-mode="legend"');
+    expect(pie).toContain("data-legend=");
+    expect(pie).not.toContain("<polyline ");
+    expect(pie).toContain("data-plot-border=");
+    expect(pie).not.toContain('data-donut="1"');
+    const scatter = renderSvg(scatterChart("highcharts"));
+    expect(scatter).toContain("data-plot-border=");
+    expect(scatter).toContain("data-axis-titles=");
+    expect(scatter).toMatch(/<circle[^>]*\br="3\.5"/);
+  });
+
+  it("shadcn: donut hole 0.45–0.55 + legend; scatter card + quieter opacity", () => {
+    expect(shadcn.PIE_LABEL_MODE).toBe("legend");
+    expect(shadcn.PIE_INNER_RATIO).toBeGreaterThanOrEqual(0.45);
+    expect(shadcn.PIE_INNER_RATIO).toBeLessThanOrEqual(0.55);
+    expect(shadcn.SCATTER_OPACITY).toBeLessThanOrEqual(0.75);
+    const pie = renderSvg(pieChart("shadcn"));
+    expect(pie).toContain('data-pie-label-mode="legend"');
+    expect(pie).toContain('data-pie-inner-ratio="0.5"');
+    expect(pie).toContain('data-donut="1"');
+    expect(pie).toContain("data-legend=");
+    expect(pie).not.toContain("<polyline ");
+    const scatter = renderSvg(scatterChart("shadcn"));
+    expect(scatter).toContain('data-plot-border="1"');
+    expect(scatter).toContain("#e5e5e5");
+    expect(scatter).not.toContain("data-axis-titles=");
+    expect(scatter).toMatch(/fill-opacity="0\.75/);
+  });
+
+  it("docs: thin stroke + short leaders; scatter r=2.5 + title rule", () => {
+    expect(docs.PIE_STROKE).toBe(1);
+    expect(docs.PIE_LEADER).toBeLessThanOrEqual(12);
+    expect(docs.PIE_LABEL_MODE).toBe("leaders");
+    expect(docs.PIE_INNER_RATIO).toBe(0);
+    const pie = renderSvg(pieChart("docs"));
+    expect(pie).toContain('data-pie-label-mode="leaders"');
+    expect(pie).toContain("<polyline ");
+    expect(pie).not.toContain("data-legend=");
+    expect(pie).toContain('stroke-width="1"');
+    expect(pie).toContain("data-title-rule=");
+    const scatter = renderSvg(scatterChart("docs"));
+    expect(scatter).toMatch(/<circle[^>]*\br="2\.5"/);
+    expect(scatter).toContain("data-title-rule=");
+    expect(scatter).not.toContain("data-plot-border=");
+  });
+
+  it("ant: leaders only + plot box; scatter box + axis titles", () => {
+    expect(ant.PIE_LABEL_MODE).toBe("leaders");
+    expect(ant.PIE_INNER_RATIO).toBe(0);
+    const pie = renderSvg(pieChart("ant"));
+    expect(pie).toContain('data-pie-label-mode="leaders"');
+    expect(pie).toContain("<polyline ");
+    expect(pie).not.toContain("data-legend=");
+    expect(pie).toContain("data-plot-border=");
+    const scatter = renderSvg(scatterChart("ant"));
+    expect(scatter).toContain("data-plot-border=");
+    expect(scatter).toContain("data-axis-titles=");
+  });
+
+  it("recharts: bottom pie legend; scatter rings + XY grid", () => {
+    expect(recharts.PIE_LABEL_MODE).toBe("legend");
+    expect(recharts.SCATTER_MARK).toBe("ring");
+    expect(recharts.LEGEND_BELOW).toBe(true);
+    expect(recharts.VERTICAL_GRID).toBe(true);
+    const pie = renderSvg(pieChart("recharts"));
+    expect(pie).toContain('data-pie-label-mode="legend"');
+    expect(pie).toContain("data-legend=");
+    expect(pie).not.toContain("<polyline ");
+    expect(pie).toContain("data-plot-border=");
+    const scatter = renderSvg(scatterChart("recharts"));
+    expect(scatter).toContain('data-scatter-mark="ring"');
+    expect(scatter).toContain("data-v-grid=");
+    expect(scatter).toMatch(/stroke-width="1\.5"/);
+    const multi = renderSvg(scatterChart("recharts", true));
+    expect(multi).toContain("data-legend=");
+    expect(multi).toContain('data-scatter-mark="ring"');
+  });
+
+  it("B&W: pairwise pie/scatter differ on ≥2 structural axes (not hex alone)", () => {
+    const themes = [
+      "folio",
+      "highcharts",
+      "shadcn",
+      "docs",
+      "ant",
+      "recharts",
+    ] as const;
+    function pieAxes(svg: string) {
+      return {
+        labelMode: (svg.match(/data-pie-label-mode="([^"]+)"/) ?? [, ""])[1]!,
+        innerHole: /data-donut="1"/.test(svg) || /data-pie-inner-ratio="0\.[1-9]/.test(svg),
+        legend: /data-legend=/.test(svg),
+        leaders: /<polyline /.test(svg),
+        plotFrame: /data-plot-border=/.test(svg),
+      };
+    }
+    function scatterAxes(svg: string) {
+      return {
+        markKind: /data-scatter-mark="ring"/.test(svg) ? "ring" : "circle",
+        legend: /data-legend=/.test(svg),
+        vgrid: /data-v-grid=/.test(svg),
+        plotFrame: /data-plot-border=/.test(svg),
+        titleRule: /data-title-rule=/.test(svg),
+        markerR: (svg.match(/<circle[^>]*\br="([0-9.]+)"/) ?? [, ""])[1]!,
+      };
+    }
+    function pieDiff(a: ReturnType<typeof pieAxes>, b: ReturnType<typeof pieAxes>): number {
+      let n = 0;
+      if (a.labelMode !== b.labelMode) n += 1;
+      if (a.innerHole !== b.innerHole) n += 1;
+      if (a.legend !== b.legend) n += 1;
+      if (a.leaders !== b.leaders) n += 1;
+      if (a.plotFrame !== b.plotFrame) n += 1;
+      return n;
+    }
+    function scatterDiff(
+      a: ReturnType<typeof scatterAxes>,
+      b: ReturnType<typeof scatterAxes>,
+    ): number {
+      let n = 0;
+      if (a.markKind !== b.markKind) n += 1;
+      if (a.legend !== b.legend) n += 1;
+      if (a.vgrid !== b.vgrid) n += 1;
+      if (a.plotFrame !== b.plotFrame) n += 1;
+      if (a.titleRule !== b.titleRule) n += 1;
+      if (a.markerR !== b.markerR) n += 1;
+      return n;
+    }
+    const pies = Object.fromEntries(
+      themes.map((t) => [t, pieAxes(renderSvg(pieChart(t)))]),
+    );
+    const scatters = Object.fromEntries(
+      themes.map((t) => [t, scatterAxes(renderSvg(scatterChart(t, true)))]),
+    );
+    // shadcn vs folio: donut + legend vs leaders
+    expect(pieDiff(pies.folio!, pies.shadcn!)).toBeGreaterThanOrEqual(2);
+    // recharts vs folio: legend + plotFrame (and no leaders)
+    expect(pieDiff(pies.folio!, pies.recharts!)).toBeGreaterThanOrEqual(2);
+    // recharts vs folio scatter: ring + vgrid (+ legend on multi)
+    expect(scatterDiff(scatters.folio!, scatters.recharts!)).toBeGreaterThanOrEqual(2);
+    // highcharts vs folio scatter: plotFrame + markerR (+ axis via plot)
+    expect(scatterDiff(scatters.folio!, scatters.highcharts!)).toBeGreaterThanOrEqual(2);
+  });
+});
+
 describe("source discipline", () => {
   it("does not use clocks or random in renderer sources", () => {
     const repoRoot = join(here, "../../..");

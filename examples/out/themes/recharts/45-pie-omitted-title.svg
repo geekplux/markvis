@@ -2,16 +2,16 @@
   <title id="mv-68d9c244fd51a166-title">Yes leads at 60</title>
   <desc id="mv-68d9c244fd51a166-desc">pie chart. Yes leads at 60. x=label. y=n. 2 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#374151">Yes leads at 60</text>
-  <g aria-hidden="true">
-    <path d="M374 233 L374 99.04 A133.96 133.96 0 1 1 295.26 341.38 Z" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="yes" data-raw-value="60"/>
-    <path d="M374 233 L295.26 341.38 A133.96 133.96 0 0 1 374 99.04 Z" fill="#82ca9d" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="no" data-raw-value="40"/>
+  <g font-size="12" font-weight="400" fill="#374151">
+    <rect x="48" y="425" width="10" height="10" fill="#8884d8" rx="1"/>
+    <text x="62" y="434" data-legend="yes">yes</text>
+    <rect x="100.32" y="425" width="10" height="10" fill="#82ca9d" rx="1"/>
+    <text x="114.32" y="434" data-legend="no">no</text>
   </g>
-  <g fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1">
-    <polyline points="501.4,274.4 516.62,279.34 524.62,279.34"/>
-    <polyline points="246.6,191.6 231.38,186.66 223.38,186.66"/>
-  </g>
-  <g font-size="11" font-weight="500" fill="#374151">
-    <text x="536.62" y="279.34" text-anchor="start" dominant-baseline="middle" data-label="yes">yes · 60</text>
-    <text x="211.38" y="186.66" text-anchor="end" dominant-baseline="middle" data-label="no">no · 40</text>
+  <rect x="48" y="36" width="652" height="370" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="48" y="36" width="652" height="370" fill="none" stroke="#e2e8f0" stroke-width="1" data-plot-border="1"/>
+  <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0">
+    <path d="M374 221 L374 95.2 A125.8 125.8 0 1 1 300.06 322.77 Z" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="yes" data-raw-value="60"/>
+    <path d="M374 221 L300.06 322.77 A125.8 125.8 0 0 1 374 95.2 Z" fill="#82ca9d" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="no" data-raw-value="40"/>
   </g>
 </svg>

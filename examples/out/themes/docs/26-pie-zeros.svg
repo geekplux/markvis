@@ -3,16 +3,16 @@
   <desc id="mv-840fc044c6e0680e-desc">pie chart. On leads at 70. x=flag. y=count. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">On leads at 70</text>
   <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <g aria-hidden="true">
-    <path d="M372 248 L372 101.12 A146.88 146.88 0 1 1 232.31 293.39 Z" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1.5" data-label="on" data-raw-value="70"/>
-    <path d="M372 248 L232.31 293.39 A146.88 146.88 0 0 1 372 101.12 Z" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1.5" data-label="off" data-raw-value="30"/>
+  <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0">
+    <path d="M372 248 L372 101.12 A146.88 146.88 0 1 1 232.31 293.39 Z" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="on" data-raw-value="70"/>
+    <path d="M372 248 L232.31 293.39 A146.88 146.88 0 0 1 372 101.12 Z" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="off" data-raw-value="30"/>
   </g>
   <g fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1">
-    <polyline points="490.83,334.33 503.77,343.74 511.77,343.74"/>
-    <polyline points="253.17,161.67 240.23,152.26 232.23,152.26"/>
+    <polyline points="490.83,334.33 500.54,341.39 508.54,341.39"/>
+    <polyline points="253.17,161.67 243.46,154.61 235.46,154.61"/>
   </g>
   <g font-size="10" font-weight="500" fill="#18181B">
-    <text x="523.77" y="343.74" text-anchor="start" dominant-baseline="middle" data-label="on">on · 70</text>
-    <text x="220.23" y="152.26" text-anchor="end" dominant-baseline="middle" data-label="off">off · 30</text>
+    <text x="520.54" y="341.39" text-anchor="start" dominant-baseline="middle" data-label="on">on · 70</text>
+    <text x="223.46" y="154.61" text-anchor="end" dominant-baseline="middle" data-label="off">off · 30</text>
   </g>
 </svg>

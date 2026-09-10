@@ -2,19 +2,19 @@
   <title id="mv-45d354a539c72d2e-title">Budget overrun</title>
   <desc id="mv-45d354a539c72d2e-desc">pie chart. Budget overrun. x=bucket. y=pct. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">Budget overrun</text>
-  <g aria-hidden="true">
-    <path d="M374 238 L374 100.64 A137.36 137.36 0 0 1 433.6 361.76 Z" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Infra" data-raw-value="45"/>
-    <path d="M374 238 L433.6 361.76 A137.36 137.36 0 0 1 237.02 227.74 Z" fill="#009689" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Product" data-raw-value="35"/>
-    <path d="M374 238 L237.02 227.74 A137.36 137.36 0 0 1 374 100.64 Z" fill="#104E64" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Ops" data-raw-value="25"/>
+  <g font-size="12" font-weight="500" fill="#0A0A0A">
+    <rect x="48" y="31" width="10" height="10" fill="#F54900" rx="1"/>
+    <text x="62" y="40" data-legend="Infra">Infra</text>
+    <rect x="115.2" y="31" width="10" height="10" fill="#009689" rx="1"/>
+    <text x="129.2" y="40" data-legend="Product">Product</text>
+    <rect x="197.28" y="31" width="10" height="10" fill="#104E64" rx="1"/>
+    <text x="211.28" y="40" data-legend="Ops">Ops</text>
   </g>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1">
-    <polyline points="507.92,207.43 523.51,203.87 531.51,203.87"/>
-    <polyline points="296.62,351.49 287.61,364.71 279.61,364.71"/>
-    <polyline points="280.57,137.31 269.69,125.58 261.69,125.58"/>
-  </g>
-  <g font-size="11" font-weight="500" fill="#0A0A0A">
-    <text x="543.51" y="203.87" text-anchor="start" dominant-baseline="middle" data-label="Infra">Infra · 45</text>
-    <text x="267.61" y="364.71" text-anchor="end" dominant-baseline="middle" data-label="Product">Product · 35</text>
-    <text x="249.69" y="125.58" text-anchor="end" dominant-baseline="middle" data-label="Ops">Ops · 25</text>
+  <rect x="48" y="60" width="652" height="380" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="48" y="60" width="652" height="380" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
+  <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0.5">
+    <path d="M374 120.8 A129.2 129.2 0 0 1 430.06 366.41 L402.03 308.2 A64.6 64.6 0 0 0 374 185.4 Z" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Infra" data-raw-value="45" data-donut="1"/>
+    <path d="M430.06 366.41 A129.2 129.2 0 0 1 245.16 240.34 L309.58 245.17 A64.6 64.6 0 0 0 402.03 308.2 Z" fill="#009689" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Product" data-raw-value="35" data-donut="1"/>
+    <path d="M245.16 240.34 A129.2 129.2 0 0 1 374 120.8 L374 185.4 A64.6 64.6 0 0 0 309.58 245.17 Z" fill="#104E64" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Ops" data-raw-value="25" data-donut="1"/>
   </g>
 </svg>

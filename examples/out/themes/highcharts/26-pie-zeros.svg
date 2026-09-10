@@ -2,16 +2,16 @@
   <title id="mv-840fc044c6e0680e-title">On leads at 70</title>
   <desc id="mv-840fc044c6e0680e-desc">pie chart. On leads at 70. x=flag. y=count. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="56" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">On leads at 70</text>
-  <g aria-hidden="true">
-    <path d="M378 229 L378 99.12 A129.88 129.88 0 1 1 254.48 269.14 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="on" data-raw-value="70"/>
-    <path d="M378 229 L254.48 269.14 A129.88 129.88 0 0 1 378 99.12 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="off" data-raw-value="30"/>
+  <g font-size="12" font-weight="500" fill="#333333">
+    <rect x="56" y="31" width="10" height="10" fill="#7cb5ec" rx="1"/>
+    <text x="70" y="40" data-legend="on">on</text>
+    <rect x="100.88" y="31" width="10" height="10" fill="#434348" rx="1"/>
+    <text x="114.88" y="40" data-legend="off">off</text>
   </g>
-  <g fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1">
-    <polyline points="483.08,305.34 496.02,314.75 504.02,314.75"/>
-    <polyline points="272.92,152.66 259.98,143.25 251.98,143.25"/>
-  </g>
-  <g font-size="11" font-weight="500" fill="#333333">
-    <text x="516.02" y="314.75" text-anchor="start" dominant-baseline="middle" data-label="on">on · 70</text>
-    <text x="239.98" y="143.25" text-anchor="end" dominant-baseline="middle" data-label="off">off · 30</text>
+  <rect x="56" y="62" width="644" height="358" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="56" y="62" width="644" height="358" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
+  <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0">
+    <path d="M378 241 L378 119.28 A121.72 121.72 0 1 1 262.24 278.61 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="on" data-raw-value="70"/>
+    <path d="M378 241 L262.24 278.61 A121.72 121.72 0 0 1 378 119.28 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="off" data-raw-value="30"/>
   </g>
 </svg>

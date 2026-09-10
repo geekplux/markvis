@@ -2,7 +2,7 @@
   <title id="mv-9395583b1f0bdce1-title">Core leads at 50%</title>
   <desc id="mv-9395583b1f0bdce1-desc">pie chart. Core leads at 50%. x=name. y=value. unit=%. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Core leads at 50%<tspan font-size="12" font-weight="400" fill="#737373"> · %</tspan></text>
-  <g aria-hidden="true">
+  <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0">
     <path d="M374 248 L374 103.84 A144.16 144.16 0 0 1 395.49 390.55 Z" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Core" data-raw-value="50"/>
     <path d="M374 248 L395.49 390.55 A144.16 144.16 0 0 1 230.24 237.23 Z" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Addons" data-raw-value="30"/>
     <path d="M374 248 L230.24 237.23 A144.16 144.16 0 0 1 374 103.84 Z" fill="#10B981" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Other" data-raw-value="25"/>

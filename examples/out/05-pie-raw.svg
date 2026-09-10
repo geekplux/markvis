@@ -2,7 +2,7 @@
   <title id="mv-b5d15cbc51f2b051-title">A leads at 40</title>
   <desc id="mv-b5d15cbc51f2b051-desc">pie chart. A leads at 40. x=name. y=value. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">A leads at 40</text>
-  <g aria-hidden="true">
+  <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0">
     <path d="M374 248 L374 103.84 A144.16 144.16 0 0 1 472.05 353.68 Z" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="A" data-raw-value="40"/>
     <path d="M374 248 L472.05 353.68 A144.16 144.16 0 0 1 233.45 280.08 Z" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="B" data-raw-value="35"/>
     <path d="M374 248 L233.45 280.08 A144.16 144.16 0 0 1 374 103.84 Z" fill="#10B981" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="C" data-raw-value="30"/>

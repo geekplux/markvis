@@ -2,7 +2,9 @@
   <title id="mv-c7320d6a0a846c42-title">Billing leads tickets at 40</title>
   <desc id="mv-c7320d6a0a846c42-desc">pie chart. Billing leads tickets at 40. x=topic. y=tickets. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="70.46" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Billing leads tickets at 40</text>
-  <g aria-hidden="true">
+  <rect x="70.46" y="46" width="558.58" height="360" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="70.46" y="46" width="558.58" height="360" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0">
     <path d="M349.75 226 L349.75 103.6 A122.4 122.4 0 0 1 421.69 325.02 Z" fill="#5AD8A6" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="Billing and invoice disputes" data-raw-value="40"/>
     <path d="M349.75 226 L421.69 325.02 A122.4 122.4 0 0 1 250.72 297.94 Z" fill="#E8684A" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="Account access and MFA reset" data-raw-value="25"/>
     <path d="M349.75 226 L250.72 297.94 A122.4 122.4 0 0 1 250.72 154.06 Z" fill="#5D7092" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="Product how-to questions" data-raw-value="20"/>

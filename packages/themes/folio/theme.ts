@@ -76,6 +76,7 @@ export const folio = {
 
   SCATTER_R: 3,
   SCATTER_OPACITY: 0.85,
+  SCATTER_MARK: "circle" as "circle" | "ring",
 
   PIE_RADIUS_RATIO: 0.34,
   PIE_STROKE: 1.5,
@@ -83,6 +84,10 @@ export const folio = {
   PIE_LABEL_GAP: 12,
   PIE_LABEL_MIN_SEP: 14,
   PIE_ELBOW: 8,
+  /** leaders = outside labels; legend = color legend; none = bare pie. */
+  PIE_LABEL_MODE: "leaders" as "leaders" | "legend" | "none",
+  /** 0 = solid; ~0.5 = donut hole ratio of outer radius. */
+  PIE_INNER_RATIO: 0,
 
   COMPACT_SPAN: 10_000,
 

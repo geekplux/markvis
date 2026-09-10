@@ -2,7 +2,7 @@
   <title id="mv-c7320d6a0a846c42-title">Billing leads tickets at 40</title>
   <desc id="mv-c7320d6a0a846c42-desc">pie chart. Billing leads tickets at 40. x=topic. y=tickets. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="131.26" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Billing leads tickets at 40</text>
-  <g aria-hidden="true">
+  <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0">
     <path d="M350.28 248 L350.28 103.84 A144.16 144.16 0 0 1 435.01 364.63 Z" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Billing and invoice disputes" data-raw-value="40"/>
     <path d="M350.28 248 L435.01 364.63 A144.16 144.16 0 0 1 233.65 332.74 Z" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Account access and MFA reset" data-raw-value="25"/>
     <path d="M350.28 248 L233.65 332.74 A144.16 144.16 0 0 1 233.65 163.26 Z" fill="#10B981" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Product how-to questions" data-raw-value="20"/>

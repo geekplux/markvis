@@ -83,7 +83,8 @@ export const shadcn = {
   END_LABEL_MIN_SEP: folio.END_LABEL_MIN_SEP,
 
   SCATTER_R: folio.SCATTER_R,
-  SCATTER_OPACITY: folio.SCATTER_OPACITY,
+  SCATTER_OPACITY: 0.75,
+  SCATTER_MARK: "circle",
 
   PIE_RADIUS_RATIO: folio.PIE_RADIUS_RATIO,
   PIE_STROKE: folio.PIE_STROKE,
@@ -91,6 +92,8 @@ export const shadcn = {
   PIE_LABEL_GAP: folio.PIE_LABEL_GAP,
   PIE_LABEL_MIN_SEP: folio.PIE_LABEL_MIN_SEP,
   PIE_ELBOW: folio.PIE_ELBOW,
+  PIE_LABEL_MODE: "legend",
+  PIE_INNER_RATIO: 0.5,
 
   COMPACT_SPAN: folio.COMPACT_SPAN,
 

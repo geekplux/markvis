@@ -80,6 +80,7 @@ export const recharts = {
 
   SCATTER_R: folio.SCATTER_R,
   SCATTER_OPACITY: folio.SCATTER_OPACITY,
+  SCATTER_MARK: "ring",
 
   PIE_RADIUS_RATIO: folio.PIE_RADIUS_RATIO,
   PIE_STROKE: folio.PIE_STROKE,
@@ -87,6 +88,8 @@ export const recharts = {
   PIE_LABEL_GAP: folio.PIE_LABEL_GAP,
   PIE_LABEL_MIN_SEP: folio.PIE_LABEL_MIN_SEP,
   PIE_ELBOW: folio.PIE_ELBOW,
+  PIE_LABEL_MODE: "legend",
+  PIE_INNER_RATIO: 0,
 
   COMPACT_SPAN: folio.COMPACT_SPAN,
 

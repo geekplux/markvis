@@ -2,16 +2,16 @@
   <title id="mv-68d9c244fd51a166-title">Yes leads at 60</title>
   <desc id="mv-68d9c244fd51a166-desc">pie chart. Yes leads at 60. x=label. y=n. 2 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">Yes leads at 60</text>
-  <g aria-hidden="true">
-    <path d="M374 238 L374 100.64 A137.36 137.36 0 1 1 293.26 349.13 Z" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="yes" data-raw-value="60"/>
-    <path d="M374 238 L293.26 349.13 A137.36 137.36 0 0 1 374 100.64 Z" fill="#009689" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="no" data-raw-value="40"/>
+  <g font-size="12" font-weight="500" fill="#0A0A0A">
+    <rect x="48" y="31" width="10" height="10" fill="#F54900" rx="1"/>
+    <text x="62" y="40" data-legend="yes">yes</text>
+    <rect x="100.32" y="31" width="10" height="10" fill="#009689" rx="1"/>
+    <text x="114.32" y="40" data-legend="no">no</text>
   </g>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1">
-    <polyline points="504.64,280.45 519.85,285.39 527.85,285.39"/>
-    <polyline points="243.36,195.55 228.15,190.61 220.15,190.61"/>
-  </g>
-  <g font-size="11" font-weight="500" fill="#0A0A0A">
-    <text x="539.85" y="285.39" text-anchor="start" dominant-baseline="middle" data-label="yes">yes · 60</text>
-    <text x="208.15" y="190.61" text-anchor="end" dominant-baseline="middle" data-label="no">no · 40</text>
+  <rect x="48" y="60" width="652" height="380" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="48" y="60" width="652" height="380" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
+  <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0.5">
+    <path d="M374 120.8 A129.2 129.2 0 1 1 298.06 354.52 L336.03 302.26 A64.6 64.6 0 1 0 374 185.4 Z" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="yes" data-raw-value="60" data-donut="1"/>
+    <path d="M298.06 354.52 A129.2 129.2 0 0 1 374 120.8 L374 185.4 A64.6 64.6 0 0 0 336.03 302.26 Z" fill="#009689" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="no" data-raw-value="40" data-donut="1"/>
   </g>
 </svg>

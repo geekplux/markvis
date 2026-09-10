@@ -3,6 +3,7 @@ import { loadRows } from "./data.js";
 import { drawTitle, visibleTitle } from "./figure.js";
 import {
   fitFrameHeight,
+  layoutLegend,
   titleBlockTop,
   SVG_WIDTH,
   type Painted,
@@ -12,14 +13,21 @@ import { formatNumber } from "./scale.js";
 import { textWidth } from "./text.js";
 import {
   INK,
+  LEGEND_BELOW,
   MARGIN,
   PIE_ELBOW,
+  PIE_INNER_RATIO,
   PIE_LABEL_GAP,
   PIE_LABEL_MIN_SEP,
+  PIE_LABEL_MODE,
   PIE_LEADER,
   PIE_RADIUS_RATIO,
   PIE_STROKE,
+  PLOT_BG,
+  PLOT_BORDER,
+  PLOT_BORDER_WIDTH,
   STRUCTURE_OPACITY,
+  TITLE_BASELINE,
   TYPE,
 } from "./tokens.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
@@ -37,6 +45,48 @@ function slicePath(
   const y1 = cy + r * Math.sin(a1);
   const large = a1 - a0 > Math.PI ? 1 : 0;
   return `M${fmtPx(cx)} ${fmtPx(cy)} L${fmtPx(x0)} ${fmtPx(y0)} A${fmtPx(r)} ${fmtPx(r)} 0 ${large} 1 ${fmtPx(x1)} ${fmtPx(y1)} Z`;
+}
+
+/** Annular sector for donut slices (inner radius > 0). */
+function donutSlicePath(
+  cx: number,
+  cy: number,
+  rOuter: number,
+  rInner: number,
+  a0: number,
+  a1: number,
+): string {
+  const x0o = cx + rOuter * Math.cos(a0);
+  const y0o = cy + rOuter * Math.sin(a0);
+  const x1o = cx + rOuter * Math.cos(a1);
+  const y1o = cy + rOuter * Math.sin(a1);
+  const x0i = cx + rInner * Math.cos(a0);
+  const y0i = cy + rInner * Math.sin(a0);
+  const x1i = cx + rInner * Math.cos(a1);
+  const y1i = cy + rInner * Math.sin(a1);
+  const large = a1 - a0 > Math.PI ? 1 : 0;
+  return (
+    `M${fmtPx(x0o)} ${fmtPx(y0o)}` +
+    ` A${fmtPx(rOuter)} ${fmtPx(rOuter)} 0 ${large} 1 ${fmtPx(x1o)} ${fmtPx(y1o)}` +
+    ` L${fmtPx(x1i)} ${fmtPx(y1i)}` +
+    ` A${fmtPx(rInner)} ${fmtPx(rInner)} 0 ${large} 0 ${fmtPx(x0i)} ${fmtPx(y0i)} Z`
+  );
+}
+
+function fullDonutPath(cx: number, cy: number, rOuter: number, rInner: number): string {
+  // evenodd ring: outer circle clockwise-ish, inner counter
+  const o = fmtPx(rOuter);
+  const i = fmtPx(rInner);
+  const cxs = fmtPx(cx);
+  const cys = fmtPx(cy);
+  return (
+    `M${cxs} ${fmtPx(cy - rOuter)}` +
+    ` A${o} ${o} 0 1 1 ${cxs} ${fmtPx(cy + rOuter)}` +
+    ` A${o} ${o} 0 1 1 ${cxs} ${fmtPx(cy - rOuter)} Z` +
+    ` M${cxs} ${fmtPx(cy - rInner)}` +
+    ` A${i} ${i} 0 1 0 ${cxs} ${fmtPx(cy + rInner)}` +
+    ` A${i} ${i} 0 1 0 ${cxs} ${fmtPx(cy - rInner)} Z`
+  );
 }
 
 type Slice = {
@@ -145,7 +195,17 @@ function pieBox(
   top: number,
   bottom: number,
   height: number,
-): { cx: number; cy: number; r: number; left: number; top: number } {
+): {
+  cx: number;
+  cy: number;
+  r: number;
+  left: number;
+  top: number;
+  right: number;
+  bottom: number;
+  width: number;
+  height: number;
+} {
   const plotLeft = left;
   const plotRight = SVG_WIDTH - right;
   const plotTop = top;
@@ -155,10 +215,57 @@ function pieBox(
   return {
     left: plotLeft,
     top: plotTop,
+    right: plotRight,
+    bottom: plotBottom,
+    width: plotW,
+    height: plotH,
     cx: (plotLeft + plotRight) / 2,
     cy: (plotTop + plotBottom) / 2,
     r: Math.min(plotW, plotH) * PIE_RADIUS_RATIO,
   };
+}
+
+function drawPieLegend(
+  names: string[],
+  colors: string[],
+  opacities: number[],
+  left: number,
+  top: number,
+  maxWidth: number,
+): { lines: string[]; layout: ReturnType<typeof layoutLegend> } {
+  const layout = layoutLegend(names, colors, opacities, left, top, maxWidth);
+  if (layout.items.length === 0) {
+    return { lines: [], layout };
+  }
+  const lines: string[] = [
+    `  <g ${attrs({
+      "font-size": TYPE.legend.size,
+      "font-weight": TYPE.legend.weight,
+      fill: TYPE.legend.fill,
+    })}>`,
+  ];
+  for (const item of layout.items) {
+    lines.push(
+      `    <rect ${attrs({
+        x: fmtPx(item.x),
+        y: fmtPx(item.y - 9),
+        width: 10,
+        height: 10,
+        fill: item.color,
+        "fill-opacity": item.opacity === 1 ? undefined : item.opacity,
+        rx: 1,
+      })}/>`,
+    );
+    lines.push(
+      `    <text ${attrs({
+        x: fmtPx(item.x + 14),
+        y: fmtPx(item.y),
+        "data-legend": item.name,
+      })}>${escapeXml(item.name)}</text>`,
+    );
+  }
+  lines.push(`  </g>`);
+  return { lines, layout };
 }
 
 export function renderPie(chart: ChartIR, _id: string): Painted {
@@ -173,11 +280,39 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
     };
   });
   const sum = raw.reduce((acc, slice) => acc + slice.value, 0);
+  const useLeaders = PIE_LABEL_MODE === "leaders";
+  const useLegend = PIE_LABEL_MODE === "legend";
+  const innerRatio = Math.max(0, Math.min(0.85, PIE_INNER_RATIO));
+  const isDonut = innerRatio > 0.01;
+
+  const legendNames = useLegend
+    ? raw.filter((s) => s.value > 0).map((s) => s.label)
+    : [];
+  const legendColors = useLegend
+    ? raw.filter((s) => s.value > 0).map((s) => s.color)
+    : [];
+  const legendOpacities = useLegend
+    ? raw.filter((s) => s.value > 0).map((s) => s.opacity)
+    : [];
+
+  let legendDraft = useLegend
+    ? layoutLegend(
+        legendNames,
+        legendColors,
+        legendOpacities,
+        48,
+        TITLE_BASELINE + 18,
+        SVG_WIDTH - 96,
+      )
+    : { items: [] as ReturnType<typeof layoutLegend>["items"], height: 0 };
 
   let left = MARGIN.left;
   let right = MARGIN.right;
-  let top = titleBlockTop(0);
+  let top = titleBlockTop(legendDraft.height);
   let bottom = MARGIN.right;
+  if (LEGEND_BELOW && legendDraft.height > 0) {
+    bottom += legendDraft.height + 8;
+  }
   let height = fitFrameHeight(top, bottom);
   let box = pieBox(left, right, top, bottom, height);
 
@@ -197,44 +332,120 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
     }
   }
 
-  let labels = placeLabels(slices, box.cx, box.cy, box.r);
-  for (let pass = 0; pass < 3; pass++) {
-    let overflowLeft = 0;
-    let overflowRight = 0;
-    let overflowBottom = 0;
-    let overflowTop = 0;
-    for (const item of labels) {
-      const textLeft = item.side > 0 ? item.lx : item.lx - item.width;
-      const textRight = item.side > 0 ? item.lx + item.width : item.lx;
-      overflowLeft = Math.max(overflowLeft, 8 - textLeft);
-      overflowRight = Math.max(overflowRight, textRight - (SVG_WIDTH - 8));
-      overflowBottom = Math.max(
-        overflowBottom,
-        item.ly + TYPE.value.size / 2 + 4 - (height - 4),
+  let labels = useLeaders ? placeLabels(slices, box.cx, box.cy, box.r) : [];
+  if (useLeaders) {
+    for (let pass = 0; pass < 3; pass++) {
+      let overflowLeft = 0;
+      let overflowRight = 0;
+      let overflowBottom = 0;
+      let overflowTop = 0;
+      for (const item of labels) {
+        const textLeft = item.side > 0 ? item.lx : item.lx - item.width;
+        const textRight = item.side > 0 ? item.lx + item.width : item.lx;
+        overflowLeft = Math.max(overflowLeft, 8 - textLeft);
+        overflowRight = Math.max(overflowRight, textRight - (SVG_WIDTH - 8));
+        overflowBottom = Math.max(
+          overflowBottom,
+          item.ly + TYPE.value.size / 2 + 4 - (height - 4),
+        );
+        overflowTop = Math.max(overflowTop, 4 - (item.ly - TYPE.value.size / 2));
+      }
+      if (
+        overflowLeft <= 0.5 &&
+        overflowRight <= 0.5 &&
+        overflowBottom <= 0.5 &&
+        overflowTop <= 0.5
+      ) {
+        break;
+      }
+      left += Math.max(0, overflowLeft);
+      right += Math.max(0, overflowRight);
+      bottom += Math.max(0, overflowBottom);
+      top += Math.max(0, overflowTop);
+      height = fitFrameHeight(top, bottom);
+      box = pieBox(left, right, top, bottom, height);
+      labels = placeLabels(slices, box.cx, box.cy, box.r);
+    }
+  }
+
+  // Re-layout legend against final plot box.
+  let legendLines: string[] = [];
+  if (useLegend && legendNames.length > 0) {
+    const legendY = LEGEND_BELOW
+      ? Math.max(box.bottom + 12, height - legendDraft.height)
+      : TITLE_BASELINE + 18;
+    const painted = drawPieLegend(
+      legendNames,
+      legendColors,
+      legendOpacities,
+      box.left,
+      legendY,
+      box.width,
+    );
+    legendLines = painted.lines;
+    if (painted.layout.height !== legendDraft.height) {
+      legendDraft = painted.layout;
+      top = titleBlockTop(legendDraft.height);
+      bottom = MARGIN.right;
+      if (LEGEND_BELOW && legendDraft.height > 0) {
+        bottom += legendDraft.height + 8;
+      }
+      height = fitFrameHeight(top, bottom);
+      box = pieBox(left, right, top, bottom, height);
+      const y2 = LEGEND_BELOW
+        ? Math.max(box.bottom + 12, height - legendDraft.height)
+        : TITLE_BASELINE + 18;
+      const painted2 = drawPieLegend(
+        legendNames,
+        legendColors,
+        legendOpacities,
+        box.left,
+        y2,
+        box.width,
       );
-      overflowTop = Math.max(overflowTop, 4 - (item.ly - TYPE.value.size / 2));
+      legendLines = painted2.lines;
     }
-    if (
-      overflowLeft <= 0.5 &&
-      overflowRight <= 0.5 &&
-      overflowBottom <= 0.5 &&
-      overflowTop <= 0.5
-    ) {
-      break;
-    }
-    left += Math.max(0, overflowLeft);
-    right += Math.max(0, overflowRight);
-    bottom += Math.max(0, overflowBottom);
-    top += Math.max(0, overflowTop);
-    height = fitFrameHeight(top, bottom);
-    box = pieBox(left, right, top, bottom, height);
-    labels = placeLabels(slices, box.cx, box.cy, box.r);
   }
 
   const { cx, cy, r } = box;
+  const rInner = isDonut ? r * innerRatio : 0;
   const lines: string[] = [drawTitle(visibleTitle(chart), box.left, chart.unit)];
+  lines.push(...legendLines);
 
-  lines.push(`  <g ${attrs({ "aria-hidden": "true" })}>`);
+  if (PLOT_BG) {
+    lines.push(
+      `  <rect ${attrs({
+        x: fmtPx(box.left),
+        y: fmtPx(box.top),
+        width: fmtPx(box.width),
+        height: fmtPx(box.height),
+        fill: PLOT_BG,
+        "data-plot-bg": "1",
+      })}/>`,
+    );
+  }
+  if (PLOT_BORDER_WIDTH > 0 && PLOT_BORDER) {
+    lines.push(
+      `  <rect ${attrs({
+        x: fmtPx(box.left),
+        y: fmtPx(box.top),
+        width: fmtPx(box.width),
+        height: fmtPx(box.height),
+        fill: "none",
+        stroke: PLOT_BORDER,
+        "stroke-width": PLOT_BORDER_WIDTH,
+        "data-plot-border": "1",
+      })}/>`,
+    );
+  }
+
+  lines.push(
+    `  <g ${attrs({
+      "aria-hidden": "true",
+      "data-pie-label-mode": PIE_LABEL_MODE,
+      "data-pie-inner-ratio": String(innerRatio),
+    })}>`,
+  );
   if (sum <= 0) {
     lines.push(
       `    <circle ${attrs({
@@ -244,7 +455,7 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
         fill: "none",
         stroke: INK,
         "stroke-opacity": STRUCTURE_OPACITY,
-        "stroke-width": 1.5,
+        "stroke-width": PIE_STROKE,
         "data-empty": "true",
       })}/>`,
     );
@@ -254,25 +465,45 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
         continue;
       }
       if (slice.value === sum) {
-        lines.push(
-          `    <circle ${attrs({
-            cx: fmtPx(cx),
-            cy: fmtPx(cy),
-            r: fmtPx(r),
-            fill: slice.color,
-            "fill-opacity": slice.opacity === 1 ? undefined : slice.opacity,
-            stroke: INK,
-            "stroke-opacity": STRUCTURE_OPACITY,
-            "stroke-width": PIE_STROKE,
-            "data-label": slice.label,
-            "data-raw-value": String(slice.value),
-          })}/>`,
-        );
+        if (isDonut) {
+          lines.push(
+            `    <path ${attrs({
+              d: fullDonutPath(cx, cy, r, rInner),
+              fill: slice.color,
+              "fill-opacity": slice.opacity === 1 ? undefined : slice.opacity,
+              "fill-rule": "evenodd",
+              stroke: INK,
+              "stroke-opacity": STRUCTURE_OPACITY,
+              "stroke-width": PIE_STROKE,
+              "data-label": slice.label,
+              "data-raw-value": String(slice.value),
+              "data-donut": "1",
+            })}/>`,
+          );
+        } else {
+          lines.push(
+            `    <circle ${attrs({
+              cx: fmtPx(cx),
+              cy: fmtPx(cy),
+              r: fmtPx(r),
+              fill: slice.color,
+              "fill-opacity": slice.opacity === 1 ? undefined : slice.opacity,
+              stroke: INK,
+              "stroke-opacity": STRUCTURE_OPACITY,
+              "stroke-width": PIE_STROKE,
+              "data-label": slice.label,
+              "data-raw-value": String(slice.value),
+            })}/>`,
+          );
+        }
         continue;
       }
+      const d = isDonut
+        ? donutSlicePath(cx, cy, r, rInner, slice.a0, slice.a1)
+        : slicePath(cx, cy, r, slice.a0, slice.a1);
       lines.push(
         `    <path ${attrs({
-          d: slicePath(cx, cy, r, slice.a0, slice.a1),
+          d,
           fill: slice.color,
           "fill-opacity": slice.opacity === 1 ? undefined : slice.opacity,
           stroke: INK,
@@ -280,6 +511,7 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
           "stroke-width": PIE_STROKE,
           "data-label": slice.label,
           "data-raw-value": String(slice.value),
+          "data-donut": isDonut ? "1" : undefined,
         })}/>`,
       );
     }

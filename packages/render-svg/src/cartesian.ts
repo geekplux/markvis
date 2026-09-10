@@ -56,6 +56,7 @@ import {
   PLOT_BG,
   PLOT_BORDER,
   PLOT_BORDER_WIDTH,
+  SCATTER_MARK,
   SCATTER_OPACITY,
   SCATTER_R,
   STRUCTURE_OPACITY,
@@ -873,6 +874,7 @@ function drawScatter(prepared: Prepared): string[] {
   const { rows, series, yScale, styles } = prepared;
   const catIndex = new Map(prepared.categories.map((c, i) => [c, i]));
   const styleOf = new Map(series.map((name, i) => [name, styles[i]!]));
+  const ring = SCATTER_MARK === "ring";
   const lines: string[] = [`  <g>`];
   for (const row of rows) {
     if (row.xNum === undefined && prepared.linearX) {
@@ -881,19 +883,37 @@ function drawScatter(prepared: Prepared): string[] {
     const cx = xPos(prepared, row, catIndex);
     const cy = yScale(row.y);
     const style = styleOf.get(row.series) ?? styles[0]!;
-    lines.push(
-      `    <circle ${attrs({
-        cx: fmtPx(cx),
-        cy: fmtPx(cy),
-        r: SCATTER_R,
-        fill: style.color,
-        "fill-opacity": SCATTER_OPACITY * style.opacity,
-        stroke: "none",
-        "data-x": row.xLabel,
-        "data-y": String(row.y),
-        "data-series": row.series,
-      })}/>`,
-    );
+    if (ring) {
+      lines.push(
+        `    <circle ${attrs({
+          cx: fmtPx(cx),
+          cy: fmtPx(cy),
+          r: SCATTER_R,
+          fill: PLOT_BG ?? "none",
+          stroke: style.color,
+          "stroke-width": 1.5,
+          "stroke-opacity": SCATTER_OPACITY * style.opacity,
+          "data-x": row.xLabel,
+          "data-y": String(row.y),
+          "data-series": row.series,
+          "data-scatter-mark": "ring",
+        })}/>`,
+      );
+    } else {
+      lines.push(
+        `    <circle ${attrs({
+          cx: fmtPx(cx),
+          cy: fmtPx(cy),
+          r: SCATTER_R,
+          fill: style.color,
+          "fill-opacity": SCATTER_OPACITY * style.opacity,
+          stroke: "none",
+          "data-x": row.xLabel,
+          "data-y": String(row.y),
+          "data-series": row.series,
+        })}/>`,
+      );
+    }
   }
   lines.push(`  </g>`);
   return lines;

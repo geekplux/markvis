@@ -2,7 +2,7 @@
   <title id="mv-68d9c244fd51a166-title">Yes leads at 60</title>
   <desc id="mv-68d9c244fd51a166-desc">pie chart. Yes leads at 60. x=label. y=n. 2 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Yes leads at 60</text>
-  <g aria-hidden="true">
+  <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0">
     <path d="M374 248 L374 103.84 A144.16 144.16 0 1 1 289.26 364.63 Z" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="yes" data-raw-value="60"/>
     <path d="M374 248 L289.26 364.63 A144.16 144.16 0 0 1 374 103.84 Z" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="no" data-raw-value="40"/>
   </g>

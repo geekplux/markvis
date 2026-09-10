@@ -2,22 +2,22 @@
   <title id="mv-86e0beabec419c7d-title">Chrome leads at 52</title>
   <desc id="mv-86e0beabec419c7d-desc">pie chart. Chrome leads at 52. x=browser. y=users. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="56" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Chrome leads at 52</text>
-  <g aria-hidden="true">
-    <path d="M378 229 L378 99.12 A129.88 129.88 0 1 1 361.72 357.86 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Chrome" data-raw-value="52"/>
-    <path d="M378 229 L361.72 357.86 A129.88 129.88 0 0 1 254.48 188.86 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Safari" data-raw-value="28"/>
-    <path d="M378 229 L254.48 188.86 A129.88 129.88 0 0 1 315.43 115.19 Z" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Firefox" data-raw-value="12"/>
-    <path d="M378 229 L315.43 115.19 A129.88 129.88 0 0 1 378 99.12 Z" fill="#f7a35c" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Other" data-raw-value="8"/>
+  <g font-size="12" font-weight="500" fill="#333333">
+    <rect x="56" y="31" width="10" height="10" fill="#7cb5ec" rx="1"/>
+    <text x="70" y="40" data-legend="Chrome">Chrome</text>
+    <rect x="130.64" y="31" width="10" height="10" fill="#434348" rx="1"/>
+    <text x="144.64" y="40" data-legend="Safari">Safari</text>
+    <rect x="205.28" y="31" width="10" height="10" fill="#90ed7d" rx="1"/>
+    <text x="219.28" y="40" data-legend="Firefox">Firefox</text>
+    <rect x="287.36" y="31" width="10" height="10" fill="#f7a35c" rx="1"/>
+    <text x="301.36" y="40" data-legend="Other">Other</text>
   </g>
-  <g fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1">
-    <polyline points="507.62,237.16 523.59,238.16 531.59,238.16"/>
-    <polyline points="268.34,298.59 254.83,307.17 246.83,307.17"/>
-    <polyline points="277.93,146.21 265.6,136.01 257.6,136.01"/>
-    <polyline points="345.7,103.2 341.72,87.7 333.72,87.7"/>
-  </g>
-  <g font-size="11" font-weight="500" fill="#333333">
-    <text x="543.59" y="238.16" text-anchor="start" dominant-baseline="middle" data-label="Chrome">Chrome · 52</text>
-    <text x="234.83" y="307.17" text-anchor="end" dominant-baseline="middle" data-label="Safari">Safari · 28</text>
-    <text x="245.6" y="136.01" text-anchor="end" dominant-baseline="middle" data-label="Firefox">Firefox · 12</text>
-    <text x="321.72" y="87.7" text-anchor="end" dominant-baseline="middle" data-label="Other">Other · 8</text>
+  <rect x="56" y="62" width="644" height="358" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="56" y="62" width="644" height="358" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
+  <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0">
+    <path d="M378 241 L378 119.28 A121.72 121.72 0 1 1 362.74 361.76 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Chrome" data-raw-value="52"/>
+    <path d="M378 241 L362.74 361.76 A121.72 121.72 0 0 1 262.24 203.39 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Safari" data-raw-value="28"/>
+    <path d="M378 241 L262.24 203.39 A121.72 121.72 0 0 1 319.36 134.34 Z" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Firefox" data-raw-value="12"/>
+    <path d="M378 241 L319.36 134.34 A121.72 121.72 0 0 1 378 119.28 Z" fill="#f7a35c" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Other" data-raw-value="8"/>
   </g>
 </svg>
