@@ -1,6 +1,7 @@
 import { formatNumber } from "./scale.js";
 import { textWidth } from "./text.js";
 import {
+  AXIS_TITLES,
   BAR_LABEL_MID_MIN_W,
   BAR_LABEL_MIN_WIDTH,
   BAR_LABEL_N_OFF,
@@ -152,15 +153,17 @@ export function tickLeftMargin(yTickLabels: string[]): number {
     0,
     ...yTickLabels.map((label) => textWidth(label, TYPE.tick.size)),
   );
-  return Math.max(MARGIN.left, yTickWidth + TICK_TEXT_GAP);
+  const axisPad = AXIS_TITLES ? 18 : 0;
+  return Math.max(MARGIN.left, yTickWidth + TICK_TEXT_GAP) + axisPad;
 }
 
 export function categoryBottomMargin(
   labels: string[],
   rotate: boolean,
 ): number {
+  const axisPad = AXIS_TITLES ? 18 : 0;
   if (labels.length === 0) {
-    return TYPE.tick.size + 12;
+    return TYPE.tick.size + 12 + axisPad;
   }
   if (rotate) {
     const longest = Math.max(
@@ -168,9 +171,9 @@ export function categoryBottomMargin(
       ...labels.map((label) => textWidth(label, TYPE.tick.size)),
     );
     const rad = (Math.abs(LABEL_ROTATE_DEG) * Math.PI) / 180;
-    return Math.sin(rad) * longest + 12;
+    return Math.sin(rad) * longest + 12 + axisPad;
   }
-  return TYPE.tick.size + 12;
+  return TYPE.tick.size + 12 + axisPad;
 }
 
 export function titleBlockTop(legendHeight: number): number {

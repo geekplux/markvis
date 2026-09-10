@@ -2,7 +2,10 @@
 
 import { folio, type ThemeTokens } from "../folio/theme.js";
 
-/** Denser plot, stronger grid, legend-friendly series chrome. */
+/**
+ * Static SVG grammar (START §3.1): denser grid, plot border/bg, axis titles,
+ * legend for series≥2 (END_LABEL_SERIES_MAX: 0), line markers. No Highcharts runtime.
+ */
 export const highcharts = {
   SVG_WIDTH: folio.SVG_WIDTH,
   SVG_HEIGHT: 440,
@@ -26,11 +29,12 @@ export const highcharts = {
     legend: { size: 12, weight: 500, fill: "#333333" },
   },
 
+  /** Legend-friendly + room for axis titles. */
   MARGIN: {
-    top: 28,
-    right: 16,
-    bottom: 22,
-    left: 44,
+    top: 36,
+    right: 20,
+    bottom: 36,
+    left: 56,
   },
 
   PALETTE: [
@@ -68,10 +72,11 @@ export const highcharts = {
   BAR_LABEL_MID_MIN_W: folio.BAR_LABEL_MID_MIN_W,
 
   LINE_STROKE: 2,
-  LINE_POINT_R: 3,
+  LINE_POINT_R: 3.5,
   POINT_SKIP_AFTER: folio.POINT_SKIP_AFTER,
   AREA_OPACITY: 0.28,
-  END_LABEL_SERIES_MAX: folio.END_LABEL_SERIES_MAX,
+  /** 0 → line/area series≥2 use color legend (not end-labels). */
+  END_LABEL_SERIES_MAX: 0,
   END_LABEL_GAP: folio.END_LABEL_GAP,
   END_LABEL_MIN_SEP: folio.END_LABEL_MIN_SEP,
 
@@ -86,4 +91,9 @@ export const highcharts = {
   PIE_ELBOW: folio.PIE_ELBOW,
 
   COMPACT_SPAN: folio.COMPACT_SPAN,
+
+  PLOT_BG: "#ffffff",
+  PLOT_BORDER: "#ccd6eb",
+  PLOT_BORDER_WIDTH: 1,
+  AXIS_TITLES: true,
 } as ThemeTokens;

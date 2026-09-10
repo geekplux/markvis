@@ -91,4 +91,9 @@ export const docs = {
   PIE_ELBOW: folio.PIE_ELBOW,
 
   COMPACT_SPAN: folio.COMPACT_SPAN,
+
+  PLOT_BG: folio.PLOT_BG,
+  PLOT_BORDER: folio.PLOT_BORDER,
+  PLOT_BORDER_WIDTH: folio.PLOT_BORDER_WIDTH,
+  AXIS_TITLES: folio.AXIS_TITLES,
 } as ThemeTokens;

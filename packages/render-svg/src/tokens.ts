@@ -63,6 +63,11 @@ export let PIE_ELBOW = folio.PIE_ELBOW;
 
 export let COMPACT_SPAN = folio.COMPACT_SPAN;
 
+export let PLOT_BG = folio.PLOT_BG;
+export let PLOT_BORDER = folio.PLOT_BORDER;
+export let PLOT_BORDER_WIDTH = folio.PLOT_BORDER_WIDTH;
+export let AXIS_TITLES = folio.AXIS_TITLES;
+
 /** Apply a theme pack to the live token bindings used by layout/paint. */
 export function applyThemeTokens(t: ThemeTokens): void {
   SVG_WIDTH = t.SVG_WIDTH;
@@ -113,4 +118,8 @@ export function applyThemeTokens(t: ThemeTokens): void {
   PIE_LABEL_MIN_SEP = t.PIE_LABEL_MIN_SEP;
   PIE_ELBOW = t.PIE_ELBOW;
   COMPACT_SPAN = t.COMPACT_SPAN;
+  PLOT_BG = t.PLOT_BG;
+  PLOT_BORDER = t.PLOT_BORDER;
+  PLOT_BORDER_WIDTH = t.PLOT_BORDER_WIDTH;
+  AXIS_TITLES = t.AXIS_TITLES;
 }

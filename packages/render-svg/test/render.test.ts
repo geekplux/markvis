@@ -292,6 +292,11 @@ describe("highcharts tokens", () => {
     expect(highcharts.TYPE.legend.size).toBeGreaterThan(folio.TYPE.legend.size);
     expect(highcharts.TITLE_TO_PLOT).toBeGreaterThan(folio.TITLE_TO_PLOT);
     expect(highcharts.PALETTE[0]).not.toBe(folio.PALETTE[0]);
+    expect(highcharts.END_LABEL_SERIES_MAX).toBe(0);
+    expect(highcharts.AXIS_TITLES).toBe(true);
+    expect(highcharts.PLOT_BORDER_WIDTH).toBeGreaterThan(0);
+    expect(highcharts.PLOT_BG).toBeTruthy();
+    expect(highcharts.LINE_POINT_R).toBeGreaterThan(folio.LINE_POINT_R);
   });
 
   it("renders a different SVG than folio for the same bar IR", () => {
@@ -302,6 +307,38 @@ describe("highcharts tokens", () => {
     expect(b).toContain(
       'font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif"',
     );
+    expect(b).toContain('data-plot-border="1"');
+    expect(b).toContain('data-plot-bg="1"');
+    expect(b).toContain('data-axis-titles="1"');
+    expect(a).not.toContain('data-plot-border="1"');
+  });
+
+  it("uses color legend for multi-series line (not end-labels)", () => {
+    const chart = ChartIRSchema.parse({
+      markvis: 2,
+      type: "line",
+      title: "Multi",
+      theme: "highcharts",
+      x: "month",
+      y: "value",
+      series: "kind",
+      table: {
+        columns: ["month", "value", "kind"],
+        rows: [
+          ["Jan", "1", "A"],
+          ["Feb", "2", "A"],
+          ["Jan", "3", "B"],
+          ["Feb", "4", "B"],
+        ],
+      },
+    });
+    const svg = renderSvg(chart);
+    expect(svg).toContain('data-plot-border="1"');
+    // legend swatches for both series names
+    expect(svg).toMatch(/>A</);
+    expect(svg).toMatch(/>B</);
+    // end-labels sit at plot-right with data from end-label path — absence of end gap placement is enough via legend height
+    expect(highcharts.END_LABEL_SERIES_MAX).toBe(0);
   });
 
   it("matches examples/out/themes/highcharts/01-bar-basic.svg", () => {

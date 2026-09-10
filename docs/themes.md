@@ -66,13 +66,13 @@ Instruction: keep folio chart locks — transparent canvas, hairline grid, value
 
 ### Intent
 
-Denser plot, stronger grid, legend-friendly series chrome. Highcharts-demo-inspired look as tokens only — same keys as folio, no vendor deps.
+Static SVG grammar: denser plot, plot border/bg, axis titles, legend for series ≥ 2, line markers. Highcharts-demo-inspired tokens only — no vendor deps. Hover/draw-in is a later unit.
 
 ### Locked tokens (from `packages/themes/highcharts/theme.ts`)
 
 | Token | Value |
 | --- | --- |
-| Canvas / paper | transparent (inherits host; no pack-level paper fill) |
+| Canvas / paper | plot fill `#ffffff` + border `#ccd6eb` (1px) |
 | Ink | `#333333` |
 | Quiet | `#666666` |
 | Hairline opacity (grid) | `0.22` |
@@ -81,7 +81,7 @@ Denser plot, stronger grid, legend-friendly series chrome. Highcharts-demo-inspi
 | Wrap opacity | `0.75` |
 | Bar radius `BAR_RX` | `0` |
 | Line stroke | `2` |
-| Line point `r` | `3` |
+| Line point `r` | `3.5` |
 | Area fill opacity | `0.28` |
 | Type — title | `16` / `600` / `#333333` |
 | Type — unit | `12` / `400` / `#666666` |
@@ -91,7 +91,9 @@ Denser plot, stronger grid, legend-friendly series chrome. Highcharts-demo-inspi
 | Type — legend | `12` / `500` / `#333333` |
 | Frame | `720×440` (max height `640`) |
 | Plot min ratio | `0.62` |
-| Margins | top `28`, right `16`, bottom `22`, left `44` |
+| Margins | top `36`, right `20`, bottom `36`, left `56` |
+| `END_LABEL_SERIES_MAX` | `0` (legend for series ≥ 2) |
+| `AXIS_TITLES` | `true` |
 | Max interior grid | `5` |
 | Font | `Arial, Helvetica, "Segoe UI", sans-serif` |
 
@@ -106,9 +108,13 @@ Denser plot, stronger grid, legend-friendly series chrome. Highcharts-demo-inspi
 | SVG height | `480` | `440` |
 | Plot min ratio | `0.55` | `0.62` |
 | Max interior grid | `3` | `5` |
-| Margins | `36/20/26/48` | `28/16/22/44` |
+| Margins | `36/20/26/48` | `36/20/36/56` |
+| Plot chrome | none | bg + border |
+| Axis titles | off | on (`x`/`y`/`unit`) |
+| Line/area multi-series | end-labels (≤4) | color legend |
+| `END_LABEL_SERIES_MAX` | `4` | `0` |
 | `BAR_RX` | `3` | `0` |
-| Line stroke / point | `1.75` / `2.5` | `2` / `3` |
+| Line stroke / point | `1.75` / `2.5` | `2` / `3.5` |
 | Area opacity | `0.22` | `0.28` |
 | Legend type | `11/400` | `12/500` |
 | Palette | mid-chroma Ledger set | demo blues/greens/oranges (`#7cb5ec`…) |

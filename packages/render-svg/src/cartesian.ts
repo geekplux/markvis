@@ -32,6 +32,7 @@ import {
 import { textWidth } from "./text.js";
 import {
   AREA_OPACITY,
+  AXIS_TITLES,
   BAR_GAP_FEW,
   BAR_GAP_MANY,
   BAR_LABEL_INSIDE_H,
@@ -50,6 +51,9 @@ import {
   LINE_STROKE,
   MAX_INTERIOR_GRID,
   POINT_SKIP_AFTER,
+  PLOT_BG,
+  PLOT_BORDER,
+  PLOT_BORDER_WIDTH,
   SCATTER_OPACITY,
   SCATTER_R,
   STRUCTURE_OPACITY,
@@ -81,6 +85,8 @@ type Prepared = {
   showValueLabels: boolean;
   showInteriorGrid: boolean;
   useEndLabels: boolean;
+  axisXTitle: string | undefined;
+  axisYTitle: string | undefined;
 };
 
 function polyline(points: { x: number; y: number }[]): string {
@@ -305,6 +311,11 @@ function prepare(chart: ChartIR): Prepared {
     showValueLabels: labelBars,
     showInteriorGrid,
     useEndLabels,
+    axisXTitle: AXIS_TITLES ? chart.x : undefined,
+    axisYTitle: AXIS_TITLES
+      ? [chart.y, chart.unit].filter((s): s is string => Boolean(s)).join(" · ") ||
+        undefined
+      : undefined,
   };
 }
 
@@ -372,6 +383,34 @@ function interiorGridTicks(
 function drawGridAndAxes(prepared: Prepared): string[] {
   const { plot, xTicks, yTicks, rotateX } = prepared;
   const lines: string[] = [];
+
+  if (PLOT_BG) {
+    lines.push(
+      `  <rect ${attrs({
+        x: fmtPx(plot.left),
+        y: fmtPx(plot.top),
+        width: fmtPx(plot.width),
+        height: fmtPx(plot.height),
+        fill: PLOT_BG,
+        "data-plot-bg": "1",
+      })}/>`,
+    );
+  }
+  if (PLOT_BORDER_WIDTH > 0 && PLOT_BORDER) {
+    lines.push(
+      `  <rect ${attrs({
+        x: fmtPx(plot.left),
+        y: fmtPx(plot.top),
+        width: fmtPx(plot.width),
+        height: fmtPx(plot.height),
+        fill: "none",
+        stroke: PLOT_BORDER,
+        "stroke-width": PLOT_BORDER_WIDTH,
+        "data-plot-border": "1",
+      })}/>`,
+    );
+  }
+
   if (prepared.showInteriorGrid) {
     const gridTicks = interiorGridTicks(yTicks, plot.bottom);
     if (gridTicks.length > 0) {
@@ -474,6 +513,44 @@ function drawGridAndAxes(prepared: Prepared): string[] {
     }
   }
   lines.push(`  </g>`);
+
+  if (prepared.axisXTitle || prepared.axisYTitle) {
+    lines.push(
+      `  <g ${attrs({
+        fill: TYPE.unit.fill,
+        "font-size": TYPE.unit.size,
+        "font-weight": TYPE.unit.weight,
+        "data-axis-titles": "1",
+      })}>`,
+    );
+    if (prepared.axisYTitle) {
+      const cx = plot.left - TICK_TEXT_GAP - 14;
+      const cy = (plot.top + plot.bottom) / 2;
+      lines.push(
+        `    <text ${attrs({
+          x: fmtPx(cx),
+          y: fmtPx(cy),
+          "text-anchor": "middle",
+          "dominant-baseline": "middle",
+          transform: `rotate(-90 ${fmtPx(cx)} ${fmtPx(cy)})`,
+          "data-axis": "y",
+        })}>${escapeXml(prepared.axisYTitle)}</text>`,
+      );
+    }
+    if (prepared.axisXTitle) {
+      lines.push(
+        `    <text ${attrs({
+          x: fmtPx((plot.left + plot.right) / 2),
+          y: fmtPx(plot.bottom + (rotateX ? 28 : TYPE.tick.size + 16)),
+          "text-anchor": "middle",
+          "dominant-baseline": "hanging",
+          "data-axis": "x",
+        })}>${escapeXml(prepared.axisXTitle)}</text>`,
+      );
+    }
+    lines.push(`  </g>`);
+  }
+
   return lines;
 }
 

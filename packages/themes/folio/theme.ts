@@ -85,6 +85,13 @@ export const folio = {
   PIE_ELBOW: 8,
 
   COMPACT_SPAN: 10_000,
+
+  /** Plot chrome (null/0 = folio transparent, no box). */
+  PLOT_BG: null as string | null,
+  PLOT_BORDER: null as string | null,
+  PLOT_BORDER_WIDTH: 0,
+  /** When true, paint x/y axis titles from IR field names / unit. */
+  AXIS_TITLES: false,
 } as const;
 
 export type ThemeTokens = typeof folio;
