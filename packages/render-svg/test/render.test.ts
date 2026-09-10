@@ -414,6 +414,27 @@ describe("shadcn tokens", () => {
     expect(shadcn.BAR_GAP_FEW).toBeGreaterThan(folio.BAR_GAP_FEW);
   });
 
+  it("is not highcharts chrome (soft card, no axis titles, rounder bars)", () => {
+    expect(shadcn.PLOT_BORDER).not.toBe(highcharts.PLOT_BORDER);
+    expect(shadcn.PLOT_BORDER).toBe("#e5e5e5");
+    expect(highcharts.PLOT_BORDER).toBe("#ccd6eb");
+    expect(shadcn.AXIS_TITLES).toBe(false);
+    expect(highcharts.AXIS_TITLES).toBe(true);
+    expect(shadcn.BAR_RX).toBeGreaterThan(highcharts.BAR_RX);
+    expect(shadcn.SVG_HEIGHT).not.toBe(highcharts.SVG_HEIGHT);
+    expect(shadcn.SVG_HEIGHT).not.toBe(folio.SVG_HEIGHT);
+    expect(shadcn.PALETTE[0]).not.toBe(highcharts.PALETTE[0]);
+    const folioSvg = renderSvg(barChart({ theme: "folio" }));
+    const hcSvg = renderSvg(barChart({ theme: "highcharts" }));
+    const shSvg = renderSvg(barChart({ theme: "shadcn" }));
+    expect(shSvg).not.toBe(folioSvg);
+    expect(shSvg).not.toBe(hcSvg);
+    expect(shSvg).toContain("#e5e5e5");
+    expect(shSvg).not.toContain("#ccd6eb");
+    expect(shSvg).not.toContain('data-axis-titles="1"');
+    expect(hcSvg).toContain('data-axis-titles="1"');
+  });
+
   it("renders a different SVG than folio for the same bar IR", () => {
     const a = renderSvg(barChart({ theme: "folio" }));
     const b = renderSvg(barChart({ theme: "shadcn" }));
