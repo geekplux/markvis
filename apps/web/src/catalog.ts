@@ -248,12 +248,9 @@ export function mapsFromGlobs(
 } {
   const markdownByStem: Record<string, string> = {};
   const svgByStem: Record<string, string> = {};
-  const themedSvgByThemeStem = {
-    folio: {},
-    highcharts: {},
-    shadcn: {},
-    docs: {},
-  } as Record<ChartTheme, Record<string, string>>;
+  const themedSvgByThemeStem = Object.fromEntries(
+    THEMES.map((id) => [id, {} as Record<string, string>]),
+  ) as Record<ChartTheme, Record<string, string>>;
 
   for (const [path, source] of Object.entries(markdownModules)) {
     markdownByStem[stemFromPath(path)] = source;
@@ -290,12 +287,9 @@ export function cardCounts(items: GalleryItem[]): {
     pie: 0,
     hist: 0,
   } as Record<ChartType, number>;
-  const byTheme = {
-    folio: 0,
-    highcharts: 0,
-    shadcn: 0,
-    docs: 0,
-  } as Record<ChartTheme, number>;
+  const byTheme = Object.fromEntries(
+    THEMES.map((id) => [id, 0]),
+  ) as Record<ChartTheme, number>;
   for (const item of items) {
     byType[item.type] += 1;
     for (const theme of THEMES) {

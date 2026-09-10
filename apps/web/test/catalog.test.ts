@@ -26,22 +26,13 @@ const themesDir = join(outDir, "themes");
 function loadDiskMaps(): {
   markdownByStem: Record<string, string>;
   svgByStem: Record<string, string>;
-  themedSvgByThemeStem: Record<
-    "folio" | "highcharts" | "shadcn" | "docs",
-    Record<string, string>
-  >;
+  themedSvgByThemeStem: Record<(typeof THEMES)[number], Record<string, string>>;
 } {
   const markdownByStem: Record<string, string> = {};
   const svgByStem: Record<string, string> = {};
-  const themedSvgByThemeStem = {
-    folio: {},
-    highcharts: {},
-    shadcn: {},
-    docs: {},
-  } as Record<
-    "folio" | "highcharts" | "shadcn" | "docs",
-    Record<string, string>
-  >;
+  const themedSvgByThemeStem = Object.fromEntries(
+    THEMES.map((id) => [id, {} as Record<string, string>]),
+  ) as Record<(typeof THEMES)[number], Record<string, string>>;
   for (const name of readdirSync(validDir)) {
     if (!name.endsWith(".md")) {
       continue;
@@ -122,6 +113,7 @@ describe("gallery catalog", () => {
     const counts = cardCounts(catalog);
     expect(counts.byTheme.folio).toBe(52);
     expect(counts.byTheme.highcharts).toBe(52);
+    expect(counts.byTheme.ant).toBe(52);
     expect(counts.byType.bar).toBeGreaterThanOrEqual(1);
     expect(() =>
       catalogFromMaps(maps.markdownByStem, {
@@ -146,6 +138,8 @@ describe("gallery catalog", () => {
           "<svg data-t=shadcn><title>T</title></svg>",
         "/x/examples/out/themes/docs/01-bar-basic.svg":
           "<svg data-t=docs><title>T</title></svg>",
+        "/x/examples/out/themes/ant/01-bar-basic.svg":
+          "<svg data-t=ant><title>T</title></svg>",
       },
     );
     const catalog = catalogFromMaps(
