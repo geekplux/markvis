@@ -18,6 +18,7 @@ pageClass: folio-home-page
     <a href="/play">Play</a>
     <a href="/ai">AI</a>
   </div>
+  <button type="button" class="home-nav-mode" data-site-mode-toggle aria-label="Switch to Light mode">Light</button>
   <a class="home-nav-action" href="/play">Playground</a>
 </nav>
 

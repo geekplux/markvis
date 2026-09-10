@@ -14,9 +14,12 @@ function docsSidebar() {
   ];
 }
 
+const siteModeBoot = `(function(){try{var k='markvis-site-mode';var m=localStorage.getItem(k);if(m!=='light'&&m!=='dark'){m=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.classList.remove('light','dark');document.documentElement.classList.add(m);}catch(e){document.documentElement.classList.add('dark');}})();`;
+
 export default defineConfig({
   title: "markvis",
   description: "Quantitative charts in Markdown — the fence is the data.",
+  head: [["script", {}, siteModeBoot]],
   vite: {
     server: {
       fs: {

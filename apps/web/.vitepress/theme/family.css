@@ -6,7 +6,7 @@
   --family-field: #ffdb2a;
   --family-ink: #080b08;
   --family-paper: #edebe5;
-  --family-page: #0e1312;
+  --family-page: var(--site-page);
   --family-muted: #979d97;
   --family-rule: rgba(8, 11, 8, 0.28);
   --family-chip: #0e130f;
@@ -36,7 +36,7 @@
 .folio-examples,
 .folio-docs,
 .folio-play {
-  background: #0e1312;
+  background: var(--site-page);
   overflow-x: hidden;
 }
 
@@ -44,7 +44,7 @@
 .folio-play .VPContent,
 .folio-docs .VPContent {
   padding-top: 0 !important;
-  background: #0e1312;
+  background: var(--site-page);
 }
 
 .folio-examples .VPFooter,
@@ -56,27 +56,27 @@
 .folio-docs .VPSidebar,
 .folio-docs .VPLocalNav {
   display: flex !important;
-  background: #0e1312 !important;
-  background-color: #0e1312 !important;
+  background: var(--site-page) !important;
+  background-color: var(--site-page) !important;
   box-shadow: none !important;
   border-radius: 0;
 }
 
 .folio-docs .VPSidebarItem .item,
 .folio-docs .VPSidebarItem .text {
-  color: #edebe5 !important;
+  color: var(--site-fg) !important;
   border-radius: 0;
   background: transparent !important;
 }
 
 .folio-docs .VPSidebarItem.is-active > .item .text,
 .folio-docs .VPSidebarItem.is-active > .item {
-  color: #edebe5 !important;
+  color: var(--site-fg) !important;
   background: transparent !important;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
-  text-decoration-color: #edebe5;
+  text-decoration-color: var(--site-fg);
 }
 
 .folio-docs .vp-doc h1,
@@ -88,18 +88,18 @@
 .folio-docs .vp-doc td,
 .folio-docs .vp-doc th,
 .folio-docs .vp-doc a {
-  color: #edebe5;
+  color: var(--site-fg);
 }
 
 .folio-docs .vp-doc .VPDocFooter,
 .folio-docs .vp-doc .prev-next,
 .folio-docs .vp-doc p.muted,
 .folio-docs .vp-doc .custom-block {
-  color: #979d97;
+  color: var(--site-fg-muted);
 }
 
 .folio-docs .vp-doc a {
-  color: #edebe5;
+  color: var(--site-fg);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -107,21 +107,21 @@
 .folio-docs .vp-doc div[class*="language-"],
 .folio-docs .vp-doc .vp-code-group,
 .folio-docs .vp-doc pre {
-  background: #0e130f !important;
+  background: var(--site-cell) !important;
   border-radius: 0 !important;
   box-shadow: none !important;
 }
 
 .folio-docs .vp-doc div[class*="language-"] code,
 .folio-docs .vp-doc pre code {
-  color: #edebe5;
+  color: var(--site-fg);
 }
 
 .folio-docs .vp-doc :focus-visible,
 .folio-examples :focus-visible,
 .folio-play :focus-visible,
 .family-nav :focus-visible {
-  outline: 2px solid #edebe5;
+  outline: 2px solid var(--site-fg);
   outline-offset: 2px;
 }
 
@@ -136,7 +136,8 @@
 
 .family-nav {
   display: grid;
-  grid-template-columns: minmax(180px, 1fr) auto minmax(180px, 1fr);
+  grid-template-columns: minmax(180px, 1fr) auto auto minmax(140px, 1fr);
+  overflow: visible;
   align-items: center;
   height: 72px;
   min-height: 72px;
@@ -150,8 +151,8 @@
 
 @media (max-width: 768px) {
   .family-nav {
-    grid-template-columns: minmax(0, 1fr) auto auto;
-    overflow-x: hidden;
+    grid-template-columns: minmax(0, 1fr) auto auto auto;
+    overflow: visible;
   }
 
   .family-nav .home-wordmark {
@@ -172,7 +173,7 @@
     align-items: stretch;
     background: #ffdb2a;
     padding: 8px 16px 16px;
-    z-index: 41;
+    z-index: 50;
   }
 
   .family-nav .home-nav-toggle:checked ~ .home-nav-links {
@@ -186,7 +187,7 @@
 }
 
 .family-foot {
-  background: #f8f8f6;
+  background: var(--site-footer);
   padding: 32px clamp(24px, 5vw, 68px);
   font-size: 13px;
   color: #080b08;

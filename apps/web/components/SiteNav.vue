@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, onMounted } from "vue";
 import { useData } from "vitepress";
+import { initSiteMode } from "../.vitepress/theme/siteMode";
 
 const { frontmatter, page } = useData();
 
@@ -14,7 +15,9 @@ const show = computed(() => {
   if (cls === "folio-examples" || cls === "folio-play" || cls === "folio-docs") {
     return true;
   }
-  const path = routeKey(String(page.value.relativePath ? "/" + page.value.relativePath.replace(/\.md$/, "") : ""));
+  const path = routeKey(
+    String(page.value.relativePath ? "/" + page.value.relativePath.replace(/\.md$/, "") : ""),
+  );
   return (
     path === "/examples" ||
     path === "/spec" ||
@@ -23,6 +26,10 @@ const show = computed(() => {
     path === "/themes" ||
     path === "/play"
   );
+});
+
+onMounted(() => {
+  initSiteMode();
 });
 </script>
 
@@ -37,6 +44,14 @@ const show = computed(() => {
       <a href="/play">Play</a>
       <a href="/ai">AI</a>
     </div>
+    <button
+      type="button"
+      class="home-nav-mode"
+      data-site-mode-toggle
+      aria-label="Switch to Light mode"
+    >
+      Light
+    </button>
     <a class="home-nav-action" href="/play">Playground</a>
   </nav>
 </template>

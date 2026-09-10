@@ -1,0 +1,76 @@
+/* Site mode tokens — not chart theme. See docs/design/SITE.md §G. */
+
+html.dark {
+  color-scheme: dark;
+  --site-page: #0e1312;
+  --site-field: #ffdb2a;
+  --site-ink: #080b08;
+  --site-paper: #edebe5;
+  --site-muted: #979d97;
+  --site-cell: #0e130f;
+  --site-footer: #f8f8f6;
+  --site-rule: rgba(237, 235, 229, 0.16);
+  --site-fg: #edebe5;
+  --site-fg-muted: #979d97;
+  --site-chip-border: rgba(237, 235, 229, 0.28);
+}
+
+html.light {
+  color-scheme: light;
+  --site-page: #f8f8f6;
+  --site-field: #ffdb2a;
+  --site-ink: #080b08;
+  --site-paper: #ffffff;
+  --site-muted: #737373;
+  --site-cell: #edebe5;
+  --site-footer: #edebe5;
+  --site-rule: rgba(8, 11, 8, 0.12);
+  --site-fg: #080b08;
+  --site-fg-muted: #737373;
+  --site-chip-border: rgba(8, 11, 8, 0.18);
+}
+
+html:not(.light):not(.dark) {
+  color-scheme: dark;
+  --site-page: #0e1312;
+  --site-field: #ffdb2a;
+  --site-ink: #080b08;
+  --site-paper: #edebe5;
+  --site-muted: #979d97;
+  --site-cell: #0e130f;
+  --site-footer: #f8f8f6;
+  --site-rule: rgba(237, 235, 229, 0.16);
+  --site-fg: #edebe5;
+  --site-fg-muted: #979d97;
+  --site-chip-border: rgba(237, 235, 229, 0.28);
+}
+
+.home-nav-mode {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  height: 44px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11px;
+  font-weight: 560;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--site-ink);
+  cursor: pointer;
+  justify-self: end;
+}
+
+.home-nav-mode:focus-visible {
+  outline: 2px solid var(--site-ink);
+  outline-offset: 2px;
+}
+
+.family-nav .home-nav-mode {
+  color: #080b08;
+}

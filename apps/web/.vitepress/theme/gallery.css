@@ -3,8 +3,8 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px;
-  color: #edebe5;
-  background: #0e1312;
+  color: var(--site-fg);
+  background: transparent;
 }
 
 .gallery-title {
@@ -13,14 +13,14 @@
   font-weight: 700;
   letter-spacing: -0.04em;
   line-height: 1.05;
-  color: #edebe5;
+  color: var(--site-fg);
 }
 
 .gallery-sub {
   margin: 8px 0 20px;
   font-size: 15px;
   font-weight: 400;
-  color: #979d97;
+  color: var(--site-fg-muted);
   max-width: 42ch;
 }
 
@@ -36,9 +36,9 @@
   min-height: 44px;
   padding: 0 14px;
   border-radius: 0;
-  border: 1px solid rgba(237, 235, 229, 0.28);
+  border: 1px solid var(--site-chip-border);
   background: transparent;
-  color: #edebe5;
+  color: var(--site-fg);
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 11px;
   font-weight: 560;
@@ -78,7 +78,7 @@
   width: 100%;
   text-align: left;
   padding: 12px;
-  background: #edebe5;
+  background: var(--site-paper);
   border: 1px solid rgba(237, 235, 229, 0.16);
   border-radius: 0;
   box-shadow: none;
@@ -89,7 +89,7 @@
 }
 
 .gallery-card:hover {
-  border-color: #edebe5;
+  border-color: var(--site-fg);
   transform: translateY(-1px);
 }
 
@@ -137,7 +137,7 @@
   position: absolute;
   z-index: 2;
   pointer-events: auto;
-  background: #edebe5;
+  background: var(--site-paper);
   color: #080b08;
   border-radius: 0;
   box-sizing: border-box;
@@ -228,7 +228,7 @@
   min-width: 44px;
   padding: 0 12px;
   border: 1px solid #080b08;
-  background: #edebe5;
+  background: var(--site-paper);
   color: #080b08;
   font-size: 12px;
   font-weight: 500;

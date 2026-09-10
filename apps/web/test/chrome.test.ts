@@ -91,7 +91,8 @@ describe("site visual chrome", () => {
     expect(css).not.toMatch(/#f7f4ef/i);
     expect(css).not.toMatch(/#2563eb/i);
     expect(css).not.toMatch(/999px/);
-    expect(css).toMatch(/\.gallery-page[\s\S]*background:\s*#0e1312/);
+    expect(css).toMatch(/\.gallery-page[\s\S]*background:\s*transparent/);
+    expect(css).not.toMatch(/\.gallery-page[\s\S]*background:\s*#0e1312/);
     expect(css).toMatch(/\.gallery-page[\s\S]*padding:\s*24px/);
     expect(css).toMatch(/\.gallery-chip[\s\S]*height:\s*44px/);
     expect(css).toMatch(/\.gallery-chip[\s\S]*border-radius:\s*0/);
@@ -113,8 +114,10 @@ describe("site visual chrome", () => {
     expect(family).toMatch(/\.family-nav \.home-nav-action[\s\S]*color:\s*#ffdb2a/i);
     expect(family).toMatch(/#080b08/i);
     expect(family).not.toMatch(/#2563eb/i);
+    expect(family).toMatch(/background:\s*var\(--site-page\)/);
+    expect(family).toMatch(/overflow:\s*visible/);
     expect(family).toMatch(/max-width:\s*768px/);
-    expect(family).toMatch(/minmax\(0,\s*1fr\)\s*auto auto/);
+    expect(family).toMatch(/minmax\(0,\s*1fr\)\s*auto auto auto/);
     expect(family).not.toMatch(/max-width:\s*390px[\s\S]*home-nav-links/);
     expect(nav).toContain('href="/"');
     expect(nav).toContain("markvis");
@@ -126,6 +129,8 @@ describe("site visual chrome", () => {
     expect(nav).toContain('href="/play"');
     expect(nav).toContain('href="/ai"');
     expect(nav).toContain("Playground");
+    expect(nav).toContain("data-site-mode-toggle");
+    expect(nav).toContain("home-nav-mode");
   });
 
   it("docs body is ink; home.css locks field + ink panel", () => {
@@ -151,12 +156,36 @@ describe("site visual chrome", () => {
     expect(home).toMatch(/min-height:\s*720px/);
     expect(home).toMatch(/@media\s*\(max-width:\s*768px\)/);
     expect(home).toMatch(/@media\s*\(max-width:\s*390px\)/);
-    expect(home).toMatch(/minmax\(0,\s*1fr\)\s*auto auto/);
+    expect(home).toMatch(/minmax\(0,\s*1fr\)\s*auto auto auto/);
+    expect(home).toMatch(/\.home-nav[\s\S]*overflow:\s*visible/);
     expect(home).toMatch(/\.home-btn[\s\S]*justify-content:\s*space-between/);
     expect(home).toMatch(/\.home-btn[\s\S]*padding:\s*12px 18px/);
     expect(home).toMatch(/\.home-band[\s\S]*gap:\s*1px/);
     expect(home).toMatch(/\.home-chip-label/);
     expect(home).not.toMatch(/\.home-proof-h/);
+  });
+
+  it("site light/dark mode tokens + menu not clipped", () => {
+    const mode = read(".vitepress/theme/site-mode.css");
+    const modeTs = read(".vitepress/theme/siteMode.ts");
+    const theme = read(".vitepress/theme/index.ts");
+    const homeMd = read("index.md");
+    const homeCss = read(".vitepress/theme/home.css");
+    const family = read(".vitepress/theme/family.css");
+    expect(mode).toMatch(/html\.dark/);
+    expect(mode).toMatch(/html\.light/);
+    expect(mode).toMatch(/--site-page:\s*#0e1312/);
+    expect(mode).toMatch(/--site-page:\s*#f8f8f6/);
+    expect(modeTs).toContain("markvis-site-mode");
+    expect(modeTs).toContain("toggleSiteMode");
+    expect(theme).toContain("./site-mode.css");
+    expect(theme).toContain("initSiteMode");
+    expect(homeMd).toContain("data-site-mode-toggle");
+    expect(homeCss).toMatch(/\.home-nav[\s\S]*overflow:\s*visible/);
+    expect(family).toMatch(/\.family-nav[\s\S]*overflow:\s*visible/);
+    expect(family).not.toMatch(
+      /@media\s*\(max-width:\s*768px\)[\s\S]*\.family-nav[\s\S]*overflow-x:\s*hidden/,
+    );
   });
 
   it("playground keeps two panes with PLAY chrome + mobile toolbar", () => {
