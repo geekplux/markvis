@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="640" viewBox="0 0 720 640" role="img" aria-label="bar chart: North America leads spend at 420,000 (USD), 3 rows" aria-labelledby="mv-e9d00e87d5c9a6d2-title" aria-describedby="mv-e9d00e87d5c9a6d2-desc" data-markvis="2" data-chart-type="bar" data-id="mv-e9d00e87d5c9a6d2" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-e9d00e87d5c9a6d2-title">North America leads spend at 420,000</title>
+  <desc id="mv-e9d00e87d5c9a6d2-desc">bar chart. North America leads spend at 420,000. x=initiative. y=spend. unit=USD. 3 rows.</desc>
+  <text x="73.74" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">North America leads spend at 420,000<tspan font-size="12" font-weight="400" fill="#8C8C8C"> · USD</tspan></text>
+  <rect x="73.74" y="46" width="632.26" height="318.19" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="73.74" y="46" width="632.26" height="318.19" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <path d="M73.74 364.19 L706 364.19" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
+  <g fill="#8C8C8C" font-size="11" font-weight="400">
+    <text x="65.74" y="364.19" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="65.74" y="258.13" text-anchor="end" dominant-baseline="middle">200,000</text>
+    <text x="65.74" y="152.06" text-anchor="end" dominant-baseline="middle">400,000</text>
+    <text x="65.74" y="46" text-anchor="end" dominant-baseline="middle">600,000</text>
+    <text x="179.12" y="372.19" text-anchor="end" dominant-baseline="middle" font-size="11" transform="rotate(-55 179.12 372.19)" data-full-label="North America enterprise expansion Q3">North America enterprise expansion Q3</text>
+    <text x="389.87" y="372.19" text-anchor="end" dominant-baseline="middle" font-size="11" transform="rotate(-55 389.87 372.19)" data-full-label="APAC partner enablement and training program">APAC partner enablement and training program</text>
+    <text x="600.62" y="372.19" text-anchor="end" dominant-baseline="middle" font-size="11" transform="rotate(-55 600.62 372.19)" data-full-label="Legacy platform decommission wave 2">Legacy platform decommission wave 2</text>
+  </g>
+  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="51.74" y="205.09" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 51.74 205.09)" data-axis="y">spend · USD</text>
+    <text x="389.87" y="392.19" text-anchor="middle" dominant-baseline="hanging" data-axis="x">initiative</text>
+  </g>
+  <g>
+    <path d="M151.12 364.19 L151.12 143.46 Q151.12 141.46 153.12 141.46 L205.12 141.46 Q207.12 141.46 207.12 143.46 L207.12 364.19 Z" fill="#5AD8A6" data-x="North America enterprise expansion Q3" data-series="spend" data-y="420000"/>
+    <path d="M361.87 364.19 L361.87 268.08 Q361.87 266.08 363.87 266.08 L415.87 266.08 Q417.87 266.08 417.87 268.08 L417.87 364.19 Z" fill="#5AD8A6" data-x="APAC partner enablement and training program" data-series="spend" data-y="185000"/>
+    <path d="M572.62 364.19 L572.62 315.81 Q572.62 313.81 574.62 313.81 L626.62 313.81 Q628.62 313.81 628.62 315.81 L628.62 364.19 Z" fill="#5AD8A6" data-x="Legacy platform decommission wave 2" data-series="spend" data-y="95000"/>
+  </g>
+  <g>
+    <text x="179.12" y="133.46" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="North America enterprise expansion Q3">420,000</text>
+    <text x="389.87" y="258.08" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="APAC partner enablement and training program">185,000</text>
+    <text x="600.62" y="305.81" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="Legacy platform decommission wave 2">95,000</text>
+  </g>
+</svg>

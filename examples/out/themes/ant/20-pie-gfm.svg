@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="pie chart: Chrome leads at 52, 4 slices" aria-labelledby="mv-86e0beabec419c7d-title" aria-describedby="mv-86e0beabec419c7d-desc" data-markvis="2" data-chart-type="pie" data-id="mv-86e0beabec419c7d" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-86e0beabec419c7d-title">Chrome leads at 52</title>
+  <desc id="mv-86e0beabec419c7d-desc">pie chart. Chrome leads at 52. x=browser. y=users. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="48" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Chrome leads at 52</text>
+  <g aria-hidden="true">
+    <path d="M377 226 L377 103.6 A122.4 122.4 0 1 1 361.66 347.43 Z" fill="#5AD8A6" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="Chrome" data-raw-value="52"/>
+    <path d="M377 226 L361.66 347.43 A122.4 122.4 0 0 1 260.59 188.18 Z" fill="#E8684A" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="Safari" data-raw-value="28"/>
+    <path d="M377 226 L260.59 188.18 A122.4 122.4 0 0 1 318.03 118.74 Z" fill="#5D7092" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="Firefox" data-raw-value="12"/>
+    <path d="M377 226 L318.03 118.74 A122.4 122.4 0 0 1 377 103.6 Z" fill="#F6BD16" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="Other" data-raw-value="8"/>
+  </g>
+  <g fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1">
+    <polyline points="499.16,233.69 515.13,234.69 523.13,234.69"/>
+    <polyline points="273.65,291.59 260.15,300.16 252.15,300.16"/>
+    <polyline points="282.69,147.98 270.36,137.78 262.36,137.78"/>
+    <polyline points="346.56,107.45 342.58,91.95 334.58,91.95"/>
+  </g>
+  <g font-size="11" font-weight="500" fill="#000000">
+    <text x="535.13" y="234.69" text-anchor="start" dominant-baseline="middle" data-label="Chrome">Chrome · 52</text>
+    <text x="240.15" y="300.16" text-anchor="end" dominant-baseline="middle" data-label="Safari">Safari · 28</text>
+    <text x="250.36" y="137.78" text-anchor="end" dominant-baseline="middle" data-label="Firefox">Firefox · 12</text>
+    <text x="322.58" y="91.95" text-anchor="end" dominant-baseline="middle" data-label="Other">Other · 8</text>
+  </g>
+</svg>

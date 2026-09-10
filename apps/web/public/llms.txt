@@ -19,7 +19,7 @@ Fields:
 
 - `type` required. Only `bar` `line` `area` `scatter` `pie` `hist`.
 - `title` optional. A conclusion, not a slug.
-- `theme` optional. Omit means `folio`. Allowed: `folio` `highcharts` `shadcn` `docs`. Any other value is `E_UNKNOWN_THEME`: show the table, not a silent swap.
+- `theme` optional. Omit means `folio`. Allowed: `folio` `highcharts` `shadcn` `docs` `ant`. Any other value is `E_UNKNOWN_THEME`: show the table, not a silent swap.
 - `unit` optional.
 - `x` `y` `series` name real columns. `series` splits series.
 - Data required. Not JSON.

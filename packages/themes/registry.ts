@@ -3,9 +3,10 @@ import { folio, type ThemeTokens } from "./folio/theme.js";
 import { highcharts } from "./highcharts/theme.js";
 import { shadcn } from "./shadcn/theme.js";
 import { docs } from "./docs/theme.js";
+import { ant } from "./ant/theme.js";
 
 export type { ThemeTokens };
-export { folio, highcharts, shadcn, docs };
+export { folio, highcharts, shadcn, docs, ant };
 
 /** id → pack. Unknown / missing packs fail loudly via resolveThemePack. */
 export const themeRegistry: Record<ChartTheme, ThemeTokens> = {
@@ -13,6 +14,7 @@ export const themeRegistry: Record<ChartTheme, ThemeTokens> = {
   highcharts,
   shadcn,
   docs,
+  ant,
 };
 
 /**

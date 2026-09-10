@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="line chart: 東京 still leads 北京, 4 rows, series city" aria-labelledby="mv-7c86021fb3846ba3-title" aria-describedby="mv-7c86021fb3846ba3-desc" data-markvis="2" data-chart-type="line" data-id="mv-7c86021fb3846ba3" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-7c86021fb3846ba3-title">東京 still leads 北京</title>
+  <desc id="mv-7c86021fb3846ba3-desc">line chart. 東京 still leads 北京. x=month. y=amount. series=city. 4 rows.</desc>
+  <text x="66" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">東京 still leads 北京</text>
+  <g font-size="12" font-weight="400" fill="#000000">
+    <rect x="66" y="35" width="10" height="10" fill="#5AD8A6" rx="1"/>
+    <text x="80" y="44" data-legend="北京">北京</text>
+    <rect x="120" y="35" width="10" height="10" fill="#E8684A" rx="1"/>
+    <text x="134" y="44" data-legend="東京">東京</text>
+  </g>
+  <rect x="66" y="70" width="640" height="309" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="66" y="70" width="640" height="309" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <g fill="none" stroke="#000000" stroke-opacity="0.16" stroke-width="1">
+    <line x1="66" x2="706" y1="317.2" y2="317.2"/>
+    <line x1="66" x2="706" y1="255.4" y2="255.4"/>
+    <line x1="66" x2="706" y1="131.8" y2="131.8"/>
+    <line x1="66" x2="706" y1="70" y2="70"/>
+  </g>
+  <path d="M66 379 L706 379" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
+  <g fill="#8C8C8C" font-size="11" font-weight="400">
+    <text x="58" y="379" text-anchor="end" dominant-baseline="middle">90</text>
+    <text x="58" y="317.2" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="58" y="255.4" text-anchor="end" dominant-baseline="middle">110</text>
+    <text x="58" y="193.6" text-anchor="end" dominant-baseline="middle">120</text>
+    <text x="58" y="131.8" text-anchor="end" dominant-baseline="middle">130</text>
+    <text x="58" y="70" text-anchor="end" dominant-baseline="middle">140</text>
+    <text x="226" y="390" text-anchor="middle" font-size="11" data-full-label="Jan">Jan</text>
+    <text x="546" y="390" text-anchor="middle" font-size="11" data-full-label="Feb">Feb</text>
+  </g>
+  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="44" y="224.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 44 224.5)" data-axis="y">amount</text>
+    <text x="386" y="406" text-anchor="middle" dominant-baseline="hanging" data-axis="x">month</text>
+  </g>
+  <g fill="none">
+    <path d="M226 317.2 L546 255.4" fill="none" stroke="#5AD8A6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="北京"/>
+    <circle cx="226" cy="317.2" r="3" fill="#5AD8A6" stroke="none" data-series="北京"/>
+    <circle cx="546" cy="255.4" r="3" fill="#5AD8A6" stroke="none" data-series="北京"/>
+    <path d="M226 193.6 L546 131.8" fill="none" stroke="#E8684A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="東京"/>
+    <circle cx="226" cy="193.6" r="3" fill="#E8684A" stroke="none" data-series="東京"/>
+    <circle cx="546" cy="131.8" r="3" fill="#E8684A" stroke="none" data-series="東京"/>
+  </g>
+</svg>

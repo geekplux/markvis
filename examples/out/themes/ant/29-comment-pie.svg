@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="pie chart: Core leads at 50% (%), 3 slices" aria-labelledby="mv-9395583b1f0bdce1-title" aria-describedby="mv-9395583b1f0bdce1-desc" data-markvis="2" data-chart-type="pie" data-id="mv-9395583b1f0bdce1" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-9395583b1f0bdce1-title">Core leads at 50%</title>
+  <desc id="mv-9395583b1f0bdce1-desc">pie chart. Core leads at 50%. x=name. y=value. unit=%. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="48" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Core leads at 50%<tspan font-size="12" font-weight="400" fill="#8C8C8C"> · %</tspan></text>
+  <g aria-hidden="true">
+    <path d="M377 226 L377 103.6 A122.4 122.4 0 0 1 395.24 347.03 Z" fill="#5AD8A6" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="Core" data-raw-value="50"/>
+    <path d="M377 226 L395.24 347.03 A122.4 122.4 0 0 1 254.94 216.85 Z" fill="#E8684A" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="Addons" data-raw-value="30"/>
+    <path d="M377 226 L254.94 216.85 A122.4 122.4 0 0 1 377 103.6 Z" fill="#5D7092" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="Other" data-raw-value="25"/>
+  </g>
+  <g fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1">
+    <polyline points="499.06,216.85 515.01,215.66 523.01,215.66"/>
+    <polyline points="293.75,315.73 282.86,327.45 274.86,327.45"/>
+    <polyline points="293.75,136.27 282.86,124.55 274.86,124.55"/>
+  </g>
+  <g font-size="11" font-weight="500" fill="#000000">
+    <text x="535.01" y="215.66" text-anchor="start" dominant-baseline="middle" data-label="Core">Core · 50</text>
+    <text x="262.86" y="327.45" text-anchor="end" dominant-baseline="middle" data-label="Addons">Addons · 30</text>
+    <text x="262.86" y="124.55" text-anchor="end" dominant-baseline="middle" data-label="Other">Other · 25</text>
+  </g>
+</svg>

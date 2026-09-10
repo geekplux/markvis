@@ -38,6 +38,8 @@ Mar,150
 ```
 ```
 
+Optional `theme:`: `folio` (default) `highcharts` `shadcn` `docs` `ant` — token packs only, no chart runtimes.
+
 Also: GFM table after the blank line; or `<!-- chart: bar x=month y=revenue title="Q3" -->` immediately followed by a GFM table.
 
 ## Eight few-shots

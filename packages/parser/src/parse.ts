@@ -392,7 +392,7 @@ function parseBody(
     if (!isChartTheme(themeRaw)) {
       return fail(
         "E_UNKNOWN_THEME",
-        "theme is not one of folio|highcharts|shadcn|docs",
+        "theme is not one of folio|highcharts|shadcn|docs|ant",
         parsed,
         raw,
       );

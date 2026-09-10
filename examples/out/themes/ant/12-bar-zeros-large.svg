@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="bar chart: Traffic spikes (hits), 6 rows" aria-labelledby="mv-effd8776b175b41d-title" aria-describedby="mv-effd8776b175b41d-desc" data-markvis="2" data-chart-type="bar" data-id="mv-effd8776b175b41d" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-effd8776b175b41d-title">Traffic spikes</title>
+  <desc id="mv-effd8776b175b41d-desc">bar chart. Traffic spikes. x=hour. y=hits. unit=hits. 6 rows.</desc>
+  <text x="87.38" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Traffic spikes<tspan font-size="12" font-weight="400" fill="#8C8C8C"> · hits</tspan></text>
+  <rect x="87.38" y="46" width="618.62" height="333" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="87.38" y="46" width="618.62" height="333" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <path d="M87.38 379 L706 379" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
+  <g fill="#8C8C8C" font-size="11" font-weight="400">
+    <text x="79.38" y="379" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="79.38" y="268" text-anchor="end" dominant-baseline="middle">500,000</text>
+    <text x="79.38" y="157" text-anchor="end" dominant-baseline="middle">1,000,000</text>
+    <text x="79.38" y="46" text-anchor="end" dominant-baseline="middle">1,500,000</text>
+    <text x="138.93" y="390" text-anchor="middle" font-size="11" data-full-label="00">00</text>
+    <text x="242.04" y="390" text-anchor="middle" font-size="11" data-full-label="01">01</text>
+    <text x="345.14" y="390" text-anchor="middle" font-size="11" data-full-label="02">02</text>
+    <text x="448.24" y="390" text-anchor="middle" font-size="11" data-full-label="03">03</text>
+    <text x="551.35" y="390" text-anchor="middle" font-size="11" data-full-label="04">04</text>
+    <text x="654.45" y="390" text-anchor="middle" font-size="11" data-full-label="05">05</text>
+  </g>
+  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="65.38" y="212.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 65.38 212.5)" data-axis="y">hits · hits</text>
+    <text x="396.69" y="406" text-anchor="middle" dominant-baseline="hanging" data-axis="x">hour</text>
+  </g>
+  <g>
+    <path d="M99.75 379 L178.11 379 L178.11 379 L99.75 379 Z" fill="#5AD8A6" data-x="00" data-series="hits" data-y="0"/>
+    <path d="M202.86 379 L281.21 379 L281.21 379 L202.86 379 Z" fill="#5AD8A6" data-x="01" data-series="hits" data-y="0"/>
+    <path d="M305.96 379 L384.32 379 L384.32 379 L305.96 379 Z" fill="#5AD8A6" data-x="02" data-series="hits" data-y="12"/>
+    <path d="M409.06 379 L409.06 48 Q409.06 46 411.06 46 L485.42 46 Q487.42 46 487.42 48 L487.42 379 Z" fill="#5AD8A6" data-x="03" data-series="hits" data-y="1500000"/>
+    <path d="M512.17 379 L512.17 163.44 Q512.17 161.44 514.17 161.44 L588.52 161.44 Q590.52 161.44 590.52 163.44 L590.52 379 Z" fill="#5AD8A6" data-x="04" data-series="hits" data-y="980000"/>
+    <path d="M615.27 379 L693.63 379 L693.63 379 L615.27 379 Z" fill="#5AD8A6" data-x="05" data-series="hits" data-y="3"/>
+  </g>
+  <g>
+    <text x="138.93" y="371" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="00">0</text>
+    <text x="242.04" y="371" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="01">0</text>
+    <text x="345.14" y="371" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="02">12</text>
+    <text x="448.24" y="38" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="03">1,500,000</text>
+    <text x="551.35" y="153.44" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="04">980,000</text>
+    <text x="654.45" y="371" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="05">3</text>
+  </g>
+</svg>

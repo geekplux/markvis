@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="pie chart: On leads at 70, 3 slices" aria-labelledby="mv-840fc044c6e0680e-title" aria-describedby="mv-840fc044c6e0680e-desc" data-markvis="2" data-chart-type="pie" data-id="mv-840fc044c6e0680e" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-840fc044c6e0680e-title">On leads at 70</title>
+  <desc id="mv-840fc044c6e0680e-desc">pie chart. On leads at 70. x=flag. y=count. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="48" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">On leads at 70</text>
+  <g aria-hidden="true">
+    <path d="M377 226 L377 103.6 A122.4 122.4 0 1 1 260.59 263.82 Z" fill="#5AD8A6" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="on" data-raw-value="70"/>
+    <path d="M377 226 L260.59 263.82 A122.4 122.4 0 0 1 377 103.6 Z" fill="#E8684A" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="off" data-raw-value="30"/>
+  </g>
+  <g fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1">
+    <polyline points="476.02,297.94 488.97,307.35 496.97,307.35"/>
+    <polyline points="277.98,154.06 265.03,144.65 257.03,144.65"/>
+  </g>
+  <g font-size="11" font-weight="500" fill="#000000">
+    <text x="508.97" y="307.35" text-anchor="start" dominant-baseline="middle" data-label="on">on · 70</text>
+    <text x="245.03" y="144.65" text-anchor="end" dominant-baseline="middle" data-label="off">off · 30</text>
+  </g>
+</svg>

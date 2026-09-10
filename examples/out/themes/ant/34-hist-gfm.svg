@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="hist chart: Twos show twice, 7 rows" aria-labelledby="mv-fd4df5b287a007ce-title" aria-describedby="mv-fd4df5b287a007ce-desc" data-markvis="2" data-chart-type="hist" data-id="mv-fd4df5b287a007ce" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-fd4df5b287a007ce-title">Twos show twice</title>
+  <desc id="mv-fd4df5b287a007ce-desc">hist chart. Twos show twice. x=roll. 7 rows. x is binned with Sturges equal-width bins.</desc>
+  <text x="66" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Twos show twice</text>
+  <rect x="66" y="46" width="640" height="333" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="66" y="46" width="640" height="333" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <path d="M66 379 L706 379" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
+  <g fill="#8C8C8C" font-size="11" font-weight="400">
+    <text x="58" y="379" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="58" y="268" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="58" y="157" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="58" y="46" text-anchor="end" dominant-baseline="middle">3</text>
+    <text x="66" y="390" text-anchor="middle" font-size="11" data-full-label="1">1</text>
+    <text x="226" y="390" text-anchor="middle" font-size="11" data-full-label="2.25">2.25</text>
+    <text x="386" y="390" text-anchor="middle" font-size="11" data-full-label="3.5">3.5</text>
+    <text x="546" y="390" text-anchor="middle" font-size="11" data-full-label="4.75">4.75</text>
+    <text x="706" y="390" text-anchor="middle" font-size="11" data-full-label="6">6</text>
+  </g>
+  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="386" y="406" text-anchor="middle" dominant-baseline="hanging" data-axis="x">roll</text>
+  </g>
+  <g>
+    <path d="M118 379 L118 48 Q118 46 120 46 L172 46 Q174 46 174 48 L174 379 Z" fill="#5AD8A6" data-bin-left="1" data-bin-right="2.25" data-weight="3" data-count="3"/>
+    <path d="M278 379 L278 270 Q278 268 280 268 L332 268 Q334 268 334 270 L334 379 Z" fill="#5AD8A6" data-bin-left="2.25" data-bin-right="3.5" data-weight="1" data-count="1"/>
+    <path d="M438 379 L438 270 Q438 268 440 268 L492 268 Q494 268 494 270 L494 379 Z" fill="#5AD8A6" data-bin-left="3.5" data-bin-right="4.75" data-weight="1" data-count="1"/>
+    <path d="M598 379 L598 159 Q598 157 600 157 L652 157 Q654 157 654 159 L654 379 Z" fill="#5AD8A6" data-bin-left="4.75" data-bin-right="6" data-weight="2" data-count="2"/>
+  </g>
+  <g>
+    <text x="146" y="38" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="1–2.25">3</text>
+    <text x="306" y="260" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="2.25–3.5">1</text>
+    <text x="466" y="260" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="3.5–4.75">1</text>
+    <text x="626" y="149" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="4.75–6">2</text>
+  </g>
+</svg>

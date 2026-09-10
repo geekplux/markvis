@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="bar chart: Eng leads headcount at 24, 3 rows" aria-labelledby="mv-c1348897d63eff69-title" aria-describedby="mv-c1348897d63eff69-desc" data-markvis="2" data-chart-type="bar" data-id="mv-c1348897d63eff69" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-c1348897d63eff69-title">Eng leads headcount at 24</title>
+  <desc id="mv-c1348897d63eff69-desc">bar chart. Eng leads headcount at 24. x=team. y=n. 3 rows.</desc>
+  <text x="66" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Eng leads headcount at 24</text>
+  <rect x="66" y="46" width="640" height="333" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="66" y="46" width="640" height="333" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <path d="M66 379 L706 379" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
+  <g fill="#8C8C8C" font-size="11" font-weight="400">
+    <text x="58" y="379" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="58" y="268" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="58" y="157" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="58" y="46" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="172.67" y="390" text-anchor="middle" font-size="11" data-full-label="Eng">Eng</text>
+    <text x="386" y="390" text-anchor="middle" font-size="11" data-full-label="Design">Design</text>
+    <text x="599.33" y="390" text-anchor="middle" font-size="11" data-full-label="Ops">Ops</text>
+  </g>
+  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="44" y="212.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 44 212.5)" data-axis="y">n</text>
+    <text x="386" y="406" text-anchor="middle" dominant-baseline="hanging" data-axis="x">team</text>
+  </g>
+  <g>
+    <path d="M144.67 379 L144.67 114.6 Q144.67 112.6 146.67 112.6 L198.67 112.6 Q200.67 112.6 200.67 114.6 L200.67 379 Z" fill="#5AD8A6" data-x="Eng" data-series="n" data-y="24"/>
+    <path d="M358 379 L358 314.4 Q358 312.4 360 312.4 L412 312.4 Q414 312.4 414 314.4 L414 379 Z" fill="#5AD8A6" data-x="Design" data-series="n" data-y="6"/>
+    <path d="M571.33 379 L571.33 281.1 Q571.33 279.1 573.33 279.1 L625.33 279.1 Q627.33 279.1 627.33 281.1 L627.33 379 Z" fill="#5AD8A6" data-x="Ops" data-series="n" data-y="9"/>
+  </g>
+  <g>
+    <text x="172.67" y="104.6" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="Eng">24</text>
+    <text x="386" y="304.4" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="Design">6</text>
+    <text x="599.33" y="271.1" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="Ops">9</text>
+  </g>
+</svg>

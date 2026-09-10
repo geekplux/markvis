@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="bar chart: A12 led units at 14, 13 rows" aria-labelledby="mv-69ede10d06c80cdc-title" aria-describedby="mv-69ede10d06c80cdc-desc" data-markvis="2" data-chart-type="bar" data-id="mv-69ede10d06c80cdc" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-69ede10d06c80cdc-title">A12 led units at 14</title>
+  <desc id="mv-69ede10d06c80cdc-desc">bar chart. A12 led units at 14. x=sku. y=units. 13 rows.</desc>
+  <text x="66" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">A12 led units at 14</text>
+  <rect x="66" y="46" width="640" height="333" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="66" y="46" width="640" height="333" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <g fill="none" stroke="#000000" stroke-opacity="0.16" stroke-width="1">
+    <line x1="66" x2="706" y1="268" y2="268"/>
+    <line x1="66" x2="706" y1="157" y2="157"/>
+    <line x1="66" x2="706" y1="46" y2="46"/>
+  </g>
+  <path d="M66 379 L706 379" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
+  <g fill="#8C8C8C" font-size="11" font-weight="400">
+    <text x="58" y="379" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="58" y="268" text-anchor="end" dominant-baseline="middle">5</text>
+    <text x="58" y="157" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="58" y="46" text-anchor="end" dominant-baseline="middle">15</text>
+    <text x="90.62" y="390" text-anchor="middle" font-size="11" data-full-label="A01">A01</text>
+    <text x="139.85" y="390" text-anchor="middle" font-size="11" data-full-label="A02">A02</text>
+    <text x="189.08" y="390" text-anchor="middle" font-size="11" data-full-label="A03">A03</text>
+    <text x="238.31" y="390" text-anchor="middle" font-size="11" data-full-label="A04">A04</text>
+    <text x="287.54" y="390" text-anchor="middle" font-size="11" data-full-label="A05">A05</text>
+    <text x="336.77" y="390" text-anchor="middle" font-size="11" data-full-label="A06">A06</text>
+    <text x="386" y="390" text-anchor="middle" font-size="11" data-full-label="A07">A07</text>
+    <text x="435.23" y="390" text-anchor="middle" font-size="11" data-full-label="A08">A08</text>
+    <text x="484.46" y="390" text-anchor="middle" font-size="11" data-full-label="A09">A09</text>
+    <text x="533.69" y="390" text-anchor="middle" font-size="11" data-full-label="A10">A10</text>
+    <text x="582.92" y="390" text-anchor="middle" font-size="11" data-full-label="A11">A11</text>
+    <text x="632.15" y="390" text-anchor="middle" font-size="11" data-full-label="A12">A12</text>
+    <text x="681.38" y="390" text-anchor="middle" font-size="11" data-full-label="A13">A13</text>
+  </g>
+  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="44" y="212.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 44 212.5)" data-axis="y">units</text>
+    <text x="386" y="406" text-anchor="middle" dominant-baseline="hanging" data-axis="x">sku</text>
+  </g>
+  <g>
+    <path d="M69.45 379 L69.45 270 Q69.45 268 71.45 268 L109.78 268 Q111.78 268 111.78 270 L111.78 379 Z" fill="#5AD8A6" data-x="A01" data-series="units" data-y="5"/>
+    <path d="M118.68 379 L118.68 203.4 Q118.68 201.4 120.68 201.4 L159.02 201.4 Q161.02 201.4 161.02 203.4 L161.02 379 Z" fill="#5AD8A6" data-x="A02" data-series="units" data-y="8"/>
+    <path d="M167.91 379 L167.91 314.4 Q167.91 312.4 169.91 312.4 L208.25 312.4 Q210.25 312.4 210.25 314.4 L210.25 379 Z" fill="#5AD8A6" data-x="A03" data-series="units" data-y="3"/>
+    <path d="M217.14 379 L217.14 114.6 Q217.14 112.6 219.14 112.6 L257.48 112.6 Q259.48 112.6 259.48 114.6 L259.48 379 Z" fill="#5AD8A6" data-x="A04" data-series="units" data-y="12"/>
+    <path d="M266.37 379 L266.37 225.6 Q266.37 223.6 268.37 223.6 L306.71 223.6 Q308.71 223.6 308.71 225.6 L308.71 379 Z" fill="#5AD8A6" data-x="A05" data-series="units" data-y="7"/>
+    <path d="M315.6 379 L315.6 181.2 Q315.6 179.2 317.6 179.2 L355.94 179.2 Q357.94 179.2 357.94 181.2 L357.94 379 Z" fill="#5AD8A6" data-x="A06" data-series="units" data-y="9"/>
+    <path d="M364.83 379 L364.83 292.2 Q364.83 290.2 366.83 290.2 L405.17 290.2 Q407.17 290.2 407.17 292.2 L407.17 379 Z" fill="#5AD8A6" data-x="A07" data-series="units" data-y="4"/>
+    <path d="M414.06 379 L414.06 136.8 Q414.06 134.8 416.06 134.8 L454.4 134.8 Q456.4 134.8 456.4 136.8 L456.4 379 Z" fill="#5AD8A6" data-x="A08" data-series="units" data-y="11"/>
+    <path d="M463.29 379 L463.29 247.8 Q463.29 245.8 465.29 245.8 L503.63 245.8 Q505.63 245.8 505.63 247.8 L505.63 379 Z" fill="#5AD8A6" data-x="A09" data-series="units" data-y="6"/>
+    <path d="M512.52 379 L512.52 159 Q512.52 157 514.52 157 L552.86 157 Q554.86 157 554.86 159 L554.86 379 Z" fill="#5AD8A6" data-x="A10" data-series="units" data-y="10"/>
+    <path d="M561.75 379 L561.75 336.6 Q561.75 334.6 563.75 334.6 L602.09 334.6 Q604.09 334.6 604.09 336.6 L604.09 379 Z" fill="#5AD8A6" data-x="A11" data-series="units" data-y="2"/>
+    <path d="M610.98 379 L610.98 70.2 Q610.98 68.2 612.98 68.2 L651.32 68.2 Q653.32 68.2 653.32 70.2 L653.32 379 Z" fill="#5AD8A6" data-x="A12" data-series="units" data-y="14"/>
+    <path d="M660.22 379 L660.22 358.8 Q660.22 356.8 662.22 356.8 L700.55 356.8 Q702.55 356.8 702.55 358.8 L702.55 379 Z" fill="#5AD8A6" data-x="A13" data-series="units" data-y="1"/>
+  </g>
+</svg>

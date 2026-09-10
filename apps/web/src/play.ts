@@ -1,4 +1,4 @@
-const THEMES = new Set(["folio", "highcharts", "shadcn", "docs"]);
+const THEMES = new Set(["folio", "highcharts", "shadcn", "docs", "ant"]);
 
 export function exampleQuery(search: string): string {
   const raw = search.startsWith("?") ? search.slice(1) : search;

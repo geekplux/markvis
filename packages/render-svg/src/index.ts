@@ -7,6 +7,7 @@ export {
   highcharts,
   shadcn,
   docs,
+  ant,
 } from "@markvis/themes";
 export { themeTokens } from "./theme.js";
 export type { ThemeTokens } from "./theme.js";

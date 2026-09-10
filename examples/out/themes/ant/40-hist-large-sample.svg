@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="hist chart: Idle clusters near zero, 11 rows" aria-labelledby="mv-70aa9b42b2d28f99-title" aria-describedby="mv-70aa9b42b2d28f99-desc" data-markvis="2" data-chart-type="hist" data-id="mv-70aa9b42b2d28f99" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-70aa9b42b2d28f99-title">Idle clusters near zero</title>
+  <desc id="mv-70aa9b42b2d28f99-desc">hist chart. Idle clusters near zero. x=sec. 11 rows. x is binned with Sturges equal-width bins.</desc>
+  <text x="66" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Idle clusters near zero</text>
+  <rect x="66" y="46" width="640" height="333" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="66" y="46" width="640" height="333" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <path d="M66 379 L706 379" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
+  <g fill="#8C8C8C" font-size="11" font-weight="400">
+    <text x="58" y="379" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="58" y="295.75" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="58" y="212.5" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="58" y="129.25" text-anchor="end" dominant-baseline="middle">3</text>
+    <text x="58" y="46" text-anchor="end" dominant-baseline="middle">4</text>
+    <text x="66" y="390" text-anchor="middle" font-size="11" data-full-label="0">0</text>
+    <text x="194" y="390" text-anchor="middle" font-size="11" data-full-label="4">4</text>
+    <text x="322" y="390" text-anchor="middle" font-size="11" data-full-label="8">8</text>
+    <text x="450" y="390" text-anchor="middle" font-size="11" data-full-label="12">12</text>
+    <text x="578" y="390" text-anchor="middle" font-size="11" data-full-label="16">16</text>
+    <text x="706" y="390" text-anchor="middle" font-size="11" data-full-label="20">20</text>
+  </g>
+  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="386" y="406" text-anchor="middle" dominant-baseline="hanging" data-axis="x">sec</text>
+  </g>
+  <g>
+    <path d="M81.36 379 L81.36 48 Q81.36 46 83.36 46 L176.64 46 Q178.64 46 178.64 48 L178.64 379 Z" fill="#5AD8A6" data-bin-left="0" data-bin-right="4" data-weight="4" data-count="4"/>
+    <path d="M209.36 379 L209.36 297.75 Q209.36 295.75 211.36 295.75 L304.64 295.75 Q306.64 295.75 306.64 297.75 L306.64 379 Z" fill="#5AD8A6" data-bin-left="4" data-bin-right="8" data-weight="1" data-count="1"/>
+    <path d="M337.36 379 L337.36 131.25 Q337.36 129.25 339.36 129.25 L432.64 129.25 Q434.64 129.25 434.64 131.25 L434.64 379 Z" fill="#5AD8A6" data-bin-left="8" data-bin-right="12" data-weight="3" data-count="3"/>
+    <path d="M465.36 379 L465.36 214.5 Q465.36 212.5 467.36 212.5 L560.64 212.5 Q562.64 212.5 562.64 214.5 L562.64 379 Z" fill="#5AD8A6" data-bin-left="12" data-bin-right="16" data-weight="2" data-count="2"/>
+    <path d="M593.36 379 L593.36 297.75 Q593.36 295.75 595.36 295.75 L688.64 295.75 Q690.64 295.75 690.64 297.75 L690.64 379 Z" fill="#5AD8A6" data-bin-left="16" data-bin-right="20" data-weight="1" data-count="1"/>
+  </g>
+  <g>
+    <text x="130" y="38" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="0–4">4</text>
+    <text x="258" y="287.75" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="4–8">1</text>
+    <text x="386" y="121.25" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="8–12">3</text>
+    <text x="514" y="204.5" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="12–16">2</text>
+    <text x="642" y="287.75" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="16–20">1</text>
+  </g>
+</svg>

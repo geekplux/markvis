@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="hist chart: Most samples stay under 20 ms, 6 rows" aria-labelledby="mv-6b0bf4639d30686e-title" aria-describedby="mv-6b0bf4639d30686e-desc" data-markvis="2" data-chart-type="hist" data-id="mv-6b0bf4639d30686e" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-6b0bf4639d30686e-title">Most samples stay under 20 ms</title>
+  <desc id="mv-6b0bf4639d30686e-desc">hist chart. Most samples stay under 20 ms. x=ms. 6 rows. x is binned with Sturges equal-width bins.</desc>
+  <text x="66" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Most samples stay under 20 ms</text>
+  <rect x="66" y="46" width="640" height="333" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="66" y="46" width="640" height="333" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <path d="M66 379 L706 379" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
+  <g fill="#8C8C8C" font-size="11" font-weight="400">
+    <text x="58" y="379" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="58" y="295.75" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="58" y="212.5" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="58" y="129.25" text-anchor="end" dominant-baseline="middle">3</text>
+    <text x="58" y="46" text-anchor="end" dominant-baseline="middle">4</text>
+    <text x="66" y="390" text-anchor="middle" font-size="11" data-full-label="12">12</text>
+    <text x="226" y="390" text-anchor="middle" font-size="11" data-full-label="19.5">19.5</text>
+    <text x="386" y="390" text-anchor="middle" font-size="11" data-full-label="27">27</text>
+    <text x="546" y="390" text-anchor="middle" font-size="11" data-full-label="34.5">34.5</text>
+    <text x="706" y="390" text-anchor="middle" font-size="11" data-full-label="42">42</text>
+  </g>
+  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="386" y="406" text-anchor="middle" dominant-baseline="hanging" data-axis="x">ms</text>
+  </g>
+  <g>
+    <path d="M118 379 L118 48 Q118 46 120 46 L172 46 Q174 46 174 48 L174 379 Z" fill="#5AD8A6" data-bin-left="12" data-bin-right="19.5" data-weight="4" data-count="4"/>
+    <path d="M278 379 L334 379 L334 379 L278 379 Z" fill="#5AD8A6" data-bin-left="19.5" data-bin-right="27" data-weight="0" data-count="0"/>
+    <path d="M438 379 L494 379 L494 379 L438 379 Z" fill="#5AD8A6" data-bin-left="27" data-bin-right="34.5" data-weight="0" data-count="0"/>
+    <path d="M598 379 L598 214.5 Q598 212.5 600 212.5 L652 212.5 Q654 212.5 654 214.5 L654 379 Z" fill="#5AD8A6" data-bin-left="34.5" data-bin-right="42" data-weight="2" data-count="2"/>
+  </g>
+  <g>
+    <text x="146" y="38" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="12–19.5">4</text>
+    <text x="306" y="371" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="19.5–27">0</text>
+    <text x="466" y="371" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="27–34.5">0</text>
+    <text x="626" y="204.5" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="34.5–42">2</text>
+  </g>
+</svg>

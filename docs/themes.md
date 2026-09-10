@@ -1,6 +1,6 @@
 # themes.md — markvis theme token packs
 
-Scope: optional fence `theme: folio|highcharts|shadcn|docs`. Omitted = folio. Unknown = error + table fallback. Themes are token packs in `packages/themes/<id>/theme.ts`, resolved by `packages/themes/registry.ts`. No Highcharts/d3/Unovis/Recharts deps. No new chart types. Public UI labels may say Folio / Highcharts-style / shadcn-style / Docs — avoid trademark claims in marketing copy.
+Scope: optional fence `theme: folio|highcharts|shadcn|docs|ant`. Omitted = folio. Unknown = error + table fallback. Themes are token packs in `packages/themes/<id>/theme.ts`, resolved by `packages/themes/registry.ts`. No Highcharts/d3/Unovis/Recharts deps. No new chart types. Public UI labels may say Folio / Highcharts-style / shadcn-style / Docs — avoid trademark claims in marketing copy.
 
 Default site figures stay folio.
 
@@ -270,6 +270,56 @@ Status: `packages/themes/docs/theme.ts` is present on disk with the values above
 - Strong demo grids (highcharts `0.22` hairline)
 - Claiming VitePress/Vite product affiliation or adding their chart libs
 
+
+---
+
+
+## ant
+
+### Intent
+
+Static SVG grammar inspired by Ant Design Charts: technical axes, muted teal/brick categorical, tight padding, annotation-friendly title. Tokens only — no `@antv/g2`. Hover waits.
+
+### Locked tokens (from `packages/themes/ant/theme.ts`)
+
+| Token | Value |
+| --- | --- |
+| Canvas / paper | plot fill `#ffffff` + border `#d9d9d9` (1px) |
+| Ink | `#000000` |
+| Quiet | `#8C8C8C` |
+| Hairline opacity (grid) | `0.16` |
+| Structure opacity | `0.32` |
+| Series palette | `#5AD8A6`, `#E8684A`, `#5D7092`, `#F6BD16`, `#6DC8EC`, `#9270CA`, `#FF9D4D`, `#269A99` |
+| Bar radius `BAR_RX` | `2` |
+| Line stroke / point | `2` / `3` |
+| Area opacity | `0.25` |
+| Type — title | `18` / `600` / `#000000` |
+| Frame | `720×420` |
+| Plot min ratio | `0.6` |
+| Margins | top `28`, right `14`, bottom `28`, left `48` |
+| Max interior grid | `4` |
+| `END_LABEL_SERIES_MAX` | `0` |
+| `AXIS_TITLES` | `true` |
+| Font | system Ant stack (San Francisco / Segoe / Roboto) |
+
+### Differentiator vs folio / highcharts / shadcn
+
+| Lock | folio | highcharts | shadcn | ant |
+| --- | --- | --- | --- | --- |
+| Plot border | none | `#ccd6eb` | `#e5e5e5` | `#d9d9d9` |
+| Axis titles | off | on | off | on |
+| Height | 480 | 440 | 460 | 420 |
+| `BAR_RX` | 3 | 0 | 6 | 2 |
+| Palette lead | `#3B82F6` | `#7cb5ec` | `#F54900` | `#5AD8A6` |
+| Title size | 17 | 16 | 16 | 18 |
+| Grid max | 3 | 5 | 2 | 4 |
+
+### Ban list
+
+- `@antv/g2` / AntV chart runtime
+- Folio blue-first or highcharts `#7cb5ec` as series-1
+- Soft card-only shadcn look without technical axes
+- Hover/tooltip in this unit
 
 ---
 

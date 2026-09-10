@@ -9,7 +9,8 @@
     "./folio": "./folio/theme.ts",
     "./highcharts": "./highcharts/theme.ts",
     "./shadcn": "./shadcn/theme.ts",
-    "./docs": "./docs/theme.ts"
+    "./docs": "./docs/theme.ts",
+    "./ant": "./ant/theme.ts"
   },
   "main": "./registry.ts",
   "types": "./registry.ts",

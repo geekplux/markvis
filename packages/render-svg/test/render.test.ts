@@ -12,6 +12,7 @@ import {
   highcharts,
   shadcn,
   docs,
+  ant,
   renderSvg,
   themeTokens,
 } from "../src/index.js";
@@ -528,6 +529,132 @@ describe("shadcn tokens", () => {
   });
 });
 
+
+describe("ant tokens", () => {
+  it("is a technical-axes, teal/brick, tight-padding pack", () => {
+    expect(themeTokens("ant")).toBe(ant);
+    expect(ant.AXIS_TITLES).toBe(true);
+    expect(ant.END_LABEL_SERIES_MAX).toBe(0);
+    expect(ant.PLOT_BORDER).toBe("#d9d9d9");
+    expect(ant.PLOT_BORDER_WIDTH).toBeGreaterThan(0);
+    expect(ant.TYPE.title.size).toBeGreaterThan(folio.TYPE.title.size);
+    expect(ant.TITLE_TO_PLOT).toBeGreaterThan(folio.TITLE_TO_PLOT);
+    expect(ant.MAX_INTERIOR_GRID).toBeGreaterThan(folio.MAX_INTERIOR_GRID);
+    expect(ant.SVG_HEIGHT).toBeLessThan(folio.SVG_HEIGHT);
+    expect(ant.BAR_RX).toBe(2);
+    expect(ant.PALETTE[0]).toBe("#5AD8A6");
+    expect(ant.PALETTE[0]).not.toBe(folio.PALETTE[0]);
+    expect(ant.PALETTE[0]).not.toBe(highcharts.PALETTE[0]);
+    expect(ant.PALETTE[0]).not.toBe(shadcn.PALETTE[0]);
+    expect(ant.PLOT_BORDER).not.toBe(highcharts.PLOT_BORDER);
+    expect(ant.PLOT_BORDER).not.toBe(shadcn.PLOT_BORDER);
+  });
+
+  it("renders geometry distinct from folio / highcharts / shadcn", () => {
+    const f = renderSvg(barChart({ theme: "folio" }));
+    const h = renderSvg(barChart({ theme: "highcharts" }));
+    const s = renderSvg(barChart({ theme: "shadcn" }));
+    const a = renderSvg(barChart({ theme: "ant" }));
+    expect(a).not.toBe(f);
+    expect(a).not.toBe(h);
+    expect(a).not.toBe(s);
+    expect(a).toContain(ant.PALETTE[0]!);
+    expect(a).toContain('data-plot-border="1"');
+    expect(a).toContain("#d9d9d9");
+    expect(a).toContain('data-axis-titles="1"');
+    expect(s).not.toContain('data-axis-titles="1"');
+  });
+
+  it("uses color legend for multi-series line", () => {
+    const chart = ChartIRSchema.parse({
+      markvis: 2,
+      type: "line",
+      title: "Multi",
+      theme: "ant",
+      x: "month",
+      y: "value",
+      series: "kind",
+      table: {
+        columns: ["month", "value", "kind"],
+        rows: [
+          ["Jan", "1", "A"],
+          ["Feb", "2", "A"],
+          ["Jan", "3", "B"],
+          ["Feb", "4", "B"],
+        ],
+      },
+    });
+    const svg = renderSvg(chart);
+    expect(svg).toContain('data-legend="A"');
+    expect(svg).toContain('data-legend="B"');
+    expect(svg).not.toContain("data-end-label");
+    expect(svg).toContain('data-plot-border="1"');
+  });
+
+  it("matches examples/out/themes/ant/01-bar-basic.svg", () => {
+    const repoRoot = join(here, "../../..");
+    const source = readFileSync(
+      join(repoRoot, "examples/valid/01-bar-basic.md"),
+      "utf8",
+    );
+    const result = parseMarkdown(source, { filename: "01-bar-basic.md" });
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    const chart = ChartIRSchema.parse({ ...result.chart, theme: "ant" });
+    const svg = renderSvg(chart);
+    const outDir = join(repoRoot, "examples/out/themes/ant");
+    const outPath = join(outDir, "01-bar-basic.svg");
+    if (process.env["UPDATE_SNAPSHOTS"] === "1") {
+      mkdirSync(outDir, { recursive: true });
+      writeFileSync(outPath, svg, "utf8");
+    }
+    const committed = readFileSync(outPath, "utf8");
+    expect(svg).toBe(committed);
+  });
+
+  it("matches examples/out/themes/ant/02-line-multi.svg", () => {
+    const repoRoot = join(here, "../../..");
+    const source = readFileSync(
+      join(repoRoot, "examples/valid/02-line-multi.md"),
+      "utf8",
+    );
+    const result = parseMarkdown(source, { filename: "02-line-multi.md" });
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    const chart = ChartIRSchema.parse({ ...result.chart, theme: "ant" });
+    const svg = renderSvg(chart);
+    const outPath = join(repoRoot, "examples/out/themes/ant/02-line-multi.svg");
+    if (process.env["UPDATE_SNAPSHOTS"] === "1") {
+      mkdirSync(join(repoRoot, "examples/out/themes/ant"), { recursive: true });
+      writeFileSync(outPath, svg, "utf8");
+    }
+    const committed = readFileSync(outPath, "utf8");
+    expect(svg).toBe(committed);
+    expect(committed).toContain('data-legend="free"');
+    expect(committed).not.toContain("data-end-label");
+  });
+
+  it("matches examples/out/themes/ant/05-pie-raw.svg", () => {
+    const repoRoot = join(here, "../../..");
+    const source = readFileSync(
+      join(repoRoot, "examples/valid/05-pie-raw.md"),
+      "utf8",
+    );
+    const result = parseMarkdown(source, { filename: "05-pie-raw.md" });
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    const chart = ChartIRSchema.parse({ ...result.chart, theme: "ant" });
+    const svg = renderSvg(chart);
+    const outPath = join(repoRoot, "examples/out/themes/ant/05-pie-raw.svg");
+    if (process.env["UPDATE_SNAPSHOTS"] === "1") {
+      mkdirSync(join(repoRoot, "examples/out/themes/ant"), { recursive: true });
+      writeFileSync(outPath, svg, "utf8");
+    }
+    expect(svg).toBe(readFileSync(outPath, "utf8"));
+    expect(svg).toContain(ant.PALETTE[0]!);
+  });
+});
+
 describe("docs tokens", () => {
   it("is a zinc/slate, thin-tick, quiet-fill pack for VitePress page figures", () => {
     expect(themeTokens("docs")).toBe(docs);
@@ -586,6 +713,7 @@ describe("source discipline", () => {
       join(repoRoot, "packages/themes"),
       join(repoRoot, "packages/themes/folio"),
       join(repoRoot, "packages/themes/highcharts"),
+      join(repoRoot, "packages/themes/ant"),
       join(repoRoot, "packages/themes/shadcn"),
       join(repoRoot, "packages/themes/docs"),
     ];

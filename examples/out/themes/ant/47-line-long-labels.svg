@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="line chart: Points climb through beta, 3 rows" aria-labelledby="mv-e1383cf3e70518e9-title" aria-describedby="mv-e1383cf3e70518e9-desc" data-markvis="2" data-chart-type="line" data-id="mv-e1383cf3e70518e9" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-e1383cf3e70518e9-title">Points climb through beta</title>
+  <desc id="mv-e1383cf3e70518e9-desc">line chart. Points climb through beta. x=milestone. y=points. 3 rows.</desc>
+  <text x="66" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Points climb through beta</text>
+  <rect x="66" y="46" width="640" height="333" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="66" y="46" width="640" height="333" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <g fill="none" stroke="#000000" stroke-opacity="0.16" stroke-width="1">
+    <line x1="66" x2="706" y1="295.75" y2="295.75"/>
+    <line x1="66" x2="706" y1="212.5" y2="212.5"/>
+    <line x1="66" x2="706" y1="129.25" y2="129.25"/>
+    <line x1="66" x2="706" y1="46" y2="46"/>
+  </g>
+  <path d="M66 379 L706 379" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
+  <g fill="#8C8C8C" font-size="11" font-weight="400">
+    <text x="58" y="379" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="58" y="295.75" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="58" y="212.5" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="58" y="129.25" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="58" y="46" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="172.67" y="390" text-anchor="middle" font-size="11" data-full-label="Kickoff and discovery workshop">Kickoff and discovery workshop</text>
+    <text x="386" y="390" text-anchor="middle" font-size="11" data-full-label="Alpha internal dogfood release">Alpha internal dogfood release</text>
+    <text x="599.33" y="390" text-anchor="middle" font-size="11" data-full-label="Public beta launch week">Public beta launch week</text>
+  </g>
+  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="44" y="212.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 44 212.5)" data-axis="y">points</text>
+    <text x="386" y="406" text-anchor="middle" dominant-baseline="hanging" data-axis="x">milestone</text>
+  </g>
+  <g fill="none">
+    <path d="M172.67 295.75 L386 191.69 L599.33 87.63" fill="none" stroke="#5AD8A6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="points"/>
+    <circle cx="172.67" cy="295.75" r="3" fill="#5AD8A6" stroke="none" data-series="points"/>
+    <circle cx="386" cy="191.69" r="3" fill="#5AD8A6" stroke="none" data-series="points"/>
+    <circle cx="599.33" cy="87.63" r="3" fill="#5AD8A6" stroke="none" data-series="points"/>
+  </g>
+</svg>

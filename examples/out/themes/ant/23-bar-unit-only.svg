@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="bar chart: API leads p99 at 120 ms (ms), 3 rows" aria-labelledby="mv-97115e67c37fcdef-title" aria-describedby="mv-97115e67c37fcdef-desc" data-markvis="2" data-chart-type="bar" data-id="mv-97115e67c37fcdef" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-97115e67c37fcdef-title">API leads p99 at 120 ms</title>
+  <desc id="mv-97115e67c37fcdef-desc">bar chart. API leads p99 at 120 ms. x=service. y=p99. unit=ms. 3 rows.</desc>
+  <text x="66" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">API leads p99 at 120 ms<tspan font-size="12" font-weight="400" fill="#8C8C8C"> · ms</tspan></text>
+  <rect x="66" y="46" width="640" height="333" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="66" y="46" width="640" height="333" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <path d="M66 379 L706 379" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
+  <g fill="#8C8C8C" font-size="11" font-weight="400">
+    <text x="58" y="379" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="58" y="268" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="58" y="157" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="58" y="46" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="172.67" y="390" text-anchor="middle" font-size="11" data-full-label="api">api</text>
+    <text x="386" y="390" text-anchor="middle" font-size="11" data-full-label="auth">auth</text>
+    <text x="599.33" y="390" text-anchor="middle" font-size="11" data-full-label="cdn">cdn</text>
+  </g>
+  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="44" y="212.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 44 212.5)" data-axis="y">p99 · ms</text>
+    <text x="386" y="406" text-anchor="middle" dominant-baseline="hanging" data-axis="x">service</text>
+  </g>
+  <g>
+    <path d="M144.67 379 L144.67 114.6 Q144.67 112.6 146.67 112.6 L198.67 112.6 Q200.67 112.6 200.67 114.6 L200.67 379 Z" fill="#5AD8A6" data-x="api" data-series="p99" data-y="120"/>
+    <path d="M358 379 L358 203.4 Q358 201.4 360 201.4 L412 201.4 Q414 201.4 414 203.4 L414 379 Z" fill="#5AD8A6" data-x="auth" data-series="p99" data-y="80"/>
+    <path d="M571.33 379 L571.33 281.1 Q571.33 279.1 573.33 279.1 L625.33 279.1 Q627.33 279.1 627.33 281.1 L627.33 379 Z" fill="#5AD8A6" data-x="cdn" data-series="p99" data-y="45"/>
+  </g>
+  <g>
+    <text x="172.67" y="104.6" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="api">120</text>
+    <text x="386" y="193.4" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="auth">80</text>
+    <text x="599.33" y="271.1" text-anchor="middle" font-size="11" font-weight="500" fill="#000000" data-value-label="cdn">45</text>
+  </g>
+</svg>

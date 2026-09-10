@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="scatter chart: Most points sit on the axes, 4 rows" aria-labelledby="mv-f6777e3877ae8317-title" aria-describedby="mv-f6777e3877ae8317-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-f6777e3877ae8317" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-f6777e3877ae8317-title">Most points sit on the axes</title>
+  <desc id="mv-f6777e3877ae8317-desc">scatter chart. Most points sit on the axes. x=dx. y=dy. 4 rows.</desc>
+  <text x="66" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Most points sit on the axes</text>
+  <rect x="66" y="46" width="640" height="333" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="66" y="46" width="640" height="333" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <g fill="none" stroke="#000000" stroke-opacity="0.16" stroke-width="1">
+    <line x1="66" x2="706" y1="312.4" y2="312.4"/>
+    <line x1="66" x2="706" y1="245.8" y2="245.8"/>
+    <line x1="66" x2="706" y1="112.6" y2="112.6"/>
+    <line x1="66" x2="706" y1="46" y2="46"/>
+  </g>
+  <path d="M66 379 L706 379" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
+  <line x1="66" x2="706" y1="312.4" y2="312.4" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
+  <g fill="#8C8C8C" font-size="11" font-weight="400">
+    <text x="58" y="379" text-anchor="end" dominant-baseline="middle">-1</text>
+    <text x="58" y="312.4" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="58" y="245.8" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="58" y="179.2" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="58" y="112.6" text-anchor="end" dominant-baseline="middle">3</text>
+    <text x="58" y="46" text-anchor="end" dominant-baseline="middle">4</text>
+    <text x="74" y="390" text-anchor="middle" font-size="11" data-full-label="-1">-1</text>
+    <text x="230" y="390" text-anchor="middle" font-size="11" data-full-label="0">0</text>
+    <text x="386" y="390" text-anchor="middle" font-size="11" data-full-label="1">1</text>
+    <text x="542" y="390" text-anchor="middle" font-size="11" data-full-label="2">2</text>
+    <text x="698" y="390" text-anchor="middle" font-size="11" data-full-label="3">3</text>
+  </g>
+  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="44" y="212.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 44 212.5)" data-axis="y">dy</text>
+    <text x="386" y="406" text-anchor="middle" dominant-baseline="hanging" data-axis="x">dx</text>
+  </g>
+  <g>
+    <circle cx="230" cy="312.4" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="0" data-y="0" data-series="dy"/>
+    <circle cx="386" cy="312.4" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="1" data-y="0" data-series="dy"/>
+    <circle cx="230" cy="245.8" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="0" data-y="1" data-series="dy"/>
+    <circle cx="542" cy="112.6" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="2" data-y="3" data-series="dy"/>
+  </g>
+</svg>
