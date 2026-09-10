@@ -334,11 +334,41 @@ describe("highcharts tokens", () => {
     });
     const svg = renderSvg(chart);
     expect(svg).toContain('data-plot-border="1"');
-    // legend swatches for both series names
-    expect(svg).toMatch(/>A</);
-    expect(svg).toMatch(/>B</);
-    // end-labels sit at plot-right with data from end-label path — absence of end gap placement is enough via legend height
-    expect(highcharts.END_LABEL_SERIES_MAX).toBe(0);
+    expect(svg).toContain('data-plot-bg="1"');
+    expect(svg).toContain('data-legend="A"');
+    expect(svg).toContain('data-legend="B"');
+    expect(svg).not.toContain("data-end-label");
+    expect(svg).toContain('r="3.5"');
+  });
+
+  it("matches examples/out/themes/highcharts/02-line-multi.svg", () => {
+    const repoRoot = join(here, "../../..");
+    const source = readFileSync(
+      join(repoRoot, "examples/valid/02-line-multi.md"),
+      "utf8",
+    );
+    const result = parseMarkdown(source, { filename: "02-line-multi.md" });
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    const chart = ChartIRSchema.parse({ ...result.chart, theme: "highcharts" });
+    const svg = renderSvg(chart);
+    const outPath = join(
+      repoRoot,
+      "examples/out/themes/highcharts/02-line-multi.svg",
+    );
+    if (process.env["UPDATE_SNAPSHOTS"] === "1") {
+      mkdirSync(join(repoRoot, "examples/out/themes/highcharts"), {
+        recursive: true,
+      });
+      writeFileSync(outPath, svg, "utf8");
+    }
+    const committed = readFileSync(outPath, "utf8");
+    expect(svg).toBe(committed);
+    expect(committed).toContain('data-legend="free"');
+    expect(committed).toContain('data-legend="pro"');
+    expect(committed).toContain('data-plot-border="1"');
+    expect(committed).not.toContain("data-end-label");
+    expect(committed).toContain('r="3.5"');
   });
 
   it("matches examples/out/themes/highcharts/01-bar-basic.svg", () => {
