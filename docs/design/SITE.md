@@ -170,7 +170,7 @@ One shared token surface for `/`, `/examples`, `/play`, docs. Yellow field stays
 | cell / band | `#0E130F` | `#EDEBE5` |
 | footer | `#F8F8F6` | `#EDEBE5` |
 | rule on ink body | `rgba(237,235,229,0.16)` | `rgba(8,11,8,0.12)` |
-| examples card | paper | paper (same as home atlas cells) |
+| examples card | **none** (transparent + hairline) | **none** (transparent + hairline) |
 | drawer / sheet | paper | paper |
 
 Document: `html.dark` | `html.light`. System preference on first visit; toggle in nav; persist `localStorage` key `markvis-site-mode`.
@@ -178,6 +178,7 @@ Document: `html.dark` | `html.light`. System preference on first visit; toggle i
 ### Instruction — Coder
 
 1. Replace hard-coded `#0e1312` page fills with `var(--site-page)`. Examples / gallery / family / docs share it — **no island bg** on `/examples`.
+1b. Examples cards: transparent fill + `var(--site-rule)` hairline — **not** `--site-paper` slabs. Drawer may stay paper. See `EXAMPLES.md` § Card surface.
 2. Hero field + lattice stay field yellow in both modes. Ink panel stays ink. Below-fold bands use `--site-page` and `--site-cell`.
 3. Nav: Mode control is an **icon button**, not word labels `Light`/`Dark`.
    - Hit target `44×44`. Radius `0`. On the field: ink glyph, transparent fill, `1px` ink at 28% border optional.
