@@ -113,3 +113,44 @@ These make theme switches feel like color-only today — fix in the same unit as
 - No new chart types. No vendor runtimes.
 
 @Coder start with docs. @Verifier add B&W skeleton asserts after docs lands. @PM keep `recharts` paused until docs PASS.
+
+## Pie + scatter — fork the shared silhouette
+
+### Observation (`8258239`)
+
+`05-pie-raw` across all six ids is the **same three-slice leader pie** (same stroke, same label pattern). Only canvas height / title chrome change. `04-scatter-basic` mostly shares `r=3` circles; docs alone uses `2.5`. Plot frame / v-grid ride the cartesian chrome, not a scatter grammar.
+
+That is why theme chips on pie/scatter still feel like a tint.
+
+### Judgment
+
+Bar/line B&W is done. Pie/scatter need **label + hole + mark-shape** forks, not more palette. Painter may need new tokens; keep six chart types frozen.
+
+### Required signatures (B&W)
+
+| id | pie | scatter |
+| --- | --- | --- |
+| **folio** | Solid pie. **Outside leaders** + slice labels. No legend. No hole. Stroke `1.5`. | Open sheet (no plot box). Soft filled circles `r=3`, opacity ≥ `0.8`. No legend. |
+| **highcharts** | Solid pie in plot box. **Color legend** (no leaders). Slice separators stronger (`STRUCTURE` ≥ `0.4`). | Plot box `#ccd6eb`. Axis titles on. Circles `r≥3.5`. Legend if series ≥2. |
+| **shadcn** | **Donut** — inner hole ratio `0.45–0.55`. Soft slice stroke. **Legend**, no leaders. | Card plot `#e5e5e5`. Circles `r=3`, quieter opacity ≤ `0.75`. No axis titles. |
+| **docs** | Solid, **thin** stroke `1`. Leaders OK but shorter (`PIE_LEADER ≤ 12`). Title hairline stays. No hole. No legend. | No plot box. Circles `r=2.5`. Title rule. Quietest ink. |
+| **ant** | Solid. **Leaders + legend** forbidden pair — use **leaders only** OR center total label if painter allows; prefer leaders with wider gap (`TITLE_TO_PLOT` air). Plot box `#d9d9d9`. | Plot box + axis titles. Circles `r=3`. Teal/brick series when multi. |
+| **recharts** | Solid. **Bottom legend**, **no leaders**. Light plot border `#e2e8f0`. | **XY grid** (`data-v-grid`). Marks: **stroked** circles (fill none or paper, stroke ink `1.5`) — not solid folio dots. `r=3`. Bottom legend if series ≥2. |
+
+### New tokens (Coder — only if painter lacks them)
+
+Add to theme table / painter as needed; do not invent chart types:
+
+- `PIE_LABEL_MODE`: `leaders` | `legend` | `none`
+- `PIE_INNER_RATIO`: `0` solid … `0.5` donut
+- `SCATTER_MARK`: `circle` | `ring` (stroked)
+- Keep existing `PIE_*` / `SCATTER_*` for sizes
+
+### Acceptance
+
+- Flip theme on Examples pie + scatter: B&W naming works (donut vs leaders vs legend; ring vs solid; v-grid vs open).
+- Verifier: pairwise pie/scatter stripPaint differs on ≥2 of {labelMode, innerHole, markKind, legend, vgrid, plotFrame} — not hex alone.
+- Regen `05-pie-*` and `04-scatter-*` (and multi-series scatter if present) for all six themes. `check`+`pages` green.
+
+@Coder implement after this lock. Hover still waits.
+
