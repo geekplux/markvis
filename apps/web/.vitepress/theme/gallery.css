@@ -64,13 +64,7 @@
 }
 
 .gallery-layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
-
-.gallery-layout.open {
-  grid-template-columns: 1fr minmax(360px, 40%);
+  display: block;
 }
 
 .gallery-grid {
@@ -91,10 +85,20 @@
   cursor: pointer;
   color: #080b08;
   box-sizing: border-box;
+  transition: transform 120ms ease, border-color 120ms ease;
 }
 
 .gallery-card:hover {
   border-color: #edebe5;
+  transform: translateY(-1px);
+}
+
+.gallery-card-caption {
+  margin: 8px 0 0;
+  font-size: 12px;
+  font-weight: 560;
+  line-height: 1.35;
+  color: #080b08;
 }
 
 .gallery-thumb {
@@ -111,14 +115,69 @@
   max-height: none;
 }
 
-.gallery-detail {
-  position: relative;
+.gallery-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+}
+
+.gallery-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border: 0;
+  background: rgba(8, 11, 8, 0.45);
+  cursor: pointer;
+  pointer-events: auto;
+  animation: gallery-fade-in 200ms ease;
+}
+
+.gallery-drawer {
+  position: absolute;
   z-index: 2;
-  min-width: 0;
+  pointer-events: auto;
   background: #edebe5;
-  border: 1px solid rgba(237, 235, 229, 0.16);
+  color: #080b08;
   border-radius: 0;
+  box-sizing: border-box;
+  overflow: auto;
   padding: 16px;
+  animation: gallery-drawer-in 240ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Mobile bottom sheet */
+.gallery-drawer {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: min(88vh, 100%);
+  border-top: 1px solid #080b08;
+}
+
+@media (min-width: 768px) {
+  .gallery-drawer {
+    left: auto;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: min(480px, 92vw);
+    height: 100vh;
+    border-top: 0;
+    border-left: 1px solid #080b08;
+    animation-name: gallery-drawer-in-right;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 .gallery-detail-title {
@@ -138,6 +197,21 @@
   max-width: 100%;
 }
 
+.gallery-detail-themes {
+  margin-top: 12px;
+}
+
+.gallery-detail-themes .gallery-chip {
+  color: #080b08;
+  border-color: rgba(8, 11, 8, 0.28);
+}
+
+.gallery-detail-themes .gallery-chip.active {
+  background: #ffdb2a;
+  border-color: #ffdb2a;
+  color: #080b08;
+}
+
 .gallery-actions {
   display: flex;
   flex-wrap: wrap;
@@ -149,12 +223,13 @@
 .gallery-actions button,
 .gallery-close,
 .gallery-play {
-  height: 36px;
-  min-height: 36px;
+  height: 44px;
+  min-height: 44px;
+  min-width: 44px;
   padding: 0 12px;
-  border: 1px solid #e4e4e7;
-  background: #ffffff;
-  color: #171717;
+  border: 1px solid #080b08;
+  background: #edebe5;
+  color: #080b08;
   font-size: 12px;
   font-weight: 500;
   cursor: pointer;
@@ -162,6 +237,7 @@
   display: inline-flex;
   align-items: center;
   box-sizing: border-box;
+  border-radius: 0;
 }
 
 .gallery-copied {
@@ -176,41 +252,46 @@
   line-height: 1.4;
   overflow: auto;
   background: #fafaf9;
-  border: 1px solid #e4e4e7;
+  border: 1px solid rgba(8, 11, 8, 0.28);
   white-space: pre-wrap;
-}
-
-.gallery-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  border: 0;
-  background: rgba(23, 23, 23, 0.4);
-  cursor: pointer;
 }
 
 .gallery-close {
   margin-bottom: 8px;
 }
 
-@media (min-width: 768px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+@keyframes gallery-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
-@media (min-width: 1200px) {
-  .gallery-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+@keyframes gallery-drawer-in {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
   }
 }
 
-@media (max-width: 390px) {
-  .gallery-layout.open {
-    grid-template-columns: 1fr;
+@keyframes gallery-drawer-in-right {
+  from {
+    transform: translateX(100%);
   }
+  to {
+    transform: translateX(0);
+  }
+}
 
-  .gallery-page {
-    padding: 24px;
+@media (prefers-reduced-motion: reduce) {
+  .gallery-card,
+  .gallery-backdrop,
+  .gallery-drawer {
+    transition: none !important;
+    animation: none !important;
   }
 }

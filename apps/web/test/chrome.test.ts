@@ -40,6 +40,11 @@ describe("site visual chrome", () => {
     expect(home).not.toContain("folio-who");
     expect(home).not.toContain("<figcaption>");
     expect(home).toContain("Feb led Q3");
+    expect(home).toContain("home-lattice");
+    expect(home).toContain("home-hero-figure");
+    expect(home).toContain("home-figure-strip");
+    expect(css).toMatch(/\.home-lattice/);
+    expect(css).toMatch(/home-rise/);
     expect(home).toContain("Pro pulled ahead");
     expect(home).toContain("Shares stay raw");
     expect(home).not.toMatch(/```chart/);
@@ -54,6 +59,9 @@ describe("site visual chrome", () => {
     const vue = read("components/Gallery.vue");
     expect(vue).toContain(':aria-label="item.title"');
     expect(vue).not.toContain("gallery-card-title");
+    expect(vue).toContain("gallery-drawer");
+    expect(vue).not.toContain('class="{ open: selected }"');
+    expect(vue).not.toMatch(/gallery-layout[\s\S]*open:\s*selected/);
     expect(vue).toContain('aria-label="Chart theme"');
     expect(vue).toContain("themeFilter");
     expect(vue).toContain("svgsByTheme");
@@ -65,6 +73,8 @@ describe("site visual chrome", () => {
 
   it("gallery mobile grid + white chrome per EXAMPLES.md", () => {
     const css = read(".vitepress/theme/gallery.css");
+    expect(css).not.toMatch(/\.gallery-layout\.open/);
+    expect(css).toMatch(/\.gallery-drawer/);
     const family = read(".vitepress/theme/family.css");
     const nav = read("components/SiteNav.vue");
     expect(css).not.toMatch(/max-height:\s*140px/);

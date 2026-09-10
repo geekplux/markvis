@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, onUnmounted, ref } from "vue";
+import { computed, onMounted, onUnmounted, ref, watch } from "vue";
 import {
   CHART_TYPES,
   THEMES,
@@ -16,8 +16,10 @@ const THEME_CHIPS: ChartTheme[] = [...THEMES];
 
 const typeFilter = ref<"all" | ChartType>("all");
 const themeFilter = ref<ChartTheme>("folio");
+const detailTheme = ref<ChartTheme>("folio");
 const selectedId = ref<string | null>(null);
 const copyNote = ref("");
+const savedScrollY = ref(0);
 
 const items = GALLERY_ITEMS;
 
@@ -39,21 +41,21 @@ const selectedSvg = computed(() => {
   if (!selected.value) {
     return "";
   }
-  return selected.value.svgsByTheme[themeFilter.value];
+  return selected.value.svgsByTheme[detailTheme.value];
 });
 
 const selectedFence = computed(() => {
   if (!selected.value) {
     return "";
   }
-  return fenceForTheme(selected.value.fence, themeFilter.value);
+  return fenceForTheme(selected.value.fence, detailTheme.value);
 });
 
 const selectedPlayHref = computed(() => {
   if (!selected.value) {
     return "/play";
   }
-  return playHref(selected.value.id, themeFilter.value);
+  return playHref(selected.value.id, detailTheme.value);
 });
 
 const subline = computed(() => {
@@ -75,6 +77,9 @@ function readUrl(): void {
   const theme = params.get("theme");
   if (theme && THEME_CHIPS.includes(theme as ChartTheme)) {
     themeFilter.value = theme as ChartTheme;
+    if (selectedId.value) {
+      detailTheme.value = theme as ChartTheme;
+    }
   }
 }
 
@@ -85,22 +90,45 @@ function writeUrl(id: string | null): void {
   } else {
     url.searchParams.delete("id");
   }
-  if (themeFilter.value !== "folio") {
-    url.searchParams.set("theme", themeFilter.value);
+  const themeForUrl = id ? detailTheme.value : themeFilter.value;
+  if (themeForUrl !== "folio") {
+    url.searchParams.set("theme", themeForUrl);
   } else {
     url.searchParams.delete("theme");
   }
   window.history.replaceState(null, "", url.pathname + url.search + url.hash);
 }
 
+function lockScroll(): void {
+  savedScrollY.value = window.scrollY;
+  document.body.style.position = "fixed";
+  document.body.style.top = `-${savedScrollY.value}px`;
+  document.body.style.left = "0";
+  document.body.style.right = "0";
+  document.body.style.width = "100%";
+}
+
+function unlockScroll(): void {
+  const y = savedScrollY.value;
+  document.body.style.position = "";
+  document.body.style.top = "";
+  document.body.style.left = "";
+  document.body.style.right = "";
+  document.body.style.width = "";
+  window.scrollTo(0, y);
+}
+
 function openItem(id: string): void {
+  detailTheme.value = themeFilter.value;
   selectedId.value = id;
   writeUrl(id);
+  lockScroll();
 }
 
 function closeDetail(): void {
   selectedId.value = null;
   writeUrl(null);
+  unlockScroll();
 }
 
 function setTheme(theme: ChartTheme): void {
@@ -108,8 +136,13 @@ function setTheme(theme: ChartTheme): void {
   writeUrl(selectedId.value);
 }
 
+function setDetailTheme(theme: ChartTheme): void {
+  detailTheme.value = theme;
+  writeUrl(selectedId.value);
+}
+
 function onKey(event: KeyboardEvent): void {
-  if (event.key === "Escape") {
+  if (event.key === "Escape" && selectedId.value) {
     closeDetail();
   }
 }
@@ -138,13 +171,29 @@ async function copyText(text: string, label: string): Promise<void> {
   }
 }
 
+watch(selectedId, (id, prev) => {
+  if (id && !prev) {
+    /* opened via URL */
+    if (document.body.style.position !== "fixed") {
+      lockScroll();
+    }
+  }
+});
+
 onMounted(() => {
   readUrl();
+  if (selectedId.value) {
+    detailTheme.value = themeFilter.value;
+    lockScroll();
+  }
   window.addEventListener("keydown", onKey);
   window.addEventListener("popstate", readUrl);
 });
 
 onUnmounted(() => {
+  if (document.body.style.position === "fixed") {
+    unlockScroll();
+  }
   window.removeEventListener("keydown", onKey);
   window.removeEventListener("popstate", readUrl);
 });
@@ -184,7 +233,7 @@ onUnmounted(() => {
       </button>
     </div>
 
-    <div class="gallery-layout" :class="{ open: selected }">
+    <div class="gallery-layout">
       <div class="gallery-grid">
         <button
           v-for="item in visible"
@@ -198,43 +247,52 @@ onUnmounted(() => {
           @click="openItem(item.id)"
         >
           <div class="gallery-thumb" v-html="svgFor(item)" />
+          <p class="gallery-card-caption">{{ item.title }}</p>
         </button>
       </div>
-
-      <aside v-if="selected" class="gallery-detail" aria-live="polite">
-        <button type="button" class="gallery-close" @click="closeDetail">
-          Close
-        </button>
-        <h2 class="gallery-detail-title">{{ selected.title }}</h2>
-        <div class="gallery-full" v-html="selectedSvg" />
-        <div class="gallery-actions">
-          <button
-            type="button"
-            @click="copyText(selectedFence, 'Copied fence')"
-          >
-            Copy fence
-          </button>
-          <button
-            type="button"
-            @click="copyText(selectedSvg, 'Copied SVG')"
-          >
-            Copy SVG
-          </button>
-          <a class="gallery-play" :href="selectedPlayHref">
-            Open in Play
-          </a>
-          <span v-if="copyNote" class="gallery-copied">{{ copyNote }}</span>
-        </div>
-        <pre class="gallery-fence">{{ selectedFence }}</pre>
-      </aside>
     </div>
 
-    <button
-      v-if="selected"
-      type="button"
-      class="gallery-backdrop"
-      aria-label="Close detail"
-      @click="closeDetail"
-    />
+    <Teleport to="body">
+      <div v-if="selected" class="gallery-overlay" role="dialog" aria-modal="true">
+        <button
+          type="button"
+          class="gallery-backdrop"
+          aria-label="Close detail"
+          @click="closeDetail"
+        />
+        <aside class="gallery-drawer" aria-live="polite">
+          <button type="button" class="gallery-close" @click="closeDetail">
+            Close
+          </button>
+          <h2 class="gallery-detail-title">{{ selected.title }}</h2>
+          <div class="gallery-full" v-html="selectedSvg" />
+          <div class="gallery-filters gallery-detail-themes" role="tablist" aria-label="Detail theme">
+            <button
+              v-for="chip in THEME_CHIPS"
+              :key="`detail-${chip}`"
+              type="button"
+              class="gallery-chip"
+              :class="{ active: detailTheme === chip }"
+              :aria-pressed="detailTheme === chip"
+              :data-theme="chip"
+              @click="setDetailTheme(chip)"
+            >
+              {{ chip }}
+            </button>
+          </div>
+          <div class="gallery-actions">
+            <button type="button" @click="copyText(selectedFence, 'Copied fence')">
+              Copy fence
+            </button>
+            <button type="button" @click="copyText(selectedSvg, 'Copied SVG')">
+              Copy SVG
+            </button>
+            <a class="gallery-play" :href="selectedPlayHref">Open in Play</a>
+            <span v-if="copyNote" class="gallery-copied">{{ copyNote }}</span>
+          </div>
+          <pre class="gallery-fence">{{ selectedFence }}</pre>
+        </aside>
+      </div>
+    </Teleport>
   </div>
 </template>

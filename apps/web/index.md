@@ -22,22 +22,39 @@ pageClass: folio-home-page
 </nav>
 
 <section class="home-field">
-  <div class="home-panel">
-    <p class="home-meta"><span>OPEN SOURCE / MIT LICENSE</span><span>v2</span></p>
-    <h1 class="home-headline">
-      <span class="home-name">markvis.</span>
-      <span class="home-line">Charts in Markdown for any preview, any agent reply.</span>
-    </h1>
-    <p class="home-actions">
-      <a class="home-btn filled" href="/play"><span>Get started</span><span aria-hidden="true">&gt;</span></a>
-      <a class="home-btn outline" href="/examples"><span>Browse examples</span><span aria-hidden="true">&gt;</span></a>
-    </p>
-    <p class="home-chip-label">&gt; available for</p>
-    <p class="home-chips">
-      <span class="home-chip">npm</span>
-      <span class="home-chip">script</span>
-      <span class="home-chip">skill</span>
-    </p>
+  <div class="home-lattice" aria-hidden="true"></div>
+  <div class="home-hero">
+    <div class="home-panel">
+      <p class="home-meta"><span>OPEN SOURCE / MIT LICENSE</span><span>v2</span></p>
+      <h1 class="home-headline">
+        <span class="home-name">markvis.</span>
+        <span class="home-line">Charts in Markdown for any preview, any agent reply.</span>
+      </h1>
+      <p class="home-actions">
+        <a class="home-btn filled" href="/play"><span>Get started</span><span aria-hidden="true">&gt;</span></a>
+        <a class="home-btn outline" href="/examples"><span>Browse examples</span><span aria-hidden="true">&gt;</span></a>
+      </p>
+      <p class="home-chip-label">&gt; available for</p>
+      <p class="home-chips">
+        <span class="home-chip">npm</span>
+        <span class="home-chip">script</span>
+        <span class="home-chip">skill</span>
+      </p>
+    </div>
+    <div class="home-hero-figure">
+      <div class="home-figure-strip" aria-label="Sample figures">
+        <figure class="home-figure-tile">
+          <img src="/home/01-bar-basic.svg" alt="Bar chart: Feb led Q3" />
+        </figure>
+        <figure class="home-figure-tile">
+          <img src="/home/02-line-multi.svg" alt="Line chart: Pro pulled ahead" />
+        </figure>
+        <figure class="home-figure-tile">
+          <img src="/home/05-pie-raw.svg" alt="Pie chart: Shares stay raw" />
+        </figure>
+      </div>
+      <p class="home-figure-caption">FOLIO FIGURES</p>
+    </div>
   </div>
 </section>
 
