@@ -30,6 +30,21 @@ function stripPaint(svg: string): string {
 }
 
 /** Structural axes for B&W theme naming (THEMES.md). Hex ignored. */
+/** Bars are path marks; rounded tops use Q. Prefer that over rect rx=. */
+function barRxAxis(svg: string): string {
+  const barPaths = [...svg.matchAll(/<path\b([^>]*)>/g)].filter((m) =>
+    /data-(?:x|series)=/.test(m[1]!),
+  );
+  if (barPaths.length > 0) {
+    const rounded = barPaths.some((m) => {
+      const d = m[1]!.match(/\bd="([^"]*)"/)?.[1] ?? "";
+      return /\bQ\b/.test(d);
+    });
+    return rounded ? "round" : "0";
+  }
+  return (svg.match(/\brx="([0-9.]+)"/) ?? [, "0"])[1]!;
+}
+
 function bwAxes(svg: string) {
   return {
     legend: /data-legend=/.test(svg),
@@ -40,7 +55,7 @@ function bwAxes(svg: string) {
     titleSize: (svg.match(/font-size="(\d+(?:\.\d+)?)"[^>]*font-weight="6/) ??
       svg.match(/font-weight="6\d*"[^>]*font-size="(\d+(?:\.\d+)?)"/) ?? [, ""])[1],
     markerR: (svg.match(/<circle[^>]*\br="([0-9.]+)"/) ?? [, ""])[1],
-    barRx: (svg.match(/\brx="([0-9.]+)"/) ?? [, "0"])[1],
+    barRx: barRxAxis(svg),
     vGrid: /data-v-grid=/.test(svg),
   };
 }
@@ -910,6 +925,31 @@ describe("B&W theme skeletons", () => {
       );
       expect(n, theme).toBeGreaterThanOrEqual(3);
       expect(stripPaint(line)).not.toBe(stripPaint(folioLine));
+    }
+  });
+
+  it("recharts differs from each other pack on ≥3 structural axes", () => {
+    const rcLine = renderSvg(multiLine("recharts"));
+    const rcBar = renderSvg(barChart({ theme: "recharts" }));
+    expect(bwAxes(rcBar).barRx).toBe("0");
+    expect(bwAxes(rcBar).vGrid).toBe(true);
+    for (const theme of [
+      "folio",
+      "highcharts",
+      "shadcn",
+      "docs",
+      "ant",
+    ] as const) {
+      const line = renderSvg(multiLine(theme));
+      const bar = renderSvg(barChart({ theme }));
+      const nLine = bwDiffCount(bwAxes(rcLine), bwAxes(line));
+      const nBar = bwDiffCount(bwAxes(rcBar), bwAxes(bar));
+      const n = Math.max(nLine, nBar);
+      expect(n, `recharts vs ${theme} (line=${nLine} bar=${nBar})`).toBeGreaterThanOrEqual(
+        3,
+      );
+      expect(stripPaint(rcLine), theme).not.toBe(stripPaint(line));
+      expect(stripPaint(rcBar), theme).not.toBe(stripPaint(bar));
     }
   });
 });
