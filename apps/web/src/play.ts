@@ -1,4 +1,6 @@
-const THEMES = new Set(["folio", "highcharts", "shadcn", "docs", "ant"]);
+import { THEMES } from "./catalog.js";
+
+const THEME_SET = new Set<string>(THEMES);
 
 export function exampleQuery(search: string): string {
   const raw = search.startsWith("?") ? search.slice(1) : search;
@@ -12,7 +14,7 @@ export function exampleQuery(search: string): string {
       out.set("example", stem);
     }
   }
-  if (themeRaw && THEMES.has(themeRaw)) {
+  if (themeRaw && THEME_SET.has(themeRaw)) {
     out.set("theme", themeRaw);
   }
   const qs = out.toString();

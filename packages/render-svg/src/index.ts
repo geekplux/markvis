@@ -8,6 +8,7 @@ export {
   shadcn,
   docs,
   ant,
+  recharts,
 } from "@markvis/themes";
 export { themeTokens } from "./theme.js";
 export type { ThemeTokens } from "./theme.js";

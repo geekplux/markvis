@@ -96,6 +96,8 @@ export const folio = {
   LEGEND_BELOW: false,
   /** When true, draw a hairline rule under the title. */
   TITLE_RULE: false,
+  /** When true, draw vertical grid lines at x tick / category centers. */
+  VERTICAL_GRID: false,
 } as const;
 
 export type ThemeTokens = typeof folio;

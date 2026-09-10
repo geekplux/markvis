@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="pie chart: Core leads at 50% (%), 3 slices" aria-labelledby="mv-9395583b1f0bdce1-title" aria-describedby="mv-9395583b1f0bdce1-desc" data-markvis="2" data-chart-type="pie" data-id="mv-9395583b1f0bdce1" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-9395583b1f0bdce1-title">Core leads at 50%</title>
+  <desc id="mv-9395583b1f0bdce1-desc">pie chart. Core leads at 50%. x=name. y=value. unit=%. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#374151">Core leads at 50%<tspan font-size="12" font-weight="400" fill="#6B7280"> · %</tspan></text>
+  <g aria-hidden="true">
+    <path d="M374 233 L374 99.04 A133.96 133.96 0 0 1 393.97 365.46 Z" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="Core" data-raw-value="50"/>
+    <path d="M374 233 L393.97 365.46 A133.96 133.96 0 0 1 240.41 222.99 Z" fill="#82ca9d" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="Addons" data-raw-value="30"/>
+    <path d="M374 233 L240.41 222.99 A133.96 133.96 0 0 1 374 99.04 Z" fill="#ffc658" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="Other" data-raw-value="25"/>
+  </g>
+  <g fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1">
+    <polyline points="507.59,222.99 523.54,221.79 531.54,221.79"/>
+    <polyline points="282.88,331.2 272,342.93 264,342.93"/>
+    <polyline points="282.88,134.8 272,123.07 264,123.07"/>
+  </g>
+  <g font-size="11" font-weight="500" fill="#374151">
+    <text x="543.54" y="221.79" text-anchor="start" dominant-baseline="middle" data-label="Core">Core · 50</text>
+    <text x="252" y="342.93" text-anchor="end" dominant-baseline="middle" data-label="Addons">Addons · 30</text>
+    <text x="252" y="123.07" text-anchor="end" dominant-baseline="middle" data-label="Other">Other · 25</text>
+  </g>
+</svg>

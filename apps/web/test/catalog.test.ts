@@ -114,6 +114,7 @@ describe("gallery catalog", () => {
     expect(counts.byTheme.folio).toBe(52);
     expect(counts.byTheme.highcharts).toBe(52);
     expect(counts.byTheme.ant).toBe(52);
+    expect(counts.byTheme.recharts).toBe(52);
     expect(counts.byType.bar).toBeGreaterThanOrEqual(1);
     expect(() =>
       catalogFromMaps(maps.markdownByStem, {
@@ -140,6 +141,8 @@ describe("gallery catalog", () => {
           "<svg data-t=docs><title>T</title></svg>",
         "/x/examples/out/themes/ant/01-bar-basic.svg":
           "<svg data-t=ant><title>T</title></svg>",
+        "/x/examples/out/themes/recharts/01-bar-basic.svg":
+          "<svg data-t=recharts><title>T</title></svg>",
       },
     );
     const catalog = catalogFromMaps(

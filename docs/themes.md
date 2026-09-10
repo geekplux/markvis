@@ -1,6 +1,6 @@
 # themes.md — markvis theme token packs
 
-Scope: optional fence `theme: folio|highcharts|shadcn|docs|ant`. Omitted = folio. Unknown = error + table fallback. Themes are token packs in `packages/themes/<id>/theme.ts`, resolved by `packages/themes/registry.ts`. No Highcharts/d3/Unovis/Recharts deps. No new chart types. Public UI labels may say Folio / Highcharts-style / shadcn-style / Docs — avoid trademark claims in marketing copy.
+Scope: optional fence `theme: folio|highcharts|shadcn|docs|ant|recharts`. Omitted = folio. Unknown = error + table fallback. Themes are token packs in `packages/themes/<id>/theme.ts`, resolved by `packages/themes/registry.ts`. No Highcharts/d3/Unovis/Recharts deps. No new chart types. Public UI labels may say Folio / Highcharts-style / shadcn-style / Docs — avoid trademark claims in marketing copy.
 
 Default site figures stay folio.
 
@@ -319,6 +319,59 @@ Static SVG grammar inspired by Ant Design Charts: technical axes, muted teal/bri
 - `@antv/g2` / AntV chart runtime
 - Folio blue-first or highcharts `#7cb5ec` as series-1
 - Soft card-only shadcn look without technical axes
+- Hover/tooltip in this unit
+
+---
+
+## recharts
+
+### Intent
+
+Static SVG grammar inspired by Recharts demos: Cartesian XY grid, legend below plot,
+stroke 2 / markers r=3, square bars, light `#e2e8f0` plot border. Tokens only — no `recharts` npm.
+Hover waits.
+
+### Locked tokens (from `packages/themes/recharts/theme.ts`)
+
+| Token | Value |
+| --- | --- |
+| Canvas / paper | plot fill `#ffffff` + border `#e2e8f0` (1px) |
+| Ink | `#374151` |
+| Quiet | `#6B7280` |
+| Hairline opacity (grid) | `0.14` |
+| Structure opacity | `0.28` |
+| Series palette | `#8884d8`, `#82ca9d`, `#ffc658`, `#ff7300`, `#0088FE`, `#00C49F`, `#FFBB28`, `#FF8042` |
+| Bar radius `BAR_RX` | `0` |
+| Line stroke / point | `2` / `3` |
+| Area opacity | `0.2` |
+| Type — title | `16` / `600` / `#374151` |
+| Frame | `720×450` |
+| Plot min ratio | `0.58` |
+| Margins | top `32`, right `20`, bottom `36`, left `48` |
+| Max interior grid | `4` |
+| `VERTICAL_GRID` | `true` |
+| `END_LABEL_SERIES_MAX` | `0` |
+| `LEGEND_BELOW` | `true` |
+| `AXIS_TITLES` | `false` |
+| Font | system UI (folio stack) |
+
+### Differentiator vs folio / highcharts / docs / ant
+
+| Lock | folio | highcharts | docs | ant | recharts |
+| --- | --- | --- | --- | --- | --- |
+| Vertical grid | off | off | off | off | **on** |
+| Legend | end-labels | top band | below | top band | **below** |
+| Plot border | none | `#ccd6eb` | none | `#d9d9d9` | `#e2e8f0` |
+| Height | 480 | 440 | 480 | 420 | **450** |
+| `BAR_RX` | 3 | 0 | 0 | 2 | 0 |
+| Palette lead | `#3B82F6` | `#7cb5ec` | `#475569` | `#5AD8A6` | `#8884d8` |
+
+### Ban list
+
+- `recharts` npm / vendor chart runtime
+- HC denser-horiz-only grid without verticals
+- Soft card-only shadcn look / Inter-only face
+- Axis field titles
 - Hover/tooltip in this unit
 
 ---

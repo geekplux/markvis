@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="hist chart: Idle clusters near zero, 11 rows" aria-labelledby="mv-70aa9b42b2d28f99-title" aria-describedby="mv-70aa9b42b2d28f99-desc" data-markvis="2" data-chart-type="hist" data-id="mv-70aa9b42b2d28f99" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-70aa9b42b2d28f99-title">Idle clusters near zero</title>
+  <desc id="mv-70aa9b42b2d28f99-desc">hist chart. Idle clusters near zero. x=sec. 11 rows. x is binned with Sturges equal-width bins.</desc>
+  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#374151">Idle clusters near zero</text>
+  <rect x="48" y="36" width="652" height="391" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="48" y="36" width="652" height="391" fill="none" stroke="#e2e8f0" stroke-width="1" data-plot-border="1"/>
+  <g fill="none" stroke="#374151" stroke-opacity="0.14" stroke-width="1" data-v-grid="1">
+    <line x1="48" x2="48" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="178.4" x2="178.4" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="308.8" x2="308.8" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="439.2" x2="439.2" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="569.6" x2="569.6" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="700" x2="700" y1="36" y2="427" data-v-grid="1"/>
+  </g>
+  <path d="M48 427 L700 427" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#6B7280" font-size="11" font-weight="400">
+    <text x="40" y="427" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="40" y="329.25" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="40" y="231.5" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="40" y="133.75" text-anchor="end" dominant-baseline="middle">3</text>
+    <text x="40" y="36" text-anchor="end" dominant-baseline="middle">4</text>
+    <text x="48" y="438" text-anchor="middle" font-size="11" data-full-label="0">0</text>
+    <text x="178.4" y="438" text-anchor="middle" font-size="11" data-full-label="4">4</text>
+    <text x="308.8" y="438" text-anchor="middle" font-size="11" data-full-label="8">8</text>
+    <text x="439.2" y="438" text-anchor="middle" font-size="11" data-full-label="12">12</text>
+    <text x="569.6" y="438" text-anchor="middle" font-size="11" data-full-label="16">16</text>
+    <text x="700" y="438" text-anchor="middle" font-size="11" data-full-label="20">20</text>
+  </g>
+  <g>
+    <path d="M64.95 427 L161.45 427 L161.45 36 L64.95 36 Z" fill="#8884d8" data-bin-left="0" data-bin-right="4" data-weight="4" data-count="4"/>
+    <path d="M195.35 427 L291.85 427 L291.85 329.25 L195.35 329.25 Z" fill="#8884d8" data-bin-left="4" data-bin-right="8" data-weight="1" data-count="1"/>
+    <path d="M325.75 427 L422.25 427 L422.25 133.75 L325.75 133.75 Z" fill="#8884d8" data-bin-left="8" data-bin-right="12" data-weight="3" data-count="3"/>
+    <path d="M456.15 427 L552.65 427 L552.65 231.5 L456.15 231.5 Z" fill="#8884d8" data-bin-left="12" data-bin-right="16" data-weight="2" data-count="2"/>
+    <path d="M586.55 427 L683.05 427 L683.05 329.25 L586.55 329.25 Z" fill="#8884d8" data-bin-left="16" data-bin-right="20" data-weight="1" data-count="1"/>
+  </g>
+  <g>
+    <text x="113.2" y="28" text-anchor="middle" font-size="11" font-weight="500" fill="#374151" data-value-label="0–4">4</text>
+    <text x="243.6" y="321.25" text-anchor="middle" font-size="11" font-weight="500" fill="#374151" data-value-label="4–8">1</text>
+    <text x="374" y="125.75" text-anchor="middle" font-size="11" font-weight="500" fill="#374151" data-value-label="8–12">3</text>
+    <text x="504.4" y="223.5" text-anchor="middle" font-size="11" font-weight="500" fill="#374151" data-value-label="12–16">2</text>
+    <text x="634.8" y="321.25" text-anchor="middle" font-size="11" font-weight="500" fill="#374151" data-value-label="16–20">1</text>
+  </g>
+</svg>

@@ -51,6 +51,7 @@ import {
   LINE_POINT_R,
   LINE_STROKE,
   MAX_INTERIOR_GRID,
+  VERTICAL_GRID,
   POINT_SKIP_AFTER,
   PLOT_BG,
   PLOT_BORDER,
@@ -457,6 +458,30 @@ function drawGridAndAxes(prepared: Prepared): string[] {
       }
       lines.push(`  </g>`);
     }
+  }
+
+  if (VERTICAL_GRID && prepared.xTicks.length > 0) {
+    lines.push(
+      `  <g ${attrs({
+        fill: "none",
+        stroke: INK,
+        "stroke-opacity": HAIRLINE_OPACITY,
+        "stroke-width": 1,
+        "data-v-grid": "1",
+      })}>`,
+    );
+    for (const tick of prepared.xTicks) {
+      lines.push(
+        `    <line ${attrs({
+          x1: fmtPx(tick.pos),
+          x2: fmtPx(tick.pos),
+          y1: fmtPx(plot.top),
+          y2: fmtPx(plot.bottom),
+          "data-v-grid": "1",
+        })}/>`,
+      );
+    }
+    lines.push(`  </g>`);
   }
 
   lines.push(

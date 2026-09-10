@@ -5,18 +5,20 @@ import {
   docs,
   folio,
   highcharts,
+  recharts,
   resolveThemePack,
   shadcn,
   themeRegistry,
 } from "../registry.js";
 
 describe("theme registry", () => {
-  it("resolves all five packs", () => {
+  it("resolves all registered packs", () => {
     expect(resolveThemePack("folio")).toBe(folio);
     expect(resolveThemePack("highcharts")).toBe(highcharts);
     expect(resolveThemePack("shadcn")).toBe(shadcn);
     expect(resolveThemePack("docs")).toBe(docs);
     expect(resolveThemePack("ant")).toBe(ant);
+    expect(resolveThemePack("recharts")).toBe(recharts);
     for (const id of THEMES) {
       expect(themeRegistry[id]).toBe(resolveThemePack(id));
     }

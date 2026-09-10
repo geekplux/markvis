@@ -4,9 +4,10 @@ import { highcharts } from "./highcharts/theme.js";
 import { shadcn } from "./shadcn/theme.js";
 import { docs } from "./docs/theme.js";
 import { ant } from "./ant/theme.js";
+import { recharts } from "./recharts/theme.js";
 
 export type { ThemeTokens };
-export { folio, highcharts, shadcn, docs, ant };
+export { folio, highcharts, shadcn, docs, ant, recharts };
 
 /** id → pack. Unknown / missing packs fail loudly via resolveThemePack. */
 export const themeRegistry: Record<ChartTheme, ThemeTokens> = {
@@ -15,6 +16,7 @@ export const themeRegistry: Record<ChartTheme, ThemeTokens> = {
   shadcn,
   docs,
   ant,
+  recharts,
 };
 
 /**

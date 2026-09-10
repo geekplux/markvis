@@ -227,5 +227,6 @@ describe("site visual chrome", () => {
     expect(html).toContain('value="shadcn"');
     expect(html).toContain('value="docs"');
     expect(html).toContain('value="ant"');
+    expect(html).toContain('value="recharts"');
   });
 });

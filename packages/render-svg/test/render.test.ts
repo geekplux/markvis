@@ -13,6 +13,7 @@ import {
   shadcn,
   docs,
   ant,
+  recharts,
   renderSvg,
   themeTokens,
 } from "../src/index.js";
@@ -40,6 +41,7 @@ function bwAxes(svg: string) {
       svg.match(/font-weight="6\d*"[^>]*font-size="(\d+(?:\.\d+)?)"/) ?? [, ""])[1],
     markerR: (svg.match(/<circle[^>]*\br="([0-9.]+)"/) ?? [, ""])[1],
     barRx: (svg.match(/\brx="([0-9.]+)"/) ?? [, "0"])[1],
+    vGrid: /data-v-grid=/.test(svg),
   };
 }
 
@@ -56,6 +58,7 @@ function bwDiffCount(
   if (a.titleSize !== b.titleSize) n += 1;
   if (a.markerR !== b.markerR) n += 1;
   if (a.barRx !== b.barRx) n += 1;
+  if (a.vGrid !== b.vGrid) n += 1;
   return n;
 }
 
@@ -786,11 +789,119 @@ describe("docs tokens", () => {
 });
 
 
+
+describe("recharts tokens", () => {
+  it("is an XY-grid, bottom-legend pack", () => {
+    expect(themeTokens("recharts")).toBe(recharts);
+    expect(recharts.VERTICAL_GRID).toBe(true);
+    expect(folio.VERTICAL_GRID).toBe(false);
+    expect(recharts.LEGEND_BELOW).toBe(true);
+    expect(recharts.END_LABEL_SERIES_MAX).toBe(0);
+    expect(recharts.AXIS_TITLES).toBe(false);
+    expect(recharts.TITLE_RULE).toBe(false);
+    expect(recharts.LINE_STROKE).toBe(2);
+    expect(recharts.LINE_POINT_R).toBe(3);
+    expect(recharts.BAR_RX).toBe(0);
+    expect(recharts.SVG_HEIGHT).toBe(450);
+    expect(recharts.SVG_HEIGHT).not.toBe(folio.SVG_HEIGHT);
+    expect(recharts.SVG_HEIGHT).not.toBe(highcharts.SVG_HEIGHT);
+    expect(recharts.SVG_HEIGHT).not.toBe(shadcn.SVG_HEIGHT);
+    expect(recharts.SVG_HEIGHT).not.toBe(ant.SVG_HEIGHT);
+    expect(recharts.MAX_INTERIOR_GRID).toBe(4);
+    expect(recharts.PLOT_BG).toBe("#ffffff");
+    expect(recharts.PLOT_BORDER).toBe("#e2e8f0");
+    expect(recharts.PLOT_BORDER_WIDTH).toBe(1);
+    expect(recharts.PLOT_BORDER).not.toBe(highcharts.PLOT_BORDER);
+    expect(recharts.PLOT_BORDER).not.toBe(ant.PLOT_BORDER);
+    expect(recharts.PLOT_BORDER).not.toBe(shadcn.PLOT_BORDER);
+    expect(recharts.PALETTE[0]).toBe("#8884d8");
+    expect(recharts.PALETTE[0]).not.toBe(folio.PALETTE[0]);
+    expect(recharts.PALETTE[0]).not.toBe(highcharts.PALETTE[0]);
+    expect(recharts.PALETTE[0]).not.toBe(shadcn.PALETTE[0]);
+    expect(recharts.PALETTE[0]).not.toBe(ant.PALETTE[0]);
+    expect(recharts.PALETTE[0]).not.toBe(docs.PALETTE[0]);
+    expect(recharts.FONT).toBe(folio.FONT);
+  });
+
+  it("B&W: XY grid + bottom legend vs folio ≥3 axes", () => {
+    const folioSvg = renderSvg(multiLine("folio"));
+    const rcSvg = renderSvg(multiLine("recharts"));
+    const folioBar = renderSvg(barChart({ theme: "folio" }));
+    const rcBar = renderSvg(barChart({ theme: "recharts" }));
+    expect(folioSvg).toContain("data-end-label");
+    expect(rcSvg).not.toContain("data-end-label");
+    expect(rcSvg).toContain('data-legend="A"');
+    expect(rcSvg).toContain('data-legend="B"');
+    expect(rcSvg).toContain('data-v-grid="1"');
+    expect(folioSvg).not.toContain('data-v-grid="1"');
+    expect(rcBar).toContain('data-v-grid="1"');
+    expect(rcBar).toContain('data-plot-border="1"');
+    expect(rcBar).toContain("#e2e8f0");
+    expect(rcBar).not.toContain('data-axis-titles="1"');
+    const n = Math.max(
+      bwDiffCount(bwAxes(folioSvg), bwAxes(rcSvg)),
+      bwDiffCount(bwAxes(folioBar), bwAxes(rcBar)),
+    );
+    expect(n).toBeGreaterThanOrEqual(3);
+    expect(stripPaint(rcSvg)).not.toBe(stripPaint(folioSvg));
+  });
+
+  it("matches examples/out/themes/recharts/01-bar-basic.svg", () => {
+    const repoRoot = join(here, "../../..");
+    const source = readFileSync(
+      join(repoRoot, "examples/valid/01-bar-basic.md"),
+      "utf8",
+    );
+    const result = parseMarkdown(source, { filename: "01-bar-basic.md" });
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    const chart = ChartIRSchema.parse({ ...result.chart, theme: "recharts" });
+    const svg = renderSvg(chart);
+    const outDir = join(repoRoot, "examples/out/themes/recharts");
+    const outPath = join(outDir, "01-bar-basic.svg");
+    if (process.env["UPDATE_SNAPSHOTS"] === "1") {
+      mkdirSync(outDir, { recursive: true });
+      writeFileSync(outPath, svg, "utf8");
+    }
+    const committed = readFileSync(outPath, "utf8");
+    expect(svg).toBe(committed);
+    expect(committed).toContain('data-v-grid="1"');
+  });
+
+  it("matches examples/out/themes/recharts/02-line-multi.svg", () => {
+    const repoRoot = join(here, "../../..");
+    const source = readFileSync(
+      join(repoRoot, "examples/valid/02-line-multi.md"),
+      "utf8",
+    );
+    const result = parseMarkdown(source, { filename: "02-line-multi.md" });
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    const chart = ChartIRSchema.parse({ ...result.chart, theme: "recharts" });
+    const svg = renderSvg(chart);
+    const outPath = join(
+      repoRoot,
+      "examples/out/themes/recharts/02-line-multi.svg",
+    );
+    if (process.env["UPDATE_SNAPSHOTS"] === "1") {
+      mkdirSync(join(repoRoot, "examples/out/themes/recharts"), {
+        recursive: true,
+      });
+      writeFileSync(outPath, svg, "utf8");
+    }
+    const committed = readFileSync(outPath, "utf8");
+    expect(svg).toBe(committed);
+    expect(committed).toContain('data-legend="free"');
+    expect(committed).not.toContain("data-end-label");
+    expect(committed).toContain('data-v-grid="1"');
+  });
+});
+
 describe("B&W theme skeletons", () => {
   it("HC / shadcn / ant each differ from folio on ≥3 structural axes", () => {
     const folioLine = renderSvg(multiLine("folio"));
     const folioBar = renderSvg(barChart({ theme: "folio" }));
-    for (const theme of ["highcharts", "shadcn", "ant"] as const) {
+    for (const theme of ["highcharts", "shadcn", "ant", "recharts"] as const) {
       const line = renderSvg(multiLine(theme));
       const bar = renderSvg(barChart({ theme }));
       const n = Math.max(
@@ -815,6 +926,7 @@ describe("source discipline", () => {
       join(repoRoot, "packages/themes/ant"),
       join(repoRoot, "packages/themes/shadcn"),
       join(repoRoot, "packages/themes/docs"),
+      join(repoRoot, "packages/themes/recharts"),
     ];
     const files: string[] = [];
     for (const dir of dirs) {
@@ -833,7 +945,8 @@ describe("source discipline", () => {
       expect(source, file).not.toMatch(/legacy/);
       expect(source, file).not.toMatch(/highcharts\.com/);
       expect(source, file).not.toMatch(/\bunovis\b/i);
-      expect(source, file).not.toMatch(/\brecharts\b/i);
+      expect(source, file).not.toMatch(/from\s+["']recharts["']/);
+      expect(source, file).not.toMatch(/require\(\s*["']recharts["']\s*\)/);
     }
   });
 });

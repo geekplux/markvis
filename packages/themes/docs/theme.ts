@@ -101,4 +101,5 @@ export const docs = {
   LEGEND_BELOW: true,
   /** Hairline under title — not a four-sided plot rect. */
   TITLE_RULE: true,
+  VERTICAL_GRID: false,
 } as ThemeTokens;

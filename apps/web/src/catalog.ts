@@ -9,7 +9,7 @@ export const CHART_TYPES = [
 
 export type ChartType = (typeof CHART_TYPES)[number];
 
-export const THEMES = ["folio", "highcharts", "shadcn", "docs", "ant"] as const;
+export const THEMES = ["folio", "highcharts", "shadcn", "docs", "ant", "recharts"] as const;
 
 export type ChartTheme = (typeof THEMES)[number];
 
@@ -46,7 +46,7 @@ export function themeStemFromPath(
 ): { theme: ChartTheme; stem: string } | null {
   const normalized = path.replace(/\\/g, "/");
   const match = normalized.match(
-    /(?:^|\/)themes\/(folio|highcharts|shadcn|docs|ant)\/([^/]+)\.svg$/i,
+    /(?:^|\/)themes\/(folio|highcharts|shadcn|docs|ant|recharts)\/([^/]+)\.svg$/i,
   );
   if (!match) {
     return null;

@@ -13,7 +13,7 @@ export type ChartType = (typeof CHART_TYPES)[number];
 
 export const ChartTypeSchema = z.enum(CHART_TYPES);
 
-export const THEMES = ["folio", "highcharts", "shadcn", "docs", "ant"] as const;
+export const THEMES = ["folio", "highcharts", "shadcn", "docs", "ant", "recharts"] as const;
 
 export type ChartTheme = (typeof THEMES)[number];
 

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="hist chart: Most retries stay at 0–1, 7 rows" aria-labelledby="mv-3eb60b6354c3da43-title" aria-describedby="mv-3eb60b6354c3da43-desc" data-markvis="2" data-chart-type="hist" data-id="mv-3eb60b6354c3da43" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-3eb60b6354c3da43-title">Most retries stay at 0–1</title>
+  <desc id="mv-3eb60b6354c3da43-desc">hist chart. Most retries stay at 0–1. x=retries. 7 rows. x is binned with Sturges equal-width bins.</desc>
+  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#374151">Most retries stay at 0–1</text>
+  <rect x="48" y="36" width="652" height="391" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="48" y="36" width="652" height="391" fill="none" stroke="#e2e8f0" stroke-width="1" data-plot-border="1"/>
+  <g fill="none" stroke="#374151" stroke-opacity="0.14" stroke-width="1" data-v-grid="1">
+    <line x1="48" x2="48" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="211" x2="211" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="374" x2="374" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="537" x2="537" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="700" x2="700" y1="36" y2="427" data-v-grid="1"/>
+  </g>
+  <path d="M48 427 L700 427" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#6B7280" font-size="11" font-weight="400">
+    <text x="40" y="427" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="40" y="296.67" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="40" y="166.33" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="40" y="36" text-anchor="end" dominant-baseline="middle">3</text>
+    <text x="48" y="438" text-anchor="middle" font-size="11" data-full-label="0">0</text>
+    <text x="211" y="438" text-anchor="middle" font-size="11" data-full-label="1">1</text>
+    <text x="374" y="438" text-anchor="middle" font-size="11" data-full-label="2">2</text>
+    <text x="537" y="438" text-anchor="middle" font-size="11" data-full-label="3">3</text>
+    <text x="700" y="438" text-anchor="middle" font-size="11" data-full-label="4">4</text>
+  </g>
+  <g>
+    <path d="M99.5 427 L159.5 427 L159.5 166.33 L99.5 166.33 Z" fill="#8884d8" data-bin-left="0" data-bin-right="1" data-weight="2" data-count="2"/>
+    <path d="M262.5 427 L322.5 427 L322.5 36 L262.5 36 Z" fill="#8884d8" data-bin-left="1" data-bin-right="2" data-weight="3" data-count="3"/>
+    <path d="M425.5 427 L485.5 427 L485.5 296.67 L425.5 296.67 Z" fill="#8884d8" data-bin-left="2" data-bin-right="3" data-weight="1" data-count="1"/>
+    <path d="M588.5 427 L648.5 427 L648.5 296.67 L588.5 296.67 Z" fill="#8884d8" data-bin-left="3" data-bin-right="4" data-weight="1" data-count="1"/>
+  </g>
+  <g>
+    <text x="129.5" y="158.33" text-anchor="middle" font-size="11" font-weight="500" fill="#374151" data-value-label="0–1">2</text>
+    <text x="292.5" y="28" text-anchor="middle" font-size="11" font-weight="500" fill="#374151" data-value-label="1–2">3</text>
+    <text x="455.5" y="288.67" text-anchor="middle" font-size="11" font-weight="500" fill="#374151" data-value-label="2–3">1</text>
+    <text x="618.5" y="288.67" text-anchor="middle" font-size="11" font-weight="500" fill="#374151" data-value-label="3–4">1</text>
+  </g>
+</svg>

@@ -102,4 +102,5 @@ export const shadcn = {
   AXIS_TITLES: false,
   LEGEND_BELOW: false,
   TITLE_RULE: false,
+  VERTICAL_GRID: false,
 } as ThemeTokens;

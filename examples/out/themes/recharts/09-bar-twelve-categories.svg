@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="bar chart: Jul peaked at 22, 12 rows" aria-labelledby="mv-f2ca0b65d8753e21-title" aria-describedby="mv-f2ca0b65d8753e21-desc" data-markvis="2" data-chart-type="bar" data-id="mv-f2ca0b65d8753e21" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-f2ca0b65d8753e21-title">Jul peaked at 22</title>
+  <desc id="mv-f2ca0b65d8753e21-desc">bar chart. Jul peaked at 22. x=month. y=tickets. 12 rows.</desc>
+  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#374151">Jul peaked at 22</text>
+  <rect x="48" y="36" width="652" height="391" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="48" y="36" width="652" height="391" fill="none" stroke="#e2e8f0" stroke-width="1" data-plot-border="1"/>
+  <g fill="none" stroke="#374151" stroke-opacity="0.14" stroke-width="1">
+    <line x1="48" x2="700" y1="296.67" y2="296.67"/>
+    <line x1="48" x2="700" y1="166.33" y2="166.33"/>
+    <line x1="48" x2="700" y1="36" y2="36"/>
+  </g>
+  <g fill="none" stroke="#374151" stroke-opacity="0.14" stroke-width="1" data-v-grid="1">
+    <line x1="75.17" x2="75.17" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="129.5" x2="129.5" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="183.83" x2="183.83" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="238.17" x2="238.17" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="292.5" x2="292.5" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="346.83" x2="346.83" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="401.17" x2="401.17" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="455.5" x2="455.5" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="509.83" x2="509.83" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="564.17" x2="564.17" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="618.5" x2="618.5" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="672.83" x2="672.83" y1="36" y2="427" data-v-grid="1"/>
+  </g>
+  <path d="M48 427 L700 427" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#6B7280" font-size="11" font-weight="400">
+    <text x="40" y="427" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="40" y="296.67" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="40" y="166.33" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="40" y="36" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="75.17" y="438" text-anchor="middle" font-size="11" data-full-label="Jan">Jan</text>
+    <text x="129.5" y="438" text-anchor="middle" font-size="11" data-full-label="Feb">Feb</text>
+    <text x="183.83" y="438" text-anchor="middle" font-size="11" data-full-label="Mar">Mar</text>
+    <text x="238.17" y="438" text-anchor="middle" font-size="11" data-full-label="Apr">Apr</text>
+    <text x="292.5" y="438" text-anchor="middle" font-size="11" data-full-label="May">May</text>
+    <text x="346.83" y="438" text-anchor="middle" font-size="11" data-full-label="Jun">Jun</text>
+    <text x="401.17" y="438" text-anchor="middle" font-size="11" data-full-label="Jul">Jul</text>
+    <text x="455.5" y="438" text-anchor="middle" font-size="11" data-full-label="Aug">Aug</text>
+    <text x="509.83" y="438" text-anchor="middle" font-size="11" data-full-label="Sep">Sep</text>
+    <text x="564.17" y="438" text-anchor="middle" font-size="11" data-full-label="Oct">Oct</text>
+    <text x="618.5" y="438" text-anchor="middle" font-size="11" data-full-label="Nov">Nov</text>
+    <text x="672.83" y="438" text-anchor="middle" font-size="11" data-full-label="Dec">Dec</text>
+  </g>
+  <g>
+    <path d="M52.35 427 L97.99 427 L97.99 296.67 L52.35 296.67 Z" fill="#8884d8" data-x="Jan" data-series="tickets" data-y="10"/>
+    <path d="M106.68 427 L152.32 427 L152.32 270.6 L106.68 270.6 Z" fill="#8884d8" data-x="Feb" data-series="tickets" data-y="12"/>
+    <path d="M161.01 427 L206.65 427 L206.65 309.7 L161.01 309.7 Z" fill="#8884d8" data-x="Mar" data-series="tickets" data-y="9"/>
+    <path d="M215.35 427 L260.99 427 L260.99 231.5 L215.35 231.5 Z" fill="#8884d8" data-x="Apr" data-series="tickets" data-y="15"/>
+    <path d="M269.68 427 L315.32 427 L315.32 244.53 L269.68 244.53 Z" fill="#8884d8" data-x="May" data-series="tickets" data-y="14"/>
+    <path d="M324.01 427 L369.65 427 L369.65 192.4 L324.01 192.4 Z" fill="#8884d8" data-x="Jun" data-series="tickets" data-y="18"/>
+    <path d="M378.35 427 L423.99 427 L423.99 140.27 L378.35 140.27 Z" fill="#8884d8" data-x="Jul" data-series="tickets" data-y="22"/>
+    <path d="M432.68 427 L478.32 427 L478.32 166.33 L432.68 166.33 Z" fill="#8884d8" data-x="Aug" data-series="tickets" data-y="20"/>
+    <path d="M487.01 427 L532.65 427 L532.65 205.43 L487.01 205.43 Z" fill="#8884d8" data-x="Sep" data-series="tickets" data-y="17"/>
+    <path d="M541.35 427 L586.99 427 L586.99 179.37 L541.35 179.37 Z" fill="#8884d8" data-x="Oct" data-series="tickets" data-y="19"/>
+    <path d="M595.68 427 L641.32 427 L641.32 218.47 L595.68 218.47 Z" fill="#8884d8" data-x="Nov" data-series="tickets" data-y="16"/>
+    <path d="M650.01 427 L695.65 427 L695.65 153.3 L650.01 153.3 Z" fill="#8884d8" data-x="Dec" data-series="tickets" data-y="21"/>
+  </g>
+</svg>

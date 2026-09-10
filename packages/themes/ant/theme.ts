@@ -97,4 +97,5 @@ export const ant = {
   AXIS_TITLES: true,
   LEGEND_BELOW: false,
   TITLE_RULE: false,
+  VERTICAL_GRID: false,
 } as ThemeTokens;

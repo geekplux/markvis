@@ -10,7 +10,8 @@
     "./highcharts": "./highcharts/theme.ts",
     "./shadcn": "./shadcn/theme.ts",
     "./docs": "./docs/theme.ts",
-    "./ant": "./ant/theme.ts"
+    "./ant": "./ant/theme.ts",
+    "./recharts": "./recharts/theme.ts"
   },
   "main": "./registry.ts",
   "types": "./registry.ts",

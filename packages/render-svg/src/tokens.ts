@@ -69,6 +69,7 @@ export let PLOT_BORDER_WIDTH = folio.PLOT_BORDER_WIDTH;
 export let AXIS_TITLES = folio.AXIS_TITLES;
 export let LEGEND_BELOW = folio.LEGEND_BELOW;
 export let TITLE_RULE = folio.TITLE_RULE;
+export let VERTICAL_GRID = folio.VERTICAL_GRID;
 
 /** Apply a theme pack to the live token bindings used by layout/paint. */
 export function applyThemeTokens(t: ThemeTokens): void {
@@ -126,4 +127,5 @@ export function applyThemeTokens(t: ThemeTokens): void {
   AXIS_TITLES = t.AXIS_TITLES;
   LEGEND_BELOW = t.LEGEND_BELOW;
   TITLE_RULE = t.TITLE_RULE;
+  VERTICAL_GRID = t.VERTICAL_GRID;
 }
