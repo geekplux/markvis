@@ -92,6 +92,9 @@ describe("site visual chrome", () => {
     expect(css).not.toMatch(/#2563eb/i);
     expect(css).not.toMatch(/999px/);
     expect(css).toMatch(/\.gallery-page[\s\S]*background:\s*transparent/);
+    expect(css).toMatch(/\.gallery-card\s*\{[^}]*background:\s*transparent/s);
+    expect(css).toMatch(/\.gallery-card\s*\{[^}]*border:\s*1px\s+solid\s+var\(--site-rule\)/s);
+    expect(css).not.toMatch(/\.gallery-card\s*\{[^}]*background:\s*var\(--site-paper\)/s);
     expect(css).not.toMatch(/\.gallery-page[\s\S]*background:\s*#0e1312/);
     expect(css).toMatch(/\.gallery-page[\s\S]*padding:\s*24px/);
     expect(css).toMatch(/\.gallery-chip[\s\S]*height:\s*44px/);

@@ -78,12 +78,12 @@
   width: 100%;
   text-align: left;
   padding: 12px;
-  background: var(--site-paper);
-  border: 1px solid rgba(237, 235, 229, 0.16);
+  background: transparent;
+  border: 1px solid var(--site-rule);
   border-radius: 0;
   box-shadow: none;
   cursor: pointer;
-  color: #080b08;
+  color: var(--site-fg);
   box-sizing: border-box;
   transition: transform 120ms ease, border-color 120ms ease;
 }
@@ -98,7 +98,7 @@
   font-size: 12px;
   font-weight: 560;
   line-height: 1.35;
-  color: #080b08;
+  color: var(--site-fg);
 }
 
 .gallery-thumb {
