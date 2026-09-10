@@ -466,10 +466,6 @@
   max-width: 22ch;
 }
 
-.home-root {
-  overflow-x: hidden;
-}
-
 .home-index {
   margin: 0 0 12px;
   font-family: var(--home-mono);
