@@ -295,3 +295,30 @@
     animation: none !important;
   }
 }
+
+
+/* Detail-drawer chart tip + draw-in (thumbs never enhanced) */
+.markvis-tip {
+  position: fixed;
+  z-index: 10000;
+  pointer-events: none;
+  padding: 4px 8px;
+  border-radius: 2px;
+  border: 1px solid rgba(237, 235, 229, 0.22);
+  background: #080b08;
+  color: #edebe5;
+  font: 560 11px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .markvis-tip {
+    transition: none;
+    transform: none;
+  }
+  .gallery-full svg.markvis-motion .markvis-mark,
+  .gallery-full svg.markvis-motion path.markvis-mark-line {
+    animation: none !important;
+    opacity: 1 !important;
+    stroke-dashoffset: 0 !important;
+  }
+}

@@ -21,6 +21,18 @@ export default defineConfig({
   description: "Quantitative charts in Markdown — the fence is the data.",
   head: [["script", {}, siteModeBoot]],
   vite: {
+    resolve: {
+      alias: {
+        "@markvis/browser/enhance": resolve(repoRoot, "packages/browser/src/enhance.ts"),
+        "@markvis/browser": resolve(repoRoot, "packages/browser/src/index.ts"),
+        "@markvis/parser": resolve(repoRoot, "packages/parser/src/index.ts"),
+        "@markvis/render-svg": resolve(
+          repoRoot,
+          "packages/render-svg/src/index.ts",
+        ),
+        "@markvis/ir": resolve(repoRoot, "packages/ir/src/index.ts"),
+      },
+    },
     server: {
       fs: {
         allow: [repoRoot],

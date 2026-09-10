@@ -69,6 +69,9 @@ describe("site visual chrome", () => {
     expect(vue).toContain("Open in Play");
     expect(vue).toContain("playHref");
     expect(vue).toContain("data-theme");
+    expect(vue).toContain("enhanceChartSvg");
+    expect(vue).toContain('@markvis/browser/enhance');
+    expect(vue).toMatch(/querySelector\([\"'`]\.gallery-full[\"'`]\)/);
   });
 
   it("gallery mobile grid + white chrome per EXAMPLES.md", () => {
@@ -88,6 +91,8 @@ describe("site visual chrome", () => {
     expect(css).toMatch(/\.gallery-full svg[\s\S]*width:\s*100%/);
     expect(css).toMatch(/\.gallery-full svg[\s\S]*height:\s*auto/);
     expect(css).toMatch(/\.gallery-full svg[\s\S]*max-width:\s*100%/);
+    expect(css).toMatch(/\.markvis-tip/);
+    expect(css).toMatch(/prefers-reduced-motion:\s*reduce/);
     expect(css).not.toMatch(/#f7f4ef/i);
     expect(css).not.toMatch(/#2563eb/i);
     expect(css).not.toMatch(/999px/);
@@ -231,5 +236,18 @@ describe("site visual chrome", () => {
     expect(html).toContain('value="docs"');
     expect(html).toContain('value="ant"');
     expect(html).toContain('value="recharts"');
+    const main = read("../playground/src/main.ts");
+    expect(main).toContain("enhanceChartSvg");
+    expect(main).toContain('@markvis/browser/enhance');
+    expect(css).toMatch(/prefers-reduced-motion:\s*reduce/);
+    expect(css).toMatch(/\.markvis-tip/);
+  });
+
+  it("browser package exports enhanceChartSvg", () => {
+    const idx = read("../../packages/browser/src/index.ts");
+    const enhance = read("../../packages/browser/src/enhance.ts");
+    expect(idx).toContain("enhanceChartSvg");
+    expect(enhance).toContain("export function enhanceChartSvg");
+    expect(enhance).toContain("prefers-reduced-motion");
   });
 });

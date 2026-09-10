@@ -12,6 +12,7 @@ import {
   rewriteThemeInFence,
   type ChartTheme,
 } from "./theme.js";
+import { enhanceChartSvg } from "@markvis/browser/enhance";
 import "./style.css";
 
 function mustEl<T extends HTMLElement>(id: string): T {
@@ -53,7 +54,9 @@ function searchForExample(): string {
   return own;
 }
 
-function paint(view: PlaygroundView): void {
+let disposeEnhance: (() => void) | undefined;
+
+function paint(view: PlaygroundView, theme?: ChartTheme): void {
   const errorEl = mustEl<HTMLParagraphElement>("error");
   const svgHost = mustEl<HTMLDivElement>("svg-host");
   const tableHost = mustEl<HTMLDivElement>("table-host");
@@ -65,9 +68,15 @@ function paint(view: PlaygroundView): void {
     errorEl.hidden = false;
     errorEl.textContent = view.error ?? "parse failed";
   }
+  disposeEnhance?.();
+  disposeEnhance = undefined;
   svgHost.innerHTML = view.svg;
   tableHost.innerHTML = htmlTable(view.table);
   copySvgBtn.disabled = view.svg.length === 0;
+  const svg = svgHost.querySelector("svg");
+  if (svg instanceof SVGSVGElement) {
+    disposeEnhance = enhanceChartSvg(svg, { theme });
+  }
 }
 
 function main(): void {
@@ -148,7 +157,7 @@ function main(): void {
     galleryLink.href = galleryHref(id, currentTheme());
     select.value = id;
     syncUrl(id);
-    paint(view);
+    paint(view, currentTheme());
   }
 
   function flash(label: string): void {
@@ -162,7 +171,7 @@ function main(): void {
     view = previewSource(next, filename);
     galleryLink.href = galleryHref(select.value, theme);
     syncUrl(select.value);
-    paint(view);
+    paint(view, currentTheme());
   });
 
   select.addEventListener("change", () => {
@@ -173,7 +182,7 @@ function main(): void {
 
   editor.addEventListener("input", () => {
     view = previewSource(editor.value, filename);
-    paint(view);
+    paint(view, currentTheme());
     syncThemeSelect(editor.value);
   });
 

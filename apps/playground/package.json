@@ -13,7 +13,8 @@
   "dependencies": {
     "@markvis/ir": "workspace:*",
     "@markvis/parser": "workspace:*",
-    "@markvis/render-svg": "workspace:*"
+    "@markvis/render-svg": "workspace:*",
+    "@markvis/browser": "workspace:*"
   },
   "devDependencies": {
     "vite": "^6.3.5"

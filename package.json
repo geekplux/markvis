@@ -24,7 +24,8 @@
     "./remark": "./packages/remark/src/index.ts",
     "./markdown-it": "./packages/markdown-it/src/index.ts",
     "./browser": "./packages/browser/src/index.ts",
-    "./themes": "./packages/themes/registry.ts"
+    "./themes": "./packages/themes/registry.ts",
+    "./browser/enhance": "./packages/browser/src/enhance.ts"
   },
   "bin": {
     "markvis": "./packages/cli/bin.js"
@@ -48,6 +49,7 @@
   },
   "devDependencies": {
     "@types/node": "^26.4.1",
+    "happy-dom": "18",
     "markdown-it": "^14.1.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",

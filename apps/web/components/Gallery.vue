@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed, onMounted, onUnmounted, ref, watch } from "vue";
+import { computed, nextTick, onMounted, onUnmounted, ref, watch } from "vue";
+import { enhanceChartSvg } from "@markvis/browser/enhance";
 import {
   CHART_TYPES,
   THEMES,
@@ -171,6 +172,30 @@ async function copyText(text: string, label: string): Promise<void> {
   }
 }
 
+
+let disposeDetailEnhance: (() => void) | undefined;
+
+function enhanceDetailSvg(): void {
+  disposeDetailEnhance?.();
+  disposeDetailEnhance = undefined;
+  const host = document.querySelector(".gallery-full");
+  const svg = host?.querySelector("svg");
+  if (svg instanceof SVGSVGElement) {
+    disposeDetailEnhance = enhanceChartSvg(svg, { theme: detailTheme.value });
+  }
+}
+
+
+watch([selectedSvg, detailTheme], async () => {
+  if (!selectedId.value) {
+    disposeDetailEnhance?.();
+    disposeDetailEnhance = undefined;
+    return;
+  }
+  await nextTick();
+  enhanceDetailSvg();
+});
+
 watch(selectedId, (id, prev) => {
   if (id && !prev) {
     /* opened via URL */
@@ -191,6 +216,8 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
+  disposeDetailEnhance?.();
+  disposeDetailEnhance = undefined;
   if (document.body.style.position === "fixed") {
     unlockScroll();
   }

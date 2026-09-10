@@ -30,6 +30,8 @@ export default defineConfig({
         repoRoot,
         "packages/render-svg/src/index.ts",
       ),
+      "@markvis/browser/enhance": resolve(repoRoot, "packages/browser/src/enhance.ts"),
+      "@markvis/browser": resolve(repoRoot, "packages/browser/src/index.ts"),
     },
   },
   server: {
@@ -38,7 +40,12 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    exclude: ["@markvis/ir", "@markvis/parser", "@markvis/render-svg"],
+    exclude: [
+      "@markvis/ir",
+      "@markvis/parser",
+      "@markvis/render-svg",
+      "@markvis/browser",
+    ],
   },
   build: {
     outDir: "dist",
