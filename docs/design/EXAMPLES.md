@@ -68,6 +68,7 @@ A card may ship only if:
 - multi-series has a legend
 - whole plot visible (no crop)
 - theme grammar readable without reading the id
+- **density bar** (see § Demo data): not a 2–3 point toy series on a public card
 
 Theme filter lists: `folio | highcharts | shadcn | docs | ant | recharts` once those ids exist.
 
@@ -108,3 +109,57 @@ Keep background: the **page**. Drop independent card fill. Mark cells with hairl
 - `prefers-reduced-motion`: drawer appears without slide.
 
 @Coder: delete the accordion in the same unit as the drawer. Do not touch `/` in the examples unit unless SITE.md hero work is the same commit family under PM order.
+
+
+## Demo data — card → dataset (2026-09-10)
+
+### Fact bar (Researcher)
+
+Public chart demos that feel “real” stay **modestly dense**, not sparse toys and not huge dumps:
+
+| shape | public-demo density |
+| --- | --- |
+| categorical bar / column | **5–12** categories; **1–2** series |
+| time line / area | **6–24** points per series; **1–2** series (3 only if legend stays readable) |
+| scatter | **≥8** points (prefer 12–24); 1 series unless grammar needs 2 |
+| pie | **4–6** slices (3 only for a deliberate tiny case, not the default hero pie) |
+| hist | **≥12** raw samples (or ≥6 bins after binning) |
+
+Avoid **2–3 point** lines/bars on `/examples` thumbs and home figures. Stress / edge fixtures may stay thin under `examples/valid` **if they are not** gallery-default cards.
+
+Internal note only: this bar matches common gallery demo sizing; do **not** name other chart products in UI copy, titles, or fence captions.
+
+### Judgment
+
+Rewrite public fences with **fictional ATL / season / channel** labels so density reads as a place, not `A/B/C` and `Jan/Feb`. Keep six types frozen. Titles stay conclusion sentences.
+
+### Card → dataset lock (Coder)
+
+Apply to gallery-default + home hero/atlas fences (and Play seed when it shares the same id). Edge cases (`zeros`, `negatives`, `long-labels`, `unsorted`) keep their intent; densify only if still public-default.
+
+| card / seed | type | dataset |
+| --- | --- | --- |
+| `01-bar-basic` | bar | **8** months `Sep…Apr`; y = `tickets` (fictional Midtown box office); title names the peak month |
+| `02-line-multi` | line | **12** weeks `W1…W12`; series `walk-up` / `member` (fictional season pass); 2×12 rows |
+| `03-area-basic` | area | **10** days `Mon…` or `D1…D10`; y = `holds` (fictional hold queue) |
+| `04-scatter-basic` | scatter | **12** points; x = `commute_min`, y = `rent_index` (fictional Intown belt); title states the trend |
+| `05-pie-raw` | pie | **5** slices: `MARTA`, `Walk`, `Drive`, `Bike`, `Other` (mode share, raw counts OK); not `A/B/C` |
+| `06-hist-basic` | hist | **16+** `ms` samples clustered mid + a few slow tails |
+| `09-bar-twelve-categories` | bar | keep **12** months (already in bar); refresh labels/values if title stale — already meets density |
+| home hero / atlas SVGs | — | regenerate from the same densified seeds (folio), not the old 3-row toys |
+
+Playground default fence: same density bar when it loads a starter (prefer `01` or `02` densified).
+
+### Label rules
+
+- Fictional venue/channel/season words only (`Midtown`, `Beltline`, `W3`, `member`) — no real org trademarks required.
+- No competitor product names in titles, captions, or fence comments.
+- `unit` when it helps (`tickets`, `holds`, `ms`).
+
+### Acceptance
+
+- Public `/examples` default bar/line/area/scatter/pie/hist thumbs are visually denser than the old 3-row toys; no card ships with 2–3 points unless filtered as an edge fixture.
+- Titles still conclusions; theme flip still shows grammar, not hex-only.
+- Regen theme snaps for touched ids; `check`+`pages`+`bake` green.
+
+@Coder after `POLISH.md` A→B→C (or parallel if PM splits). Researcher facts already closed.
