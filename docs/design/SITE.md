@@ -1,0 +1,131 @@
+# SITE — Lattice
+
+Named language: **Lattice**. One accent field. Hard geometry. Visible construction grid. Type too big on purpose. Almost no shadow. Charts stay theme grammars (folio default on marketing figures). Do not restyle chart marks to match the field.
+
+Public pages never name competing diagram tools. Do not write “premium / modern / clean.”
+
+Supersedes the empty-right hero in live `/`. Keeps Field tokens from `HOME.md`. Adds lattice, hero figure, motion, and docs family rules in one place. Page-specific paint still lives in `HOME.md` / `EXAMPLES.md` / `DOCS.md` / `PLAY.md` when they disagree on local slots; this file wins on lattice, hero right, animation, and the accordion ban.
+
+References (structure only — never copy assets, wordmarks, or product names into UI):
+
+- motion.dev — field + inset panel + two CTAs + hairline feature row
+- zed.dev — construction grid energy, product in the hero, italic/display line
+- vite.dev — section rules, measured gaps, logo/grid bands
+
+## Tokens (locked)
+
+| role | value |
+| --- | --- |
+| field | `#FFDB2A` |
+| ink | `#080B08` |
+| body ink | `#0E1312` |
+| cell | `#0E130F` |
+| paper | `#EDEBE5` |
+| muted | `#979D97` |
+| footer | `#F8F8F6` |
+| rule on field | `rgba(8,11,8,0.14)` |
+| rule on ink | `rgba(237,235,229,0.16)` |
+| rule strong | `rgba(8,11,8,0.28)` |
+| radius | `0` |
+| shadow | none (hover may use `translateY(-1px)` only) |
+| accent blue | none on marketing chrome |
+
+Mono: `ui-monospace, SFMono-Regular, Menlo, Consolas, monospace`. Display / body: system UI sans unless a face is already shipped.
+
+## A. Lattice
+
+The yellow field is a surface with structure, not a PNG fill.
+
+1. On the home field (`min-height: 720px`), draw a **construction grid**:
+   - Vertical columns: `12` tracks across the content inset `clamp(24px, 5vw, 68px)`.
+   - Column gutters: hairlines `1px` in `rgba(8,11,8,0.14)`.
+   - Horizontal rules every `72px` from the top of the field (same stroke).
+   - Grid sits **behind** the ink panel and the hero figure; `pointer-events: none`.
+2. Below the fold (dark body `#0E1312`): section bands separated by full-bleed hairlines `1px` `rgba(237,235,229,0.16)`. Feature row uses `gap: 1px` on a rule-colored background so cells read as a lattice, not floating cards.
+3. Examples and docs pages: same dark body + hairline section rules. Card grids use `gap: 16px` but the **page** still shows left/right inset rules aligning to the home content edge.
+4. Lattice must not jitter on hover or load. Animate opacity/transform of content only, never the grid lines’ positions.
+
+## B. Hero
+
+Desktop first screen (`>=900px`):
+
+1. Field full-bleed `#FFDB2A`, nav on field, height `72px` (see `HOME.md` nav).
+2. **Left:** ink panel `#080B08`, width `min(520px, 46%)`, padding `48px`, radius `0`, vertically centered. Meta, two-voice headline (`markvis.` `#FFDB2A` + paper line), CTAs with trailing `>`, chips — as `HOME.md`.
+3. **Right:** not empty yellow. Prefer one of these, in order:
+   - **A (preferred):** a live playground fragment (one bar or line fence rendered), paper cell `#EDEBE5`, padding `16px`, radius `0`, width `min(520px, 42%)`, vertically centered. Caption under it `11px` mono uppercase muted on the field: `LIVE FIGURE` or the fence title.
+   - **B (if live fragment is blocked):** a **3-tile strip** of uncropped folio SVGs in paper cells, stacked or `1×3` with `gap: 12px`, same vertical center. One caption for the strip.
+4. Panel and figure share one horizontal band inside the field padding. Space between them `clamp(24px, 4vw, 48px)`.
+5. Fail condition: first screen at `1440` with more than ~40% contiguous empty field to the right of the panel.
+
+390:
+
+- Panel almost full width: `calc(100% - 32px)`.
+- CTAs stacked, height `48px`.
+- Live figure / strip **under** the panel, full content width, not beside it.
+- Lattice may drop to 4 columns + fewer horizontal rules. No horizontal scroll.
+
+## C. Motion (animation)
+
+CSS / WAAPI only. No Lottie. Honor `prefers-reduced-motion: reduce` → all durations `0`, no transforms beyond static layout.
+
+| element | motion | duration / easing |
+| --- | --- | --- |
+| home panel | fade + `translateY(8px → 0)` | `280ms` `cubic-bezier(0.22, 1, 0.36, 1)` |
+| hero figure / strip | fade + `translateY(8px → 0)`, delay `80ms` | `320ms` same ease |
+| feature cells | stagger fade-in `40ms` each, max 5 | `240ms` |
+| CTA hover | invert fill/text (field ↔ ink) | `120ms` |
+| chip hover | border → paper 56% | `120ms` |
+| feature cell hover | `translateY(-1px)` only | `120ms` |
+| examples card hover | `translateY(-1px)` + hairline to paper | `120ms` |
+| examples drawer | slide from right `100% → 0` | `240ms` same ease |
+| lattice | **never** moves | — |
+
+Do not animate layout widths of sibling cards.
+
+## D. Type
+
+| slot | size / weight | color |
+| --- | --- | --- |
+| display (hero / section h1) | `44px/700`, tracking `-0.04em`, lh `1.05` | paper on ink; name voice field yellow |
+| display floor @390 | `36px/700` | same voices |
+| feature title | `11px` mono uppercase, tracking `0.12em`, weight `560` | `#FFDB2A` |
+| feature body | `13px/400`, max `22ch` (desktop cell); full sentence, no clip at `200px` width | muted |
+| nav / chip / CTA | `11px` mono uppercase, tracking `0.12em` | per control |
+| docs h1 | `44px/700` paper | |
+| docs body | `15–16px/400` paper, muted for secondary | |
+
+Writer owns feature-band sentences and example titles. Five feature cells minimum, readable at `1440` and stacked at `390`.
+
+## E. Mobile 390
+
+- No horizontal page scroll: `scrollWidth === clientWidth` at `390` and `430`.
+- Nav collapses center links at `max-width: 768px` (not `390`). Menu `44px`. Playground stays in bar. See `HOME.md` mobile nav.
+- Panel, CTAs, figure stack as in §B.
+- Feature lattice: one column, `gap: 1px` retained.
+- Tap targets `>= 44px`.
+
+## F. Docs pages
+
+`/spec`, `/integrate`, `/ai`, `/themes` (and VitePress article chrome):
+
+- Yellow nav, dark body `#0E1312`, light footer `#F8F8F6`.
+- Fat h1 `44px/700` paper.
+- Hairline rules between sections (`1px` ink-rule).
+- Code blocks cell `#0E130F`, radius `0`.
+- No blue accent. Tokens match this file.
+- Play keeps paper figure pane per `PLAY.md`.
+
+## Instruction — Coder (site chrome)
+
+1. Custom homepage layout only. Default VitePress hero is a fail.
+2. Implement lattice + hero right + motion from this file; keep Field copy slots from `HOME.md`.
+3. Delete empty-right desert. If playground fragment is not ready in the same unit, ship the 3-tile folio strip first.
+4. Do not merge to `main`. Work on `v2` only.
+
+## Acceptance — site
+
+- `markvis.js.org` first screen: structure on the right (live figure or 3-tile), lattice visible on the field, panel motion on load, CTA/chip/feature hover motion.
+- `390` and `1440`: no overflow; hero right not empty on desktop.
+- `prefers-reduced-motion`: animations off.
+- Charts in atlas/examples stay theme-painted; marketing lattice does not recolor marks.
+
