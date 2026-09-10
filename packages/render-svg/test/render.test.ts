@@ -20,6 +20,66 @@ import { niceTicks, formatNumber } from "../src/scale.js";
 
 const here = dirname(fileURLToPath(import.meta.url));
 
+
+function stripPaint(svg: string): string {
+  return svg
+    .replace(/#[0-9a-fA-F]{3,8}/g, "#X")
+    .replace(/rgba?\([^)]+\)/g, "#X")
+    .replace(/\s+/g, " ");
+}
+
+/** Structural axes for B&W theme naming (THEMES.md). Hex ignored. */
+function bwAxes(svg: string) {
+  return {
+    legend: /data-legend=/.test(svg),
+    endLabel: /data-end-label/.test(svg),
+    plotFrame: /data-plot-border=/.test(svg),
+    axisTitles: /data-axis-titles=/.test(svg),
+    viewBox: (svg.match(/viewBox="([^"]+)"/) ?? [, ""])[1],
+    titleSize: (svg.match(/font-size="(\d+(?:\.\d+)?)"[^>]*font-weight="6/) ??
+      svg.match(/font-weight="6\d*"[^>]*font-size="(\d+(?:\.\d+)?)"/) ?? [, ""])[1],
+    markerR: (svg.match(/<circle[^>]*\br="([0-9.]+)"/) ?? [, ""])[1],
+    barRx: (svg.match(/\brx="([0-9.]+)"/) ?? [, "0"])[1],
+  };
+}
+
+function bwDiffCount(
+  a: ReturnType<typeof bwAxes>,
+  b: ReturnType<typeof bwAxes>,
+): number {
+  let n = 0;
+  if (a.legend !== b.legend) n += 1;
+  if (a.endLabel !== b.endLabel) n += 1;
+  if (a.plotFrame !== b.plotFrame) n += 1;
+  if (a.axisTitles !== b.axisTitles) n += 1;
+  if (a.viewBox !== b.viewBox) n += 1;
+  if (a.titleSize !== b.titleSize) n += 1;
+  if (a.markerR !== b.markerR) n += 1;
+  if (a.barRx !== b.barRx) n += 1;
+  return n;
+}
+
+function multiLine(theme: ChartIR["theme"]): ChartIR {
+  return ChartIRSchema.parse({
+    markvis: 2,
+    type: "line",
+    title: "Multi",
+    theme,
+    x: "month",
+    y: "value",
+    series: "kind",
+    table: {
+      columns: ["month", "value", "kind"],
+      rows: [
+        ["Jan", "1", "A"],
+        ["Feb", "2", "A"],
+        ["Jan", "3", "B"],
+        ["Feb", "4", "B"],
+      ],
+    },
+  });
+}
+
 function barChart(overrides: Partial<ChartIR> = {}): ChartIR {
   return ChartIRSchema.parse({
     markvis: 2,
@@ -672,6 +732,24 @@ describe("docs tokens", () => {
     expect(docs.AREA_OPACITY).toBeLessThan(folio.AREA_OPACITY);
     expect(docs.BAR_RX).toBe(0);
     expect(docs.PALETTE[0]).not.toBe(folio.PALETTE[0]);
+    // THEMES.md: leave folio twin — legend policy + tight inset
+    expect(docs.END_LABEL_SERIES_MAX).toBe(0);
+    expect(docs.MARGIN.left).toBeLessThanOrEqual(40);
+    expect(docs.MARGIN.top).toBeLessThanOrEqual(28);
+    expect(docs.LINE_STROKE).toBeLessThan(folio.LINE_STROKE);
+  });
+
+  it("B&W: multi-series uses bottom legend, not folio end-labels", () => {
+    const folioSvg = renderSvg(multiLine("folio"));
+    const docsSvg = renderSvg(multiLine("docs"));
+    expect(folioSvg).toContain("data-end-label");
+    expect(docsSvg).not.toContain("data-end-label");
+    expect(docsSvg).toContain('data-legend="A"');
+    expect(docsSvg).toContain('data-legend="B"');
+    expect(bwDiffCount(bwAxes(folioSvg), bwAxes(docsSvg))).toBeGreaterThanOrEqual(
+      3,
+    );
+    expect(stripPaint(folioSvg)).not.toBe(stripPaint(docsSvg));
   });
 
   it("renders a different SVG than folio for the same bar IR", () => {
@@ -682,6 +760,7 @@ describe("docs tokens", () => {
     expect(b).toContain(
       'font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif"',
     );
+    expect(bwDiffCount(bwAxes(a), bwAxes(b))).toBeGreaterThanOrEqual(1);
   });
 
   it("matches examples/out/themes/docs/01-bar-basic.svg", () => {
@@ -703,6 +782,24 @@ describe("docs tokens", () => {
     }
     const committed = readFileSync(outPath, "utf8");
     expect(svg).toBe(committed);
+  });
+});
+
+
+describe("B&W theme skeletons", () => {
+  it("HC / shadcn / ant each differ from folio on ≥3 structural axes", () => {
+    const folioLine = renderSvg(multiLine("folio"));
+    const folioBar = renderSvg(barChart({ theme: "folio" }));
+    for (const theme of ["highcharts", "shadcn", "ant"] as const) {
+      const line = renderSvg(multiLine(theme));
+      const bar = renderSvg(barChart({ theme }));
+      const n = Math.max(
+        bwDiffCount(bwAxes(folioLine), bwAxes(line)),
+        bwDiffCount(bwAxes(folioBar), bwAxes(bar)),
+      );
+      expect(n, theme).toBeGreaterThanOrEqual(3);
+      expect(stripPaint(line)).not.toBe(stripPaint(folioLine));
+    }
   });
 });
 
