@@ -48,6 +48,13 @@ On dark `--site-page` these cream slabs float like a second app. Examples alread
 
 Panel stacks under field; CTAs `48` full width — OK. Strip becomes full-width tower under panel — same paper stack, worse vertical scroll. Menu path previously PASS; reconfirm after polish.
 
+
+### 6. Play mobile toolbar overflow (live autopsy 2026-09-10)
+
+At ~390, Play’s dark control toolbar **overflows horizontally** (`scrollWidth > clientWidth` on the bar). Desktop Play chrome is heavy (yellow nav + dark toolbar + split) but usable; mobile controls must wrap or scroll intentionally inside the toolbar — **page** must not grow sideways.
+
+**Coder (follow-up, with densify or small CSS):** `.folio-play` toolbar / control row: no page-level horizontal scroll at 390; prefer wrap or internal `overflow-x: auto` on the toolbar only.
+
 ## Judgment
 
 Next polish cut is **surface register + hero figure geometry**, not new sections or seventh theme. Match Examples: page tone + hairline; one clear hero figure band on desktop.
