@@ -541,6 +541,8 @@ describe("ant tokens", () => {
     expect(ant.TITLE_TO_PLOT).toBeGreaterThan(folio.TITLE_TO_PLOT);
     expect(ant.MAX_INTERIOR_GRID).toBeGreaterThan(folio.MAX_INTERIOR_GRID);
     expect(ant.SVG_HEIGHT).toBeLessThan(folio.SVG_HEIGHT);
+    expect(ant.SVG_HEIGHT).not.toBe(highcharts.SVG_HEIGHT);
+    expect(ant.SVG_HEIGHT).not.toBe(shadcn.SVG_HEIGHT);
     expect(ant.BAR_RX).toBe(2);
     expect(ant.PALETTE[0]).toBe("#5AD8A6");
     expect(ant.PALETTE[0]).not.toBe(folio.PALETTE[0]);
