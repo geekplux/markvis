@@ -17,7 +17,7 @@ Grid geometry is constant. Detail is an overlay layer, never a second track that
 | role | value |
 | --- | --- |
 | nav field | `#FFDB2A` |
-| page | `#0E1312` |
+| page | `var(--site-page)` — same as home/docs; **no island** `#0E1312` |
 | card | `#EDEBE5` |
 | footer | `#F8F8F6` |
 | rule | `rgba(237,235,229,0.16)` |
@@ -70,6 +70,8 @@ A card may ship only if:
 - theme grammar readable without reading the id
 
 Theme filter lists: `folio | highcharts | shadcn | docs | ant | recharts` once those ids exist.
+
+Site mode (`light`|`dark`) is `SITE.md` §G. This page follows `--site-page`; do not force a second background.
 
 ## Acceptance
 

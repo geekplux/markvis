@@ -144,3 +144,48 @@ Writer owns feature-band sentences and example titles. Five feature cells minimu
 - `prefers-reduced-motion`: animations off.
 - Charts in atlas/examples stay theme-painted; marketing lattice does not recolor marks.
 
+## G. Site mode — `light` | `dark` (not chart theme)
+
+Architect lock: site mode ≠ fence `theme=` (folio|highcharts|…). Mode is `apps/web` chrome only.
+
+### Observation — live fail
+
+- Marketing pages force body ink `#0E1312`. Examples paints its own `#0E1312` island (`.gallery-page` / `.folio-examples`) so it never follows a light surface.
+- There is no `light` document class. User asked for both modes.
+- Mobile Menu uses a checkbox + absolute link panel; nav sets `overflow-x: hidden`, which clips the open panel — click looks dead.
+
+### Judgment
+
+One shared token surface for `/`, `/examples`, `/play`, docs. Yellow field stays the brand hero in both modes. Body and cards flip paper ↔ ink. Chart SVGs keep their theme grammar.
+
+### Tokens
+
+| role | `dark` (default) | `light` |
+| --- | --- | --- |
+| page / body | `#0E1312` | `#F8F8F6` |
+| field (hero + nav) | `#FFDB2A` | `#FFDB2A` |
+| ink (panel, wordmark on field) | `#080B08` | `#080B08` |
+| paper (cards, figure cells) | `#EDEBE5` | `#FFFFFF` |
+| muted | `#979D97` | `#737373` |
+| cell / band | `#0E130F` | `#EDEBE5` |
+| footer | `#F8F8F6` | `#EDEBE5` |
+| rule on ink body | `rgba(237,235,229,0.16)` | `rgba(8,11,8,0.12)` |
+| examples card | paper | paper (same as home atlas cells) |
+| drawer / sheet | paper | paper |
+
+Document: `html.dark` | `html.light`. System preference on first visit; toggle in nav; persist `localStorage` key `markvis-site-mode`.
+
+### Instruction — Coder
+
+1. Replace hard-coded `#0e1312` page fills with `var(--site-page)`. Examples / gallery / family / docs share it — **no island bg** on `/examples`.
+2. Hero field + lattice stay field yellow in both modes. Ink panel stays ink. Below-fold bands use `--site-page` and `--site-cell`.
+3. Nav: add a Mode control (mono `11px`, height `44px`) next to Menu / Playground. Label `Dark` / `Light` reflecting the *other* mode or current — Writer can pick one word pair later; default `Light` when dark, `Dark` when light.
+4. Mobile Menu bug: open panel must be visible. Do not clip it with nav `overflow-x: hidden`. Prefer `overflow: visible` on `.home-nav` / `.family-nav`, clip the page shell instead. Checkbox/button must toggle at `390`. Acceptance: tap Menu → links visible and tappable; tap again → closed.
+5. Do not put light/dark into `packages/themes/*`.
+
+### Acceptance
+
+- Toggle flips `/` and `/examples` together; examples is not a darker box on a light site.
+- `390` Menu opens a usable link list.
+- Fence `theme=shadcn` still paints shadcn grammar in both site modes.
+
