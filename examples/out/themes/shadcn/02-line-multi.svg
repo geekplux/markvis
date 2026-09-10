@@ -1,31 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Free still leads pro, 4 rows, series plan" aria-labelledby="mv-8c6df151fda9c0b6-title" aria-describedby="mv-8c6df151fda9c0b6-desc" data-markvis="2" data-chart-type="line" data-id="mv-8c6df151fda9c0b6" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="line chart: Free still leads pro, 4 rows, series plan" aria-labelledby="mv-8c6df151fda9c0b6-title" aria-describedby="mv-8c6df151fda9c0b6-desc" data-markvis="2" data-chart-type="line" data-id="mv-8c6df151fda9c0b6" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-8c6df151fda9c0b6-title">Free still leads pro</title>
   <desc id="mv-8c6df151fda9c0b6-desc">line chart. Free still leads pro. x=month. y=count. series=plan. 4 rows.</desc>
-  <text x="44" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">Free still leads pro</text>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1">
-    <line x1="44" x2="684.72" y1="316.67" y2="316.67"/>
-    <line x1="44" x2="684.72" y1="176.33" y2="176.33"/>
-    <line x1="44" x2="684.72" y1="36" y2="36"/>
+  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">Free still leads pro</text>
+  <g font-size="12" font-weight="500" fill="#0A0A0A">
+    <rect x="48" y="31" width="10" height="10" fill="#F54900" rx="1"/>
+    <text x="62" y="40" data-legend="free">free</text>
+    <rect x="107.76" y="31" width="10" height="10" fill="#009689" rx="1"/>
+    <text x="121.76" y="40" data-legend="pro">pro</text>
   </g>
-  <path d="M44 457 L684.72 457" fill="none" stroke="#0A0A0A" stroke-opacity="0.18" stroke-width="1"/>
+  <rect x="48" y="60" width="652" height="377" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="48" y="60" width="652" height="377" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.06" stroke-width="1">
+    <line x1="48" x2="700" y1="311.33" y2="311.33"/>
+    <line x1="48" x2="700" y1="60" y2="60"/>
+  </g>
+  <path d="M48 437 L700 437" fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1"/>
   <g fill="#737373" font-size="11" font-weight="400">
-    <text x="36" y="457" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="36" y="316.67" text-anchor="end" dominant-baseline="middle">20</text>
-    <text x="36" y="176.33" text-anchor="end" dominant-baseline="middle">40</text>
-    <text x="36" y="36" text-anchor="end" dominant-baseline="middle">60</text>
-    <text x="204.18" y="468" text-anchor="middle" font-size="11" data-full-label="Jan">Jan</text>
-    <text x="524.54" y="468" text-anchor="middle" font-size="11" data-full-label="Feb">Feb</text>
+    <text x="40" y="437" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="40" y="311.33" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="40" y="185.67" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="40" y="60" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="211" y="448" text-anchor="middle" font-size="11" data-full-label="Jan">Jan</text>
+    <text x="537" y="448" text-anchor="middle" font-size="11" data-full-label="Feb">Feb</text>
   </g>
   <g fill="none">
-    <path d="M204.18 176.33 L524.54 71.08" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="free"/>
-    <circle cx="204.18" cy="176.33" r="3" fill="#F54900" stroke="none" data-series="free"/>
-    <circle cx="524.54" cy="71.08" r="3" fill="#F54900" stroke="none" data-series="free"/>
-    <path d="M204.18 372.8 L524.54 330.7" fill="none" stroke="#009689" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="pro"/>
-    <circle cx="204.18" cy="372.8" r="3" fill="#009689" stroke="none" data-series="pro"/>
-    <circle cx="524.54" cy="330.7" r="3" fill="#009689" stroke="none" data-series="pro"/>
-  </g>
-  <g font-size="11" font-weight="500">
-    <text x="532.54" y="71.08" text-anchor="start" dominant-baseline="middle" fill="#F54900" data-end-label="free">free</text>
-    <text x="532.54" y="330.7" text-anchor="start" dominant-baseline="middle" fill="#009689" data-end-label="pro">pro</text>
+    <path d="M211 185.67 L537 91.42" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="free"/>
+    <circle cx="211" cy="185.67" r="3.5" fill="#F54900" stroke="none" data-series="free"/>
+    <circle cx="537" cy="91.42" r="3.5" fill="#F54900" stroke="none" data-series="free"/>
+    <path d="M211 361.6 L537 323.9" fill="none" stroke="#009689" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="pro"/>
+    <circle cx="211" cy="361.6" r="3.5" fill="#009689" stroke="none" data-series="pro"/>
+    <circle cx="537" cy="323.9" r="3.5" fill="#009689" stroke="none" data-series="pro"/>
   </g>
 </svg>

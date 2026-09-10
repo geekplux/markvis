@@ -406,6 +406,12 @@ describe("shadcn tokens", () => {
       Number(folio.HAIRLINE_OPACITY),
     );
     expect(shadcn.TYPE.tick.fill).toBe(shadcn.QUIET);
+    expect(shadcn.MAX_INTERIOR_GRID).toBeLessThan(folio.MAX_INTERIOR_GRID);
+    expect(shadcn.END_LABEL_SERIES_MAX).toBe(0);
+    expect(shadcn.PLOT_BORDER).toBe("#e5e5e5");
+    expect(shadcn.PLOT_BORDER_WIDTH).toBeGreaterThan(0);
+    expect(shadcn.AXIS_TITLES).toBe(false);
+    expect(shadcn.BAR_GAP_FEW).toBeGreaterThan(folio.BAR_GAP_FEW);
   });
 
   it("renders a different SVG than folio for the same bar IR", () => {
@@ -416,6 +422,38 @@ describe("shadcn tokens", () => {
     expect(b).toContain(
       'font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif"',
     );
+    expect(b).toContain('data-plot-border="1"');
+    expect(b).toContain("#e5e5e5");
+    expect(a).not.toContain('data-plot-border="1"');
+  });
+
+  it("uses color legend for multi-series line (not end-labels)", () => {
+    const chart = ChartIRSchema.parse({
+      markvis: 2,
+      type: "line",
+      title: "Multi",
+      theme: "shadcn",
+      x: "month",
+      y: "value",
+      series: "kind",
+      table: {
+        columns: ["month", "value", "kind"],
+        rows: [
+          ["Jan", "1", "A"],
+          ["Feb", "2", "A"],
+          ["Jan", "3", "B"],
+          ["Feb", "4", "B"],
+        ],
+      },
+    });
+    const svg = renderSvg(chart);
+    expect(svg).toContain('data-plot-border="1"');
+    expect(svg).toContain("#e5e5e5");
+    expect(svg).toContain('data-legend="A"');
+    expect(svg).toContain('data-legend="B"');
+    expect(svg).not.toContain("data-end-label");
+    expect(svg).toContain('r="3.5"');
+    expect(svg).not.toContain("data-axis-titles");
   });
 
   it("matches examples/out/themes/shadcn/01-bar-basic.svg", () => {
@@ -437,6 +475,35 @@ describe("shadcn tokens", () => {
     }
     const committed = readFileSync(outPath, "utf8");
     expect(svg).toBe(committed);
+  });
+
+  it("matches examples/out/themes/shadcn/02-line-multi.svg", () => {
+    const repoRoot = join(here, "../../..");
+    const source = readFileSync(
+      join(repoRoot, "examples/valid/02-line-multi.md"),
+      "utf8",
+    );
+    const result = parseMarkdown(source, { filename: "02-line-multi.md" });
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    const chart = ChartIRSchema.parse({ ...result.chart, theme: "shadcn" });
+    const svg = renderSvg(chart);
+    const outPath = join(
+      repoRoot,
+      "examples/out/themes/shadcn/02-line-multi.svg",
+    );
+    if (process.env["UPDATE_SNAPSHOTS"] === "1") {
+      mkdirSync(join(repoRoot, "examples/out/themes/shadcn"), {
+        recursive: true,
+      });
+      writeFileSync(outPath, svg, "utf8");
+    }
+    const committed = readFileSync(outPath, "utf8");
+    expect(svg).toBe(committed);
+    expect(committed).toContain('data-legend="free"');
+    expect(committed).toContain('data-plot-border="1"');
+    expect(committed).not.toContain("data-end-label");
+    expect(committed).toContain('r="3.5"');
   });
 });
 

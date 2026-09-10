@@ -1,38 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: US still leads EU, 6 rows, series region" aria-labelledby="mv-e1001338f4d6a6a3-title" aria-describedby="mv-e1001338f4d6a6a3-desc" data-markvis="2" data-chart-type="line" data-id="mv-e1001338f4d6a6a3" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="line chart: US still leads EU, 6 rows, series region" aria-labelledby="mv-e1001338f4d6a6a3-title" aria-describedby="mv-e1001338f4d6a6a3-desc" data-markvis="2" data-chart-type="line" data-id="mv-e1001338f4d6a6a3" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-e1001338f4d6a6a3-title">US still leads EU</title>
   <desc id="mv-e1001338f4d6a6a3-desc">line chart. US still leads EU. x=week. y=mau. series=region. 6 rows.</desc>
-  <text x="44" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">US still leads EU</text>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1">
-    <line x1="44" x2="698.36" y1="372.8" y2="372.8"/>
-    <line x1="44" x2="698.36" y1="204.4" y2="204.4"/>
-    <line x1="44" x2="698.36" y1="36" y2="36"/>
+  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">US still leads EU</text>
+  <g font-size="12" font-weight="500" fill="#0A0A0A">
+    <rect x="48" y="31" width="10" height="10" fill="#F54900" rx="1"/>
+    <text x="62" y="40" data-legend="us">us</text>
+    <rect x="92.88" y="31" width="10" height="10" fill="#009689" rx="1"/>
+    <text x="106.88" y="40" data-legend="eu">eu</text>
   </g>
-  <path d="M44 457 L698.36 457" fill="none" stroke="#0A0A0A" stroke-opacity="0.18" stroke-width="1"/>
+  <rect x="48" y="60" width="652" height="377" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="48" y="60" width="652" height="377" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.06" stroke-width="1">
+    <line x1="48" x2="700" y1="361.6" y2="361.6"/>
+    <line x1="48" x2="700" y1="60" y2="60"/>
+  </g>
+  <path d="M48 437 L700 437" fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1"/>
   <g fill="#737373" font-size="11" font-weight="400">
-    <text x="36" y="457" text-anchor="end" dominant-baseline="middle">700</text>
-    <text x="36" y="372.8" text-anchor="end" dominant-baseline="middle">800</text>
-    <text x="36" y="288.6" text-anchor="end" dominant-baseline="middle">900</text>
-    <text x="36" y="204.4" text-anchor="end" dominant-baseline="middle">1,000</text>
-    <text x="36" y="120.2" text-anchor="end" dominant-baseline="middle">1,100</text>
-    <text x="36" y="36" text-anchor="end" dominant-baseline="middle">1,200</text>
-    <text x="52" y="468" text-anchor="middle" font-size="11" data-full-label="0">0</text>
-    <text x="211.59" y="468" text-anchor="middle" font-size="11" data-full-label="1">1</text>
-    <text x="371.18" y="468" text-anchor="middle" font-size="11" data-full-label="2">2</text>
-    <text x="530.77" y="468" text-anchor="middle" font-size="11" data-full-label="3">3</text>
-    <text x="690.36" y="468" text-anchor="middle" font-size="11" data-full-label="4">4</text>
+    <text x="40" y="437" text-anchor="end" dominant-baseline="middle">700</text>
+    <text x="40" y="361.6" text-anchor="end" dominant-baseline="middle">800</text>
+    <text x="40" y="286.2" text-anchor="end" dominant-baseline="middle">900</text>
+    <text x="40" y="210.8" text-anchor="end" dominant-baseline="middle">1,000</text>
+    <text x="40" y="135.4" text-anchor="end" dominant-baseline="middle">1,100</text>
+    <text x="40" y="60" text-anchor="end" dominant-baseline="middle">1,200</text>
+    <text x="56" y="448" text-anchor="middle" font-size="11" data-full-label="0">0</text>
+    <text x="215" y="448" text-anchor="middle" font-size="11" data-full-label="1">1</text>
+    <text x="374" y="448" text-anchor="middle" font-size="11" data-full-label="2">2</text>
+    <text x="533" y="448" text-anchor="middle" font-size="11" data-full-label="3">3</text>
+    <text x="692" y="448" text-anchor="middle" font-size="11" data-full-label="4">4</text>
   </g>
   <g fill="none">
-    <path d="M211.59 204.4 L371.18 120.2 L530.77 162.3" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="us"/>
-    <circle cx="211.59" cy="204.4" r="3" fill="#F54900" stroke="none" data-series="us"/>
-    <circle cx="371.18" cy="120.2" r="3" fill="#F54900" stroke="none" data-series="us"/>
-    <circle cx="530.77" cy="162.3" r="3" fill="#F54900" stroke="none" data-series="us"/>
-    <path d="M211.59 372.8 L371.18 355.96 L530.77 288.6" fill="none" stroke="#009689" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="eu"/>
-    <circle cx="211.59" cy="372.8" r="3" fill="#009689" stroke="none" data-series="eu"/>
-    <circle cx="371.18" cy="355.96" r="3" fill="#009689" stroke="none" data-series="eu"/>
-    <circle cx="530.77" cy="288.6" r="3" fill="#009689" stroke="none" data-series="eu"/>
-  </g>
-  <g font-size="11" font-weight="500">
-    <text x="538.77" y="162.3" text-anchor="start" dominant-baseline="middle" fill="#F54900" data-end-label="us">us</text>
-    <text x="538.77" y="288.6" text-anchor="start" dominant-baseline="middle" fill="#009689" data-end-label="eu">eu</text>
+    <path d="M215 210.8 L374 135.4 L533 173.1" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="us"/>
+    <circle cx="215" cy="210.8" r="3.5" fill="#F54900" stroke="none" data-series="us"/>
+    <circle cx="374" cy="135.4" r="3.5" fill="#F54900" stroke="none" data-series="us"/>
+    <circle cx="533" cy="173.1" r="3.5" fill="#F54900" stroke="none" data-series="us"/>
+    <path d="M215 361.6 L374 346.52 L533 286.2" fill="none" stroke="#009689" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="eu"/>
+    <circle cx="215" cy="361.6" r="3.5" fill="#009689" stroke="none" data-series="eu"/>
+    <circle cx="374" cy="346.52" r="3.5" fill="#009689" stroke="none" data-series="eu"/>
+    <circle cx="533" cy="286.2" r="3.5" fill="#009689" stroke="none" data-series="eu"/>
   </g>
 </svg>

@@ -134,33 +134,35 @@ Static SVG grammar: denser plot, plot border/bg, axis titles, legend for series 
 
 ### Intent
 
-Rounded marks, categorical chart-1..5 hues (light-theme oklch → hex), quiet axes — muted ticks and soft structure so the figure sits on a card surface without loud chrome.
+Static SVG grammar: rounded marks, categorical chart-1..5 hues, card-quiet axes, soft card plot border, legend for series ≥ 2, sparse grid. Not folio-with-new-blue. No shadcn/ui runtime. Hover waits.
 
 ### Locked tokens (from `packages/themes/shadcn/theme.ts`)
 
 | Token | Value |
 | --- | --- |
-| Canvas / paper | transparent (card/host shows through; no pack-level paper fill) |
+| Canvas / paper | plot fill `#ffffff` + border `#e5e5e5` (1px card edge) |
 | Ink | `#0A0A0A` |
 | Quiet | `#737373` |
-| Hairline opacity (grid) | `0.08` |
-| Structure opacity | `0.18` |
+| Hairline opacity (grid) | `0.06` |
+| Structure opacity | `0.14` |
 | Series palette (chart-1..5) | `#F54900`, `#009689`, `#104E64`, `#FFB900`, `#FE9A00` |
 | Wrap opacity | `0.72` |
 | Bar radius `BAR_RX` | `6` |
 | Line stroke | `2` |
-| Line point `r` | `3` |
-| Area fill opacity | `0.2` |
+| Line point `r` | `3.5` |
+| Area fill opacity | `0.18` |
 | Type — title | `16` / `600` / `#0A0A0A` |
 | Type — unit | `12` / `400` / `#737373` |
 | Type — value | `11` / `500` / `#0A0A0A` |
 | Type — tick | `11` / `400` / `#737373` |
 | Type — note | `11` / `400` / `#737373` |
 | Type — legend | `12` / `500` / `#0A0A0A` |
-| Frame | `720×480` (max height `640`) |
-| Plot min ratio | `0.55` |
-| Margins | top `32`, right `18`, bottom `24`, left `44` |
-| Max interior grid | `3` |
+| Frame | `720×460` (max height `640`) |
+| Plot min ratio | `0.58` |
+| Margins | top `36`, right `20`, bottom `28`, left `48` |
+| Max interior grid | `2` |
+| `END_LABEL_SERIES_MAX` | `0` (legend for series ≥ 2) |
+| `AXIS_TITLES` | `false` |
 | Font | `Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif` |
 
 ### Differentiator vs folio (measured)
@@ -168,24 +170,33 @@ Rounded marks, categorical chart-1..5 hues (light-theme oklch → hex), quiet ax
 | Lock | folio | shadcn |
 | --- | --- | --- |
 | Ink | `#171717` | `#0A0A0A` |
-| Hairline | `0.10` | `0.08` |
-| Structure | `0.28` | `0.18` |
+| Hairline | `0.10` | `0.06` |
+| Structure | `0.28` | `0.14` |
+| SVG height | `480` | `460` |
+| Plot min ratio | `0.55` | `0.58` |
+| Max interior grid | `3` | `2` |
+| Plot chrome | none | bg + `#e5e5e5` border |
+| Axis titles | off | off |
+| Line/area multi-series | end-labels (≤4) | color legend |
+| `END_LABEL_SERIES_MAX` | `4` | `0` |
 | `BAR_RX` | `3` | `6` |
-| Line stroke / point | `1.75` / `2.5` | `2` / `3` |
-| Area opacity | `0.22` | `0.2` |
+| Bar gaps | `0.28` / `0.18` | `0.32` / `0.2` |
+| Line stroke / point | `1.75` / `2.5` | `2` / `3.5` |
+| Area opacity | `0.22` | `0.18` |
 | Palette | 8 mid-chroma hues | 5 categorical (`#F54900`…`#FE9A00`) |
 | Title size | `17` | `16` |
 | Legend | `11/400` | `12/500` |
-| Margins | `36/20/26/48` | `32/18/24/44` |
+| Margins | `36/20/26/48` | `36/20/28/48` |
 | Font | system ui-sans | Inter-first stack |
 
 ### Ban list
 
 - Square bar tops (`BAR_RX = 0`) — rounded marks are the lock
-- Folio blue-first palette or highcharts demo blues
-- Stronger structure than `0.18` / hairline louder than `0.08` (axes stay quiet)
+- Folio blue-first palette or highcharts demo blues / `#ccd6eb` plot border
+- Stronger structure than `0.14` / hairline louder than `0.06` (axes stay quiet)
 - Shipping shadcn/ui or Recharts as a runtime dependency
 - Loud filled legend slabs; accent must stay on the mark
+- Axis field titles (`AXIS_TITLES`) — card figures stay quiet
 
 ---
 

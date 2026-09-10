@@ -1,28 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="scatter chart: Bigger cities, bigger GDP, 3 rows" aria-labelledby="mv-28b6ffc848f9c105-title" aria-describedby="mv-28b6ffc848f9c105-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-28b6ffc848f9c105" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="scatter chart: Bigger cities, bigger GDP, 3 rows" aria-labelledby="mv-28b6ffc848f9c105-title" aria-describedby="mv-28b6ffc848f9c105-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-28b6ffc848f9c105" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-28b6ffc848f9c105-title">Bigger cities, bigger GDP</title>
   <desc id="mv-28b6ffc848f9c105-desc">scatter chart. Bigger cities, bigger GDP. x=pop. y=gdp. 3 rows.</desc>
   <text x="117.12" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">Bigger cities, bigger GDP</text>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1">
-    <line x1="117.12" x2="702" y1="351.75" y2="351.75"/>
-    <line x1="117.12" x2="702" y1="141.25" y2="141.25"/>
-    <line x1="117.12" x2="702" y1="36" y2="36"/>
+  <rect x="117.12" y="36" width="582.88" height="401" fill="#ffffff" data-plot-bg="1"/>
+  <rect x="117.12" y="36" width="582.88" height="401" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.06" stroke-width="1">
+    <line x1="117.12" x2="700" y1="336.75" y2="336.75"/>
+    <line x1="117.12" x2="700" y1="36" y2="36"/>
   </g>
-  <path d="M117.12 457 L702 457" fill="none" stroke="#0A0A0A" stroke-opacity="0.18" stroke-width="1"/>
-  <line x1="117.12" x2="702" y1="351.75" y2="351.75" stroke="#0A0A0A" stroke-opacity="0.18" stroke-width="1"/>
+  <path d="M117.12 437 L700 437" fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1"/>
+  <line x1="117.12" x2="700" y1="336.75" y2="336.75" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1"/>
   <g fill="#737373" font-size="11" font-weight="400">
-    <text x="109.12" y="457" text-anchor="end" dominant-baseline="middle">-100,000,000,000</text>
-    <text x="109.12" y="351.75" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="109.12" y="246.5" text-anchor="end" dominant-baseline="middle">100,000,000,000</text>
-    <text x="109.12" y="141.25" text-anchor="end" dominant-baseline="middle">200,000,000,000</text>
+    <text x="109.12" y="437" text-anchor="end" dominant-baseline="middle">-100,000,000,000</text>
+    <text x="109.12" y="336.75" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="109.12" y="236.5" text-anchor="end" dominant-baseline="middle">100,000,000,000</text>
+    <text x="109.12" y="136.25" text-anchor="end" dominant-baseline="middle">200,000,000,000</text>
     <text x="109.12" y="36" text-anchor="end" dominant-baseline="middle">300,000,000,000</text>
-    <text x="125.12" y="468" text-anchor="middle" font-size="11" data-full-label="-5,000,000">-5,000,000</text>
-    <text x="314.75" y="468" text-anchor="middle" font-size="11" data-full-label="0">0</text>
-    <text x="504.37" y="468" text-anchor="middle" font-size="11" data-full-label="5,000,000">5,000,000</text>
-    <text x="694" y="468" text-anchor="middle" font-size="11" data-full-label="10,000,000">10,000,000</text>
+    <text x="125.12" y="448" text-anchor="middle" font-size="11" data-full-label="-5,000,000">-5,000,000</text>
+    <text x="314.08" y="448" text-anchor="middle" font-size="11" data-full-label="0">0</text>
+    <text x="503.04" y="448" text-anchor="middle" font-size="11" data-full-label="5,000,000">5,000,000</text>
+    <text x="692" y="448" text-anchor="middle" font-size="11" data-full-label="10,000,000">10,000,000</text>
   </g>
   <g>
-    <circle cx="352.67" cy="304.39" r="3" fill="#F54900" fill-opacity="0.85" stroke="none" data-x="1000000" data-y="45000000000" data-series="gdp"/>
-    <circle cx="637.11" cy="130.72" r="3" fill="#F54900" fill-opacity="0.85" stroke="none" data-x="8500000" data-y="210000000000" data-series="gdp"/>
-    <circle cx="333.71" cy="339.12" r="3" fill="#F54900" fill-opacity="0.85" stroke="none" data-x="500000" data-y="12000000000" data-series="gdp"/>
+    <circle cx="351.87" cy="291.64" r="3" fill="#F54900" fill-opacity="0.85" stroke="none" data-x="1000000" data-y="45000000000" data-series="gdp"/>
+    <circle cx="635.31" cy="126.22" r="3" fill="#F54900" fill-opacity="0.85" stroke="none" data-x="8500000" data-y="210000000000" data-series="gdp"/>
+    <circle cx="332.98" cy="324.72" r="3" fill="#F54900" fill-opacity="0.85" stroke="none" data-x="500000" data-y="12000000000" data-series="gdp"/>
   </g>
 </svg>

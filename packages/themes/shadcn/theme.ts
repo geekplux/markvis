@@ -3,14 +3,14 @@
 import { folio, type ThemeTokens } from "../folio/theme.js";
 
 /**
- * Rounded marks, categorical --chart-1..5 hues (light theme oklch → hex),
- * card-quiet axes (muted ticks, soft structure).
+ * Static SVG grammar: rounded marks, chart-1..5 categorical, card-quiet axes,
+ * soft card plot border, legend for series≥2, no loud grid. No shadcn/ui runtime.
  */
 export const shadcn = {
   SVG_WIDTH: folio.SVG_WIDTH,
-  SVG_HEIGHT: folio.SVG_HEIGHT,
+  SVG_HEIGHT: 460,
   SVG_HEIGHT_MAX: folio.SVG_HEIGHT_MAX,
-  PLOT_MIN_RATIO: folio.PLOT_MIN_RATIO,
+  PLOT_MIN_RATIO: 0.58,
 
   FONT: 'Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif',
 
@@ -19,8 +19,8 @@ export const shadcn = {
   /** Muted-foreground ≈ oklch(0.556 0 0) — card-quiet tick/unit ink. */
   QUIET: "#737373",
   /** Softer than folio so axes sit quiet on a card surface. */
-  HAIRLINE_OPACITY: "0.08",
-  STRUCTURE_OPACITY: "0.18",
+  HAIRLINE_OPACITY: "0.06",
+  STRUCTURE_OPACITY: "0.14",
 
   TYPE: {
     title: { size: 16, weight: 600, fill: "#0A0A0A" },
@@ -31,11 +31,12 @@ export const shadcn = {
     legend: { size: 12, weight: 500, fill: "#0A0A0A" },
   },
 
+  /** Legend-friendly card margins. */
   MARGIN: {
-    top: 32,
-    right: 18,
-    bottom: 24,
-    left: 44,
+    top: 36,
+    right: 20,
+    bottom: 28,
+    left: 48,
   },
 
   /** Light-theme --chart-1..5 (oklch → hex). Extra series wrap at WRAP_OPACITY. */
@@ -55,10 +56,11 @@ export const shadcn = {
   LABEL_ROTATE_DEG: folio.LABEL_ROTATE_DEG,
   LABEL_MIN_GAP: folio.LABEL_MIN_GAP,
   ROTATE_LINE_HEIGHT: folio.ROTATE_LINE_HEIGHT,
-  MAX_INTERIOR_GRID: folio.MAX_INTERIOR_GRID,
+  /** Quieter than folio — no loud grid. */
+  MAX_INTERIOR_GRID: 2,
 
-  BAR_GAP_FEW: 0.26,
-  BAR_GAP_MANY: 0.16,
+  BAR_GAP_FEW: 0.32,
+  BAR_GAP_MANY: 0.2,
   GROUP_GAP_PX: folio.GROUP_GAP_PX,
   /** Rounded marks (shadcn radius language); tops only via roundedBarPath. */
   BAR_RX: 6,
@@ -72,10 +74,11 @@ export const shadcn = {
   BAR_LABEL_MID_MIN_W: folio.BAR_LABEL_MID_MIN_W,
 
   LINE_STROKE: 2,
-  LINE_POINT_R: 3,
+  LINE_POINT_R: 3.5,
   POINT_SKIP_AFTER: folio.POINT_SKIP_AFTER,
-  AREA_OPACITY: 0.2,
-  END_LABEL_SERIES_MAX: folio.END_LABEL_SERIES_MAX,
+  AREA_OPACITY: 0.18,
+  /** 0 → line/area series≥2 use color legend (not end-labels). */
+  END_LABEL_SERIES_MAX: 0,
   END_LABEL_GAP: folio.END_LABEL_GAP,
   END_LABEL_MIN_SEP: folio.END_LABEL_MIN_SEP,
 
@@ -91,8 +94,10 @@ export const shadcn = {
 
   COMPACT_SPAN: folio.COMPACT_SPAN,
 
-  PLOT_BG: folio.PLOT_BG,
-  PLOT_BORDER: folio.PLOT_BORDER,
-  PLOT_BORDER_WIDTH: folio.PLOT_BORDER_WIDTH,
-  AXIS_TITLES: folio.AXIS_TITLES,
+  /** Soft card plot — not highcharts #ccd6eb chrome. */
+  PLOT_BG: "#ffffff",
+  PLOT_BORDER: "#e5e5e5",
+  PLOT_BORDER_WIDTH: 1,
+  /** Card figures stay quiet — no IR field titles on axes. */
+  AXIS_TITLES: false,
 } as ThemeTokens;
