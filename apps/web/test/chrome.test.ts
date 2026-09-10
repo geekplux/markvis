@@ -131,6 +131,8 @@ describe("site visual chrome", () => {
     expect(nav).toContain("Playground");
     expect(nav).toContain("data-site-mode-toggle");
     expect(nav).toContain("home-nav-mode");
+    expect(nav).toContain("home-nav-mode-sun");
+    expect(nav).not.toMatch(/>\s*Light\s*</);
   });
 
   it("docs body is ink; home.css locks field + ink panel", () => {
@@ -181,6 +183,15 @@ describe("site visual chrome", () => {
     expect(theme).toContain("./site-mode.css");
     expect(theme).toContain("initSiteMode");
     expect(homeMd).toContain("data-site-mode-toggle");
+    expect(homeMd).toContain("home-nav-mode-sun");
+    expect(homeMd).toContain('aria-label="Switch to light mode"');
+    expect(homeMd).not.toMatch(/>\s*Light\s*</);
+    expect(homeMd).not.toMatch(/>\s*Dark\s*</);
+    expect(mode).toMatch(/width:\s*44px/);
+    expect(mode).toMatch(/height:\s*44px/);
+    expect(modeTs).toContain("Switch to light mode");
+    expect(modeTs).toContain("home-nav-mode-sun");
+    expect(modeTs).not.toContain('return mode === "dark" ? "Light"');
     expect(homeCss).toMatch(/\.home-nav[\s\S]*overflow:\s*visible/);
     expect(family).toMatch(/\.family-nav[\s\S]*overflow:\s*visible/);
     expect(family).not.toMatch(

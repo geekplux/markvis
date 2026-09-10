@@ -4,6 +4,12 @@ export type SiteMode = "light" | "dark";
 
 export const SITE_MODE_KEY = "markvis-site-mode";
 
+const SUN_SVG =
+  '<svg class="home-nav-mode-icon home-nav-mode-sun" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><circle cx="9" cy="9" r="3.25" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="M9 1.5v2.25M9 14.25V16.5M1.5 9h2.25M14.25 9H16.5M3.7 3.7l1.6 1.6M12.7 12.7l1.6 1.6M14.3 3.7l-1.6 1.6M5.3 12.7l-1.6 1.6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"/></svg>';
+
+const MOON_SVG =
+  '<svg class="home-nav-mode-icon home-nav-mode-moon" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M14.5 10.2A5.75 5.75 0 0 1 7.8 3.5 5.75 5.75 0 1 0 14.5 10.2Z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg>';
+
 export function readStoredMode(): SiteMode | null {
   try {
     const v = localStorage.getItem(SITE_MODE_KEY);
@@ -32,6 +38,11 @@ export function currentMode(): SiteMode {
   return systemMode();
 }
 
+/** Target mode + visible glyph: dark→sun (to light), light→moon (to dark). */
+export function toggleAriaLabel(mode: SiteMode): string {
+  return mode === "dark" ? "Switch to light mode" : "Switch to dark mode";
+}
+
 export function applySiteMode(mode: SiteMode): void {
   const root = document.documentElement;
   root.classList.remove("light", "dark");
@@ -41,7 +52,7 @@ export function applySiteMode(mode: SiteMode): void {
   } catch {
     /* ignore */
   }
-  syncModeToggleLabels(mode);
+  syncModeToggle(mode);
 }
 
 export function toggleSiteMode(): SiteMode {
@@ -50,18 +61,14 @@ export function toggleSiteMode(): SiteMode {
   return next;
 }
 
-/** Label shows the mode you switch *to*. */
-export function toggleLabel(mode: SiteMode): string {
-  return mode === "dark" ? "Light" : "Dark";
-}
-
-export function syncModeToggleLabels(mode: SiteMode = currentMode()): void {
-  const label = toggleLabel(mode);
+export function syncModeToggle(mode: SiteMode = currentMode()): void {
+  const label = toggleAriaLabel(mode);
+  const glyph = mode === "dark" ? SUN_SVG : MOON_SVG;
   for (const el of document.querySelectorAll("[data-site-mode-toggle]")) {
-    el.textContent = label;
-    if (el instanceof HTMLElement) {
-      el.setAttribute("aria-label", `Switch to ${label} mode`);
-    }
+    if (!(el instanceof HTMLElement)) continue;
+    el.setAttribute("aria-label", label);
+    el.setAttribute("data-mode", mode);
+    el.innerHTML = glyph;
   }
 }
 

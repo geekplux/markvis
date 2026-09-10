@@ -48,9 +48,33 @@ onMounted(() => {
       type="button"
       class="home-nav-mode"
       data-site-mode-toggle
-      aria-label="Switch to Light mode"
+      data-mode="dark"
+      aria-label="Switch to light mode"
     >
-      Light
+      <svg
+        class="home-nav-mode-icon home-nav-mode-sun"
+        width="18"
+        height="18"
+        viewBox="0 0 18 18"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <circle
+          cx="9"
+          cy="9"
+          r="3.25"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.75"
+        />
+        <path
+          d="M9 1.5v2.25M9 14.25V16.5M1.5 9h2.25M14.25 9H16.5M3.7 3.7l1.6 1.6M12.7 12.7l1.6 1.6M14.3 3.7l-1.6 1.6M5.3 12.7l-1.6 1.6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.75"
+          stroke-linecap="square"
+        />
+      </svg>
     </button>
     <a class="home-nav-action" href="/play">Playground</a>
   </nav>

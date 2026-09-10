@@ -49,21 +49,26 @@ html:not(.light):not(.dark) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 44px;
   min-width: 44px;
-  min-height: 44px;
   height: 44px;
-  padding: 0 12px;
-  border: 0;
+  min-height: 44px;
+  padding: 0;
+  border: 1px solid rgba(8, 11, 8, 0.28);
   border-radius: 0;
   background: transparent;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 11px;
-  font-weight: 560;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
   color: var(--site-ink);
   cursor: pointer;
   justify-self: end;
+  margin-right: 4px;
+}
+
+.home-nav-mode svg,
+.home-nav-mode-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .home-nav-mode:focus-visible {
@@ -73,4 +78,5 @@ html:not(.light):not(.dark) {
 
 .family-nav .home-nav-mode {
   color: #080b08;
+  border-color: rgba(8, 11, 8, 0.28);
 }
