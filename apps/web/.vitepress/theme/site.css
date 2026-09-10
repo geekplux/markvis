@@ -127,7 +127,7 @@ body {
 
 .folio-play .VPContent {
   padding-top: 0 !important;
-  background: #ffffff;
+  background: var(--site-page);
 }
 
 .VPHome,

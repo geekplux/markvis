@@ -163,7 +163,7 @@
   padding-inline: clamp(24px, 5vw, 68px);
   box-sizing: border-box;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: visible;
 }
 
 .home-lattice {
@@ -244,15 +244,19 @@
 
 .home-figure-strip {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 12px;
   margin: 0;
+  align-items: stretch;
 }
 
 .home-figure-tile {
   margin: 0;
-  padding: 16px;
-  background: #edebe5;
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid var(--home-rule);
   border-radius: 0;
   box-sizing: border-box;
 }
@@ -528,7 +532,8 @@
 
 .home-atlas .home-figures figure {
   padding: 16px;
-  background: var(--site-paper);
+  background: transparent;
+  border: 1px solid var(--site-rule);
   border-radius: 0;
   box-shadow: none;
 }
@@ -576,7 +581,8 @@
   margin: 0;
   min-width: 0;
   padding: 8px;
-  background: var(--site-paper);
+  background: transparent;
+  border: 1px solid var(--site-rule);
   border-radius: 0;
 }
 
@@ -664,8 +670,9 @@
 .home-figures figure {
   margin: 0;
   min-width: 0;
-  padding: 22px;
-  background: #edebe5;
+  padding: 16px;
+  background: transparent;
+  border: 1px solid var(--site-rule);
   border-radius: 0;
 }
 
@@ -681,7 +688,7 @@
   margin-top: 8px;
   font-size: 13px;
   font-weight: 500;
-  color: var(--home-ink);
+  color: var(--site-fg);
 }
 
 .home-foot {

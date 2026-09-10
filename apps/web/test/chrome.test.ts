@@ -45,6 +45,19 @@ describe("site visual chrome", () => {
     expect(home).toContain("home-figure-strip");
     expect(css).toMatch(/\.home-lattice/);
     expect(css).toMatch(/home-rise/);
+    expect(css).toMatch(
+      /\.home-figure-strip\s*\{[^}]*flex-direction:\s*row/s,
+    );
+    expect(css).toMatch(
+      /\.home-figure-tile\s*\{[^}]*background:\s*transparent/s,
+    );
+    expect(css).toMatch(
+      /\.home-figure-tile\s*\{[^}]*border:\s*1px\s+solid\s+var\(--home-rule\)/s,
+    );
+    expect(css).not.toMatch(
+      /\.home-figure-tile\s*\{[^}]*background:\s*#edebe5/s,
+    );
+    expect(css).toMatch(/\.home-field[\s\S]*overflow-y:\s*visible/);
     expect(home).toContain("Pro pulled ahead");
     expect(home).toContain("Shares stay raw");
     expect(home).not.toMatch(/```chart/);
@@ -173,6 +186,27 @@ describe("site visual chrome", () => {
     expect(home).toMatch(/\.home-band[\s\S]*gap:\s*1px/);
     expect(home).toMatch(/\.home-chip-label/);
     expect(home).not.toMatch(/\.home-proof-h/);
+    expect(home).toMatch(
+      /\.home-atlas \.home-figures figure\s*\{[^}]*background:\s*transparent/s,
+    );
+    expect(home).toMatch(
+      /\.home-thumbs figure\s*\{[^}]*background:\s*transparent/s,
+    );
+    expect(home).toMatch(
+      /\.home-figures figure\s*\{[^}]*background:\s*transparent/s,
+    );
+    expect(home).not.toMatch(
+      /\.home-figures figure\s*\{[^}]*background:\s*#edebe5/s,
+    );
+    expect(home).toMatch(
+      /\.home-atlas \.home-figures figure\s*\{[^}]*border:\s*1px\s+solid\s+var\(--site-rule\)/s,
+    );
+    expect(site).toMatch(
+      /\.folio-play \.VPContent\s*\{[^}]*background:\s*var\(--site-page\)/s,
+    );
+    expect(site).not.toMatch(
+      /\.folio-play \.VPContent\s*\{[^}]*background:\s*#ffffff/s,
+    );
   });
 
   it("site light/dark mode tokens + menu not clipped", () => {
