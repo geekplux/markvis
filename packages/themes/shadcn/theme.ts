@@ -100,4 +100,6 @@ export const shadcn = {
   PLOT_BORDER_WIDTH: 1,
   /** Card figures stay quiet — no IR field titles on axes. */
   AXIS_TITLES: false,
+  LEGEND_BELOW: false,
+  TITLE_RULE: false,
 } as ThemeTokens;

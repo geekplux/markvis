@@ -9,6 +9,7 @@ import {
   FONT,
   LABEL_MIN_GAP,
   LABEL_ROTATE_DEG,
+  LEGEND_BELOW,
   MARGIN,
   PALETTE,
   PLOT_MIN_RATIO,
@@ -176,7 +177,10 @@ export function categoryBottomMargin(
   return TYPE.tick.size + 12 + axisPad;
 }
 
-export function titleBlockTop(legendHeight: number): number {
+export function titleBlockTop(legendHeight: number, legendBelow = LEGEND_BELOW): number {
+  if (legendBelow) {
+    return TITLE_BASELINE + TITLE_TO_PLOT;
+  }
   if (legendHeight > 0) {
     return TITLE_BASELINE + 8 + legendHeight + TITLE_TO_PLOT;
   }
@@ -199,14 +203,17 @@ export function layoutFrame(opts: {
   const width = SVG_WIDTH;
   const left = tickLeftMargin(opts.yTickLabels);
   const right = Math.max(MARGIN.right, opts.rightMin ?? MARGIN.right);
-  const top = titleBlockTop(opts.legendHeight);
+  const top = titleBlockTop(opts.legendHeight, LEGEND_BELOW);
   const draftW = Math.max(width - left - right, 1);
   const nCat = Math.max(opts.categoryLabels.length, 1);
   const catLay =
     opts.categoryLabels.length > 0
       ? categoryLayout(opts.categoryLabels, draftW / nCat)
       : { rotate: false, show: [] as boolean[] };
-  const bottom = categoryBottomMargin(opts.categoryLabels, catLay.rotate);
+  let bottom = categoryBottomMargin(opts.categoryLabels, catLay.rotate);
+  if (LEGEND_BELOW && opts.legendHeight > 0) {
+    bottom += opts.legendHeight + 8;
+  }
   const height = fitFrameHeight(top, bottom);
   const plot: PlotBox = {
     left,

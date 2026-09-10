@@ -92,6 +92,10 @@ export const folio = {
   PLOT_BORDER_WIDTH: 0,
   /** When true, paint x/y axis titles from IR field names / unit. */
   AXIS_TITLES: false,
+  /** When true, color legend sits under the plot (not in the title block). */
+  LEGEND_BELOW: false,
+  /** When true, draw a hairline rule under the title. */
+  TITLE_RULE: false,
 } as const;
 
 export type ThemeTokens = typeof folio;

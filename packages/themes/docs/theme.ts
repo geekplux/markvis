@@ -33,7 +33,7 @@ export const docs = {
   MARGIN: {
     top: 28,
     right: 16,
-    bottom: 22,
+    bottom: 36,
     left: 40,
   },
 
@@ -67,7 +67,7 @@ export const docs = {
   BAR_LABEL_MIN_WIDTH: folio.BAR_LABEL_MIN_WIDTH,
   BAR_LABEL_INSIDE_H: folio.BAR_LABEL_INSIDE_H,
   BAR_LABEL_OFFSET: folio.BAR_LABEL_OFFSET,
-  BAR_LABEL_N_ON: folio.BAR_LABEL_N_ON,
+  BAR_LABEL_N_ON: 10,
   BAR_LABEL_N_OFF: folio.BAR_LABEL_N_OFF,
   BAR_LABEL_MID_MIN_W: folio.BAR_LABEL_MID_MIN_W,
 
@@ -76,7 +76,8 @@ export const docs = {
   POINT_SKIP_AFTER: folio.POINT_SKIP_AFTER,
   /** Quiet area wash — no loud fill */
   AREA_OPACITY: 0.12,
-  END_LABEL_SERIES_MAX: folio.END_LABEL_SERIES_MAX,
+  /** 0 → multi-series line/area use color legend (not end-labels). */
+  END_LABEL_SERIES_MAX: 0,
   END_LABEL_GAP: folio.END_LABEL_GAP,
   END_LABEL_MIN_SEP: folio.END_LABEL_MIN_SEP,
 
@@ -96,4 +97,8 @@ export const docs = {
   PLOT_BORDER: folio.PLOT_BORDER,
   PLOT_BORDER_WIDTH: folio.PLOT_BORDER_WIDTH,
   AXIS_TITLES: folio.AXIS_TITLES,
+  /** Docs: legend under plot (B&W tell vs folio end-labels). */
+  LEGEND_BELOW: true,
+  /** Hairline under title — not a four-sided plot rect. */
+  TITLE_RULE: true,
 } as ThemeTokens;

@@ -96,4 +96,6 @@ export const highcharts = {
   PLOT_BORDER: "#ccd6eb",
   PLOT_BORDER_WIDTH: 1,
   AXIS_TITLES: true,
+  LEGEND_BELOW: false,
+  TITLE_RULE: false,
 } as ThemeTokens;

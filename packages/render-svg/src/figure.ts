@@ -1,5 +1,13 @@
 import type { ChartIR } from "@markvis/ir";
-import { TITLE_BASELINE, TYPE } from "./tokens.js";
+import {
+  INK,
+  MARGIN,
+  STRUCTURE_OPACITY,
+  SVG_WIDTH,
+  TITLE_BASELINE,
+  TITLE_RULE,
+  TYPE,
+} from "./tokens.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
 
 /** Visible title from IR; never a chart-type word. Empty → y field. */
@@ -16,7 +24,7 @@ export function drawTitle(title: string, x: number, unit?: string): string {
   const unitSpan = unit
     ? `<tspan font-size="${TYPE.unit.size}" font-weight="${TYPE.unit.weight}" fill="${TYPE.unit.fill}"> · ${escapeXml(unit)}</tspan>`
     : "";
-  return `  <text ${attrs({
+  const text = `  <text ${attrs({
     x: fmtPx(x),
     y: TITLE_BASELINE,
     "text-anchor": "start",
@@ -24,4 +32,18 @@ export function drawTitle(title: string, x: number, unit?: string): string {
     "font-weight": TYPE.title.weight,
     fill: TYPE.title.fill,
   })}>${escapeXml(title)}${unitSpan}</text>`;
+  if (!TITLE_RULE) {
+    return text;
+  }
+  const rule = `  <line ${attrs({
+    x1: fmtPx(MARGIN.left),
+    x2: fmtPx(SVG_WIDTH - MARGIN.right),
+    y1: fmtPx(TITLE_BASELINE + 6),
+    y2: fmtPx(TITLE_BASELINE + 6),
+    stroke: INK,
+    "stroke-opacity": STRUCTURE_OPACITY,
+    "stroke-width": 1,
+    "data-title-rule": "1",
+  })}/>`;
+  return `${text}\n${rule}`;
 }

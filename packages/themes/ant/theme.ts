@@ -95,4 +95,6 @@ export const ant = {
   PLOT_BORDER: "#d9d9d9",
   PLOT_BORDER_WIDTH: 1,
   AXIS_TITLES: true,
+  LEGEND_BELOW: false,
+  TITLE_RULE: false,
 } as ThemeTokens;

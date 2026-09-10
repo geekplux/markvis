@@ -47,6 +47,7 @@ import {
   HAIRLINE_OPACITY,
   INK,
   LABEL_ROTATE_DEG,
+  LEGEND_BELOW,
   LINE_POINT_R,
   LINE_STROKE,
   MAX_INTERIOR_GRID,
@@ -203,35 +204,57 @@ function prepare(chart: ChartIR): Prepared {
       )
     : { items: [], height: 0 };
 
+  const categoryLabels =
+    xLabelTexts.length ? xLabelTexts : linearX ? [] : categories;
+
   let frame = layoutFrame({
     yTickLabels,
-    categoryLabels: xLabelTexts.length ? xLabelTexts : linearX ? [] : categories,
+    categoryLabels,
     legendHeight: legendDraft.height,
     rightMin,
   });
 
-  const legend = showLegend
+  let legend = showLegend
     ? layoutLegend(
         series,
         styles.map((s) => s.color),
         styles.map((s) => s.opacity),
         frame.plot.left,
-        TITLE_BASELINE + 18,
+        LEGEND_BELOW
+          ? Math.max(
+              frame.plot.bottom + TYPE.tick.size + 16,
+              frame.height - legendDraft.height,
+            )
+          : TITLE_BASELINE + 18,
         frame.plot.width,
       )
     : legendDraft;
 
-  if (legend.height !== legendDraft.height && showLegend) {
-    frame = layoutFrame({
-      yTickLabels,
-      categoryLabels: xLabelTexts.length
-        ? xLabelTexts
-        : linearX
-          ? []
-          : categories,
-      legendHeight: legend.height,
-      rightMin,
-    });
+  if (showLegend && (legend.height !== legendDraft.height || LEGEND_BELOW)) {
+    if (legend.height !== legendDraft.height) {
+      frame = layoutFrame({
+        yTickLabels,
+        categoryLabels,
+        legendHeight: legend.height,
+        rightMin,
+      });
+    }
+    // After frame is final: place under plot (or keep title-band Y).
+    // Under plot: after x ticks, clamped into the bottom legend reserve.
+    const y = LEGEND_BELOW
+      ? Math.max(
+          frame.plot.bottom + TYPE.tick.size + 16,
+          frame.height - legend.height,
+        )
+      : TITLE_BASELINE + 18;
+    legend = layoutLegend(
+      series,
+      styles.map((s) => s.color),
+      styles.map((s) => s.opacity),
+      frame.plot.left,
+      y,
+      frame.plot.width,
+    );
   }
 
   const plot = frame.plot;

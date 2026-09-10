@@ -2,6 +2,7 @@
   <title id="mv-840fc044c6e0680e-title">On leads at 70</title>
   <desc id="mv-840fc044c6e0680e-desc">pie chart. On leads at 70. x=flag. y=count. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">On leads at 70</text>
+  <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
   <g aria-hidden="true">
     <path d="M372 248 L372 101.12 A146.88 146.88 0 1 1 232.31 293.39 Z" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1.5" data-label="on" data-raw-value="70"/>
     <path d="M372 248 L232.31 293.39 A146.88 146.88 0 0 1 372 101.12 Z" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1.5" data-label="off" data-raw-value="30"/>

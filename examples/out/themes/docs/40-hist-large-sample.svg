@@ -2,6 +2,7 @@
   <title id="mv-70aa9b42b2d28f99-title">Idle clusters near zero</title>
   <desc id="mv-70aa9b42b2d28f99-desc">hist chart. Idle clusters near zero. x=sec. 11 rows. x is binned with Sturges equal-width bins.</desc>
   <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Idle clusters near zero</text>
+  <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
   <path d="M40 458 L704 458" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
   <g fill="#64748B" font-size="10" font-weight="400">
     <text x="32" y="458" text-anchor="end" dominant-baseline="middle">0</text>

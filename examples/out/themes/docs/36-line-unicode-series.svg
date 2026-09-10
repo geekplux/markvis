@@ -2,32 +2,35 @@
   <title id="mv-7c86021fb3846ba3-title">東京 still leads 北京</title>
   <desc id="mv-7c86021fb3846ba3-desc">line chart. 東京 still leads 北京. x=month. y=amount. series=city. 4 rows.</desc>
   <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">東京 still leads 北京</text>
-  <g fill="none" stroke="#18181B" stroke-opacity="0.06" stroke-width="1">
-    <line x1="40" x2="692" y1="372.8" y2="372.8"/>
-    <line x1="40" x2="692" y1="202.4" y2="202.4"/>
-    <line x1="40" x2="692" y1="32" y2="32"/>
+  <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
+  <g font-size="11" font-weight="500" fill="#18181B">
+    <rect x="40" y="455" width="10" height="10" fill="#475569" rx="1"/>
+    <text x="54" y="464" data-legend="北京">北京</text>
+    <rect x="92" y="455" width="10" height="10" fill="#64748B" rx="1"/>
+    <text x="106" y="464" data-legend="東京">東京</text>
   </g>
-  <path d="M40 458 L692 458" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <g fill="none" stroke="#18181B" stroke-opacity="0.06" stroke-width="1">
+    <line x1="40" x2="704" y1="353.6" y2="353.6"/>
+    <line x1="40" x2="704" y1="192.8" y2="192.8"/>
+    <line x1="40" x2="704" y1="32" y2="32"/>
+  </g>
+  <path d="M40 434 L704 434" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
   <g fill="#64748B" font-size="10" font-weight="400">
-    <text x="32" y="458" text-anchor="end" dominant-baseline="middle">90</text>
-    <text x="32" y="372.8" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="32" y="287.6" text-anchor="end" dominant-baseline="middle">110</text>
-    <text x="32" y="202.4" text-anchor="end" dominant-baseline="middle">120</text>
-    <text x="32" y="117.2" text-anchor="end" dominant-baseline="middle">130</text>
+    <text x="32" y="434" text-anchor="end" dominant-baseline="middle">90</text>
+    <text x="32" y="353.6" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="32" y="273.2" text-anchor="end" dominant-baseline="middle">110</text>
+    <text x="32" y="192.8" text-anchor="end" dominant-baseline="middle">120</text>
+    <text x="32" y="112.4" text-anchor="end" dominant-baseline="middle">130</text>
     <text x="32" y="32" text-anchor="end" dominant-baseline="middle">140</text>
-    <text x="203" y="468" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
-    <text x="529" y="468" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
+    <text x="206" y="444" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
+    <text x="538" y="444" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
   </g>
   <g fill="none">
-    <path d="M203 372.8 L529 287.6" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="北京"/>
-    <circle cx="203" cy="372.8" r="2" fill="#475569" stroke="none" data-series="北京"/>
-    <circle cx="529" cy="287.6" r="2" fill="#475569" stroke="none" data-series="北京"/>
-    <path d="M203 202.4 L529 117.2" fill="none" stroke="#64748B" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="東京"/>
-    <circle cx="203" cy="202.4" r="2" fill="#64748B" stroke="none" data-series="東京"/>
-    <circle cx="529" cy="117.2" r="2" fill="#64748B" stroke="none" data-series="東京"/>
-  </g>
-  <g font-size="10" font-weight="500">
-    <text x="537" y="287.6" text-anchor="start" dominant-baseline="middle" fill="#475569" data-end-label="北京">北京</text>
-    <text x="537" y="117.2" text-anchor="start" dominant-baseline="middle" fill="#64748B" data-end-label="東京">東京</text>
+    <path d="M206 353.6 L538 273.2" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="北京"/>
+    <circle cx="206" cy="353.6" r="2" fill="#475569" stroke="none" data-series="北京"/>
+    <circle cx="538" cy="273.2" r="2" fill="#475569" stroke="none" data-series="北京"/>
+    <path d="M206 192.8 L538 112.4" fill="none" stroke="#64748B" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="東京"/>
+    <circle cx="206" cy="192.8" r="2" fill="#64748B" stroke="none" data-series="東京"/>
+    <circle cx="538" cy="112.4" r="2" fill="#64748B" stroke="none" data-series="東京"/>
   </g>
 </svg>

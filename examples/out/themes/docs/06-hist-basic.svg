@@ -2,6 +2,7 @@
   <title id="mv-6b0bf4639d30686e-title">Most samples stay under 20 ms</title>
   <desc id="mv-6b0bf4639d30686e-desc">hist chart. Most samples stay under 20 ms. x=ms. 6 rows. x is binned with Sturges equal-width bins.</desc>
   <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Most samples stay under 20 ms</text>
+  <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
   <path d="M40 458 L704 458" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
   <g fill="#64748B" font-size="10" font-weight="400">
     <text x="32" y="458" text-anchor="end" dominant-baseline="middle">0</text>

@@ -2,38 +2,41 @@
   <title id="mv-62a59a241ade70e7-title">Queue a stays deeper</title>
   <desc id="mv-62a59a241ade70e7-desc">area chart. Queue a stays deeper. x=minute. y=depth. series=queue. 6 rows.</desc>
   <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Queue a stays deeper</text>
+  <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
+  <g font-size="11" font-weight="500" fill="#18181B">
+    <rect x="40" y="455" width="10" height="10" fill="#475569" rx="1"/>
+    <text x="54" y="464" data-legend="a">a</text>
+    <rect x="76.82" y="455" width="10" height="10" fill="#64748B" rx="1"/>
+    <text x="90.82" y="464" data-legend="b">b</text>
+  </g>
   <g fill="none" stroke="#18181B" stroke-opacity="0.06" stroke-width="1">
-    <line x1="40" x2="704" y1="351.5" y2="351.5"/>
-    <line x1="40" x2="704" y1="138.5" y2="138.5"/>
+    <line x1="40" x2="704" y1="333.5" y2="333.5"/>
+    <line x1="40" x2="704" y1="132.5" y2="132.5"/>
     <line x1="40" x2="704" y1="32" y2="32"/>
   </g>
-  <path d="M40 458 L704 458" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <path d="M40 434 L704 434" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
   <g fill="#64748B" font-size="10" font-weight="400">
-    <text x="32" y="458" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="32" y="351.5" text-anchor="end" dominant-baseline="middle">2</text>
-    <text x="32" y="245" text-anchor="end" dominant-baseline="middle">4</text>
-    <text x="32" y="138.5" text-anchor="end" dominant-baseline="middle">6</text>
+    <text x="32" y="434" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="32" y="333.5" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="32" y="233" text-anchor="end" dominant-baseline="middle">4</text>
+    <text x="32" y="132.5" text-anchor="end" dominant-baseline="middle">6</text>
     <text x="32" y="32" text-anchor="end" dominant-baseline="middle">8</text>
-    <text x="48" y="468" text-anchor="middle" font-size="10" data-full-label="-1">-1</text>
-    <text x="210" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
-    <text x="372" y="468" text-anchor="middle" font-size="10" data-full-label="1">1</text>
-    <text x="534" y="468" text-anchor="middle" font-size="10" data-full-label="2">2</text>
-    <text x="696" y="468" text-anchor="middle" font-size="10" data-full-label="3">3</text>
+    <text x="48" y="444" text-anchor="middle" font-size="10" data-full-label="-1">-1</text>
+    <text x="210" y="444" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <text x="372" y="444" text-anchor="middle" font-size="10" data-full-label="1">1</text>
+    <text x="534" y="444" text-anchor="middle" font-size="10" data-full-label="2">2</text>
+    <text x="696" y="444" text-anchor="middle" font-size="10" data-full-label="3">3</text>
   </g>
   <g fill="none">
-    <path d="M210 191.75 L372 85.25 L534 138.5 L534 458 L210 458 Z" fill="#475569" fill-opacity="0.12" stroke="none" data-series="a"/>
-    <path d="M210 191.75 L372 85.25 L534 138.5" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="a"/>
-    <circle cx="210" cy="191.75" r="2" fill="#475569" stroke="none" data-series="a"/>
-    <circle cx="372" cy="85.25" r="2" fill="#475569" stroke="none" data-series="a"/>
-    <circle cx="534" cy="138.5" r="2" fill="#475569" stroke="none" data-series="a"/>
-    <path d="M210 351.5 L372 298.25 L534 245 L534 458 L210 458 Z" fill="#64748B" fill-opacity="0.12" stroke="none" data-series="b"/>
-    <path d="M210 351.5 L372 298.25 L534 245" fill="none" stroke="#64748B" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="b"/>
-    <circle cx="210" cy="351.5" r="2" fill="#64748B" stroke="none" data-series="b"/>
-    <circle cx="372" cy="298.25" r="2" fill="#64748B" stroke="none" data-series="b"/>
-    <circle cx="534" cy="245" r="2" fill="#64748B" stroke="none" data-series="b"/>
-  </g>
-  <g font-size="10" font-weight="500">
-    <text x="542" y="138.5" text-anchor="start" dominant-baseline="middle" fill="#475569" data-end-label="a">a</text>
-    <text x="542" y="245" text-anchor="start" dominant-baseline="middle" fill="#64748B" data-end-label="b">b</text>
+    <path d="M210 182.75 L372 82.25 L534 132.5 L534 434 L210 434 Z" fill="#475569" fill-opacity="0.12" stroke="none" data-series="a"/>
+    <path d="M210 182.75 L372 82.25 L534 132.5" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="a"/>
+    <circle cx="210" cy="182.75" r="2" fill="#475569" stroke="none" data-series="a"/>
+    <circle cx="372" cy="82.25" r="2" fill="#475569" stroke="none" data-series="a"/>
+    <circle cx="534" cy="132.5" r="2" fill="#475569" stroke="none" data-series="a"/>
+    <path d="M210 333.5 L372 283.25 L534 233 L534 434 L210 434 Z" fill="#64748B" fill-opacity="0.12" stroke="none" data-series="b"/>
+    <path d="M210 333.5 L372 283.25 L534 233" fill="none" stroke="#64748B" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="b"/>
+    <circle cx="210" cy="333.5" r="2" fill="#64748B" stroke="none" data-series="b"/>
+    <circle cx="372" cy="283.25" r="2" fill="#64748B" stroke="none" data-series="b"/>
+    <circle cx="534" cy="233" r="2" fill="#64748B" stroke="none" data-series="b"/>
   </g>
 </svg>
