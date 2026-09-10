@@ -1114,61 +1114,78 @@ describe("pie + scatter theme forks (THEMES.md)", () => {
       "ant",
       "recharts",
     ] as const;
+    /** THEMES.md acceptance keys + signature tells (stroke, title rule, r, axes). */
     function pieAxes(svg: string) {
+      const sliceStroke =
+        (svg.match(
+          /data-label="[^"]+"[^>]*stroke-width="([0-9.]+)"|stroke-width="([0-9.]+)"[^>]*data-label=/,
+        ) ?? [, "", ""])[1] ||
+        (svg.match(
+          /data-label="[^"]+"[^>]*stroke-width="([0-9.]+)"|stroke-width="([0-9.]+)"[^>]*data-label=/,
+        ) ?? [, "", ""])[2] ||
+        "";
       return {
         labelMode: (svg.match(/data-pie-label-mode="([^"]+)"/) ?? [, ""])[1]!,
-        innerHole: /data-donut="1"/.test(svg) || /data-pie-inner-ratio="0\.[1-9]/.test(svg),
+        innerHole:
+          /data-donut="1"/.test(svg) ||
+          /data-pie-inner-ratio="0\.[1-9]/.test(svg),
+        markKind: "n/a" as const,
         legend: /data-legend=/.test(svg),
         leaders: /<polyline /.test(svg),
+        vgrid: /data-v-grid=/.test(svg),
         plotFrame: /data-plot-border=/.test(svg),
+        titleRule: /data-title-rule=/.test(svg),
+        sliceStroke,
+        viewBox: (svg.match(/viewBox="([^"]+)"/) ?? [, ""])[1]!,
       };
     }
     function scatterAxes(svg: string) {
       return {
+        labelMode: "n/a" as const,
+        innerHole: false,
         markKind: /data-scatter-mark="ring"/.test(svg) ? "ring" : "circle",
         legend: /data-legend=/.test(svg),
         vgrid: /data-v-grid=/.test(svg),
         plotFrame: /data-plot-border=/.test(svg),
         titleRule: /data-title-rule=/.test(svg),
         markerR: (svg.match(/<circle[^>]*\br="([0-9.]+)"/) ?? [, ""])[1]!,
+        axisTitles: /data-axis-titles=/.test(svg),
+        quietOpacity: /fill-opacity="0\.75/.test(svg),
+        viewBox: (svg.match(/viewBox="([^"]+)"/) ?? [, ""])[1]!,
       };
     }
-    function pieDiff(a: ReturnType<typeof pieAxes>, b: ReturnType<typeof pieAxes>): number {
+    function countDiff(a: Record<string, unknown>, b: Record<string, unknown>): number {
       let n = 0;
-      if (a.labelMode !== b.labelMode) n += 1;
-      if (a.innerHole !== b.innerHole) n += 1;
-      if (a.legend !== b.legend) n += 1;
-      if (a.leaders !== b.leaders) n += 1;
-      if (a.plotFrame !== b.plotFrame) n += 1;
-      return n;
-    }
-    function scatterDiff(
-      a: ReturnType<typeof scatterAxes>,
-      b: ReturnType<typeof scatterAxes>,
-    ): number {
-      let n = 0;
-      if (a.markKind !== b.markKind) n += 1;
-      if (a.legend !== b.legend) n += 1;
-      if (a.vgrid !== b.vgrid) n += 1;
-      if (a.plotFrame !== b.plotFrame) n += 1;
-      if (a.titleRule !== b.titleRule) n += 1;
-      if (a.markerR !== b.markerR) n += 1;
+      for (const k of Object.keys(a)) {
+        if (a[k] !== b[k]) n += 1;
+      }
       return n;
     }
     const pies = Object.fromEntries(
       themes.map((t) => [t, pieAxes(renderSvg(pieChart(t)))]),
     );
     const scatters = Object.fromEntries(
-      themes.map((t) => [t, scatterAxes(renderSvg(scatterChart(t, true)))]),
+      themes.map((t) => [t, scatterAxes(renderSvg(scatterChart(t)))]),
     );
-    // shadcn vs folio: donut + legend vs leaders
-    expect(pieDiff(pies.folio!, pies.shadcn!)).toBeGreaterThanOrEqual(2);
-    // recharts vs folio: legend + plotFrame (and no leaders)
-    expect(pieDiff(pies.folio!, pies.recharts!)).toBeGreaterThanOrEqual(2);
-    // recharts vs folio scatter: ring + vgrid (+ legend on multi)
-    expect(scatterDiff(scatters.folio!, scatters.recharts!)).toBeGreaterThanOrEqual(2);
-    // highcharts vs folio scatter: plotFrame + markerR (+ axis via plot)
-    expect(scatterDiff(scatters.folio!, scatters.highcharts!)).toBeGreaterThanOrEqual(2);
+    for (let i = 0; i < themes.length; i++) {
+      for (let j = i + 1; j < themes.length; j++) {
+        const a = themes[i]!;
+        const b = themes[j]!;
+        const nPie = countDiff(pies[a]!, pies[b]!);
+        const nSc = countDiff(scatters[a]!, scatters[b]!);
+        expect(
+          Math.max(nPie, nSc),
+          `pie/scatter ${a} vs ${b} (pie=${nPie} scatter=${nSc})`,
+        ).toBeGreaterThanOrEqual(2);
+        expect(stripPaint(renderSvg(pieChart(a))), `pie ${a}/${b}`).not.toBe(
+          stripPaint(renderSvg(pieChart(b))),
+        );
+        expect(
+          stripPaint(renderSvg(scatterChart(a))),
+          `scatter ${a}/${b}`,
+        ).not.toBe(stripPaint(renderSvg(scatterChart(b))));
+      }
+    }
   });
 });
 
