@@ -12,6 +12,20 @@ References (structure only — never copy assets, wordmarks, or product names in
 - zed.dev — construction grid energy, product in the hero, italic/display line
 - vite.dev — section rules, measured gaps, logo/grid bands
 
+## Observation — live refs (1280 CSS, 2026-09-10)
+
+Measured with the tab open. Steal structure, not assets.
+
+| surface | measured |
+| --- | --- |
+| motion.dev field | `#FFDB2A`, 1280×720. Panel `#080B08` ~520×510 at x56. **Right of panel is empty yellow** (~696px). No construction grid on the field — only control borders. |
+| zed.dev | Page ~`#F5F5F3`. Construction energy: ~10px undergrid at ~4% stroke; side tick tracks ~32px with 1px marks; hairlines ~`#DADDE2`. Hero holds product, not a void. |
+| vite.dev | Dark `#16171D`, rules `#3B3440`. Hero splits ~623 / 543 with a **visual canvas on the right** (x675, ~543×532). Section rules with measured spacers (~74–93px). |
+| markvis.js.org `/` | Field `#FFDB2A` under 72px nav, 1265×720. Panel `#080B08` 520×~567 at x64. **Empty yellow x584→1265 (~681px)** — the desert START rejects. |
+| markvis.js.org `/examples` | 4-col grid, cards ~276×193 paper. Click opens `?id=`; siblings shrink to ~157×113 while an in-flow detail steals width. Banned in `EXAMPLES.md`. |
+
+Takeaway: keep Motion’s field + ink panel + CTA rhythm. Fill the right like a product-in-hero page (canvas / figure), not like Motion’s empty field. Lattice opacity stays quiet (field rules `rgba(8,11,8,0.14)` ≈ the faint undergrid energy).
+
 ## Tokens (locked)
 
 | role | value |
@@ -37,6 +51,7 @@ Mono: `ui-monospace, SFMono-Regular, Menlo, Consolas, monospace`. Display / body
 The yellow field is a surface with structure, not a PNG fill.
 
 1. On the home field (`min-height: 720px`), draw a **construction grid**:
+   - Optional quiet undergrid: `10px` pitch, stroke `rgba(8,11,8,0.06)` (construction energy, not a screenshot of another site).
    - Vertical columns: `12` tracks across the content inset `clamp(24px, 5vw, 68px)`.
    - Column gutters: hairlines `1px` in `rgba(8,11,8,0.14)`.
    - Horizontal rules every `72px` from the top of the field (same stroke).
@@ -51,7 +66,7 @@ Desktop first screen (`>=900px`):
 
 1. Field full-bleed `#FFDB2A`, nav on field, height `72px` (see `HOME.md` nav).
 2. **Left:** ink panel `#080B08`, width `min(520px, 46%)`, padding `48px`, radius `0`, vertically centered. Meta, two-voice headline (`markvis.` `#FFDB2A` + paper line), CTAs with trailing `>`, chips — as `HOME.md`.
-3. **Right:** not empty yellow. Prefer one of these, in order:
+3. **Right:** not empty yellow (live `/` measured ~681px void; Motion also leaves this empty — we do not). Prefer one of these, in order:
    - **A (preferred):** a live playground fragment (one bar or line fence rendered), paper cell `#EDEBE5`, padding `16px`, radius `0`, width `min(520px, 42%)`, vertically centered. Caption under it `11px` mono uppercase muted on the field: `LIVE FIGURE` or the fence title.
    - **B (if live fragment is blocked):** a **3-tile strip** of uncropped folio SVGs in paper cells, stacked or `1×3` with `gap: 12px`, same vertical center. One caption for the strip.
 4. Panel and figure share one horizontal band inside the field padding. Space between them `clamp(24px, 4vw, 48px)`.
