@@ -179,7 +179,11 @@ Document: `html.dark` | `html.light`. System preference on first visit; toggle i
 
 1. Replace hard-coded `#0e1312` page fills with `var(--site-page)`. Examples / gallery / family / docs share it — **no island bg** on `/examples`.
 2. Hero field + lattice stay field yellow in both modes. Ink panel stays ink. Below-fold bands use `--site-page` and `--site-cell`.
-3. Nav: add a Mode control (mono `11px`, height `44px`) next to Menu / Playground. Label `Dark` / `Light` reflecting the *other* mode or current — Writer can pick one word pair later; default `Light` when dark, `Dark` when light.
+3. Nav: Mode control is an **icon button**, not word labels `Light`/`Dark`.
+   - Hit target `44×44`. Radius `0`. On the field: ink glyph, transparent fill, `1px` ink at 28% border optional.
+   - Glyph: sun when current mode is `dark` (action = switch to light); moon when current is `light`. Inline SVG, `18×18`, stroke `1.75`, no fill soup.
+   - `aria-label`: `Switch to light mode` / `Switch to dark mode` (visible text optional via sr-only only).
+   - Place between Menu and Playground on mobile; end of link cluster / before Playground on desktop.
 4. Mobile Menu bug: open panel must be visible. Do not clip it with nav `overflow-x: hidden`. Prefer `overflow: visible` on `.home-nav` / `.family-nav`, clip the page shell instead. Checkbox/button must toggle at `390`. Acceptance: tap Menu → links visible and tappable; tap again → closed.
 5. Do not put light/dark into `packages/themes/*`.
 
