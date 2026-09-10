@@ -77,6 +77,38 @@ describe("enhanceChartSvg", () => {
     expect(svg.querySelector(".markvis-mark")).toBeTruthy();
   });
 
+  it("still shows hover tip when prefers-reduced-motion: reduce", () => {
+    vi.stubGlobal(
+      "matchMedia",
+      (query: string) =>
+        ({
+          matches: query.includes("prefers-reduced-motion") && query.includes("reduce"),
+          media: query,
+          onchange: null,
+          addListener: () => {},
+          removeListener: () => {},
+          addEventListener: () => {},
+          removeEventListener: () => {},
+          dispatchEvent: () => false,
+        }) as MediaQueryList,
+    );
+    const svg = mountSvg();
+    cleanup = enhanceChartSvg(svg, { theme: "folio" });
+    expect(svg.classList.contains("markvis-motion")).toBe(false);
+    const bar = svg.querySelector("path[data-y]")!;
+    bar.dispatchEvent(
+      new PointerEvent("pointerover", {
+        bubbles: true,
+        clientX: 20,
+        clientY: 40,
+      }),
+    );
+    const tip = document.querySelector(".markvis-tip") as HTMLElement | null;
+    expect(tip).toBeTruthy();
+    expect(tip!.hidden).toBe(false);
+    expect(tip!.textContent).toBe("revenue · Jan · 120");
+  });
+
   it("adds motion class and stagger when motion OK", () => {
     vi.stubGlobal(
       "matchMedia",
