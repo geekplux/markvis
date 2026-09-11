@@ -47,7 +47,7 @@
 
 .home-nav {
   display: grid;
-  grid-template-columns: minmax(180px, 1fr) auto auto minmax(140px, 1fr);
+  grid-template-columns: 1fr auto 1fr;
   overflow: visible;
   align-items: center;
   height: 72px;
@@ -118,9 +118,11 @@
   text-decoration: none;
 }
 
-.home-nav-mode {
+.home-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   justify-self: end;
-  margin-right: 4px;
 }
 
 .home-nav-action {
@@ -130,7 +132,6 @@
   height: 48px;
   min-height: 48px;
   padding: 0 18px;
-  justify-self: end;
   background: var(--home-ink);
   color: var(--home-field);
   font-family: var(--home-mono);
@@ -754,7 +755,7 @@
 
 @media (max-width: 768px) {
   .home-nav {
-    grid-template-columns: minmax(0, 1fr) auto auto auto;
+    grid-template-columns: minmax(0, 1fr) auto auto;
     overflow: visible;
   }
 

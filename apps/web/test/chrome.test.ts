@@ -138,7 +138,7 @@ describe("site visual chrome", () => {
     expect(family).toMatch(/background:\s*var\(--site-page\)/);
     expect(family).toMatch(/overflow:\s*visible/);
     expect(family).toMatch(/max-width:\s*768px/);
-    expect(family).toMatch(/minmax\(0,\s*1fr\)\s*auto auto auto/);
+    expect(family).toMatch(/minmax\(0,\s*1fr\)\s*auto auto/);
     expect(family).not.toMatch(/max-width:\s*390px[\s\S]*home-nav-links/);
     expect(nav).toContain('href="/"');
     expect(nav).toContain("markvis");
@@ -154,6 +154,12 @@ describe("site visual chrome", () => {
     expect(nav).toContain("home-nav-mode");
     expect(nav).toContain("home-nav-mode-sun");
     expect(nav).not.toMatch(/>\s*Light\s*</);
+    expect(nav).toContain("home-nav-right");
+    expect(nav).toMatch(
+      /home-nav-right[\s\S]*home-nav-mode[\s\S]*home-nav-action/,
+    );
+    expect(family).toMatch(/\.home-nav-right/);
+    expect(family).toMatch(/grid-template-columns:\s*1fr\s+auto\s+1fr/);
   });
 
   it("docs body is ink; home.css locks field + ink panel", () => {
@@ -179,7 +185,9 @@ describe("site visual chrome", () => {
     expect(home).toMatch(/min-height:\s*720px/);
     expect(home).toMatch(/@media\s*\(max-width:\s*768px\)/);
     expect(home).toMatch(/@media\s*\(max-width:\s*390px\)/);
-    expect(home).toMatch(/minmax\(0,\s*1fr\)\s*auto auto auto/);
+    expect(home).toMatch(/minmax\(0,\s*1fr\)\s*auto auto/);
+    expect(home).toMatch(/grid-template-columns:\s*1fr\s+auto\s+1fr/);
+    expect(home).toMatch(/\.home-nav-right/);
     expect(home).toMatch(/\.home-nav[\s\S]*overflow:\s*visible/);
     expect(home).toMatch(/\.home-btn[\s\S]*justify-content:\s*space-between/);
     expect(home).toMatch(/\.home-btn[\s\S]*padding:\s*12px 18px/);
@@ -229,6 +237,11 @@ describe("site visual chrome", () => {
     expect(homeMd).toContain('aria-label="Switch to light mode"');
     expect(homeMd).not.toMatch(/>\s*Light\s*</);
     expect(homeMd).not.toMatch(/>\s*Dark\s*</);
+    expect(homeMd).toContain("home-nav-right");
+    expect(homeMd).toMatch(
+      /home-nav-right[\s\S]*home-nav-mode[\s\S]*home-nav-action/,
+    );
+    expect(homeCss).toMatch(/\.home-nav-right/);
     expect(mode).toMatch(/width:\s*44px/);
     expect(mode).toMatch(/height:\s*44px/);
     expect(modeTs).toContain("Switch to light mode");
