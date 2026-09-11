@@ -1,4 +1,3 @@
-import { createHash } from "node:crypto";
 import type { ChartIR } from "@markvis/ir";
 
 export function escapeXml(value: string): string {
@@ -22,15 +21,6 @@ export function canonicalJson(chart: ChartIR): string {
     columns: chart.table.columns,
     rows: chart.table.rows,
   });
-}
-
-/** Stable id from a SHA-256 of the canonical IR. No clocks or random. */
-export function chartId(chart: ChartIR): string {
-  const hash = createHash("sha256")
-    .update(canonicalJson(chart), "utf8")
-    .digest("hex")
-    .slice(0, 16);
-  return `mv-${hash}`;
 }
 
 export function fmtPx(n: number): string {

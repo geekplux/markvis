@@ -35,14 +35,8 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
+        // Enhance-only: do not alias full @markvis/browser / render-svg (node:crypto).
         "@markvis/browser/enhance": resolve(repoRoot, "packages/browser/src/enhance.ts"),
-        "@markvis/browser": resolve(repoRoot, "packages/browser/src/index.ts"),
-        "@markvis/parser": resolve(repoRoot, "packages/parser/src/index.ts"),
-        "@markvis/render-svg": resolve(
-          repoRoot,
-          "packages/render-svg/src/index.ts",
-        ),
-        "@markvis/ir": resolve(repoRoot, "packages/ir/src/index.ts"),
       },
     },
     server: {

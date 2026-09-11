@@ -4,7 +4,8 @@ import { renderPie } from "./pie.js";
 import { themeTokens } from "./theme.js";
 import { applyThemeTokens } from "./tokens.js";
 import { folio } from "@markvis/themes";
-import { attrs, chartId, escapeXml } from "./xml.js";
+import { chartId } from "./chart-id.js";
+import { attrs, escapeXml } from "./xml.js";
 
 export function ariaLabel(chart: ChartIR): string {
   const n = chart.table.rows.length;

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from "vue";
 import { enhanceChartSvg } from "@markvis/browser/enhance";
-import { parseMarkdown, renderSvg } from "@markvis/browser";
 import {
   CHART_TYPES,
   PALETTES,
@@ -58,16 +57,9 @@ const selectedSvg = computed(() => {
   if (!selected.value) {
     return "";
   }
-  if (!detailPalette.value) {
-    return selected.value.svgsByTheme[detailTheme.value];
-  }
-  const result = parseMarkdown(selectedFence.value, {
-    filename: `${selected.value.id}.md`,
-  });
-  if (!result.ok) {
-    return selected.value.svgsByTheme[detailTheme.value];
-  }
-  return renderSvg(result.chart);
+  // Pre-baked theme SVGs only — no client render-svg (Node createHash graph).
+  // Palette rewrites fence + Play href; live palette preview is Play.
+  return selected.value.svgsByTheme[detailTheme.value];
 });
 
 const selectedPlayHref = computed(() => {
