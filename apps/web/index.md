@@ -64,23 +64,23 @@ pageClass: folio-home-page
 <section class="home-band" aria-label="What markvis is">
   <article>
     <h2>library you can drop in</h2>
-    <p>npm, a script tag, or a Skill. One name: markvis.</p>
+    <p>Install with npm, a script tag, or a Skill — one name: markvis.</p>
   </article>
   <article>
     <h2>Any Markdown view</h2>
-    <p>preview or rendered page. The fence is the figure.</p>
+    <p>Works in any Markdown preview or rendered page; the fence is the figure.</p>
   </article>
   <article>
     <h2>same fence, same SVG</h2>
-    <p>same text, same figure. No plugin, the table stays.</p>
+    <p>Same fence text always yields the same SVG; no plugin, and the table stays.</p>
   </article>
   <article>
     <h2>AI replies</h2>
-    <p>agents emit the fence. A figure, not a paragraph of numbers.</p>
+    <p>Agents emit the fence so the reply is a figure, not a paragraph of numbers.</p>
   </article>
   <article>
     <h2>Themes</h2>
-    <p>one fence fits the host. folio is the default.</p>
+    <p>One fence fits the host theme; folio is the default look.</p>
   </article>
 </section>
 

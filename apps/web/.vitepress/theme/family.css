@@ -7,7 +7,7 @@
   --family-ink: #080b08;
   --family-paper: #edebe5;
   --family-page: var(--site-page);
-  --family-muted: #979d97;
+  --family-muted: var(--site-fg-muted);
   --family-rule: rgba(8, 11, 8, 0.28);
   --family-chip: #0e130f;
   --family-fence: #f4f4f5;
@@ -197,7 +197,7 @@
   background: var(--site-footer);
   padding: 32px clamp(24px, 5vw, 68px);
   font-size: 13px;
-  color: #080b08;
+  color: var(--site-ink);
 }
 
 .family-foot nav {
@@ -210,7 +210,7 @@
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  color: #080b08;
+  color: var(--site-ink);
   text-decoration: none;
 }
 

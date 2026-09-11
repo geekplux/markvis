@@ -12,7 +12,14 @@ html.dark {
   --site-rule: rgba(237, 235, 229, 0.16);
   --site-fg: #edebe5;
   --site-fg-muted: #979d97;
+  --site-accent: #ffdb2a;
   --site-chip-border: rgba(237, 235, 229, 0.28);
+  /* Preferred aliases — pair with --site-* */
+  --ink: var(--site-fg);
+  --ink-mute: var(--site-fg-muted);
+  --accent: var(--site-accent);
+  --line: var(--site-rule);
+  --paper: var(--site-paper);
 }
 
 html.light {
@@ -21,13 +28,19 @@ html.light {
   --site-field: #ffdb2a;
   --site-ink: #080b08;
   --site-paper: #ffffff;
-  --site-muted: #737373;
+  --site-muted: #5c5c5c;
   --site-cell: #edebe5;
   --site-footer: #edebe5;
   --site-rule: rgba(8, 11, 8, 0.12);
   --site-fg: #080b08;
-  --site-fg-muted: #737373;
+  --site-fg-muted: #5c5c5c;
+  --site-accent: #080b08;
   --site-chip-border: rgba(8, 11, 8, 0.18);
+  --ink: var(--site-fg);
+  --ink-mute: var(--site-fg-muted);
+  --accent: var(--site-accent);
+  --line: var(--site-rule);
+  --paper: var(--site-paper);
 }
 
 html:not(.light):not(.dark) {
@@ -42,7 +55,13 @@ html:not(.light):not(.dark) {
   --site-rule: rgba(237, 235, 229, 0.16);
   --site-fg: #edebe5;
   --site-fg-muted: #979d97;
+  --site-accent: #ffdb2a;
   --site-chip-border: rgba(237, 235, 229, 0.28);
+  --ink: var(--site-fg);
+  --ink-mute: var(--site-fg-muted);
+  --accent: var(--site-accent);
+  --line: var(--site-rule);
+  --paper: var(--site-paper);
 }
 
 .home-nav-mode {
@@ -77,6 +96,6 @@ html:not(.light):not(.dark) {
 }
 
 .family-nav .home-nav-mode {
-  color: #080b08;
+  color: var(--site-ink);
   border-color: rgba(8, 11, 8, 0.28);
 }

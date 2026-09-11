@@ -254,6 +254,116 @@ describe("site visual chrome", () => {
     );
   });
 
+  it("light mode text uses token pairs; no yellow-on-cream feature titles", () => {
+    const mode = read(".vitepress/theme/site-mode.css");
+    const home = read(".vitepress/theme/home.css");
+    const family = read(".vitepress/theme/family.css");
+    const homeMd = read("index.md");
+
+    // Both modes set the full text/surface pair
+    for (const block of [/html\.dark\s*\{([\s\S]*?)\n\}/, /html\.light\s*\{([\s\S]*?)\n\}/]) {
+      const m = mode.match(block);
+      expect(m, "mode block").toBeTruthy();
+      const body = m![1];
+      for (const token of [
+        "--site-page",
+        "--site-field",
+        "--site-ink",
+        "--site-paper",
+        "--site-fg",
+        "--site-fg-muted",
+        "--site-accent",
+        "--site-cell",
+        "--site-footer",
+        "--site-rule",
+        "--ink",
+        "--ink-mute",
+        "--accent",
+        "--line",
+        "--paper",
+      ]) {
+        expect(body).toContain(`${token}:`);
+      }
+    }
+
+    // Light accent is ink (not Motions yellow) so feature titles pass on cream cells
+    expect(mode).toMatch(
+      /html\.light\s*\{[^}]*--site-accent:\s*#080b08/s,
+    );
+    expect(mode).toMatch(
+      /html\.dark\s*\{[^}]*--site-accent:\s*#ffdb2a/s,
+    );
+    // Muted on cream cells needs ≥4.5:1 (#737373 fails on #edebe5)
+    expect(mode).toMatch(
+      /html\.light\s*\{[^}]*--site-fg-muted:\s*#5c5c5c/s,
+    );
+
+    // Feature titles + body are tokenized (no raw yellow title)
+    expect(home).toMatch(
+      /\.home-band h2\s*\{[^}]*color:\s*var\(--site-accent\)/s,
+    );
+    expect(home).not.toMatch(
+      /\.home-band h2\s*\{[^}]*color:\s*#ffdb2a/s,
+    );
+    expect(home).toMatch(
+      /\.home-band p\s*\{[^}]*color:\s*var\(--site-fg-muted\)/s,
+    );
+
+    // Hero chips stay on the dark panel tokens (not flipping site-cell/fg)
+    expect(home).toMatch(
+      /\.home-chip\s*\{[^}]*background:\s*var\(--home-chip\)/s,
+    );
+    expect(home).toMatch(
+      /\.home-chip\s*\{[^}]*color:\s*var\(--home-paper\)/s,
+    );
+    expect(home).not.toMatch(
+      /\.home-chip\s*\{[^}]*background:\s*var\(--site-cell\)/s,
+    );
+
+    // Below-fold / footer no dark-only paper hex text
+    expect(home).toMatch(
+      /\.home-agent-links a\s*\{[^}]*color:\s*var\(--site-fg\)/s,
+    );
+    expect(home).not.toMatch(
+      /\.home-agent-links a\s*\{[^}]*color:\s*#edebe5/s,
+    );
+    expect(home).toMatch(
+      /\.home-strip \.home-lead\s*\{[^}]*color:\s*var\(--site-fg-muted\)/s,
+    );
+    expect(home).toMatch(
+      /\.home-atlas \.home-index[\s\S]*?color:\s*var\(--site-accent\)/,
+    );
+    expect(home).toMatch(
+      /\.home-foot\s*\{[^}]*background:\s*var\(--site-footer\)/s,
+    );
+    expect(home).toMatch(
+      /\.home-foot\s*\{[^}]*color:\s*var\(--site-ink\)/s,
+    );
+    expect(family).toMatch(
+      /\.family-foot\s*\{[^}]*color:\s*var\(--site-ink\)/s,
+    );
+    expect(family).toMatch(
+      /\.family-foot a\s*\{[^}]*color:\s*var\(--site-ink\)/s,
+    );
+
+    // Five full feature sentences (not clipped fragments)
+    expect(homeMd).toContain(
+      "Install with npm, a script tag, or a Skill — one name: markvis.",
+    );
+    expect(homeMd).toContain(
+      "Works in any Markdown preview or rendered page; the fence is the figure.",
+    );
+    expect(homeMd).toContain(
+      "Same fence text always yields the same SVG; no plugin, and the table stays.",
+    );
+    expect(homeMd).toContain(
+      "Agents emit the fence so the reply is a figure, not a paragraph of numbers.",
+    );
+    expect(homeMd).toContain(
+      "One fence fits the host theme; folio is the default look.",
+    );
+  });
+
   it("playground keeps two panes with PLAY chrome + mobile toolbar", () => {
     const css = read("../playground/src/style.css");
     const html = read("../playground/index.html");
