@@ -1,3 +1,62 @@
+# HOME — U3 lattice wire (authoritative for this unit)
+
+Named language: **Lattice** (same as `SITE.md`). Motion hero stays. This unit kills the **all-over yellow graph paper**.
+
+Supersedes the 10px repeating undergrid on `.home-lattice` for `/` only. Older Field essays below stay historical; **Coder follows this wire**.
+
+## Observation
+
+Live / tip still paints `.home-lattice` with `repeating-linear-gradient` every `10px` across the whole field — reads as notebook paper, not Zed/Motion/Vite construction.
+
+## Judgment
+
+Layout = **measure + 12 columns + hairlines at edges/gutters**. Not a filled engineering sheet.
+
+## Wire (desktop ≥900)
+
+```
+|← clamp(24px,5vw,68px) →|======== measure max 1120px ========|← pad →|
+                           12 columns, gutter hairlines only
+Hero field #FFDB2A min-height 720:
+  cols 1–6  → ink panel (existing)
+  cols 7–12 → 1×3 hairline figure strip (existing POLISH)
+  NO 10px undergrid fill. Optional: 1px verticals at column gutters
+  rgba(8,11,8,0.14) and horizontal rules ONLY at field top (under nav)
+  and field bottom (section edge) — not every 72px across the yellow.
+```
+
+Below fold (dark `--site-page`):
+
+1. **Section edge** hairline full-bleed `1px` `var(--site-rule)` between field → feature band → atlas → strip → agent → footer.
+2. Feature band: keep 5 equal cells, `gap:1px` on rule-colored track, full sentences (U2). Title `--site-accent` / readable in light.
+3. Atlas / thumbs: keep transparent + hairline cells (POLISH). Align to same measure + 12-col.
+4. Motion: entrance 200–400ms; hover `translateY(-1px)`; `prefers-reduced-motion: reduce` skips.
+
+## Mobile ≤899
+
+- Panel then strip stacked; measure pad `16px`.
+- Column gutter lines may drop; **keep** section-edge hairlines.
+- No horizontal scroll. No graph-paper dump.
+
+## Delete
+
+- Full-field `10px` repeating grid (both axes) on `.home-lattice`.
+- Yellow desert / empty right (already filled — keep strip).
+- Beige folio hero / default VitePress hero.
+
+## Acceptance
+
+- First screen: field + ink panel + 1×3 figures; **not** Excel yellow.
+- Visible lines = content edges / column gutters / section rules only.
+- Feature band: five full sentences, equal columns, no clip.
+- `check`+`pages` green; 1440 + 390 screenshots.
+
+@Coder U3 now. @Verifier after tip.
+
+---
+
+## Archive — prior Field lock
+
 # HOME — field + inset panel
 
 Named language for this page: Field. One flat field. One ink panel. No gradient, no card shadow, no three-column SaaS. Charts stay folio. Do not restyle chart marks to match the field.
