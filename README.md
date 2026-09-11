@@ -16,8 +16,12 @@ Open-source library. Install with npm or a script tag. Any Markdown preview or r
 
 ![MARTA takes the largest mode share](./examples/out/05-pie-raw.svg)
 
-Tags: `chart` | `markvis` | `vis`. Types: bar · line · area · scatter · pie · hist.
+Tags: `chart` | `markvis` | `vis`. Types: bar · line · area · scatter · pie · hist. Optional `theme:` and `palette:` — [SPEC.md](./SPEC.md).
 
-Bake so any image viewer shows the figure: `markvis bake README.md`. One-file script: `packages/browser/dist/markvis.min.js`. Spec · integrate · themes: [docs](./docs/site-copy.md).
+    fence | GFM | HTML comment → @markvis/parser → Chart IR (@markvis/ir)
+         → @markvis/render-svg → SVG
+         → table fallback on error
+
+Bake so any image viewer shows the figure: `markvis bake README.md`. One-file script: `packages/browser/dist/markvis.min.js`. [Spec](./SPEC.md) · [integrate](./docs/integrate.md) · [themes](./docs/themes.md) · [architecture](./docs/architecture.md). Site: [markvis.js.org](https://markvis.js.org).
 
 0.0.13 (frozen): [legacy/](./legacy/). Branch `v2`.

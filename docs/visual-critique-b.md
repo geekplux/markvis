@@ -1,4 +1,6 @@
-# visual-critique B — after Unit B `1479af9`
+# visual-critique B — historical snapshot after Unit B `1479af9`
+
+**Historical.** Not current product law. Live grammar: `SPEC.md` (`theme:` / `palette:`). Live look: `docs/visual-spec.md` + `packages/themes/`.
 
 Method: Ledger autopsy on regenerated SVGs. Measurements from the files. No adjective without a number.
 

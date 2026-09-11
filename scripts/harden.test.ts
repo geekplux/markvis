@@ -222,3 +222,209 @@ describe("no d3 in packages or apps", () => {
     }
   });
 });
+
+function readRepo(rel: string): string {
+  return readFileSync(join(repoRoot, rel), "utf8");
+}
+
+function walkFiles(dir: string, test: (name: string) => boolean, acc: string[] = []): string[] {
+  for (const name of readdirSync(dir)) {
+    if (
+      name === "node_modules" ||
+      name === "dist" ||
+      name === ".vitepress" ||
+      name === "coverage"
+    ) {
+      continue;
+    }
+    const path = join(dir, name);
+    const stat = statSync(path);
+    if (stat.isDirectory()) {
+      walkFiles(path, test, acc);
+      continue;
+    }
+    if (test(name)) {
+      acc.push(path);
+    }
+  }
+  return acc;
+}
+
+function specFieldNotes(spec: string, field: string): string {
+  const row = spec.split("\n").find((line) => line.includes(`| \`${field}\` |`));
+  expect(row, `SPEC.md field row for ${field}`).toBeTruthy();
+  return row ?? "";
+}
+
+function specListedValues(notes: string, skip: readonly string[]): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const match of notes.matchAll(/`([a-z][a-z0-9-]*)`/g)) {
+    const tok = match[1]!;
+    if (skip.includes(tok) || seen.has(tok)) {
+      continue;
+    }
+    seen.add(tok);
+    out.push(tok);
+  }
+  return out;
+}
+
+describe("docs: live grammar, diagrams, unused shims", () => {
+  const spec = readRepo("SPEC.md");
+  const architecturePath = join(repoRoot, "docs/architecture.md");
+
+  it("SPEC.md lists theme and palette allowed values", () => {
+    const themeNotes = specFieldNotes(spec, "theme");
+    const paletteNotes = specFieldNotes(spec, "palette");
+    for (const value of [
+      "folio",
+      "highcharts",
+      "shadcn",
+      "docs",
+      "ant",
+      "recharts",
+    ]) {
+      expect(themeNotes).toContain(value);
+    }
+    for (const value of ["ink", "porcelain", "warm", "cool", "vivid"]) {
+      expect(paletteNotes).toContain(value);
+    }
+  });
+
+  it("current-product grammar docs include SPEC theme and palette values", () => {
+    const themeValues = specListedValues(specFieldNotes(spec, "theme"), [
+      "theme",
+    ]);
+    const paletteValues = specListedValues(specFieldNotes(spec, "palette"), [
+      "palette",
+      "theme",
+    ]);
+    expect(themeValues).toEqual([
+      "folio",
+      "highcharts",
+      "shadcn",
+      "docs",
+      "ant",
+      "recharts",
+    ]);
+    expect(paletteValues).toEqual([
+      "ink",
+      "porcelain",
+      "warm",
+      "cool",
+      "vivid",
+    ]);
+
+    const grammarDocs = [
+      "SPEC.md",
+      "apps/web/spec.md",
+      "apps/web/public/llms.txt",
+      "llms-full.txt",
+      "docs/themes.md",
+      "skills/markvis/SKILL.md",
+    ];
+    for (const rel of grammarDocs) {
+      const text = readRepo(rel);
+      expect(text, `${rel} theme field`).toMatch(/theme/i);
+      expect(text, `${rel} palette field`).toMatch(/palette/i);
+      for (const value of themeValues) {
+        expect(text, `${rel} theme:${value}`).toContain(value);
+      }
+      for (const value of paletteValues) {
+        expect(text, `${rel} palette:${value}`).toContain(value);
+      }
+    }
+  });
+
+  it("live-product specs do not ban theme: as current law", () => {
+    const liveSpecs = [
+      "SPEC.md",
+      "GOAL.md",
+      "docs/visual-spec.md",
+      "docs/gallery-spec.md",
+      "docs/site-visual-spec.md",
+      "docs/designer-language.md",
+      "apps/web/spec.md",
+      "extensions/vscode-markvis-preview/README.md",
+    ];
+    const stale = [
+      /(?:\*\*)?no(?:\*\*)? `theme:`/,
+      /Do \*\*not\*\* add a chart `theme:`/,
+      /No theme field/,
+    ];
+    for (const rel of liveSpecs) {
+      const text = readRepo(rel);
+      for (const pattern of stale) {
+        expect(text, `${rel} ${pattern}`).not.toMatch(pattern);
+      }
+    }
+  });
+
+  it("commits architecture, parse/render workflow, and package-structure diagrams", () => {
+    expect(existsSync(architecturePath)).toBe(true);
+    const architecture = readRepo("docs/architecture.md");
+    expect(architecture).toMatch(/^# /m);
+    expect(architecture).toMatch(/## Architecture/i);
+    expect(architecture).toMatch(/## .*(Workflow|Parse)/i);
+    expect(architecture).toMatch(/## .*(Structure|Packages)/i);
+
+    const mermaid = architecture.match(/```mermaid[\s\S]*?```/g) ?? [];
+    expect(mermaid.length).toBeGreaterThanOrEqual(3);
+    const diagramText = mermaid.join("\n");
+    expect(diagramText).toMatch(/parser/i);
+    expect(diagramText).toMatch(/Chart IR/i);
+    expect(diagramText).toContain("@markvis/ir");
+    expect(diagramText).toContain("@markvis/render-svg");
+    expect(diagramText).toMatch(/table fallback/i);
+    expect(diagramText).toContain("@markvis/parser");
+    expect(diagramText).toContain("@markvis/cli");
+    expect(diagramText).toContain("@markvis/remark");
+    expect(diagramText).toContain("@markvis/markdown-it");
+    expect(diagramText).toContain("@markvis/browser");
+    expect(diagramText).toContain("@markvis/themes");
+    expect(diagramText).not.toMatch(/\b(heatmap|donut|treemap|sankey|vega|echarts|d3)\b/i);
+    expect(diagramText).not.toMatch(/JSON as default/i);
+  });
+
+  it("keeps mermaid out of README, site-copy, and apps/web", () => {
+    const forbidden = [
+      join(repoRoot, "README.md"),
+      join(repoRoot, "docs/site-copy.md"),
+      ...walkFiles(join(repoRoot, "apps/web"), (name) =>
+        /\.(md|vue|ts|css|html)$/.test(name),
+      ),
+    ];
+    expect(forbidden.length).toBeGreaterThan(2);
+    for (const file of forbidden) {
+      const text = readFileSync(file, "utf8");
+      expect(text, relative(repoRoot, file)).not.toMatch(/mermaid/i);
+    }
+  });
+
+  it("removes unreferenced render-svg theme shims and keeps constitution paths", () => {
+    expect(existsSync(join(repoRoot, "packages/render-svg/themes"))).toBe(
+      false,
+    );
+    const kept = [
+      "CONSTITUTION.md",
+      "VISION.md",
+      "GOAL.md",
+      "AGENTS.md",
+      "STATUS.md",
+      "DECISIONS.tsv",
+      "SPEC.md",
+      "llms.txt",
+      "llms-full.txt",
+      "docs/landing.md",
+      "docs/research-brief.md",
+      "docs/model-errors.md",
+      "docs/best-practices.md",
+      "packages/compat-legacy",
+      "legacy",
+    ];
+    for (const rel of kept) {
+      expect(existsSync(join(repoRoot, rel)), rel).toBe(true);
+    }
+  });
+});

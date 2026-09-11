@@ -3,7 +3,7 @@
 ## Locked
 - Docs engine: VitePress only (not docsify/Docusaurus/Starlight/Mintlify)
 - Gallery north star: https://www.highcharts.com/demo density (grid of small charts, click to enlarge). Do not steal new chart families, 3D, stock, gauges, maps, JS animation as product.
-- Language frozen: chart|markvis|vis and bar|line|area|scatter|pie|hist. No theme field. One default look.
+- Language frozen: chart|markvis|vis and bar|line|area|scatter|pie|hist. Optional `theme:` / `palette:` per SPEC.md (default folio). No 7th type.
 - No npm latest / 2.0.0 stable. Alpha only if GeekPlux says after site live.
 - master stays 0.0.13. GitHub Pages must build FROM v2.
 - Replace markvis.js.org (today docsify on master). markvis-editor.js.org untouched; homepage links to /play.

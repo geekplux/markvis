@@ -1,4 +1,6 @@
-# visual-critique C — after transparent Ledger `11b6d26`
+# visual-critique C — historical snapshot after transparent Ledger `11b6d26`
+
+**Historical.** Not current product law. Live grammar: `SPEC.md` (`theme:` / `palette:`). Live look: `docs/visual-spec.md` + `packages/themes/`.
 
 Method: Ledger autopsy on regenerated SVGs. Measurements from the files. No adjective without a number.
 

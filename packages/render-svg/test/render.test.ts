@@ -1315,7 +1315,6 @@ describe("source discipline", () => {
     const repoRoot = join(here, "../../..");
     const dirs = [
       join(here, "../src"),
-      join(here, "../themes"),
       join(repoRoot, "packages/themes"),
       join(repoRoot, "packages/themes/folio"),
       join(repoRoot, "packages/themes/highcharts"),

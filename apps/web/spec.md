@@ -48,7 +48,7 @@ Progressive form — comment immediately followed by a GFM table:
 | Mar | 150 |
 ```
 
-Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`. Same meaning as fence headers.
+Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`. Same meaning as fence headers.
 
 ## Fields
 
@@ -57,7 +57,8 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`. Same meani
 | `markvis` | no | `2` | Language version. |
 | `type` | yes | — | `bar` \| `line` \| `area` \| `scatter` \| `pie` \| `hist` only. |
 | `title` | no | derived | Conclusion title when present. |
-| `theme` | no | `folio` | `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts`. |
+| `theme` | no | `folio` | Grammar only: `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts`. |
+| `palette` | no | theme default | Colors only: `ink` \| `porcelain` \| `warm` \| `cool` \| `vivid`. Omit → theme pack colors. |
 | `unit` | no | — | Display suffix for values. |
 | `x` | typed | first category / numeric col | Independent axis or labels. |
 | `y` | typed | first numeric col | Measure. |
@@ -100,7 +101,12 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`. Same meani
 | `E_YAML_TABLE_CONFLICT` | Header fields disagree with progressive table mapping. |
 | `E_EMPTY_FENCE` | Fence body empty. |
 | `E_UNKNOWN_THEME` | `theme` not in the allowed set. |
+| `E_UNKNOWN_PALETTE` | `palette` not in `ink` \| `porcelain` \| `warm` \| `cool` \| `vivid`. |
 
 ## Themes
 
 Optional `theme:` selects a named grammar pack. See [Themes](/themes). Unknown → `E_UNKNOWN_THEME` with table fallback.
+
+Optional `palette:` selects colors only (`ink` · `porcelain` · `warm` · `cool` · `vivid`). Omit → theme pack default colors. Unknown → `E_UNKNOWN_PALETTE` with table fallback. Never merge palette into the theme id.
+
+Pipeline diagrams live in repo `docs/architecture.md` (architecture, parse/render workflow, package structure). This page stays prose so public sources stay free of competitor diagram fences.

@@ -1,6 +1,6 @@
 # gallery-spec — `/examples` (Highcharts density, Ledger figures)
 
-Language for **figures** stays **Ledger** (`docs/designer-language.md`, `docs/visual-spec.md`): transparent SVG, conclusion titles, six types, no `theme:`.
+Language for **figures** follows the fence `theme:` / `palette:` (`SPEC.md`). Default `folio` is Ledger (`docs/designer-language.md`, `docs/visual-spec.md`): transparent SVG, conclusion titles, six types. Gallery chrome may filter by theme and palette; it does not invent a seventh type.
 
 This file specifies only the **gallery chrome** — the page that shows many figures. Steal from [Highcharts demos](https://www.highcharts.com/demo): dense grid of finished small charts, click → large, variation within a type. Do **not** steal: new families, 3D, stock, gauges, maps, animation-as-product.
 

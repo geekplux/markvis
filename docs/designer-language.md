@@ -24,7 +24,7 @@ The host is Markdown. The canvas stays transparent so the article background sho
 7. **Three type grades:** title 17 / 600 ink · unit 12 / 400 quiet · value 11 / 500 ink · tick 10 / 400 quiet. No fourth grade. No axis-name layer when the title already names the measure.
 8. **Corner rule:** square frame and axes. Radius only on the data mark — bar tops `rx = 3`. No card radius.
 9. **Plot share & titles:** data region owns ≥55% of frame height; grow height to 640 before crushing the plot. Horizontal grid ≤3 lines (never the baseline). Titles state a conclusion the reader can take home — never the chart type, never a bare noun that only repeats the y-field.
-10. **Ornament budget zero.** Ban: paper / full-frame canvas fill, `theme:` / dark mode / second worlds, vertical grids, axis boxes, tick lines, gradients, shadows, glow, rainbow defaults, chart-type titles, dual encoding (full y-grid + every value label on n≤6), color legends when end-labels fit, fat bars that exist to fill the canvas, HTML posters, animation, d3, spline interpolation.
+10. **Ornament budget zero.** Ban: paper / full-frame canvas fill, dark-mode canvas on Ledger, painted second worlds, vertical grids, axis boxes, tick lines, gradients, shadows, glow, rainbow defaults, chart-type titles, dual encoding (full y-grid + every value label on n≤6), color legends when end-labels fit, fat bars that exist to fill the canvas, HTML posters, animation, d3, spline interpolation. Named `theme:` packs (`folio` default = Ledger) and `palette:` color tables live in `SPEC.md` / `packages/themes/`.
 
 ## Self-intro
 
@@ -32,4 +32,4 @@ I make editorial figures that sit in Markdown. The canvas is transparent — the
 
 ## Closed
 
-Transparent canvas is locked. No hedges. If a later pass needs a second world, it is a different language with a different name — not a `theme:` field on Ledger.
+Transparent canvas is locked on Ledger (the `folio` pack). Other named `theme:` values are grammar packs in `packages/themes/` — they do not paint a second canvas onto Ledger.

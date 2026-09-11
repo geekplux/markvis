@@ -11,12 +11,14 @@
 U5 done: theme = grammar, palette = colors; PALETTES.md; Play+Examples two controls; snaps folio+ink / folio+vivid / highcharts+ink.
 U6 done: plot fill transparent across packs; HC/shadcn/ant/recharts keep plot stroke only; no opaque data-plot-bg; enhance tip shape per theme.
 U7 done: examples-data.md lock — 52 gallery fences with conclusion stories, densified 01–06/09 (+08=01), regen theme/home SVGs; keep U5 palettes + U6 transparent plots.
+Docs refresh: live grammar includes `theme:` + `palette:`; diagrams in `docs/architecture.md`; unused `packages/render-svg/themes` shims removed.
 
 ## Hour order
 C1 ✓ → C2 ✓ → C3 ✓ → C4 ✓ → C5 ✓ → C6 ✓ playground switcher → C7 mobile 390 → C8 homepage from site-copy.md → C9 examples theme toggle → C10 launch kit → U1–U4 ✓ → U5 ✓ → U6 ✓ → U7 ✓
 
 ## Commands
-pnpm test
-pnpm markvis check examples/valid
-pnpm markvis check examples/invalid
-pnpm --filter playground build
+pnpm test                                    # exit 0  (530 passed)
+pnpm markvis check examples/valid            # exit 0  (52 ok)
+pnpm markvis check examples/invalid          # exit 1  (0 ok, 20 error)  # required non-zero
+pnpm --filter web build                      # exit 0
+pnpm --filter playground build               # skipped (playground files unchanged)

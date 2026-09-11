@@ -2,6 +2,18 @@
 
 Tiny versioned chart language for Markdown. Source is tabular data. Path: fence | GFM table | HTML comment → parser → Chart IR → deterministic SVG (table always kept). Tags `chart`, `markvis`, `vis` share one parser. No JSON-as-default. No JS in the fence. No d3 to parse.
 
+    fence | GFM table | HTML comment
+            ↓
+       @markvis/parser
+            ↓
+     Chart IR (@markvis/ir)
+            ↓
+     @markvis/render-svg  →  SVG
+            ↘
+          table fallback
+
+Diagrams: `docs/architecture.md` (architecture, parse/render workflow, package structure).
+
 This SPEC is the seed for `examples/`. The eight fences below must land verbatim as valid fixtures; do not invent a second copy in docs.
 
 ## Grammar

@@ -39,4 +39,4 @@ extensions/vscode-markvis-preview — Markdown preview renders chart / markvis /
 
 - Waiting for github.com to add native markvis fences
 - Docusaurus adapter (skipped for now — use bake or the browser drop-in; MDX surface is not cheap)
-- A second theme field, new chart types, or d3 in packages/ or apps/
+- New chart types, JSON-as-default data, or d3 in packages/ or apps/

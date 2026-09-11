@@ -2,7 +2,7 @@
 
 Language: **Ledger** (`docs/designer-language.md`). Critique: `docs/visual-critique.md`.
 
-Constraints: static deterministic SVG · six types only · **no** `theme:` · **no** HTML poster · **no** animation · **no** d3 · implement only in `packages/render-svg` · regenerate `examples/out/*` + `examples/gallery.html` · update vitest snapshots in the same unit.
+Constraints: static deterministic SVG · six types only · optional fence `theme:` / `palette:` per `SPEC.md` (this file is the `folio` / Ledger look) · **no** HTML poster · **no** animation · **no** d3 · implement in `packages/render-svg` with tokens from `@markvis/themes` · regenerate `examples/out/*` + `examples/gallery.html` · update vitest snapshots in the same unit.
 
 Fixture sources for 01 / 02 / 05 / 09 / 17 may receive **title-only** edits so the IR title is a conclusion (never a chart-type word). No other product escape hatches.
 
@@ -152,7 +152,7 @@ Keep title, desc, role=img, labelledby/describedby, data-markvis, stable ids, se
 
 ## Out of scope
 
-`theme:`, dark mode, paper / full-frame canvas fill, animation, tooltips, new types, marketing chrome, HTML posters, d3, vertical grids, axis boxes, tick lines, spline interpolation.
+Dark mode canvas, paper / full-frame canvas fill, animation, tooltips, new types, marketing chrome, HTML posters, d3, vertical grids, axis boxes, tick lines, spline interpolation. Named `theme:` / `palette:` values are grammar in `SPEC.md` and packs in `packages/themes/` — not a second canvas painted onto Ledger.
 
 ## Done when
 

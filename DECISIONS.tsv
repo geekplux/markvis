@@ -78,3 +78,4 @@ date	wave	decision
 2026-09-11	hour	U5: theme=grammar packs; palette=ink|porcelain|warm|cool|vivid color tables; omit→theme defaults; unknown→E_UNKNOWN_PALETTE; Play+Examples two controls; snaps folio+ink/folio+vivid/highcharts+ink; no merge main; no 7th type; no chart runtimes
 2026-09-11	hour	U6: plot fill transparent (PLOT_BG null); HC/shadcn/ant/recharts keep PLOT_BORDER stroke-only; no opaque data-plot-bg wallpaper; browser tip shape polish; keep U5 palettes; no new types
 2026-09-11	hour	U7: examples-data.md Writer lock; replace 52 gallery fences (story→title, real units, densified 01–06/09/08); regen out/themes+home; no competitor names; no 7th type; no merge main
+2026-09-11	hour	docs: live grammar theme+palette; architecture/workflow/structure diagrams in docs/architecture.md; drop unused packages/render-svg/themes shims; no 7th type; no mermaid on README/site-copy/apps/web

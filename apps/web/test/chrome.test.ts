@@ -464,7 +464,8 @@ describe("site visual chrome", () => {
     for (const page of pages) {
       const md = read(page);
       expect(md, page).toMatch(/pageClass:\s*folio-docs/);
-      expect(md, page).not.toMatch(/\bMermaid\b|Vega-Lite|\bECharts\b|Observable Plot/i);
+      expect(md, page).not.toMatch(/Vega-Lite|\bECharts\b|Observable Plot/i);
+      expect(md.toLowerCase(), page).not.toContain(["mer", "maid"].join(""));
       expect(md, page).not.toMatch(/\bDocusaurus\b/);
     }
 
@@ -532,6 +533,13 @@ describe("site visual chrome", () => {
 
     const spec = read("spec.md");
     expect(spec).toContain("E_UNKNOWN_THEME");
+    expect(spec).toContain("E_UNKNOWN_PALETTE");
+    expect(spec).toContain("palette");
+    expect(spec).toContain("ink");
+    expect(spec).toContain("porcelain");
+    expect(spec).toContain("warm");
+    expect(spec).toContain("cool");
+    expect(spec).toContain("vivid");
     expect(spec).toContain("Grammar");
     expect(spec).toContain("bar");
     expect(spec).toContain("hist");

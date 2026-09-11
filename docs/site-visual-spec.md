@@ -1,7 +1,7 @@
 # site-visual-spec — public markvis.js.org chrome
 
 Scope: **the website** (VitePress layout, home, `/examples` cards, `/play` chrome).
-Figures stay **Ledger** (`docs/visual-spec.md`). Do **not** add a chart `theme:`. Do **not** restyle SVG marks to match marketing — if a plot clips, **fix the card**, not the chart language.
+Figures follow the fence `theme:` / `palette:` (default `folio` = Ledger in `docs/visual-spec.md`). Do **not** restyle SVG marks to match marketing — if a plot clips, **fix the card**, not the chart language.
 
 Public voice (Writer owns words; this file owns placement): markvis is charts in Markdown. The fence is the data. **No Mermaid** on public surfaces.
 

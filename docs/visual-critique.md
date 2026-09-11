@@ -1,4 +1,6 @@
-# visual-critique — current `v2` @ `bb73178` (pre-rewrite)
+# visual-critique — historical snapshot `v2` @ `bb73178` (pre-rewrite)
+
+**Historical.** Not current product law. Live grammar: `SPEC.md` (`theme:` / `palette:`). Live look: `docs/visual-spec.md` + `packages/themes/`.
 
 Method: Ledger autopsy. Measurements from the SVG. No adjective without a number.
 
