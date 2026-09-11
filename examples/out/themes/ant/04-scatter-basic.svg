@@ -1,33 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="scatter chart: Weight rises with height, 3 rows" aria-labelledby="mv-39f4c903b9abd5fd-title" aria-describedby="mv-39f4c903b9abd5fd-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-39f4c903b9abd5fd" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
-  <title id="mv-39f4c903b9abd5fd-title">Weight rises with height</title>
-  <desc id="mv-39f4c903b9abd5fd-desc">scatter chart. Weight rises with height. x=height_cm. y=weight_kg. 3 rows.</desc>
-  <text x="66" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Weight rises with height</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="scatter chart: Closer Beltline commute, higher rent_index, 12 rows" aria-labelledby="mv-fbbfb28a7e00b67e-title" aria-describedby="mv-fbbfb28a7e00b67e-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-fbbfb28a7e00b67e" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-fbbfb28a7e00b67e-title">Closer Beltline commute, higher rent_index</title>
+  <desc id="mv-fbbfb28a7e00b67e-desc">scatter chart. Closer Beltline commute, higher rent_index. x=commute_min. y=rent_index. 12 rows.</desc>
+  <text x="66" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Closer Beltline commute, higher rent_index</text>
   <rect x="66" y="46" width="640" height="333" fill="#ffffff" data-plot-bg="1"/>
   <rect x="66" y="46" width="640" height="333" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
   <g fill="none" stroke="#000000" stroke-opacity="0.16" stroke-width="1">
-    <line x1="66" x2="706" y1="268" y2="268"/>
-    <line x1="66" x2="706" y1="157" y2="157"/>
+    <line x1="66" x2="706" y1="312.4" y2="312.4"/>
+    <line x1="66" x2="706" y1="245.8" y2="245.8"/>
+    <line x1="66" x2="706" y1="112.6" y2="112.6"/>
     <line x1="66" x2="706" y1="46" y2="46"/>
   </g>
   <path d="M66 379 L706 379" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
   <g fill="#8C8C8C" font-size="11" font-weight="400">
-    <text x="58" y="379" text-anchor="end" dominant-baseline="middle">50</text>
-    <text x="58" y="268" text-anchor="end" dominant-baseline="middle">60</text>
-    <text x="58" y="157" text-anchor="end" dominant-baseline="middle">70</text>
-    <text x="58" y="46" text-anchor="end" dominant-baseline="middle">80</text>
-    <text x="74" y="390" text-anchor="middle" font-size="11" data-full-label="150">150</text>
-    <text x="230" y="390" text-anchor="middle" font-size="11" data-full-label="160">160</text>
-    <text x="386" y="390" text-anchor="middle" font-size="11" data-full-label="170">170</text>
-    <text x="542" y="390" text-anchor="middle" font-size="11" data-full-label="180">180</text>
-    <text x="698" y="390" text-anchor="middle" font-size="11" data-full-label="190">190</text>
+    <text x="58" y="379" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="58" y="312.4" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="58" y="245.8" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="58" y="179.2" text-anchor="end" dominant-baseline="middle">120</text>
+    <text x="58" y="112.6" text-anchor="end" dominant-baseline="middle">140</text>
+    <text x="58" y="46" text-anchor="end" dominant-baseline="middle">160</text>
+    <text x="74" y="390" text-anchor="middle" font-size="11" data-full-label="0">0</text>
+    <text x="282" y="390" text-anchor="middle" font-size="11" data-full-label="20">20</text>
+    <text x="490" y="390" text-anchor="middle" font-size="11" data-full-label="40">40</text>
+    <text x="698" y="390" text-anchor="middle" font-size="11" data-full-label="60">60</text>
   </g>
   <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="44" y="212.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 44 212.5)" data-axis="y">weight_kg</text>
-    <text x="386" y="406" text-anchor="middle" dominant-baseline="hanging" data-axis="x">height_cm</text>
+    <text x="44" y="212.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 44 212.5)" data-axis="y">rent_index</text>
+    <text x="386" y="406" text-anchor="middle" dominant-baseline="hanging" data-axis="x">commute_min</text>
   </g>
   <g>
-    <circle cx="230" cy="323.5" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="160" data-y="55" data-series="weight_kg"/>
-    <circle cx="464" cy="157" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="175" data-y="70" data-series="weight_kg"/>
-    <circle cx="573.2" cy="68.2" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="182" data-y="78" data-series="weight_kg"/>
+    <circle cx="157.2" cy="105.94" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="8" data-y="142" data-series="rent_index"/>
+    <circle cx="198.8" cy="119.26" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="12" data-y="138" data-series="rent_index"/>
+    <circle cx="230" cy="142.57" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="15" data-y="131" data-series="rent_index"/>
+    <circle cx="261.2" cy="152.56" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="18" data-y="128" data-series="rent_index"/>
+    <circle cx="302.8" cy="175.87" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="22" data-y="121" data-series="rent_index"/>
+    <circle cx="334" cy="185.86" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="25" data-y="118" data-series="rent_index"/>
+    <circle cx="365.2" cy="205.84" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="28" data-y="112" data-series="rent_index"/>
+    <circle cx="406.8" cy="219.16" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="32" data-y="108" data-series="rent_index"/>
+    <circle cx="438" cy="239.14" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="35" data-y="102" data-series="rent_index"/>
+    <circle cx="490" cy="259.12" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="40" data-y="96" data-series="rent_index"/>
+    <circle cx="542" cy="275.77" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="45" data-y="91" data-series="rent_index"/>
+    <circle cx="614.8" cy="299.08" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="52" data-y="84" data-series="rent_index"/>
   </g>
 </svg>

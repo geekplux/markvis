@@ -122,7 +122,7 @@ describe("check", () => {
   it("exits 0 for a valid file", () => {
     const { code, stdout, stderr } = capture(["check", valid01]);
     expect(code).toBe(0);
-    expect(stdout).toContain(`ok\t${valid01}\tbar\t3`);
+    expect(stdout).toContain(`ok\t${valid01}\tbar\t8`);
     expect(stderr).toContain("1 ok");
   });
 
@@ -160,19 +160,19 @@ describe("stats", () => {
     const { code, stdout } = capture(["stats", valid01]);
     expect(code).toBe(0);
     expect(stdout).toContain("file\ttype\tn\tmin\tmax\tseries");
-    expect(stdout).toContain(`${valid01}\tbar\t3\t120\t180\t-`);
+    expect(stdout).toContain(`${valid01}\tbar\t8\t190\t410\t-`);
   });
 
   it("prints the series column and y min/max for multi-series", () => {
     const { code, stdout } = capture(["stats", valid02]);
     expect(code).toBe(0);
-    expect(stdout).toContain(`${valid02}\tline\t4\t12\t55\tplan`);
+    expect(stdout).toContain(`${valid02}\tline\t24\t28\t64\tchannel`);
   });
 
   it("uses x for hist min/max", () => {
     const { code, stdout } = capture(["stats", valid06]);
     expect(code).toBe(0);
-    expect(stdout).toContain(`${valid06}\thist\t6\t12\t42\t-`);
+    expect(stdout).toContain(`${valid06}\thist\t18\t11\t44\t-`);
   });
 
   it("exits non-zero on invalid input", () => {
@@ -191,9 +191,9 @@ describe("stats", () => {
     }
     expect(chartStats(result.chart)).toEqual({
       type: "bar",
-      n: 3,
-      min: 120,
-      max: 180,
+      n: 8,
+      min: 190,
+      max: 410,
       series: "-",
     });
   });
@@ -203,10 +203,10 @@ describe("to-table", () => {
   it("prints a GFM table for a valid chart", () => {
     const { code, stdout } = capture(["to-table", valid01]);
     expect(code).toBe(0);
-    expect(stdout).toContain("| month | revenue |");
+    expect(stdout).toContain("| month | tickets |");
     expect(stdout).toContain("| --- | --- |");
-    expect(stdout).toContain("| Jan | 120 |");
-    expect(stdout).toContain("| Mar | 150 |");
+    expect(stdout).toContain("| Dec | 410 |");
+    expect(stdout).toContain("| Mar | 265 |");
     expect(stdout).not.toMatch(/E_/);
   });
 
@@ -304,7 +304,7 @@ describe("preview", () => {
     expect(html).toContain("preview-layout");
     expect(html).toContain("type: bar");
     expect(html).toContain("<svg ");
-    expect(html).toContain("Feb led Q3 at 180");
+    expect(html).toContain("Dec led Midtown box office at 410 tickets");
     expect(html).toContain("<table");
     expect(html).toContain("Jan");
   });
@@ -540,6 +540,6 @@ describe("bin", () => {
       { cwd: repoRoot, encoding: "utf8" },
     );
     expect(result.status).toBe(0);
-    expect(result.stdout).toContain(`ok\t${valid01}\tbar\t3`);
+    expect(result.stdout).toContain(`ok\t${valid01}\tbar\t8`);
   });
 });

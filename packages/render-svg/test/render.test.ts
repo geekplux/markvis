@@ -443,8 +443,8 @@ describe("highcharts tokens", () => {
     }
     const committed = readFileSync(outPath, "utf8");
     expect(svg).toBe(committed);
-    expect(committed).toContain('data-legend="free"');
-    expect(committed).toContain('data-legend="pro"');
+    expect(committed).toContain('data-legend="walk-up"');
+    expect(committed).toContain('data-legend="member"');
     expect(committed).toContain('data-plot-border="1"');
     expect(committed).not.toContain("data-end-label");
     expect(committed).toContain('r="3.5"');
@@ -600,7 +600,7 @@ describe("shadcn tokens", () => {
     }
     const committed = readFileSync(outPath, "utf8");
     expect(svg).toBe(committed);
-    expect(committed).toContain('data-legend="free"');
+    expect(committed).toContain('data-legend="walk-up"');
     expect(committed).toContain('data-plot-border="1"');
     expect(committed).not.toContain("data-end-label");
     expect(committed).toContain('r="3.5"');
@@ -710,7 +710,7 @@ describe("ant tokens", () => {
     }
     const committed = readFileSync(outPath, "utf8");
     expect(svg).toBe(committed);
-    expect(committed).toContain('data-legend="free"');
+    expect(committed).toContain('data-legend="walk-up"');
     expect(committed).not.toContain("data-end-label");
   });
 
@@ -906,7 +906,7 @@ describe("recharts tokens", () => {
     }
     const committed = readFileSync(outPath, "utf8");
     expect(svg).toBe(committed);
-    expect(committed).toContain('data-legend="free"');
+    expect(committed).toContain('data-legend="walk-up"');
     expect(committed).not.toContain("data-end-label");
     expect(committed).toContain('data-v-grid="1"');
   });
@@ -959,7 +959,7 @@ function pieChart(theme: ChartIR["theme"]): ChartIR {
   return ChartIRSchema.parse({
     markvis: 2,
     type: "pie",
-    title: "A leads at 40",
+    title: "MARTA leads Midtown mode share at 38",
     theme,
     x: "name",
     y: "value",

@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="line chart: Free still leads pro, 4 rows, series plan" aria-labelledby="mv-8c6df151fda9c0b6-title" aria-describedby="mv-8c6df151fda9c0b6-desc" data-markvis="2" data-chart-type="line" data-id="mv-8c6df151fda9c0b6" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-8c6df151fda9c0b6-title">Free still leads pro</title>
-  <desc id="mv-8c6df151fda9c0b6-desc">line chart. Free still leads pro. x=month. y=count. series=plan. 4 rows.</desc>
-  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">Free still leads pro</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="line chart: Member overtook walk-up after W8, 24 rows, series channel" aria-labelledby="mv-73e329433e022533-title" aria-describedby="mv-73e329433e022533-desc" data-markvis="2" data-chart-type="line" data-id="mv-73e329433e022533" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-73e329433e022533-title">Member overtook walk-up after W8</title>
+  <desc id="mv-73e329433e022533-desc">line chart. Member overtook walk-up after W8. x=week. y=count. series=channel. 24 rows.</desc>
+  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">Member overtook walk-up after W8</text>
   <g font-size="12" font-weight="500" fill="#0A0A0A">
     <rect x="48" y="31" width="10" height="10" fill="#F54900" rx="1"/>
-    <text x="62" y="40" data-legend="free">free</text>
-    <rect x="107.76" y="31" width="10" height="10" fill="#009689" rx="1"/>
-    <text x="121.76" y="40" data-legend="pro">pro</text>
+    <text x="62" y="40" data-legend="walk-up">walk-up</text>
+    <rect x="130.08" y="31" width="10" height="10" fill="#009689" rx="1"/>
+    <text x="144.08" y="40" data-legend="member">member</text>
   </g>
   <rect x="48" y="60" width="652" height="377" fill="#ffffff" data-plot-bg="1"/>
   <rect x="48" y="60" width="652" height="377" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
@@ -16,19 +16,49 @@
   </g>
   <path d="M48 437 L700 437" fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1"/>
   <g fill="#737373" font-size="11" font-weight="400">
-    <text x="40" y="437" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="40" y="311.33" text-anchor="end" dominant-baseline="middle">20</text>
-    <text x="40" y="185.67" text-anchor="end" dominant-baseline="middle">40</text>
-    <text x="40" y="60" text-anchor="end" dominant-baseline="middle">60</text>
-    <text x="211" y="448" text-anchor="middle" font-size="11" data-full-label="Jan">Jan</text>
-    <text x="537" y="448" text-anchor="middle" font-size="11" data-full-label="Feb">Feb</text>
+    <text x="40" y="437" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="40" y="311.33" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="40" y="185.67" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="40" y="60" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="75.17" y="448" text-anchor="middle" font-size="11" data-full-label="W1">W1</text>
+    <text x="129.5" y="448" text-anchor="middle" font-size="11" data-full-label="W2">W2</text>
+    <text x="183.83" y="448" text-anchor="middle" font-size="11" data-full-label="W3">W3</text>
+    <text x="238.17" y="448" text-anchor="middle" font-size="11" data-full-label="W4">W4</text>
+    <text x="292.5" y="448" text-anchor="middle" font-size="11" data-full-label="W5">W5</text>
+    <text x="346.83" y="448" text-anchor="middle" font-size="11" data-full-label="W6">W6</text>
+    <text x="401.17" y="448" text-anchor="middle" font-size="11" data-full-label="W7">W7</text>
+    <text x="455.5" y="448" text-anchor="middle" font-size="11" data-full-label="W8">W8</text>
+    <text x="509.83" y="448" text-anchor="middle" font-size="11" data-full-label="W9">W9</text>
+    <text x="564.17" y="448" text-anchor="middle" font-size="11" data-full-label="W10">W10</text>
+    <text x="618.5" y="448" text-anchor="middle" font-size="11" data-full-label="W11">W11</text>
+    <text x="672.83" y="448" text-anchor="middle" font-size="11" data-full-label="W12">W12</text>
   </g>
   <g fill="none">
-    <path d="M211 185.67 L537 91.42" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="free"/>
-    <circle cx="211" cy="185.67" r="3.5" fill="#F54900" stroke="none" data-series="free"/>
-    <circle cx="537" cy="91.42" r="3.5" fill="#F54900" stroke="none" data-series="free"/>
-    <path d="M211 361.6 L537 323.9" fill="none" stroke="#009689" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="pro"/>
-    <circle cx="211" cy="361.6" r="3.5" fill="#009689" stroke="none" data-series="pro"/>
-    <circle cx="537" cy="323.9" r="3.5" fill="#009689" stroke="none" data-series="pro"/>
+    <path d="M75.17 298.77 L129.5 279.92 L183.83 261.07 L238.17 286.2 L292.5 242.22 L346.83 267.35 L401.17 254.78 L455.5 273.63 L509.83 292.48 L564.17 305.05 L618.5 317.62 L672.83 311.33" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="walk-up"/>
+    <circle cx="75.17" cy="298.77" r="3.5" fill="#F54900" stroke="none" data-series="walk-up"/>
+    <circle cx="129.5" cy="279.92" r="3.5" fill="#F54900" stroke="none" data-series="walk-up"/>
+    <circle cx="183.83" cy="261.07" r="3.5" fill="#F54900" stroke="none" data-series="walk-up"/>
+    <circle cx="238.17" cy="286.2" r="3.5" fill="#F54900" stroke="none" data-series="walk-up"/>
+    <circle cx="292.5" cy="242.22" r="3.5" fill="#F54900" stroke="none" data-series="walk-up"/>
+    <circle cx="346.83" cy="267.35" r="3.5" fill="#F54900" stroke="none" data-series="walk-up"/>
+    <circle cx="401.17" cy="254.78" r="3.5" fill="#F54900" stroke="none" data-series="walk-up"/>
+    <circle cx="455.5" cy="273.63" r="3.5" fill="#F54900" stroke="none" data-series="walk-up"/>
+    <circle cx="509.83" cy="292.48" r="3.5" fill="#F54900" stroke="none" data-series="walk-up"/>
+    <circle cx="564.17" cy="305.05" r="3.5" fill="#F54900" stroke="none" data-series="walk-up"/>
+    <circle cx="618.5" cy="317.62" r="3.5" fill="#F54900" stroke="none" data-series="walk-up"/>
+    <circle cx="672.83" cy="311.33" r="3.5" fill="#F54900" stroke="none" data-series="walk-up"/>
+    <path d="M75.17 386.73 L129.5 367.88 L183.83 349.03 L238.17 323.9 L292.5 305.05 L346.83 279.92 L401.17 261.07 L455.5 235.93 L509.83 217.08 L564.17 198.23 L618.5 179.38 L672.83 160.53" fill="none" stroke="#009689" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="member"/>
+    <circle cx="75.17" cy="386.73" r="3.5" fill="#009689" stroke="none" data-series="member"/>
+    <circle cx="129.5" cy="367.88" r="3.5" fill="#009689" stroke="none" data-series="member"/>
+    <circle cx="183.83" cy="349.03" r="3.5" fill="#009689" stroke="none" data-series="member"/>
+    <circle cx="238.17" cy="323.9" r="3.5" fill="#009689" stroke="none" data-series="member"/>
+    <circle cx="292.5" cy="305.05" r="3.5" fill="#009689" stroke="none" data-series="member"/>
+    <circle cx="346.83" cy="279.92" r="3.5" fill="#009689" stroke="none" data-series="member"/>
+    <circle cx="401.17" cy="261.07" r="3.5" fill="#009689" stroke="none" data-series="member"/>
+    <circle cx="455.5" cy="235.93" r="3.5" fill="#009689" stroke="none" data-series="member"/>
+    <circle cx="509.83" cy="217.08" r="3.5" fill="#009689" stroke="none" data-series="member"/>
+    <circle cx="564.17" cy="198.23" r="3.5" fill="#009689" stroke="none" data-series="member"/>
+    <circle cx="618.5" cy="179.38" r="3.5" fill="#009689" stroke="none" data-series="member"/>
+    <circle cx="672.83" cy="160.53" r="3.5" fill="#009689" stroke="none" data-series="member"/>
   </g>
 </svg>

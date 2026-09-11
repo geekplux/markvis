@@ -1,13 +1,14 @@
 ```chart
-markvis: 2
 type: pie
 theme: ant
-title: Shares stay raw
-x: slice
-y: value
+title: MARTA leads Midtown mode share at 38
+x: mode
+y: count
 
-slice,value
-A,40
-B,35
-C,30
+mode,count
+MARTA,38
+Walk,24
+Drive,22
+Bike,11
+Other,8
 ```

@@ -42,9 +42,9 @@ Five columns. Title is locked. Line under each is this copy.
 
 Proof only, if kept. Folio, uncropped. One caption each. Not in the panel. No fence sample in the panel.
 
-1. Feb led Q3 — `examples/out/01-bar-basic.svg`
-2. Pro pulled ahead — `examples/out/02-line-multi.svg`
-3. Shares stay raw — `examples/out/05-pie-raw.svg`
+1. Dec led Midtown box office — `examples/out/01-bar-basic.svg`
+2. Member overtook walk-up — `examples/out/02-line-multi.svg`
+3. MARTA leads Midtown mode share — `examples/out/05-pie-raw.svg`
 
 ## Footer
 

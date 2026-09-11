@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="area chart: Week 2 led pipeline at 11, 3 rows" aria-labelledby="mv-3667a70e5f5bd18b-title" aria-describedby="mv-3667a70e5f5bd18b-desc" data-markvis="2" data-chart-type="area" data-id="mv-3667a70e5f5bd18b" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-3667a70e5f5bd18b-title">Week 2 led pipeline at 11</title>
-  <desc id="mv-3667a70e5f5bd18b-desc">area chart. Week 2 led pipeline at 11. x=week. y=deals. 3 rows.</desc>
-  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">Week 2 led pipeline at 11</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="area chart: D7 held the Midtown queue peak at 28 (holds), 10 rows" aria-labelledby="mv-e0ea0393533533a8-title" aria-describedby="mv-e0ea0393533533a8-desc" data-markvis="2" data-chart-type="area" data-id="mv-e0ea0393533533a8" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-e0ea0393533533a8-title">D7 held the Midtown queue peak at 28</title>
+  <desc id="mv-e0ea0393533533a8-desc">area chart. D7 held the Midtown queue peak at 28. x=day. y=holds. unit=holds. 10 rows.</desc>
+  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">D7 held the Midtown queue peak at 28<tspan font-size="12" font-weight="400" fill="#737373"> · holds</tspan></text>
   <rect x="48" y="36" width="652" height="401" fill="#ffffff" data-plot-bg="1"/>
   <rect x="48" y="36" width="652" height="401" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
   <g fill="none" stroke="#0A0A0A" stroke-opacity="0.06" stroke-width="1">
@@ -11,20 +11,32 @@
   <path d="M48 437 L700 437" fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1"/>
   <g fill="#737373" font-size="11" font-weight="400">
     <text x="40" y="437" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="40" y="303.33" text-anchor="end" dominant-baseline="middle">5</text>
-    <text x="40" y="169.67" text-anchor="end" dominant-baseline="middle">10</text>
-    <text x="40" y="36" text-anchor="end" dominant-baseline="middle">15</text>
-    <text x="56" y="448" text-anchor="middle" font-size="11" data-full-label="0">0</text>
-    <text x="215" y="448" text-anchor="middle" font-size="11" data-full-label="1">1</text>
-    <text x="374" y="448" text-anchor="middle" font-size="11" data-full-label="2">2</text>
-    <text x="533" y="448" text-anchor="middle" font-size="11" data-full-label="3">3</text>
-    <text x="692" y="448" text-anchor="middle" font-size="11" data-full-label="4">4</text>
+    <text x="40" y="303.33" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="40" y="169.67" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="40" y="36" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="80.6" y="448" text-anchor="middle" font-size="11" data-full-label="D1">D1</text>
+    <text x="145.8" y="448" text-anchor="middle" font-size="11" data-full-label="D2">D2</text>
+    <text x="211" y="448" text-anchor="middle" font-size="11" data-full-label="D3">D3</text>
+    <text x="276.2" y="448" text-anchor="middle" font-size="11" data-full-label="D4">D4</text>
+    <text x="341.4" y="448" text-anchor="middle" font-size="11" data-full-label="D5">D5</text>
+    <text x="406.6" y="448" text-anchor="middle" font-size="11" data-full-label="D6">D6</text>
+    <text x="471.8" y="448" text-anchor="middle" font-size="11" data-full-label="D7">D7</text>
+    <text x="537" y="448" text-anchor="middle" font-size="11" data-full-label="D8">D8</text>
+    <text x="602.2" y="448" text-anchor="middle" font-size="11" data-full-label="D9">D9</text>
+    <text x="667.4" y="448" text-anchor="middle" font-size="11" data-full-label="D10">D10</text>
   </g>
   <g fill="none">
-    <path d="M215 223.13 L374 142.93 L533 196.4 L533 437 L215 437 Z" fill="#F54900" fill-opacity="0.18" stroke="none" data-series="deals"/>
-    <path d="M215 223.13 L374 142.93 L533 196.4" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="deals"/>
-    <circle cx="215" cy="223.13" r="3.5" fill="#F54900" stroke="none" data-series="deals"/>
-    <circle cx="374" cy="142.93" r="3.5" fill="#F54900" stroke="none" data-series="deals"/>
-    <circle cx="533" cy="196.4" r="3.5" fill="#F54900" stroke="none" data-series="deals"/>
+    <path d="M80.6 276.6 L145.8 236.5 L211 249.87 L276.2 196.4 L341.4 223.13 L406.6 142.93 L471.8 62.73 L537 156.3 L602.2 183.03 L667.4 209.77 L667.4 437 L80.6 437 Z" fill="#F54900" fill-opacity="0.18" stroke="none" data-series="holds"/>
+    <path d="M80.6 276.6 L145.8 236.5 L211 249.87 L276.2 196.4 L341.4 223.13 L406.6 142.93 L471.8 62.73 L537 156.3 L602.2 183.03 L667.4 209.77" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="holds"/>
+    <circle cx="80.6" cy="276.6" r="3.5" fill="#F54900" stroke="none" data-series="holds"/>
+    <circle cx="145.8" cy="236.5" r="3.5" fill="#F54900" stroke="none" data-series="holds"/>
+    <circle cx="211" cy="249.87" r="3.5" fill="#F54900" stroke="none" data-series="holds"/>
+    <circle cx="276.2" cy="196.4" r="3.5" fill="#F54900" stroke="none" data-series="holds"/>
+    <circle cx="341.4" cy="223.13" r="3.5" fill="#F54900" stroke="none" data-series="holds"/>
+    <circle cx="406.6" cy="142.93" r="3.5" fill="#F54900" stroke="none" data-series="holds"/>
+    <circle cx="471.8" cy="62.73" r="3.5" fill="#F54900" stroke="none" data-series="holds"/>
+    <circle cx="537" cy="156.3" r="3.5" fill="#F54900" stroke="none" data-series="holds"/>
+    <circle cx="602.2" cy="183.03" r="3.5" fill="#F54900" stroke="none" data-series="holds"/>
+    <circle cx="667.4" cy="209.77" r="3.5" fill="#F54900" stroke="none" data-series="holds"/>
   </g>
 </svg>

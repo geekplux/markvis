@@ -1,31 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Free still leads pro, 4 rows, series plan" aria-labelledby="mv-8c6df151fda9c0b6-title" aria-describedby="mv-8c6df151fda9c0b6-desc" data-markvis="2" data-chart-type="line" data-id="mv-8c6df151fda9c0b6" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-8c6df151fda9c0b6-title">Free still leads pro</title>
-  <desc id="mv-8c6df151fda9c0b6-desc">line chart. Free still leads pro. x=month. y=count. series=plan. 4 rows.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Free still leads pro</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Member overtook walk-up after W8, 24 rows, series channel" aria-labelledby="mv-73e329433e022533-title" aria-describedby="mv-73e329433e022533-desc" data-markvis="2" data-chart-type="line" data-id="mv-73e329433e022533" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-73e329433e022533-title">Member overtook walk-up after W8</title>
+  <desc id="mv-73e329433e022533-desc">line chart. Member overtook walk-up after W8. x=week. y=count. series=channel. 24 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Member overtook walk-up after W8</text>
   <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
-    <line x1="48" x2="684.72" y1="317.33" y2="317.33"/>
-    <line x1="48" x2="684.72" y1="176.67" y2="176.67"/>
-    <line x1="48" x2="684.72" y1="36" y2="36"/>
+    <line x1="48" x2="664.26" y1="317.33" y2="317.33"/>
+    <line x1="48" x2="664.26" y1="176.67" y2="176.67"/>
+    <line x1="48" x2="664.26" y1="36" y2="36"/>
   </g>
-  <path d="M48 458 L684.72 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <path d="M48 458 L664.26 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
   <g fill="#737373" font-size="10" font-weight="400">
-    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="38" y="317.33" text-anchor="end" dominant-baseline="middle">20</text>
-    <text x="38" y="176.67" text-anchor="end" dominant-baseline="middle">40</text>
-    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">60</text>
-    <text x="207.18" y="468" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
-    <text x="525.54" y="468" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="38" y="317.33" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="38" y="176.67" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="73.68" y="468" text-anchor="middle" font-size="10" data-full-label="W1">W1</text>
+    <text x="125.03" y="468" text-anchor="middle" font-size="10" data-full-label="W2">W2</text>
+    <text x="176.39" y="468" text-anchor="middle" font-size="10" data-full-label="W3">W3</text>
+    <text x="227.74" y="468" text-anchor="middle" font-size="10" data-full-label="W4">W4</text>
+    <text x="279.1" y="468" text-anchor="middle" font-size="10" data-full-label="W5">W5</text>
+    <text x="330.45" y="468" text-anchor="middle" font-size="10" data-full-label="W6">W6</text>
+    <text x="381.81" y="468" text-anchor="middle" font-size="10" data-full-label="W7">W7</text>
+    <text x="433.16" y="468" text-anchor="middle" font-size="10" data-full-label="W8">W8</text>
+    <text x="484.52" y="468" text-anchor="middle" font-size="10" data-full-label="W9">W9</text>
+    <text x="535.87" y="468" text-anchor="middle" font-size="10" data-full-label="W10">W10</text>
+    <text x="587.23" y="468" text-anchor="middle" font-size="10" data-full-label="W11">W11</text>
+    <text x="638.58" y="468" text-anchor="middle" font-size="10" data-full-label="W12">W12</text>
   </g>
   <g fill="none">
-    <path d="M207.18 176.67 L525.54 71.17" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="free"/>
-    <circle cx="207.18" cy="176.67" r="2.5" fill="#3B82F6" stroke="none" data-series="free"/>
-    <circle cx="525.54" cy="71.17" r="2.5" fill="#3B82F6" stroke="none" data-series="free"/>
-    <path d="M207.18 373.6 L525.54 331.4" fill="none" stroke="#F97316" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="pro"/>
-    <circle cx="207.18" cy="373.6" r="2.5" fill="#F97316" stroke="none" data-series="pro"/>
-    <circle cx="525.54" cy="331.4" r="2.5" fill="#F97316" stroke="none" data-series="pro"/>
+    <path d="M73.68 303.27 L125.03 282.17 L176.39 261.07 L227.74 289.2 L279.1 239.97 L330.45 268.1 L381.81 254.03 L433.16 275.13 L484.52 296.23 L535.87 310.3 L587.23 324.37 L638.58 317.33" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="walk-up"/>
+    <circle cx="73.68" cy="303.27" r="2.5" fill="#3B82F6" stroke="none" data-series="walk-up"/>
+    <circle cx="125.03" cy="282.17" r="2.5" fill="#3B82F6" stroke="none" data-series="walk-up"/>
+    <circle cx="176.39" cy="261.07" r="2.5" fill="#3B82F6" stroke="none" data-series="walk-up"/>
+    <circle cx="227.74" cy="289.2" r="2.5" fill="#3B82F6" stroke="none" data-series="walk-up"/>
+    <circle cx="279.1" cy="239.97" r="2.5" fill="#3B82F6" stroke="none" data-series="walk-up"/>
+    <circle cx="330.45" cy="268.1" r="2.5" fill="#3B82F6" stroke="none" data-series="walk-up"/>
+    <circle cx="381.81" cy="254.03" r="2.5" fill="#3B82F6" stroke="none" data-series="walk-up"/>
+    <circle cx="433.16" cy="275.13" r="2.5" fill="#3B82F6" stroke="none" data-series="walk-up"/>
+    <circle cx="484.52" cy="296.23" r="2.5" fill="#3B82F6" stroke="none" data-series="walk-up"/>
+    <circle cx="535.87" cy="310.3" r="2.5" fill="#3B82F6" stroke="none" data-series="walk-up"/>
+    <circle cx="587.23" cy="324.37" r="2.5" fill="#3B82F6" stroke="none" data-series="walk-up"/>
+    <circle cx="638.58" cy="317.33" r="2.5" fill="#3B82F6" stroke="none" data-series="walk-up"/>
+    <path d="M73.68 401.73 L125.03 380.63 L176.39 359.53 L227.74 331.4 L279.1 310.3 L330.45 282.17 L381.81 261.07 L433.16 232.93 L484.52 211.83 L535.87 190.73 L587.23 169.63 L638.58 148.53" fill="none" stroke="#F97316" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="member"/>
+    <circle cx="73.68" cy="401.73" r="2.5" fill="#F97316" stroke="none" data-series="member"/>
+    <circle cx="125.03" cy="380.63" r="2.5" fill="#F97316" stroke="none" data-series="member"/>
+    <circle cx="176.39" cy="359.53" r="2.5" fill="#F97316" stroke="none" data-series="member"/>
+    <circle cx="227.74" cy="331.4" r="2.5" fill="#F97316" stroke="none" data-series="member"/>
+    <circle cx="279.1" cy="310.3" r="2.5" fill="#F97316" stroke="none" data-series="member"/>
+    <circle cx="330.45" cy="282.17" r="2.5" fill="#F97316" stroke="none" data-series="member"/>
+    <circle cx="381.81" cy="261.07" r="2.5" fill="#F97316" stroke="none" data-series="member"/>
+    <circle cx="433.16" cy="232.93" r="2.5" fill="#F97316" stroke="none" data-series="member"/>
+    <circle cx="484.52" cy="211.83" r="2.5" fill="#F97316" stroke="none" data-series="member"/>
+    <circle cx="535.87" cy="190.73" r="2.5" fill="#F97316" stroke="none" data-series="member"/>
+    <circle cx="587.23" cy="169.63" r="2.5" fill="#F97316" stroke="none" data-series="member"/>
+    <circle cx="638.58" cy="148.53" r="2.5" fill="#F97316" stroke="none" data-series="member"/>
   </g>
   <g font-size="11" font-weight="500">
-    <text x="533.54" y="71.17" text-anchor="start" dominant-baseline="middle" fill="#3B82F6" data-end-label="free">free</text>
-    <text x="533.54" y="331.4" text-anchor="start" dominant-baseline="middle" fill="#F97316" data-end-label="pro">pro</text>
+    <text x="646.58" y="317.33" text-anchor="start" dominant-baseline="middle" fill="#3B82F6" data-end-label="walk-up">walk-up</text>
+    <text x="646.58" y="148.53" text-anchor="start" dominant-baseline="middle" fill="#F97316" data-end-label="member">member</text>
   </g>
 </svg>

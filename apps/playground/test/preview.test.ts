@@ -35,11 +35,16 @@ describe("previewSource", () => {
     expect(view.error).toBeUndefined();
     expect(view.svg).toContain("<svg");
     expect(view.svg).toContain("</svg>");
-    expect(view.table.columns).toEqual(["month", "revenue"]);
+    expect(view.table.columns).toEqual(["month", "tickets"]);
     expect(view.table.rows).toEqual([
-      ["Jan", "120"],
-      ["Feb", "180"],
-      ["Mar", "150"],
+      ["Sep", "210"],
+      ["Oct", "245"],
+      ["Nov", "280"],
+      ["Dec", "410"],
+      ["Jan", "190"],
+      ["Feb", "220"],
+      ["Mar", "265"],
+      ["Apr", "240"],
     ]);
     const parsed = parseMarkdown(valid01, { filename: "01-bar-basic.md" });
     expect(parsed.ok).toBe(true);

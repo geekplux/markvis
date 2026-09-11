@@ -1,12 +1,14 @@
 ```chart
 type: pie
 theme: highcharts
-title: A leads at 40
-x: name
-y: value
+title: MARTA leads Midtown mode share at 38
+x: mode
+y: count
 
-name,value
-A,40
-B,35
-C,30
+mode,count
+MARTA,38
+Walk,24
+Drive,22
+Bike,11
+Other,8
 ```

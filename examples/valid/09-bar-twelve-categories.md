@@ -2,21 +2,22 @@
 
 ```chart
 type: bar
-title: Jul peaked at 22
+title: Jul peaked Midtown season at 420 tickets
+unit: tickets
 x: month
 y: tickets
 
 month,tickets
-Jan,10
-Feb,12
-Mar,9
-Apr,15
-May,14
-Jun,18
-Jul,22
-Aug,20
-Sep,17
-Oct,19
-Nov,16
-Dec,21
+Jan,210
+Feb,235
+Mar,248
+Apr,262
+May,290
+Jun,355
+Jul,420
+Aug,390
+Sep,310
+Oct,278
+Nov,255
+Dec,340
 ```

@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Jul peaked at 22, 12 rows" aria-labelledby="mv-f2ca0b65d8753e21-title" aria-describedby="mv-f2ca0b65d8753e21-desc" data-markvis="2" data-chart-type="bar" data-id="mv-f2ca0b65d8753e21" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-f2ca0b65d8753e21-title">Jul peaked at 22</title>
-  <desc id="mv-f2ca0b65d8753e21-desc">bar chart. Jul peaked at 22. x=month. y=tickets. 12 rows.</desc>
-  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Jul peaked at 22</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Jul peaked Midtown season at 420 tickets (tickets), 12 rows" aria-labelledby="mv-871fc7f07bbf4b38-title" aria-describedby="mv-871fc7f07bbf4b38-desc" data-markvis="2" data-chart-type="bar" data-id="mv-871fc7f07bbf4b38" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-871fc7f07bbf4b38-title">Jul peaked Midtown season at 420 tickets</title>
+  <desc id="mv-871fc7f07bbf4b38-desc">bar chart. Jul peaked Midtown season at 420 tickets. x=month. y=tickets. unit=tickets. 12 rows.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Jul peaked Midtown season at 420 tickets<tspan font-size="11" font-weight="400" fill="#64748B"> · tickets</tspan></text>
   <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
   <g fill="none" stroke="#18181B" stroke-opacity="0.06" stroke-width="1">
     <line x1="40" x2="704" y1="316" y2="316"/>
@@ -11,9 +11,9 @@
   <path d="M40 458 L704 458" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
   <g fill="#64748B" font-size="10" font-weight="400">
     <text x="32" y="458" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="32" y="316" text-anchor="end" dominant-baseline="middle">10</text>
-    <text x="32" y="174" text-anchor="end" dominant-baseline="middle">20</text>
-    <text x="32" y="32" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="32" y="316" text-anchor="end" dominant-baseline="middle">200</text>
+    <text x="32" y="174" text-anchor="end" dominant-baseline="middle">400</text>
+    <text x="32" y="32" text-anchor="end" dominant-baseline="middle">600</text>
     <text x="67.67" y="468" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
     <text x="123" y="468" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
     <text x="178.33" y="468" text-anchor="middle" font-size="10" data-full-label="Mar">Mar</text>
@@ -28,17 +28,17 @@
     <text x="676.33" y="468" text-anchor="middle" font-size="10" data-full-label="Dec">Dec</text>
   </g>
   <g>
-    <path d="M45.53 458 L89.8 458 L89.8 316 L45.53 316 Z" fill="#475569" data-x="Jan" data-series="tickets" data-y="10"/>
-    <path d="M100.87 458 L145.13 458 L145.13 287.6 L100.87 287.6 Z" fill="#475569" data-x="Feb" data-series="tickets" data-y="12"/>
-    <path d="M156.2 458 L200.47 458 L200.47 330.2 L156.2 330.2 Z" fill="#475569" data-x="Mar" data-series="tickets" data-y="9"/>
-    <path d="M211.53 458 L255.8 458 L255.8 245 L211.53 245 Z" fill="#475569" data-x="Apr" data-series="tickets" data-y="15"/>
-    <path d="M266.87 458 L311.13 458 L311.13 259.2 L266.87 259.2 Z" fill="#475569" data-x="May" data-series="tickets" data-y="14"/>
-    <path d="M322.2 458 L366.47 458 L366.47 202.4 L322.2 202.4 Z" fill="#475569" data-x="Jun" data-series="tickets" data-y="18"/>
-    <path d="M377.53 458 L421.8 458 L421.8 145.6 L377.53 145.6 Z" fill="#475569" data-x="Jul" data-series="tickets" data-y="22"/>
-    <path d="M432.87 458 L477.13 458 L477.13 174 L432.87 174 Z" fill="#475569" data-x="Aug" data-series="tickets" data-y="20"/>
-    <path d="M488.2 458 L532.47 458 L532.47 216.6 L488.2 216.6 Z" fill="#475569" data-x="Sep" data-series="tickets" data-y="17"/>
-    <path d="M543.53 458 L587.8 458 L587.8 188.2 L543.53 188.2 Z" fill="#475569" data-x="Oct" data-series="tickets" data-y="19"/>
-    <path d="M598.87 458 L643.13 458 L643.13 230.8 L598.87 230.8 Z" fill="#475569" data-x="Nov" data-series="tickets" data-y="16"/>
-    <path d="M654.2 458 L698.47 458 L698.47 159.8 L654.2 159.8 Z" fill="#475569" data-x="Dec" data-series="tickets" data-y="21"/>
+    <path d="M45.53 458 L89.8 458 L89.8 308.9 L45.53 308.9 Z" fill="#475569" data-x="Jan" data-series="tickets" data-y="210"/>
+    <path d="M100.87 458 L145.13 458 L145.13 291.15 L100.87 291.15 Z" fill="#475569" data-x="Feb" data-series="tickets" data-y="235"/>
+    <path d="M156.2 458 L200.47 458 L200.47 281.92 L156.2 281.92 Z" fill="#475569" data-x="Mar" data-series="tickets" data-y="248"/>
+    <path d="M211.53 458 L255.8 458 L255.8 271.98 L211.53 271.98 Z" fill="#475569" data-x="Apr" data-series="tickets" data-y="262"/>
+    <path d="M266.87 458 L311.13 458 L311.13 252.1 L266.87 252.1 Z" fill="#475569" data-x="May" data-series="tickets" data-y="290"/>
+    <path d="M322.2 458 L366.47 458 L366.47 205.95 L322.2 205.95 Z" fill="#475569" data-x="Jun" data-series="tickets" data-y="355"/>
+    <path d="M377.53 458 L421.8 458 L421.8 159.8 L377.53 159.8 Z" fill="#475569" data-x="Jul" data-series="tickets" data-y="420"/>
+    <path d="M432.87 458 L477.13 458 L477.13 181.1 L432.87 181.1 Z" fill="#475569" data-x="Aug" data-series="tickets" data-y="390"/>
+    <path d="M488.2 458 L532.47 458 L532.47 237.9 L488.2 237.9 Z" fill="#475569" data-x="Sep" data-series="tickets" data-y="310"/>
+    <path d="M543.53 458 L587.8 458 L587.8 260.62 L543.53 260.62 Z" fill="#475569" data-x="Oct" data-series="tickets" data-y="278"/>
+    <path d="M598.87 458 L643.13 458 L643.13 276.95 L598.87 276.95 Z" fill="#475569" data-x="Nov" data-series="tickets" data-y="255"/>
+    <path d="M654.2 458 L698.47 458 L698.47 216.6 L654.2 216.6 Z" fill="#475569" data-x="Dec" data-series="tickets" data-y="340"/>
   </g>
 </svg>

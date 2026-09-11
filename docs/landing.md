@@ -4,11 +4,11 @@ Charts in Markdown. The fence is the data (CSV or GFM). Open-source library for 
 
 ## Figures
 
-![Feb led Q3](../examples/out/01-bar-basic.svg)
+![Dec led Midtown box office](../examples/out/01-bar-basic.svg)
 
-![Pro pulled ahead](../examples/out/02-line-multi.svg)
+![Member overtook walk-up](../examples/out/02-line-multi.svg)
 
-![Shares stay raw](../examples/out/05-pie-raw.svg)
+![MARTA leads Midtown mode share](../examples/out/05-pie-raw.svg)
 
 ## Try
 

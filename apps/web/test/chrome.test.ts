@@ -39,7 +39,7 @@ describe("site visual chrome", () => {
     expect(home).not.toContain("folio-what");
     expect(home).not.toContain("folio-who");
     expect(home).not.toContain("<figcaption>");
-    expect(home).toContain("Feb led Q3");
+    expect(home).toContain("Dec led Midtown");
     expect(home).toContain("home-lattice");
     expect(home).toContain("home-hero-figure");
     expect(home).toContain("home-figure-strip");
@@ -58,8 +58,8 @@ describe("site visual chrome", () => {
       /\.home-figure-tile\s*\{[^}]*background:\s*#edebe5/s,
     );
     expect(css).toMatch(/\.home-field[\s\S]*overflow-y:\s*visible/);
-    expect(home).toContain("Pro pulled ahead");
-    expect(home).toContain("Shares stay raw");
+    expect(home).toContain("Member overtook walk-up");
+    expect(home).toContain("MARTA leads Midtown mode share");
     expect(home).not.toMatch(/```chart/);
     expect(home).not.toMatch(/month,revenue/);
     expect(css).toMatch(/#ffdb2a/i);

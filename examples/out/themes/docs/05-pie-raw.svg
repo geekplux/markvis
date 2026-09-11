@@ -1,21 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: A leads at 40, 3 slices" aria-labelledby="mv-b5d15cbc51f2b051-title" aria-describedby="mv-b5d15cbc51f2b051-desc" data-markvis="2" data-chart-type="pie" data-id="mv-b5d15cbc51f2b051" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-b5d15cbc51f2b051-title">A leads at 40</title>
-  <desc id="mv-b5d15cbc51f2b051-desc">pie chart. A leads at 40. x=name. y=value. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">A leads at 40</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: MARTA leads Midtown mode share at 38, 5 slices" aria-labelledby="mv-dd2f5e29042f92f1-title" aria-describedby="mv-dd2f5e29042f92f1-desc" data-markvis="2" data-chart-type="pie" data-id="mv-dd2f5e29042f92f1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-dd2f5e29042f92f1-title">MARTA leads Midtown mode share at 38</title>
+  <desc id="mv-dd2f5e29042f92f1-desc">pie chart. MARTA leads Midtown mode share at 38. x=mode. y=count. 5 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">MARTA leads Midtown mode share at 38</text>
   <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
   <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0">
-    <path d="M372 248 L372 101.12 A146.88 146.88 0 0 1 471.9 355.67 Z" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="A" data-raw-value="40"/>
-    <path d="M372 248 L471.9 355.67 A146.88 146.88 0 0 1 228.8 280.68 Z" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="B" data-raw-value="35"/>
-    <path d="M372 248 L228.8 280.68 A146.88 146.88 0 0 1 372 101.12 Z" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="C" data-raw-value="30"/>
+    <path d="M372 248 L372 101.12 A146.88 146.88 0 0 1 479.74 347.83 Z" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="MARTA" data-raw-value="38"/>
+    <path d="M372 248 L479.74 347.83 A146.88 146.88 0 0 1 284.22 365.77 Z" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Walk" data-raw-value="24"/>
+    <path d="M372 248 L284.22 365.77 A146.88 146.88 0 0 1 237.4 189.21 Z" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Drive" data-raw-value="22"/>
+    <path d="M372 248 L237.4 189.21 A146.88 146.88 0 0 1 303.13 118.27 Z" fill="#334155" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Bike" data-raw-value="11"/>
+    <path d="M372 248 L303.13 118.27 A146.88 146.88 0 0 1 372 101.12 Z" fill="#78716C" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Other" data-raw-value="8"/>
   </g>
   <g fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1">
-    <polyline points="508.73,194.34 519.9,189.95 527.9,189.95"/>
-    <polyline points="328.71,388.35 325.17,399.82 317.17,399.82"/>
-    <polyline points="257.16,156.42 247.78,148.94 239.78,148.94"/>
+    <polyline points="506.6,189.21 517.6,184.41 525.6,184.41"/>
+    <polyline points="385.42,394.27 386.52,406.22 394.52,406.22"/>
+    <polyline points="230.03,285.65 218.43,288.73 210.43,288.73"/>
+    <polyline points="264.26,148.17 255.45,140.02 247.45,140.02"/>
+    <polyline points="336.51,105.47 333.62,93.83 325.62,93.83"/>
   </g>
   <g font-size="10" font-weight="500" fill="#18181B">
-    <text x="539.9" y="189.95" text-anchor="start" dominant-baseline="middle" data-label="A">A · 40</text>
-    <text x="305.17" y="399.82" text-anchor="end" dominant-baseline="middle" data-label="B">B · 35</text>
-    <text x="227.78" y="148.94" text-anchor="end" dominant-baseline="middle" data-label="C">C · 30</text>
+    <text x="537.6" y="184.41" text-anchor="start" dominant-baseline="middle" data-label="MARTA">MARTA · 38</text>
+    <text x="406.52" y="406.22" text-anchor="start" dominant-baseline="middle" data-label="Walk">Walk · 24</text>
+    <text x="198.43" y="288.73" text-anchor="end" dominant-baseline="middle" data-label="Drive">Drive · 22</text>
+    <text x="235.45" y="140.02" text-anchor="end" dominant-baseline="middle" data-label="Bike">Bike · 11</text>
+    <text x="313.62" y="93.83" text-anchor="end" dominant-baseline="middle" data-label="Other">Other · 8</text>
   </g>
 </svg>

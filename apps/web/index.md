@@ -45,13 +45,13 @@ pageClass: folio-home-page
     <div class="home-hero-figure">
       <div class="home-figure-strip" aria-label="Sample figures">
         <figure class="home-figure-tile">
-          <img src="/home/01-bar-basic.svg" alt="Bar chart: Feb led Q3" />
+          <img src="/home/01-bar-basic.svg" alt="Bar chart: Dec led Midtown box office" />
         </figure>
         <figure class="home-figure-tile">
-          <img src="/home/02-line-multi.svg" alt="Line chart: Pro pulled ahead" />
+          <img src="/home/02-line-multi.svg" alt="Line chart: Member overtook walk-up" />
         </figure>
         <figure class="home-figure-tile">
-          <img src="/home/05-pie-raw.svg" alt="Pie chart: Shares stay raw" />
+          <img src="/home/05-pie-raw.svg" alt="Pie chart: MARTA leads Midtown mode share" />
         </figure>
       </div>
       <p class="home-figure-caption">FOLIO FIGURES</p>
@@ -89,15 +89,15 @@ pageClass: folio-home-page
   <div class="home-figures">
     <figure>
       <span class="home-index">01</span>
-      <img src="/home/01-bar-basic.svg" alt="Bar chart: Feb led Q3" />
+      <img src="/home/01-bar-basic.svg" alt="Bar chart: Dec led Midtown box office" />
     </figure>
     <figure>
       <span class="home-index">02</span>
-      <img src="/home/02-line-multi.svg" alt="Line chart: Pro pulled ahead" />
+      <img src="/home/02-line-multi.svg" alt="Line chart: Member overtook walk-up" />
     </figure>
     <figure>
       <span class="home-index">03</span>
-      <img src="/home/05-pie-raw.svg" alt="Pie chart: Shares stay raw" />
+      <img src="/home/05-pie-raw.svg" alt="Pie chart: MARTA leads Midtown mode share" />
     </figure>
   </div>
 </section>
@@ -109,9 +109,9 @@ pageClass: folio-home-page
     <a class="home-textlink" href="/examples"><span>Browse examples</span><span aria-hidden="true">&gt;</span></a>
   </div>
   <div class="home-thumbs">
-    <figure><img src="/home/01-bar-basic.svg" alt="Bar chart: Feb led Q3" /></figure>
-    <figure><img src="/home/02-line-multi.svg" alt="Line chart: Pro pulled ahead" /></figure>
-    <figure><img src="/home/05-pie-raw.svg" alt="Pie chart: Shares stay raw" /></figure>
+    <figure><img src="/home/01-bar-basic.svg" alt="Bar chart: Dec led Midtown box office" /></figure>
+    <figure><img src="/home/02-line-multi.svg" alt="Line chart: Member overtook walk-up" /></figure>
+    <figure><img src="/home/05-pie-raw.svg" alt="Pie chart: MARTA leads Midtown mode share" /></figure>
     <figure><img src="/home/03-area-basic.svg" alt="Area chart" /></figure>
   </div>
 </section>

@@ -3,13 +3,18 @@
 ```chart
 markvis: 2
 type: bar
-title: Feb led Q3 at 180
-unit: USD k
+title: Dec led Midtown box office at 410 tickets
+unit: tickets
 x: month
-y: revenue
+y: tickets
 
-month,revenue
-Jan,120
-Feb,180
-Mar,150
+month,tickets
+Sep,210
+Oct,245
+Nov,280
+Dec,410
+Jan,190
+Feb,220
+Mar,265
+Apr,240
 ```

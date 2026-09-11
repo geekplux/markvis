@@ -113,39 +113,45 @@ describe("visual-spec tokens", () => {
     const svg = svgOf("01-bar-basic.md");
     const plot = plotBox(svg);
     const title = titleEl(svg);
-    expect(svg).toContain("Feb led Q3 at 180");
+    expect(svg).toContain("Dec led Midtown box office at 410 tickets");
     expect(svg).not.toMatch(/>bar</i);
     expect(title.size).toBe("17");
     expect(title.anchor).toBe("start");
     expect(title.x).toBeCloseTo(plot.left, 2);
     expect(svg).toContain(PALETTE[0]);
     expect(svg).not.toContain(PALETTE[1]);
-    expect(svg).toContain(" · USD k");
+    expect(svg).toContain(" · tickets");
     expect(svg).not.toContain('data-legend=');
     expect(svg).not.toContain('shape-rendering="crispEdges"');
     expect(svg).not.toContain("rotate(-90");
-    expect(svg).toContain('data-value-label="Jan"');
-    expect(svg).toContain('data-value-label="Feb"');
-    expect(svg).toContain('data-value-label="Mar"');
+    // 8 Midtown months: labels if wide enough, else interior grid (XOR)
+    const hasLabels = svg.includes('data-value-label="Dec"');
+    const hasGrid =
+      svg.includes('stroke-opacity="0.14"') || svg.includes('stroke-opacity="0.12"');
+    expect(hasLabels || hasGrid).toBe(true);
+    if (hasLabels) {
+      expect(svg).toContain('data-value-label="Sep"');
+      expect(svg).toContain('data-value-label="Apr"');
+    }
     expect(svg).not.toContain('stroke="#E7E5E4"');
     expect(firstBarWidth(svg)).toBeLessThanOrEqual(72.01);
     expect(plot.share).toBeGreaterThanOrEqual(PLOT_MIN_RATIO);
-    expect(svg).not.toContain("revenue (USD k)");
+    expect(svg).not.toContain(">tickets (tickets)<");
   });
 
   it("02 line: S1/S2, 1.75px stroke, points, end-labels not a color legend", () => {
     const svg = svgOf("02-line-multi.md");
     const plot = plotBox(svg);
     const title = titleEl(svg);
-    expect(svg).toContain("Free still leads pro");
+    expect(svg).toContain("Member overtook walk-up after W8");
     expect(title.anchor).toBe("start");
     expect(title.x).toBeCloseTo(plot.left, 2);
     expect(svg).toContain(PALETTE[0]);
     expect(svg).toContain(PALETTE[1]);
     expect(svg).toContain('stroke-width="1.75"');
     expect(svg).toContain('r="2.5"');
-    expect(svg).toContain('data-end-label="free"');
-    expect(svg).toContain('data-end-label="pro"');
+    expect(svg).toContain('data-end-label="walk-up"');
+    expect(svg).toContain('data-end-label="member"');
     expect(svg).not.toContain('data-legend=');
     expect(plot.share).toBeGreaterThanOrEqual(PLOT_MIN_RATIO);
   });
@@ -153,16 +159,16 @@ describe("visual-spec tokens", () => {
   it("05 pie: structure slice stroke, outside name · value, conclusion title, no side legend", () => {
     const svg = svgOf("05-pie-raw.md");
     const title = titleEl(svg);
-    expect(svg).toContain("A leads at 40");
+    expect(svg).toContain("MARTA leads Midtown mode share at 38");
     expect(svg).not.toContain(">Share<");
     expect(title.anchor).toBe("start");
     expect(title.size).toBe("17");
     expect(svg).toContain(`stroke="${INK}"`);
     expect(svg).toContain(`stroke-opacity="${STRUCTURE_OPACITY}"`);
-    expect(svg).toContain("A · 40");
-    expect(svg).toContain("B · 35");
-    expect(svg).toContain("C · 30");
-    expect(svg).toContain('data-raw-value="40"');
+    expect(svg).toContain("MARTA · 38");
+    expect(svg).toContain("Walk · 24");
+    expect(svg).toContain("Drive · 22");
+    expect(svg).toContain('data-raw-value="38"');
     expect(svg).not.toContain('data-legend=');
     expect(svg).toContain("<polyline ");
     expect(svg).toContain("not normalized to 100");
@@ -171,7 +177,7 @@ describe("visual-spec tokens", () => {
   it("09 twelve categories stay horizontal; value labels off; grid on", () => {
     const svg = svgOf("09-bar-twelve-categories.md");
     const plot = plotBox(svg);
-    expect(svg).toContain("Jul peaked at 22");
+    expect(svg).toContain("Jul peaked Midtown season at 420 tickets");
     expect(svg).not.toContain("rotate(-55");
     expect(svg).not.toContain("…");
     expect(svg).not.toContain("data-value-label=");

@@ -1,30 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="hist chart: Most samples stay under 20 ms, 6 rows" aria-labelledby="mv-6b0bf4639d30686e-title" aria-describedby="mv-6b0bf4639d30686e-desc" data-markvis="2" data-chart-type="hist" data-id="mv-6b0bf4639d30686e" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-6b0bf4639d30686e-title">Most samples stay under 20 ms</title>
-  <desc id="mv-6b0bf4639d30686e-desc">hist chart. Most samples stay under 20 ms. x=ms. 6 rows. x is binned with Sturges equal-width bins.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Most samples stay under 20 ms</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="hist chart: Most Midtown samples stay under 20 ms (ms), 18 rows" aria-labelledby="mv-bf566f17d2252685-title" aria-describedby="mv-bf566f17d2252685-desc" data-markvis="2" data-chart-type="hist" data-id="mv-bf566f17d2252685" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-bf566f17d2252685-title">Most Midtown samples stay under 20 ms</title>
+  <desc id="mv-bf566f17d2252685-desc">hist chart. Most Midtown samples stay under 20 ms. x=ms. unit=ms. 18 rows. x is binned with Sturges equal-width bins.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Most Midtown samples stay under 20 ms<tspan font-size="12" font-weight="400" fill="#737373"> · ms</tspan></text>
   <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
   <g fill="#737373" font-size="10" font-weight="400">
     <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="38" y="352.5" text-anchor="end" dominant-baseline="middle">1</text>
-    <text x="38" y="247" text-anchor="end" dominant-baseline="middle">2</text>
-    <text x="38" y="141.5" text-anchor="end" dominant-baseline="middle">3</text>
-    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">4</text>
-    <text x="48" y="468" text-anchor="middle" font-size="10" data-full-label="12">12</text>
-    <text x="211" y="468" text-anchor="middle" font-size="10" data-full-label="19.5">19.5</text>
-    <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="27">27</text>
-    <text x="537" y="468" text-anchor="middle" font-size="10" data-full-label="34.5">34.5</text>
-    <text x="700" y="468" text-anchor="middle" font-size="10" data-full-label="42">42</text>
+    <text x="38" y="247" text-anchor="end" dominant-baseline="middle">5</text>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="48" y="468" text-anchor="middle" font-size="10" data-full-label="11">11</text>
+    <text x="156.67" y="468" text-anchor="middle" font-size="10" data-full-label="16.5">16.5</text>
+    <text x="265.33" y="468" text-anchor="middle" font-size="10" data-full-label="22">22</text>
+    <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="27.5">27.5</text>
+    <text x="482.67" y="468" text-anchor="middle" font-size="10" data-full-label="33">33</text>
+    <text x="591.33" y="468" text-anchor="middle" font-size="10" data-full-label="38.5">38.5</text>
+    <text x="700" y="468" text-anchor="middle" font-size="10" data-full-label="44">44</text>
   </g>
   <g>
-    <path d="M93.5 458 L93.5 39 Q93.5 36 96.5 36 L162.5 36 Q165.5 36 165.5 39 L165.5 458 Z" fill="#3B82F6" data-bin-left="12" data-bin-right="19.5" data-weight="4" data-count="4"/>
-    <path d="M256.5 458 L328.5 458 L328.5 458 L256.5 458 Z" fill="#3B82F6" data-bin-left="19.5" data-bin-right="27" data-weight="0" data-count="0"/>
-    <path d="M419.5 458 L491.5 458 L491.5 458 L419.5 458 Z" fill="#3B82F6" data-bin-left="27" data-bin-right="34.5" data-weight="0" data-count="0"/>
-    <path d="M582.5 458 L582.5 250 Q582.5 247 585.5 247 L651.5 247 Q654.5 247 654.5 250 L654.5 458 Z" fill="#3B82F6" data-bin-left="34.5" data-bin-right="42" data-weight="2" data-count="2"/>
+    <path d="M63.21 458 L63.21 39 Q63.21 36 66.21 36 L138.45 36 Q141.45 36 141.45 39 L141.45 458 Z" fill="#3B82F6" data-bin-left="11" data-bin-right="16.5" data-weight="10" data-count="10"/>
+    <path d="M171.88 458 L171.88 250 Q171.88 247 174.88 247 L247.12 247 Q250.12 247 250.12 250 L250.12 458 Z" fill="#3B82F6" data-bin-left="16.5" data-bin-right="22" data-weight="5" data-count="5"/>
+    <path d="M280.55 458 L280.55 418.8 Q280.55 415.8 283.55 415.8 L355.79 415.8 Q358.79 415.8 358.79 418.8 L358.79 458 Z" fill="#3B82F6" data-bin-left="22" data-bin-right="27.5" data-weight="1" data-count="1"/>
+    <path d="M389.21 458 L467.45 458 L467.45 458 L389.21 458 Z" fill="#3B82F6" data-bin-left="27.5" data-bin-right="33" data-weight="0" data-count="0"/>
+    <path d="M497.88 458 L497.88 418.8 Q497.88 415.8 500.88 415.8 L573.12 415.8 Q576.12 415.8 576.12 418.8 L576.12 458 Z" fill="#3B82F6" data-bin-left="33" data-bin-right="38.5" data-weight="1" data-count="1"/>
+    <path d="M606.55 458 L606.55 418.8 Q606.55 415.8 609.55 415.8 L681.79 415.8 Q684.79 415.8 684.79 418.8 L684.79 458 Z" fill="#3B82F6" data-bin-left="38.5" data-bin-right="44" data-weight="1" data-count="1"/>
   </g>
   <g>
-    <text x="129.5" y="28" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="12–19.5">4</text>
-    <text x="292.5" y="450" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="19.5–27">0</text>
-    <text x="455.5" y="450" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="27–34.5">0</text>
-    <text x="618.5" y="239" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="34.5–42">2</text>
+    <text x="102.33" y="28" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="11–16.5">10</text>
+    <text x="211" y="239" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="16.5–22">5</text>
+    <text x="319.67" y="407.8" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="22–27.5">1</text>
+    <text x="428.33" y="450" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="27.5–33">0</text>
+    <text x="537" y="407.8" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="33–38.5">1</text>
+    <text x="645.67" y="407.8" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="38.5–44">1</text>
   </g>
 </svg>

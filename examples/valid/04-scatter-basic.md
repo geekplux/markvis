@@ -1,13 +1,22 @@
-<!-- intent: Scatter plot of height vs weight -->
+<!-- intent: Scatter of commute vs rent along Intown belt -->
 
 ```chart
 type: scatter
-title: Weight rises with height
-x: height_cm
-y: weight_kg
+title: Closer Beltline commute, higher rent_index
+x: commute_min
+y: rent_index
 
-height_cm,weight_kg
-160,55
-175,70
-182,78
+commute_min,rent_index
+8,142
+12,138
+15,131
+18,128
+22,121
+25,118
+28,112
+32,108
+35,102
+40,96
+45,91
+52,84
 ```

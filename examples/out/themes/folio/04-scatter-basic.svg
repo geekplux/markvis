@@ -1,27 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="scatter chart: Weight rises with height, 3 rows" aria-labelledby="mv-39f4c903b9abd5fd-title" aria-describedby="mv-39f4c903b9abd5fd-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-39f4c903b9abd5fd" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-39f4c903b9abd5fd-title">Weight rises with height</title>
-  <desc id="mv-39f4c903b9abd5fd-desc">scatter chart. Weight rises with height. x=height_cm. y=weight_kg. 3 rows.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Weight rises with height</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="scatter chart: Closer Beltline commute, higher rent_index, 12 rows" aria-labelledby="mv-fbbfb28a7e00b67e-title" aria-describedby="mv-fbbfb28a7e00b67e-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-fbbfb28a7e00b67e" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-fbbfb28a7e00b67e-title">Closer Beltline commute, higher rent_index</title>
+  <desc id="mv-fbbfb28a7e00b67e-desc">scatter chart. Closer Beltline commute, higher rent_index. x=commute_min. y=rent_index. 12 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Closer Beltline commute, higher rent_index</text>
   <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
-    <line x1="48" x2="700" y1="317.33" y2="317.33"/>
-    <line x1="48" x2="700" y1="176.67" y2="176.67"/>
+    <line x1="48" x2="700" y1="373.6" y2="373.6"/>
+    <line x1="48" x2="700" y1="204.8" y2="204.8"/>
     <line x1="48" x2="700" y1="36" y2="36"/>
   </g>
   <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
   <g fill="#737373" font-size="10" font-weight="400">
-    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">50</text>
-    <text x="38" y="317.33" text-anchor="end" dominant-baseline="middle">60</text>
-    <text x="38" y="176.67" text-anchor="end" dominant-baseline="middle">70</text>
-    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">80</text>
-    <text x="56" y="468" text-anchor="middle" font-size="10" data-full-label="150">150</text>
-    <text x="215" y="468" text-anchor="middle" font-size="10" data-full-label="160">160</text>
-    <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="170">170</text>
-    <text x="533" y="468" text-anchor="middle" font-size="10" data-full-label="180">180</text>
-    <text x="692" y="468" text-anchor="middle" font-size="10" data-full-label="190">190</text>
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="38" y="373.6" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="38" y="289.2" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="38" y="204.8" text-anchor="end" dominant-baseline="middle">120</text>
+    <text x="38" y="120.4" text-anchor="end" dominant-baseline="middle">140</text>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">160</text>
+    <text x="56" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <text x="268" y="468" text-anchor="middle" font-size="10" data-full-label="20">20</text>
+    <text x="480" y="468" text-anchor="middle" font-size="10" data-full-label="40">40</text>
+    <text x="692" y="468" text-anchor="middle" font-size="10" data-full-label="60">60</text>
   </g>
   <g>
-    <circle cx="215" cy="387.67" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="160" data-y="55" data-series="weight_kg"/>
-    <circle cx="453.5" cy="176.67" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="175" data-y="70" data-series="weight_kg"/>
-    <circle cx="564.8" cy="64.13" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="182" data-y="78" data-series="weight_kg"/>
+    <circle cx="140.8" cy="111.96" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="8" data-y="142" data-series="rent_index"/>
+    <circle cx="183.2" cy="128.84" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="12" data-y="138" data-series="rent_index"/>
+    <circle cx="215" cy="158.38" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="15" data-y="131" data-series="rent_index"/>
+    <circle cx="246.8" cy="171.04" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="18" data-y="128" data-series="rent_index"/>
+    <circle cx="289.2" cy="200.58" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="22" data-y="121" data-series="rent_index"/>
+    <circle cx="321" cy="213.24" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="25" data-y="118" data-series="rent_index"/>
+    <circle cx="352.8" cy="238.56" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="28" data-y="112" data-series="rent_index"/>
+    <circle cx="395.2" cy="255.44" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="32" data-y="108" data-series="rent_index"/>
+    <circle cx="427" cy="280.76" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="35" data-y="102" data-series="rent_index"/>
+    <circle cx="480" cy="306.08" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="40" data-y="96" data-series="rent_index"/>
+    <circle cx="533" cy="327.18" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="45" data-y="91" data-series="rent_index"/>
+    <circle cx="607.2" cy="356.72" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="52" data-y="84" data-series="rent_index"/>
   </g>
 </svg>

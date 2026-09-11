@@ -151,7 +151,7 @@ describe("vitest covers parser, render-svg, cli", () => {
     expect(svg).toBe(snapshot);
     const { code, stdout } = capture(["check", file]);
     expect(code).toBe(0);
-    expect(stdout).toContain(`ok\t${file}\tbar\t3`);
+    expect(stdout).toContain(`ok\t${file}\tbar\t8`);
   });
 
   it("cli check of examples/invalid exits non-zero", () => {

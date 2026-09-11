@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="area chart: Week 2 led pipeline at 11, 3 rows" aria-labelledby="mv-3667a70e5f5bd18b-title" aria-describedby="mv-3667a70e5f5bd18b-desc" data-markvis="2" data-chart-type="area" data-id="mv-3667a70e5f5bd18b" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-3667a70e5f5bd18b-title">Week 2 led pipeline at 11</title>
-  <desc id="mv-3667a70e5f5bd18b-desc">area chart. Week 2 led pipeline at 11. x=week. y=deals. 3 rows.</desc>
-  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#374151">Week 2 led pipeline at 11</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="area chart: D7 held the Midtown queue peak at 28 (holds), 10 rows" aria-labelledby="mv-e0ea0393533533a8-title" aria-describedby="mv-e0ea0393533533a8-desc" data-markvis="2" data-chart-type="area" data-id="mv-e0ea0393533533a8" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-e0ea0393533533a8-title">D7 held the Midtown queue peak at 28</title>
+  <desc id="mv-e0ea0393533533a8-desc">area chart. D7 held the Midtown queue peak at 28. x=day. y=holds. unit=holds. 10 rows.</desc>
+  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#374151">D7 held the Midtown queue peak at 28<tspan font-size="12" font-weight="400" fill="#6B7280"> · holds</tspan></text>
   <rect x="48" y="36" width="652" height="391" fill="#ffffff" data-plot-bg="1"/>
   <rect x="48" y="36" width="652" height="391" fill="none" stroke="#e2e8f0" stroke-width="1" data-plot-border="1"/>
   <g fill="none" stroke="#374151" stroke-opacity="0.14" stroke-width="1">
@@ -10,29 +10,46 @@
     <line x1="48" x2="700" y1="36" y2="36"/>
   </g>
   <g fill="none" stroke="#374151" stroke-opacity="0.14" stroke-width="1" data-v-grid="1">
-    <line x1="56" x2="56" y1="36" y2="427" data-v-grid="1"/>
-    <line x1="215" x2="215" y1="36" y2="427" data-v-grid="1"/>
-    <line x1="374" x2="374" y1="36" y2="427" data-v-grid="1"/>
-    <line x1="533" x2="533" y1="36" y2="427" data-v-grid="1"/>
-    <line x1="692" x2="692" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="80.6" x2="80.6" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="145.8" x2="145.8" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="211" x2="211" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="276.2" x2="276.2" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="341.4" x2="341.4" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="406.6" x2="406.6" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="471.8" x2="471.8" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="537" x2="537" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="602.2" x2="602.2" y1="36" y2="427" data-v-grid="1"/>
+    <line x1="667.4" x2="667.4" y1="36" y2="427" data-v-grid="1"/>
   </g>
   <path d="M48 427 L700 427" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1"/>
   <g fill="#6B7280" font-size="11" font-weight="400">
     <text x="40" y="427" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="40" y="296.67" text-anchor="end" dominant-baseline="middle">5</text>
-    <text x="40" y="166.33" text-anchor="end" dominant-baseline="middle">10</text>
-    <text x="40" y="36" text-anchor="end" dominant-baseline="middle">15</text>
-    <text x="56" y="438" text-anchor="middle" font-size="11" data-full-label="0">0</text>
-    <text x="215" y="438" text-anchor="middle" font-size="11" data-full-label="1">1</text>
-    <text x="374" y="438" text-anchor="middle" font-size="11" data-full-label="2">2</text>
-    <text x="533" y="438" text-anchor="middle" font-size="11" data-full-label="3">3</text>
-    <text x="692" y="438" text-anchor="middle" font-size="11" data-full-label="4">4</text>
+    <text x="40" y="296.67" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="40" y="166.33" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="40" y="36" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="80.6" y="438" text-anchor="middle" font-size="11" data-full-label="D1">D1</text>
+    <text x="145.8" y="438" text-anchor="middle" font-size="11" data-full-label="D2">D2</text>
+    <text x="211" y="438" text-anchor="middle" font-size="11" data-full-label="D3">D3</text>
+    <text x="276.2" y="438" text-anchor="middle" font-size="11" data-full-label="D4">D4</text>
+    <text x="341.4" y="438" text-anchor="middle" font-size="11" data-full-label="D5">D5</text>
+    <text x="406.6" y="438" text-anchor="middle" font-size="11" data-full-label="D6">D6</text>
+    <text x="471.8" y="438" text-anchor="middle" font-size="11" data-full-label="D7">D7</text>
+    <text x="537" y="438" text-anchor="middle" font-size="11" data-full-label="D8">D8</text>
+    <text x="602.2" y="438" text-anchor="middle" font-size="11" data-full-label="D9">D9</text>
+    <text x="667.4" y="438" text-anchor="middle" font-size="11" data-full-label="D10">D10</text>
   </g>
   <g fill="none">
-    <path d="M215 218.47 L374 140.27 L533 192.4 L533 427 L215 427 Z" fill="#8884d8" fill-opacity="0.2" stroke="none" data-series="deals"/>
-    <path d="M215 218.47 L374 140.27 L533 192.4" fill="none" stroke="#8884d8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="deals"/>
-    <circle cx="215" cy="218.47" r="3" fill="#8884d8" stroke="none" data-series="deals"/>
-    <circle cx="374" cy="140.27" r="3" fill="#8884d8" stroke="none" data-series="deals"/>
-    <circle cx="533" cy="192.4" r="3" fill="#8884d8" stroke="none" data-series="deals"/>
+    <path d="M80.6 270.6 L145.8 231.5 L211 244.53 L276.2 192.4 L341.4 218.47 L406.6 140.27 L471.8 62.07 L537 153.3 L602.2 179.37 L667.4 205.43 L667.4 427 L80.6 427 Z" fill="#8884d8" fill-opacity="0.2" stroke="none" data-series="holds"/>
+    <path d="M80.6 270.6 L145.8 231.5 L211 244.53 L276.2 192.4 L341.4 218.47 L406.6 140.27 L471.8 62.07 L537 153.3 L602.2 179.37 L667.4 205.43" fill="none" stroke="#8884d8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="holds"/>
+    <circle cx="80.6" cy="270.6" r="3" fill="#8884d8" stroke="none" data-series="holds"/>
+    <circle cx="145.8" cy="231.5" r="3" fill="#8884d8" stroke="none" data-series="holds"/>
+    <circle cx="211" cy="244.53" r="3" fill="#8884d8" stroke="none" data-series="holds"/>
+    <circle cx="276.2" cy="192.4" r="3" fill="#8884d8" stroke="none" data-series="holds"/>
+    <circle cx="341.4" cy="218.47" r="3" fill="#8884d8" stroke="none" data-series="holds"/>
+    <circle cx="406.6" cy="140.27" r="3" fill="#8884d8" stroke="none" data-series="holds"/>
+    <circle cx="471.8" cy="62.07" r="3" fill="#8884d8" stroke="none" data-series="holds"/>
+    <circle cx="537" cy="153.3" r="3" fill="#8884d8" stroke="none" data-series="holds"/>
+    <circle cx="602.2" cy="179.37" r="3" fill="#8884d8" stroke="none" data-series="holds"/>
+    <circle cx="667.4" cy="205.43" r="3" fill="#8884d8" stroke="none" data-series="holds"/>
   </g>
 </svg>
