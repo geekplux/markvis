@@ -2,27 +2,29 @@
 
 ```chart
 type: hist
-title: Most Midtown samples stay under 20 ms
+title: Most API samples stay under 40 ms
 unit: ms
 x: ms
 
 ms
-11
-12
-13
-14
-14
-15
-15
-15
-16
-16
-17
-18
 18
 19
-21
+20
+22
+23
 24
+25
+25
+26
+27
+28
+29
+30
+32
+34
+36
 38
-44
+42
+48
+55
 ```

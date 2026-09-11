@@ -161,19 +161,19 @@ describe("stats", () => {
     const { code, stdout } = capture(["stats", valid01]);
     expect(code).toBe(0);
     expect(stdout).toContain("file\ttype\tn\tmin\tmax\tseries");
-    expect(stdout).toContain(`${valid01}\tbar\t8\t190\t410\t-`);
+    expect(stdout).toContain(`${valid01}\tbar\t8\t4800\t9200\t-`);
   });
 
   it("prints the series column and y min/max for multi-series", () => {
     const { code, stdout } = capture(["stats", valid02]);
     expect(code).toBe(0);
-    expect(stdout).toContain(`${valid02}\tline\t24\t28\t64\tchannel`);
+    expect(stdout).toContain(`${valid02}\tline\t24\t28\t78\tchannel`);
   });
 
   it("uses x for hist min/max", () => {
     const { code, stdout } = capture(["stats", valid06]);
     expect(code).toBe(0);
-    expect(stdout).toContain(`${valid06}\thist\t18\t11\t44\t-`);
+    expect(stdout).toContain(`${valid06}\thist\t20\t18\t55\t-`);
   });
 
   it("exits non-zero on invalid input", () => {
@@ -193,8 +193,8 @@ describe("stats", () => {
     expect(chartStats(result.chart)).toEqual({
       type: "bar",
       n: 8,
-      min: 190,
-      max: 410,
+      min: 4800,
+      max: 9200,
       series: "-",
     });
   });
@@ -206,8 +206,8 @@ describe("to-table", () => {
     expect(code).toBe(0);
     expect(stdout).toContain("| month | tickets |");
     expect(stdout).toContain("| --- | --- |");
-    expect(stdout).toContain("| Dec | 410 |");
-    expect(stdout).toContain("| Mar | 265 |");
+    expect(stdout).toContain("| Mar | 9200 |");
+    expect(stdout).toContain("| Apr | 6900 |");
     expect(stdout).not.toMatch(/E_/);
   });
 
@@ -305,7 +305,7 @@ describe("preview", () => {
     expect(html).toContain("preview-layout");
     expect(html).toContain("type: bar");
     expect(html).toContain("<svg ");
-    expect(html).toContain("Dec led Midtown box office at 410 tickets");
+    expect(html).toContain("Mar led Midtown box office at 9.2k tickets");
     expect(html).toContain("<table");
     expect(html).toContain("Jan");
   });

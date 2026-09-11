@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: 東京 leads at 92, 4 rows" aria-labelledby="mv-c11fe51e607a9324-title" aria-describedby="mv-c11fe51e607a9324-desc" data-markvis="2" data-chart-type="bar" data-id="mv-c11fe51e607a9324" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-c11fe51e607a9324-title">東京 leads at 92</title>
-  <desc id="mv-c11fe51e607a9324-desc">bar chart. 東京 leads at 92. x=city. y=score. 4 rows.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">東京 leads at 92</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Tokyo leads regional RSVPs at 92, 4 rows" aria-labelledby="mv-729521da1ac38812-title" aria-describedby="mv-729521da1ac38812-desc" data-markvis="2" data-chart-type="bar" data-id="mv-729521da1ac38812" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-729521da1ac38812-title">Tokyo leads regional RSVPs at 92</title>
+  <desc id="mv-729521da1ac38812-desc">bar chart. Tokyo leads regional RSVPs at 92. x=city. y=rsvps. 4 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Tokyo leads regional RSVPs at 92</text>
   <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
   <g fill="#737373" font-size="10" font-weight="400">
     <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
@@ -13,10 +13,10 @@
     <text x="618.5" y="468" text-anchor="middle" font-size="10" data-full-label="München">München</text>
   </g>
   <g>
-    <path d="M93.5 458 L93.5 89.64 Q93.5 86.64 96.5 86.64 L162.5 86.64 Q165.5 86.64 165.5 89.64 L165.5 458 Z" fill="#3B82F6" data-x="北京" data-series="score" data-y="88"/>
-    <path d="M256.5 458 L256.5 72.76 Q256.5 69.76 259.5 69.76 L325.5 69.76 Q328.5 69.76 328.5 72.76 L328.5 458 Z" fill="#3B82F6" data-x="東京" data-series="score" data-y="92"/>
-    <path d="M419.5 458 L419.5 102.3 Q419.5 99.3 422.5 99.3 L488.5 99.3 Q491.5 99.3 491.5 102.3 L491.5 458 Z" fill="#3B82F6" data-x="서울" data-series="score" data-y="85"/>
-    <path d="M582.5 458 L582.5 127.62 Q582.5 124.62 585.5 124.62 L651.5 124.62 Q654.5 124.62 654.5 127.62 L654.5 458 Z" fill="#3B82F6" data-x="München" data-series="score" data-y="79"/>
+    <path d="M93.5 458 L93.5 89.64 Q93.5 86.64 96.5 86.64 L162.5 86.64 Q165.5 86.64 165.5 89.64 L165.5 458 Z" fill="#3B82F6" data-x="北京" data-series="rsvps" data-y="88"/>
+    <path d="M256.5 458 L256.5 72.76 Q256.5 69.76 259.5 69.76 L325.5 69.76 Q328.5 69.76 328.5 72.76 L328.5 458 Z" fill="#3B82F6" data-x="東京" data-series="rsvps" data-y="92"/>
+    <path d="M419.5 458 L419.5 102.3 Q419.5 99.3 422.5 99.3 L488.5 99.3 Q491.5 99.3 491.5 102.3 L491.5 458 Z" fill="#3B82F6" data-x="서울" data-series="rsvps" data-y="85"/>
+    <path d="M582.5 458 L582.5 127.62 Q582.5 124.62 585.5 124.62 L651.5 124.62 Q654.5 124.62 654.5 127.62 L654.5 458 Z" fill="#3B82F6" data-x="München" data-series="rsvps" data-y="79"/>
   </g>
   <g>
     <text x="129.5" y="78.64" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="北京">88</text>

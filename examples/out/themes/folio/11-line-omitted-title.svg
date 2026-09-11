@@ -1,28 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Tue peaked at 120, 3 rows" aria-labelledby="mv-fbd0c63fa52e6506-title" aria-describedby="mv-fbd0c63fa52e6506-desc" data-markvis="2" data-chart-type="line" data-id="mv-fbd0c63fa52e6506" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-fbd0c63fa52e6506-title">Tue peaked at 120</title>
-  <desc id="mv-fbd0c63fa52e6506-desc">line chart. Tue peaked at 120. x=day. y=visitors. 3 rows.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Tue peaked at 120</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Tuesday peaked corridor delays at 120 min (min), 5 rows" aria-labelledby="mv-2891e3f7754a99f2-title" aria-describedby="mv-2891e3f7754a99f2-desc" data-markvis="2" data-chart-type="line" data-id="mv-2891e3f7754a99f2" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-2891e3f7754a99f2-title">Tuesday peaked corridor delays at 120 min</title>
+  <desc id="mv-2891e3f7754a99f2-desc">line chart. Tuesday peaked corridor delays at 120 min. x=day. y=delay_min. unit=min. 5 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Tuesday peaked corridor delays at 120 min<tspan font-size="12" font-weight="400" fill="#737373"> · min</tspan></text>
   <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
-    <line x1="48" x2="700" y1="373.6" y2="373.6"/>
-    <line x1="48" x2="700" y1="204.8" y2="204.8"/>
+    <line x1="48" x2="700" y1="352.5" y2="352.5"/>
+    <line x1="48" x2="700" y1="141.5" y2="141.5"/>
     <line x1="48" x2="700" y1="36" y2="36"/>
   </g>
   <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
   <g fill="#737373" font-size="10" font-weight="400">
-    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">80</text>
-    <text x="38" y="373.6" text-anchor="end" dominant-baseline="middle">90</text>
-    <text x="38" y="289.2" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="38" y="204.8" text-anchor="end" dominant-baseline="middle">110</text>
-    <text x="38" y="120.4" text-anchor="end" dominant-baseline="middle">120</text>
-    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">130</text>
-    <text x="156.67" y="468" text-anchor="middle" font-size="10" data-full-label="Mon">Mon</text>
-    <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="Tue">Tue</text>
-    <text x="591.33" y="468" text-anchor="middle" font-size="10" data-full-label="Wed">Wed</text>
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="38" y="352.5" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="38" y="247" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="38" y="141.5" text-anchor="end" dominant-baseline="middle">120</text>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">140</text>
+    <text x="113.2" y="468" text-anchor="middle" font-size="10" data-full-label="Mon">Mon</text>
+    <text x="243.6" y="468" text-anchor="middle" font-size="10" data-full-label="Tue">Tue</text>
+    <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="Wed">Wed</text>
+    <text x="504.4" y="468" text-anchor="middle" font-size="10" data-full-label="Thu">Thu</text>
+    <text x="634.8" y="468" text-anchor="middle" font-size="10" data-full-label="Fri">Fri</text>
   </g>
   <g fill="none">
-    <path d="M156.67 289.2 L374 120.4 L591.33 373.6" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="visitors"/>
-    <circle cx="156.67" cy="289.2" r="2.5" fill="#3B82F6" stroke="none" data-series="visitors"/>
-    <circle cx="374" cy="120.4" r="2.5" fill="#3B82F6" stroke="none" data-series="visitors"/>
-    <circle cx="591.33" cy="373.6" r="2.5" fill="#3B82F6" stroke="none" data-series="visitors"/>
+    <path d="M113.2 326.13 L243.6 141.5 L374 394.7 L504.4 299.75 L634.8 273.38" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="delay_min"/>
+    <circle cx="113.2" cy="326.13" r="2.5" fill="#3B82F6" stroke="none" data-series="delay_min"/>
+    <circle cx="243.6" cy="141.5" r="2.5" fill="#3B82F6" stroke="none" data-series="delay_min"/>
+    <circle cx="374" cy="394.7" r="2.5" fill="#3B82F6" stroke="none" data-series="delay_min"/>
+    <circle cx="504.4" cy="299.75" r="2.5" fill="#3B82F6" stroke="none" data-series="delay_min"/>
+    <circle cx="634.8" cy="273.38" r="2.5" fill="#3B82F6" stroke="none" data-series="delay_min"/>
   </g>
 </svg>

@@ -2,11 +2,11 @@
 
 ```chart
 type: bar
-title: 東京 leads at 92
+title: Tokyo leads regional RSVPs at 92
 x: city
-y: score
+y: rsvps
 
-city,score
+city,rsvps
 北京,88
 東京,92
 서울,85

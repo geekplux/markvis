@@ -2,7 +2,7 @@
 
 ```chart
 type: hist
-title: Twos show twice
+title: Twos show up twice as often
 x: roll
 
 | roll |

@@ -1,8 +1,13 @@
 <!-- intent: Progressive HTML comment form followed by GFM table -->
 
-<!-- chart: bar x=month y=revenue title="Feb led Q3 at 180" -->
-| month | revenue |
+<!-- chart: bar x=month y=tickets unit="tickets" title="Mar led Midtown box office at 9.2k tickets" -->
+| month | tickets |
 | --- | --- |
-| Jan | 120 |
-| Feb | 180 |
-| Mar | 150 |
+| Sep | 5200 |
+| Oct | 6100 |
+| Nov | 7800 |
+| Dec | 8500 |
+| Jan | 4800 |
+| Feb | 7200 |
+| Mar | 9200 |
+| Apr | 6900 |

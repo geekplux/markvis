@@ -197,11 +197,16 @@ describe("language rules", () => {
       return;
     }
     expect(result.chart.type).toBe("bar");
-    expect(result.chart.title).toBe("Feb led Q3 at 180");
+    expect(result.chart.title).toBe("Mar led Midtown box office at 9.2k tickets");
     expect(columnValues(result.chart.table, "month")).toEqual([
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
       "Jan",
       "Feb",
       "Mar",
+      "Apr",
     ]);
   });
 

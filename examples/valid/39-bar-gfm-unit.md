@@ -2,7 +2,7 @@
 
 ```chart
 type: bar
-title: Archive leads at 8000 GB
+title: Archive leads storage at 8000 GB
 unit: GB
 x: bucket
 y: size

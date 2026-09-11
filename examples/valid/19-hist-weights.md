@@ -2,7 +2,7 @@
 
 ```chart
 type: hist
-title: Mid-20s carry the weight
+title: Mid-20s carry most of the weight mass
 x: age
 y: weight
 

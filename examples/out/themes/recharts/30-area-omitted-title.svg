@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="area chart: Day 4 peaked at 120, 4 rows" aria-labelledby="mv-ca251feb4fc55566-title" aria-describedby="mv-ca251feb4fc55566-desc" data-markvis="2" data-chart-type="area" data-id="mv-ca251feb4fc55566" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-ca251feb4fc55566-title">Day 4 peaked at 120</title>
-  <desc id="mv-ca251feb4fc55566-desc">area chart. Day 4 peaked at 120. x=day. y=active. 4 rows.</desc>
-  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#374151">Day 4 peaked at 120</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="area chart: Day 4 peaked warehouse intake at 120, 4 rows" aria-labelledby="mv-cdbac949a672f636-title" aria-describedby="mv-cdbac949a672f636-desc" data-markvis="2" data-chart-type="area" data-id="mv-cdbac949a672f636" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-cdbac949a672f636-title">Day 4 peaked warehouse intake at 120</title>
+  <desc id="mv-cdbac949a672f636-desc">area chart. Day 4 peaked warehouse intake at 120. x=day. y=intake. 4 rows.</desc>
+  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#374151">Day 4 peaked warehouse intake at 120</text>
   <rect x="48" y="36" width="652" height="391" fill="none" stroke="#e2e8f0" stroke-width="1" data-plot-border="1"/>
   <g fill="none" stroke="#374151" stroke-opacity="0.14" stroke-width="1">
     <line x1="48" x2="700" y1="296.67" y2="296.67"/>
@@ -30,11 +30,11 @@
     <text x="692" y="438" text-anchor="middle" font-size="11" data-full-label="5">5</text>
   </g>
   <g fill="none">
-    <path d="M183.2 166.33 L310.4 140.27 L437.6 153.3 L564.8 114.2 L564.8 427 L183.2 427 Z" fill="#8884d8" fill-opacity="0.2" stroke="none" data-series="active"/>
-    <path d="M183.2 166.33 L310.4 140.27 L437.6 153.3 L564.8 114.2" fill="none" stroke="#8884d8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="active"/>
-    <circle cx="183.2" cy="166.33" r="3" fill="#8884d8" stroke="none" data-series="active"/>
-    <circle cx="310.4" cy="140.27" r="3" fill="#8884d8" stroke="none" data-series="active"/>
-    <circle cx="437.6" cy="153.3" r="3" fill="#8884d8" stroke="none" data-series="active"/>
-    <circle cx="564.8" cy="114.2" r="3" fill="#8884d8" stroke="none" data-series="active"/>
+    <path d="M183.2 166.33 L310.4 140.27 L437.6 153.3 L564.8 114.2 L564.8 427 L183.2 427 Z" fill="#8884d8" fill-opacity="0.2" stroke="none" data-series="intake"/>
+    <path d="M183.2 166.33 L310.4 140.27 L437.6 153.3 L564.8 114.2" fill="none" stroke="#8884d8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="intake"/>
+    <circle cx="183.2" cy="166.33" r="3" fill="#8884d8" stroke="none" data-series="intake"/>
+    <circle cx="310.4" cy="140.27" r="3" fill="#8884d8" stroke="none" data-series="intake"/>
+    <circle cx="437.6" cy="153.3" r="3" fill="#8884d8" stroke="none" data-series="intake"/>
+    <circle cx="564.8" cy="114.2" r="3" fill="#8884d8" stroke="none" data-series="intake"/>
   </g>
 </svg>

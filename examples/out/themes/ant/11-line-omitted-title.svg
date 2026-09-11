@@ -1,34 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="line chart: Tue peaked at 120, 3 rows" aria-labelledby="mv-fbd0c63fa52e6506-title" aria-describedby="mv-fbd0c63fa52e6506-desc" data-markvis="2" data-chart-type="line" data-id="mv-fbd0c63fa52e6506" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
-  <title id="mv-fbd0c63fa52e6506-title">Tue peaked at 120</title>
-  <desc id="mv-fbd0c63fa52e6506-desc">line chart. Tue peaked at 120. x=day. y=visitors. 3 rows.</desc>
-  <text x="66" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Tue peaked at 120</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="line chart: Tuesday peaked corridor delays at 120 min (min), 5 rows" aria-labelledby="mv-2891e3f7754a99f2-title" aria-describedby="mv-2891e3f7754a99f2-desc" data-markvis="2" data-chart-type="line" data-id="mv-2891e3f7754a99f2" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-2891e3f7754a99f2-title">Tuesday peaked corridor delays at 120 min</title>
+  <desc id="mv-2891e3f7754a99f2-desc">line chart. Tuesday peaked corridor delays at 120 min. x=day. y=delay_min. unit=min. 5 rows.</desc>
+  <text x="66" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Tuesday peaked corridor delays at 120 min<tspan font-size="12" font-weight="400" fill="#8C8C8C"> · min</tspan></text>
   <rect x="66" y="46" width="640" height="333" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
   <g fill="none" stroke="#000000" stroke-opacity="0.16" stroke-width="1">
-    <line x1="66" x2="706" y1="312.4" y2="312.4"/>
-    <line x1="66" x2="706" y1="245.8" y2="245.8"/>
-    <line x1="66" x2="706" y1="112.6" y2="112.6"/>
+    <line x1="66" x2="706" y1="295.75" y2="295.75"/>
+    <line x1="66" x2="706" y1="212.5" y2="212.5"/>
+    <line x1="66" x2="706" y1="129.25" y2="129.25"/>
     <line x1="66" x2="706" y1="46" y2="46"/>
   </g>
   <path d="M66 379 L706 379" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
   <g fill="#8C8C8C" font-size="11" font-weight="400">
-    <text x="58" y="379" text-anchor="end" dominant-baseline="middle">80</text>
-    <text x="58" y="312.4" text-anchor="end" dominant-baseline="middle">90</text>
-    <text x="58" y="245.8" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="58" y="179.2" text-anchor="end" dominant-baseline="middle">110</text>
-    <text x="58" y="112.6" text-anchor="end" dominant-baseline="middle">120</text>
-    <text x="58" y="46" text-anchor="end" dominant-baseline="middle">130</text>
-    <text x="172.67" y="390" text-anchor="middle" font-size="11" data-full-label="Mon">Mon</text>
-    <text x="386" y="390" text-anchor="middle" font-size="11" data-full-label="Tue">Tue</text>
-    <text x="599.33" y="390" text-anchor="middle" font-size="11" data-full-label="Wed">Wed</text>
+    <text x="58" y="379" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="58" y="295.75" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="58" y="212.5" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="58" y="129.25" text-anchor="end" dominant-baseline="middle">120</text>
+    <text x="58" y="46" text-anchor="end" dominant-baseline="middle">140</text>
+    <text x="130" y="390" text-anchor="middle" font-size="11" data-full-label="Mon">Mon</text>
+    <text x="258" y="390" text-anchor="middle" font-size="11" data-full-label="Tue">Tue</text>
+    <text x="386" y="390" text-anchor="middle" font-size="11" data-full-label="Wed">Wed</text>
+    <text x="514" y="390" text-anchor="middle" font-size="11" data-full-label="Thu">Thu</text>
+    <text x="642" y="390" text-anchor="middle" font-size="11" data-full-label="Fri">Fri</text>
   </g>
   <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="44" y="212.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 44 212.5)" data-axis="y">visitors</text>
+    <text x="44" y="212.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 44 212.5)" data-axis="y">delay_min · min</text>
     <text x="386" y="406" text-anchor="middle" dominant-baseline="hanging" data-axis="x">day</text>
   </g>
   <g fill="none">
-    <path d="M172.67 245.8 L386 112.6 L599.33 312.4" fill="none" stroke="#5AD8A6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="visitors"/>
-    <circle cx="172.67" cy="245.8" r="3" fill="#5AD8A6" stroke="none" data-series="visitors"/>
-    <circle cx="386" cy="112.6" r="3" fill="#5AD8A6" stroke="none" data-series="visitors"/>
-    <circle cx="599.33" cy="312.4" r="3" fill="#5AD8A6" stroke="none" data-series="visitors"/>
+    <path d="M130 274.94 L258 129.25 L386 329.05 L514 254.13 L642 233.31" fill="none" stroke="#5AD8A6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="delay_min"/>
+    <circle cx="130" cy="274.94" r="3" fill="#5AD8A6" stroke="none" data-series="delay_min"/>
+    <circle cx="258" cy="129.25" r="3" fill="#5AD8A6" stroke="none" data-series="delay_min"/>
+    <circle cx="386" cy="329.05" r="3" fill="#5AD8A6" stroke="none" data-series="delay_min"/>
+    <circle cx="514" cy="254.13" r="3" fill="#5AD8A6" stroke="none" data-series="delay_min"/>
+    <circle cx="642" cy="233.31" r="3" fill="#5AD8A6" stroke="none" data-series="delay_min"/>
   </g>
 </svg>

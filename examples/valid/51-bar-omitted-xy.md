@@ -2,7 +2,7 @@
 
 ```chart
 type: bar
-title: Gamma leads at 3
+title: Gamma leads category share at 3
 
 category,value
 alpha,1

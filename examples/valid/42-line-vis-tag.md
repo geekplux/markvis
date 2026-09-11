@@ -2,11 +2,11 @@
 
 ```vis
 type: line
-title: FPS holds near 60
-x: frame
+title: FPS holds near 60 through the run
+x: minute
 y: fps
 
-frame,fps
+minute,fps
 1,60
 2,58
 3,59

@@ -2,7 +2,7 @@
 
 ```vis
 type: area
-title: Sprint 2 led backlog at 24
+title: Sprint 2 carried the deepest backlog at 24
 x: sprint
 y: stories
 

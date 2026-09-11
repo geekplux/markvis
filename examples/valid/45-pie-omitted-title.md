@@ -2,12 +2,12 @@
 
 ```chart
 type: pie
-title: Yes leads at 60
+title: Yes leads survey answers at 60
 x: label
 y: n
 
 label,n
 yes,60
-no,40
+no,30
+other,10
 ```
-

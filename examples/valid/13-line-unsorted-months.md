@@ -2,7 +2,7 @@
 
 ```chart
 type: line
-title: Dec led signups at 55
+title: December led signups at 55
 x: month
 y: signups
 

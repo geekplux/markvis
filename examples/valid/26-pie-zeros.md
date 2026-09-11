@@ -2,7 +2,7 @@
 
 ```chart
 type: pie
-title: On leads at 70
+title: On still leads status mix at 70
 x: flag
 y: count
 

@@ -2,14 +2,17 @@
 
 ```markvis
 type: area
-title: RSS climbed then eased
-unit: MB
-x: t
-y: rss
+title: RSS climbed then eased after noon
+unit: hits
+x: hour
+y: hits
 
-t,rss
-0,120
-1,125
-2,130
-3,128
+hour,hits
+0,40
+6,55
+9,90
+12,130
+15,118
+18,95
+21,70
 ```

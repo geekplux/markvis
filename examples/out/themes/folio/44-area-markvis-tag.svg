@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: RSS climbed then eased (MB), 4 rows" aria-labelledby="mv-65fa4577cb354284-title" aria-describedby="mv-65fa4577cb354284-desc" data-markvis="2" data-chart-type="area" data-id="mv-65fa4577cb354284" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-65fa4577cb354284-title">RSS climbed then eased</title>
-  <desc id="mv-65fa4577cb354284-desc">area chart. RSS climbed then eased. x=t. y=rss. unit=MB. 4 rows.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">RSS climbed then eased<tspan font-size="12" font-weight="400" fill="#737373"> · MB</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: RSS climbed then eased after noon (hits), 7 rows" aria-labelledby="mv-6c937ae59f8d092f-title" aria-describedby="mv-6c937ae59f8d092f-desc" data-markvis="2" data-chart-type="area" data-id="mv-6c937ae59f8d092f" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-6c937ae59f8d092f-title">RSS climbed then eased after noon</title>
+  <desc id="mv-6c937ae59f8d092f-desc">area chart. RSS climbed then eased after noon. x=hour. y=hits. unit=hits. 7 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">RSS climbed then eased after noon<tspan font-size="12" font-weight="400" fill="#737373"> · hits</tspan></text>
   <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
     <line x1="48" x2="700" y1="317.33" y2="317.33"/>
     <line x1="48" x2="700" y1="176.67" y2="176.67"/>
@@ -13,19 +13,21 @@
     <text x="38" y="317.33" text-anchor="end" dominant-baseline="middle">50</text>
     <text x="38" y="176.67" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="38" y="36" text-anchor="end" dominant-baseline="middle">150</text>
-    <text x="56" y="468" text-anchor="middle" font-size="10" data-full-label="-1">-1</text>
-    <text x="183.2" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
-    <text x="310.4" y="468" text-anchor="middle" font-size="10" data-full-label="1">1</text>
-    <text x="437.6" y="468" text-anchor="middle" font-size="10" data-full-label="2">2</text>
-    <text x="564.8" y="468" text-anchor="middle" font-size="10" data-full-label="3">3</text>
-    <text x="692" y="468" text-anchor="middle" font-size="10" data-full-label="4">4</text>
+    <text x="56" y="468" text-anchor="middle" font-size="10" data-full-label="-10">-10</text>
+    <text x="215" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="10">10</text>
+    <text x="533" y="468" text-anchor="middle" font-size="10" data-full-label="20">20</text>
+    <text x="692" y="468" text-anchor="middle" font-size="10" data-full-label="30">30</text>
   </g>
   <g fill="none">
-    <path d="M183.2 120.4 L310.4 106.33 L437.6 92.27 L564.8 97.89 L564.8 458 L183.2 458 Z" fill="#3B82F6" fill-opacity="0.22" stroke="none" data-series="rss"/>
-    <path d="M183.2 120.4 L310.4 106.33 L437.6 92.27 L564.8 97.89" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="rss"/>
-    <circle cx="183.2" cy="120.4" r="2.5" fill="#3B82F6" stroke="none" data-series="rss"/>
-    <circle cx="310.4" cy="106.33" r="2.5" fill="#3B82F6" stroke="none" data-series="rss"/>
-    <circle cx="437.6" cy="92.27" r="2.5" fill="#3B82F6" stroke="none" data-series="rss"/>
-    <circle cx="564.8" cy="97.89" r="2.5" fill="#3B82F6" stroke="none" data-series="rss"/>
+    <path d="M215 345.47 L310.4 303.27 L358.1 204.8 L405.8 92.27 L453.5 126.03 L501.2 190.73 L548.9 261.07 L548.9 458 L215 458 Z" fill="#3B82F6" fill-opacity="0.22" stroke="none" data-series="hits"/>
+    <path d="M215 345.47 L310.4 303.27 L358.1 204.8 L405.8 92.27 L453.5 126.03 L501.2 190.73 L548.9 261.07" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="hits"/>
+    <circle cx="215" cy="345.47" r="2.5" fill="#3B82F6" stroke="none" data-series="hits"/>
+    <circle cx="310.4" cy="303.27" r="2.5" fill="#3B82F6" stroke="none" data-series="hits"/>
+    <circle cx="358.1" cy="204.8" r="2.5" fill="#3B82F6" stroke="none" data-series="hits"/>
+    <circle cx="405.8" cy="92.27" r="2.5" fill="#3B82F6" stroke="none" data-series="hits"/>
+    <circle cx="453.5" cy="126.03" r="2.5" fill="#3B82F6" stroke="none" data-series="hits"/>
+    <circle cx="501.2" cy="190.73" r="2.5" fill="#3B82F6" stroke="none" data-series="hits"/>
+    <circle cx="548.9" cy="261.07" r="2.5" fill="#3B82F6" stroke="none" data-series="hits"/>
   </g>
 </svg>

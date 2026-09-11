@@ -2,7 +2,7 @@
 
 ```chart
 type: line
-title: Tue took 12 minutes
+title: Tuesday took 12 minutes end-to-end
 x: day
 y: minutes
 

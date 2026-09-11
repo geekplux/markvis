@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="area chart: Queue a stays deeper, 6 rows, series queue" aria-labelledby="mv-62a59a241ade70e7-title" aria-describedby="mv-62a59a241ade70e7-desc" data-markvis="2" data-chart-type="area" data-id="mv-62a59a241ade70e7" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-62a59a241ade70e7-title">Queue a stays deeper</title>
-  <desc id="mv-62a59a241ade70e7-desc">area chart. Queue a stays deeper. x=minute. y=depth. series=queue. 6 rows.</desc>
-  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">Queue a stays deeper</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="area chart: Queue A stays deeper than queue B, 6 rows, series queue" aria-labelledby="mv-8c2fdefb06435294-title" aria-describedby="mv-8c2fdefb06435294-desc" data-markvis="2" data-chart-type="area" data-id="mv-8c2fdefb06435294" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-8c2fdefb06435294-title">Queue A stays deeper than queue B</title>
+  <desc id="mv-8c2fdefb06435294-desc">area chart. Queue A stays deeper than queue B. x=minute. y=depth. series=queue. 6 rows.</desc>
+  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">Queue A stays deeper than queue B</text>
   <g font-size="12" font-weight="500" fill="#0A0A0A">
     <rect x="48" y="31" width="10" height="10" fill="#F54900" rx="1"/>
-    <text x="62" y="40" data-legend="a">a</text>
+    <text x="62" y="40" data-legend="A">A</text>
     <rect x="85.44" y="31" width="10" height="10" fill="#009689" rx="1"/>
-    <text x="99.44" y="40" data-legend="b">b</text>
+    <text x="99.44" y="40" data-legend="B">B</text>
   </g>
   <rect x="48" y="60" width="652" height="377" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
   <g fill="none" stroke="#0A0A0A" stroke-opacity="0.06" stroke-width="1">
@@ -27,15 +27,15 @@
     <text x="692" y="448" text-anchor="middle" font-size="11" data-full-label="3">3</text>
   </g>
   <g fill="none">
-    <path d="M215 201.38 L374 107.13 L533 154.25 L533 437 L215 437 Z" fill="#F54900" fill-opacity="0.18" stroke="none" data-series="a"/>
-    <path d="M215 201.38 L374 107.13 L533 154.25" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="a"/>
-    <circle cx="215" cy="201.38" r="3.5" fill="#F54900" stroke="none" data-series="a"/>
-    <circle cx="374" cy="107.13" r="3.5" fill="#F54900" stroke="none" data-series="a"/>
-    <circle cx="533" cy="154.25" r="3.5" fill="#F54900" stroke="none" data-series="a"/>
-    <path d="M215 342.75 L374 295.63 L533 248.5 L533 437 L215 437 Z" fill="#009689" fill-opacity="0.18" stroke="none" data-series="b"/>
-    <path d="M215 342.75 L374 295.63 L533 248.5" fill="none" stroke="#009689" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="b"/>
-    <circle cx="215" cy="342.75" r="3.5" fill="#009689" stroke="none" data-series="b"/>
-    <circle cx="374" cy="295.63" r="3.5" fill="#009689" stroke="none" data-series="b"/>
-    <circle cx="533" cy="248.5" r="3.5" fill="#009689" stroke="none" data-series="b"/>
+    <path d="M215 201.38 L374 107.13 L533 154.25 L533 437 L215 437 Z" fill="#F54900" fill-opacity="0.18" stroke="none" data-series="A"/>
+    <path d="M215 201.38 L374 107.13 L533 154.25" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="A"/>
+    <circle cx="215" cy="201.38" r="3.5" fill="#F54900" stroke="none" data-series="A"/>
+    <circle cx="374" cy="107.13" r="3.5" fill="#F54900" stroke="none" data-series="A"/>
+    <circle cx="533" cy="154.25" r="3.5" fill="#F54900" stroke="none" data-series="A"/>
+    <path d="M215 342.75 L374 295.63 L533 248.5 L533 437 L215 437 Z" fill="#009689" fill-opacity="0.18" stroke="none" data-series="B"/>
+    <path d="M215 342.75 L374 295.63 L533 248.5" fill="none" stroke="#009689" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="B"/>
+    <circle cx="215" cy="342.75" r="3.5" fill="#009689" stroke="none" data-series="B"/>
+    <circle cx="374" cy="295.63" r="3.5" fill="#009689" stroke="none" data-series="B"/>
+    <circle cx="533" cy="248.5" r="3.5" fill="#009689" stroke="none" data-series="B"/>
   </g>
 </svg>

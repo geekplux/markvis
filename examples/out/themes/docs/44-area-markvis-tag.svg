@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: RSS climbed then eased (MB), 4 rows" aria-labelledby="mv-65fa4577cb354284-title" aria-describedby="mv-65fa4577cb354284-desc" data-markvis="2" data-chart-type="area" data-id="mv-65fa4577cb354284" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-65fa4577cb354284-title">RSS climbed then eased</title>
-  <desc id="mv-65fa4577cb354284-desc">area chart. RSS climbed then eased. x=t. y=rss. unit=MB. 4 rows.</desc>
-  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">RSS climbed then eased<tspan font-size="11" font-weight="400" fill="#64748B"> · MB</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: RSS climbed then eased after noon (hits), 7 rows" aria-labelledby="mv-6c937ae59f8d092f-title" aria-describedby="mv-6c937ae59f8d092f-desc" data-markvis="2" data-chart-type="area" data-id="mv-6c937ae59f8d092f" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-6c937ae59f8d092f-title">RSS climbed then eased after noon</title>
+  <desc id="mv-6c937ae59f8d092f-desc">area chart. RSS climbed then eased after noon. x=hour. y=hits. unit=hits. 7 rows.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">RSS climbed then eased after noon<tspan font-size="11" font-weight="400" fill="#64748B"> · hits</tspan></text>
   <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
   <g fill="none" stroke="#18181B" stroke-opacity="0.06" stroke-width="1">
     <line x1="40" x2="704" y1="316" y2="316"/>
@@ -14,19 +14,21 @@
     <text x="32" y="316" text-anchor="end" dominant-baseline="middle">50</text>
     <text x="32" y="174" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="32" y="32" text-anchor="end" dominant-baseline="middle">150</text>
-    <text x="48" y="468" text-anchor="middle" font-size="10" data-full-label="-1">-1</text>
-    <text x="177.6" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
-    <text x="307.2" y="468" text-anchor="middle" font-size="10" data-full-label="1">1</text>
-    <text x="436.8" y="468" text-anchor="middle" font-size="10" data-full-label="2">2</text>
-    <text x="566.4" y="468" text-anchor="middle" font-size="10" data-full-label="3">3</text>
-    <text x="696" y="468" text-anchor="middle" font-size="10" data-full-label="4">4</text>
+    <text x="48" y="468" text-anchor="middle" font-size="10" data-full-label="-10">-10</text>
+    <text x="210" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <text x="372" y="468" text-anchor="middle" font-size="10" data-full-label="10">10</text>
+    <text x="534" y="468" text-anchor="middle" font-size="10" data-full-label="20">20</text>
+    <text x="696" y="468" text-anchor="middle" font-size="10" data-full-label="30">30</text>
   </g>
   <g fill="none">
-    <path d="M177.6 117.2 L307.2 103 L436.8 88.8 L566.4 94.48 L566.4 458 L177.6 458 Z" fill="#475569" fill-opacity="0.12" stroke="none" data-series="rss"/>
-    <path d="M177.6 117.2 L307.2 103 L436.8 88.8 L566.4 94.48" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="rss"/>
-    <circle cx="177.6" cy="117.2" r="2" fill="#475569" stroke="none" data-series="rss"/>
-    <circle cx="307.2" cy="103" r="2" fill="#475569" stroke="none" data-series="rss"/>
-    <circle cx="436.8" cy="88.8" r="2" fill="#475569" stroke="none" data-series="rss"/>
-    <circle cx="566.4" cy="94.48" r="2" fill="#475569" stroke="none" data-series="rss"/>
+    <path d="M210 344.4 L307.2 301.8 L355.8 202.4 L404.4 88.8 L453 122.88 L501.6 188.2 L550.2 259.2 L550.2 458 L210 458 Z" fill="#475569" fill-opacity="0.12" stroke="none" data-series="hits"/>
+    <path d="M210 344.4 L307.2 301.8 L355.8 202.4 L404.4 88.8 L453 122.88 L501.6 188.2 L550.2 259.2" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="hits"/>
+    <circle cx="210" cy="344.4" r="2" fill="#475569" stroke="none" data-series="hits"/>
+    <circle cx="307.2" cy="301.8" r="2" fill="#475569" stroke="none" data-series="hits"/>
+    <circle cx="355.8" cy="202.4" r="2" fill="#475569" stroke="none" data-series="hits"/>
+    <circle cx="404.4" cy="88.8" r="2" fill="#475569" stroke="none" data-series="hits"/>
+    <circle cx="453" cy="122.88" r="2" fill="#475569" stroke="none" data-series="hits"/>
+    <circle cx="501.6" cy="188.2" r="2" fill="#475569" stroke="none" data-series="hits"/>
+    <circle cx="550.2" cy="259.2" r="2" fill="#475569" stroke="none" data-series="hits"/>
   </g>
 </svg>

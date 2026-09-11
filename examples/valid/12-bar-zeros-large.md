@@ -2,16 +2,16 @@
 
 ```chart
 type: bar
-title: Traffic spikes
+title: Friday spike dwarfs quiet weekdays
 unit: hits
-x: hour
+x: day
 y: hits
 
-hour,hits
-00,0
-01,0
-02,12
-03,1500000
-04,980000
-05,3
+day,hits
+Mon,0
+Tue,12
+Wed,0
+Thu,8
+Fri,1500000
+Sat,3
 ```

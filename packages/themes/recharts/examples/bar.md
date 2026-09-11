@@ -2,18 +2,18 @@
 markvis: 2
 type: bar
 theme: recharts
-title: Dec led Midtown box office at 410 tickets
+title: Mar led Midtown box office at 9.2k tickets
 unit: tickets
 x: month
 y: tickets
 
 month,tickets
-Sep,210
-Oct,245
-Nov,280
-Dec,410
-Jan,190
-Feb,220
-Mar,265
-Apr,240
+Sep,5200
+Oct,6100
+Nov,7800
+Dec,8500
+Jan,4800
+Feb,7200
+Mar,9200
+Apr,6900
 ```

@@ -2,7 +2,7 @@
 
 ```chart
 type: scatter
-title: Closer Beltline commute, higher rent_index
+title: Rent climbs as commute shortens on the Beltline
 x: commute_min
 y: rent_index
 

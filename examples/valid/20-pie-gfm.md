@@ -2,7 +2,7 @@
 
 ```chart
 type: pie
-title: Chrome leads at 52
+title: Chrome still leads browser share at 52
 x: browser
 y: users
 

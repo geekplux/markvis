@@ -2,22 +2,22 @@
 
 ```chart
 type: bar
-title: Jul peaked Midtown season at 420 tickets
-unit: tickets
+title: Jul peaked Midtown walks at 22k
+unit: walks
 x: month
-y: tickets
+y: walks
 
-month,tickets
-Jan,210
-Feb,235
-Mar,248
-Apr,262
-May,290
-Jun,355
-Jul,420
-Aug,390
-Sep,310
-Oct,278
-Nov,255
-Dec,340
+month,walks
+Jan,8200
+Feb,9100
+Mar,10500
+Apr,11200
+May,14800
+Jun,18600
+Jul,22000
+Aug,20100
+Sep,16700
+Oct,13100
+Nov,10800
+Dec,12400
 ```

@@ -37,10 +37,10 @@ describe("markdownItMarkvis", () => {
     expect(html).toContain("<table");
     expect(html).toContain("</table>");
     expect(html).toContain("<figure");
-    expect(html).toContain("<figcaption>Dec led Midtown box office at 410 tickets</figcaption>");
+    expect(html).toContain("<figcaption>Mar led Midtown box office at 9.2k tickets</figcaption>");
     expect(html).toContain("<th>month</th>");
     expect(html).toContain("<td>Dec</td>");
-    expect(html).toContain("<td>410</td>");
+    expect(html).toContain("<td>9200</td>");
   });
 
   it("embeds the same SVG bytes as render-svg", () => {
@@ -58,14 +58,14 @@ describe("markdownItMarkvis", () => {
     expect(html).toContain("<svg");
     expect(html).toContain("<table");
     expect(html).toContain("<td>Mar</td>");
-    expect(html).toContain("<figcaption>Feb led Q3 at 180</figcaption>");
+    expect(html).toContain("<figcaption>Mar led Midtown box office at 9.2k tickets</figcaption>");
   });
 
   it("renders comment form even when markdown-it html option is false", () => {
     const html = toHtml(valid08, false);
     expect(html).toContain("<svg");
     expect(html).toContain("<table");
-    expect(html).toContain("<figcaption>Feb led Q3 at 180</figcaption>");
+    expect(html).toContain("<figcaption>Mar led Midtown box office at 9.2k tickets</figcaption>");
   });
 
   it("accepts vis and markvis fence tags", () => {

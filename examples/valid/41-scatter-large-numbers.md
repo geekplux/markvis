@@ -2,7 +2,7 @@
 
 ```chart
 type: scatter
-title: Bigger cities, bigger GDP
+title: Bigger metros, bigger GDP
 x: pop
 y: gdp
 

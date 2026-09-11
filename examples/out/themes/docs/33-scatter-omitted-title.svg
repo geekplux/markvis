@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="scatter chart: y rises with x, 4 rows" aria-labelledby="mv-9ccfe06238dd91bf-title" aria-describedby="mv-9ccfe06238dd91bf-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-9ccfe06238dd91bf" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-9ccfe06238dd91bf-title">y rises with x</title>
-  <desc id="mv-9ccfe06238dd91bf-desc">scatter chart. y rises with x. x=x. y=y. 4 rows.</desc>
-  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">y rises with x</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="scatter chart: Delivery time rises with distance, 4 rows" aria-labelledby="mv-34d4b0503681798c-title" aria-describedby="mv-34d4b0503681798c-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-34d4b0503681798c" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-34d4b0503681798c-title">Delivery time rises with distance</title>
+  <desc id="mv-34d4b0503681798c-desc">scatter chart. Delivery time rises with distance. x=distance_km. y=minutes. 4 rows.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Delivery time rises with distance</text>
   <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
   <g fill="none" stroke="#18181B" stroke-opacity="0.06" stroke-width="1">
     <line x1="40" x2="704" y1="372.8" y2="372.8"/>
@@ -24,9 +24,9 @@
     <text x="696" y="468" text-anchor="middle" font-size="10" data-full-label="3">3</text>
   </g>
   <g>
-    <circle cx="177.6" cy="355.76" r="2.5" fill="#475569" fill-opacity="0.75" stroke="none" data-x="1.0" data-y="2.1" data-series="y"/>
-    <circle cx="307.2" cy="236.48" r="2.5" fill="#475569" fill-opacity="0.75" stroke="none" data-x="1.5" data-y="2.8" data-series="y"/>
-    <circle cx="436.8" cy="202.4" r="2.5" fill="#475569" fill-opacity="0.75" stroke="none" data-x="2.0" data-y="3" data-series="y"/>
-    <circle cx="566.4" cy="134.24" r="2.5" fill="#475569" fill-opacity="0.75" stroke="none" data-x="2.5" data-y="3.4" data-series="y"/>
+    <circle cx="177.6" cy="355.76" r="2.5" fill="#475569" fill-opacity="0.75" stroke="none" data-x="1.0" data-y="2.1" data-series="minutes"/>
+    <circle cx="307.2" cy="236.48" r="2.5" fill="#475569" fill-opacity="0.75" stroke="none" data-x="1.5" data-y="2.8" data-series="minutes"/>
+    <circle cx="436.8" cy="202.4" r="2.5" fill="#475569" fill-opacity="0.75" stroke="none" data-x="2.0" data-y="3" data-series="minutes"/>
+    <circle cx="566.4" cy="134.24" r="2.5" fill="#475569" fill-opacity="0.75" stroke="none" data-x="2.5" data-y="3.4" data-series="minutes"/>
   </g>
 </svg>

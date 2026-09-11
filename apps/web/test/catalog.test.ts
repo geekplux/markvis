@@ -98,7 +98,7 @@ describe("gallery catalog", () => {
       expect(types.has(type)).toBe(true);
     }
     expect(catalog[0]?.id).toBe("01-bar-basic");
-    expect(catalog[0]?.title).toBe("Dec led Midtown box office at 410 tickets");
+    expect(catalog[0]?.title).toBe("Mar led Midtown box office at 9.2k tickets");
     expect(catalog[0]?.title).not.toMatch(/Bar Chart/i);
     expect(isStemSlugTitle(catalog[0]!.title, catalog[0]!.id)).toBe(false);
     for (const item of catalog) {

@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: API leads p99 at 120 ms (ms), 3 rows" aria-labelledby="mv-97115e67c37fcdef-title" aria-describedby="mv-97115e67c37fcdef-desc" data-markvis="2" data-chart-type="bar" data-id="mv-97115e67c37fcdef" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-97115e67c37fcdef-title">API leads p99 at 120 ms</title>
-  <desc id="mv-97115e67c37fcdef-desc">bar chart. API leads p99 at 120 ms. x=service. y=p99. unit=ms. 3 rows.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">API leads p99 at 120 ms<tspan font-size="12" font-weight="400" fill="#737373"> · ms</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: API leads p99 latency at 120 ms (ms), 3 rows" aria-labelledby="mv-20a2729dcd062f24-title" aria-describedby="mv-20a2729dcd062f24-desc" data-markvis="2" data-chart-type="bar" data-id="mv-20a2729dcd062f24" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-20a2729dcd062f24-title">API leads p99 latency at 120 ms</title>
+  <desc id="mv-20a2729dcd062f24-desc">bar chart. API leads p99 latency at 120 ms. x=service. y=p99. unit=ms. 3 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">API leads p99 latency at 120 ms<tspan font-size="12" font-weight="400" fill="#737373"> · ms</tspan></text>
   <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
   <g fill="#737373" font-size="10" font-weight="400">
     <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>

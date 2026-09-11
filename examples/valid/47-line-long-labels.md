@@ -2,7 +2,7 @@
 
 ```chart
 type: line
-title: Points climb through beta
+title: Points climb through beta weeks
 x: milestone
 y: points
 

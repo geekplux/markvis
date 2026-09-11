@@ -2,7 +2,7 @@
 
 ```vis
 type: scatter
-title: Most points sit on the axes
+title: Most points sit near the axes
 x: dx
 y: dy
 

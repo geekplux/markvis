@@ -2,20 +2,20 @@
 
 ```vis
 type: area
-title: D7 held the Midtown queue peak at 28
+title: Day 6 held the deepest queue at 48 holds
 unit: holds
 x: day
 y: holds
 
 day,holds
-D1,12
-D2,15
-D3,14
-D4,18
-D5,16
-D6,22
-D7,28
-D8,21
-D9,19
-D10,17
+D1,18
+D2,24
+D3,31
+D4,37
+D5,42
+D6,48
+D7,40
+D8,33
+D9,28
+D10,22
 ```

@@ -1,6 +1,6 @@
 <!-- intent: Progressive comment with unit attribute -->
 
-<!-- chart: bar x=item y=cost unit="USD" title="Hosting leads cost at 400" -->
+<!-- chart: bar x=item y=cost unit="USD" title="Hosting leads monthly cost at 400" -->
 | item | cost |
 | --- | --- |
 | Hosting | 400 |

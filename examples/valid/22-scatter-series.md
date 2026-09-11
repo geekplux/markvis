@@ -2,7 +2,7 @@
 
 ```chart
 type: scatter
-title: Scores rise with hours
+title: Scores rise with study hours
 x: hours
 y: score
 series: cohort

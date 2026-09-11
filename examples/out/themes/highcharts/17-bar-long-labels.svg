@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="640" viewBox="0 0 720 640" role="img" aria-label="bar chart: North America leads spend at 420,000 (USD), 3 rows" aria-labelledby="mv-e9d00e87d5c9a6d2-title" aria-describedby="mv-e9d00e87d5c9a6d2-desc" data-markvis="2" data-chart-type="bar" data-id="mv-e9d00e87d5c9a6d2" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-e9d00e87d5c9a6d2-title">North America leads spend at 420,000</title>
-  <desc id="mv-e9d00e87d5c9a6d2-desc">bar chart. North America leads spend at 420,000. x=initiative. y=spend. unit=USD. 3 rows.</desc>
-  <text x="74" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">North America leads spend at 420,000<tspan font-size="12" font-weight="400" fill="#666666"> · USD</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="640" viewBox="0 0 720 640" role="img" aria-label="bar chart: North America leads cloud spend at 420k (USD), 3 rows" aria-labelledby="mv-8e85d3644f53d3e4-title" aria-describedby="mv-8e85d3644f53d3e4-desc" data-markvis="2" data-chart-type="bar" data-id="mv-8e85d3644f53d3e4" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-8e85d3644f53d3e4-title">North America leads cloud spend at 420k</title>
+  <desc id="mv-8e85d3644f53d3e4-desc">bar chart. North America leads cloud spend at 420k. x=region. y=spend. unit=USD. 3 rows.</desc>
+  <text x="74" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">North America leads cloud spend at 420k<tspan font-size="12" font-weight="400" fill="#666666"> · USD</tspan></text>
   <rect x="74" y="38" width="626" height="326.19" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
   <path d="M74 364.19 L700 364.19" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
@@ -15,7 +15,7 @@
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
     <text x="52" y="201.09" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 52 201.09)" data-axis="y">spend · USD</text>
-    <text x="387" y="392.19" text-anchor="middle" dominant-baseline="hanging" data-axis="x">initiative</text>
+    <text x="387" y="392.19" text-anchor="middle" dominant-baseline="hanging" data-axis="x">region</text>
   </g>
   <g>
     <path d="M146.33 364.19 L210.33 364.19 L210.33 135.86 L146.33 135.86 Z" fill="#7cb5ec" data-x="North America enterprise expansion Q3" data-series="spend" data-y="420000"/>

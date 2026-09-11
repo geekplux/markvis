@@ -10,11 +10,11 @@ Open-source library. Install with npm or a script tag. Any Markdown preview or r
 
 **Spec:** [https://markvis.js.org/llms.txt](https://markvis.js.org/llms.txt)
 
-![Dec led Midtown box office](./examples/out/01-bar-basic.svg)
+![Mar led Midtown box office](./examples/out/01-bar-basic.svg)
 
-![Member overtook walk-up](./examples/out/02-line-multi.svg)
+![Walk-up still leads member](./examples/out/02-line-multi.svg)
 
-![MARTA leads Midtown mode share](./examples/out/05-pie-raw.svg)
+![MARTA takes the largest mode share](./examples/out/05-pie-raw.svg)
 
 Tags: `chart` | `markvis` | `vis`. Types: bar · line · area · scatter · pie · hist.
 

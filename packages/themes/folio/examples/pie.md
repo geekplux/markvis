@@ -1,7 +1,7 @@
 ```chart
 type: pie
 theme: folio
-title: MARTA leads Midtown mode share at 38
+title: MARTA takes the largest mode share
 x: mode
 y: count
 

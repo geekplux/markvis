@@ -36,7 +36,7 @@ describe("wrapFence + chartBlockHtml", () => {
     expect(html).toContain("<svg");
     expect(html).toContain("</svg>");
     expect(html).toContain("<table");
-    expect(html).toContain("<figcaption>Dec led Midtown box office at 410 tickets</figcaption>");
+    expect(html).toContain("<figcaption>Mar led Midtown box office at 9.2k tickets</figcaption>");
   });
 
   it("matches render-svg bytes for the same IR", () => {

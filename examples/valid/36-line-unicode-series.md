@@ -2,14 +2,14 @@
 
 ```chart
 type: line
-title: 東京 still leads 北京
-x: month
-y: amount
+title: Tokyo still leads Beijing on RSVPs
+x: week
+y: rsvps
 series: city
 
-month,city,amount
-Jan,北京,100
-Jan,東京,120
-Feb,北京,110
-Feb,東京,130
+week,city,rsvps
+W1,北京,100
+W1,東京,120
+W2,北京,110
+W2,東京,130
 ```

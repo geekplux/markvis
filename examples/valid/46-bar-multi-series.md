@@ -2,7 +2,7 @@
 
 ```chart
 type: bar
-title: Free still outnumbers pro
+title: Free still outnumbers pro seats
 x: month
 y: seats
 series: plan

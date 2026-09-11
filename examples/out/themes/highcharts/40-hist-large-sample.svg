@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="hist chart: Idle clusters near zero, 11 rows" aria-labelledby="mv-70aa9b42b2d28f99-title" aria-describedby="mv-70aa9b42b2d28f99-desc" data-markvis="2" data-chart-type="hist" data-id="mv-70aa9b42b2d28f99" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-70aa9b42b2d28f99-title">Idle clusters near zero</title>
-  <desc id="mv-70aa9b42b2d28f99-desc">hist chart. Idle clusters near zero. x=sec. 11 rows. x is binned with Sturges equal-width bins.</desc>
-  <text x="74" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Idle clusters near zero</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="hist chart: Idle CPU clusters near zero, 11 rows" aria-labelledby="mv-622c0e98a61f6195-title" aria-describedby="mv-622c0e98a61f6195-desc" data-markvis="2" data-chart-type="hist" data-id="mv-622c0e98a61f6195" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-622c0e98a61f6195-title">Idle CPU clusters near zero</title>
+  <desc id="mv-622c0e98a61f6195-desc">hist chart. Idle CPU clusters near zero. x=idle_pct. 11 rows. x is binned with Sturges equal-width bins.</desc>
+  <text x="74" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Idle CPU clusters near zero</text>
   <rect x="74" y="38" width="626" height="361" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
   <path d="M74 399 L700 399" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
@@ -18,7 +18,7 @@
     <text x="700" y="410" text-anchor="middle" font-size="11" data-full-label="20">20</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="387" y="426" text-anchor="middle" dominant-baseline="hanging" data-axis="x">sec</text>
+    <text x="387" y="426" text-anchor="middle" dominant-baseline="hanging" data-axis="x">idle_pct</text>
   </g>
   <g>
     <path d="M87.77 399 L185.43 399 L185.43 38 L87.77 38 Z" fill="#7cb5ec" data-bin-left="0" data-bin-right="4" data-weight="4" data-count="4"/>

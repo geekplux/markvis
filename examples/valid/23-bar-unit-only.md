@@ -2,7 +2,7 @@
 
 ```chart
 type: bar
-title: API leads p99 at 120 ms
+title: API leads p99 latency at 120 ms
 unit: ms
 x: service
 y: p99

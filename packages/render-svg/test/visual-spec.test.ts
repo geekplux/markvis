@@ -113,7 +113,7 @@ describe("visual-spec tokens", () => {
     const svg = svgOf("01-bar-basic.md");
     const plot = plotBox(svg);
     const title = titleEl(svg);
-    expect(svg).toContain("Dec led Midtown box office at 410 tickets");
+    expect(svg).toContain("Mar led Midtown box office at 9.2k tickets");
     expect(svg).not.toMatch(/>bar</i);
     expect(title.size).toBe("17");
     expect(title.anchor).toBe("start");
@@ -125,7 +125,7 @@ describe("visual-spec tokens", () => {
     expect(svg).not.toContain('shape-rendering="crispEdges"');
     expect(svg).not.toContain("rotate(-90");
     // 8 Midtown months: labels if wide enough, else interior grid (XOR)
-    const hasLabels = svg.includes('data-value-label="Dec"');
+    const hasLabels = svg.includes('data-value-label="Mar"');
     const hasGrid =
       svg.includes('stroke-opacity="0.14"') || svg.includes('stroke-opacity="0.12"');
     expect(hasLabels || hasGrid).toBe(true);
@@ -143,7 +143,7 @@ describe("visual-spec tokens", () => {
     const svg = svgOf("02-line-multi.md");
     const plot = plotBox(svg);
     const title = titleEl(svg);
-    expect(svg).toContain("Member overtook walk-up after W8");
+    expect(svg).toContain("Walk-up still leads member through week 12");
     expect(title.anchor).toBe("start");
     expect(title.x).toBeCloseTo(plot.left, 2);
     expect(svg).toContain(PALETTE[0]);
@@ -159,7 +159,7 @@ describe("visual-spec tokens", () => {
   it("05 pie: structure slice stroke, outside name · value, conclusion title, no side legend", () => {
     const svg = svgOf("05-pie-raw.md");
     const title = titleEl(svg);
-    expect(svg).toContain("MARTA leads Midtown mode share at 38");
+    expect(svg).toContain("MARTA takes the largest mode share");
     expect(svg).not.toContain(">Share<");
     expect(title.anchor).toBe("start");
     expect(title.size).toBe("17");
@@ -177,7 +177,7 @@ describe("visual-spec tokens", () => {
   it("09 twelve categories stay horizontal; value labels off; grid on", () => {
     const svg = svgOf("09-bar-twelve-categories.md");
     const plot = plotBox(svg);
-    expect(svg).toContain("Jul peaked Midtown season at 420 tickets");
+    expect(svg).toContain("Jul peaked Midtown walks at 22k");
     expect(svg).not.toContain("rotate(-55");
     expect(svg).not.toContain("…");
     expect(svg).not.toContain("data-value-label=");
@@ -207,7 +207,7 @@ describe("visual-spec tokens", () => {
     const svg = svgOf("17-bar-long-labels.md");
     const plot = plotBox(svg);
     const title = titleEl(svg);
-    expect(svg).toContain("North America leads spend at 420,000");
+    expect(svg).toContain("North America leads cloud spend at 420k");
     expect(title.anchor).toBe("start");
     expect(title.x).toBeCloseTo(plot.left, 2);
     expect(svg).toContain("rotate(-55");

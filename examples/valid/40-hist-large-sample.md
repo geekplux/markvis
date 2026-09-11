@@ -2,10 +2,10 @@
 
 ```chart
 type: hist
-title: Idle clusters near zero
-x: sec
+title: Idle CPU clusters near zero
+x: idle_pct
 
-sec
+idle_pct
 0
 0
 1

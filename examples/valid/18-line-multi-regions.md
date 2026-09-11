@@ -2,7 +2,7 @@
 
 ```chart
 type: line
-title: US still leads EU
+title: US traffic still leads EU week over week
 x: week
 y: mau
 series: region

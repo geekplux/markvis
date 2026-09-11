@@ -2,13 +2,15 @@
 
 ```chart
 type: line
-title: Tue peaked at 120
+title: Tuesday peaked corridor delays at 120 min
+unit: min
 x: day
-y: visitors
+y: delay_min
 
-day,visitors
-Mon,100
+day,delay_min
+Mon,85
 Tue,120
-Wed,90
+Wed,72
+Thu,90
+Fri,95
 ```
-

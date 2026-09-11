@@ -2,16 +2,16 @@
 
 ```chart
 type: area
-title: Queue a stays deeper
+title: Queue A stays deeper than queue B
 x: minute
 y: depth
 series: queue
 
 minute,queue,depth
-0,a,5
-0,b,2
-1,a,7
-1,b,3
-2,a,6
-2,b,4
+0,A,5
+0,B,2
+1,A,7
+1,B,3
+2,A,6
+2,B,4
 ```

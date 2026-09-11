@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="area chart: Queue a stays deeper, 6 rows, series queue" aria-labelledby="mv-62a59a241ade70e7-title" aria-describedby="mv-62a59a241ade70e7-desc" data-markvis="2" data-chart-type="area" data-id="mv-62a59a241ade70e7" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
-  <title id="mv-62a59a241ade70e7-title">Queue a stays deeper</title>
-  <desc id="mv-62a59a241ade70e7-desc">area chart. Queue a stays deeper. x=minute. y=depth. series=queue. 6 rows.</desc>
-  <text x="66" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Queue a stays deeper</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="area chart: Queue A stays deeper than queue B, 6 rows, series queue" aria-labelledby="mv-8c2fdefb06435294-title" aria-describedby="mv-8c2fdefb06435294-desc" data-markvis="2" data-chart-type="area" data-id="mv-8c2fdefb06435294" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-8c2fdefb06435294-title">Queue A stays deeper than queue B</title>
+  <desc id="mv-8c2fdefb06435294-desc">area chart. Queue A stays deeper than queue B. x=minute. y=depth. series=queue. 6 rows.</desc>
+  <text x="66" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Queue A stays deeper than queue B</text>
   <g font-size="12" font-weight="400" fill="#000000">
     <rect x="66" y="35" width="10" height="10" fill="#5AD8A6" rx="1"/>
-    <text x="80" y="44" data-legend="a">a</text>
+    <text x="80" y="44" data-legend="A">A</text>
     <rect x="103.44" y="35" width="10" height="10" fill="#E8684A" rx="1"/>
-    <text x="117.44" y="44" data-legend="b">b</text>
+    <text x="117.44" y="44" data-legend="B">B</text>
   </g>
   <rect x="66" y="70" width="640" height="309" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
   <g fill="none" stroke="#000000" stroke-opacity="0.16" stroke-width="1">
@@ -33,15 +33,15 @@
     <text x="386" y="406" text-anchor="middle" dominant-baseline="hanging" data-axis="x">minute</text>
   </g>
   <g fill="none">
-    <path d="M230 185.88 L386 108.63 L542 147.25 L542 379 L230 379 Z" fill="#5AD8A6" fill-opacity="0.25" stroke="none" data-series="a"/>
-    <path d="M230 185.88 L386 108.63 L542 147.25" fill="none" stroke="#5AD8A6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="a"/>
-    <circle cx="230" cy="185.88" r="3" fill="#5AD8A6" stroke="none" data-series="a"/>
-    <circle cx="386" cy="108.63" r="3" fill="#5AD8A6" stroke="none" data-series="a"/>
-    <circle cx="542" cy="147.25" r="3" fill="#5AD8A6" stroke="none" data-series="a"/>
-    <path d="M230 301.75 L386 263.13 L542 224.5 L542 379 L230 379 Z" fill="#E8684A" fill-opacity="0.25" stroke="none" data-series="b"/>
-    <path d="M230 301.75 L386 263.13 L542 224.5" fill="none" stroke="#E8684A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="b"/>
-    <circle cx="230" cy="301.75" r="3" fill="#E8684A" stroke="none" data-series="b"/>
-    <circle cx="386" cy="263.13" r="3" fill="#E8684A" stroke="none" data-series="b"/>
-    <circle cx="542" cy="224.5" r="3" fill="#E8684A" stroke="none" data-series="b"/>
+    <path d="M230 185.88 L386 108.63 L542 147.25 L542 379 L230 379 Z" fill="#5AD8A6" fill-opacity="0.25" stroke="none" data-series="A"/>
+    <path d="M230 185.88 L386 108.63 L542 147.25" fill="none" stroke="#5AD8A6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="A"/>
+    <circle cx="230" cy="185.88" r="3" fill="#5AD8A6" stroke="none" data-series="A"/>
+    <circle cx="386" cy="108.63" r="3" fill="#5AD8A6" stroke="none" data-series="A"/>
+    <circle cx="542" cy="147.25" r="3" fill="#5AD8A6" stroke="none" data-series="A"/>
+    <path d="M230 301.75 L386 263.13 L542 224.5 L542 379 L230 379 Z" fill="#E8684A" fill-opacity="0.25" stroke="none" data-series="B"/>
+    <path d="M230 301.75 L386 263.13 L542 224.5" fill="none" stroke="#E8684A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="B"/>
+    <circle cx="230" cy="301.75" r="3" fill="#E8684A" stroke="none" data-series="B"/>
+    <circle cx="386" cy="263.13" r="3" fill="#E8684A" stroke="none" data-series="B"/>
+    <circle cx="542" cy="224.5" r="3" fill="#E8684A" stroke="none" data-series="B"/>
   </g>
 </svg>

@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: D7 held the Midtown queue peak at 28 (holds), 10 rows" aria-labelledby="mv-e0ea0393533533a8-title" aria-describedby="mv-e0ea0393533533a8-desc" data-markvis="2" data-chart-type="area" data-id="mv-e0ea0393533533a8" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-e0ea0393533533a8-title">D7 held the Midtown queue peak at 28</title>
-  <desc id="mv-e0ea0393533533a8-desc">area chart. D7 held the Midtown queue peak at 28. x=day. y=holds. unit=holds. 10 rows.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">D7 held the Midtown queue peak at 28<tspan font-size="12" font-weight="400" fill="#737373"> · holds</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: Day 6 held the deepest queue at 48 holds (holds), 10 rows" aria-labelledby="mv-7af386c80bccba57-title" aria-describedby="mv-7af386c80bccba57-desc" data-markvis="2" data-chart-type="area" data-id="mv-7af386c80bccba57" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-7af386c80bccba57-title">Day 6 held the deepest queue at 48 holds</title>
+  <desc id="mv-7af386c80bccba57-desc">area chart. Day 6 held the deepest queue at 48 holds. x=day. y=holds. unit=holds. 10 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Day 6 held the deepest queue at 48 holds<tspan font-size="12" font-weight="400" fill="#737373"> · holds</tspan></text>
   <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
     <line x1="48" x2="700" y1="317.33" y2="317.33"/>
     <line x1="48" x2="700" y1="176.67" y2="176.67"/>
@@ -10,9 +10,9 @@
   <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
   <g fill="#737373" font-size="10" font-weight="400">
     <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="38" y="317.33" text-anchor="end" dominant-baseline="middle">10</text>
-    <text x="38" y="176.67" text-anchor="end" dominant-baseline="middle">20</text>
-    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="38" y="317.33" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="38" y="176.67" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">60</text>
     <text x="80.6" y="468" text-anchor="middle" font-size="10" data-full-label="D1">D1</text>
     <text x="145.8" y="468" text-anchor="middle" font-size="10" data-full-label="D2">D2</text>
     <text x="211" y="468" text-anchor="middle" font-size="10" data-full-label="D3">D3</text>
@@ -25,17 +25,17 @@
     <text x="667.4" y="468" text-anchor="middle" font-size="10" data-full-label="D10">D10</text>
   </g>
   <g fill="none">
-    <path d="M80.6 289.2 L145.8 247 L211 261.07 L276.2 204.8 L341.4 232.93 L406.6 148.53 L471.8 64.13 L537 162.6 L602.2 190.73 L667.4 218.87 L667.4 458 L80.6 458 Z" fill="#3B82F6" fill-opacity="0.22" stroke="none" data-series="holds"/>
-    <path d="M80.6 289.2 L145.8 247 L211 261.07 L276.2 204.8 L341.4 232.93 L406.6 148.53 L471.8 64.13 L537 162.6 L602.2 190.73 L667.4 218.87" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="holds"/>
-    <circle cx="80.6" cy="289.2" r="2.5" fill="#3B82F6" stroke="none" data-series="holds"/>
-    <circle cx="145.8" cy="247" r="2.5" fill="#3B82F6" stroke="none" data-series="holds"/>
-    <circle cx="211" cy="261.07" r="2.5" fill="#3B82F6" stroke="none" data-series="holds"/>
-    <circle cx="276.2" cy="204.8" r="2.5" fill="#3B82F6" stroke="none" data-series="holds"/>
-    <circle cx="341.4" cy="232.93" r="2.5" fill="#3B82F6" stroke="none" data-series="holds"/>
-    <circle cx="406.6" cy="148.53" r="2.5" fill="#3B82F6" stroke="none" data-series="holds"/>
-    <circle cx="471.8" cy="64.13" r="2.5" fill="#3B82F6" stroke="none" data-series="holds"/>
-    <circle cx="537" cy="162.6" r="2.5" fill="#3B82F6" stroke="none" data-series="holds"/>
-    <circle cx="602.2" cy="190.73" r="2.5" fill="#3B82F6" stroke="none" data-series="holds"/>
-    <circle cx="667.4" cy="218.87" r="2.5" fill="#3B82F6" stroke="none" data-series="holds"/>
+    <path d="M80.6 331.4 L145.8 289.2 L211 239.97 L276.2 197.77 L341.4 162.6 L406.6 120.4 L471.8 176.67 L537 225.9 L602.2 261.07 L667.4 303.27 L667.4 458 L80.6 458 Z" fill="#3B82F6" fill-opacity="0.22" stroke="none" data-series="holds"/>
+    <path d="M80.6 331.4 L145.8 289.2 L211 239.97 L276.2 197.77 L341.4 162.6 L406.6 120.4 L471.8 176.67 L537 225.9 L602.2 261.07 L667.4 303.27" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="holds"/>
+    <circle cx="80.6" cy="331.4" r="2.5" fill="#3B82F6" stroke="none" data-series="holds"/>
+    <circle cx="145.8" cy="289.2" r="2.5" fill="#3B82F6" stroke="none" data-series="holds"/>
+    <circle cx="211" cy="239.97" r="2.5" fill="#3B82F6" stroke="none" data-series="holds"/>
+    <circle cx="276.2" cy="197.77" r="2.5" fill="#3B82F6" stroke="none" data-series="holds"/>
+    <circle cx="341.4" cy="162.6" r="2.5" fill="#3B82F6" stroke="none" data-series="holds"/>
+    <circle cx="406.6" cy="120.4" r="2.5" fill="#3B82F6" stroke="none" data-series="holds"/>
+    <circle cx="471.8" cy="176.67" r="2.5" fill="#3B82F6" stroke="none" data-series="holds"/>
+    <circle cx="537" cy="225.9" r="2.5" fill="#3B82F6" stroke="none" data-series="holds"/>
+    <circle cx="602.2" cy="261.07" r="2.5" fill="#3B82F6" stroke="none" data-series="holds"/>
+    <circle cx="667.4" cy="303.27" r="2.5" fill="#3B82F6" stroke="none" data-series="holds"/>
   </g>
 </svg>

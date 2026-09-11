@@ -2,7 +2,7 @@
 
 ```chart
 type: area
-title: Sep led events at 40
+title: September led park events at 40
 x: month
 y: count
 

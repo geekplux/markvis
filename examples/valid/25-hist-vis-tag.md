@@ -2,7 +2,7 @@
 
 ```vis
 type: hist
-title: 8 kb shows up most
+title: 8 kb payloads show up most often
 x: kb
 
 kb

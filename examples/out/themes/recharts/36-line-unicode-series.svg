@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="line chart: 東京 still leads 北京, 4 rows, series city" aria-labelledby="mv-7c86021fb3846ba3-title" aria-describedby="mv-7c86021fb3846ba3-desc" data-markvis="2" data-chart-type="line" data-id="mv-7c86021fb3846ba3" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-7c86021fb3846ba3-title">東京 still leads 北京</title>
-  <desc id="mv-7c86021fb3846ba3-desc">line chart. 東京 still leads 北京. x=month. y=amount. series=city. 4 rows.</desc>
-  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#374151">東京 still leads 北京</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="line chart: Tokyo still leads Beijing on RSVPs, 4 rows, series city" aria-labelledby="mv-d1bab8a68cc6db35-title" aria-describedby="mv-d1bab8a68cc6db35-desc" data-markvis="2" data-chart-type="line" data-id="mv-d1bab8a68cc6db35" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-d1bab8a68cc6db35-title">Tokyo still leads Beijing on RSVPs</title>
+  <desc id="mv-d1bab8a68cc6db35-desc">line chart. Tokyo still leads Beijing on RSVPs. x=week. y=rsvps. series=city. 4 rows.</desc>
+  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#374151">Tokyo still leads Beijing on RSVPs</text>
   <g font-size="12" font-weight="400" fill="#374151">
     <rect x="48" y="425" width="10" height="10" fill="#8884d8" rx="1"/>
     <text x="62" y="434" data-legend="北京">北京</text>
@@ -27,8 +27,8 @@
     <text x="40" y="182.8" text-anchor="end" dominant-baseline="middle">120</text>
     <text x="40" y="109.4" text-anchor="end" dominant-baseline="middle">130</text>
     <text x="40" y="36" text-anchor="end" dominant-baseline="middle">140</text>
-    <text x="211" y="414" text-anchor="middle" font-size="11" data-full-label="Jan">Jan</text>
-    <text x="537" y="414" text-anchor="middle" font-size="11" data-full-label="Feb">Feb</text>
+    <text x="211" y="414" text-anchor="middle" font-size="11" data-full-label="W1">W1</text>
+    <text x="537" y="414" text-anchor="middle" font-size="11" data-full-label="W2">W2</text>
   </g>
   <g fill="none">
     <path d="M211 329.6 L537 256.2" fill="none" stroke="#8884d8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="北京"/>

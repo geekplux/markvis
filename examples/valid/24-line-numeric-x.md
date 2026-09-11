@@ -2,7 +2,7 @@
 
 ```chart
 type: line
-title: Noon peaked at 22°C
+title: Noon peaked outdoor heat at 22°C
 x: hour
 y: celsius
 
