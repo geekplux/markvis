@@ -93,7 +93,7 @@ export const recharts = {
 
   COMPACT_SPAN: folio.COMPACT_SPAN,
 
-  PLOT_BG: "#ffffff",
+  PLOT_BG: null,
   PLOT_BORDER: "#e2e8f0",
   PLOT_BORDER_WIDTH: 1,
   AXIS_TITLES: false,

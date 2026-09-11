@@ -95,7 +95,7 @@ export const highcharts = {
 
   COMPACT_SPAN: folio.COMPACT_SPAN,
 
-  PLOT_BG: "#ffffff",
+  PLOT_BG: null,
   PLOT_BORDER: "#ccd6eb",
   PLOT_BORDER_WIDTH: 1,
   AXIS_TITLES: true,

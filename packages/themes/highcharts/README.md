@@ -5,7 +5,7 @@ Static SVG grammar that reads like Highcharts demos — without Highcharts.
 ## Steal
 - Default series blues/greys/greens
 - Arial / Helvetica labels
-- Plot border `#ccd6eb` + white plot fill
+- Plot border `#ccd6eb` stroke-only (transparent fill)
 - Denser grid (`MAX_INTERIOR_GRID: 5`, hairline `0.22`)
 - Square bars (`BAR_RX: 0`)
 - Line markers (`LINE_POINT_R: 3.5`)
@@ -15,6 +15,6 @@ Static SVG grammar that reads like Highcharts demos — without Highcharts.
 
 ## Don't steal
 - Highcharts JS runtime, modules, or license
-- Hover/tooltip/draw-in (next unit — browser layer)
+- Opaque plot wallpaper (U6: transparent fill; stroke-only border)
 - Exporting chrome
 - Chart types Markvis does not have

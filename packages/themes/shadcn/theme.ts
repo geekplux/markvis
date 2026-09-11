@@ -97,8 +97,8 @@ export const shadcn = {
 
   COMPACT_SPAN: folio.COMPACT_SPAN,
 
-  /** Soft card plot — not highcharts #ccd6eb chrome. */
-  PLOT_BG: "#ffffff",
+  /** Soft card stroke — transparent fill; not highcharts #ccd6eb chrome. */
+  PLOT_BG: null,
   PLOT_BORDER: "#e5e5e5",
   PLOT_BORDER_WIDTH: 1,
   /** Card figures stay quiet — no IR field titles on axes. */

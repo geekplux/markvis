@@ -12,7 +12,7 @@ Static SVG grammar inspired by Ant Design Charts demos — without `@antv/g2`.
 
 ## Don't steal
 - `@antv/g2` / AntV runtime or license
-- Hover/tooltip/draw-in (later unit)
+- Opaque plot wallpaper (U6: transparent fill; stroke-only border)
 - Folio blue-first or highcharts demo blues
 - Chart types Markvis does not have
 

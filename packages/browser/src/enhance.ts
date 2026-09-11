@@ -83,6 +83,41 @@ function ensureStyles(): void {
   opacity: 1;
   transform: translateY(0);
 }
+/* U6: tip shape / face per theme (play + examples detail) */
+.${TIP_CLASS}[data-theme="highcharts"] {
+  border-radius: 0;
+  padding: 5px 9px;
+  font-family: Arial, Helvetica, "Segoe UI", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.${TIP_CLASS}[data-theme="shadcn"] {
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 500;
+}
+.${TIP_CLASS}[data-theme="ant"] {
+  border-radius: 2px;
+  padding: 4px 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+.${TIP_CLASS}[data-theme="recharts"] {
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+.${TIP_CLASS}[data-theme="docs"] {
+  border-radius: 0;
+  padding: 3px 8px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.${TIP_CLASS}[data-theme="folio"] {
+  border-radius: 2px;
+}
 .${ENHANCED} .${MARK},
 .${ENHANCED} .${MARK_LINE} {
   cursor: crosshair;
@@ -247,6 +282,9 @@ export function enhanceChartSvg(
   const tip = document.createElement("div");
   tip.className = TIP_CLASS;
   tip.setAttribute("role", "tooltip");
+  if (opts.theme) {
+    tip.dataset.theme = opts.theme;
+  }
   tip.hidden = true;
   document.body.appendChild(tip);
 

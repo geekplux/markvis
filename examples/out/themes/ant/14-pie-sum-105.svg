@@ -2,7 +2,6 @@
   <title id="mv-45d354a539c72d2e-title">Budget overrun</title>
   <desc id="mv-45d354a539c72d2e-desc">pie chart. Budget overrun. x=bucket. y=pct. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="48" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Budget overrun</text>
-  <rect x="48" y="46" width="658" height="360" fill="#ffffff" data-plot-bg="1"/>
   <rect x="48" y="46" width="658" height="360" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
   <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0">
     <path d="M377 226 L377 103.6 A122.4 122.4 0 0 1 430.11 336.28 Z" fill="#5AD8A6" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="Infra" data-raw-value="45"/>

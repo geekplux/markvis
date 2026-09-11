@@ -20,7 +20,7 @@ Measured tip: `7b3ffb3` (tokens + baked SVGs).
 | bar max W | `72` | `64` | `68` | `64` | `56` |
 | line stroke / r | `1.75` / `2.5` | `2` / `3.5` | `2` / `3.5` | `1.5` / `2` | `2` / `3` |
 | multi series | **end-labels** (≤4) | **color legend** | **color legend** | **end-labels** (folio) | **color legend** |
-| plot frame | none | `#ffffff`+`#ccd6eb` | `#ffffff`+`#e5e5e5` | none | `#ffffff`+`#d9d9d9` |
+| plot frame | none | stroke `#ccd6eb` | stroke `#e5e5e5` | none | stroke `#d9d9d9` |
 | axis titles | no | yes | no | no | yes |
 | grid max | `3` @ `0.10` | `5` @ `0.22` | `2` @ `0.06` | `3` @ `0.06` | `4` @ `0.16` |
 | margins T/R/B/L | `36/20/26/48` | `36/20/36/56` | `36/20/28/48` | `28/16/22/40` | `28/14/28/48` |
@@ -33,7 +33,7 @@ Measured tip: `7b3ffb3` (tokens + baked SVGs).
 | id | steal | don’t |
 | --- | --- | --- |
 | folio | editorial open figure, value labels on bars, end-labels for few series | plot box; demo-tool chrome |
-| highcharts | white plot, blue-gray border, axis titles, denser grid, square bars, legend ≥2, fat markers | HC logo, credits spam, stacked-percent types, runtime |
+| highcharts | blue-gray plot stroke (transparent fill), axis titles, denser grid, square bars, legend ≥2, fat markers | HC logo, credits spam, stacked-percent types, runtime; opaque plot wallpaper |
 | shadcn | card radius language (`BAR_RX:6`), quiet grid, Inter, soft `#e5e5e5` frame, legend ≥2 | axis field titles; loud HC border |
 | docs | zinc/slate ink, thin `1.5` stroke, tight margins, sharp `RX:0`, muted palette | card frame; saturated categorical; looking like folio with gray bars |
 | ant | annotation title (`18`), tight canvas, teal/brick, technical axis titles, `#d9d9d9` frame | G2 runtime; copying HC border hex |
@@ -53,7 +53,7 @@ Every pack must keep the locked **signature** below. Palette may change only ins
 
 ### highcharts — boxed instrument
 
-1. Plot `#ffffff` + border `#ccd6eb` (or equivalent cool gray-blue — not `#e5e5e5` / `#d9d9d9`).
+1. Plot fill transparent; border `#ccd6eb` stroke-only (cool gray-blue — not `#e5e5e5` / `#d9d9d9`). No opaque `data-plot-bg`.
 2. `AXIS_TITLES: true`. `BAR_RX: 0`. `LINE_POINT_R ≥ 3.5`. Grid denser than others (`MAX_INTERIOR_GRID ≥ 5` or hairline ≥ `0.20`).
 3. Multi-series: **legend only**.
 4. Arial stack.
@@ -61,7 +61,7 @@ Every pack must keep the locked **signature** below. Palette may change only ins
 
 ### shadcn — soft card
 
-1. `BAR_RX ≥ 6`. Plot border soft neutral (`#e5e5e5` class), **no** axis titles.
+1. `BAR_RX ≥ 6`. Plot fill transparent; border soft neutral (`#e5e5e5` class), **no** axis titles.
 2. Quietest grid (`MAX_INTERIOR_GRID ≤ 2`, hairline ≤ `0.08`).
 3. Inter. Widest bar gaps (`BAR_GAP_FEW ≥ 0.30`).
 4. Multi-series: legend.
@@ -81,7 +81,7 @@ Every pack must keep the locked **signature** below. Palette may change only ins
 ### ant — annotation technical
 
 1. Title `18/600`, `TITLE_TO_PLOT ≥ 20`, canvas `420` tall.
-2. Axis titles on. Plot border `#d9d9d9` class (warmer/neutral than HC).
+2. Axis titles on. Plot fill transparent; border `#d9d9d9` class (warmer/neutral than HC).
 3. Narrower bars (`BAR_MAX_WIDTH ≤ 56`). Teal/brick first two hues.
 4. Multi-series: legend.
 5. B&W tell: big title air + short frame + narrow columns.
@@ -93,7 +93,7 @@ Do not land until docs (and any weak twin) pass B&W.
 1. **Cartesian grid:** light full grid (vertical + horizontal), not hairline-only horizontals — must read different from HC denser horiz and shadcn sparse.
 2. Legend **below** plot (centered or start), even for 1 series when demo-like.
 3. Stroke `2`, markers `r=3`, `BAR_RX: 0`, no axis titles (labels on ticks only).
-4. Plot bg transparent or very light; border optional `#e2e8f0` — must not equal HC `#ccd6eb` or ant `#d9d9d9`.
+4. Plot fill transparent; border `#e2e8f0` stroke-only — must not equal HC `#ccd6eb` or ant `#d9d9d9`.
 5. Face: system UI (not Inter-only, not Arial-only).
 6. Browser-only later: tooltip gutter; bake stays static.
 7. B&W tell: visible XY grid + legend under the chart.

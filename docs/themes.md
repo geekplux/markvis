@@ -66,13 +66,13 @@ Instruction: keep folio chart locks — transparent canvas, hairline grid, value
 
 ### Intent
 
-Static SVG grammar: denser plot, plot border/bg, axis titles, legend for series ≥ 2, line markers. Highcharts-demo-inspired tokens only — no vendor deps. Hover/draw-in is a later unit.
+Static SVG grammar: denser plot, plot border (transparent fill), axis titles, legend for series ≥ 2, line markers. Highcharts-demo-inspired tokens only — no vendor deps. Hover/draw-in lives in `@markvis/browser/enhance`.
 
 ### Locked tokens (from `packages/themes/highcharts/theme.ts`)
 
 | Token | Value |
 | --- | --- |
-| Canvas / paper | plot fill `#ffffff` + border `#ccd6eb` (1px) |
+| Canvas / paper | transparent plot fill + border `#ccd6eb` (1px stroke-only) |
 | Ink | `#333333` |
 | Quiet | `#666666` |
 | Hairline opacity (grid) | `0.22` |
@@ -109,7 +109,7 @@ Static SVG grammar: denser plot, plot border/bg, axis titles, legend for series 
 | Plot min ratio | `0.55` | `0.62` |
 | Max interior grid | `3` | `5` |
 | Margins | `36/20/26/48` | `36/20/36/56` |
-| Plot chrome | none | bg + border |
+| Plot chrome | none | border only (transparent fill) |
 | Axis titles | off | on (`x`/`y`/`unit`) |
 | Line/area multi-series | end-labels (≤4) | color legend |
 | `END_LABEL_SERIES_MAX` | `4` | `0` |
@@ -140,7 +140,7 @@ Static SVG grammar: rounded marks, categorical chart-1..5 hues, card-quiet axes,
 
 | Token | Value |
 | --- | --- |
-| Canvas / paper | plot fill `#ffffff` + border `#e5e5e5` (1px card edge) |
+| Canvas / paper | transparent plot fill + border `#e5e5e5` (1px card edge) |
 | Ink | `#0A0A0A` |
 | Quiet | `#737373` |
 | Hairline opacity (grid) | `0.06` |
@@ -284,7 +284,7 @@ Static SVG grammar inspired by Ant Design Charts: technical axes, muted teal/bri
 
 | Token | Value |
 | --- | --- |
-| Canvas / paper | plot fill `#ffffff` + border `#d9d9d9` (1px) |
+| Canvas / paper | transparent plot fill + border `#d9d9d9` (1px stroke-only) |
 | Ink | `#000000` |
 | Quiet | `#8C8C8C` |
 | Hairline opacity (grid) | `0.16` |
@@ -335,7 +335,7 @@ Hover waits.
 
 | Token | Value |
 | --- | --- |
-| Canvas / paper | plot fill `#ffffff` + border `#e2e8f0` (1px) |
+| Canvas / paper | transparent plot fill + border `#e2e8f0` (1px stroke-only) |
 | Ink | `#374151` |
 | Quiet | `#6B7280` |
 | Hairline opacity (grid) | `0.14` |

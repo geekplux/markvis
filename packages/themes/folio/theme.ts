@@ -91,7 +91,7 @@ export const folio = {
 
   COMPACT_SPAN: 10_000,
 
-  /** Plot chrome (null/0 = folio transparent, no box). */
+  /** Plot chrome (U6: PLOT_BG null = transparent; border optional stroke-only). */
   PLOT_BG: null as string | null,
   PLOT_BORDER: null as string | null,
   PLOT_BORDER_WIDTH: 0,

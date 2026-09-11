@@ -10,7 +10,6 @@
     <rect x="205.28" y="31" width="10" height="10" fill="#90ed7d" rx="1"/>
     <text x="219.28" y="40" data-legend="Ops">Ops</text>
   </g>
-  <rect x="56" y="62" width="644" height="358" fill="#ffffff" data-plot-bg="1"/>
   <rect x="56" y="62" width="644" height="358" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0">
     <path d="M378 241 L378 119.28 A121.72 121.72 0 0 1 430.81 350.67 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Infra" data-raw-value="45"/>

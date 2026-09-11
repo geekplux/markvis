@@ -9,9 +9,10 @@
 
 ## Active
 U5 done: theme = grammar, palette = colors; PALETTES.md; Play+Examples two controls; snaps folio+ink / folio+vivid / highcharts+ink.
+U6 done: plot fill transparent across packs; HC/shadcn/ant/recharts keep plot stroke only; no opaque data-plot-bg; enhance tip shape per theme.
 
 ## Hour order
-C1 ✓ → C2 ✓ → C3 ✓ → C4 ✓ → C5 ✓ → C6 ✓ playground switcher → C7 mobile 390 → C8 homepage from site-copy.md → C9 examples theme toggle → C10 launch kit → U1–U4 ✓ → U5 ✓
+C1 ✓ → C2 ✓ → C3 ✓ → C4 ✓ → C5 ✓ → C6 ✓ playground switcher → C7 mobile 390 → C8 homepage from site-copy.md → C9 examples theme toggle → C10 launch kit → U1–U4 ✓ → U5 ✓ → U6 ✓
 
 ## Commands
 pnpm test

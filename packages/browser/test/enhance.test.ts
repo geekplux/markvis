@@ -109,6 +109,31 @@ describe("enhanceChartSvg", () => {
     expect(tip!.textContent).toBe("revenue · Jan · 120");
   });
 
+  it("sets tip data-theme for per-theme shape polish", () => {
+    vi.stubGlobal(
+      "matchMedia",
+      () =>
+        ({
+          matches: false,
+          media: "",
+          onchange: null,
+          addListener: () => {},
+          removeListener: () => {},
+          addEventListener: () => {},
+          removeEventListener: () => {},
+          dispatchEvent: () => false,
+        }) as MediaQueryList,
+    );
+    const svg = mountSvg();
+    cleanup = enhanceChartSvg(svg, { theme: "shadcn" });
+    const tip = document.querySelector(".markvis-tip") as HTMLElement | null;
+    expect(tip?.dataset.theme).toBe("shadcn");
+    const css = document.getElementById("markvis-enhance-css")?.textContent ?? "";
+    expect(css).toContain('[data-theme="shadcn"]');
+    expect(css).toContain('[data-theme="highcharts"]');
+    expect(css).toContain("prefers-reduced-motion");
+  });
+
   it("adds motion class and stagger when motion OK", () => {
     vi.stubGlobal(
       "matchMedia",

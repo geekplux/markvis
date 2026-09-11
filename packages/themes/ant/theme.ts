@@ -94,7 +94,7 @@ export const ant = {
 
   COMPACT_SPAN: folio.COMPACT_SPAN,
 
-  PLOT_BG: "#ffffff",
+  PLOT_BG: null,
   PLOT_BORDER: "#d9d9d9",
   PLOT_BORDER_WIDTH: 1,
   AXIS_TITLES: true,

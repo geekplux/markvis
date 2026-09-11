@@ -376,7 +376,7 @@ describe("highcharts tokens", () => {
     expect(highcharts.END_LABEL_SERIES_MAX).toBe(0);
     expect(highcharts.AXIS_TITLES).toBe(true);
     expect(highcharts.PLOT_BORDER_WIDTH).toBeGreaterThan(0);
-    expect(highcharts.PLOT_BG).toBeTruthy();
+    expect(highcharts.PLOT_BG).toBeNull();
     expect(highcharts.LINE_POINT_R).toBeGreaterThan(folio.LINE_POINT_R);
   });
 
@@ -389,7 +389,7 @@ describe("highcharts tokens", () => {
       'font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif"',
     );
     expect(b).toContain('data-plot-border="1"');
-    expect(b).toContain('data-plot-bg="1"');
+    expect(b).not.toContain('data-plot-bg="1"');
     expect(b).toContain('data-axis-titles="1"');
     expect(a).not.toContain('data-plot-border="1"');
   });
@@ -415,7 +415,7 @@ describe("highcharts tokens", () => {
     });
     const svg = renderSvg(chart);
     expect(svg).toContain('data-plot-border="1"');
-    expect(svg).toContain('data-plot-bg="1"');
+    expect(svg).not.toContain('data-plot-bg="1"');
     expect(svg).toContain('data-legend="A"');
     expect(svg).toContain('data-legend="B"');
     expect(svg).not.toContain("data-end-label");
@@ -825,7 +825,7 @@ describe("recharts tokens", () => {
     expect(recharts.SVG_HEIGHT).not.toBe(shadcn.SVG_HEIGHT);
     expect(recharts.SVG_HEIGHT).not.toBe(ant.SVG_HEIGHT);
     expect(recharts.MAX_INTERIOR_GRID).toBe(4);
-    expect(recharts.PLOT_BG).toBe("#ffffff");
+    expect(recharts.PLOT_BG).toBeNull();
     expect(recharts.PLOT_BORDER).toBe("#e2e8f0");
     expect(recharts.PLOT_BORDER_WIDTH).toBe(1);
     expect(recharts.PLOT_BORDER).not.toBe(highcharts.PLOT_BORDER);
@@ -1191,6 +1191,52 @@ describe("pie + scatter theme forks (THEMES.md)", () => {
   });
 });
 
+
+describe("U6 transparent plot fill", () => {
+  it("no pack paints an opaque data-plot-bg wallpaper", () => {
+    for (const theme of [
+      "folio",
+      "highcharts",
+      "shadcn",
+      "docs",
+      "ant",
+      "recharts",
+    ] as const) {
+      expect(themeTokens(theme).PLOT_BG, theme).toBeNull();
+      const svg = renderSvg(barChart({ theme }));
+      expect(svg, theme).not.toContain('data-plot-bg="1"');
+    }
+    // HC / card packs keep stroke-only plot frame
+    expect(renderSvg(barChart({ theme: "highcharts" }))).toContain(
+      'data-plot-border="1"',
+    );
+    expect(renderSvg(barChart({ theme: "shadcn" }))).toContain(
+      'data-plot-border="1"',
+    );
+    expect(renderSvg(barChart({ theme: "ant" }))).toContain(
+      'data-plot-border="1"',
+    );
+    expect(renderSvg(barChart({ theme: "recharts" }))).toContain(
+      'data-plot-border="1"',
+    );
+    expect(renderSvg(barChart({ theme: "folio" }))).not.toContain(
+      'data-plot-border="1"',
+    );
+  });
+
+  it("gallery theme SVGs have no opaque plot wallpaper", () => {
+    const repoRoot = join(here, "../../..");
+    const themesDir = join(repoRoot, "examples/out/themes");
+    for (const theme of readdirSync(themesDir)) {
+      const dir = join(themesDir, theme);
+      for (const name of readdirSync(dir)) {
+        if (!name.endsWith(".svg")) continue;
+        const svg = readFileSync(join(dir, name), "utf8");
+        expect(svg, `${theme}/${name}`).not.toContain('data-plot-bg="1"');
+      }
+    }
+  });
+});
 
 describe("U5 palette independence", () => {
   function barChart(theme: ChartIR["theme"], palette?: ChartIR["palette"]): ChartIR {
