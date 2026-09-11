@@ -17,6 +17,7 @@ Docs refresh: live grammar includes `theme:` + `palette:`; diagrams in `docs/arc
 C1 ✓ → C2 ✓ → C3 ✓ → C4 ✓ → C5 ✓ → C6 ✓ playground switcher → C7 mobile 390 → C8 homepage from site-copy.md → C9 examples theme toggle → C10 launch kit → U1–U4 ✓ → U5 ✓ → U6 ✓ → U7 ✓
 
 ## Commands
+# tip 98b6bc0 docs: live grammar + architecture diagrams; drop unused theme shims
 pnpm test                                    # exit 0  (530 passed)
 pnpm markvis check examples/valid            # exit 0  (52 ok)
 pnpm markvis check examples/invalid          # exit 1  (0 ok, 20 error)  # required non-zero
