@@ -5,9 +5,20 @@ import { shadcn } from "./shadcn/theme.js";
 import { docs } from "./docs/theme.js";
 import { ant } from "./ant/theme.js";
 import { recharts } from "./recharts/theme.js";
-
 export type { ThemeTokens };
 export { folio, highcharts, shadcn, docs, ant, recharts };
+
+export {
+  applyPaletteToTheme,
+  cool,
+  ink,
+  paletteRegistry,
+  porcelain,
+  resolvePalette,
+  vivid,
+  warm,
+  type PaletteTokens,
+} from "./palettes.js";
 
 /** id → pack. Unknown / missing packs fail loudly via resolveThemePack. */
 export const themeRegistry: Record<ChartTheme, ThemeTokens> = {

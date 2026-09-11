@@ -1,6 +1,6 @@
 # themes.md — markvis theme token packs
 
-Scope: optional fence `theme: folio|highcharts|shadcn|docs|ant|recharts`. Omitted = folio. Unknown = error + table fallback. Themes are token packs in `packages/themes/<id>/theme.ts`, resolved by `packages/themes/registry.ts`. No Highcharts/d3/Unovis/Recharts deps. No new chart types. Public UI labels may say Folio / Highcharts-style / shadcn-style / Docs — avoid trademark claims in marketing copy.
+Scope: optional fence `theme: folio|highcharts|shadcn|docs|ant|recharts` (grammar). Omitted = folio. Unknown = E_UNKNOWN_THEME + table. Optional `palette: ink|porcelain|warm|cool|vivid` (colors). Omitted = theme pack default colors. Unknown = E_UNKNOWN_PALETTE + table. Hex tables: `docs/design/PALETTES.md` / `packages/themes/palettes.ts`. Themes are token packs in `packages/themes/<id>/theme.ts`, resolved by `packages/themes/registry.ts`. No Highcharts/d3/Unovis/Recharts deps. No new chart types. Public UI: two controls (Theme + Color). Labels may say Folio / Highcharts-style / shadcn-style / Docs — avoid trademark claims in marketing copy.
 
 Default site figures stay folio.
 

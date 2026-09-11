@@ -27,7 +27,9 @@ Allowed ids: `folio` · `highcharts` · `shadcn` · `docs` · `ant` · `recharts
 
 A **theme** is a grammar: mark form, axes, legend policy, typeface, plot chrome, padding. Hex is one column inside that grammar — not the product.
 
-**Palette** is a second axis (colors only). It is not shipped yet; do not invent hex lists here. When it lands, theme stays the grammar and palette stays the colors.
+**Palette** is a second axis (colors only): optional fence `palette:` with `ink` · `porcelain` · `warm` · `cool` · `vivid`. Omit → theme pack default colors. Unknown → `E_UNKNOWN_PALETTE` + table. Play and Examples detail keep **two** controls (Theme + Color) — never one merged dropdown.
+
+Hex tables live in `docs/design/PALETTES.md` / `packages/themes/palettes.ts`. Do not invent hex lists on this page.
 
 Site light/dark mode is chrome only — unrelated to fence `theme=`.
 

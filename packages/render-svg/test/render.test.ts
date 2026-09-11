@@ -14,6 +14,8 @@ import {
   docs,
   ant,
   recharts,
+  ink,
+  vivid,
   renderSvg,
   themeTokens,
 } from "../src/index.js";
@@ -1186,6 +1188,79 @@ describe("pie + scatter theme forks (THEMES.md)", () => {
         ).not.toBe(stripPaint(renderSvg(scatterChart(b))));
       }
     }
+  });
+});
+
+
+describe("U5 palette independence", () => {
+  function barChart(theme: ChartIR["theme"], palette?: ChartIR["palette"]): ChartIR {
+    const repoRoot = join(here, "../../..");
+    const source = readFileSync(
+      join(repoRoot, "examples/valid/01-bar-basic.md"),
+      "utf8",
+    );
+    const result = parseMarkdown(source, { filename: "01-bar-basic.md" });
+    if (!result.ok) {
+      throw new Error("01-bar-basic must parse");
+    }
+    return ChartIRSchema.parse({
+      ...result.chart,
+      theme,
+      ...(palette ? { palette } : {}),
+    });
+  }
+
+  function snapPath(theme: string, palette: string): string {
+    return join(
+      here,
+      "../../../examples/out/palettes",
+      `${theme}+${palette}`,
+      "01-bar-basic.svg",
+    );
+  }
+
+  function assertSnap(theme: ChartIR["theme"], palette: ChartIR["palette"]): string {
+    const chart = barChart(theme, palette);
+    const svg = renderSvg(chart);
+    const outPath = snapPath(theme, palette!);
+    if (process.env["UPDATE_SNAPSHOTS"] === "1") {
+      mkdirSync(dirname(outPath), { recursive: true });
+      writeFileSync(outPath, svg, "utf8");
+    }
+    const committed = readFileSync(outPath, "utf8");
+    expect(svg).toBe(committed);
+    return svg;
+  }
+
+  it("matches folio+ink / folio+vivid / highcharts+ink snapshots", () => {
+    const folioInk = assertSnap("folio", "ink");
+    const folioVivid = assertSnap("folio", "vivid");
+    const hcInk = assertSnap("highcharts", "ink");
+    expect(folioInk).toContain(ink.SERIES[0]);
+    expect(folioVivid).toContain(vivid.SERIES[0]);
+    expect(folioInk).not.toContain(vivid.SERIES[0]);
+    expect(hcInk).toContain(ink.SERIES[0]);
+  });
+
+  it("B&W skeleton same within theme across palettes; fills differ", () => {
+    const folioInk = renderSvg(barChart("folio", "ink"));
+    const folioVivid = renderSvg(barChart("folio", "vivid"));
+    const folioDefault = renderSvg(barChart("folio"));
+    expect(stripPaint(folioInk)).toBe(stripPaint(folioVivid));
+    expect(stripPaint(folioInk)).toBe(stripPaint(folioDefault));
+    expect(folioInk).not.toBe(folioVivid);
+    expect(folioInk).toContain(ink.SERIES[0]);
+    expect(folioVivid).toContain(vivid.SERIES[0]);
+  });
+
+  it("same palette keeps grammar fork across themes", () => {
+    const folioInk = renderSvg(barChart("folio", "ink"));
+    const hcInk = renderSvg(barChart("highcharts", "ink"));
+    expect(stripPaint(folioInk)).not.toBe(stripPaint(hcInk));
+    expect(themeTokens("folio", "ink").BAR_RX).toBe(folio.BAR_RX);
+    expect(themeTokens("highcharts", "ink").BAR_RX).toBe(highcharts.BAR_RX);
+    expect(themeTokens("folio", "ink").PALETTE[0]).toBe(ink.SERIES[0]);
+    expect(themeTokens("highcharts", "ink").PALETTE[0]).toBe(ink.SERIES[0]);
   });
 });
 

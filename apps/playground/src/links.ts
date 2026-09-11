@@ -1,4 +1,9 @@
-import { isChartTheme, type ChartTheme } from "@markvis/ir";
+import {
+  isChartPalette,
+  isChartTheme,
+  type ChartPalette,
+  type ChartTheme,
+} from "@markvis/ir";
 
 export function stemFromId(value: string): string {
   return value.replace(/\.md$/i, "");
@@ -26,20 +31,45 @@ export function themeFromSearch(search: string): ChartTheme | null {
   return isChartTheme(trimmed) ? trimmed : null;
 }
 
-export function galleryHref(id: string, theme?: ChartTheme): string {
+export function paletteFromSearch(search: string): ChartPalette | null {
+  const raw = search.startsWith("?") ? search.slice(1) : search;
+  const params = new URLSearchParams(raw);
+  const value = params.get("palette");
+  if (!value) {
+    return null;
+  }
+  const trimmed = value.trim();
+  return isChartPalette(trimmed) ? trimmed : null;
+}
+
+export function galleryHref(
+  id: string,
+  theme?: ChartTheme,
+  palette?: ChartPalette | null,
+): string {
   const params = new URLSearchParams();
   params.set("id", stemFromId(id));
   if (theme && theme !== "folio") {
     params.set("theme", theme);
   }
+  if (palette) {
+    params.set("palette", palette);
+  }
   return `/examples?${params.toString()}`;
 }
 
-export function playgroundSearch(id: string, theme?: ChartTheme): string {
+export function playgroundSearch(
+  id: string,
+  theme?: ChartTheme,
+  palette?: ChartPalette | null,
+): string {
   const params = new URLSearchParams();
   params.set("example", stemFromId(id));
   if (theme) {
     params.set("theme", theme);
+  }
+  if (palette) {
+    params.set("palette", palette);
   }
   return `?${params.toString()}`;
 }

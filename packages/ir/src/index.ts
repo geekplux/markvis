@@ -13,11 +13,32 @@ export type ChartType = (typeof CHART_TYPES)[number];
 
 export const ChartTypeSchema = z.enum(CHART_TYPES);
 
-export const THEMES = ["folio", "highcharts", "shadcn", "docs", "ant", "recharts"] as const;
+/** Grammar packs only — mark form, axes, legend, typeface, chrome. Colors live on palette. */
+export const THEMES = [
+  "folio",
+  "highcharts",
+  "shadcn",
+  "docs",
+  "ant",
+  "recharts",
+] as const;
 
 export type ChartTheme = (typeof THEMES)[number];
 
 export const ChartThemeSchema = z.enum(THEMES);
+
+/** Color tables only — categorical series fills/strokes. Grammar stays on theme. */
+export const PALETTES = [
+  "ink",
+  "porcelain",
+  "warm",
+  "cool",
+  "vivid",
+] as const;
+
+export type ChartPalette = (typeof PALETTES)[number];
+
+export const ChartPaletteSchema = z.enum(PALETTES);
 
 export const TableSchema = z
   .object({
@@ -34,6 +55,8 @@ export const ChartIRSchema = z
     type: ChartTypeSchema,
     title: z.string().min(1),
     theme: ChartThemeSchema.default("folio"),
+    /** Omit → theme pack default series colors. */
+    palette: ChartPaletteSchema.optional(),
     unit: z.string().min(1).optional(),
     x: z.string().min(1),
     y: z.string().min(1).optional(),
@@ -80,6 +103,10 @@ export function isChartType(value: string): value is ChartType {
 
 export function isChartTheme(value: string): value is ChartTheme {
   return (THEMES as readonly string[]).includes(value);
+}
+
+export function isChartPalette(value: string): value is ChartPalette {
+  return (PALETTES as readonly string[]).includes(value);
 }
 
 export function columnValues(

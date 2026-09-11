@@ -105,6 +105,10 @@ describe("site visual chrome", () => {
     expect(vue).not.toContain('class="{ open: selected }"');
     expect(vue).not.toMatch(/gallery-layout[\s\S]*open:\s*selected/);
     expect(vue).toContain('aria-label="Chart theme"');
+    expect(vue).toContain('aria-label="Detail color"');
+    expect(vue).toContain("PALETTE_CHIPS");
+    expect(vue).toContain("detailPalette");
+    expect(vue).toContain("fenceForThemePalette");
     expect(vue).toContain("themeFilter");
     expect(vue).toContain("svgsByTheme");
     expect(vue).toContain("THEME_CHIPS");
@@ -418,6 +422,8 @@ describe("site visual chrome", () => {
     expect(css).toMatch(/@media\s*\(max-width:\s*768px\)[\s\S]*grid-template-columns:\s*1fr/);
     expect(css).toMatch(/\.toolbar[\s\S]*flex-wrap:\s*nowrap/);
     expect(html).toContain('id="theme"');
+    expect(html).toContain('id="palette"');
+    expect(html).toMatch(/Color[\s\S]*id="palette"/);
     expect(html).toContain('value="folio"');
     expect(html).toContain('value="highcharts"');
     expect(html).toContain('value="shadcn"');

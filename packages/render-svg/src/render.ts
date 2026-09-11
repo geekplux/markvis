@@ -47,7 +47,7 @@ export function description(chart: ChartIR): string {
 }
 
 export function renderSvg(chart: ChartIR): string {
-  const t = themeTokens(chart.theme);
+  const t = themeTokens(chart.theme, chart.palette);
   applyThemeTokens(t);
   try {
     const id = chartId(chart);

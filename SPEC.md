@@ -42,7 +42,7 @@ Progressive form (comment immediately followed by a GFM table):
 | Mar | 150 |
 ```
 
-Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`. Same meaning as fence headers.
+Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`. Same meaning as fence headers.
 
 ## Field table
 
@@ -51,7 +51,8 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`. Same meani
 | `markvis` | no | `2` | Language version. |
 | `type` | yes | — | `bar` \| `line` \| `area` \| `scatter` \| `pie` \| `hist` only. |
 | `title` | no | derived | From filename or first column / `y` if omitted. |
-| `theme` | no | `folio` | `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts` only. |
+| `theme` | no | `folio` | Grammar only: `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts`. |
+| `palette` | no | theme default | Colors only: `ink` \| `porcelain` \| `warm` \| `cool` \| `vivid`. Omit → theme pack colors. |
 | `unit` | no | — | Display suffix for values. |
 | `x` | typed | first category / numeric col | Independent axis or labels. |
 | `y` | typed | first numeric col | Measure. |
@@ -96,8 +97,11 @@ Zeros are legal. Negatives are legal on bar/line/area/scatter; illegal on `pie`.
 | `E_YAML_TABLE_CONFLICT` | Header fields disagree with progressive table mapping. |
 | `E_EMPTY_FENCE` | Fence body empty. |
 | `E_UNKNOWN_THEME` | `theme` not in `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts`. |
+| `E_UNKNOWN_PALETTE` | `palette` not in `ink` \| `porcelain` \| `warm` \| `cool` \| `vivid`. |
 
 Unknown failures still degrade to table + one line; prefer a listed code when it fits.
+
+`theme` is grammar (mark form, axes, legend, typeface, chrome). `palette` is colors only. Never merge palette into the theme id. Play and Examples detail expose two controls (Theme + Color).
 
 ## Themes
 

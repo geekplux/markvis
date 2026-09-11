@@ -5,7 +5,7 @@ Quantitative Markdown charts. Path: fence | GFM | HTML comment → parser → Ch
 ## Grammar
 
 1. Optional `markvis: 2`
-2. Headers: `type`, `title`, `unit`, `x`, `y`, `series`
+2. Headers: `type`, `title`, `theme`, `palette`, `unit`, `x`, `y`, `series`
 3. Blank line
 4. CSV or GFM table with a header row
 
@@ -24,7 +24,10 @@ Language tags `chart`, `markvis`, `vis` share one parser.
 
 ## Errors (stable codes)
 
-E_UNKNOWN_TYPE, E_TYPE_TYPO, E_JSON_DATA, E_MISSING_HEADER, E_EMPTY_DATA, E_EXTRA_COLUMN, E_DUP_COLUMN, E_UNKNOWN_FIELD, E_PIE_NEGATIVE, E_YAML_TABLE_CONFLICT, E_EMPTY_FENCE.
+E_UNKNOWN_TYPE, E_TYPE_TYPO, E_JSON_DATA, E_MISSING_HEADER, E_EMPTY_DATA, E_EXTRA_COLUMN, E_DUP_COLUMN, E_UNKNOWN_FIELD, E_PIE_NEGATIVE, E_YAML_TABLE_CONFLICT, E_EMPTY_FENCE, E_UNKNOWN_THEME, E_UNKNOWN_PALETTE.
+
+Optional `theme:` grammar pack: folio|highcharts|shadcn|docs|ant|recharts (default folio).
+Optional `palette:` color table: ink|porcelain|warm|cool|vivid (omit → theme default colors). Theme ≠ palette.
 
 Invalid → table + one-line error. Never drop recovered rows.
 

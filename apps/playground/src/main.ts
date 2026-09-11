@@ -2,14 +2,18 @@ import { EXAMPLES } from "./examples.js";
 import {
   exampleIdFromSearch,
   galleryHref,
+  paletteFromSearch,
   playgroundSearch,
   themeFromSearch,
 } from "./links.js";
 import { htmlTable, previewSource, type PlaygroundView } from "./preview.js";
 import { dropinSnippet } from "./snippet.js";
 import {
+  readPaletteFromFence,
   readThemeFromFence,
+  rewritePaletteInFence,
   rewriteThemeInFence,
+  type ChartPalette,
   type ChartTheme,
 } from "./theme.js";
 import { enhanceChartSvg } from "@markvis/browser/enhance";
@@ -41,7 +45,11 @@ async function copyText(text: string): Promise<void> {
 
 function searchForExample(): string {
   const own = window.location.search;
-  if (exampleIdFromSearch(own) || themeFromSearch(own)) {
+  if (
+    exampleIdFromSearch(own) ||
+    themeFromSearch(own) ||
+    paletteFromSearch(own)
+  ) {
     return own;
   }
   try {
@@ -81,6 +89,7 @@ function paint(view: PlaygroundView, theme?: ChartTheme): void {
 
 function main(): void {
   const themeSelect = mustEl<HTMLSelectElement>("theme");
+  const paletteSelect = mustEl<HTMLSelectElement>("palette");
   const select = mustEl<HTMLSelectElement>("example");
   const editor = mustEl<HTMLTextAreaElement>("fence");
   const copyFenceBtn = mustEl<HTMLButtonElement>("copy-fence");
@@ -109,6 +118,7 @@ function main(): void {
   const query = searchForExample();
   const fromQuery = exampleIdFromSearch(query);
   const themeQuery = themeFromSearch(query);
+  const paletteQuery = paletteFromSearch(query);
   const initial =
     EXAMPLES.find((item) => item.id === fromQuery) ?? first;
   let filename = initial.filename;
@@ -118,8 +128,13 @@ function main(): void {
     return themeSelect.value as ChartTheme;
   }
 
+  function currentPalette(): ChartPalette | null {
+    const raw = paletteSelect.value;
+    return raw === "" ? null : (raw as ChartPalette);
+  }
+
   function syncUrl(id: string): void {
-    const next = playgroundSearch(id, currentTheme());
+    const next = playgroundSearch(id, currentTheme(), currentPalette());
     if (`${window.location.search}` !== next) {
       window.history.replaceState(
         null,
@@ -141,20 +156,31 @@ function main(): void {
     }
   }
 
-  function syncThemeSelect(source: string): void {
+  function syncSelects(source: string): void {
     themeSelect.value = readThemeFromFence(source);
+    const palette = readPaletteFromFence(source);
+    paletteSelect.value = palette ?? "";
   }
 
-  function load(source: string, name: string, id: string, theme?: ChartTheme | null): void {
+  function load(
+    source: string,
+    name: string,
+    id: string,
+    theme?: ChartTheme | null,
+    palette?: ChartPalette | null,
+  ): void {
     filename = name;
     let nextSource = source;
     if (theme) {
-      nextSource = rewriteThemeInFence(source, theme);
+      nextSource = rewriteThemeInFence(nextSource, theme);
+    }
+    if (palette !== undefined) {
+      nextSource = rewritePaletteInFence(nextSource, palette);
     }
     editor.value = nextSource;
-    syncThemeSelect(nextSource);
+    syncSelects(nextSource);
     view = previewSource(nextSource, filename);
-    galleryLink.href = galleryHref(id, currentTheme());
+    galleryLink.href = galleryHref(id, currentTheme(), currentPalette());
     select.value = id;
     syncUrl(id);
     paint(view, currentTheme());
@@ -166,10 +192,24 @@ function main(): void {
 
   themeSelect.addEventListener("change", () => {
     const theme = themeSelect.value as ChartTheme;
-    const next = rewriteThemeInFence(editor.value, theme);
+    let next = rewriteThemeInFence(editor.value, theme);
+    next = rewritePaletteInFence(next, currentPalette());
     editor.value = next;
     view = previewSource(next, filename);
-    galleryLink.href = galleryHref(select.value, theme);
+    galleryLink.href = galleryHref(select.value, theme, currentPalette());
+    syncUrl(select.value);
+    paint(view, currentTheme());
+  });
+
+  paletteSelect.addEventListener("change", () => {
+    const next = rewritePaletteInFence(editor.value, currentPalette());
+    editor.value = next;
+    view = previewSource(next, filename);
+    galleryLink.href = galleryHref(
+      select.value,
+      currentTheme(),
+      currentPalette(),
+    );
     syncUrl(select.value);
     paint(view, currentTheme());
   });
@@ -177,13 +217,19 @@ function main(): void {
   select.addEventListener("change", () => {
     const picked =
       EXAMPLES.find((item) => item.id === select.value) ?? first;
-    load(picked.source, picked.filename, picked.id, currentTheme());
+    load(
+      picked.source,
+      picked.filename,
+      picked.id,
+      currentTheme(),
+      currentPalette(),
+    );
   });
 
   editor.addEventListener("input", () => {
     view = previewSource(editor.value, filename);
     paint(view, currentTheme());
-    syncThemeSelect(editor.value);
+    syncSelects(editor.value);
   });
 
   copyFenceBtn.addEventListener("click", () => {
@@ -210,7 +256,13 @@ function main(): void {
     );
   });
 
-  load(initial.source, initial.filename, initial.id, themeQuery);
+  load(
+    initial.source,
+    initial.filename,
+    initial.id,
+    themeQuery,
+    paletteQuery,
+  );
 }
 
 main();

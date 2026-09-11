@@ -36,6 +36,16 @@
       ],
       "default": "folio"
     },
+    "palette": {
+      "type": "string",
+      "enum": [
+        "ink",
+        "porcelain",
+        "warm",
+        "cool",
+        "vivid"
+      ]
+    },
     "unit": {
       "type": "string",
       "minLength": 1

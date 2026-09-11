@@ -5,6 +5,7 @@ import { describe, expect, it } from "vitest";
 import {
   CHART_TYPES,
   ChartIRSchema,
+  PALETTES,
   columnValues,
   type ChartType,
 } from "@markvis/ir";
@@ -54,8 +55,8 @@ describe("fixture inventory", () => {
     expect(validFiles).toHaveLength(52);
   });
 
-  it("covers 19 invalid fixtures", () => {
-    expect(invalidFiles).toHaveLength(19);
+  it("covers 20 invalid fixtures", () => {
+    expect(invalidFiles).toHaveLength(20);
   });
 });
 
@@ -304,4 +305,55 @@ describe("language rules", () => {
       ["Feb", "180"],
     ]);
   });
+
+  it("omits palette when not provided", () => {
+    const source = [
+      "```chart",
+      "type: bar",
+      "title: Default palette",
+      "x: month",
+      "y: revenue",
+      "",
+      "month,revenue",
+      "Jan,120",
+      "```",
+    ].join("\n");
+    const result = parseMarkdown(source, { filename: "palette-omit.md" });
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.chart.palette).toBeUndefined();
+  });
+
+  it.each([...PALETTES] as const)("accepts palette %s", (palette) => {
+    const source = [
+      "```chart",
+      "type: bar",
+      `palette: ${palette}`,
+      "title: Palette case",
+      "x: month",
+      "y: revenue",
+      "",
+      "month,revenue",
+      "Jan,120",
+      "```",
+    ].join("\n");
+    const result = parseMarkdown(source, { filename: "palette-ok.md" });
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.chart.palette).toBe(palette);
+  });
+
+  it("rejects unknown palette with E_UNKNOWN_PALETTE and table fallback", () => {
+    const source = readFileSync(
+      join(invalidDir, "20-unknown-palette.md"),
+      "utf8",
+    );
+    const result = parseMarkdown(source, { filename: "20-unknown-palette.md" });
+    expect(result.ok).toBe(false);
+    if (result.ok) return;
+    expect(result.error.code).toBe("E_UNKNOWN_PALETTE");
+    expect(result.error.message).toContain("E_UNKNOWN_PALETTE");
+    expect(result.table.columns.length).toBeGreaterThan(0);
+  });
+
 });

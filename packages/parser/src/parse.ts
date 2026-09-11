@@ -1,9 +1,11 @@
 import {
   ChartIRSchema,
   CHART_TYPES,
+  isChartPalette,
   isChartTheme,
   isChartType,
   type ChartIR,
+  type ChartPalette,
   type ChartTheme,
   type ChartType,
 } from "@markvis/ir";
@@ -33,6 +35,7 @@ export const ERROR_CODES = [
   "E_YAML_TABLE_CONFLICT",
   "E_EMPTY_FENCE",
   "E_UNKNOWN_THEME",
+  "E_UNKNOWN_PALETTE",
 ] as const;
 
 export type ErrorCode = (typeof ERROR_CODES)[number];
@@ -267,6 +270,7 @@ function buildIR(fields: {
   type: ChartType;
   title: string;
   theme: ChartTheme;
+  palette?: ChartPalette | undefined;
   unit?: string | undefined;
   x: string;
   y?: string | undefined;
@@ -280,6 +284,7 @@ function buildIR(fields: {
     theme: fields.theme,
     x: fields.x,
     table: fields.table,
+    ...(fields.palette ? { palette: fields.palette } : {}),
     ...(fields.unit ? { unit: fields.unit } : {}),
     ...(fields.y ? { y: fields.y } : {}),
     ...(fields.series && fields.type !== "pie" && fields.type !== "hist"
@@ -400,6 +405,20 @@ function parseBody(
     theme = themeRaw;
   }
 
+  const paletteRaw = headers["palette"]?.trim() ?? "";
+  let palette: ChartPalette | undefined;
+  if (paletteRaw !== "") {
+    if (!isChartPalette(paletteRaw)) {
+      return fail(
+        "E_UNKNOWN_PALETTE",
+        "palette is not one of ink|porcelain|warm|cool|vivid",
+        parsed,
+        raw,
+      );
+    }
+    palette = paletteRaw;
+  }
+
   const specified = {
     x: headers["x"]?.trim() || undefined,
     y: headers["y"]?.trim() || undefined,
@@ -469,6 +488,7 @@ function parseBody(
     type,
     title,
     theme,
+    palette,
     unit,
     x,
     y,

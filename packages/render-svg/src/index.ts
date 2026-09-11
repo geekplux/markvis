@@ -9,6 +9,15 @@ export {
   docs,
   ant,
   recharts,
+  applyPaletteToTheme,
+  ink,
+  porcelain,
+  warm,
+  cool,
+  vivid,
+  paletteRegistry,
+  resolvePalette,
 } from "@markvis/themes";
+export type { PaletteTokens } from "@markvis/themes";
 export { themeTokens } from "./theme.js";
 export type { ThemeTokens } from "./theme.js";

@@ -197,16 +197,19 @@
   max-width: 100%;
 }
 
-.gallery-detail-themes {
+.gallery-detail-themes,
+.gallery-detail-palettes {
   margin-top: 12px;
 }
 
-.gallery-detail-themes .gallery-chip {
+.gallery-detail-themes .gallery-chip,
+.gallery-detail-palettes .gallery-chip {
   color: var(--site-ink);
   border-color: rgba(8, 11, 8, 0.28);
 }
 
-.gallery-detail-themes .gallery-chip.active {
+.gallery-detail-themes .gallery-chip.active,
+.gallery-detail-palettes .gallery-chip.active {
   background: #ffdb2a;
   border-color: #ffdb2a;
   color: #080b08;

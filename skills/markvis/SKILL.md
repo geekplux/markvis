@@ -38,7 +38,8 @@ Mar,150
 ```
 ```
 
-Optional `theme:`: `folio` (default) `highcharts` `shadcn` `docs` `ant` `recharts` — token packs only, no chart runtimes.
+Optional `theme:`: `folio` (default) `highcharts` `shadcn` `docs` `ant` `recharts` — grammar packs only, no chart runtimes.
+Optional `palette:`: `ink` `porcelain` `warm` `cool` `vivid` — colors only. Omit → theme default colors. Unknown → `E_UNKNOWN_PALETTE` + table. Never merge palette into the theme id.
 
 Also: GFM table after the blank line; or `<!-- chart: bar x=month y=revenue title="Q3" -->` immediately followed by a GFM table.
 

@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from "vue";
 import { enhanceChartSvg } from "@markvis/browser/enhance";
+import { parseMarkdown, renderSvg } from "@markvis/browser";
 import {
   CHART_TYPES,
+  PALETTES,
   THEMES,
-  fenceForTheme,
+  fenceForThemePalette,
   playHref,
+  type ChartPalette,
   type ChartTheme,
   type ChartType,
   type GalleryItem,
@@ -14,10 +17,12 @@ import { GALLERY_ITEMS } from "../src/items";
 
 const TYPES: Array<"all" | ChartType> = ["all", ...CHART_TYPES];
 const THEME_CHIPS: ChartTheme[] = [...THEMES];
+const PALETTE_CHIPS: Array<ChartPalette | ""> = ["", ...PALETTES];
 
 const typeFilter = ref<"all" | ChartType>("all");
 const themeFilter = ref<ChartTheme>("folio");
 const detailTheme = ref<ChartTheme>("folio");
+const detailPalette = ref<ChartPalette | null>(null);
 const selectedId = ref<string | null>(null);
 const copyNote = ref("");
 const savedScrollY = ref(0);
@@ -38,25 +43,38 @@ const selected = computed<GalleryItem | null>(() => {
   return items.find((item) => item.id === selectedId.value) ?? null;
 });
 
-const selectedSvg = computed(() => {
-  if (!selected.value) {
-    return "";
-  }
-  return selected.value.svgsByTheme[detailTheme.value];
-});
-
 const selectedFence = computed(() => {
   if (!selected.value) {
     return "";
   }
-  return fenceForTheme(selected.value.fence, detailTheme.value);
+  return fenceForThemePalette(
+    selected.value.fence,
+    detailTheme.value,
+    detailPalette.value,
+  );
+});
+
+const selectedSvg = computed(() => {
+  if (!selected.value) {
+    return "";
+  }
+  if (!detailPalette.value) {
+    return selected.value.svgsByTheme[detailTheme.value];
+  }
+  const result = parseMarkdown(selectedFence.value, {
+    filename: `${selected.value.id}.md`,
+  });
+  if (!result.ok) {
+    return selected.value.svgsByTheme[detailTheme.value];
+  }
+  return renderSvg(result.chart);
 });
 
 const selectedPlayHref = computed(() => {
   if (!selected.value) {
     return "/play";
   }
-  return playHref(selected.value.id, detailTheme.value);
+  return playHref(selected.value.id, detailTheme.value, detailPalette.value);
 });
 
 const subline = computed(() => {
@@ -82,6 +100,12 @@ function readUrl(): void {
       detailTheme.value = theme as ChartTheme;
     }
   }
+  const palette = params.get("palette");
+  if (palette && PALETTES.includes(palette as ChartPalette)) {
+    detailPalette.value = palette as ChartPalette;
+  } else if (!palette) {
+    detailPalette.value = null;
+  }
 }
 
 function writeUrl(id: string | null): void {
@@ -96,6 +120,11 @@ function writeUrl(id: string | null): void {
     url.searchParams.set("theme", themeForUrl);
   } else {
     url.searchParams.delete("theme");
+  }
+  if (id && detailPalette.value) {
+    url.searchParams.set("palette", detailPalette.value);
+  } else {
+    url.searchParams.delete("palette");
   }
   window.history.replaceState(null, "", url.pathname + url.search + url.hash);
 }
@@ -121,6 +150,7 @@ function unlockScroll(): void {
 
 function openItem(id: string): void {
   detailTheme.value = themeFilter.value;
+  detailPalette.value = null;
   selectedId.value = id;
   writeUrl(id);
   lockScroll();
@@ -139,6 +169,11 @@ function setTheme(theme: ChartTheme): void {
 
 function setDetailTheme(theme: ChartTheme): void {
   detailTheme.value = theme;
+  writeUrl(selectedId.value);
+}
+
+function setDetailPalette(palette: ChartPalette | ""): void {
+  detailPalette.value = palette === "" ? null : palette;
   writeUrl(selectedId.value);
 }
 
@@ -186,7 +221,7 @@ function enhanceDetailSvg(): void {
 }
 
 
-watch([selectedSvg, detailTheme], async () => {
+watch([selectedSvg, detailTheme, detailPalette], async () => {
   if (!selectedId.value) {
     disposeDetailEnhance?.();
     disposeDetailEnhance = undefined;
@@ -305,6 +340,20 @@ onUnmounted(() => {
               @click="setDetailTheme(chip)"
             >
               {{ chip }}
+            </button>
+          </div>
+          <div class="gallery-filters gallery-detail-palettes" role="tablist" aria-label="Detail color">
+            <button
+              v-for="chip in PALETTE_CHIPS"
+              :key="`palette-${chip || 'default'}`"
+              type="button"
+              class="gallery-chip"
+              :class="{ active: (detailPalette ?? '') === chip }"
+              :aria-pressed="(detailPalette ?? '') === chip"
+              :data-palette="chip || 'default'"
+              @click="setDetailPalette(chip)"
+            >
+              {{ chip === "" ? "default" : chip }}
             </button>
           </div>
           <div class="gallery-actions">

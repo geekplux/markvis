@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "description": "markvis theme token packs and registry (U4)",
+  "description": "markvis theme grammar packs + color palettes (U5)",
   "exports": {
     ".": "./registry.ts",
     "./folio": "./folio/theme.ts",
@@ -11,7 +11,8 @@
     "./shadcn": "./shadcn/theme.ts",
     "./docs": "./docs/theme.ts",
     "./ant": "./ant/theme.ts",
-    "./recharts": "./recharts/theme.ts"
+    "./recharts": "./recharts/theme.ts",
+    "./palettes": "./palettes.ts"
   },
   "main": "./registry.ts",
   "types": "./registry.ts",

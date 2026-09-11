@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   exampleIdFromSearch,
   galleryHref,
+  paletteFromSearch,
   playgroundSearch,
   stemFromId,
   themeFromSearch,
@@ -31,6 +32,14 @@ describe("playground links", () => {
     expect(themeFromSearch("")).toBeNull();
   });
 
+  it("reads ?palette=", () => {
+    expect(paletteFromSearch("?example=01-bar-basic&palette=vivid")).toBe(
+      "vivid",
+    );
+    expect(paletteFromSearch("?palette=neon")).toBeNull();
+    expect(paletteFromSearch("")).toBeNull();
+  });
+
   it("returns null when missing", () => {
     expect(exampleIdFromSearch("")).toBeNull();
     expect(exampleIdFromSearch("?foo=bar")).toBeNull();
@@ -42,12 +51,18 @@ describe("playground links", () => {
     expect(galleryHref("01-bar-basic", "shadcn")).toBe(
       "/examples?id=01-bar-basic&theme=shadcn",
     );
+    expect(galleryHref("01-bar-basic", "folio", "cool")).toBe(
+      "/examples?id=01-bar-basic&palette=cool",
+    );
   });
 
   it("writes playground search for the switcher", () => {
     expect(playgroundSearch("01-bar-basic.md")).toBe("?example=01-bar-basic");
     expect(playgroundSearch("01-bar-basic", "docs")).toBe(
       "?example=01-bar-basic&theme=docs",
+    );
+    expect(playgroundSearch("01-bar-basic", "folio", "ink")).toBe(
+      "?example=01-bar-basic&theme=folio&palette=ink",
     );
   });
 });

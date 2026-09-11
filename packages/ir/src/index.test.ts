@@ -2,8 +2,10 @@ import { describe, expect, it } from "vitest";
 import {
   CHART_TYPES,
   ChartIRSchema,
+  PALETTES,
   THEMES,
   columnValues,
+  isChartPalette,
   isChartTheme,
   isChartType,
 } from "./index.js";
@@ -162,4 +164,49 @@ describe("@markvis/ir", () => {
     });
     expect(result.success).toBe(false);
   });
+
+  it("omits palette when not provided", () => {
+    const ir = ChartIRSchema.parse({
+      markvis: 2,
+      type: "bar",
+      title: "Q3 Revenue",
+      x: "month",
+      y: "revenue",
+      table: barTable,
+    });
+    expect(ir.palette).toBeUndefined();
+  });
+
+  it("accepts locked palettes", () => {
+    expect([...PALETTES]).toEqual(["ink", "porcelain", "warm", "cool", "vivid"]);
+    for (const palette of PALETTES) {
+      const ir = ChartIRSchema.parse({
+        markvis: 2,
+        type: "bar",
+        title: "Q3",
+        theme: "folio",
+        palette,
+        x: "month",
+        y: "revenue",
+        table: barTable,
+      });
+      expect(ir.palette).toBe(palette);
+      expect(isChartPalette(palette)).toBe(true);
+    }
+    expect(isChartPalette("neon")).toBe(false);
+  });
+
+  it("rejects an unknown palette", () => {
+    const result = ChartIRSchema.safeParse({
+      markvis: 2,
+      type: "bar",
+      title: "Q3",
+      palette: "neon",
+      x: "month",
+      y: "revenue",
+      table: barTable,
+    });
+    expect(result.success).toBe(false);
+  });
+
 });
