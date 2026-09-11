@@ -13,7 +13,7 @@ pageClass: folio-home-page
   <input type="checkbox" id="home-nav-toggle" class="home-nav-toggle" />
   <label class="home-nav-menu" for="home-nav-toggle">Menu</label>
   <div class="home-nav-links">
-    <a href="/spec">Docs</a>
+    <a href="/get-started">Docs</a>
     <a href="/examples">Examples</a>
     <a href="/play">Play</a>
     <a href="/ai">AI</a>
@@ -152,7 +152,7 @@ pageClass: folio-home-page
 
 <footer class="home-foot">
   <nav aria-label="Footer">
-    <a href="/spec">Docs</a>
+    <a href="/get-started">Docs</a>
     <a href="/examples">Examples</a>
     <a href="/play">Play</a>
     <a href="https://github.com/geekplux/markvis">GitHub</a>

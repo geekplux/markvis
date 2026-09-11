@@ -13,7 +13,7 @@ const show = computed(() => {
 <template>
   <footer v-if="show" class="family-foot">
     <nav aria-label="Footer">
-      <a href="/spec">Docs</a>
+      <a href="/get-started">Docs</a>
       <a href="/examples">Examples</a>
       <a href="/play">Play</a>
       <a href="https://github.com/geekplux/markvis">GitHub</a>

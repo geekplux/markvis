@@ -4,43 +4,63 @@ pageClass: folio-docs
 sidebar: true
 ---
 
-Put a figure in any Markdown preview or rendered view. Bake an SVG so any viewer shows it, or drop in a one-file script where the host already runs JavaScript. No plugin still shows the table.
+# Integrate
 
-## Public site
+Put a figure in any Markdown preview or rendered view. Four paste paths. No plugin still shows the table.
 
-markvis.js.org is the VitePress site in apps/web, built from branch v2. GitHub Pages source must be GitHub Actions (not master docsify). One-time Settings: [pages.md](./pages.md). Do not change markvis-editor.js.org.
+## 1. Bake
 
-## GitHub README
+Keep the fence. Write SVG beside the file. Insert a Markdown image after the fence so GitHub, static hosts, and plain viewers show the figure.
 
-GitHub will not grow a native chart fence. Use markvis bake on README.md and docs/landing.md. Keeps the fence; inserts a markdown image after it. Second bake is a no-op. CI workflow bake.yml runs on v2 push and PR.
+```bash
+pnpm markvis bake path/to.md
+```
 
-## Any JS preview
+Second bake is a no-op when nothing changed. CI can run bake on push.
 
-Drop in packages/browser/dist/markvis.min.js (or .mjs). Zero network. Finds pre/code with language chart, markvis, or vis and replaces with the same SVG as Node.
+## 2. Browser script
 
-After clone: install deps, build the browser package (see package name @markvis/browser in the monorepo), then open apps/playground/dropin.html. dist is gitignored — without that build the script 404s. For the live editor, start the playground Vite app.
+Where the page already runs JavaScript, drop in the one-file build. Zero network after load. Finds fences tagged `chart` / `markvis` / `vis` and replaces them with the same SVG as Node.
 
-Demo: apps/playground/dropin.html.
+```html
+<script type="module" src="./markvis.min.js"></script>
+```
 
-HTML comment plus GFM table charts only survive if the host already emitted them into the DOM; the browser script does not re-parse Markdown.
+Build `@markvis/browser` first; `packages/browser/dist/` is gitignored. Demo: `apps/playground/dropin.html`. The script does not re-parse Markdown — comment-plus-table charts only work if the host already emitted them into the DOM.
 
-## VitePress / Astro / markdown-it / remark
+## 3. markdown-it
 
-| Host | Path |
-| --- | --- |
-| VitePress | examples/hosts/vitepress/ — wire @markvis/markdown-it in markdown.config |
-| Astro | examples/hosts/astro/ |
-| markdown-it | examples/hosts/markdown-it/ + package @markvis/markdown-it |
-| remark | package @markvis/remark (short README + 15-line example) |
+```js
+import MarkdownIt from "markdown-it";
+import markdownItMarkvis from "@markvis/markdown-it";
 
-Each host example renders at least one valid fence to HTML with svg and table elements.
+const html = new MarkdownIt({ html: true })
+  .use(markdownItMarkvis)
+  .render(markdown);
+// html contains <svg> and <table>
+```
 
-## VS Code
+VitePress: `markdown.config(md) { md.use(markdownItMarkvis) }`. Host example: `examples/hosts/vitepress/`, `examples/hosts/markdown-it/`.
 
-extensions/vscode-markvis-preview — Markdown preview renders chart / markvis / vis to SVG. Install from folder or vsce package. Do not publish to Marketplace unless GeekPlux says so. See that folder README.
+## 4. remark
 
-## Explicit non-goals
+```js
+import { remark } from "remark";
+import remarkHtml from "remark-html";
+import remarkMarkvis from "@markvis/remark";
 
-- Waiting for github.com to add native markvis fences
-- Docusaurus adapter (skipped for now — use bake or the browser drop-in; MDX surface is not cheap)
-- A second theme field, new chart types, or d3 in packages/ or apps/
+const html = String(
+  await remark()
+    .use(remarkMarkvis)
+    .use(remarkHtml, { sanitize: false })
+    .process(markdown),
+);
+// html contains <svg> and <table>
+```
+
+Host example: `examples/hosts/astro/` (and the package README). Same parser and render-svg as the CLI. No extra types.
+
+## Also
+
+- VS Code preview: `extensions/vscode-markvis-preview` (install from folder; Marketplace only if GeekPlux says so).
+- Public site: markvis.js.org from branch `v2` via GitHub Actions — not master docsify. Leave markvis-editor.js.org alone.

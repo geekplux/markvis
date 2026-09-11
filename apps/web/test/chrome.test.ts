@@ -171,13 +171,15 @@ describe("site visual chrome", () => {
     expect(family).not.toMatch(/max-width:\s*390px[\s\S]*home-nav-links/);
     expect(nav).toContain('href="/"');
     expect(nav).toContain("markvis");
-    expect(nav).toContain('href="/spec"');
+    expect(nav).toContain('href="/get-started"');
     expect(nav).toContain('href="/examples"');
     expect(nav).toContain("folio-examples");
     expect(nav).toContain("pageClass");
     expect(nav).not.toContain("useRoute");
     expect(nav).toContain('href="/play"');
     expect(nav).toContain('href="/ai"');
+    expect(nav).toContain("/get-started");
+    expect(nav).toContain("/contributing-themes");
     expect(nav).toContain("Playground");
     expect(nav).toContain("data-site-mode-toggle");
     expect(nav).toContain("home-nav-mode");
@@ -436,4 +438,94 @@ describe("site visual chrome", () => {
     expect(enhance).toContain("export function enhanceChartSvg");
     expect(enhance).toContain("prefers-reduced-motion");
   });
+
+  it("docs family shares folio-docs chrome + linked routes", () => {
+    const family = read(".vitepress/theme/family.css");
+    const config = read(".vitepress/config.ts");
+    const nav = read("components/SiteNav.vue");
+    const foot = read("components/FamilyFoot.vue");
+    const home = read("index.md");
+
+    const pages = [
+      "get-started.md",
+      "docs.md",
+      "integrate.md",
+      "spec.md",
+      "themes.md",
+      "ai.md",
+      "contributing-themes.md",
+    ];
+    for (const page of pages) {
+      const md = read(page);
+      expect(md, page).toMatch(/pageClass:\s*folio-docs/);
+      expect(md, page).not.toMatch(/\bMermaid\b|Vega-Lite|\bECharts\b|Observable Plot/i);
+      expect(md, page).not.toMatch(/\bDocusaurus\b/);
+    }
+
+    expect(config).toContain('link: "/get-started"');
+    expect(config).toContain('link: "/integrate"');
+    expect(config).toContain('link: "/spec"');
+    expect(config).toContain('link: "/themes"');
+    expect(config).toContain('link: "/ai"');
+    expect(config).toContain('link: "/contributing-themes"');
+    expect(config).toContain('"/docs"');
+
+    expect(nav).toContain('href="/get-started">Docs');
+    expect(foot).toContain('href="/get-started">Docs');
+    expect(home).toContain('href="/get-started">Docs');
+    expect(nav).not.toContain('href="/spec">Docs');
+
+    expect(family).toMatch(/\.folio-docs \.vp-doc h1\s*\{[^}]*font-size:\s*44px/s);
+    expect(family).toMatch(/\.folio-docs \.vp-doc h1\s*\{[^}]*font-weight:\s*700/s);
+    expect(family).toMatch(
+      /\.folio-docs \.vp-doc h2\s*\{[^}]*border-top:\s*1px\s+solid\s+var\(--site-rule\)/s,
+    );
+    expect(family).toMatch(
+      /\.folio-docs \.vp-doc div\[class\*=\"language-\"\][\s\S]*border-radius:\s*0/,
+    );
+    expect(family).not.toMatch(/#2563eb/i);
+    expect(family).toMatch(/\.folio-docs[\s\S]*--vp-nav-height:\s*72px/);
+
+    const started = read("get-started.md");
+    expect(started).toContain("Play");
+    expect(started).toContain("Bake");
+    expect(started).toContain("Script");
+    expect(started).toContain("Skill");
+    expect(started).toContain("pnpm markvis bake");
+    expect(started).toContain("/llms.txt");
+
+    const integrate = read("integrate.md");
+    expect(integrate).toContain("pnpm markvis bake");
+    expect(integrate).toContain("markvis.min.js");
+    expect(integrate).toContain("@markvis/markdown-it");
+    expect(integrate).toContain("@markvis/remark");
+
+    const themes = read("themes.md");
+    expect(themes).toMatch(/theme vs palette/i);
+    expect(themes).toContain("second axis");
+    expect(themes).toContain("Contributing themes");
+    expect(themes).not.toMatch(/#[0-9A-Fa-f]{6}/); // no invented palette hex on public themes page
+
+    const ai = read("ai.md");
+    expect(ai).toContain("/llms.txt");
+    expect(ai).toContain("Emit **only** the fields");
+    expect(ai).toContain("markvis.js.org/llms.txt");
+
+    const spec = read("spec.md");
+    expect(spec).toContain("E_UNKNOWN_THEME");
+    expect(spec).toContain("Grammar");
+    expect(spec).toContain("bar");
+    expect(spec).toContain("hist");
+
+    const contrib = read("contributing-themes.md");
+    expect(contrib).toContain("packages/themes/");
+    expect(contrib).toContain("theme.ts");
+    expect(contrib).toContain("registry.ts");
+    expect(contrib).toContain("THEMES");
+
+    const docsHub = read("docs.md");
+    expect(docsHub).toContain("/get-started");
+    expect(docsHub).toContain("location.replace");
+  });
+
 });

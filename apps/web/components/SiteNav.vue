@@ -20,10 +20,13 @@ const show = computed(() => {
   );
   return (
     path === "/examples" ||
+    path === "/docs" ||
+    path === "/get-started" ||
     path === "/spec" ||
     path === "/integrate" ||
     path === "/ai" ||
     path === "/themes" ||
+    path === "/contributing-themes" ||
     path === "/play"
   );
 });
@@ -39,7 +42,7 @@ onMounted(() => {
     <input type="checkbox" id="family-nav-toggle" class="home-nav-toggle" />
     <label class="home-nav-menu" for="family-nav-toggle">Menu</label>
     <div class="home-nav-links">
-      <a href="/spec">Docs</a>
+      <a href="/get-started">Docs</a>
       <a href="/examples">Examples</a>
       <a href="/play">Play</a>
       <a href="/ai">AI</a>

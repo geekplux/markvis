@@ -7,12 +7,24 @@ const repoRoot = resolve(root, "../../..");
 
 function docsSidebar() {
   return [
-    { text: "Spec", link: "/spec" },
+    { text: "Get started", link: "/get-started" },
     { text: "Integrate", link: "/integrate" },
-    { text: "AI", link: "/ai" },
+    { text: "Spec", link: "/spec" },
     { text: "Themes", link: "/themes" },
+    { text: "AI", link: "/ai" },
+    { text: "Contributing themes", link: "/contributing-themes" },
   ];
 }
+
+const docsSidebarPaths = [
+  "/docs",
+  "/get-started",
+  "/integrate",
+  "/spec",
+  "/themes",
+  "/ai",
+  "/contributing-themes",
+];
 
 const siteModeBoot = `(function(){try{var k='markvis-site-mode';var m=localStorage.getItem(k);if(m!=='light'&&m!=='dark'){m=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.classList.remove('light','dark');document.documentElement.classList.add(m);}catch(e){document.documentElement.classList.add('dark');}})();`;
 
@@ -43,19 +55,15 @@ export default defineConfig({
   themeConfig: {
     siteTitle: "markvis",
     nav: [
+      { text: "Docs", link: "/get-started" },
       { text: "Play", link: "/play" },
       { text: "Examples", link: "/examples" },
-      { text: "Spec", link: "/spec" },
-      { text: "Integrate", link: "/integrate" },
       { text: "AI", link: "/ai" },
       { text: "GitHub", link: "https://github.com/geekplux/markvis" },
     ],
-    sidebar: {
-      "/spec": docsSidebar(),
-      "/integrate": docsSidebar(),
-      "/ai": docsSidebar(),
-      "/themes": docsSidebar(),
-    },
+    sidebar: Object.fromEntries(
+      docsSidebarPaths.map((path) => [path, docsSidebar()]),
+    ),
     footer: {
       message: "0.0.13 lives under legacy/",
       copyright: "MIT · github.com/geekplux/markvis",

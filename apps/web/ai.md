@@ -6,27 +6,40 @@ sidebar: true
 
 # AI
 
-An agent finds the spec, emits a fence, and gets a figure. No human fixes the text. Not a PNG.
+An agent finds the brief, emits a fence, and gets a figure. No human fixes the text. Not a PNG.
 
-Agents emit a markvis fence (`chart` / `markvis` / `vis`), never a flowchart DSL, never a PNG, never JSON as the default. Types: bar, line, area, scatter, pie, hist.
+## Fetch this
 
-## Trigger
+```
+https://markvis.js.org/llms.txt
+```
 
-Use when a Markdown preview, a rendered view, or an AI reply needs a figure from a table.
+Fetch `/llms.txt`. Emit **only** the fields that file lists. Do not invent keys. Do not add a seventh type. Do not emit a PNG or JSON as the default data body.
 
-Skill: https://github.com/geekplux/markvis/blob/v2/skills/markvis/SKILL.md  
-Brief: https://markvis.js.org/llms.txt
+Skill (optional, same language): [skills/markvis/SKILL.md](https://github.com/geekplux/markvis/blob/v2/skills/markvis/SKILL.md)
+
+## What to emit
+
+Tags `chart` / `markvis` / `vis` — one language. Types: `bar` `line` `area` `scatter` `pie` `hist`.
+
+Order inside the fence:
+
+1. Optional `markvis: 2`
+2. One `key: value` per line (`type` required; `title` `theme` `unit` `x` `y` `series` as listed in `/llms.txt`)
+3. Blank line
+4. CSV or one GFM table — not JSON
 
 ## Prefer
 
 - CSV or GFM table
-- Keep row order; do not force pie to 100
-- Invalid: table plus one error line
+- Keep row order; do not force pie slices to 100
+- On error: table plus one line with the stable error code
 
 ## Avoid
 
 - Flowchart tools for spreadsheet numbers
 - A seventh chart type
 - Silent x-sort
+- Fields not listed in `/llms.txt`
 
-Eval pairs: examples/prompts.md
+Eval pairs: `examples/prompts.md` in the repo.
