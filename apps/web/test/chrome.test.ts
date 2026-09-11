@@ -45,6 +45,35 @@ describe("site visual chrome", () => {
     expect(home).toContain("home-figure-strip");
     expect(css).toMatch(/\.home-lattice/);
     expect(css).toMatch(/home-rise/);
+    // U3: no full-bleed 10px graph-paper wallpaper on field/lattice
+    expect(css).not.toMatch(/transparent\s+10px/);
+    expect(css).not.toMatch(/background-size:\s*[\s\S]*10px\s+10px/);
+    expect(css).not.toMatch(/transparent\s+72px/);
+    expect(css).toMatch(/--home-measure:\s*1120px/);
+    expect(css).toMatch(/--home-cols:\s*12/);
+    expect(css).toMatch(
+      /\.home-hero\s*\{[^}]*max-width:\s*var\(--home-measure\)/s,
+    );
+    expect(css).toMatch(
+      /\.home-hero\s*\{[^}]*grid-template-columns:\s*repeat\(var\(--home-cols\)/s,
+    );
+    expect(css).toMatch(/\.home-panel\s*\{[^}]*grid-column:\s*1\s*\/\s*span\s*6/s);
+    expect(css).toMatch(
+      /\.home-hero-figure\s*\{[^}]*grid-column:\s*7\s*\/\s*span\s*6/s,
+    );
+    expect(css).toMatch(
+      /\.home-lattice\s*\{[^}]*repeating-linear-gradient\(\s*to right/s,
+    );
+    expect(css).not.toMatch(
+      /\.home-lattice\s*\{[^}]*repeating-linear-gradient\(\s*to bottom/s,
+    );
+    expect(css).toMatch(/\.home-field[\s\S]*border-bottom:\s*1px\s+solid\s+var\(--home-hair\)/);
+    expect(css).toMatch(
+      /\.home-band p\s*\{[^}]*max-width:\s*none/s,
+    );
+    expect(css).not.toMatch(
+      /\.home-band p\s*\{[^}]*max-width:\s*22ch/s,
+    );
     expect(css).toMatch(
       /\.home-figure-strip\s*\{[^}]*flex-direction:\s*row/s,
     );
