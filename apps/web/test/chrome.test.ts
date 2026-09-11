@@ -517,6 +517,19 @@ describe("site visual chrome", () => {
     expect(ai).toContain("Emit **only** the fields");
     expect(ai).toContain("markvis.js.org/llms.txt");
 
+    const llms = read("public/llms.txt");
+    expect(llms).toMatch(/`palette`/i);
+    expect(llms).toContain("E_UNKNOWN_PALETTE");
+    expect(llms).toContain("ink");
+    expect(llms).toContain("porcelain");
+    expect(llms).toContain("warm");
+    expect(llms).toContain("cool");
+    expect(llms).toContain("vivid");
+    expect(llms).toContain("Mar led Midtown box office at 9.2k tickets");
+    expect(llms).toContain("Walk-up still leads member through week 12");
+    expect(llms).toContain("MARTA takes the largest mode share");
+    expect(llms).not.toContain("Feb led Q3 at 180");
+
     const spec = read("spec.md");
     expect(spec).toContain("E_UNKNOWN_THEME");
     expect(spec).toContain("Grammar");

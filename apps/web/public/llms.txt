@@ -20,15 +20,16 @@ Fields:
 - `type` required. Only `bar` `line` `area` `scatter` `pie` `hist`.
 - `title` optional. A conclusion, not a slug.
 - `theme` optional. Omit means `folio`. Allowed: `folio` `highcharts` `shadcn` `docs` `ant` `recharts`. Any other value is `E_UNKNOWN_THEME`: show the table, not a silent swap.
+- `palette` optional. Colors only. Allowed: `ink` `porcelain` `warm` `cool` `vivid`. Omit means the theme’s default colors. Any other value is `E_UNKNOWN_PALETTE`: show the table, not a silent swap. Never merge palette into the theme id.
 - `unit` optional.
 - `x` `y` `series` name real columns. `series` splits series.
 - Data required. Not JSON.
 
 Also valid: an HTML comment immediately followed by a GFM table.
 
-`<!-- chart: bar x=month y=revenue title="Feb led Q3 at 180" -->`
+`<!-- chart: bar x=month y=tickets title="Mar led Midtown box office at 9.2k tickets" -->`
 
-Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`. Same meaning as fence headers.
+Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`. Same meaning as fence headers.
 
 ## Types
 
@@ -48,45 +49,72 @@ On any error: keep the rows, show the table, add one line with the error code. N
 ```chart
 markvis: 2
 type: bar
-title: Feb led Q3 at 180
-unit: USD k
+title: Mar led Midtown box office at 9.2k tickets
+unit: tickets
 x: month
-y: revenue
+y: tickets
 
-month,revenue
-Jan,120
-Feb,180
-Mar,150
+month,tickets
+Sep,5200
+Oct,6100
+Nov,7800
+Dec,8500
+Jan,4800
+Feb,7200
+Mar,9200
+Apr,6900
 ```
 
 ### Line
 
 ```chart
 type: line
-title: Free still leads pro
-x: month
+title: Walk-up still leads member through week 12
+x: week
 y: count
-series: plan
+series: channel
 
-month,plan,count
-Jan,free,40
-Jan,pro,12
-Feb,free,55
-Feb,pro,18
+week,channel,count
+W1,walk-up,64
+W1,member,28
+W2,walk-up,68
+W2,member,32
+W3,walk-up,71
+W3,member,35
+W4,walk-up,69
+W4,member,38
+W5,walk-up,74
+W5,member,41
+W6,walk-up,72
+W6,member,44
+W7,walk-up,75
+W7,member,47
+W8,walk-up,73
+W8,member,50
+W9,walk-up,76
+W9,member,53
+W10,walk-up,74
+W10,member,55
+W11,walk-up,77
+W11,member,57
+W12,walk-up,78
+W12,member,59
 ```
 
 ### Pie
 
 ```markvis
 type: pie
-title: A leads at 40
-x: name
-y: value
+title: MARTA takes the largest mode share
+x: mode
+y: count
 
-name,value
-A,40
-B,35
-C,30
+mode,count
+MARTA,38
+Walk,24
+Drive,22
+Bike,11
+Other,8
 ```
 
 Emit the fence. Do not emit a PNG. Do not add a seventh type.
