@@ -233,7 +233,8 @@ function walkFiles(dir: string, test: (name: string) => boolean, acc: string[] =
       name === "node_modules" ||
       name === "dist" ||
       name === ".vitepress" ||
-      name === "coverage"
+      name === "coverage" ||
+      name === "play-app"
     ) {
       continue;
     }
@@ -342,9 +343,8 @@ describe("docs: live grammar, diagrams, unused shims", () => {
       "SPEC.md",
       "GOAL.md",
       "docs/visual-spec.md",
-      "docs/gallery-spec.md",
-      "docs/site-visual-spec.md",
-      "docs/designer-language.md",
+      "docs/site.md",
+      "docs/themes.md",
       "apps/web/spec.md",
       "extensions/vscode-markvis-preview/README.md",
     ];
@@ -387,10 +387,10 @@ describe("docs: live grammar, diagrams, unused shims", () => {
     expect(diagramText).not.toMatch(/JSON as default/i);
   });
 
-  it("keeps mermaid out of README, site-copy, and apps/web", () => {
+  it("keeps mermaid out of README, landing, and apps/web", () => {
     const forbidden = [
       join(repoRoot, "README.md"),
-      join(repoRoot, "docs/site-copy.md"),
+      join(repoRoot, "docs/landing.md"),
       ...walkFiles(join(repoRoot, "apps/web"), (name) =>
         /\.(md|vue|ts|css|html)$/.test(name),
       ),
@@ -416,6 +416,12 @@ describe("docs: live grammar, diagrams, unused shims", () => {
       "SPEC.md",
       "llms.txt",
       "llms-full.txt",
+      "docs/architecture.md",
+      "docs/integrate.md",
+      "docs/themes.md",
+      "docs/visual-spec.md",
+      "docs/site.md",
+      "docs/examples.md",
       "docs/landing.md",
       "docs/research-brief.md",
       "docs/model-errors.md",
@@ -425,6 +431,98 @@ describe("docs: live grammar, diagrams, unused shims", () => {
     ];
     for (const rel of kept) {
       expect(existsSync(join(repoRoot, rel)), rel).toBe(true);
+    }
+  });
+
+  it("states the English-only committed-text rule in AGENTS.md", () => {
+    const agents = readRepo("AGENTS.md");
+    expect(agents).toContain(
+      "Committed repo text (documents, code, comments) is English only",
+    );
+    expect(agents).toContain(
+      "English is the only source language in the repo",
+    );
+    expect(agents).toMatch(/The user may prompt in Chinese or any other language/i);
+  });
+
+  it("keeps only current-law markdown under docs/", () => {
+    const docsDir = join(repoRoot, "docs");
+    const names = readdirSync(docsDir).sort();
+    expect(names).toEqual([
+      "architecture.md",
+      "best-practices.md",
+      "examples.md",
+      "integrate.md",
+      "landing.md",
+      "model-errors.md",
+      "research-brief.md",
+      "site.md",
+      "themes.md",
+      "visual-spec.md",
+    ]);
+    for (const name of names) {
+      expect(statSync(join(docsDir, name)).isFile(), name).toBe(true);
+    }
+  });
+
+  it("deletes outdated critique, backlog, launch, and superseded copy", () => {
+    const gone = [
+      "docs/visual-critique.md",
+      "docs/visual-critique-b.md",
+      "docs/visual-critique-c.md",
+      "docs/BACKLOG.md",
+      "docs/launch/READY.md",
+      "docs/launch/SHOW_HN.md",
+      "docs/launch/TWEET.md",
+      "docs/design/PALETTES.md",
+      "docs/design/HOME.md",
+      "docs/designer-language.md",
+      "docs/gallery-spec.md",
+      "docs/gallery-titles.md",
+      "docs/site-copy.md",
+      "docs/site-visual-spec.md",
+      "docs/pages.md",
+      "docs/POSITIONING.md",
+      "docs/examples-data.md",
+    ];
+    for (const rel of gone) {
+      expect(existsSync(join(repoRoot, rel)), rel).toBe(false);
+    }
+  });
+
+  it("has no CJK prose in in-scope v2 files", () => {
+    const han = /\p{Script=Han}/u;
+    const files = [
+      join(repoRoot, "CONSTITUTION.md"),
+      join(repoRoot, "VISION.md"),
+      join(repoRoot, "GOAL.md"),
+      join(repoRoot, "AGENTS.md"),
+      join(repoRoot, "STATUS.md"),
+      join(repoRoot, "DECISIONS.tsv"),
+      join(repoRoot, "SPEC.md"),
+      join(repoRoot, "llms.txt"),
+      join(repoRoot, "llms-full.txt"),
+      join(repoRoot, "README.md"),
+      ...walkFiles(join(repoRoot, "docs"), (name) =>
+        /\.(md|ts|js|txt)$/.test(name),
+      ),
+      ...walkFiles(join(repoRoot, "packages"), (name) =>
+        /\.(md|ts|js|tsx|mjs|cjs|vue|css|html|json|yml|yaml|txt)$/.test(name),
+      ),
+      ...walkFiles(join(repoRoot, "apps"), (name) =>
+        /\.(md|ts|js|tsx|mjs|cjs|vue|css|html|json|yml|yaml|txt)$/.test(name),
+      ),
+      ...walkFiles(join(repoRoot, "scripts"), (name) =>
+        /\.(md|ts|js|txt)$/.test(name),
+      ),
+      ...walkFiles(join(repoRoot, "skills"), (name) =>
+        /\.(md|ts|js|txt)$/.test(name),
+      ),
+    ];
+    expect(files.length).toBeGreaterThan(20);
+    for (const file of files) {
+      const text = readFileSync(file, "utf8");
+      expect(text, relative(repoRoot, file)).not.toMatch(han);
     }
   });
 });

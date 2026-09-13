@@ -1,67 +1,66 @@
 # CONSTITUTION.md — markvis 2.0
 
-这不是一条新聊天。这是仓库宪法。立刻覆盖写入：
+This is not a new chat. This is the repository constitution. Write it to disk immediately:
 
-- CONSTITUTION.md（本条全文）
+- CONSTITUTION.md (this full text)
 - VISION.md
 - GOAL.md
 - AGENTS.md
-- STATUS.md（先写：previous U2 cancelled; legacy modernization is not 2.0）
+- STATUS.md (first line: previous U2 cancelled; legacy modernization is not 2.0)
 
-读完再动手。旧 GOAL 把 2.0 定义成「给 0.0.13 加类型」——作废。
-github.com/geekplux/markvis 的 v2 仍是 babel6 + d3 + markvis-bar/line/pie。那叫 U1 救活旧测试，不是产品。
+Read these before touching code. The old GOAL defined 2.0 as “add types to 0.0.13” — void. github.com/geekplux/markvis `v2` was still Babel 6 + d3 + markvis-bar/line/pie. That was U1 reviving old tests, not the product.
 
-编码只许 Coder 用 Grok Build 在分支 v2。频道禁止大段实现。pstack / poteto-mode 只许在 Grok Build 里。不用 Notion。旧 master 只读。旧 src/ 和旧测试搬进 legacy/ 后冻结。
+Coding is only the Coder using Grok Build on branch `v2`. The channel forbids large implementation dumps. pstack / poteto-mode only inside Grok Build. No Notion. Old `master` is read-only. Old `src/` and old tests move into `legacy/` and freeze.
 
-Architect 写完四份文件后立刻 /loop 30m，直到停机条件成立。不要等人类下一句。
+After Architect writes the four files, start `/loop 30m` until the stop condition holds. Do not wait for the next human sentence.
 
 ==================================================
 1. VISION
 ==================================================
 
-Markdown 是 AI 时代的编程语言。Mermaid 赢了「结构」（流程、时序、状态）。markvis 要赢「数字」。
+Markdown is the programming language of the AI era. Mermaid won **structure** (flow, sequence, state). markvis must win **numbers**.
 
-一张图的源码必须同时是数据。模型读 .md 能算 max/min。模型改一行 CSV 就能重画。没装插件的人至少还能看见表。失败时数据不准消失。
+A chart’s source must also be the data. A model that reads `.md` can compute max/min. Changing one CSV row redraws the figure. People without a plugin still see the table. On failure the numbers must not disappear.
 
-2017 的 markvis 解决的是「少上传一张图」。那是渲染器。2.0 的产品是语言：
+2017 markvis solved “upload one fewer image.” That was a renderer. 2.0’s product is a language:
 
-    围栏 / GFM 表 / HTML 注释
+    fence / GFM table / HTML comment
             ↓
          parser
             ↓
          Chart IR + JSON Schema
             ↓
-     SVG | 表降级 | stats | playground | 以后 MCP
+     SVG | table fallback | stats | playground | later MCP
 
-默认渲染器是我们自己的确定性 SVG。不要把 Vega-Lite / ECharts / d3 当核心。那些以后只能是 engine: 选项。
+The default renderer is our own deterministic SVG. Do not make Vega-Lite / ECharts / d3 the core. Those can only be a later `engine:` option.
 
-品牌：保住 github.com/geekplux/markvis 和 npm 名 markvis。发 2.0.0 必须 GeekPlux 本人点头。故事是「2017 年那个项目，按 AI 重写」。
+Brand: keep github.com/geekplux/markvis and the npm name `markvis`. Shipping 2.0.0 requires GeekPlux’s own approval. The story is “the 2017 project, rewritten for AI.”
 
-不要做：Tableau、跟 Mermaid 抢流程图、一图一个 npm 包、主题市场、账号、短链、把 d3 灵活性当成 API。
+Do not: Tableau, compete with Mermaid for flowcharts, one npm package per chart, a theme marketplace, accounts, short links, or treat d3 flexibility as the API.
 
 ==================================================
-2. 技术栈（写进 AGENTS.md，违反即拒）
+2. STACK (copy into AGENTS.md; a violation is a reject)
 ==================================================
 
-允许：
+Allow:
 - pnpm workspaces + TypeScript strict
 - Node 20
-- IR 用 zod（或同等）定义，再生成 schema/markvis-2.schema.json
-- 测试：vitest
-- 文档站级 Markdown 宿主：remark 插件 + markdown-it 插件（薄适配，核心不准绑其中一个）
-- 试用页：Vite + 浏览器里跑同一份 parser 和 render-svg，零后端
-- SVG：手写确定性字符串或最小自研 layout，禁止运行时拉 d3/d3-node/jsdom 才能出图
-- CI 以后：GitHub Actions，先本地能跑同样命令
-- 包管理：@markvis/ir @markvis/parser @markvis/render-svg @markvis/cli @markvis/remark @markvis/markdown-it
-- 根包 markvis 只做 re-export 和 CLI bin
+- IR defined with zod (or equivalent), then generate `schema/markvis-2.schema.json`
+- Tests: vitest
+- Docs-site Markdown hosts: a remark plugin + a markdown-it plugin (thin adapters; the core must not bind to either)
+- Playground: Vite + the same parser and render-svg in the browser, zero backend
+- SVG: handwritten deterministic strings or a minimal in-house layout; forbidden to pull d3 / d3-node / jsdom at runtime just to emit a figure
+- CI later: GitHub Actions; the same commands must run locally first
+- Packages: `@markvis/ir` `@markvis/parser` `@markvis/render-svg` `@markvis/cli` `@markvis/remark` `@markvis/markdown-it`
+- Root package `markvis` is re-export + CLI bin only
 
-禁止出现在 packages/ 和 apps/ 的 dependencies：
+Forbidden in `packages/` and `apps/` dependencies:
 d3, d3-node, markvis-bar, markvis-line, markvis-pie, markdown-it-fence, babel-preset-es2015, jsdom-as-renderer
 
-legacy/ 可以保留旧依赖，但 packages/* 的测试不准 import legacy。
+`legacy/` may keep old deps, but `packages/*` tests must not import `legacy`.
 
 ==================================================
-3. 目录（按这个长，不准另起一套）
+3. LAYOUT (grow to this list; do not invent another tree)
 ==================================================
 
 CONSTITUTION.md
@@ -74,19 +73,28 @@ SPEC.md
 llms.txt
 llms-full.txt
 schema/markvis-2.schema.json
-legacy/                  旧 0.0.13 代码整棵挪进来
+legacy/                  frozen 0.0.13 tree moved in whole
 packages/ir/
 packages/parser/
 packages/render-svg/
 packages/cli/
 packages/remark/
 packages/markdown-it/
-packages/compat-legacy/  可选，默认关闭的旧 YAML 解析
+packages/compat-legacy/  optional, default-off old YAML parse
+packages/themes/
+packages/browser/
 apps/playground/
+apps/web/
 examples/valid/01.md … 50.md
 examples/invalid/01.md … 15.md
-examples/prompts.md      30 条自然语言 -> 围栏
+examples/prompts.md      30 natural-language lines -> fences
 examples/out/*.svg
+docs/architecture.md
+docs/integrate.md
+docs/themes.md
+docs/visual-spec.md
+docs/site.md
+docs/examples.md
 docs/landing.md
 docs/research-brief.md
 docs/model-errors.md
@@ -95,12 +103,12 @@ skills/markvis/SKILL.md
 .github/workflows/check.yml
 
 ==================================================
-4. 冻结语法
+4. FROZEN GRAMMAR
 ==================================================
 
-语言标签：chart / markvis / vis 同一个 parser。
+Language tags: `chart` / `markvis` / `vis` share one parser.
 
-头：
+Header:
     markvis: 2
     type: bar|line|area|scatter|pie|hist
     title:
@@ -109,156 +117,157 @@ skills/markvis/SKILL.md
     y:
     series:
 
-空一行后：CSV 或 GFM 表。不要 JSON 当默认数据。不要围栏里写 JS。
+Then a blank line, then CSV or a GFM table. Do not use JSON as the default data form. Do not put JS in a fence.
 
-也合法：
+Also legal:
     <!-- chart: bar x=month y=revenue title="Q3" -->
-    紧跟一张 GFM 表
+    immediately followed by a GFM table
 
-非法：未知 type、JSON 数据块、缺表头、pie 负数、空表。非法必须带稳定 error code，并降级成表 + 一行错，不准丢数据。
+Illegal: unknown type, JSON data block, missing header, pie negatives, empty table. Illegal input must carry a stable error code and degrade to a table plus one error line. Never drop the data.
 
-title 可省略，从文件名或第一列推导。输入行序保持，禁止偷偷 sort x。pie 不自动归一化到 100。
+`title` may be omitted; derive from the filename or the first column. Keep input row order; do not silently sort `x`. Pie does not auto-normalize to 100.
 
 ==================================================
-5. 工作流（按序，做完一块勾 STATUS，不要并行改语法）
+5. WORKFLOW (in order; tick STATUS when a block is done; do not change grammar in parallel)
 ==================================================
 
-W0 纠偏
-把旧树移到 legacy/。根目录变成 monorepo。STATUS 写明 U2 cancelled。
-grep packages apps 不得命中 d3-node 或 markvis-bar。
+W0 Course-correct
+Move the old tree into `legacy/`. Root becomes a monorepo. STATUS records U2 cancelled.
+`grep` of `packages` and `apps` must not hit `d3-node` or `markvis-bar`.
 
-W1 研究
-docs/research-brief.md：Mermaid pie/xychart、Vega-Lite、2017 markvis、Observable Plot。
-结论必须站 VISION：自研小 DSL，不包 Vega。
+W1 Research
+`docs/research-brief.md`: Mermaid pie/xychart, Vega-Lite, 2017 markvis, Observable Plot.
+The conclusion must stand with VISION: a small in-house DSL, not a Vega wrap.
 
-W2 规格
-SPEC.md 必须有：语法、字段表、6 种图语义、降级规则、8 个可复制例子、错误码表。
-Writer 写。Architect 只准收紧字句，不准加第 7 种 type。
+W2 Spec
+SPEC.md must have: grammar, field table, semantics of the six types, fallback rules, eight copy-paste examples, error-code table.
+Writer writes. Architect may only tighten wording, never add a 7th type.
 
-W3 例子
-valid 至少 50 个，invalid 至少 15 个。每个文件顶部一段 intent。
-覆盖：6 种图、多系列、12+ 类目、unicode、缺 title、大数与 0、不求和 pie、行序保持、三种语言标签、GFM 表、HTML 注释形态、长 label。
-invalid：未知 type、JSON 数据、缺表头、多一列、pie 负、空数据、重复列名、type 拼错、YAML 和表冲突、只有头没有数据。
+W3 Examples
+At least 50 valid, at least 15 invalid. Each file starts with an intent paragraph.
+Cover: six types, multi-series, 12+ categories, unicode, omitted title, large numbers and 0, pie that does not sum to 100, row-order preserved, three language tags, GFM table, HTML-comment form, long labels.
+Invalid: unknown type, JSON data, missing header, extra column, pie negative, empty data, duplicate column names, type typo, YAML vs table conflict, header-only.
 
 W4 IR + parser
-zod IR。全部 65 个 fixture 的测试。错误码稳定。零渲染依赖。
+zod IR. Tests for all 65 fixtures. Stable error codes. Zero render dependencies.
 
 W5 schema
-从 IR 生成 schema/markvis-2.schema.json，CI 检查手改漂移。
+Generate `schema/markvis-2.schema.json` from IR. CI checks hand-edit drift.
 
 W6 render-svg
-6 种图。轴、刻度、网格、title、legend、默认 8 色（对比足够）、aria-label、figure 语义。
-同一 IR -> 同一 SVG 字节。快照提交 examples/out。改一像素测试红。
+Six types. Axes, ticks, grid, title, legend, default 8 colors (enough contrast), aria-label, figure semantics.
+Same IR -> same SVG bytes. Snapshots committed under `examples/out`. One pixel change fails tests.
 
 W7 CLI
-markvis check | render | preview | stats | to-table
-stats 打印 type n min max series。
-preview 打开单文件左右对照，不必是完整产品。
+`markvis check | render | preview | stats | to-table`
+`stats` prints type n min max series.
+`preview` opens a single-file left/right compare; it need not be the full product.
 
-W8 宿主
-remark 和 markdown-it 各一个适配器。fixture：输入含围栏的 md，输出 HTML 同时含 svg 和 table。
-无插件时源码仍是合法 Markdown。
+W8 Hosts
+One remark adapter and one markdown-it adapter. Fixture: Markdown that contains a fence; HTML output contains both svg and table.
+Without a plugin the source is still legal Markdown.
 
 W9 playground
-Vite。左围栏右 SVG+降级表。顶部例子切换绑定 examples/valid。
-Copy fence / Copy SVG。无效输入显示表+错误，禁止白屏。
-pnpm --filter playground build 必须过。
+Vite. Fence on the left, SVG + fallback table on the right. Top example switcher bound to `examples/valid`.
+Copy fence / Copy SVG. Invalid input shows the table + error; never a blank screen.
+`pnpm --filter playground build` must pass.
 
-W10 AI 面
-skills/markvis/SKILL.md：何时用、何时不准用 Mermaid、8 few-shot、反模式。
-llms.txt + llms-full.txt。
-examples/prompts.md：30 句人话。Coder 写一个 scripts/eval-prompts（可以先伪，但要能跑 check）。
-失败记入 docs/model-errors.md。
+W10 AI surface
+`skills/markvis/SKILL.md`: when to use, when not to use a structure-diagram tool, 8 few-shots, anti-patterns.
+`llms.txt` + `llms-full.txt`.
+`examples/prompts.md`: 30 plain-language lines. Coder writes `scripts/eval-prompts` (may start stubbed, but must be able to run `check`).
+Failures go in `docs/model-errors.md`.
 
-W11 工程硬化
-vitest 覆盖 parser/render/cli。
-.github/workflows/check.yml：install + test + check valid + check invalid 非0 + playground build。
-AGENTS.md 写给未来 Grok Build：语言已冻，禁止加 type，禁止加 d3。
-docs/best-practices.md 写给人看的贡献规则。
+W11 Engineering harden
+vitest covers parser / render / cli.
+`.github/workflows/check.yml`: install + test + check valid + check invalid non-zero + playground build.
+AGENTS.md for future Grok Build: language is frozen, do not add a type, do not add d3.
+`docs/best-practices.md` is the human contrib rules.
 
-W12 加厚（W0-W11 全绿才开始，这是「不停工作」的燃料）
-- compat-legacy：把 2017 YAML vis 围栏尽量解析到新 IR，默认关闭，测试单独放
-- GitHub Action：PR 评论里贴渲染 SVG
-- packages/mcp/README.md + 最小 validate/suggest/render/toTable（能本地 stdio 跑就行）
-- 视觉回归：除快照外再做一个 examples/gallery.html 由 CLI 生成
-- landing.md ≤40 行：是什么、为什么不是 Mermaid、怎么试、三张 svg
-- README 顶部改成 2.0 入口，旧用法链到 legacy/README.md
-- 性能：1000 行 CSV 的 check+render 上限写进测试（自己量，再定阈值，不准空想数字）
-- a11y：每个 SVG 有 title/desc，颜色不只靠色盲不友好的红绿一对
+W12 Thicken (start only after W0–W11 are green; this is the fuel that keeps work going)
+- compat-legacy: parse 2017 YAML vis fences into the new IR as far as possible; default off; tests live separately
+- GitHub Action: paste rendered SVG on the PR comment
+- `packages/mcp/README.md` + minimal validate/suggest/render/toTable (local stdio is enough)
+- Visual regression: besides snapshots, `examples/gallery.html` generated by the CLI
+- `docs/landing.md` ≤40 lines: what it is, why it is not a flowchart DSL, how to try, three svgs
+- README top becomes the 2.0 entry; old usage links to `legacy/README.md`
+- Perf: write a check+render ceiling for 1000-row CSV into tests (measure first, then set the threshold; no invented numbers)
+- a11y: every SVG has title/desc; color is not only a colorblind-hostile red/green pair
 
-未做完 W12 不准宣布「今天做完」。未做完 W9 不准提官网。
+Do not announce “done for today” until W12 is finished. Do not propose a public site until W9 is finished.
 
 ==================================================
-6. 最佳实践（每轮违反就重做）
+6. BEST PRACTICES (a violation in a round means redo)
 ==================================================
 
 Architect
-- 每轮只派一个 W 编号。
-- 先读 STATUS.md 和 DECISIONS.tsv 最后 20 行。
-- 发现 Coder 在修 legacy/ 里的 jest/xo/d3 黄金文件：立刻叫停并记 DECISIONS。
-- 不要在频道开 pstack arena。
-- 产品分叉（要不要 JSON 核心、要不要第 7 种图）默认 NO，记一笔，不要讨论超过 10 条消息。
+- Dispatch only one W number per round.
+- Read STATUS.md and the last 20 rows of DECISIONS.tsv first.
+- If Coder is patching jest/xo/d3 golden files inside `legacy/`: stop them immediately and record DECISIONS.
+- Do not open a pstack arena in the channel.
+- Product forks (JSON as core, a 7th chart type) default NO — one DECISIONS row, no debate past 10 messages.
 
 Coder
-- 只通过 grok -p 在仓库干活。回频道只报：commit、文件、命令、通过/失败。
-- 最小改动。先测试后实现。parser/renderer 没有测试的 PR 不算完成。
-- 一次一个包。不要同时重构 CLI 和改语法。
-- commit 信息：feat(parser): ... / test(render-svg): ...
-- 禁止 force-push master。禁止 npm publish。
-- 跑完必须把命令和退出码写进 STATUS。
-- Grok Build 里非平凡改动才 /poteto-mode。脚手架不必开评审团。
+- Work in the repo only via `grok -p`. Report back to the channel: commit, files, commands, pass/fail.
+- Minimal diffs. Tests first, then implementation. A PR without parser/renderer tests is not done.
+- One package at a time. Do not refactor the CLI and change grammar in the same unit.
+- Commit messages: `feat(parser): ...` / `test(render-svg): ...`
+- Do not add a type. Do not add d3. Do not change frozen grammar.
+- Do not force-push `master`. Do not npm publish.
+- After a run, write the commands and exit codes into STATUS.
+- In Grok Build, `/poteto-mode` only for non-trivial changes. Scaffold does not need a review panel.
 
 Writer
-- SPEC 例子必须和 examples/ 里真实文件一致，禁止文档里的假围栏。
-- Skill 的 description 要能当触发器，不要写成广告。
-- 不发明字段。
+- SPEC examples must match real files in `examples/`. No fake fences in docs.
+- The Skill description must work as a trigger, not an ad.
+- Do not invent fields.
 
 Researcher
-- 短、有出处、服务 VISION。不要输出「也可以考虑 ECharts」这种让 Coder 跑偏的句子。
+- Short, sourced, in service of VISION. Do not output “could also consider ECharts” sentences that send Coder off the path.
 
-通用
-- /loop 每次都是冷启动：状态只信磁盘，不信聊天记忆。
-- 同一 W 失败两次：STATUS 标 BLOCKED + 一个问题，跳到下一个互不依赖的 W。
-- 连续两轮零文件变更：停 loop，@GeekPlux，附命令输出。
-- 不要用「差不多了」「感觉能用」当验收。
+Shared
+- Every `/loop` is a cold start: trust disk, not chat memory.
+- Same W fails twice: STATUS marks BLOCKED + one question, skip to the next independent W.
+- Two consecutive rounds with zero file changes: stop the loop, @GeekPlux, attach command output.
+- Do not accept “close enough” or “feels usable” as done.
 
 ==================================================
-7. 验收（少一条就不能停）
+7. ACCEPTANCE (missing any item means do not stop)
 ==================================================
 
     pnpm test
     pnpm markvis check examples/valid
-    pnpm markvis check examples/invalid          退出码必须非 0
+    pnpm markvis check examples/invalid          exit code must be non-zero
     pnpm markvis stats examples/valid/01-bar-basic.md
     pnpm --filter playground build
     rg "d3-node|markvis-bar|markvis-line|markvis-pie" packages apps && exit 1
 
-playground dev：能切例子、能改围栏出图、能复制围栏。
-每个 valid 例子在 examples/out 有对应 svg。
-CONSTITUTION.md VISION.md SPEC.md SKILL.md 都在仓库里，不是只在频道里。
+playground dev: can switch examples, edit a fence and get a figure, copy the fence.
+Every valid example has a matching svg in `examples/out`.
+CONSTITUTION.md VISION.md SPEC.md SKILL.md live in the repo, not only in the channel.
 
 ==================================================
-8. 循环（现在就臂）
+8. LOOP (arm it now)
 ==================================================
 
-Architect 在 W0 文件落地后执行：
+After W0 files land, Architect runs:
 
-    /loop 30m 读 CONSTITUTION.md GOAL.md STATUS.md DECISIONS.tsv。
-    若验收命令全绿且 W12 至少完成 gallery + landing + README 入口：停 loop，@GeekPlux。
-    否则只做一个未勾选 W。点名负责人。
-    Coder 的任务必须附上完整 grok -p 一句话。
-    写一行 TSV。不要聊天解决问题。
+    /loop 30m read CONSTITUTION.md GOAL.md STATUS.md DECISIONS.tsv.
+    If acceptance commands are all green and W12 at least has gallery + landing + README entry: stop the loop, @GeekPlux.
+    Otherwise do exactly one unchecked W. Name the owner.
+    Coder tasks must include a complete one-line `grok -p`.
+    Write one TSV row. Do not solve problems in chat.
 
-心跳不要短于 30 分钟。不要 5 分钟。不要让 Grok Build 会话自己再套一层 /loop 盯同一件事。
+Heartbeat must not be shorter than 30 minutes. Not 5 minutes. Do not nest another `/loop` inside the Grok Build session watching the same work.
 
 ==================================================
-9. Architect 此刻第一句话
+9. ARCHITECT FIRST SENTENCE NOW
 ==================================================
 
-1. 确认 workdir 和分支 v2
-2. 确认旧代码已计划移入 legacy/（或正在移）
-3. 确认 CONSTITUTION.md 已写入
-4. 取消 U2
-5. 派 W0 给 Coder，派 VISION/SPEC 给 Writer
+1. Confirm workdir and branch `v2`
+2. Confirm old code is planned to move into `legacy/` (or is moving)
+3. Confirm CONSTITUTION.md is written
+4. Cancel U2
+5. Dispatch W0 to Coder, VISION/SPEC to Writer
 
-开始。不要等下一封人类消息。
+Start. Do not wait for the next human message.

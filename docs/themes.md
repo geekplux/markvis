@@ -1,10 +1,28 @@
 # themes.md — markvis theme token packs
 
-Scope: optional fence `theme: folio|highcharts|shadcn|docs|ant|recharts` (grammar). Omitted = folio. Unknown = E_UNKNOWN_THEME + table. Optional `palette: ink|porcelain|warm|cool|vivid` (colors). Omitted = theme pack default colors. Unknown = E_UNKNOWN_PALETTE + table. Hex tables: `docs/design/PALETTES.md` / `packages/themes/palettes.ts`. Themes are token packs in `packages/themes/<id>/theme.ts`, resolved by `packages/themes/registry.ts`. No Highcharts/d3/Unovis/Recharts deps. No new chart types. Public UI: two controls (Theme + Color). Labels may say Folio / Highcharts-style / shadcn-style / Docs — avoid trademark claims in marketing copy.
+Scope: optional fence `theme: folio|highcharts|shadcn|docs|ant|recharts` (grammar). Omitted = folio. Unknown = E_UNKNOWN_THEME + table. Optional `palette: ink|porcelain|warm|cool|vivid` (colors). Omitted = theme pack default colors. Unknown = E_UNKNOWN_PALETTE + table. Hex tables: this file and `packages/themes/palettes.ts`. Themes are token packs in `packages/themes/<id>/theme.ts`, resolved by `packages/themes/registry.ts`. No Highcharts/d3/Unovis/Recharts deps. No new chart types. Public UI: two controls (Theme + Color). Labels may say Folio / Highcharts-style / shadcn-style / Docs — avoid trademark claims in marketing copy.
 
 Default site figures stay folio.
 
-Playground theme switcher and examples theme toggle are Coder C6/C9. This file is token truth only.
+This file is token truth: theme grammar packs plus the color-only palette tables. Site chrome is `docs/site.md`. Ledger / folio look is `docs/visual-spec.md`.
+
+---
+
+## Palettes (color axis)
+
+`palette=` replaces **series / categorical fills and strokes only**. Margins, ticks, legend placement, radius, and grid stay with the theme.
+
+Five ids, eight series each (wrap at `WRAP_OPACITY` like themes). Omit `palette=` → the theme pack’s own default `PALETTE`. Unknown id → `E_UNKNOWN_PALETTE` + table. Names are frozen: `ink` · `porcelain` · `warm` · `cool` · `vivid` — no aliases.
+
+Hex lock (series 0…7), source of truth also `packages/themes/palettes.ts`:
+
+| id | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **ink** | `#2A2F2A` | `#5C6560` | `#8A9188` | `#3D4A5C` | `#6B5A4E` | `#4A5C54` | `#7A6E62` | `#4E5560` |
+| **porcelain** | `#5B7C99` | `#8FA3B0` | `#6A8F8A` | `#9AA4B2` | `#7B8FA6` | `#A8B4BC` | `#6E7F8E` | `#B0BEC5` |
+| **warm** | `#C45C26` | `#D4892A` | `#B33A2B` | `#E0A05A` | `#9C4A2F` | `#C97B4A` | `#A65D3A` | `#D4A574` |
+| **cool** | `#2F6F8F` | `#3D8B8C` | `#4A6FA5` | `#5B9AA8` | `#3A5F7A` | `#6B8FB8` | `#2E7A6E` | `#7A9BB0` |
+| **vivid** | `#E11D48` | `#2563EB` | `#16A34A` | `#D97706` | `#9333EA` | `#0891B2` | `#EA580C` | `#4F46E5` |
 
 ---
 
@@ -234,7 +252,7 @@ Zinc/slate ink, thin ticks, no loud fill — page-figure language that reads nat
 | Scatter `r` / opacity | `2.5` / `0.75` |
 | Font | `Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif` |
 
-Status: `packages/themes/docs/theme.ts` is present on disk with the values above (not stub-equal to folio). If C5 still lands wiring/export polish, keep these measured locks; do not silently revert to folio hex.
+Status: `packages/themes/docs/theme.ts` is present on disk with the values above (not stub-equal to folio). Keep these measured locks; do not silently revert to folio hex.
 
 ### Differentiator vs folio (measured)
 
@@ -253,7 +271,7 @@ Status: `packages/themes/docs/theme.ts` is present on disk with the values above
 | Wrap opacity | `0.7` | `0.65` |
 | Scatter | `3` / `0.85` | `2.5` / `0.75` |
 
-### What MUST stay true when C5 finishes
+### What must stay true
 
 - Ink stays zinc/slate (`#18181B` / `#64748B`), not folio `#171717` / `#737373`
 - Hairline ≤ `0.06`, structure ≤ `0.16` — thinner than folio

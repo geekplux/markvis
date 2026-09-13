@@ -1,10 +1,16 @@
 .gallery-page {
   position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 24px;
+  max-width: none;
+  margin: 0;
+  padding: 24px 1.5rem 64px;
   color: var(--site-fg);
   background: transparent;
+}
+
+@media (min-width: 640px) {
+  .gallery-page {
+    padding: 32px 3rem 80px;
+  }
 }
 
 .gallery-title {
@@ -39,7 +45,7 @@
   border: 1px solid var(--site-chip-border);
   background: transparent;
   color: var(--site-fg);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-family: var(--site-mono);
   font-size: 11px;
   font-weight: 560;
   letter-spacing: 0.12em;
@@ -49,9 +55,9 @@
 }
 
 .gallery-chip.active {
-  background: #ffdb2a;
-  border-color: #ffdb2a;
-  color: #080b08;
+  background: var(--site-primary);
+  border-color: var(--site-primary);
+  color: var(--site-primary-fg);
 }
 
 .gallery-chip:focus-visible,
@@ -210,9 +216,9 @@
 
 .gallery-detail-themes .gallery-chip.active,
 .gallery-detail-palettes .gallery-chip.active {
-  background: #ffdb2a;
-  border-color: #ffdb2a;
-  color: #080b08;
+  background: var(--site-primary);
+  border-color: var(--site-primary);
+  color: var(--site-primary-fg);
 }
 
 .gallery-actions {

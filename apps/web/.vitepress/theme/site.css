@@ -1,31 +1,36 @@
 :root {
-  --folio-paper: #ffffff;
-  --folio-ink: #171717;
-  --folio-quiet: #64748b;
-  --folio-rule: rgba(23, 23, 23, 0.12);
-  --folio-accent: #2563eb;
-  --folio-fence: #f4f4f5;
-  --vp-c-bg: #ffffff;
-  --vp-c-bg-alt: #ffffff;
-  --vp-c-bg-elv: #ffffff;
-  --vp-c-bg-soft: #f4f4f5;
-  --vp-c-text-1: #171717;
-  --vp-c-text-2: #64748b;
-  --vp-c-brand-1: #2563eb;
-  --vp-c-brand-2: #2563eb;
-  --vp-c-brand-3: #2563eb;
-  --vp-nav-height: 52px;
-  --vp-home-hero-name-color: #171717;
+  --folio-paper: var(--site-bg, #ffffff);
+  --folio-ink: var(--site-fg, #18181b);
+  --folio-quiet: var(--site-muted, #71717a);
+  --folio-rule: var(--site-border, #e4e4e7);
+  --folio-accent: var(--site-peach, #c2410c);
+  --folio-fence: var(--site-card-2, #fafafa);
+  --vp-c-bg: var(--site-bg, #ffffff);
+  --vp-c-bg-alt: var(--site-bg, #ffffff);
+  --vp-c-bg-elv: var(--site-bg, #ffffff);
+  --vp-c-bg-soft: var(--site-card-2, #fafafa);
+  --vp-c-text-1: var(--site-fg, #18181b);
+  --vp-c-text-2: var(--site-muted, #71717a);
+  --vp-c-brand-1: var(--site-peach, #c2410c);
+  --vp-c-brand-2: var(--site-peach, #c2410c);
+  --vp-c-brand-3: var(--site-peach, #c2410c);
+  --vp-nav-height: var(--site-nav-h, 64px);
+  --vp-home-hero-name-color: var(--site-fg, #18181b);
   --vp-home-hero-name-background: transparent;
-  --vp-font-family-base: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-    sans-serif;
+  --vp-font-family-base: var(--site-sans);
+  --vp-font-family-mono: var(--site-mono);
+  --vp-radius: 0;
 }
 
 html,
 body {
-  background: #ffffff;
-  color: var(--folio-ink);
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--site-bg, #ffffff);
+  color: var(--site-fg, #18181b);
+  font-family: var(--site-sans);
+}
+
+.VPSkipLink {
+  display: none !important;
 }
 
 .VPNav,
@@ -34,13 +39,13 @@ body {
 .VPNavBar .container,
 .VPNavBar .content,
 .VPNavBar .divider {
-  background: #ffffff !important;
-  background-color: #ffffff !important;
+  background: var(--site-bg) !important;
+  background-color: var(--site-bg) !important;
 }
 
 .VPNavBar {
-  height: 52px;
-  border-bottom: 1px solid var(--folio-rule);
+  height: var(--site-nav-h);
+  border-bottom: 1px solid var(--site-border);
   box-shadow: none !important;
 }
 
@@ -93,7 +98,7 @@ body {
 
 .VPContent {
   padding-top: var(--vp-nav-height) !important;
-  background: #ffffff;
+  background: var(--site-bg);
 }
 
 .VPDoc {
@@ -103,13 +108,17 @@ body {
 .VPDoc .container,
 .VPDoc .content-container,
 .VPDoc .content {
-  max-width: 1040px !important;
+  max-width: none !important;
 }
 
-.folio-examples .VPDoc .container,
-.folio-examples .VPDoc .content-container,
-.folio-examples .VPDoc .content {
-  max-width: 1200px !important;
+.folio-docs .VPDoc {
+  padding: 32px 1.5rem 64px !important;
+}
+
+@media (min-width: 640px) {
+  .folio-docs .VPDoc {
+    padding: 32px 3rem 64px !important;
+  }
 }
 
 .folio-home-page .VPDoc,
@@ -127,7 +136,7 @@ body {
 
 .folio-play .VPContent {
   padding-top: 0 !important;
-  background: var(--site-page);
+  background: var(--site-bg);
 }
 
 .VPHome,
@@ -178,7 +187,7 @@ body {
   justify-content: center;
   height: 44px;
   padding: 0 18px;
-  border-radius: 6px;
+  border-radius: var(--site-radius);
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
@@ -232,7 +241,7 @@ body {
   margin: 0;
   padding: 16px;
   border: 1px solid var(--folio-rule);
-  border-radius: 6px;
+  border-radius: var(--site-radius);
   background: #ffffff;
 }
 
@@ -300,7 +309,7 @@ body {
 .folio-home div[class*="language-"] {
   background: var(--folio-fence) !important;
   border: 1px solid var(--folio-rule);
-  border-radius: 6px !important;
+  border-radius: var(--site-radius) !important;
   margin: 0 0 24px !important;
   box-shadow: none !important;
 }
@@ -368,8 +377,8 @@ body {
 }
 
 .VPFooter {
-  background: #ffffff !important;
-  border-top: 1px solid var(--folio-rule) !important;
+  background: var(--site-bg) !important;
+  border-top: 1px solid var(--site-border) !important;
 }
 
 .VPFooter .message,

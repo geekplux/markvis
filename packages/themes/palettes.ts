@@ -2,7 +2,7 @@ import type { ChartPalette } from "@markvis/ir";
 import type { ThemeTokens } from "./folio/theme.js";
 
 /**
- * Color-only series tables. Hex locked in docs/design/PALETTES.md — do not invent.
+ * Color-only series tables. Hex locked in docs/themes.md — do not invent.
  * `palette=` overlays SERIES fills/strokes only; theme grammar untouched.
  */
 export type PaletteTokens = {

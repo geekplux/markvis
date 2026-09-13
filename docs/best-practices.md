@@ -22,9 +22,12 @@ Human contrib rules for markvis 2.0. SPEC.md and CONSTITUTION.md win on conflict
 
 | Change | Also update |
 | --- | --- |
-| New valid/invalid fence | examples/ + tests that read it |
-| Agent failure pattern | docs/model-errors.md |
-| Prompt to fence pair | examples/prompts.md + eval-prompts script |
+| New valid/invalid fence | `examples/` + tests that read it + `docs/examples.md` when the gallery story changes |
+| Agent failure pattern | `docs/model-errors.md` |
+| Prompt to fence pair | `examples/prompts.md` + eval-prompts script |
 | Architecture call | DECISIONS.tsv one line + `docs/architecture.md` |
+| Theme / palette tokens | `docs/themes.md` + `packages/themes/` |
+| Ledger / folio look | `docs/visual-spec.md` |
+| Public site chrome or home copy | `docs/site.md` + `apps/web/` |
 
-Landing copy lives in docs/landing.md (W12). Skill trigger text lives in skills/markvis/SKILL.md.
+Landing copy lives in `docs/landing.md`. Skill trigger text lives in `skills/markvis/SKILL.md`. Committed repo text is English only (`AGENTS.md`).

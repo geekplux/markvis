@@ -3,7 +3,30 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Play · markvis</title>
+    <title>Playground · MarkVis</title>
+    <script>
+      (function () {
+        try {
+          var k = "markvis-site-mode";
+          var m = localStorage.getItem(k);
+          if (m !== "light" && m !== "dark") {
+            m = window.matchMedia("(prefers-color-scheme: light)").matches
+              ? "light"
+              : "dark";
+          }
+          document.documentElement.classList.remove("light", "dark");
+          document.documentElement.classList.add(m);
+          window.addEventListener("storage", function (e) {
+            if (e.key === k && (e.newValue === "light" || e.newValue === "dark")) {
+              document.documentElement.classList.remove("light", "dark");
+              document.documentElement.classList.add(e.newValue);
+            }
+          });
+        } catch (e) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
   </head>
   <body>
     <noscript>
@@ -13,7 +36,7 @@
       </p>
     </noscript>
     <header class="toolbar">
-      <h1>Play</h1>
+      <h1>Playground</h1>
       <label>
         Theme
         <select id="theme">

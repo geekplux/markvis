@@ -9,9 +9,9 @@
 - Replace markvis.js.org (today docsify on master). markvis-editor.js.org untouched; homepage links to /play.
 
 ## GOAL NOW
-Public VitePress site at apps/web with Mermaid.js.org energy + Highcharts demo density.
+Public VitePress site at apps/web with QuickGUI landing architecture (peach-zinc rails, radius 0, Geist, logo) + Highcharts demo density.
 Routes: / (home), /play, /examples, /spec, /integrate, /ai.
-Home: one sentence, Open playground + Examples + GitHub, three live SVGs from examples/out, short fence sample, footer 0.0.13 under legacy/.
+Home: bordered column — hero, proof SVGs from examples/out, feature grid, fence tabs, numbered quickstart, host row, dotted final CTA, footer 0.0.13 under legacy/.
 Playground: keep apps/playground, product UI (left fence / right figure / switcher / Copy fence / Copy SVG / Open in gallery).
 Examples: Highcharts-style gallery, >=40 cards from examples/valid (currently 52), conclusion titles, click for full figure + fence + copy. Generated so docs cannot drift.
 

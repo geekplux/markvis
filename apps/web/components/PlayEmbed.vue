@@ -10,30 +10,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="play-embed">
-    <iframe
-      :src="src"
-      title="Playground"
-      class="play-embed-frame"
-    />
+  <div class="play-shell site-rail">
+    <div class="play-embed">
+      <iframe
+        :src="src"
+        title="Playground"
+        class="play-embed-frame"
+      />
+    </div>
   </div>
 </template>
-
-<style scoped>
-.play-embed {
-  position: fixed;
-  top: 72px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 6;
-  background: #ffffff;
-}
-
-.play-embed-frame {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-</style>

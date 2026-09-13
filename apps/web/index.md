@@ -2,162 +2,155 @@
 layout: page
 sidebar: false
 aside: false
-title: markvis
+title: MarkVis
 pageClass: folio-home-page
 ---
 
 <div class="home-root">
 
-<nav class="home-nav" aria-label="Home">
-  <a class="home-wordmark" href="/">markvis</a>
-  <input type="checkbox" id="home-nav-toggle" class="home-nav-toggle" />
-  <label class="home-nav-menu" for="home-nav-toggle">Menu</label>
-  <div class="home-nav-links">
-    <a href="/get-started">Docs</a>
-    <a href="/examples">Examples</a>
-    <a href="/play">Play</a>
-    <a href="/ai">AI</a>
-  </div>
-  <div class="home-nav-right">
-    <button type="button" class="home-nav-mode" data-site-mode-toggle data-mode="dark" aria-label="Switch to light mode"><svg class="home-nav-mode-icon home-nav-mode-sun" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><circle cx="9" cy="9" r="3.25" fill="none" stroke="currentColor" stroke-width="1.75"/><path d="M9 1.5v2.25M9 14.25V16.5M1.5 9h2.25M14.25 9H16.5M3.7 3.7l1.6 1.6M12.7 12.7l1.6 1.6M14.3 3.7l-1.6 1.6M5.3 12.7l-1.6 1.6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"/></svg></button>
-    <a class="home-nav-action" href="/play">Playground</a>
-  </div>
-</nav>
+<main>
+<div class="site-rail">
 
-<section class="home-field">
-  <div class="home-lattice" aria-hidden="true"></div>
-  <div class="home-hero">
-    <div class="home-panel">
-      <p class="home-meta"><span>OPEN SOURCE / MIT LICENSE</span><span>v2</span></p>
-      <h1 class="home-headline">
-        <span class="home-name">markvis.</span>
-        <span class="home-line">Charts in Markdown for any preview, any agent reply.</span>
-      </h1>
-      <p class="home-actions">
-        <a class="home-btn filled" href="/play"><span>Get started</span><span aria-hidden="true">&gt;</span></a>
-        <a class="home-btn outline" href="/examples"><span>Browse examples</span><span aria-hidden="true">&gt;</span></a>
-      </p>
-      <p class="home-chip-label">&gt; available for</p>
-      <p class="home-chips">
-        <span class="home-chip">npm</span>
-        <span class="home-chip">script</span>
-        <span class="home-chip">skill</span>
-      </p>
-    </div>
-    <div class="home-hero-figure">
-      <div class="home-figure-strip" aria-label="Sample figures">
-        <figure class="home-figure-tile">
-          <img src="/home/01-bar-basic.svg" alt="Bar chart: Mar led Midtown box office" />
-        </figure>
-        <figure class="home-figure-tile">
-          <img src="/home/02-line-multi.svg" alt="Line chart: Walk-up still leads member" />
-        </figure>
-        <figure class="home-figure-tile">
-          <img src="/home/05-pie-raw.svg" alt="Pie chart: MARTA takes the largest mode share" />
-        </figure>
-      </div>
-      <p class="home-figure-caption">FOLIO FIGURES</p>
-    </div>
-  </div>
-</section>
-
-<section class="home-band" aria-label="What markvis is">
-  <article>
-    <h2>library you can drop in</h2>
-    <p>Install with npm, a script tag, or a Skill — one name: markvis.</p>
-  </article>
-  <article>
-    <h2>Any Markdown view</h2>
-    <p>Works in any Markdown preview or rendered page; the fence is the figure.</p>
-  </article>
-  <article>
-    <h2>same fence, same SVG</h2>
-    <p>Same fence text always yields the same SVG; no plugin, and the table stays.</p>
-  </article>
-  <article>
-    <h2>AI replies</h2>
-    <p>Agents emit the fence so the reply is a figure, not a paragraph of numbers.</p>
-  </article>
-  <article>
-    <h2>Themes</h2>
-    <p>One fence fits the host theme; folio is the default look.</p>
-  </article>
-</section>
-
-<section class="home-atlas" aria-label="Figures">
-  <p class="home-index">01</p>
-  <h2 class="home-section-title">Figures.</h2>
-  <p class="home-lead">Same text, same figure.</p>
-  <div class="home-figures">
-    <figure>
-      <span class="home-index">01</span>
-      <img src="/home/01-bar-basic.svg" alt="Bar chart: Mar led Midtown box office" />
-    </figure>
-    <figure>
-      <span class="home-index">02</span>
-      <img src="/home/02-line-multi.svg" alt="Line chart: Walk-up still leads member" />
-    </figure>
-    <figure>
-      <span class="home-index">03</span>
-      <img src="/home/05-pie-raw.svg" alt="Pie chart: MARTA takes the largest mode share" />
-    </figure>
-  </div>
-</section>
-
-<section class="home-strip" aria-label="Examples">
-  <div class="home-strip-copy">
-    <h2 class="home-section-title">Examples.</h2>
-    <p class="home-lead ink">preview or rendered page. The fence is the figure.</p>
-    <a class="home-textlink" href="/examples"><span>Browse examples</span><span aria-hidden="true">&gt;</span></a>
-  </div>
-  <div class="home-thumbs">
-    <figure><img src="/home/01-bar-basic.svg" alt="Bar chart: Mar led Midtown box office" /></figure>
-    <figure><img src="/home/02-line-multi.svg" alt="Line chart: Walk-up still leads member" /></figure>
-    <figure><img src="/home/05-pie-raw.svg" alt="Pie chart: MARTA takes the largest mode share" /></figure>
-    <figure><img src="/home/03-area-basic.svg" alt="Area chart" /></figure>
-  </div>
-</section>
-
-<section class="home-start" aria-label="Start">
-  <div class="home-start-copy">
-    <h2 class="home-section-title paper">Start.</h2>
-    <p class="home-lead muted">npm, a script tag, or a Skill. One name: markvis.</p>
-    <a class="home-btn filled" href="/play"><span>Get started</span><span aria-hidden="true">&gt;</span></a>
-  </div>
-  <div class="home-start-rows">
-    <div>
-      <p>npm</p>
-      <p>One name: markvis.</p>
-    </div>
-    <div>
-      <p>script</p>
-      <p>a script tag.</p>
-    </div>
-    <div>
-      <p>skill</p>
-      <p>a Skill.</p>
-    </div>
-  </div>
-</section>
-
-<section class="home-agent" aria-label="Agents">
-  <p class="home-index">02</p>
-  <h2 class="home-section-title">Agents.</h2>
-  <p class="home-lead">agents emit the fence. A figure, not a paragraph of numbers.</p>
-  <p class="home-agent-links">
-    <a href="/llms.txt">/llms.txt</a>
-    <a href="/ai">/ai</a>
+<section id="hero" class="home-hero">
+  <p class="home-badge">
+    <span class="home-badge-left">OPEN SOURCE</span>
+    <span class="home-badge-right">v2 · MIT</span>
   </p>
+  <h1 class="home-headline">
+    <span>Charts in Markdown.</span>
+    <span>The fence is the data.</span>
+  </h1>
+  <p class="home-sub">A Markdown fence — CSV or a GFM table — parses to IR and a deterministic SVG. Types: bar, line, area, scatter, pie, hist. Same text, same figure. No plugin, the table stays.</p>
+  <p class="home-cta">
+    <a class="home-btn filled" href="#quickstart">Get started</a>
+    <a class="home-btn outline" href="/get-started">Docs <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
+    <a class="home-btn outline" href="/examples">Examples <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
+  </p>
+  <div class="home-install">
+    <CopyChip command="pnpm markvis bake README.md" />
+  </div>
 </section>
 
-<footer class="home-foot">
-  <nav aria-label="Footer">
-    <a href="/get-started">Docs</a>
-    <a href="/examples">Examples</a>
-    <a href="/play">Play</a>
-    <a href="https://github.com/geekplux/markvis">GitHub</a>
-  </nav>
-  <p>MIT · 0.0.13 under <code>legacy/</code></p>
-</footer>
+<section id="proof">
+  <div class="home-section-head">
+    <h2>Figures</h2>
+    <p>Same text, same figure. Folio marks from examples/out — uncropped.</p>
+  </div>
+  <HomeProof />
+</section>
+
+<section id="features">
+  <div class="home-section-head">
+    <h2>Features</h2>
+  </div>
+  <div class="home-grid home-features-grid">
+    <article class="home-feature">
+      <h3>Library you can drop in</h3>
+      <p>Install with npm, a script tag, or a Skill. One name: markvis.</p>
+    </article>
+    <article class="home-feature">
+      <h3>Any Markdown view</h3>
+      <p>Works in any Markdown preview or rendered page. The fence is the figure.</p>
+    </article>
+    <article class="home-feature">
+      <h3>Same fence, same SVG</h3>
+      <p>Same fence text always yields the same SVG. Deterministic. No plugin, the table stays.</p>
+    </article>
+    <article class="home-feature">
+      <h3>Table fallback</h3>
+      <p>Illegal input keeps a table plus one error line. Never drop the data.</p>
+    </article>
+    <article class="home-feature">
+      <h3>Six types</h3>
+      <p>bar, line, area, scatter, pie, hist. Frozen.</p>
+    </article>
+    <article class="home-feature">
+      <h3>CSV or GFM table</h3>
+      <p>The data is the source. Not JSON as the default. No JavaScript in a fence.</p>
+    </article>
+    <article class="home-feature">
+      <h3>Parser to IR to SVG</h3>
+      <p>Fence, GFM table, or HTML comment to Chart IR to handwritten SVG.</p>
+    </article>
+    <article class="home-feature">
+      <h3>AI replies</h3>
+      <p>Agents emit the fence. A figure, not a paragraph of numbers.</p>
+    </article>
+    <article class="home-feature">
+      <h3>Themes</h3>
+      <p>One fence fits the host. folio is the default. Site light/dark is chrome only — not theme.</p>
+    </article>
+  </div>
+</section>
+
+<section id="code">
+  <div class="home-section-head">
+    <h2>Fences</h2>
+    <p>One language, three figures. Copy a fence and paste it in Play.</p>
+  </div>
+  <FenceTabs />
+</section>
+
+<section id="quickstart">
+  <div class="home-section-head">
+    <h2>Quickstart</h2>
+  </div>
+  <div class="home-grid home-quick-grid">
+    <article class="home-quick">
+      <div class="home-quick-title"><span>01</span><h3>Play</h3></div>
+      <pre class="home-quick-code">Open /play. Paste a fence. The SVG updates.</pre>
+      <p>Same text, same figure.</p>
+    </article>
+    <article class="home-quick">
+      <div class="home-quick-title"><span>02</span><h3>Bake</h3></div>
+      <CopyChip command="pnpm markvis bake README.md" />
+      <p>Keeps the fence; writes the figure after it.</p>
+    </article>
+    <article class="home-quick">
+      <div class="home-quick-title"><span>03</span><h3>Skill</h3></div>
+      <pre class="home-quick-code">skills/markvis/SKILL.md</pre>
+      <p>Point an agent at the Skill or /llms.txt.</p>
+    </article>
+  </div>
+</section>
+
+<section id="hosts">
+  <div class="home-grid home-hosts">
+    <div class="home-host">
+      <span class="home-host-dot" aria-hidden="true"></span>
+      <span class="home-host-name">npm</span>
+      <span class="home-host-status">available now</span>
+    </div>
+    <div class="home-host">
+      <span class="home-host-dot" aria-hidden="true"></span>
+      <span class="home-host-name">script</span>
+      <span class="home-host-status">available now</span>
+    </div>
+    <div class="home-host">
+      <span class="home-host-dot" aria-hidden="true"></span>
+      <span class="home-host-name">skill</span>
+      <span class="home-host-status">available now</span>
+    </div>
+  </div>
+</section>
+
+<section id="cta" class="home-final">
+  <div class="home-dots" aria-hidden="true"></div>
+  <div class="home-final-inner">
+    <img class="site-logo site-logo-light site-logo-lg" src="/logo.png" width="44" height="44" alt="" />
+    <img class="site-logo site-logo-dark site-logo-lg" src="/logo-dark.png" width="44" height="44" alt="" />
+    <h2>Get started with MarkVis</h2>
+    <p class="home-final-lead">Write a fence. Get a figure. Parser to IR to a deterministic SVG.</p>
+    <p class="home-final-actions">
+      <a class="home-btn filled" href="/play">Playground</a>
+      <a class="home-btn outline" href="/get-started">Docs <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
+      <a class="home-btn outline" href="/examples">Examples <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
+      <a class="home-btn outline" href="https://github.com/geekplux/markvis" target="_blank" rel="noreferrer"><span class="home-gh" aria-hidden="true"></span> Star on GitHub</a>
+    </p>
+  </div>
+</section>
+
+</div>
+</main>
 
 </div>

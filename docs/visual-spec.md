@@ -1,12 +1,24 @@
 # visual-spec — Ledger → markvis (transparent canvas)
 
-Language: **Ledger** (`docs/designer-language.md`). Critique: `docs/visual-critique.md`.
+Language: **Ledger**. Default fence `theme:` is `folio`. Named `theme:` / `palette:` values are grammar in `SPEC.md` and packs in `packages/themes/` — they do not paint a second canvas onto Ledger.
 
 Constraints: static deterministic SVG · six types only · optional fence `theme:` / `palette:` per `SPEC.md` (this file is the `folio` / Ledger look) · **no** HTML poster · **no** animation · **no** d3 · implement in `packages/render-svg` with tokens from `@markvis/themes` · regenerate `examples/out/*` + `examples/gallery.html` · update vitest snapshots in the same unit.
 
 Fixture sources for 01 / 02 / 05 / 09 / 17 may receive **title-only** edits so the IR title is a conclusion (never a chart-type word). No other product escape hatches.
 
 **Host assumption:** light Markdown article. Canvas is transparent so the host background shows through. Do not assume a paper plate.
+
+## Ledger locks
+
+Editorial in-article figure: inherit the Markdown host surface — not a dashboard card, not a poster, not an instrument panel, not a paper plate. Three-second judgment first (which mark wins); thirty-second verification second (exact number).
+
+1. **Canvas:** transparent. Never paint a full-frame fill rect (no paper `#F7F4EF`, no card slab).
+2. **Ink / Quiet / structure:** Ink `#171717`. Quiet `#737373`. Hairline `0.10` (grid only). Structure `0.28` (baseline, leaders, slice separators).
+3. **One accent for one series;** extra hues only for extra series. Area fill opacity `0.22` under the series stroke. Accent occupies the mark, never a filled legend slab, never the canvas.
+4. **Three line grades:** hairline / structure / data. No axis box. Baseline only on the plot floor. No vertical grids. No tick lines sticking off the axis.
+5. **Three type grades:** title 17 / 600 ink · unit 12 / 400 quiet · value 11 / 500 ink · tick 10 / 400 quiet. No axis-name layer when the title already names the measure.
+6. **Corner rule:** square frame and axes. Radius only on the data mark — bar tops `rx = 3`.
+7. **Plot share & titles:** data region owns ≥55% of frame height; grow height to 640 before crushing the plot. Horizontal grid ≤3 lines (never the baseline). Titles state a conclusion — never the chart type, never a bare noun that only repeats the y-field.
 
 ---
 
@@ -156,7 +168,7 @@ Dark mode canvas, paper / full-frame canvas fill, animation, tooltips, new types
 
 ## Done when
 
-1. designer-language.md and this file match Ledger transparent canvas.
-2. Acceptance SVGs pass measured critique with no paper rect.
+1. This file matches Ledger transparent canvas (folio pack).
+2. Acceptance SVGs have no paper rect.
 3. Tests green and gallery regenerated.
 4. Product owner has not rejected the five.

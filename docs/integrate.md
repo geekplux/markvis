@@ -4,7 +4,7 @@ Put a figure in any Markdown preview or rendered view. Bake an SVG so any viewer
 
 ## Public site
 
-markvis.js.org is the VitePress site in apps/web, built from branch v2. GitHub Pages source must be GitHub Actions (not master docsify). One-time Settings: [pages.md](./pages.md). Do not change markvis-editor.js.org.
+markvis.js.org is the VitePress site in apps/web, built from branch v2. GitHub Pages source must be GitHub Actions (not master docsify). Do not change markvis-editor.js.org. Workflow: `.github/workflows/pages.yml` (`pnpm --filter web build`, upload `apps/web/.vitepress/dist`). `check.yml` stays the CI contract; Pages only deploys the site.
 
 ## GitHub README
 
@@ -34,6 +34,34 @@ Each host example renders at least one valid fence to HTML with svg and table el
 ## VS Code
 
 extensions/vscode-markvis-preview — Markdown preview renders chart / markvis / vis to SVG. Install from folder or vsce package. Do not publish to Marketplace unless GeekPlux says so. See that folder README.
+
+## GitHub Pages (one-time Settings)
+
+On **github.com/geekplux/markvis** → **Settings** → **Pages**:
+
+1. **Build and deployment → Source:** GitHub Actions. Not “Deploy from a branch”. Master docsify must not stay the source.
+2. **Custom domain:** `markvis.js.org` (keep existing DNS).
+3. First green `pages` run on `v2` publishes. Until Source is GitHub Actions, the workflow uploads but GitHub still serves the old branch site.
+
+### Environment `github-pages`
+
+The Actions deploy job uses the **github-pages** environment. Under **Settings** → **Environments** → **github-pages** → **Deployment branches and tags**:
+
+- Must **allow branch `v2`** (or “All branches”, or a rule that includes `v2`).
+- If the allow list is only `master` / `main` / `gh-pages`, the run fails with: **Branch v2 is not allowed to deploy to github-pages**.
+
+### Enforce HTTPS vs Cloudflare
+
+**Enforce HTTPS** on the Pages custom-domain screen only works when GitHub sees its own DNS for the domain.
+
+If `markvis.js.org` is **Cloudflare-proxied** (orange cloud):
+
+- Leave **Enforce HTTPS unchecked** in GitHub Pages. GitHub cannot issue/complete HTTPS for a proxied record.
+- In Cloudflare: SSL/TLS mode **Full** (not Flexible). Proxied CNAME/A to GitHub Pages; Cloudflare terminates visitor HTTPS.
+
+If DNS is **grey-cloud / DNS-only** to GitHub Pages, Enforce HTTPS can stay on.
+
+`apps/web/public/CNAME` ships `markvis.js.org` in the artifact. pages.yml must not deploy a red build.
 
 ## Explicit non-goals
 

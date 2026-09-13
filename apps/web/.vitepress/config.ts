@@ -29,9 +29,13 @@ const docsSidebarPaths = [
 const siteModeBoot = `(function(){try{var k='markvis-site-mode';var m=localStorage.getItem(k);if(m!=='light'&&m!=='dark'){m=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.classList.remove('light','dark');document.documentElement.classList.add(m);}catch(e){document.documentElement.classList.add('dark');}})();`;
 
 export default defineConfig({
-  title: "markvis",
+  title: "MarkVis",
   description: "Quantitative charts in Markdown — the fence is the data.",
-  head: [["script", {}, siteModeBoot]],
+  head: [
+    ["script", {}, siteModeBoot],
+    ["link", { rel: "icon", href: "/favicon.png", type: "image/png" }],
+    ["link", { rel: "apple-touch-icon", href: "/apple-touch-icon.png" }],
+  ],
   vite: {
     resolve: {
       alias: {
@@ -47,11 +51,11 @@ export default defineConfig({
   },
   appearance: false,
   themeConfig: {
-    siteTitle: "markvis",
+    siteTitle: "MarkVis",
     nav: [
       { text: "Docs", link: "/get-started" },
-      { text: "Play", link: "/play" },
       { text: "Examples", link: "/examples" },
+      { text: "Playground", link: "/play" },
       { text: "AI", link: "/ai" },
       { text: "GitHub", link: "https://github.com/geekplux/markvis" },
     ],

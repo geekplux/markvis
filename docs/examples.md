@@ -1,10 +1,10 @@
-# Examples data (U7 lock)
+# Examples
 
-Writer lock for every public `examples/valid` gallery card. Coder replaces fences + regenerates SVGs to match **story** (fence `title:`) and density; invalid fixtures stay off `/examples`.
+Writer lock for every public `examples/valid` gallery card. Fences and regenerated SVGs must match **story** (fence `title:`) and density. Invalid fixtures stay off `/examples`. Gallery chrome: `docs/site.md`.
 
 Rules: conclusion titles, real units, no stem-slug captions, no competitor names. "illustrative" means fictional but real-world-shaped.
 
-Densified seeds (EXAMPLES.md § Demo data) stay authoritative for `01`–`06`, `09`, and home/Play defaults.
+Densified seeds stay authoritative for `01`–`06`, `09`, and home/Play defaults.
 
 | id | type | story | dataset | source note |
 | --- | --- | --- | --- | --- |
