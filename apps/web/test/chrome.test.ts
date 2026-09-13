@@ -1,6 +1,7 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { inflateSync } from "node:zlib";
 import { describe, expect, it } from "vitest";
 import { PROOF_STEMS, proofViews } from "../src/homeProof";
 import type { GalleryItem } from "../src/catalog";
@@ -10,6 +11,87 @@ const webRoot = join(here, "..");
 
 function read(rel: string): string {
   return readFileSync(join(webRoot, rel), "utf8");
+}
+
+/** 8-bit RGBA PNG only — locks Klein Blue ink without a decoder package. */
+function pngRgba8(buf: Buffer): { width: number; height: number; rgba: Buffer } {
+  expect(buf.subarray(0, 8)).toEqual(
+    Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]),
+  );
+  let width = 0;
+  let height = 0;
+  let bit = 0;
+  let color = 0;
+  const idats: Buffer[] = [];
+  for (let i = 8; i + 12 <= buf.length; ) {
+    const len = buf.readUInt32BE(i);
+    const type = buf.toString("ascii", i + 4, i + 8);
+    const data = buf.subarray(i + 8, i + 8 + len);
+    if (type === "IHDR") {
+      width = data.readUInt32BE(0);
+      height = data.readUInt32BE(4);
+      bit = data[8] ?? 0;
+      color = data[9] ?? 0;
+    } else if (type === "IDAT") {
+      idats.push(data);
+    } else if (type === "IEND") {
+      break;
+    }
+    i += 12 + len;
+  }
+  expect(bit).toBe(8);
+  expect(color).toBe(6);
+  const inflated = inflateSync(Buffer.concat(idats));
+  const stride = width * 4;
+  const rgba = Buffer.alloc(height * stride);
+  let src = 0;
+  for (let y = 0; y < height; y++) {
+    const filter = inflated[src++] ?? 0;
+    const row = inflated.subarray(src, src + stride);
+    src += stride;
+    const outOff = y * stride;
+    const upOff = (y - 1) * stride;
+    for (let x = 0; x < stride; x++) {
+      const raw = row[x] ?? 0;
+      const a = x >= 4 ? (rgba[outOff + x - 4] ?? 0) : 0;
+      const b = y > 0 ? (rgba[upOff + x] ?? 0) : 0;
+      const c = y > 0 && x >= 4 ? (rgba[upOff + x - 4] ?? 0) : 0;
+      let recon = raw;
+      if (filter === 1) {
+        recon = (raw + a) & 255;
+      } else if (filter === 2) {
+        recon = (raw + b) & 255;
+      } else if (filter === 3) {
+        recon = (raw + ((a + b) >> 1)) & 255;
+      } else if (filter === 4) {
+        const p = a + b - c;
+        const pa = Math.abs(p - a);
+        const pb = Math.abs(p - b);
+        const pc = Math.abs(p - c);
+        const pr = pa <= pb && pa <= pc ? a : pb <= pc ? b : c;
+        recon = (raw + pr) & 255;
+      } else if (filter !== 0) {
+        throw new Error(`png filter ${filter}`);
+      }
+      rgba[outOff + x] = recon;
+    }
+  }
+  return { width, height, rgba };
+}
+
+function countRgb(rgba: Buffer, r: number, g: number, b: number): number {
+  let n = 0;
+  for (let i = 0; i + 3 < rgba.length; i += 4) {
+    if (
+      rgba[i] === r &&
+      rgba[i + 1] === g &&
+      rgba[i + 2] === b &&
+      (rgba[i + 3] ?? 0) > 200
+    ) {
+      n++;
+    }
+  }
+  return n;
 }
 
 function expectNoYellow(source: string, label: string): void {
@@ -102,9 +184,11 @@ describe("site visual chrome", () => {
     expect(home).toContain("Charts in Markdown.");
     expect(home).toContain("The fence is the data.");
     expect(home).toContain('href="#quickstart">Get started');
+    expect(home).toContain('class="home-btn filled" href="#quickstart">Get started');
     expect(home).toContain("Examples");
     expect(home).toContain("Get started with MarkVis");
     expect(home).toContain('href="/play">Playground');
+    expect(home).toContain('class="home-btn filled" href="/play">Playground');
     expect(home).toContain('<CopyChip command="pnpm markvis bake README.md"');
     const chip = read("components/CopyChip.vue");
     expect(chip).toMatch(/prefix:\s*"\$"/);
@@ -157,12 +241,21 @@ describe("site visual chrome", () => {
     expect(png.subarray(0, 8)).toEqual(
       Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]),
     );
+    const pixels = pngRgba8(png);
+    expect(pixels.width).toBe(547);
+    expect(pixels.height).toBe(598);
+    // Klein Blue #002FA7 on the geometric M; a 3-bar mark would not hit this.
+    expect(countRgb(pixels.rgba, 0x00, 0x2f, 0xa7)).toBeGreaterThan(10_000);
     const nav = read("components/SiteNav.vue");
     const home = read("index.md");
     const config = read(".vitepress/config.ts");
     expect(nav).toContain('src="/logo.png"');
-    expect(nav).toContain("MarkVis");
-    expect(nav).toContain('href="/play">Playground');
+    expect(nav).toContain('class="home-wordmark"');
+    expect(nav).toContain("<span>MarkVis</span>");
+    expect(nav).toMatch(
+      /<div class="home-nav-links">\s*<a href="\/get-started">Docs<\/a>\s*<a href="\/examples">Examples<\/a>\s*<a href="\/play">Playground<\/a>\s*<a href="\/ai">AI<\/a>/,
+    );
+    expect(nav).toContain('class="home-nav-action" href="/play">Playground');
     expect(nav).not.toContain("Get started");
     expect(nav).toContain("folio-home-page");
     expect(home).toContain('id="cta"');
@@ -170,6 +263,7 @@ describe("site visual chrome", () => {
     expect(config).toContain('rel: "icon"');
     expect(config).toContain("/favicon.png");
     expect(config).toContain('title: "MarkVis"');
+    expect(config).toContain('siteTitle: "MarkVis"');
     expect(existsSync(join(webRoot, "public/logo.svg"))).toBe(false);
   });
 
@@ -385,7 +479,9 @@ describe("site visual chrome", () => {
     expect(css).toMatch(/html\.dark[\s\S]*--bg:\s*#171719/);
     expect(css).not.toMatch(/section\.preview[\s\S]*background:\s*#f7f4ef/);
     expect(css).not.toMatch(/#2563eb/i);
-    expect(css).not.toMatch(/#0e1312/);
+    expect(css).not.toMatch(/#0e1312/i);
+    expect(css).not.toMatch(/#edebe5/i);
+    expect(css).not.toMatch(/#ffdb2a/i);
     expect(css).toMatch(/--editor-bg:\s*#fafafa/);
     expect(css).toMatch(/font-size:\s*11px/);
     expect(css).toMatch(/text-transform:\s*uppercase/);
@@ -413,12 +509,16 @@ describe("site visual chrome", () => {
     expect(css).toMatch(/prefers-reduced-motion:\s*reduce/);
     expect(css).toMatch(/\.markvis-tip/);
     const embed = read("components/PlayEmbed.vue");
-    expect(embed).toContain("play-shell");
-    expect(embed).toContain("site-rail");
+    expect(embed).toContain('class="play-shell site-rail"');
+    expect(embed).not.toMatch(/position\s*:\s*fixed/);
     const familyPlay = read(".vitepress/theme/family.css");
-    expect(familyPlay).toMatch(
-      /\.play-shell[\s\S]*height:\s*calc\(100vh - var\(--site-nav-h\)\)/,
+    const playShellRule = familyPlay.match(/\.play-shell\s*\{[^}]*\}/)?.[0] ?? "";
+    expect(playShellRule).toMatch(
+      /height:\s*calc\(100vh - var\(--site-nav-h\)\)/,
     );
+    expect(playShellRule).not.toMatch(/position\s*:\s*fixed/);
+    expect(playShellRule).not.toMatch(/inset\s*:\s*0/);
+    expect(playShellRule).not.toMatch(/100vw/);
   });
 
   it("browser package exports enhanceChartSvg", () => {
