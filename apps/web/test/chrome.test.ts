@@ -158,6 +158,9 @@ describe("site visual chrome", () => {
     expect(mode).toMatch(
       /html\.light\s*\{[^}]*--site-primary:\s*#002fa7/s,
     );
+    expect(mode).toMatch(
+      /html\.dark\s*\{[^}]*--site-primary:\s*#7aa2ff/s,
+    );
     expect(mode).toMatch(/\.site-rail/);
     expect(mode).toMatch(/max-width:\s*var\(--site-measure\)/);
     expect(mode).toMatch(/border-inline:\s*1px\s+solid\s+var\(--site-border\)/);
@@ -174,6 +177,7 @@ describe("site visual chrome", () => {
     expectNoPeachHex(mode, "site-mode.css");
     expectNoPeachHex(home, "home.css");
     expectNoPeachHex(family, "family.css");
+    expectNoPeachHex(gallery, "gallery.css");
     expectNoPeachHex(read(".vitepress/theme/site.css"), "site.css");
   });
 
@@ -277,7 +281,8 @@ describe("site visual chrome", () => {
       /class="home-nav-links">[\s\S]*href="\/get-started"[\s\S]*>Docs<\/a>[\s\S]*href="\/examples"[\s\S]*>Examples<\/a>[\s\S]*href="\/play"[\s\S]*>Playground<\/a>[\s\S]*href="\/ai"[\s\S]*>AI<\/a>/,
     );
     expect(nav).toContain('class="home-nav-action" href="/play">Playground');
-    expect(nav).not.toContain("Get started");
+    expect(nav).not.toMatch(/class="home-nav-action"[^>]*>Get started/);
+    expect(nav).toContain('text: "Get started"');
     expect(nav).toContain("folio-home-page");
     expect(home).toContain('id="cta"');
     expect(home).toContain('src="/logo.png"');
@@ -308,15 +313,41 @@ describe("site visual chrome", () => {
       expect(html).toContain('href="/favicon.png"');
       expect(html).toContain('class="copy-chip-prefix"');
       expect(html).toContain(">$</span>");
+      expect(html).toMatch(
+        /class="home-nav-right"[\s\S]*class="home-nav-menu"/,
+      );
       expect(existsSync(join(webRoot, ".vitepress/dist/logo.png"))).toBe(true);
       const cssName = readdirSync(join(webRoot, ".vitepress/dist/assets")).find(
         (name) => name.startsWith("style.") && name.endsWith(".css"),
       );
       expect(cssName, "built style css").toBeTruthy();
-      expectNoYellow(
-        read(`.vitepress/dist/assets/${cssName}`),
-        "built style css",
+      const builtCss = read(`.vitepress/dist/assets/${cssName}`);
+      expect(builtCss).toMatch(/#002fa7/i);
+      expect(builtCss).toMatch(/#7aa2ff/i);
+      expectNoYellow(builtCss, "built style css");
+      expectNoPeachHex(builtCss, "built style css");
+    },
+  );
+
+  const distDocs = join(webRoot, ".vitepress/dist/get-started.html");
+  it.skipIf(!existsSync(distDocs))(
+    "built dist docs ships section links in the site Menu drawer",
+    () => {
+      const html = read(".vitepress/dist/get-started.html");
+      expect(html).toContain('class="home-nav-docs"');
+      expect(html).toMatch(
+        /class="home-nav-right"[\s\S]*class="home-nav-menu"/,
       );
+      for (const label of [
+        "Get started",
+        "Integrate",
+        "Spec",
+        "Themes",
+        "AI",
+        "Contributing themes",
+      ]) {
+        expect(html).toContain(label);
+      }
     },
   );
 
@@ -444,6 +475,7 @@ describe("site visual chrome", () => {
       /@media\s*\(min-width:\s*1200px\)[\s\S]*grid-template-columns:\s*repeat\(4/,
     );
     expect(family).toMatch(/--vp-nav-height:\s*var\(--site-nav-h\)/);
+    expect(family).toMatch(/--vp-sidebar-width:\s*272px/);
     expect(family).toMatch(/\.home-nav-action[\s\S]*background:\s*var\(--site-primary\)/);
     expect(family).toMatch(/\.site-header/);
     expect(nav).toContain("rail-joints");
@@ -466,14 +498,58 @@ describe("site visual chrome", () => {
     expect(family).toMatch(/\.home-nav-right/);
     expect(nav).toContain("aria-expanded");
     expect(nav).toContain("menuOpen");
-    expect(family).toMatch(/\.home-nav-menu[\s\S]*min-height:\s*44px/);
-    expect(family).toMatch(/\.home-nav\.is-open \.home-nav-links/);
-    expect(family).toMatch(
-      /@media\s*\(max-width:\s*959px\)[\s\S]*\.folio-docs \.VPSidebar[\s\S]*display:\s*none/,
+    const menuRule = family.match(/\.home-nav-menu\s*\{[^}]*\}/)?.[0] ?? "";
+    expect(menuRule).toMatch(/min-height:\s*44px/);
+    expect(menuRule).toMatch(/min-width:\s*44px/);
+    expect(menuRule).not.toMatch(/(?<![a-z-])width:\s*44px/);
+    expect(nav).toMatch(
+      /class="home-nav-right"[\s\S]*class="home-nav-menu"/,
     );
     expect(family).toMatch(
-      /@media\s*\(min-width:\s*960px\)[\s\S]*\.folio-docs \.VPSidebar[\s\S]*position:\s*fixed/,
+      /@media\s*\(max-width:\s*1023px\)[\s\S]*?\.home-nav-links\s*\{[^}]*flex-basis:\s*100%/,
     );
+    expect(family).toMatch(
+      /@media\s*\(max-width:\s*1023px\)[\s\S]*?\.home-nav\.is-open \.home-nav-links\s*\{[^}]*display:\s*flex/,
+    );
+    expect(nav).toContain("Contributing themes");
+    expect(nav).toContain('href: "/integrate"');
+    expect(nav).toContain(':href="link.href"');
+    expect(family).toMatch(/\.home-nav-docs/);
+    expect(family).toMatch(
+      /\.folio-docs \.VPLocalNav\s*\{[^}]*display:\s*none/,
+    );
+    expect(family).toMatch(
+      /\.folio-docs \.VPSidebar \.curtain\s*\{[^}]*display:\s*none/,
+    );
+    expect(family).toMatch(
+      /@media\s*\(max-width:\s*959px\)[\s\S]*?\.folio-docs \.VPSidebar\s*\{[^}]*display:\s*none/,
+    );
+    expect(family).toMatch(
+      /@media\s*\(min-width:\s*960px\)[\s\S]*?\.folio-docs \.VPSidebar\s*\{[^}]*position:\s*fixed/,
+    );
+    expect(family).not.toMatch(
+      /@media\s*\(min-width:\s*960px\)[\s\S]*?\.folio-docs \.VPSidebar\s*\{[^}]*display:\s*flex/,
+    );
+    expect(family).toMatch(
+      /@media\s*\(min-width:\s*1440px\)[\s\S]*?\.folio-docs \.VPSidebar[\s\S]*?padding-left:\s*16px/,
+    );
+    expect(family).toMatch(
+      /@media\s*\(min-width:\s*960px\)[\s\S]*?\.folio-docs \.VPSidebar[\s\S]*?overflow-x:\s*visible/,
+    );
+    expect(family).toMatch(
+      /\.folio-docs \.VPContent\.has-sidebar\s*\{[^}]*margin-inline:\s*auto\s*!important/,
+    );
+    expect(family).toMatch(
+      /@media\s*\(min-width:\s*960px\)[\s\S]*?\.folio-docs \.VPContent\.has-sidebar[\s\S]*?padding-left:\s*var\(--vp-sidebar-width\)/,
+    );
+    expect(family).toMatch(
+      /@media\s*\(min-width:\s*1440px\)[\s\S]*?\.folio-docs \.VPContent\.has-sidebar[\s\S]*?padding-right:\s*0/,
+    );
+    expect(family).toMatch(
+      /html\.dark \.site-logo-light\s*\{[^}]*display:\s*none/,
+    );
+    expect(family).not.toMatch(/prefers-color-scheme/);
+    expect(nav).not.toMatch(/prefers-color-scheme/);
   });
 
   it("site light/dark mode tokens + menu not clipped", () => {
@@ -515,6 +591,7 @@ describe("site visual chrome", () => {
     expect(css).not.toMatch(/#edebe5/i);
     expect(css).not.toMatch(/#ffdb2a/i);
     expect(css).not.toMatch(/#c2410c/i);
+    expect(css).not.toMatch(/#fb923c/i);
     expect(css).toMatch(/--editor-bg:\s*#eef1f8/);
     expect(css).toMatch(/font-size:\s*11px/);
     expect(css).toMatch(/text-transform:\s*uppercase/);

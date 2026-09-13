@@ -4,7 +4,7 @@
 .folio-play,
 .folio-docs {
   --vp-nav-height: var(--site-nav-h);
-  --vp-sidebar-width: 220px;
+  --vp-sidebar-width: 272px;
   --vp-c-brand-1: var(--site-klein);
   --vp-c-brand-2: var(--site-klein);
   --vp-c-brand-3: var(--site-klein);
@@ -126,23 +126,14 @@ html.dark .site-logo-dark {
   display: block;
 }
 
-.home-nav-toggle {
-  position: absolute;
-  opacity: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
 .home-nav-menu {
   display: none;
   align-items: center;
   justify-content: center;
   min-width: 44px;
   min-height: 44px;
-  width: 44px;
   height: 44px;
-  padding: 0;
+  padding: 0 12px;
   font-family: var(--site-mono);
   font-size: 12px;
   color: var(--site-fg);
@@ -292,51 +283,78 @@ html.dark .site-logo-dark {
 }
 
 .folio-docs .VPLocalNav {
-  top: var(--vp-nav-height);
-  border-bottom: 1px solid var(--site-border);
+  display: none !important;
 }
 
 .folio-docs .VPContent.has-sidebar {
   padding-top: 0 !important;
 }
 
-.folio-docs .VPContent {
+.folio-docs .VPContent,
+.folio-docs .VPContent.has-sidebar {
   max-width: var(--site-measure);
-  margin-inline: auto;
+  margin-inline: auto !important;
   border-inline: 1px solid var(--site-border);
   box-sizing: border-box;
 }
 
+.folio-docs .VPSidebar .curtain {
+  display: none !important;
+}
+
 @media (min-width: 960px) {
   .folio-docs .VPSidebar {
-    display: flex !important;
     position: fixed;
     top: var(--vp-nav-height);
     bottom: 0;
     left: max(0px, calc((100vw - min(100vw, var(--site-measure))) / 2));
     width: var(--vp-sidebar-width);
-    padding-top: 24px;
-    overflow: auto;
+    max-width: var(--vp-sidebar-width);
+    padding: 24px 16px 96px;
+    overflow-x: visible !important;
+    overflow-y: auto;
     border-right: 1px solid var(--site-border);
     z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    box-sizing: border-box;
+  }
+
+  .folio-docs .VPSidebar .nav {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .folio-docs .VPSidebarItem .text {
+    overflow: visible;
+    white-space: normal;
   }
 
   .folio-docs .VPContent.has-sidebar {
     padding-left: var(--vp-sidebar-width) !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .folio-docs .VPSidebar {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    width: var(--vp-sidebar-width) !important;
+    max-width: var(--vp-sidebar-width) !important;
   }
 
-  .folio-docs .VPLocalNav {
-    display: none !important;
+  .folio-docs .VPContent.has-sidebar {
+    padding-left: var(--vp-sidebar-width) !important;
+    padding-right: 0 !important;
   }
 }
 
 @media (max-width: 959px) {
   .folio-docs .VPSidebar {
     display: none !important;
-  }
-
-  .folio-docs .VPLocalNav {
-    display: flex !important;
   }
 
   .folio-docs .VPContent.has-sidebar,
@@ -469,9 +487,24 @@ html.dark .site-logo-dark {
   }
 }
 
+.home-nav-docs {
+  display: none;
+}
+
 @media (max-width: 1023px) {
   .home-nav {
     position: relative;
+    flex-wrap: wrap;
+    height: auto;
+    min-height: var(--site-nav-h);
+  }
+
+  .home-wordmark {
+    min-width: 0;
+  }
+
+  .home-nav-right {
+    margin-left: auto;
   }
 
   .home-nav-menu {
@@ -487,18 +520,15 @@ html.dark .site-logo-dark {
 
   .home-nav-links {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
+    flex-basis: 100%;
+    order: 3;
+    position: static;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
     background: var(--site-bg);
     border-top: 1px solid var(--site-border);
-    border-bottom: 1px solid var(--site-border);
-    padding: 8px 1.5rem 16px;
-    z-index: 50;
+    padding: 8px 0 16px;
   }
 
   .home-nav.is-open .home-nav-links {
@@ -509,6 +539,23 @@ html.dark .site-logo-dark {
     min-height: 44px;
     display: flex;
     align-items: center;
+  }
+
+  .home-nav-docs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--site-border);
+  }
+
+  .home-nav-docs-label {
+    margin: 8px 0 4px;
+    font-family: var(--site-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--site-muted);
   }
 
   .home-nav-action {

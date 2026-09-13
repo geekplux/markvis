@@ -17,9 +17,11 @@ U7 done: `docs/examples.md` lock — 52 gallery fences with conclusion stories, 
 C1 ✓ → C2 ✓ → C3 ✓ → C4 ✓ → C5 ✓ → C6 ✓ playground switcher → C7 mobile 390 → C8 homepage copy → C9 examples theme toggle → C10 launch kit → U1–U4 ✓ → U5 ✓ → U6 ✓ → U7 ✓
 
 ## Commands
-# site chrome: Klein Blue schema + filled M logo; Docs rails; mobile Menu
+# site chrome: Klein Blue schema + filled M; Docs rails (no clip); Menu in right cluster
+pnpm exec vitest run apps/web/test           # exit 0  (22 passed)
 pnpm test                                    # exit 0  (536 passed)
 pnpm markvis check examples/valid            # exit 0  (52 ok)
 pnpm markvis check examples/invalid          # exit 1  (0 ok, 20 error)  # required non-zero
 pnpm --filter playground build               # exit 0
-pnpm --filter web build                      # exit 0
+pnpm --filter web build                      # exit 0  (twice)
+# preview :4173 — Docs 1440 labels intact; 390 Menu in right cluster; docs drawer section links

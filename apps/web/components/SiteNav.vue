@@ -14,6 +14,32 @@ const pageClass = computed(() => String(frontmatter.value.pageClass ?? ""));
 
 const isHome = computed(() => pageClass.value === "folio-home-page");
 
+const isDocs = computed(() => {
+  const cls = pageClass.value;
+  if (cls === "folio-docs") return true;
+  const path = routeKey(
+    String(page.value.relativePath ? "/" + page.value.relativePath.replace(/\.md$/, "") : ""),
+  );
+  return (
+    path === "/docs" ||
+    path === "/get-started" ||
+    path === "/spec" ||
+    path === "/integrate" ||
+    path === "/ai" ||
+    path === "/themes" ||
+    path === "/contributing-themes"
+  );
+});
+
+const docsLinks = [
+  { href: "/get-started", text: "Get started" },
+  { href: "/integrate", text: "Integrate" },
+  { href: "/spec", text: "Spec" },
+  { href: "/themes", text: "Themes" },
+  { href: "/ai", text: "AI" },
+  { href: "/contributing-themes", text: "Contributing themes" },
+] as const;
+
 const menuOpen = ref(false);
 
 function toggleMenu(): void {
@@ -69,22 +95,31 @@ onMounted(() => {
         <img class="site-logo site-logo-dark" src="/logo-dark.png" width="28" height="28" alt="" />
         <span>MarkVis</span>
       </a>
-      <button
-        type="button"
-        class="home-nav-menu"
-        :aria-expanded="menuOpen"
-        aria-controls="site-nav-links"
-        @click="toggleMenu"
-      >
-        Menu
-      </button>
       <div id="site-nav-links" class="home-nav-links">
         <a href="/get-started" @click="closeMenu">Docs</a>
         <a href="/examples" @click="closeMenu">Examples</a>
         <a href="/play" @click="closeMenu">Playground</a>
         <a href="/ai" @click="closeMenu">AI</a>
+        <div v-if="isDocs" class="home-nav-docs">
+          <p class="home-nav-docs-label">Docs</p>
+          <a
+            v-for="link in docsLinks"
+            :key="link.href"
+            :href="link.href"
+            @click="closeMenu"
+          >{{ link.text }}</a>
+        </div>
       </div>
       <div class="home-nav-right">
+        <button
+          type="button"
+          class="home-nav-menu"
+          :aria-expanded="menuOpen"
+          aria-controls="site-nav-links"
+          @click="toggleMenu"
+        >
+          Menu
+        </button>
         <button
           type="button"
           class="home-nav-mode"
