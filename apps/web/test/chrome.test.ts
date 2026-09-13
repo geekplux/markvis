@@ -101,8 +101,21 @@ function expectNoYellow(source: string, label: string): void {
   expect(source, label).not.toMatch(/--family-field:/);
 }
 
+function expectNoPeachHex(source: string, label: string): void {
+  expect(source, label).not.toMatch(/#c2410c/i);
+  expect(source, label).not.toMatch(/#fb923c/i);
+}
+
+function opaqueCount(rgba: Buffer): number {
+  let n = 0;
+  for (let i = 3; i < rgba.length; i += 4) {
+    if ((rgba[i] ?? 0) > 200) n += 1;
+  }
+  return n;
+}
+
 describe("site visual chrome", () => {
-  it("tokens lock peach-zinc rails and drop Motions yellow", () => {
+  it("tokens lock Klein Blue rails and drop peach Motions identity", () => {
     const mode = read(".vitepress/theme/site-mode.css");
     const home = read(".vitepress/theme/home.css");
     const family = read(".vitepress/theme/family.css");
@@ -117,7 +130,7 @@ describe("site visual chrome", () => {
       expect(m, "mode block").toBeTruthy();
       const body = m![1];
       for (const token of [
-        "--site-peach",
+        "--site-klein",
         "--site-mint",
         "--site-bg",
         "--site-fg",
@@ -137,10 +150,13 @@ describe("site visual chrome", () => {
     expect(mode).toMatch(/--site-sans:\s*"Geist Variable"/);
     expect(mode).toMatch(/--site-mono:\s*"Geist Mono Variable"/);
     expect(mode).toMatch(
-      /html\.light\s*\{[^}]*--site-peach:\s*#c2410c/s,
+      /html\.light\s*\{[^}]*--site-klein:\s*#002fa7/s,
     );
     expect(mode).toMatch(
-      /html\.dark\s*\{[^}]*--site-peach:\s*#fb923c/s,
+      /html\.dark\s*\{[^}]*--site-klein:\s*#7aa2ff/s,
+    );
+    expect(mode).toMatch(
+      /html\.light\s*\{[^}]*--site-primary:\s*#002fa7/s,
     );
     expect(mode).toMatch(/\.site-rail/);
     expect(mode).toMatch(/max-width:\s*var\(--site-measure\)/);
@@ -155,6 +171,10 @@ describe("site visual chrome", () => {
     expectNoYellow(gallery, "gallery.css");
     expectNoYellow(read(".vitepress/theme/site.css"), "site.css");
     expectNoYellow(index, "index.md");
+    expectNoPeachHex(mode, "site-mode.css");
+    expectNoPeachHex(home, "home.css");
+    expectNoPeachHex(family, "family.css");
+    expectNoPeachHex(read(".vitepress/theme/site.css"), "site.css");
   });
 
   it("home mounts the QuickGUI landing stack with markvis copy", () => {
@@ -242,10 +262,11 @@ describe("site visual chrome", () => {
       Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]),
     );
     const pixels = pngRgba8(png);
-    expect(pixels.width).toBe(547);
-    expect(pixels.height).toBe(598);
-    // Klein Blue #002FA7 on the geometric M; a 3-bar mark would not hit this.
-    expect(countRgb(pixels.rgba, 0x00, 0x2f, 0xa7)).toBeGreaterThan(10_000);
+    const klein = countRgb(pixels.rgba, 0x00, 0x2f, 0xa7);
+    const opaque = opaqueCount(pixels.rgba);
+    expect(opaque).toBeGreaterThan(0);
+    // Filled faces, not a hollow wireframe: Klein ink is most of the mark.
+    expect(klein / opaque).toBeGreaterThan(0.5);
     const nav = read("components/SiteNav.vue");
     const home = read("index.md");
     const config = read(".vitepress/config.ts");
@@ -253,7 +274,7 @@ describe("site visual chrome", () => {
     expect(nav).toContain('class="home-wordmark"');
     expect(nav).toContain("<span>MarkVis</span>");
     expect(nav).toMatch(
-      /<div class="home-nav-links">\s*<a href="\/get-started">Docs<\/a>\s*<a href="\/examples">Examples<\/a>\s*<a href="\/play">Playground<\/a>\s*<a href="\/ai">AI<\/a>/,
+      /class="home-nav-links">[\s\S]*href="\/get-started"[\s\S]*>Docs<\/a>[\s\S]*href="\/examples"[\s\S]*>Examples<\/a>[\s\S]*href="\/play"[\s\S]*>Playground<\/a>[\s\S]*href="\/ai"[\s\S]*>AI<\/a>/,
     );
     expect(nav).toContain('class="home-nav-action" href="/play">Playground');
     expect(nav).not.toContain("Get started");
@@ -443,6 +464,16 @@ describe("site visual chrome", () => {
     expect(nav).not.toMatch(/>\s*Light\s*</);
     expect(nav).toContain("home-nav-right");
     expect(family).toMatch(/\.home-nav-right/);
+    expect(nav).toContain("aria-expanded");
+    expect(nav).toContain("menuOpen");
+    expect(family).toMatch(/\.home-nav-menu[\s\S]*min-height:\s*44px/);
+    expect(family).toMatch(/\.home-nav\.is-open \.home-nav-links/);
+    expect(family).toMatch(
+      /@media\s*\(max-width:\s*959px\)[\s\S]*\.folio-docs \.VPSidebar[\s\S]*display:\s*none/,
+    );
+    expect(family).toMatch(
+      /@media\s*\(min-width:\s*960px\)[\s\S]*\.folio-docs \.VPSidebar[\s\S]*position:\s*fixed/,
+    );
   });
 
   it("site light/dark mode tokens + menu not clipped", () => {
@@ -475,14 +506,16 @@ describe("site visual chrome", () => {
       /grid-template-columns:\s*minmax\(40%,\s*1fr\)\s+minmax\(40%,\s*1fr\)/,
     );
     expect(css).toMatch(/section\.preview[\s\S]*background:\s*var\(--bg\)/);
-    expect(css).toMatch(/html\.light[\s\S]*--bg:\s*#ffffff/);
-    expect(css).toMatch(/html\.dark[\s\S]*--bg:\s*#171719/);
+    expect(css).toMatch(/html\.light[\s\S]*--bg:\s*#f5f7fc/);
+    expect(css).toMatch(/html\.dark[\s\S]*--bg:\s*#0b1020/);
+    expect(css).toMatch(/html\.light[\s\S]*--accent:\s*#002fa7/);
     expect(css).not.toMatch(/section\.preview[\s\S]*background:\s*#f7f4ef/);
     expect(css).not.toMatch(/#2563eb/i);
     expect(css).not.toMatch(/#0e1312/i);
     expect(css).not.toMatch(/#edebe5/i);
     expect(css).not.toMatch(/#ffdb2a/i);
-    expect(css).toMatch(/--editor-bg:\s*#fafafa/);
+    expect(css).not.toMatch(/#c2410c/i);
+    expect(css).toMatch(/--editor-bg:\s*#eef1f8/);
     expect(css).toMatch(/font-size:\s*11px/);
     expect(css).toMatch(/text-transform:\s*uppercase/);
     expect(css).toMatch(/#svg-host svg[\s\S]*width:\s*100%/);
@@ -567,7 +600,7 @@ describe("site visual chrome", () => {
     expect(config).toContain('link: "/play"');
     expect(config).toContain('link: "/examples"');
 
-    expect(nav).toContain('href="/get-started">Docs');
+    expect(nav).toMatch(/href="\/get-started"[\s\S]*>Docs<\/a>/);
     expect(foot).toContain('href="/get-started">Docs');
     expect(home).toContain('href="/get-started">Docs');
     expect(nav).not.toContain('href="/spec">Docs');

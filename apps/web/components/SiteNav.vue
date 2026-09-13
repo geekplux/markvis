@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted } from "vue";
+import { computed, onMounted, ref } from "vue";
 import { useData } from "vitepress";
 import { initSiteMode } from "../.vitepress/theme/siteMode";
 
@@ -13,6 +13,16 @@ function routeKey(raw: string): string {
 const pageClass = computed(() => String(frontmatter.value.pageClass ?? ""));
 
 const isHome = computed(() => pageClass.value === "folio-home-page");
+
+const menuOpen = ref(false);
+
+function toggleMenu(): void {
+  menuOpen.value = !menuOpen.value;
+}
+
+function closeMenu(): void {
+  menuOpen.value = false;
+}
 
 const show = computed(() => {
   const cls = pageClass.value;
@@ -49,19 +59,30 @@ onMounted(() => {
 <template>
   <header v-if="show" class="site-header">
     <a class="skip-link" :href="isHome ? '#features' : '#docs-content'">Skip to content</a>
-    <nav class="home-nav family-nav site-rail rail-joints rail-joints-bottom" aria-label="Site">
-      <a class="home-wordmark" href="/" aria-label="MarkVis home">
+    <nav
+      class="home-nav family-nav site-rail rail-joints rail-joints-bottom"
+      :class="{ 'is-open': menuOpen }"
+      aria-label="Site"
+    >
+      <a class="home-wordmark" href="/" aria-label="MarkVis home" @click="closeMenu">
         <img class="site-logo site-logo-light" src="/logo.png" width="28" height="28" alt="" />
         <img class="site-logo site-logo-dark" src="/logo-dark.png" width="28" height="28" alt="" />
         <span>MarkVis</span>
       </a>
-      <input type="checkbox" id="family-nav-toggle" class="home-nav-toggle" />
-      <label class="home-nav-menu" for="family-nav-toggle">Menu</label>
-      <div class="home-nav-links">
-        <a href="/get-started">Docs</a>
-        <a href="/examples">Examples</a>
-        <a href="/play">Playground</a>
-        <a href="/ai">AI</a>
+      <button
+        type="button"
+        class="home-nav-menu"
+        :aria-expanded="menuOpen"
+        aria-controls="site-nav-links"
+        @click="toggleMenu"
+      >
+        Menu
+      </button>
+      <div id="site-nav-links" class="home-nav-links">
+        <a href="/get-started" @click="closeMenu">Docs</a>
+        <a href="/examples" @click="closeMenu">Examples</a>
+        <a href="/play" @click="closeMenu">Playground</a>
+        <a href="/ai" @click="closeMenu">AI</a>
       </div>
       <div class="home-nav-right">
         <button

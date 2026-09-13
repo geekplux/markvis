@@ -1,14 +1,14 @@
 html.light {
   color-scheme: light;
-  --bg: #ffffff;
-  --panel: #ffffff;
-  --ink: #18181b;
-  --muted: #71717a;
-  --line: #e4e4e7;
-  --accent: #c2410c;
+  --bg: #f5f7fc;
+  --panel: #f5f7fc;
+  --ink: #0b1a4a;
+  --muted: #5a6a8a;
+  --line: #d5dced;
+  --accent: #002fa7;
   --error: #dc2626;
-  --editor-bg: #fafafa;
-  --editor-ink: #18181b;
+  --editor-bg: #eef1f8;
+  --editor-ink: #0b1a4a;
   --mono: "Geist Mono Variable", ui-monospace, SFMono-Regular, Menlo, Consolas,
     monospace;
   --sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
@@ -17,15 +17,15 @@ html.light {
 html.dark,
 html:not(.light):not(.dark) {
   color-scheme: dark;
-  --bg: #171719;
-  --panel: #171719;
-  --ink: #f4f4f5;
-  --muted: #aaaab1;
-  --line: #343438;
-  --accent: #fb923c;
+  --bg: #0b1020;
+  --panel: #0b1020;
+  --ink: #e8edf8;
+  --muted: #9aa6c2;
+  --line: #243056;
+  --accent: #7aa2ff;
   --error: #f87171;
-  --editor-bg: #222225;
-  --editor-ink: #f4f4f5;
+  --editor-bg: #141a2e;
+  --editor-ink: #e8edf8;
   --mono: "Geist Mono Variable", ui-monospace, SFMono-Regular, Menlo, Consolas,
     monospace;
   --sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;

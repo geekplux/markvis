@@ -8,7 +8,7 @@ Audience: any Markdown preview or rendered view, and any AI reply that needs a f
 
 Do not restyle SVG marks to match marketing chrome. If a plot clips, fix the card, not the chart language. Figures follow fence `theme:` / `palette:` (`SPEC.md`). Default `folio` is Ledger (`docs/visual-spec.md`). Site light/dark is chrome only — unrelated to fence `theme=`.
 
-Chrome: QuickGUI landing architecture inside VitePress. Brand **MarkVis** (library name `markvis`). Zinc surfaces, peach accent (`#c2410c` light / `#fb923c` dark), mint for “available now”, radius 0, Geist Variable + Geist Mono, one centered column (`max-width: 72rem`) with 1px rails, hairline section breaks, and rail-joint ticks. No Motions yellow field (`#ffdb2a`). Logo is the legacy README geometric M recolored Klein Blue (`#002FA7` light / `#7AA2FF` dark) at `apps/web/public/logo.png`. Peach-zinc chrome stays; Klein is the mark.
+Chrome: QuickGUI landing architecture inside VitePress. Brand **MarkVis** (library name `markvis`). Klein Blue schema (`#002FA7` light / `#7AA2FF` dark) for accent, filled brand controls, links, and focus. Pale Klein tints for surfaces. Mint for “available now”. Radius 0, Geist Variable + Geist Mono, one centered column (`max-width: 72rem`) with 1px rails. No Motions yellow (`#ffdb2a`) and no peach identity. Logo is the filled legacy geometric M at `apps/web/public/logo.png`.
 
 Public pages never name competing diagram tools.
 

@@ -1,7 +1,7 @@
 # STATUS.md
 
 ## Snapshot
-- Site chrome: QuickGUI peach-zinc rails in VitePress (no Motions yellow); logo in header/CTA/favicon; home bordered-column landing; gallery cards aria-label only; play two panes iframe
+- Site chrome: Klein Blue schema in VitePress (no peach/Motions yellow); filled geometric M logo; Docs sidebar in rails; mobile Menu drawer 44px; play two panes iframe
 - Gallery thumbs + detail: SVG width 100% / height auto / max-width 100% (no :deep, no 720px cap)
 - Play chrome: Theme + Color selects (two controls); examples detail Theme + Color chips
 - Chart `theme:` folio|highcharts|shadcn|docs|ant|recharts (default folio; unknown → E_UNKNOWN_THEME)
@@ -17,7 +17,7 @@ U7 done: `docs/examples.md` lock — 52 gallery fences with conclusion stories, 
 C1 ✓ → C2 ✓ → C3 ✓ → C4 ✓ → C5 ✓ → C6 ✓ playground switcher → C7 mobile 390 → C8 homepage copy → C9 examples theme toggle → C10 launch kit → U1–U4 ✓ → U5 ✓ → U6 ✓ → U7 ✓
 
 ## Commands
-# site chrome: QuickGUI peach-zinc rails + logo; Motions yellow gone
+# site chrome: Klein Blue schema + filled M logo; Docs rails; mobile Menu
 pnpm test                                    # exit 0  (536 passed)
 pnpm markvis check examples/valid            # exit 0  (52 ok)
 pnpm markvis check examples/invalid          # exit 1  (0 ok, 20 error)  # required non-zero

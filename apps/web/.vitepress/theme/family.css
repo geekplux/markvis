@@ -1,13 +1,14 @@
-/* Family routes: same rails / peach-zinc / logo chrome as home. */
+/* Family routes: same rails / Klein Blue / logo chrome as home. */
 
 .folio-examples,
 .folio-play,
 .folio-docs {
   --vp-nav-height: var(--site-nav-h);
-  --vp-c-brand-1: var(--site-peach);
-  --vp-c-brand-2: var(--site-peach);
-  --vp-c-brand-3: var(--site-peach);
-  --folio-accent: var(--site-peach);
+  --vp-sidebar-width: 220px;
+  --vp-c-brand-1: var(--site-klein);
+  --vp-c-brand-2: var(--site-klein);
+  --vp-c-brand-3: var(--site-klein);
+  --folio-accent: var(--site-klein);
   --folio-ink: var(--site-fg);
   --folio-quiet: var(--site-muted);
 }
@@ -137,16 +138,18 @@ html.dark .site-logo-dark {
   display: none;
   align-items: center;
   justify-content: center;
-  min-width: 32px;
-  min-height: 32px;
-  height: 32px;
-  padding: 0 10px;
+  min-width: 44px;
+  min-height: 44px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
   font-family: var(--site-mono);
   font-size: 12px;
   color: var(--site-fg);
   cursor: pointer;
   border: 1px solid var(--site-border);
   border-radius: var(--site-radius);
+  background: transparent;
 }
 
 .home-nav-links {
@@ -197,13 +200,12 @@ html.dark .site-logo-dark {
 .home-wordmark:focus-visible,
 .home-nav-links a:focus-visible,
 .home-nav-menu:focus-visible {
-  outline: 2px solid var(--site-peach);
+  outline: 2px solid var(--site-klein);
   outline-offset: 2px;
 }
 
 .folio-docs .VPSidebar,
 .folio-docs .VPLocalNav {
-  display: flex !important;
   background: var(--site-bg) !important;
   background-color: var(--site-bg) !important;
   box-shadow: none !important;
@@ -219,7 +221,7 @@ html.dark .site-logo-dark {
 
 .folio-docs .VPSidebarItem.is-active > .item .text,
 .folio-docs .VPSidebarItem.is-active > .item {
-  color: var(--site-peach) !important;
+  color: var(--site-klein) !important;
   background: transparent !important;
 }
 
@@ -235,7 +237,7 @@ html.dark .site-logo-dark {
 }
 
 .folio-docs .vp-doc a {
-  color: var(--site-peach);
+  color: var(--site-klein);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -289,12 +291,6 @@ html.dark .site-logo-dark {
   background: transparent;
 }
 
-.folio-docs .VPSidebar {
-  top: var(--vp-nav-height);
-  padding-top: 24px;
-  border-right: 1px solid var(--site-border);
-}
-
 .folio-docs .VPLocalNav {
   top: var(--vp-nav-height);
   border-bottom: 1px solid var(--site-border);
@@ -311,8 +307,42 @@ html.dark .site-logo-dark {
   box-sizing: border-box;
 }
 
-.folio-docs .VPSidebar {
-  left: max(0px, calc((100vw - min(100vw, var(--site-measure))) / 2));
+@media (min-width: 960px) {
+  .folio-docs .VPSidebar {
+    display: flex !important;
+    position: fixed;
+    top: var(--vp-nav-height);
+    bottom: 0;
+    left: max(0px, calc((100vw - min(100vw, var(--site-measure))) / 2));
+    width: var(--vp-sidebar-width);
+    padding-top: 24px;
+    overflow: auto;
+    border-right: 1px solid var(--site-border);
+    z-index: 10;
+  }
+
+  .folio-docs .VPContent.has-sidebar {
+    padding-left: var(--vp-sidebar-width) !important;
+  }
+
+  .folio-docs .VPLocalNav {
+    display: none !important;
+  }
+}
+
+@media (max-width: 959px) {
+  .folio-docs .VPSidebar {
+    display: none !important;
+  }
+
+  .folio-docs .VPLocalNav {
+    display: flex !important;
+  }
+
+  .folio-docs .VPContent.has-sidebar,
+  .folio-docs .VPContent {
+    padding-left: 0 !important;
+  }
 }
 
 .examples-rail {
@@ -369,7 +399,7 @@ html.dark .site-logo-dark {
 .folio-examples :focus-visible,
 .folio-play :focus-visible,
 .family-nav :focus-visible {
-  outline: 2px solid var(--site-peach);
+  outline: 2px solid var(--site-klein);
   outline-offset: 2px;
 }
 
@@ -440,26 +470,38 @@ html.dark .site-logo-dark {
 }
 
 @media (max-width: 1023px) {
+  .home-nav {
+    position: relative;
+  }
+
   .home-nav-menu {
     display: inline-flex;
+  }
+
+  .home-nav-mode {
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    min-height: 44px;
   }
 
   .home-nav-links {
     display: none;
     position: absolute;
-    top: var(--site-nav-h);
+    top: 100%;
     left: 0;
     right: 0;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
     background: var(--site-bg);
+    border-top: 1px solid var(--site-border);
     border-bottom: 1px solid var(--site-border);
-    padding: 8px 24px 16px;
+    padding: 8px 1.5rem 16px;
     z-index: 50;
   }
 
-  .home-nav-toggle:checked ~ .home-nav-links {
+  .home-nav.is-open .home-nav-links {
     display: flex;
   }
 
@@ -467,5 +509,9 @@ html.dark .site-logo-dark {
     min-height: 44px;
     display: flex;
     align-items: center;
+  }
+
+  .home-nav-action {
+    display: none;
   }
 }
