@@ -36,7 +36,7 @@ Filled: Get started → `#quickstart`.
 
 Outline: Docs → `/get-started`. Examples → `/examples`.
 
-Install chip: `$ pnpm markvis bake README.md` (copyable). Do not claim a v2 npm install line. Do not put `npx markvis` on the chip: npm `latest` is 0.0.13 and has no bin.
+Install chip: `$ npx markvis bake README.md` (copyable). Public install: `npm install markvis`. 2.0.0 replaces 0.0.13.
 
 Proof figures (folio, uncropped; conclusion captions):
 
@@ -50,7 +50,7 @@ Tabbed examples: bar / line / pie from those three stems.
 
 Quickstart: 01 Try it · 02 Save a picture · 03 Ask an AI.
 
-Hosts: npm · script — clone + build. Skill / Play — available now. Do not stamp npm or script as “available now”.
+Hosts: npm · script · skill — available now.
 
 Final CTA: logo, Get started with MarkVis, “Write the numbers. Get the chart.”, Playground / Docs / Examples / Star on GitHub.
 

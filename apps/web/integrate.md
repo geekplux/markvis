@@ -13,13 +13,11 @@ Four ways to show the chart. If none of them run, the table of numbers is still 
 Write a picture next to the Markdown and add an image so GitHub, static hosts, and plain viewers can show it. The code block stays.
 
 ```bash
-pnpm install && pnpm build
-pnpm markvis bake path/to.md
+npm install markvis
+npx markvis bake path/to.md
 ```
 
-Running bake again does nothing if nothing changed. CI can run bake on push.
-
-Do not `npx markvis bake` from a project that only ran `npm install markvis`: that is `0.0.13`, which has no command. Pack this tree (`pnpm pack:lib`) and install the tarball in the other project.
+Running bake again does nothing if nothing changed. CI can run bake on push. **2.0.0 replaces 0.0.13.**
 
 ## 2. Browser script
 

@@ -110,8 +110,8 @@
 }
 
 .site-logo-lg {
-  width: 44px;
-  height: 44px;
+  width: 64px;
+  height: 64px;
 }
 
 .site-logo-dark {
@@ -166,6 +166,34 @@ html.dark .site-logo-dark {
   gap: 8px;
 }
 
+.home-nav-github {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 44px;
+  min-height: 32px;
+  height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--site-border);
+  background: var(--site-card-2);
+  color: var(--site-fg);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: var(--site-radius);
+}
+
+.home-nav-github:hover {
+  background: var(--site-secondary);
+  color: var(--site-fg);
+}
+
+.home-nav-github-icon {
+  display: block;
+  flex-shrink: 0;
+}
+
 .home-nav-action {
   display: none;
   align-items: center;
@@ -186,6 +214,7 @@ html.dark .site-logo-dark {
 }
 
 .home-nav-action:focus-visible,
+.home-nav-github:focus-visible,
 .home-nav-mode:focus-visible,
 .home-btn:focus-visible,
 .home-wordmark:focus-visible,
@@ -514,6 +543,11 @@ html.dark .site-logo-dark {
   .home-nav-mode {
     width: 44px;
     min-width: 44px;
+    height: 44px;
+    min-height: 44px;
+  }
+
+  .home-nav-github {
     height: 44px;
     min-height: 44px;
   }

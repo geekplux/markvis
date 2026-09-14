@@ -16,6 +16,19 @@ const valid01 = readFileSync(
   "utf8",
 );
 
+describe("toolbar chrome", () => {
+  it("selects and buttons are filled controls, not ghost chrome", () => {
+    const css = readFileSync(join(here, "../src/style.css"), "utf8");
+    expect(css).toMatch(
+      /\.toolbar select[\s\S]*?background:\s*var\(--editor-bg\)/,
+    );
+    expect(css).toMatch(/\.toolbar button\.primary[\s\S]*?background:\s*var\(--accent\)/);
+    expect(css).not.toMatch(
+      /\.toolbar button,\s*\n\.toolbar a\.gallery-link \{\n(?:[^{}]*\n)*[^{}]*background:\s*transparent/,
+    );
+  });
+});
+
 describe("rewriteThemeInFence", () => {
   it("inserts theme when missing and re-renders", () => {
     expect(valid01).not.toMatch(/theme:/);

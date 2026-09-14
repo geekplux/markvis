@@ -52,24 +52,14 @@ You can also put the numbers in a Markdown table, or use the HTML comment form i
 
 1. **Play** — paste a block at [markvis.js.org/play](https://markvis.js.org/play). No install.
 
-2. **This repo** (after `pnpm install && pnpm build`):
+2. **Install** — `2.0.0` replaces `0.0.13` (the old d3 renderer stays in [legacy/](./legacy/)).
 
    ```bash
-   pnpm markvis check examples/valid
-   pnpm markvis bake README.md
-   ```
-
-   `check` makes sure every chart block is valid. `bake` writes a picture next to the file and adds a Markdown image so GitHub can show it. The code block stays. Running bake again does nothing if nothing changed.
-
-3. **In another project** — `2.0.0-rc.1` is this tree. It is **not** on the npm registry. `npm install markvis` still installs **0.0.13**.
-
-   ```bash
-   pnpm pack:lib
-   npm install ./markvis-2.0.0-rc.1.tgz
+   npm install markvis
    npx markvis bake README.md
    ```
 
-   That last `npx` is the **local tarball**, not npm `latest`. Bare `npx markvis` / `npm install markvis` still resolves **0.0.13**, which has no `markvis` command.
+   `bake` writes a picture next to the file and adds a Markdown image so GitHub can show it. The code block stays. Running bake again does nothing if nothing changed. `npx markvis check notes.md` makes sure every chart block is valid.
 
    ```js
    import { parseMarkdown, renderSvg } from "markvis";
@@ -82,7 +72,7 @@ You can also put the numbers in a Markdown table, or use the HTML comment form i
    }
    ```
 
-4. **In a Markdown site** — remark **or** markdown-it. Both return the picture and the data table:
+3. **In a Markdown site** — remark **or** markdown-it. Both return the picture and the data table:
 
    ```js
    import MarkdownIt from "markdown-it";
@@ -107,7 +97,7 @@ You can also put the numbers in a Markdown table, or use the HTML comment form i
    );
    ```
 
-5. **With an AI** — point a model at [skills/markvis/SKILL.md](./skills/markvis/SKILL.md) or [llms.txt](./llms.txt). It should write only the fields listed there. Not a PNG. Not a seventh chart kind.
+4. **With an AI** — point a model at [skills/markvis/SKILL.md](./skills/markvis/SKILL.md) or [llms.txt](./llms.txt). It should write only the fields listed there. Not a PNG. Not a seventh chart kind.
 
 ## What you can write
 

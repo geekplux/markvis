@@ -45,7 +45,7 @@ Committed repo text (documents, code, comments) is English only. The Skill descr
 
 ## Pack
 
-`pnpm pack:lib` writes `markvis-2.0.0-rc.1.tgz`. npm `latest` is 0.0.13; do not publish this rc as `latest`.
+Public install is `npm install markvis` (2.0.0). `pnpm pack:lib` is a local tarball for testing the packed artifact.
 
 ## Issues
 

@@ -35,13 +35,11 @@ Browse finished pictures in [Examples](/examples). Open one in Play to edit.
 GitHub and many viewers will not draw the code block by themselves. `bake` writes a picture file next to your Markdown and adds an image so they can show it. The code block stays in the file.
 
 ```bash
-pnpm install && pnpm build
-pnpm markvis bake README.md
+npm install markvis
+npx markvis bake README.md
 ```
 
-Running bake again does nothing if nothing changed.
-
-A fresh other project cannot call `npx markvis` yet: npm `latest` is still `0.0.13` and has no `markvis` command. Pack this tree (`pnpm pack:lib`), then in the other project `npm install ./markvis-2.0.0-rc.1.tgz` and use that local command.
+Running bake again does nothing if nothing changed. **2.0.0 replaces 0.0.13.**
 
 ## Put it on a web page (script)
 

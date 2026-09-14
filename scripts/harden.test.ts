@@ -6,7 +6,6 @@ import { CHART_TYPES } from "@markvis/ir";
 import { parseMarkdown } from "@markvis/parser";
 import { renderSvg } from "@markvis/render-svg";
 import { runCli } from "@markvis/cli";
-import { publishManifest } from "./pack-lib.mjs";
 
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -556,7 +555,7 @@ describe("public contract", () => {
       expect(existsSync(join(repoRoot, rel)), rel).toBe(true);
     }
     expect(readRepo("CODE_OF_CONDUCT.md")).toMatch(/Contributor Covenant/);
-    expect(readRepo("CHANGELOG.md")).toContain("2.0.0-rc.1");
+    expect(readRepo("CHANGELOG.md")).toContain("2.0.0");
   });
 
   it("does not instruct pstack, /loop, or grok -p in public markdown", () => {
@@ -592,8 +591,10 @@ describe("public contract", () => {
       dependencies?: Record<string, string>;
       devDependencies?: Record<string, string>;
       version: string;
+      private?: boolean;
     };
-    expect(pkg.version).toBe("2.0.0-rc.1");
+    expect(pkg.version).toBe("2.0.0");
+    expect(pkg.private).not.toBe(true);
     expect(pkg.main).toBe("./dist/index.js");
     expect(pkg.types).toBe("./dist/index.d.ts");
     expect(pkg.bin.markvis).toBe("./dist/cli.bin.js");
@@ -612,20 +613,25 @@ describe("public contract", () => {
   });
 
   it("packed manifest has no workspace protocol and no empty export", () => {
-    const pkg = JSON.parse(readRepo("package.json")) as Record<string, unknown>;
-    const manifest = publishManifest(pkg) as {
+    const pkg = JSON.parse(readRepo("package.json")) as {
       main: string;
+      private?: boolean;
+      publishConfig?: { access?: string };
       dependencies?: Record<string, string>;
-      devDependencies?: Record<string, string>;
+      optionalDependencies?: Record<string, string>;
       exports: Record<string, unknown>;
     };
-    const blob = JSON.stringify(manifest);
-    expect(blob).not.toContain("workspace:");
-    expect(blob).not.toContain("export {}");
-    expect(manifest.main).toBe("./dist/index.js");
-    expect(manifest.dependencies ?? {}).toEqual({});
-    expect(manifest.devDependencies).toBeUndefined();
-    expect(manifest.exports["."]).toMatchObject({
+    expect(pkg.private).not.toBe(true);
+    expect(pkg.publishConfig?.access).toBe("public");
+    expect(pkg.main).toBe("./dist/index.js");
+    expect(pkg.dependencies ?? {}).toEqual({});
+    const runtime = {
+      ...(pkg.dependencies ?? {}),
+      ...(pkg.optionalDependencies ?? {}),
+    };
+    expect(JSON.stringify(runtime)).not.toContain("workspace:");
+    expect(JSON.stringify(pkg.exports)).not.toContain("export {}");
+    expect(pkg.exports["."]).toMatchObject({
       import: "./dist/index.js",
     });
   });
@@ -660,11 +666,12 @@ describe("public contract", () => {
     }
   });
 
-  it("does not claim v2 is npm latest or install-with-npm-now", () => {
+  it("claims npm install markvis and notes 2.0.0 replaces 0.0.13", () => {
     const readme = readRepo("README.md");
-    expect(readme).toMatch(/not.*npm registry/i);
+    expect(readme).toContain("npm install markvis");
     expect(readme).toContain("0.0.13");
     expect(readme).toContain("markvis/remark");
+    expect(readme).toContain("`2.0.0` replaces `0.0.13`");
     expect(readRepo("apps/web/index.md")).not.toContain("Install with npm");
     expect(readRepo("docs/site.md")).not.toMatch(
       /Install with npm or a script tag/,
@@ -682,20 +689,17 @@ describe("public contract", () => {
     expect(readRepo("docs/release.md")).toMatch(/force-push|push --force/);
   });
 
-  it("does not stamp npm or script as available now", () => {
+  it("stamps npm, script, and skill as available now", () => {
     const home = readRepo("apps/web/index.md");
     expect(
       home.match(/home-host-name">npm<\/span>\s*<span class="home-host-status">([^<]+)/)?.[1],
-    ).toBe("clone + build");
+    ).toBe("available now");
     expect(
       home.match(/home-host-name">script<\/span>\s*<span class="home-host-status">([^<]+)/)?.[1],
-    ).toBe("clone + build");
+    ).toBe("available now");
     expect(
       home.match(/home-host-name">skill<\/span>\s*<span class="home-host-status">([^<]+)/)?.[1],
     ).toBe("available now");
-    expect(readRepo("docs/site.md")).toMatch(
-      /Do not stamp npm or script as .available now/,
-    );
   });
 
   it("homepage copy does not say IR or fence", () => {
@@ -716,22 +720,16 @@ describe("public contract", () => {
     expect(slogan ?? "").not.toMatch(/fence/i);
   });
 
-  it("does not advertise registry npx markvis as the bake command", () => {
+  it("advertises npm install markvis and npx bake", () => {
     const home = readRepo("apps/web/index.md");
     expect(home).toContain(
-      '<CopyChip command="pnpm markvis bake README.md"',
+      '<CopyChip command="npx markvis bake README.md"',
     );
-    expect(home).not.toContain("npx markvis");
-    expect(readRepo("apps/web/get-started.md")).toContain("pnpm markvis bake");
-    expect(readRepo("apps/web/integrate.md")).toContain("pnpm markvis bake");
-    expect(readRepo("README.md")).toContain("pnpm markvis bake README.md");
-    expect(readRepo("docs/site.md")).toContain("$ pnpm markvis bake README.md");
-    expect(readRepo("apps/web/test/chrome.test.ts")).not.toMatch(
-      /toContain\(["']npx markvis bake/,
-    );
-    expect(readRepo("apps/web/test/chrome.test.ts")).not.toContain(
-      '<CopyChip command="npx markvis bake',
-    );
+    expect(readRepo("apps/web/get-started.md")).toContain("npx markvis bake");
+    expect(readRepo("apps/web/integrate.md")).toContain("npx markvis bake");
+    expect(readRepo("README.md")).toContain("npm install markvis");
+    expect(readRepo("README.md")).toContain("npx markvis bake README.md");
+    expect(readRepo("docs/site.md")).toContain("$ npx markvis bake README.md");
     const legacyPkg = JSON.parse(readRepo("legacy/package.json")) as {
       version: string;
       bin?: unknown;

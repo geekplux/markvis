@@ -1,10 +1,13 @@
 {
   "name": "markvis",
-  "version": "2.0.0-rc.1",
-  "private": true,
+  "version": "2.0.0",
+  "private": false,
   "type": "module",
   "description": "Markdown chart language: fence / GFM table / HTML comment -> Chart IR -> deterministic SVG",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "http://github.com/geekplux/markvis.git"
@@ -61,7 +64,8 @@
   ],
   "scripts": {
     "build": "tsup && node scripts/copy-dts.mjs && pnpm --filter @markvis/browser build && node scripts/copy-browser-dist.mjs",
-    "prepack": "pnpm build",
+    "prepack": "pnpm build && node scripts/assert-pack.mjs",
+    "prepublishOnly": "node scripts/prepublish-guard.mjs",
     "pack:lib": "node scripts/pack-lib.mjs",
     "markvis": "node ./dist/cli.bin.js",
     "test": "vitest run",

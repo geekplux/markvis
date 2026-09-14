@@ -97,15 +97,15 @@ body {
 .toolbar button,
 .toolbar a.gallery-link {
   font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 560;
-  letter-spacing: 0.12em;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   min-height: 44px;
   height: 44px;
   padding: 0 12px;
-  border: 1px solid var(--line);
-  background: transparent;
+  border: 1px solid var(--ink);
+  background: var(--editor-bg);
   border-radius: 0;
   cursor: pointer;
   color: var(--ink);
@@ -116,14 +116,23 @@ body {
   flex-shrink: 0;
 }
 
+.toolbar button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
 .toolbar select {
   max-width: 220px;
 }
 
 .toolbar button:hover:not(:disabled),
 .toolbar a.gallery-link:hover {
-  background: var(--editor-bg);
-  border-color: var(--muted);
+  filter: brightness(1.08);
+}
+
+.toolbar button.primary:hover:not(:disabled) {
+  filter: brightness(1.12);
 }
 
 .toolbar button:focus-visible,

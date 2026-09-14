@@ -38,7 +38,7 @@ That creates a merge commit. Historic `v2` SHAs stay reachable from `master`. 20
    git log --oneline master | head
    ```
 
-This tree is `markvis@2.0.0-rc.1`. The npm registry `latest` tag stays `0.0.13` until an explicit later publish (`npm publish --tag rc`, never `latest`, without GeekPlux).
+This tree is `markvis@2.0.0`. Publishing `latest` replaces `0.0.13` for npm users (the old renderer stays in `legacy/`). This unit does not run `npm publish`.
 
 Until that merge, `pages.yml` and `bake.yml` still fire on `v2` so markvis.js.org does not go dark.
 

@@ -66,7 +66,7 @@ async function copy(): Promise<void> {
 <template>
   <div class="fence-tabs">
     <div class="fence-tabs-panel">
-      <div class="fence-tabs-list" role="tablist" aria-label="Fence type">
+      <div class="fence-tabs-list" role="tablist" aria-label="Chart type">
         <button
           v-for="view in views"
           :key="view.stem"
@@ -116,7 +116,17 @@ async function copy(): Promise<void> {
           </svg>
         </button>
       </div>
-      <pre class="fence-tabs-code"><code>{{ current.fence }}</code></pre>
+      <div class="fence-tabs-body">
+        <pre class="fence-tabs-code"><code>{{ current.fence }}</code></pre>
+        <figure class="fence-tabs-figure">
+          <img
+            :src="current.src"
+            :alt="current.title"
+            width="720"
+            height="480"
+          />
+        </figure>
+      </div>
       <div class="fence-tabs-foot">
         <p>{{ footer[current.stem] }}</p>
         <a :href="`/play?example=${current.stem}`">Open in Playground <span aria-hidden="true">↗</span></a>

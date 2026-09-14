@@ -15,7 +15,7 @@ import { packLib } from "./pack-lib.mjs";
 
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
 const TIMEOUT = 180_000;
-const TGZ_NAME = "markvis-2.0.0-rc.1.tgz";
+const TGZ_NAME = "markvis-2.0.0.tgz";
 
 function consumerEnv(): NodeJS.ProcessEnv {
   const env = { ...process.env };
@@ -46,7 +46,7 @@ describe("packed consumer", { timeout: TIMEOUT }, () => {
   let tgz = "";
 
   beforeAll(() => {
-    tgz = packLib({ build: true });
+    tgz = packLib();
     temp = mkdtempSync(join(tmpdir(), "markvis-consumer-"));
     const init = run(temp, "npm", ["init", "-y"]);
     expect(init.status, init.stderr).toBe(0);
@@ -68,7 +68,7 @@ describe("packed consumer", { timeout: TIMEOUT }, () => {
     }
   });
 
-  it("packs markvis-2.0.0-rc.1.tgz without workspace protocol", () => {
+  it("packs markvis-2.0.0.tgz without workspace protocol", () => {
     expect(tgz).toBe(join(repoRoot, TGZ_NAME));
     expect(existsSync(tgz)).toBe(true);
     const listed = run(repoRoot, "tar", ["-tzf", tgz]);
@@ -77,16 +77,38 @@ describe("packed consumer", { timeout: TIMEOUT }, () => {
     expect(listed.stdout).toContain("package/dist/cli.bin.js");
     expect(listed.stdout).toContain("package/dist/markvis.min.js");
     expect(listed.stdout).not.toMatch(/(^|\n)package\/index\.js(\n|$)/);
+    expect(listed.stdout).not.toContain("package/src/");
+    const binHead = run(repoRoot, "tar", [
+      "-xOf",
+      tgz,
+      "package/dist/cli.bin.js",
+    ]);
+    expect(binHead.status).toBe(0);
+    expect(binHead.stdout.startsWith("#!/usr/bin/env node")).toBe(true);
     const manifestRaw = run(repoRoot, "tar", [
       "-xOf",
       tgz,
       "package/package.json",
     ]);
     expect(manifestRaw.status).toBe(0);
-    expect(manifestRaw.stdout).not.toContain("workspace:");
     expect(manifestRaw.stdout).not.toContain("export {}");
-    const man = JSON.parse(manifestRaw.stdout) as { main: string };
+    const runtimeBlob = JSON.stringify({
+      ...(JSON.parse(manifestRaw.stdout) as { dependencies?: object })
+        .dependencies,
+    });
+    expect(runtimeBlob).not.toContain("workspace:");
+    const man = JSON.parse(manifestRaw.stdout) as {
+      name: string;
+      version: string;
+      private?: boolean;
+      main: string;
+      bin?: { markvis?: string };
+    };
+    expect(man.name).toBe("markvis");
+    expect(man.version).toBe("2.0.0");
+    expect(man.private).not.toBe(true);
     expect(man.main).toBe("./dist/index.js");
+    expect(man.bin?.markvis).toBe("./dist/cli.bin.js");
   });
 
   it("imports parseMarkdown and renderSvg from markvis", () => {
@@ -167,7 +189,7 @@ process.stdout.write(md.render(readFileSync(process.argv[2], "utf8")));
   it("runs npx markvis check and bake", () => {
     const version = run(temp, "npx", ["--no-install", "markvis", "-v"]);
     expect(version.status, version.stderr).toBe(0);
-    expect(version.stdout.trim()).toBe("2.0.0-rc.1");
+    expect(version.stdout.trim()).toBe("2.0.0");
 
     const valid = run(temp, "npx", ["--no-install", "markvis", "check", "valid.md"]);
     expect(valid.status, valid.stderr).toBe(0);

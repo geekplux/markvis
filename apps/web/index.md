@@ -27,7 +27,7 @@ pageClass: folio-home-page
     <a class="home-btn outline" href="/examples">Examples <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
   </p>
   <div class="home-install">
-    <CopyChip command="pnpm markvis bake README.md" />
+    <CopyChip command="npx markvis bake README.md" />
   </div>
 </section>
 
@@ -103,7 +103,7 @@ pageClass: folio-home-page
     </article>
     <article class="home-quick">
       <div class="home-quick-title"><span>02</span><h3>Save a picture</h3></div>
-      <CopyChip command="pnpm markvis bake README.md" />
+      <CopyChip command="npx markvis bake README.md" />
       <p>Keeps the Markdown; writes the picture after it so GitHub can show it.</p>
     </article>
     <article class="home-quick">
@@ -119,12 +119,12 @@ pageClass: folio-home-page
     <div class="home-host">
       <span class="home-host-dot" aria-hidden="true"></span>
       <span class="home-host-name">npm</span>
-      <span class="home-host-status">clone + build</span>
+      <span class="home-host-status">available now</span>
     </div>
     <div class="home-host">
       <span class="home-host-dot" aria-hidden="true"></span>
       <span class="home-host-name">script</span>
-      <span class="home-host-status">clone + build</span>
+      <span class="home-host-status">available now</span>
     </div>
     <div class="home-host">
       <span class="home-host-dot" aria-hidden="true"></span>
@@ -137,8 +137,8 @@ pageClass: folio-home-page
 <section id="cta" class="home-final">
   <div class="home-dots" aria-hidden="true"></div>
   <div class="home-final-inner">
-    <img class="site-logo site-logo-light site-logo-lg" src="/logo.png" width="44" height="44" alt="" />
-    <img class="site-logo site-logo-dark site-logo-lg" src="/logo-dark.png" width="44" height="44" alt="" />
+    <img class="site-logo site-logo-light site-logo-lg" src="/logo.png" width="64" height="64" alt="" />
+    <img class="site-logo site-logo-dark site-logo-lg" src="/logo-dark.png" width="64" height="64" alt="" />
     <h2>Get started with MarkVis</h2>
     <p class="home-final-lead">Write the numbers. Get the chart. The table stays in the file.</p>
     <p class="home-final-actions">

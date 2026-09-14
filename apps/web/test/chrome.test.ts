@@ -215,10 +215,12 @@ describe("site visual chrome", () => {
     expect(home).toContain('class="home-btn filled" href="#quickstart">Get started');
     expect(home).toContain("Examples");
     expect(home).toContain("Get started with MarkVis");
+    expect(home).toMatch(
+      /site-logo-lg" src="\/logo.png" width="64" height="64"/,
+    );
     expect(home).toContain('href="/play">Playground');
     expect(home).toContain('class="home-btn filled" href="/play">Playground');
-    expect(home).toContain('<CopyChip command="pnpm markvis bake README.md"');
-    expect(home).not.toContain("npx markvis");
+    expect(home).toContain('<CopyChip command="npx markvis bake README.md"');
     const chip = read("components/CopyChip.vue");
     expect(chip).toMatch(/prefix:\s*"\$"/);
     expect(chip).toContain("copy-chip-prefix");
@@ -227,6 +229,9 @@ describe("site visual chrome", () => {
     const tabs = read("components/FenceTabs.vue");
     expect(tabs).toContain('role="tablist"');
     expect(tabs).toContain("fence-tabs-tab");
+    expect(tabs).toContain("fence-tabs-figure");
+    expect(tabs).toContain("current.src");
+    expect(tabs).toContain('aria-label="Chart type"');
     expect(home).toContain(">01<");
     expect(home).toContain(">02<");
     expect(home).toContain(">03<");
@@ -236,10 +241,10 @@ describe("site visual chrome", () => {
     expect(home).toContain('class="home-host-name">script</span>');
     expect(home).toContain('class="home-host-name">skill</span>');
     expect(home.match(/home-host-name">npm<\/span>\s*<span class="home-host-status">([^<]+)/)?.[1]).toBe(
-      "clone + build",
+      "available now",
     );
     expect(home.match(/home-host-name">script<\/span>\s*<span class="home-host-status">([^<]+)/)?.[1]).toBe(
-      "clone + build",
+      "available now",
     );
     expect(home.match(/home-host-name">skill<\/span>\s*<span class="home-host-status">([^<]+)/)?.[1]).toBe(
       "available now",
@@ -301,6 +306,9 @@ describe("site visual chrome", () => {
       /class="home-nav-links">[\s\S]*href="\/get-started"[\s\S]*>Docs<\/a>[\s\S]*href="\/examples"[\s\S]*>Examples<\/a>[\s\S]*href="\/play"[\s\S]*>Playground<\/a>[\s\S]*href="\/ai"[\s\S]*>AI<\/a>/,
     );
     expect(nav).toContain('class="home-nav-action" href="/play">Playground');
+    expect(nav).toContain("home-nav-github");
+    expect(nav).toContain("https://github.com/geekplux/markvis");
+    expect(nav).toContain("Star MarkVis on GitHub");
     expect(nav).not.toMatch(/class="home-nav-action"[^>]*>Get started/);
     expect(nav).toContain('text: "Get started"');
     expect(nav).toContain("folio-home-page");
@@ -499,6 +507,7 @@ describe("site visual chrome", () => {
     expect(family).toMatch(/--vp-nav-height:\s*var\(--site-nav-h\)/);
     expect(family).toMatch(/--vp-sidebar-width:\s*272px/);
     expect(family).toMatch(/\.home-nav-action[\s\S]*background:\s*var\(--site-primary\)/);
+    expect(family).toMatch(/\.site-logo-lg[\s\S]*width:\s*64px/);
     expect(family).toMatch(/\.site-header/);
     expect(nav).toContain("rail-joints");
     expect(family).not.toMatch(/#2563eb/i);
@@ -518,6 +527,7 @@ describe("site visual chrome", () => {
     expect(nav).not.toMatch(/>\s*Light\s*</);
     expect(nav).toContain("home-nav-right");
     expect(family).toMatch(/\.home-nav-right/);
+    expect(family).toMatch(/\.home-nav-github/);
     expect(nav).toContain("aria-expanded");
     expect(nav).toContain("menuOpen");
     const menuRule = family.match(/\.home-nav-menu\s*\{[^}]*\}/)?.[0] ?? "";
@@ -720,12 +730,12 @@ describe("site visual chrome", () => {
     const started = read("get-started.md");
     expect(started).toContain("Play");
     expect(started).toContain("Save a picture");
-    expect(started).toContain("pnpm markvis bake");
+    expect(started).toContain("npx markvis bake");
     expect(started).toContain("Skill");
     expect(started).toContain("/llms.txt");
 
     const integrate = read("integrate.md");
-    expect(integrate).toContain("pnpm markvis bake");
+    expect(integrate).toContain("npx markvis bake");
     expect(integrate).toContain("markvis.min.js");
     expect(integrate).toContain("markvis/markdown-it");
     expect(integrate).toContain("markvis/remark");

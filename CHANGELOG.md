@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.0-rc.1
+## 2.0.0
 
 The 2017 project rewritten as a Markdown chart language. The fence is the data.
 
@@ -11,7 +11,7 @@ The 2017 project rewritten as a Markdown chart language. The fence is the data.
 - Path: fence → Chart IR → deterministic SVG. Invalid input keeps a table plus a stable error code.
 - CLI: `check`, `render`, `preview`, `stats`, `to-table`, `gallery`, `bake`.
 - Hosts: `markvis/remark`, `markvis/markdown-it`, browser IIFE, Play at markvis.js.org/play.
-- Packed library name remains `markvis`. This RC is **not** npm `latest` (`latest` is still `0.0.13`).
+- Packed library name remains `markvis`. **2.0.0 replaces 0.0.13** on npm (`legacy/` keeps the 2017 renderer).
 
 The frozen 0.0.13 d3 renderer lives under `legacy/`.
 
