@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="apps/web/public/logo.png" width="128" height="128" alt="MarkVis" />
+</p>
+
 # markvis
 
 [![check](https://github.com/geekplux/markvis/actions/workflows/check.yml/badge.svg?branch=v2)](https://github.com/geekplux/markvis/actions/workflows/check.yml)

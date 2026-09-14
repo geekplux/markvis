@@ -261,16 +261,22 @@ describe("site visual chrome", () => {
     expect(existsSync(join(webRoot, "public/logo.png"))).toBe(true);
     expect(existsSync(join(webRoot, "public/logo-dark.png"))).toBe(true);
     expect(existsSync(join(webRoot, "public/favicon.png"))).toBe(true);
+    expect(existsSync(join(webRoot, "public/apple-touch-icon.png"))).toBe(true);
+    expect(existsSync(join(webRoot, "public/og.png"))).toBe(true);
     const png = readFileSync(join(webRoot, "public/logo.png"));
     expect(png.subarray(0, 8)).toEqual(
       Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]),
     );
     const pixels = pngRgba8(png);
     const klein = countRgb(pixels.rgba, 0x00, 0x2f, 0xa7);
+    const white = countRgb(pixels.rgba, 0xff, 0xff, 0xff);
+    const cyan = countRgb(pixels.rgba, 0x00, 0xc4, 0xf8);
     const opaque = opaqueCount(pixels.rgba);
     expect(opaque).toBeGreaterThan(0);
-    // Filled faces, not a hollow wireframe: Klein ink is most of the mark.
+    // Klein square field is most of the mark; white M + cyan V sit on it.
     expect(klein / opaque).toBeGreaterThan(0.5);
+    expect(white).toBeGreaterThan(0);
+    expect(cyan).toBeGreaterThan(0);
     const nav = read("components/SiteNav.vue");
     const home = read("index.md");
     const config = read(".vitepress/config.ts");
@@ -288,6 +294,8 @@ describe("site visual chrome", () => {
     expect(home).toContain('src="/logo.png"');
     expect(config).toContain('rel: "icon"');
     expect(config).toContain("/favicon.png");
+    expect(config).toContain("/apple-touch-icon.png");
+    expect(config).toContain("https://markvis.js.org/og.png");
     expect(config).toContain('title: "MarkVis"');
     expect(config).toContain('siteTitle: "MarkVis"');
     expect(existsSync(join(webRoot, "public/logo.svg"))).toBe(false);

@@ -35,6 +35,25 @@ export default defineConfig({
     ["script", {}, siteModeBoot],
     ["link", { rel: "icon", href: "/favicon.png", type: "image/png" }],
     ["link", { rel: "apple-touch-icon", href: "/apple-touch-icon.png" }],
+    ["meta", { property: "og:title", content: "MarkVis" }],
+    [
+      "meta",
+      {
+        property: "og:description",
+        content: "Quantitative charts in Markdown — the fence is the data.",
+      },
+    ],
+    [
+      "meta",
+      { property: "og:image", content: "https://markvis.js.org/og.png" },
+    ],
+    ["meta", { property: "og:url", content: "https://markvis.js.org/" }],
+    ["meta", { property: "og:type", content: "website" }],
+    ["meta", { name: "twitter:card", content: "summary_large_image" }],
+    [
+      "meta",
+      { name: "twitter:image", content: "https://markvis.js.org/og.png" },
+    ],
   ],
   vite: {
     resolve: {
