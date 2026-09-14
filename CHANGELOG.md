@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.1
+
+npm listing: README starts with `# markvis` so the website can render it; keywords and a short description are set. **2.x replaces 0.0.13.**
+
 ## 2.0.0
 
 The 2017 project rewritten as a Markdown chart language. The fence is the data.

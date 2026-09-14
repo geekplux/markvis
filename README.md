@@ -1,26 +1,27 @@
-<p align="center">
-  <img src="apps/web/public/logo.png" width="128" height="128" alt="MarkVis" />
-</p>
-
 # markvis
 
+<p align="center">
+  <img src="https://markvis.js.org/logo.png" width="128" height="128" alt="MarkVis" />
+</p>
+
 [![check](https://github.com/geekplux/markvis/actions/workflows/check.yml/badge.svg)](https://github.com/geekplux/markvis/actions/workflows/check.yml)
+[![npm](https://img.shields.io/npm/v/markvis.svg)](https://www.npmjs.com/package/markvis)
 
 **Charts in Markdown. The numbers are the picture.**
 
 Write a table in a Markdown code block. MarkVis draws the chart. Change a number — the picture changes. If the chart cannot draw, you still see the table.
 
-You do not need to know what “IR” means. A **fence** is just a fenced code block tagged `chart` (or `markvis`, or `vis`). The numbers live in that block. That is the whole idea.
+A **fence** is a fenced code block tagged `chart` (or `markvis`, or `vis`). The numbers live in that block. That is the whole idea.
 
 In 2017 this project was a renderer (GitHub Trending). This is the rewrite: the same name, for people and for AI.
 
 **Try:** [Play](https://markvis.js.org/play) · [Examples](https://markvis.js.org/examples) · [For AI](https://markvis.js.org/llms.txt)
 
-![Mar led Midtown box office](./examples/out/01-bar-basic.svg)
+![Mar led Midtown box office](https://raw.githubusercontent.com/geekplux/markvis/v2/examples/out/01-bar-basic.svg)
 
-![Walk-up still leads member](./examples/out/02-line-multi.svg)
+![Walk-up still leads member](https://raw.githubusercontent.com/geekplux/markvis/v2/examples/out/02-line-multi.svg)
 
-![MARTA takes the largest mode share](./examples/out/05-pie-raw.svg)
+![MARTA takes the largest mode share](https://raw.githubusercontent.com/geekplux/markvis/v2/examples/out/05-pie-raw.svg)
 
 ## An example
 
@@ -52,7 +53,7 @@ You can also put the numbers in a Markdown table, or use the HTML comment form i
 
 1. **Play** — paste a block at [markvis.js.org/play](https://markvis.js.org/play). No install.
 
-2. **Install** — `2.0.0` replaces `0.0.13` (the old d3 renderer stays in [legacy/](./legacy/)).
+2. **Install** — `2.x` replaces `0.0.13` (the old d3 renderer stays in [legacy/](./legacy/)).
 
    ```bash
    npm install markvis

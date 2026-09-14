@@ -86,7 +86,7 @@ describe("usage", () => {
   it("prints version", () => {
     const { code, stdout } = capture(["-v"]);
     expect(code).toBe(0);
-    expect(stdout.trim()).toBe("2.0.0");
+    expect(stdout.trim()).toBe("2.0.1");
   });
 
   it("exits 1 with usage when no command is given", () => {

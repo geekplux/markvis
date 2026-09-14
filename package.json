@@ -1,9 +1,21 @@
 {
   "name": "markvis",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "private": false,
   "type": "module",
-  "description": "Markdown chart language: fence / GFM table / HTML comment -> Chart IR -> deterministic SVG",
+  "description": "Charts in Markdown. Write a table in a code block; MarkVis draws the SVG. Same text, same picture.",
+  "keywords": [
+    "markdown",
+    "chart",
+    "charts",
+    "svg",
+    "visualization",
+    "data-visualization",
+    "markdown-it",
+    "remark",
+    "cli",
+    "bar-chart"
+  ],
   "license": "MIT",
   "publishConfig": {
     "access": "public"

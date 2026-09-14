@@ -45,7 +45,7 @@ Committed repo text (documents, code, comments) is English only. The Skill descr
 
 ## Pack
 
-Public install is `npm install markvis` (2.0.0). `pnpm pack:lib` is a local tarball for testing the packed artifact.
+Public install is `npm install markvis`. `pnpm pack:lib` is a local tarball for testing the packed artifact.
 
 ## Issues
 

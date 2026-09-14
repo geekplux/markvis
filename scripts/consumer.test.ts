@@ -15,7 +15,10 @@ import { packLib } from "./pack-lib.mjs";
 
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
 const TIMEOUT = 180_000;
-const TGZ_NAME = "markvis-2.0.0.tgz";
+const PKG_VERSION = JSON.parse(
+  readFileSync(join(repoRoot, "package.json"), "utf8"),
+).version as string;
+const TGZ_NAME = `markvis-${PKG_VERSION}.tgz`;
 
 function consumerEnv(): NodeJS.ProcessEnv {
   const env = { ...process.env };
@@ -68,7 +71,7 @@ describe("packed consumer", { timeout: TIMEOUT }, () => {
     }
   });
 
-  it("packs markvis-2.0.0.tgz without workspace protocol", () => {
+  it("packs the versioned tarball without workspace protocol", () => {
     expect(tgz).toBe(join(repoRoot, TGZ_NAME));
     expect(existsSync(tgz)).toBe(true);
     const listed = run(repoRoot, "tar", ["-tzf", tgz]);
@@ -105,7 +108,7 @@ describe("packed consumer", { timeout: TIMEOUT }, () => {
       bin?: { markvis?: string };
     };
     expect(man.name).toBe("markvis");
-    expect(man.version).toBe("2.0.0");
+    expect(man.version).toBe(PKG_VERSION);
     expect(man.private).not.toBe(true);
     expect(man.main).toBe("./dist/index.js");
     expect(String(man.bin?.markvis ?? "").replace(/^\.\//, "")).toBe(
@@ -191,7 +194,7 @@ process.stdout.write(md.render(readFileSync(process.argv[2], "utf8")));
   it("runs npx markvis check and bake", () => {
     const version = run(temp, "npx", ["--no-install", "markvis", "-v"]);
     expect(version.status, version.stderr).toBe(0);
-    expect(version.stdout.trim()).toBe("2.0.0");
+    expect(version.stdout.trim()).toBe(PKG_VERSION);
 
     const valid = run(temp, "npx", ["--no-install", "markvis", "check", "valid.md"]);
     expect(valid.status, valid.stderr).toBe(0);

@@ -592,8 +592,10 @@ describe("public contract", () => {
       devDependencies?: Record<string, string>;
       version: string;
       private?: boolean;
+      keywords?: string[];
     };
-    expect(pkg.version).toBe("2.0.0");
+    expect(pkg.version).toBe("2.0.1");
+    expect(pkg.keywords?.includes("markdown")).toBe(true);
     expect(pkg.private).not.toBe(true);
     expect(pkg.main).toBe("./dist/index.js");
     expect(pkg.types).toBe("./dist/index.d.ts");
@@ -666,12 +668,13 @@ describe("public contract", () => {
     }
   });
 
-  it("claims npm install markvis and notes 2.0.0 replaces 0.0.13", () => {
+  it("claims npm install markvis and notes 2.x replaces 0.0.13", () => {
     const readme = readRepo("README.md");
+    expect(readme.startsWith("# markvis\n")).toBe(true);
     expect(readme).toContain("npm install markvis");
     expect(readme).toContain("0.0.13");
     expect(readme).toContain("markvis/remark");
-    expect(readme).toContain("`2.0.0` replaces `0.0.13`");
+    expect(readme).toContain("`2.x` replaces `0.0.13`");
     expect(readRepo("apps/web/index.md")).not.toContain("Install with npm");
     expect(readRepo("docs/site.md")).not.toMatch(
       /Install with npm or a script tag/,

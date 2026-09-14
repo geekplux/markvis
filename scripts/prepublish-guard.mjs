@@ -26,8 +26,8 @@ const pkg = JSON.parse(readFileSync(join(root, "package.json"), "utf8"));
 if (pkg.private === true) {
   fail("root package.json private must be false");
 }
-if (pkg.version !== "2.0.0") {
-  fail(`root version must be 2.0.0, got ${pkg.version}`);
+if (typeof pkg.version !== "string" || !pkg.version.startsWith("2.")) {
+  fail(`root version must be 2.x, got ${pkg.version}`);
 }
 const bin = String(pkg.bin?.markvis ?? "").replace(/^\.\//, "");
 if (bin !== "dist/cli.bin.js") {
@@ -36,10 +36,13 @@ if (bin !== "dist/cli.bin.js") {
 if (pkg.publishConfig?.access !== "public") {
   fail("publishConfig.access must be public");
 }
+if (!Array.isArray(pkg.keywords) || pkg.keywords.length === 0) {
+  fail("package.json keywords must be a non-empty array");
+}
 
 const cli = readFileSync(join(root, "packages/cli/src/cli.ts"), "utf8");
-if (!cli.includes('export const VERSION = "2.0.0"')) {
-  fail("CLI VERSION must match package.json 2.0.0");
+if (!cli.includes(`export const VERSION = "${pkg.version}"`)) {
+  fail(`CLI VERSION must match package.json ${pkg.version}`);
 }
 
 for (const top of ["packages", "apps"]) {
