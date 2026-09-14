@@ -10,7 +10,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/geekplux/markvis.git"
+    "url": "git+https://github.com/geekplux/markvis.git"
+  },
+  "homepage": "https://markvis.js.org",
+  "bugs": {
+    "url": "https://github.com/geekplux/markvis/issues"
   },
   "author": "GeekPlux <geekplux@gmail.com> (http://geekplux.com/)",
   "engines": {
@@ -55,7 +59,7 @@
     "./min": "./dist/markvis.min.js"
   },
   "bin": {
-    "markvis": "./dist/cli.bin.js"
+    "markvis": "dist/cli.bin.js"
   },
   "files": [
     "dist",

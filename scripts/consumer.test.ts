@@ -108,7 +108,9 @@ describe("packed consumer", { timeout: TIMEOUT }, () => {
     expect(man.version).toBe("2.0.0");
     expect(man.private).not.toBe(true);
     expect(man.main).toBe("./dist/index.js");
-    expect(man.bin?.markvis).toBe("./dist/cli.bin.js");
+    expect(String(man.bin?.markvis ?? "").replace(/^\.\//, "")).toBe(
+      "dist/cli.bin.js",
+    );
   });
 
   it("imports parseMarkdown and renderSvg from markvis", () => {

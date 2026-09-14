@@ -38,7 +38,17 @@ That creates a merge commit. Historic `v2` SHAs stay reachable from `master`. 20
    git log --oneline master | head
    ```
 
-This tree is `markvis@2.0.0`. Publishing `latest` replaces `0.0.13` for npm users (the old renderer stays in `legacy/`). This unit does not run `npm publish`.
+This tree is `markvis@2.0.0`. Publishing `latest` replaces `0.0.13` for npm users (the old renderer stays in `legacy/`).
+
+npm PUT 404 on publish means the local token is not allowed (npm hides 401/403 as 404). The package owner is `geekplux`. From a **clean** `v2` tree:
+
+```bash
+npm login
+npm whoami          # must print geekplux
+npm publish         # add --otp=xxxxxx if 2FA is on
+```
+
+Do not `pnpm publish -r`. Do not publish from `legacy/`.
 
 Until that merge, `pages.yml` and `bake.yml` still fire on `v2` so markvis.js.org does not go dark.
 

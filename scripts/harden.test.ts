@@ -597,7 +597,7 @@ describe("public contract", () => {
     expect(pkg.private).not.toBe(true);
     expect(pkg.main).toBe("./dist/index.js");
     expect(pkg.types).toBe("./dist/index.d.ts");
-    expect(pkg.bin.markvis).toBe("./dist/cli.bin.js");
+    expect(String(pkg.bin.markvis).replace(/^\.\//, "")).toBe("dist/cli.bin.js");
     expect(pkg.exports["."]).toMatchObject({
       types: "./dist/index.d.ts",
       import: "./dist/index.js",

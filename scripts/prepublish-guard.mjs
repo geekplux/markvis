@@ -29,8 +29,9 @@ if (pkg.private === true) {
 if (pkg.version !== "2.0.0") {
   fail(`root version must be 2.0.0, got ${pkg.version}`);
 }
-if (pkg.bin?.markvis !== "./dist/cli.bin.js") {
-  fail("bin.markvis must be ./dist/cli.bin.js");
+const bin = String(pkg.bin?.markvis ?? "").replace(/^\.\//, "");
+if (bin !== "dist/cli.bin.js") {
+  fail("bin.markvis must be dist/cli.bin.js");
 }
 if (pkg.publishConfig?.access !== "public") {
   fail("publishConfig.access must be public");
