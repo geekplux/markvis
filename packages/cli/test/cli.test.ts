@@ -513,6 +513,26 @@ Feb,4
     expect(mdOnce.match(/!\[Q3\]\(\.\/one\.svg\)/g)?.length).toBe(1);
   });
 
+  it("bakes a copy of README.md and docs/landing.md with exit 0", () => {
+    const dir = tmp();
+    const readmePath = join(dir, "README.md");
+    const landingDir = join(dir, "docs");
+    mkdirSync(landingDir);
+    writeFileSync(readmePath, readFileSync(join(repoRoot, "README.md"), "utf8"));
+    writeFileSync(
+      join(landingDir, "landing.md"),
+      readFileSync(join(repoRoot, "docs/landing.md"), "utf8"),
+    );
+    const first = capture(["bake", readmePath, join(landingDir, "landing.md")], dir);
+    expect(first.code, first.stdout + first.stderr).toBe(0);
+    expect(first.stdout).not.toContain("error");
+    expect(first.stdout).not.toContain("E_EMPTY_DATA");
+    expect(readFileSync(readmePath, "utf8")).toContain("```chart");
+    const second = capture(["bake", readmePath, join(landingDir, "landing.md")], dir);
+    expect(second.code, second.stdout + second.stderr).toBe(0);
+    expect(second.stdout).toMatch(/unchanged/);
+  });
+
   it("does not insert a second image when already baked", () => {
     const dir = tmp();
     const mdPath = join(dir, "one.md");

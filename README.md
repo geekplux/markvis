@@ -42,8 +42,9 @@ Feb,7200
 Mar,9200
 Apr,6900
 ```
+![Mar led Midtown box office at 9.2k tickets](./README.svg)
 
-Also legal: a GFM table after the blank line, or `<!-- chart: bar x=month y=tickets title="Mar led Midtown box office at 9.2k tickets" -->` immediately followed by a GFM table.
+Also legal: a GFM table after the blank line, or the HTML comment form in [`examples/valid/08-bar-comment.md`](./examples/valid/08-bar-comment.md) (comment immediately followed by a GFM table).
 
 ## Try it today
 

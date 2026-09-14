@@ -722,6 +722,10 @@ describe("public contract", () => {
     expect(legacyPkg.bin).toBeUndefined();
   });
 
+  it("README has no live HTML comment chart that bake would parse", () => {
+    expect(readRepo("README.md")).not.toMatch(/<!--\s*(chart|markvis|vis)\s*:/);
+  });
+
   it("legacy README does not link removed CONSTITUTION.md", () => {
     expect(readRepo("legacy/README.md")).not.toContain("CONSTITUTION.md");
     expect(existsSync(join(repoRoot, "CONSTITUTION.md"))).toBe(false);
