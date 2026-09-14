@@ -13,10 +13,13 @@ Put a figure in any Markdown preview or rendered view. Four paste paths. No plug
 Keep the fence. Write SVG beside the file. Insert a Markdown image after the fence so GitHub, static hosts, and plain viewers show the figure.
 
 ```bash
-npx markvis bake path/to.md
+pnpm install && pnpm build
+pnpm markvis bake path/to.md
 ```
 
 Second bake is a no-op when nothing changed. CI can run bake on push.
+
+Do not `npx markvis bake` from a project that only ran `npm install markvis`: that is `0.0.13`, which has no CLI. Pack this tree (`pnpm pack:lib`) and install the tarball in the other project.
 
 ## 2. Browser script
 

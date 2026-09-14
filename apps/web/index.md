@@ -27,7 +27,7 @@ pageClass: folio-home-page
     <a class="home-btn outline" href="/examples">Examples <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
   </p>
   <div class="home-install">
-    <CopyChip command="npx markvis bake README.md" />
+    <CopyChip command="pnpm markvis bake README.md" />
   </div>
 </section>
 
@@ -103,7 +103,7 @@ pageClass: folio-home-page
     </article>
     <article class="home-quick">
       <div class="home-quick-title"><span>02</span><h3>Bake</h3></div>
-      <CopyChip command="npx markvis bake README.md" />
+      <CopyChip command="pnpm markvis bake README.md" />
       <p>Keeps the fence; writes the figure after it.</p>
     </article>
     <article class="home-quick">

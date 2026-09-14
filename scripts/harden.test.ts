@@ -698,6 +698,35 @@ describe("public contract", () => {
     );
   });
 
+  it("does not advertise registry npx markvis as the bake command", () => {
+    const home = readRepo("apps/web/index.md");
+    expect(home).toContain(
+      '<CopyChip command="pnpm markvis bake README.md"',
+    );
+    expect(home).not.toContain("npx markvis");
+    expect(readRepo("apps/web/get-started.md")).toContain("pnpm markvis bake");
+    expect(readRepo("apps/web/integrate.md")).toContain("pnpm markvis bake");
+    expect(readRepo("README.md")).toContain("pnpm markvis bake README.md");
+    expect(readRepo("docs/site.md")).toContain("$ pnpm markvis bake README.md");
+    expect(readRepo("apps/web/test/chrome.test.ts")).not.toMatch(
+      /toContain\(["']npx markvis bake/,
+    );
+    expect(readRepo("apps/web/test/chrome.test.ts")).not.toContain(
+      '<CopyChip command="npx markvis bake',
+    );
+    const legacyPkg = JSON.parse(readRepo("legacy/package.json")) as {
+      version: string;
+      bin?: unknown;
+    };
+    expect(legacyPkg.version).toBe("0.0.13");
+    expect(legacyPkg.bin).toBeUndefined();
+  });
+
+  it("legacy README does not link removed CONSTITUTION.md", () => {
+    expect(readRepo("legacy/README.md")).not.toContain("CONSTITUTION.md");
+    expect(existsSync(join(repoRoot, "CONSTITUTION.md"))).toBe(false);
+  });
+
   it("points Skill blob URLs at master, not v2", () => {
     const files = [
       "apps/web/ai.md",

@@ -53,7 +53,7 @@ Also legal: a GFM table after the blank line, or `<!-- chart: bar x=month y=tick
 
    ```bash
    pnpm markvis check examples/valid
-   npx markvis bake README.md
+   pnpm markvis bake README.md
    ```
 
    `check` exits 0 only when every fence is valid. `bake` writes an SVG next to the file, inserts a Markdown image, and keeps the fence. A second bake is a no-op.
@@ -63,7 +63,10 @@ Also legal: a GFM table after the blank line, or `<!-- chart: bar x=month y=tick
    ```bash
    pnpm pack:lib
    npm install ./markvis-2.0.0-rc.1.tgz
+   npx markvis bake README.md
    ```
+
+   That last `npx` is the **local tarball**, not npm `latest`. Bare `npx markvis` / `npm install markvis` still resolves **0.0.13**, which has no `markvis` bin.
 
    ```js
    import { parseMarkdown, renderSvg } from "markvis";

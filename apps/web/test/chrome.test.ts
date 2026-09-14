@@ -213,7 +213,8 @@ describe("site visual chrome", () => {
     expect(home).toContain("Get started with MarkVis");
     expect(home).toContain('href="/play">Playground');
     expect(home).toContain('class="home-btn filled" href="/play">Playground');
-    expect(home).toContain('<CopyChip command="npx markvis bake README.md"');
+    expect(home).toContain('<CopyChip command="pnpm markvis bake README.md"');
+    expect(home).not.toContain("npx markvis");
     const chip = read("components/CopyChip.vue");
     expect(chip).toMatch(/prefix:\s*"\$"/);
     expect(chip).toContain("copy-chip-prefix");
@@ -716,11 +717,11 @@ describe("site visual chrome", () => {
     expect(started).toContain("Bake");
     expect(started).toContain("Script");
     expect(started).toContain("Skill");
-    expect(started).toContain("npx markvis bake");
+    expect(started).toContain("pnpm markvis bake");
     expect(started).toContain("/llms.txt");
 
     const integrate = read("integrate.md");
-    expect(integrate).toContain("npx markvis bake");
+    expect(integrate).toContain("pnpm markvis bake");
     expect(integrate).toContain("markvis.min.js");
     expect(integrate).toContain("markvis/markdown-it");
     expect(integrate).toContain("markvis/remark");

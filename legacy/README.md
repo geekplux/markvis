@@ -1,4 +1,4 @@
-> Frozen 0.0.13 tree. Not the markvis 2.0 product. See [CONSTITUTION.md](../CONSTITUTION.md).
+> Frozen 0.0.13 tree. Not the markvis 2.0 product. See [README.md](../README.md) and [SPEC.md](../SPEC.md).
 
 <p align="center">
   <img width="250" src="./docs/markvis-logo.png" alt="logo" />

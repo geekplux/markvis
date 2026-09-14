@@ -33,10 +33,13 @@ Browse finished figures in [Examples](/examples). Open one in Play to edit.
 Keep the fence in the Markdown file. Write an SVG next to it and insert an image so any viewer shows the figure — including hosts that never run a plugin.
 
 ```bash
-npx markvis bake README.md
+pnpm install && pnpm build
+pnpm markvis bake README.md
 ```
 
 Second bake is a no-op when nothing changed. The fence stays; the image follows it.
+
+A fresh other project cannot call `npx markvis` yet: npm `latest` is still `0.0.13` and has no `markvis` bin. Pack this tree (`pnpm pack:lib`), then in the other project `npm install ./markvis-2.0.0-rc.1.tgz` and use that local bin.
 
 ## Script
 

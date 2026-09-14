@@ -34,7 +34,7 @@ Filled: Get started → `#quickstart`.
 
 Outline: Docs → `/get-started`. Examples → `/examples`.
 
-Install chip: `$ npx markvis bake README.md` (copyable). Do not claim a v2 npm install line.
+Install chip: `$ pnpm markvis bake README.md` (copyable). Do not claim a v2 npm install line. Do not put `npx markvis` on the chip: npm `latest` is 0.0.13 and has no bin.
 
 Proof figures (folio, uncropped; conclusion captions):
 
