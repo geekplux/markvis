@@ -18,7 +18,7 @@ pageClass: folio-home-page
   </p>
   <h1 class="home-headline">
     <span>Charts in Markdown.</span>
-    <span>The fence is the data.</span>
+    <span>The numbers are the picture.</span>
   </h1>
   <p class="home-sub">Write a table in a Markdown code block. MarkVis draws the chart. Change a number — the picture changes. If the chart cannot draw, you still see the table.</p>
   <p class="home-cta">

@@ -28,7 +28,7 @@ Source for `/`. Public voice only. No competitor names. Do not lead with README 
 
 Badge: OPEN SOURCE | v2 · MIT.
 
-Headline: Charts in Markdown. / The fence is the data.
+Headline: Charts in Markdown. / The numbers are the picture.
 
 Sub: Write a table in a Markdown code block. MarkVis draws the chart. Change a number — the picture changes. If the chart cannot draw, you still see the table.
 

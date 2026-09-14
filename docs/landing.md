@@ -1,6 +1,6 @@
 # markvis
 
-Charts in Markdown. Write a table in a code block. MarkVis draws the picture. Change a number — the picture changes. If the chart cannot draw, you still see the table.
+Charts in Markdown. The numbers are the picture. Write a table in a code block. MarkVis draws the chart. Change a number — the picture changes. If the chart cannot draw, you still see the table.
 
 ## Figures
 

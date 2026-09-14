@@ -698,9 +698,22 @@ describe("public contract", () => {
     );
   });
 
-  it("homepage copy does not say IR", () => {
-    expect(readRepo("apps/web/index.md")).not.toMatch(/\bIR\b/);
+  it("homepage copy does not say IR or fence", () => {
+    const home = readRepo("apps/web/index.md");
+    expect(home).not.toMatch(/\bIR\b/);
+    expect(home.replace(/<FenceTabs\s*\/>/g, "")).not.toMatch(/fence/i);
+    expect(home).toContain("The numbers are the picture.");
     expect(readRepo("apps/web/get-started.md")).not.toMatch(/\bIR\b/);
+    expect(readRepo("docs/site.md")).toContain(
+      "Headline: Charts in Markdown. / The numbers are the picture.",
+    );
+    const slogan = readRepo("README.md")
+      .split("\n")
+      .find((line) => line.includes("**Charts in Markdown."));
+    expect(slogan).toBe(
+      "**Charts in Markdown. The numbers are the picture.**",
+    );
+    expect(slogan ?? "").not.toMatch(/fence/i);
   });
 
   it("does not advertise registry npx markvis as the bake command", () => {

@@ -205,8 +205,12 @@ describe("site visual chrome", () => {
 
     expect(home).toContain("OPEN SOURCE");
     expect(home).toContain("v2");
+    expect(home).toMatch(
+      /<h1 class="home-headline">\s*<span>Charts in Markdown\.<\/span>\s*<span>The numbers are the picture\.<\/span>/,
+    );
     expect(home).toContain("Charts in Markdown.");
-    expect(home).toContain("The fence is the data.");
+    expect(home).toContain("The numbers are the picture.");
+    expect(home.replace(/<FenceTabs\s*\/>/g, "")).not.toMatch(/fence/i);
     expect(home).toContain('href="#quickstart">Get started');
     expect(home).toContain('class="home-btn filled" href="#quickstart">Get started');
     expect(home).toContain("Examples");

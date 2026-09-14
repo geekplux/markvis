@@ -6,7 +6,7 @@
 
 [![check](https://github.com/geekplux/markvis/actions/workflows/check.yml/badge.svg)](https://github.com/geekplux/markvis/actions/workflows/check.yml)
 
-**Charts in Markdown. The fence is the data.**
+**Charts in Markdown. The numbers are the picture.**
 
 Write a table in a Markdown code block. MarkVis draws the chart. Change a number — the picture changes. If the chart cannot draw, you still see the table.
 
