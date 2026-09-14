@@ -1,0 +1,61 @@
+name: check
+
+on:
+  push:
+    branches: [v2, main, master]
+  pull_request:
+    branches: [v2, main, master]
+
+  workflow_call:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.9
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      - name: Test
+        run: pnpm test
+
+      - name: Check valid
+        run: pnpm markvis check examples/valid
+
+      - name: Check invalid (must exit non-zero)
+        run: |
+          if pnpm markvis check examples/invalid; then
+            echo "pnpm markvis check examples/invalid must exit non-zero"
+            exit 1
+          fi
+
+      - name: Playground build
+        run: pnpm --filter playground build
+
+      - name: Web build
+        run: pnpm --filter web build
+
+      - name: Assert theme snapshots
+        run: |
+          for t in folio highcharts shadcn docs; do
+            test -f "examples/out/themes/${t}/01-bar-basic.svg"
+          done

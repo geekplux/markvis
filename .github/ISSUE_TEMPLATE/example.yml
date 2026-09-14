@@ -1,0 +1,45 @@
+name: Example fixture
+description: Add a proud gallery card inside an existing chart type.
+title: "[example] "
+labels: ["example"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Six types only: `bar` · `line` · `area` · `scatter` · `pie` · `hist`. Invalid fixtures stay off the gallery.
+  - type: dropdown
+    id: chart_type
+    attributes:
+      label: Chart type
+      options:
+        - bar
+        - line
+        - area
+        - scatter
+        - pie
+        - hist
+    validations:
+      required: true
+  - type: input
+    id: fixture
+    attributes:
+      label: Proposed fixture name
+      description: Stem under `examples/valid/` (e.g. `53-bar-`).
+      placeholder: 53-bar-
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it is not already covered
+      description: What gap vs the current 52 valid cards? Conclusion title you would use?
+    validations:
+      required: true
+  - type: textarea
+    id: fence
+    attributes:
+      label: Full fence draft
+      description: Include a conclusion `title:` (not a stem slug).
+      render: markdown
+    validations:
+      required: true

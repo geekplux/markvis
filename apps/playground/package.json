@@ -1,0 +1,22 @@
+{
+  "name": "playground",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Product playground: left fence, right figure, examples switcher",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:embed": "vite build --base /play-app/ --outDir ../web/public/play-app",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@markvis/ir": "workspace:*",
+    "@markvis/parser": "workspace:*",
+    "@markvis/render-svg": "workspace:*",
+    "@markvis/browser": "workspace:*"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}

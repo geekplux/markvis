@@ -1,0 +1,120 @@
+# markvis
+
+Write a table of numbers in a Markdown code block tagged `chart`, `markvis`, or `vis`. That block is the chart. Same text, same picture. If it cannot draw, keep the table.
+
+Fetch this file. Emit that code block. Do not invent fields.
+
+## Fence (the code block)
+
+Tags `chart`, `markvis`, and `vis` are the same language.
+
+Order:
+
+1. Optional `markvis: 2`
+2. One `key: value` per line
+3. Blank line
+4. Data: CSV, or one GFM table
+
+Fields:
+
+- `type` required. Only `bar` `line` `area` `scatter` `pie` `hist`.
+- `title` optional. A conclusion, not a slug.
+- `theme` optional. Omit means `folio`. Allowed: `folio` `highcharts` `shadcn` `docs` `ant` `recharts`. Any other value is `E_UNKNOWN_THEME`: show the table, not a silent swap.
+- `palette` optional. Colors only. Allowed: `ink` `porcelain` `warm` `cool` `vivid`. Omit means the theme’s default colors. Any other value is `E_UNKNOWN_PALETTE`: show the table, not a silent swap. Never merge palette into the theme id.
+- `unit` optional.
+- `x` `y` `series` name real columns. `series` splits series.
+- Data required. Not JSON.
+
+Also valid: an HTML comment immediately followed by a GFM table.
+
+`<!-- chart: bar x=month y=tickets title="Mar led Midtown box office at 9.2k tickets" -->`
+
+Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`. Same meaning as fence headers.
+
+## Types
+
+- `bar` — category x, number y. Keep row order. Do not sort.
+- `line` — ordered x, number y. Optional `series`. Keep row order.
+- `area` — same as line, filled.
+- `scatter` — number x, number y. One mark per row.
+- `pie` — label x, number y >= 0. Do not force the slices to 100.
+- `hist` — number x. Table keeps the raw rows.
+
+On any error: keep the rows, show the table, add one line with the error code. Never drop the numbers.
+
+## Copy these
+
+### Bar
+
+```chart
+markvis: 2
+type: bar
+title: Mar led Midtown box office at 9.2k tickets
+unit: tickets
+x: month
+y: tickets
+
+month,tickets
+Sep,5200
+Oct,6100
+Nov,7800
+Dec,8500
+Jan,4800
+Feb,7200
+Mar,9200
+Apr,6900
+```
+
+### Line
+
+```chart
+type: line
+title: Walk-up still leads member through week 12
+x: week
+y: count
+series: channel
+
+week,channel,count
+W1,walk-up,64
+W1,member,28
+W2,walk-up,68
+W2,member,32
+W3,walk-up,71
+W3,member,35
+W4,walk-up,69
+W4,member,38
+W5,walk-up,74
+W5,member,41
+W6,walk-up,72
+W6,member,44
+W7,walk-up,75
+W7,member,47
+W8,walk-up,73
+W8,member,50
+W9,walk-up,76
+W9,member,53
+W10,walk-up,74
+W10,member,55
+W11,walk-up,77
+W11,member,57
+W12,walk-up,78
+W12,member,59
+```
+
+### Pie
+
+```markvis
+type: pie
+title: MARTA takes the largest mode share
+x: mode
+y: count
+
+mode,count
+MARTA,38
+Walk,24
+Drive,22
+Bike,11
+Other,8
+```
+
+Emit the fence. Do not emit a PNG. Do not add a seventh type.

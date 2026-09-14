@@ -1,150 +1,118 @@
+# markvis
+
 <p align="center">
-  <img width="250" src="./docs/markvis-logo.png" alt="logo" />
+  <img src="https://markvis.js.org/logo.png" width="128" height="128" alt="MarkVis" />
 </p>
 
-# Markvis
+[![check](https://github.com/geekplux/markvis/actions/workflows/check.yml/badge.svg)](https://github.com/geekplux/markvis/actions/workflows/check.yml)
+[![npm](https://img.shields.io/npm/v/markvis.svg)](https://www.npmjs.com/package/markvis)
 
-> Make visualization in markdown.
+**Charts in Markdown. The numbers are the picture.**
 
-[![NPM version](https://img.shields.io/npm/v/markvis.svg?style=flat-square)](https://npmjs.com/package/markvis) [![NPM downloads](https://img.shields.io/npm/dm/markvis.svg?style=flat-square)](https://npmjs.com/package/markvis) [![Build](https://travis-ci.org/geekplux/markvis.svg?style=flat-square)](https://travis-ci.org/geekplux/markvis) [![Coverage](https://coveralls.io/repos/github/geekplux/markvis/badge.svg?style=flat-square)](https://coveralls.io/github/geekplux/markvis) [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat-square)](https://geekplux.github.io/donate)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgeekplux%2Fmarkvis.svg?type=shield)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgeekplux%2Fmarkvis?ref=badge_shield)
+Write a table in a Markdown code block. MarkVis draws the chart. Change a number — the picture changes. If the chart cannot draw, you still see the table.
 
-- [Documentation](https://markvis.js.org)
-- [Online Editor](https://markvis-editor.js.org)
+A **fence** is a fenced code block tagged `chart` (or `markvis`, or `vis`). The numbers live in that block. That is the whole idea.
 
-## Preview
+In 2017 this project was a renderer (GitHub Trending). This is the rewrite: the same name, for people and for AI.
 
-![](./docs/preview.png)
+**Try:** [Play](https://markvis.js.org/play) · [Examples](https://markvis.js.org/examples) · [For AI](https://markvis.js.org/llms.txt)
 
-# Quick Start
+![Mar led Midtown box office](https://raw.githubusercontent.com/geekplux/markvis/v2/examples/out/01-bar-basic.svg)
 
-## Install
+![Walk-up still leads member](https://raw.githubusercontent.com/geekplux/markvis/v2/examples/out/02-line-multi.svg)
 
-```bash
-yarn add markvis --save
-npm install markvis --save
+![MARTA takes the largest mode share](https://raw.githubusercontent.com/geekplux/markvis/v2/examples/out/05-pie-raw.svg)
+
+## An example
+
+Paste this into [Play](https://markvis.js.org/play). Six kinds: bar, line, area, scatter, pie, hist. Optional look: `theme` and `palette` — [SPEC.md](./SPEC.md).
+
+```chart
+markvis: 2
+type: bar
+title: Mar led Midtown box office at 9.2k tickets
+unit: tickets
+x: month
+y: tickets
+
+month,tickets
+Sep,5200
+Oct,6100
+Nov,7800
+Dec,8500
+Jan,4800
+Feb,7200
+Mar,9200
+Apr,6900
 ```
+![Mar led Midtown box office at 9.2k tickets](./README.svg)
 
-## Usage
+You can also put the numbers in a Markdown table, or use the HTML comment form in [`examples/valid/08-bar-comment.md`](./examples/valid/08-bar-comment.md).
 
-```js
-const md = require('markdown-it')()
-const vis = require('markvis')
-const d3 = require('d3')  // in browser environment
-const d3node = require('d3-node') // in node environment
+## Try it today
 
-md.use(vis).render(`
-  your markdown content
-`, {
-  d3,    // in browser environment
-  d3node // in node environment
-})
-```
+1. **Play** — paste a block at [markvis.js.org/play](https://markvis.js.org/play). No install.
 
-there are [Examples](https://github.com/geekplux/markvis/tree/master/examples) which in node environment.
+2. **Install** — `2.x` replaces `0.0.13` (the old d3 renderer stays in [legacy/](./legacy/)).
 
-# Motivation
+   ```bash
+   npm install markvis
+   npx markvis bake README.md
+   ```
 
-We often publish articles enriched with data, since data make them more convincing and easy to interpret. Hence, techniques that enable the embedding of visualization into texts are of great importance. 
+   `bake` writes a picture next to the file and adds a Markdown image so GitHub can show it. The code block stays. Running bake again does nothing if nothing changed. `npx markvis check notes.md` makes sure every chart block is valid.
 
-However, the most frequently used method now is to export charts as images, upload them into cloud, and then paste them into the editor.  It is a tedious process from the perspective of a writer. Besides, image loading costs much more time than that of DOM elements, which leads to poor experience from the perspective of a reader.
+   ```js
+   import { parseMarkdown, renderSvg } from "markvis";
 
+   const parsed = parseMarkdown(markdown);
+   if (parsed.ok) {
+     const svg = renderSvg(parsed.chart);
+   } else {
+     // parsed.table still has the rows; parsed.error.code is stable
+   }
+   ```
 
-# API
+3. **In a Markdown site** — remark **or** markdown-it. Both return the picture and the data table:
 
-There are many options you can config and below is some in common. But you'd better to config the options which related to chart style in chart options, such as [markvis-bar](https://github.com/geekplux/markvis-bar), [markvis-line](https://github.com/geekplux/markvis-line), [markvis-pie](https://github.com/geekplux/markvis-pie).
+   ```js
+   import MarkdownIt from "markdown-it";
+   import markdownItMarkvis from "markvis/markdown-it";
 
-## options
+   const html = new MarkdownIt({ html: true })
+     .use(markdownItMarkvis)
+     .render(markdown);
+   // html contains <svg> and <table>
+   ```
 
-##### data
+   ```js
+   import { remark } from "remark";
+   import remarkHtml from "remark-html";
+   import remarkMarkvis from "markvis/remark";
 
-- Type: `Array`
+   const html = String(
+     await remark()
+       .use(remarkMarkvis)
+       .use(remarkHtml, { sanitize: false })
+       .process(markdown),
+   );
+   ```
 
-Data from file or web processed by d3 library.
+4. **With an AI** — point a model at [skills/markvis/SKILL.md](./skills/markvis/SKILL.md) or [llms.txt](./llms.txt). It should write only the fields listed there. Not a PNG. Not a seventh chart kind.
 
-##### d3
+## What you can write
 
-- Type: `Object`
+| | |
+| --- | --- |
+| Code block tags | `chart` `markvis` `vis` |
+| Chart kinds | `bar` `line` `area` `scatter` `pie` `hist` |
+| Fields | `markvis` `type` `title` `unit` `x` `y` `series` plus `theme` `palette` |
+| Numbers | Comma-separated rows, or one Markdown table. Not JSON as the default. No JavaScript in the block. |
 
-[d3](https://github.com/d3/d3) library which used in **browser** environment.
+`theme:` how it is drawn: `folio` (default) `highcharts` `shadcn` `docs` `ant` `recharts`. `palette:` colors only: `ink` `porcelain` `warm` `cool` `vivid`. Unknown look → table + error, never a silent swap. Pie slices are not forced to 100. Rows stay in the order you wrote them.
 
-##### d3node
+## Docs
 
-- Type: `Function`
+[Get started](https://markvis.js.org/get-started) · [Integrate](./docs/integrate.md) · [SPEC.md](./SPEC.md) · [Themes](./docs/themes.md) · [Architecture](./docs/architecture.md) · [Contributing](./CONTRIBUTING.md) · [Release / merge](./docs/release.md)
 
-[d3-node](https://github.com/d3-node/d3-node) constructor which used in **node** environment.
-
-##### layout
-
-- Type: `String`
-
-Name of chart layout. You can customize any chart layout you want.
-
-##### render
-
-- Type: `Function`
-
-Customized renderer to render a new layout you want.
-
-##### container
-
-- Type: `String`
-- Default: `<div id="container"><h2>Bar Chart</h2><div id="chart"></div></div>`
-
-DOM contained the visualization result.
-
-##### selector
-
-- Type: `String`
-- Default: `'#chart'`
-
-DOM selector in container.
-
-##### style
-
-- Type: `String`<br>
-- Default: `''`
-
-Chart style.
-
-##### width
-
-- Type: `Number`<br>
-- Default: `960`
-
-SVG width for chart.
-
-##### height
-
-- Type: `Number`<br>
-- Default: `500`
-
-SVG height for chart.
-
-##### margin
-
-- Type: `Object`<br>
-- Default: `{ top: 20, right: 20, bottom: 20, left: 20 }`
-
-Margin of the first <g> wrapper in SVG, usually used to add axis.
-
-
-# Contributing
-
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
-
-
-# LICENSE
-
-**markvis** © [geekplux](https://github.com/geekplux), Released under the [MIT](./LICENSE) License.<br>
-Authored and maintained by geekplux with help from contributors ([list](https://github.com/geekplux/markvis/contributors)).
-
-> [geekplux.com](http://geekplux.com) · GitHub [@geekplux](https://github.com/geekplux) · Twitter [@geekplux](https://twitter.com/geekplux)
-
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgeekplux%2Fmarkvis.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fgeekplux%2Fmarkvis?ref=badge_large)
-
+0.0.13 (the old d3 renderer): [legacy/](./legacy/).

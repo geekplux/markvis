@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="hist chart: Twos show up twice as often, 7 rows" aria-labelledby="mv-b65f7ad7a6635b46-title" aria-describedby="mv-b65f7ad7a6635b46-desc" data-markvis="2" data-chart-type="hist" data-id="mv-b65f7ad7a6635b46" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-b65f7ad7a6635b46-title">Twos show up twice as often</title>
+  <desc id="mv-b65f7ad7a6635b46-desc">hist chart. Twos show up twice as often. x=roll. 7 rows. x is binned with Sturges equal-width bins.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Twos show up twice as often</text>
+  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="317.33" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="38" y="176.67" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">3</text>
+    <text x="48" y="468" text-anchor="middle" font-size="10" data-full-label="1">1</text>
+    <text x="211" y="468" text-anchor="middle" font-size="10" data-full-label="2.25">2.25</text>
+    <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="3.5">3.5</text>
+    <text x="537" y="468" text-anchor="middle" font-size="10" data-full-label="4.75">4.75</text>
+    <text x="700" y="468" text-anchor="middle" font-size="10" data-full-label="6">6</text>
+  </g>
+  <g>
+    <path d="M93.5 458 L93.5 39 Q93.5 36 96.5 36 L162.5 36 Q165.5 36 165.5 39 L165.5 458 Z" fill="#3B82F6" data-bin-left="1" data-bin-right="2.25" data-weight="3" data-count="3"/>
+    <path d="M256.5 458 L256.5 320.33 Q256.5 317.33 259.5 317.33 L325.5 317.33 Q328.5 317.33 328.5 320.33 L328.5 458 Z" fill="#3B82F6" data-bin-left="2.25" data-bin-right="3.5" data-weight="1" data-count="1"/>
+    <path d="M419.5 458 L419.5 320.33 Q419.5 317.33 422.5 317.33 L488.5 317.33 Q491.5 317.33 491.5 320.33 L491.5 458 Z" fill="#3B82F6" data-bin-left="3.5" data-bin-right="4.75" data-weight="1" data-count="1"/>
+    <path d="M582.5 458 L582.5 179.67 Q582.5 176.67 585.5 176.67 L651.5 176.67 Q654.5 176.67 654.5 179.67 L654.5 458 Z" fill="#3B82F6" data-bin-left="4.75" data-bin-right="6" data-weight="2" data-count="2"/>
+  </g>
+  <g>
+    <text x="129.5" y="28" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="1–2.25">3</text>
+    <text x="292.5" y="309.33" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="2.25–3.5">1</text>
+    <text x="455.5" y="309.33" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="3.5–4.75">1</text>
+    <text x="618.5" y="168.67" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="4.75–6">2</text>
+  </g>
+</svg>

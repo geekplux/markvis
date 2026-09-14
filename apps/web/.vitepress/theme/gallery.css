@@ -1,0 +1,333 @@
+.gallery-page {
+  position: relative;
+  max-width: none;
+  margin: 0;
+  padding: 24px 1.5rem 64px;
+  color: var(--site-fg);
+  background: transparent;
+}
+
+@media (min-width: 640px) {
+  .gallery-page {
+    padding: 32px 3rem 80px;
+  }
+}
+
+.gallery-title {
+  margin: 0;
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: var(--site-fg);
+}
+
+.gallery-sub {
+  margin: 8px 0 20px;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--site-fg-muted);
+  max-width: 42ch;
+}
+
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.gallery-chip {
+  height: 44px;
+  min-height: 44px;
+  padding: 0 14px;
+  border-radius: 0;
+  border: 1px solid var(--site-chip-border);
+  background: transparent;
+  color: var(--site-fg);
+  font-family: var(--site-mono);
+  font-size: 11px;
+  font-weight: 560;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.gallery-chip.active {
+  background: var(--site-primary);
+  border-color: var(--site-primary);
+  color: var(--site-primary-fg);
+}
+
+.gallery-chip:focus-visible,
+.gallery-card:focus-visible,
+.gallery-close:focus-visible,
+.gallery-actions button:focus-visible,
+.gallery-play:focus-visible {
+  outline: 2px solid var(--site-fg);
+  outline-offset: 2px;
+}
+
+.gallery-layout {
+  display: block;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+.gallery-card {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid var(--site-rule);
+  border-radius: 0;
+  box-shadow: none;
+  cursor: pointer;
+  color: var(--site-fg);
+  box-sizing: border-box;
+  transition: transform 120ms ease, border-color 120ms ease;
+}
+
+.gallery-card:hover {
+  border-color: var(--site-fg);
+  transform: translateY(-1px);
+}
+
+.gallery-card-caption {
+  margin: 8px 0 0;
+  font-size: 12px;
+  font-weight: 560;
+  line-height: 1.35;
+  color: var(--site-fg);
+}
+
+.gallery-thumb {
+  width: 100%;
+  overflow: visible;
+  background: transparent;
+}
+
+.gallery-thumb svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: none;
+}
+
+.gallery-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+}
+
+.gallery-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border: 0;
+  background: rgba(8, 11, 8, 0.45);
+  cursor: pointer;
+  pointer-events: auto;
+  animation: gallery-fade-in 200ms ease;
+}
+
+.gallery-drawer {
+  position: absolute;
+  z-index: 2;
+  pointer-events: auto;
+  background: var(--site-paper);
+  color: var(--site-ink);
+  border-radius: 0;
+  box-sizing: border-box;
+  overflow: auto;
+  padding: 16px;
+  animation: gallery-drawer-in 240ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Mobile bottom sheet */
+.gallery-drawer {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: min(88vh, 100%);
+  border-top: 1px solid var(--site-ink);
+}
+
+@media (min-width: 768px) {
+  .gallery-drawer {
+    left: auto;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: min(480px, 92vw);
+    height: 100vh;
+    border-top: 0;
+    border-left: 1px solid var(--site-ink);
+    animation-name: gallery-drawer-in-right;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.gallery-detail-title {
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.gallery-full {
+  overflow: auto;
+}
+
+.gallery-full svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.gallery-detail-themes,
+.gallery-detail-palettes {
+  margin-top: 12px;
+}
+
+.gallery-detail-themes .gallery-chip,
+.gallery-detail-palettes .gallery-chip {
+  color: var(--site-ink);
+  border-color: rgba(8, 11, 8, 0.28);
+}
+
+.gallery-detail-themes .gallery-chip.active,
+.gallery-detail-palettes .gallery-chip.active {
+  background: var(--site-primary);
+  border-color: var(--site-primary);
+  color: var(--site-primary-fg);
+}
+
+.gallery-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.gallery-actions button,
+.gallery-close,
+.gallery-play {
+  height: 44px;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--site-ink);
+  background: var(--site-paper);
+  color: var(--site-ink);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 0;
+}
+
+.gallery-copied {
+  font-size: 12px;
+  color: #737373;
+}
+
+.gallery-fence {
+  margin: 0;
+  padding: 12px;
+  font-size: 12px;
+  line-height: 1.4;
+  overflow: auto;
+  background: #fafaf9;
+  border: 1px solid rgba(8, 11, 8, 0.28);
+  white-space: pre-wrap;
+}
+
+.gallery-close {
+  margin-bottom: 8px;
+}
+
+@keyframes gallery-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes gallery-drawer-in {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes gallery-drawer-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-card,
+  .gallery-backdrop,
+  .gallery-drawer {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+
+/* Detail-drawer chart tip + draw-in (thumbs never enhanced) */
+.markvis-tip {
+  position: fixed;
+  z-index: 10000;
+  pointer-events: none;
+  padding: 4px 8px;
+  border-radius: 2px;
+  border: 1px solid rgba(237, 235, 229, 0.22);
+  background: #080b08;
+  color: #edebe5;
+  font: 560 11px/1.35 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .markvis-tip {
+    transition: none;
+    transform: none;
+  }
+  .gallery-full svg.markvis-motion .markvis-mark,
+  .gallery-full svg.markvis-motion path.markvis-mark-line {
+    animation: none !important;
+    opacity: 1 !important;
+    stroke-dashoffset: 0 !important;
+  }
+}

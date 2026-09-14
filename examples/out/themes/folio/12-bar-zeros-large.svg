@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Friday spike dwarfs quiet weekdays (hits), 6 rows" aria-labelledby="mv-1ea1fec35b551bf2-title" aria-describedby="mv-1ea1fec35b551bf2-desc" data-markvis="2" data-chart-type="bar" data-id="mv-1ea1fec35b551bf2" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-1ea1fec35b551bf2-title">Friday spike dwarfs quiet weekdays</title>
+  <desc id="mv-1ea1fec35b551bf2-desc">bar chart. Friday spike dwarfs quiet weekdays. x=day. y=hits. unit=hits. 6 rows.</desc>
+  <text x="65.8" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Friday spike dwarfs quiet weekdays<tspan font-size="12" font-weight="400" fill="#737373"> · hits</tspan></text>
+  <path d="M65.8 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="55.8" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="55.8" y="317.33" text-anchor="end" dominant-baseline="middle">500,000</text>
+    <text x="55.8" y="176.67" text-anchor="end" dominant-baseline="middle">1,000,000</text>
+    <text x="55.8" y="36" text-anchor="end" dominant-baseline="middle">1,500,000</text>
+    <text x="118.65" y="468" text-anchor="middle" font-size="10" data-full-label="Mon">Mon</text>
+    <text x="224.35" y="468" text-anchor="middle" font-size="10" data-full-label="Tue">Tue</text>
+    <text x="330.05" y="468" text-anchor="middle" font-size="10" data-full-label="Wed">Wed</text>
+    <text x="435.75" y="468" text-anchor="middle" font-size="10" data-full-label="Thu">Thu</text>
+    <text x="541.45" y="468" text-anchor="middle" font-size="10" data-full-label="Fri">Fri</text>
+    <text x="647.15" y="468" text-anchor="middle" font-size="10" data-full-label="Sat">Sat</text>
+  </g>
+  <g>
+    <path d="M80.6 458 L156.7 458 L156.7 458 L80.6 458 Z" fill="#3B82F6" data-x="Mon" data-series="hits" data-y="0"/>
+    <path d="M186.3 458 L262.4 458 L262.4 458 L186.3 458 Z" fill="#3B82F6" data-x="Tue" data-series="hits" data-y="12"/>
+    <path d="M292 458 L368.1 458 L368.1 458 L292 458 Z" fill="#3B82F6" data-x="Wed" data-series="hits" data-y="0"/>
+    <path d="M397.7 458 L473.8 458 L473.8 458 L397.7 458 Z" fill="#3B82F6" data-x="Thu" data-series="hits" data-y="8"/>
+    <path d="M503.4 458 L503.4 39 Q503.4 36 506.4 36 L576.5 36 Q579.5 36 579.5 39 L579.5 458 Z" fill="#3B82F6" data-x="Fri" data-series="hits" data-y="1500000"/>
+    <path d="M609.1 458 L685.2 458 L685.2 458 L609.1 458 Z" fill="#3B82F6" data-x="Sat" data-series="hits" data-y="3"/>
+  </g>
+  <g>
+    <text x="118.65" y="450" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Mon">0</text>
+    <text x="224.35" y="450" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Tue">12</text>
+    <text x="330.05" y="450" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Wed">0</text>
+    <text x="435.75" y="450" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Thu">8</text>
+    <text x="541.45" y="28" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Fri">1,500,000</text>
+    <text x="647.15" y="450" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Sat">3</text>
+  </g>
+</svg>

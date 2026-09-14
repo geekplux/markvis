@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Free still outnumbers pro seats, 4 rows, series plan" aria-labelledby="mv-5045ce5a4f128422-title" aria-describedby="mv-5045ce5a4f128422-desc" data-markvis="2" data-chart-type="bar" data-id="mv-5045ce5a4f128422" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-5045ce5a4f128422-title">Free still outnumbers pro seats</title>
+  <desc id="mv-5045ce5a4f128422-desc">bar chart. Free still outnumbers pro seats. x=month. y=seats. series=plan. 4 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Free still outnumbers pro seats</text>
+  <g font-size="11" font-weight="400" fill="#171717">
+    <rect x="48" y="33" width="10" height="10" fill="#3B82F6" rx="1"/>
+    <text x="62" y="42" data-legend="free">free</text>
+    <rect x="105.28" y="33" width="10" height="10" fill="#F97316" rx="1"/>
+    <text x="119.28" y="42" data-legend="pro">pro</text>
+  </g>
+  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="325.33" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="38" y="192.67" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="38" y="60" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="211" y="468" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
+    <text x="537" y="468" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
+  </g>
+  <g>
+    <path d="M138 458 L138 195.67 Q138 192.67 141 192.67 L207 192.67 Q210 192.67 210 195.67 L210 458 Z" fill="#3B82F6" data-x="Jan" data-series="free" data-y="100"/>
+    <path d="M212 458 L212 407.93 Q212 404.93 215 404.93 L281 404.93 Q284 404.93 284 407.93 L284 458 Z" fill="#F97316" data-x="Jan" data-series="pro" data-y="20"/>
+    <path d="M464 458 L464 169.13 Q464 166.13 467 166.13 L533 166.13 Q536 166.13 536 169.13 L536 458 Z" fill="#3B82F6" data-x="Feb" data-series="free" data-y="110"/>
+    <path d="M538 458 L538 386.71 Q538 383.71 541 383.71 L607 383.71 Q610 383.71 610 386.71 L610 458 Z" fill="#F97316" data-x="Feb" data-series="pro" data-y="28"/>
+  </g>
+  <g>
+    <text x="174" y="184.67" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Jan">100</text>
+    <text x="248" y="396.93" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Jan">20</text>
+    <text x="500" y="158.13" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Feb">110</text>
+    <text x="574" y="375.71" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Feb">28</text>
+  </g>
+</svg>

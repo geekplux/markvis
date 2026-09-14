@@ -1,62 +1,123 @@
 {
   "name": "markvis",
-  "version": "0.0.13",
-  "description": "a markdown-it plugin to generate the visualization in markdown",
-  "main": "./dist/index",
-  "scripts": {
-    "example": "node examples/basic.js",
-    "lint": "xo",
-    "build": "rm -rf ./dist && mkdir dist && ./node_modules/.bin/babel src -d dist",
-    "prepublish": "npm run build",
-    "test": "jest && npm run lint",
-    "test:cover": "jest --coverage",
-    "test:cover:travis": "npm run test:cover && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+  "version": "2.0.1",
+  "private": false,
+  "type": "module",
+  "description": "Charts in Markdown. Write a table in a code block; MarkVis draws the SVG. Same text, same picture.",
+  "keywords": [
+    "markdown",
+    "chart",
+    "charts",
+    "svg",
+    "visualization",
+    "data-visualization",
+    "markdown-it",
+    "remark",
+    "cli",
+    "bar-chart"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/geekplux/markvis.git"
+    "url": "git+https://github.com/geekplux/markvis.git"
+  },
+  "homepage": "https://markvis.js.org",
+  "bugs": {
+    "url": "https://github.com/geekplux/markvis/issues"
   },
   "author": "GeekPlux <geekplux@gmail.com> (http://geekplux.com/)",
-  "keywords": [
-    "markvis",
-    "d3",
-    "d3-node",
-    "visualization",
-    "markdown",
-    "md",
-    "vis",
-    "markdown-it",
-    "markdown-it-plugin",
-    "markvis-bar",
-    "markvis-line",
-    "markvis-pie"
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@9.15.9",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./parser": {
+      "types": "./dist/parser.d.ts",
+      "import": "./dist/parser.js"
+    },
+    "./render-svg": {
+      "types": "./dist/render-svg.d.ts",
+      "import": "./dist/render-svg.js"
+    },
+    "./ir": {
+      "types": "./dist/ir.d.ts",
+      "import": "./dist/ir.js"
+    },
+    "./remark": {
+      "types": "./dist/remark.d.ts",
+      "import": "./dist/remark.js"
+    },
+    "./markdown-it": {
+      "types": "./dist/markdown-it.d.ts",
+      "import": "./dist/markdown-it.js"
+    },
+    "./themes": {
+      "types": "./dist/themes.d.ts",
+      "import": "./dist/themes.js"
+    },
+    "./cli": {
+      "types": "./dist/cli.d.ts",
+      "import": "./dist/cli.js"
+    },
+    "./min": "./dist/markvis.min.js"
+  },
+  "bin": {
+    "markvis": "dist/cli.bin.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
-  "license": "MIT",
-  "dependencies": {
-    "js-yaml": "^3.8.2",
-    "markdown-it-fence": "^0.1.3",
-    "markvis-bar": "^0.0.9",
-    "markvis-line": "^0.0.6",
-    "markvis-pie": "^0.0.7"
+  "scripts": {
+    "build": "tsup && node scripts/copy-dts.mjs && pnpm --filter @markvis/browser build && node scripts/copy-browser-dist.mjs",
+    "prepack": "pnpm build && node scripts/assert-pack.mjs",
+    "prepublishOnly": "node scripts/prepublish-guard.mjs",
+    "pack:lib": "node scripts/pack-lib.mjs",
+    "markvis": "node ./dist/cli.bin.js",
+    "test": "vitest run",
+    "schema:generate": "tsx packages/ir/scripts/generate-schema.ts",
+    "schema:check": "vitest run packages/ir/src/json-schema.test.ts",
+    "eval-prompts": "tsx scripts/eval-prompts.ts"
+  },
+  "peerDependencies": {
+    "markdown-it": "^14.0.0",
+    "remark": "^15.0.0"
+  },
+  "peerDependenciesMeta": {
+    "markdown-it": {
+      "optional": true
+    },
+    "remark": {
+      "optional": true
+    }
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-preset-es2015": "^6.22.0",
-    "coveralls": "^2.13.1",
-    "d3-node": "^1.0.3",
-    "eslint-config-geekplux": "^1.0.3",
-    "jest": "^20.0.4",
-    "markdown-it": "^8.2.2",
-    "xo": "^0.18.2"
-  },
-  "xo": {
-    "extends": "geekplux",
-    "esnext": true,
-    "envs": [
-      "jest"
-    ],
-    "rules": {
-      "no-useless-escape": 0
-    }
+    "@markvis/browser": "workspace:*",
+    "@markvis/cli": "workspace:*",
+    "@markvis/ir": "workspace:*",
+    "@markvis/markdown-it": "workspace:*",
+    "@markvis/parser": "workspace:*",
+    "@markvis/remark": "workspace:*",
+    "@markvis/render-svg": "workspace:*",
+    "@markvis/themes": "workspace:*",
+    "@types/node": "^26.4.1",
+    "happy-dom": "18",
+    "markdown-it": "^14.1.0",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
+    "tsup": "^8.5.0",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.0"
   }
 }

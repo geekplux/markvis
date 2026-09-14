@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Archive leads storage at 8000 GB (GB), 3 rows" aria-labelledby="mv-1c614ab58513920f-title" aria-describedby="mv-1c614ab58513920f-desc" data-markvis="2" data-chart-type="bar" data-id="mv-1c614ab58513920f" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-1c614ab58513920f-title">Archive leads storage at 8000 GB</title>
+  <desc id="mv-1c614ab58513920f-desc">bar chart. Archive leads storage at 8000 GB. x=bucket. y=size. unit=GB. 3 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Archive leads storage at 8000 GB<tspan font-size="12" font-weight="400" fill="#737373"> · GB</tspan></text>
+  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="352.5" text-anchor="end" dominant-baseline="middle">2,000</text>
+    <text x="38" y="247" text-anchor="end" dominant-baseline="middle">4,000</text>
+    <text x="38" y="141.5" text-anchor="end" dominant-baseline="middle">6,000</text>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">8,000</text>
+    <text x="156.67" y="468" text-anchor="middle" font-size="10" data-full-label="raw">raw</text>
+    <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="processed">processed</text>
+    <text x="591.33" y="468" text-anchor="middle" font-size="10" data-full-label="archive">archive</text>
+  </g>
+  <g>
+    <path d="M120.67 458 L120.67 397.7 Q120.67 394.7 123.67 394.7 L189.67 394.7 Q192.67 394.7 192.67 397.7 L192.67 458 Z" fill="#3B82F6" data-x="raw" data-series="size" data-y="1200"/>
+    <path d="M338 458 L338 437.26 Q338 434.26 341 434.26 L407 434.26 Q410 434.26 410 437.26 L410 458 Z" fill="#3B82F6" data-x="processed" data-series="size" data-y="450"/>
+    <path d="M555.33 458 L555.33 39 Q555.33 36 558.33 36 L624.33 36 Q627.33 36 627.33 39 L627.33 458 Z" fill="#3B82F6" data-x="archive" data-series="size" data-y="8000"/>
+  </g>
+  <g>
+    <text x="156.67" y="386.7" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="raw">1,200</text>
+    <text x="374" y="446.26" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="processed">450</text>
+    <text x="591.33" y="28" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="archive">8,000</text>
+  </g>
+</svg>

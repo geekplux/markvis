@@ -1,0 +1,16 @@
+figure.markvis {
+  margin: 1em 0;
+}
+
+figure.markvis svg {
+  max-width: 100%;
+  height: auto;
+}
+
+figure.markvis table {
+  margin-top: 0.5em;
+}
+
+p.markvis-error {
+  color: #b42318;
+}

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="pie chart: Billing leads support tickets at 40, 4 slices" aria-labelledby="mv-084d4e3d9bba4f2b-title" aria-describedby="mv-084d4e3d9bba4f2b-desc" data-markvis="2" data-chart-type="pie" data-id="mv-084d4e3d9bba4f2b" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-084d4e3d9bba4f2b-title">Billing leads support tickets at 40</title>
+  <desc id="mv-084d4e3d9bba4f2b-desc">pie chart. Billing leads support tickets at 40. x=topic. y=tickets. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="56" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Billing leads support tickets at 40</text>
+  <g font-size="12" font-weight="500" fill="#333333">
+    <rect x="56" y="31" width="10" height="10" fill="#7cb5ec" rx="1"/>
+    <text x="70" y="40" data-legend="Billing and invoice disputes">Billing and invoice disputes</text>
+    <rect x="294.32" y="31" width="10" height="10" fill="#434348" rx="1"/>
+    <text x="308.32" y="40" data-legend="Account access and MFA reset">Account access and MFA reset</text>
+    <rect x="56" y="49" width="10" height="10" fill="#90ed7d" rx="1"/>
+    <text x="70" y="58" data-legend="Product how-to questions">Product how-to questions</text>
+    <rect x="264.56" y="49" width="10" height="10" fill="#f7a35c" rx="1"/>
+    <text x="278.56" y="58" data-legend="Other miscellaneous">Other miscellaneous</text>
+  </g>
+  <rect x="56" y="80" width="644" height="340" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
+  <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0">
+    <path d="M378 250 L378 134.4 A115.6 115.6 0 0 1 445.95 343.52 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Billing and invoice disputes" data-raw-value="40"/>
+    <path d="M378 250 L445.95 343.52 A115.6 115.6 0 0 1 284.48 317.95 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Account access and MFA reset" data-raw-value="25"/>
+    <path d="M378 250 L284.48 317.95 A115.6 115.6 0 0 1 284.48 182.05 Z" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Product how-to questions" data-raw-value="20"/>
+    <path d="M378 250 L284.48 182.05 A115.6 115.6 0 0 1 378 134.4 Z" fill="#f7a35c" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Other miscellaneous" data-raw-value="15"/>
+  </g>
+</svg>

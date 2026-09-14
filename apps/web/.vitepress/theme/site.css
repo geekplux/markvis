@@ -1,0 +1,438 @@
+:root {
+  --folio-paper: var(--site-bg, #ffffff);
+  --folio-ink: var(--site-fg, #18181b);
+  --folio-quiet: var(--site-muted, #71717a);
+  --folio-rule: var(--site-border, #e4e4e7);
+  --folio-accent: var(--site-klein, #002fa7);
+  --folio-fence: var(--site-card-2, #fafafa);
+  --vp-c-bg: var(--site-bg, #ffffff);
+  --vp-c-bg-alt: var(--site-bg, #ffffff);
+  --vp-c-bg-elv: var(--site-bg, #ffffff);
+  --vp-c-bg-soft: var(--site-card-2, #fafafa);
+  --vp-c-text-1: var(--site-fg, #18181b);
+  --vp-c-text-2: var(--site-muted, #71717a);
+  --vp-c-brand-1: var(--site-klein, #002fa7);
+  --vp-c-brand-2: var(--site-klein, #002fa7);
+  --vp-c-brand-3: var(--site-klein, #002fa7);
+  --vp-nav-height: var(--site-nav-h, 64px);
+  --vp-home-hero-name-color: var(--site-fg, #18181b);
+  --vp-home-hero-name-background: transparent;
+  --vp-font-family-base: var(--site-sans);
+  --vp-font-family-mono: var(--site-mono);
+  --vp-radius: 0;
+}
+
+html,
+body {
+  background: var(--site-bg, #ffffff);
+  color: var(--site-fg, #18181b);
+  font-family: var(--site-sans);
+}
+
+.VPSkipLink {
+  display: none !important;
+}
+
+.VPNav,
+.VPNavBar,
+.VPNavBar .wrapper,
+.VPNavBar .container,
+.VPNavBar .content,
+.VPNavBar .divider {
+  background: var(--site-bg) !important;
+  background-color: var(--site-bg) !important;
+}
+
+.VPNavBar {
+  height: var(--site-nav-h);
+  border-bottom: 1px solid var(--site-border);
+  box-shadow: none !important;
+}
+
+.VPNavBar .divider,
+.VPNavBar.has-sidebar .divider {
+  display: none;
+}
+
+.VPNavBarTitle .title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--folio-ink) !important;
+  background: none !important;
+  -webkit-text-fill-color: var(--folio-ink) !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+}
+
+.VPNavBarMenu {
+  gap: 20px;
+}
+
+.VPNavBarMenuLink {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: var(--folio-quiet) !important;
+  line-height: 52px !important;
+}
+
+.VPNavBarMenuLink.active,
+.VPNavBarMenuLink.is-active {
+  color: var(--folio-ink) !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 8px;
+  text-decoration-color: rgba(23, 23, 23, 0.28);
+}
+
+.VPNavBarMenuLink:focus-visible,
+.folio-btn:focus-visible {
+  outline: 2px solid var(--folio-accent);
+  outline-offset: 2px;
+}
+
+.folio-home-page .VPSidebar,
+.folio-examples .VPSidebar,
+.folio-play .VPSidebar,
+.VPDocAside {
+  display: none !important;
+}
+
+.VPContent {
+  padding-top: var(--vp-nav-height) !important;
+  background: var(--site-bg);
+}
+
+.VPDoc {
+  padding: 32px 24px 64px !important;
+}
+
+.VPDoc .container,
+.VPDoc .content-container,
+.VPDoc .content {
+  max-width: none !important;
+}
+
+.folio-docs .VPDoc {
+  padding: 32px 1.5rem 64px !important;
+}
+
+@media (min-width: 640px) {
+  .folio-docs .VPDoc {
+    padding: 32px 3rem 64px !important;
+  }
+}
+
+.folio-home-page .VPDoc,
+.folio-examples .VPDoc {
+  padding: 0 !important;
+}
+
+.folio-home-page .VPFooter,
+.folio-home-page .VPDocFooter,
+.folio-play .VPDoc,
+.folio-play .VPFooter,
+.folio-play .VPDocFooter {
+  display: none !important;
+}
+
+.folio-play .VPContent {
+  padding-top: 0 !important;
+  background: var(--site-bg);
+}
+
+.VPHome,
+.VPHero,
+.VPFeatures {
+  display: none !important;
+}
+
+.folio-home {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+  color: var(--folio-ink);
+  background: transparent;
+}
+
+.folio-hero {
+  margin: 0 0 56px;
+}
+
+.folio-mark {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--folio-ink);
+}
+
+.folio-lede {
+  margin: 12px 0 24px;
+  max-width: 40rem;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--folio-ink);
+}
+
+.folio-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+}
+
+.folio-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: var(--site-radius);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.folio-btn.primary {
+  background: var(--folio-accent);
+  color: #ffffff;
+  border: 1px solid var(--folio-accent);
+}
+
+.folio-btn.secondary {
+  background: transparent;
+  color: var(--folio-ink);
+  border: 1px solid rgba(23, 23, 23, 0.28);
+}
+
+.folio-section {
+  margin: 0 0 56px;
+}
+
+.folio-h2 {
+  margin: 0 0 16px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--folio-ink);
+}
+
+.folio-bullets {
+  margin: 0;
+  padding-left: 1.25rem;
+  max-width: 40rem;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--folio-ink);
+}
+
+.folio-bullets li + li {
+  margin-top: 8px;
+}
+
+.folio-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.folio-card {
+  margin: 0;
+  padding: 16px;
+  border: 1px solid var(--folio-rule);
+  border-radius: var(--site-radius);
+  background: #ffffff;
+}
+
+.folio-card-title {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--folio-ink);
+}
+
+.folio-card-body {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--folio-quiet);
+}
+
+.folio-figures {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+}
+
+.folio-figures figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.folio-figures img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: transparent;
+}
+
+.folio-figures figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--folio-quiet);
+}
+
+.folio-steps {
+  margin: 0 0 20px;
+  padding-left: 1.25rem;
+  max-width: 40rem;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--folio-ink);
+}
+
+.folio-steps li + li {
+  margin-top: 8px;
+}
+
+.folio-steps a {
+  color: var(--folio-accent);
+}
+
+.folio-home .vp-code-group,
+.folio-home div[class*="language-"] {
+  background: var(--folio-fence) !important;
+  border: 1px solid var(--folio-rule);
+  border-radius: var(--site-radius) !important;
+  margin: 0 0 24px !important;
+  box-shadow: none !important;
+}
+
+.folio-home div[class*="language-"] pre,
+.folio-home div[class*="language-"] code {
+  background: transparent !important;
+  font-size: 12px !important;
+  padding: 12px !important;
+}
+
+.folio-home div[class*="language-"] pre {
+  overflow-x: auto;
+}
+
+.folio-use .vp-doc table,
+.folio-home table {
+  width: 100%;
+  display: table;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 0;
+}
+
+.folio-home table th,
+.folio-home table td {
+  border: 1px solid var(--folio-rule);
+  padding: 10px 12px;
+  text-align: left;
+  color: var(--folio-ink);
+}
+
+.folio-home table th {
+  font-weight: 600;
+  background: var(--folio-fence);
+}
+
+.folio-home table code {
+  font-size: 13px;
+}
+
+.folio-themes-line {
+  margin: 0;
+  max-width: 40rem;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--folio-ink);
+}
+
+.folio-themes-line a {
+  color: var(--folio-accent);
+}
+
+.folio-foot {
+  margin: 0;
+  padding-top: 8px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--folio-quiet);
+}
+
+.folio-foot a {
+  color: var(--folio-accent);
+}
+
+.VPFooter {
+  background: var(--site-bg) !important;
+  border-top: 1px solid var(--site-border) !important;
+}
+
+.VPFooter .message,
+.VPFooter .copyright {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--folio-quiet);
+}
+
+@media (max-width: 899px) {
+  .folio-cards,
+  .folio-figures {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .folio-home {
+    padding: 32px 24px 48px;
+  }
+
+  .folio-hero,
+  .folio-section {
+    margin-bottom: 32px;
+  }
+
+  .folio-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .folio-btn {
+    flex: 1 1 calc(50% - 6px);
+    min-width: 0;
+    min-height: 44px;
+    height: 44px;
+  }
+
+  .folio-home table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 390px) {
+  .folio-actions {
+    flex-direction: column;
+  }
+
+  .folio-btn {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+}

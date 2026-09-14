@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Playground · MarkVis</title>
+    <script>
+      (function () {
+        try {
+          var k = "markvis-site-mode";
+          var m = localStorage.getItem(k);
+          if (m !== "light" && m !== "dark") {
+            m = window.matchMedia("(prefers-color-scheme: light)").matches
+              ? "light"
+              : "dark";
+          }
+          document.documentElement.classList.remove("light", "dark");
+          document.documentElement.classList.add(m);
+          window.addEventListener("storage", function (e) {
+            if (e.key === k && (e.newValue === "light" || e.newValue === "dark")) {
+              document.documentElement.classList.remove("light", "dark");
+              document.documentElement.classList.add(e.newValue);
+            }
+          });
+        } catch (e) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <p class="noscript">
+        Enable JavaScript. This page runs the same parser and SVG renderer in
+        the browser; there is no backend.
+      </p>
+    </noscript>
+    <header class="toolbar">
+      <h1>Playground</h1>
+      <label>
+        Theme
+        <select id="theme">
+          <option value="folio">Folio</option>
+          <option value="highcharts">Highcharts-style</option>
+          <option value="shadcn">shadcn-style</option>
+          <option value="docs">Docs</option>
+          <option value="ant">Ant-style</option>
+          <option value="recharts">Recharts-style</option>
+        </select>
+      </label>
+      <label>
+        Color
+        <select id="palette">
+          <option value="">Theme default</option>
+          <option value="ink">Ink</option>
+          <option value="porcelain">Porcelain</option>
+          <option value="warm">Warm</option>
+          <option value="cool">Cool</option>
+          <option value="vivid">Vivid</option>
+        </select>
+      </label>
+      <label>
+        Example
+        <select id="example"></select>
+      </label>
+      <button type="button" class="primary" id="copy-fence">Copy fence</button>
+      <button type="button" class="primary" id="copy-svg">Copy SVG</button>
+      <a class="gallery-link" id="open-gallery" href="/examples" target="_top">Open gallery</a>
+      <button type="button" id="copy-snippet">Copy snippet</button>
+      <span class="copied" id="copied" aria-live="polite"></span>
+    </header>
+    <div class="layout">
+      <section class="source">
+        <label for="fence">Fence</label>
+        <textarea id="fence" spellcheck="false"></textarea>
+      </section>
+      <section class="preview">
+        <h2>Figure</h2>
+        <p class="error" id="error" hidden></p>
+        <div id="svg-host"></div>
+        <div id="table-host"></div>
+      </section>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
