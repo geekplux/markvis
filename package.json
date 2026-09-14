@@ -1,6 +1,6 @@
 {
   "name": "markvis",
-  "version": "2.0.0-dev",
+  "version": "2.0.0-rc.1",
   "private": true,
   "type": "module",
   "description": "Markdown chart language: fence / GFM table / HTML comment -> Chart IR -> deterministic SVG",
@@ -14,30 +14,74 @@
     "node": ">=20"
   },
   "packageManager": "pnpm@9.15.9",
-  "main": "./index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./index.js",
-    "./ir": "./packages/ir/src/index.ts",
-    "./parser": "./packages/parser/src/index.ts",
-    "./render-svg": "./packages/render-svg/src/index.ts",
-    "./cli": "./packages/cli/src/index.ts",
-    "./remark": "./packages/remark/src/index.ts",
-    "./markdown-it": "./packages/markdown-it/src/index.ts",
-    "./browser": "./packages/browser/src/index.ts",
-    "./themes": "./packages/themes/registry.ts",
-    "./browser/enhance": "./packages/browser/src/enhance.ts"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./parser": {
+      "types": "./dist/parser.d.ts",
+      "import": "./dist/parser.js"
+    },
+    "./render-svg": {
+      "types": "./dist/render-svg.d.ts",
+      "import": "./dist/render-svg.js"
+    },
+    "./ir": {
+      "types": "./dist/ir.d.ts",
+      "import": "./dist/ir.js"
+    },
+    "./remark": {
+      "types": "./dist/remark.d.ts",
+      "import": "./dist/remark.js"
+    },
+    "./markdown-it": {
+      "types": "./dist/markdown-it.d.ts",
+      "import": "./dist/markdown-it.js"
+    },
+    "./themes": {
+      "types": "./dist/themes.d.ts",
+      "import": "./dist/themes.js"
+    },
+    "./cli": {
+      "types": "./dist/cli.d.ts",
+      "import": "./dist/cli.js"
+    },
+    "./min": "./dist/markvis.min.js"
   },
   "bin": {
-    "markvis": "./packages/cli/bin.js"
+    "markvis": "./dist/cli.bin.js"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
+    "build": "tsup && node scripts/copy-dts.mjs && pnpm --filter @markvis/browser build && node scripts/copy-browser-dist.mjs",
+    "prepack": "pnpm build",
+    "pack:lib": "node scripts/pack-lib.mjs",
+    "markvis": "node ./dist/cli.bin.js",
     "test": "vitest run",
-    "markvis": "node ./packages/cli/bin.js",
     "schema:generate": "tsx packages/ir/scripts/generate-schema.ts",
     "schema:check": "vitest run packages/ir/src/json-schema.test.ts",
     "eval-prompts": "tsx scripts/eval-prompts.ts"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "markdown-it": "^14.0.0",
+    "remark": "^15.0.0"
+  },
+  "peerDependenciesMeta": {
+    "markdown-it": {
+      "optional": true
+    },
+    "remark": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
     "@markvis/browser": "workspace:*",
     "@markvis/cli": "workspace:*",
     "@markvis/ir": "workspace:*",
@@ -45,14 +89,13 @@
     "@markvis/parser": "workspace:*",
     "@markvis/remark": "workspace:*",
     "@markvis/render-svg": "workspace:*",
-    "@markvis/themes": "workspace:*"
-  },
-  "devDependencies": {
+    "@markvis/themes": "workspace:*",
     "@types/node": "^26.4.1",
     "happy-dom": "18",
     "markdown-it": "^14.1.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
+    "tsup": "^8.5.0",
     "tsx": "^4.23.13",
     "typescript": "^7.0.2",
     "vitest": "^5.0.0"

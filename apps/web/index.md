@@ -27,7 +27,7 @@ pageClass: folio-home-page
     <a class="home-btn outline" href="/examples">Examples <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
   </p>
   <div class="home-install">
-    <CopyChip command="pnpm markvis bake README.md" />
+    <CopyChip command="npx markvis bake README.md" />
   </div>
 </section>
 
@@ -46,7 +46,7 @@ pageClass: folio-home-page
   <div class="home-grid home-features-grid">
     <article class="home-feature">
       <h3>Library you can drop in</h3>
-      <p>Install with npm, a script tag, or a Skill. One name: markvis.</p>
+      <p>Play, bake, a plugin, or a Skill. One name: markvis.</p>
     </article>
     <article class="home-feature">
       <h3>Any Markdown view</h3>
@@ -103,7 +103,7 @@ pageClass: folio-home-page
     </article>
     <article class="home-quick">
       <div class="home-quick-title"><span>02</span><h3>Bake</h3></div>
-      <CopyChip command="pnpm markvis bake README.md" />
+      <CopyChip command="npx markvis bake README.md" />
       <p>Keeps the fence; writes the figure after it.</p>
     </article>
     <article class="home-quick">
@@ -119,12 +119,12 @@ pageClass: folio-home-page
     <div class="home-host">
       <span class="home-host-dot" aria-hidden="true"></span>
       <span class="home-host-name">npm</span>
-      <span class="home-host-status">available now</span>
+      <span class="home-host-status">clone + build</span>
     </div>
     <div class="home-host">
       <span class="home-host-dot" aria-hidden="true"></span>
       <span class="home-host-name">script</span>
-      <span class="home-host-status">available now</span>
+      <span class="home-host-status">clone + build</span>
     </div>
     <div class="home-host">
       <span class="home-host-dot" aria-hidden="true"></span>

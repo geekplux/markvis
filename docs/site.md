@@ -1,8 +1,8 @@
 # Site
 
-Public VitePress site in `apps/web`, built from branch `v2`. This is the site, not a second docs tree. Product docs live under `docs/`.
+Public VitePress site in `apps/web`, built from branch `master`. This is the site, not a second docs tree. Product docs live under `docs/`.
 
-markvis is an open-source library. Install with npm or a script tag. It is not a docs product and not a chart suite. The fence is the source. Same text, same SVG. No plugin, the table still shows.
+markvis is an open-source library. Play, bake, or drop in a plugin. It is not a docs product and not a chart suite. The fence is the source. Same text, same SVG. No plugin, the table still shows.
 
 Audience: any Markdown preview or rendered view, and any AI reply that needs a figure. Two host-permission-free paths: bake an SVG, or drop in a one-file script where the host already runs JavaScript.
 
@@ -34,7 +34,7 @@ Filled: Get started → `#quickstart`.
 
 Outline: Docs → `/get-started`. Examples → `/examples`.
 
-Install chip: `$ pnpm markvis bake README.md` (copyable). Do not claim a v2 npm install line.
+Install chip: `$ npx markvis bake README.md` (copyable). Do not claim a v2 npm install line.
 
 Proof figures (folio, uncropped; conclusion captions):
 
@@ -48,7 +48,7 @@ Tabbed fences: bar / line / pie from those three stems.
 
 Quickstart: 01 Play · 02 Bake · 03 Skill.
 
-Hosts: npm · script · skill — available now.
+Hosts: npm · script — clone + build. Skill / Play — available now. Do not stamp npm or script as “available now”.
 
 Final CTA: logo, Get started with MarkVis, Playground / Docs / Examples / Star on GitHub.
 

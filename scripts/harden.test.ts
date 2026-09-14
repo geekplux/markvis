@@ -6,6 +6,7 @@ import { CHART_TYPES } from "@markvis/ir";
 import { parseMarkdown } from "@markvis/parser";
 import { renderSvg } from "@markvis/render-svg";
 import { runCli } from "@markvis/cli";
+import { publishManifest } from "./pack-lib.mjs";
 
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -100,6 +101,7 @@ describe("CI contract", () => {
 
   it("installs, tests, checks valid, checks invalid non-zero, builds playground", () => {
     expect(yaml).toContain("pnpm install");
+    expect(yaml).toContain("pnpm build");
     expect(yaml).toContain("pnpm test");
     expect(yaml).toContain("pnpm markvis check examples/valid");
     expect(yaml).toContain("pnpm markvis check examples/invalid");
@@ -108,6 +110,12 @@ describe("CI contract", () => {
     );
     expect(yaml).toContain("pnpm --filter playground build");
     expect(yaml).toMatch(/node-version:\s*20\b/);
+    const installAt = yaml.indexOf("pnpm install");
+    const buildAt = yaml.indexOf("pnpm build");
+    const testAt = yaml.indexOf("pnpm test");
+    expect(installAt).toBeGreaterThan(-1);
+    expect(buildAt).toBeGreaterThan(installAt);
+    expect(testAt).toBeGreaterThan(buildAt);
   });
 });
 
@@ -321,6 +329,7 @@ describe("docs: live grammar, diagrams, unused shims", () => {
       "SPEC.md",
       "apps/web/spec.md",
       "apps/web/public/llms.txt",
+      "llms.txt",
       "llms-full.txt",
       "docs/themes.md",
       "skills/markvis/SKILL.md",
@@ -341,7 +350,6 @@ describe("docs: live grammar, diagrams, unused shims", () => {
   it("live-product specs do not ban theme: as current law", () => {
     const liveSpecs = [
       "SPEC.md",
-      "GOAL.md",
       "docs/visual-spec.md",
       "docs/site.md",
       "docs/themes.md",
@@ -402,17 +410,13 @@ describe("docs: live grammar, diagrams, unused shims", () => {
     }
   });
 
-  it("removes unreferenced render-svg theme shims and keeps constitution paths", () => {
+  it("removes unreferenced render-svg theme shims and keeps product paths", () => {
     expect(existsSync(join(repoRoot, "packages/render-svg/themes"))).toBe(
       false,
     );
     const kept = [
-      "CONSTITUTION.md",
       "VISION.md",
-      "GOAL.md",
       "AGENTS.md",
-      "STATUS.md",
-      "DECISIONS.tsv",
       "SPEC.md",
       "llms.txt",
       "llms-full.txt",
@@ -426,6 +430,7 @@ describe("docs: live grammar, diagrams, unused shims", () => {
       "docs/research-brief.md",
       "docs/model-errors.md",
       "docs/best-practices.md",
+      "docs/release.md",
       "packages/compat-legacy",
       "legacy",
     ];
@@ -455,6 +460,7 @@ describe("docs: live grammar, diagrams, unused shims", () => {
       "integrate.md",
       "landing.md",
       "model-errors.md",
+      "release.md",
       "research-brief.md",
       "site.md",
       "themes.md",
@@ -493,16 +499,16 @@ describe("docs: live grammar, diagrams, unused shims", () => {
   it("has no CJK prose in in-scope v2 files", () => {
     const han = /\p{Script=Han}/u;
     const files = [
-      join(repoRoot, "CONSTITUTION.md"),
       join(repoRoot, "VISION.md"),
-      join(repoRoot, "GOAL.md"),
       join(repoRoot, "AGENTS.md"),
-      join(repoRoot, "STATUS.md"),
-      join(repoRoot, "DECISIONS.tsv"),
       join(repoRoot, "SPEC.md"),
       join(repoRoot, "llms.txt"),
       join(repoRoot, "llms-full.txt"),
       join(repoRoot, "README.md"),
+      join(repoRoot, "CONTRIBUTING.md"),
+      join(repoRoot, "CODE_OF_CONDUCT.md"),
+      join(repoRoot, "SECURITY.md"),
+      join(repoRoot, "CHANGELOG.md"),
       ...walkFiles(join(repoRoot, "docs"), (name) =>
         /\.(md|ts|js|txt)$/.test(name),
       ),
@@ -526,3 +532,187 @@ describe("docs: live grammar, diagrams, unused shims", () => {
     }
   });
 });
+
+describe("public contract", () => {
+  it("removes process files from the repo root", () => {
+    for (const rel of [
+      "CONSTITUTION.md",
+      "GOAL.md",
+      "STATUS.md",
+      "DECISIONS.tsv",
+    ]) {
+      expect(existsSync(join(repoRoot, rel)), rel).toBe(false);
+    }
+  });
+
+  it("keeps community files", () => {
+    for (const rel of [
+      "CONTRIBUTING.md",
+      "CODE_OF_CONDUCT.md",
+      "SECURITY.md",
+      "CHANGELOG.md",
+      "docs/release.md",
+    ]) {
+      expect(existsSync(join(repoRoot, rel)), rel).toBe(true);
+    }
+    expect(readRepo("CODE_OF_CONDUCT.md")).toMatch(/Contributor Covenant/);
+    expect(readRepo("CHANGELOG.md")).toContain("2.0.0-rc.1");
+  });
+
+  it("does not instruct pstack, /loop, or grok -p in public markdown", () => {
+    const instruct = /pstack|\/loop\b|grok -p/;
+    const files = [
+      join(repoRoot, "README.md"),
+      join(repoRoot, "AGENTS.md"),
+      join(repoRoot, "CONTRIBUTING.md"),
+      join(repoRoot, "VISION.md"),
+      join(repoRoot, "SPEC.md"),
+      join(repoRoot, "llms.txt"),
+      join(repoRoot, "llms-full.txt"),
+      ...walkFiles(join(repoRoot, "docs"), (name) => name.endsWith(".md")),
+      ...walkFiles(join(repoRoot, "apps/web"), (name) =>
+        /\.(md|vue)$/.test(name),
+      ),
+      ...walkFiles(join(repoRoot, "skills"), (name) => name.endsWith(".md")),
+    ];
+    expect(files.length).toBeGreaterThan(10);
+    for (const file of files) {
+      const text = readFileSync(file, "utf8");
+      expect(text, relative(repoRoot, file)).not.toMatch(instruct);
+    }
+  });
+
+  it("exports compiled dist, not an empty index.js", () => {
+    expect(existsSync(join(repoRoot, "index.js"))).toBe(false);
+    const pkg = JSON.parse(readRepo("package.json")) as {
+      main: string;
+      types: string;
+      bin: { markvis: string };
+      exports: Record<string, unknown>;
+      dependencies?: Record<string, string>;
+      devDependencies?: Record<string, string>;
+      version: string;
+    };
+    expect(pkg.version).toBe("2.0.0-rc.1");
+    expect(pkg.main).toBe("./dist/index.js");
+    expect(pkg.types).toBe("./dist/index.d.ts");
+    expect(pkg.bin.markvis).toBe("./dist/cli.bin.js");
+    expect(pkg.exports["."]).toMatchObject({
+      types: "./dist/index.d.ts",
+      import: "./dist/index.js",
+    });
+    expect(pkg.exports).not.toHaveProperty("./browser");
+    expect(pkg.dependencies ?? {}).toEqual({});
+    const workspaceKeys = Object.entries(pkg.devDependencies ?? {})
+      .filter(([, ver]) => String(ver).startsWith("workspace:"))
+      .map(([name]) => name);
+    expect(workspaceKeys.length).toBeGreaterThan(0);
+    expect(readRepo("README.md")).toContain('from "markvis"');
+    expect(readRepo("README.md")).toContain("markvis/markdown-it");
+  });
+
+  it("packed manifest has no workspace protocol and no empty export", () => {
+    const pkg = JSON.parse(readRepo("package.json")) as Record<string, unknown>;
+    const manifest = publishManifest(pkg) as {
+      main: string;
+      dependencies?: Record<string, string>;
+      devDependencies?: Record<string, string>;
+      exports: Record<string, unknown>;
+    };
+    const blob = JSON.stringify(manifest);
+    expect(blob).not.toContain("workspace:");
+    expect(blob).not.toContain("export {}");
+    expect(manifest.main).toBe("./dist/index.js");
+    expect(manifest.dependencies ?? {}).toEqual({});
+    expect(manifest.devDependencies).toBeUndefined();
+    expect(manifest.exports["."]).toMatchObject({
+      import: "./dist/index.js",
+    });
+  });
+
+  it("Skill and public llms.txt list only frozen fields and types", () => {
+    const frozenTypes = ["bar", "line", "area", "scatter", "pie", "hist"];
+    const frozenFields = [
+      "markvis",
+      "type",
+      "title",
+      "unit",
+      "x",
+      "y",
+      "series",
+    ];
+    for (const rel of [
+      "skills/markvis/SKILL.md",
+      "llms.txt",
+      "apps/web/public/llms.txt",
+    ]) {
+      const text = readRepo(rel);
+      for (const value of frozenTypes) {
+        expect(text, `${rel} type:${value}`).toContain(value);
+      }
+      for (const field of frozenFields) {
+        expect(text, `${rel} field:${field}`).toContain(field);
+      }
+      expect(text, rel).not.toMatch(/type:\s*heatmap/);
+      expect(text, rel).not.toMatch(/type:\s*donut/);
+      expect(text, rel).not.toMatch(/type:\s*treemap/);
+      expect(text, rel).not.toMatch(/type:\s*sankey/);
+    }
+  });
+
+  it("does not claim v2 is npm latest or install-with-npm-now", () => {
+    const readme = readRepo("README.md");
+    expect(readme).toMatch(/not.*npm registry/i);
+    expect(readme).toContain("0.0.13");
+    expect(readme).toContain("markvis/remark");
+    expect(readRepo("apps/web/index.md")).not.toContain("Install with npm");
+    expect(readRepo("docs/site.md")).not.toMatch(
+      /Install with npm or a script tag/,
+    );
+  });
+
+  it("pages and bake fire on master (and v2 until merge)", () => {
+    const pages = readRepo(".github/workflows/pages.yml");
+    const bake = readRepo(".github/workflows/bake.yml");
+    expect(pages).toMatch(/branches:\s*\[v2, master\]/);
+    expect(bake).toMatch(/branches:\s*\[v2, master\]/);
+    expect(readRepo("docs/release.md")).toContain("git merge --no-ff v2");
+    expect(readRepo("docs/release.md")).toMatch(/[Ff]orbidden/);
+    expect(readRepo("docs/release.md")).toMatch(/[Ss]quash-merge/);
+    expect(readRepo("docs/release.md")).toMatch(/force-push|push --force/);
+  });
+
+  it("does not stamp npm or script as available now", () => {
+    const home = readRepo("apps/web/index.md");
+    expect(
+      home.match(/home-host-name">npm<\/span>\s*<span class="home-host-status">([^<]+)/)?.[1],
+    ).toBe("clone + build");
+    expect(
+      home.match(/home-host-name">script<\/span>\s*<span class="home-host-status">([^<]+)/)?.[1],
+    ).toBe("clone + build");
+    expect(
+      home.match(/home-host-name">skill<\/span>\s*<span class="home-host-status">([^<]+)/)?.[1],
+    ).toBe("available now");
+    expect(readRepo("docs/site.md")).toMatch(
+      /Do not stamp npm or script as .available now/,
+    );
+  });
+
+  it("points Skill blob URLs at master, not v2", () => {
+    const files = [
+      "apps/web/ai.md",
+      "apps/web/get-started.md",
+      "README.md",
+      "CONTRIBUTING.md",
+      "skills/markvis/SKILL.md",
+    ];
+    for (const rel of files) {
+      const text = readRepo(rel);
+      expect(text, rel).not.toContain("/blob/v2/");
+    }
+    expect(readRepo("apps/web/ai.md")).toContain(
+      "github.com/geekplux/markvis/blob/master/skills/markvis/SKILL.md",
+    );
+  });
+});
+

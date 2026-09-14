@@ -6,15 +6,15 @@
 # If bake updates md/svg, this job commits and pushes:
 #   chore: bake README.md docs/landing.md
 # Fork PRs cannot push with GITHUB_TOKEN; those runs bake only
-# (no commit). Authors on v2 / same-repo PRs get the commit.
+# (no commit). Authors on v2 / master / same-repo PRs get the commit.
 # Does not replace check.yml. No theme, no d3, no new types.
 name: bake
 
 on:
   push:
-    branches: [v2]
+    branches: [v2, master]
   pull_request:
-    branches: [v2]
+    branches: [v2, master]
 
 jobs:
   bake:
@@ -42,6 +42,9 @@ jobs:
 
       - name: Install
         run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
 
       - name: Bake README and landing
         run: pnpm markvis bake README.md docs/landing.md

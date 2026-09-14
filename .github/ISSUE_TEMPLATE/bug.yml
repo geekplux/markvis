@@ -10,9 +10,9 @@ body:
   - type: input
     id: branch
     attributes:
-      label: Branch / version
-      description: e.g. `v2` tip SHA, or `markvis` CLI version.
-      placeholder: v2 @ abc1234
+      label: Version
+      description: `markvis -v` output, or a commit SHA.
+      placeholder: 2.0.0-rc.1 or abc1234
     validations:
       required: true
   - type: textarea

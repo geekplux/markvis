@@ -16,7 +16,7 @@ https://markvis.js.org/llms.txt
 
 Fetch `/llms.txt`. Emit **only** the fields that file lists. Do not invent keys. Do not add a seventh type. Do not emit a PNG or JSON as the default data body.
 
-Skill (optional, same language): [skills/markvis/SKILL.md](https://github.com/geekplux/markvis/blob/v2/skills/markvis/SKILL.md)
+Skill (optional, same language): [skills/markvis/SKILL.md](https://github.com/geekplux/markvis/blob/master/skills/markvis/SKILL.md)
 
 ## What to emit
 

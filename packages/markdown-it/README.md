@@ -4,7 +4,7 @@ Thin markdown-it plugin. `chart` / `markvis` / `vis` fences (and the HTML commen
 
 ```js
 import MarkdownIt from "markdown-it";
-import markdownItMarkvis from "@markvis/markdown-it";
+import markdownItMarkvis from "markvis/markdown-it";
 
 const html = new MarkdownIt({ html: true })
   .use(markdownItMarkvis)

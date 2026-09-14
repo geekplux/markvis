@@ -86,7 +86,7 @@ describe("usage", () => {
   it("prints version", () => {
     const { code, stdout } = capture(["-v"]);
     expect(code).toBe(0);
-    expect(stdout.trim()).toBe("2.0.0-dev");
+    expect(stdout.trim()).toBe("2.0.0-rc.1");
   });
 
   it("exits 1 with usage when no command is given", () => {
@@ -534,12 +534,15 @@ Feb,4
 });
 
 describe("bin", () => {
-  it("runs check via packages/cli/bin.js", () => {
-    const result = spawnSync(
-      process.execPath,
-      [join(repoRoot, "packages/cli/bin.js"), "check", valid01],
-      { cwd: repoRoot, encoding: "utf8" },
+  it("runs check via compiled dist/cli.bin.js", () => {
+    const bin = join(repoRoot, "dist/cli.bin.js");
+    expect(existsSync(bin), "dist/cli.bin.js missing; run pnpm build").toBe(
+      true,
     );
+    const result = spawnSync(process.execPath, [bin, "check", valid01], {
+      cwd: repoRoot,
+      encoding: "utf8",
+    });
     expect(result.status).toBe(0);
     expect(result.stdout).toContain(`ok\t${valid01}\tbar\t8`);
   });

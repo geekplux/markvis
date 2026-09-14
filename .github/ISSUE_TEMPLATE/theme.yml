@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Themes are **token packs only** (`folio` · `highcharts` · `shadcn` · `docs`). No new chart types. No new renderer deps.
+        Themes are **token packs only** (`folio` · `highcharts` · `shadcn` · `docs` · `ant` · `recharts`). No new chart types. No new renderer deps.
   - type: input
     id: theme_id
     attributes:

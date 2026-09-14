@@ -80,4 +80,4 @@ flowchart LR
 | `apps/web` | Public VitePress site |
 | `legacy/` | Frozen 0.0.13. Not imported by `packages/*` tests |
 
-Root `markvis` re-exports the packages and owns the `markvis` bin.
+Root `markvis` is the packed consumer artifact (`parseMarkdown`, `renderSvg`, `markvis/remark`, `markvis/markdown-it`) and owns the `markvis` bin. Workspace `@markvis/*` packages stay private to this monorepo.

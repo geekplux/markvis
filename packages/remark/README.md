@@ -5,7 +5,7 @@ Thin remark plugin. `chart` / `markvis` / `vis` fences (and the HTML comment for
 ```js
 import { remark } from "remark";
 import remarkHtml from "remark-html";
-import remarkMarkvis from "@markvis/remark";
+import remarkMarkvis from "markvis/remark";
 
 const html = String(
   await remark()

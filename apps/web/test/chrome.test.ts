@@ -213,7 +213,7 @@ describe("site visual chrome", () => {
     expect(home).toContain("Get started with MarkVis");
     expect(home).toContain('href="/play">Playground');
     expect(home).toContain('class="home-btn filled" href="/play">Playground');
-    expect(home).toContain('<CopyChip command="pnpm markvis bake README.md"');
+    expect(home).toContain('<CopyChip command="npx markvis bake README.md"');
     const chip = read("components/CopyChip.vue");
     expect(chip).toMatch(/prefix:\s*"\$"/);
     expect(chip).toContain("copy-chip-prefix");
@@ -230,7 +230,15 @@ describe("site visual chrome", () => {
     expect(home).toContain('class="home-host-name">npm</span>');
     expect(home).toContain('class="home-host-name">script</span>');
     expect(home).toContain('class="home-host-name">skill</span>');
-    expect(home).toContain("available now");
+    expect(home.match(/home-host-name">npm<\/span>\s*<span class="home-host-status">([^<]+)/)?.[1]).toBe(
+      "clone + build",
+    );
+    expect(home.match(/home-host-name">script<\/span>\s*<span class="home-host-status">([^<]+)/)?.[1]).toBe(
+      "clone + build",
+    );
+    expect(home.match(/home-host-name">skill<\/span>\s*<span class="home-host-status">([^<]+)/)?.[1]).toBe(
+      "available now",
+    );
     expect(home).toContain("Library you can drop in");
     expect(home).toContain("Any Markdown view");
     expect(home).toContain("Same fence, same SVG");
@@ -708,14 +716,14 @@ describe("site visual chrome", () => {
     expect(started).toContain("Bake");
     expect(started).toContain("Script");
     expect(started).toContain("Skill");
-    expect(started).toContain("pnpm markvis bake");
+    expect(started).toContain("npx markvis bake");
     expect(started).toContain("/llms.txt");
 
     const integrate = read("integrate.md");
-    expect(integrate).toContain("pnpm markvis bake");
+    expect(integrate).toContain("npx markvis bake");
     expect(integrate).toContain("markvis.min.js");
-    expect(integrate).toContain("@markvis/markdown-it");
-    expect(integrate).toContain("@markvis/remark");
+    expect(integrate).toContain("markvis/markdown-it");
+    expect(integrate).toContain("markvis/remark");
 
     const themes = read("themes.md");
     expect(themes).toMatch(/theme vs palette/i);

@@ -15,7 +15,6 @@
   "dependencies": {
     "@markvis/ir": "workspace:*",
     "@markvis/parser": "workspace:*",
-    "@markvis/render-svg": "workspace:*",
-    "tsx": "^4.23.13"
+    "@markvis/render-svg": "workspace:*"
   }
 }

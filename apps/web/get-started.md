@@ -33,7 +33,7 @@ Browse finished figures in [Examples](/examples). Open one in Play to edit.
 Keep the fence in the Markdown file. Write an SVG next to it and insert an image so any viewer shows the figure — including hosts that never run a plugin.
 
 ```bash
-pnpm markvis bake README.md
+npx markvis bake README.md
 ```
 
 Second bake is a no-op when nothing changed. The fence stays; the image follows it.
@@ -46,13 +46,13 @@ Where the host already runs JavaScript, drop in the one-file browser build. Zero
 <script type="module" src="./markvis.min.js"></script>
 ```
 
-Build `@markvis/browser` in this monorepo first (`packages/browser/dist/` is gitignored). Demo page: `apps/playground/dropin.html`.
+After `pnpm build`, copy `dist/markvis.min.js`. Packed install: `node_modules/markvis/dist/markvis.min.js`. Demo page: `apps/playground/dropin.html`.
 
 ## Skill
 
 Point an agent at the Skill or the public brief. It emits a fence — not a PNG, not a seventh type.
 
-- Skill: [skills/markvis/SKILL.md](https://github.com/geekplux/markvis/blob/v2/skills/markvis/SKILL.md)
+- Skill: [skills/markvis/SKILL.md](https://github.com/geekplux/markvis/blob/master/skills/markvis/SKILL.md)
 - Brief: [/llms.txt](/llms.txt) — fetch that URL; emit only the fields it lists
 
 Next: [Integrate](/integrate) · [Spec](/spec) · [Themes](/themes) · [AI](/ai)
