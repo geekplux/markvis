@@ -2,9 +2,9 @@
 
 Public VitePress site in `apps/web`, built from branch `master`. This is the site, not a second docs tree. Product docs live under `docs/`.
 
-markvis is an open-source library. Play, bake, or drop in a plugin. It is not a docs product and not a chart suite. The fence is the source. Same text, same SVG. No plugin, the table still shows.
+markvis is an open-source library. Play, save a picture, or drop in a plugin. It is not a docs product and not a chart suite. The numbers live in a Markdown code block. Same text, same picture. If the chart cannot draw, the table still shows.
 
-Audience: any Markdown preview or rendered view, and any AI reply that needs a figure. Two host-permission-free paths: bake an SVG, or drop in a one-file script where the host already runs JavaScript.
+Audience: anyone writing Markdown, and any AI reply that needs a figure. Two paths that need no plugin on the host: save a picture next to the file (`bake`), or drop in a one-file script where the page already runs JavaScript.
 
 Do not restyle SVG marks to match marketing chrome. If a plot clips, fix the card, not the chart language. Figures follow fence `theme:` / `palette:` (`SPEC.md`). Default `folio` is Ledger (`docs/visual-spec.md`). Site light/dark is chrome only — unrelated to fence `theme=`.
 
@@ -30,6 +30,8 @@ Badge: OPEN SOURCE | v2 · MIT.
 
 Headline: Charts in Markdown. / The fence is the data.
 
+Sub: Write a table in a Markdown code block. MarkVis draws the chart. Change a number — the picture changes. If the chart cannot draw, you still see the table.
+
 Filled: Get started → `#quickstart`.
 
 Outline: Docs → `/get-started`. Examples → `/examples`.
@@ -42,15 +44,15 @@ Proof figures (folio, uncropped; conclusion captions):
 2. Walk-up still leads member — `examples/out/02-line-multi.svg`
 3. MARTA takes the largest mode share — `examples/out/05-pie-raw.svg`
 
-Feature grid (1px gutter): library you can drop in; Any Markdown view; Same fence, same SVG; Table fallback; Six types; CSV or GFM table; Parser to IR to SVG; AI replies; Themes.
+Feature grid (1px gutter): Try it in the browser; Lives in your Markdown; Same text, same picture; The table never disappears; Six kinds of chart; Write a table of numbers; Built for people and AI; Looks you can pick; Show it on GitHub too.
 
-Tabbed fences: bar / line / pie from those three stems.
+Tabbed examples: bar / line / pie from those three stems.
 
-Quickstart: 01 Play · 02 Bake · 03 Skill.
+Quickstart: 01 Try it · 02 Save a picture · 03 Ask an AI.
 
 Hosts: npm · script — clone + build. Skill / Play — available now. Do not stamp npm or script as “available now”.
 
-Final CTA: logo, Get started with MarkVis, Playground / Docs / Examples / Star on GitHub.
+Final CTA: logo, Get started with MarkVis, “Write the numbers. Get the chart.”, Playground / Docs / Examples / Star on GitHub.
 
 Footer: © 2026 GeekPlux · MIT · 0.0.13 under `legacy/`.
 

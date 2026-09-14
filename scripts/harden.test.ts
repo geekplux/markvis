@@ -698,6 +698,11 @@ describe("public contract", () => {
     );
   });
 
+  it("homepage copy does not say IR", () => {
+    expect(readRepo("apps/web/index.md")).not.toMatch(/\bIR\b/);
+    expect(readRepo("apps/web/get-started.md")).not.toMatch(/\bIR\b/);
+  });
+
   it("does not advertise registry npx markvis as the bake command", () => {
     const home = readRepo("apps/web/index.md");
     expect(home).toContain(

@@ -20,7 +20,7 @@ pageClass: folio-home-page
     <span>Charts in Markdown.</span>
     <span>The fence is the data.</span>
   </h1>
-  <p class="home-sub">A Markdown fence — CSV or a GFM table — parses to IR and a deterministic SVG. Types: bar, line, area, scatter, pie, hist. Same text, same figure. No plugin, the table stays.</p>
+  <p class="home-sub">Write a table in a Markdown code block. MarkVis draws the chart. Change a number — the picture changes. If the chart cannot draw, you still see the table.</p>
   <p class="home-cta">
     <a class="home-btn filled" href="#quickstart">Get started</a>
     <a class="home-btn outline" href="/get-started">Docs <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
@@ -34,7 +34,7 @@ pageClass: folio-home-page
 <section id="proof">
   <div class="home-section-head">
     <h2>Figures</h2>
-    <p>Same text, same figure. Folio marks from examples/out — uncropped.</p>
+    <p>The pictures below come from the same Markdown as the numbers. Nothing is hand-traced.</p>
   </div>
   <HomeProof />
 </section>
@@ -45,48 +45,48 @@ pageClass: folio-home-page
   </div>
   <div class="home-grid home-features-grid">
     <article class="home-feature">
-      <h3>Library you can drop in</h3>
-      <p>Play, bake, a plugin, or a Skill. One name: markvis.</p>
+      <h3>Try it in the browser</h3>
+      <p>Open Play. Paste a block. No account, no install.</p>
     </article>
     <article class="home-feature">
-      <h3>Any Markdown view</h3>
-      <p>Works in any Markdown preview or rendered page. The fence is the figure.</p>
+      <h3>Lives in your Markdown</h3>
+      <p>Notes, READMEs, docs sites. The numbers stay in the file.</p>
     </article>
     <article class="home-feature">
-      <h3>Same fence, same SVG</h3>
-      <p>Same fence text always yields the same SVG. Deterministic. No plugin, the table stays.</p>
+      <h3>Same text, same picture</h3>
+      <p>The same block always draws the same chart. Not a one-off screenshot.</p>
     </article>
     <article class="home-feature">
-      <h3>Table fallback</h3>
-      <p>Illegal input keeps a table plus one error line. Never drop the data.</p>
+      <h3>The table never disappears</h3>
+      <p>If something is wrong, you still see the rows — never a blank hole.</p>
     </article>
     <article class="home-feature">
-      <h3>Six types</h3>
-      <p>bar, line, area, scatter, pie, hist. Frozen.</p>
+      <h3>Six kinds of chart</h3>
+      <p>bar, line, area, scatter, pie, hist. That is the set.</p>
     </article>
     <article class="home-feature">
-      <h3>CSV or GFM table</h3>
-      <p>The data is the source. Not JSON as the default. No JavaScript in a fence.</p>
+      <h3>Write a table of numbers</h3>
+      <p>Comma-separated rows or a Markdown table. Not a blob of JSON.</p>
     </article>
     <article class="home-feature">
-      <h3>Parser to IR to SVG</h3>
-      <p>Fence, GFM table, or HTML comment to Chart IR to handwritten SVG.</p>
+      <h3>Built for people and AI</h3>
+      <p>A person or a model writes the same block. Not a screenshot.</p>
     </article>
     <article class="home-feature">
-      <h3>AI replies</h3>
-      <p>Agents emit the fence. A figure, not a paragraph of numbers.</p>
+      <h3>Looks you can pick</h3>
+      <p>folio is the default. Light and dark on this site are the page, not the chart.</p>
     </article>
     <article class="home-feature">
-      <h3>Themes</h3>
-      <p>One fence fits the host. folio is the default. Site light/dark is chrome only — not theme.</p>
+      <h3>Show it on GitHub too</h3>
+      <p>Save a picture next to the text so any viewer can see the chart.</p>
     </article>
   </div>
 </section>
 
 <section id="code">
   <div class="home-section-head">
-    <h2>Fences</h2>
-    <p>One language, three figures. Copy a fence and paste it in Play.</p>
+    <h2>Examples</h2>
+    <p>Copy a block. Paste it in Play. That Markdown code block is the chart.</p>
   </div>
   <FenceTabs />
 </section>
@@ -97,19 +97,19 @@ pageClass: folio-home-page
   </div>
   <div class="home-grid home-quick-grid">
     <article class="home-quick">
-      <div class="home-quick-title"><span>01</span><h3>Play</h3></div>
-      <pre class="home-quick-code">Open /play. Paste a fence. The SVG updates.</pre>
-      <p>Same text, same figure.</p>
+      <div class="home-quick-title"><span>01</span><h3>Try it</h3></div>
+      <pre class="home-quick-code">Open /play. Paste a block. The chart appears.</pre>
+      <p>Same text, same picture.</p>
     </article>
     <article class="home-quick">
-      <div class="home-quick-title"><span>02</span><h3>Bake</h3></div>
+      <div class="home-quick-title"><span>02</span><h3>Save a picture</h3></div>
       <CopyChip command="pnpm markvis bake README.md" />
-      <p>Keeps the fence; writes the figure after it.</p>
+      <p>Keeps the Markdown; writes the picture after it so GitHub can show it.</p>
     </article>
     <article class="home-quick">
-      <div class="home-quick-title"><span>03</span><h3>Skill</h3></div>
+      <div class="home-quick-title"><span>03</span><h3>Ask an AI</h3></div>
       <pre class="home-quick-code">skills/markvis/SKILL.md</pre>
-      <p>Point an agent at the Skill or /llms.txt.</p>
+      <p>Point an agent at the Skill or /llms.txt. It writes the block, not a screenshot.</p>
     </article>
   </div>
 </section>
@@ -140,7 +140,7 @@ pageClass: folio-home-page
     <img class="site-logo site-logo-light site-logo-lg" src="/logo.png" width="44" height="44" alt="" />
     <img class="site-logo site-logo-dark site-logo-lg" src="/logo-dark.png" width="44" height="44" alt="" />
     <h2>Get started with MarkVis</h2>
-    <p class="home-final-lead">Write a fence. Get a figure. Parser to IR to a deterministic SVG.</p>
+    <p class="home-final-lead">Write the numbers. Get the chart. The table stays in the file.</p>
     <p class="home-final-actions">
       <a class="home-btn filled" href="/play">Playground</a>
       <a class="home-btn outline" href="/get-started">Docs <span class="home-btn-arrow" aria-hidden="true">↗</span></a>

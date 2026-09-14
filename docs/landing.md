@@ -1,6 +1,6 @@
 # markvis
 
-Charts in Markdown. The fence is the data (CSV or GFM). Open-source library for any Markdown preview or rendered view, and for an AI reply that needs a figure. Same text, same SVG. No plugin, the table still shows.
+Charts in Markdown. Write a table in a code block. MarkVis draws the picture. Change a number — the picture changes. If the chart cannot draw, you still see the table.
 
 ## Figures
 
@@ -13,11 +13,11 @@ Charts in Markdown. The fence is the data (CSV or GFM). Open-source library for 
 ## Try
 
 1. Playground: open /play on the site, or run the playground app locally.
-2. CLI: markvis check examples/valid then markvis render on one file.
+2. Command line: markvis check examples/valid then markvis bake on one file.
 3. Agents: skills/markvis/SKILL.md, llms.txt.
 
-Gallery: examples/gallery.html. Spec: SPEC.md. Architecture: docs/architecture.md. Look: docs/visual-spec.md (Ledger / folio, transparent canvas). Themes: docs/themes.md. Site chrome: docs/site.md. Optional `theme:` and `palette:` per SPEC.md.
+Gallery: examples/gallery.html. Spec: SPEC.md. Architecture: docs/architecture.md. Look: docs/visual-spec.md. Themes: docs/themes.md. Site chrome: docs/site.md. Optional `theme:` and `palette:` per SPEC.md.
 
-Bake so any image viewer shows the figure (the fence stays in the file): markvis bake path/to.md — keeps the fence, inserts an image after it; second bake is a no-op.
+`markvis bake path/to.md` writes a picture next to the file and adds an image so any viewer can show it. The code block stays. Running bake again does nothing if nothing changed.
 
 Hosts: docs/integrate.md.

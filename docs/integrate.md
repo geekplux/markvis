@@ -1,6 +1,6 @@
 # Integrate
 
-Put a figure in any Markdown preview or rendered view. Bake an SVG so any viewer shows it, or drop in a one-file script where the host already runs JavaScript. No plugin still shows the table.
+Put a chart in any Markdown preview or rendered page. Save a picture so any viewer can show it, or drop in a one-file script where the page already runs JavaScript. If nothing runs, the table of numbers is still there.
 
 ## Public site
 

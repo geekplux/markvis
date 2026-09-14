@@ -6,30 +6,30 @@ sidebar: true
 
 # Integrate
 
-Put a figure in any Markdown preview or rendered view. Four paste paths. No plugin still shows the table.
+Four ways to show the chart. If none of them run, the table of numbers is still in the file.
 
-## 1. Bake
+## 1. Save a picture (bake)
 
-Keep the fence. Write SVG beside the file. Insert a Markdown image after the fence so GitHub, static hosts, and plain viewers show the figure.
+Write a picture next to the Markdown and add an image so GitHub, static hosts, and plain viewers can show it. The code block stays.
 
 ```bash
 pnpm install && pnpm build
 pnpm markvis bake path/to.md
 ```
 
-Second bake is a no-op when nothing changed. CI can run bake on push.
+Running bake again does nothing if nothing changed. CI can run bake on push.
 
-Do not `npx markvis bake` from a project that only ran `npm install markvis`: that is `0.0.13`, which has no CLI. Pack this tree (`pnpm pack:lib`) and install the tarball in the other project.
+Do not `npx markvis bake` from a project that only ran `npm install markvis`: that is `0.0.13`, which has no command. Pack this tree (`pnpm pack:lib`) and install the tarball in the other project.
 
 ## 2. Browser script
 
-Where the page already runs JavaScript, drop in the one-file build. Zero network after load. Finds fences tagged `chart` / `markvis` / `vis` and replaces them with the same SVG as Node.
+If the page already runs JavaScript, drop in the one-file build. After load it finds blocks tagged `chart` / `markvis` / `vis` and replaces them with the same picture as on the server.
 
 ```html
 <script type="module" src="./markvis.min.js"></script>
 ```
 
-After `pnpm build`, use `dist/markvis.min.js` (gitignored until you build). Packed install: `node_modules/markvis/dist/markvis.min.js`. Demo: `apps/playground/dropin.html`. The script does not re-parse Markdown — comment-plus-table charts only work if the host already emitted them into the DOM.
+After `pnpm build`, use `dist/markvis.min.js` (not in git until you build). Packed install: `node_modules/markvis/dist/markvis.min.js`. Demo: `apps/playground/dropin.html`. The script does not re-read Markdown — comment-plus-table charts only work if the host already put them in the page.
 
 ## 3. markdown-it
 
@@ -61,9 +61,9 @@ const html = String(
 // html contains <svg> and <table>
 ```
 
-Host example: `examples/hosts/astro/` (and the package README). Same parser and render-svg as the CLI. No extra types.
+Host example: `examples/hosts/astro/` (and the package README). Same drawing as the command line. No extra chart kinds.
 
 ## Also
 
 - VS Code preview: `extensions/vscode-markvis-preview` (install from folder; Marketplace only if GeekPlux says so).
-- Public site: markvis.js.org from branch `master` via GitHub Actions — not docsify. Leave markvis-editor.js.org alone.
+- Public site: markvis.js.org from branch `master` via GitHub Actions. Leave markvis-editor.js.org alone.

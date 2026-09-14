@@ -1,11 +1,11 @@
 ---
 name: markvis
-description: Use when the user wants a quantitative chart in Markdown (bar, line, area, scatter, pie, hist) from tabular data — emit a markvis fence (chart|markvis|vis), never a flowchart pie/xychart, never a PNG, never Vega-Lite JSON as the default.
+description: Use when the user wants a chart of numbers in Markdown (bar, line, area, scatter, pie, hist) from a table — emit a Markdown code block tagged chart|markvis|vis, never a flowchart pie/xychart, never a PNG, never Vega-Lite JSON as the default.
 ---
 
 # markvis
 
-Quantitative charts in Markdown. Source is the data (CSV or GFM table). Tags `chart`, `markvis`, and `vis` share one parser. Types: `bar` `line` `area` `scatter` `pie` `hist` only.
+Charts of numbers in Markdown. The table is the source (comma-separated rows or a Markdown table). Tags `chart`, `markvis`, and `vis` are the same language. Types: `bar` `line` `area` `scatter` `pie` `hist` only.
 
 ## When to use
 

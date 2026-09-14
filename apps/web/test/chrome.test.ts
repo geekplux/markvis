@@ -240,11 +240,12 @@ describe("site visual chrome", () => {
     expect(home.match(/home-host-name">skill<\/span>\s*<span class="home-host-status">([^<]+)/)?.[1]).toBe(
       "available now",
     );
-    expect(home).toContain("Library you can drop in");
-    expect(home).toContain("Any Markdown view");
-    expect(home).toContain("Same fence, same SVG");
-    expect(home).toContain("AI replies");
-    expect(home).toContain("Themes");
+    expect(home).toContain("Try it in the browser");
+    expect(home).toContain("Lives in your Markdown");
+    expect(home).toContain("Same text, same picture");
+    expect(home).toContain("Built for people and AI");
+    expect(home).toContain("Looks you can pick");
+    expect(home).not.toMatch(/\bIR\b/);
     expect(home).not.toContain("home-lattice");
     expect(home).not.toContain("home-field");
     expect(home).not.toContain("home-nav");
@@ -714,10 +715,9 @@ describe("site visual chrome", () => {
 
     const started = read("get-started.md");
     expect(started).toContain("Play");
-    expect(started).toContain("Bake");
-    expect(started).toContain("Script");
-    expect(started).toContain("Skill");
+    expect(started).toContain("Save a picture");
     expect(started).toContain("pnpm markvis bake");
+    expect(started).toContain("Skill");
     expect(started).toContain("/llms.txt");
 
     const integrate = read("integrate.md");

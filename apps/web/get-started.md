@@ -6,11 +6,13 @@ sidebar: true
 
 # Get started
 
-Four ways in. Pick one and ship a figure.
+A **fence** is a Markdown code block tagged `chart`. The numbers live in that block. MarkVis draws the picture. You do not need any other jargon.
 
-## Play (30 seconds)
+Four ways in. Pick one.
 
-Open [Play](/play). Paste a fence. The SVG updates on the right. Same text, same figure.
+## Try it (no install)
+
+Open [Play](/play). Paste this block. The chart appears on the right. Change a number — the picture updates.
 
 ```chart
 markvis: 2
@@ -26,24 +28,24 @@ Feb,180
 Mar,150
 ```
 
-Browse finished figures in [Examples](/examples). Open one in Play to edit.
+Browse finished pictures in [Examples](/examples). Open one in Play to edit.
 
-## Bake
+## Save a picture (bake)
 
-Keep the fence in the Markdown file. Write an SVG next to it and insert an image so any viewer shows the figure — including hosts that never run a plugin.
+GitHub and many viewers will not draw the code block by themselves. `bake` writes a picture file next to your Markdown and adds an image so they can show it. The code block stays in the file.
 
 ```bash
 pnpm install && pnpm build
 pnpm markvis bake README.md
 ```
 
-Second bake is a no-op when nothing changed. The fence stays; the image follows it.
+Running bake again does nothing if nothing changed.
 
-A fresh other project cannot call `npx markvis` yet: npm `latest` is still `0.0.13` and has no `markvis` bin. Pack this tree (`pnpm pack:lib`), then in the other project `npm install ./markvis-2.0.0-rc.1.tgz` and use that local bin.
+A fresh other project cannot call `npx markvis` yet: npm `latest` is still `0.0.13` and has no `markvis` command. Pack this tree (`pnpm pack:lib`), then in the other project `npm install ./markvis-2.0.0-rc.1.tgz` and use that local command.
 
-## Script
+## Put it on a web page (script)
 
-Where the host already runs JavaScript, drop in the one-file browser build. Zero network after load. It finds `pre` / `code` with language `chart`, `markvis`, or `vis` and replaces them with the same SVG as Node.
+If the page already runs JavaScript, drop in one file. After it loads, it finds code blocks tagged `chart` / `markvis` / `vis` and replaces them with the same picture as on the server. No extra network.
 
 ```html
 <script type="module" src="./markvis.min.js"></script>
@@ -51,9 +53,9 @@ Where the host already runs JavaScript, drop in the one-file browser build. Zero
 
 After `pnpm build`, copy `dist/markvis.min.js`. Packed install: `node_modules/markvis/dist/markvis.min.js`. Demo page: `apps/playground/dropin.html`.
 
-## Skill
+## Ask an AI (Skill)
 
-Point an agent at the Skill or the public brief. It emits a fence — not a PNG, not a seventh type.
+Give an agent the Skill or the short brief. It should write the Markdown block — not a screenshot, not a seventh chart kind.
 
 - Skill: [skills/markvis/SKILL.md](https://github.com/geekplux/markvis/blob/master/skills/markvis/SKILL.md)
 - Brief: [/llms.txt](/llms.txt) — fetch that URL; emit only the fields it lists

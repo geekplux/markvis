@@ -1,10 +1,10 @@
 # markvis
 
-Open-source library. A fence in Markdown is the chart. Same text, same SVG. No plugin, the table still shows.
+Write a table of numbers in a Markdown code block tagged `chart`, `markvis`, or `vis`. That block is the chart. Same text, same picture. If it cannot draw, keep the table.
 
-Fetch this file. Emit a fence. Do not invent fields.
+Fetch this file. Emit that code block. Do not invent fields.
 
-## Fence
+## Fence (the code block)
 
 Tags `chart`, `markvis`, and `vis` are the same language.
 

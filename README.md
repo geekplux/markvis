@@ -8,11 +8,13 @@
 
 **Charts in Markdown. The fence is the data.**
 
-A Markdown fence — CSV or a GFM table — parses to IR and a deterministic SVG. Same text, same figure. Without a plugin, the table still shows. On error, the rows stay: a table plus one error line.
+Write a table in a Markdown code block. MarkVis draws the chart. Change a number — the picture changes. If the chart cannot draw, you still see the table.
 
-In 2017 this project was a renderer (GitHub Trending). This is the rewrite: a tiny chart **language** for humans and agents.
+You do not need to know what “IR” means. A **fence** is just a fenced code block tagged `chart` (or `markvis`, or `vis`). The numbers live in that block. That is the whole idea.
 
-**Try:** [Play](https://markvis.js.org/play) · [Examples](https://markvis.js.org/examples) · [Spec for agents](https://markvis.js.org/llms.txt)
+In 2017 this project was a renderer (GitHub Trending). This is the rewrite: the same name, for people and for AI.
+
+**Try:** [Play](https://markvis.js.org/play) · [Examples](https://markvis.js.org/examples) · [For AI](https://markvis.js.org/llms.txt)
 
 ![Mar led Midtown box office](./examples/out/01-bar-basic.svg)
 
@@ -20,9 +22,9 @@ In 2017 this project was a renderer (GitHub Trending). This is the rewrite: a ti
 
 ![MARTA takes the largest mode share](./examples/out/05-pie-raw.svg)
 
-## Fence
+## An example
 
-Tags `chart` · `markvis` · `vis` are one language. Types: `bar` `line` `area` `scatter` `pie` `hist`. Optional `theme:` and `palette:` — [SPEC.md](./SPEC.md).
+Paste this into [Play](https://markvis.js.org/play). Six kinds: bar, line, area, scatter, pie, hist. Optional look: `theme` and `palette` — [SPEC.md](./SPEC.md).
 
 ```chart
 markvis: 2
@@ -44,11 +46,11 @@ Apr,6900
 ```
 ![Mar led Midtown box office at 9.2k tickets](./README.svg)
 
-Also legal: a GFM table after the blank line, or the HTML comment form in [`examples/valid/08-bar-comment.md`](./examples/valid/08-bar-comment.md) (comment immediately followed by a GFM table).
+You can also put the numbers in a Markdown table, or use the HTML comment form in [`examples/valid/08-bar-comment.md`](./examples/valid/08-bar-comment.md).
 
 ## Try it today
 
-1. **Play** — paste a fence at [markvis.js.org/play](https://markvis.js.org/play). No install.
+1. **Play** — paste a block at [markvis.js.org/play](https://markvis.js.org/play). No install.
 
 2. **This repo** (after `pnpm install && pnpm build`):
 
@@ -57,9 +59,9 @@ Also legal: a GFM table after the blank line, or the HTML comment form in [`exam
    pnpm markvis bake README.md
    ```
 
-   `check` exits 0 only when every fence is valid. `bake` writes an SVG next to the file, inserts a Markdown image, and keeps the fence. A second bake is a no-op.
+   `check` makes sure every chart block is valid. `bake` writes a picture next to the file and adds a Markdown image so GitHub can show it. The code block stays. Running bake again does nothing if nothing changed.
 
-3. **Packed library** — `2.0.0-rc.1` is this tree. It is **not** on the npm registry. `npm install markvis` still installs **0.0.13**.
+3. **In another project** — `2.0.0-rc.1` is this tree. It is **not** on the npm registry. `npm install markvis` still installs **0.0.13**.
 
    ```bash
    pnpm pack:lib
@@ -67,12 +69,12 @@ Also legal: a GFM table after the blank line, or the HTML comment form in [`exam
    npx markvis bake README.md
    ```
 
-   That last `npx` is the **local tarball**, not npm `latest`. Bare `npx markvis` / `npm install markvis` still resolves **0.0.13**, which has no `markvis` bin.
+   That last `npx` is the **local tarball**, not npm `latest`. Bare `npx markvis` / `npm install markvis` still resolves **0.0.13**, which has no `markvis` command.
 
    ```js
    import { parseMarkdown, renderSvg } from "markvis";
 
-   const parsed = parseMarkdown(fence);
+   const parsed = parseMarkdown(markdown);
    if (parsed.ok) {
      const svg = renderSvg(parsed.chart);
    } else {
@@ -80,7 +82,7 @@ Also legal: a GFM table after the blank line, or the HTML comment form in [`exam
    }
    ```
 
-4. **Plugin** — remark **or** markdown-it. Both emit SVG + the data table:
+4. **In a Markdown site** — remark **or** markdown-it. Both return the picture and the data table:
 
    ```js
    import MarkdownIt from "markdown-it";
@@ -105,21 +107,21 @@ Also legal: a GFM table after the blank line, or the HTML comment form in [`exam
    );
    ```
 
-5. **Agent** — point a model at [skills/markvis/SKILL.md](./skills/markvis/SKILL.md) or [llms.txt](./llms.txt). It must emit only the fields listed there. Not a PNG. Not a seventh type.
+5. **With an AI** — point a model at [skills/markvis/SKILL.md](./skills/markvis/SKILL.md) or [llms.txt](./llms.txt). It should write only the fields listed there. Not a PNG. Not a seventh chart kind.
 
-## Language
+## What you can write
 
 | | |
 | --- | --- |
-| Tags | `chart` `markvis` `vis` |
-| Types | `bar` `line` `area` `scatter` `pie` `hist` |
+| Code block tags | `chart` `markvis` `vis` |
+| Chart kinds | `bar` `line` `area` `scatter` `pie` `hist` |
 | Fields | `markvis` `type` `title` `unit` `x` `y` `series` plus `theme` `palette` |
-| Data | CSV or one GFM table. Not JSON as the default. No JavaScript in a fence. |
+| Numbers | Comma-separated rows, or one Markdown table. Not JSON as the default. No JavaScript in the block. |
 
-`theme:` grammar packs: `folio` (default) `highcharts` `shadcn` `docs` `ant` `recharts`. `palette:` colors only: `ink` `porcelain` `warm` `cool` `vivid`. Unknown theme or palette → table + error, never a silent swap. Pie is not normalized to 100. Input row order is kept.
+`theme:` how it is drawn: `folio` (default) `highcharts` `shadcn` `docs` `ant` `recharts`. `palette:` colors only: `ink` `porcelain` `warm` `cool` `vivid`. Unknown look → table + error, never a silent swap. Pie slices are not forced to 100. Rows stay in the order you wrote them.
 
 ## Docs
 
 [Get started](https://markvis.js.org/get-started) · [Integrate](./docs/integrate.md) · [SPEC.md](./SPEC.md) · [Themes](./docs/themes.md) · [Architecture](./docs/architecture.md) · [Contributing](./CONTRIBUTING.md) · [Release / merge](./docs/release.md)
 
-0.0.13 (frozen d3 renderer): [legacy/](./legacy/).
+0.0.13 (the old d3 renderer): [legacy/](./legacy/).
