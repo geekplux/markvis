@@ -38,7 +38,7 @@ That creates a merge commit. Historic `v2` SHAs stay reachable from `master`. 20
    git log --oneline master | head
    ```
 
-This tree is `markvis@2.0.1`. Publishing `latest` replaces `0.0.13` for npm users (the old renderer stays in `legacy/`). A published version cannot be overwritten; bump (2.0.1, 2.0.2, …) to change the listing.
+This tree is `markvis@2.0.2`. Publishing `latest` replaces `0.0.13` for npm users (the old renderer stays in `legacy/`). A published version cannot be overwritten; bump (2.0.2, 2.0.3, …) to change the listing.
 
 npm PUT 404 on publish means the local token is not allowed (npm hides 401/403 as 404). The package owner is `geekplux`. From a **clean** `v2` tree:
 

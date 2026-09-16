@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.2
+
+README charts: same files as `examples/out/`, hosted at markvis.js.org so GitHub and npm both show them. The `v2` branch URLs 404 after the merge.
+
 ## 2.0.1
 
 npm listing: README starts with `# markvis` so the website can render it; keywords and a short description are set. **2.x replaces 0.0.13.**

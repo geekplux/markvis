@@ -594,7 +594,7 @@ describe("public contract", () => {
       private?: boolean;
       keywords?: string[];
     };
-    expect(pkg.version).toBe("2.0.1");
+    expect(pkg.version).toBe("2.0.2");
     expect(pkg.keywords?.includes("markdown")).toBe(true);
     expect(pkg.private).not.toBe(true);
     expect(pkg.main).toBe("./dist/index.js");
