@@ -86,7 +86,7 @@ describe("usage", () => {
   it("prints version", () => {
     const { code, stdout } = capture(["-v"]);
     expect(code).toBe(0);
-    expect(stdout.trim()).toBe("2.0.1");
+    expect(stdout.trim()).toBe("2.0.2");
   });
 
   it("exits 1 with usage when no command is given", () => {
@@ -531,6 +531,22 @@ Feb,4
     const second = capture(["bake", readmePath, join(landingDir, "landing.md")], dir);
     expect(second.code, second.stdout + second.stderr).toBe(0);
     expect(second.stdout).toMatch(/unchanged/);
+  });
+
+  it("does not insert a second image when a hosted image already follows the fence", () => {
+    const dir = tmp();
+    const mdPath = join(dir, "one.md");
+    writeFileSync(
+      mdPath,
+      `${oneFence}\n![Q3](https://example.com/chart.svg)\n`,
+    );
+    const { code, stdout } = capture(["bake", mdPath], dir);
+    expect(code).toBe(0);
+    expect(stdout).toContain("unchanged");
+    const md = readFileSync(mdPath, "utf8");
+    expect(md.match(/!\[Q3\]\(/g)?.length).toBe(1);
+    expect(md).toContain("https://example.com/chart.svg");
+    expect(md).not.toContain("./one.svg");
   });
 
   it("does not insert a second image when already baked", () => {
