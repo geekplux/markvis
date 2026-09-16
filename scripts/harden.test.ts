@@ -761,10 +761,31 @@ describe("public contract", () => {
     for (const rel of files) {
       const text = readRepo(rel);
       expect(text, rel).not.toContain("/blob/v2/");
+      expect(text, rel).not.toContain("/geekplux/markvis/v2/");
     }
     expect(readRepo("apps/web/ai.md")).toContain(
       "github.com/geekplux/markvis/blob/master/skills/markvis/SKILL.md",
     );
+  });
+
+  it("README proof images are repo-relative files, not a retired branch URL", () => {
+    const readme = readRepo("README.md");
+    expect(readme).toContain("./examples/out/01-bar-basic.svg");
+    expect(readme).toContain("./examples/out/02-line-multi.svg");
+    expect(readme).toContain("./examples/out/05-pie-raw.svg");
+    expect(readme).toContain("./README.svg");
+    expect(existsSync(join(repoRoot, "examples/out/01-bar-basic.svg"))).toBe(
+      true,
+    );
+    expect(existsSync(join(repoRoot, "examples/out/02-line-multi.svg"))).toBe(
+      true,
+    );
+    expect(existsSync(join(repoRoot, "examples/out/05-pie-raw.svg"))).toBe(
+      true,
+    );
+    expect(existsSync(join(repoRoot, "README.svg"))).toBe(true);
+    expect(readme).not.toContain("raw.githubusercontent.com/");
+    expect(readme).not.toContain("/geekplux/markvis/v2/");
   });
 });
 

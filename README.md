@@ -17,11 +17,11 @@ In 2017 this project was a renderer (GitHub Trending). This is the rewrite: the 
 
 **Try:** [Play](https://markvis.js.org/play) · [Examples](https://markvis.js.org/examples) · [For AI](https://markvis.js.org/llms.txt)
 
-![Mar led Midtown box office](https://raw.githubusercontent.com/geekplux/markvis/v2/examples/out/01-bar-basic.svg)
+![Mar led Midtown box office](./examples/out/01-bar-basic.svg)
 
-![Walk-up still leads member](https://raw.githubusercontent.com/geekplux/markvis/v2/examples/out/02-line-multi.svg)
+![Walk-up still leads member](./examples/out/02-line-multi.svg)
 
-![MARTA takes the largest mode share](https://raw.githubusercontent.com/geekplux/markvis/v2/examples/out/05-pie-raw.svg)
+![MARTA takes the largest mode share](./examples/out/05-pie-raw.svg)
 
 ## An example
 
