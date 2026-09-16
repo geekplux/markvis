@@ -17,11 +17,11 @@ In 2017 this project was a renderer (GitHub Trending). This is the rewrite: the 
 
 **Try:** [Play](https://markvis.js.org/play) · [Examples](https://markvis.js.org/examples) · [For AI](https://markvis.js.org/llms.txt)
 
-![Mar led Midtown box office](./examples/out/01-bar-basic.svg)
+![Mar led Midtown box office](https://markvis.js.org/home/01-bar-basic.svg)
 
-![Walk-up still leads member](./examples/out/02-line-multi.svg)
+![Walk-up still leads member](https://markvis.js.org/home/02-line-multi.svg)
 
-![MARTA takes the largest mode share](./examples/out/05-pie-raw.svg)
+![MARTA takes the largest mode share](https://markvis.js.org/home/05-pie-raw.svg)
 
 ## An example
 
@@ -45,7 +45,7 @@ Feb,7200
 Mar,9200
 Apr,6900
 ```
-![Mar led Midtown box office at 9.2k tickets](./README.svg)
+![Mar led Midtown box office at 9.2k tickets](https://markvis.js.org/home/01-bar-basic.svg)
 
 You can also put the numbers in a Markdown table, or use the HTML comment form in [`examples/valid/08-bar-comment.md`](./examples/valid/08-bar-comment.md).
 

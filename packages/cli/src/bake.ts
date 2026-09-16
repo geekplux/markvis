@@ -32,16 +32,9 @@ function svgName(stem: string, index: number, total: number): string {
   return `${stem}-${index + 1}.svg`;
 }
 
-function alreadyHasImage(after: string, svgRel: string): boolean {
+function alreadyHasImage(after: string): boolean {
   const rest = after.replace(/^\r?\n/, "");
-  const match = rest.match(IMAGE_RE);
-  if (!match) {
-    return false;
-  }
-  const href = match[2]!.trim();
-  const a = href.replace(/^\.\//, "");
-  const b = svgRel.replace(/^\.\//, "");
-  return a === b;
+  return IMAGE_RE.test(rest);
 }
 
 function imageLine(title: string, svgRel: string): string {
@@ -75,7 +68,7 @@ export function bakeMarkdown(source: string, mdAbs: string): BakeFileResult {
 
     const svg = renderSvg(parsed.chart);
     const after = md.slice(insertAt);
-    const inserted = !alreadyHasImage(after, svgRel);
+    const inserted = !alreadyHasImage(after);
     results.push({ svgRel, svgAbs, svg, inserted });
 
     if (inserted) {
