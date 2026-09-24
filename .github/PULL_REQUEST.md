@@ -4,7 +4,7 @@
 
 ## Summary
 
-Additive **markvis 2.x** on `feat/type-packs` tip **`192d54f`** (plus Writer docs after): chart types become **type packs** (mirror themes), then Wave 1 encodings (`layout` on bar/line/area, `innerRadius` on pie). No 3.0. Old six fences still parse.
+Additive **markvis 2.x** on `feat/type-packs` tip **`f7ae300`**: chart types become **type packs** (mirror themes), then Wave 1 encodings (`layout` on bar/line/area, `innerRadius` on pie). No 3.0. Old six fences still parse.
 
 ## Why
 
@@ -88,5 +88,5 @@ Attach after Verifier / bake if missing:
 ## Branch / release discipline
 
 - Branch: `feat/type-packs` from `origin/master`
-- Code tip: `192d54f` (Wave 1); Writer docs commit follows
+- Tip: `f7ae300` (Wave 1 code `192d54f` + Writer docs)
 - One PR for Wave 0+1; no drive-by master SHAs; no force-push master
