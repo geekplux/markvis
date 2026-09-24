@@ -8,7 +8,7 @@ Tiny versioned chart language for Markdown. Source is tabular data. Path: fence 
             ↓
      Chart IR (@markvis/ir)
             ↓
-     @markvis/render-svg  →  SVG
+     @markvis/types (paint) → @markvis/render-svg chrome → SVG
             ↘
           table fallback
 
@@ -54,7 +54,7 @@ Progressive form (comment immediately followed by a GFM table):
 | Mar | 150 |
 ```
 
-Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`. Same meaning as fence headers.
+Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`, plus type-local encodings `layout` / `innerRadius` when legal. Same meaning as fence headers.
 
 ## Field table
 
@@ -69,22 +69,40 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | `x` | typed | first category / numeric col | Independent axis or labels. |
 | `y` | typed | first numeric col | Measure. |
 | `series` | no | — | Optional column that splits series. |
+| `layout` | no | `grouped` when omitted | Type-local. Only on `bar` \| `line` \| `area`: `grouped` \| `stacked` \| `percent`. Omit = today's paint (`grouped`). Wrong type or bad value → `E_UNKNOWN_FIELD` + table. |
+| `innerRadius` | no | theme `PIE_INNER_RATIO` | Type-local. Only on `pie`. Number in `[0, 1]`. Omit → theme default hole (folio/most = `0`; shadcn = `0.5`). Explicit `0` forces a solid pie. `(0, 1]` = donut hole as a fraction of outer radius. Wrong type or out of range → `E_UNKNOWN_FIELD` + table. |
 | data | yes | — | CSV or GFM after a blank line. |
 
 `x` / `y` / `series` must name real header columns. Unnamed extra columns stay in the fallback table, not in the mark geometry.
+
+CORE fence keys: `markvis` `type` `title` `theme` `palette` `unit` `x` `y` `series`. Encodings are **type-local extras**, not CORE. Any header ∉ CORE ∪ that pack's extras → `E_UNKNOWN_FIELD` + table.
 
 ## Type semantics
 
 | Type | x | y | series | Rules |
 | --- | --- | --- | --- | --- |
-| `bar` | category | number | optional → grouped | Keep input row order. Never sort x. |
-| `line` | ordered category or number | number | optional → multi-line | Keep input row order. |
-| `area` | same as line | number | optional | Fill under line(s). Same order rule. |
+| `bar` | category | number | optional; `layout` controls grouping | Keep input row order. Never sort x. `layout`: `grouped` (default) \| `stacked` \| `percent`. |
+| `line` | ordered category or number | number | optional; `layout` as bar | Keep input row order. |
+| `area` | same as line | number | optional; `layout` as bar | Fill under line(s). Same order rule. |
 | `scatter` | number | number | optional | One mark per row. |
-| `pie` | label | number ≥ 0 | ignored | Slice sizes as given. Do **not** normalize to 100. |
+| `pie` | label | number ≥ 0 | ignored | Slice sizes as given. Do **not** normalize to 100. Optional `innerRadius` (see field table). Still `type: pie` — never invent `donut`. |
 | `hist` | number | optional weight | ignored | Continuous x; renderer bins; table keeps raw rows. |
 
 Zeros are legal. Negatives are legal on bar/line/area/scatter; illegal on `pie`.
+
+
+## Encodings (Wave 1)
+
+Optional fields that change paint on an existing type. Same `type` id — not a seventh type.
+
+| Encoding | Legal on | Values | Omit means |
+| --- | --- | --- | --- |
+| `layout` | `bar` `line` `area` | `grouped` \| `stacked` \| `percent` | Today's look (`grouped`) |
+| `innerRadius` | `pie` | number in `[0, 1]` | Theme `PIE_INNER_RATIO` (not always solid) |
+
+- Explicit `innerRadius: 0` forces a solid pie and overrides the theme.
+- Bad value (`layout: foo`, `innerRadius: 2`) or encoding on the wrong type → parse fail + table with `E_UNKNOWN_FIELD` (clear detail string; no new error code in Wave 1).
+- Theme ‖ palette stay orthogonal. Do not invent `stacked-bar` / `donut` type ids.
 
 ## Fallback rules
 
@@ -104,7 +122,7 @@ Zeros are legal. Negatives are legal on bar/line/area/scatter; illegal on `pie`.
 | `E_EMPTY_DATA` | Header only, or zero data rows. |
 | `E_EXTRA_COLUMN` | Row width ≠ header width. |
 | `E_DUP_COLUMN` | Duplicate header names. |
-| `E_UNKNOWN_FIELD` | `x` / `y` / `series` name a missing column. |
+| `E_UNKNOWN_FIELD` | `x` / `y` / `series` name a missing column; undeclared header key; encoding on the wrong type; or bad encoding value. |
 | `E_PIE_NEGATIVE` | Pie value < 0. |
 | `E_YAML_TABLE_CONFLICT` | Header fields disagree with progressive table mapping. |
 | `E_EMPTY_FENCE` | Fence body empty. |
@@ -245,7 +263,8 @@ y: n
 | --- | --- |
 | Mermaid `pie` / `xychart` for tabular numbers | Use markvis. Mermaid is structure. |
 | JSON as the data body | CSV or GFM table. |
-| Invented type (`donut`, `stacked-bar`, `heatmap`) | Only the six. |
+| Invented type (`donut`, `stacked-bar`, `heatmap`) | Only the six. Use `innerRadius` / `layout` or wait for a typed pack. |
+| Assuming omit `innerRadius` is always solid | Omit → theme `PIE_INNER_RATIO`; use `0` to force solid. |
 | Sorting categories for looks | Keep input order. |
 | Renormalizing pie to 100 | Leave values as-is. |
 | Dropping the table on failure | Table + one-line error, always. |
