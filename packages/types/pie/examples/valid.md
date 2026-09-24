@@ -1,6 +1,7 @@
 ```chart
 markvis: 2
 type: pie
+innerRadius: 0.45
 title: Share by region
 x: region
 y: share

@@ -66,11 +66,14 @@ import {
 } from "./tokens.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
 
+type LayoutMode = "grouped" | "stacked" | "percent";
+
 type Prepared = {
   rows: DataRow[];
   series: string[];
   categories: string[];
   linearX: boolean;
+  layout: LayoutMode;
   xTicks: { pos: number; label: string; show: boolean }[];
   yTicks: { pos: number; label: string }[];
   xScaleNum: (v: number) => number;
@@ -135,6 +138,60 @@ function usesEndLabels(chart: ChartIR, seriesCount: number): boolean {
   return seriesCount >= 2 && seriesCount <= END_LABEL_SERIES_MAX;
 }
 
+
+function resolveLayout(chart: ChartIR): LayoutMode {
+  if (chart.type !== "bar" && chart.type !== "line" && chart.type !== "area") {
+    return "grouped";
+  }
+  const layout = chart.layout;
+  if (layout === "stacked" || layout === "percent") {
+    return layout;
+  }
+  return "grouped";
+}
+
+/** Segment heights [series][category] — percent normalizes per category to sum 100 (or 0). */
+function segmentMatrix(
+  rows: DataRow[],
+  series: string[],
+  categories: string[],
+  percent: boolean,
+): number[][] {
+  const raw = series.map((ser) =>
+    categories.map((cat) => groupedValue(rows, ser, cat)),
+  );
+  if (!percent) {
+    return raw;
+  }
+  const out = series.map(() => categories.map(() => 0));
+  for (let ci = 0; ci < categories.length; ci++) {
+    let total = 0;
+    for (let si = 0; si < series.length; si++) {
+      total += raw[si]![ci]!;
+    }
+    for (let si = 0; si < series.length; si++) {
+      out[si]![ci] = total === 0 ? 0 : (raw[si]![ci]! / total) * 100;
+    }
+  }
+  return out;
+}
+
+function stackTotals(matrix: number[][]): number[] {
+  if (matrix.length === 0) {
+    return [];
+  }
+  const nCat = matrix[0]!.length;
+  const totals: number[] = [];
+  for (let ci = 0; ci < nCat; ci++) {
+    let sum = 0;
+    for (let si = 0; si < matrix.length; si++) {
+      sum += matrix[si]![ci]!;
+    }
+    totals.push(sum);
+  }
+  return totals;
+}
+
 function usesColorLegend(chart: ChartIR, seriesCount: number): boolean {
   if (seriesCount <= 1) {
     return false;
@@ -165,11 +222,24 @@ function prepare(chart: ChartIR): Prepared {
     : categoryNames(rows);
   const linearX = histMode ? true : usesLinearX(chart, rows);
 
-  const yValues = histMode
-    ? bins.map((bin) => bin.weight)
-    : rows.map((row) => row.y);
+  const layout = resolveLayout(chart);
+  const stacking = layout === "stacked" || layout === "percent";
+  let yValues: number[];
+  if (histMode) {
+    yValues = bins.map((bin) => bin.weight);
+  } else if (layout === "percent") {
+    yValues = [0, 100];
+  } else if (stacking) {
+    const matrix = segmentMatrix(rows, series, categories, false);
+    yValues = stackTotals(matrix);
+  } else {
+    yValues = rows.map((row) => row.y);
+  }
   const forceZero =
-    chart.type === "bar" || chart.type === "area" || chart.type === "hist";
+    chart.type === "bar" ||
+    chart.type === "area" ||
+    chart.type === "hist" ||
+    stacking;
   const yDom = yExtent(yValues, forceZero);
   const yTickNums = niceTicks(yDom[0], yDom[1]);
   const yMin = yTickNums[0] ?? yDom[0];
@@ -263,7 +333,8 @@ function prepare(chart: ChartIR): Prepared {
   const nCat = Math.max(histMode ? bins.length : categories.length, 1);
   const catStep = plot.width / nCat;
   const nS = Math.max(series.length, 1);
-  const barW = typicalBarWidth(nCat, nS, catStep);
+  const barSeriesCount = stacking && chart.type === "bar" ? 1 : nS;
+  const barW = typicalBarWidth(nCat, barSeriesCount, catStep);
   const labelBars =
     (chart.type === "bar" || chart.type === "hist") &&
     showBarValueLabels(nCat, barW);
@@ -319,6 +390,7 @@ function prepare(chart: ChartIR): Prepared {
     series,
     categories,
     linearX,
+    layout,
     xTicks,
     yTicks,
     xScaleNum,
@@ -651,14 +723,67 @@ function drawBars(prepared: Prepared): string[] {
     yScale,
     styles,
     showValueLabels,
+    layout,
   } = prepared;
+  const stacking = layout === "stacked" || layout === "percent";
   const nS = Math.max(series.length, 1);
   const nCat = categories.length;
   const y0 = yScale(0);
   const lines: string[] = [`  <g>`];
   const labels: string[] = [];
+  const matrix = stacking
+    ? segmentMatrix(rows, series, categories, layout === "percent")
+    : null;
+
   for (let ci = 0; ci < categories.length; ci++) {
     const cat = categories[ci]!;
+    if (stacking && matrix) {
+      let base = 0;
+      const { x, barW } = barSlot(nCat, 1, catStep, plot.left, ci, 0);
+      for (let si = 0; si < series.length; si++) {
+        const ser = series[si]!;
+        const val = matrix[si]![ci]!;
+        const yBottom = yScale(base);
+        const yTop = yScale(base + val);
+        const y = Math.min(yBottom, yTop);
+        const h = Math.abs(yTop - yBottom);
+        const style = styles[si]!;
+        const roundUp = val >= 0;
+        // Only round the outermost (top) segment away from baseline.
+        const isOuter = si === series.length - 1;
+        lines.push(
+          `    <path ${attrs({
+            d: roundedBarPath(x, y, barW, h, isOuter && roundUp),
+            fill: style.color,
+            "fill-opacity": style.opacity === 1 ? undefined : style.opacity,
+            "data-x": cat,
+            "data-series": ser,
+            "data-y": String(val),
+            "data-layout": layout,
+          })}/>`,
+        );
+        base += val;
+        if (!showValueLabels) {
+          continue;
+        }
+        const text = formatNumber(val);
+        const cx = x + barW / 2;
+        const ly = valueLabelY(roundUp, y, h, y0);
+        labels.push(
+          `    <text ${attrs({
+            x: fmtPx(cx),
+            y: fmtPx(ly),
+            "text-anchor": "middle",
+            "font-size": TYPE.value.size,
+            "font-weight": TYPE.value.weight,
+            fill: TYPE.value.fill,
+            "data-value-label": cat,
+          })}>${escapeXml(text)}</text>`,
+        );
+      }
+      continue;
+    }
+
     for (let si = 0; si < series.length; si++) {
       const ser = series[si]!;
       const val = groupedValue(rows, ser, cat);
@@ -727,6 +852,28 @@ function lastPointBySeries(
 ): { name: string; x: number; y: number; color: string }[] {
   const catIndex = new Map(prepared.categories.map((c, i) => [c, i]));
   const out: { name: string; x: number; y: number; color: string }[] = [];
+  const stacking =
+    prepared.layout === "stacked" || prepared.layout === "percent";
+  if (stacking && prepared.categories.length > 0) {
+    const matrix = segmentMatrix(
+      prepared.rows,
+      prepared.series,
+      prepared.categories,
+      prepared.layout === "percent",
+    );
+    const lastCi = prepared.categories.length - 1;
+    let run = 0;
+    for (let si = 0; si < prepared.series.length; si++) {
+      run += matrix[si]![lastCi]!;
+      out.push({
+        name: prepared.series[si]!,
+        x: prepared.catCenter(lastCi),
+        y: prepared.yScale(run),
+        color: prepared.styles[si]!.color,
+      });
+    }
+    return out;
+  }
   for (let si = 0; si < prepared.series.length; si++) {
     const ser = prepared.series[si]!;
     let last: { x: number; y: number } | undefined;
@@ -805,10 +952,87 @@ function drawEndLabels(prepared: Prepared): string[] {
 }
 
 function drawLineOrArea(prepared: Prepared, area: boolean): string[] {
-  const { rows, series, yScale, styles } = prepared;
+  const { rows, series, yScale, styles, layout, categories } = prepared;
   const catIndex = new Map(prepared.categories.map((c, i) => [c, i]));
-  const zero = yScale(0);
+  const stacking = layout === "stacked" || layout === "percent";
   const lines: string[] = [`  <g fill="none">`];
+
+  if (stacking) {
+    const matrix = segmentMatrix(rows, series, categories, layout === "percent");
+    const cum: number[][] = series.map(() => categories.map(() => 0));
+    for (let ci = 0; ci < categories.length; ci++) {
+      let run = 0;
+      for (let si = 0; si < series.length; si++) {
+        run += matrix[si]![ci]!;
+        cum[si]![ci] = run;
+      }
+    }
+    for (let si = 0; si < series.length; si++) {
+      const ser = series[si]!;
+      const style = styles[si]!;
+      const topPts: { x: number; y: number }[] = [];
+      const botPts: { x: number; y: number }[] = [];
+      for (let ci = 0; ci < categories.length; ci++) {
+        const x = prepared.catCenter(ci);
+        const top = cum[si]![ci]!;
+        const bot = si === 0 ? 0 : cum[si - 1]![ci]!;
+        topPts.push({ x, y: yScale(top) });
+        botPts.push({ x, y: yScale(bot) });
+      }
+      if (topPts.length === 0) {
+        continue;
+      }
+      if (area) {
+        const revBot = [...botPts].reverse();
+        const fillPts = [...topPts, ...revBot];
+        const d = `${polyline(fillPts)} Z`;
+        lines.push(
+          `    <path ${attrs({
+            d,
+            fill: style.color,
+            "fill-opacity": AREA_OPACITY * style.opacity,
+            stroke: "none",
+            "data-series": ser,
+            "data-layout": layout,
+          })}/>`,
+        );
+      }
+      const d = polyline(topPts);
+      lines.push(
+        `    <path ${attrs({
+          d,
+          fill: "none",
+          stroke: style.color,
+          "stroke-width": LINE_STROKE,
+          "stroke-linejoin": "round",
+          "stroke-linecap": "round",
+          "stroke-opacity": opacityAttr(style.opacity),
+          "data-series": ser,
+          "data-layout": layout,
+        })}/>`,
+      );
+      if (topPts.length <= POINT_SKIP_AFTER) {
+        for (const pt of topPts) {
+          lines.push(
+            `    <circle ${attrs({
+              cx: fmtPx(pt.x),
+              cy: fmtPx(pt.y),
+              r: LINE_POINT_R,
+              fill: style.color,
+              "fill-opacity": opacityAttr(style.opacity),
+              stroke: "none",
+              "data-series": ser,
+            })}/>`,
+          );
+        }
+      }
+    }
+    lines.push(`  </g>`);
+    lines.push(...drawEndLabels(prepared));
+    return lines;
+  }
+
+  const zero = yScale(0);
   for (let si = 0; si < series.length; si++) {
     const ser = series[si]!;
     const pts: { x: number; y: number }[] = [];

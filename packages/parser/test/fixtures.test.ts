@@ -327,10 +327,10 @@ describe("language rules", () => {
     expect(result.error.code).toBe("E_UNKNOWN_FIELD");
     expect(result.error.message).toContain("E_UNKNOWN_FIELD");
     expect(result.error.message.includes("\n")).toBe(false);
-    expect(result.table.columns).toEqual(["month", "revenue"]);
+    expect(result.table.columns).toEqual(["region", "share"]);
     expect(result.table.rows).toEqual([
-      ["Jan", "120"],
-      ["Feb", "180"],
+      ["East", "40"],
+      ["West", "35"],
     ]);
   });
 

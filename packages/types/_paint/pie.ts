@@ -282,7 +282,9 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
   const sum = raw.reduce((acc, slice) => acc + slice.value, 0);
   const useLeaders = PIE_LABEL_MODE === "leaders";
   const useLegend = PIE_LABEL_MODE === "legend";
-  const innerRatio = Math.max(0, Math.min(0.85, PIE_INNER_RATIO));
+  const rawInner =
+    chart.innerRadius !== undefined ? chart.innerRadius : PIE_INNER_RATIO;
+  const innerRatio = Math.max(0, Math.min(0.85, rawInner));
   const isDonut = innerRatio > 0.01;
 
   const legendNames = useLegend

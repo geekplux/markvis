@@ -1,8 +1,8 @@
 ```chart
 markvis: 2
 type: bar
-layout: stacked
-title: Unknown extra field
+innerRadius: 0.4
+title: Wrong-type extra field
 x: month
 y: tickets
 

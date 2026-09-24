@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "description": "markvis chart type packs + paint (Wave 0)",
+  "description": "markvis chart type packs + paint (Wave 1)",
   "exports": {
     ".": "./registry.ts",
     "./bar": "./bar/type.ts",

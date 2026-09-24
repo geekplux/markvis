@@ -1,8 +1,8 @@
 ```chart
 markvis: 2
 type: pie
-innerRadius: 0.4
-title: Unknown extra field (Wave 0)
+layout: stacked
+title: Wrong-type extra field
 x: region
 y: share
 

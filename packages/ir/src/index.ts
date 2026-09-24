@@ -61,6 +61,10 @@ export const ChartIRSchema = z
     x: z.string().min(1),
     y: z.string().min(1).optional(),
     series: z.string().min(1).optional(),
+    /** bar|line|area only. Omit / grouped → Wave 0 look. */
+    layout: z.enum(["grouped", "stacked", "percent"]).optional(),
+    /** pie only. Fraction in [0, 1]. Omit → theme PIE_INNER_RATIO. */
+    innerRadius: z.number().min(0).max(1).optional(),
     table: TableSchema,
   })
   .strict()
@@ -91,6 +95,20 @@ export const ChartIRSchema = z
         code: z.ZodIssueCode.custom,
         message: "series must name a table column",
         path: ["series"],
+      });
+    }
+    if (val.layout !== undefined && val.type !== "bar" && val.type !== "line" && val.type !== "area") {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "layout is only valid for bar, line, or area",
+        path: ["layout"],
+      });
+    }
+    if (val.innerRadius !== undefined && val.type !== "pie") {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "innerRadius is only valid for pie",
+        path: ["innerRadius"],
       });
     }
   });

@@ -4,15 +4,16 @@ import { CORE_FENCE_KEYS } from "./contract.js";
 export { CORE_FENCE_KEYS };
 
 /**
- * Type-local extras by id. Wave 0: all empty.
+ * Type-local extras by id. Wave 1 encodings:
+ * bar/line/area → layout; pie → innerRadius; scatter/hist → none.
  * Packs must keep `extras` in sync with this table (integrity test checks).
  */
 export const typeExtras: Record<ChartType, readonly string[]> = {
-  bar: [],
-  line: [],
-  area: [],
+  bar: ["layout"],
+  line: ["layout"],
+  area: ["layout"],
   scatter: [],
-  pie: [],
+  pie: ["innerRadius"],
   hist: [],
 };
 

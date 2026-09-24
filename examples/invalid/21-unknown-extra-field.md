@@ -1,13 +1,13 @@
-<!-- intent: E_UNKNOWN_FIELD: undeclared layout encoding (Wave 0) -->
+<!-- intent: E_UNKNOWN_FIELD: layout is not an extra on pie -->
 
 ```chart
-type: bar
+type: pie
 layout: stacked
 title: Extra field
-x: month
-y: revenue
+x: region
+y: share
 
-month,revenue
-Jan,120
-Feb,180
+region,share
+East,40
+West,35
 ```

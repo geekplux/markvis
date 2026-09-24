@@ -27,9 +27,18 @@ describe("type registry", () => {
     for (const id of CHART_TYPES) {
       expect(typeRegistry[id].id).toBe(id);
       expect(typeRegistry[id].extras).toEqual(typeExtras[id]);
-      expect([...typeRegistry[id].extras]).toEqual([]);
+      expect([...typeRegistry[id].extras]).toEqual([...typeExtras[id]]);
       expect(resolveTypePack(id)).toBe(typeRegistry[id]);
     }
+  });
+
+  it("locks Wave 1 typeExtras", () => {
+    expect([...typeExtras.bar]).toEqual(["layout"]);
+    expect([...typeExtras.line]).toEqual(["layout"]);
+    expect([...typeExtras.area]).toEqual(["layout"]);
+    expect([...typeExtras.pie]).toEqual(["innerRadius"]);
+    expect([...typeExtras.scatter]).toEqual([]);
+    expect([...typeExtras.hist]).toEqual([]);
   });
 
   it("fails loudly when a pack is missing", () => {
