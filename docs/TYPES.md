@@ -30,7 +30,7 @@ Unknown `type` → `E_UNKNOWN_TYPE` + table. Near-miss spelling → `E_TYPE_TYPO
 | Want | Do this | Do not |
 | --- | --- | --- |
 | Side-by-side / stacked / 100% series on bar, line, or area | Fence field `layout: grouped \| stacked \| percent` | Invent `stacked-bar` / `grouped-line` |
-| Donut look | `type: pie` + `innerRadius` | Invent `donut` |
+| Donut look | `type: pie` + `innerRadius` in `(0, 1]` (omit = theme `PIE_INNER_RATIO`; `0` = solid) | Invent `donut` |
 | Heatmap, funnel, waterfall, radar, gauge | New type packs (Wave 2+) | Stuff them into pie/bar with magic fields |
 | Treemap, sankey | Later — write the table shape first | Prototype without a locked table contract |
 
@@ -41,7 +41,7 @@ Type-local extra keys only. Undeclared keys → `E_UNKNOWN_FIELD`.
 2D, tabular, deterministic SVG:
 
 - Layout encodings on bar / line / area: `grouped` | `stacked` | `percent`
-- Pie `innerRadius` (donut look, still `pie`)
+- Pie `innerRadius` in `[0, 1]` (still `pie`; omit = theme default hole)
 - Later packs: heatmap, funnel, waterfall, radar, gauge
 - Still later: treemap, sankey — after the table shape is written down
 
