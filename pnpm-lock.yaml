@@ -32,6 +32,9 @@ importers:
       '@markvis/themes':
         specifier: workspace:*
         version: link:packages/themes
+      '@markvis/types':
+        specifier: workspace:*
+        version: link:packages/types
       '@types/node':
         specifier: ^26.4.1
         version: 26.4.1
@@ -146,6 +149,9 @@ importers:
       '@markvis/ir':
         specifier: workspace:*
         version: link:../ir
+      '@markvis/types':
+        specifier: workspace:*
+        version: link:../types
 
   packages/remark:
     dependencies:
@@ -171,12 +177,24 @@ importers:
       '@markvis/themes':
         specifier: workspace:*
         version: link:../themes
+      '@markvis/types':
+        specifier: workspace:*
+        version: link:../types
 
   packages/themes:
     dependencies:
       '@markvis/ir':
         specifier: workspace:*
         version: link:../ir
+
+  packages/types:
+    dependencies:
+      '@markvis/ir':
+        specifier: workspace:*
+        version: link:../ir
+      '@markvis/themes':
+        specifier: workspace:*
+        version: link:../themes
 
 packages:
 

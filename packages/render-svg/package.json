@@ -11,6 +11,7 @@
   "types": "./src/index.ts",
   "dependencies": {
     "@markvis/ir": "workspace:*",
-    "@markvis/themes": "workspace:*"
+    "@markvis/themes": "workspace:*",
+    "@markvis/types": "workspace:*"
   }
 }

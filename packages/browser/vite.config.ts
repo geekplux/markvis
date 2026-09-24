@@ -24,6 +24,9 @@ export default defineConfig({
   resolve: {
     alias: {
       "@markvis/ir": resolve(repoRoot, "packages/ir/src/index.ts"),
+      "@markvis/types": resolve(repoRoot, "packages/types/registry.ts"),
+      "@markvis/types/fence-keys": resolve(repoRoot, "packages/types/fence-keys.ts"),
+      "@markvis/themes": resolve(repoRoot, "packages/themes/registry.ts"),
       "@markvis/parser": resolve(repoRoot, "packages/parser/src/index.ts"),
       "@markvis/render-svg": resolve(
         repoRoot,

@@ -453,6 +453,7 @@ describe("docs: live grammar, diagrams, unused shims", () => {
     const docsDir = join(repoRoot, "docs");
     const names = readdirSync(docsDir).sort();
     expect(names).toEqual([
+      "TYPES.md",
       "architecture.md",
       "best-practices.md",
       "examples.md",

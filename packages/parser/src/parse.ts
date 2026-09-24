@@ -9,6 +9,7 @@ import {
   type ChartTheme,
   type ChartType,
 } from "@markvis/ir";
+import { allowedFenceKeys } from "@markvis/types";
 import { extractCharts, type ChartForm } from "./extract.js";
 import {
   columnIsNumeric,
@@ -390,6 +391,17 @@ function parseBody(
     );
   }
   const type = typeRaw as ChartType;
+
+  const allowedKeys = allowedFenceKeys(type);
+  const unknownKeys = Object.keys(headers).filter((key) => !allowedKeys.has(key));
+  if (unknownKeys.length > 0) {
+    return fail(
+      "E_UNKNOWN_FIELD",
+      `undeclared fence field: ${unknownKeys[0]}`,
+      parsed,
+      raw,
+    );
+  }
 
   const themeRaw = headers["theme"]?.trim() ?? "";
   let theme: ChartTheme = "folio";

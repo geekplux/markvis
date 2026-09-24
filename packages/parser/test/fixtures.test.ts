@@ -55,8 +55,8 @@ describe("fixture inventory", () => {
     expect(validFiles).toHaveLength(52);
   });
 
-  it("covers 20 invalid fixtures", () => {
-    expect(invalidFiles).toHaveLength(20);
+  it("covers 21 invalid fixtures", () => {
+    expect(invalidFiles).toHaveLength(21);
   });
 });
 
@@ -303,6 +303,29 @@ describe("language rules", () => {
     }
     expect(result.error.code).toBe("E_UNKNOWN_THEME");
     expect(result.error.message).toContain("E_UNKNOWN_THEME");
+    expect(result.error.message.includes("\n")).toBe(false);
+    expect(result.table.columns).toEqual(["month", "revenue"]);
+    expect(result.table.rows).toEqual([
+      ["Jan", "120"],
+      ["Feb", "180"],
+    ]);
+  });
+
+
+  it("rejects undeclared fence header with E_UNKNOWN_FIELD and table fallback", () => {
+    const source = readFileSync(
+      join(invalidDir, "21-unknown-extra-field.md"),
+      "utf8",
+    );
+    const result = parseMarkdown(source, {
+      filename: "21-unknown-extra-field.md",
+    });
+    expect(result.ok).toBe(false);
+    if (result.ok) {
+      return;
+    }
+    expect(result.error.code).toBe("E_UNKNOWN_FIELD");
+    expect(result.error.message).toContain("E_UNKNOWN_FIELD");
     expect(result.error.message.includes("\n")).toBe(false);
     expect(result.table.columns).toEqual(["month", "revenue"]);
     expect(result.table.rows).toEqual([
