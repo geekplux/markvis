@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="area chart: Queue A share stays ahead of queue B, 8 rows, series queue" aria-labelledby="mv-e22563a32fc41eb7-title" aria-describedby="mv-e22563a32fc41eb7-desc" data-markvis="2" data-chart-type="area" data-id="mv-e22563a32fc41eb7" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-e22563a32fc41eb7-title">Queue A share stays ahead of queue B</title>
+  <desc id="mv-e22563a32fc41eb7-desc">area chart. Queue A share stays ahead of queue B. x=minute. y=depth. series=queue. 8 rows.</desc>
+  <text x="74" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Queue A share stays ahead of queue B</text>
+  <g font-size="12" font-weight="500" fill="#333333">
+    <rect x="74" y="31" width="10" height="10" fill="#7cb5ec" rx="1"/>
+    <text x="88" y="40" data-legend="A">A</text>
+    <rect x="111.44" y="31" width="10" height="10" fill="#434348" rx="1"/>
+    <text x="125.44" y="40" data-legend="B">B</text>
+  </g>
+  <rect x="74" y="62" width="626" height="337" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
+  <g fill="none" stroke="#333333" stroke-opacity="0.22" stroke-width="1">
+    <line x1="74" x2="700" y1="230.5" y2="230.5"/>
+    <line x1="74" x2="700" y1="62" y2="62"/>
+  </g>
+  <path d="M74 399 L700 399" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <g fill="#666666" font-size="11" font-weight="400">
+    <text x="66" y="399" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="230.5" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="66" y="62" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="82" y="410" text-anchor="middle" font-size="11" data-full-label="-1">-1</text>
+    <text x="204" y="410" text-anchor="middle" font-size="11" data-full-label="0">0</text>
+    <text x="326" y="410" text-anchor="middle" font-size="11" data-full-label="1">1</text>
+    <text x="448" y="410" text-anchor="middle" font-size="11" data-full-label="2">2</text>
+    <text x="570" y="410" text-anchor="middle" font-size="11" data-full-label="3">3</text>
+    <text x="692" y="410" text-anchor="middle" font-size="11" data-full-label="4">4</text>
+  </g>
+  <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="52" y="230.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 52 230.5)" data-axis="y">depth</text>
+    <text x="387" y="426" text-anchor="middle" dominant-baseline="hanging" data-axis="x">minute</text>
+  </g>
+  <g fill="none">
+    <path d="M152.25 158.29 L308.75 163.1 L465.25 196.8 L621.75 153.91 L621.75 399 L465.25 399 L308.75 399 L152.25 399 Z" fill="#7cb5ec" fill-opacity="0.28" stroke="none" data-series="A" data-layout="percent"/>
+    <path d="M152.25 158.29 L308.75 163.1 L465.25 196.8 L621.75 153.91" fill="none" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="A" data-layout="percent"/>
+    <circle cx="152.25" cy="158.29" r="3.5" fill="#7cb5ec" stroke="none" data-series="A"/>
+    <circle cx="308.75" cy="163.1" r="3.5" fill="#7cb5ec" stroke="none" data-series="A"/>
+    <circle cx="465.25" cy="196.8" r="3.5" fill="#7cb5ec" stroke="none" data-series="A"/>
+    <circle cx="621.75" cy="153.91" r="3.5" fill="#7cb5ec" stroke="none" data-series="A"/>
+    <path d="M152.25 62 L308.75 62 L465.25 62 L621.75 62 L621.75 153.91 L465.25 196.8 L308.75 163.1 L152.25 158.29 Z" fill="#434348" fill-opacity="0.28" stroke="none" data-series="B" data-layout="percent"/>
+    <path d="M152.25 62 L308.75 62 L465.25 62 L621.75 62" fill="none" stroke="#434348" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="B" data-layout="percent"/>
+    <circle cx="152.25" cy="62" r="3.5" fill="#434348" stroke="none" data-series="B"/>
+    <circle cx="308.75" cy="62" r="3.5" fill="#434348" stroke="none" data-series="B"/>
+    <circle cx="465.25" cy="62" r="3.5" fill="#434348" stroke="none" data-series="B"/>
+    <circle cx="621.75" cy="62" r="3.5" fill="#434348" stroke="none" data-series="B"/>
+  </g>
+</svg>

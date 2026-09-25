@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Walk-up plus member still climb through week 8, 16 rows, series channel" aria-labelledby="mv-61cebd44b0368518-title" aria-describedby="mv-61cebd44b0368518-desc" data-markvis="2" data-chart-type="line" data-id="mv-61cebd44b0368518" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-61cebd44b0368518-title">Walk-up plus member still climb through week 8</title>
+  <desc id="mv-61cebd44b0368518-desc">line chart. Walk-up plus member still climb through week 8. x=week. y=count. series=channel. 16 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Walk-up plus member still climb through week 8</text>
+  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
+    <line x1="48" x2="664.26" y1="317.33" y2="317.33"/>
+    <line x1="48" x2="664.26" y1="176.67" y2="176.67"/>
+    <line x1="48" x2="664.26" y1="36" y2="36"/>
+  </g>
+  <path d="M48 458 L664.26 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="317.33" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="38" y="176.67" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="86.52" y="468" text-anchor="middle" font-size="10" data-full-label="W1">W1</text>
+    <text x="163.55" y="468" text-anchor="middle" font-size="10" data-full-label="W2">W2</text>
+    <text x="240.58" y="468" text-anchor="middle" font-size="10" data-full-label="W3">W3</text>
+    <text x="317.61" y="468" text-anchor="middle" font-size="10" data-full-label="W4">W4</text>
+    <text x="394.65" y="468" text-anchor="middle" font-size="10" data-full-label="W5">W5</text>
+    <text x="471.68" y="468" text-anchor="middle" font-size="10" data-full-label="W6">W6</text>
+    <text x="548.71" y="468" text-anchor="middle" font-size="10" data-full-label="W7">W7</text>
+    <text x="625.74" y="468" text-anchor="middle" font-size="10" data-full-label="W8">W8</text>
+  </g>
+  <g fill="none">
+    <path d="M86.52 277.95 L163.55 266.69 L240.58 258.25 L317.61 263.88 L394.65 249.81 L471.68 255.44 L548.71 247 L625.74 252.63" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="walk-up" data-layout="stacked"/>
+    <circle cx="86.52" cy="277.95" r="2.5" fill="#3B82F6" stroke="none" data-series="walk-up"/>
+    <circle cx="163.55" cy="266.69" r="2.5" fill="#3B82F6" stroke="none" data-series="walk-up"/>
+    <circle cx="240.58" cy="258.25" r="2.5" fill="#3B82F6" stroke="none" data-series="walk-up"/>
+    <circle cx="317.61" cy="263.88" r="2.5" fill="#3B82F6" stroke="none" data-series="walk-up"/>
+    <circle cx="394.65" cy="249.81" r="2.5" fill="#3B82F6" stroke="none" data-series="walk-up"/>
+    <circle cx="471.68" cy="255.44" r="2.5" fill="#3B82F6" stroke="none" data-series="walk-up"/>
+    <circle cx="548.71" cy="247" r="2.5" fill="#3B82F6" stroke="none" data-series="walk-up"/>
+    <circle cx="625.74" cy="252.63" r="2.5" fill="#3B82F6" stroke="none" data-series="walk-up"/>
+    <path d="M86.52 199.17 L163.55 176.67 L240.58 159.79 L317.61 156.97 L394.65 134.47 L471.68 131.65 L548.71 114.77 L625.74 111.96" fill="none" stroke="#F97316" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="member" data-layout="stacked"/>
+    <circle cx="86.52" cy="199.17" r="2.5" fill="#F97316" stroke="none" data-series="member"/>
+    <circle cx="163.55" cy="176.67" r="2.5" fill="#F97316" stroke="none" data-series="member"/>
+    <circle cx="240.58" cy="159.79" r="2.5" fill="#F97316" stroke="none" data-series="member"/>
+    <circle cx="317.61" cy="156.97" r="2.5" fill="#F97316" stroke="none" data-series="member"/>
+    <circle cx="394.65" cy="134.47" r="2.5" fill="#F97316" stroke="none" data-series="member"/>
+    <circle cx="471.68" cy="131.65" r="2.5" fill="#F97316" stroke="none" data-series="member"/>
+    <circle cx="548.71" cy="114.77" r="2.5" fill="#F97316" stroke="none" data-series="member"/>
+    <circle cx="625.74" cy="111.96" r="2.5" fill="#F97316" stroke="none" data-series="member"/>
+  </g>
+  <g font-size="11" font-weight="500">
+    <text x="633.74" y="252.63" text-anchor="start" dominant-baseline="middle" fill="#3B82F6" data-end-label="walk-up">walk-up</text>
+    <text x="633.74" y="111.96" text-anchor="start" dominant-baseline="middle" fill="#F97316" data-end-label="member">member</text>
+  </g>
+</svg>

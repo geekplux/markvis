@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="pie chart: Billing still leads support tickets at 40, 4 slices" aria-labelledby="mv-398374c454625ec9-title" aria-describedby="mv-398374c454625ec9-desc" data-markvis="2" data-chart-type="pie" data-id="mv-398374c454625ec9" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-398374c454625ec9-title">Billing still leads support tickets at 40</title>
+  <desc id="mv-398374c454625ec9-desc">pie chart. Billing still leads support tickets at 40. x=topic. y=tickets. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#374151">Billing still leads support tickets at 40</text>
+  <g font-size="12" font-weight="400" fill="#374151">
+    <rect x="48" y="425" width="10" height="10" fill="#8884d8" rx="1"/>
+    <text x="62" y="434" data-legend="Billing">Billing</text>
+    <rect x="130.08" y="425" width="10" height="10" fill="#82ca9d" rx="1"/>
+    <text x="144.08" y="434" data-legend="Access">Access</text>
+    <rect x="204.72" y="425" width="10" height="10" fill="#ffc658" rx="1"/>
+    <text x="218.72" y="434" data-legend="How-to">How-to</text>
+    <rect x="279.36" y="425" width="10" height="10" fill="#ff7300" rx="1"/>
+    <text x="293.36" y="434" data-legend="Other">Other</text>
+  </g>
+  <rect x="48" y="36" width="652" height="370" fill="none" stroke="#e2e8f0" stroke-width="1" data-plot-border="1"/>
+  <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0.5">
+    <path d="M374 95.2 A125.8 125.8 0 0 1 447.94 322.77 L410.97 271.89 A62.9 62.9 0 0 0 374 158.1 Z" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="Billing" data-raw-value="40" data-donut="1"/>
+    <path d="M447.94 322.77 A125.8 125.8 0 0 1 272.23 294.94 L323.11 257.97 A62.9 62.9 0 0 0 410.97 271.89 Z" fill="#82ca9d" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="Access" data-raw-value="25" data-donut="1"/>
+    <path d="M272.23 294.94 A125.8 125.8 0 0 1 272.23 147.06 L323.11 184.03 A62.9 62.9 0 0 0 323.11 257.97 Z" fill="#ffc658" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="How-to" data-raw-value="20" data-donut="1"/>
+    <path d="M272.23 147.06 A125.8 125.8 0 0 1 374 95.2 L374 158.1 A62.9 62.9 0 0 0 323.11 184.03 Z" fill="#ff7300" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="Other" data-raw-value="15" data-donut="1"/>
+  </g>
+</svg>
