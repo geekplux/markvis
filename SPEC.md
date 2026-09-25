@@ -135,7 +135,7 @@ Optional fields that change paint on an existing type. Same `type` id — not a 
 | `E_DUP_COLUMN` | Duplicate header names. |
 | `E_UNKNOWN_FIELD` | `x` / `y` / `series` name a missing column; undeclared header key; encoding on the wrong type; or bad encoding value. |
 | `E_PIE_NEGATIVE` | Pie value < 0. |
-| `E_NEGATIVE_VALUE` | Funnel or radar value < 0. |
+| `E_NEGATIVE_VALUE` | Funnel, radar, sankey, or treemap value < 0. |
 | `E_YAML_TABLE_CONFLICT` | Header fields disagree with progressive table mapping. |
 | `E_EMPTY_FENCE` | Fence body empty. |
 | `E_UNKNOWN_THEME` | `theme` not in `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts`. |
