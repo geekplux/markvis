@@ -4,7 +4,7 @@
 
 ## Summary
 
-Additive **markvis 2.x** on `feat/wave2-types` tip **`bbbd775`** (gauge polish `7625e8e`): five new type packs — `heatmap` `funnel` `waterfall` `radar` `gauge` — same registry path as the six. Unknown type still → `E_UNKNOWN_TYPE` + table. No chart-library runtimes. Gauge paint polished after review (upper arc + hero number; no needle).
+Additive **markvis 2.x** on `feat/wave2-types` tip **`bc218fa`** (gauge polish `7625e8e`): five new type packs — `heatmap` `funnel` `waterfall` `radar` `gauge` — same registry path as the six. Unknown type still → `E_UNKNOWN_TYPE` + table. No chart-library runtimes. Gauge paint polished after review (upper arc + hero number; no needle).
 
 ## Why
 
@@ -60,7 +60,7 @@ Deps stay `@markvis/ir` ← `@markvis/types` ← `@markvis/render-svg`. Chrome s
 - [x] `examples/valid` + `out` + gallery bake (`59`–`63`)
 - [x] Invalid: missing heatmap `series`, funnel/radar neg, bad gauge `min`/`max`, `min` on bar
 - [x] Gauge polish @ `7625e8e` — `59`–`62` byte-stable; only `63` + gallery re-baked; Coder `pnpm test` 650 / 2 skipped
-- [ ] Verifier re-gate gauge-only on polish `7625e8e` (docs HEAD follows)
+- [x] Verifier re-gate gauge-only — PASS-with-risks @ `bc218fa` (polish `7625e8e`)
 - [x] CHANGELOG Unreleased, SPEC / TYPES / llms catalogs updated
 - [x] PR description tip sync
 
@@ -89,5 +89,5 @@ Pack bake `d5204b9`; gauge re-bake on tip `7625e8e` (paths under `examples/out/`
 ## Branch / release discipline
 
 - Branch: `feat/wave2-types` → `master` via [#20](https://github.com/geekplux/markvis/pull/20)
-- Tip: docs `bbbd775`; gauge polish `7625e8e`; pack bake `d5204b9`
+- Tip: `bc218fa`; gauge polish `7625e8e`; pack bake `d5204b9`
 - No drive-by master SHAs; no force-push master; no npm publish
