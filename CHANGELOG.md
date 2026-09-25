@@ -2,26 +2,41 @@
 
 ## Unreleased
 
-- Docs/catalog sync: AGENTS fence example, site Spec, home feature copy, README, and issue templates list all thirteen types (`sankey`/`treemap` included). Drop leftover Wave 3 PR body and orphan `home/03-area-basic.svg`.
+### Added
 
-- Wave 3 type packs: `sankey` `treemap`. Pack-local layout only (no d3-hierarchy/sankey). Sankey self-link → `E_UNKNOWN_FIELD`; sankey/treemap negatives → `E_NEGATIVE_VALUE`.
+- (none yet)
+
+### Changed
+
+- (none yet)
+
+### Fixed
+
+- (none yet)
+
+## 2.1.0 — 2026-09-25
+
+Type packs land on npm. Thirteen chart kinds, layout encodings, and richer examples — still one Markdown fence language, no chart-library runtime.
 
 ### Added
 
-- Wave 2 type packs: `heatmap` `funnel` `waterfall` `radar` `gauge`. Gauge extras `min`/`max`. Funnel/radar negatives use `E_NEGATIVE_VALUE`.
-- Type packs under `packages/types/<id>/` with a registry (same contribution shape as themes). Paint lives with the pack; `@markvis/render-svg` keeps SVG chrome.
-- Fence encodings: `layout: grouped|stacked|percent` on `bar` / `line` / `area` (omit = grouped). `innerRadius` on `pie` in `[0, 1]` (omit = theme `PIE_INNER_RATIO`; explicit `0` = solid).
-- `docs/TYPES.md` — IN/OUT, encodings vs new type ids, how to contribute a type.
-- Agent docs: short encodings note in `llms.txt`; fuller catalog notes in `llms-full.txt`.
+- **Type packs** under `packages/types/<id>/` with a registry (same contribution shape as themes). Packs own paint; `@markvis/render-svg` keeps SVG chrome. Docs: `docs/TYPES.md`.
+- **Wave 1 encodings:** `layout: grouped|stacked|percent` on `bar` / `line` / `area` (omit = grouped). `innerRadius` on `pie` in `[0, 1]` (omit = theme `PIE_INNER_RATIO`; explicit `0` = solid).
+- **Wave 2 types:** `heatmap` `funnel` `waterfall` `radar` `gauge`. Gauge extras `min` / `max`. Funnel / radar negatives → `E_NEGATIVE_VALUE`.
+- **Wave 3 types:** `sankey` `treemap`. Pack-local layout only (no d3-hierarchy / d3-sankey). Sankey: `series` required as target; self-link → `E_UNKNOWN_FIELD`. Treemap: flat or two levels only. Negatives → `E_NEGATIVE_VALUE`.
+- Agent docs: encodings + full catalog notes in `llms.txt` / `llms-full.txt`. Spec and site Spec list all thirteen types.
+- Examples densified for Wave 2–3 (real-job fences); home proof strip is bar · line · sankey.
 
 ### Changed
 
 - Undeclared fence headers and illegal encodings fail with `E_UNKNOWN_FIELD` + table (no silent ignore).
 - Old six fences without encodings stay valid; omit-encoding snapshots stay byte-stable.
+- Sankey paint uses filled value ribbons (d3-sankey *behavior*, no d3 runtime) instead of thick stroked centerlines.
 
-### Fixed
+### Site (markvis.js.org — not an npm API change)
 
-- (none user-facing in this cut)
+- Examples detail view re-renders live for theme ‖ palette (grid thumbs stay theme-baked).
+- SiteNav GitHub control shows the live star count when the API responds.
 
 
 ## 2.0.2

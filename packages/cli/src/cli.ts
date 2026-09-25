@@ -21,7 +21,7 @@ import { buildGalleryHtml } from "./gallery.js";
 import { buildPreviewHtml } from "./preview.js";
 import { chartStats } from "./stats.js";
 
-export const VERSION = "2.0.2";
+export const VERSION = "2.1.0";
 
 export const USAGE = `Usage: markvis <command> [options] [paths...]
 
