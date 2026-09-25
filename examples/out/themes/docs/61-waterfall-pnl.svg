@@ -1,44 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="waterfall chart: Concessions still cover Midtown rent after payroll (USD k), 8 rows" aria-labelledby="mv-b80f123a37aff372-title" aria-describedby="mv-b80f123a37aff372-desc" data-markvis="2" data-chart-type="waterfall" data-id="mv-b80f123a37aff372" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-b80f123a37aff372-title">Concessions still cover Midtown rent after payroll</title>
   <desc id="mv-b80f123a37aff372-desc">waterfall chart. Concessions still cover Midtown rent after payroll. x=step. y=delta. unit=USD k. 8 rows.</desc>
-  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Concessions still cover Midtown rent after payroll<tspan font-size="11" font-weight="400" fill="#64748B"> · USD k</tspan></text>
-  <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="40" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#18181B"><title>Concessions still cover Midtown rent after payroll</title>Concessions still cover Midtown rent after payroll<tspan font-size="13" font-weight="400" fill="#64748B"> · USD k</tspan></text>
+  <line x1="40" x2="704" y1="38" y2="38" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
   <g fill="none" stroke="#18181B" stroke-opacity="0.06" stroke-width="1">
-    <line x1="40" x2="704" y1="316" y2="316"/>
-    <line x1="40" x2="704" y1="174" y2="174"/>
+    <line x1="40" x2="704" y1="308" y2="308"/>
+    <line x1="40" x2="704" y1="176" y2="176"/>
   </g>
-  <path d="M40 458 L704 458" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <path d="M40 440 L704 440" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
   <g data-waterfall="1">
-    <rect x="48.3" y="202.4" width="66.4" height="255.6" fill="#475569" rx="0" data-step="Ticket sales" data-y="180" data-baseline="0"/>
-    <rect x="131.3" y="111.52" width="66.4" height="90.88" fill="#475569" rx="0" data-step="Concessions" data-y="64" data-baseline="180"/>
-    <rect x="214.3" y="71.76" width="66.4" height="39.76" fill="#475569" rx="0" data-step="Merch" data-y="28" data-baseline="244"/>
-    <rect x="297.3" y="40.52" width="66.4" height="31.24" fill="#475569" rx="0" data-step="Sponsorships" data-y="22" data-baseline="272"/>
-    <rect x="380.3" y="40.52" width="66.4" height="127.8" fill="#64748B" rx="0" data-step="Payroll" data-y="-90" data-baseline="294"/>
-    <rect x="463.3" y="168.32" width="66.4" height="59.64" fill="#64748B" rx="0" data-step="Rent" data-y="-42" data-baseline="204"/>
-    <rect x="546.3" y="227.96" width="66.4" height="17.04" fill="#64748B" rx="0" data-step="Utilities" data-y="-12" data-baseline="162"/>
-    <rect x="629.3" y="245" width="66.4" height="25.56" fill="#64748B" rx="0" data-step="Marketing" data-y="-18" data-baseline="150"/>
+    <rect x="48.3" y="202.4" width="66.4" height="237.6" fill="#0F766E" rx="0" data-step="Ticket sales" data-y="180" data-level="180" data-role="delta" data-baseline="0"/>
+    <text x="81.5" y="196.4" text-anchor="middle" font-size="13" font-weight="500" fill="#18181B" data-delta="Ticket sales">+180 → 180</text>
+    <rect x="131.3" y="117.92" width="66.4" height="84.48" fill="#0F766E" rx="0" data-step="Concessions" data-y="64" data-level="244" data-role="delta" data-baseline="180"/>
+    <text x="164.5" y="111.92" text-anchor="middle" font-size="13" font-weight="500" fill="#18181B" data-delta="Concessions">+64 → 244</text>
+    <rect x="214.3" y="80.96" width="66.4" height="36.96" fill="#0F766E" rx="0" data-step="Merch" data-y="28" data-level="272" data-role="delta" data-baseline="244"/>
+    <text x="247.5" y="74.96" text-anchor="middle" font-size="13" font-weight="500" fill="#18181B" data-delta="Merch">+28 → 272</text>
+    <rect x="297.3" y="51.92" width="66.4" height="29.04" fill="#0F766E" rx="0" data-step="Sponsorships" data-y="22" data-level="294" data-role="delta" data-baseline="272"/>
+    <text x="330.5" y="45.92" text-anchor="middle" font-size="13" font-weight="500" fill="#18181B" data-delta="Sponsorships">+22 → 294</text>
+    <rect x="380.3" y="51.92" width="66.4" height="118.8" fill="#BE123C" rx="0" data-step="Payroll" data-y="-90" data-level="204" data-role="delta" data-baseline="294"/>
+    <text x="413.5" y="45.92" text-anchor="middle" font-size="13" font-weight="500" fill="#18181B" data-delta="Payroll">-90 → 204</text>
+    <rect x="463.3" y="170.72" width="66.4" height="55.44" fill="#BE123C" rx="0" data-step="Rent" data-y="-42" data-level="162" data-role="delta" data-baseline="204"/>
+    <text x="496.5" y="164.72" text-anchor="middle" font-size="13" font-weight="500" fill="#18181B" data-delta="Rent">-42 → 162</text>
+    <rect x="546.3" y="226.16" width="66.4" height="15.84" fill="#BE123C" rx="0" data-step="Utilities" data-y="-12" data-level="150" data-role="delta" data-baseline="162"/>
+    <text x="579.5" y="220.16" text-anchor="middle" font-size="13" font-weight="500" fill="#18181B" data-delta="Utilities">-12 → 150</text>
+    <rect x="629.3" y="242" width="66.4" height="23.76" fill="#BE123C" rx="0" data-step="Marketing" data-y="-18" data-level="132" data-role="delta" data-baseline="150"/>
+    <text x="662.5" y="236" text-anchor="middle" font-size="13" font-weight="500" fill="#18181B" data-delta="Marketing">-18 → 132</text>
   </g>
   <g fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-waterfall-connectors="1">
     <line x1="114.7" x2="131.3" y1="202.4" y2="202.4"/>
-    <line x1="197.7" x2="214.3" y1="111.52" y2="111.52"/>
-    <line x1="280.7" x2="297.3" y1="71.76" y2="71.76"/>
-    <line x1="363.7" x2="380.3" y1="40.52" y2="40.52"/>
-    <line x1="446.7" x2="463.3" y1="168.32" y2="168.32"/>
-    <line x1="529.7" x2="546.3" y1="227.96" y2="227.96"/>
-    <line x1="612.7" x2="629.3" y1="245" y2="245"/>
+    <line x1="197.7" x2="214.3" y1="117.92" y2="117.92"/>
+    <line x1="280.7" x2="297.3" y1="80.96" y2="80.96"/>
+    <line x1="363.7" x2="380.3" y1="51.92" y2="51.92"/>
+    <line x1="446.7" x2="463.3" y1="170.72" y2="170.72"/>
+    <line x1="529.7" x2="546.3" y1="226.16" y2="226.16"/>
+    <line x1="612.7" x2="629.3" y1="242" y2="242"/>
   </g>
-  <g fill="#64748B" font-size="10" font-weight="400">
-    <text x="32" y="458" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="32" y="316" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="32" y="174" text-anchor="end" dominant-baseline="middle">200</text>
-    <text x="32" y="32" text-anchor="end" dominant-baseline="middle">300</text>
-    <text x="81.5" y="468" text-anchor="middle" data-full-label="Ticket sales">Ticket sales</text>
-    <text x="164.5" y="468" text-anchor="middle" data-full-label="Concessions">Concessions</text>
-    <text x="247.5" y="468" text-anchor="middle" data-full-label="Merch">Merch</text>
-    <text x="330.5" y="468" text-anchor="middle" data-full-label="Sponsorships">Sponsorships</text>
-    <text x="413.5" y="468" text-anchor="middle" data-full-label="Payroll">Payroll</text>
-    <text x="496.5" y="468" text-anchor="middle" data-full-label="Rent">Rent</text>
-    <text x="579.5" y="468" text-anchor="middle" data-full-label="Utilities">Utilities</text>
-    <text x="662.5" y="468" text-anchor="middle" data-full-label="Marketing">Marketing</text>
+  <g fill="#64748B" font-size="12" font-weight="400">
+    <text x="32" y="440" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="32" y="308" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="32" y="176" text-anchor="end" dominant-baseline="middle">200</text>
+    <text x="32" y="44" text-anchor="end" dominant-baseline="middle">300</text>
+    <text x="81.5" y="452" text-anchor="middle" data-full-label="Ticket sales">Ticket sales</text>
+    <text x="164.5" y="452" text-anchor="middle" data-full-label="Concessions">Concessions</text>
+    <text x="247.5" y="452" text-anchor="middle" data-full-label="Merch">Merch</text>
+    <text x="330.5" y="452" text-anchor="middle" data-full-label="Sponsorships">Sponsorships</text>
+    <text x="413.5" y="452" text-anchor="middle" data-full-label="Payroll">Payroll</text>
+    <text x="496.5" y="452" text-anchor="middle" data-full-label="Rent">Rent</text>
+    <text x="579.5" y="452" text-anchor="middle" data-full-label="Utilities">Utilities</text>
+    <text x="662.5" y="452" text-anchor="middle" data-full-label="Marketing">Marketing</text>
   </g>
 </svg>

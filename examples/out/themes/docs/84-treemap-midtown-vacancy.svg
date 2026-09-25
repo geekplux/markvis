@@ -1,29 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="treemap chart: Colony Square still holds the largest Midtown vacancy (sq ft), 8 rows, series corridor" aria-labelledby="mv-996e8e2a1730f1c8-title" aria-describedby="mv-996e8e2a1730f1c8-desc" data-markvis="2" data-chart-type="treemap" data-id="mv-996e8e2a1730f1c8" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-996e8e2a1730f1c8-title">Colony Square still holds the largest Midtown vacancy</title>
   <desc id="mv-996e8e2a1730f1c8-desc">treemap chart. Colony Square still holds the largest Midtown vacancy. x=building. y=vacant. series=corridor. unit=sq ft. 8 rows.</desc>
-  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Colony Square still holds the largest Midtown vacancy<tspan font-size="11" font-weight="400" fill="#64748B"> · sq ft</tspan></text>
-  <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="40" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#18181B"><title>Colony Square still holds the largest Midtown vacancy</title><tspan x="40" dy="0">Colony Square still holds the largest Midtown</tspan><tspan x="40" dy="27">vacancy</tspan><tspan font-size="13" font-weight="400" fill="#64748B"> · sq ft</tspan></text>
+  <line x1="40" x2="704" y1="38" y2="38" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
   <g data-treemap="1">
-    <rect x="40" y="32" width="354.4" height="16" fill="#475569" fill-opacity="0.35" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Peachtree" data-y="87,000"/>
-    <rect x="394.4" y="32" width="199.61" height="16" fill="#64748B" fill-opacity="0.35" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="14th Street" data-y="49,000"/>
-    <rect x="594.01" y="32" width="109.99" height="16" fill="#0F766E" fill-opacity="0.35" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Tech Square" data-y="27,000"/>
-    <rect x="40" y="48" width="354.4" height="200.83" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Colony Square" data-y="42,000"/>
-    <rect x="40" y="248.83" width="354.4" height="148.23" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Promenade" data-y="31,000"/>
-    <rect x="40" y="397.06" width="354.4" height="66.94" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Campanile" data-y="14,000"/>
-    <rect x="394.4" y="48" width="199.61" height="152.82" fill="#0F766E" fill-opacity="0.65" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Ten Peachtree Place" data-y="18,000"/>
-    <rect x="394.4" y="200.82" width="199.61" height="186.78" fill="#334155" fill-opacity="0.65" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="One Atlantic Center" data-y="22,000"/>
-    <rect x="394.4" y="387.59" width="199.61" height="76.41" fill="#78716C" fill-opacity="0.65" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Midtown Center" data-y="9,000"/>
-    <rect x="594.01" y="48" width="109.99" height="246.52" fill="#78716C" fill-opacity="0.65" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Technology Square" data-y="16,000"/>
-    <rect x="594.01" y="294.52" width="109.99" height="169.48" fill="#57534E" fill-opacity="0.65" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Centergy One" data-y="11,000"/>
+    <rect x="40" y="71" width="354.4" height="22" fill="#475569" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.5" data-label="Peachtree" data-y="87,000" data-depth="0"/>
+    <rect x="394.4" y="71" width="309.6" height="22" fill="#64748B" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.5" data-label="14th Street" data-y="49,000" data-depth="0"/>
+    <rect x="394.4" y="324.38" width="309.6" height="22" fill="#0F766E" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.5" data-label="Tech Square" data-y="27,000" data-depth="0"/>
+    <rect x="40" y="93" width="354.4" height="179.1" fill="#475569" fill-opacity="0.62" stroke="#ffffff" stroke-width="1.5" data-label="Colony Square" data-y="42,000" data-depth="1"/>
+    <rect x="40" y="272.1" width="244.15" height="191.9" fill="#475569" fill-opacity="0.8300000000000001" stroke="#ffffff" stroke-width="1.5" data-label="Promenade" data-y="31,000" data-depth="1"/>
+    <rect x="284.15" y="272.1" width="110.26" height="191.9" fill="#475569" fill-opacity="0.69" stroke="#ffffff" stroke-width="1.5" data-label="Campanile" data-y="14,000" data-depth="1"/>
+    <rect x="394.4" y="93" width="139" height="231.38" fill="#64748B" fill-opacity="0.9" stroke="#ffffff" stroke-width="1.5" data-label="One Atlantic Center" data-y="22,000" data-depth="1"/>
+    <rect x="533.41" y="93" width="170.59" height="154.25" fill="#64748B" fill-opacity="0.76" stroke="#ffffff" stroke-width="1.5" data-label="Ten Peachtree Place" data-y="18,000" data-depth="1"/>
+    <rect x="533.41" y="247.25" width="170.59" height="77.13" fill="#64748B" fill-opacity="0.9" stroke="#ffffff" stroke-width="1.5" data-label="Midtown Center" data-y="9,000" data-depth="1"/>
+    <rect x="394.4" y="346.38" width="183.46" height="117.62" fill="#0F766E" fill-opacity="0.9" stroke="#ffffff" stroke-width="1.5" data-label="Technology Square" data-y="16,000" data-depth="1"/>
+    <rect x="577.87" y="346.38" width="126.13" height="117.62" fill="#0F766E" fill-opacity="0.62" stroke="#ffffff" stroke-width="1.5" data-label="Centergy One" data-y="11,000" data-depth="1"/>
   </g>
-  <g fill="#18181B" font-size="10" font-weight="500">
-    <text x="44" y="60.5" text-anchor="start" data-label-text="Colony Square">Colony Square</text>
-    <text x="44" y="261.33" text-anchor="start" data-label-text="Promenade">Promenade</text>
-    <text x="44" y="409.56" text-anchor="start" data-label-text="Campanile">Campanile</text>
-    <text x="398.4" y="60.5" text-anchor="start" data-label-text="Ten Peachtree Place">Ten Peachtree Place</text>
-    <text x="398.4" y="213.32" text-anchor="start" data-label-text="One Atlantic Center">One Atlantic Center</text>
-    <text x="398.4" y="400.09" text-anchor="start" data-label-text="Midtown Center">Midtown Center</text>
-    <text x="598.01" y="60.5" text-anchor="start" data-label-text="Technology Square">Technology Squa…</text>
-    <text x="598.01" y="307.02" text-anchor="start" data-label-text="Centergy One">Centergy One</text>
+  <g fill="#18181B" font-size="13" font-weight="500">
+    <text x="44" y="86.05" text-anchor="start" fill="#fafaf9" data-label-text="Peachtree"><title>Peachtree</title>Peachtree</text>
+    <text x="398.4" y="86.05" text-anchor="start" fill="#fafaf9" data-label-text="14th Street"><title>14th Street</title>14th Street</text>
+    <text x="398.4" y="339.43" text-anchor="start" fill="#fafaf9" data-label-text="Tech Square"><title>Tech Square</title>Tech Square</text>
+    <text x="44" y="108.05" text-anchor="start" fill="#fafaf9" data-label-text="Colony Square"><title>Colony Square</title>Colony Square</text>
+    <text x="44" y="287.15" text-anchor="start" fill="#fafaf9" data-label-text="Promenade"><title>Promenade</title>Promenade</text>
+    <text x="288.15" y="287.15" text-anchor="start" fill="#fafaf9" data-label-text="Campanile"><title>Campanile</title>Campanile</text>
+    <text x="398.4" y="108.05" text-anchor="start" fill="#fafaf9" data-label-text="One Atlantic Center"><title>One Atlantic Center</title>One Atlantic Ce…</text>
+    <text x="537.41" y="108.05" text-anchor="start" fill="#fafaf9" data-label-text="Ten Peachtree Place"><title>Ten Peachtree Place</title>Ten Peachtree Place</text>
+    <text x="537.41" y="262.3" text-anchor="start" fill="#fafaf9" data-label-text="Midtown Center"><title>Midtown Center</title>Midtown Center</text>
+    <text x="398.4" y="361.43" text-anchor="start" fill="#fafaf9" data-label-text="Technology Square"><title>Technology Square</title>Technology Square</text>
+    <text x="581.87" y="361.43" text-anchor="start" fill="#fafaf9" data-label-text="Centergy One"><title>Centergy One</title>Centergy One</text>
   </g>
 </svg>

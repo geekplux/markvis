@@ -1,6 +1,6 @@
 import type { ChartIR } from "@markvis/ir";
 import { loadRows } from "./data.js";
-import { drawTitle, visibleTitle } from "./figure.js";
+import { drawTitle, reserveTitle, visibleTitle } from "./figure.js";
 import {
   fitFrameHeight,
   titleBlockTop,
@@ -48,16 +48,26 @@ function upperArc(
 export function renderGauge(chart: ChartIR, _id: string): Painted {
   const rows = loadRows(chart);
   const first = rows[0];
-  const value = first?.y ?? 0;
+  const value = first?.y ?? null;
   const label = (first?.xLabel ?? "").trim();
   const gmin = chart.min ?? 0;
-  const gmax = chart.max !== undefined ? chart.max : Math.max(value, 1);
+  // Omitted max is the documented 0–100 percentage range, not the current value.
+  const gmax = chart.max !== undefined ? chart.max : 100;
+  if (value === null) {
+    reserveTitle(visibleTitle(chart), MARGIN.left, chart.unit);
+    const top = titleBlockTop(0);
+    return {
+      height: fitFrameHeight(top, MARGIN.right),
+      lines: [drawTitle(visibleTitle(chart), MARGIN.left, chart.unit)],
+    };
+  }
   const span = gmax - gmin;
   const t =
     span === 0 ? 0.5 : Math.max(0, Math.min(1, (value - gmin) / span));
 
   const left = MARGIN.left;
   const right = MARGIN.right;
+  reserveTitle(visibleTitle(chart), left, chart.unit);
   const top = titleBlockTop(0);
   const bottom = MARGIN.right + 28;
   const height = fitFrameHeight(top, bottom);
@@ -153,7 +163,7 @@ export function renderGauge(chart: ChartIR, _id: string): Painted {
       "font-weight": 600,
       fill: INK,
       "data-gauge-value": "1",
-    })}>${escapeXml(formatNumber(value))}</text>`,
+    })}>${escapeXml(formatNumber(value))}${chart.unit ? ` ${escapeXml(chart.unit)}` : ""}</text>`,
   );
   if (label !== "") {
     lines.push(
@@ -196,6 +206,20 @@ export function renderGauge(chart: ChartIR, _id: string): Painted {
     })}>${escapeXml(formatNumber(gmax))}</text>`,
   );
   lines.push(`  </g>`);
+
+  if (value < gmin || value > gmax) {
+    const note = value > gmax ? "above range" : "below range";
+    lines.push(
+      `  <text ${attrs({
+        x: fmtPx(cx),
+        y: fmtPx(cy + 32),
+        "text-anchor": "middle",
+        "font-size": TYPE.tick.size,
+        fill: TYPE.tick.fill,
+        "data-out-of-range": "1",
+      })}>${escapeXml(note)}</text>`,
+    );
+  }
 
   return { lines, height };
 }

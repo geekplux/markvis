@@ -1,10 +1,20 @@
 import type { ChartIR } from "@markvis/ir";
 import { resolveTypePack } from "@markvis/types";
 import { folio } from "@markvis/themes";
+import { countTitleLines, visibleTitle } from "../../types/_paint/figure.js";
+import { setTitleLineCount } from "../../types/_paint/layout.js";
+import { MARGIN } from "../../types/_paint/tokens.js";
 import { themeTokens } from "./theme.js";
-import { applyThemeTokens } from "./tokens.js";
+import { applyFrame, applyThemeTokens, type SurfaceName } from "./tokens.js";
 import { chartId } from "./chart-id.js";
 import { attrs, escapeXml } from "./xml.js";
+
+export type RenderOptions = {
+  /** Intended display width in px. Layout reflows; type is not shrunk. */
+  width?: number;
+  /** Overrides the chart's surface field. */
+  surface?: SurfaceName;
+};
 
 export function ariaLabel(chart: ChartIR): string {
   const n = chart.table.rows.length;
@@ -46,17 +56,23 @@ export function description(chart: ChartIR): string {
   return `${bits.join(". ")}.`;
 }
 
-export function renderSvg(chart: ChartIR): string {
+export function renderSvg(chart: ChartIR, options?: RenderOptions): string {
   const t = themeTokens(chart.theme, chart.palette);
   applyThemeTokens(t);
+  const width = options?.width ?? t.SVG_WIDTH;
+  const surface = options?.surface ?? chart.surface ?? "light";
+  applyFrame({ width, surface });
+  setTitleLineCount(
+    countTitleLines(visibleTitle(chart), MARGIN.left, chart.unit),
+  );
   try {
     const id = chartId(chart);
     const painted = resolveTypePack(chart.type).paint(chart, id);
     const open = `<svg ${attrs({
       xmlns: "http://www.w3.org/2000/svg",
-      width: t.SVG_WIDTH,
+      width,
       height: painted.height,
-      viewBox: `0 0 ${t.SVG_WIDTH} ${painted.height}`,
+      viewBox: `0 0 ${width} ${painted.height}`,
       role: "img",
       "aria-label": ariaLabel(chart),
       "aria-labelledby": `${id}-title`,
@@ -71,11 +87,19 @@ export function renderSvg(chart: ChartIR): string {
       open,
       `  <title id="${id}-title">${escapeXml(chart.title)}</title>`,
       `  <desc id="${id}-desc">${escapeXml(description(chart))}</desc>`,
+      `  <rect ${attrs({
+        width: "100%",
+        height: "100%",
+        fill: surface === "dark" ? "#1c1917" : surface === "export" ? "#ffffff" : "#fafaf9",
+        "data-surface": surface,
+      })}/>`,
       ...painted.lines,
       `</svg>`,
     ];
     return `${lines.join("\n")}\n`;
   } finally {
     applyThemeTokens(folio);
+    applyFrame({ width: folio.SVG_WIDTH, surface: "light" });
+    setTitleLineCount(1);
   }
 }

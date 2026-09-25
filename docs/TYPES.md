@@ -21,8 +21,8 @@ These stay valid forever. Additive only.
 | `heatmap` | x cat × series cat, y intensity. Long form; `series` required. |
 | `funnel` | x stage, y ≥ 0. Keep order; `series` ignored. |
 | `waterfall` | x step, y signed delta. Running baseline; `series` ignored. |
-| `radar` | x spoke, y ≥ 0. Optional `series`; scale max = max(y) or 1. |
-| `gauge` | First row. Optional `min`/`max`; `series` ignored. |
+| `radar` | x spoke, y ≥ 0. Optional `series`. One scale: `max` when it is at least the data max, otherwise the data max (or 1). |
+| `gauge` | One row. A second row is `E_DUP_KEY`. Optional `min`/`max`; omit max → 100. `series` ignored. |
 | `sankey` | x source, series target (required), y flow ≥ 0. One row = one link. |
 | `treemap` | x label, y ≥ 0, optional series parent (two levels max). |
 
@@ -50,7 +50,7 @@ Type-local extra keys only. Undeclared keys → `E_UNKNOWN_FIELD`.
 - Layout encodings on bar / line / area: `grouped` | `stacked` | `percent`
 - Pie `innerRadius` in `[0, 1]` (still `pie`; omit = theme default hole)
 - Wave 2 packs: heatmap, funnel, waterfall, radar, gauge
-- Gauge extras: `min` / `max` (omit min → 0, omit max → max(y, 1); both set ⇒ min < max)
+- Gauge extras: `min` / `max` (omit min → 0, omit max → 100; both set ⇒ min < max)
 - Wave 3 packs: sankey, treemap (pack-local layout; no d3-hierarchy/sankey)
 
 ## OUT

@@ -1,27 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="line chart: Points climb through beta weeks, 3 rows" aria-labelledby="mv-edeeaf08edaeb9c1-title" aria-describedby="mv-edeeaf08edaeb9c1-desc" data-markvis="2" data-chart-type="line" data-id="mv-edeeaf08edaeb9c1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-edeeaf08edaeb9c1-title">Points climb through beta weeks</title>
   <desc id="mv-edeeaf08edaeb9c1-desc">line chart. Points climb through beta weeks. x=milestone. y=points. 3 rows.</desc>
-  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">Points climb through beta weeks</text>
-  <rect x="48" y="36" width="652" height="401" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#0A0A0A"><title>Points climb through beta weeks</title>Points climb through beta weeks</text>
+  <rect x="48" y="46" width="652" height="374" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
   <g fill="none" stroke="#0A0A0A" stroke-opacity="0.06" stroke-width="1">
-    <line x1="48" x2="700" y1="336.75" y2="336.75"/>
-    <line x1="48" x2="700" y1="36" y2="36"/>
+    <line x1="48" x2="700" y1="326.5" y2="326.5"/>
+    <line x1="48" x2="700" y1="46" y2="46"/>
   </g>
-  <path d="M48 437 L700 437" fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1"/>
-  <g fill="#737373" font-size="11" font-weight="400">
-    <text x="40" y="437" text-anchor="end" dominant-baseline="middle">20</text>
-    <text x="40" y="336.75" text-anchor="end" dominant-baseline="middle">40</text>
-    <text x="40" y="236.5" text-anchor="end" dominant-baseline="middle">60</text>
-    <text x="40" y="136.25" text-anchor="end" dominant-baseline="middle">80</text>
-    <text x="40" y="36" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="156.67" y="448" text-anchor="middle" font-size="11" data-full-label="Kickoff and discovery workshop">Kickoff and discovery workshop</text>
-    <text x="374" y="448" text-anchor="middle" font-size="11" data-full-label="Alpha internal dogfood release">Alpha internal dogfood release</text>
-    <text x="591.33" y="448" text-anchor="middle" font-size="11" data-full-label="Public beta launch week">Public beta launch week</text>
+  <path d="M48 420 L700 420" fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1"/>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="40" y="420" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="40" y="326.5" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="40" y="233" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="40" y="139.5" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="40" y="46" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="156.67" y="432" text-anchor="middle" font-size="12" data-full-label="Kickoff and discovery workshop"><title>Kickoff and discovery workshop</title><tspan x="156.67" dy="0">Kickoff and discovery</tspan><tspan x="156.67" dy="15">workshop</tspan></text>
+    <text x="374" y="432" text-anchor="middle" font-size="12" data-full-label="Alpha internal dogfood release"><title>Alpha internal dogfood release</title><tspan x="374" dy="0">Alpha internal dogfood</tspan><tspan x="374" dy="15">release</tspan></text>
+    <text x="591.33" y="432" text-anchor="middle" font-size="12" data-full-label="Public beta launch week"><title>Public beta launch week</title>Public beta launch week</text>
   </g>
   <g fill="none">
-    <path d="M156.67 336.75 L374 211.44 L591.33 86.13" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="points"/>
-    <circle cx="156.67" cy="336.75" r="3.5" fill="#F54900" stroke="none" data-series="points"/>
-    <circle cx="374" cy="211.44" r="3.5" fill="#F54900" stroke="none" data-series="points"/>
-    <circle cx="591.33" cy="86.13" r="3.5" fill="#F54900" stroke="none" data-series="points"/>
+    <path d="M156.67 326.5 L374 209.63 L591.33 92.75" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="points"/>
+    <circle cx="156.67" cy="326.5" r="3.5" fill="#F54900" stroke="none" data-series="points"/>
+    <circle cx="374" cy="209.63" r="3.5" fill="#F54900" stroke="none" data-series="points"/>
+    <circle cx="591.33" cy="92.75" r="3.5" fill="#F54900" stroke="none" data-series="points"/>
   </g>
 </svg>

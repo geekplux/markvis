@@ -1,3 +1,8 @@
 import type { ChartIR } from "./ir.js";
 
-export declare function renderSvg(chart: ChartIR): string;
+export type RenderOptions = {
+  width?: number;
+  surface?: "light" | "dark" | "export";
+};
+
+export declare function renderSvg(chart: ChartIR, options?: RenderOptions): string;

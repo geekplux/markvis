@@ -26,7 +26,7 @@ export const highcharts = {
     value: { size: 11, weight: 500, fill: "#333333" },
     tick: { size: 11, weight: 400, fill: "#666666" },
     note: { size: 11, weight: 400, fill: "#666666" },
-    legend: { size: 12, weight: 500, fill: "#333333" },
+    legend: { size: 14, weight: 500, fill: "#333333" },
   },
 
   /** Legend-friendly + room for axis titles. */

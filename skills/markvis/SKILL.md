@@ -40,6 +40,10 @@ Mar,150
 
 Optional `theme:`: `folio` (default) `highcharts` `shadcn` `docs` `ant` `recharts` — grammar packs only, no chart runtimes.
 Optional `palette:`: `ink` `porcelain` `warm` `cool` `vivid` — colors only. Omit → theme default colors. Unknown → `E_UNKNOWN_PALETTE` + table. Never merge palette into the theme id.
+Optional `surface:`: `light` (default) `dark` `export`.
+Optional `orient: horizontal` on `bar` only, for long category labels. Omit means vertical.
+`markvis` other than `2` is `E_BAD_VERSION`. Omit means 2.
+Do not turn `N/A`, blanks, or other text into zero. Non-numeric measure cells are `E_BAD_NUMBER`. Repeated category/series keys are `E_DUP_KEY` (scatter and hist may repeat rows). A sankey cycle is `E_SANKEY_CYCLE`.
 
 Also: GFM table after the blank line; or `<!-- chart: bar x=month y=revenue title="Q3" -->` immediately followed by a GFM table.
 

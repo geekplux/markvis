@@ -1,17 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: On still leads status mix at 70, 3 slices" aria-labelledby="mv-046c245537a98d47-title" aria-describedby="mv-046c245537a98d47-desc" data-markvis="2" data-chart-type="pie" data-id="mv-046c245537a98d47" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-046c245537a98d47-title">On still leads status mix at 70</title>
   <desc id="mv-046c245537a98d47-desc">pie chart. On still leads status mix at 70. x=flag. y=count. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">On still leads status mix at 70</text>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>On still leads status mix at 70</title>On still leads status mix at 70</text>
   <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0">
-    <path d="M374 248 L374 103.84 A144.16 144.16 0 1 1 236.9 292.55 Z" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="on" data-raw-value="70"/>
-    <path d="M374 248 L236.9 292.55 A144.16 144.16 0 0 1 374 103.84 Z" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="off" data-raw-value="30"/>
+    <path d="M374 252 L374 110.56 A141.44 141.44 0 1 1 239.48 295.71 Z" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="on" data-raw-value="70"/>
+    <path d="M374 252 L239.48 295.71 A141.44 141.44 0 0 1 374 110.56 Z" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="off" data-raw-value="30"/>
   </g>
   <g fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1">
-    <polyline points="490.63,332.74 503.57,342.14 511.57,342.14"/>
-    <polyline points="257.37,163.26 244.43,153.86 236.43,153.86"/>
+    <polyline points="488.43,335.14 501.37,344.54 509.37,344.54"/>
+    <polyline points="259.57,168.86 246.63,159.46 238.63,159.46"/>
   </g>
-  <g font-size="11" font-weight="500" fill="#171717">
-    <text x="523.57" y="342.14" text-anchor="start" dominant-baseline="middle" data-label="on">on · 70</text>
-    <text x="224.43" y="153.86" text-anchor="end" dominant-baseline="middle" data-label="off">off · 30</text>
+  <g font-size="13" font-weight="500" fill="#171717">
+    <text x="521.37" y="344.54" text-anchor="start" dominant-baseline="middle" data-label="on">on · 70</text>
+    <text x="226.63" y="159.46" text-anchor="end" dominant-baseline="middle" data-label="off">off · 30</text>
   </g>
 </svg>

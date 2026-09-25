@@ -21,7 +21,8 @@ export function tableToGfm(table: FallbackTable): string {
   const header = `| ${table.columns.join(" | ")} |`;
   const sep = `| ${table.columns.map(() => "---").join(" | ")} |`;
   const body = table.rows.map((row) => {
-    const cells = table.columns.map((_, i) => row[i] ?? "");
+    const width = Math.max(table.columns.length, row.length);
+    const cells = Array.from({ length: width }, (_, i) => row[i] ?? "");
     return `| ${cells.join(" | ")} |`;
   });
   return [header, sep, ...body].join("\n");

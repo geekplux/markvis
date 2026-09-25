@@ -1,21 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="pie chart: Budget lines overrun the 100% pie, 3 slices" aria-labelledby="mv-2e7a703e9d22ed38-title" aria-describedby="mv-2e7a703e9d22ed38-desc" data-markvis="2" data-chart-type="pie" data-id="mv-2e7a703e9d22ed38" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
   <title id="mv-2e7a703e9d22ed38-title">Budget lines overrun the 100% pie</title>
   <desc id="mv-2e7a703e9d22ed38-desc">pie chart. Budget lines overrun the 100% pie. x=bucket. y=pct. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="48" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Budget lines overrun the 100% pie</text>
-  <rect x="48" y="46" width="658" height="360" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="48" y="32" text-anchor="start" font-size="22" font-weight="600" fill="#000000"><title>Budget lines overrun the 100% pie</title>Budget lines overrun the 100% pie</text>
+  <rect x="48" y="52" width="658" height="354" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
   <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0">
-    <path d="M377 226 L377 103.6 A122.4 122.4 0 0 1 430.11 336.28 Z" fill="#5AD8A6" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="Infra" data-raw-value="45"/>
-    <path d="M377 226 L430.11 336.28 A122.4 122.4 0 0 1 254.94 216.85 Z" fill="#E8684A" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="Product" data-raw-value="35"/>
-    <path d="M377 226 L254.94 216.85 A122.4 122.4 0 0 1 377 103.6 Z" fill="#5D7092" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="Ops" data-raw-value="25"/>
+    <path d="M377 229 L377 108.64 A120.36 120.36 0 0 1 429.22 337.44 Z" fill="#5AD8A6" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="Infra" data-raw-value="45"/>
+    <path d="M377 229 L429.22 337.44 A120.36 120.36 0 0 1 256.98 220.01 Z" fill="#E8684A" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="Product" data-raw-value="35"/>
+    <path d="M377 229 L256.98 220.01 A120.36 120.36 0 0 1 377 108.64 Z" fill="#5D7092" stroke="#000000" stroke-opacity="0.32" stroke-width="1.5" data-label="Ops" data-raw-value="25"/>
   </g>
   <g fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1">
-    <polyline points="496.33,198.76 511.93,195.2 519.93,195.2"/>
-    <polyline points="308.05,327.13 299.04,340.35 291.04,340.35"/>
-    <polyline points="293.75,136.27 282.86,124.55 274.86,124.55"/>
+    <polyline points="494.34,202.22 509.94,198.66 517.94,198.66"/>
+    <polyline points="309.2,328.45 300.19,341.67 292.19,341.67"/>
+    <polyline points="295.13,140.77 284.25,129.04 276.25,129.04"/>
   </g>
-  <g font-size="11" font-weight="500" fill="#000000">
-    <text x="531.93" y="195.2" text-anchor="start" dominant-baseline="middle" data-label="Infra">Infra · 45</text>
-    <text x="279.04" y="340.35" text-anchor="end" dominant-baseline="middle" data-label="Product">Product · 35</text>
-    <text x="262.86" y="124.55" text-anchor="end" dominant-baseline="middle" data-label="Ops">Ops · 25</text>
+  <g font-size="13" font-weight="500" fill="#000000">
+    <text x="529.94" y="198.66" text-anchor="start" dominant-baseline="middle" data-label="Infra">Infra · 45</text>
+    <text x="280.19" y="341.67" text-anchor="end" dominant-baseline="middle" data-label="Product">Product · 35</text>
+    <text x="264.25" y="129.04" text-anchor="end" dominant-baseline="middle" data-label="Ops">Ops · 25</text>
   </g>
 </svg>

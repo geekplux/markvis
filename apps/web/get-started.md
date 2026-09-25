@@ -53,7 +53,7 @@ After `pnpm build`, copy `dist/markvis.min.js`. Packed install: `node_modules/ma
 
 ## Ask an AI (Skill)
 
-Give an agent the Skill or the short brief. It should write the Markdown block — not a screenshot, not a seventh chart kind.
+Give an agent the Skill or the short brief. It should write the Markdown block — not a screenshot, and not an invented type id.
 
 - Skill: [skills/markvis/SKILL.md](https://github.com/geekplux/markvis/blob/master/skills/markvis/SKILL.md)
 - Brief: [/llms.txt](/llms.txt) — fetch that URL; emit only the fields it lists

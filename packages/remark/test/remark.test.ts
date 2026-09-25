@@ -36,6 +36,23 @@ function toHtml(source: string, path?: string): string {
   return String(file);
 }
 
+describe("ragged fallback", () => {
+  it("keeps an extra malformed cell in the fallback table", () => {
+    const html = chartBlockHtml(`\`\`\`chart
+type: bar
+title: Ragged
+x: k
+y: v
+
+k,v
+a,1,leftover
+b,2
+\`\`\``);
+    expect(html).toContain("leftover");
+    expect(html).toContain("E_EXTRA_COLUMN");
+  });
+});
+
 describe("remarkMarkvis", () => {
   it("turns a chart fence into HTML that contains svg and table", () => {
     const html = toHtml(valid01);

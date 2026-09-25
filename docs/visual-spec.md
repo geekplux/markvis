@@ -1,4 +1,4 @@
-# visual-spec — Ledger → markvis (transparent canvas)
+# visual-spec — Ledger → markvis (readable type, explicit surface)
 
 Language: **Ledger**. Default fence `theme:` is `folio`. Named `theme:` / `palette:` values are grammar in `SPEC.md` and packs in `packages/themes/` — they do not paint a second canvas onto Ledger.
 
@@ -6,17 +6,17 @@ Constraints: static deterministic SVG · catalog types only · optional fence `t
 
 Fixture sources for 01 / 02 / 05 / 09 / 17 may receive **title-only** edits so the IR title is a conclusion (never a chart-type word). No other product escape hatches.
 
-**Host assumption:** light Markdown article. Canvas is transparent so the host background shows through. Do not assume a paper plate.
+**Host assumption:** the SVG carries its own surface. `surface: light` (default) paints warm paper `#fafaf9` and dark ink. `surface: dark` paints a dark paper and light ink. `surface: export` paints an opaque white card. Do not rely on a transparent figure with dark text. Text width is estimated at 0.62em for Latin and 1em for wide scripts (code point above U+2E80), against the theme font stack. It is not an operating-system measurement.
 
 ## Ledger locks
 
 Editorial in-article figure: inherit the Markdown host surface — not a dashboard card, not a poster, not an instrument panel, not a paper plate. Three-second judgment first (which mark wins); thirty-second verification second (exact number).
 
-1. **Canvas:** transparent. Never paint a full-frame fill rect (no paper `#F7F4EF`, no card slab).
+1. **Canvas:** an explicit surface fill. Light is `#fafaf9`. Never assume the host color.
 2. **Ink / Quiet / structure:** Ink `#171717`. Quiet `#737373`. Hairline `0.10` (grid only). Structure `0.28` (baseline, leaders, slice separators).
 3. **One accent for one series;** extra hues only for extra series. Area fill opacity `0.22` under the series stroke. Accent occupies the mark, never a filled legend slab, never the canvas.
 4. **Three line grades:** hairline / structure / data. No axis box. Baseline only on the plot floor. No vertical grids. No tick lines sticking off the axis.
-5. **Three type grades:** title 17 / 600 ink · unit 12 / 400 quiet · value 11 / 500 ink · tick 10 / 400 quiet. No axis-name layer when the title already names the measure.
+5. **Three type grades:** title 21 / 600 ink · unit 13 / 400 quiet · value 13 / 500 ink · tick 12 / 400 quiet. These sizes stay at the intended width; a narrow figure reflows instead of shrinking the type. Scatter and histogram name both axes. No axis-name layer on other types when the title already names the measure.
 6. **Corner rule:** square frame and axes. Radius only on the data mark — bar tops `rx = 3`.
 7. **Plot share & titles:** data region owns ≥55% of frame height; grow height to 640 before crushing the plot. Horizontal grid ≤3 lines (never the baseline). Titles state a conclusion — never the chart type, never a bare noun that only repeats the y-field.
 
@@ -24,9 +24,9 @@ Editorial in-article figure: inherit the Markdown host surface — not a dashboa
 
 ## Canvas
 
-- **Transparent.** Do **not** emit a full-frame `<rect>` (no paper `#F7F4EF`, no card fill, no background slab).
-- First paints after `<title>` / `<desc>` are chrome and marks only.
-- SVG root keeps `viewBox` and size attrs; fill remains unset / none.
+- Paint a full-frame surface rect after `<title>` / `<desc>`, tagged `data-surface`.
+- Light `#fafaf9`, dark `#1c1917`, export `#ffffff`.
+- SVG root `width` and `viewBox` use the intended width. Layout is computed in that width.
 
 ---
 
@@ -34,8 +34,8 @@ Editorial in-article figure: inherit the Markdown host surface — not a dashboa
 
 | Token | Value |
 | --- | --- |
-| Frame default | `720` wide · height `480` minimum; **grow height** up to `640` when label-driven bottom margin would drop plot height below `0.55 × height` |
-| Canvas | transparent — **no** full-frame fill |
+| Frame default | `720` wide · height `480` minimum; **grow height** so the plot stays at least `0.55 × height` |
+| Canvas | surface fill (`light` `#fafaf9`) |
 | Ink | `#171717` |
 | Quiet | `#737373` |
 | Hairline | ink `#171717` at opacity `0.10`, stroke `1` (horizontal grid only) |
@@ -60,11 +60,11 @@ Tick / category text uses Quiet (`#737373`). Title and value labels use Ink.
 
 | Role | Size | Weight | Fill |
 | --- | --- | --- | --- |
-| Title | `17px` | `600` | ink |
-| Unit (title tspan) | `12px` | `400` | quiet |
-| Value / end-label | `11px` | `500` | ink |
-| Tick / category | `10px` | `400` | quiet |
-| Note (rare) | `11px` | `400` | quiet |
+| Title | `21px` | `600` | ink |
+| Unit (title tspan) | `13px` | `400` | quiet |
+| Value / end-label | `13px` | `500` | ink |
+| Tick / category | `12px` | `400` | quiet |
+| Note (rare) | `12px` | `400` | quiet |
 
 No axis-name layer by default (see Quiet chrome).
 

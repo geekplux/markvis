@@ -1,34 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="scatter chart: Bigger metros, bigger GDP, 3 rows" aria-labelledby="mv-06366ce7bfbead72-title" aria-describedby="mv-06366ce7bfbead72-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-06366ce7bfbead72" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
   <title id="mv-06366ce7bfbead72-title">Bigger metros, bigger GDP</title>
   <desc id="mv-06366ce7bfbead72-desc">scatter chart. Bigger metros, bigger GDP. x=pop. y=gdp. 3 rows.</desc>
-  <text x="135.12" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Bigger metros, bigger GDP</text>
-  <rect x="135.12" y="46" width="570.88" height="333" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="145.04" y="32" text-anchor="start" font-size="22" font-weight="600" fill="#000000"><title>Bigger metros, bigger GDP</title>Bigger metros, bigger GDP</text>
+  <rect x="145.04" y="52" width="560.96" height="307" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
   <g fill="none" stroke="#000000" stroke-opacity="0.16" stroke-width="1">
-    <line x1="135.12" x2="706" y1="295.75" y2="295.75"/>
-    <line x1="135.12" x2="706" y1="212.5" y2="212.5"/>
-    <line x1="135.12" x2="706" y1="129.25" y2="129.25"/>
-    <line x1="135.12" x2="706" y1="46" y2="46"/>
+    <line x1="145.04" x2="706" y1="282.25" y2="282.25"/>
+    <line x1="145.04" x2="706" y1="205.5" y2="205.5"/>
+    <line x1="145.04" x2="706" y1="128.75" y2="128.75"/>
+    <line x1="145.04" x2="706" y1="52" y2="52"/>
   </g>
-  <path d="M135.12 379 L706 379" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
-  <line x1="135.12" x2="706" y1="295.75" y2="295.75" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
-  <g fill="#8C8C8C" font-size="11" font-weight="400">
-    <text x="127.12" y="379" text-anchor="end" dominant-baseline="middle">-100,000,000,000</text>
-    <text x="127.12" y="295.75" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="127.12" y="212.5" text-anchor="end" dominant-baseline="middle">100,000,000,000</text>
-    <text x="127.12" y="129.25" text-anchor="end" dominant-baseline="middle">200,000,000,000</text>
-    <text x="127.12" y="46" text-anchor="end" dominant-baseline="middle">300,000,000,000</text>
-    <text x="143.12" y="390" text-anchor="middle" font-size="11" data-full-label="-5,000,000">-5,000,000</text>
-    <text x="328.08" y="390" text-anchor="middle" font-size="11" data-full-label="0">0</text>
-    <text x="513.04" y="390" text-anchor="middle" font-size="11" data-full-label="5,000,000">5,000,000</text>
-    <text x="698" y="390" text-anchor="middle" font-size="11" data-full-label="10,000,000">10,000,000</text>
+  <path d="M145.04 359 L706 359" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
+  <line x1="145.04" x2="706" y1="282.25" y2="282.25" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
+  <g fill="#8C8C8C" font-size="12" font-weight="400">
+    <text x="137.04" y="359" text-anchor="end" dominant-baseline="middle">-100,000,000,000</text>
+    <text x="137.04" y="282.25" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="137.04" y="205.5" text-anchor="end" dominant-baseline="middle">100,000,000,000</text>
+    <text x="137.04" y="128.75" text-anchor="end" dominant-baseline="middle">200,000,000,000</text>
+    <text x="137.04" y="52" text-anchor="end" dominant-baseline="middle">300,000,000,000</text>
+    <text x="153.04" y="371" text-anchor="middle" font-size="12" data-full-label="-5,000,000"><title>-5,000,000</title>-5,000,000</text>
+    <text x="334.69" y="371" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
+    <text x="516.35" y="371" text-anchor="middle" font-size="12" data-full-label="5,000,000"><title>5,000,000</title>5,000,000</text>
+    <text x="698" y="371" text-anchor="middle" font-size="12" data-full-label="10,000,000"><title>10,000,000</title>10,000,000</text>
   </g>
-  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="113.12" y="212.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 113.12 212.5)" data-axis="y">gdp</text>
-    <text x="420.56" y="406" text-anchor="middle" dominant-baseline="hanging" data-axis="x">pop</text>
+  <g fill="#8C8C8C" font-size="13" font-weight="400" data-axis-titles="1">
+    <text x="123.04" y="205.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 123.04 205.5)" data-axis="y">gdp</text>
+    <text x="425.52" y="387" text-anchor="middle" dominant-baseline="hanging" data-axis="x">pop</text>
   </g>
   <g>
-    <circle cx="365.07" cy="258.29" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="1000000" data-y="45000000000" data-series="gdp"/>
-    <circle cx="642.51" cy="120.93" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="8500000" data-y="210000000000" data-series="gdp"/>
-    <circle cx="346.58" cy="285.76" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="500000" data-y="12000000000" data-series="gdp"/>
+    <circle cx="371.02" cy="247.71" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="1000000" data-y="45000000000" data-series="gdp"/>
+    <circle cx="643.5" cy="121.07" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="8500000" data-y="210000000000" data-series="gdp"/>
+    <circle cx="352.86" cy="273.04" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="500000" data-y="12000000000" data-series="gdp"/>
   </g>
 </svg>

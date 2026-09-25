@@ -60,7 +60,9 @@ You can also put the numbers in a Markdown table, or use the HTML comment form i
    npx markvis bake README.md
    ```
 
-   `bake` writes a picture next to the file and adds a Markdown image so GitHub can show it. The code block stays. Running bake again does nothing if nothing changed. `npx markvis check notes.md` makes sure every chart block is valid.
+   `bake` writes a picture next to the file and adds a Markdown image so GitHub can show it. The code block stays. The image reference stays pointed at the file just written. Running bake again does nothing if nothing changed. `npx markvis check notes.md` checks every chart block in the file and exits non-zero if any block is invalid.
+
+   A blank measure cell is missing, not zero. Text such as `N/A` is an error (`E_BAD_NUMBER`) and the table stays. `orient: horizontal` on a bar chart is for long category labels. Omit `markvis` for version 2; any other version is rejected.
 
    ```js
    import { parseMarkdown, renderSvg } from "markvis";
@@ -98,15 +100,15 @@ You can also put the numbers in a Markdown table, or use the HTML comment form i
    );
    ```
 
-4. **With an AI** — point a model at [skills/markvis/SKILL.md](./skills/markvis/SKILL.md) or [llms.txt](./llms.txt). It should write only the fields listed there. Not a PNG. Not a seventh chart kind.
+4. **With an AI** — point a model at [skills/markvis/SKILL.md](./skills/markvis/SKILL.md) or [llms.txt](./llms.txt). It should write only the fields listed there. Not a PNG. Do not invent a type id.
 
 ## What you can write
 
 | | |
 | --- | --- |
 | Code block tags | `chart` `markvis` `vis` |
-| Chart kinds | `bar` `line` `area` `scatter` `pie` `hist` |
-| Fields | `markvis` `type` `title` `unit` `x` `y` `series` plus `theme` `palette` |
+| Chart kinds | `bar` `line` `area` `scatter` `pie` `hist` `heatmap` `funnel` `waterfall` `radar` `gauge` `sankey` `treemap` |
+| Fields | `markvis` `type` `title` `unit` `x` `y` `series` plus `theme` `palette` `surface`. Type-local: `layout` `innerRadius` `min` `max` `orient` `role` |
 | Numbers | Comma-separated rows, or one Markdown table. Not JSON as the default. No JavaScript in the block. |
 
 `theme:` how it is drawn: `folio` (default) `highcharts` `shadcn` `docs` `ant` `recharts`. `palette:` colors only: `ink` `porcelain` `warm` `cool` `vivid`. Unknown look → table + error, never a silent swap. Pie slices are not forced to 100. Rows stay in the order you wrote them.

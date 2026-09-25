@@ -1,30 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="hist chart: 8 kb payloads show up most often, 7 rows" aria-labelledby="mv-2474fed0a052eb52-title" aria-describedby="mv-2474fed0a052eb52-desc" data-markvis="2" data-chart-type="hist" data-id="mv-2474fed0a052eb52" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-2474fed0a052eb52-title">8 kb payloads show up most often</title>
   <desc id="mv-2474fed0a052eb52-desc">hist chart. 8 kb payloads show up most often. x=kb. 7 rows. x is binned with Sturges equal-width bins.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">8 kb payloads show up most often</text>
-  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
-  <g fill="#737373" font-size="10" font-weight="400">
-    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="38" y="352.5" text-anchor="end" dominant-baseline="middle">1</text>
-    <text x="38" y="247" text-anchor="end" dominant-baseline="middle">2</text>
-    <text x="38" y="141.5" text-anchor="end" dominant-baseline="middle">3</text>
-    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">4</text>
-    <text x="48" y="468" text-anchor="middle" font-size="10" data-full-label="4">4</text>
-    <text x="211" y="468" text-anchor="middle" font-size="10" data-full-label="11">11</text>
-    <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="18">18</text>
-    <text x="537" y="468" text-anchor="middle" font-size="10" data-full-label="25">25</text>
-    <text x="700" y="468" text-anchor="middle" font-size="10" data-full-label="32">32</text>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="66" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>8 kb payloads show up most often</title>8 kb payloads show up most often</text>
+  <path d="M66 437 L700 437" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="56" y="437" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="56" y="338.75" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="56" y="240.5" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="56" y="142.25" text-anchor="end" dominant-baseline="middle">3</text>
+    <text x="56" y="44" text-anchor="end" dominant-baseline="middle">4</text>
+    <text x="66" y="449" text-anchor="middle" font-size="12" data-full-label="4"><title>4</title>4</text>
+    <text x="224.5" y="449" text-anchor="middle" font-size="12" data-full-label="11"><title>11</title>11</text>
+    <text x="383" y="449" text-anchor="middle" font-size="12" data-full-label="18"><title>18</title>18</text>
+    <text x="541.5" y="449" text-anchor="middle" font-size="12" data-full-label="25"><title>25</title>25</text>
+    <text x="700" y="449" text-anchor="middle" font-size="12" data-full-label="32"><title>32</title>32</text>
+  </g>
+  <g fill="#737373" font-size="13" font-weight="400" data-axis-titles="1">
+    <text x="42" y="240.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 42 240.5)" data-axis="y">count</text>
+    <text x="383" y="465" text-anchor="middle" dominant-baseline="hanging" data-axis="x">kb · Sturges bins</text>
   </g>
   <g>
-    <path d="M93.5 458 L93.5 39 Q93.5 36 96.5 36 L162.5 36 Q165.5 36 165.5 39 L165.5 458 Z" fill="#3B82F6" data-bin-left="4" data-bin-right="11" data-weight="4" data-count="4"/>
-    <path d="M256.5 458 L256.5 250 Q256.5 247 259.5 247 L325.5 247 Q328.5 247 328.5 250 L328.5 458 Z" fill="#3B82F6" data-bin-left="11" data-bin-right="18" data-weight="2" data-count="2"/>
-    <path d="M419.5 458 L491.5 458 L491.5 458 L419.5 458 Z" fill="#3B82F6" data-bin-left="18" data-bin-right="25" data-weight="0" data-count="0"/>
-    <path d="M582.5 458 L582.5 355.5 Q582.5 352.5 585.5 352.5 L651.5 352.5 Q654.5 352.5 654.5 355.5 L654.5 458 Z" fill="#3B82F6" data-bin-left="25" data-bin-right="32" data-weight="1" data-count="1"/>
+    <path d="M109.25 437 L109.25 47 Q109.25 44 112.25 44 L178.25 44 Q181.25 44 181.25 47 L181.25 437 Z" fill="#3B82F6" data-bin-left="4" data-bin-right="11" data-weight="4" data-count="4"/>
+    <path d="M267.75 437 L267.75 243.5 Q267.75 240.5 270.75 240.5 L336.75 240.5 Q339.75 240.5 339.75 243.5 L339.75 437 Z" fill="#3B82F6" data-bin-left="11" data-bin-right="18" data-weight="2" data-count="2"/>
+    <path d="M426.25 437 L498.25 437 L498.25 437 L426.25 437 Z" fill="#3B82F6" data-bin-left="18" data-bin-right="25" data-weight="0" data-count="0"/>
+    <path d="M584.75 437 L584.75 341.75 Q584.75 338.75 587.75 338.75 L653.75 338.75 Q656.75 338.75 656.75 341.75 L656.75 437 Z" fill="#3B82F6" data-bin-left="25" data-bin-right="32" data-weight="1" data-count="1"/>
   </g>
   <g>
-    <text x="129.5" y="28" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="4–11">4</text>
-    <text x="292.5" y="239" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="11–18">2</text>
-    <text x="455.5" y="450" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="18–25">0</text>
-    <text x="618.5" y="344.5" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="25–32">1</text>
+    <text x="145.25" y="36" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="4–11">4</text>
+    <text x="303.75" y="232.5" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="11–18">2</text>
+    <text x="462.25" y="429" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="18–25">0</text>
+    <text x="620.75" y="330.75" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="25–32">1</text>
   </g>
 </svg>

@@ -29,28 +29,35 @@ Encodings (optional, type-local — not a new type id):
 
 - On `bar` `line` or `area` only: `layout: grouped|stacked|percent`. Omit means grouped (today's look). Wrong type or bad value → table + `E_UNKNOWN_FIELD`.
 - On `pie` only: `innerRadius` as a number in `[0, 1]`. Omit means the theme's default hole (`PIE_INNER_RATIO`). Explicit `0` forces a solid pie. Do not invent `donut`.
-- On `gauge` only: `min` and `max` as numbers. Omit `min` means 0. Omit `max` means max(y, 1). Both set requires min < max, else `E_UNKNOWN_FIELD`.
+- On `bar` only: `orient: horizontal|vertical`. Omit means vertical.
+- On `waterfall` only: `role` names a column of `delta|total|subtotal`. Empty means delta. Do not treat a step label as a total.
+- On `gauge`: `min` and `max` as numbers. Omit `min` means 0. Omit `max` means 100, a labeled range, not the current value. Heatmap may set `min`/`max` as the shared color domain. Radar may set `max`.
+- `surface` optional: `light` (default) `dark` `export`.
+- A measure cell that is not a number is `E_BAD_NUMBER` (row and column in the message). An empty cell is a gap on line, area, grouped bar, scatter, hist, heatmap, and radar. It is `E_MISSING_VALUE` when the chart needs every value (pie, funnel, sankey, treemap, waterfall, gauge, stacked, percent).
+- A repeated category/series key is `E_DUP_KEY`. Scatter, hist, and waterfall step labels may repeat. Do not keep the last row.
+- `markvis` other than `2` is `E_BAD_VERSION`. Omit means 2.
+- Sankey: one thickness scale. A cycle is `E_SANKEY_CYCLE`.
 
 Also valid: an HTML comment immediately followed by a GFM table.
 
 `<!-- chart: bar x=month y=tickets title="Mar led Midtown box office at 9.2k tickets" -->`
 
-Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`, and legal encodings (`layout`, `innerRadius`, `min`, `max`). Same meaning as fence headers.
+Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`, `surface`, and legal encodings (`layout`, `innerRadius`, `min`, `max`, `orient`, `role`). Same meaning as fence headers.
 
 ## Types
 
-- `bar` — category x, number y. Keep row order. Do not sort. Optional `layout`.
+- `bar` — category x, number y. Keep row order. Do not sort. Optional `layout`. Optional `orient: horizontal` for long labels.
 - `line` — ordered x, number y. Optional `series`. Keep row order. Optional `layout`.
 - `area` — same as line, filled. Optional `layout`.
 - `scatter` — number x, number y. One mark per row.
 - `pie` — label x, number y >= 0. Do not force the slices to 100. Optional `innerRadius` (see Encodings).
 - `hist` — number x. Table keeps the raw rows.
 - `heatmap` — x category × series category, y intensity. Long form. `series` is required.
-- `funnel` — x stage, y >= 0. Keep order. `series` ignored. Negatives → `E_NEGATIVE_VALUE`.
+- `funnel` — x stage, y >= 0. Keep order. Stage length is the value. The label sits beside the bar. Conversion to the previous stage is a percent rounded to one decimal. `series` ignored. Negatives → `E_NEGATIVE_VALUE`.
 - `waterfall` — x step, y signed delta. Keep order. Running baseline. `series` ignored.
-- `radar` — x spoke, y >= 0. Optional `series`. Scale max is max(y), or 1 if all 0. Negatives → `E_NEGATIVE_VALUE`.
-- `gauge` — first row. Optional `min`/`max` (see Encodings). `series` ignored.
-- `sankey` — x source, series target (required), y flow >= 0. One row = one link. Self-link → `E_UNKNOWN_FIELD`. Negatives → `E_NEGATIVE_VALUE`.
+- `radar` — x spoke, y >= 0. Optional `series`. One scale for every series. A grouped bar is clearer when the exact number matters. Negatives → `E_NEGATIVE_VALUE`.
+- `gauge` — one row. Omit `max` means 100. `series` ignored.
+- `sankey` — x source, series target (required), y flow >= 0. One row = one link. Self-link → `E_UNKNOWN_FIELD`. Cycle → `E_SANKEY_CYCLE`. Negatives → `E_NEGATIVE_VALUE`.
 - `treemap` — x label, y >= 0, optional series parent (two levels only). Negatives → `E_NEGATIVE_VALUE`. `y<=0` omitted from paint.
 
 On any error: keep the rows, show the table, add one line with the error code. Never drop the numbers.

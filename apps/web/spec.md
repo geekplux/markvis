@@ -48,13 +48,13 @@ Progressive form — comment immediately followed by a GFM table:
 | Mar | 150 |
 ```
 
-Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`, plus legal encodings (`layout`, `innerRadius`, `min`, `max`). Same meaning as fence headers.
+Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`, `surface`, plus legal encodings (`layout`, `innerRadius`, `min`, `max`, `orient`, `role`). Same meaning as fence headers.
 
 ## Fields
 
 | Field | Required | Default | Notes |
 | --- | --- | --- | --- |
-| `markvis` | no | `2` | Language version. |
+| `markvis` | no | `2` | Language version. Any other value → `E_BAD_VERSION`. It is not rewritten to 2. |
 | `type` | yes | — | `bar` \| `line` \| `area` \| `scatter` \| `pie` \| `hist` \| `heatmap` \| `funnel` \| `waterfall` \| `radar` \| `gauge` \| `sankey` \| `treemap`. |
 | `title` | no | derived | Conclusion title when present. |
 | `theme` | no | `folio` | Grammar only: `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts`. |
@@ -63,10 +63,13 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | `x` | typed | first category / numeric col | Independent axis or labels. |
 | `y` | typed | first numeric col | Measure. |
 | `series` | no | — | Optional column that splits series. |
+| `surface` | no | `light` | `light` \| `dark` \| `export`. |
 | `layout` | no | `grouped` when omitted | On `bar` / `line` / `area` only: `grouped` \| `stacked` \| `percent`. |
 | `innerRadius` | no | theme `PIE_INNER_RATIO` | On `pie` only. `[0, 1]`. Omit → theme hole; `0` = solid. |
-| `min` | no | `0` at paint | On `gauge` only. |
-| `max` | no | `max(y, 1)` at paint | On `gauge` only. Both set ⇒ min < max. |
+| `min` | no | see type | Gauge omit → 0. Heatmap omit → data minimum. |
+| `max` | no | gauge `100` | Gauge, heatmap, or radar. Omit on a gauge means a labeled 0–100 range, not the current value. |
+| `orient` | no | `vertical` | On `bar` only: `horizontal` \| `vertical`. |
+| `role` | no | every row is a delta | On `waterfall` only. Names a column of `delta` \| `total` \| `subtotal`. |
 | data | yes | — | CSV or GFM after a blank line. |
 
 `x` / `y` / `series` must name real header columns. CORE keys stay separate from type-local encodings. Undeclared or illegal encodings → `E_UNKNOWN_FIELD` + table.
@@ -75,18 +78,18 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 
 | Type | x | y | series | Rules |
 | --- | --- | --- | --- | --- |
-| `bar` | category | number | optional; `layout` | Keep input row order. Never sort x. |
-| `line` | ordered category or number | number | optional; `layout` | Keep input row order. |
-| `area` | same as line | number | optional; `layout` | Fill under line(s). |
-| `scatter` | number | number | optional | One mark per row. |
-| `pie` | label | number ≥ 0 | ignored | Do **not** normalize to 100. Optional `innerRadius`. |
-| `hist` | number | optional weight | ignored | Renderer bins; table keeps raw rows. |
-| `heatmap` | category | intensity | required | Long form. Keep order. |
-| `funnel` | stage | number ≥ 0 | ignored | Keep order. |
-| `waterfall` | step | signed delta | ignored | Running baseline. |
-| `radar` | spoke | number ≥ 0 | optional | Scale max = max(y) or 1. |
-| `gauge` | label | number | ignored | First row. Optional `min`/`max`. |
-| `sankey` | source | flow ≥ 0 | required (target) | One row = one link. Self-link → `E_UNKNOWN_FIELD`. |
+| `bar` | category | number | optional; `layout` | Keep input row order. `orient: horizontal` puts categories on the side. Empty y is a gap unless stacked or percent. |
+| `line` | ordered category or number | number | optional; `layout` | Keep input row order. An empty y is a gap. The line does not connect through it. |
+| `area` | same as line | number | optional; `layout` | Fill under the line. Missing y stays a gap. |
+| `scatter` | number | number | optional | One mark per row. Repeated observations stay. Both axes are labeled. |
+| `pie` | label | number ≥ 0 | ignored | Do **not** normalize to 100. Optional `innerRadius`. An empty y is `E_MISSING_VALUE`. |
+| `hist` | number | optional weight | ignored | Sturges bins; table keeps raw rows. Repeated samples stay. |
+| `heatmap` | category | intensity | required | Long form. Empty y is a missing cell, not zero. Optional `min`/`max` share the color domain. |
+| `funnel` | stage | number ≥ 0 | ignored | Left-aligned stage bars. The label sits beside the bar. Conversion is a percent rounded to one decimal. |
+| `waterfall` | step | signed delta | ignored | Delta and the level after it are labeled. Optional `role` column. Totals are not inferred from the step name. |
+| `radar` | spoke | number ≥ 0 | optional | One scale: `max` when it is at least the data max, otherwise the data max. A missing spoke is a gap. A grouped bar is clearer when the exact number matters. |
+| `gauge` | label | number | ignored | One row. A second row → `E_DUP_KEY`. Omit max → 100, omit min → 0. |
+| `sankey` | source | flow ≥ 0 | required (target) | One row = one link. Equal values share one thickness. A cycle → `E_SANKEY_CYCLE`. |
 | `treemap` | label | number ≥ 0 | optional (parent) | Flat or two levels. `y≤0` omitted from paint. |
 
 ## Encodings
@@ -95,8 +98,10 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | --- | --- | --- | --- |
 | `layout` | `bar` `line` `area` | `grouped` \| `stacked` \| `percent` | `grouped` |
 | `innerRadius` | `pie` | `[0, 1]` | theme `PIE_INNER_RATIO` (explicit `0` = solid) |
-| `min` | `gauge` | number | 0 |
-| `max` | `gauge` | number | max(y, 1) |
+| `min` | `gauge` `heatmap` | number | gauge 0; heatmap data min |
+| `max` | `gauge` `heatmap` `radar` | number | gauge 100; heatmap data max; radar data max |
+| `orient` | `bar` | `horizontal` \| `vertical` | vertical |
+| `role` | `waterfall` | column of `delta` \| `total` \| `subtotal` | every row is a delta |
 
 Do not invent `donut` or `stacked-bar` type ids.
 
@@ -125,5 +130,10 @@ Do not invent `donut` or `stacked-bar` type ids.
 | `E_EMPTY_FENCE` | Fence body empty. |
 | `E_UNKNOWN_THEME` | `theme` not in the allow-list. |
 | `E_UNKNOWN_PALETTE` | `palette` not in the allow-list. |
+| `E_BAD_VERSION` | `markvis` is present and is not `2`. |
+| `E_BAD_NUMBER` | A measure cell is not a finite number. The message names the row and column. |
+| `E_MISSING_VALUE` | A required measure cell is empty. |
+| `E_DUP_KEY` | The same category/series key appears twice. Scatter, hist, and waterfall steps may repeat. |
+| `E_SANKEY_CYCLE` | Sankey links form a cycle. The table is kept. |
 
 `theme` is grammar. `palette` is colors only. Never merge them. Contribute a type: repo `docs/TYPES.md`.

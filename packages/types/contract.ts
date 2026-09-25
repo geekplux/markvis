@@ -21,6 +21,7 @@ export const CORE_FENCE_KEYS = [
   "title",
   "theme",
   "palette",
+  "surface",
   "unit",
   "x",
   "y",

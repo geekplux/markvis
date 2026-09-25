@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="heatmap chart: Synthetic heatmap, 3 rows, series row" aria-labelledby="mv-9495c07936bf147a-title" aria-describedby="mv-9495c07936bf147a-desc" data-markvis="2" data-chart-type="heatmap" data-id="mv-9495c07936bf147a" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-9495c07936bf147a-title">Synthetic heatmap</title>
+  <desc id="mv-9495c07936bf147a-desc">heatmap chart. Synthetic heatmap. x=col. y=v. series=row. 3 rows.</desc>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Synthetic heatmap</title>Synthetic heatmap</text>
+  <defs>
+    <pattern id="mv-9495c07936bf147a-missing" patternUnits="userSpaceOnUse" width="6" height="6">
+      <rect width="6" height="6" fill="#f4f1ea"/>
+      <path d="M0 6 L6 0" stroke="#a8a29e" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <g data-heatmap="1">
+    <rect x="48" y="44" width="198.67" height="411" fill="#d6dfec" stroke="#d6d3d1" stroke-width="1" data-x="A" data-series="r" data-y="0"/>
+    <text x="147.33" y="249.5" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="A:r">0</text>
+    <rect x="246.67" y="44" width="198.67" height="411" fill="#3b82f6" stroke="#d6d3d1" stroke-width="1" data-x="B" data-series="r" data-y="5"/>
+    <text x="346" y="249.5" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-cell-label="B:r">5</text>
+    <rect x="445.33" y="44" width="198.67" height="411" fill="url(#mv-9495c07936bf147a-missing)" stroke="#d6d3d1" stroke-width="1" data-x="C" data-series="r" data-missing="1"/>
+  </g>
+  <g data-color-scale="1">
+    <rect x="660" y="403.63" width="12" height="51.88" fill="#d6dfec"/>
+    <rect x="660" y="352.25" width="12" height="51.88" fill="#c0d2ed"/>
+    <rect x="660" y="300.88" width="12" height="51.88" fill="#aac5ef"/>
+    <rect x="660" y="249.5" width="12" height="51.88" fill="#94b7f0"/>
+    <rect x="660" y="198.13" width="12" height="51.88" fill="#7eaaf2"/>
+    <rect x="660" y="146.75" width="12" height="51.88" fill="#679df3"/>
+    <rect x="660" y="95.38" width="12" height="51.88" fill="#518ff5"/>
+    <rect x="660" y="44" width="12" height="51.88" fill="#3b82f6"/>
+    <text x="676" y="48" font-size="12" fill="#737373" dominant-baseline="hanging" data-scale-max="1">5</text>
+    <text x="676" y="455" font-size="12" fill="#737373" data-scale-min="1">0</text>
+  </g>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="38" y="249.5" text-anchor="end" dominant-baseline="middle" data-series-label="r"><title>r</title>r</text>
+    <text x="147.33" y="467" text-anchor="middle" data-full-label="A"><title>A</title>A</text>
+    <text x="346" y="467" text-anchor="middle" data-full-label="B"><title>B</title>B</text>
+    <text x="544.67" y="467" text-anchor="middle" data-full-label="C"><title>C</title>C</text>
+  </g>
+</svg>

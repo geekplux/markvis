@@ -1,21 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="funnel chart: Close still seals 12 of 85 Grant Park tours, 6 rows" aria-labelledby="mv-1fe5f50d0d0280e3-title" aria-describedby="mv-1fe5f50d0d0280e3-desc" data-markvis="2" data-chart-type="funnel" data-id="mv-1fe5f50d0d0280e3" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-1fe5f50d0d0280e3-title">Close still seals 12 of 85 Grant Park tours</title>
   <desc id="mv-1fe5f50d0d0280e3-desc">funnel chart. Close still seals 12 of 85 Grant Park tours. x=stage. y=households. 6 rows.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Close still seals 12 of 85 Grant Park tours</text>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Close still seals 12 of 85 Grant Park tours</title>Close still seals 12 of 85 Grant Park tours</text>
   <g data-funnel="1">
-    <path d="M48 36 L601.7 36 L481.19 106.67 L168.51 106.67 Z" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Inquiry" data-y="85"/>
-    <path d="M168.51 106.67 L481.19 106.67 L396.51 177.33 L253.19 177.33 Z" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Tour" data-y="48"/>
-    <path d="M253.19 177.33 L396.51 177.33 L383.48 248 L266.22 248 Z" fill="#10B981" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Offer" data-y="22"/>
-    <path d="M266.22 248 L383.48 248 L373.71 318.67 L275.99 318.67 Z" fill="#A855F7" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Inspection" data-y="18"/>
-    <path d="M275.99 318.67 L373.71 318.67 L363.93 389.33 L285.77 389.33 Z" fill="#EAB308" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Earnest" data-y="15"/>
-    <path d="M285.77 389.33 L363.93 389.33 L363.93 460 L285.77 460 Z" fill="#14B8A6" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Close" data-y="12"/>
-  </g>
-  <g fill="#171717" font-size="11" font-weight="500">
-    <text x="609.7" y="71.33" text-anchor="start" dominant-baseline="middle" data-label="Inquiry">Inquiry · 85</text>
-    <text x="609.7" y="142" text-anchor="start" dominant-baseline="middle" data-label="Tour">Tour · 48</text>
-    <text x="609.7" y="212.67" text-anchor="start" dominant-baseline="middle" data-label="Offer">Offer · 22</text>
-    <text x="609.7" y="283.33" text-anchor="start" dominant-baseline="middle" data-label="Inspection">Inspection · 18</text>
-    <text x="609.7" y="354" text-anchor="start" dominant-baseline="middle" data-label="Earnest">Earnest · 15</text>
-    <text x="609.7" y="424.67" text-anchor="start" dominant-baseline="middle" data-label="Close">Close · 12</text>
+    <rect x="48" y="48" width="535.1" height="61.33" fill="#3B82F6" data-stage="Inquiry" data-y="85"/>
+    <text x="56" y="78.67" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-label="Inquiry">Inquiry · 85</text>
+    <rect x="48" y="117.33" width="302.17" height="61.33" fill="#3B82F6" data-stage="Tour" data-y="48"/>
+    <text x="56" y="148" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-label="Tour">Tour · 48 · 56.4706% of previous · drop 37</text>
+    <rect x="48" y="186.67" width="138.5" height="61.33" fill="#3B82F6" data-stage="Offer" data-y="22"/>
+    <text x="56" y="217.33" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-label="Offer">Offer · 22 · 45.8333% of previous · drop 26</text>
+    <rect x="48" y="256" width="113.32" height="61.33" fill="#3B82F6" data-stage="Inspection" data-y="18"/>
+    <text x="56" y="286.67" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-label="Inspection">Inspection · 18 · 81.8182% of previous · drop 4</text>
+    <rect x="48" y="325.33" width="94.43" height="61.33" fill="#3B82F6" data-stage="Earnest" data-y="15"/>
+    <text x="56" y="356" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-label="Earnest">Earnest · 15 · 83.3333% of previous · drop 3</text>
+    <rect x="48" y="394.67" width="75.54" height="61.33" fill="#3B82F6" data-stage="Close" data-y="12"/>
+    <text x="56" y="425.33" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-label="Close">Close · 12 · 80% of previous · drop 3</text>
   </g>
 </svg>

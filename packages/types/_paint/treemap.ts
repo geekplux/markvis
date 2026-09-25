@@ -1,6 +1,6 @@
 import type { ChartIR } from "@markvis/ir";
 import { loadRows, uniqueInOrder } from "./data.js";
-import { drawTitle, visibleTitle } from "./figure.js";
+import { drawTitle, reserveTitle, visibleTitle } from "./figure.js";
 import {
   fitFrameHeight,
   titleBlockTop,
@@ -26,17 +26,39 @@ type Group = { label: string; value: number; children: Leaf[]; colorIndex: numbe
 
 type Rect = { x: number; y: number; w: number; h: number; label: string; value: number; colorIndex: number; depth: number };
 
-/** Slice-and-dice: alternate horizontal / vertical splits by value weight. */
-function sliceDice(
-  items: { label: string; value: number; colorIndex: number; depth: number; children?: Leaf[] }[],
-  x: number,
-  y: number,
-  w: number,
-  h: number,
-  vertical: boolean,
-  out: Rect[],
-): void {
-  const positive = items.filter((it) => it.value > 0);
+function luminance(hex: string): number {
+  const body = hex.replace("#", "");
+  const n = Number.parseInt(body, 16);
+  const r = ((n >> 16) & 255) / 255;
+  const g = ((n >> 8) & 255) / 255;
+  const b = (n & 255) / 255;
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+}
+
+type Tile = {
+  label: string;
+  value: number;
+  colorIndex: number;
+  depth: number;
+};
+
+function worstAspect(areas: number[], length: number): number {
+  const sum = areas.reduce((s, n) => s + n, 0);
+  if (sum <= 0 || length <= 0) {
+    return Infinity;
+  }
+  const rowLen = sum / length;
+  let worst = 0;
+  for (const area of areas) {
+    const side = area / rowLen;
+    worst = Math.max(worst, rowLen / side, side / rowLen);
+  }
+  return worst;
+}
+
+/** Squarified tiles. Items should already be positive. */
+function squarify(items: Tile[], x: number, y: number, w: number, h: number, out: Rect[]): void {
+  const positive = items.filter((it) => it.value > 0 && w > 0 && h > 0);
   if (positive.length === 0 || w <= 0 || h <= 0) {
     return;
   }
@@ -44,73 +66,74 @@ function sliceDice(
   if (total <= 0) {
     return;
   }
-  let cursor = vertical ? y : x;
-  for (const it of positive) {
-    const frac = it.value / total;
-    if (vertical) {
-      const hh = h * frac;
-      out.push({
-        x,
-        y: cursor,
-        w,
-        h: hh,
-        label: it.label,
-        value: it.value,
-        colorIndex: it.colorIndex,
-        depth: it.depth,
-      });
-      if (it.children && it.children.length > 0) {
-        sliceDice(
-          it.children.map((c) => ({
-            label: c.label,
-            value: c.value,
-            colorIndex: c.colorIndex,
-            depth: it.depth + 1,
-          })),
-          x,
-          cursor,
-          w,
-          hh,
-          !vertical,
-          out,
-        );
+  const scale = (w * h) / total;
+  let remaining = [...positive].sort((a, b) => b.value - a.value || a.label.localeCompare(b.label));
+  let rx = x;
+  let ry = y;
+  let rw = w;
+  let rh = h;
+  while (remaining.length > 0 && rw > 0 && rh > 0) {
+    const vertical = rw >= rh;
+    const side = vertical ? rh : rw;
+    const row: Tile[] = [];
+    let best = Infinity;
+    for (const item of remaining) {
+      const next = [...row, item];
+      const score = worstAspect(
+        next.map((it) => it.value * scale),
+        side,
+      );
+      if (row.length > 0 && score > best) {
+        break;
       }
-      cursor += hh;
-    } else {
-      const ww = w * frac;
-      out.push({
-        x: cursor,
-        y,
-        w: ww,
-        h,
-        label: it.label,
-        value: it.value,
-        colorIndex: it.colorIndex,
-        depth: it.depth,
-      });
-      if (it.children && it.children.length > 0) {
-        sliceDice(
-          it.children.map((c) => ({
-            label: c.label,
-            value: c.value,
-            colorIndex: c.colorIndex,
-            depth: it.depth + 1,
-          })),
-          cursor,
-          y,
-          ww,
-          h,
-          !vertical,
-          out,
-        );
-      }
-      cursor += ww;
+      row.push(item);
+      best = score;
     }
+    const rowArea = row.reduce((s, it) => s + it.value * scale, 0);
+    const rowLen = side > 0 ? rowArea / side : 0;
+    let cursor = 0;
+    for (const item of row) {
+      const len = rowLen > 0 ? (item.value * scale) / rowLen : 0;
+      if (vertical) {
+        out.push({
+          x: rx,
+          y: ry + cursor,
+          w: rowLen,
+          h: len,
+          label: item.label,
+          value: item.value,
+          colorIndex: item.colorIndex,
+          depth: item.depth,
+        });
+      } else {
+        out.push({
+          x: rx + cursor,
+          y: ry,
+          w: len,
+          h: rowLen,
+          label: item.label,
+          value: item.value,
+          colorIndex: item.colorIndex,
+          depth: item.depth,
+        });
+      }
+      cursor += len;
+    }
+    if (vertical) {
+      rx += rowLen;
+      rw -= rowLen;
+    } else {
+      ry += rowLen;
+      rh -= rowLen;
+    }
+    remaining = remaining.slice(row.length);
   }
 }
 
 export function renderTreemap(chart: ChartIR, _id: string): Painted {
-  const rows = loadRows(chart).filter((row) => row.y > 0);
+  const rows = loadRows(chart).flatMap((row) =>
+    row.y !== null && row.y > 0 ? [{ ...row, y: row.y }] : [],
+  );
   const hasParent = chart.series !== undefined;
 
   let layoutItems: {
@@ -156,6 +179,7 @@ export function renderTreemap(chart: ChartIR, _id: string): Painted {
 
   const left = MARGIN.left;
   const right = MARGIN.right;
+  reserveTitle(visibleTitle(chart), left, chart.unit);
   const top = titleBlockTop(0);
   const bottom = MARGIN.right;
   const height = fitFrameHeight(top, bottom);
@@ -171,13 +195,12 @@ export function renderTreemap(chart: ChartIR, _id: string): Painted {
   const rects: Rect[] = [];
   // Only paint leaf cells for flat; for two-level paint children (and skip drawing parent fill under children).
   if (!hasParent) {
-    sliceDice(layoutItems, plot.left, plot.top, plot.width, plot.height, plot.width < plot.height, rects);
+    squarify(layoutItems, plot.left, plot.top, plot.width, plot.height, rects);
   } else {
     // Parent strips first, then children inside — collect only child leaf rects for fill,
     // but draw parent labels when space remains around children (we draw child cells only).
     const parentRects: Rect[] = [];
-    const vertical = plot.width < plot.height;
-    sliceDice(
+    squarify(
       layoutItems.map((it) => ({
         label: it.label,
         value: it.value,
@@ -188,29 +211,27 @@ export function renderTreemap(chart: ChartIR, _id: string): Painted {
       plot.top,
       plot.width,
       plot.height,
-      vertical,
       parentRects,
     );
     for (let i = 0; i < layoutItems.length; i++) {
       const group = layoutItems[i]!;
-      const pr = parentRects[i];
+      const pr = parentRects.find((rect) => rect.label === group.label);
       if (!pr || !group.children) {
         continue;
       }
-      // Reserve a thin parent header band when tall enough, else fill fully with children.
-      const header = pr.h > 28 ? TYPE.tick.size + 6 : 0;
-      sliceDice(
+      const headerNeed = TYPE.tick.size + 10;
+      const header = pr.h > headerNeed + 16 && pr.w > 36 ? headerNeed : 0;
+      squarify(
         group.children.map((c) => ({
           label: c.label,
           value: c.value,
-          colorIndex: c.colorIndex,
+          colorIndex: group.colorIndex,
           depth: 1,
         })),
         pr.x,
         pr.y + header,
         pr.w,
         Math.max(pr.h - header, 0),
-        !vertical,
         rects,
       );
       if (header > 0) {
@@ -266,6 +287,12 @@ export function renderTreemap(chart: ChartIR, _id: string): Painted {
     }
     const style = seriesStyle(r.colorIndex);
     const isHeader = hasParent && r.depth === 0;
+    const tiny = r.w < 14 || r.h < 14;
+    let hash = 0;
+    for (const ch of r.label) {
+      hash = (hash + ch.charCodeAt(0)) % 5;
+    }
+    const opacity = isHeader ? 0.92 : tiny ? 0.45 : 0.62 + hash * 0.07;
     lines.push(
       `    <rect ${attrs({
         x: fmtPx(r.x),
@@ -273,16 +300,12 @@ export function renderTreemap(chart: ChartIR, _id: string): Painted {
         width: fmtPx(r.w),
         height: fmtPx(r.h),
         fill: style.color,
-        "fill-opacity": isHeader
-          ? 0.35
-          : style.opacity === 1
-            ? undefined
-            : style.opacity,
-        stroke: INK,
-        "stroke-opacity": STRUCTURE_OPACITY,
-        "stroke-width": 1,
+        "fill-opacity": opacity,
+        stroke: tiny ? "none" : "#ffffff",
+        "stroke-width": tiny ? undefined : 1.5,
         "data-label": r.label,
         "data-y": formatNumber(r.value),
+        "data-depth": r.depth,
       })}/>`,
     );
   }
@@ -306,13 +329,15 @@ export function renderTreemap(chart: ChartIR, _id: string): Painted {
     if (textWidth(label, TYPE.value.size) > availW) {
       continue;
     }
+    const ink = luminance(seriesStyle(r.colorIndex).color) > 0.45 ? "#171717" : "#fafaf9";
     lines.push(
       `    <text ${attrs({
         x: fmtPx(r.x + pad),
         y: fmtPx(r.y + pad + TYPE.value.size * 0.85),
         "text-anchor": "start",
+        fill: ink,
         "data-label-text": r.label,
-      })}>${escapeXml(label)}</text>`,
+      })}><title>${escapeXml(r.label)}</title>${escapeXml(label)}</text>`,
     );
   }
   lines.push(`  </g>`);

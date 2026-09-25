@@ -1,33 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="heatmap chart: Fall still leads Eastside Beltline walks at Ponce (walkers), 16 rows, series season" aria-labelledby="mv-f20ff20e0aaf08c6-title" aria-describedby="mv-f20ff20e0aaf08c6-desc" data-markvis="2" data-chart-type="heatmap" data-id="mv-f20ff20e0aaf08c6" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-f20ff20e0aaf08c6-title">Fall still leads Eastside Beltline walks at Ponce</title>
   <desc id="mv-f20ff20e0aaf08c6-desc">heatmap chart. Fall still leads Eastside Beltline walks at Ponce. x=segment. y=walkers. series=season. unit=walkers. 16 rows.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Fall still leads Eastside Beltline walks at Ponce<tspan font-size="12" font-weight="400" fill="#737373"> · walkers</tspan></text>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="54.64" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Fall still leads Eastside Beltline walks at Ponce</title><tspan x="54.64" dy="0">Fall still leads Eastside Beltline walks at</tspan><tspan x="54.64" dy="27">Ponce</tspan><tspan font-size="13" font-weight="400" fill="#737373"> · walkers</tspan></text>
+  <defs>
+    <pattern id="mv-f20ff20e0aaf08c6-missing" patternUnits="userSpaceOnUse" width="6" height="6">
+      <rect width="6" height="6" fill="#f4f1ea"/>
+      <path d="M0 6 L6 0" stroke="#a8a29e" stroke-width="1"/>
+    </pattern>
+  </defs>
   <g data-heatmap="1">
-    <rect x="48" y="36" width="163" height="105.5" fill="#3B82F6" fill-opacity="0.68" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Ponce" data-series="Spring" data-y="4,200"/>
-    <rect x="211" y="36" width="163" height="105.5" fill="#3B82F6" fill-opacity="0.43" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Irwin" data-series="Spring" data-y="3,100"/>
-    <rect x="374" y="36" width="163" height="105.5" fill="#3B82F6" fill-opacity="0.36" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Krog" data-series="Spring" data-y="2,800"/>
-    <rect x="537" y="36" width="163" height="105.5" fill="#3B82F6" fill-opacity="0.16" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Allene" data-series="Spring" data-y="1,900"/>
-    <rect x="48" y="141.5" width="163" height="105.5" fill="#3B82F6" fill-opacity="0.89" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Ponce" data-series="Summer" data-y="5,100"/>
-    <rect x="211" y="141.5" width="163" height="105.5" fill="#3B82F6" fill-opacity="0.55" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Irwin" data-series="Summer" data-y="3,600"/>
-    <rect x="374" y="141.5" width="163" height="105.5" fill="#3B82F6" fill-opacity="0.48" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Krog" data-series="Summer" data-y="3,300"/>
-    <rect x="537" y="141.5" width="163" height="105.5" fill="#3B82F6" fill-opacity="0.27" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Allene" data-series="Summer" data-y="2,400"/>
-    <rect x="48" y="247" width="163" height="105.5" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Ponce" data-series="Fall" data-y="5,600"/>
-    <rect x="211" y="247" width="163" height="105.5" fill="#3B82F6" fill-opacity="0.61" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Irwin" data-series="Fall" data-y="3,900"/>
-    <rect x="374" y="247" width="163" height="105.5" fill="#3B82F6" fill-opacity="0.52" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Krog" data-series="Fall" data-y="3,500"/>
-    <rect x="537" y="247" width="163" height="105.5" fill="#3B82F6" fill-opacity="0.34" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Allene" data-series="Fall" data-y="2,700"/>
-    <rect x="48" y="352.5" width="163" height="105.5" fill="#3B82F6" fill-opacity="0.39" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Ponce" data-series="Winter" data-y="2,900"/>
-    <rect x="211" y="352.5" width="163" height="105.5" fill="#3B82F6" fill-opacity="0.2" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Irwin" data-series="Winter" data-y="2,100"/>
-    <rect x="374" y="352.5" width="163" height="105.5" fill="#3B82F6" fill-opacity="0.14" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Krog" data-series="Winter" data-y="1,800"/>
-    <rect x="537" y="352.5" width="163" height="105.5" fill="#3B82F6" fill-opacity="0" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Allene" data-series="Winter" data-y="1,200"/>
+    <rect x="54.64" y="71" width="147.34" height="96" fill="#6ca0f3" stroke="#d6d3d1" stroke-width="1" data-x="Ponce" data-series="Spring" data-y="4,200"/>
+    <text x="128.31" y="119" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-cell-label="Ponce:Spring">4,200</text>
+    <rect x="201.98" y="71" width="147.34" height="96" fill="#93b7f0" stroke="#d6d3d1" stroke-width="1" data-x="Irwin" data-series="Spring" data-y="3,100"/>
+    <text x="275.65" y="119" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Irwin:Spring">3,100</text>
+    <rect x="349.32" y="71" width="147.34" height="96" fill="#9ebdf0" stroke="#d6d3d1" stroke-width="1" data-x="Krog" data-series="Spring" data-y="2,800"/>
+    <text x="422.99" y="119" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Krog:Spring">2,800</text>
+    <rect x="496.66" y="71" width="147.34" height="96" fill="#bed0ee" stroke="#d6d3d1" stroke-width="1" data-x="Allene" data-series="Spring" data-y="1,900"/>
+    <text x="570.33" y="119" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Allene:Spring">1,900</text>
+    <rect x="54.64" y="167" width="147.34" height="96" fill="#4d8df5" stroke="#d6d3d1" stroke-width="1" data-x="Ponce" data-series="Summer" data-y="5,100"/>
+    <text x="128.31" y="215" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-cell-label="Ponce:Summer">5,100</text>
+    <rect x="201.98" y="167" width="147.34" height="96" fill="#82acf1" stroke="#d6d3d1" stroke-width="1" data-x="Irwin" data-series="Summer" data-y="3,600"/>
+    <text x="275.65" y="215" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Irwin:Summer">3,600</text>
+    <rect x="349.32" y="167" width="147.34" height="96" fill="#8cb3f1" stroke="#d6d3d1" stroke-width="1" data-x="Krog" data-series="Summer" data-y="3,300"/>
+    <text x="422.99" y="215" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Krog:Summer">3,300</text>
+    <rect x="496.66" y="167" width="147.34" height="96" fill="#acc6ef" stroke="#d6d3d1" stroke-width="1" data-x="Allene" data-series="Summer" data-y="2,400"/>
+    <text x="570.33" y="215" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Allene:Summer">2,400</text>
+    <rect x="54.64" y="263" width="147.34" height="96" fill="#3b82f6" stroke="#d6d3d1" stroke-width="1" data-x="Ponce" data-series="Fall" data-y="5,600"/>
+    <text x="128.31" y="311" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-cell-label="Ponce:Fall">5,600</text>
+    <rect x="201.98" y="263" width="147.34" height="96" fill="#77a6f2" stroke="#d6d3d1" stroke-width="1" data-x="Irwin" data-series="Fall" data-y="3,900"/>
+    <text x="275.65" y="311" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Irwin:Fall">3,900</text>
+    <rect x="349.32" y="263" width="147.34" height="96" fill="#85aff1" stroke="#d6d3d1" stroke-width="1" data-x="Krog" data-series="Fall" data-y="3,500"/>
+    <text x="422.99" y="311" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Krog:Fall">3,500</text>
+    <rect x="496.66" y="263" width="147.34" height="96" fill="#a1bfef" stroke="#d6d3d1" stroke-width="1" data-x="Allene" data-series="Fall" data-y="2,700"/>
+    <text x="570.33" y="311" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Allene:Fall">2,700</text>
+    <rect x="54.64" y="359" width="147.34" height="96" fill="#9abbf0" stroke="#d6d3d1" stroke-width="1" data-x="Ponce" data-series="Winter" data-y="2,900"/>
+    <text x="128.31" y="407" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Ponce:Winter">2,900</text>
+    <rect x="201.98" y="359" width="147.34" height="96" fill="#b7ccee" stroke="#d6d3d1" stroke-width="1" data-x="Irwin" data-series="Winter" data-y="2,100"/>
+    <text x="275.65" y="407" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Irwin:Winter">2,100</text>
+    <rect x="349.32" y="359" width="147.34" height="96" fill="#c1d3ed" stroke="#d6d3d1" stroke-width="1" data-x="Krog" data-series="Winter" data-y="1,800"/>
+    <text x="422.99" y="407" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Krog:Winter">1,800</text>
+    <rect x="496.66" y="359" width="147.34" height="96" fill="#d6dfec" stroke="#d6d3d1" stroke-width="1" data-x="Allene" data-series="Winter" data-y="1,200"/>
+    <text x="570.33" y="407" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Allene:Winter">1,200</text>
   </g>
-  <g fill="#737373" font-size="10" font-weight="400">
-    <text x="38" y="88.75" text-anchor="end" dominant-baseline="middle" data-series-label="Spring">Spring</text>
-    <text x="38" y="194.25" text-anchor="end" dominant-baseline="middle" data-series-label="Summer">Summer</text>
-    <text x="38" y="299.75" text-anchor="end" dominant-baseline="middle" data-series-label="Fall">Fall</text>
-    <text x="38" y="405.25" text-anchor="end" dominant-baseline="middle" data-series-label="Winter">Winter</text>
-    <text x="129.5" y="468" text-anchor="middle" data-full-label="Ponce">Ponce</text>
-    <text x="292.5" y="468" text-anchor="middle" data-full-label="Irwin">Irwin</text>
-    <text x="455.5" y="468" text-anchor="middle" data-full-label="Krog">Krog</text>
-    <text x="618.5" y="468" text-anchor="middle" data-full-label="Allene">Allene</text>
+  <g data-color-scale="1">
+    <rect x="660" y="407" width="12" height="48.5" fill="#d6dfec"/>
+    <rect x="660" y="359" width="12" height="48.5" fill="#c0d2ed"/>
+    <rect x="660" y="311" width="12" height="48.5" fill="#aac5ef"/>
+    <rect x="660" y="263" width="12" height="48.5" fill="#94b7f0"/>
+    <rect x="660" y="215" width="12" height="48.5" fill="#7eaaf2"/>
+    <rect x="660" y="167" width="12" height="48.5" fill="#679df3"/>
+    <rect x="660" y="119" width="12" height="48.5" fill="#518ff5"/>
+    <rect x="660" y="71" width="12" height="48.5" fill="#3b82f6"/>
+    <text x="676" y="75" font-size="12" fill="#737373" dominant-baseline="hanging" data-scale-max="1">5,600</text>
+    <text x="676" y="455" font-size="12" fill="#737373" data-scale-min="1">1,200</text>
+  </g>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="44.64" y="119" text-anchor="end" dominant-baseline="middle" data-series-label="Spring"><title>Spring</title>Spring</text>
+    <text x="44.64" y="215" text-anchor="end" dominant-baseline="middle" data-series-label="Summer"><title>Summer</title>Summer</text>
+    <text x="44.64" y="311" text-anchor="end" dominant-baseline="middle" data-series-label="Fall"><title>Fall</title>Fall</text>
+    <text x="44.64" y="407" text-anchor="end" dominant-baseline="middle" data-series-label="Winter"><title>Winter</title>Winter</text>
+    <text x="128.31" y="467" text-anchor="middle" data-full-label="Ponce"><title>Ponce</title>Ponce</text>
+    <text x="275.65" y="467" text-anchor="middle" data-full-label="Irwin"><title>Irwin</title>Irwin</text>
+    <text x="422.99" y="467" text-anchor="middle" data-full-label="Krog"><title>Krog</title>Krog</text>
+    <text x="570.33" y="467" text-anchor="middle" data-full-label="Allene"><title>Allene</title>Allene</text>
   </g>
 </svg>

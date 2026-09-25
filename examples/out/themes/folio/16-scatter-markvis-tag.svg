@@ -1,27 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="scatter chart: Humidity falls as afternoon heat rises, 4 rows" aria-labelledby="mv-b07fb1da177a9a91-title" aria-describedby="mv-b07fb1da177a9a91-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-b07fb1da177a9a91" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-b07fb1da177a9a91-title">Humidity falls as afternoon heat rises</title>
   <desc id="mv-b07fb1da177a9a91-desc">scatter chart. Humidity falls as afternoon heat rises. x=temp_c. y=humidity. 4 rows.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Humidity falls as afternoon heat rises</text>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="66" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Humidity falls as afternoon heat rises</title>Humidity falls as afternoon heat rises</text>
   <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
-    <line x1="48" x2="700" y1="317.33" y2="317.33"/>
-    <line x1="48" x2="700" y1="176.67" y2="176.67"/>
-    <line x1="48" x2="700" y1="36" y2="36"/>
+    <line x1="66" x2="700" y1="306" y2="306"/>
+    <line x1="66" x2="700" y1="175" y2="175"/>
+    <line x1="66" x2="700" y1="44" y2="44"/>
   </g>
-  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
-  <g fill="#737373" font-size="10" font-weight="400">
-    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">30</text>
-    <text x="38" y="317.33" text-anchor="end" dominant-baseline="middle">40</text>
-    <text x="38" y="176.67" text-anchor="end" dominant-baseline="middle">50</text>
-    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">60</text>
-    <text x="56" y="468" text-anchor="middle" font-size="10" data-full-label="15">15</text>
-    <text x="268" y="468" text-anchor="middle" font-size="10" data-full-label="20">20</text>
-    <text x="480" y="468" text-anchor="middle" font-size="10" data-full-label="25">25</text>
-    <text x="692" y="468" text-anchor="middle" font-size="10" data-full-label="30">30</text>
+  <path d="M66 437 L700 437" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="56" y="437" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="56" y="306" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="56" y="175" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="56" y="44" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="74" y="449" text-anchor="middle" font-size="12" data-full-label="15"><title>15</title>15</text>
+    <text x="280" y="449" text-anchor="middle" font-size="12" data-full-label="20"><title>20</title>20</text>
+    <text x="486" y="449" text-anchor="middle" font-size="12" data-full-label="25"><title>25</title>25</text>
+    <text x="692" y="449" text-anchor="middle" font-size="12" data-full-label="30"><title>30</title>30</text>
+  </g>
+  <g fill="#737373" font-size="13" font-weight="400" data-axis-titles="1">
+    <text x="42" y="240.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 42 240.5)" data-axis="y">humidity</text>
+    <text x="383" y="465" text-anchor="middle" dominant-baseline="hanging" data-axis="x">temp_c</text>
   </g>
   <g>
-    <circle cx="183.2" cy="106.33" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="18" data-y="55" data-series="humidity"/>
-    <circle cx="352.8" cy="204.8" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="22" data-y="48" data-series="humidity"/>
-    <circle cx="480" cy="317.33" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="25" data-y="40" data-series="humidity"/>
-    <circle cx="607.2" cy="387.67" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="28" data-y="35" data-series="humidity"/>
+    <circle cx="197.6" cy="109.5" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="18" data-y="55" data-series="humidity"/>
+    <circle cx="362.4" cy="201.2" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="22" data-y="48" data-series="humidity"/>
+    <circle cx="486" cy="306" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="25" data-y="40" data-series="humidity"/>
+    <circle cx="609.6" cy="371.5" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="28" data-y="35" data-series="humidity"/>
   </g>
 </svg>

@@ -1,16 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="gauge chart: Five Points uptime still holds at 99.4 (%), 1 rows" aria-labelledby="mv-614cc13a5cf9d8a3-title" aria-describedby="mv-614cc13a5cf9d8a3-desc" data-markvis="2" data-chart-type="gauge" data-id="mv-614cc13a5cf9d8a3" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
   <title id="mv-614cc13a5cf9d8a3-title">Five Points uptime still holds at 99.4</title>
   <desc id="mv-614cc13a5cf9d8a3-desc">gauge chart. Five Points uptime still holds at 99.4. x=station. y=uptime. unit=%. 1 rows.</desc>
-  <text x="48" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Five Points uptime still holds at 99.4<tspan font-size="12" font-weight="400" fill="#8C8C8C"> · %</tspan></text>
-  <rect x="48" y="46" width="658" height="332" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="48" y="32" text-anchor="start" font-size="22" font-weight="600" fill="#000000"><title>Five Points uptime still holds at 99.4</title>Five Points uptime still holds at 99.4<tspan font-size="13" font-weight="400" fill="#8C8C8C"> · %</tspan></text>
+  <rect x="48" y="52" width="658" height="326" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
   <g data-gauge="1" data-min="90" data-max="100">
-    <path d="M74.32 370 A302.68 302.68 0 0 1 679.68 370" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="12" stroke-linecap="round" data-gauge-track="1"/>
-    <path d="M74.32 370 A302.68 302.68 0 0 1 674.32 313.28" fill="none" stroke="#5AD8A6" stroke-width="12" stroke-linecap="round" data-gauge-arc="99.4"/>
+    <path d="M77.08 370 A299.92 299.92 0 0 1 676.92 370" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="12" stroke-linecap="round" data-gauge-track="1"/>
+    <path d="M77.08 370 A299.92 299.92 0 0 1 671.61 313.8" fill="none" stroke="#5AD8A6" stroke-width="12" stroke-linecap="round" data-gauge-arc="99.4"/>
   </g>
-  <text x="377" y="242.87" text-anchor="middle" dominant-baseline="middle" font-size="28" font-weight="600" fill="#000000" data-gauge-value="1">99.4</text>
-  <text x="377" y="264.87" text-anchor="middle" dominant-baseline="hanging" font-size="11" font-weight="400" fill="#8C8C8C" data-gauge-label="1">Five Points</text>
-  <g fill="#8C8C8C" font-size="11" font-weight="400">
-    <text x="74.32" y="384" text-anchor="middle" dominant-baseline="hanging" data-gauge-min="1">90</text>
-    <text x="679.68" y="384" text-anchor="middle" dominant-baseline="hanging" data-gauge-max="1">100</text>
+  <text x="377" y="244.03" text-anchor="middle" dominant-baseline="middle" font-size="28" font-weight="600" fill="#000000" data-gauge-value="1">99.4 %</text>
+  <text x="377" y="266.03" text-anchor="middle" dominant-baseline="hanging" font-size="11" font-weight="400" fill="#8C8C8C" data-gauge-label="1">Five Points</text>
+  <g fill="#8C8C8C" font-size="12" font-weight="400">
+    <text x="77.08" y="384" text-anchor="middle" dominant-baseline="hanging" data-gauge-min="1">90</text>
+    <text x="676.92" y="384" text-anchor="middle" dominant-baseline="hanging" data-gauge-max="1">100</text>
   </g>
 </svg>

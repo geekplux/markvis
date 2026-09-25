@@ -1,4 +1,4 @@
-export { parse, parseMarkdown, extractCharts, ERROR_CODES } from "@markvis/parser";
+export { parse, parseMarkdown, parseDocument, extractCharts, ERROR_CODES } from "@markvis/parser";
 export type {
   ErrorCode,
   FallbackTable,

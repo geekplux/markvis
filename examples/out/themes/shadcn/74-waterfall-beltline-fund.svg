@@ -1,44 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="waterfall chart: City match still lifts Beltline fund after resurfacing (USD k), 8 rows" aria-labelledby="mv-4f95b76943f773ed-title" aria-describedby="mv-4f95b76943f773ed-desc" data-markvis="2" data-chart-type="waterfall" data-id="mv-4f95b76943f773ed" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-4f95b76943f773ed-title">City match still lifts Beltline fund after resurfacing</title>
   <desc id="mv-4f95b76943f773ed-desc">waterfall chart. City match still lifts Beltline fund after resurfacing. x=step. y=delta. unit=USD k. 8 rows.</desc>
-  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">City match still lifts Beltline fund after resurfacing<tspan font-size="12" font-weight="400" fill="#737373"> · USD k</tspan></text>
-  <rect x="48" y="36" width="652" height="328.2" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#0A0A0A"><title>City match still lifts Beltline fund after resurfacing</title><tspan x="48" dy="0">City match still lifts Beltline fund after</tspan><tspan x="48" dy="27">resurfacing</tspan><tspan font-size="13" font-weight="400" fill="#737373"> · USD k</tspan></text>
+  <rect x="48" y="73" width="652" height="347" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
   <g fill="none" stroke="#0A0A0A" stroke-opacity="0.06" stroke-width="1">
-    <line x1="48" x2="700" y1="254.8" y2="254.8"/>
-    <line x1="48" x2="700" y1="145.4" y2="145.4"/>
+    <line x1="48" x2="700" y1="304.33" y2="304.33"/>
+    <line x1="48" x2="700" y1="188.67" y2="188.67"/>
   </g>
-  <path d="M48 364.2 L700 364.2" fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1"/>
+  <path d="M48 420 L700 420" fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1"/>
   <g data-waterfall="1">
-    <rect x="56.15" y="232.92" width="65.2" height="131.28" fill="#F54900" rx="6" data-step="Opening balance" data-y="120" data-baseline="0"/>
-    <rect x="137.65" y="183.69" width="65.2" height="49.23" fill="#F54900" rx="6" data-step="Donor gifts" data-y="45" data-baseline="120"/>
-    <rect x="219.15" y="118.05" width="65.2" height="65.64" fill="#F54900" rx="6" data-step="City match" data-y="60" data-baseline="165"/>
-    <rect x="300.65" y="98.36" width="65.2" height="19.69" fill="#F54900" rx="6" data-step="Event fees" data-y="18" data-baseline="225"/>
-    <rect x="382.15" y="98.36" width="65.2" height="87.52" fill="#009689" rx="6" data-step="Resurfacing" data-y="-80" data-baseline="243"/>
-    <rect x="463.65" y="185.88" width="65.2" height="27.35" fill="#009689" rx="6" data-step="Lighting" data-y="-25" data-baseline="163"/>
-    <rect x="545.15" y="213.23" width="65.2" height="32.82" fill="#009689" rx="6" data-step="Crew" data-y="-30" data-baseline="138"/>
-    <rect x="626.65" y="246.05" width="65.2" height="16.41" fill="#009689" rx="6" data-step="Plantings" data-y="-15" data-baseline="108"/>
+    <rect x="56.15" y="281.2" width="65.2" height="138.8" fill="#0F766E" rx="6" data-step="Opening balance" data-y="120" data-level="120" data-role="delta" data-baseline="0"/>
+    <text x="88.75" y="275.2" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-delta="Opening balance">+120 → 120</text>
+    <rect x="137.65" y="229.15" width="65.2" height="52.05" fill="#0F766E" rx="6" data-step="Donor gifts" data-y="45" data-level="165" data-role="delta" data-baseline="120"/>
+    <text x="170.25" y="223.15" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-delta="Donor gifts">+45 → 165</text>
+    <rect x="219.15" y="159.75" width="65.2" height="69.4" fill="#0F766E" rx="6" data-step="City match" data-y="60" data-level="225" data-role="delta" data-baseline="165"/>
+    <text x="251.75" y="153.75" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-delta="City match">+60 → 225</text>
+    <rect x="300.65" y="138.93" width="65.2" height="20.82" fill="#0F766E" rx="6" data-step="Event fees" data-y="18" data-level="243" data-role="delta" data-baseline="225"/>
+    <text x="333.25" y="132.93" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-delta="Event fees">+18 → 243</text>
+    <rect x="382.15" y="138.93" width="65.2" height="92.53" fill="#BE123C" rx="6" data-step="Resurfacing" data-y="-80" data-level="163" data-role="delta" data-baseline="243"/>
+    <text x="414.75" y="132.93" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-delta="Resurfacing">-80 → 163</text>
+    <rect x="463.65" y="231.46" width="65.2" height="28.92" fill="#BE123C" rx="6" data-step="Lighting" data-y="-25" data-level="138" data-role="delta" data-baseline="163"/>
+    <text x="496.25" y="225.46" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-delta="Lighting">-25 → 138</text>
+    <rect x="545.15" y="260.38" width="65.2" height="34.7" fill="#BE123C" rx="6" data-step="Crew" data-y="-30" data-level="108" data-role="delta" data-baseline="138"/>
+    <text x="577.75" y="254.38" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-delta="Crew">-30 → 108</text>
+    <rect x="626.65" y="295.08" width="65.2" height="17.35" fill="#BE123C" rx="6" data-step="Plantings" data-y="-15" data-level="93" data-role="delta" data-baseline="108"/>
+    <text x="659.25" y="289.08" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-delta="Plantings">-15 → 93</text>
   </g>
   <g fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-waterfall-connectors="1">
-    <line x1="121.35" x2="137.65" y1="232.92" y2="232.92"/>
-    <line x1="202.85" x2="219.15" y1="183.69" y2="183.69"/>
-    <line x1="284.35" x2="300.65" y1="118.05" y2="118.05"/>
-    <line x1="365.85" x2="382.15" y1="98.36" y2="98.36"/>
-    <line x1="447.35" x2="463.65" y1="185.88" y2="185.88"/>
-    <line x1="528.85" x2="545.15" y1="213.23" y2="213.23"/>
-    <line x1="610.35" x2="626.65" y1="246.05" y2="246.05"/>
+    <line x1="121.35" x2="137.65" y1="281.2" y2="281.2"/>
+    <line x1="202.85" x2="219.15" y1="229.15" y2="229.15"/>
+    <line x1="284.35" x2="300.65" y1="159.75" y2="159.75"/>
+    <line x1="365.85" x2="382.15" y1="138.93" y2="138.93"/>
+    <line x1="447.35" x2="463.65" y1="231.46" y2="231.46"/>
+    <line x1="528.85" x2="545.15" y1="260.38" y2="260.38"/>
+    <line x1="610.35" x2="626.65" y1="295.08" y2="295.08"/>
   </g>
-  <g fill="#737373" font-size="11" font-weight="400">
-    <text x="40" y="364.2" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="40" y="254.8" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="40" y="145.4" text-anchor="end" dominant-baseline="middle">200</text>
-    <text x="40" y="36" text-anchor="end" dominant-baseline="middle">300</text>
-    <text x="88.75" y="372.2" text-anchor="end" dominant-baseline="middle" transform="rotate(-55 88.75 372.2)" data-full-label="Opening balance">Opening balance</text>
-    <text x="170.25" y="372.2" text-anchor="end" dominant-baseline="middle" transform="rotate(-55 170.25 372.2)" data-full-label="Donor gifts">Donor gifts</text>
-    <text x="251.75" y="372.2" text-anchor="end" dominant-baseline="middle" transform="rotate(-55 251.75 372.2)" data-full-label="City match">City match</text>
-    <text x="333.25" y="372.2" text-anchor="end" dominant-baseline="middle" transform="rotate(-55 333.25 372.2)" data-full-label="Event fees">Event fees</text>
-    <text x="414.75" y="372.2" text-anchor="end" dominant-baseline="middle" transform="rotate(-55 414.75 372.2)" data-full-label="Resurfacing">Resurfacing</text>
-    <text x="496.25" y="372.2" text-anchor="end" dominant-baseline="middle" transform="rotate(-55 496.25 372.2)" data-full-label="Lighting">Lighting</text>
-    <text x="577.75" y="372.2" text-anchor="end" dominant-baseline="middle" transform="rotate(-55 577.75 372.2)" data-full-label="Crew">Crew</text>
-    <text x="659.25" y="372.2" text-anchor="end" dominant-baseline="middle" transform="rotate(-55 659.25 372.2)" data-full-label="Plantings">Plantings</text>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="40" y="420" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="40" y="304.33" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="40" y="188.67" text-anchor="end" dominant-baseline="middle">200</text>
+    <text x="40" y="73" text-anchor="end" dominant-baseline="middle">300</text>
+    <text x="88.75" y="432" text-anchor="middle" data-full-label="Opening balance">Opening balance</text>
+    <text x="170.25" y="432" text-anchor="middle" data-full-label="Donor gifts">Donor gifts</text>
+    <text x="251.75" y="432" text-anchor="middle" data-full-label="City match">City match</text>
+    <text x="333.25" y="432" text-anchor="middle" data-full-label="Event fees">Event fees</text>
+    <text x="414.75" y="432" text-anchor="middle" data-full-label="Resurfacing">Resurfacing</text>
+    <text x="496.25" y="432" text-anchor="middle" data-full-label="Lighting">Lighting</text>
+    <text x="577.75" y="432" text-anchor="middle" data-full-label="Crew">Crew</text>
+    <text x="659.25" y="432" text-anchor="middle" data-full-label="Plantings">Plantings</text>
   </g>
 </svg>

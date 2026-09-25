@@ -21,7 +21,7 @@ function svgName(mdFile: string): string {
 
 describe("valid fixture SVGs", () => {
   it("covers 87 valid fixtures", () => {
-    expect(validFiles).toHaveLength(87);
+    expect(validFiles).toHaveLength(88);
   });
 
   it.each(validFiles)("%s", (file) => {

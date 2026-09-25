@@ -1,47 +1,48 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="area chart: Queue A stays deeper than queue B, 6 rows, series queue" aria-labelledby="mv-8c2fdefb06435294-title" aria-describedby="mv-8c2fdefb06435294-desc" data-markvis="2" data-chart-type="area" data-id="mv-8c2fdefb06435294" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-8c2fdefb06435294-title">Queue A stays deeper than queue B</title>
   <desc id="mv-8c2fdefb06435294-desc">area chart. Queue A stays deeper than queue B. x=minute. y=depth. series=queue. 6 rows.</desc>
-  <text x="74" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Queue A stays deeper than queue B</text>
-  <g font-size="12" font-weight="500" fill="#333333">
-    <rect x="74" y="31" width="10" height="10" fill="#7cb5ec" rx="1"/>
-    <text x="88" y="40" data-legend="A">A</text>
-    <rect x="111.44" y="31" width="10" height="10" fill="#434348" rx="1"/>
-    <text x="125.44" y="40" data-legend="B">B</text>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="74" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#333333"><title>Queue A stays deeper than queue B</title>Queue A stays deeper than queue B</text>
+  <g font-size="14" font-weight="500" fill="#333333">
+    <rect x="74" y="41" width="10" height="10" fill="#7cb5ec" rx="1"/>
+    <text x="88" y="50" data-legend="A">A</text>
+    <rect x="112.68" y="41" width="10" height="10" fill="#434348" rx="1"/>
+    <text x="126.68" y="50" data-legend="B">B</text>
   </g>
-  <rect x="74" y="62" width="626" height="337" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
+  <rect x="74" y="72" width="626" height="307" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
   <g fill="none" stroke="#333333" stroke-opacity="0.22" stroke-width="1">
-    <line x1="74" x2="700" y1="314.75" y2="314.75"/>
-    <line x1="74" x2="700" y1="230.5" y2="230.5"/>
-    <line x1="74" x2="700" y1="146.25" y2="146.25"/>
-    <line x1="74" x2="700" y1="62" y2="62"/>
+    <line x1="74" x2="700" y1="302.25" y2="302.25"/>
+    <line x1="74" x2="700" y1="225.5" y2="225.5"/>
+    <line x1="74" x2="700" y1="148.75" y2="148.75"/>
+    <line x1="74" x2="700" y1="72" y2="72"/>
   </g>
-  <path d="M74 399 L700 399" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
-  <g fill="#666666" font-size="11" font-weight="400">
-    <text x="66" y="399" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="66" y="314.75" text-anchor="end" dominant-baseline="middle">2</text>
-    <text x="66" y="230.5" text-anchor="end" dominant-baseline="middle">4</text>
-    <text x="66" y="146.25" text-anchor="end" dominant-baseline="middle">6</text>
-    <text x="66" y="62" text-anchor="end" dominant-baseline="middle">8</text>
-    <text x="82" y="410" text-anchor="middle" font-size="11" data-full-label="-1">-1</text>
-    <text x="234.5" y="410" text-anchor="middle" font-size="11" data-full-label="0">0</text>
-    <text x="387" y="410" text-anchor="middle" font-size="11" data-full-label="1">1</text>
-    <text x="539.5" y="410" text-anchor="middle" font-size="11" data-full-label="2">2</text>
-    <text x="692" y="410" text-anchor="middle" font-size="11" data-full-label="3">3</text>
+  <path d="M74 379 L700 379" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <g fill="#666666" font-size="12" font-weight="400">
+    <text x="66" y="379" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="302.25" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="66" y="225.5" text-anchor="end" dominant-baseline="middle">4</text>
+    <text x="66" y="148.75" text-anchor="end" dominant-baseline="middle">6</text>
+    <text x="66" y="72" text-anchor="end" dominant-baseline="middle">8</text>
+    <text x="82" y="391" text-anchor="middle" font-size="12" data-full-label="-1"><title>-1</title>-1</text>
+    <text x="234.5" y="391" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
+    <text x="387" y="391" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
+    <text x="539.5" y="391" text-anchor="middle" font-size="12" data-full-label="2"><title>2</title>2</text>
+    <text x="692" y="391" text-anchor="middle" font-size="12" data-full-label="3"><title>3</title>3</text>
   </g>
-  <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="52" y="230.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 52 230.5)" data-axis="y">depth</text>
-    <text x="387" y="426" text-anchor="middle" dominant-baseline="hanging" data-axis="x">minute</text>
+  <g fill="#666666" font-size="13" font-weight="400" data-axis-titles="1">
+    <text x="52" y="225.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 52 225.5)" data-axis="y">depth</text>
+    <text x="387" y="407" text-anchor="middle" dominant-baseline="hanging" data-axis="x">minute</text>
   </g>
   <g fill="none">
-    <path d="M234.5 188.38 L387 104.13 L539.5 146.25 L539.5 399 L234.5 399 Z" fill="#7cb5ec" fill-opacity="0.28" stroke="none" data-series="A"/>
-    <path d="M234.5 188.38 L387 104.13 L539.5 146.25" fill="none" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="A"/>
-    <circle cx="234.5" cy="188.38" r="3.5" fill="#7cb5ec" stroke="none" data-series="A"/>
-    <circle cx="387" cy="104.13" r="3.5" fill="#7cb5ec" stroke="none" data-series="A"/>
-    <circle cx="539.5" cy="146.25" r="3.5" fill="#7cb5ec" stroke="none" data-series="A"/>
-    <path d="M234.5 314.75 L387 272.63 L539.5 230.5 L539.5 399 L234.5 399 Z" fill="#434348" fill-opacity="0.28" stroke="none" data-series="B"/>
-    <path d="M234.5 314.75 L387 272.63 L539.5 230.5" fill="none" stroke="#434348" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="B"/>
-    <circle cx="234.5" cy="314.75" r="3.5" fill="#434348" stroke="none" data-series="B"/>
-    <circle cx="387" cy="272.63" r="3.5" fill="#434348" stroke="none" data-series="B"/>
-    <circle cx="539.5" cy="230.5" r="3.5" fill="#434348" stroke="none" data-series="B"/>
+    <path d="M234.5 187.13 L387 110.38 L539.5 148.75 L539.5 379 L234.5 379 Z" fill="#7cb5ec" fill-opacity="0.28" stroke="none" data-series="A"/>
+    <path d="M234.5 187.13 L387 110.38 L539.5 148.75" fill="none" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="A"/>
+    <circle cx="234.5" cy="187.13" r="3.5" fill="#7cb5ec" stroke="none" data-series="A"/>
+    <circle cx="387" cy="110.38" r="3.5" fill="#7cb5ec" stroke="none" data-series="A"/>
+    <circle cx="539.5" cy="148.75" r="3.5" fill="#7cb5ec" stroke="none" data-series="A"/>
+    <path d="M234.5 302.25 L387 263.88 L539.5 225.5 L539.5 379 L234.5 379 Z" fill="#434348" fill-opacity="0.28" stroke="none" data-series="B"/>
+    <path d="M234.5 302.25 L387 263.88 L539.5 225.5" fill="none" stroke="#434348" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6 4" data-series="B"/>
+    <circle cx="234.5" cy="302.25" r="3.5" fill="#434348" stroke="none" data-series="B"/>
+    <circle cx="387" cy="263.88" r="3.5" fill="#434348" stroke="none" data-series="B"/>
+    <circle cx="539.5" cy="225.5" r="3.5" fill="#434348" stroke="none" data-series="B"/>
   </g>
 </svg>

@@ -1,25 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Gamma leads category share at 3, 3 rows" aria-labelledby="mv-36cf52585c5aecc9-title" aria-describedby="mv-36cf52585c5aecc9-desc" data-markvis="2" data-chart-type="bar" data-id="mv-36cf52585c5aecc9" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-36cf52585c5aecc9-title">Gamma leads category share at 3</title>
   <desc id="mv-36cf52585c5aecc9-desc">bar chart. Gamma leads category share at 3. x=category. y=value. 3 rows.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Gamma leads category share at 3</text>
-  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
-  <g fill="#737373" font-size="10" font-weight="400">
-    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="38" y="317.33" text-anchor="end" dominant-baseline="middle">1</text>
-    <text x="38" y="176.67" text-anchor="end" dominant-baseline="middle">2</text>
-    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">3</text>
-    <text x="156.67" y="468" text-anchor="middle" font-size="10" data-full-label="alpha">alpha</text>
-    <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="beta">beta</text>
-    <text x="591.33" y="468" text-anchor="middle" font-size="10" data-full-label="gamma">gamma</text>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Gamma leads category share at 3</title>Gamma leads category share at 3</text>
+  <path d="M48 455 L700 455" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="38" y="455" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="318" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="38" y="181" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="38" y="44" text-anchor="end" dominant-baseline="middle">3</text>
+    <text x="156.67" y="467" text-anchor="middle" font-size="12" data-full-label="alpha"><title>alpha</title>alpha</text>
+    <text x="374" y="467" text-anchor="middle" font-size="12" data-full-label="beta"><title>beta</title>beta</text>
+    <text x="591.33" y="467" text-anchor="middle" font-size="12" data-full-label="gamma"><title>gamma</title>gamma</text>
   </g>
   <g>
-    <path d="M120.67 458 L120.67 320.33 Q120.67 317.33 123.67 317.33 L189.67 317.33 Q192.67 317.33 192.67 320.33 L192.67 458 Z" fill="#3B82F6" data-x="alpha" data-series="value" data-y="1"/>
-    <path d="M338 458 L338 179.67 Q338 176.67 341 176.67 L407 176.67 Q410 176.67 410 179.67 L410 458 Z" fill="#3B82F6" data-x="beta" data-series="value" data-y="2"/>
-    <path d="M555.33 458 L555.33 39 Q555.33 36 558.33 36 L624.33 36 Q627.33 36 627.33 39 L627.33 458 Z" fill="#3B82F6" data-x="gamma" data-series="value" data-y="3"/>
+    <path d="M120.67 455 L120.67 321 Q120.67 318 123.67 318 L189.67 318 Q192.67 318 192.67 321 L192.67 455 Z" fill="#3B82F6" data-x="alpha" data-series="value" data-y="1"/>
+    <path d="M338 455 L338 184 Q338 181 341 181 L407 181 Q410 181 410 184 L410 455 Z" fill="#3B82F6" data-x="beta" data-series="value" data-y="2"/>
+    <path d="M555.33 455 L555.33 47 Q555.33 44 558.33 44 L624.33 44 Q627.33 44 627.33 47 L627.33 455 Z" fill="#3B82F6" data-x="gamma" data-series="value" data-y="3"/>
   </g>
   <g>
-    <text x="156.67" y="309.33" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="alpha">1</text>
-    <text x="374" y="168.67" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="beta">2</text>
-    <text x="591.33" y="28" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="gamma">3</text>
+    <text x="156.67" y="310" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="alpha">1</text>
+    <text x="374" y="173" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="beta">2</text>
+    <text x="591.33" y="36" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="gamma">3</text>
   </g>
 </svg>

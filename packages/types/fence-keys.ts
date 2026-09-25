@@ -11,16 +11,16 @@ export { CORE_FENCE_KEYS };
  * Packs must keep `extras` in sync with this table (integrity test checks).
  */
 export const typeExtras: Record<ChartType, readonly string[]> = {
-  bar: ["layout"],
+  bar: ["layout", "orient"],
   line: ["layout"],
   area: ["layout"],
   scatter: [],
   pie: ["innerRadius"],
   hist: [],
-  heatmap: [],
+  heatmap: ["min", "max"],
   funnel: [],
-  waterfall: [],
-  radar: [],
+  waterfall: ["role"],
+  radar: ["max"],
   gauge: ["min", "max"],
   sankey: [],
   treemap: [],

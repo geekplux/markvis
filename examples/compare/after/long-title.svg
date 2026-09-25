@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Quarterly pipeline review for the north region after the partner enablement push, 3 rows" aria-labelledby="mv-21449aca797a3154-title" aria-describedby="mv-21449aca797a3154-desc" data-markvis="2" data-chart-type="bar" data-id="mv-21449aca797a3154" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-21449aca797a3154-title">Quarterly pipeline review for the north region after the partner enablement push</title>
+  <desc id="mv-21449aca797a3154-desc">bar chart. Quarterly pipeline review for the north region after the partner enablement push. x=quarter. y=deals. 3 rows.</desc>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Quarterly pipeline review for the north region after the partner enablement push</title><tspan x="48" dy="0">Quarterly pipeline review for the north region</tspan><tspan x="48" dy="27">after the partner enablement push</tspan></text>
+  <path d="M48 455 L700 455" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="38" y="455" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="359" text-anchor="end" dominant-baseline="middle">5</text>
+    <text x="38" y="263" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="38" y="167" text-anchor="end" dominant-baseline="middle">15</text>
+    <text x="38" y="71" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="156.67" y="467" text-anchor="middle" font-size="12" data-full-label="Q1"><title>Q1</title>Q1</text>
+    <text x="374" y="467" text-anchor="middle" font-size="12" data-full-label="Q2"><title>Q2</title>Q2</text>
+    <text x="591.33" y="467" text-anchor="middle" font-size="12" data-full-label="Q3"><title>Q3</title>Q3</text>
+  </g>
+  <g>
+    <path d="M120.67 455 L120.67 227.6 Q120.67 224.6 123.67 224.6 L189.67 224.6 Q192.67 224.6 192.67 227.6 L192.67 455 Z" fill="#3B82F6" data-x="Q1" data-series="deals" data-y="12"/>
+    <path d="M338 455 L338 112.4 Q338 109.4 341 109.4 L407 109.4 Q410 109.4 410 112.4 L410 455 Z" fill="#3B82F6" data-x="Q2" data-series="deals" data-y="18"/>
+    <path d="M555.33 455 L555.33 170 Q555.33 167 558.33 167 L624.33 167 Q627.33 167 627.33 170 L627.33 455 Z" fill="#3B82F6" data-x="Q3" data-series="deals" data-y="15"/>
+  </g>
+  <g>
+    <text x="156.67" y="216.6" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Q1">12</text>
+    <text x="374" y="101.4" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Q2">18</text>
+    <text x="591.33" y="159" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Q3">15</text>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="480" viewBox="0 0 390 480" role="img" aria-label="bar chart: Sales led the net at +120 (USD), 4 rows" aria-labelledby="mv-400c492f32b093b6-title" aria-describedby="mv-400c492f32b093b6-desc" data-markvis="2" data-chart-type="bar" data-id="mv-400c492f32b093b6" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-400c492f32b093b6-title">Sales led the net at +120</title>
+  <desc id="mv-400c492f32b093b6-desc">bar chart. Sales led the net at +120. x=dept. y=delta. unit=USD. 4 rows.</desc>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Sales led the net at +120</title><tspan x="48" dy="0">Sales led the net at</tspan><tspan x="48" dy="27">+120</tspan><tspan font-size="13" font-weight="400" fill="#737373"> · USD</tspan></text>
+  <path d="M48 455 L370 455" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <line x1="48" x2="370" y1="359" y2="359" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="38" y="455" text-anchor="end" dominant-baseline="middle">-50</text>
+    <text x="38" y="359" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="263" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="38" y="167" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="38" y="71" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="88.25" y="467" text-anchor="middle" font-size="12" data-full-label="Sales"><title>Sales</title>Sales</text>
+    <text x="168.75" y="467" text-anchor="middle" font-size="12" data-full-label="Support"><title>Support</title>Support</text>
+    <text x="249.25" y="467" text-anchor="middle" font-size="12" data-full-label="R&amp;D"><title>R&amp;D</title>R&amp;D</text>
+    <text x="329.75" y="467" text-anchor="middle" font-size="12" data-full-label="Ops"><title>Ops</title>Ops</text>
+  </g>
+  <g>
+    <path d="M59.27 359 L59.27 131.6 Q59.27 128.6 62.27 128.6 L114.23 128.6 Q117.23 128.6 117.23 131.6 L117.23 359 Z" fill="#3B82F6" data-x="Sales" data-series="delta" data-y="120"/>
+    <path d="M139.77 359 L197.73 359 L197.73 432.8 Q197.73 435.8 194.73 435.8 L142.77 435.8 Q139.77 435.8 139.77 432.8 Z" fill="#3B82F6" data-x="Support" data-series="delta" data-y="-40"/>
+    <path d="M220.27 359 L220.27 208.4 Q220.27 205.4 223.27 205.4 L275.23 205.4 Q278.23 205.4 278.23 208.4 L278.23 359 Z" fill="#3B82F6" data-x="R&amp;D" data-series="delta" data-y="80"/>
+    <path d="M300.77 359 L358.73 359 L358.73 384.8 Q358.73 387.8 355.73 387.8 L303.77 387.8 Q300.77 387.8 300.77 384.8 Z" fill="#3B82F6" data-x="Ops" data-series="delta" data-y="-15"/>
+  </g>
+  <g>
+    <text x="88.25" y="120.6" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Sales">120</text>
+    <text x="168.75" y="451.8" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Support">-40</text>
+    <text x="249.25" y="197.4" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="R&amp;D">80</text>
+    <text x="329.75" y="403.8" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Ops">-15</text>
+  </g>
+</svg>

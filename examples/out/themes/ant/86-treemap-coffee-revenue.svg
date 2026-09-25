@@ -1,37 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="treemap chart: Espresso still leads Octane revenue on the Eastside (USD k), 12 rows, series shop" aria-labelledby="mv-d761e5c17cb166bf-title" aria-describedby="mv-d761e5c17cb166bf-desc" data-markvis="2" data-chart-type="treemap" data-id="mv-d761e5c17cb166bf" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
   <title id="mv-d761e5c17cb166bf-title">Espresso still leads Octane revenue on the Eastside</title>
   <desc id="mv-d761e5c17cb166bf-desc">treemap chart. Espresso still leads Octane revenue on the Eastside. x=drink. y=revenue. series=shop. unit=USD k. 12 rows.</desc>
-  <text x="48" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Espresso still leads Octane revenue on the Eastside<tspan font-size="12" font-weight="400" fill="#8C8C8C"> · USD k</tspan></text>
-  <rect x="48" y="46" width="658" height="360" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="48" y="32" text-anchor="start" font-size="22" font-weight="600" fill="#000000"><title>Espresso still leads Octane revenue on the Eastside</title><tspan x="48" dy="0">Espresso still leads Octane revenue on the</tspan><tspan x="48" dy="28">Eastside</tspan><tspan font-size="13" font-weight="400" fill="#8C8C8C"> · USD k</tspan></text>
+  <rect x="48" y="80" width="658" height="326" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
   <g data-treemap="1">
-    <rect x="48" y="46" width="226.03" height="17" fill="#5AD8A6" fill-opacity="0.35" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-label="Octane" data-y="90"/>
-    <rect x="274.03" y="46" width="213.47" height="17" fill="#E8684A" fill-opacity="0.35" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-label="Barista" data-y="85"/>
-    <rect x="487.5" y="46" width="218.5" height="17" fill="#5D7092" fill-opacity="0.35" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-label="Component" data-y="87"/>
-    <rect x="48" y="63" width="226.03" height="182.93" fill="#5AD8A6" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-label="Espresso" data-y="48"/>
-    <rect x="48" y="245.93" width="226.03" height="83.84" fill="#E8684A" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-label="Batch brew" data-y="22"/>
-    <rect x="48" y="329.78" width="226.03" height="34.3" fill="#5D7092" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-label="Tea" data-y="9"/>
-    <rect x="48" y="364.08" width="226.03" height="41.92" fill="#F6BD16" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-label="Pastry" data-y="11"/>
-    <rect x="274.03" y="63" width="213.47" height="145.27" fill="#5AD8A6" fill-opacity="0.7" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-label="Espresso" data-y="36"/>
-    <rect x="274.03" y="208.27" width="213.47" height="112.99" fill="#E8684A" fill-opacity="0.7" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-label="Batch brew" data-y="28"/>
-    <rect x="274.03" y="321.26" width="213.47" height="56.49" fill="#5D7092" fill-opacity="0.7" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-label="Pastry" data-y="14"/>
-    <rect x="274.03" y="377.75" width="213.47" height="28.25" fill="#F6BD16" fill-opacity="0.7" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-label="Tea" data-y="7"/>
-    <rect x="487.5" y="63" width="218.5" height="161.64" fill="#5AD8A6" fill-opacity="0.7" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-label="Espresso" data-y="41"/>
-    <rect x="487.5" y="224.64" width="218.5" height="74.91" fill="#E8684A" fill-opacity="0.7" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-label="Batch brew" data-y="19"/>
-    <rect x="487.5" y="299.55" width="218.5" height="67.02" fill="#5D7092" fill-opacity="0.7" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-label="Retail beans" data-y="17"/>
-    <rect x="487.5" y="366.57" width="218.5" height="39.43" fill="#F6BD16" fill-opacity="0.7" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-label="Pastry" data-y="10"/>
+    <rect x="48" y="80" width="226.03" height="22" fill="#5AD8A6" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.5" data-label="Octane" data-y="90" data-depth="0"/>
+    <rect x="492.53" y="80" width="213.47" height="22" fill="#E8684A" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.5" data-label="Barista" data-y="85" data-depth="0"/>
+    <rect x="274.03" y="80" width="218.5" height="22" fill="#5D7092" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.5" data-label="Component" data-y="87" data-depth="0"/>
+    <rect x="48" y="102" width="226.03" height="162.13" fill="#5AD8A6" fill-opacity="0.76" stroke="#ffffff" stroke-width="1.5" data-label="Espresso" data-y="48" data-depth="1"/>
+    <rect x="48" y="264.13" width="118.4" height="141.87" fill="#5AD8A6" fill-opacity="0.69" stroke="#ffffff" stroke-width="1.5" data-label="Batch brew" data-y="22" data-depth="1"/>
+    <rect x="166.4" y="264.13" width="107.63" height="78.03" fill="#5AD8A6" fill-opacity="0.8300000000000001" stroke="#ffffff" stroke-width="1.5" data-label="Pastry" data-y="11" data-depth="1"/>
+    <rect x="166.4" y="342.16" width="107.63" height="63.84" fill="#5AD8A6" fill-opacity="0.76" stroke="#ffffff" stroke-width="1.5" data-label="Tea" data-y="9" data-depth="1"/>
+    <rect x="492.53" y="102" width="213.47" height="128.75" fill="#E8684A" fill-opacity="0.76" stroke="#ffffff" stroke-width="1.5" data-label="Espresso" data-y="36" data-depth="1"/>
+    <rect x="492.53" y="230.75" width="121.98" height="175.25" fill="#E8684A" fill-opacity="0.69" stroke="#ffffff" stroke-width="1.5" data-label="Batch brew" data-y="28" data-depth="1"/>
+    <rect x="614.51" y="230.75" width="91.49" height="116.83" fill="#E8684A" fill-opacity="0.8300000000000001" stroke="#ffffff" stroke-width="1.5" data-label="Pastry" data-y="14" data-depth="1"/>
+    <rect x="614.51" y="347.58" width="91.49" height="58.42" fill="#E8684A" fill-opacity="0.76" stroke="#ffffff" stroke-width="1.5" data-label="Tea" data-y="7" data-depth="1"/>
+    <rect x="274.03" y="102" width="218.5" height="143.26" fill="#5D7092" fill-opacity="0.76" stroke="#ffffff" stroke-width="1.5" data-label="Espresso" data-y="41" data-depth="1"/>
+    <rect x="274.03" y="245.26" width="90.25" height="160.74" fill="#5D7092" fill-opacity="0.69" stroke="#ffffff" stroke-width="1.5" data-label="Batch brew" data-y="19" data-depth="1"/>
+    <rect x="364.28" y="245.26" width="128.25" height="101.2" fill="#5D7092" fill-opacity="0.76" stroke="#ffffff" stroke-width="1.5" data-label="Retail beans" data-y="17" data-depth="1"/>
+    <rect x="364.28" y="346.47" width="128.25" height="59.53" fill="#5D7092" fill-opacity="0.8300000000000001" stroke="#ffffff" stroke-width="1.5" data-label="Pastry" data-y="10" data-depth="1"/>
   </g>
-  <g fill="#000000" font-size="11" font-weight="500">
-    <text x="52" y="76.35" text-anchor="start" data-label-text="Espresso">Espresso</text>
-    <text x="52" y="259.28" text-anchor="start" data-label-text="Batch brew">Batch brew</text>
-    <text x="52" y="343.13" text-anchor="start" data-label-text="Tea">Tea</text>
-    <text x="52" y="377.43" text-anchor="start" data-label-text="Pastry">Pastry</text>
-    <text x="278.03" y="76.35" text-anchor="start" data-label-text="Espresso">Espresso</text>
-    <text x="278.03" y="221.62" text-anchor="start" data-label-text="Batch brew">Batch brew</text>
-    <text x="278.03" y="334.61" text-anchor="start" data-label-text="Pastry">Pastry</text>
-    <text x="278.03" y="391.1" text-anchor="start" data-label-text="Tea">Tea</text>
-    <text x="491.5" y="76.35" text-anchor="start" data-label-text="Espresso">Espresso</text>
-    <text x="491.5" y="237.99" text-anchor="start" data-label-text="Batch brew">Batch brew</text>
-    <text x="491.5" y="312.9" text-anchor="start" data-label-text="Retail beans">Retail beans</text>
-    <text x="491.5" y="379.92" text-anchor="start" data-label-text="Pastry">Pastry</text>
+  <g fill="#000000" font-size="13" font-weight="500">
+    <text x="52" y="95.05" text-anchor="start" fill="#171717" data-label-text="Octane"><title>Octane</title>Octane</text>
+    <text x="496.53" y="95.05" text-anchor="start" fill="#171717" data-label-text="Barista"><title>Barista</title>Barista</text>
+    <text x="278.03" y="95.05" text-anchor="start" fill="#fafaf9" data-label-text="Component"><title>Component</title>Component</text>
+    <text x="52" y="117.05" text-anchor="start" fill="#171717" data-label-text="Espresso"><title>Espresso</title>Espresso</text>
+    <text x="52" y="279.18" text-anchor="start" fill="#171717" data-label-text="Batch brew"><title>Batch brew</title>Batch brew</text>
+    <text x="170.4" y="279.18" text-anchor="start" fill="#171717" data-label-text="Pastry"><title>Pastry</title>Pastry</text>
+    <text x="170.4" y="357.21" text-anchor="start" fill="#171717" data-label-text="Tea"><title>Tea</title>Tea</text>
+    <text x="496.53" y="117.05" text-anchor="start" fill="#171717" data-label-text="Espresso"><title>Espresso</title>Espresso</text>
+    <text x="496.53" y="245.8" text-anchor="start" fill="#171717" data-label-text="Batch brew"><title>Batch brew</title>Batch brew</text>
+    <text x="618.51" y="245.8" text-anchor="start" fill="#171717" data-label-text="Pastry"><title>Pastry</title>Pastry</text>
+    <text x="618.51" y="362.63" text-anchor="start" fill="#171717" data-label-text="Tea"><title>Tea</title>Tea</text>
+    <text x="278.03" y="117.05" text-anchor="start" fill="#fafaf9" data-label-text="Espresso"><title>Espresso</title>Espresso</text>
+    <text x="278.03" y="260.31" text-anchor="start" fill="#fafaf9" data-label-text="Batch brew"><title>Batch brew</title>Batch brew</text>
+    <text x="368.28" y="260.31" text-anchor="start" fill="#fafaf9" data-label-text="Retail beans"><title>Retail beans</title>Retail beans</text>
+    <text x="368.28" y="361.52" text-anchor="start" fill="#fafaf9" data-label-text="Pastry"><title>Pastry</title>Pastry</text>
   </g>
 </svg>

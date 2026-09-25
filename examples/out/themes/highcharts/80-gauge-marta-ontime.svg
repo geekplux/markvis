@@ -1,15 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="gauge chart: Red Line mornings still hit 94 on-time (%), 1 rows" aria-labelledby="mv-b79429d614571e4c-title" aria-describedby="mv-b79429d614571e4c-desc" data-markvis="2" data-chart-type="gauge" data-id="mv-b79429d614571e4c" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-b79429d614571e4c-title">Red Line mornings still hit 94 on-time</title>
   <desc id="mv-b79429d614571e4c-desc">gauge chart. Red Line mornings still hit 94 on-time. x=line. y=ontime. unit=%. 1 rows.</desc>
-  <text x="56" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Red Line mornings still hit 94 on-time<tspan font-size="12" font-weight="400" fill="#666666"> · %</tspan></text>
-  <rect x="56" y="38" width="644" height="354" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="56" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#333333"><title>Red Line mornings still hit 94 on-time</title>Red Line mornings still hit 94 on-time<tspan font-size="13" font-weight="400" fill="#666666"> · %</tspan></text>
+  <rect x="56" y="48" width="644" height="344" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
   <g data-gauge="1" data-min="80" data-max="100">
     <path d="M81.76 384 A296.24 296.24 0 0 1 674.24 384" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="12" stroke-linecap="round" data-gauge-track="1"/>
     <path d="M81.76 384 A296.24 296.24 0 0 1 552.13 144.34" fill="none" stroke="#7cb5ec" stroke-width="12" stroke-linecap="round" data-gauge-arc="94"/>
   </g>
-  <text x="378" y="259.58" text-anchor="middle" dominant-baseline="middle" font-size="28" font-weight="600" fill="#333333" data-gauge-value="1">94</text>
+  <text x="378" y="259.58" text-anchor="middle" dominant-baseline="middle" font-size="28" font-weight="600" fill="#333333" data-gauge-value="1">94 %</text>
   <text x="378" y="281.58" text-anchor="middle" dominant-baseline="hanging" font-size="11" font-weight="400" fill="#666666" data-gauge-label="1">Red</text>
-  <g fill="#666666" font-size="11" font-weight="400">
+  <g fill="#666666" font-size="12" font-weight="400">
     <text x="81.76" y="398" text-anchor="middle" dominant-baseline="hanging" data-gauge-min="1">80</text>
     <text x="674.24" y="398" text-anchor="middle" dominant-baseline="hanging" data-gauge-max="1">100</text>
   </g>

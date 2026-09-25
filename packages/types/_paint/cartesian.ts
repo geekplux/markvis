@@ -1,19 +1,22 @@
 import type { ChartIR } from "@markvis/ir";
 import {
   categoryNames,
+  finiteValues,
   groupedValue,
   loadRows,
   seriesNames,
   usesLinearX,
   type DataRow,
 } from "./data.js";
-import { drawTitle, visibleTitle } from "./figure.js";
+import { countTitleLines, drawTitle, visibleTitle } from "./figure.js";
 import { binHistogram, histSamplesFromChart, type HistBin } from "./hist.js";
 import {
   layoutFrame,
   layoutLegend,
+  setTitleLineCount,
   showBarValueLabels,
   SVG_WIDTH,
+  tickLeftMargin,
   type Painted,
   type PlotBox,
 } from "./layout.js";
@@ -21,7 +24,7 @@ import { seriesStyle } from "./palette.js";
 import {
   compactScale,
   formatNumber,
-  formatTick,
+  labelTicks,
   niceTicks,
   scaleLinear,
   unitWithCompact,
@@ -74,7 +77,7 @@ type Prepared = {
   categories: string[];
   linearX: boolean;
   layout: LayoutMode;
-  xTicks: { pos: number; label: string; show: boolean }[];
+  xTicks: { pos: number; label: string; show: boolean; lines: string[] }[];
   yTicks: { pos: number; label: string }[];
   xScaleNum: (v: number) => number;
   yScale: (v: number) => number;
@@ -94,6 +97,27 @@ type Prepared = {
   axisXTitle: string | undefined;
   axisYTitle: string | undefined;
 };
+
+function finiteRuns(
+  points: { x: number; y: number }[],
+): { x: number; y: number }[][] {
+  const runs: { x: number; y: number }[][] = [];
+  let run: { x: number; y: number }[] = [];
+  for (const point of points) {
+    if (!Number.isFinite(point.x) || !Number.isFinite(point.y)) {
+      if (run.length > 0) {
+        runs.push(run);
+        run = [];
+      }
+      continue;
+    }
+    run.push(point);
+  }
+  if (run.length > 0) {
+    runs.push(run);
+  }
+  return runs;
+}
 
 function polyline(points: { x: number; y: number }[]): string {
   return points
@@ -150,33 +174,47 @@ function resolveLayout(chart: ChartIR): LayoutMode {
   return "grouped";
 }
 
-/** Segment heights [series][category] — percent normalizes per category to sum 100 (or 0). */
+/** Segment heights [series][category]. Null is missing and is not a zero. */
 function segmentMatrix(
   rows: DataRow[],
   series: string[],
   categories: string[],
   percent: boolean,
-): number[][] {
+): Array<Array<number | null>> {
   const raw = series.map((ser) =>
     categories.map((cat) => groupedValue(rows, ser, cat)),
   );
   if (!percent) {
     return raw;
   }
-  const out = series.map(() => categories.map(() => 0));
+  const out: Array<Array<number | null>> = series.map(() =>
+    categories.map(() => null),
+  );
   for (let ci = 0; ci < categories.length; ci++) {
     let total = 0;
     for (let si = 0; si < series.length; si++) {
-      total += raw[si]![ci]!;
+      const value = raw[si]?.[ci];
+      if (typeof value === "number") {
+        total += value;
+      }
     }
     for (let si = 0; si < series.length; si++) {
-      out[si]![ci] = total === 0 ? 0 : (raw[si]![ci]! / total) * 100;
+      const value = raw[si]?.[ci];
+      const rowOut = out[si];
+      if (!rowOut) {
+        continue;
+      }
+      if (typeof value !== "number") {
+        rowOut[ci] = null;
+      } else {
+        rowOut[ci] = total === 0 ? 0 : (value / total) * 100;
+      }
     }
   }
   return out;
 }
 
-function stackTotals(matrix: number[][]): number[] {
+function stackTotals(matrix: Array<Array<number | null>>): number[] {
   if (matrix.length === 0) {
     return [];
   }
@@ -185,11 +223,21 @@ function stackTotals(matrix: number[][]): number[] {
   for (let ci = 0; ci < nCat; ci++) {
     let sum = 0;
     for (let si = 0; si < matrix.length; si++) {
-      sum += matrix[si]![ci]!;
+      const value = matrix[si]?.[ci];
+      if (typeof value === "number") {
+        sum += value;
+      }
     }
     totals.push(sum);
   }
   return totals;
+}
+
+const SERIES_DASH = ["", "6 4", "2 2", "7 3 2 3"] as const;
+
+function seriesDash(index: number): string | undefined {
+  const dash = SERIES_DASH[index % SERIES_DASH.length] ?? "";
+  return dash === "" ? undefined : dash;
 }
 
 function usesColorLegend(chart: ChartIR, seriesCount: number): boolean {
@@ -233,7 +281,7 @@ function prepare(chart: ChartIR): Prepared {
     const matrix = segmentMatrix(rows, series, categories, false);
     yValues = stackTotals(matrix);
   } else {
-    yValues = rows.map((row) => row.y);
+    yValues = finiteValues(rows.map((row) => row.y));
   }
   const forceZero =
     chart.type === "bar" ||
@@ -245,7 +293,7 @@ function prepare(chart: ChartIR): Prepared {
   const yMin = yTickNums[0] ?? yDom[0];
   const yMax = yTickNums[yTickNums.length - 1] ?? yDom[1];
   const compact = compactScale(yTickNums, yMax - yMin);
-  const yTickLabels = yTickNums.map((n) => formatTick(n, compact));
+  const yTickLabels = labelTicks(yTickNums);
 
   const styles = series.map((_, i) => seriesStyle(i));
   const showLegend = usesColorLegend(chart, series.length);
@@ -265,6 +313,9 @@ function prepare(chart: ChartIR): Prepared {
       : []
     : categories;
 
+  const namedAxes =
+    AXIS_TITLES || chart.type === "scatter" || chart.type === "hist";
+
   const legendDraft = showLegend
     ? layoutLegend(
         series,
@@ -279,11 +330,20 @@ function prepare(chart: ChartIR): Prepared {
   const categoryLabels =
     xLabelTexts.length ? xLabelTexts : linearX ? [] : categories;
 
+  setTitleLineCount(
+    countTitleLines(
+      visibleTitle(chart),
+      tickLeftMargin(yTickLabels, namedAxes),
+      unitWithCompact(chart.unit, compact),
+    ),
+  );
+
   let frame = layoutFrame({
     yTickLabels,
     categoryLabels,
     legendHeight: legendDraft.height,
     rightMin,
+    axisTitles: namedAxes,
   });
 
   let legend = showLegend
@@ -309,6 +369,7 @@ function prepare(chart: ChartIR): Prepared {
         categoryLabels,
         legendHeight: legend.height,
         rightMin,
+        axisTitles: namedAxes,
       });
     }
     // After frame is final: place under plot (or keep title-band Y).
@@ -342,13 +403,13 @@ function prepare(chart: ChartIR): Prepared {
     chart.type === "bar" || chart.type === "hist" ? !labelBars : true;
 
   const yScale = scaleLinear([yMin, yMax], [plot.bottom, plot.top]);
-  const yTicks = yTickNums.map((n) => ({
+  const yTicks = yTickNums.map((n, i) => ({
     pos: yScale(n),
-    label: formatTick(n, compact),
+    label: yTickLabels[i] ?? formatNumber(n),
   }));
 
   let xScaleNum = scaleLinear([0, 1], [plot.left, plot.right]);
-  let xTicks: { pos: number; label: string; show: boolean }[] = [];
+  let xTicks: { pos: number; label: string; show: boolean; lines: string[] }[] = [];
   const catCenter = (i: number) => plot.left + (i + 0.5) * catStep;
   const showAt = (i: number) => frame.show[i] ?? true;
 
@@ -358,10 +419,12 @@ function prepare(chart: ChartIR): Prepared {
     xScaleNum = scaleLinear([lo, hi], [plot.left, plot.right]);
     const edges = bins.map((bin) => bin.left);
     edges.push(bins[bins.length - 1]!.right);
+    const edgeLabels = labelTicks(edges);
     xTicks = edges.map((edge, i) => ({
       pos: xScaleNum(edge),
-      label: formatNumber(edge),
+      label: edgeLabels[i] ?? formatNumber(edge),
       show: showAt(i),
+      lines: [edgeLabels[i] ?? formatNumber(edge)],
     }));
   } else if (linearX) {
     const xs = rows
@@ -372,16 +435,19 @@ function prepare(chart: ChartIR): Prepared {
     const xMin = xTickNums[0] ?? xDom[0];
     const xMax = xTickNums[xTickNums.length - 1] ?? xDom[1];
     xScaleNum = scaleLinear([xMin, xMax], [plot.left + 8, plot.right - 8]);
-    xTicks = xTickNums.map((n) => ({
+    const xLabels = labelTicks(xTickNums);
+    xTicks = xTickNums.map((n, i) => ({
       pos: xScaleNum(n),
-      label: formatNumber(n),
+      label: xLabels[i] ?? formatNumber(n),
       show: true,
+      lines: [xLabels[i] ?? formatNumber(n)],
     }));
   } else {
     xTicks = categories.map((label, i) => ({
       pos: catCenter(i),
       label,
       show: showAt(i),
+      lines: frame.labelLines[i] ?? [label],
     }));
   }
 
@@ -408,10 +474,18 @@ function prepare(chart: ChartIR): Prepared {
     showValueLabels: labelBars,
     showInteriorGrid,
     useEndLabels,
-    axisXTitle: AXIS_TITLES ? chart.x : undefined,
-    axisYTitle: AXIS_TITLES
-      ? [chart.y, chart.unit].filter((s): s is string => Boolean(s)).join(" · ") ||
-        undefined
+    axisXTitle: namedAxes
+      ? chart.type === "hist"
+        ? `${chart.x} · Sturges bins`
+        : chart.x
+      : undefined,
+    axisYTitle: namedAxes
+      ? [
+          chart.type === "hist" ? (chart.y ?? "count") : chart.y,
+          chart.unit,
+        ]
+          .filter((part): part is string => Boolean(part))
+          .join(" · ") || undefined
       : undefined,
   };
 }
@@ -478,7 +552,7 @@ function interiorGridTicks(
 }
 
 function drawGridAndAxes(prepared: Prepared): string[] {
-  const { plot, xTicks, yTicks, rotateX } = prepared;
+  const { plot, xTicks, yTicks } = prepared;
   const lines: string[] = [];
 
   if (PLOT_BG) {
@@ -607,31 +681,26 @@ function drawGridAndAxes(prepared: Prepared): string[] {
     if (!tick.show) {
       continue;
     }
-    if (rotateX) {
-      const tx = fmtPx(tick.pos);
-      const ty = fmtPx(plot.bottom + 8);
-      lines.push(
-        `    <text ${attrs({
-          x: tx,
-          y: ty,
-          "text-anchor": "end",
-          "dominant-baseline": "middle",
-          "font-size": TYPE.tick.size,
-          transform: `rotate(${LABEL_ROTATE_DEG} ${tx} ${ty})`,
-          "data-full-label": tick.label,
-        })}>${escapeXml(tick.label)}</text>`,
-      );
-    } else {
-      lines.push(
-        `    <text ${attrs({
-          x: fmtPx(tick.pos),
-          y: fmtPx(plot.bottom + TYPE.tick.size),
-          "text-anchor": "middle",
-          "font-size": TYPE.tick.size,
-          "data-full-label": tick.label,
-        })}>${escapeXml(tick.label)}</text>`,
-      );
-    }
+    const display = tick.lines.length > 0 ? tick.lines : [tick.label];
+    const lineH = TYPE.tick.size + 3;
+    const body =
+      display.length === 1
+        ? escapeXml(display[0] ?? "")
+        : display
+            .map((line, i) => {
+              const dy = i === 0 ? 0 : lineH;
+              return `<tspan x="${fmtPx(tick.pos)}" dy="${dy}">${escapeXml(line)}</tspan>`;
+            })
+            .join("");
+    lines.push(
+      `    <text ${attrs({
+        x: fmtPx(tick.pos),
+        y: fmtPx(plot.bottom + TYPE.tick.size),
+        "text-anchor": "middle",
+        "font-size": TYPE.tick.size,
+        "data-full-label": tick.label,
+      })}><title>${escapeXml(tick.label)}</title>${body}</text>`,
+    );
   }
   lines.push(`  </g>`);
 
@@ -662,7 +731,7 @@ function drawGridAndAxes(prepared: Prepared): string[] {
       lines.push(
         `    <text ${attrs({
           x: fmtPx((plot.left + plot.right) / 2),
-          y: fmtPx(plot.bottom + (rotateX ? 28 : TYPE.tick.size + 16)),
+          y: fmtPx(plot.bottom + TYPE.tick.size + 16),
           "text-anchor": "middle",
           "dominant-baseline": "hanging",
           "data-axis": "x",
@@ -698,19 +767,54 @@ function roundedBarPath(
   return `M${x0} ${y0} L${x1} ${y0} L${x1} ${fmtPx(y + h - r)} Q${x1} ${y1} ${fmtPx(x + w - r)} ${y1} L${fmtPx(x + r)} ${y1} Q${x0} ${y1} ${x0} ${fmtPx(y + h - r)} Z`;
 }
 
-function valueLabelY(
+function luminance(hex: string): number {
+  const body = hex.replace("#", "");
+  const n = Number.parseInt(body.length === 3 ? body.replace(/./g, "$&$&") : body, 16);
+  if (!Number.isFinite(n)) {
+    return 0;
+  }
+  const r = ((n >> 16) & 255) / 255;
+  const g = ((n >> 8) & 255) / 255;
+  const b = (n & 255) / 255;
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+}
+
+/** Ink that stays readable on a bar fill. */
+function inkOnFill(fill: string): string {
+  return luminance(fill) > 0.62 ? "#171717" : "#fafaf9";
+}
+
+/**
+ * Place a value label outside the bar when it fits in the plot.
+ * A bar that reaches the plot edge would otherwise draw through the title,
+ * so that label moves inside the bar.
+ */
+function valueLabelPlacement(
   roundUp: boolean,
   y: number,
   h: number,
   y0: number,
-): number {
-  if (h >= BAR_LABEL_INSIDE_H) {
-    return roundUp ? y - BAR_LABEL_OFFSET : y + h + BAR_LABEL_OFFSET + 8;
+  plotTop: number,
+  plotBottom: number,
+): { y: number; inside: boolean } {
+  const outside = (() => {
+    if (h >= BAR_LABEL_INSIDE_H) {
+      return roundUp ? y - BAR_LABEL_OFFSET : y + h + BAR_LABEL_OFFSET + 8;
+    }
+    if (h < 8) {
+      return roundUp ? y0 - BAR_LABEL_OFFSET : y0 + BAR_LABEL_OFFSET + 8;
+    }
+    return roundUp ? y + 12 : y + h - 6;
+  })();
+  const hitsTitle = roundUp && outside < plotTop + 2;
+  const hitsBottom = !roundUp && outside > plotBottom - 2;
+  if ((hitsTitle || hitsBottom) && h >= 16) {
+    return {
+      y: roundUp ? Math.min(y + 14, y + h - 6) : Math.max(y + h - 14, y + 6),
+      inside: true,
+    };
   }
-  if (h < 8) {
-    return roundUp ? y0 - BAR_LABEL_OFFSET : y0 + BAR_LABEL_OFFSET + 8;
-  }
-  return roundUp ? y + 12 : y + h - 6;
+  return { y: outside, inside: false };
 }
 
 function drawBars(prepared: Prepared): string[] {
@@ -742,7 +846,23 @@ function drawBars(prepared: Prepared): string[] {
       const { x, barW } = barSlot(nCat, 1, catStep, plot.left, ci, 0);
       for (let si = 0; si < series.length; si++) {
         const ser = series[si]!;
-        const val = matrix[si]![ci]!;
+        const val = matrix[si]?.[ci];
+        if (typeof val !== "number") {
+          lines.push(
+            `    <rect ${attrs({
+              x: fmtPx(x),
+              y: fmtPx(y0),
+              width: fmtPx(barW),
+              height: 0,
+              fill: "none",
+              "data-x": cat,
+              "data-series": ser,
+              "data-missing": "1",
+              "data-layout": layout,
+            })}/>`,
+          );
+          continue;
+        }
         const yBottom = yScale(base);
         const yTop = yScale(base + val);
         const y = Math.min(yBottom, yTop);
@@ -768,15 +888,15 @@ function drawBars(prepared: Prepared): string[] {
         }
         const text = formatNumber(val);
         const cx = x + barW / 2;
-        const ly = valueLabelY(roundUp, y, h, y0);
+        const placed = valueLabelPlacement(roundUp, y, h, y0, plot.top, plot.bottom);
         labels.push(
           `    <text ${attrs({
             x: fmtPx(cx),
-            y: fmtPx(ly),
+            y: fmtPx(placed.y),
             "text-anchor": "middle",
             "font-size": TYPE.value.size,
             "font-weight": TYPE.value.weight,
-            fill: TYPE.value.fill,
+            fill: placed.inside ? inkOnFill(style.color) : TYPE.value.fill,
             "data-value-label": cat,
           })}>${escapeXml(text)}</text>`,
         );
@@ -788,10 +908,54 @@ function drawBars(prepared: Prepared): string[] {
       const ser = series[si]!;
       const val = groupedValue(rows, ser, cat);
       const { x, barW } = barSlot(nCat, nS, catStep, plot.left, ci, si);
+      const style = styles[si]!;
+      if (val === null) {
+        lines.push(
+          `    <rect ${attrs({
+            x: fmtPx(x),
+            y: fmtPx(y0),
+            width: fmtPx(barW),
+            height: 0,
+            fill: "none",
+            "data-x": cat,
+            "data-series": ser,
+            "data-missing": "1",
+          })}/>`,
+        );
+        continue;
+      }
+      if (val === 0) {
+        lines.push(
+          `    <line ${attrs({
+            x1: fmtPx(x),
+            x2: fmtPx(x + barW),
+            y1: fmtPx(y0),
+            y2: fmtPx(y0),
+            stroke: style.color,
+            "stroke-width": 2,
+            "data-x": cat,
+            "data-series": ser,
+            "data-y": "0",
+          })}/>`,
+        );
+        if (showValueLabels) {
+          labels.push(
+            `    <text ${attrs({
+              x: fmtPx(x + barW / 2),
+              y: fmtPx(y0 - BAR_LABEL_OFFSET),
+              "text-anchor": "middle",
+              "font-size": TYPE.value.size,
+              "font-weight": TYPE.value.weight,
+              fill: TYPE.value.fill,
+              "data-value-label": cat,
+            })}>0</text>`,
+          );
+        }
+        continue;
+      }
       const y1 = yScale(val);
       const y = Math.min(y0, y1);
       const h = Math.abs(y1 - y0);
-      const style = styles[si]!;
       const roundUp = val >= 0;
       lines.push(
         `    <path ${attrs({
@@ -808,15 +972,15 @@ function drawBars(prepared: Prepared): string[] {
       }
       const text = formatNumber(val);
       const cx = x + barW / 2;
-      const ly = valueLabelY(roundUp, y, h, y0);
+      const placed = valueLabelPlacement(roundUp, y, h, y0, plot.top, plot.bottom);
       labels.push(
         `    <text ${attrs({
           x: fmtPx(cx),
-          y: fmtPx(ly),
+          y: fmtPx(placed.y),
           "text-anchor": "middle",
           "font-size": TYPE.value.size,
           "font-weight": TYPE.value.weight,
-          fill: TYPE.value.fill,
+          fill: placed.inside ? inkOnFill(style.color) : TYPE.value.fill,
           "data-value-label": cat,
         })}>${escapeXml(text)}</text>`,
       );
@@ -878,7 +1042,7 @@ function lastPointBySeries(
     const ser = prepared.series[si]!;
     let last: { x: number; y: number } | undefined;
     for (const row of prepared.rows) {
-      if (row.series !== ser) {
+      if (row.series !== ser || row.y === null) {
         continue;
       }
       last = {
@@ -963,8 +1127,14 @@ function drawLineOrArea(prepared: Prepared, area: boolean): string[] {
     for (let ci = 0; ci < categories.length; ci++) {
       let run = 0;
       for (let si = 0; si < series.length; si++) {
-        run += matrix[si]![ci]!;
-        cum[si]![ci] = run;
+        const value = matrix[si]?.[ci];
+        if (typeof value === "number") {
+          run += value;
+        }
+        const cumRow = cum[si];
+        if (cumRow) {
+          cumRow[ci] = typeof value === "number" ? run : Number.NaN;
+        }
       }
     }
     for (let si = 0; si < series.length; si++) {
@@ -973,46 +1143,65 @@ function drawLineOrArea(prepared: Prepared, area: boolean): string[] {
       const topPts: { x: number; y: number }[] = [];
       const botPts: { x: number; y: number }[] = [];
       for (let ci = 0; ci < categories.length; ci++) {
+        const top = cum[si]![ci];
+        if (top === undefined || Number.isNaN(top)) {
+          topPts.push({ x: Number.NaN, y: Number.NaN });
+          botPts.push({ x: Number.NaN, y: Number.NaN });
+          continue;
+        }
         const x = prepared.catCenter(ci);
-        const top = cum[si]![ci]!;
-        const bot = si === 0 ? 0 : cum[si - 1]![ci]!;
+        const bot = si === 0 ? 0 : (cum[si - 1]![ci] ?? 0);
+        const botValue = Number.isNaN(bot) ? 0 : bot;
         topPts.push({ x, y: yScale(top) });
-        botPts.push({ x, y: yScale(bot) });
+        botPts.push({ x, y: yScale(botValue) });
       }
-      if (topPts.length === 0) {
+      const topRuns = finiteRuns(topPts);
+      const botRuns = finiteRuns(botPts);
+      if (topRuns.length === 0) {
         continue;
       }
       if (area) {
-        const revBot = [...botPts].reverse();
-        const fillPts = [...topPts, ...revBot];
-        const d = `${polyline(fillPts)} Z`;
+        for (let r = 0; r < topRuns.length; r++) {
+          const top = topRuns[r]!;
+          const bot = botRuns[r] ?? [];
+          const revBot = [...bot].reverse();
+          const fillPts = [...top, ...revBot];
+          if (fillPts.length < 2) {
+            continue;
+          }
+          const d = `${polyline(fillPts)} Z`;
+          lines.push(
+            `    <path ${attrs({
+              d,
+              fill: style.color,
+              "fill-opacity": AREA_OPACITY * style.opacity,
+              stroke: "none",
+              "data-series": ser,
+              "data-layout": layout,
+            })}/>`,
+          );
+        }
+      }
+      for (const pts of topRuns) {
+        const d = polyline(pts);
         lines.push(
           `    <path ${attrs({
             d,
-            fill: style.color,
-            "fill-opacity": AREA_OPACITY * style.opacity,
-            stroke: "none",
+            fill: "none",
+            stroke: style.color,
+            "stroke-width": LINE_STROKE,
+            "stroke-linejoin": "round",
+            "stroke-linecap": "round",
+            "stroke-dasharray": seriesDash(si),
+            "stroke-opacity": opacityAttr(style.opacity),
             "data-series": ser,
             "data-layout": layout,
           })}/>`,
         );
       }
-      const d = polyline(topPts);
-      lines.push(
-        `    <path ${attrs({
-          d,
-          fill: "none",
-          stroke: style.color,
-          "stroke-width": LINE_STROKE,
-          "stroke-linejoin": "round",
-          "stroke-linecap": "round",
-          "stroke-opacity": opacityAttr(style.opacity),
-          "data-series": ser,
-          "data-layout": layout,
-        })}/>`,
-      );
-      if (topPts.length <= POINT_SKIP_AFTER) {
-        for (const pt of topPts) {
+      const finiteTop = topRuns.flat();
+      if (finiteTop.length <= POINT_SKIP_AFTER) {
+        for (const pt of finiteTop) {
           lines.push(
             `    <circle ${attrs({
               cx: fmtPx(pt.x),
@@ -1035,57 +1224,75 @@ function drawLineOrArea(prepared: Prepared, area: boolean): string[] {
   const zero = yScale(0);
   for (let si = 0; si < series.length; si++) {
     const ser = series[si]!;
-    const pts: { x: number; y: number }[] = [];
+    const runs: { x: number; y: number }[][] = [];
+    let run: { x: number; y: number }[] = [];
     for (const row of rows) {
       if (row.series !== ser) {
         continue;
       }
-      pts.push({ x: xPos(prepared, row, catIndex), y: yScale(row.y) });
+      if (row.y === null) {
+        if (run.length > 0) {
+          runs.push(run);
+          run = [];
+        }
+        continue;
+      }
+      run.push({ x: xPos(prepared, row, catIndex), y: yScale(row.y) });
     }
-    if (pts.length === 0) {
+    if (run.length > 0) {
+      runs.push(run);
+    }
+    if (runs.length === 0) {
       continue;
     }
     const style = styles[si]!;
-    const d = polyline(pts);
-    if (area) {
-      const first = pts[0]!;
-      const last = pts[pts.length - 1]!;
-      const fillD = `${d} L${fmtPx(last.x)} ${fmtPx(zero)} L${fmtPx(first.x)} ${fmtPx(zero)} Z`;
-      lines.push(
-        `    <path ${attrs({
-          d: fillD,
-          fill: style.color,
-          "fill-opacity": AREA_OPACITY * style.opacity,
-          stroke: "none",
-          "data-series": ser,
-        })}/>`,
-      );
-    }
-    lines.push(
-      `    <path ${attrs({
-        d,
-        fill: "none",
-        stroke: style.color,
-        "stroke-width": LINE_STROKE,
-        "stroke-linejoin": "round",
-        "stroke-linecap": "round",
-        "stroke-opacity": opacityAttr(style.opacity),
-        "data-series": ser,
-      })}/>`,
-    );
-    if (pts.length <= POINT_SKIP_AFTER) {
-      for (const pt of pts) {
+    const dash = seriesDash(si);
+    for (const pts of runs) {
+      const d = polyline(pts);
+      if (area && pts.length > 0) {
+        const first = pts[0]!;
+        const last = pts[pts.length - 1]!;
+        const fillD = `${d} L${fmtPx(last.x)} ${fmtPx(zero)} L${fmtPx(first.x)} ${fmtPx(zero)} Z`;
         lines.push(
-          `    <circle ${attrs({
-            cx: fmtPx(pt.x),
-            cy: fmtPx(pt.y),
-            r: LINE_POINT_R,
+          `    <path ${attrs({
+            d: fillD,
             fill: style.color,
-            "fill-opacity": opacityAttr(style.opacity),
+            "fill-opacity": AREA_OPACITY * style.opacity,
             stroke: "none",
             "data-series": ser,
           })}/>`,
         );
+      }
+      lines.push(
+        `    <path ${attrs({
+          d,
+          fill: "none",
+          stroke: style.color,
+          "stroke-width": LINE_STROKE,
+          "stroke-linejoin": "round",
+          "stroke-linecap": "round",
+          "stroke-dasharray": dash,
+          "stroke-opacity": opacityAttr(style.opacity),
+          "data-series": ser,
+        })}/>`,
+      );
+    }
+    const pointCount = runs.reduce((sum, pts) => sum + pts.length, 0);
+    if (pointCount <= POINT_SKIP_AFTER) {
+      for (const pts of runs) {
+        for (const pt of pts) {
+          lines.push(
+            `    <circle ${attrs({
+              cx: fmtPx(pt.x),
+              cy: fmtPx(pt.y),
+              r: LINE_POINT_R,
+              fill: style.color,
+              "fill-opacity": opacityAttr(style.opacity),
+              stroke: "none",
+              "data-series": ser,
+            })}/>`,
+          );
+        }
       }
     }
   }
@@ -1101,12 +1308,51 @@ function drawScatter(prepared: Prepared): string[] {
   const ring = SCATTER_MARK === "ring";
   const lines: string[] = [`  <g>`];
   for (const row of rows) {
+    if (row.y === null) {
+      continue;
+    }
     if (row.xNum === undefined && prepared.linearX) {
       continue;
     }
     const cx = xPos(prepared, row, catIndex);
     const cy = yScale(row.y);
     const style = styleOf.get(row.series) ?? styles[0]!;
+    const seriesIndex = Math.max(0, series.indexOf(row.series));
+    const shape = (["circle", "square", "triangle"] as const)[seriesIndex % 3]!;
+    if (shape === "square") {
+      const s = SCATTER_R * 2;
+      lines.push(
+        `    <rect ${attrs({
+          x: fmtPx(cx - SCATTER_R),
+          y: fmtPx(cy - SCATTER_R),
+          width: fmtPx(s),
+          height: fmtPx(s),
+          fill: style.color,
+          "fill-opacity": SCATTER_OPACITY * style.opacity,
+          "data-x": row.xLabel,
+          "data-y": formatNumber(row.y),
+          "data-series": row.series,
+          "data-scatter-mark": "square",
+        })}/>`,
+      );
+      continue;
+    }
+    if (shape === "triangle") {
+      const r = SCATTER_R + 1;
+      const d = `M${fmtPx(cx)} ${fmtPx(cy - r)} L${fmtPx(cx + r)} ${fmtPx(cy + r)} L${fmtPx(cx - r)} ${fmtPx(cy + r)} Z`;
+      lines.push(
+        `    <path ${attrs({
+          d,
+          fill: style.color,
+          "fill-opacity": SCATTER_OPACITY * style.opacity,
+          "data-x": row.xLabel,
+          "data-y": formatNumber(row.y),
+          "data-series": row.series,
+          "data-scatter-mark": "triangle",
+        })}/>`,
+      );
+      continue;
+    }
     if (ring) {
       lines.push(
         `    <circle ${attrs({
@@ -1174,14 +1420,22 @@ function drawHist(prepared: Prepared): string[] {
       continue;
     }
     const roundUp = bin.weight >= 0;
+    const placed = valueLabelPlacement(
+      roundUp,
+      y,
+      h,
+      y0,
+      prepared.plot.top,
+      prepared.plot.bottom,
+    );
     labels.push(
       `    <text ${attrs({
         x: fmtPx(x + barW / 2),
-        y: fmtPx(valueLabelY(roundUp, y, h, y0)),
+        y: fmtPx(placed.y),
         "text-anchor": "middle",
         "font-size": TYPE.value.size,
         "font-weight": TYPE.value.weight,
-        fill: TYPE.value.fill,
+        fill: placed.inside ? inkOnFill(style.color) : TYPE.value.fill,
         "data-value-label": `${bin.left}–${bin.right}`,
       })}>${escapeXml(formatNumber(bin.weight))}</text>`,
     );

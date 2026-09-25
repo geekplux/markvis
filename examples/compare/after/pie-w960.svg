@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" role="img" aria-label="pie chart: MARTA takes the largest mode share, 5 slices" aria-labelledby="mv-57a6d979cf5c648a-title" aria-describedby="mv-57a6d979cf5c648a-desc" data-markvis="2" data-chart-type="pie" data-id="mv-57a6d979cf5c648a" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-57a6d979cf5c648a-title">MARTA takes the largest mode share</title>
+  <desc id="mv-57a6d979cf5c648a-desc">pie chart. MARTA takes the largest mode share. x=mode. y=count. 5 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>MARTA takes the largest mode share</title>MARTA takes the largest mode share</text>
+  <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0">
+    <path d="M494 252 L494 110.56 A141.44 141.44 0 0 1 597.75 348.13 Z" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="MARTA" data-raw-value="38"/>
+    <path d="M494 252 L597.75 348.13 A141.44 141.44 0 0 1 409.47 365.4 Z" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Walk" data-raw-value="24"/>
+    <path d="M494 252 L409.47 365.4 A141.44 141.44 0 0 1 364.38 195.39 Z" fill="#10B981" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Drive" data-raw-value="22"/>
+    <path d="M494 252 L364.38 195.39 A141.44 141.44 0 0 1 427.68 127.07 Z" fill="#A855F7" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Bike" data-raw-value="11"/>
+    <path d="M494 252 L427.68 127.07 A141.44 141.44 0 0 1 494 110.56 Z" fill="#EAB308" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Other" data-raw-value="8"/>
+  </g>
+  <g fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1">
+    <polyline points="623.62,195.39 638.28,188.99 646.28,188.99"/>
+    <polyline points="506.92,392.85 508.39,408.78 516.39,408.78"/>
+    <polyline points="357.29,288.26 341.82,292.36 333.82,292.36"/>
+    <polyline points="390.25,155.87 378.51,145 370.51,145"/>
+    <polyline points="459.83,114.75 455.96,99.22 447.96,99.22"/>
+  </g>
+  <g font-size="13" font-weight="500" fill="#171717">
+    <text x="658.28" y="188.99" text-anchor="start" dominant-baseline="middle" data-label="MARTA">MARTA · 38</text>
+    <text x="528.39" y="408.78" text-anchor="start" dominant-baseline="middle" data-label="Walk">Walk · 24</text>
+    <text x="321.82" y="292.36" text-anchor="end" dominant-baseline="middle" data-label="Drive">Drive · 22</text>
+    <text x="358.51" y="145" text-anchor="end" dominant-baseline="middle" data-label="Bike">Bike · 11</text>
+    <text x="435.96" y="99.22" text-anchor="end" dominant-baseline="middle" data-label="Other">Other · 8</text>
+  </g>
+</svg>

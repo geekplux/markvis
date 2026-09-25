@@ -1,33 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Free still outnumbers pro seats, 4 rows, series plan" aria-labelledby="mv-5045ce5a4f128422-title" aria-describedby="mv-5045ce5a4f128422-desc" data-markvis="2" data-chart-type="bar" data-id="mv-5045ce5a4f128422" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-5045ce5a4f128422-title">Free still outnumbers pro seats</title>
   <desc id="mv-5045ce5a4f128422-desc">bar chart. Free still outnumbers pro seats. x=month. y=seats. series=plan. 4 rows.</desc>
-  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Free still outnumbers pro seats</text>
-  <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <g font-size="11" font-weight="500" fill="#18181B">
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="40" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#18181B"><title>Free still outnumbers pro seats</title>Free still outnumbers pro seats</text>
+  <line x1="40" x2="704" y1="38" y2="38" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
+  <g font-size="13" font-weight="500" fill="#18181B">
     <rect x="40" y="455" width="10" height="10" fill="#475569" rx="1"/>
     <text x="54" y="464" data-legend="free">free</text>
-    <rect x="97.28" y="455" width="10" height="10" fill="#64748B" rx="1"/>
-    <text x="111.28" y="464" data-legend="pro">pro</text>
+    <rect x="102.24" y="455" width="10" height="10" fill="#64748B" rx="1"/>
+    <text x="116.24" y="464" data-legend="pro">pro</text>
   </g>
-  <path d="M40 434 L704 434" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
-  <g fill="#64748B" font-size="10" font-weight="400">
-    <text x="32" y="434" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="32" y="300" text-anchor="end" dominant-baseline="middle">50</text>
-    <text x="32" y="166" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="32" y="32" text-anchor="end" dominant-baseline="middle">150</text>
-    <text x="206" y="444" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
-    <text x="538" y="444" text-anchor="middle" font-size="10" data-full-label="Feb">Feb</text>
-  </g>
-  <g>
-    <path d="M141 434 L205 434 L205 166 L141 166 Z" fill="#475569" data-x="Jan" data-series="free" data-y="100"/>
-    <path d="M207 434 L271 434 L271 380.4 L207 380.4 Z" fill="#64748B" data-x="Jan" data-series="pro" data-y="20"/>
-    <path d="M473 434 L537 434 L537 139.2 L473 139.2 Z" fill="#475569" data-x="Feb" data-series="free" data-y="110"/>
-    <path d="M539 434 L603 434 L603 358.96 L539 358.96 Z" fill="#64748B" data-x="Feb" data-series="pro" data-y="28"/>
+  <path d="M40 431 L704 431" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <g fill="#64748B" font-size="12" font-weight="400">
+    <text x="32" y="431" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="32" y="302" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="32" y="173" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="32" y="44" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="206" y="443" text-anchor="middle" font-size="12" data-full-label="Jan"><title>Jan</title>Jan</text>
+    <text x="538" y="443" text-anchor="middle" font-size="12" data-full-label="Feb"><title>Feb</title>Feb</text>
   </g>
   <g>
-    <text x="173" y="158" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="Jan">100</text>
-    <text x="239" y="372.4" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="Jan">20</text>
-    <text x="505" y="131.2" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="Feb">110</text>
-    <text x="571" y="350.96" text-anchor="middle" font-size="10" font-weight="500" fill="#18181B" data-value-label="Feb">28</text>
+    <path d="M141 431 L205 431 L205 173 L141 173 Z" fill="#475569" data-x="Jan" data-series="free" data-y="100"/>
+    <path d="M207 431 L271 431 L271 379.4 L207 379.4 Z" fill="#64748B" data-x="Jan" data-series="pro" data-y="20"/>
+    <path d="M473 431 L537 431 L537 147.2 L473 147.2 Z" fill="#475569" data-x="Feb" data-series="free" data-y="110"/>
+    <path d="M539 431 L603 431 L603 358.76 L539 358.76 Z" fill="#64748B" data-x="Feb" data-series="pro" data-y="28"/>
+  </g>
+  <g>
+    <text x="173" y="165" text-anchor="middle" font-size="13" font-weight="500" fill="#18181B" data-value-label="Jan">100</text>
+    <text x="239" y="371.4" text-anchor="middle" font-size="13" font-weight="500" fill="#18181B" data-value-label="Jan">20</text>
+    <text x="505" y="139.2" text-anchor="middle" font-size="13" font-weight="500" fill="#18181B" data-value-label="Feb">110</text>
+    <text x="571" y="350.76" text-anchor="middle" font-size="13" font-weight="500" fill="#18181B" data-value-label="Feb">28</text>
   </g>
 </svg>

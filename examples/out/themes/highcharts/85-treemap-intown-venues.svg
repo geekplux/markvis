@@ -1,35 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="treemap chart: Tabernacle still tops Midtown venue capacity, 10 rows, series neighborhood" aria-labelledby="mv-6ec88be0f0767b1c-title" aria-describedby="mv-6ec88be0f0767b1c-desc" data-markvis="2" data-chart-type="treemap" data-id="mv-6ec88be0f0767b1c" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-6ec88be0f0767b1c-title">Tabernacle still tops Midtown venue capacity</title>
   <desc id="mv-6ec88be0f0767b1c-desc">treemap chart. Tabernacle still tops Midtown venue capacity. x=venue. y=seats. series=neighborhood. 10 rows.</desc>
-  <text x="56" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Tabernacle still tops Midtown venue capacity</text>
-  <rect x="56" y="38" width="644" height="382" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="56" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#333333"><title>Tabernacle still tops Midtown venue capacity</title>Tabernacle still tops Midtown venue capacity</text>
+  <rect x="56" y="48" width="644" height="372" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
   <g data-treemap="1">
-    <rect x="56" y="38" width="346.72" height="17" fill="#7cb5ec" fill-opacity="0.35" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Midtown" data-y="5,400"/>
-    <rect x="402.72" y="38" width="64.21" height="17" fill="#434348" fill-opacity="0.35" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Little Five Points" data-y="1,000"/>
-    <rect x="466.93" y="38" width="19.26" height="17" fill="#90ed7d" fill-opacity="0.35" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="East Atlanta" data-y="300"/>
-    <rect x="486.19" y="38" width="112.36" height="17" fill="#f7a35c" fill-opacity="0.35" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="West Midtown" data-y="1,750"/>
-    <rect x="598.55" y="38" width="89.89" height="17" fill="#8085e9" fill-opacity="0.35" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Old Fourth Ward" data-y="1,400"/>
-    <rect x="688.44" y="38" width="11.56" height="17" fill="#f15c80" fill-opacity="0.35" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Decatur" data-y="180"/>
-    <rect x="56" y="55" width="346.72" height="175.74" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Tabernacle" data-y="2,600"/>
-    <rect x="56" y="230.74" width="346.72" height="70.97" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Center Stage" data-y="1,050"/>
-    <rect x="56" y="301.71" width="346.72" height="118.29" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Symphony Hall" data-y="1,750"/>
-    <rect x="402.72" y="55" width="64.21" height="365" fill="#7cb5ec" fill-opacity="0.75" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Variety Playhouse" data-y="1,000"/>
-    <rect x="466.93" y="55" width="19.26" height="365" fill="#7cb5ec" fill-opacity="0.75" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="The Earl" data-y="300"/>
-    <rect x="486.19" y="55" width="112.36" height="219" fill="#7cb5ec" fill-opacity="0.75" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Terminal West" data-y="1,050"/>
-    <rect x="486.19" y="274" width="112.36" height="146" fill="#434348" fill-opacity="0.75" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="The Mill" data-y="700"/>
-    <rect x="598.55" y="55" width="89.89" height="260.71" fill="#7cb5ec" fill-opacity="0.75" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="The Masquerade" data-y="1,000"/>
-    <rect x="598.55" y="315.71" width="89.89" height="104.29" fill="#434348" fill-opacity="0.75" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Skyline Park" data-y="400"/>
-    <rect x="688.44" y="55" width="11.56" height="365" fill="#7cb5ec" fill-opacity="0.75" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Eddie&apos;s Attic" data-y="180"/>
+    <rect x="56" y="48" width="346.72" height="22" fill="#7cb5ec" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.5" data-label="Midtown" data-y="5,400" data-depth="0"/>
+    <rect x="402.72" y="301.09" width="200.86" height="22" fill="#434348" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.5" data-label="Little Five Points" data-y="1,000" data-depth="0"/>
+    <rect x="603.58" y="301.09" width="96.42" height="22" fill="#90ed7d" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.5" data-label="East Atlanta" data-y="300" data-depth="0"/>
+    <rect x="402.72" y="48" width="165.16" height="22" fill="#f7a35c" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.5" data-label="West Midtown" data-y="1,750" data-depth="0"/>
+    <rect x="567.88" y="48" width="132.12" height="22" fill="#8085e9" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.5" data-label="Old Fourth Ward" data-y="1,400" data-depth="0"/>
+    <rect x="603.58" y="375.41" width="96.42" height="22" fill="#f15c80" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.5" data-label="Decatur" data-y="180" data-depth="0"/>
+    <rect x="56" y="70" width="207.23" height="281.94" fill="#7cb5ec" fill-opacity="0.9" stroke="#ffffff" stroke-width="1.5" data-label="Tabernacle" data-y="2,600" data-depth="1"/>
+    <rect x="263.23" y="70" width="139.48" height="281.94" fill="#7cb5ec" fill-opacity="0.8300000000000001" stroke="#ffffff" stroke-width="1.5" data-label="Symphony Hall" data-y="1,750" data-depth="1"/>
+    <rect x="56" y="351.94" width="346.72" height="68.06" fill="#7cb5ec" fill-opacity="0.69" stroke="#ffffff" stroke-width="1.5" data-label="Center Stage" data-y="1,050" data-depth="1"/>
+    <rect x="402.72" y="323.09" width="200.86" height="96.91" fill="#434348" fill-opacity="0.69" stroke="#ffffff" stroke-width="1.5" data-label="Variety Playhouse" data-y="1,000" data-depth="1"/>
+    <rect x="603.58" y="323.09" width="96.42" height="52.32" fill="#90ed7d" fill-opacity="0.9" stroke="#ffffff" stroke-width="1.5" data-label="The Earl" data-y="300" data-depth="1"/>
+    <rect x="402.72" y="70" width="165.16" height="138.65" fill="#f7a35c" fill-opacity="0.9" stroke="#ffffff" stroke-width="1.5" data-label="Terminal West" data-y="1,050" data-depth="1"/>
+    <rect x="402.72" y="208.65" width="165.16" height="92.44" fill="#f7a35c" fill-opacity="0.9" stroke="#ffffff" stroke-width="1.5" data-label="The Mill" data-y="700" data-depth="1"/>
+    <rect x="567.88" y="70" width="132.12" height="165.06" fill="#8085e9" fill-opacity="0.8300000000000001" stroke="#ffffff" stroke-width="1.5" data-label="The Masquerade" data-y="1,000" data-depth="1"/>
+    <rect x="567.88" y="235.06" width="132.12" height="66.03" fill="#8085e9" fill-opacity="0.62" stroke="#ffffff" stroke-width="1.5" data-label="Skyline Park" data-y="400" data-depth="1"/>
+    <rect x="603.58" y="397.41" width="96.42" height="22.59" fill="#f15c80" fill-opacity="0.76" stroke="#ffffff" stroke-width="1.5" data-label="Eddie&apos;s Attic" data-y="180" data-depth="1"/>
   </g>
-  <g fill="#333333" font-size="11" font-weight="500">
-    <text x="60" y="68.35" text-anchor="start" data-label-text="Tabernacle">Tabernacle</text>
-    <text x="60" y="244.09" text-anchor="start" data-label-text="Center Stage">Center Stage</text>
-    <text x="60" y="315.06" text-anchor="start" data-label-text="Symphony Hall">Symphony Hall</text>
-    <text x="406.72" y="68.35" text-anchor="start" data-label-text="Variety Playhouse">Variety…</text>
-    <text x="470.93" y="68.35" text-anchor="start" data-label-text="The Earl">…</text>
-    <text x="490.19" y="68.35" text-anchor="start" data-label-text="Terminal West">Terminal West</text>
-    <text x="490.19" y="287.35" text-anchor="start" data-label-text="The Mill">The Mill</text>
-    <text x="602.55" y="68.35" text-anchor="start" data-label-text="The Masquerade">The Masquer…</text>
-    <text x="602.55" y="329.06" text-anchor="start" data-label-text="Skyline Park">Skyline Park</text>
+  <g fill="#333333" font-size="13" font-weight="500">
+    <text x="60" y="63.05" text-anchor="start" fill="#171717" data-label-text="Midtown"><title>Midtown</title>Midtown</text>
+    <text x="406.72" y="316.14" text-anchor="start" fill="#fafaf9" data-label-text="Little Five Points"><title>Little Five Points</title>Little Five Points</text>
+    <text x="607.58" y="316.14" text-anchor="start" fill="#171717" data-label-text="East Atlanta"><title>East Atlanta</title>East Atla…</text>
+    <text x="406.72" y="63.05" text-anchor="start" fill="#171717" data-label-text="West Midtown"><title>West Midtown</title>West Midtown</text>
+    <text x="571.88" y="63.05" text-anchor="start" fill="#171717" data-label-text="Old Fourth Ward"><title>Old Fourth Ward</title>Old Fourth Ward</text>
+    <text x="607.58" y="390.46" text-anchor="start" fill="#171717" data-label-text="Decatur"><title>Decatur</title>Decatur</text>
+    <text x="60" y="85.05" text-anchor="start" fill="#171717" data-label-text="Tabernacle"><title>Tabernacle</title>Tabernacle</text>
+    <text x="267.23" y="85.05" text-anchor="start" fill="#171717" data-label-text="Symphony Hall"><title>Symphony Hall</title>Symphony Hall</text>
+    <text x="60" y="366.99" text-anchor="start" fill="#171717" data-label-text="Center Stage"><title>Center Stage</title>Center Stage</text>
+    <text x="406.72" y="338.14" text-anchor="start" fill="#fafaf9" data-label-text="Variety Playhouse"><title>Variety Playhouse</title>Variety Playhouse</text>
+    <text x="607.58" y="338.14" text-anchor="start" fill="#171717" data-label-text="The Earl"><title>The Earl</title>The Earl</text>
+    <text x="406.72" y="85.05" text-anchor="start" fill="#171717" data-label-text="Terminal West"><title>Terminal West</title>Terminal West</text>
+    <text x="406.72" y="223.7" text-anchor="start" fill="#171717" data-label-text="The Mill"><title>The Mill</title>The Mill</text>
+    <text x="571.88" y="85.05" text-anchor="start" fill="#171717" data-label-text="The Masquerade"><title>The Masquerade</title>The Masquerade</text>
+    <text x="571.88" y="250.11" text-anchor="start" fill="#171717" data-label-text="Skyline Park"><title>Skyline Park</title>Skyline Park</text>
+    <text x="607.58" y="412.46" text-anchor="start" fill="#171717" data-label-text="Eddie&apos;s Attic"><title>Eddie&apos;s Attic</title>Eddie&apos;s A…</text>
   </g>
 </svg>

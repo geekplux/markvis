@@ -1,22 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="pie chart: Chrome still leads browser share at 52, 4 slices" aria-labelledby="mv-ed79d7ac4511bfdd-title" aria-describedby="mv-ed79d7ac4511bfdd-desc" data-markvis="2" data-chart-type="pie" data-id="mv-ed79d7ac4511bfdd" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-ed79d7ac4511bfdd-title">Chrome still leads browser share at 52</title>
   <desc id="mv-ed79d7ac4511bfdd-desc">pie chart. Chrome still leads browser share at 52. x=browser. y=users. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">Chrome still leads browser share at 52</text>
-  <g font-size="12" font-weight="500" fill="#0A0A0A">
-    <rect x="48" y="31" width="10" height="10" fill="#F54900" rx="1"/>
-    <text x="62" y="40" data-legend="Chrome">Chrome</text>
-    <rect x="122.64" y="31" width="10" height="10" fill="#009689" rx="1"/>
-    <text x="136.64" y="40" data-legend="Safari">Safari</text>
-    <rect x="197.28" y="31" width="10" height="10" fill="#104E64" rx="1"/>
-    <text x="211.28" y="40" data-legend="Firefox">Firefox</text>
-    <rect x="279.36" y="31" width="10" height="10" fill="#FFB900" rx="1"/>
-    <text x="293.36" y="40" data-legend="Other">Other</text>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#0A0A0A"><title>Chrome still leads browser share at 52</title>Chrome still leads browser share at 52</text>
+  <g font-size="13" font-weight="500" fill="#0A0A0A">
+    <rect x="48" y="41" width="10" height="10" fill="#F54900" rx="1"/>
+    <text x="62" y="50" data-legend="Chrome">Chrome</text>
+    <rect x="126.36" y="41" width="10" height="10" fill="#009689" rx="1"/>
+    <text x="140.36" y="50" data-legend="Safari">Safari</text>
+    <rect x="204.72" y="41" width="10" height="10" fill="#104E64" rx="1"/>
+    <text x="218.72" y="50" data-legend="Firefox">Firefox</text>
+    <rect x="291.14" y="41" width="10" height="10" fill="#FFB900" rx="1"/>
+    <text x="305.14" y="50" data-legend="Other">Other</text>
   </g>
-  <rect x="48" y="60" width="652" height="380" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
+  <rect x="48" y="70" width="652" height="370" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0.5">
-    <path d="M374 120.8 A129.2 129.2 0 1 1 357.81 378.18 L365.9 314.09 A64.6 64.6 0 1 0 374 185.4 Z" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Chrome" data-raw-value="52" data-donut="1"/>
-    <path d="M357.81 378.18 A129.2 129.2 0 0 1 251.12 210.08 L312.56 230.04 A64.6 64.6 0 0 0 365.9 314.09 Z" fill="#009689" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Safari" data-raw-value="28" data-donut="1"/>
-    <path d="M251.12 210.08 A129.2 129.2 0 0 1 311.76 136.78 L342.88 193.39 A64.6 64.6 0 0 0 312.56 230.04 Z" fill="#104E64" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Firefox" data-raw-value="12" data-donut="1"/>
-    <path d="M311.76 136.78 A129.2 129.2 0 0 1 374 120.8 L374 185.4 A64.6 64.6 0 0 0 342.88 193.39 Z" fill="#FFB900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Other" data-raw-value="8" data-donut="1"/>
+    <path d="M374 129.2 A125.8 125.8 0 1 1 358.23 379.81 L366.12 317.4 A62.9 62.9 0 1 0 374 192.1 Z" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Chrome" data-raw-value="52" data-donut="1"/>
+    <path d="M358.23 379.81 A125.8 125.8 0 0 1 254.36 216.13 L314.18 235.56 A62.9 62.9 0 0 0 366.12 317.4 Z" fill="#009689" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Safari" data-raw-value="28" data-donut="1"/>
+    <path d="M254.36 216.13 A125.8 125.8 0 0 1 313.4 144.76 L343.7 199.88 A62.9 62.9 0 0 0 314.18 235.56 Z" fill="#104E64" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Firefox" data-raw-value="12" data-donut="1"/>
+    <path d="M313.4 144.76 A125.8 125.8 0 0 1 374 129.2 L374 192.1 A62.9 62.9 0 0 0 343.7 199.88 Z" fill="#FFB900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Other" data-raw-value="8" data-donut="1"/>
   </g>
 </svg>

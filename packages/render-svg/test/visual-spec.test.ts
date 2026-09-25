@@ -94,28 +94,28 @@ function titleEl(svg: string): { x: number; anchor: string; size: string } {
 }
 
 describe("visual-spec tokens", () => {
-  it("keeps a transparent canvas and the frozen font stack", () => {
+  it("paints an opaque light surface and the frozen font stack", () => {
     const svg = svgOf("01-bar-basic.md");
     const rest = afterTitleDesc(svg);
-    expect(rest).not.toMatch(/<rect width="100%" height="100%"/);
-    expect(rest.trimStart().startsWith("<text ")).toBe(true);
+    expect(rest).toContain('data-surface="light"');
+    expect(rest).toContain('fill="#fafaf9"');
     expect(svg).toContain(`font-family="${FONT.replace(/"/g, "&quot;")}"`);
     expect(svg).toContain('role="img"');
     expect(svg).toMatch(/<title id="mv-[a-f0-9]+-title">/);
     expect(svg).toMatch(/<desc id="mv-[a-f0-9]+-desc">/);
     expect(svg).not.toContain("theme");
-    expect(TYPE.title).toEqual({ size: 17, weight: 600, fill: INK });
+    expect(TYPE.title).toEqual({ size: 21, weight: 600, fill: INK });
     expect(svg).toContain(`stroke="${INK}"`);
     expect(svg).toContain(`stroke-opacity="${STRUCTURE_OPACITY}"`);
   });
 
-  it("01 bar: conclusion title, 17/600 left, 72px cap, labels XOR grid", () => {
+  it("01 bar: conclusion title, 21/600 left, 72px cap, labels XOR grid", () => {
     const svg = svgOf("01-bar-basic.md");
     const plot = plotBox(svg);
     const title = titleEl(svg);
     expect(svg).toContain("Mar led Midtown box office at 9.2k tickets");
     expect(svg).not.toMatch(/>bar</i);
-    expect(title.size).toBe("17");
+    expect(title.size).toBe("21");
     expect(title.anchor).toBe("start");
     expect(title.x).toBeCloseTo(plot.left, 2);
     expect(svg).toContain(PALETTE[0]);
@@ -162,7 +162,7 @@ describe("visual-spec tokens", () => {
     expect(svg).toContain("MARTA takes the largest mode share");
     expect(svg).not.toContain(">Share<");
     expect(title.anchor).toBe("start");
-    expect(title.size).toBe("17");
+    expect(title.size).toBe("21");
     expect(svg).toContain(`stroke="${INK}"`);
     expect(svg).toContain(`stroke-opacity="${STRUCTURE_OPACITY}"`);
     expect(svg).toContain("MARTA · 38");
@@ -203,15 +203,14 @@ describe("visual-spec tokens", () => {
     }
   });
 
-  it("17 long labels rotate −55° without ellipsis; plot ≥55%; bar ≤72", () => {
+  it("17 long labels stay horizontal, readable, and inside the frame", () => {
     const svg = svgOf("17-bar-long-labels.md");
     const plot = plotBox(svg);
     const title = titleEl(svg);
     expect(svg).toContain("North America leads cloud spend at 420k");
     expect(title.anchor).toBe("start");
     expect(title.x).toBeCloseTo(plot.left, 2);
-    expect(svg).toContain("rotate(-55");
-    expect(svg).not.toContain("…");
+    expect(svg).not.toContain("rotate(-55");
     expect(svg).toContain("North America enterprise expansion Q3");
     expect(svg).toContain("APAC partner enablement and training program");
     expect(svg).toContain("Legacy platform decommission wave 2");
@@ -223,8 +222,6 @@ describe("visual-spec tokens", () => {
     expect(svg).not.toContain(">200k<");
     expect(svg).not.toContain(">400k<");
     expect(firstBarWidth(svg)).toBeLessThanOrEqual(72.01);
-    expect(plot.height).toBeGreaterThan(480);
-    expect(plot.height).toBeLessThanOrEqual(640);
     expect(plot.share).toBeGreaterThanOrEqual(PLOT_MIN_RATIO);
   });
 });

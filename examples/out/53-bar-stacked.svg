@@ -1,42 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: East still outnumbers West seats by season, 8 rows, series region" aria-labelledby="mv-2ea32752e20e283f-title" aria-describedby="mv-2ea32752e20e283f-desc" data-markvis="2" data-chart-type="bar" data-id="mv-2ea32752e20e283f" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-2ea32752e20e283f-title">East still outnumbers West seats by season</title>
   <desc id="mv-2ea32752e20e283f-desc">bar chart. East still outnumbers West seats by season. x=season. y=seats. series=region. 8 rows.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">East still outnumbers West seats by season</text>
-  <g font-size="11" font-weight="400" fill="#171717">
-    <rect x="48" y="33" width="10" height="10" fill="#3B82F6" rx="1"/>
-    <text x="62" y="42" data-legend="East">East</text>
-    <rect x="105.28" y="33" width="10" height="10" fill="#F97316" rx="1"/>
-    <text x="119.28" y="42" data-legend="West">West</text>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>East still outnumbers West seats by season</title>East still outnumbers West seats by season</text>
+  <g font-size="13" font-weight="400" fill="#171717">
+    <rect x="48" y="41" width="10" height="10" fill="#3B82F6" rx="1"/>
+    <text x="62" y="50" data-legend="East">East</text>
+    <rect x="110.24" y="41" width="10" height="10" fill="#F97316" rx="1"/>
+    <text x="124.24" y="50" data-legend="West">West</text>
   </g>
-  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
-  <g fill="#737373" font-size="10" font-weight="400">
-    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="38" y="325.33" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="38" y="192.67" text-anchor="end" dominant-baseline="middle">200</text>
-    <text x="38" y="60" text-anchor="end" dominant-baseline="middle">300</text>
-    <text x="129.5" y="468" text-anchor="middle" font-size="10" data-full-label="Spring">Spring</text>
-    <text x="292.5" y="468" text-anchor="middle" font-size="10" data-full-label="Summer">Summer</text>
-    <text x="455.5" y="468" text-anchor="middle" font-size="10" data-full-label="Fall">Fall</text>
-    <text x="618.5" y="468" text-anchor="middle" font-size="10" data-full-label="Winter">Winter</text>
-  </g>
-  <g>
-    <path d="M93.5 298.8 L165.5 298.8 L165.5 455 Q165.5 458 162.5 458 L96.5 458 Q93.5 458 93.5 455 Z" fill="#3B82F6" data-x="Spring" data-series="East" data-y="120" data-layout="stacked"/>
-    <path d="M93.5 298.8 L93.5 195.67 Q93.5 192.67 96.5 192.67 L162.5 192.67 Q165.5 192.67 165.5 195.67 L165.5 298.8 Z" fill="#F97316" data-x="Spring" data-series="West" data-y="80" data-layout="stacked"/>
-    <path d="M256.5 259 L328.5 259 L328.5 455 Q328.5 458 325.5 458 L259.5 458 Q256.5 458 256.5 455 Z" fill="#3B82F6" data-x="Summer" data-series="East" data-y="150" data-layout="stacked"/>
-    <path d="M256.5 259 L256.5 135.97 Q256.5 132.97 259.5 132.97 L325.5 132.97 Q328.5 132.97 328.5 135.97 L328.5 259 Z" fill="#F97316" data-x="Summer" data-series="West" data-y="95" data-layout="stacked"/>
-    <path d="M419.5 312.07 L491.5 312.07 L491.5 455 Q491.5 458 488.5 458 L422.5 458 Q419.5 458 419.5 455 Z" fill="#3B82F6" data-x="Fall" data-series="East" data-y="110" data-layout="stacked"/>
-    <path d="M419.5 312.07 L419.5 222.2 Q419.5 219.2 422.5 219.2 L488.5 219.2 Q491.5 219.2 491.5 222.2 L491.5 312.07 Z" fill="#F97316" data-x="Fall" data-series="West" data-y="70" data-layout="stacked"/>
-    <path d="M582.5 338.6 L654.5 338.6 L654.5 455 Q654.5 458 651.5 458 L585.5 458 Q582.5 458 582.5 455 Z" fill="#3B82F6" data-x="Winter" data-series="East" data-y="90" data-layout="stacked"/>
-    <path d="M582.5 338.6 L582.5 262 Q582.5 259 585.5 259 L651.5 259 Q654.5 259 654.5 262 L654.5 338.6 Z" fill="#F97316" data-x="Winter" data-series="West" data-y="60" data-layout="stacked"/>
+  <path d="M48 455 L700 455" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="38" y="455" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="326" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="38" y="197" text-anchor="end" dominant-baseline="middle">200</text>
+    <text x="38" y="68" text-anchor="end" dominant-baseline="middle">300</text>
+    <text x="129.5" y="467" text-anchor="middle" font-size="12" data-full-label="Spring"><title>Spring</title>Spring</text>
+    <text x="292.5" y="467" text-anchor="middle" font-size="12" data-full-label="Summer"><title>Summer</title>Summer</text>
+    <text x="455.5" y="467" text-anchor="middle" font-size="12" data-full-label="Fall"><title>Fall</title>Fall</text>
+    <text x="618.5" y="467" text-anchor="middle" font-size="12" data-full-label="Winter"><title>Winter</title>Winter</text>
   </g>
   <g>
-    <text x="129.5" y="290.8" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Spring">120</text>
-    <text x="129.5" y="184.67" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Spring">80</text>
-    <text x="292.5" y="251" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Summer">150</text>
-    <text x="292.5" y="124.97" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Summer">95</text>
-    <text x="455.5" y="304.07" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Fall">110</text>
-    <text x="455.5" y="211.2" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Fall">70</text>
-    <text x="618.5" y="330.6" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Winter">90</text>
-    <text x="618.5" y="251" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="Winter">60</text>
+    <path d="M93.5 300.2 L165.5 300.2 L165.5 452 Q165.5 455 162.5 455 L96.5 455 Q93.5 455 93.5 452 Z" fill="#3B82F6" data-x="Spring" data-series="East" data-y="120" data-layout="stacked"/>
+    <path d="M93.5 300.2 L93.5 200 Q93.5 197 96.5 197 L162.5 197 Q165.5 197 165.5 200 L165.5 300.2 Z" fill="#F97316" data-x="Spring" data-series="West" data-y="80" data-layout="stacked"/>
+    <path d="M256.5 261.5 L328.5 261.5 L328.5 452 Q328.5 455 325.5 455 L259.5 455 Q256.5 455 256.5 452 Z" fill="#3B82F6" data-x="Summer" data-series="East" data-y="150" data-layout="stacked"/>
+    <path d="M256.5 261.5 L256.5 141.95 Q256.5 138.95 259.5 138.95 L325.5 138.95 Q328.5 138.95 328.5 141.95 L328.5 261.5 Z" fill="#F97316" data-x="Summer" data-series="West" data-y="95" data-layout="stacked"/>
+    <path d="M419.5 313.1 L491.5 313.1 L491.5 452 Q491.5 455 488.5 455 L422.5 455 Q419.5 455 419.5 452 Z" fill="#3B82F6" data-x="Fall" data-series="East" data-y="110" data-layout="stacked"/>
+    <path d="M419.5 313.1 L419.5 225.8 Q419.5 222.8 422.5 222.8 L488.5 222.8 Q491.5 222.8 491.5 225.8 L491.5 313.1 Z" fill="#F97316" data-x="Fall" data-series="West" data-y="70" data-layout="stacked"/>
+    <path d="M582.5 338.9 L654.5 338.9 L654.5 452 Q654.5 455 651.5 455 L585.5 455 Q582.5 455 582.5 452 Z" fill="#3B82F6" data-x="Winter" data-series="East" data-y="90" data-layout="stacked"/>
+    <path d="M582.5 338.9 L582.5 264.5 Q582.5 261.5 585.5 261.5 L651.5 261.5 Q654.5 261.5 654.5 264.5 L654.5 338.9 Z" fill="#F97316" data-x="Winter" data-series="West" data-y="60" data-layout="stacked"/>
+  </g>
+  <g>
+    <text x="129.5" y="292.2" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Spring">120</text>
+    <text x="129.5" y="189" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Spring">80</text>
+    <text x="292.5" y="253.5" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Summer">150</text>
+    <text x="292.5" y="130.95" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Summer">95</text>
+    <text x="455.5" y="305.1" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Fall">110</text>
+    <text x="455.5" y="214.8" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Fall">70</text>
+    <text x="618.5" y="330.9" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Winter">90</text>
+    <text x="618.5" y="253.5" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Winter">60</text>
   </g>
 </svg>

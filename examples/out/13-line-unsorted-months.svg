@@ -1,30 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: December led signups at 55, 4 rows" aria-labelledby="mv-38d53de0cc111dae-title" aria-describedby="mv-38d53de0cc111dae-desc" data-markvis="2" data-chart-type="line" data-id="mv-38d53de0cc111dae" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-38d53de0cc111dae-title">December led signups at 55</title>
   <desc id="mv-38d53de0cc111dae-desc">line chart. December led signups at 55. x=month. y=signups. 4 rows.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">December led signups at 55</text>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>December led signups at 55</title>December led signups at 55</text>
   <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
-    <line x1="48" x2="700" y1="373.6" y2="373.6"/>
-    <line x1="48" x2="700" y1="204.8" y2="204.8"/>
-    <line x1="48" x2="700" y1="36" y2="36"/>
+    <line x1="48" x2="700" y1="372.8" y2="372.8"/>
+    <line x1="48" x2="700" y1="208.4" y2="208.4"/>
+    <line x1="48" x2="700" y1="44" y2="44"/>
   </g>
-  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
-  <g fill="#737373" font-size="10" font-weight="400">
-    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">10</text>
-    <text x="38" y="373.6" text-anchor="end" dominant-baseline="middle">20</text>
-    <text x="38" y="289.2" text-anchor="end" dominant-baseline="middle">30</text>
-    <text x="38" y="204.8" text-anchor="end" dominant-baseline="middle">40</text>
-    <text x="38" y="120.4" text-anchor="end" dominant-baseline="middle">50</text>
-    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">60</text>
-    <text x="129.5" y="468" text-anchor="middle" font-size="10" data-full-label="Mar">Mar</text>
-    <text x="292.5" y="468" text-anchor="middle" font-size="10" data-full-label="Jan">Jan</text>
-    <text x="455.5" y="468" text-anchor="middle" font-size="10" data-full-label="Dec">Dec</text>
-    <text x="618.5" y="468" text-anchor="middle" font-size="10" data-full-label="Jun">Jun</text>
+  <path d="M48 455 L700 455" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="38" y="455" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="38" y="372.8" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="38" y="290.6" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="38" y="208.4" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="38" y="126.2" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="38" y="44" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="129.5" y="467" text-anchor="middle" font-size="12" data-full-label="Mar"><title>Mar</title>Mar</text>
+    <text x="292.5" y="467" text-anchor="middle" font-size="12" data-full-label="Jan"><title>Jan</title>Jan</text>
+    <text x="455.5" y="467" text-anchor="middle" font-size="12" data-full-label="Dec"><title>Dec</title>Dec</text>
+    <text x="618.5" y="467" text-anchor="middle" font-size="12" data-full-label="Jun"><title>Jun</title>Jun</text>
   </g>
   <g fill="none">
-    <path d="M129.5 204.8 L292.5 356.72 L455.5 78.2 L618.5 289.2" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="signups"/>
-    <circle cx="129.5" cy="204.8" r="2.5" fill="#3B82F6" stroke="none" data-series="signups"/>
-    <circle cx="292.5" cy="356.72" r="2.5" fill="#3B82F6" stroke="none" data-series="signups"/>
-    <circle cx="455.5" cy="78.2" r="2.5" fill="#3B82F6" stroke="none" data-series="signups"/>
-    <circle cx="618.5" cy="289.2" r="2.5" fill="#3B82F6" stroke="none" data-series="signups"/>
+    <path d="M129.5 208.4 L292.5 356.36 L455.5 85.1 L618.5 290.6" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="signups"/>
+    <circle cx="129.5" cy="208.4" r="2.5" fill="#3B82F6" stroke="none" data-series="signups"/>
+    <circle cx="292.5" cy="356.36" r="2.5" fill="#3B82F6" stroke="none" data-series="signups"/>
+    <circle cx="455.5" cy="85.1" r="2.5" fill="#3B82F6" stroke="none" data-series="signups"/>
+    <circle cx="618.5" cy="290.6" r="2.5" fill="#3B82F6" stroke="none" data-series="signups"/>
   </g>
 </svg>

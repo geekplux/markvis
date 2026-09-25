@@ -1,4 +1,5 @@
 import { columnValues, type ChartIR } from "@markvis/ir";
+import { classifyNumeric } from "./data.js";
 import { cleanFloat } from "./scale.js";
 
 export type HistSample = {
@@ -16,8 +17,9 @@ export type HistBin = {
 /**
  * Histogram binning (deterministic).
  *
- * 1. Each finite x becomes a sample. Weight is Number(y) when y is set,
- *    otherwise 1. Non-finite weights become 0. Input rows are never sorted.
+ * 1. Each finite x becomes a sample. Weight is y when y is a finite number,
+ *    otherwise the row is skipped (missing or invalid weight is not zero).
+ *    When y is omitted, every finite x has weight 1. Rows stay unsorted.
  * 2. n = sample count. If n === 0, return no bins.
  * 3. vmin / vmax = min / max of sample values.
  * 4. Bin count k = clamp(ceil(log2(n) + 1), 1, 20)  (Sturges).
@@ -93,16 +95,19 @@ export function histSamplesFromChart(chart: ChartIR): HistSample[] {
       : columnValues(chart.table, chart.y);
   const samples: HistSample[] = [];
   for (let i = 0; i < xValues.length; i++) {
-    const value = Number((xValues[i] ?? "").trim());
-    if (!Number.isFinite(value)) {
+    const xClass = classifyNumeric(xValues[i] ?? "");
+    if (xClass.kind !== "number") {
       continue;
     }
     let weight = 1;
     if (yValues) {
-      const parsed = Number((yValues[i] ?? "").trim());
-      weight = Number.isFinite(parsed) ? parsed : 0;
+      const yClass = classifyNumeric(yValues[i] ?? "");
+      if (yClass.kind !== "number") {
+        continue;
+      }
+      weight = yClass.value;
     }
-    samples.push({ value, weight });
+    samples.push({ value: xClass.value, weight });
   }
   return samples;
 }

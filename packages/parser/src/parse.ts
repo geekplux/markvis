@@ -38,6 +38,11 @@ export const ERROR_CODES = [
   "E_EMPTY_FENCE",
   "E_UNKNOWN_THEME",
   "E_UNKNOWN_PALETTE",
+  "E_BAD_VERSION",
+  "E_BAD_NUMBER",
+  "E_MISSING_VALUE",
+  "E_DUP_KEY",
+  "E_SANKEY_CYCLE",
 ] as const;
 
 export type ErrorCode = (typeof ERROR_CODES)[number];
@@ -50,6 +55,10 @@ export type FallbackTable = {
 export type ParseError = {
   code: ErrorCode;
   message: string;
+  /** 1-based data row when the failure is a cell or a repeated key. */
+  row?: number;
+  /** Column name when the failure is a cell or a repeated key. */
+  column?: string;
 };
 
 export type ParseSuccess = {
@@ -77,10 +86,18 @@ function fail(
   detail: string,
   table: FallbackTable,
   raw: string,
+  loc?: { row?: number; column?: string },
 ): ParseFailure {
+  const error: ParseError = { code, message: `${code}: ${detail}` };
+  if (loc?.row !== undefined) {
+    error.row = loc.row;
+  }
+  if (loc?.column !== undefined) {
+    error.column = loc.column;
+  }
   return {
     ok: false,
-    error: { code, message: `${code}: ${detail}` },
+    error,
     table,
     raw,
   };
@@ -248,6 +265,113 @@ function keepSeriesOnIR(type: ChartType): boolean {
   );
 }
 
+function cellAt(table: LooseTable, row: string[], column: string): string {
+  const index = table.columns.indexOf(column);
+  if (index === -1) {
+    return "";
+  }
+  return row[index] ?? "";
+}
+
+function missingPolicy(
+  type: ChartType,
+  layout: "grouped" | "stacked" | "percent" | undefined,
+): "required" | "gap" {
+  if (
+    (type === "bar" || type === "line" || type === "area") &&
+    (layout === "stacked" || layout === "percent")
+  ) {
+    return "required";
+  }
+  if (
+    type === "bar" ||
+    type === "line" ||
+    type === "area" ||
+    type === "scatter" ||
+    type === "hist" ||
+    type === "heatmap" ||
+    type === "radar"
+  ) {
+    return "gap";
+  }
+  return "required";
+}
+
+function measureColumns(
+  type: ChartType,
+  x: string,
+  y: string | undefined,
+): string[] {
+  if (type === "scatter") {
+    return [x, y].filter((name): name is string => Boolean(name));
+  }
+  if (type === "hist") {
+    return [x, y].filter((name): name is string => Boolean(name));
+  }
+  return y ? [y] : [];
+}
+
+function duplicateKey(
+  type: ChartType,
+  xValue: string,
+  seriesValue: string,
+): string | null {
+  if (type === "scatter" || type === "hist" || type === "waterfall") {
+    return null;
+  }
+  if (type === "pie" || type === "funnel" || type === "gauge") {
+    return xValue;
+  }
+  if (type === "sankey" || type === "treemap") {
+    return `${xValue}\0${seriesValue}`;
+  }
+  return `${seriesValue}\0${xValue}`;
+}
+
+function sankeyCycleNode(
+  links: Array<{ source: string; target: string }>,
+): string | null {
+  const outs = new Map<string, string[]>();
+  const nodes = new Set<string>();
+  for (const link of links) {
+    nodes.add(link.source);
+    nodes.add(link.target);
+    const list = outs.get(link.source) ?? [];
+    list.push(link.target);
+    outs.set(link.source, list);
+    if (!outs.has(link.target)) {
+      outs.set(link.target, []);
+    }
+  }
+  const state = new Map<string, 0 | 1 | 2>();
+  function walk(id: string): string | null {
+    state.set(id, 1);
+    for (const next of outs.get(id) ?? []) {
+      const seen = state.get(next) ?? 0;
+      if (seen === 1) {
+        return next;
+      }
+      if (seen === 0) {
+        const hit = walk(next);
+        if (hit) {
+          return hit;
+        }
+      }
+    }
+    state.set(id, 2);
+    return null;
+  }
+  for (const id of nodes) {
+    if ((state.get(id) ?? 0) === 0) {
+      const hit = walk(id);
+      if (hit) {
+        return hit;
+      }
+    }
+  }
+  return null;
+}
+
 function columnHasNegative(
   table: LooseTable,
   column: string,
@@ -319,6 +443,9 @@ function buildIR(fields: {
   innerRadius?: number | undefined;
   min?: number | undefined;
   max?: number | undefined;
+  surface?: "light" | "dark" | "export" | undefined;
+  orient?: "horizontal" | "vertical" | undefined;
+  role?: string | undefined;
   table: LooseTable;
 }): ChartIR {
   return ChartIRSchema.parse({
@@ -340,6 +467,9 @@ function buildIR(fields: {
       : {}),
     ...(fields.min !== undefined ? { min: fields.min } : {}),
     ...(fields.max !== undefined ? { max: fields.max } : {}),
+    ...(fields.surface ? { surface: fields.surface } : {}),
+    ...(fields.orient ? { orient: fields.orient } : {}),
+    ...(fields.role ? { role: fields.role } : {}),
   });
 }
 
@@ -624,13 +754,185 @@ function parseBody(
     }
     max = n;
   }
-  if (min !== undefined && max !== undefined && min >= max) {
+  if (
+    (type === "gauge" || type === "heatmap") &&
+    min !== undefined &&
+    max !== undefined &&
+    min >= max
+  ) {
     return fail(
       "E_UNKNOWN_FIELD",
-      "gauge min must be less than max",
+      `${type} min must be less than max`,
       parsed,
       raw,
     );
+  }
+
+  const versionRaw = headers["markvis"];
+  if (versionRaw !== undefined && versionRaw.trim() !== "" && versionRaw.trim() !== "2") {
+    return fail(
+      "E_BAD_VERSION",
+      `markvis version "${versionRaw.trim()}" is not supported; use 2 or omit the field`,
+      parsed,
+      raw,
+    );
+  }
+
+  let surface: "light" | "dark" | "export" | undefined;
+  const surfaceRaw = headers["surface"]?.trim();
+  if (surfaceRaw !== undefined && surfaceRaw !== "") {
+    if (surfaceRaw !== "light" && surfaceRaw !== "dark" && surfaceRaw !== "export") {
+      return fail(
+        "E_UNKNOWN_FIELD",
+        `surface must be light|dark|export (got ${surfaceRaw})`,
+        parsed,
+        raw,
+      );
+    }
+    surface = surfaceRaw;
+  }
+
+  let orient: "horizontal" | "vertical" | undefined;
+  const orientRaw = headers["orient"]?.trim();
+  if (orientRaw !== undefined && orientRaw !== "") {
+    if (orientRaw !== "horizontal" && orientRaw !== "vertical") {
+      return fail(
+        "E_UNKNOWN_FIELD",
+        `orient must be horizontal|vertical (got ${orientRaw})`,
+        parsed,
+        raw,
+      );
+    }
+    orient = orientRaw;
+  }
+
+  const role = headers["role"]?.trim() || undefined;
+  if (role && !parsed.columns.includes(role)) {
+    return fail(
+      "E_UNKNOWN_FIELD",
+      "role names a missing column",
+      parsed,
+      raw,
+    );
+  }
+
+  const measures = measureColumns(type, x, y);
+  const policy = missingPolicy(type, layout);
+  for (const column of measures) {
+    const index = parsed.columns.indexOf(column);
+    if (index === -1) {
+      continue;
+    }
+    for (let r = 0; r < parsed.rows.length; r++) {
+      const cell = parsed.rows[r]![index] ?? "";
+      const trimmed = cell.trim();
+      if (trimmed === "") {
+        if (policy === "required") {
+          return fail(
+            "E_MISSING_VALUE",
+            `row ${r + 1}, column ${column}: empty value is not allowed on ${type}`,
+            parsed,
+            raw,
+            { row: r + 1, column },
+          );
+        }
+        continue;
+      }
+      if (!isNumericString(trimmed)) {
+        return fail(
+          "E_BAD_NUMBER",
+          `row ${r + 1}, column ${column}: "${trimmed}" is not a number`,
+          parsed,
+          raw,
+          { row: r + 1, column },
+        );
+      }
+    }
+  }
+
+  if (
+    layout === "percent" &&
+    y &&
+    columnHasNegative(parsed, y)
+  ) {
+    return fail(
+      "E_NEGATIVE_VALUE",
+      "percent layout cannot include negative values",
+      parsed,
+      raw,
+    );
+  }
+
+  if (type === "gauge" && parsed.rows.length > 1) {
+    return fail(
+      "E_DUP_KEY",
+      `gauge accepts a single observation (got ${parsed.rows.length} rows)`,
+      parsed,
+      raw,
+      { row: 2, column: x },
+    );
+  }
+
+  if (role && type === "waterfall") {
+    const roleIndex = parsed.columns.indexOf(role);
+    for (let r = 0; r < parsed.rows.length; r++) {
+      const cell = (parsed.rows[r]![roleIndex] ?? "").trim();
+      if (cell === "" || cell === "delta" || cell === "total" || cell === "subtotal") {
+        continue;
+      }
+      return fail(
+        "E_UNKNOWN_FIELD",
+        `row ${r + 1}, column ${role}: role must be delta|total|subtotal (got ${cell})`,
+        parsed,
+        raw,
+        { row: r + 1, column: role },
+      );
+    }
+  }
+
+  const seenKeys = new Map<string, number>();
+  const seriesColumn = specified.series;
+  for (let r = 0; r < parsed.rows.length; r++) {
+    const row = parsed.rows[r]!;
+    const xValue = cellAt(parsed, row, x);
+    const seriesValue = seriesColumn ? cellAt(parsed, row, seriesColumn) : "";
+    const key = duplicateKey(type, xValue, seriesValue);
+    if (key === null) {
+      continue;
+    }
+    const previous = seenKeys.get(key);
+    if (previous !== undefined) {
+      const where =
+        type === "sankey"
+          ? `duplicate link "${xValue}" → "${seriesValue}"`
+          : seriesColumn && type !== "pie" && type !== "funnel" && type !== "gauge"
+            ? `duplicate ${x} "${xValue}" for ${seriesColumn} "${seriesValue}"`
+            : `duplicate ${x} "${xValue}"`;
+      return fail(
+        "E_DUP_KEY",
+        `row ${r + 1}: ${where}`,
+        parsed,
+        raw,
+        { row: r + 1, column: x },
+      );
+    }
+    seenKeys.set(key, r);
+  }
+
+  if (type === "sankey" && seriesColumn) {
+    const links = parsed.rows.map((row) => ({
+      source: cellAt(parsed, row, x).trim(),
+      target: cellAt(parsed, row, seriesColumn).trim(),
+    }));
+    const cycle = sankeyCycleNode(links);
+    if (cycle) {
+      return fail(
+        "E_SANKEY_CYCLE",
+        `sankey cycle involves "${cycle}"; a flow chart here is a directed acyclic graph`,
+        parsed,
+        raw,
+      );
+    }
   }
 
   const title =
@@ -655,9 +957,57 @@ function parseBody(
     innerRadius,
     min,
     max,
+    surface,
+    orient,
+    role,
     table: parsed,
   });
   return { ok: true, chart };
+}
+
+function lineAt(source: string, index: number): number {
+  let line = 1;
+  const end = Math.min(Math.max(index, 0), source.length);
+  for (let i = 0; i < end; i++) {
+    if (source.charCodeAt(i) === 10) {
+      line += 1;
+    }
+  }
+  return line;
+}
+
+export type LocatedChart = {
+  /** 1-based chart order in the file. */
+  index: number;
+  /** 1-based line of the chart block. */
+  line: number;
+  result: ParseResult;
+};
+
+/** Parse every chart block. An empty document is one E_EMPTY_FENCE result. */
+export function parseDocument(
+  source: string,
+  options: ParseOptions = {},
+): LocatedChart[] {
+  const charts = extractCharts(source);
+  if (charts.length === 0) {
+    return [
+      {
+        index: 1,
+        line: 1,
+        result: fail("E_EMPTY_FENCE", "fence body empty", EMPTY_TABLE, source),
+      },
+    ];
+  }
+  return charts.map((chart, i) => ({
+    index: i + 1,
+    line: lineAt(source, chart.index),
+    result: parseBody(chart.body, {
+      form: chart.form,
+      filename: options.filename,
+      raw: chart.raw,
+    }),
+  }));
 }
 
 export function parseMarkdown(

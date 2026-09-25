@@ -1,37 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="bar chart: Free still outnumbers pro seats, 4 rows, series plan" aria-labelledby="mv-5045ce5a4f128422-title" aria-describedby="mv-5045ce5a4f128422-desc" data-markvis="2" data-chart-type="bar" data-id="mv-5045ce5a4f128422" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-5045ce5a4f128422-title">Free still outnumbers pro seats</title>
   <desc id="mv-5045ce5a4f128422-desc">bar chart. Free still outnumbers pro seats. x=month. y=seats. series=plan. 4 rows.</desc>
-  <text x="74" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Free still outnumbers pro seats</text>
-  <g font-size="12" font-weight="500" fill="#333333">
-    <rect x="74" y="31" width="10" height="10" fill="#7cb5ec" rx="1"/>
-    <text x="88" y="40" data-legend="free">free</text>
-    <rect x="133.76" y="31" width="10" height="10" fill="#434348" rx="1"/>
-    <text x="147.76" y="40" data-legend="pro">pro</text>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="74" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#333333"><title>Free still outnumbers pro seats</title>Free still outnumbers pro seats</text>
+  <g font-size="14" font-weight="500" fill="#333333">
+    <rect x="74" y="41" width="10" height="10" fill="#7cb5ec" rx="1"/>
+    <text x="88" y="50" data-legend="free">free</text>
+    <rect x="138.72" y="41" width="10" height="10" fill="#434348" rx="1"/>
+    <text x="152.72" y="50" data-legend="pro">pro</text>
   </g>
-  <rect x="74" y="62" width="626" height="337" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
-  <path d="M74 399 L700 399" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
-  <g fill="#666666" font-size="11" font-weight="400">
-    <text x="66" y="399" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="66" y="286.67" text-anchor="end" dominant-baseline="middle">50</text>
+  <rect x="74" y="72" width="626" height="307" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
+  <path d="M74 379 L700 379" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <g fill="#666666" font-size="12" font-weight="400">
+    <text x="66" y="379" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="276.67" text-anchor="end" dominant-baseline="middle">50</text>
     <text x="66" y="174.33" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="66" y="62" text-anchor="end" dominant-baseline="middle">150</text>
-    <text x="230.5" y="410" text-anchor="middle" font-size="11" data-full-label="Jan">Jan</text>
-    <text x="543.5" y="410" text-anchor="middle" font-size="11" data-full-label="Feb">Feb</text>
+    <text x="66" y="72" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="230.5" y="391" text-anchor="middle" font-size="12" data-full-label="Jan"><title>Jan</title>Jan</text>
+    <text x="543.5" y="391" text-anchor="middle" font-size="12" data-full-label="Feb"><title>Feb</title>Feb</text>
   </g>
-  <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="52" y="230.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 52 230.5)" data-axis="y">seats</text>
-    <text x="387" y="426" text-anchor="middle" dominant-baseline="hanging" data-axis="x">month</text>
-  </g>
-  <g>
-    <path d="M165.5 399 L229.5 399 L229.5 174.33 L165.5 174.33 Z" fill="#7cb5ec" data-x="Jan" data-series="free" data-y="100"/>
-    <path d="M231.5 399 L295.5 399 L295.5 354.07 L231.5 354.07 Z" fill="#434348" data-x="Jan" data-series="pro" data-y="20"/>
-    <path d="M478.5 399 L542.5 399 L542.5 151.87 L478.5 151.87 Z" fill="#7cb5ec" data-x="Feb" data-series="free" data-y="110"/>
-    <path d="M544.5 399 L608.5 399 L608.5 336.09 L544.5 336.09 Z" fill="#434348" data-x="Feb" data-series="pro" data-y="28"/>
+  <g fill="#666666" font-size="13" font-weight="400" data-axis-titles="1">
+    <text x="52" y="225.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 52 225.5)" data-axis="y">seats</text>
+    <text x="387" y="407" text-anchor="middle" dominant-baseline="hanging" data-axis="x">month</text>
   </g>
   <g>
-    <text x="197.5" y="166.33" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="Jan">100</text>
-    <text x="263.5" y="346.07" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="Jan">20</text>
-    <text x="510.5" y="143.87" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="Feb">110</text>
-    <text x="576.5" y="328.09" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="Feb">28</text>
+    <path d="M165.5 379 L229.5 379 L229.5 174.33 L165.5 174.33 Z" fill="#7cb5ec" data-x="Jan" data-series="free" data-y="100"/>
+    <path d="M231.5 379 L295.5 379 L295.5 338.07 L231.5 338.07 Z" fill="#434348" data-x="Jan" data-series="pro" data-y="20"/>
+    <path d="M478.5 379 L542.5 379 L542.5 153.87 L478.5 153.87 Z" fill="#7cb5ec" data-x="Feb" data-series="free" data-y="110"/>
+    <path d="M544.5 379 L608.5 379 L608.5 321.69 L544.5 321.69 Z" fill="#434348" data-x="Feb" data-series="pro" data-y="28"/>
+  </g>
+  <g>
+    <text x="197.5" y="166.33" text-anchor="middle" font-size="13" font-weight="500" fill="#333333" data-value-label="Jan">100</text>
+    <text x="263.5" y="330.07" text-anchor="middle" font-size="13" font-weight="500" fill="#333333" data-value-label="Jan">20</text>
+    <text x="510.5" y="145.87" text-anchor="middle" font-size="13" font-weight="500" fill="#333333" data-value-label="Feb">110</text>
+    <text x="576.5" y="313.69" text-anchor="middle" font-size="13" font-weight="500" fill="#333333" data-value-label="Feb">28</text>
   </g>
 </svg>

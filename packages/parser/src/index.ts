@@ -1,4 +1,4 @@
-export { parse, parseMarkdown, ERROR_CODES } from "./parse.js";
+export { parse, parseMarkdown, parseDocument, ERROR_CODES } from "./parse.js";
 export type {
   ErrorCode,
   FallbackTable,
@@ -7,6 +7,7 @@ export type {
   ParseOptions,
   ParseResult,
   ParseSuccess,
+  LocatedChart,
 } from "./parse.js";
 export { extractCharts } from "./extract.js";
 export type { ChartForm, ExtractedChart } from "./extract.js";

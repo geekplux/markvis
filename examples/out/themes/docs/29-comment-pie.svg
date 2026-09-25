@@ -1,21 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Core still leads product mix at 50% (%), 3 slices" aria-labelledby="mv-e0c3dbc735af8720-title" aria-describedby="mv-e0c3dbc735af8720-desc" data-markvis="2" data-chart-type="pie" data-id="mv-e0c3dbc735af8720" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-e0c3dbc735af8720-title">Core still leads product mix at 50%</title>
   <desc id="mv-e0c3dbc735af8720-desc">pie chart. Core still leads product mix at 50%. x=name. y=value. unit=%. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Core still leads product mix at 50%<tspan font-size="11" font-weight="400" fill="#64748B"> · %</tspan></text>
-  <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="40" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#18181B"><title>Core still leads product mix at 50%</title>Core still leads product mix at 50%<tspan font-size="13" font-weight="400" fill="#64748B"> · %</tspan></text>
+  <line x1="40" x2="704" y1="38" y2="38" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
   <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0">
-    <path d="M372 248 L372 101.12 A146.88 146.88 0 0 1 393.89 393.24 Z" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Core" data-raw-value="50"/>
-    <path d="M372 248 L393.89 393.24 A146.88 146.88 0 0 1 225.53 237.02 Z" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Addons" data-raw-value="30"/>
-    <path d="M372 248 L225.53 237.02 A146.88 146.88 0 0 1 372 101.12 Z" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Other" data-raw-value="25"/>
+    <path d="M372 254 L372 111.2 A142.8 142.8 0 0 1 393.28 395.21 Z" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Core" data-raw-value="50"/>
+    <path d="M372 254 L393.28 395.21 A142.8 142.8 0 0 1 229.6 243.33 Z" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Addons" data-raw-value="30"/>
+    <path d="M372 254 L229.6 243.33 A142.8 142.8 0 0 1 372 111.2 Z" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Other" data-raw-value="25"/>
   </g>
   <g fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1">
-    <polyline points="518.47,237.02 530.44,236.13 538.44,236.13"/>
-    <polyline points="272.1,355.67 263.93,364.47 255.93,364.47"/>
-    <polyline points="272.1,140.33 263.93,131.53 255.93,131.53"/>
+    <polyline points="514.4,243.33 526.37,242.43 534.37,242.43"/>
+    <polyline points="274.87,358.68 266.71,367.48 258.71,367.48"/>
+    <polyline points="274.87,149.32 266.71,140.52 258.71,140.52"/>
   </g>
-  <g font-size="10" font-weight="500" fill="#18181B">
-    <text x="550.44" y="236.13" text-anchor="start" dominant-baseline="middle" data-label="Core">Core · 50</text>
-    <text x="243.93" y="364.47" text-anchor="end" dominant-baseline="middle" data-label="Addons">Addons · 30</text>
-    <text x="243.93" y="131.53" text-anchor="end" dominant-baseline="middle" data-label="Other">Other · 25</text>
+  <g font-size="13" font-weight="500" fill="#18181B">
+    <text x="546.37" y="242.43" text-anchor="start" dominant-baseline="middle" data-label="Core">Core · 50</text>
+    <text x="246.71" y="367.48" text-anchor="end" dominant-baseline="middle" data-label="Addons">Addons · 30</text>
+    <text x="246.71" y="140.52" text-anchor="end" dominant-baseline="middle" data-label="Other">Other · 25</text>
   </g>
 </svg>

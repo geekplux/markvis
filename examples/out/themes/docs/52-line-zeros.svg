@@ -1,31 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Tuesday took 12 minutes end-to-end, 4 rows" aria-labelledby="mv-cd5ddc80008e6dc7-title" aria-describedby="mv-cd5ddc80008e6dc7-desc" data-markvis="2" data-chart-type="line" data-id="mv-cd5ddc80008e6dc7" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-cd5ddc80008e6dc7-title">Tuesday took 12 minutes end-to-end</title>
   <desc id="mv-cd5ddc80008e6dc7-desc">line chart. Tuesday took 12 minutes end-to-end. x=day. y=minutes. 4 rows.</desc>
-  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Tuesday took 12 minutes end-to-end</text>
-  <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
+  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
+  <text x="40" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#18181B"><title>Tuesday took 12 minutes end-to-end</title>Tuesday took 12 minutes end-to-end</text>
+  <line x1="40" x2="704" y1="38" y2="38" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
   <g fill="none" stroke="#18181B" stroke-opacity="0.06" stroke-width="1">
-    <line x1="40" x2="704" y1="351.5" y2="351.5"/>
-    <line x1="40" x2="704" y1="138.5" y2="138.5"/>
-    <line x1="40" x2="704" y1="32" y2="32"/>
+    <line x1="40" x2="704" y1="352.25" y2="352.25"/>
+    <line x1="40" x2="704" y1="146.75" y2="146.75"/>
+    <line x1="40" x2="704" y1="44" y2="44"/>
   </g>
-  <path d="M40 458 L704 458" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
-  <line x1="40" x2="704" y1="351.5" y2="351.5" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
-  <g fill="#64748B" font-size="10" font-weight="400">
-    <text x="32" y="458" text-anchor="end" dominant-baseline="middle">-5</text>
-    <text x="32" y="351.5" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="32" y="245" text-anchor="end" dominant-baseline="middle">5</text>
-    <text x="32" y="138.5" text-anchor="end" dominant-baseline="middle">10</text>
-    <text x="32" y="32" text-anchor="end" dominant-baseline="middle">15</text>
-    <text x="123" y="468" text-anchor="middle" font-size="10" data-full-label="Mon">Mon</text>
-    <text x="289" y="468" text-anchor="middle" font-size="10" data-full-label="Tue">Tue</text>
-    <text x="455" y="468" text-anchor="middle" font-size="10" data-full-label="Wed">Wed</text>
-    <text x="621" y="468" text-anchor="middle" font-size="10" data-full-label="Thu">Thu</text>
+  <path d="M40 455 L704 455" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <line x1="40" x2="704" y1="352.25" y2="352.25" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <g fill="#64748B" font-size="12" font-weight="400">
+    <text x="32" y="455" text-anchor="end" dominant-baseline="middle">-5</text>
+    <text x="32" y="352.25" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="32" y="249.5" text-anchor="end" dominant-baseline="middle">5</text>
+    <text x="32" y="146.75" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="32" y="44" text-anchor="end" dominant-baseline="middle">15</text>
+    <text x="123" y="467" text-anchor="middle" font-size="12" data-full-label="Mon"><title>Mon</title>Mon</text>
+    <text x="289" y="467" text-anchor="middle" font-size="12" data-full-label="Tue"><title>Tue</title>Tue</text>
+    <text x="455" y="467" text-anchor="middle" font-size="12" data-full-label="Wed"><title>Wed</title>Wed</text>
+    <text x="621" y="467" text-anchor="middle" font-size="12" data-full-label="Thu"><title>Thu</title>Thu</text>
   </g>
   <g fill="none">
-    <path d="M123 351.5 L289 95.9 L455 351.5 L621 245" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="minutes"/>
-    <circle cx="123" cy="351.5" r="2" fill="#475569" stroke="none" data-series="minutes"/>
-    <circle cx="289" cy="95.9" r="2" fill="#475569" stroke="none" data-series="minutes"/>
-    <circle cx="455" cy="351.5" r="2" fill="#475569" stroke="none" data-series="minutes"/>
-    <circle cx="621" cy="245" r="2" fill="#475569" stroke="none" data-series="minutes"/>
+    <path d="M123 352.25 L289 105.65 L455 352.25 L621 249.5" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="minutes"/>
+    <circle cx="123" cy="352.25" r="2" fill="#475569" stroke="none" data-series="minutes"/>
+    <circle cx="289" cy="105.65" r="2" fill="#475569" stroke="none" data-series="minutes"/>
+    <circle cx="455" cy="352.25" r="2" fill="#475569" stroke="none" data-series="minutes"/>
+    <circle cx="621" cy="249.5" r="2" fill="#475569" stroke="none" data-series="minutes"/>
   </g>
 </svg>

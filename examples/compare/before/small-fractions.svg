@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Synthetic small fractions, 3 rows" aria-labelledby="mv-3304592d919dd0aa-title" aria-describedby="mv-3304592d919dd0aa-desc" data-markvis="2" data-chart-type="bar" data-id="mv-3304592d919dd0aa" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-3304592d919dd0aa-title">Synthetic small fractions</title>
+  <desc id="mv-3304592d919dd0aa-desc">bar chart. Synthetic small fractions. x=sample. y=value. 3 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Synthetic small fractions</text>
+  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="317.33" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="176.67" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="156.67" y="468" text-anchor="middle" font-size="10" data-full-label="a">a</text>
+    <text x="374" y="468" text-anchor="middle" font-size="10" data-full-label="b">b</text>
+    <text x="591.33" y="468" text-anchor="middle" font-size="10" data-full-label="c">c</text>
+  </g>
+  <g>
+    <path d="M120.67 458 L120.67 320.33 Q120.67 317.33 123.67 317.33 L189.67 317.33 Q192.67 317.33 192.67 320.33 L192.67 458 Z" fill="#3B82F6" data-x="a" data-series="value" data-y="0.001"/>
+    <path d="M338 458 L338 179.67 Q338 176.67 341 176.67 L407 176.67 Q410 176.67 410 179.67 L410 458 Z" fill="#3B82F6" data-x="b" data-series="value" data-y="0.002"/>
+    <path d="M555.33 458 L555.33 39 Q555.33 36 558.33 36 L624.33 36 Q627.33 36 627.33 39 L627.33 458 Z" fill="#3B82F6" data-x="c" data-series="value" data-y="0.003"/>
+  </g>
+  <g>
+    <text x="156.67" y="309.33" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="a">0</text>
+    <text x="374" y="168.67" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="b">0</text>
+    <text x="591.33" y="28" text-anchor="middle" font-size="11" font-weight="500" fill="#171717" data-value-label="c">0</text>
+  </g>
+</svg>
