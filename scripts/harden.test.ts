@@ -169,7 +169,7 @@ describe("vitest covers parser, render-svg, cli", () => {
 });
 
 describe("frozen language", () => {
-  it("does not add a seventh chart type", () => {
+  it("freezes eleven chart types", () => {
     expect([...CHART_TYPES]).toEqual([
       "bar",
       "line",
@@ -177,15 +177,20 @@ describe("frozen language", () => {
       "scatter",
       "pie",
       "hist",
+      "heatmap",
+      "funnel",
+      "waterfall",
+      "radar",
+      "gauge",
     ]);
   });
 
-  it("rejects heatmap in the parser", () => {
+  it("rejects sankey in the parser", () => {
     const source = readFileSync(
-      join(repoRoot, "examples/invalid/13-heatmap-type.md"),
+      join(repoRoot, "examples/invalid/13-sankey-type.md"),
       "utf8",
     );
-    const result = parseMarkdown(source, { filename: "13-heatmap-type.md" });
+    const result = parseMarkdown(source, { filename: "13-sankey-type.md" });
     expect(result.ok).toBe(false);
     if (result.ok) {
       return;
@@ -640,7 +645,19 @@ describe("public contract", () => {
   });
 
   it("Skill and public llms.txt list only frozen fields and types", () => {
-    const frozenTypes = ["bar", "line", "area", "scatter", "pie", "hist"];
+    const frozenTypes = [
+      "bar",
+      "line",
+      "area",
+      "scatter",
+      "pie",
+      "hist",
+      "heatmap",
+      "funnel",
+      "waterfall",
+      "radar",
+      "gauge",
+    ];
     const frozenFields = [
       "markvis",
       "type",

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="radar chart: Stage crew still leads box office on coverage, 8 rows, series crew" aria-labelledby="mv-aac23fe43bb44fcb-title" aria-describedby="mv-aac23fe43bb44fcb-desc" data-markvis="2" data-chart-type="radar" data-id="mv-aac23fe43bb44fcb" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-aac23fe43bb44fcb-title">Stage crew still leads box office on coverage</title>
+  <desc id="mv-aac23fe43bb44fcb-desc">radar chart. Stage crew still leads box office on coverage. x=skill. y=score. series=crew. 8 rows.</desc>
+  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">Stage crew still leads box office on coverage</text>
+  <g font-size="12" font-weight="500" fill="#0A0A0A">
+    <rect x="48" y="31" width="10" height="10" fill="#F54900" rx="1"/>
+    <text x="62" y="40" data-legend="Stage">Stage</text>
+    <rect x="115.2" y="31" width="10" height="10" fill="#009689" rx="1"/>
+    <text x="129.2" y="40" data-legend="Box">Box</text>
+  </g>
+  <rect x="48" y="60" width="632.72" height="362" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-radar-grid="1">
+    <path d="M364.36 179.46 L425.9 241 L364.36 302.54 L302.82 241 Z"/>
+    <path d="M364.36 117.92 L487.44 241 L364.36 364.08 L241.28 241 Z"/>
+    <line x1="364.36" y1="241" x2="364.36" y2="117.92"/>
+    <line x1="364.36" y1="241" x2="487.44" y2="241"/>
+    <line x1="364.36" y1="241" x2="364.36" y2="364.08"/>
+    <line x1="364.36" y1="241" x2="241.28" y2="241"/>
+  </g>
+  <g data-radar="1">
+    <path d="M364.36 131.6 L462.82 241 L364.36 364.08 L246.75 241 Z" fill="#F54900" fill-opacity="0.18" stroke="#F54900" stroke-width="1.75" data-series="Stage"/>
+    <path d="M364.36 153.48 L460.09 241 L364.36 320.32 L263.16 241 Z" fill="#009689" fill-opacity="0.18" stroke="#009689" stroke-width="1.75" data-series="Box"/>
+  </g>
+  <g fill="#737373" font-size="11" font-weight="400">
+    <text x="364.36" y="103.92" text-anchor="middle" dominant-baseline="middle" data-spoke="Speed">Speed</text>
+    <text x="501.44" y="241" text-anchor="middle" dominant-baseline="middle" data-spoke="Range">Range</text>
+    <text x="364.36" y="378.08" text-anchor="middle" dominant-baseline="middle" data-spoke="Coverage">Coverage</text>
+    <text x="227.28" y="241" text-anchor="middle" dominant-baseline="middle" data-spoke="Safety">Safety</text>
+  </g>
+</svg>

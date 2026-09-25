@@ -10,6 +10,7 @@ export declare const ERROR_CODES: readonly [
   "E_DUP_COLUMN",
   "E_UNKNOWN_FIELD",
   "E_PIE_NEGATIVE",
+  "E_NEGATIVE_VALUE",
   "E_YAML_TABLE_CONFLICT",
   "E_EMPTY_FENCE",
   "E_UNKNOWN_THEME",

@@ -5,15 +5,15 @@ Human contrib rules for markvis. SPEC.md, VISION.md, and AGENTS.md are the publi
 ## Do
 
 1. **Fixtures first.** Add or change an examples/valid or examples/invalid fixture before touching parser or render. Invalid cases need a stable error code.
-2. **Keep the six types.** bar, line, area, scatter, pie, hist only. New chart kinds need a product decision, not a PR.
+2. **Keep the type catalog.** bar, line, area, scatter, pie, hist, heatmap, funnel, waterfall, radar, gauge. New chart kinds need a product decision, not a PR.
 3. **CSV or GFM data.** Prefer tables over JSON. Keep input row order. Do not normalize pie to 100.
 4. **Prove with commands.** Same local suite CI runs (install, build, test, check fixtures, playground build when UI moves).
-5. **Read AGENTS.md** before opening a PR. Language tags and the six types are frozen. Optional `theme:` (grammar) and `palette:` (colors) follow `SPEC.md`.
+5. **Read AGENTS.md** before opening a PR. Language tags and the type catalog are frozen. Optional `theme:` (grammar) and `palette:` (colors) follow `SPEC.md`.
 
 ## Do not
 
 - Add forbidden render deps under packages/ or apps/ (see AGENTS.md allow/forbid list).
-- Invent a 7th type, silent x-sort, or JSON-as-default data.
+- Invent `donut` / `sankey` / `treemap` / stacked-bar as type ids, silent x-sort, or JSON-as-default data.
 - Drop recovered rows on invalid fences (table + one-line error).
 - Import legacy/ from new package tests.
 - Use a flowchart tool for flows — not for spreadsheet numbers.

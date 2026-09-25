@@ -20,7 +20,7 @@ const barTable = {
 };
 
 describe("@markvis/ir", () => {
-  it("freezes exactly six chart types", () => {
+  it("freezes exactly eleven chart types", () => {
     expect([...CHART_TYPES]).toEqual([
       "bar",
       "line",
@@ -28,6 +28,11 @@ describe("@markvis/ir", () => {
       "scatter",
       "pie",
       "hist",
+      "heatmap",
+      "funnel",
+      "waterfall",
+      "radar",
+      "gauge",
     ]);
   });
 
@@ -77,7 +82,7 @@ describe("@markvis/ir", () => {
     expect(result.success).toBe(false);
   });
 
-  it("rejects a seventh type", () => {
+  it("rejects donut as a type id", () => {
     const result = ChartIRSchema.safeParse({
       markvis: 2,
       type: "donut",
@@ -94,7 +99,77 @@ describe("@markvis/ir", () => {
 
   it("isChartType matches the frozen set only", () => {
     expect(isChartType("bar")).toBe(true);
-    expect(isChartType("heatmap")).toBe(false);
+    expect(isChartType("heatmap")).toBe(true);
+    expect(isChartType("donut")).toBe(false);
+  });
+
+  it("requires series for heatmap", () => {
+    const table = {
+      columns: ["hour", "weekday", "entries"],
+      rows: [
+        ["7am", "Mon", "420"],
+        ["8am", "Tue", "880"],
+      ],
+    };
+    const ok = ChartIRSchema.parse({
+      markvis: 2,
+      type: "heatmap",
+      title: "Heat",
+      x: "hour",
+      y: "entries",
+      series: "weekday",
+      table,
+    });
+    expect(ok.series).toBe("weekday");
+    const missing = ChartIRSchema.safeParse({
+      markvis: 2,
+      type: "heatmap",
+      title: "Heat",
+      x: "hour",
+      y: "entries",
+      table,
+    });
+    expect(missing.success).toBe(false);
+  });
+
+  it("accepts min/max on gauge and rejects min >= max", () => {
+    const table = {
+      columns: ["station", "uptime"],
+      rows: [["Five Points", "99.4"]],
+    };
+    const ir = ChartIRSchema.parse({
+      markvis: 2,
+      type: "gauge",
+      title: "Up",
+      x: "station",
+      y: "uptime",
+      min: 90,
+      max: 100,
+      table,
+    });
+    expect(ir.min).toBe(90);
+    expect(ir.max).toBe(100);
+    const inverted = ChartIRSchema.safeParse({
+      markvis: 2,
+      type: "gauge",
+      title: "Up",
+      x: "station",
+      y: "uptime",
+      min: 100,
+      max: 10,
+      table,
+    });
+    expect(inverted.success).toBe(false);
+    const onBar = ChartIRSchema.safeParse({
+      markvis: 2,
+      type: "bar",
+      title: "B",
+      x: "month",
+      y: "revenue",
+      min: 0,
+      table: barTable,
+    });
+    expect(onBar.success).toBe(false);
   });
 
   it("does not invent fields", () => {

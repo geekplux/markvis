@@ -8,7 +8,7 @@ Agents should fetch `https://markvis.js.org/llms.txt` for CORE. The full catalog
 
 ## Core types (forever)
 
-These six stay valid forever. Additive only.
+These stay valid forever. Additive only.
 
 | Id | Role |
 | --- | --- |
@@ -18,6 +18,11 @@ These six stay valid forever. Additive only.
 | `scatter` | Number x, number y. One mark per row. |
 | `pie` | Label x, number y ≥ 0. Do not force slices to 100. |
 | `hist` | Number x. Table keeps the raw rows. |
+| `heatmap` | x cat × series cat, y intensity. Long form; `series` required. |
+| `funnel` | x stage, y ≥ 0. Keep order; `series` ignored. |
+| `waterfall` | x step, y signed delta. Running baseline; `series` ignored. |
+| `radar` | x spoke, y ≥ 0. Optional `series`; scale max = max(y) or 1. |
+| `gauge` | First row. Optional `min`/`max`; `series` ignored. |
 
 Unknown `type` → `E_UNKNOWN_TYPE` + table. Near-miss spelling → `E_TYPE_TYPO` (still invalid). Failure always keeps the rows.
 
@@ -31,7 +36,7 @@ Unknown `type` → `E_UNKNOWN_TYPE` + table. Near-miss spelling → `E_TYPE_TYPO
 | --- | --- | --- |
 | Side-by-side / stacked / 100% series on bar, line, or area | Fence field `layout: grouped \| stacked \| percent` | Invent `stacked-bar` / `grouped-line` |
 | Donut look | `type: pie` + `innerRadius` in `(0, 1]` (omit = theme `PIE_INNER_RATIO`; `0` = solid) | Invent `donut` |
-| Heatmap, funnel, waterfall, radar, gauge | New type packs (Wave 2+) | Stuff them into pie/bar with magic fields |
+| Heatmap, funnel, waterfall, radar, gauge | Wave 2 type packs (`heatmap` `funnel` `waterfall` `radar` `gauge`) | Stuff them into pie/bar with magic fields |
 | Treemap, sankey | Later — write the table shape first | Prototype without a locked table contract |
 
 Type-local extra keys only. Undeclared keys → `E_UNKNOWN_FIELD`.
@@ -42,7 +47,8 @@ Type-local extra keys only. Undeclared keys → `E_UNKNOWN_FIELD`.
 
 - Layout encodings on bar / line / area: `grouped` | `stacked` | `percent`
 - Pie `innerRadius` in `[0, 1]` (still `pie`; omit = theme default hole)
-- Later packs: heatmap, funnel, waterfall, radar, gauge
+- Wave 2 packs: heatmap, funnel, waterfall, radar, gauge
+- Gauge extras: `min` / `max` (omit min → 0, omit max → max(y, 1); both set ⇒ min < max)
 - Still later: treemap, sankey — after the table shape is written down
 
 ## OUT

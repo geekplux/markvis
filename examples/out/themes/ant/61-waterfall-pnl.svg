@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="waterfall chart: Concessions still cover Midtown rent after payroll (USD k), 5 rows" aria-labelledby="mv-8a5d1c459aa031da-title" aria-describedby="mv-8a5d1c459aa031da-desc" data-markvis="2" data-chart-type="waterfall" data-id="mv-8a5d1c459aa031da" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-8a5d1c459aa031da-title">Concessions still cover Midtown rent after payroll</title>
+  <desc id="mv-8a5d1c459aa031da-desc">waterfall chart. Concessions still cover Midtown rent after payroll. x=step. y=delta. unit=USD k. 5 rows.</desc>
+  <text x="66" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Concessions still cover Midtown rent after payroll<tspan font-size="12" font-weight="400" fill="#8C8C8C"> · USD k</tspan></text>
+  <rect x="66" y="46" width="640" height="333" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <g fill="none" stroke="#000000" stroke-opacity="0.16" stroke-width="1">
+    <line x1="66" x2="706" y1="268" y2="268"/>
+    <line x1="66" x2="706" y1="157" y2="157"/>
+  </g>
+  <path d="M66 379 L706 379" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
+  <g data-waterfall="1">
+    <rect x="81.36" y="179.2" width="97.28" height="199.8" fill="#5AD8A6" rx="2" data-step="Ticket sales" data-y="180" data-baseline="0"/>
+    <rect x="209.36" y="108.16" width="97.28" height="71.04" fill="#5AD8A6" rx="2" data-step="Concessions" data-y="64" data-baseline="180"/>
+    <rect x="337.36" y="108.16" width="97.28" height="99.9" fill="#E8684A" rx="2" data-step="Payroll" data-y="-90" data-baseline="244"/>
+    <rect x="465.36" y="208.06" width="97.28" height="46.62" fill="#E8684A" rx="2" data-step="Rent" data-y="-42" data-baseline="154"/>
+    <rect x="593.36" y="254.68" width="97.28" height="13.32" fill="#E8684A" rx="2" data-step="Utilities" data-y="-12" data-baseline="112"/>
+  </g>
+  <g fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-waterfall-connectors="1">
+    <line x1="178.64" x2="209.36" y1="179.2" y2="179.2"/>
+    <line x1="306.64" x2="337.36" y1="108.16" y2="108.16"/>
+    <line x1="434.64" x2="465.36" y1="208.06" y2="208.06"/>
+    <line x1="562.64" x2="593.36" y1="254.68" y2="254.68"/>
+  </g>
+  <g fill="#8C8C8C" font-size="11" font-weight="400">
+    <text x="58" y="379" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="58" y="268" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="58" y="157" text-anchor="end" dominant-baseline="middle">200</text>
+    <text x="58" y="46" text-anchor="end" dominant-baseline="middle">300</text>
+    <text x="130" y="390" text-anchor="middle" data-full-label="Ticket sales">Ticket sales</text>
+    <text x="258" y="390" text-anchor="middle" data-full-label="Concessions">Concessions</text>
+    <text x="386" y="390" text-anchor="middle" data-full-label="Payroll">Payroll</text>
+    <text x="514" y="390" text-anchor="middle" data-full-label="Rent">Rent</text>
+    <text x="642" y="390" text-anchor="middle" data-full-label="Utilities">Utilities</text>
+  </g>
+</svg>

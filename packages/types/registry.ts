@@ -5,13 +5,30 @@ import { area } from "./area/type.js";
 import { scatter } from "./scatter/type.js";
 import { pie } from "./pie/type.js";
 import { hist } from "./hist/type.js";
+import { heatmap } from "./heatmap/type.js";
+import { funnel } from "./funnel/type.js";
+import { waterfall } from "./waterfall/type.js";
+import { radar } from "./radar/type.js";
+import { gauge } from "./gauge/type.js";
 import type { TypePack } from "./contract.js";
 
 export type { Painted, TypePack } from "./contract.js";
 export { CORE_FENCE_KEYS } from "./contract.js";
 export { typeExtras, allowedFenceKeys } from "./fence-keys.js";
 
-export { bar, line, area, scatter, pie, hist };
+export {
+  bar,
+  line,
+  area,
+  scatter,
+  pie,
+  hist,
+  heatmap,
+  funnel,
+  waterfall,
+  radar,
+  gauge,
+};
 
 /** id → pack. Unknown / missing packs fail loudly via resolveTypePack. */
 export const typeRegistry: Record<ChartType, TypePack> = {
@@ -21,6 +38,11 @@ export const typeRegistry: Record<ChartType, TypePack> = {
   scatter,
   pie,
   hist,
+  heatmap,
+  funnel,
+  waterfall,
+  radar,
+  gauge,
 };
 
 /**

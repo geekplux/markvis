@@ -7,6 +7,11 @@ export const CHART_TYPES = [
   "scatter",
   "pie",
   "hist",
+  "heatmap",
+  "funnel",
+  "waterfall",
+  "radar",
+  "gauge",
 ] as const;
 
 export type ChartType = (typeof CHART_TYPES)[number];
@@ -65,6 +70,10 @@ export const ChartIRSchema = z
     layout: z.enum(["grouped", "stacked", "percent"]).optional(),
     /** pie only. Fraction in [0, 1]. Omit → theme PIE_INNER_RATIO. */
     innerRadius: z.number().min(0).max(1).optional(),
+    /** gauge only. Omit → 0 at paint. */
+    min: z.number().optional(),
+    /** gauge only. Omit → max(y, 1) at paint. */
+    max: z.number().optional(),
     table: TableSchema,
   })
   .strict()
@@ -97,6 +106,13 @@ export const ChartIRSchema = z
         path: ["series"],
       });
     }
+    if (val.type === "heatmap" && val.series === undefined) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "series is required for heatmap",
+        path: ["series"],
+      });
+    }
     if (val.layout !== undefined && val.type !== "bar" && val.type !== "line" && val.type !== "area") {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
@@ -109,6 +125,32 @@ export const ChartIRSchema = z
         code: z.ZodIssueCode.custom,
         message: "innerRadius is only valid for pie",
         path: ["innerRadius"],
+      });
+    }
+    if (val.min !== undefined && val.type !== "gauge") {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "min is only valid for gauge",
+        path: ["min"],
+      });
+    }
+    if (val.max !== undefined && val.type !== "gauge") {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "max is only valid for gauge",
+        path: ["max"],
+      });
+    }
+    if (
+      val.type === "gauge" &&
+      val.min !== undefined &&
+      val.max !== undefined &&
+      val.min >= val.max
+    ) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "min must be less than max",
+        path: ["min"],
       });
     }
   });

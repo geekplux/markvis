@@ -2,7 +2,7 @@
 
 Language: **Ledger**. Default fence `theme:` is `folio`. Named `theme:` / `palette:` values are grammar in `SPEC.md` and packs in `packages/themes/` — they do not paint a second canvas onto Ledger.
 
-Constraints: static deterministic SVG · six types only · optional fence `theme:` / `palette:` per `SPEC.md` (this file is the `folio` / Ledger look) · **no** HTML poster · **no** animation · **no** d3 · implement in `packages/render-svg` with tokens from `@markvis/themes` · regenerate `examples/out/*` + `examples/gallery.html` · update vitest snapshots in the same unit.
+Constraints: static deterministic SVG · catalog types only · optional fence `theme:` / `palette:` per `SPEC.md` (this file is the `folio` / Ledger look) · **no** HTML poster · **no** animation · **no** d3 · implement in `packages/render-svg` with tokens from `@markvis/themes` · regenerate `examples/out/*` + `examples/gallery.html` · update vitest snapshots in the same unit.
 
 Fixture sources for 01 / 02 / 05 / 09 / 17 may receive **title-only** edits so the IR title is a conclusion (never a chart-type word). No other product escape hatches.
 

@@ -33,6 +33,7 @@ export const ERROR_CODES = [
   "E_DUP_COLUMN",
   "E_UNKNOWN_FIELD",
   "E_PIE_NEGATIVE",
+  "E_NEGATIVE_VALUE",
   "E_YAML_TABLE_CONFLICT",
   "E_EMPTY_FENCE",
   "E_UNKNOWN_THEME",
@@ -220,10 +221,46 @@ function inferX(type: ChartType, table: LooseTable): string {
   if (type === "scatter" || type === "hist") {
     return firstNumericColumn(table) ?? table.columns[0]!;
   }
-  if (type === "bar" || type === "pie") {
+  if (
+    type === "bar" ||
+    type === "pie" ||
+    type === "heatmap" ||
+    type === "funnel" ||
+    type === "waterfall" ||
+    type === "radar" ||
+    type === "gauge"
+  ) {
     return firstCategoryColumn(table) ?? table.columns[0]!;
   }
   return table.columns[0]!;
+}
+
+/** pie/hist/funnel/waterfall/gauge ignore series on IR; heatmap requires it; radar optional. */
+function keepSeriesOnIR(type: ChartType): boolean {
+  return (
+    type !== "pie" &&
+    type !== "hist" &&
+    type !== "funnel" &&
+    type !== "waterfall" &&
+    type !== "gauge"
+  );
+}
+
+function columnHasNegative(
+  table: LooseTable,
+  column: string,
+): boolean {
+  const index = table.columns.indexOf(column);
+  if (index === -1) {
+    return false;
+  }
+  return table.rows.some((row) => {
+    const cell = row[index];
+    if (cell === undefined || !isNumericString(cell)) {
+      return false;
+    }
+    return Number(cell) < 0;
+  });
 }
 
 function inferY(
@@ -278,6 +315,8 @@ function buildIR(fields: {
   series?: string | undefined;
   layout?: "grouped" | "stacked" | "percent" | undefined;
   innerRadius?: number | undefined;
+  min?: number | undefined;
+  max?: number | undefined;
   table: LooseTable;
 }): ChartIR {
   return ChartIRSchema.parse({
@@ -290,13 +329,15 @@ function buildIR(fields: {
     ...(fields.palette ? { palette: fields.palette } : {}),
     ...(fields.unit ? { unit: fields.unit } : {}),
     ...(fields.y ? { y: fields.y } : {}),
-    ...(fields.series && fields.type !== "pie" && fields.type !== "hist"
+    ...(fields.series && keepSeriesOnIR(fields.type)
       ? { series: fields.series }
       : {}),
     ...(fields.layout ? { layout: fields.layout } : {}),
     ...(fields.innerRadius !== undefined
       ? { innerRadius: fields.innerRadius }
       : {}),
+    ...(fields.min !== undefined ? { min: fields.min } : {}),
+    ...(fields.max !== undefined ? { max: fields.max } : {}),
   });
 }
 
@@ -391,7 +432,7 @@ function parseBody(
   if (typeKind === "unknown") {
     return fail(
       "E_UNKNOWN_TYPE",
-      "type is not one of bar|line|area|scatter|pie|hist",
+      "type is not one of bar|line|area|scatter|pie|hist|heatmap|funnel|waterfall|radar|gauge",
       parsed,
       raw,
     );
@@ -463,12 +504,14 @@ function parseBody(
     );
   }
 
+  if (type === "heatmap" && !specified.series) {
+    return fail("E_UNKNOWN_FIELD", "heatmap requires series", parsed, raw);
+  }
+
   const x = specified.x ?? inferX(type, parsed);
   const y = specified.y ?? inferY(type, parsed, x);
   const series =
-    specified.series && type !== "pie" && type !== "hist"
-      ? specified.series
-      : undefined;
+    specified.series && keepSeriesOnIR(type) ? specified.series : undefined;
 
   if (type !== "hist" && !y) {
     return fail(
@@ -479,18 +522,21 @@ function parseBody(
     );
   }
 
-  if (type === "pie" && y) {
-    const yIndex = parsed.columns.indexOf(y);
-    const negative = parsed.rows.some((row) => {
-      const cell = row[yIndex];
-      if (cell === undefined || !isNumericString(cell)) {
-        return false;
-      }
-      return Number(cell) < 0;
-    });
-    if (negative) {
-      return fail("E_PIE_NEGATIVE", "pie values must be >= 0", parsed, raw);
-    }
+  if (type === "pie" && y && columnHasNegative(parsed, y)) {
+    return fail("E_PIE_NEGATIVE", "pie values must be >= 0", parsed, raw);
+  }
+
+  if (
+    (type === "funnel" || type === "radar") &&
+    y &&
+    columnHasNegative(parsed, y)
+  ) {
+    return fail(
+      "E_NEGATIVE_VALUE",
+      `${type} values must be >= 0`,
+      parsed,
+      raw,
+    );
   }
 
   let layout: "grouped" | "stacked" | "percent" | undefined;
@@ -522,6 +568,43 @@ function parseBody(
     innerRadius = n;
   }
 
+  let min: number | undefined;
+  let max: number | undefined;
+  const minRaw = headers["min"]?.trim();
+  if (minRaw !== undefined && minRaw !== "") {
+    const n = Number(minRaw);
+    if (!Number.isFinite(n)) {
+      return fail(
+        "E_UNKNOWN_FIELD",
+        `min must be a number (got ${minRaw})`,
+        parsed,
+        raw,
+      );
+    }
+    min = n;
+  }
+  const maxRaw = headers["max"]?.trim();
+  if (maxRaw !== undefined && maxRaw !== "") {
+    const n = Number(maxRaw);
+    if (!Number.isFinite(n)) {
+      return fail(
+        "E_UNKNOWN_FIELD",
+        `max must be a number (got ${maxRaw})`,
+        parsed,
+        raw,
+      );
+    }
+    max = n;
+  }
+  if (min !== undefined && max !== undefined && min >= max) {
+    return fail(
+      "E_UNKNOWN_FIELD",
+      "gauge min must be less than max",
+      parsed,
+      raw,
+    );
+  }
+
   const title =
     headers["title"]?.trim() ||
     deriveTitle({
@@ -542,6 +625,8 @@ function parseBody(
     series,
     layout,
     innerRadius,
+    min,
+    max,
     table: parsed,
   });
   return { ok: true, chart };

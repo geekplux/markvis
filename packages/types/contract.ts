@@ -4,7 +4,7 @@ import type { ChartIR, ChartType } from "@markvis/ir";
 export type Painted = { height: number; lines: string[] };
 
 /**
- * Type pack contract. Wave 1: type-local extras via typeExtras; undeclared fence headers → E_UNKNOWN_FIELD.
+ * Type pack contract. Type-local extras via typeExtras; undeclared fence headers → E_UNKNOWN_FIELD.
  * Packs own paint; chrome (aria, title/desc, data-*) stays in render-svg.
  */
 export type TypePack = {

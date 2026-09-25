@@ -5,6 +5,11 @@ export const CHART_TYPES = [
   "scatter",
   "pie",
   "hist",
+  "heatmap",
+  "funnel",
+  "waterfall",
+  "radar",
+  "gauge",
 ] as const;
 
 export type ChartType = (typeof CHART_TYPES)[number];
@@ -143,7 +148,7 @@ export function isStemSlugTitle(title: string, id: string): boolean {
   if (/^[0-9]{2}-[a-z0-9-]+$/i.test(trimmed)) {
     return true;
   }
-  if (/^(bar|line|area|scatter|pie|hist)(\s+chart)?$/i.test(trimmed)) {
+  if (/^(bar|line|area|scatter|pie|hist|heatmap|funnel|waterfall|radar|gauge)(\s+chart)?$/i.test(trimmed)) {
     return true;
   }
   return false;
@@ -360,14 +365,9 @@ export function cardCounts(items: GalleryItem[]): {
   byType: Record<ChartType, number>;
   byTheme: Record<ChartTheme, number>;
 } {
-  const byType = {
-    bar: 0,
-    line: 0,
-    area: 0,
-    scatter: 0,
-    pie: 0,
-    hist: 0,
-  } as Record<ChartType, number>;
+  const byType = Object.fromEntries(
+    CHART_TYPES.map((id) => [id, 0]),
+  ) as Record<ChartType, number>;
   const byTheme = Object.fromEntries(
     THEMES.map((id) => [id, 0]),
   ) as Record<ChartTheme, number>;
