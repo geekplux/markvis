@@ -1,14 +1,14 @@
-# Type packs + Wave 1 encodings
+# Wave 2 type packs
 
-> GeekPlux review — [#19](https://github.com/geekplux/markvis/pull/19). Do not npm publish in this PR.
+> GeekPlux review. Do not npm publish in this PR.
 
 ## Summary
 
-Additive **markvis 2.x** on `feat/type-packs` tip **`b131db9`** (+ docs): chart types become **type packs** (mirror themes), then Wave 1 encodings (`layout` on bar/line/area, `innerRadius` on pie). No 3.0. Old six fences still parse.
+Additive **markvis 2.x** on `feat/wave2-types` tip **`d5204b9`**: five new type packs — `heatmap` `funnel` `waterfall` `radar` `gauge` — same registry path as the six. Unknown type still → `E_UNKNOWN_TYPE` + table. No chart-library runtimes.
 
 ## Why
 
-The agent surface stays small (`llms.txt` = CORE). The catalog grows as packs (`llms-full.txt`). Contributors add a type the way they already add a theme: a folder, a registry entry, examples, and loud failure on unknown ids. Visual richness comes from encodings and later packs — not from bundling another chart runtime.
+Wave 0+1 shipped the pack spine and encodings. Wave 2 grows the catalog along that spine: one folder per kind, registry entry, examples, loud failure on unknown ids. Agents keep a small CORE surface; the full catalog stays in `llms-full.txt` / SPEC.
 
 ## Architecture
 
@@ -18,80 +18,74 @@ packages/types/<id>/
   README.md
   examples/
 packages/types/registry.ts
-packages/types/_paint/     # shared paint kit (no types → render-svg import)
+packages/types/_paint/<id>.ts   # pack-owned marks
 ```
 
-Deps: `@markvis/ir` ← `@markvis/types` ← `@markvis/render-svg`. Packs own paint. Unknown id → `E_UNKNOWN_TYPE` + table. Type-local extras only; undeclared → `E_UNKNOWN_FIELD`. Docs: `docs/TYPES.md`.
+Deps stay `@markvis/ir` ← `@markvis/types` ← `@markvis/render-svg`. Chrome stays in render-svg. Theme ‖ palette orthogonal — no new theme ids. CORE fence keys unchanged; Wave 1 `layout` / `innerRadius` fences unchanged. Leave `E_PIE_NEGATIVE` alone.
 
-## User-facing types / encodings in this PR
+## User-facing types in this PR
 
-### Wave 0
+| Id | extras | Table | Rules |
+| --- | --- | --- | --- |
+| `heatmap` | `[]` | `x` cat, `series` cat (required), `y` number (intensity) | Long form only; keep row order; both cats discrete |
+| `funnel` | `[]` | `x` stage, `y` number ≥ 0 | Keep order; `series` ignored; neg → `E_NEGATIVE_VALUE` |
+| `waterfall` | `[]` | `x` step, `y` signed delta | Keep order; paint running baseline; `series` ignored |
+| `radar` | `[]` | `x` spoke, `y` number ≥ 0, `series` optional | Keep order; scale max = max(y) (or 1 if all 0); neg → `E_NEGATIVE_VALUE` |
+| `gauge` | `["min","max"]` | `x` label, `y` number; first data row | omit `min`→0, omit `max`→max(y,1); both set ⇒ `min < max` or `E_UNKNOWN_FIELD`; `series` ignored |
 
-- Six packs: `bar` `line` `area` `scatter` `pie` `hist`.
-- Zero visual change for fences without encodings. Verifier PASS @ `6c1e2ce`.
-
-### Wave 1
-
-- `layout: grouped|stacked|percent` on `bar` / `line` / `area` (omit = grouped).
-- `innerRadius` on `pie` in `[0, 1]`: omit → theme `PIE_INNER_RATIO`; explicit `0` = solid; `(0, 1]` = donut hole.
-- Still six type ids. No `donut` / `stacked-bar` types.
+MVP geometry. Visual polish (heatmap scale, gauge arc) only if review fails the look.
 
 ## Explicitly out
 
-- 3D / WebGL / canvas force layouts
-- Geo maps / tiles
-- Custom series as JS callbacks
-- Animation-as-source (draw-in stays playground-only)
+- sankey / treemap (Wave 3)
+- heatmap color-domain extras
+- waterfall total-row markers
+- 3D / WebGL / maps / tiles
+- Animation-as-source
 - Runtime chart-library deps
-- Naming competitor tools on public marketing pages
+- Competitor names on public marketing pages
 - npm publish (GeekPlux publishes after review)
-- Wave 2 packs (`heatmap` `funnel` `waterfall` `radar` `gauge`)
 
 ## Compatibility
 
-- Semver: **2.x additive**. Old six fences still parse.
+- Semver: **2.x additive**. Old six + Wave 1 encodings still parse.
 - Theme ‖ palette unchanged and independent.
 - Unknown type / theme / palette still `E_UNKNOWN_*` + table.
 
 ## Test plan
 
-- [x] `pnpm test` green (Coder: 612 passed / 2 skipped @ `b131db9`)
-- [x] Old six omit-encoding fixtures byte-stable
-- [x] Unknown type → table + `E_UNKNOWN_TYPE`
-- [x] Encoding fixtures + invalid (wrong type / bad value) — valid `53`–`58`, invalid `22`–`25`
-- [x] `check examples/valid` 58 ok; `check examples/invalid` 25 errors
-- [ ] Verifier re-gate after encoding bake
-- [x] CHANGELOG Unreleased entry
+- [x] Registry + extras sync; schema regenerate
+- [x] ≥1 valid + ≥1 invalid under each pack
+- [x] `examples/valid` + `out` + gallery bake (`59`–`63`)
+- [x] Invalid: missing heatmap `series`, funnel/radar neg, bad gauge `min`/`max`, `min` on bar
+- [ ] `pnpm test` + `pnpm markvis check` valid/invalid — Verifier gate
+- [x] CHANGELOG Unreleased, SPEC / TYPES / llms catalogs updated
 - [x] PR description complete
-- [x] `/examples` encoding cards baked (`53`–`58` in `out` + gallery)
 
 ## Screenshots / examples
 
-Baked on tip `b131db9` (paths under `examples/out/` and themed packs):
+Baked on tip `d5204b9` (paths under `examples/out/`):
 
-- [x] stacked bar — `53-bar-stacked`
-- [x] percent bar — `54-bar-percent`
-- [x] stacked line — `55-line-stacked`
-- [x] percent area — `56-area-percent`
-- [x] pie `innerRadius: 0` — `57-pie-inner-radius-0`
-- [x] pie `innerRadius: 0.5` — `58-pie-donut`
-- [x] grouped baseline — existing old-six / omit-`layout` fixtures
-- [x] invalid extras — `examples/invalid/22`–`25` (wrong type + bad values)
+- [x] heatmap — `59-heatmap-atl`
+- [x] funnel — `60-funnel-signup`
+- [x] waterfall — `61-waterfall-pnl`
+- [x] radar — `62-radar-skills`
+- [x] gauge — `63-gauge-uptime`
+- [x] invalid — `examples/invalid/26`–`30`
 
 ## llms.txt vs llms-full.txt
 
-- `llms.txt` — CORE + one short encodings paragraph; never invent a type name.
-- `llms-full.txt` — encodings table + CORE types.
-- Skill: unknown type → fetch full spec or use a core type.
+- `llms.txt` — CORE types include Wave 2 ids + short gauge `min`/`max` note; never invent sankey/treemap/donut/stacked-bar.
+- `llms-full.txt` — catalog table + extras rows for `min`/`max`.
+- Skill: unknown type → fetch full spec or use a known type.
 
-## Follow-up PR (Wave 2)
+## Follow-up (Wave 3)
 
-- Packs: `heatmap` `funnel` `waterfall` `radar` `gauge`
-- Each: ≥2 valid + ≥1 invalid + snapshots + `/examples` card
-- Wave 3: sankey / treemap after table shape is written down
+- Packs: `sankey` / `treemap` after table shapes are locked
+- Optional: heatmap color-domain extras, waterfall total markers, Designer pass on gauge/heatmap if MVP look fails
 
 ## Branch / release discipline
 
-- Branch: `feat/type-packs` → `master` via [#19](https://github.com/geekplux/markvis/pull/19)
-- Tip: bake `b131db9`; PR checklist docs follow on branch HEAD
-- One PR for Wave 0+1; no drive-by master SHAs; no force-push master; no npm publish
+- Branch: `feat/wave2-types` → `master` (separate PR from [#19](https://github.com/geekplux/markvis/pull/19))
+- Tip: `d5204b9` (bake + gallery + schema)
+- No drive-by master SHAs; no force-push master; no npm publish
