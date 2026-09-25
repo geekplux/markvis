@@ -43,7 +43,7 @@ Optional `palette:`: `ink` `porcelain` `warm` `cool` `vivid` — colors only. Om
 Optional `surface:`: `light` (default) `dark` `export`.
 Optional `orient: horizontal` on `bar` only, for long category labels. Omit means vertical.
 `markvis` other than `2` is `E_BAD_VERSION`. Omit means 2.
-Do not turn `N/A`, blanks, or other text into zero. Non-numeric measure cells are `E_BAD_NUMBER`. Repeated category/series keys are `E_DUP_KEY` (scatter and hist may repeat rows). A sankey cycle is `E_SANKEY_CYCLE`.
+Do not turn `N/A`, blanks, or other text into zero. Non-numeric measure cells are `E_BAD_NUMBER`. An empty cell is `E_MISSING_VALUE` when the chart needs every value. Repeated category/series keys are `E_DUP_KEY` (scatter, hist, and waterfall steps may repeat). A sankey cycle is `E_SANKEY_CYCLE`.
 
 Also: GFM table after the blank line; or `<!-- chart: bar x=month y=revenue title="Q3" -->` immediately followed by a GFM table.
 

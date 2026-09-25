@@ -5,17 +5,19 @@
   <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#374151"><title>Follow-up still lands 160 of 900 Emory referrals</title>Follow-up still lands 160 of 900 Emory referrals</text>
   <rect x="48" y="46" width="510.92" height="384" fill="none" stroke="#e2e8f0" stroke-width="1" data-plot-border="1"/>
   <g data-funnel="1">
-    <rect x="48" y="50" width="510.92" height="56" fill="#8884d8" data-stage="Referral" data-y="900"/>
-    <text x="56" y="78" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-label="Referral">Referral · 900</text>
-    <rect x="48" y="114" width="306.55" height="56" fill="#8884d8" data-stage="Scheduled" data-y="540"/>
-    <text x="56" y="142" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-label="Scheduled">Scheduled · 540 · 60% of previous · drop 360</text>
-    <rect x="48" y="178" width="215.72" height="56" fill="#8884d8" data-stage="Arrived" data-y="380"/>
-    <text x="56" y="206" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-label="Arrived">Arrived · 380 · 70.3704% of previous · drop 160</text>
-    <rect x="48" y="242" width="119.21" height="56" fill="#8884d8" data-stage="Visit" data-y="210"/>
-    <text x="56" y="270" dominant-baseline="middle" font-size="13" font-weight="500" fill="#374151" data-label="Visit">Visit · 210 · 55.2632% of previous · drop 170</text>
-    <rect x="48" y="306" width="105.02" height="56" fill="#8884d8" data-stage="Labs ordered" data-y="185"/>
-    <text x="56" y="334" dominant-baseline="middle" font-size="13" font-weight="500" fill="#374151" data-label="Labs ordered">Labs ordered · 185 · 88.0952% of previous · drop 25</text>
-    <rect x="48" y="370" width="90.83" height="56" fill="#8884d8" data-stage="Follow-up" data-y="160"/>
-    <text x="56" y="398" dominant-baseline="middle" font-size="13" font-weight="500" fill="#374151" data-label="Follow-up">Follow-up · 160 · 86.4865% of previous · drop 25</text>
+    <path d="M48 46 L558.92 46 L456.74 110 L150.18 110 Z" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-stage="Referral" data-y="900"/>
+    <path d="M150.18 110 L456.74 110 L411.32 174 L195.6 174 Z" fill="#82ca9d" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-stage="Scheduled" data-y="540"/>
+    <path d="M195.6 174 L411.32 174 L363.07 238 L243.85 238 Z" fill="#ffc658" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-stage="Arrived" data-y="380"/>
+    <path d="M243.85 238 L363.07 238 L355.97 302 L250.95 302 Z" fill="#ff7300" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-stage="Visit" data-y="210"/>
+    <path d="M250.95 302 L355.97 302 L348.88 366 L258.04 366 Z" fill="#0088FE" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-stage="Labs ordered" data-y="185"/>
+    <path d="M258.04 366 L348.88 366 L348.88 430 L258.04 430 Z" fill="#00C49F" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-stage="Follow-up" data-y="160"/>
+  </g>
+  <g fill="#374151" font-size="13" font-weight="500">
+    <text x="566.92" y="78" text-anchor="start" dominant-baseline="middle" data-label="Referral"><title>Referral · 900</title>Referral · 900</text>
+    <text x="566.92" y="142" text-anchor="start" dominant-baseline="middle" data-label="Scheduled"><title>Scheduled · 540</title>Scheduled · 540</text>
+    <text x="566.92" y="206" text-anchor="start" dominant-baseline="middle" data-label="Arrived"><title>Arrived · 380</title>Arrived · 380</text>
+    <text x="566.92" y="270" text-anchor="start" dominant-baseline="middle" data-label="Visit"><title>Visit · 210</title>Visit · 210</text>
+    <text x="566.92" y="334" text-anchor="start" dominant-baseline="middle" data-label="Labs ordered"><title>Labs ordered · 185</title>Labs ordered · 185</text>
+    <text x="566.92" y="398" text-anchor="start" dominant-baseline="middle" data-label="Follow-up"><title>Follow-up · 160</title>Follow-up · 160</text>
   </g>
 </svg>

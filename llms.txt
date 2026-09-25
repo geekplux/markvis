@@ -53,7 +53,7 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 - `pie` — label x, number y >= 0. Do not force the slices to 100. Optional `innerRadius` (see Encodings).
 - `hist` — number x. Table keeps the raw rows.
 - `heatmap` — x category × series category, y intensity. Long form. `series` is required.
-- `funnel` — x stage, y >= 0. Keep order. Stage length is the value. The label sits beside the bar. Conversion to the previous stage is a percent rounded to one decimal. `series` ignored. Negatives → `E_NEGATIVE_VALUE`.
+- `funnel` — x stage, y >= 0. Keep order. Centered bands narrow from each stage's value to the next. The label sits to the right of the shape. `series` ignored. Negatives → `E_NEGATIVE_VALUE`.
 - `waterfall` — x step, y signed delta. Keep order. Running baseline. `series` ignored.
 - `radar` — x spoke, y >= 0. Optional `series`. One scale for every series. A grouped bar is clearer when the exact number matters. Negatives → `E_NEGATIVE_VALUE`.
 - `gauge` — one row. Omit `max` means 100. `series` ignored.

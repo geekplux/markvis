@@ -75,16 +75,41 @@ type GapImage = {
 };
 
 function firstImage(gap: string): GapImage | null {
-  const match = IMAGE_RE.exec(gap);
-  if (!match) {
-    return null;
+  return imagesIn(gap)[0] ?? null;
+}
+
+function imagesIn(gap: string): GapImage[] {
+  const found: GapImage[] = [];
+  let cursor = 0;
+  while (cursor < gap.length) {
+    const match = IMAGE_RE.exec(gap.slice(cursor));
+    if (!match) {
+      break;
+    }
+    found.push({
+      alt: match[1] ?? "",
+      href: match[2] ?? "",
+      start: cursor + match.index,
+      end: cursor + match.index + match[0].length,
+    });
+    cursor += match.index + match[0].length;
   }
-  return {
-    alt: match[1] ?? "",
-    href: match[2] ?? "",
-    start: match.index,
-    end: match.index + match[0].length,
-  };
+  return found;
+}
+
+function consumeLine(md: string, absEnd: number): number {
+  let end = absEnd;
+  if (md[end] === "\r") {
+    end += 1;
+  }
+  if (md[end] === "\n") {
+    end += 1;
+  }
+  const marker = /^<!-- markvis-asset -->\r?\n?/.exec(md.slice(end));
+  if (marker) {
+    end += marker[0].length;
+  }
+  return end;
 }
 
 function gapEnd(source: string, from: number, nextIndex: number | undefined): number {
@@ -190,35 +215,38 @@ export function bakeMarkdown(source: string, mdAbs: string): BakeFileResult {
   }
 
   const finalCharts = extractCharts(md);
-  const referenced = new Set<string>();
-  for (let i = 0; i < finalCharts.length; i++) {
+  // Walk from the end so removing an earlier gap does not shift later fences.
+  for (let i = finalCharts.length - 1; i >= 0; i--) {
     const extracted = finalCharts[i]!;
     const start = extracted.index + extracted.raw.length;
     const next = finalCharts[i + 1]?.index;
     const gap = md.slice(start, gapEnd(md, start, next));
-    const image = firstImage(gap);
-    if (!image || !ownedHref(image.href, stem)) {
+    const owned = imagesIn(gap).filter((image) => ownedHref(image.href, stem));
+    const kept = owned[0];
+    if (!kept) {
       continue;
     }
-    const abs = join(dir, image.href.replace(/^\.\//, ""));
-    referenced.add(abs);
-    let cursor = image.end;
-    const rest = gap.slice(cursor);
-    const extra = IMAGE_RE.exec(rest);
-    if (extra && ownedHref(extra[2] ?? "", stem)) {
-      const extraAbs = join(dir, (extra[2] ?? "").replace(/^\.\//, ""));
-      if (!referenced.has(extraAbs) && extraAbs !== abs) {
-        const absStart = start + cursor + extra.index;
-        const absEnd = absStart + extra[0].length;
-        const lineEnd = md[absEnd] === "\n" ? absEnd + 1 : absEnd;
-        md = md.slice(0, absStart) + md.slice(lineEnd);
-        remove.add(extraAbs);
+    const keptAbs = join(dir, kept.href.replace(/^\.\//, ""));
+    for (let k = owned.length - 1; k >= 1; k--) {
+      const extra = owned[k]!;
+      const extraAbs = join(dir, extra.href.replace(/^\.\//, ""));
+      if (extraAbs === keptAbs) {
+        continue;
       }
+      const absStart = start + extra.start;
+      const lineEnd = consumeLine(md, start + extra.end);
+      md = md.slice(0, absStart) + md.slice(lineEnd);
+      remove.add(extraAbs);
     }
   }
 
-  for (const abs of referenced) {
-    remove.delete(abs);
+  // A file stays if any image in the markdown still points at it.
+  for (const match of md.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)) {
+    const href = match[1] ?? "";
+    if (!ownedHref(href, stem)) {
+      continue;
+    }
+    remove.delete(join(dir, href.replace(/^\.\//, "")));
   }
 
   results.reverse();

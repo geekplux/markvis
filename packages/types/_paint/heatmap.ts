@@ -52,7 +52,23 @@ export function renderHeatmap(chart: ChartIR, svgId: string): Painted {
   const ymax = chart.max ?? dataMax;
   const span = ymax - ymin;
 
-  const legendW = 56;
+  // The ramp starts 16px past the plot and the label 16px past that.
+  // A label that only slightly overruns the 8px pad slides left. A label
+  // that would cover the ramp grows the right reserve instead.
+  const scaleLabelW = Math.max(
+    textWidth(formatNumber(ymax), TYPE.tick.size),
+    textWidth(formatNumber(ymin), TYPE.tick.size),
+  );
+  const rampW = 56;
+  const baseRight = MARGIN.right + rampW;
+  const basePlotRight = SVG_WIDTH - baseRight;
+  const naturalEnd = basePlotRight + 32 + scaleLabelW;
+  const barEnd = basePlotRight + 28;
+  const shifted = SVG_WIDTH - 8 - scaleLabelW;
+  const legendW =
+    naturalEnd <= SVG_WIDTH - 8 + 0.5 || shifted >= barEnd + 2
+      ? rampW
+      : Math.max(rampW, scaleLabelW + 40 - MARGIN.right);
   const left = tickLeftMargin(yCats);
   const right = MARGIN.right + legendW;
   reserveTitle(visibleTitle(chart), left, chart.unit);
@@ -164,6 +180,7 @@ export function renderHeatmap(chart: ChartIR, svgId: string): Painted {
   const scaleX = plot.right + 16;
   const scaleH = Math.max(plot.height, 24);
   const steps = 8;
+  const labelX = Math.min(scaleX + 16, SVG_WIDTH - 8 - scaleLabelW);
   lines.push(`  <g ${attrs({ "data-color-scale": "1" })}>`);
   for (let i = 0; i < steps; i++) {
     const t = i / (steps - 1);
@@ -180,7 +197,7 @@ export function renderHeatmap(chart: ChartIR, svgId: string): Painted {
   }
   lines.push(
     `    <text ${attrs({
-      x: fmtPx(scaleX + 16),
+      x: fmtPx(labelX),
       y: fmtPx(plot.top + 4),
       "font-size": TYPE.tick.size,
       fill: TYPE.tick.fill,
@@ -190,7 +207,7 @@ export function renderHeatmap(chart: ChartIR, svgId: string): Painted {
   );
   lines.push(
     `    <text ${attrs({
-      x: fmtPx(scaleX + 16),
+      x: fmtPx(labelX),
       y: fmtPx(plot.top + scaleH),
       "font-size": TYPE.tick.size,
       fill: TYPE.tick.fill,

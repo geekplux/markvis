@@ -4,17 +4,19 @@
   <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
   <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>First ride still keeps 140 of 1,200 Midtown visits</title><tspan x="48" dy="0">First ride still keeps 140 of 1,200 Midtown</tspan><tspan x="48" dy="27">visits</tspan></text>
   <g data-funnel="1">
-    <rect x="48" y="75" width="510.92" height="56.83" fill="#3B82F6" data-stage="Visit" data-y="1,200"/>
-    <text x="56" y="103.42" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-label="Visit">Visit · 1,200</text>
-    <rect x="48" y="139.83" width="204.37" height="56.83" fill="#3B82F6" data-stage="Signup" data-y="480"/>
-    <text x="56" y="168.25" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-label="Signup">Signup · 480 · 40% of previous · drop 720</text>
-    <rect x="48" y="204.67" width="131.99" height="56.83" fill="#3B82F6" data-stage="Verify" data-y="310"/>
-    <text x="56" y="233.08" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-label="Verify">Verify · 310 · 64.5833% of previous · drop 170</text>
-    <rect x="48" y="269.5" width="76.64" height="56.83" fill="#3B82F6" data-stage="Activate" data-y="180"/>
-    <text x="56" y="297.92" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-label="Activate">Activate · 180 · 58.0645% of previous · drop 130</text>
-    <rect x="48" y="334.33" width="59.61" height="56.83" fill="#3B82F6" data-stage="First ride" data-y="140"/>
-    <text x="56" y="362.75" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-label="First ride">First ride · 140 · 77.7778% of previous · drop 40</text>
-    <rect x="48" y="399.17" width="40.45" height="56.83" fill="#3B82F6" data-stage="Week-4 return" data-y="95"/>
-    <text x="56" y="427.58" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-label="Week-4 return">Week-4 return · 95 · 67.8571% of previous · drop 45</text>
+    <path d="M48 71 L558.92 71 L405.64 135.83 L201.28 135.83 Z" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Visit" data-y="1,200"/>
+    <path d="M201.28 135.83 L405.64 135.83 L369.45 200.67 L237.47 200.67 Z" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Signup" data-y="480"/>
+    <path d="M237.47 200.67 L369.45 200.67 L341.78 265.5 L265.14 265.5 Z" fill="#10B981" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Verify" data-y="310"/>
+    <path d="M265.14 265.5 L341.78 265.5 L333.26 330.33 L273.66 330.33 Z" fill="#A855F7" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Activate" data-y="180"/>
+    <path d="M273.66 330.33 L333.26 330.33 L323.68 395.17 L283.24 395.17 Z" fill="#EAB308" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="First ride" data-y="140"/>
+    <path d="M283.24 395.17 L323.68 395.17 L323.68 460 L283.24 460 Z" fill="#14B8A6" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Week-4 return" data-y="95"/>
+  </g>
+  <g fill="#171717" font-size="13" font-weight="500">
+    <text x="566.92" y="103.42" text-anchor="start" dominant-baseline="middle" data-label="Visit"><title>Visit · 1,200</title>Visit · 1,200</text>
+    <text x="566.92" y="168.25" text-anchor="start" dominant-baseline="middle" data-label="Signup"><title>Signup · 480</title>Signup · 480</text>
+    <text x="566.92" y="233.08" text-anchor="start" dominant-baseline="middle" data-label="Verify"><title>Verify · 310</title>Verify · 310</text>
+    <text x="566.92" y="297.92" text-anchor="start" dominant-baseline="middle" data-label="Activate"><title>Activate · 180</title>Activate · 180</text>
+    <text x="566.92" y="362.75" text-anchor="start" dominant-baseline="middle" data-label="First ride"><title>First ride · 140</title>First ride · 140</text>
+    <text x="566.92" y="427.58" text-anchor="start" dominant-baseline="middle" data-label="Week-4 return"><title>Week-4 return · 95</title>Week-4 return · 95</text>
   </g>
 </svg>

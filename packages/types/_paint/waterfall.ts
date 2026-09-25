@@ -5,6 +5,7 @@ import {
   formatTickLabel,
   layoutFrame,
   setTitleLineCount,
+  SVG_WIDTH,
   tickLeftMargin,
   type Painted,
 } from "./layout.js";
@@ -31,6 +32,7 @@ import {
   SURFACE,
   TYPE,
 } from "./tokens.js";
+import { placeHorizontalLabel } from "./text.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
 
 export function renderWaterfall(chart: ChartIR, _id: string): Painted {
@@ -208,16 +210,27 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
     const deltaText = isTotal
       ? `${row.role} ${formatNumber(row.y)}`
       : `${signed} → ${formatNumber(ends[i]!)}`;
+    const placed = placeHorizontalLabel(
+      cx,
+      deltaText,
+      TYPE.value.size,
+      SVG_WIDTH,
+      8,
+    );
+    const deltaTitle =
+      placed.text === deltaText
+        ? ""
+        : `<title>${escapeXml(deltaText)}</title>`;
     lines.push(
       `    <text ${attrs({
-        x: fmtPx(cx),
+        x: fmtPx(placed.x),
         y: fmtPx(top - 6),
-        "text-anchor": "middle",
+        "text-anchor": placed.anchor,
         "font-size": TYPE.value.size,
         "font-weight": TYPE.value.weight,
         fill: TYPE.value.fill,
         "data-delta": row.xLabel,
-      })}>${escapeXml(deltaText)}</text>`,
+      })}>${deltaTitle}${escapeXml(placed.text)}</text>`,
     );
   }
   lines.push(`  </g>`);
@@ -283,13 +296,22 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
         })}>${escapeXml(label)}</text>`,
       );
     } else {
+      const placed = placeHorizontalLabel(
+        cx,
+        label,
+        TYPE.tick.size,
+        SVG_WIDTH,
+        4,
+      );
+      const stepTitle =
+        placed.text === label ? "" : `<title>${escapeXml(label)}</title>`;
       lines.push(
         `    <text ${attrs({
-          x: fmtPx(cx),
+          x: fmtPx(placed.x),
           y: fmtPx(plot.bottom + TYPE.tick.size),
-          "text-anchor": "middle",
+          "text-anchor": placed.anchor,
           "data-full-label": label,
-        })}>${escapeXml(label)}</text>`,
+        })}>${stepTitle}${escapeXml(placed.text)}</text>`,
       );
     }
   }

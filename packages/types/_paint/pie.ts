@@ -10,7 +10,7 @@ import {
 } from "./layout.js";
 import { seriesStyle } from "./palette.js";
 import { formatNumber } from "./scale.js";
-import { textWidth } from "./text.js";
+import { textWidth, truncateLabel } from "./text.js";
 import {
   INK,
   LEGEND_BELOW,
@@ -103,7 +103,9 @@ type LabelPos = {
   slice: Slice;
   extraR: number;
   side: 1 | -1;
+  /** Visible label. May be shorter than `full` when the frame is narrow. */
   text: string;
+  full: string;
   width: number;
   x0: number;
   y0: number;
@@ -113,6 +115,46 @@ type LabelPos = {
   lx: number;
   ly: number;
 };
+
+const PIE_LABEL_PAD = 8;
+const PIE_MIN_PLOT = 128;
+
+function clampPieGutters(
+  nextLeft: number,
+  nextRight: number,
+): { left: number; right: number } {
+  let left = nextLeft;
+  let right = nextRight;
+  const plot = SVG_WIDTH - left - right;
+  if (plot >= PIE_MIN_PLOT) {
+    return { left, right };
+  }
+  const deficit = PIE_MIN_PLOT - plot;
+  const spareL = Math.max(0, left - MARGIN.left);
+  const spareR = Math.max(0, right - MARGIN.right);
+  const spare = spareL + spareR;
+  if (spare <= 0) {
+    return { left, right };
+  }
+  const take = Math.min(deficit, spare);
+  left -= take * (spareL / spare);
+  right -= take * (spareR / spare);
+  return { left, right };
+}
+
+/** Pull leader text back inside the frame. Full strings stay in `<title>`. */
+function clipLeaderLabels(items: LabelPos[]): void {
+  const pad = PIE_LABEL_PAD;
+  const limit = SVG_WIDTH - pad;
+  for (const item of items) {
+    item.x1 = Math.max(pad, Math.min(limit, item.x1));
+    item.elbowX = Math.max(pad, Math.min(limit, item.elbowX));
+    item.lx = Math.max(pad, Math.min(limit, item.lx));
+    const room = item.side > 0 ? limit - item.lx : item.lx - pad;
+    item.text = truncateLabel(item.full, Math.max(0, room), TYPE.value.size);
+    item.width = textWidth(item.text, TYPE.value.size);
+  }
+}
 
 function placeLabels(
   slices: Slice[],
@@ -130,6 +172,7 @@ function placeLabels(
         extraR: 0,
         side,
         text,
+        full: text,
         width: textWidth(text, TYPE.value.size),
         x0: 0,
         y0: 0,
@@ -364,8 +407,12 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
       ) {
         break;
       }
-      left += Math.max(0, overflowLeft);
-      right += Math.max(0, overflowRight);
+      const grown = clampPieGutters(
+        left + Math.max(0, overflowLeft),
+        right + Math.max(0, overflowRight),
+      );
+      left = grown.left;
+      right = grown.right;
       bottom += Math.max(0, overflowBottom);
       top += Math.max(0, overflowTop);
       height = fitFrameHeight(top, bottom);
@@ -423,6 +470,10 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
       );
       legendLines = painted2.lines;
     }
+  }
+
+  if (useLeaders) {
+    clipLeaderLabels(labels);
   }
 
   const { cx, cy, r } = box;
@@ -568,7 +619,11 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
           "text-anchor": item.side > 0 ? "start" : "end",
           "dominant-baseline": "middle",
           "data-label": item.slice.label,
-        })}>${escapeXml(item.text)}</text>`,
+        })}>${
+          item.text === item.full
+            ? ""
+            : `<title>${escapeXml(item.full)}</title>`
+        }${escapeXml(item.text)}</text>`,
       );
     }
     lines.push(`  </g>`);

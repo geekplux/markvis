@@ -32,7 +32,7 @@ import {
   yExtent,
   type CompactScale,
 } from "./scale.js";
-import { textWidth } from "./text.js";
+import { placeHorizontalLabel, textWidth } from "./text.js";
 import {
   AREA_OPACITY,
   AXIS_TITLES,
@@ -683,20 +683,37 @@ function drawGridAndAxes(prepared: Prepared): string[] {
     }
     const display = tick.lines.length > 0 ? tick.lines : [tick.label];
     const lineH = TYPE.tick.size + 3;
+    let widest = display[0] ?? "";
+    for (const line of display) {
+      if (textWidth(line, TYPE.tick.size) > textWidth(widest, TYPE.tick.size)) {
+        widest = line;
+      }
+    }
+    const placed = placeHorizontalLabel(
+      tick.pos,
+      widest,
+      TYPE.tick.size,
+      SVG_WIDTH,
+      4,
+    );
+    const shown =
+      placed.text === widest
+        ? display
+        : [placed.text];
     const body =
-      display.length === 1
-        ? escapeXml(display[0] ?? "")
-        : display
+      shown.length === 1
+        ? escapeXml(shown[0] ?? "")
+        : shown
             .map((line, i) => {
               const dy = i === 0 ? 0 : lineH;
-              return `<tspan x="${fmtPx(tick.pos)}" dy="${dy}">${escapeXml(line)}</tspan>`;
+              return `<tspan x="${fmtPx(placed.x)}" dy="${dy}">${escapeXml(line)}</tspan>`;
             })
             .join("");
     lines.push(
       `    <text ${attrs({
-        x: fmtPx(tick.pos),
+        x: fmtPx(placed.x),
         y: fmtPx(plot.bottom + TYPE.tick.size),
-        "text-anchor": "middle",
+        "text-anchor": placed.anchor,
         "font-size": TYPE.tick.size,
         "data-full-label": tick.label,
       })}><title>${escapeXml(tick.label)}</title>${body}</text>`,

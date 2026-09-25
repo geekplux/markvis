@@ -8,7 +8,7 @@
 
 ### Changed
 
-- Readable type, wrapped labels, explicit paper/dark/export surfaces, gauge range 0–100 when `max` is omitted, sankey thickness, funnel stage bars.
+- Readable type, wrapped labels, explicit paper/dark/export surfaces, gauge range 0–100 when `max` is omitted, sankey thickness. Funnel stays a centered silhouette.
 
 ### Fixed
 

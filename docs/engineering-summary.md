@@ -6,7 +6,7 @@ Shared data handling now classifies each measure cell as a finite number, a miss
 
 One formatter feeds ticks and value labels. Sankey thickness is `value × one pixels-per-unit scale` for the whole figure. `check` walks every extracted block. `bake` treats a following `name.svg` / `name-N.svg` image as owned, rewrites the reference when the chart count changes, and deletes a file only when that ownership is established and nothing still points at it.
 
-`renderSvg(chart, { width, surface })` sets the frame width and a light, dark, or export surface, then the painters lay out in that width. Title, tick, and value sizes stay at a readable floor (21 / 12 / 13) unless the theme is already larger. Text width uses the in-repo estimator (0.62em Latin, 1em wide scripts). The title line count is measured at the same x the title is drawn, and the unit shares the last line's width, so a wrapped title stays above the plot. A horizontal bar draws that title across the full figure width: at 390px the USD example is two lines, "Synthetic regional" and "program costs · USD", and the bars start below them. Bar charts gained `orient: horizontal`. Heatmap, treemap, waterfall, gauge, radar, funnel, and line/area paint use that shared frame and the numeric classes. Funnel stage labels sit beside the bar in surface ink, and conversion is a percent rounded to one decimal. Sankey outer labels use the reserved margin, and the full node name stays in a `<title>`.
+`renderSvg(chart, { width, surface })` sets the frame width and a light, dark, or export surface, then the painters lay out in that width. Title, tick, and value sizes stay at a readable floor (21 / 12 / 13) unless the theme is already larger. Text width uses the in-repo estimator (0.62em Latin, 1em wide scripts). The title line count is measured at the same x the title is drawn, and the unit shares the last line's width, so a wrapped title stays above the plot. A horizontal bar draws that title across the full figure width: at 390px the USD example is two lines, "Synthetic regional" and "program costs · USD", and the bars start below them. Bar charts gained `orient: horizontal`. Heatmap, treemap, waterfall, gauge, radar, funnel, and line/area paint use that shared frame and the numeric classes. Funnel stays a centered silhouette: each band narrows from one stage to the next, and the label sits to the right of the shape. Sankey outer labels use the reserved margin, and the full node name stays in a `<title>`.
 
 ## Why it matters
 
@@ -14,7 +14,7 @@ A pasted table was able to draw `N/A` as zero, hide a second broken chart from `
 
 ## What was tested
 
-- `pnpm test` after the changes: 33 files, 805 tests, including the title, funnel, Sankey, and small-fraction label regressions. The baseline before the changes was 764 passing tests.
+- `pnpm test` after the changes: 33 files, 810 tests, including the title, funnel, Sankey, small-fraction, and inside-frame label regressions. The baseline before the changes was 764 passing tests.
 - New vitest files call `parseMarkdown`, `renderSvg`, `runCli`, and both adapters' `chartBlockHtml`.
 - `examples/valid` (88 files) and `examples/invalid` (39 files) through the parser fixtures.
 
@@ -49,11 +49,11 @@ There is no speed target. Byte counts are the stable comparison. Times move a fe
 - Text width is an estimate. A host font that is much wider than 0.62em can still collide.
 - Histogram empty rows are skipped rather than rejected. Invalid histogram text is rejected.
 - Waterfall totals exist only when the author sets `role`. There is no inferred total.
-- Funnel conversion text is the ratio to the previous stage, not a statistical model.
+- Funnel bands narrow from one stage's value to the next. The side label is the stage name and its value.
 - Radar `max` below the data expands the scale to the data so a spoke is not clipped; the authored maximum is not drawn as a second ring in that case.
 - `parseMarkdown` still returns the first chart. `check` and `parseDocument` cover every chart. Host plugins replace each fence on their own.
-- The package version field is still 2.1.0. Nothing was published, pushed, or deployed.
+- The package version field is still 2.1.0 and has not been published.
 
 ## Blocked work
 
-None in the repository. Publishing, pushing, and a live model evaluation were out of scope and were not attempted.
+None in the repository. Publishing and a live model evaluation were out of scope and were not attempted.

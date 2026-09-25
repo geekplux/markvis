@@ -4,17 +4,19 @@
   <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
   <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Gate still seats 780 of 3,400 Piedmont browsers</title>Gate still seats 780 of 3,400 Piedmont browsers</text>
   <g data-funnel="1">
-    <rect x="48" y="48" width="527.04" height="61.33" fill="#3B82F6" data-stage="Browse" data-y="3,400"/>
-    <text x="56" y="78.67" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-label="Browse">Browse · 3,400</text>
-    <rect x="48" y="117.33" width="372.03" height="61.33" fill="#3B82F6" data-stage="Waitlist" data-y="2,400"/>
-    <text x="56" y="148" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-label="Waitlist">Waitlist · 2,400 · 70.5882% of previous · drop 1,000</text>
-    <rect x="48" y="186.67" width="279.02" height="61.33" fill="#3B82F6" data-stage="Cart" data-y="1,800"/>
-    <text x="56" y="217.33" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-label="Cart">Cart · 1,800 · 75% of previous · drop 600</text>
-    <rect x="48" y="256" width="192.21" height="61.33" fill="#3B82F6" data-stage="Pay" data-y="1,240"/>
-    <text x="56" y="286.67" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-label="Pay">Pay · 1,240 · 68.8889% of previous · drop 560</text>
-    <rect x="48" y="325.33" width="142.61" height="61.33" fill="#3B82F6" data-stage="Check-in" data-y="920"/>
-    <text x="56" y="356" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-label="Check-in">Check-in · 920 · 74.1935% of previous · drop 320</text>
-    <rect x="48" y="394.67" width="120.91" height="61.33" fill="#3B82F6" data-stage="Gate" data-y="780"/>
-    <text x="56" y="425.33" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-label="Gate">Gate · 780 · 84.7826% of previous · drop 140</text>
+    <path d="M48 44 L575.04 44 L497.53 113.33 L125.51 113.33 Z" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Browse" data-y="3,400"/>
+    <path d="M125.51 113.33 L497.53 113.33 L451.03 182.67 L172.01 182.67 Z" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Waitlist" data-y="2,400"/>
+    <path d="M172.01 182.67 L451.03 182.67 L407.63 252 L215.41 252 Z" fill="#10B981" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Cart" data-y="1,800"/>
+    <path d="M215.41 252 L407.63 252 L382.83 321.33 L240.21 321.33 Z" fill="#A855F7" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Pay" data-y="1,240"/>
+    <path d="M240.21 321.33 L382.83 321.33 L371.97 390.67 L251.07 390.67 Z" fill="#EAB308" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Check-in" data-y="920"/>
+    <path d="M251.07 390.67 L371.97 390.67 L371.97 460 L251.07 460 Z" fill="#14B8A6" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Gate" data-y="780"/>
+  </g>
+  <g fill="#171717" font-size="13" font-weight="500">
+    <text x="583.04" y="78.67" text-anchor="start" dominant-baseline="middle" data-label="Browse"><title>Browse · 3,400</title>Browse · 3,400</text>
+    <text x="583.04" y="148" text-anchor="start" dominant-baseline="middle" data-label="Waitlist"><title>Waitlist · 2,400</title>Waitlist · 2,400</text>
+    <text x="583.04" y="217.33" text-anchor="start" dominant-baseline="middle" data-label="Cart"><title>Cart · 1,800</title>Cart · 1,800</text>
+    <text x="583.04" y="286.67" text-anchor="start" dominant-baseline="middle" data-label="Pay"><title>Pay · 1,240</title>Pay · 1,240</text>
+    <text x="583.04" y="356" text-anchor="start" dominant-baseline="middle" data-label="Check-in"><title>Check-in · 920</title>Check-in · 920</text>
+    <text x="583.04" y="425.33" text-anchor="start" dominant-baseline="middle" data-label="Gate"><title>Gate · 780</title>Gate · 780</text>
   </g>
 </svg>

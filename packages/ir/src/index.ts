@@ -72,7 +72,7 @@ export const ChartIRSchema = z
     layout: z.enum(["grouped", "stacked", "percent"]).optional(),
     /** pie only. Fraction in [0, 1]. Omit → theme PIE_INNER_RATIO. */
     innerRadius: z.number().min(0).max(1).optional(),
-    /** gauge, heatmap, or radar. Meaning is type-local. */
+    /** gauge or heatmap. Meaning is type-local. */
     min: z.number().optional(),
     /** gauge, heatmap, or radar. Meaning is type-local. */
     max: z.number().optional(),

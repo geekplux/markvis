@@ -13,7 +13,7 @@ The package version field is still `2.1.0` because this branch is not published.
 - Waterfall bars show the delta and the level after it. Increases and decreases use different colors and a sign. An optional `role` column can mark `total` or `subtotal`. Step text is never treated as a total.
 - Gauges are a labeled range. If you omit `max`, the range is 0–100, and the unit sits next to the value. A value outside the range is marked above or below range.
 - Radar charts show numeric rings, one scale for every series, and lighter fills. A grouped bar is the clearer choice when the exact number matters.
-- Funnels are left-aligned stage bars. The stage label sits beside the bar, in ink that matches the surface. Conversion to the previous stage is a percent rounded to one decimal.
+- Funnels stay centered bands that narrow from each stage to the next, with the stage name and value to the right of the shape.
 - Line and area charts leave a gap for an empty cell. They do not connect through it or drop it to zero.
 - `surface: light` (default), `dark`, and `export` each paint a coordinated background and ink. A transparent figure with dark text is no longer the only surface.
 

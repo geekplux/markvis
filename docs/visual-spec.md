@@ -164,11 +164,11 @@ Keep title, desc, role=img, labelledby/describedby, data-markvis, stable ids, se
 
 ## Out of scope
 
-Dark mode canvas, paper / full-frame canvas fill, animation, tooltips, new types, marketing chrome, HTML posters, d3, vertical grids, axis boxes, tick lines, spline interpolation. Named `theme:` / `palette:` values are grammar in `SPEC.md` and packs in `packages/themes/` — not a second canvas painted onto Ledger.
+Animation, tooltips, new types, marketing chrome, HTML posters, d3, vertical grids, axis boxes, tick lines, spline interpolation. Named `theme:` / `palette:` values are grammar in `SPEC.md`. The renderer paints one full-frame surface (`light`, `dark`, or `export`) behind the figure.
 
 ## Done when
 
-1. This file matches Ledger transparent canvas (folio pack).
-2. Acceptance SVGs have no paper rect.
+1. This file matches the folio pack plus the renderer's surface rect.
+2. Acceptance SVGs include one full-frame `data-surface` rect.
 3. Tests green and gallery regenerated.
 4. Product owner has not rejected the five.

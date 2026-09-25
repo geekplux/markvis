@@ -106,4 +106,51 @@ Feb,4
     expect(readFileSync(file, "utf8")).toBe(before);
     expect(readFileSync(join(dir, firstHref!.replace(/^\.\//, "")), "utf8")).toBe(firstSvg);
   });
+
+  it("drops every extra owned image and does not delete a file the markdown still names", () => {
+    const dir = join(tmpdir(), `markvis-bake-extra-${Date.now()}`);
+    mkdirSync(dir, { recursive: true });
+    const file = join(dir, "doc.md");
+    writeFileSync(
+      file,
+      `${valid}
+![One](./doc-1.svg)
+![Two](./doc-2.svg)
+![again](./doc-1.svg)
+`,
+    );
+    writeFileSync(join(dir, "doc-1.svg"), "<svg>OLD1</svg>\n");
+    writeFileSync(join(dir, "doc-2.svg"), "<svg>OLD2</svg>\n");
+    expect(capture(["bake", file], dir).code).toBe(0);
+    const md = readFileSync(file, "utf8");
+    expect(md).toContain("![First](./doc.svg)");
+    expect(md).not.toContain("doc-1.svg");
+    expect(md).not.toContain("doc-2.svg");
+    expect(existsSync(join(dir, "doc.svg"))).toBe(true);
+    expect(existsSync(join(dir, "doc-1.svg"))).toBe(false);
+    expect(existsSync(join(dir, "doc-2.svg"))).toBe(false);
+
+    const many = join(dir, "many.md");
+    writeFileSync(
+      many,
+      `${valid}
+![One](./many-1.svg)
+![Two](./many-2.svg)
+![Three](./many-3.svg)
+`,
+    );
+    writeFileSync(join(dir, "many-1.svg"), "<svg>OLD1</svg>\n");
+    writeFileSync(join(dir, "many-2.svg"), "<svg>OLD2</svg>\n");
+    writeFileSync(join(dir, "many-3.svg"), "<svg>OLD3</svg>\n");
+    expect(capture(["bake", many], dir).code).toBe(0);
+    const manyMd = readFileSync(many, "utf8");
+    expect(manyMd).toContain("![First](./many.svg)");
+    expect(manyMd).not.toContain("many-1.svg");
+    expect(manyMd).not.toContain("many-2.svg");
+    expect(manyMd).not.toContain("many-3.svg");
+    const written = readFileSync(join(dir, "many.svg"), "utf8");
+    expect(written.startsWith("<svg ")).toBe(true);
+    expect(written).not.toContain("OLD3");
+    expect(existsSync(join(dir, "many-3.svg"))).toBe(false);
+  });
 });

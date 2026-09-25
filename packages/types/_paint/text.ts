@@ -26,7 +26,46 @@ export function truncateLabel(
   while (out.length > 0 && textWidth(`${out}…`, fontSize) > maxPx) {
     out = out.slice(0, -1);
   }
-  return out.length === 0 ? "…" : `${out}…`;
+  const trimmed = out.trimEnd();
+  return trimmed.length === 0 ? "…" : `${trimmed}…`;
+}
+
+/** Half a pixel covers estimator noise when a reserved margin is recomputed. */
+const FIT_SLOP = 0.5;
+
+/**
+ * Keep one line inside the frame. Shift the anchor before truncating.
+ * A label that already fits centered is returned unchanged.
+ */
+export function placeHorizontalLabel(
+  x: number,
+  text: string,
+  fontSize: number,
+  frameWidth: number,
+  pad = 8,
+): { x: number; anchor: "start" | "middle" | "end"; text: string } {
+  const width = textWidth(text, fontSize);
+  const rightEdge = frameWidth - pad;
+  if (!(width <= rightEdge - pad + FIT_SLOP)) {
+    return {
+      x: pad,
+      anchor: "start",
+      text: truncateLabel(text, Math.max(0, rightEdge - pad), fontSize),
+    };
+  }
+  if (x - width / 2 >= pad - FIT_SLOP && x + width / 2 <= rightEdge + FIT_SLOP) {
+    return { x, anchor: "middle", text };
+  }
+  if (x + width / 2 > rightEdge && x - width >= pad - FIT_SLOP) {
+    return { x: Math.min(x, rightEdge), anchor: "end", text };
+  }
+  if (x - width / 2 < pad && x + width <= rightEdge + FIT_SLOP) {
+    return { x: Math.max(x, pad), anchor: "start", text };
+  }
+  if (x + width / 2 > rightEdge) {
+    return { x: rightEdge, anchor: "end", text };
+  }
+  return { x: pad, anchor: "start", text };
 }
 
 export type WrappedText = {

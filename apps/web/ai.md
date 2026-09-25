@@ -25,7 +25,7 @@ A fenced code block tagged `chart` / `markvis` / `vis` — one language. Types: 
 Order inside the block:
 
 1. Optional `markvis: 2`
-2. One `key: value` per line (`type` required; `title` `theme` `unit` `x` `y` `series` as listed in `/llms.txt`)
+2. One `key: value` per line. `type` is required. Every other field must be one listed in `/llms.txt`.
 3. Blank line
 4. Comma-separated rows, or one Markdown table — not JSON
 

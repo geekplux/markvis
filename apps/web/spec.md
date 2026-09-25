@@ -85,7 +85,7 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | `pie` | label | number ≥ 0 | ignored | Do **not** normalize to 100. Optional `innerRadius`. An empty y is `E_MISSING_VALUE`. |
 | `hist` | number | optional weight | ignored | Sturges bins; table keeps raw rows. Repeated samples stay. |
 | `heatmap` | category | intensity | required | Long form. Empty y is a missing cell, not zero. Optional `min`/`max` share the color domain. |
-| `funnel` | stage | number ≥ 0 | ignored | Left-aligned stage bars. The label sits beside the bar. Conversion is a percent rounded to one decimal. |
+| `funnel` | stage | number ≥ 0 | ignored | Centered bands narrow from each stage to the next. The label sits to the right. |
 | `waterfall` | step | signed delta | ignored | Delta and the level after it are labeled. Optional `role` column. Totals are not inferred from the step name. |
 | `radar` | spoke | number ≥ 0 | optional | One scale: `max` when it is at least the data max, otherwise the data max. A missing spoke is a gap. A grouped bar is clearer when the exact number matters. |
 | `gauge` | label | number | ignored | One row. A second row → `E_DUP_KEY`. Omit max → 100, omit min → 0. |
@@ -125,7 +125,7 @@ Do not invent `donut` or `stacked-bar` type ids.
 | `E_DUP_COLUMN` | Duplicate header names. |
 | `E_UNKNOWN_FIELD` | Missing column name; undeclared header; illegal encoding. |
 | `E_PIE_NEGATIVE` | Pie value < 0. |
-| `E_NEGATIVE_VALUE` | Funnel, radar, sankey, or treemap value < 0. |
+| `E_NEGATIVE_VALUE` | Funnel, radar, sankey, or treemap value < 0, or a `percent` layout that includes a negative. |
 | `E_YAML_TABLE_CONFLICT` | Header fields disagree with progressive table mapping. |
 | `E_EMPTY_FENCE` | Fence body empty. |
 | `E_UNKNOWN_THEME` | `theme` not in the allow-list. |

@@ -5,17 +5,19 @@
   <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#0A0A0A"><title>Follow-up still lands 160 of 900 Emory referrals</title>Follow-up still lands 160 of 900 Emory referrals</text>
   <rect x="48" y="46" width="510.92" height="394" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
   <g data-funnel="1">
-    <rect x="48" y="50" width="510.92" height="57.67" fill="#F54900" data-stage="Referral" data-y="900"/>
-    <text x="56" y="78.83" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-label="Referral">Referral · 900</text>
-    <rect x="48" y="115.67" width="306.55" height="57.67" fill="#F54900" data-stage="Scheduled" data-y="540"/>
-    <text x="56" y="144.5" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-label="Scheduled">Scheduled · 540 · 60% of previous · drop 360</text>
-    <rect x="48" y="181.33" width="215.72" height="57.67" fill="#F54900" data-stage="Arrived" data-y="380"/>
-    <text x="56" y="210.17" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-label="Arrived">Arrived · 380 · 70.3704% of previous · drop 160</text>
-    <rect x="48" y="247" width="119.21" height="57.67" fill="#F54900" data-stage="Visit" data-y="210"/>
-    <text x="56" y="275.83" dominant-baseline="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-label="Visit">Visit · 210 · 55.2632% of previous · drop 170</text>
-    <rect x="48" y="312.67" width="105.02" height="57.67" fill="#F54900" data-stage="Labs ordered" data-y="185"/>
-    <text x="56" y="341.5" dominant-baseline="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-label="Labs ordered">Labs ordered · 185 · 88.0952% of previous · drop 25</text>
-    <rect x="48" y="378.33" width="90.83" height="57.67" fill="#F54900" data-stage="Follow-up" data-y="160"/>
-    <text x="56" y="407.17" dominant-baseline="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-label="Follow-up">Follow-up · 160 · 86.4865% of previous · drop 25</text>
+    <path d="M48 46 L558.92 46 L456.74 111.67 L150.18 111.67 Z" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Referral" data-y="900"/>
+    <path d="M150.18 111.67 L456.74 111.67 L411.32 177.33 L195.6 177.33 Z" fill="#009689" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Scheduled" data-y="540"/>
+    <path d="M195.6 177.33 L411.32 177.33 L363.07 243 L243.85 243 Z" fill="#104E64" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Arrived" data-y="380"/>
+    <path d="M243.85 243 L363.07 243 L355.97 308.67 L250.95 308.67 Z" fill="#FFB900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Visit" data-y="210"/>
+    <path d="M250.95 308.67 L355.97 308.67 L348.88 374.33 L258.04 374.33 Z" fill="#FE9A00" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Labs ordered" data-y="185"/>
+    <path d="M258.04 374.33 L348.88 374.33 L348.88 440 L258.04 440 Z" fill="#F54900" fill-opacity="0.72" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Follow-up" data-y="160"/>
+  </g>
+  <g fill="#0A0A0A" font-size="13" font-weight="500">
+    <text x="566.92" y="78.83" text-anchor="start" dominant-baseline="middle" data-label="Referral"><title>Referral · 900</title>Referral · 900</text>
+    <text x="566.92" y="144.5" text-anchor="start" dominant-baseline="middle" data-label="Scheduled"><title>Scheduled · 540</title>Scheduled · 540</text>
+    <text x="566.92" y="210.17" text-anchor="start" dominant-baseline="middle" data-label="Arrived"><title>Arrived · 380</title>Arrived · 380</text>
+    <text x="566.92" y="275.83" text-anchor="start" dominant-baseline="middle" data-label="Visit"><title>Visit · 210</title>Visit · 210</text>
+    <text x="566.92" y="341.5" text-anchor="start" dominant-baseline="middle" data-label="Labs ordered"><title>Labs ordered · 185</title>Labs ordered · 185</text>
+    <text x="566.92" y="407.17" text-anchor="start" dominant-baseline="middle" data-label="Follow-up"><title>Follow-up · 160</title>Follow-up · 160</text>
   </g>
 </svg>

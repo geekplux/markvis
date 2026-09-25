@@ -93,14 +93,14 @@ CORE fence keys: `markvis` `type` `title` `theme` `palette` `surface` `unit` `x`
 | `pie` | label | number ≥ 0 | ignored | Slice sizes as given. Do **not** normalize to 100. Optional `innerRadius` (see field table). Still `type: pie` — never invent `donut`. |
 | `hist` | number | optional weight | ignored | Continuous x; renderer bins; table keeps raw rows. |
 | `heatmap` | category | number (intensity) | required (category) | Long form only. Keep row order. Both cats discrete. Empty y is a missing cell, not zero. Optional `min`/`max` share the color domain across figures. |
-| `funnel` | stage | number ≥ 0 | ignored | Keep order. Stage length is the value (left-aligned bars). The label sits beside the bar. Conversion to the previous stage is a percent rounded to one decimal. Negatives → `E_NEGATIVE_VALUE`. |
+| `funnel` | stage | number ≥ 0 | ignored | Keep order. Centered bands narrow from each stage's value to the next. The stage name and value sit to the right of the shape. Negatives → `E_NEGATIVE_VALUE`. |
 | `waterfall` | step | signed delta | ignored | Keep order. Each bar is labeled with the delta and the level after it. Optional `role` column marks `total` or `subtotal`. Duplicate step labels are allowed. |
 | `radar` | spoke | number ≥ 0 | optional | Keep order. One scale for every series: `max` if set and at least the data max, otherwise max(y) or 1. A missing spoke is a gap. Negatives → `E_NEGATIVE_VALUE`. A grouped bar is clearer when the reader needs the exact number. |
 | `gauge` | label | number | ignored | One row. A second row → `E_DUP_KEY`. Optional `min`/`max`. Omit max → 100, omit min → 0. Out-of-range values stay visible and are labeled above or below range. |
 | `sankey` | category (source) | number (flow ≥ 0) | required (target) | One row = one link. Keep order. Self-link → `E_UNKNOWN_FIELD`. A cycle → `E_SANKEY_CYCLE`. Equal values share one thickness. A repeated source/target pair → `E_DUP_KEY`. |
 | `treemap` | category (label) | number (≥ 0) | optional (parent) | Flat or two levels only. Rows with y≤0 omitted from paint. A repeated label under the same parent → `E_DUP_KEY`. |
 
-Zeros are legal. Negatives are legal on bar/line/area/scatter/waterfall; illegal on `pie` (`E_PIE_NEGATIVE`) and funnel/radar/sankey/treemap (`E_NEGATIVE_VALUE`).
+Zeros are legal. Negatives are legal on bar/line/area/scatter/waterfall, except `layout: percent`, which rejects them with `E_NEGATIVE_VALUE`. Negatives are illegal on `pie` (`E_PIE_NEGATIVE`) and funnel/radar/sankey/treemap (`E_NEGATIVE_VALUE`).
 
 
 ## Encodings (Wave 1)
@@ -140,7 +140,7 @@ Optional fields that change paint on an existing type. Same `type` id — not a 
 | `E_DUP_COLUMN` | Duplicate header names. |
 | `E_UNKNOWN_FIELD` | `x` / `y` / `series` name a missing column; undeclared header key; encoding on the wrong type; or bad encoding value. |
 | `E_PIE_NEGATIVE` | Pie value < 0. |
-| `E_NEGATIVE_VALUE` | Funnel, radar, sankey, or treemap value < 0. |
+| `E_NEGATIVE_VALUE` | Funnel, radar, sankey, or treemap value < 0, or a `percent` layout that includes a negative. |
 | `E_YAML_TABLE_CONFLICT` | Header fields disagree with progressive table mapping. |
 | `E_EMPTY_FENCE` | Fence body empty. |
 | `E_UNKNOWN_THEME` | `theme` not in `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts`. |

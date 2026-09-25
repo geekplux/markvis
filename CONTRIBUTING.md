@@ -21,7 +21,7 @@ Node 20. pnpm 9. Default branch is `master`. Open PRs against `master`.
 
 - Tags: `chart` | `markvis` | `vis` — one parser.
 - Types: `bar` | `line` | `area` | `scatter` | `pie` | `hist` | `heatmap` | `funnel` | `waterfall` | `radar` | `gauge` | `sankey` | `treemap`. Do not invent another id.
-- Fields: `markvis`, `type`, `title`, `unit`, `x`, `y`, `series`, plus existing `theme` and `palette`.
+- Fields: `markvis`, `type`, `title`, `unit`, `x`, `y`, `series`. Optional `theme`, `palette`, and `surface` follow `SPEC.md`. Type-local extras: `layout`, `innerRadius`, `min`, `max`, `orient` (bar), `role` (waterfall).
 - Data: CSV or a GFM table. Do not make JSON the default data form. Do not put JavaScript in a fence.
 - Do not add d3, d3-node, Vega-Lite, ECharts, or jsdom as a runtime just to emit SVG (`packages/` and `apps/`).
 - Keep input row order. Do not silently sort `x`. Do not auto-normalize pie to 100.

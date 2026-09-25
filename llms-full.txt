@@ -23,7 +23,7 @@ Language tags `chart`, `markvis`, `vis` share one parser.
 | pie | values ≥ 0; do not normalize to 100; optional `innerRadius`; empty y is E_MISSING_VALUE |
 | hist | continuous x; table keeps raw rows; repeated samples stay |
 | heatmap | x cat × series cat, y intensity; long form; series required; empty y is missing, not zero |
-| funnel | x stage, y ≥ 0; left-aligned bars; label beside the bar; conversion rounded to one decimal; series ignored |
+| funnel | x stage, y ≥ 0; centered bands narrow from each value to the next; label to the right; series ignored |
 | waterfall | x step, y signed delta; optional `role` column; totals are not inferred from the label |
 | radar | x spoke, y ≥ 0; optional series; one shared scale; missing spoke is a gap |
 | gauge | one row (a second row is E_DUP_KEY); omit max → 100; series ignored |

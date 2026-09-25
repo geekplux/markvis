@@ -3,42 +3,42 @@
   <desc id="mv-2a4bdc1546ea41e2-desc">scatter chart. Rent climbs as commute shortens on the Beltline. x=commute_min. y=rent_index. 12 rows.</desc>
   <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
   <text x="66" y="32" text-anchor="start" font-size="22" font-weight="600" fill="#000000"><title>Rent climbs as commute shortens on the Beltline</title><tspan x="66" dy="0">Rent climbs as commute shortens on the</tspan><tspan x="66" dy="28">Beltline</tspan></text>
-  <rect x="66" y="52" width="640" height="307" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <rect x="66" y="80" width="640" height="279" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
   <g fill="none" stroke="#000000" stroke-opacity="0.16" stroke-width="1">
-    <line x1="66" x2="706" y1="297.6" y2="297.6"/>
-    <line x1="66" x2="706" y1="236.2" y2="236.2"/>
-    <line x1="66" x2="706" y1="113.4" y2="113.4"/>
-    <line x1="66" x2="706" y1="52" y2="52"/>
+    <line x1="66" x2="706" y1="303.2" y2="303.2"/>
+    <line x1="66" x2="706" y1="247.4" y2="247.4"/>
+    <line x1="66" x2="706" y1="135.8" y2="135.8"/>
+    <line x1="66" x2="706" y1="80" y2="80"/>
   </g>
   <path d="M66 359 L706 359" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
   <g fill="#8C8C8C" font-size="12" font-weight="400">
     <text x="58" y="359" text-anchor="end" dominant-baseline="middle">60</text>
-    <text x="58" y="297.6" text-anchor="end" dominant-baseline="middle">80</text>
-    <text x="58" y="236.2" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="58" y="174.8" text-anchor="end" dominant-baseline="middle">120</text>
-    <text x="58" y="113.4" text-anchor="end" dominant-baseline="middle">140</text>
-    <text x="58" y="52" text-anchor="end" dominant-baseline="middle">160</text>
+    <text x="58" y="303.2" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="58" y="247.4" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="58" y="191.6" text-anchor="end" dominant-baseline="middle">120</text>
+    <text x="58" y="135.8" text-anchor="end" dominant-baseline="middle">140</text>
+    <text x="58" y="80" text-anchor="end" dominant-baseline="middle">160</text>
     <text x="74" y="371" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
     <text x="282" y="371" text-anchor="middle" font-size="12" data-full-label="20"><title>20</title>20</text>
     <text x="490" y="371" text-anchor="middle" font-size="12" data-full-label="40"><title>40</title>40</text>
     <text x="698" y="371" text-anchor="middle" font-size="12" data-full-label="60"><title>60</title>60</text>
   </g>
   <g fill="#8C8C8C" font-size="13" font-weight="400" data-axis-titles="1">
-    <text x="44" y="205.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 44 205.5)" data-axis="y">rent_index</text>
+    <text x="44" y="219.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 44 219.5)" data-axis="y">rent_index</text>
     <text x="386" y="387" text-anchor="middle" dominant-baseline="hanging" data-axis="x">commute_min</text>
   </g>
   <g>
-    <circle cx="157.2" cy="107.26" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="8" data-y="142" data-series="rent_index"/>
-    <circle cx="198.8" cy="119.54" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="12" data-y="138" data-series="rent_index"/>
-    <circle cx="230" cy="141.03" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="15" data-y="131" data-series="rent_index"/>
-    <circle cx="261.2" cy="150.24" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="18" data-y="128" data-series="rent_index"/>
-    <circle cx="302.8" cy="171.73" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="22" data-y="121" data-series="rent_index"/>
-    <circle cx="334" cy="180.94" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="25" data-y="118" data-series="rent_index"/>
-    <circle cx="365.2" cy="199.36" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="28" data-y="112" data-series="rent_index"/>
-    <circle cx="406.8" cy="211.64" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="32" data-y="108" data-series="rent_index"/>
-    <circle cx="438" cy="230.06" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="35" data-y="102" data-series="rent_index"/>
-    <circle cx="490" cy="248.48" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="40" data-y="96" data-series="rent_index"/>
-    <circle cx="542" cy="263.83" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="45" data-y="91" data-series="rent_index"/>
-    <circle cx="614.8" cy="285.32" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="52" data-y="84" data-series="rent_index"/>
+    <circle cx="157.2" cy="130.22" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="8" data-y="142" data-series="rent_index"/>
+    <circle cx="198.8" cy="141.38" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="12" data-y="138" data-series="rent_index"/>
+    <circle cx="230" cy="160.91" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="15" data-y="131" data-series="rent_index"/>
+    <circle cx="261.2" cy="169.28" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="18" data-y="128" data-series="rent_index"/>
+    <circle cx="302.8" cy="188.81" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="22" data-y="121" data-series="rent_index"/>
+    <circle cx="334" cy="197.18" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="25" data-y="118" data-series="rent_index"/>
+    <circle cx="365.2" cy="213.92" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="28" data-y="112" data-series="rent_index"/>
+    <circle cx="406.8" cy="225.08" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="32" data-y="108" data-series="rent_index"/>
+    <circle cx="438" cy="241.82" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="35" data-y="102" data-series="rent_index"/>
+    <circle cx="490" cy="258.56" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="40" data-y="96" data-series="rent_index"/>
+    <circle cx="542" cy="272.51" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="45" data-y="91" data-series="rent_index"/>
+    <circle cx="614.8" cy="292.04" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="52" data-y="84" data-series="rent_index"/>
   </g>
 </svg>

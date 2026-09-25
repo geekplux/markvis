@@ -314,7 +314,7 @@ c,0.003
 });
 
 describe("funnel labels and sankey names", () => {
-  it("places funnel stage text on readable ink and rounds conversion", () => {
+  it("draws a centered funnel and keeps stage labels off the fill", () => {
     const out = svg(`type: funnel
 title: Signup
 x: stage
@@ -325,17 +325,30 @@ Visit,1200
 Signup,480
 Verify,310
 `);
+    expect(out).toContain('data-funnel="1"');
     expect(out).not.toContain("64.5833");
-    expect(out).toContain("64.6%");
-    const signup = out.match(/<text\b[^>]*data-label="Signup"[^>]*>/)?.[0] ?? "";
-    expect(signup).toContain('fill="#171717"');
-    expect(signup).not.toContain("#fafaf9");
-    const bar = out.match(/<rect\b[^>]*data-stage="Signup"[^>]*>/)?.[0] ?? "";
-    const barRight =
-      Number(bar.match(/\bx="([^"]+)"/)?.[1]) +
-      Number(bar.match(/\bwidth="([^"]+)"/)?.[1]);
-    const textX = Number(signup.match(/\bx="([^"]+)"/)?.[1]);
-    expect(textX).toBeGreaterThanOrEqual(barRight - 0.5);
+    const band = out.match(/<path\b[^>]*data-stage="Signup"[^>]*>/)?.[0] ?? "";
+    const d = band.match(/\bd="([^"]+)"/)?.[1] ?? "";
+    const nums = [...d.matchAll(/-?\d+(?:\.\d+)?/g)].map((n) => Number(n[0]));
+    const topLeft = nums[0] ?? 0;
+    const topRight = nums[2] ?? 0;
+    const botRight = nums[4] ?? 0;
+    const botLeft = nums[6] ?? 0;
+    const topMid = (topLeft + topRight) / 2;
+    const botMid = (botLeft + botRight) / 2;
+    expect(topRight - topLeft).toBeGreaterThan(botRight - botLeft);
+    expect(Math.abs(topMid - botMid)).toBeLessThan(1);
+    const label = out.match(/<text\b[^>]*data-label="Signup"[^>]*>[\s\S]*?<\/text>/)?.[0] ?? "";
+    expect(label).toContain("Signup · 480");
+    expect(label).not.toContain("#fafaf9");
+    const visit =
+      out.match(/<text\b[^>]*data-label="Visit"[^>]*>[\s\S]*?<\/text>/)?.[0] ?? "";
+    const visitVisible = visit
+      .replace(/<title>[\s\S]*?<\/title>/, "")
+      .replace(/<[^>]+>/g, "");
+    expect(visitVisible).toBe("Visit · 1,200");
+    const textX = Number(label.match(/\bx="([^"]+)"/)?.[1]);
+    expect(textX).toBeGreaterThan(Math.max(topRight, botRight) - 0.5);
   });
 
   it("keeps a long sankey name in a title and sizes the visible label to the outer margin", () => {
@@ -403,5 +416,132 @@ A,40
     expect(out).toContain(">0<");
     expect(out).toContain(">100<");
     expect(out).not.toContain('data-max="40"');
+  });
+});
+
+function decodeXml(value: string): string {
+  return value
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'");
+}
+
+/** Horizontal ink of each <text>, using the element's font size or the nearest group size. */
+function textOverflows(svgText: string): string[] {
+  const width = Number(svgText.match(/<svg\b[^>]*\bwidth="([\d.]+)"/)?.[1]);
+  const problems: string[] = [];
+  for (const match of svgText.matchAll(/<text\b([^>]*)>([\s\S]*?)<\/text>/g)) {
+    const attr = match[1] ?? "";
+    if (attr.includes("rotate(")) {
+      continue;
+    }
+    const own = attr.match(/\bfont-size="([^"]+)"/);
+    const before = svgText.slice(0, match.index ?? 0);
+    const groups = [...before.matchAll(/<g\b[^>]*\bfont-size="([^"]+)"/g)];
+    const size = Number(own?.[1] ?? groups[groups.length - 1]?.[1] ?? 12);
+    const anchor = attr.match(/\btext-anchor="([^"]+)"/)?.[1] ?? "start";
+    const x = Number(attr.match(/\bx="([^"]+)"/)?.[1]);
+    const body = (match[2] ?? "").replace(/<title>[\s\S]*?<\/title>/g, "");
+    const spans = [...body.matchAll(/<tspan\b[^>]*>([\s\S]*?)<\/tspan>/g)].map(
+      (part) => part[1] ?? "",
+    );
+    const chunks = spans.length > 0 ? spans : [body.replace(/<[^>]+>/g, "")];
+    for (const chunk of chunks) {
+      const label = decodeXml(chunk);
+      if (label.trim() === "") {
+        continue;
+      }
+      const w = textWidth(label, size);
+      const left = anchor === "middle" ? x - w / 2 : anchor === "end" ? x - w : x;
+      const right = anchor === "middle" ? x + w / 2 : anchor === "end" ? x : x + w;
+      if (left < -0.5 || right > width + 0.5) {
+        problems.push(`${label} [${left.toFixed(1)}, ${right.toFixed(1)}] width ${width}`);
+      }
+    }
+  }
+  return problems;
+}
+
+describe("labels stay inside the frame", () => {
+  it("keeps a narrow pie title and its slice labels inside the SVG", () => {
+    const out = svg(
+      `type: pie
+title: Billing leads support tickets at 40
+x: topic
+y: tickets
+
+topic,tickets
+"Billing and invoice disputes",40
+"Account access and MFA reset",25
+"Product how-to questions",20
+"Other miscellaneous",15
+`,
+      390,
+    );
+    expect(textOverflows(out)).toEqual([]);
+    const title = out.match(/<text\b[^>]*font-weight="600"[^>]*>/)?.[0] ?? "";
+    const titleX = Number(title.match(/\bx="([^"]+)"/)?.[1]);
+    expect(titleX).toBeGreaterThanOrEqual(0);
+    expect(titleX).toBeLessThan(390);
+    expect(out).toContain("Billing and invoice disputes");
+  });
+
+  it("keeps a large scatter end tick inside the SVG", () => {
+    const out = svg(`type: scatter
+title: Big
+x: pop
+y: gdp
+
+pop,gdp
+1000000,1
+8500000,2
+`);
+    expect(textOverflows(out)).toEqual([]);
+    expect(out).toContain(">10,000,000<");
+  });
+
+  it("keeps a wide heatmap scale label inside the SVG", () => {
+    const out = svg(`type: heatmap
+title: Big scale
+x: col
+y: v
+series: row
+
+col,row,v
+A,r,0
+B,r,1500000
+`);
+    expect(textOverflows(out)).toEqual([]);
+    expect(out).toContain(">1,500,000</text>");
+  });
+
+  it("keeps waterfall delta labels inside a narrow frame", () => {
+    const out = svg(
+      `type: waterfall
+title: Cash
+x: step
+y: delta
+
+step,delta
+A,4200
+B,6100
+C,900
+D,450
+E,-3800
+F,-2200
+G,-2400
+H,-380
+`,
+      390,
+    );
+    expect(textOverflows(out)).toEqual([]);
+    const utilities = out.match(/<text\b[^>]*data-delta="H"[^>]*>[\s\S]*?<\/text>/)?.[0] ?? "";
+    const visible = utilities
+      .replace(/<title>[\s\S]*?<\/title>/, "")
+      .replace(/<[^>]+>/g, "");
+    expect(visible).toContain("380");
+    expect(visible).toContain("2,870");
   });
 });
