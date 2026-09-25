@@ -4,7 +4,7 @@
 
 ## Summary
 
-Additive **markvis 2.x** on `feat/type-packs` tip **`d31325f`**: chart types become **type packs** (mirror themes), then Wave 1 encodings (`layout` on bar/line/area, `innerRadius` on pie). No 3.0. Old six fences still parse.
+Additive **markvis 2.x** on `feat/type-packs` tip **`b131db9`** (+ docs): chart types become **type packs** (mirror themes), then Wave 1 encodings (`layout` on bar/line/area, `innerRadius` on pie). No 3.0. Old six fences still parse.
 
 ## Why
 
@@ -67,7 +67,7 @@ Deps: `@markvis/ir` ← `@markvis/types` ← `@markvis/render-svg`. Packs own pa
 
 ## Screenshots / examples
 
-Baked on tip `b131db9` (PR body tip `d31325f`) (paths under `examples/out/` and themed packs):
+Baked on tip `b131db9` (paths under `examples/out/` and themed packs):
 
 - [x] stacked bar — `53-bar-stacked`
 - [x] percent bar — `54-bar-percent`
@@ -93,5 +93,5 @@ Baked on tip `b131db9` (PR body tip `d31325f`) (paths under `examples/out/` and 
 ## Branch / release discipline
 
 - Branch: `feat/type-packs` → `master` via [#19](https://github.com/geekplux/markvis/pull/19)
-- Tip: `d31325f` (bake `b131db9` + this PR checklist)
+- Tip: bake `b131db9`; PR checklist docs follow on branch HEAD
 - One PR for Wave 0+1; no drive-by master SHAs; no force-push master; no npm publish
