@@ -1,14 +1,14 @@
-# Wave 2 type packs
+# Wave 3 type packs
 
-> GeekPlux review — [#20](https://github.com/geekplux/markvis/pull/20). Do not npm publish in this PR.
+> GeekPlux review. Do not npm publish in this PR.
 
 ## Summary
 
-Additive **markvis 2.x** on `feat/wave2-types` tip **`bc218fa`** (gauge polish `7625e8e`): five new type packs — `heatmap` `funnel` `waterfall` `radar` `gauge` — same registry path as the six. Unknown type still → `E_UNKNOWN_TYPE` + table. No chart-library runtimes. Gauge paint polished after review (upper arc + hero number; no needle).
+Additive **markvis 2.x** on `feat/wave3-types` tip **`7112986`**: two new type packs — `sankey` `treemap` — same registry path as Waves 0–2. Unknown type still → `E_UNKNOWN_TYPE` + table. Pack-local layout only (no d3-hierarchy / d3-sankey). Closes the START-plan catalog gap.
 
 ## Why
 
-Wave 0+1 shipped the pack spine and encodings. Wave 2 grows the catalog along that spine: one folder per kind, registry entry, examples, loud failure on unknown ids. Agents keep a small CORE surface; the full catalog stays in `llms-full.txt` / SPEC.
+Waves 0–2 shipped the pack spine, encodings, and the first five additive packs. Wave 3 fills the last planned ids without pulling chart runtimes into `packages/`.
 
 ## Architecture
 
@@ -18,38 +18,34 @@ packages/types/<id>/
   README.md
   examples/
 packages/types/registry.ts
-packages/types/_paint/<id>.ts   # pack-owned marks
+packages/types/_paint/<id>.ts   # pack-owned marks + layout
 ```
 
-Deps stay `@markvis/ir` ← `@markvis/types` ← `@markvis/render-svg`. Chrome stays in render-svg. Theme ‖ palette orthogonal — no new theme ids. CORE fence keys unchanged; Wave 1 `layout` / `innerRadius` fences unchanged. Leave `E_PIE_NEGATIVE` alone.
+Deps stay `@markvis/ir` ← `@markvis/types` ← `@markvis/render-svg`. Theme ‖ palette orthogonal — no new theme ids. CORE fence keys unchanged; Wave 1–2 fences (`layout` / `innerRadius` / `min` / `max`) untouched.
 
 ## User-facing types in this PR
 
 | Id | extras | Table | Rules |
 | --- | --- | --- | --- |
-| `heatmap` | `[]` | `x` cat, `series` cat (required), `y` number (intensity) | Long form only; keep row order; both cats discrete |
-| `funnel` | `[]` | `x` stage, `y` number ≥ 0 | Keep order; `series` ignored; neg → `E_NEGATIVE_VALUE` |
-| `waterfall` | `[]` | `x` step, `y` signed delta | Keep order; paint running baseline; `series` ignored |
-| `radar` | `[]` | `x` spoke, `y` number ≥ 0, `series` optional | Keep order; scale max = max(y) (or 1 if all 0); neg → `E_NEGATIVE_VALUE` |
-| `gauge` | `["min","max"]` | `x` label, `y` number; first data row | omit `min`→0, omit `max`→max(y,1); both set ⇒ `min < max` or `E_UNKNOWN_FIELD`; `series` ignored |
+| `sankey` | `[]` | `x` source, `series` target (**required**), `y` flow ≥ 0 | One row = one link; keep order; nodes = unique `x` ∪ `series`; self-link → `E_UNKNOWN_FIELD`; neg → `E_NEGATIVE_VALUE`; cycles allowed (L→R columns) |
+| `treemap` | `[]` | `x` label, `y` ≥ 0, `series` optional parent | Omit `series` → flat leaves; with `series` → two levels only; neg → `E_NEGATIVE_VALUE`; `y≤0` omitted from paint (table kept) |
 
-**Gauge paint (post-review):** upper semicircle KPI meter; track = theme ink @ `STRUCTURE_OPACITY`; value arc = palette S1; hero number 28/600; no needle/hub. Heatmap / funnel / waterfall / radar unchanged.
+MVP paint: sankey node rects + cubic links (palette by link index); treemap squarify/slice-dice in-pack; labels only when they fit. Designer only if review fails look.
 
 ## Explicitly out
 
-- sankey / treemap (Wave 3)
-- heatmap color-domain extras
-- waterfall total-row markers
-- Gauge color zones / arc ticks / dual needles / new fence keys
+- >2-level treemap, sunburst, circular sankey
+- Sankey node extras / curvature fence keys
+- More type ids beyond these two
 - 3D / WebGL / maps / tiles
 - Animation-as-source
-- Runtime chart-library deps
+- Runtime chart-library deps (no d3-hierarchy / d3-sankey)
 - Competitor names on public marketing pages
 - npm publish (GeekPlux publishes after review)
 
 ## Compatibility
 
-- Semver: **2.x additive**. Old six + Wave 1 encodings still parse.
+- Semver: **2.x additive**. Prior eleven types + encodings still parse.
 - Theme ‖ palette unchanged and independent.
 - Unknown type / theme / palette still `E_UNKNOWN_*` + table.
 
@@ -57,37 +53,33 @@ Deps stay `@markvis/ir` ← `@markvis/types` ← `@markvis/render-svg`. Chrome s
 
 - [x] Registry + extras sync; schema regenerate
 - [x] ≥1 valid + ≥1 invalid under each pack
-- [x] `examples/valid` + `out` + gallery bake (`59`–`63`)
-- [x] Invalid: missing heatmap `series`, funnel/radar neg, bad gauge `min`/`max`, `min` on bar
-- [x] Gauge polish @ `7625e8e` — `59`–`62` byte-stable; only `63` + gallery re-baked; Coder `pnpm test` 650 / 2 skipped
-- [x] Verifier re-gate gauge-only — PASS-with-risks @ `bc218fa` (polish `7625e8e`)
+- [x] `examples/valid` + `out` + gallery bake (`64`–`65`)
+- [x] Invalid: self-link, missing sankey `series`, sankey/treemap neg (`31`–`34`; plus prior `13`)
+- [ ] `pnpm test` + `pnpm markvis check` valid/invalid — Verifier gate
 - [x] CHANGELOG Unreleased, SPEC / TYPES / llms catalogs updated
-- [x] PR description tip sync
+- [x] PR description complete
 
 ## Screenshots / examples
 
-Pack bake `d5204b9`; gauge re-bake on tip `7625e8e` (paths under `examples/out/`):
+Baked on tip `7112986` (paths under `examples/out/`):
 
-- [x] heatmap — `59-heatmap-atl`
-- [x] funnel — `60-funnel-signup`
-- [x] waterfall — `61-waterfall-pnl`
-- [x] radar — `62-radar-skills`
-- [x] gauge — `63-gauge-uptime` (upper arc + hero; no needle)
-- [x] invalid — `examples/invalid/26`–`30`
+- [x] sankey — `64-sankey-marta-flow`
+- [x] treemap — `65-treemap-marta-boardings`
+- [x] invalid — `examples/invalid/31`–`34` (and `13-sankey-type`)
 
 ## llms.txt vs llms-full.txt
 
-- `llms.txt` — CORE types include Wave 2 ids + short gauge `min`/`max` note; never invent sankey/treemap/donut/stacked-bar.
-- `llms-full.txt` — catalog table + extras rows for `min`/`max`.
+- `llms.txt` — CORE types include `sankey` `treemap`; never invent sunburst/chord/donut/stacked-bar.
+- `llms-full.txt` — catalog rows for both packs.
 - Skill: unknown type → fetch full spec or use a known type.
 
-## Follow-up (Wave 3)
+## Follow-up
 
-- Packs: `sankey` / `treemap` after table shapes are locked
-- Optional: heatmap color-domain extras, waterfall total markers
+- Optional Designer pass if sankey curves / treemap label overflow fail review
+- No further type waves planned from START; new ids need a fresh product bet
 
 ## Branch / release discipline
 
-- Branch: `feat/wave2-types` → `master` via [#20](https://github.com/geekplux/markvis/pull/20)
-- Tip: `bc218fa`; gauge polish `7625e8e`; pack bake `d5204b9`
+- Branch: `feat/wave3-types` → `master` (after [#20](https://github.com/geekplux/markvis/pull/20))
+- Tip: `7112986` (bake + gallery + catalog)
 - No drive-by master SHAs; no force-push master; no npm publish
