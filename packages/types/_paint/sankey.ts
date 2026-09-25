@@ -9,7 +9,7 @@ import {
 } from "./layout.js";
 import { seriesStyle } from "./palette.js";
 import { formatNumber } from "./scale.js";
-import { textWidth, truncateLabel } from "./text.js";
+import { truncateLabel } from "./text.js";
 import {
   INK,
   MARGIN,
@@ -41,6 +41,8 @@ type NodeGeom = {
 const NODE_W = 14;
 const NODE_GAP = 8;
 const COL_PAD = 24;
+/** Filled ribbon opacity (designer lock). */
+const LINK_FILL_OPACITY = 0.45;
 
 function assignColumns(nodeIds: string[], links: Link[]): Map<string, number> {
   const outs = new Map<string, string[]>();
@@ -120,6 +122,51 @@ function nodeValue(id: string, links: Link[]): number {
   return Math.max(out, inn, 0);
 }
 
+function sumOut(id: string, links: Link[]): number {
+  let s = 0;
+  for (const link of links) {
+    if (link.source === id) {
+      s += link.value;
+    }
+  }
+  return s;
+}
+
+function sumIn(id: string, links: Link[]): number {
+  let s = 0;
+  for (const link of links) {
+    if (link.target === id) {
+      s += link.value;
+    }
+  }
+  return s;
+}
+
+function nodeCenterY(g: NodeGeom): number {
+  return g.y + g.height / 2;
+}
+
+/** Closed ribbon: cubic top (src top → tgt top) + cubic bottom (tgt bot → src bot) + Z. */
+function ribbonPath(
+  x0: number,
+  y0Top: number,
+  y0Bot: number,
+  x1: number,
+  y1Top: number,
+  y1Bot: number,
+): string {
+  const dx = Math.max((x1 - x0) / 2, 16);
+  const cx0 = x0 + dx;
+  const cx1 = x1 - dx;
+  return [
+    `M${fmtPx(x0)} ${fmtPx(y0Top)}`,
+    `C${fmtPx(cx0)} ${fmtPx(y0Top)}, ${fmtPx(cx1)} ${fmtPx(y1Top)}, ${fmtPx(x1)} ${fmtPx(y1Top)}`,
+    `L${fmtPx(x1)} ${fmtPx(y1Bot)}`,
+    `C${fmtPx(cx1)} ${fmtPx(y1Bot)}, ${fmtPx(cx0)} ${fmtPx(y0Bot)}, ${fmtPx(x0)} ${fmtPx(y0Bot)}`,
+    `Z`,
+  ].join(" ");
+}
+
 export function renderSankey(chart: ChartIR, _id: string): Painted {
   const rows = loadRows(chart);
   const links: Link[] = rows.map((row, index) => ({
@@ -170,7 +217,10 @@ export function renderSankey(chart: ChartIR, _id: string): Painted {
   for (let c = 0; c <= maxCol; c++) {
     const ids = byCol.get(c) ?? [];
     const total = ids.reduce((sum, id) => sum + (values.get(id) ?? 0), 0);
-    const scale = total > 0 ? (plot.height - NODE_GAP * Math.max(ids.length - 1, 0)) / total : 0;
+    const scale =
+      total > 0
+        ? (plot.height - NODE_GAP * Math.max(ids.length - 1, 0)) / total
+        : 0;
     let yCursor = plot.top;
     const x = plot.left + COL_PAD + c * colSpan;
     for (const id of ids) {
@@ -189,12 +239,123 @@ export function renderSankey(chart: ChartIR, _id: string): Painted {
     }
   }
 
-  // Per-node outflow / inflow offsets for link attachment
+  // One barycenter attach-order pass: outflows by target center, inflows by source center.
+  const outLinks = new Map<string, Link[]>();
+  const inLinks = new Map<string, Link[]>();
+  for (const id of nodeIds) {
+    outLinks.set(id, []);
+    inLinks.set(id, []);
+  }
+  for (const link of links) {
+    if (link.value <= 0) {
+      continue;
+    }
+    outLinks.get(link.source)?.push(link);
+    inLinks.get(link.target)?.push(link);
+  }
+  for (const id of nodeIds) {
+    const outs = outLinks.get(id) ?? [];
+    outs.sort((a, b) => {
+      const ta = geoms.get(a.target);
+      const tb = geoms.get(b.target);
+      const ca = ta ? nodeCenterY(ta) : 0;
+      const cb = tb ? nodeCenterY(tb) : 0;
+      if (ca !== cb) {
+        return ca - cb;
+      }
+      return a.index - b.index;
+    });
+    const inns = inLinks.get(id) ?? [];
+    inns.sort((a, b) => {
+      const sa = geoms.get(a.source);
+      const sb = geoms.get(b.source);
+      const ca = sa ? nodeCenterY(sa) : 0;
+      const cb = sb ? nodeCenterY(sb) : 0;
+      if (ca !== cb) {
+        return ca - cb;
+      }
+      return a.index - b.index;
+    });
+  }
+
+  // Per-link source/target face thicknesses + stacked offsets (sum to full node face).
+  type LinkGeom = {
+    link: Link;
+    x0: number;
+    y0Top: number;
+    y0Bot: number;
+    x1: number;
+    y1Top: number;
+    y1Bot: number;
+  };
+  const linkGeoms: LinkGeom[] = [];
   const outAt = new Map<string, number>();
   const inAt = new Map<string, number>();
   for (const id of nodeIds) {
     outAt.set(id, 0);
     inAt.set(id, 0);
+  }
+
+  // Walk sources in column order so out offsets stack; then apply in offsets via sorted inflows.
+  // Build by iterating each node's sorted outflows (covers every link once).
+  const linkSrcBand = new Map<number, { y0Top: number; y0Bot: number; x0: number }>();
+  const linkTgtBand = new Map<number, { y1Top: number; y1Bot: number; x1: number }>();
+
+  for (const id of nodeIds) {
+    const src = geoms.get(id);
+    if (!src) {
+      continue;
+    }
+    const outSum = sumOut(id, links);
+    for (const link of outLinks.get(id) ?? []) {
+      const sh = outSum > 0 ? (link.value / outSum) * src.height : 0;
+      const y0Top = src.y + (outAt.get(id) ?? 0);
+      const y0Bot = y0Top + sh;
+      outAt.set(id, (outAt.get(id) ?? 0) + sh);
+      linkSrcBand.set(link.index, {
+        y0Top,
+        y0Bot,
+        x0: src.x + src.width,
+      });
+    }
+  }
+  for (const id of nodeIds) {
+    const tgt = geoms.get(id);
+    if (!tgt) {
+      continue;
+    }
+    const inSum = sumIn(id, links);
+    for (const link of inLinks.get(id) ?? []) {
+      const th = inSum > 0 ? (link.value / inSum) * tgt.height : 0;
+      const y1Top = tgt.y + (inAt.get(id) ?? 0);
+      const y1Bot = y1Top + th;
+      inAt.set(id, (inAt.get(id) ?? 0) + th);
+      linkTgtBand.set(link.index, {
+        y1Top,
+        y1Bot,
+        x1: tgt.x,
+      });
+    }
+  }
+
+  for (const link of links) {
+    if (link.value <= 0) {
+      continue;
+    }
+    const s = linkSrcBand.get(link.index);
+    const t = linkTgtBand.get(link.index);
+    if (!s || !t) {
+      continue;
+    }
+    linkGeoms.push({
+      link,
+      x0: s.x0,
+      y0Top: s.y0Top,
+      y0Bot: s.y0Bot,
+      x1: t.x1,
+      y1Top: t.y1Top,
+      y1Bot: t.y1Bot,
+    });
   }
 
   const lines: string[] = [drawTitle(visibleTitle(chart), plot.left, chart.unit)];
@@ -227,40 +388,22 @@ export function renderSankey(chart: ChartIR, _id: string): Painted {
   }
 
   lines.push(`  <g ${attrs({ "data-sankey-links": "1" })}>`);
-  const totalFlow = Math.max(
-    1,
-    links.reduce((s, l) => s + l.value, 0),
-  );
-  for (const link of links) {
-    const src = geoms.get(link.source);
-    const tgt = geoms.get(link.target);
-    if (!src || !tgt || link.value <= 0) {
-      continue;
-    }
-    const srcScale = src.value > 0 ? src.height / src.value : 0;
-    const tgtScale = tgt.value > 0 ? tgt.height / tgt.value : 0;
-    const sw = Math.max(srcScale * link.value, 1);
-    const tw = Math.max(tgtScale * link.value, 1);
-    const sy0 = src.y + (outAt.get(link.source) ?? 0) + sw / 2;
-    const ty0 = tgt.y + (inAt.get(link.target) ?? 0) + tw / 2;
-    outAt.set(link.source, (outAt.get(link.source) ?? 0) + sw);
-    inAt.set(link.target, (inAt.get(link.target) ?? 0) + tw);
-    const x0 = src.x + src.width;
-    const x1 = tgt.x;
-    const dx = Math.max((x1 - x0) / 2, 16);
-    const style = seriesStyle(link.index);
-    const thickness = Math.max((link.value / totalFlow) * 40, sw, 1.5);
-    const d = `M${fmtPx(x0)} ${fmtPx(sy0)} C${fmtPx(x0 + dx)} ${fmtPx(sy0)}, ${fmtPx(x1 - dx)} ${fmtPx(ty0)}, ${fmtPx(x1)} ${fmtPx(ty0)}`;
+  for (const g of linkGeoms) {
+    const style = seriesStyle(g.link.index);
+    const fillOpacity =
+      style.opacity === 1
+        ? LINK_FILL_OPACITY
+        : style.opacity * LINK_FILL_OPACITY;
+    const d = ribbonPath(g.x0, g.y0Top, g.y0Bot, g.x1, g.y1Top, g.y1Bot);
     lines.push(
       `    <path ${attrs({
         d,
-        fill: "none",
-        stroke: style.color,
-        "stroke-opacity": style.opacity === 1 ? 0.55 : style.opacity * 0.55,
-        "stroke-width": fmtPx(thickness),
-        "data-source": link.source,
-        "data-target": link.target,
-        "data-y": formatNumber(link.value),
+        fill: style.color,
+        "fill-opacity": fillOpacity,
+        stroke: "none",
+        "data-source": g.link.source,
+        "data-target": g.link.target,
+        "data-y": formatNumber(g.link.value),
       })}/>`,
     );
   }
@@ -297,18 +440,30 @@ export function renderSankey(chart: ChartIR, _id: string): Painted {
   );
   for (const id of nodeIds) {
     const g = geoms.get(id)!;
-    const labelRight = g.col >= maxCol && maxCol > 0;
+    // Left col outside-left; right col outside-right; middle toward nearer plot edge.
+    let outsideLeft: boolean;
+    if (g.col === 0) {
+      outsideLeft = true;
+    } else if (g.col >= maxCol && maxCol > 0) {
+      outsideLeft = false;
+    } else {
+      const midX = g.x + g.width / 2;
+      const distLeft = midX - plot.left;
+      const distRight = plot.right - midX;
+      outsideLeft = distLeft <= distRight;
+    }
     const maxLabel = Math.max(colSpan - NODE_W - 8, 40);
-    const label = truncateLabel(id, maxLabel, TYPE.tick.size);
-    if (textWidth(label, TYPE.tick.size) > maxLabel && maxLabel < 12) {
+    // Skip when the gutter is too tight to read (~12px).
+    if (maxLabel < 12) {
       continue;
     }
-    const lx = labelRight ? g.x - 4 : g.x + g.width + 4;
+    const label = truncateLabel(id, maxLabel, TYPE.tick.size);
+    const lx = outsideLeft ? g.x - 4 : g.x + g.width + 4;
     lines.push(
       `    <text ${attrs({
         x: fmtPx(lx),
         y: fmtPx(g.y + g.height / 2),
-        "text-anchor": labelRight ? "end" : "start",
+        "text-anchor": outsideLeft ? "end" : "start",
         "dominant-baseline": "middle",
         "data-node-label": id,
       })}>${escapeXml(label)}</text>`,

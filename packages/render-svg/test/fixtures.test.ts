@@ -20,8 +20,8 @@ function svgName(mdFile: string): string {
 }
 
 describe("valid fixture SVGs", () => {
-  it("covers 86 valid fixtures", () => {
-    expect(validFiles).toHaveLength(86);
+  it("covers 87 valid fixtures", () => {
+    expect(validFiles).toHaveLength(87);
   });
 
   it.each(validFiles)("%s", (file) => {

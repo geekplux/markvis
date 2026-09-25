@@ -4,21 +4,21 @@
   <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">MARTA still carries more airport guests than rideshare</text>
   <rect x="48" y="36" width="652" height="404" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
   <g data-sankey-links="1">
-    <path d="M86 94.4 C226.5 94.4, 226.5 92.04, 367 92.04" fill="none" stroke="#F54900" stroke-opacity="0.55" stroke-width="116.81" data-source="Domestic Terminal" data-target="MARTA" data-y="820"/>
-    <path d="M86 198.39 C226.5 198.39, 226.5 239.47, 367 239.47" fill="none" stroke="#009689" stroke-opacity="0.55" stroke-width="91.17" data-source="Domestic Terminal" data-target="Rideshare" data-y="640"/>
-    <path d="M86 266.05 C226.5 266.05, 226.5 368.44, 367 368.44" fill="none" stroke="#104E64" stroke-opacity="0.55" stroke-width="44.16" data-source="Domestic Terminal" data-target="Hotel shuttle" data-y="310"/>
-    <path d="M86 301.66 C226.5 301.66, 226.5 427.01, 367 427.01" fill="none" stroke="#FFB900" stroke-opacity="0.55" stroke-width="27.06" data-source="Domestic Terminal" data-target="Rental car" data-y="190"/>
-    <path d="M86 343.85 C226.5 343.85, 226.5 167.91, 367 167.91" fill="none" stroke="#FE9A00" stroke-opacity="0.55" stroke-width="41.31" data-source="International" data-target="MARTA" data-y="290"/>
-    <path d="M86 393.71 C226.5 393.71, 226.5 311.23, 367 311.23" fill="none" stroke="#F54900" stroke-opacity="0.396" stroke-width="58.4" data-source="International" data-target="Rideshare" data-y="410"/>
-    <path d="M86 431.45 C226.5 431.45, 226.5 397.83, 367 397.83" fill="none" stroke="#009689" stroke-opacity="0.396" stroke-width="17.09" data-source="International" data-target="Hotel shuttle" data-y="120"/>
-    <path d="M381 89.31 C521.5 89.31, 521.5 91.55, 662 91.55" fill="none" stroke="#104E64" stroke-opacity="0.396" stroke-width="106.62" data-source="MARTA" data-target="Midtown hotels" data-y="780"/>
-    <path d="M381 165.17 C521.5 165.17, 521.5 338.15, 662 338.15" fill="none" stroke="#FFB900" stroke-opacity="0.396" stroke-width="45.11" data-source="MARTA" data-target="Downtown hotels" data-y="330"/>
-    <path d="M381 244.94 C521.5 244.94, 521.5 198.39, 662 198.39" fill="none" stroke="#FE9A00" stroke-opacity="0.396" stroke-width="98.42" data-source="Rideshare" data-target="Midtown hotels" data-y="720"/>
-    <path d="M381 316.7 C521.5 316.7, 521.5 385.16, 662 385.16" fill="none" stroke="#F54900" stroke-opacity="0.396" stroke-width="45.11" data-source="Rideshare" data-target="Downtown hotels" data-y="330"/>
-    <path d="M381 366.39 C521.5 366.39, 521.5 269.61, 662 269.61" fill="none" stroke="#009689" stroke-opacity="0.396" stroke-width="38.27" data-source="Hotel shuttle" data-target="Midtown hotels" data-y="280"/>
-    <path d="M381 395.78 C521.5 395.78, 521.5 419.35, 662 419.35" fill="none" stroke="#104E64" stroke-opacity="0.396" stroke-width="20.5" data-source="Hotel shuttle" data-target="Downtown hotels" data-y="150"/>
-    <path d="M381 422.23 C521.5 422.23, 521.5 298.1, 662 298.1" fill="none" stroke="#FFB900" stroke-opacity="0.396" stroke-width="16.4" data-source="Rental car" data-target="Midtown hotels" data-y="120"/>
-    <path d="M381 435.22 C521.5 435.22, 521.5 435.01, 662 435.01" fill="none" stroke="#FE9A00" stroke-opacity="0.396" stroke-width="9.57" data-source="Rental car" data-target="Downtown hotels" data-y="70"/>
+    <path d="M86 36 C226.5 36, 226.5 36, 367 36 L367 148.09 C226.5 148.09, 226.5 152.81, 86 152.81 Z" fill="#F54900" fill-opacity="0.45" stroke="none" data-source="Domestic Terminal" data-target="MARTA" data-y="820"/>
+    <path d="M86 152.81 C226.5 152.81, 226.5 195.73, 367 195.73 L367 283.21 C226.5 283.21, 226.5 243.97, 86 243.97 Z" fill="#009689" fill-opacity="0.45" stroke="none" data-source="Domestic Terminal" data-target="Rideshare" data-y="640"/>
+    <path d="M86 243.97 C226.5 243.97, 226.5 347.25, 367 347.25 L367 389.63 C226.5 389.63, 226.5 288.13, 86 288.13 Z" fill="#104E64" fill-opacity="0.45" stroke="none" data-source="Domestic Terminal" data-target="Hotel shuttle" data-y="310"/>
+    <path d="M86 288.13 C226.5 288.13, 226.5 414.03, 367 414.03 L367 440 C226.5 440, 226.5 315.19, 86 315.19 Z" fill="#FFB900" fill-opacity="0.45" stroke="none" data-source="Domestic Terminal" data-target="Rental car" data-y="190"/>
+    <path d="M86 323.19 C226.5 323.19, 226.5 148.09, 367 148.09 L367 187.73 C226.5 187.73, 226.5 364.5, 86 364.5 Z" fill="#FE9A00" fill-opacity="0.45" stroke="none" data-source="International" data-target="MARTA" data-y="290"/>
+    <path d="M86 364.5 C226.5 364.5, 226.5 283.21, 367 283.21 L367 339.25 C226.5 339.25, 226.5 422.91, 86 422.91 Z" fill="#F54900" fill-opacity="0.324" stroke="none" data-source="International" data-target="Rideshare" data-y="410"/>
+    <path d="M86 422.91 C226.5 422.91, 226.5 389.63, 367 389.63 L367 406.03 C226.5 406.03, 226.5 440, 86 440 Z" fill="#009689" fill-opacity="0.324" stroke="none" data-source="International" data-target="Hotel shuttle" data-y="120"/>
+    <path d="M381 36 C521.5 36, 521.5 36, 662 36 L662 147.11 C521.5 147.11, 521.5 142.62, 381 142.62 Z" fill="#104E64" fill-opacity="0.324" stroke="none" data-source="MARTA" data-target="Midtown hotels" data-y="780"/>
+    <path d="M381 142.62 C521.5 142.62, 521.5 314.65, 662 314.65 L662 361.65 C521.5 361.65, 521.5 187.73, 381 187.73 Z" fill="#FFB900" fill-opacity="0.324" stroke="none" data-source="MARTA" data-target="Downtown hotels" data-y="330"/>
+    <path d="M381 195.73 C521.5 195.73, 521.5 147.11, 662 147.11 L662 249.67 C521.5 249.67, 521.5 294.14, 381 294.14 Z" fill="#FE9A00" fill-opacity="0.324" stroke="none" data-source="Rideshare" data-target="Midtown hotels" data-y="720"/>
+    <path d="M381 294.14 C521.5 294.14, 521.5 361.65, 662 361.65 L662 408.66 C521.5 408.66, 521.5 339.25, 381 339.25 Z" fill="#F54900" fill-opacity="0.324" stroke="none" data-source="Rideshare" data-target="Downtown hotels" data-y="330"/>
+    <path d="M381 347.25 C521.5 347.25, 521.5 249.67, 662 249.67 L662 289.55 C521.5 289.55, 521.5 385.53, 381 385.53 Z" fill="#009689" fill-opacity="0.324" stroke="none" data-source="Hotel shuttle" data-target="Midtown hotels" data-y="280"/>
+    <path d="M381 385.53 C521.5 385.53, 521.5 408.66, 662 408.66 L662 430.03 C521.5 430.03, 521.5 406.03, 381 406.03 Z" fill="#104E64" fill-opacity="0.324" stroke="none" data-source="Hotel shuttle" data-target="Downtown hotels" data-y="150"/>
+    <path d="M381 414.03 C521.5 414.03, 521.5 289.55, 662 289.55 L662 306.65 C521.5 306.65, 521.5 430.43, 381 430.43 Z" fill="#FFB900" fill-opacity="0.324" stroke="none" data-source="Rental car" data-target="Midtown hotels" data-y="120"/>
+    <path d="M381 430.43 C521.5 430.43, 521.5 430.03, 662 430.03 L662 440 C521.5 440, 521.5 440, 381 440 Z" fill="#FE9A00" fill-opacity="0.324" stroke="none" data-source="Rental car" data-target="Downtown hotels" data-y="70"/>
   </g>
   <g data-sankey-nodes="1">
     <rect x="72" y="36" width="14" height="279.19" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-node="Domestic Terminal" data-y="1,960"/>
@@ -31,13 +31,13 @@
     <rect x="662" y="314.65" width="14" height="125.35" fill="#104E64" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-node="Downtown hotels" data-y="880"/>
   </g>
   <g fill="#737373" font-size="11" font-weight="400">
-    <text x="90" y="175.6" text-anchor="start" dominant-baseline="middle" data-node-label="Domestic Terminal">Domestic Terminal</text>
-    <text x="385" y="111.86" text-anchor="start" dominant-baseline="middle" data-node-label="MARTA">MARTA</text>
-    <text x="385" y="267.49" text-anchor="start" dominant-baseline="middle" data-node-label="Rideshare">Rideshare</text>
-    <text x="385" y="376.64" text-anchor="start" dominant-baseline="middle" data-node-label="Hotel shuttle">Hotel shuttle</text>
-    <text x="385" y="427.01" text-anchor="start" dominant-baseline="middle" data-node-label="Rental car">Rental car</text>
-    <text x="90" y="381.6" text-anchor="start" dominant-baseline="middle" data-node-label="International">International</text>
-    <text x="658" y="171.32" text-anchor="end" dominant-baseline="middle" data-node-label="Midtown hotels">Midtown hotels</text>
-    <text x="658" y="377.32" text-anchor="end" dominant-baseline="middle" data-node-label="Downtown hotels">Downtown hotels</text>
+    <text x="68" y="175.6" text-anchor="end" dominant-baseline="middle" data-node-label="Domestic Terminal">Domestic Terminal</text>
+    <text x="363" y="111.86" text-anchor="end" dominant-baseline="middle" data-node-label="MARTA">MARTA</text>
+    <text x="363" y="267.49" text-anchor="end" dominant-baseline="middle" data-node-label="Rideshare">Rideshare</text>
+    <text x="363" y="376.64" text-anchor="end" dominant-baseline="middle" data-node-label="Hotel shuttle">Hotel shuttle</text>
+    <text x="363" y="427.01" text-anchor="end" dominant-baseline="middle" data-node-label="Rental car">Rental car</text>
+    <text x="68" y="381.6" text-anchor="end" dominant-baseline="middle" data-node-label="International">International</text>
+    <text x="680" y="171.32" text-anchor="start" dominant-baseline="middle" data-node-label="Midtown hotels">Midtown hotels</text>
+    <text x="680" y="377.32" text-anchor="start" dominant-baseline="middle" data-node-label="Downtown hotels">Downtown hotels</text>
   </g>
 </svg>
