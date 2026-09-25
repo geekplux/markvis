@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="waterfall chart: Concessions still cover Midtown rent after payroll (USD k), 5 rows" aria-labelledby="mv-8a5d1c459aa031da-title" aria-describedby="mv-8a5d1c459aa031da-desc" data-markvis="2" data-chart-type="waterfall" data-id="mv-8a5d1c459aa031da" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-8a5d1c459aa031da-title">Concessions still cover Midtown rent after payroll</title>
+  <desc id="mv-8a5d1c459aa031da-desc">waterfall chart. Concessions still cover Midtown rent after payroll. x=step. y=delta. unit=USD k. 5 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Concessions still cover Midtown rent after payroll<tspan font-size="12" font-weight="400" fill="#737373"> · USD k</tspan></text>
+  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
+    <line x1="48" x2="700" y1="317.33" y2="317.33"/>
+    <line x1="48" x2="700" y1="176.67" y2="176.67"/>
+  </g>
+  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g data-waterfall="1">
+    <rect x="66.26" y="204.8" width="93.89" height="253.2" fill="#3B82F6" rx="3" data-step="Ticket sales" data-y="180" data-baseline="0"/>
+    <rect x="196.66" y="114.77" width="93.89" height="90.03" fill="#3B82F6" rx="3" data-step="Concessions" data-y="64" data-baseline="180"/>
+    <rect x="327.06" y="114.77" width="93.89" height="126.6" fill="#F97316" rx="3" data-step="Payroll" data-y="-90" data-baseline="244"/>
+    <rect x="457.46" y="241.37" width="93.89" height="59.08" fill="#F97316" rx="3" data-step="Rent" data-y="-42" data-baseline="154"/>
+    <rect x="587.86" y="300.45" width="93.89" height="16.88" fill="#F97316" rx="3" data-step="Utilities" data-y="-12" data-baseline="112"/>
+  </g>
+  <g fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-waterfall-connectors="1">
+    <line x1="160.14" x2="196.66" y1="204.8" y2="204.8"/>
+    <line x1="290.54" x2="327.06" y1="114.77" y2="114.77"/>
+    <line x1="420.94" x2="457.46" y1="241.37" y2="241.37"/>
+    <line x1="551.34" x2="587.86" y1="300.45" y2="300.45"/>
+  </g>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="38" y="317.33" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="38" y="176.67" text-anchor="end" dominant-baseline="middle">200</text>
+    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">300</text>
+    <text x="113.2" y="468" text-anchor="middle" data-full-label="Ticket sales">Ticket sales</text>
+    <text x="243.6" y="468" text-anchor="middle" data-full-label="Concessions">Concessions</text>
+    <text x="374" y="468" text-anchor="middle" data-full-label="Payroll">Payroll</text>
+    <text x="504.4" y="468" text-anchor="middle" data-full-label="Rent">Rent</text>
+    <text x="634.8" y="468" text-anchor="middle" data-full-label="Utilities">Utilities</text>
+  </g>
+</svg>

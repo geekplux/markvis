@@ -17,7 +17,12 @@
         "area",
         "scatter",
         "pie",
-        "hist"
+        "hist",
+        "heatmap",
+        "funnel",
+        "waterfall",
+        "radar",
+        "gauge"
       ]
     },
     "title": {
@@ -74,6 +79,12 @@
       "type": "number",
       "minimum": 0,
       "maximum": 1
+    },
+    "min": {
+      "type": "number"
+    },
+    "max": {
+      "type": "number"
     },
     "table": {
       "type": "object",
