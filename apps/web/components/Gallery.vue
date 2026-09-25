@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from "vue";
 import { enhanceChartSvg } from "@markvis/browser/enhance";
+import { htmlTable, previewSource } from "@markvis/browser/preview";
 import {
   CHART_TYPES,
   PALETTES,
@@ -53,14 +54,24 @@ const selectedFence = computed(() => {
   );
 });
 
-const selectedSvg = computed(() => {
-  if (!selected.value) {
-    return "";
+/** Live parse→render on the rewritten fence (same path as Play). */
+const selectedPreview = computed(() => {
+  if (!selected.value || !selectedFence.value) {
+    return previewSource("");
   }
-  // Pre-baked theme SVGs only — no client render-svg (Node createHash graph).
-  // Palette rewrites fence + Play href; live palette preview is Play.
-  return selected.value.svgsByTheme[detailTheme.value];
+  return previewSource(selectedFence.value, `${selected.value.id}.md`);
 });
+
+/** Live SVG bytes only when paint succeeds — never a stale baked theme SVG. */
+const selectedSvg = computed(() =>
+  selectedPreview.value.ok ? selectedPreview.value.svg : "",
+);
+
+const detailError = computed(() =>
+  selectedPreview.value.ok ? undefined : selectedPreview.value.error,
+);
+
+const detailTableHtml = computed(() => htmlTable(selectedPreview.value.table));
 
 const selectedPlayHref = computed(() => {
   if (!selected.value) {
@@ -213,7 +224,7 @@ function enhanceDetailSvg(): void {
 }
 
 
-watch([selectedSvg, detailTheme, detailPalette], async () => {
+watch([selectedPreview, detailTheme, detailPalette], async () => {
   if (!selectedId.value) {
     disposeDetailEnhance?.();
     disposeDetailEnhance = undefined;
@@ -319,7 +330,15 @@ onUnmounted(() => {
             Close
           </button>
           <h2 class="gallery-detail-title">{{ selected.title }}</h2>
-          <div class="gallery-full" v-html="selectedSvg" />
+          <div class="gallery-full">
+            <template v-if="selectedPreview.ok">
+              <div v-html="selectedSvg" />
+            </template>
+            <template v-else>
+              <p class="gallery-error">{{ detailError ?? "render failed" }}</p>
+              <div class="gallery-fallback-table" v-html="detailTableHtml" />
+            </template>
+          </div>
           <div class="gallery-filters gallery-detail-themes" role="tablist" aria-label="Detail theme">
             <button
               v-for="chip in THEME_CHIPS"
