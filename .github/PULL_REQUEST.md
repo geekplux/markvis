@@ -1,10 +1,10 @@
 # Type packs + Wave 1 encodings
 
-> GeekPlux review. Verifier gates before open. Do not npm publish in this PR.
+> GeekPlux review — [#19](https://github.com/geekplux/markvis/pull/19). Do not npm publish in this PR.
 
 ## Summary
 
-Additive **markvis 2.x** on `feat/type-packs` tip **`89233d7`**: chart types become **type packs** (mirror themes), then Wave 1 encodings (`layout` on bar/line/area, `innerRadius` on pie). No 3.0. Old six fences still parse.
+Additive **markvis 2.x** on `feat/type-packs` tip **`b131db9`**: chart types become **type packs** (mirror themes), then Wave 1 encodings (`layout` on bar/line/area, `innerRadius` on pie). No 3.0. Old six fences still parse.
 
 ## Why
 
@@ -55,35 +55,34 @@ Deps: `@markvis/ir` ← `@markvis/types` ← `@markvis/render-svg`. Packs own pa
 
 ## Test plan
 
-- [x] `pnpm test` green (Coder: 576 passed / 2 skipped @ `192d54f`)
+- [x] `pnpm test` green (Coder: 612 passed / 2 skipped @ `b131db9`)
 - [x] Old six omit-encoding fixtures byte-stable
 - [x] Unknown type → table + `E_UNKNOWN_TYPE`
-- [x] Encoding fixtures + invalid (wrong type / bad value)
-- [ ] Verifier Wave 1 gate (full checklist)
+- [x] Encoding fixtures + invalid (wrong type / bad value) — valid `53`–`58`, invalid `22`–`25`
+- [x] `check examples/valid` 58 ok; `check examples/invalid` 25 errors
+- [ ] Verifier re-gate after encoding bake
 - [x] CHANGELOG Unreleased entry
 - [x] PR description complete
-- [ ] `/examples` screenshot pass — **open / TBD** (encoding gallery bake deferred; follow-up before merge, not a code-gate block)
+- [x] `/examples` encoding cards baked (`53`–`58` in `out` + gallery)
 
-## Screenshots
+## Screenshots / examples
 
-**Open / TBD** — encoding variants not yet in `examples/valid` / `out` / gallery. Deferred bake is a PR follow-up before merge (PASS-with-risks accepted).
+Baked on tip `b131db9` (paths under `examples/out/` and themed packs):
 
-- [ ] grouped bar/line/area
-- [ ] stacked bar/line/area
-- [ ] percent bar/line/area
-- [ ] pie with `innerRadius` (omit vs `0` vs theme)
+- [x] stacked bar — `53-bar-stacked`
+- [x] percent bar — `54-bar-percent`
+- [x] stacked line — `55-line-stacked`
+- [x] percent area — `56-area-percent`
+- [x] pie `innerRadius: 0` — `57-pie-inner-radius-0`
+- [x] pie `innerRadius: 0.5` — `58-pie-donut`
+- [x] grouped baseline — existing old-six / omit-`layout` fixtures
+- [x] invalid extras — `examples/invalid/22`–`25` (wrong type + bad values)
 
 ## llms.txt vs llms-full.txt
 
 - `llms.txt` — CORE + one short encodings paragraph; never invent a type name.
 - `llms-full.txt` — encodings table + CORE types.
 - Skill: unknown type → fetch full spec or use a core type.
-
-## Follow-up before merge (same PR)
-
-- Bake encoding SVGs into `examples/valid` / `out` / gallery (`layout` + `innerRadius`).
-- Attach Screenshots checklist once baked.
-- Optional: `examples/invalid/*.md` for bad encoding values (today covered in unit tests).
 
 ## Follow-up PR (Wave 2)
 
@@ -93,6 +92,6 @@ Deps: `@markvis/ir` ← `@markvis/types` ← `@markvis/render-svg`. Packs own pa
 
 ## Branch / release discipline
 
-- Branch: `feat/type-packs` from `origin/master`
-- Tip: `89233d7` (Verifier Wave 1 PASS-with-risks; includes Writer docs)
-- One PR for Wave 0+1; no drive-by master SHAs; no force-push master
+- Branch: `feat/type-packs` → `master` via [#19](https://github.com/geekplux/markvis/pull/19)
+- Tip: `b131db9` (encoding fixtures + invalid fences; closes PASS-with-risks 1–2)
+- One PR for Wave 0+1; no drive-by master SHAs; no force-push master; no npm publish
