@@ -6,7 +6,7 @@ Quantitative Markdown charts. Path: fence | GFM | HTML comment → parser → Ch
 
 1. Optional `markvis: 2`
 2. CORE headers: `type`, `title`, `theme`, `palette`, `unit`, `x`, `y`, `series`
-3. Type-local encodings when legal: `layout`, `innerRadius`
+3. Type-local encodings when legal: `layout`, `innerRadius`, `min`, `max`
 4. Blank line
 5. CSV or GFM table with a header row
 
@@ -22,6 +22,11 @@ Language tags `chart`, `markvis`, `vis` share one parser.
 | scatter | numeric x and y |
 | pie | values ≥ 0; do not normalize to 100; optional `innerRadius` |
 | hist | continuous x; table keeps raw rows |
+| heatmap | x cat × series cat, y intensity; long form; series required |
+| funnel | x stage, y ≥ 0; keep order; series ignored |
+| waterfall | x step, y signed delta; running baseline; series ignored |
+| radar | x spoke, y ≥ 0; optional series; scale max = max(y) or 1 |
+| gauge | first row; optional min/max; series ignored |
 
 ## Encodings
 
@@ -29,12 +34,14 @@ Language tags `chart`, `markvis`, `vis` share one parser.
 | --- | --- | --- | --- |
 | layout | bar line area | grouped \| stacked \| percent | grouped |
 | innerRadius | pie | [0, 1] | theme PIE_INNER_RATIO (explicit 0 = solid) |
+| min | gauge | number | 0 |
+| max | gauge | number | max(y, 1) |
 
-Wrong type / bad value → E_UNKNOWN_FIELD + table. Do not invent donut or stacked-bar type ids.
+Wrong type / bad value → E_UNKNOWN_FIELD + table. Do not invent donut, stacked-bar, sankey, or treemap type ids. Gauge with both min and max set requires min < max.
 
 ## Errors (stable codes)
 
-E_UNKNOWN_TYPE, E_TYPE_TYPO, E_JSON_DATA, E_MISSING_HEADER, E_EMPTY_DATA, E_EXTRA_COLUMN, E_DUP_COLUMN, E_UNKNOWN_FIELD, E_PIE_NEGATIVE, E_YAML_TABLE_CONFLICT, E_EMPTY_FENCE, E_UNKNOWN_THEME, E_UNKNOWN_PALETTE.
+E_UNKNOWN_TYPE, E_TYPE_TYPO, E_JSON_DATA, E_MISSING_HEADER, E_EMPTY_DATA, E_EXTRA_COLUMN, E_DUP_COLUMN, E_UNKNOWN_FIELD, E_PIE_NEGATIVE, E_NEGATIVE_VALUE, E_YAML_TABLE_CONFLICT, E_EMPTY_FENCE, E_UNKNOWN_THEME, E_UNKNOWN_PALETTE.
 
 Optional `theme:` grammar pack: folio|highcharts|shadcn|docs|ant|recharts (default folio).
 Optional `palette:` color table: ink|porcelain|warm|cool|vivid (omit → theme default colors). Theme ≠ palette.
@@ -47,4 +54,4 @@ See examples/valid/01–08 (canonical) and SPEC.md. Natural-language → fence: 
 
 ## Product boundaries
 
-No chart runtimes in core. No JSON-as-default data. No 7th type id in Wave 1 (use encodings). Structure diagrams stay outside this language. Full type catalog grows as packs; see docs/TYPES.md.
+No chart runtimes in core. No JSON-as-default data. Do not invent donut / sankey / treemap / stacked-bar as type ids (use encodings or the Wave 2 packs). Structure diagrams stay outside this language. Full type catalog grows as packs; see docs/TYPES.md.

@@ -37,14 +37,13 @@ describe("schema/markvis-2.schema.json", () => {
     expect(result.message).toMatch(/drifted from ChartIRSchema/);
   });
 
-  it("describes the frozen six chart types and forbids extra fields", () => {
+  it("describes the frozen eleven chart types and forbids extra fields", () => {
     const schema = generateChartIRJsonSchema();
     const json = JSON.stringify(schema);
     for (const type of CHART_TYPES) {
       expect(json).toContain(`"${type}"`);
     }
     expect(json).not.toContain("donut");
-    expect(json).not.toContain("heatmap");
     expect(schema.$id).toBe(
       "https://github.com/geekplux/markvis/schema/markvis-2.schema.json",
     );

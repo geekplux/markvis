@@ -1,11 +1,11 @@
 ---
 name: markvis
-description: Use when the user wants a chart of numbers in Markdown (bar, line, area, scatter, pie, hist) from a table — emit a Markdown code block tagged chart|markvis|vis, never a flowchart pie/xychart, never a PNG, never Vega-Lite JSON as the default.
+description: Use when the user wants a chart of numbers in Markdown (bar, line, area, scatter, pie, hist, heatmap, funnel, waterfall, radar, gauge) from a table — emit a Markdown code block tagged chart|markvis|vis, never a flowchart pie/xychart, never a PNG, never Vega-Lite JSON as the default.
 ---
 
 # markvis
 
-Charts of numbers in Markdown. The table is the source (comma-separated rows or a Markdown table). Tags `chart`, `markvis`, and `vis` are the same language. Types: `bar` `line` `area` `scatter` `pie` `hist` only.
+Charts of numbers in Markdown. The table is the source (comma-separated rows or a Markdown table). Tags `chart`, `markvis`, and `vis` are the same language. Types: `bar` `line` `area` `scatter` `pie` `hist` `heatmap` `funnel` `waterfall` `radar` `gauge`.
 
 ## When to use
 
@@ -18,7 +18,7 @@ Charts of numbers in Markdown. The table is the source (comma-separated rows or 
 - Flowcharts, sequence, state, ER → a structure diagram tool.
 - Invented PNG / screenshot as the source of truth.
 - Vega-Lite / ECharts JSON as the default artifact (optional later `engine:`, not core).
-- A 7th chart type (`donut`, `heatmap`, `stacked-bar` as its own type).
+- Invented type ids (`donut`, `sankey`, `treemap`, `stacked-bar` as its own type).
 
 ## Fence shape
 

@@ -48,14 +48,14 @@ Progressive form — comment immediately followed by a GFM table:
 | Mar | 150 |
 ```
 
-Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`, plus legal encodings (`layout`, `innerRadius`). Same meaning as fence headers.
+Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`, plus legal encodings (`layout`, `innerRadius`, `min`, `max`). Same meaning as fence headers.
 
 ## Fields
 
 | Field | Required | Default | Notes |
 | --- | --- | --- | --- |
 | `markvis` | no | `2` | Language version. |
-| `type` | yes | — | `bar` \| `line` \| `area` \| `scatter` \| `pie` \| `hist` only. |
+| `type` | yes | — | `bar` \| `line` \| `area` \| `scatter` \| `pie` \| `hist` \| `heatmap` \| `funnel` \| `waterfall` \| `radar` \| `gauge`. |
 | `title` | no | derived | Conclusion title when present. |
 | `theme` | no | `folio` | Grammar only: `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts`. |
 | `palette` | no | theme default | Colors only: `ink` \| `porcelain` \| `warm` \| `cool` \| `vivid`. Omit → theme pack colors. |
@@ -65,6 +65,8 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | `series` | no | — | Optional column that splits series. |
 | `layout` | no | `grouped` when omitted | On `bar` / `line` / `area` only: `grouped` \| `stacked` \| `percent`. |
 | `innerRadius` | no | theme `PIE_INNER_RATIO` | On `pie` only. `[0, 1]`. Omit → theme hole; `0` = solid. |
+| `min` | no | `0` at paint | On `gauge` only. |
+| `max` | no | `max(y, 1)` at paint | On `gauge` only. Both set ⇒ min < max. |
 | data | yes | — | CSV or GFM after a blank line. |
 
 `x` / `y` / `series` must name real header columns. CORE keys stay separate from type-local encodings. Undeclared or illegal encodings → `E_UNKNOWN_FIELD` + table.
@@ -79,6 +81,11 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | `scatter` | number | number | optional | One mark per row. |
 | `pie` | label | number ≥ 0 | ignored | Do **not** normalize to 100. Optional `innerRadius`. |
 | `hist` | number | optional weight | ignored | Renderer bins; table keeps raw rows. |
+| `heatmap` | category | intensity | required | Long form. Keep order. |
+| `funnel` | stage | number ≥ 0 | ignored | Keep order. |
+| `waterfall` | step | signed delta | ignored | Running baseline. |
+| `radar` | spoke | number ≥ 0 | optional | Scale max = max(y) or 1. |
+| `gauge` | label | number | ignored | First row. Optional `min`/`max`. |
 
 ## Encodings
 
@@ -86,6 +93,8 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | --- | --- | --- | --- |
 | `layout` | `bar` `line` `area` | `grouped` \| `stacked` \| `percent` | `grouped` |
 | `innerRadius` | `pie` | `[0, 1]` | theme `PIE_INNER_RATIO` (explicit `0` = solid) |
+| `min` | `gauge` | number | 0 |
+| `max` | `gauge` | number | max(y, 1) |
 
 Do not invent `donut` or `stacked-bar` type ids.
 
@@ -100,7 +109,7 @@ Do not invent `donut` or `stacked-bar` type ids.
 
 | Code | When |
 | --- | --- |
-| `E_UNKNOWN_TYPE` | `type` not in the six. |
+| `E_UNKNOWN_TYPE` | `type` not in the allowed set. |
 | `E_TYPE_TYPO` | Near-miss spelling of a known type. |
 | `E_JSON_DATA` | Data body is JSON. |
 | `E_MISSING_HEADER` | No CSV/GFM header row. |
@@ -109,6 +118,7 @@ Do not invent `donut` or `stacked-bar` type ids.
 | `E_DUP_COLUMN` | Duplicate header names. |
 | `E_UNKNOWN_FIELD` | Missing column name; undeclared header; illegal encoding. |
 | `E_PIE_NEGATIVE` | Pie value < 0. |
+| `E_NEGATIVE_VALUE` | Funnel or radar value < 0. |
 | `E_YAML_TABLE_CONFLICT` | Header fields disagree with progressive table mapping. |
 | `E_EMPTY_FENCE` | Fence body empty. |
 | `E_UNKNOWN_THEME` | `theme` not in the allow-list. |

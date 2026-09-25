@@ -4,6 +4,7 @@
 
 ### Added
 
+- Wave 2 type packs: `heatmap` `funnel` `waterfall` `radar` `gauge`. Gauge extras `min`/`max`. Funnel/radar negatives use `E_NEGATIVE_VALUE`.
 - Type packs under `packages/types/<id>/` with a registry (same contribution shape as themes). Paint lives with the pack; `@markvis/render-svg` keeps SVG chrome.
 - Fence encodings: `layout: grouped|stacked|percent` on `bar` / `line` / `area` (omit = grouped). `innerRadius` on `pie` in `[0, 1]` (omit = theme `PIE_INNER_RATIO`; explicit `0` = solid).
 - `docs/TYPES.md` — IN/OUT, encodings vs new type ids, how to contribute a type.

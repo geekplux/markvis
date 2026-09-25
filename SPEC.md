@@ -54,14 +54,14 @@ Progressive form (comment immediately followed by a GFM table):
 | Mar | 150 |
 ```
 
-Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`, plus type-local encodings `layout` / `innerRadius` when legal. Same meaning as fence headers.
+Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`, plus type-local encodings `layout` / `innerRadius` / `min` / `max` when legal. Same meaning as fence headers.
 
 ## Field table
 
 | Field | Required | Default | Notes |
 | --- | --- | --- | --- |
 | `markvis` | no | `2` | Language version. |
-| `type` | yes | — | `bar` \| `line` \| `area` \| `scatter` \| `pie` \| `hist` only. |
+| `type` | yes | — | `bar` \| `line` \| `area` \| `scatter` \| `pie` \| `hist` \| `heatmap` \| `funnel` \| `waterfall` \| `radar` \| `gauge`. |
 | `title` | no | derived | From filename or first column / `y` if omitted. |
 | `theme` | no | `folio` | Grammar only: `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts`. |
 | `palette` | no | theme default | Colors only: `ink` \| `porcelain` \| `warm` \| `cool` \| `vivid`. Omit → theme pack colors. |
@@ -71,6 +71,8 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | `series` | no | — | Optional column that splits series. |
 | `layout` | no | `grouped` when omitted | Type-local. Only on `bar` \| `line` \| `area`: `grouped` \| `stacked` \| `percent`. Omit = today's paint (`grouped`). Wrong type or bad value → `E_UNKNOWN_FIELD` + table. |
 | `innerRadius` | no | theme `PIE_INNER_RATIO` | Type-local. Only on `pie`. Number in `[0, 1]`. Omit → theme default hole (folio/most = `0`; shadcn = `0.5`). Explicit `0` forces a solid pie. `(0, 1]` = donut hole as a fraction of outer radius. Wrong type or out of range → `E_UNKNOWN_FIELD` + table. |
+| `min` | no | `0` at paint | Type-local. Only on `gauge`. Number. |
+| `max` | no | `max(y, 1)` at paint | Type-local. Only on `gauge`. Number. Both `min` and `max` set ⇒ `min < max` else `E_UNKNOWN_FIELD`. |
 | data | yes | — | CSV or GFM after a blank line. |
 
 `x` / `y` / `series` must name real header columns. Unnamed extra columns stay in the fallback table, not in the mark geometry.
@@ -87,8 +89,13 @@ CORE fence keys: `markvis` `type` `title` `theme` `palette` `unit` `x` `y` `seri
 | `scatter` | number | number | optional | One mark per row. |
 | `pie` | label | number ≥ 0 | ignored | Slice sizes as given. Do **not** normalize to 100. Optional `innerRadius` (see field table). Still `type: pie` — never invent `donut`. |
 | `hist` | number | optional weight | ignored | Continuous x; renderer bins; table keeps raw rows. |
+| `heatmap` | category | number (intensity) | required (category) | Long form only. Keep row order. Both cats discrete. |
+| `funnel` | stage | number ≥ 0 | ignored | Keep order. Negatives → `E_NEGATIVE_VALUE`. |
+| `waterfall` | step | signed delta | ignored | Keep order. Paint running baseline. |
+| `radar` | spoke | number ≥ 0 | optional | Keep order. Scale max = max(y) (or 1 if all 0). Negatives → `E_NEGATIVE_VALUE`. |
+| `gauge` | label | number | ignored | First data row. Optional `min`/`max`. |
 
-Zeros are legal. Negatives are legal on bar/line/area/scatter; illegal on `pie`.
+Zeros are legal. Negatives are legal on bar/line/area/scatter/waterfall; illegal on `pie` (`E_PIE_NEGATIVE`) and funnel/radar (`E_NEGATIVE_VALUE`).
 
 
 ## Encodings (Wave 1)
@@ -99,6 +106,8 @@ Optional fields that change paint on an existing type. Same `type` id — not a 
 | --- | --- | --- | --- |
 | `layout` | `bar` `line` `area` | `grouped` \| `stacked` \| `percent` | Today's look (`grouped`) |
 | `innerRadius` | `pie` | number in `[0, 1]` | Theme `PIE_INNER_RATIO` (not always solid) |
+| `min` | `gauge` | number | 0 |
+| `max` | `gauge` | number | max(y, 1) |
 
 - Explicit `innerRadius: 0` forces a solid pie and overrides the theme.
 - Bad value (`layout: foo`, `innerRadius: 2`) or encoding on the wrong type → parse fail + table with `E_UNKNOWN_FIELD` (clear detail string; no new error code in Wave 1).
@@ -115,7 +124,7 @@ Optional fields that change paint on an existing type. Same `type` id — not a 
 
 | Code | When |
 | --- | --- |
-| `E_UNKNOWN_TYPE` | `type` not in the six. |
+| `E_UNKNOWN_TYPE` | `type` not in the allowed set. |
 | `E_TYPE_TYPO` | Near-miss spelling of a known type (still invalid). |
 | `E_JSON_DATA` | Data body is a JSON array/object. |
 | `E_MISSING_HEADER` | No CSV/GFM header row. |
@@ -124,6 +133,7 @@ Optional fields that change paint on an existing type. Same `type` id — not a 
 | `E_DUP_COLUMN` | Duplicate header names. |
 | `E_UNKNOWN_FIELD` | `x` / `y` / `series` name a missing column; undeclared header key; encoding on the wrong type; or bad encoding value. |
 | `E_PIE_NEGATIVE` | Pie value < 0. |
+| `E_NEGATIVE_VALUE` | Funnel or radar value < 0. |
 | `E_YAML_TABLE_CONFLICT` | Header fields disagree with progressive table mapping. |
 | `E_EMPTY_FENCE` | Fence body empty. |
 | `E_UNKNOWN_THEME` | `theme` not in `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts`. |
@@ -263,7 +273,7 @@ y: n
 | --- | --- |
 | Mermaid `pie` / `xychart` for tabular numbers | Use markvis. Mermaid is structure. |
 | JSON as the data body | CSV or GFM table. |
-| Invented type (`donut`, `stacked-bar`, `heatmap`) | Only the six. Use `innerRadius` / `layout` or wait for a typed pack. |
+| Invented type (`donut`, `stacked-bar`, `sankey`, `treemap`) | Use a real type id. Donut = `pie` + `innerRadius`. Stacked = `layout`. |
 | Assuming omit `innerRadius` is always solid | Omit → theme `PIE_INNER_RATIO`; use `0` to force solid. |
 | Sorting categories for looks | Keep input order. |
 | Renormalizing pie to 100 | Leave values as-is. |

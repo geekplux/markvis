@@ -9,6 +9,11 @@ import {
   scatter,
   pie,
   hist,
+  heatmap,
+  funnel,
+  waterfall,
+  radar,
+  gauge,
 } from "../registry.js";
 import { typeExtras } from "../fence-keys.js";
 
@@ -24,6 +29,11 @@ describe("type registry", () => {
     expect(typeRegistry.scatter).toBe(scatter);
     expect(typeRegistry.pie).toBe(pie);
     expect(typeRegistry.hist).toBe(hist);
+    expect(typeRegistry.heatmap).toBe(heatmap);
+    expect(typeRegistry.funnel).toBe(funnel);
+    expect(typeRegistry.waterfall).toBe(waterfall);
+    expect(typeRegistry.radar).toBe(radar);
+    expect(typeRegistry.gauge).toBe(gauge);
     for (const id of CHART_TYPES) {
       expect(typeRegistry[id].id).toBe(id);
       expect(typeRegistry[id].extras).toEqual(typeExtras[id]);
@@ -39,6 +49,14 @@ describe("type registry", () => {
     expect([...typeExtras.pie]).toEqual(["innerRadius"]);
     expect([...typeExtras.scatter]).toEqual([]);
     expect([...typeExtras.hist]).toEqual([]);
+  });
+
+  it("locks Wave 2 typeExtras", () => {
+    expect([...typeExtras.heatmap]).toEqual([]);
+    expect([...typeExtras.funnel]).toEqual([]);
+    expect([...typeExtras.waterfall]).toEqual([]);
+    expect([...typeExtras.radar]).toEqual([]);
+    expect([...typeExtras.gauge]).toEqual(["min", "max"]);
   });
 
   it("fails loudly when a pack is missing", () => {

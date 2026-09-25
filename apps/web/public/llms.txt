@@ -17,7 +17,7 @@ Order:
 
 Fields:
 
-- `type` required. Only `bar` `line` `area` `scatter` `pie` `hist`.
+- `type` required. `bar` `line` `area` `scatter` `pie` `hist` `heatmap` `funnel` `waterfall` `radar` `gauge`. Do not invent `donut`, `sankey`, `treemap`, or `stacked-bar`.
 - `title` optional. A conclusion, not a slug.
 - `theme` optional. Omit means `folio`. Allowed: `folio` `highcharts` `shadcn` `docs` `ant` `recharts`. Any other value is `E_UNKNOWN_THEME`: show the table, not a silent swap.
 - `palette` optional. Colors only. Allowed: `ink` `porcelain` `warm` `cool` `vivid`. Omit means the theme’s default colors. Any other value is `E_UNKNOWN_PALETTE`: show the table, not a silent swap. Never merge palette into the theme id.
@@ -25,16 +25,17 @@ Fields:
 - `x` `y` `series` name real columns. `series` splits series.
 - Data required. Not JSON.
 
-Encodings (optional, type-local — not a seventh type):
+Encodings (optional, type-local — not a new type id):
 
 - On `bar` `line` or `area` only: `layout: grouped|stacked|percent`. Omit means grouped (today's look). Wrong type or bad value → table + `E_UNKNOWN_FIELD`.
 - On `pie` only: `innerRadius` as a number in `[0, 1]`. Omit means the theme's default hole (`PIE_INNER_RATIO`). Explicit `0` forces a solid pie. Do not invent `donut`.
+- On `gauge` only: `min` and `max` as numbers. Omit `min` means 0. Omit `max` means max(y, 1). Both set requires min < max, else `E_UNKNOWN_FIELD`.
 
 Also valid: an HTML comment immediately followed by a GFM table.
 
 `<!-- chart: bar x=month y=tickets title="Mar led Midtown box office at 9.2k tickets" -->`
 
-Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`, and legal encodings (`layout`, `innerRadius`). Same meaning as fence headers.
+Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`, and legal encodings (`layout`, `innerRadius`, `min`, `max`). Same meaning as fence headers.
 
 ## Types
 
@@ -44,6 +45,11 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 - `scatter` — number x, number y. One mark per row.
 - `pie` — label x, number y >= 0. Do not force the slices to 100. Optional `innerRadius` (see Encodings).
 - `hist` — number x. Table keeps the raw rows.
+- `heatmap` — x category × series category, y intensity. Long form. `series` is required.
+- `funnel` — x stage, y >= 0. Keep order. `series` ignored. Negatives → `E_NEGATIVE_VALUE`.
+- `waterfall` — x step, y signed delta. Keep order. Running baseline. `series` ignored.
+- `radar` — x spoke, y >= 0. Optional `series`. Scale max is max(y), or 1 if all 0. Negatives → `E_NEGATIVE_VALUE`.
+- `gauge` — first row. Optional `min`/`max` (see Encodings). `series` ignored.
 
 On any error: keep the rows, show the table, add one line with the error code. Never drop the numbers.
 
@@ -122,4 +128,4 @@ Bike,11
 Other,8
 ```
 
-Emit the fence. Do not emit a PNG. Do not add a seventh type.
+Emit the fence. Do not emit a PNG. Do not invent `donut`, `sankey`, `treemap`, or `stacked-bar` as type ids.

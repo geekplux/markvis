@@ -12,14 +12,14 @@ Unicode labels inside `examples/` fixtures are data, not documentation language.
 
 ## Language frozen
 
-Do not add a chart type. Do not add d3.
+Do not invent a type id. Do not add d3.
 
-Types only: `bar` | `line` | `area` | `scatter` | `pie` | `hist`.
+Types only: `bar` | `line` | `area` | `scatter` | `pie` | `hist` | `heatmap` | `funnel` | `waterfall` | `radar` | `gauge`.
 Tags only: `chart` / `markvis` / `vis` → one parser.
 Fields only: `markvis`, `type`, `title`, `unit`, `x`, `y`, `series`.
-Optional `theme:` and `palette:` follow `SPEC.md`.
+Optional `theme:` and `palette:` follow `SPEC.md`. Type-local extras: `layout`, `innerRadius`, `min`, `max`.
 Data: CSV or GFM table. No JSON as default data. No JS in a fence.
-`heatmap` / `donut` / stacked-bar-as-type / `treemap` / `sankey` / `map`: NO.
+`donut` / stacked-bar-as-type / `treemap` / `sankey` / `map`: NO.
 
 Forbidden in `packages/` and `apps/` (dependencies, imports, tests):
 `d3`, `d3-node`, `markvis-bar`, `markvis-line`, `markvis-pie`,
@@ -27,7 +27,7 @@ Forbidden in `packages/` and `apps/` (dependencies, imports, tests):
 Do not pull jsdom, Vega-Lite, ECharts, or Observable Plot to render SVG.
 legacy/ may keep old deps. `packages/*` tests must not import `legacy`.
 
-A PR that adds a type or a forbidden dep is rejected.
+A PR that invents a type id or adds a forbidden dep is rejected.
 
 CI contract is `.github/workflows/check.yml` and must stay:
 
@@ -57,7 +57,7 @@ Allow:
 Forbidden in `packages/` and `apps/` dependencies (adding any item is a reject):
 d3, d3-node, markvis-bar, markvis-line, markvis-pie, markdown-it-fence, babel-preset-es2015, jsdom-as-renderer
 
-Do not add a 7th type. Do not make d3 the default renderer. Do not pull d3 / d3-node / jsdom at runtime just to emit a figure.
+Do not invent `donut` / `sankey` / `treemap` / stacked-bar as type ids. Do not make d3 the default renderer. Do not pull d3 / d3-node / jsdom at runtime just to emit a figure.
 
 `legacy/` may keep old deps, but `packages/*` tests must not import `legacy`.
 
@@ -67,7 +67,7 @@ Language tags: `chart` / `markvis` / `vis` share one parser.
 
 Header:
     markvis: 2
-    type: bar|line|area|scatter|pie|hist
+    type: bar|line|area|scatter|pie|hist|heatmap|funnel|waterfall|radar|gauge
     title:
     unit:
     x:
