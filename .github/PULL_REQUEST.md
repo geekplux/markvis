@@ -4,7 +4,7 @@
 
 ## Summary
 
-Additive **markvis 2.x** on `feat/type-packs` tip **`f7ae300`**: chart types become **type packs** (mirror themes), then Wave 1 encodings (`layout` on bar/line/area, `innerRadius` on pie). No 3.0. Old six fences still parse.
+Additive **markvis 2.x** on `feat/type-packs` tip **`89233d7`**: chart types become **type packs** (mirror themes), then Wave 1 encodings (`layout` on bar/line/area, `innerRadius` on pie). No 3.0. Old six fences still parse.
 
 ## Why
 
@@ -62,22 +62,28 @@ Deps: `@markvis/ir` ← `@markvis/types` ← `@markvis/render-svg`. Packs own pa
 - [ ] Verifier Wave 1 gate (full checklist)
 - [x] CHANGELOG Unreleased entry
 - [x] PR description complete
-- [ ] `/examples` screenshot pass (grouped / stacked / percent / pie+innerRadius; no wallpaper)
+- [ ] `/examples` screenshot pass — **open / TBD** (encoding gallery bake deferred; follow-up before merge, not a code-gate block)
 
 ## Screenshots
 
-Attach after Verifier / bake if missing:
+**Open / TBD** — encoding variants not yet in `examples/valid` / `out` / gallery. Deferred bake is a PR follow-up before merge (PASS-with-risks accepted).
 
 - [ ] grouped bar/line/area
 - [ ] stacked bar/line/area
 - [ ] percent bar/line/area
-- [ ] pie with `innerRadius` (and omit vs `0` vs theme)
+- [ ] pie with `innerRadius` (omit vs `0` vs theme)
 
 ## llms.txt vs llms-full.txt
 
 - `llms.txt` — CORE + one short encodings paragraph; never invent a type name.
 - `llms-full.txt` — encodings table + CORE types.
 - Skill: unknown type → fetch full spec or use a core type.
+
+## Follow-up before merge (same PR)
+
+- Bake encoding SVGs into `examples/valid` / `out` / gallery (`layout` + `innerRadius`).
+- Attach Screenshots checklist once baked.
+- Optional: `examples/invalid/*.md` for bad encoding values (today covered in unit tests).
 
 ## Follow-up PR (Wave 2)
 
@@ -88,5 +94,5 @@ Attach after Verifier / bake if missing:
 ## Branch / release discipline
 
 - Branch: `feat/type-packs` from `origin/master`
-- Tip: `f7ae300` (Wave 1 code `192d54f` + Writer docs)
+- Tip: `89233d7` (Verifier Wave 1 PASS-with-risks; includes Writer docs)
 - One PR for Wave 0+1; no drive-by master SHAs; no force-push master
