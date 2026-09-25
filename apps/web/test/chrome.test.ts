@@ -385,14 +385,14 @@ describe("site visual chrome", () => {
     expect([...PROOF_STEMS]).toEqual([
       "01-bar-basic",
       "02-line-multi",
-      "05-pie-raw",
+      "81-sankey-airport-ground",
     ]);
     const proof = read("src/homeProof.ts");
     const homeProofVue = read("components/HomeProof.vue");
     const tabs = read("components/FenceTabs.vue");
     expect(proof).toContain("01-bar-basic");
     expect(proof).toContain("02-line-multi");
-    expect(proof).toContain("05-pie-raw");
+    expect(proof).toContain("81-sankey-airport-ground");
     expect(homeProofVue).toContain("examples/out");
     expect(homeProofVue).toContain("GALLERY_ITEMS");
     expect(tabs).toContain("PROOF_STEMS");
@@ -416,10 +416,10 @@ describe("site visual chrome", () => {
         svgsByTheme: {} as GalleryItem["svgsByTheme"],
       },
       {
-        id: "05-pie-raw",
-        type: "pie",
-        title: "MARTA takes the largest mode share",
-        fence: "```markvis\ntype: pie\n```",
+        id: "81-sankey-airport-ground",
+        type: "sankey",
+        title: "MARTA still carries more airport guests than rideshare",
+        fence: "```chart\ntype: sankey\n```",
         svg: "<svg></svg>",
         svgsByTheme: {} as GalleryItem["svgsByTheme"],
       },
@@ -427,17 +427,18 @@ describe("site visual chrome", () => {
     const views = proofViews(items, {
       "01-bar-basic": "/out/01-bar-basic.svg",
       "02-line-multi": "/out/02-line-multi.svg",
-      "05-pie-raw": "/out/05-pie-raw.svg",
+      "81-sankey-airport-ground": "/out/81-sankey-airport-ground.svg",
     });
     expect(views).toHaveLength(3);
     expect(views[0]?.src).toBe("/out/01-bar-basic.svg");
     expect(views[0]?.type).toBe("bar");
+    expect(views[2]?.type).toBe("sankey");
     expect(views[2]?.title).toContain("MARTA");
     expect(() =>
       proofViews(items.slice(0, 1), {
         "01-bar-basic": "/x.svg",
         "02-line-multi": "/y.svg",
-        "05-pie-raw": "/z.svg",
+        "81-sankey-airport-ground": "/z.svg",
       }),
     ).toThrow(/missing proof gallery item/);
   });

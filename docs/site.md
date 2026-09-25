@@ -42,11 +42,11 @@ Proof figures (folio, uncropped; conclusion captions):
 
 1. Mar led Midtown box office — `examples/out/01-bar-basic.svg`
 2. Walk-up still leads member — `examples/out/02-line-multi.svg`
-3. MARTA takes the largest mode share — `examples/out/05-pie-raw.svg`
+3. MARTA still carries more airport guests than rideshare — `examples/out/81-sankey-airport-ground.svg`
 
 Feature grid (1px gutter): Try it in the browser; Lives in your Markdown; Same text, same picture; The table never disappears; Six kinds of chart; Write a table of numbers; Built for people and AI; Looks you can pick; Show it on GitHub too.
 
-Tabbed examples: bar / line / pie from those three stems.
+Tabbed examples: bar / line / sankey from those three stems.
 
 Quickstart: 01 Try it · 02 Save a picture · 03 Ask an AI.
 

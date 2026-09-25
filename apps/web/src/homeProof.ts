@@ -3,14 +3,14 @@ import type { GalleryItem } from "./catalog";
 export const PROOF_STEMS = [
   "01-bar-basic",
   "02-line-multi",
-  "05-pie-raw",
+  "81-sankey-airport-ground",
 ] as const;
 
 export type ProofStem = (typeof PROOF_STEMS)[number];
 
 export type ProofView = {
   stem: ProofStem;
-  type: "bar" | "line" | "pie";
+  type: "bar" | "line" | "sankey";
   title: string;
   fence: string;
   src: string;
@@ -30,7 +30,7 @@ export function proofViews(
       throw new Error(`missing proof svg url: ${stem}`);
     }
     const type = item.type;
-    if (type !== "bar" && type !== "line" && type !== "pie") {
+    if (type !== "bar" && type !== "line" && type !== "sankey") {
       throw new Error(`unexpected proof type for ${stem}: ${type}`);
     }
     return {

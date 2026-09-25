@@ -8,7 +8,7 @@ Charts in Markdown. The numbers are the picture. Write a table in a code block. 
 
 ![Walk-up still leads member](../examples/out/02-line-multi.svg)
 
-![MARTA takes the largest mode share](../examples/out/05-pie-raw.svg)
+![MARTA still carries more airport guests than rideshare](../examples/out/81-sankey-airport-ground.svg)
 
 ## Try
 

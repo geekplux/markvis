@@ -21,7 +21,7 @@ In 2017 this project was a renderer (GitHub Trending). This is the rewrite: the 
 
 ![Walk-up still leads member](https://markvis.js.org/home/02-line-multi.svg)
 
-![MARTA takes the largest mode share](https://markvis.js.org/home/05-pie-raw.svg)
+![MARTA still carries more airport guests than rideshare](https://markvis.js.org/home/81-sankey-airport-ground.svg)
 
 ## An example
 
