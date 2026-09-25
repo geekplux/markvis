@@ -169,7 +169,7 @@ describe("vitest covers parser, render-svg, cli", () => {
 });
 
 describe("frozen language", () => {
-  it("freezes eleven chart types", () => {
+  it("freezes thirteen chart types", () => {
     expect([...CHART_TYPES]).toEqual([
       "bar",
       "line",
@@ -182,10 +182,12 @@ describe("frozen language", () => {
       "waterfall",
       "radar",
       "gauge",
+      "sankey",
+      "treemap",
     ]);
   });
 
-  it("rejects sankey in the parser", () => {
+  it("rejects sunburst in the parser", () => {
     const source = readFileSync(
       join(repoRoot, "examples/invalid/13-sankey-type.md"),
       "utf8",
@@ -657,6 +659,8 @@ describe("public contract", () => {
       "waterfall",
       "radar",
       "gauge",
+      "sankey",
+      "treemap",
     ];
     const frozenFields = [
       "markvis",

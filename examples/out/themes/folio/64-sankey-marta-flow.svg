@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="sankey chart: Five Points still feeds Midtown before Arts Center, 7 rows, series to" aria-labelledby="mv-4615ac5933b0d66d-title" aria-describedby="mv-4615ac5933b0d66d-desc" data-markvis="2" data-chart-type="sankey" data-id="mv-4615ac5933b0d66d" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-4615ac5933b0d66d-title">Five Points still feeds Midtown before Arts Center</title>
+  <desc id="mv-4615ac5933b0d66d-desc">sankey chart. Five Points still feeds Midtown before Arts Center. x=from. y=riders. series=to. 7 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Five Points still feeds Midtown before Arts Center</text>
+  <g data-sankey-links="1">
+    <path d="M86 133.7 C177.33 133.7, 177.33 124.94, 268.67 124.94" fill="none" stroke="#3B82F6" stroke-opacity="0.55" stroke-width="195.39" data-source="North Springs" data-target="Five Points" data-y="620"/>
+    <path d="M86 324.48 C177.33 324.48, 177.33 291.34, 268.67 291.34" fill="none" stroke="#F97316" stroke-opacity="0.55" stroke-width="170.18" data-source="Airport" data-target="Five Points" data-y="540"/>
+    <path d="M282.67 162.23 C374 162.23, 374 177.89, 465.33 177.89" fill="none" stroke="#10B981" stroke-opacity="0.55" stroke-width="252.47" data-source="Five Points" data-target="Midtown" data-y="880"/>
+    <path d="M282.67 347.28 C374 347.28, 374 393.89, 465.33 393.89" fill="none" stroke="#A855F7" stroke-opacity="0.55" stroke-width="117.63" data-source="Five Points" data-target="Peachtree Center" data-y="410"/>
+    <path d="M479.33 98.88 C570.67 98.88, 570.67 173.8, 662 173.8" fill="none" stroke="#EAB308" stroke-opacity="0.55" stroke-width="125.77" data-source="Midtown" data-target="Arts Center" data-y="390"/>
+    <path d="M479.33 361.64 C570.67 361.64, 570.67 385.8, 662 385.8" fill="none" stroke="#14B8A6" stroke-opacity="0.55" stroke-width="67.72" data-source="Peachtree Center" data-target="Arts Center" data-y="210"/>
+    <path d="M86 434.79 C177.33 434.79, 177.33 437.05, 268.67 437.05" fill="none" stroke="#F43F5E" stroke-opacity="0.55" stroke-width="50.42" data-source="Airport" data-target="College Park" data-y="160"/>
+  </g>
+  <g data-sankey-nodes="1">
+    <rect x="72" y="36" width="14" height="195.39" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-node="North Springs" data-y="620"/>
+    <rect x="268.67" y="36" width="14" height="370.1" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-node="Five Points" data-y="1,290"/>
+    <rect x="72" y="239.39" width="14" height="220.61" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-node="Airport" data-y="700"/>
+    <rect x="465.33" y="36" width="14" height="283.78" fill="#10B981" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-node="Midtown" data-y="880"/>
+    <rect x="465.33" y="327.78" width="14" height="132.22" fill="#10B981" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-node="Peachtree Center" data-y="410"/>
+    <rect x="662" y="36" width="14" height="424" fill="#A855F7" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-node="Arts Center" data-y="600"/>
+    <rect x="268.67" y="414.1" width="14" height="45.9" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-node="College Park" data-y="160"/>
+  </g>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="90" y="133.7" text-anchor="start" dominant-baseline="middle" data-node-label="North Springs">North Springs</text>
+    <text x="286.67" y="221.05" text-anchor="start" dominant-baseline="middle" data-node-label="Five Points">Five Points</text>
+    <text x="90" y="349.7" text-anchor="start" dominant-baseline="middle" data-node-label="Airport">Airport</text>
+    <text x="483.33" y="177.89" text-anchor="start" dominant-baseline="middle" data-node-label="Midtown">Midtown</text>
+    <text x="483.33" y="393.89" text-anchor="start" dominant-baseline="middle" data-node-label="Peachtree Center">Peachtree Center</text>
+    <text x="658" y="248" text-anchor="end" dominant-baseline="middle" data-node-label="Arts Center">Arts Center</text>
+    <text x="286.67" y="437.05" text-anchor="start" dominant-baseline="middle" data-node-label="College Park">College Park</text>
+  </g>
+</svg>

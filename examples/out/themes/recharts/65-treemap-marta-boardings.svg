@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="treemap chart: Red Line still carries Midtown mornings, 8 rows, series line" aria-labelledby="mv-b9aff2b6b0cebc81-title" aria-describedby="mv-b9aff2b6b0cebc81-desc" data-markvis="2" data-chart-type="treemap" data-id="mv-b9aff2b6b0cebc81" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-b9aff2b6b0cebc81-title">Red Line still carries Midtown mornings</title>
+  <desc id="mv-b9aff2b6b0cebc81-desc">treemap chart. Red Line still carries Midtown mornings. x=station. y=boardings. series=line. 8 rows.</desc>
+  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#374151">Red Line still carries Midtown mornings</text>
+  <rect x="48" y="36" width="652" height="394" fill="none" stroke="#e2e8f0" stroke-width="1" data-plot-border="1"/>
+  <g data-treemap="1">
+    <rect x="48" y="36" width="374.1" height="17" fill="#8884d8" fill-opacity="0.35" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="Red" data-y="10,500"/>
+    <rect x="422.1" y="36" width="245.84" height="17" fill="#82ca9d" fill-opacity="0.35" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="Gold" data-y="6,900"/>
+    <rect x="667.93" y="36" width="32.07" height="17" fill="#ffc658" fill-opacity="0.35" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="Green" data-y="900"/>
+    <rect x="48" y="53" width="374.1" height="150.8" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="Five Points" data-y="4,200"/>
+    <rect x="48" y="203.8" width="374.1" height="111.3" fill="#82ca9d" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="Midtown" data-y="3,100"/>
+    <rect x="48" y="315.1" width="374.1" height="64.63" fill="#ffc658" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="Arts Center" data-y="1,800"/>
+    <rect x="48" y="379.73" width="374.1" height="50.27" fill="#ff7300" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="North Springs" data-y="1,400"/>
+    <rect x="422.1" y="53" width="245.84" height="196.7" fill="#8884d8" fill-opacity="0.72" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="Airport" data-y="3,600"/>
+    <rect x="422.1" y="249.7" width="245.84" height="120.2" fill="#82ca9d" fill-opacity="0.72" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="Peachtree Center" data-y="2,200"/>
+    <rect x="422.1" y="369.9" width="245.84" height="60.1" fill="#ffc658" fill-opacity="0.72" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="College Park" data-y="1,100"/>
+    <rect x="667.93" y="53" width="32.07" height="377" fill="#8884d8" fill-opacity="0.72" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="Lindbergh" data-y="900"/>
+  </g>
+  <g fill="#374151" font-size="11" font-weight="500">
+    <text x="52" y="66.35" text-anchor="start" data-label-text="Five Points">Five Points</text>
+    <text x="52" y="217.15" text-anchor="start" data-label-text="Midtown">Midtown</text>
+    <text x="52" y="328.45" text-anchor="start" data-label-text="Arts Center">Arts Center</text>
+    <text x="52" y="393.08" text-anchor="start" data-label-text="North Springs">North Springs</text>
+    <text x="426.1" y="66.35" text-anchor="start" data-label-text="Airport">Airport</text>
+    <text x="426.1" y="263.05" text-anchor="start" data-label-text="Peachtree Center">Peachtree Center</text>
+    <text x="426.1" y="383.25" text-anchor="start" data-label-text="College Park">College Park</text>
+    <text x="671.93" y="66.35" text-anchor="start" data-label-text="Lindbergh">Li…</text>
+  </g>
+</svg>

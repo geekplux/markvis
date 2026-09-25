@@ -17,7 +17,7 @@ Order:
 
 Fields:
 
-- `type` required. `bar` `line` `area` `scatter` `pie` `hist` `heatmap` `funnel` `waterfall` `radar` `gauge`. Do not invent `donut`, `sankey`, `treemap`, or `stacked-bar`.
+- `type` required. `bar` `line` `area` `scatter` `pie` `hist` `heatmap` `funnel` `waterfall` `radar` `gauge` `sankey` `treemap`. Do not invent `donut`, `sunburst`, `chord`, or `stacked-bar`.
 - `title` optional. A conclusion, not a slug.
 - `theme` optional. Omit means `folio`. Allowed: `folio` `highcharts` `shadcn` `docs` `ant` `recharts`. Any other value is `E_UNKNOWN_THEME`: show the table, not a silent swap.
 - `palette` optional. Colors only. Allowed: `ink` `porcelain` `warm` `cool` `vivid`. Omit means the theme’s default colors. Any other value is `E_UNKNOWN_PALETTE`: show the table, not a silent swap. Never merge palette into the theme id.
@@ -50,6 +50,8 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 - `waterfall` — x step, y signed delta. Keep order. Running baseline. `series` ignored.
 - `radar` — x spoke, y >= 0. Optional `series`. Scale max is max(y), or 1 if all 0. Negatives → `E_NEGATIVE_VALUE`.
 - `gauge` — first row. Optional `min`/`max` (see Encodings). `series` ignored.
+- `sankey` — x source, series target (required), y flow >= 0. One row = one link. Self-link → `E_UNKNOWN_FIELD`. Negatives → `E_NEGATIVE_VALUE`.
+- `treemap` — x label, y >= 0, optional series parent (two levels only). Negatives → `E_NEGATIVE_VALUE`. `y<=0` omitted from paint.
 
 On any error: keep the rows, show the table, add one line with the error code. Never drop the numbers.
 
@@ -128,4 +130,4 @@ Bike,11
 Other,8
 ```
 
-Emit the fence. Do not emit a PNG. Do not invent `donut`, `sankey`, `treemap`, or `stacked-bar` as type ids.
+Emit the fence. Do not emit a PNG. Do not invent `donut`, `sunburst`, `chord`, or `stacked-bar` as type ids.

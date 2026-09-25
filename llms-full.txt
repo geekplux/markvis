@@ -27,6 +27,8 @@ Language tags `chart`, `markvis`, `vis` share one parser.
 | waterfall | x step, y signed delta; running baseline; series ignored |
 | radar | x spoke, y ≥ 0; optional series; scale max = max(y) or 1 |
 | gauge | first row; optional min/max; series ignored |
+| sankey | x source, series target (required), y flow ≥ 0; one row = one link |
+| treemap | x label, y ≥ 0; optional series parent; two levels max |
 
 ## Encodings
 
@@ -37,7 +39,7 @@ Language tags `chart`, `markvis`, `vis` share one parser.
 | min | gauge | number | 0 |
 | max | gauge | number | max(y, 1) |
 
-Wrong type / bad value → E_UNKNOWN_FIELD + table. Do not invent donut, stacked-bar, sankey, or treemap type ids. Gauge with both min and max set requires min < max.
+Wrong type / bad value → E_UNKNOWN_FIELD + table. Do not invent donut, stacked-bar, sunburst, or chord type ids. Gauge with both min and max set requires min < max.
 
 ## Errors (stable codes)
 
@@ -54,4 +56,4 @@ See examples/valid/01–08 (canonical) and SPEC.md. Natural-language → fence: 
 
 ## Product boundaries
 
-No chart runtimes in core. No JSON-as-default data. Do not invent donut / sankey / treemap / stacked-bar as type ids (use encodings or the Wave 2 packs). Structure diagrams stay outside this language. Full type catalog grows as packs; see docs/TYPES.md.
+No chart runtimes in core. No JSON-as-default data. Do not invent donut / sunburst / chord / stacked-bar as type ids (use encodings or the Wave 2–3 packs). Structure diagrams stay outside this language. Full type catalog grows as packs; see docs/TYPES.md.

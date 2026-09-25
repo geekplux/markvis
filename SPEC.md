@@ -61,7 +61,7 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | Field | Required | Default | Notes |
 | --- | --- | --- | --- |
 | `markvis` | no | `2` | Language version. |
-| `type` | yes | — | `bar` \| `line` \| `area` \| `scatter` \| `pie` \| `hist` \| `heatmap` \| `funnel` \| `waterfall` \| `radar` \| `gauge`. |
+| `type` | yes | — | `bar` \| `line` \| `area` \| `scatter` \| `pie` \| `hist` \| `heatmap` \| `funnel` \| `waterfall` \| `radar` \| `gauge` \| `sankey` \| `treemap`. |
 | `title` | no | derived | From filename or first column / `y` if omitted. |
 | `theme` | no | `folio` | Grammar only: `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts`. |
 | `palette` | no | theme default | Colors only: `ink` \| `porcelain` \| `warm` \| `cool` \| `vivid`. Omit → theme pack colors. |
@@ -94,8 +94,10 @@ CORE fence keys: `markvis` `type` `title` `theme` `palette` `unit` `x` `y` `seri
 | `waterfall` | step | signed delta | ignored | Keep order. Paint running baseline. |
 | `radar` | spoke | number ≥ 0 | optional | Keep order. Scale max = max(y) (or 1 if all 0). Negatives → `E_NEGATIVE_VALUE`. |
 | `gauge` | label | number | ignored | First data row. Optional `min`/`max`. |
+| `sankey` | category (source) | number (flow ≥ 0) | required (target) | One row = one link. Keep order. Self-link → `E_UNKNOWN_FIELD`. Cycles allowed. |
+| `treemap` | category (label) | number (≥ 0) | optional (parent) | Flat or two levels only. Rows with y≤0 omitted from paint. |
 
-Zeros are legal. Negatives are legal on bar/line/area/scatter/waterfall; illegal on `pie` (`E_PIE_NEGATIVE`) and funnel/radar (`E_NEGATIVE_VALUE`).
+Zeros are legal. Negatives are legal on bar/line/area/scatter/waterfall; illegal on `pie` (`E_PIE_NEGATIVE`) and funnel/radar/sankey/treemap (`E_NEGATIVE_VALUE`).
 
 
 ## Encodings (Wave 1)
@@ -273,7 +275,7 @@ y: n
 | --- | --- |
 | Mermaid `pie` / `xychart` for tabular numbers | Use markvis. Mermaid is structure. |
 | JSON as the data body | CSV or GFM table. |
-| Invented type (`donut`, `stacked-bar`, `sankey`, `treemap`) | Use a real type id. Donut = `pie` + `innerRadius`. Stacked = `layout`. |
+| Invented type (`donut`, `stacked-bar`, `sunburst`, `chord`) | Use a real type id. Donut = `pie` + `innerRadius`. Stacked = `layout`. |
 | Assuming omit `innerRadius` is always solid | Omit → theme `PIE_INNER_RATIO`; use `0` to force solid. |
 | Sorting categories for looks | Keep input order. |
 | Renormalizing pie to 100 | Leave values as-is. |
