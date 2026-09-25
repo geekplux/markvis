@@ -5,6 +5,11 @@ export declare const CHART_TYPES: readonly [
   "scatter",
   "pie",
   "hist",
+  "heatmap",
+  "funnel",
+  "waterfall",
+  "radar",
+  "gauge",
 ];
 export type ChartType = (typeof CHART_TYPES)[number];
 
@@ -42,6 +47,10 @@ export type ChartIR = {
   x: string;
   y?: string;
   series?: string;
+  layout?: "grouped" | "stacked" | "percent";
+  innerRadius?: number;
+  min?: number;
+  max?: number;
   table: Table;
 };
 
