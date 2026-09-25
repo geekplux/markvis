@@ -1,10 +1,10 @@
 # Wave 2 type packs
 
-> GeekPlux review. Do not npm publish in this PR.
+> GeekPlux review — [#20](https://github.com/geekplux/markvis/pull/20). Do not npm publish in this PR.
 
 ## Summary
 
-Additive **markvis 2.x** on `feat/wave2-types` tip **`d5204b9`**: five new type packs — `heatmap` `funnel` `waterfall` `radar` `gauge` — same registry path as the six. Unknown type still → `E_UNKNOWN_TYPE` + table. No chart-library runtimes.
+Additive **markvis 2.x** on `feat/wave2-types` tip **`7625e8e`**: five new type packs — `heatmap` `funnel` `waterfall` `radar` `gauge` — same registry path as the six. Unknown type still → `E_UNKNOWN_TYPE` + table. No chart-library runtimes. Gauge paint polished after review (upper arc + hero number; no needle).
 
 ## Why
 
@@ -33,13 +33,14 @@ Deps stay `@markvis/ir` ← `@markvis/types` ← `@markvis/render-svg`. Chrome s
 | `radar` | `[]` | `x` spoke, `y` number ≥ 0, `series` optional | Keep order; scale max = max(y) (or 1 if all 0); neg → `E_NEGATIVE_VALUE` |
 | `gauge` | `["min","max"]` | `x` label, `y` number; first data row | omit `min`→0, omit `max`→max(y,1); both set ⇒ `min < max` or `E_UNKNOWN_FIELD`; `series` ignored |
 
-MVP geometry. Visual polish (heatmap scale, gauge arc) only if review fails the look.
+**Gauge paint (post-review):** upper semicircle KPI meter; track = theme ink @ `STRUCTURE_OPACITY`; value arc = palette S1; hero number 28/600; no needle/hub. Heatmap / funnel / waterfall / radar unchanged.
 
 ## Explicitly out
 
 - sankey / treemap (Wave 3)
 - heatmap color-domain extras
 - waterfall total-row markers
+- Gauge color zones / arc ticks / dual needles / new fence keys
 - 3D / WebGL / maps / tiles
 - Animation-as-source
 - Runtime chart-library deps
@@ -58,19 +59,20 @@ MVP geometry. Visual polish (heatmap scale, gauge arc) only if review fails the 
 - [x] ≥1 valid + ≥1 invalid under each pack
 - [x] `examples/valid` + `out` + gallery bake (`59`–`63`)
 - [x] Invalid: missing heatmap `series`, funnel/radar neg, bad gauge `min`/`max`, `min` on bar
-- [ ] `pnpm test` + `pnpm markvis check` valid/invalid — Verifier gate
+- [x] Gauge polish @ `7625e8e` — `59`–`62` byte-stable; only `63` + gallery re-baked; Coder `pnpm test` 650 / 2 skipped
+- [ ] Verifier re-gate gauge-only on tip `7625e8e`
 - [x] CHANGELOG Unreleased, SPEC / TYPES / llms catalogs updated
-- [x] PR description complete
+- [x] PR description tip sync
 
 ## Screenshots / examples
 
-Baked on tip `d5204b9` (paths under `examples/out/`):
+Pack bake `d5204b9`; gauge re-bake on tip `7625e8e` (paths under `examples/out/`):
 
 - [x] heatmap — `59-heatmap-atl`
 - [x] funnel — `60-funnel-signup`
 - [x] waterfall — `61-waterfall-pnl`
 - [x] radar — `62-radar-skills`
-- [x] gauge — `63-gauge-uptime`
+- [x] gauge — `63-gauge-uptime` (upper arc + hero; no needle)
 - [x] invalid — `examples/invalid/26`–`30`
 
 ## llms.txt vs llms-full.txt
@@ -82,10 +84,10 @@ Baked on tip `d5204b9` (paths under `examples/out/`):
 ## Follow-up (Wave 3)
 
 - Packs: `sankey` / `treemap` after table shapes are locked
-- Optional: heatmap color-domain extras, waterfall total markers, Designer pass on gauge/heatmap if MVP look fails
+- Optional: heatmap color-domain extras, waterfall total markers
 
 ## Branch / release discipline
 
-- Branch: `feat/wave2-types` → `master` (separate PR from [#19](https://github.com/geekplux/markvis/pull/19))
-- Tip: `d5204b9` (bake + gallery + schema)
+- Branch: `feat/wave2-types` → `master` via [#20](https://github.com/geekplux/markvis/pull/20)
+- Tip: `7625e8e` (gauge polish); pack bake `d5204b9`
 - No drive-by master SHAs; no force-push master; no npm publish
