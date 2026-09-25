@@ -1,0 +1,35 @@
+{
+  "name": "@markvis/types",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "markvis chart type packs + paint (Wave 1)",
+  "exports": {
+    ".": "./registry.ts",
+    "./bar": "./bar/type.ts",
+    "./line": "./line/type.ts",
+    "./area": "./area/type.ts",
+    "./scatter": "./scatter/type.ts",
+    "./pie": "./pie/type.ts",
+    "./hist": "./hist/type.ts",
+    "./fence-keys": "./fence-keys.ts",
+    "./_paint/cartesian": "./_paint/cartesian.ts",
+    "./_paint/pie": "./_paint/pie.ts",
+    "./_paint/hist": "./_paint/hist.ts",
+    "./_paint/layout": "./_paint/layout.ts",
+    "./_paint/scale": "./_paint/scale.ts",
+    "./_paint/data": "./_paint/data.ts",
+    "./_paint/tokens": "./_paint/tokens.ts",
+    "./_paint/xml": "./_paint/xml.ts",
+    "./_paint/palette": "./_paint/palette.ts",
+    "./_paint/theme": "./_paint/theme.ts",
+    "./_paint/text": "./_paint/text.ts",
+    "./_paint/figure": "./_paint/figure.ts"
+  },
+  "main": "./registry.ts",
+  "types": "./registry.ts",
+  "dependencies": {
+    "@markvis/ir": "workspace:*",
+    "@markvis/themes": "workspace:*"
+  }
+}

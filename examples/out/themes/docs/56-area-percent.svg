@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: Queue A share stays ahead of queue B, 8 rows, series queue" aria-labelledby="mv-e22563a32fc41eb7-title" aria-describedby="mv-e22563a32fc41eb7-desc" data-markvis="2" data-chart-type="area" data-id="mv-e22563a32fc41eb7" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-e22563a32fc41eb7-title">Queue A share stays ahead of queue B</title>
+  <desc id="mv-e22563a32fc41eb7-desc">area chart. Queue A share stays ahead of queue B. x=minute. y=depth. series=queue. 8 rows.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Queue A share stays ahead of queue B</text>
+  <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
+  <g font-size="11" font-weight="500" fill="#18181B">
+    <rect x="40" y="455" width="10" height="10" fill="#475569" rx="1"/>
+    <text x="54" y="464" data-legend="A">A</text>
+    <rect x="76.82" y="455" width="10" height="10" fill="#64748B" rx="1"/>
+    <text x="90.82" y="464" data-legend="B">B</text>
+  </g>
+  <g fill="none" stroke="#18181B" stroke-opacity="0.06" stroke-width="1">
+    <line x1="40" x2="704" y1="233" y2="233"/>
+    <line x1="40" x2="704" y1="32" y2="32"/>
+  </g>
+  <path d="M40 434 L704 434" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <g fill="#64748B" font-size="10" font-weight="400">
+    <text x="32" y="434" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="32" y="233" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="32" y="32" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="48" y="444" text-anchor="middle" font-size="10" data-full-label="-1">-1</text>
+    <text x="177.6" y="444" text-anchor="middle" font-size="10" data-full-label="0">0</text>
+    <text x="307.2" y="444" text-anchor="middle" font-size="10" data-full-label="1">1</text>
+    <text x="436.8" y="444" text-anchor="middle" font-size="10" data-full-label="2">2</text>
+    <text x="566.4" y="444" text-anchor="middle" font-size="10" data-full-label="3">3</text>
+    <text x="696" y="444" text-anchor="middle" font-size="10" data-full-label="4">4</text>
+  </g>
+  <g fill="none">
+    <path d="M123 146.86 L289 152.6 L455 192.8 L621 141.64 L621 434 L455 434 L289 434 L123 434 Z" fill="#475569" fill-opacity="0.12" stroke="none" data-series="A" data-layout="percent"/>
+    <path d="M123 146.86 L289 152.6 L455 192.8 L621 141.64" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="A" data-layout="percent"/>
+    <circle cx="123" cy="146.86" r="2" fill="#475569" stroke="none" data-series="A"/>
+    <circle cx="289" cy="152.6" r="2" fill="#475569" stroke="none" data-series="A"/>
+    <circle cx="455" cy="192.8" r="2" fill="#475569" stroke="none" data-series="A"/>
+    <circle cx="621" cy="141.64" r="2" fill="#475569" stroke="none" data-series="A"/>
+    <path d="M123 32 L289 32 L455 32 L621 32 L621 141.64 L455 192.8 L289 152.6 L123 146.86 Z" fill="#64748B" fill-opacity="0.12" stroke="none" data-series="B" data-layout="percent"/>
+    <path d="M123 32 L289 32 L455 32 L621 32" fill="none" stroke="#64748B" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="B" data-layout="percent"/>
+    <circle cx="123" cy="32" r="2" fill="#64748B" stroke="none" data-series="B"/>
+    <circle cx="289" cy="32" r="2" fill="#64748B" stroke="none" data-series="B"/>
+    <circle cx="455" cy="32" r="2" fill="#64748B" stroke="none" data-series="B"/>
+    <circle cx="621" cy="32" r="2" fill="#64748B" stroke="none" data-series="B"/>
+  </g>
+</svg>

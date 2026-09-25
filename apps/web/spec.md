@@ -6,9 +6,9 @@ sidebar: true
 
 # Spec
 
-Tiny versioned chart language for Markdown. Source is tabular data. Path: fence | GFM table | HTML comment → parser → Chart IR → deterministic SVG (table always kept). Tags `chart`, `markvis`, `vis` share one parser. No JSON-as-default. No JS in the fence.
+Tiny versioned chart language for Markdown. Source is tabular data. Path: fence | GFM table | HTML comment → parser → Chart IR → type pack paint → deterministic SVG (table always kept). Tags `chart`, `markvis`, `vis` share one parser. No JSON-as-default. No JS in the fence.
 
-Aligned with repo root `SPEC.md` on branch `v2`. Agents that need a short brief should fetch [/llms.txt](/llms.txt).
+Aligned with repo root `SPEC.md`. Agents that need a short brief should fetch [/llms.txt](/llms.txt).
 
 ## Grammar
 
@@ -48,7 +48,7 @@ Progressive form — comment immediately followed by a GFM table:
 | Mar | 150 |
 ```
 
-Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`. Same meaning as fence headers.
+Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`, plus legal encodings (`layout`, `innerRadius`). Same meaning as fence headers.
 
 ## Fields
 
@@ -63,20 +63,31 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | `x` | typed | first category / numeric col | Independent axis or labels. |
 | `y` | typed | first numeric col | Measure. |
 | `series` | no | — | Optional column that splits series. |
+| `layout` | no | `grouped` when omitted | On `bar` / `line` / `area` only: `grouped` \| `stacked` \| `percent`. |
+| `innerRadius` | no | theme `PIE_INNER_RATIO` | On `pie` only. `[0, 1]`. Omit → theme hole; `0` = solid. |
 | data | yes | — | CSV or GFM after a blank line. |
 
-`x` / `y` / `series` must name real header columns.
+`x` / `y` / `series` must name real header columns. CORE keys stay separate from type-local encodings. Undeclared or illegal encodings → `E_UNKNOWN_FIELD` + table.
 
 ## Types
 
 | Type | x | y | series | Rules |
 | --- | --- | --- | --- | --- |
-| `bar` | category | number | optional → grouped | Keep input row order. Never sort x. |
-| `line` | ordered category or number | number | optional → multi-line | Keep input row order. |
-| `area` | same as line | number | optional | Fill under line(s). |
+| `bar` | category | number | optional; `layout` | Keep input row order. Never sort x. |
+| `line` | ordered category or number | number | optional; `layout` | Keep input row order. |
+| `area` | same as line | number | optional; `layout` | Fill under line(s). |
 | `scatter` | number | number | optional | One mark per row. |
-| `pie` | label | number ≥ 0 | ignored | Do **not** normalize to 100. |
+| `pie` | label | number ≥ 0 | ignored | Do **not** normalize to 100. Optional `innerRadius`. |
 | `hist` | number | optional weight | ignored | Renderer bins; table keeps raw rows. |
+
+## Encodings
+
+| Encoding | Legal on | Values | Omit |
+| --- | --- | --- | --- |
+| `layout` | `bar` `line` `area` | `grouped` \| `stacked` \| `percent` | `grouped` |
+| `innerRadius` | `pie` | `[0, 1]` | theme `PIE_INNER_RATIO` (explicit `0` = solid) |
+
+Do not invent `donut` or `stacked-bar` type ids.
 
 ## Fallback
 
@@ -96,17 +107,11 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | `E_EMPTY_DATA` | Header only, or zero data rows. |
 | `E_EXTRA_COLUMN` | Row width ≠ header width. |
 | `E_DUP_COLUMN` | Duplicate header names. |
-| `E_UNKNOWN_FIELD` | `x` / `y` / `series` name a missing column. |
+| `E_UNKNOWN_FIELD` | Missing column name; undeclared header; illegal encoding. |
 | `E_PIE_NEGATIVE` | Pie value < 0. |
 | `E_YAML_TABLE_CONFLICT` | Header fields disagree with progressive table mapping. |
 | `E_EMPTY_FENCE` | Fence body empty. |
-| `E_UNKNOWN_THEME` | `theme` not in the allowed set. |
-| `E_UNKNOWN_PALETTE` | `palette` not in `ink` \| `porcelain` \| `warm` \| `cool` \| `vivid`. |
+| `E_UNKNOWN_THEME` | `theme` not in the allow-list. |
+| `E_UNKNOWN_PALETTE` | `palette` not in the allow-list. |
 
-## Themes
-
-Optional `theme:` selects a named grammar pack. See [Themes](/themes). Unknown → `E_UNKNOWN_THEME` with table fallback.
-
-Optional `palette:` selects colors only (`ink` · `porcelain` · `warm` · `cool` · `vivid`). Omit → theme pack default colors. Unknown → `E_UNKNOWN_PALETTE` with table fallback. Never merge palette into the theme id.
-
-Pipeline diagrams live in repo `docs/architecture.md` (architecture, parse/render workflow, package structure). This page stays prose so public sources stay free of competitor diagram fences.
+`theme` is grammar. `palette` is colors only. Never merge them. Contribute a type: repo `docs/TYPES.md`.

@@ -5,22 +5,32 @@ Quantitative Markdown charts. Path: fence | GFM | HTML comment → parser → Ch
 ## Grammar
 
 1. Optional `markvis: 2`
-2. Headers: `type`, `title`, `theme`, `palette`, `unit`, `x`, `y`, `series`
-3. Blank line
-4. CSV or GFM table with a header row
+2. CORE headers: `type`, `title`, `theme`, `palette`, `unit`, `x`, `y`, `series`
+3. Type-local encodings when legal: `layout`, `innerRadius`
+4. Blank line
+5. CSV or GFM table with a header row
 
 Language tags `chart`, `markvis`, `vis` share one parser.
 
-## Types
+## Types (CORE)
 
 | type | notes |
 | --- | --- |
-| bar | keep row order |
-| line | multi-series via `series`; keep row order |
-| area | same order rule as line |
+| bar | keep row order; optional `layout` |
+| line | multi-series via `series`; keep row order; optional `layout` |
+| area | same order rule as line; optional `layout` |
 | scatter | numeric x and y |
-| pie | values ≥ 0; do not normalize to 100 |
+| pie | values ≥ 0; do not normalize to 100; optional `innerRadius` |
 | hist | continuous x; table keeps raw rows |
+
+## Encodings
+
+| field | legal on | values | omit |
+| --- | --- | --- | --- |
+| layout | bar line area | grouped \| stacked \| percent | grouped |
+| innerRadius | pie | [0, 1] | theme PIE_INNER_RATIO (explicit 0 = solid) |
+
+Wrong type / bad value → E_UNKNOWN_FIELD + table. Do not invent donut or stacked-bar type ids.
 
 ## Errors (stable codes)
 
@@ -37,4 +47,4 @@ See examples/valid/01–08 (canonical) and SPEC.md. Natural-language → fence: 
 
 ## Product boundaries
 
-No d3 in core. No JSON-as-default data. No 7th type. Structure diagrams stay outside this language.
+No chart runtimes in core. No JSON-as-default data. No 7th type id in Wave 1 (use encodings). Structure diagrams stay outside this language. Full type catalog grows as packs; see docs/TYPES.md.

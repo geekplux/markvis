@@ -9,6 +9,7 @@ import {
   type ChartTheme,
   type ChartType,
 } from "@markvis/ir";
+import { allowedFenceKeys } from "@markvis/types";
 import { extractCharts, type ChartForm } from "./extract.js";
 import {
   columnIsNumeric,
@@ -275,6 +276,8 @@ function buildIR(fields: {
   x: string;
   y?: string | undefined;
   series?: string | undefined;
+  layout?: "grouped" | "stacked" | "percent" | undefined;
+  innerRadius?: number | undefined;
   table: LooseTable;
 }): ChartIR {
   return ChartIRSchema.parse({
@@ -289,6 +292,10 @@ function buildIR(fields: {
     ...(fields.y ? { y: fields.y } : {}),
     ...(fields.series && fields.type !== "pie" && fields.type !== "hist"
       ? { series: fields.series }
+      : {}),
+    ...(fields.layout ? { layout: fields.layout } : {}),
+    ...(fields.innerRadius !== undefined
+      ? { innerRadius: fields.innerRadius }
       : {}),
   });
 }
@@ -391,6 +398,17 @@ function parseBody(
   }
   const type = typeRaw as ChartType;
 
+  const allowedKeys = allowedFenceKeys(type);
+  const unknownKeys = Object.keys(headers).filter((key) => !allowedKeys.has(key));
+  if (unknownKeys.length > 0) {
+    return fail(
+      "E_UNKNOWN_FIELD",
+      `undeclared fence field: ${unknownKeys[0]}`,
+      parsed,
+      raw,
+    );
+  }
+
   const themeRaw = headers["theme"]?.trim() ?? "";
   let theme: ChartTheme = "folio";
   if (themeRaw !== "") {
@@ -475,6 +493,35 @@ function parseBody(
     }
   }
 
+  let layout: "grouped" | "stacked" | "percent" | undefined;
+  const layoutRaw = headers["layout"]?.trim();
+  if (layoutRaw !== undefined && layoutRaw !== "") {
+    if (layoutRaw !== "grouped" && layoutRaw !== "stacked" && layoutRaw !== "percent") {
+      return fail(
+        "E_UNKNOWN_FIELD",
+        `layout must be grouped|stacked|percent (got ${layoutRaw})`,
+        parsed,
+        raw,
+      );
+    }
+    layout = layoutRaw;
+  }
+
+  let innerRadius: number | undefined;
+  const innerRaw = headers["innerRadius"]?.trim();
+  if (innerRaw !== undefined && innerRaw !== "") {
+    const n = Number(innerRaw);
+    if (!Number.isFinite(n) || n < 0 || n > 1) {
+      return fail(
+        "E_UNKNOWN_FIELD",
+        `innerRadius must be a number in [0, 1] (got ${innerRaw})`,
+        parsed,
+        raw,
+      );
+    }
+    innerRadius = n;
+  }
+
   const title =
     headers["title"]?.trim() ||
     deriveTitle({
@@ -493,6 +540,8 @@ function parseBody(
     x,
     y,
     series,
+    layout,
+    innerRadius,
     table: parsed,
   });
   return { ok: true, chart };

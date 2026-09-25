@@ -25,19 +25,24 @@ Fields:
 - `x` `y` `series` name real columns. `series` splits series.
 - Data required. Not JSON.
 
+Encodings (optional, type-local — not a seventh type):
+
+- On `bar` `line` or `area` only: `layout: grouped|stacked|percent`. Omit means grouped (today's look). Wrong type or bad value → table + `E_UNKNOWN_FIELD`.
+- On `pie` only: `innerRadius` as a number in `[0, 1]`. Omit means the theme's default hole (`PIE_INNER_RATIO`). Explicit `0` forces a solid pie. Do not invent `donut`.
+
 Also valid: an HTML comment immediately followed by a GFM table.
 
 `<!-- chart: bar x=month y=tickets title="Mar led Midtown box office at 9.2k tickets" -->`
 
-Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`. Same meaning as fence headers.
+Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`, and legal encodings (`layout`, `innerRadius`). Same meaning as fence headers.
 
 ## Types
 
-- `bar` — category x, number y. Keep row order. Do not sort.
-- `line` — ordered x, number y. Optional `series`. Keep row order.
-- `area` — same as line, filled.
+- `bar` — category x, number y. Keep row order. Do not sort. Optional `layout`.
+- `line` — ordered x, number y. Optional `series`. Keep row order. Optional `layout`.
+- `area` — same as line, filled. Optional `layout`.
 - `scatter` — number x, number y. One mark per row.
-- `pie` — label x, number y >= 0. Do not force the slices to 100.
+- `pie` — label x, number y >= 0. Do not force the slices to 100. Optional `innerRadius` (see Encodings).
 - `hist` — number x. Table keeps the raw rows.
 
 On any error: keep the rows, show the table, add one line with the error code. Never drop the numbers.

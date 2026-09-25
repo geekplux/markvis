@@ -1,9 +1,8 @@
 import type { ChartIR } from "@markvis/ir";
-import { renderCartesian } from "./cartesian.js";
-import { renderPie } from "./pie.js";
+import { resolveTypePack } from "@markvis/types";
+import { folio } from "@markvis/themes";
 import { themeTokens } from "./theme.js";
 import { applyThemeTokens } from "./tokens.js";
-import { folio } from "@markvis/themes";
 import { chartId } from "./chart-id.js";
 import { attrs, escapeXml } from "./xml.js";
 
@@ -52,8 +51,7 @@ export function renderSvg(chart: ChartIR): string {
   applyThemeTokens(t);
   try {
     const id = chartId(chart);
-    const painted =
-      chart.type === "pie" ? renderPie(chart, id) : renderCartesian(chart, id);
+    const painted = resolveTypePack(chart.type).paint(chart, id);
     const open = `<svg ${attrs({
       xmlns: "http://www.w3.org/2000/svg",
       width: t.SVG_WIDTH,

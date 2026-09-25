@@ -13,6 +13,12 @@ export default defineConfig({
       "@markvis/themes": fileURLToPath(
         new URL("./packages/themes/registry.ts", import.meta.url),
       ),
+      "@markvis/types": fileURLToPath(
+        new URL("./packages/types/registry.ts", import.meta.url),
+      ),
+      "@markvis/types/fence-keys": fileURLToPath(
+        new URL("./packages/types/fence-keys.ts", import.meta.url),
+      ),
       "@markvis/render-svg": fileURLToPath(
         new URL("./packages/render-svg/src/index.ts", import.meta.url),
       ),
@@ -39,6 +45,7 @@ export default defineConfig({
       "packages/parser/src/**/*.test.ts",
       "packages/parser/test/**/*.test.ts",
       "packages/themes/**/*.test.ts",
+      "packages/types/**/*.test.ts",
       "packages/render-svg/src/**/*.test.ts",
       "packages/render-svg/test/**/*.test.ts",
       "packages/cli/src/**/*.test.ts",

@@ -51,12 +51,12 @@ function expectedError(source: string, file: string): ErrorCode {
 }
 
 describe("fixture inventory", () => {
-  it("covers 52 valid fixtures", () => {
-    expect(validFiles).toHaveLength(52);
+  it("covers 58 valid fixtures", () => {
+    expect(validFiles).toHaveLength(58);
   });
 
-  it("covers 20 invalid fixtures", () => {
-    expect(invalidFiles).toHaveLength(20);
+  it("covers 25 invalid fixtures", () => {
+    expect(invalidFiles).toHaveLength(25);
   });
 });
 
@@ -308,6 +308,29 @@ describe("language rules", () => {
     expect(result.table.rows).toEqual([
       ["Jan", "120"],
       ["Feb", "180"],
+    ]);
+  });
+
+
+  it("rejects undeclared fence header with E_UNKNOWN_FIELD and table fallback", () => {
+    const source = readFileSync(
+      join(invalidDir, "21-unknown-extra-field.md"),
+      "utf8",
+    );
+    const result = parseMarkdown(source, {
+      filename: "21-unknown-extra-field.md",
+    });
+    expect(result.ok).toBe(false);
+    if (result.ok) {
+      return;
+    }
+    expect(result.error.code).toBe("E_UNKNOWN_FIELD");
+    expect(result.error.message).toContain("E_UNKNOWN_FIELD");
+    expect(result.error.message.includes("\n")).toBe(false);
+    expect(result.table.columns).toEqual(["region", "share"]);
+    expect(result.table.rows).toEqual([
+      ["East", "40"],
+      ["West", "35"],
     ]);
   });
 

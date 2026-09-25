@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Billing still leads support tickets at 40, 4 slices" aria-labelledby="mv-398374c454625ec9-title" aria-describedby="mv-398374c454625ec9-desc" data-markvis="2" data-chart-type="pie" data-id="mv-398374c454625ec9" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-398374c454625ec9-title">Billing still leads support tickets at 40</title>
+  <desc id="mv-398374c454625ec9-desc">pie chart. Billing still leads support tickets at 40. x=topic. y=tickets. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Billing still leads support tickets at 40</text>
+  <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
+  <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0.5">
+    <path d="M372 101.12 A146.88 146.88 0 0 1 458.33 366.83 L415.17 307.41 A73.44 73.44 0 0 0 372 174.56 Z" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Billing" data-raw-value="40" data-donut="1"/>
+    <path d="M458.33 366.83 A146.88 146.88 0 0 1 253.17 334.33 L312.59 291.17 A73.44 73.44 0 0 0 415.17 307.41 Z" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Access" data-raw-value="25" data-donut="1"/>
+    <path d="M253.17 334.33 A146.88 146.88 0 0 1 253.17 161.67 L312.59 204.83 A73.44 73.44 0 0 0 312.59 291.17 Z" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="How-to" data-raw-value="20" data-donut="1"/>
+    <path d="M253.17 161.67 A146.88 146.88 0 0 1 372 101.12 L372 174.56 A73.44 73.44 0 0 0 312.59 204.83 Z" fill="#334155" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Other" data-raw-value="15" data-donut="1"/>
+  </g>
+  <g fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1">
+    <polyline points="511.69,202.61 523.1,198.9 531.1,198.9"/>
+    <polyline points="349.02,393.07 347.15,404.92 339.15,404.92"/>
+    <polyline points="225.12,248 213.12,248 205.12,248"/>
+    <polyline points="305.32,117.13 299.87,106.44 291.87,106.44"/>
+  </g>
+  <g font-size="10" font-weight="500" fill="#18181B">
+    <text x="543.1" y="198.9" text-anchor="start" dominant-baseline="middle" data-label="Billing">Billing · 40</text>
+    <text x="327.15" y="404.92" text-anchor="end" dominant-baseline="middle" data-label="Access">Access · 25</text>
+    <text x="193.12" y="248" text-anchor="end" dominant-baseline="middle" data-label="How-to">How-to · 20</text>
+    <text x="279.87" y="106.44" text-anchor="end" dominant-baseline="middle" data-label="Other">Other · 15</text>
+  </g>
+</svg>

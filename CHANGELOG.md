@@ -1,5 +1,24 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- Type packs under `packages/types/<id>/` with a registry (same contribution shape as themes). Paint lives with the pack; `@markvis/render-svg` keeps SVG chrome.
+- Fence encodings: `layout: grouped|stacked|percent` on `bar` / `line` / `area` (omit = grouped). `innerRadius` on `pie` in `[0, 1]` (omit = theme `PIE_INNER_RATIO`; explicit `0` = solid).
+- `docs/TYPES.md` — IN/OUT, encodings vs new type ids, how to contribute a type.
+- Agent docs: short encodings note in `llms.txt`; fuller catalog notes in `llms-full.txt`.
+
+### Changed
+
+- Undeclared fence headers and illegal encodings fail with `E_UNKNOWN_FIELD` + table (no silent ignore).
+- Old six fences without encodings stay valid; omit-encoding snapshots stay byte-stable.
+
+### Fixed
+
+- (none user-facing in this cut)
+
+
 ## 2.0.2
 
 README charts: same files as `examples/out/`, hosted at markvis.js.org so GitHub and npm both show them. The `v2` branch URLs 404 after the merge.

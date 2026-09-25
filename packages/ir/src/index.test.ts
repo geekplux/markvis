@@ -209,4 +209,72 @@ describe("@markvis/ir", () => {
     expect(result.success).toBe(false);
   });
 
+
+  it("accepts layout on bar/line/area and rejects on pie", () => {
+    for (const type of ["bar", "line", "area"] as const) {
+      const ir = ChartIRSchema.parse({
+        markvis: 2,
+        type,
+        title: "L",
+        x: "month",
+        y: "revenue",
+        layout: "stacked",
+        table: barTable,
+      });
+      expect(ir.layout).toBe("stacked");
+    }
+    const bad = ChartIRSchema.safeParse({
+      markvis: 2,
+      type: "pie",
+      title: "P",
+      x: "name",
+      y: "value",
+      layout: "stacked",
+      table: {
+        columns: ["name", "value"],
+        rows: [["A", "1"], ["B", "2"]],
+      },
+    });
+    expect(bad.success).toBe(false);
+  });
+
+  it("accepts innerRadius on pie and rejects on bar", () => {
+    const ir = ChartIRSchema.parse({
+      markvis: 2,
+      type: "pie",
+      title: "P",
+      x: "name",
+      y: "value",
+      innerRadius: 0.4,
+      table: {
+        columns: ["name", "value"],
+        rows: [["A", "1"], ["B", "2"]],
+      },
+    });
+    expect(ir.innerRadius).toBe(0.4);
+    const bad = ChartIRSchema.safeParse({
+      markvis: 2,
+      type: "bar",
+      title: "B",
+      x: "month",
+      y: "revenue",
+      innerRadius: 0.4,
+      table: barTable,
+    });
+    expect(bad.success).toBe(false);
+    const outOfRange = ChartIRSchema.safeParse({
+      markvis: 2,
+      type: "pie",
+      title: "P",
+      x: "name",
+      y: "value",
+      innerRadius: 1.5,
+      table: {
+        columns: ["name", "value"],
+        rows: [["A", "1"]],
+      },
+    });
+    expect(outOfRange.success).toBe(false);
+  });
+
 });
