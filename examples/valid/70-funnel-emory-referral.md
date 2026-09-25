@@ -2,7 +2,7 @@
 
 ```chart
 type: funnel
-title: Visit still lands 210 of 900 Emory referrals
+title: Follow-up still lands 160 of 900 Emory referrals
 x: stage
 y: patients
 
@@ -11,4 +11,6 @@ Referral,900
 Scheduled,540
 Arrived,380
 Visit,210
+Labs ordered,185
+Follow-up,160
 ```

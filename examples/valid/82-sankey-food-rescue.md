@@ -14,8 +14,12 @@ Caterers,Food bank,210
 Caterers,Compost,190
 Grocery,Food bank,360
 Grocery,Compost,240
+Campus dining,Food bank,150
+Campus dining,Compost,280
 Food bank,Shelters,780
 Food bank,Pantries,210
+Food bank,Senior meals,150
 Compost,Urban farms,820
 Compost,Parks mulch,290
+Compost,Community gardens,180
 ```

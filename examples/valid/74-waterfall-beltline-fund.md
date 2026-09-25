@@ -11,7 +11,9 @@ step,delta
 Opening balance,120
 Donor gifts,45
 City match,60
+Event fees,18
 Resurfacing,-80
 Lighting,-25
 Crew,-30
+Plantings,-15
 ```

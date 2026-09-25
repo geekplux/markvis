@@ -10,5 +10,7 @@ stage,households
 Inquiry,85
 Tour,48
 Offer,22
+Inspection,18
+Earnest,15
 Close,12
 ```

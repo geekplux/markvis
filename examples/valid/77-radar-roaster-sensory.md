@@ -12,12 +12,15 @@ Sweetness,Octane,86
 Acidity,Octane,72
 Body,Octane,78
 Finish,Octane,80
+Aroma,Octane,83
 Sweetness,Barista,74
 Acidity,Barista,81
 Body,Barista,70
 Finish,Barista,76
+Aroma,Barista,75
 Sweetness,Component,79
 Acidity,Component,77
 Body,Component,84
 Finish,Component,82
+Aroma,Component,80
 ```

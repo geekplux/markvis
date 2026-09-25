@@ -11,7 +11,9 @@ step,delta
 Ticket sales,95
 Sponsorships,48
 Food vendors,22
+Beer garden,18
 Permits,-18
 Sound,-30
 Staff,-28
+Insurance,-12
 ```

@@ -1,40 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="sankey chart: Kitchens still send most Midtown surplus to compost, 10 rows, series to" aria-labelledby="mv-8da29e4fd6a67f2f-title" aria-describedby="mv-8da29e4fd6a67f2f-desc" data-markvis="2" data-chart-type="sankey" data-id="mv-8da29e4fd6a67f2f" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-8da29e4fd6a67f2f-title">Kitchens still send most Midtown surplus to compost</title>
-  <desc id="mv-8da29e4fd6a67f2f-desc">sankey chart. Kitchens still send most Midtown surplus to compost. x=from. y=pounds. series=to. 10 rows.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="sankey chart: Kitchens still send most Midtown surplus to compost, 14 rows, series to" aria-labelledby="mv-75dec1650bdfdd07-title" aria-describedby="mv-75dec1650bdfdd07-desc" data-markvis="2" data-chart-type="sankey" data-id="mv-75dec1650bdfdd07" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-75dec1650bdfdd07-title">Kitchens still send most Midtown surplus to compost</title>
+  <desc id="mv-75dec1650bdfdd07-desc">sankey chart. Kitchens still send most Midtown surplus to compost. x=from. y=pounds. series=to. 14 rows.</desc>
   <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Kitchens still send most Midtown surplus to compost</text>
   <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
   <g data-sankey-links="1">
-    <path d="M78 73.6 C221.5 73.6, 221.5 74.4, 365 74.4" fill="none" stroke="#475569" stroke-opacity="0.55" stroke-width="83.2" data-source="Restaurants" data-target="Food bank" data-y="420"/>
-    <path d="M78 182.55 C221.5 182.55, 221.5 308.53, 365 308.53" fill="none" stroke="#64748B" stroke-opacity="0.55" stroke-width="134.7" data-source="Restaurants" data-target="Compost" data-y="680"/>
-    <path d="M78 278.7 C221.5 278.7, 221.5 138, 365 138" fill="none" stroke="#0F766E" stroke-opacity="0.55" stroke-width="41.6" data-source="Caterers" data-target="Food bank" data-y="210"/>
-    <path d="M78 318.32 C221.5 318.32, 221.5 396.36, 365 396.36" fill="none" stroke="#334155" stroke-opacity="0.55" stroke-width="37.64" data-source="Caterers" data-target="Compost" data-y="190"/>
-    <path d="M78 380.8 C221.5 380.8, 221.5 195.54, 365 195.54" fill="none" stroke="#78716C" stroke-opacity="0.55" stroke-width="71.31" data-source="Grocery" data-target="Food bank" data-y="360"/>
-    <path d="M78 440.23 C221.5 440.23, 221.5 439.77, 365 439.77" fill="none" stroke="#57534E" stroke-opacity="0.55" stroke-width="47.54" data-source="Grocery" data-target="Compost" data-y="240"/>
-    <path d="M379 110.74 C522.5 110.74, 522.5 107.77, 666 107.77" fill="none" stroke="#475569" stroke-opacity="0.35750000000000004" stroke-width="157.49" data-source="Food bank" data-target="Shelters" data-y="780"/>
-    <path d="M379 210.69 C522.5 210.69, 522.5 211.94, 666 211.94" fill="none" stroke="#64748B" stroke-opacity="0.35750000000000004" stroke-width="42.4" data-source="Food bank" data-target="Pantries" data-y="210"/>
-    <path d="M379 322.67 C522.5 322.67, 522.5 320, 666 320" fill="none" stroke="#0F766E" stroke-opacity="0.35750000000000004" stroke-width="165.56" data-source="Compost" data-target="Urban farms" data-y="820"/>
-    <path d="M379 434.72 C522.5 434.72, 522.5 435.83, 666 435.83" fill="none" stroke="#334155" stroke-opacity="0.35750000000000004" stroke-width="58.55" data-source="Compost" data-target="Parks mulch" data-y="290"/>
+    <path d="M78 65.87 C221.5 65.87, 221.5 67.19, 365 67.19" fill="none" stroke="#475569" stroke-opacity="0.55" stroke-width="67.73" data-source="Restaurants" data-target="Food bank" data-y="420"/>
+    <path d="M78 154.56 C221.5 154.56, 221.5 288.03, 365 288.03" fill="none" stroke="#64748B" stroke-opacity="0.55" stroke-width="109.66" data-source="Restaurants" data-target="Compost" data-y="680"/>
+    <path d="M78 234.32 C221.5 234.32, 221.5 119.98, 365 119.98" fill="none" stroke="#0F766E" stroke-opacity="0.55" stroke-width="33.87" data-source="Caterers" data-target="Food bank" data-y="210"/>
+    <path d="M78 266.58 C221.5 266.58, 221.5 360.93, 365 360.93" fill="none" stroke="#334155" stroke-opacity="0.55" stroke-width="30.64" data-source="Caterers" data-target="Compost" data-y="190"/>
+    <path d="M78 318.92 C221.5 318.92, 221.5 167.75, 365 167.75" fill="none" stroke="#78716C" stroke-opacity="0.55" stroke-width="58.06" data-source="Grocery" data-target="Food bank" data-y="360"/>
+    <path d="M78 367.3 C221.5 367.3, 221.5 396.96, 365 396.96" fill="none" stroke="#57534E" stroke-opacity="0.55" stroke-width="38.7" data-source="Grocery" data-target="Compost" data-y="240"/>
+    <path d="M78 406.75 C221.5 406.75, 221.5 210.48, 365 210.48" fill="none" stroke="#475569" stroke-opacity="0.35750000000000004" stroke-width="24.19" data-source="Campus dining" data-target="Food bank" data-y="150"/>
+    <path d="M78 441.42 C221.5 441.42, 221.5 440.54, 365 440.54" fill="none" stroke="#64748B" stroke-opacity="0.35750000000000004" stroke-width="45.15" data-source="Campus dining" data-target="Compost" data-y="280"/>
+    <path d="M379 97.36 C522.5 97.36, 522.5 94.91, 666 94.91" fill="none" stroke="#0F766E" stroke-opacity="0.35750000000000004" stroke-width="130.72" data-source="Food bank" data-target="Shelters" data-y="780"/>
+    <path d="M379 180.32 C522.5 180.32, 522.5 182.77, 666 182.77" fill="none" stroke="#334155" stroke-opacity="0.35750000000000004" stroke-width="35.19" data-source="Food bank" data-target="Pantries" data-y="210"/>
+    <path d="M379 210.48 C522.5 210.48, 522.5 219.8, 666 219.8" fill="none" stroke="#78716C" stroke-opacity="0.35750000000000004" stroke-width="25.14" data-source="Food bank" data-target="Senior meals" data-y="150"/>
+    <path d="M379 299.76 C522.5 299.76, 522.5 306.04, 666 306.04" fill="none" stroke="#57534E" stroke-opacity="0.35750000000000004" stroke-width="137.42" data-source="Compost" data-target="Urban farms" data-y="820"/>
+    <path d="M379 392.77 C522.5 392.77, 522.5 403.57, 666 403.57" fill="none" stroke="#475569" stroke-opacity="0.35750000000000004" stroke-width="48.6" data-source="Compost" data-target="Parks mulch" data-y="290"/>
+    <path d="M379 432.16 C522.5 432.16, 522.5 449.48, 666 449.48" fill="none" stroke="#64748B" stroke-opacity="0.35750000000000004" stroke-width="30.17" data-source="Compost" data-target="Community gardens" data-y="180"/>
   </g>
   <g data-sankey-nodes="1">
-    <rect x="64" y="32" width="14" height="217.9" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Restaurants" data-y="1,100"/>
-    <rect x="365" y="32" width="14" height="199.89" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Food bank" data-y="990"/>
-    <rect x="365" y="239.89" width="14" height="224.11" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Compost" data-y="1,110"/>
-    <rect x="64" y="257.9" width="14" height="79.24" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Caterers" data-y="400"/>
-    <rect x="64" y="345.14" width="14" height="118.86" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Grocery" data-y="600"/>
-    <rect x="666" y="32" width="14" height="151.54" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Shelters" data-y="780"/>
-    <rect x="666" y="191.54" width="14" height="40.8" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Pantries" data-y="210"/>
-    <rect x="666" y="240.34" width="14" height="159.31" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Urban farms" data-y="820"/>
-    <rect x="666" y="407.66" width="14" height="56.34" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Parks mulch" data-y="290"/>
+    <rect x="64" y="32" width="14" height="177.39" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Restaurants" data-y="1,100"/>
+    <rect x="365" y="32" width="14" height="191.05" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Food bank" data-y="1,140"/>
+    <rect x="365" y="231.05" width="14" height="232.95" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Compost" data-y="1,390"/>
+    <rect x="64" y="217.39" width="14" height="64.51" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Caterers" data-y="400"/>
+    <rect x="64" y="289.9" width="14" height="96.76" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Grocery" data-y="600"/>
+    <rect x="64" y="394.66" width="14" height="69.34" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Campus dining" data-y="430"/>
+    <rect x="666" y="32" width="14" height="125.83" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Shelters" data-y="780"/>
+    <rect x="666" y="165.83" width="14" height="33.88" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Pantries" data-y="210"/>
+    <rect x="666" y="207.7" width="14" height="24.2" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Senior meals" data-y="150"/>
+    <rect x="666" y="239.9" width="14" height="132.28" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Urban farms" data-y="820"/>
+    <rect x="666" y="380.18" width="14" height="46.78" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Parks mulch" data-y="290"/>
+    <rect x="666" y="434.96" width="14" height="29.04" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Community gardens" data-y="180"/>
   </g>
   <g fill="#64748B" font-size="10" font-weight="400">
-    <text x="82" y="140.95" text-anchor="start" dominant-baseline="middle" data-node-label="Restaurants">Restaurants</text>
-    <text x="383" y="131.94" text-anchor="start" dominant-baseline="middle" data-node-label="Food bank">Food bank</text>
-    <text x="383" y="351.94" text-anchor="start" dominant-baseline="middle" data-node-label="Compost">Compost</text>
-    <text x="82" y="297.52" text-anchor="start" dominant-baseline="middle" data-node-label="Caterers">Caterers</text>
-    <text x="82" y="404.57" text-anchor="start" dominant-baseline="middle" data-node-label="Grocery">Grocery</text>
-    <text x="662" y="107.77" text-anchor="end" dominant-baseline="middle" data-node-label="Shelters">Shelters</text>
-    <text x="662" y="211.94" text-anchor="end" dominant-baseline="middle" data-node-label="Pantries">Pantries</text>
-    <text x="662" y="320" text-anchor="end" dominant-baseline="middle" data-node-label="Urban farms">Urban farms</text>
-    <text x="662" y="435.83" text-anchor="end" dominant-baseline="middle" data-node-label="Parks mulch">Parks mulch</text>
+    <text x="82" y="120.7" text-anchor="start" dominant-baseline="middle" data-node-label="Restaurants">Restaurants</text>
+    <text x="383" y="127.53" text-anchor="start" dominant-baseline="middle" data-node-label="Food bank">Food bank</text>
+    <text x="383" y="347.53" text-anchor="start" dominant-baseline="middle" data-node-label="Compost">Compost</text>
+    <text x="82" y="249.64" text-anchor="start" dominant-baseline="middle" data-node-label="Caterers">Caterers</text>
+    <text x="82" y="338.28" text-anchor="start" dominant-baseline="middle" data-node-label="Grocery">Grocery</text>
+    <text x="82" y="429.33" text-anchor="start" dominant-baseline="middle" data-node-label="Campus dining">Campus dining</text>
+    <text x="662" y="94.91" text-anchor="end" dominant-baseline="middle" data-node-label="Shelters">Shelters</text>
+    <text x="662" y="182.77" text-anchor="end" dominant-baseline="middle" data-node-label="Pantries">Pantries</text>
+    <text x="662" y="219.8" text-anchor="end" dominant-baseline="middle" data-node-label="Senior meals">Senior meals</text>
+    <text x="662" y="306.04" text-anchor="end" dominant-baseline="middle" data-node-label="Urban farms">Urban farms</text>
+    <text x="662" y="403.57" text-anchor="end" dominant-baseline="middle" data-node-label="Parks mulch">Parks mulch</text>
+    <text x="662" y="449.48" text-anchor="end" dominant-baseline="middle" data-node-label="Community gardens">Community gardens</text>
   </g>
 </svg>

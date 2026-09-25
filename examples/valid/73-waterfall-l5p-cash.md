@@ -11,7 +11,9 @@ step,delta
 Weekday sales,4200
 Weekend retail,6100
 Online,900
+Wholesale,450
 Payroll,-3800
 Rent,-2200
 Inventory,-2400
+Utilities,-380
 ```
