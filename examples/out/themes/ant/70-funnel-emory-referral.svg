@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="funnel chart: Visit still lands 210 of 900 Emory referrals, 4 rows" aria-labelledby="mv-7e2fe36b6cb29316-title" aria-describedby="mv-7e2fe36b6cb29316-desc" data-markvis="2" data-chart-type="funnel" data-id="mv-7e2fe36b6cb29316" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-7e2fe36b6cb29316-title">Visit still lands 210 of 900 Emory referrals</title>
+  <desc id="mv-7e2fe36b6cb29316-desc">funnel chart. Visit still lands 210 of 900 Emory referrals. x=stage. y=patients. 4 rows.</desc>
+  <text x="48" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Visit still lands 210 of 900 Emory referrals</text>
+  <rect x="48" y="46" width="553.7" height="360" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <g data-funnel="1">
+    <path d="M48 46 L601.7 46 L490.96 136 L158.74 136 Z" fill="#5AD8A6" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Referral" data-y="900"/>
+    <path d="M158.74 136 L490.96 136 L441.74 226 L207.96 226 Z" fill="#E8684A" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Scheduled" data-y="540"/>
+    <path d="M207.96 226 L441.74 226 L389.45 316 L260.25 316 Z" fill="#5D7092" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Arrived" data-y="380"/>
+    <path d="M260.25 316 L389.45 316 L389.45 406 L260.25 406 Z" fill="#F6BD16" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Visit" data-y="210"/>
+  </g>
+  <g fill="#000000" font-size="11" font-weight="500">
+    <text x="609.7" y="91" text-anchor="start" dominant-baseline="middle" data-label="Referral">Referral · 900</text>
+    <text x="609.7" y="181" text-anchor="start" dominant-baseline="middle" data-label="Scheduled">Scheduled · 540</text>
+    <text x="609.7" y="271" text-anchor="start" dominant-baseline="middle" data-label="Arrived">Arrived · 380</text>
+    <text x="609.7" y="361" text-anchor="start" dominant-baseline="middle" data-label="Visit">Visit · 210</text>
+  </g>
+</svg>

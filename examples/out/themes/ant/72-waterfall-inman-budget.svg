@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="waterfall chart: Sponsorships still cover Inman Park sound after permits (USD k), 6 rows" aria-labelledby="mv-f660c078ae349428-title" aria-describedby="mv-f660c078ae349428-desc" data-markvis="2" data-chart-type="waterfall" data-id="mv-f660c078ae349428" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-f660c078ae349428-title">Sponsorships still cover Inman Park sound after permits</title>
+  <desc id="mv-f660c078ae349428-desc">waterfall chart. Sponsorships still cover Inman Park sound after permits. x=step. y=delta. unit=USD k. 6 rows.</desc>
+  <text x="66" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Sponsorships still cover Inman Park sound after permits<tspan font-size="12" font-weight="400" fill="#8C8C8C"> · USD k</tspan></text>
+  <rect x="66" y="46" width="640" height="333" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <g fill="none" stroke="#000000" stroke-opacity="0.16" stroke-width="1">
+    <line x1="66" x2="706" y1="295.75" y2="295.75"/>
+    <line x1="66" x2="706" y1="212.5" y2="212.5"/>
+    <line x1="66" x2="706" y1="129.25" y2="129.25"/>
+  </g>
+  <path d="M66 379 L706 379" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
+  <g data-waterfall="1">
+    <rect x="78.8" y="220.83" width="81.07" height="158.17" fill="#5AD8A6" rx="2" data-step="Ticket sales" data-y="95" data-baseline="0"/>
+    <rect x="185.47" y="140.91" width="81.07" height="79.92" fill="#5AD8A6" rx="2" data-step="Sponsorships" data-y="48" data-baseline="95"/>
+    <rect x="292.13" y="104.28" width="81.07" height="36.63" fill="#5AD8A6" rx="2" data-step="Food vendors" data-y="22" data-baseline="143"/>
+    <rect x="398.8" y="104.28" width="81.07" height="29.97" fill="#E8684A" rx="2" data-step="Permits" data-y="-18" data-baseline="165"/>
+    <rect x="505.47" y="134.25" width="81.07" height="49.95" fill="#E8684A" rx="2" data-step="Sound" data-y="-30" data-baseline="147"/>
+    <rect x="612.13" y="184.2" width="81.07" height="46.62" fill="#E8684A" rx="2" data-step="Staff" data-y="-28" data-baseline="117"/>
+  </g>
+  <g fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-waterfall-connectors="1">
+    <line x1="159.87" x2="185.47" y1="220.83" y2="220.83"/>
+    <line x1="266.53" x2="292.13" y1="140.91" y2="140.91"/>
+    <line x1="373.2" x2="398.8" y1="104.28" y2="104.28"/>
+    <line x1="479.87" x2="505.47" y1="134.25" y2="134.25"/>
+    <line x1="586.53" x2="612.13" y1="184.2" y2="184.2"/>
+  </g>
+  <g fill="#8C8C8C" font-size="11" font-weight="400">
+    <text x="58" y="379" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="58" y="295.75" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="58" y="212.5" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="58" y="129.25" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="58" y="46" text-anchor="end" dominant-baseline="middle">200</text>
+    <text x="119.33" y="390" text-anchor="middle" data-full-label="Ticket sales">Ticket sales</text>
+    <text x="226" y="390" text-anchor="middle" data-full-label="Sponsorships">Sponsorships</text>
+    <text x="332.67" y="390" text-anchor="middle" data-full-label="Food vendors">Food vendors</text>
+    <text x="439.33" y="390" text-anchor="middle" data-full-label="Permits">Permits</text>
+    <text x="546" y="390" text-anchor="middle" data-full-label="Sound">Sound</text>
+    <text x="652.67" y="390" text-anchor="middle" data-full-label="Staff">Staff</text>
+  </g>
+</svg>

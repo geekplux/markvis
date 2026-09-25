@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="funnel chart: Check-in still seats 920 of 3,400 Piedmont browsers, 4 rows" aria-labelledby="mv-128350c0bdf21762-title" aria-describedby="mv-128350c0bdf21762-desc" data-markvis="2" data-chart-type="funnel" data-id="mv-128350c0bdf21762" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-128350c0bdf21762-title">Check-in still seats 920 of 3,400 Piedmont browsers</title>
+  <desc id="mv-128350c0bdf21762-desc">funnel chart. Check-in still seats 920 of 3,400 Piedmont browsers. x=stage. y=people. 4 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Check-in still seats 920 of 3,400 Piedmont browsers</text>
+  <g data-funnel="1">
+    <path d="M48 36 L608.52 36 L476.63 142 L179.89 142 Z" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Browse" data-y="3,400"/>
+    <path d="M179.89 142 L476.63 142 L430.47 248 L226.05 248 Z" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Cart" data-y="1,800"/>
+    <path d="M226.05 248 L430.47 248 L404.1 354 L252.42 354 Z" fill="#10B981" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Pay" data-y="1,240"/>
+    <path d="M252.42 354 L404.1 354 L404.1 460 L252.42 460 Z" fill="#A855F7" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Check-in" data-y="920"/>
+  </g>
+  <g fill="#171717" font-size="11" font-weight="500">
+    <text x="616.52" y="89" text-anchor="start" dominant-baseline="middle" data-label="Browse">Browse · 3,400</text>
+    <text x="616.52" y="195" text-anchor="start" dominant-baseline="middle" data-label="Cart">Cart · 1,800</text>
+    <text x="616.52" y="301" text-anchor="start" dominant-baseline="middle" data-label="Pay">Pay · 1,240</text>
+    <text x="616.52" y="407" text-anchor="start" dominant-baseline="middle" data-label="Check-in">Check-in · 920</text>
+  </g>
+</svg>

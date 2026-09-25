@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="heatmap chart: Fall still leads Eastside Beltline walks at Ponce (walkers), 12 rows, series season" aria-labelledby="mv-708adb70569e5841-title" aria-describedby="mv-708adb70569e5841-desc" data-markvis="2" data-chart-type="heatmap" data-id="mv-708adb70569e5841" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-708adb70569e5841-title">Fall still leads Eastside Beltline walks at Ponce</title>
+  <desc id="mv-708adb70569e5841-desc">heatmap chart. Fall still leads Eastside Beltline walks at Ponce. x=segment. y=walkers. series=season. unit=walkers. 12 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Fall still leads Eastside Beltline walks at Ponce<tspan font-size="12" font-weight="400" fill="#737373"> · walkers</tspan></text>
+  <g data-heatmap="1">
+    <rect x="48" y="36" width="217.33" height="105.5" fill="#3B82F6" fill-opacity="0.63" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Ponce" data-series="Spring" data-y="4,200"/>
+    <rect x="265.33" y="36" width="217.33" height="105.5" fill="#3B82F6" fill-opacity="0.34" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Irwin" data-series="Spring" data-y="3,100"/>
+    <rect x="482.67" y="36" width="217.33" height="105.5" fill="#3B82F6" fill-opacity="0.26" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Krog" data-series="Spring" data-y="2,800"/>
+    <rect x="48" y="141.5" width="217.33" height="105.5" fill="#3B82F6" fill-opacity="0.87" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Ponce" data-series="Summer" data-y="5,100"/>
+    <rect x="265.33" y="141.5" width="217.33" height="105.5" fill="#3B82F6" fill-opacity="0.47" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Irwin" data-series="Summer" data-y="3,600"/>
+    <rect x="482.67" y="141.5" width="217.33" height="105.5" fill="#3B82F6" fill-opacity="0.39" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Krog" data-series="Summer" data-y="3,300"/>
+    <rect x="48" y="247" width="217.33" height="105.5" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Ponce" data-series="Fall" data-y="5,600"/>
+    <rect x="265.33" y="247" width="217.33" height="105.5" fill="#3B82F6" fill-opacity="0.55" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Irwin" data-series="Fall" data-y="3,900"/>
+    <rect x="482.67" y="247" width="217.33" height="105.5" fill="#3B82F6" fill-opacity="0.45" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Krog" data-series="Fall" data-y="3,500"/>
+    <rect x="48" y="352.5" width="217.33" height="105.5" fill="#3B82F6" fill-opacity="0.29" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Ponce" data-series="Winter" data-y="2,900"/>
+    <rect x="265.33" y="352.5" width="217.33" height="105.5" fill="#3B82F6" fill-opacity="0.08" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Irwin" data-series="Winter" data-y="2,100"/>
+    <rect x="482.67" y="352.5" width="217.33" height="105.5" fill="#3B82F6" fill-opacity="0" stroke="#171717" stroke-opacity="0.28" stroke-width="1" rx="1" data-x="Krog" data-series="Winter" data-y="1,800"/>
+  </g>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="38" y="88.75" text-anchor="end" dominant-baseline="middle" data-series-label="Spring">Spring</text>
+    <text x="38" y="194.25" text-anchor="end" dominant-baseline="middle" data-series-label="Summer">Summer</text>
+    <text x="38" y="299.75" text-anchor="end" dominant-baseline="middle" data-series-label="Fall">Fall</text>
+    <text x="38" y="405.25" text-anchor="end" dominant-baseline="middle" data-series-label="Winter">Winter</text>
+    <text x="156.67" y="468" text-anchor="middle" data-full-label="Ponce">Ponce</text>
+    <text x="374" y="468" text-anchor="middle" data-full-label="Irwin">Irwin</text>
+    <text x="591.33" y="468" text-anchor="middle" data-full-label="Krog">Krog</text>
+  </g>
+</svg>

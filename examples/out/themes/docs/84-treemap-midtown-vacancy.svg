@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="treemap chart: Colony Square still holds the largest Midtown vacancy (sq ft), 6 rows" aria-labelledby="mv-846ee7261f638127-title" aria-describedby="mv-846ee7261f638127-desc" data-markvis="2" data-chart-type="treemap" data-id="mv-846ee7261f638127" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-846ee7261f638127-title">Colony Square still holds the largest Midtown vacancy</title>
+  <desc id="mv-846ee7261f638127-desc">treemap chart. Colony Square still holds the largest Midtown vacancy. x=building. y=vacant. unit=sq ft. 6 rows.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Colony Square still holds the largest Midtown vacancy<tspan font-size="11" font-weight="400" fill="#64748B"> · sq ft</tspan></text>
+  <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
+  <g data-treemap="1">
+    <rect x="40" y="32" width="205.06" height="432" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Colony Square" data-y="42,000"/>
+    <rect x="245.06" y="32" width="151.35" height="432" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Promenade" data-y="31,000"/>
+    <rect x="396.41" y="32" width="87.88" height="432" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Ten Peachtree Place" data-y="18,000"/>
+    <rect x="484.29" y="32" width="68.35" height="432" fill="#334155" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Campanile" data-y="14,000"/>
+    <rect x="552.65" y="32" width="107.41" height="432" fill="#78716C" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="One Atlantic Center" data-y="22,000"/>
+    <rect x="660.06" y="32" width="43.94" height="432" fill="#57534E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Midtown Center" data-y="9,000"/>
+  </g>
+  <g fill="#18181B" font-size="10" font-weight="500">
+    <text x="44" y="44.5" text-anchor="start" data-label-text="Colony Square">Colony Square</text>
+    <text x="249.06" y="44.5" text-anchor="start" data-label-text="Promenade">Promenade</text>
+    <text x="400.41" y="44.5" text-anchor="start" data-label-text="Ten Peachtree Place">Ten Peachtr…</text>
+    <text x="488.29" y="44.5" text-anchor="start" data-label-text="Campanile">Campanile</text>
+    <text x="556.65" y="44.5" text-anchor="start" data-label-text="One Atlantic Center">One Atlantic Ce…</text>
+    <text x="664.06" y="44.5" text-anchor="start" data-label-text="Midtown Center">Midt…</text>
+  </g>
+</svg>

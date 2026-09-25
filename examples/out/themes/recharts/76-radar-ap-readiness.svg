@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="radar chart: Grady still leads Midtown High on writing readiness, 8 rows, series school" aria-labelledby="mv-8e5bd3e3977cd012-title" aria-describedby="mv-8e5bd3e3977cd012-desc" data-markvis="2" data-chart-type="radar" data-id="mv-8e5bd3e3977cd012" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-8e5bd3e3977cd012-title">Grady still leads Midtown High on writing readiness</title>
+  <desc id="mv-8e5bd3e3977cd012-desc">radar chart. Grady still leads Midtown High on writing readiness. x=skill. y=score. series=school. 8 rows.</desc>
+  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#374151">Grady still leads Midtown High on writing readiness</text>
+  <g font-size="12" font-weight="400" fill="#374151">
+    <rect x="48" y="425" width="10" height="10" fill="#8884d8" rx="1"/>
+    <text x="62" y="434" data-legend="Grady">Grady</text>
+    <rect x="115.2" y="425" width="10" height="10" fill="#82ca9d" rx="1"/>
+    <text x="129.2" y="434" data-legend="Midtown">Midtown</text>
+  </g>
+  <rect x="48" y="36" width="632.72" height="352" fill="none" stroke="#e2e8f0" stroke-width="1" data-plot-border="1"/>
+  <g fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-radar-grid="1">
+    <path d="M364.36 152.16 L424.2 212 L364.36 271.84 L304.52 212 Z"/>
+    <path d="M364.36 92.32 L484.04 212 L364.36 331.68 L244.68 212 Z"/>
+    <line x1="364.36" y1="212" x2="364.36" y2="92.32"/>
+    <line x1="364.36" y1="212" x2="484.04" y2="212"/>
+    <line x1="364.36" y1="212" x2="364.36" y2="331.68"/>
+    <line x1="364.36" y1="212" x2="244.68" y2="212"/>
+  </g>
+  <g data-radar="1">
+    <path d="M364.36 102.96 L484.04 212 L364.36 315.72 L251.33 212 Z" fill="#8884d8" fill-opacity="0.2" stroke="#8884d8" stroke-width="1.75" data-series="Grady"/>
+    <path d="M364.36 110.94 L458.77 212 L364.36 318.38 L265.96 212 Z" fill="#82ca9d" fill-opacity="0.2" stroke="#82ca9d" stroke-width="1.75" data-series="Midtown"/>
+  </g>
+  <g fill="#6B7280" font-size="11" font-weight="400">
+    <text x="364.36" y="78.32" text-anchor="middle" dominant-baseline="middle" data-spoke="Math">Math</text>
+    <text x="498.04" y="212" text-anchor="middle" dominant-baseline="middle" data-spoke="Writing">Writing</text>
+    <text x="364.36" y="345.68" text-anchor="middle" dominant-baseline="middle" data-spoke="Labs">Labs</text>
+    <text x="230.68" y="212" text-anchor="middle" dominant-baseline="middle" data-spoke="Research">Research</text>
+  </g>
+</svg>

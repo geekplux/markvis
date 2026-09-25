@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="funnel chart: Close still seals 12 of 85 Grant Park tours, 4 rows" aria-labelledby="mv-57c306819d812475-title" aria-describedby="mv-57c306819d812475-desc" data-markvis="2" data-chart-type="funnel" data-id="mv-57c306819d812475" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-57c306819d812475-title">Close still seals 12 of 85 Grant Park tours</title>
+  <desc id="mv-57c306819d812475-desc">funnel chart. Close still seals 12 of 85 Grant Park tours. x=stage. y=households. 4 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Close still seals 12 of 85 Grant Park tours</text>
+  <g data-funnel="1">
+    <path d="M48 36 L622.16 36 L497.2 142 L172.96 142 Z" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Inquiry" data-y="85"/>
+    <path d="M172.96 142 L497.2 142 L409.38 248 L260.78 248 Z" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Tour" data-y="48"/>
+    <path d="M260.78 248 L409.38 248 L375.61 354 L294.55 354 Z" fill="#10B981" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Offer" data-y="22"/>
+    <path d="M294.55 354 L375.61 354 L375.61 460 L294.55 460 Z" fill="#A855F7" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-stage="Close" data-y="12"/>
+  </g>
+  <g fill="#171717" font-size="11" font-weight="500">
+    <text x="630.16" y="89" text-anchor="start" dominant-baseline="middle" data-label="Inquiry">Inquiry · 85</text>
+    <text x="630.16" y="195" text-anchor="start" dominant-baseline="middle" data-label="Tour">Tour · 48</text>
+    <text x="630.16" y="301" text-anchor="start" dominant-baseline="middle" data-label="Offer">Offer · 22</text>
+    <text x="630.16" y="407" text-anchor="start" dominant-baseline="middle" data-label="Close">Close · 12</text>
+  </g>
+</svg>

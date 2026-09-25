@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="radar chart: Octane still leads sweetness among Eastside roasters, 12 rows, series roaster" aria-labelledby="mv-44cf0299da80a1c3-title" aria-describedby="mv-44cf0299da80a1c3-desc" data-markvis="2" data-chart-type="radar" data-id="mv-44cf0299da80a1c3" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-44cf0299da80a1c3-title">Octane still leads sweetness among Eastside roasters</title>
+  <desc id="mv-44cf0299da80a1c3-desc">radar chart. Octane still leads sweetness among Eastside roasters. x=note. y=score. series=roaster. 12 rows.</desc>
+  <text x="56" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Octane still leads sweetness among Eastside roasters</text>
+  <g font-size="12" font-weight="500" fill="#333333">
+    <rect x="56" y="31" width="10" height="10" fill="#7cb5ec" rx="1"/>
+    <text x="70" y="40" data-legend="Octane">Octane</text>
+    <rect x="130.64" y="31" width="10" height="10" fill="#434348" rx="1"/>
+    <text x="144.64" y="40" data-legend="Barista">Barista</text>
+    <rect x="212.72" y="31" width="10" height="10" fill="#90ed7d" rx="1"/>
+    <text x="226.72" y="40" data-legend="Component">Component</text>
+  </g>
+  <rect x="56" y="62" width="621.31" height="340" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
+  <g fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-radar-grid="1">
+    <path d="M366.66 174.2 L424.46 232 L366.66 289.8 L308.85 232 Z"/>
+    <path d="M366.66 116.4 L482.26 232 L366.66 347.6 L251.05 232 Z"/>
+    <line x1="366.66" y1="232" x2="366.66" y2="116.4"/>
+    <line x1="366.66" y1="232" x2="482.26" y2="232"/>
+    <line x1="366.66" y1="232" x2="366.66" y2="347.6"/>
+    <line x1="366.66" y1="232" x2="251.05" y2="232"/>
+  </g>
+  <g data-radar="1">
+    <path d="M366.66 116.4 L463.44 232 L366.66 336.85 L259.12 232 Z" fill="#7cb5ec" fill-opacity="0.28" stroke="#7cb5ec" stroke-width="1.75" data-series="Octane"/>
+    <path d="M366.66 132.53 L475.53 232 L366.66 326.09 L264.5 232 Z" fill="#434348" fill-opacity="0.28" stroke="#434348" stroke-width="1.75" data-series="Barista"/>
+    <path d="M366.66 125.81 L470.16 232 L366.66 344.91 L256.43 232 Z" fill="#90ed7d" fill-opacity="0.28" stroke="#90ed7d" stroke-width="1.75" data-series="Component"/>
+  </g>
+  <g fill="#666666" font-size="11" font-weight="400">
+    <text x="366.66" y="102.4" text-anchor="middle" dominant-baseline="middle" data-spoke="Sweetness">Sweetness</text>
+    <text x="496.26" y="232" text-anchor="middle" dominant-baseline="middle" data-spoke="Acidity">Acidity</text>
+    <text x="366.66" y="361.6" text-anchor="middle" dominant-baseline="middle" data-spoke="Body">Body</text>
+    <text x="237.05" y="232" text-anchor="middle" dominant-baseline="middle" data-spoke="Finish">Finish</text>
+  </g>
+</svg>

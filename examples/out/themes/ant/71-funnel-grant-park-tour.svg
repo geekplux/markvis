@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="funnel chart: Close still seals 12 of 85 Grant Park tours, 4 rows" aria-labelledby="mv-57c306819d812475-title" aria-describedby="mv-57c306819d812475-desc" data-markvis="2" data-chart-type="funnel" data-id="mv-57c306819d812475" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-57c306819d812475-title">Close still seals 12 of 85 Grant Park tours</title>
+  <desc id="mv-57c306819d812475-desc">funnel chart. Close still seals 12 of 85 Grant Park tours. x=stage. y=households. 4 rows.</desc>
+  <text x="48" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Close still seals 12 of 85 Grant Park tours</text>
+  <rect x="48" y="46" width="574.16" height="360" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <g data-funnel="1">
+    <path d="M48 46 L622.16 46 L497.2 136 L172.96 136 Z" fill="#5AD8A6" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Inquiry" data-y="85"/>
+    <path d="M172.96 136 L497.2 136 L409.38 226 L260.78 226 Z" fill="#E8684A" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Tour" data-y="48"/>
+    <path d="M260.78 226 L409.38 226 L375.61 316 L294.55 316 Z" fill="#5D7092" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Offer" data-y="22"/>
+    <path d="M294.55 316 L375.61 316 L375.61 406 L294.55 406 Z" fill="#F6BD16" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Close" data-y="12"/>
+  </g>
+  <g fill="#000000" font-size="11" font-weight="500">
+    <text x="630.16" y="91" text-anchor="start" dominant-baseline="middle" data-label="Inquiry">Inquiry · 85</text>
+    <text x="630.16" y="181" text-anchor="start" dominant-baseline="middle" data-label="Tour">Tour · 48</text>
+    <text x="630.16" y="271" text-anchor="start" dominant-baseline="middle" data-label="Offer">Offer · 22</text>
+    <text x="630.16" y="361" text-anchor="start" dominant-baseline="middle" data-label="Close">Close · 12</text>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="gauge chart: Domestic claim still clears in 14 minutes (min), 1 rows" aria-labelledby="mv-e0ab45110cf3d231-title" aria-describedby="mv-e0ab45110cf3d231-desc" data-markvis="2" data-chart-type="gauge" data-id="mv-e0ab45110cf3d231" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-e0ab45110cf3d231-title">Domestic claim still clears in 14 minutes</title>
+  <desc id="mv-e0ab45110cf3d231-desc">gauge chart. Domestic claim still clears in 14 minutes. x=carousel. y=minutes. unit=min. 1 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Domestic claim still clears in 14 minutes<tspan font-size="12" font-weight="400" fill="#737373"> · min</tspan></text>
+  <g data-gauge="1" data-min="0" data-max="40">
+    <path d="M74.08 424 A299.92 299.92 0 0 1 673.92 424" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="12" stroke-linecap="round" data-gauge-track="1"/>
+    <path d="M74.08 424 A299.92 299.92 0 0 1 237.84 156.77" fill="none" stroke="#3B82F6" stroke-width="12" stroke-linecap="round" data-gauge-arc="14"/>
+  </g>
+  <text x="374" y="298.03" text-anchor="middle" dominant-baseline="middle" font-size="28" font-weight="600" fill="#171717" data-gauge-value="1">14</text>
+  <text x="374" y="320.03" text-anchor="middle" dominant-baseline="hanging" font-size="11" font-weight="400" fill="#737373" data-gauge-label="1">Domestic South</text>
+  <g fill="#737373" font-size="10" font-weight="400">
+    <text x="74.08" y="438" text-anchor="middle" dominant-baseline="hanging" data-gauge-min="1">0</text>
+    <text x="673.92" y="438" text-anchor="middle" dominant-baseline="hanging" data-gauge-max="1">40</text>
+  </g>
+</svg>

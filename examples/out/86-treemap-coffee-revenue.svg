@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="treemap chart: Espresso still leads Octane revenue on the Eastside (USD k), 9 rows, series shop" aria-labelledby="mv-f7485ba93c6c0b58-title" aria-describedby="mv-f7485ba93c6c0b58-desc" data-markvis="2" data-chart-type="treemap" data-id="mv-f7485ba93c6c0b58" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-f7485ba93c6c0b58-title">Espresso still leads Octane revenue on the Eastside</title>
+  <desc id="mv-f7485ba93c6c0b58-desc">treemap chart. Espresso still leads Octane revenue on the Eastside. x=drink. y=revenue. series=shop. unit=USD k. 9 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Espresso still leads Octane revenue on the Eastside<tspan font-size="12" font-weight="400" fill="#737373"> · USD k</tspan></text>
+  <g data-treemap="1">
+    <rect x="48" y="36" width="220.12" height="16" fill="#3B82F6" fill-opacity="0.35" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-label="Octane" data-y="79"/>
+    <rect x="268.12" y="36" width="217.33" height="16" fill="#F97316" fill-opacity="0.35" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-label="Barista" data-y="78"/>
+    <rect x="485.45" y="36" width="214.55" height="16" fill="#10B981" fill-opacity="0.35" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-label="Component" data-y="77"/>
+    <rect x="48" y="52" width="220.12" height="247.9" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-label="Espresso" data-y="48"/>
+    <rect x="48" y="299.9" width="220.12" height="113.62" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-label="Batch brew" data-y="22"/>
+    <rect x="48" y="413.52" width="220.12" height="46.48" fill="#10B981" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-label="Tea" data-y="9"/>
+    <rect x="268.12" y="52" width="217.33" height="188.31" fill="#3B82F6" fill-opacity="0.7" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-label="Espresso" data-y="36"/>
+    <rect x="268.12" y="240.31" width="217.33" height="146.46" fill="#F97316" fill-opacity="0.7" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-label="Batch brew" data-y="28"/>
+    <rect x="268.12" y="386.77" width="217.33" height="73.23" fill="#10B981" fill-opacity="0.7" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-label="Pastry" data-y="14"/>
+    <rect x="485.45" y="52" width="214.55" height="217.25" fill="#3B82F6" fill-opacity="0.7" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-label="Espresso" data-y="41"/>
+    <rect x="485.45" y="269.25" width="214.55" height="100.68" fill="#F97316" fill-opacity="0.7" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-label="Batch brew" data-y="19"/>
+    <rect x="485.45" y="369.92" width="214.55" height="90.08" fill="#10B981" fill-opacity="0.7" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-label="Retail beans" data-y="17"/>
+  </g>
+  <g fill="#171717" font-size="11" font-weight="500">
+    <text x="52" y="65.35" text-anchor="start" data-label-text="Espresso">Espresso</text>
+    <text x="52" y="313.25" text-anchor="start" data-label-text="Batch brew">Batch brew</text>
+    <text x="52" y="426.87" text-anchor="start" data-label-text="Tea">Tea</text>
+    <text x="272.12" y="65.35" text-anchor="start" data-label-text="Espresso">Espresso</text>
+    <text x="272.12" y="253.66" text-anchor="start" data-label-text="Batch brew">Batch brew</text>
+    <text x="272.12" y="400.12" text-anchor="start" data-label-text="Pastry">Pastry</text>
+    <text x="489.45" y="65.35" text-anchor="start" data-label-text="Espresso">Espresso</text>
+    <text x="489.45" y="282.6" text-anchor="start" data-label-text="Batch brew">Batch brew</text>
+    <text x="489.45" y="383.27" text-anchor="start" data-label-text="Retail beans">Retail beans</text>
+  </g>
+</svg>

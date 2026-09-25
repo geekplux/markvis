@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="waterfall chart: Weekend retail still covers L5P rent after payroll (USD), 6 rows" aria-labelledby="mv-419f16cf752975ed-title" aria-describedby="mv-419f16cf752975ed-desc" data-markvis="2" data-chart-type="waterfall" data-id="mv-419f16cf752975ed" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-419f16cf752975ed-title">Weekend retail still covers L5P rent after payroll</title>
+  <desc id="mv-419f16cf752975ed-desc">waterfall chart. Weekend retail still covers L5P rent after payroll. x=step. y=delta. unit=USD. 6 rows.</desc>
+  <text x="48.92" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#374151">Weekend retail still covers L5P rent after payroll<tspan font-size="12" font-weight="400" fill="#6B7280"> · USD</tspan></text>
+  <rect x="48.92" y="36" width="651.08" height="391" fill="none" stroke="#e2e8f0" stroke-width="1" data-plot-border="1"/>
+  <g fill="none" stroke="#374151" stroke-opacity="0.14" stroke-width="1">
+    <line x1="48.92" x2="700" y1="296.67" y2="296.67"/>
+    <line x1="48.92" x2="700" y1="166.33" y2="166.33"/>
+  </g>
+  <path d="M48.92 427 L700 427" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1"/>
+  <g data-waterfall="1">
+    <rect x="63.03" y="317.52" width="80.3" height="109.48" fill="#8884d8" rx="0" data-step="Weekday sales" data-y="4,200" data-baseline="0"/>
+    <rect x="171.54" y="158.51" width="80.3" height="159.01" fill="#8884d8" rx="0" data-step="Weekend retail" data-y="6,100" data-baseline="4,200"/>
+    <rect x="280.05" y="135.05" width="80.3" height="23.46" fill="#8884d8" rx="0" data-step="Online" data-y="900" data-baseline="10,300"/>
+    <rect x="388.57" y="135.05" width="80.3" height="99.05" fill="#82ca9d" rx="0" data-step="Payroll" data-y="-3,800" data-baseline="11,200"/>
+    <rect x="497.08" y="234.11" width="80.3" height="57.35" fill="#82ca9d" rx="0" data-step="Rent" data-y="-2,200" data-baseline="7,400"/>
+    <rect x="605.59" y="291.45" width="80.3" height="62.56" fill="#82ca9d" rx="0" data-step="Inventory" data-y="-2,400" data-baseline="5,200"/>
+  </g>
+  <g fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-waterfall-connectors="1">
+    <line x1="143.33" x2="171.54" y1="317.52" y2="317.52"/>
+    <line x1="251.84" x2="280.05" y1="158.51" y2="158.51"/>
+    <line x1="360.35" x2="388.57" y1="135.05" y2="135.05"/>
+    <line x1="468.87" x2="497.08" y1="234.11" y2="234.11"/>
+    <line x1="577.38" x2="605.59" y1="291.45" y2="291.45"/>
+  </g>
+  <g fill="#6B7280" font-size="11" font-weight="400">
+    <text x="40.92" y="427" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="40.92" y="296.67" text-anchor="end" dominant-baseline="middle">5,000</text>
+    <text x="40.92" y="166.33" text-anchor="end" dominant-baseline="middle">10,000</text>
+    <text x="40.92" y="36" text-anchor="end" dominant-baseline="middle">15,000</text>
+    <text x="103.18" y="438" text-anchor="middle" data-full-label="Weekday sales">Weekday sales</text>
+    <text x="211.69" y="438" text-anchor="middle" data-full-label="Weekend retail">Weekend retail</text>
+    <text x="320.2" y="438" text-anchor="middle" data-full-label="Online">Online</text>
+    <text x="428.72" y="438" text-anchor="middle" data-full-label="Payroll">Payroll</text>
+    <text x="537.23" y="438" text-anchor="middle" data-full-label="Rent">Rent</text>
+    <text x="645.74" y="438" text-anchor="middle" data-full-label="Inventory">Inventory</text>
+  </g>
+</svg>

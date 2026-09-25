@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="radar chart: Grady still leads Midtown High on writing readiness, 8 rows, series school" aria-labelledby="mv-8e5bd3e3977cd012-title" aria-describedby="mv-8e5bd3e3977cd012-desc" data-markvis="2" data-chart-type="radar" data-id="mv-8e5bd3e3977cd012" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-8e5bd3e3977cd012-title">Grady still leads Midtown High on writing readiness</title>
+  <desc id="mv-8e5bd3e3977cd012-desc">radar chart. Grady still leads Midtown High on writing readiness. x=skill. y=score. series=school. 8 rows.</desc>
+  <text x="56" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Grady still leads Midtown High on writing readiness</text>
+  <g font-size="12" font-weight="500" fill="#333333">
+    <rect x="56" y="31" width="10" height="10" fill="#7cb5ec" rx="1"/>
+    <text x="70" y="40" data-legend="Grady">Grady</text>
+    <rect x="123.2" y="31" width="10" height="10" fill="#434348" rx="1"/>
+    <text x="137.2" y="40" data-legend="Midtown">Midtown</text>
+  </g>
+  <rect x="56" y="62" width="624.72" height="340" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
+  <g fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-radar-grid="1">
+    <path d="M368.36 174.2 L426.16 232 L368.36 289.8 L310.56 232 Z"/>
+    <path d="M368.36 116.4 L483.96 232 L368.36 347.6 L252.76 232 Z"/>
+    <line x1="368.36" y1="232" x2="368.36" y2="116.4"/>
+    <line x1="368.36" y1="232" x2="483.96" y2="232"/>
+    <line x1="368.36" y1="232" x2="368.36" y2="347.6"/>
+    <line x1="368.36" y1="232" x2="252.76" y2="232"/>
+  </g>
+  <g data-radar="1">
+    <path d="M368.36 126.68 L483.96 232 L368.36 332.19 L259.18 232 Z" fill="#7cb5ec" fill-opacity="0.28" stroke="#7cb5ec" stroke-width="1.75" data-series="Grady"/>
+    <path d="M368.36 134.38 L459.56 232 L368.36 334.76 L273.31 232 Z" fill="#434348" fill-opacity="0.28" stroke="#434348" stroke-width="1.75" data-series="Midtown"/>
+  </g>
+  <g fill="#666666" font-size="11" font-weight="400">
+    <text x="368.36" y="102.4" text-anchor="middle" dominant-baseline="middle" data-spoke="Math">Math</text>
+    <text x="497.96" y="232" text-anchor="middle" dominant-baseline="middle" data-spoke="Writing">Writing</text>
+    <text x="368.36" y="361.6" text-anchor="middle" dominant-baseline="middle" data-spoke="Labs">Labs</text>
+    <text x="238.76" y="232" text-anchor="middle" dominant-baseline="middle" data-spoke="Research">Research</text>
+  </g>
+</svg>

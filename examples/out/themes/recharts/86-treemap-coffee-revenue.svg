@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="treemap chart: Espresso still leads Octane revenue on the Eastside (USD k), 9 rows, series shop" aria-labelledby="mv-f7485ba93c6c0b58-title" aria-describedby="mv-f7485ba93c6c0b58-desc" data-markvis="2" data-chart-type="treemap" data-id="mv-f7485ba93c6c0b58" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-f7485ba93c6c0b58-title">Espresso still leads Octane revenue on the Eastside</title>
+  <desc id="mv-f7485ba93c6c0b58-desc">treemap chart. Espresso still leads Octane revenue on the Eastside. x=drink. y=revenue. series=shop. unit=USD k. 9 rows.</desc>
+  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#374151">Espresso still leads Octane revenue on the Eastside<tspan font-size="12" font-weight="400" fill="#6B7280"> · USD k</tspan></text>
+  <rect x="48" y="36" width="652" height="394" fill="none" stroke="#e2e8f0" stroke-width="1" data-plot-border="1"/>
+  <g data-treemap="1">
+    <rect x="48" y="36" width="220.12" height="17" fill="#8884d8" fill-opacity="0.35" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="Octane" data-y="79"/>
+    <rect x="268.12" y="36" width="217.33" height="17" fill="#82ca9d" fill-opacity="0.35" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="Barista" data-y="78"/>
+    <rect x="485.45" y="36" width="214.55" height="17" fill="#ffc658" fill-opacity="0.35" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="Component" data-y="77"/>
+    <rect x="48" y="53" width="220.12" height="229.06" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="Espresso" data-y="48"/>
+    <rect x="48" y="282.06" width="220.12" height="104.99" fill="#82ca9d" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="Batch brew" data-y="22"/>
+    <rect x="48" y="387.05" width="220.12" height="42.95" fill="#ffc658" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="Tea" data-y="9"/>
+    <rect x="268.12" y="53" width="217.33" height="174" fill="#8884d8" fill-opacity="0.72" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="Espresso" data-y="36"/>
+    <rect x="268.12" y="227" width="217.33" height="135.33" fill="#82ca9d" fill-opacity="0.72" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="Batch brew" data-y="28"/>
+    <rect x="268.12" y="362.33" width="217.33" height="67.67" fill="#ffc658" fill-opacity="0.72" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="Pastry" data-y="14"/>
+    <rect x="485.45" y="53" width="214.55" height="200.74" fill="#8884d8" fill-opacity="0.72" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="Espresso" data-y="41"/>
+    <rect x="485.45" y="253.74" width="214.55" height="93.03" fill="#82ca9d" fill-opacity="0.72" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="Batch brew" data-y="19"/>
+    <rect x="485.45" y="346.77" width="214.55" height="83.23" fill="#ffc658" fill-opacity="0.72" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-label="Retail beans" data-y="17"/>
+  </g>
+  <g fill="#374151" font-size="11" font-weight="500">
+    <text x="52" y="66.35" text-anchor="start" data-label-text="Espresso">Espresso</text>
+    <text x="52" y="295.41" text-anchor="start" data-label-text="Batch brew">Batch brew</text>
+    <text x="52" y="400.4" text-anchor="start" data-label-text="Tea">Tea</text>
+    <text x="272.12" y="66.35" text-anchor="start" data-label-text="Espresso">Espresso</text>
+    <text x="272.12" y="240.35" text-anchor="start" data-label-text="Batch brew">Batch brew</text>
+    <text x="272.12" y="375.68" text-anchor="start" data-label-text="Pastry">Pastry</text>
+    <text x="489.45" y="66.35" text-anchor="start" data-label-text="Espresso">Espresso</text>
+    <text x="489.45" y="267.09" text-anchor="start" data-label-text="Batch brew">Batch brew</text>
+    <text x="489.45" y="360.12" text-anchor="start" data-label-text="Retail beans">Retail beans</text>
+  </g>
+</svg>

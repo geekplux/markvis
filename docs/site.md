@@ -58,7 +58,7 @@ Footer: © 2026 GeekPlux · MIT · 0.0.13 under `legacy/`.
 
 ## Examples gallery
 
-`/examples` is generated from `examples/valid/*.md` plus `examples/out/<stem>.svg` so docs cannot drift. Today: 52 valid files. Invalid fixtures stay off the gallery.
+`/examples` is generated from `examples/valid/*.md` plus `examples/out/<stem>.svg` so docs cannot drift. Today: 86 valid files. Invalid fixtures stay off the gallery.
 
 - Card title = SVG `<title>` or fence `title:` (a conclusion, never a filename slug).
 - `data-type` = fence `type:`. `data-id` = stem.

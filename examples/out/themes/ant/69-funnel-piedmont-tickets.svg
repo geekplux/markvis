@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="funnel chart: Check-in still seats 920 of 3,400 Piedmont browsers, 4 rows" aria-labelledby="mv-128350c0bdf21762-title" aria-describedby="mv-128350c0bdf21762-desc" data-markvis="2" data-chart-type="funnel" data-id="mv-128350c0bdf21762" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-128350c0bdf21762-title">Check-in still seats 920 of 3,400 Piedmont browsers</title>
+  <desc id="mv-128350c0bdf21762-desc">funnel chart. Check-in still seats 920 of 3,400 Piedmont browsers. x=stage. y=people. 4 rows.</desc>
+  <text x="48" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Check-in still seats 920 of 3,400 Piedmont browsers</text>
+  <rect x="48" y="46" width="560.52" height="360" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <g data-funnel="1">
+    <path d="M48 46 L608.52 46 L476.63 136 L179.89 136 Z" fill="#5AD8A6" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Browse" data-y="3,400"/>
+    <path d="M179.89 136 L476.63 136 L430.47 226 L226.05 226 Z" fill="#E8684A" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Cart" data-y="1,800"/>
+    <path d="M226.05 226 L430.47 226 L404.1 316 L252.42 316 Z" fill="#5D7092" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Pay" data-y="1,240"/>
+    <path d="M252.42 316 L404.1 316 L404.1 406 L252.42 406 Z" fill="#F6BD16" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Check-in" data-y="920"/>
+  </g>
+  <g fill="#000000" font-size="11" font-weight="500">
+    <text x="616.52" y="91" text-anchor="start" dominant-baseline="middle" data-label="Browse">Browse · 3,400</text>
+    <text x="616.52" y="181" text-anchor="start" dominant-baseline="middle" data-label="Cart">Cart · 1,800</text>
+    <text x="616.52" y="271" text-anchor="start" dominant-baseline="middle" data-label="Pay">Pay · 1,240</text>
+    <text x="616.52" y="361" text-anchor="start" dominant-baseline="middle" data-label="Check-in">Check-in · 920</text>
+  </g>
+</svg>

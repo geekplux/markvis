@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="treemap chart: Tabernacle still tops Midtown venue capacity, 8 rows, series neighborhood" aria-labelledby="mv-e3f39ecc8f1703b1-title" aria-describedby="mv-e3f39ecc8f1703b1-desc" data-markvis="2" data-chart-type="treemap" data-id="mv-e3f39ecc8f1703b1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-e3f39ecc8f1703b1-title">Tabernacle still tops Midtown venue capacity</title>
+  <desc id="mv-e3f39ecc8f1703b1-desc">treemap chart. Tabernacle still tops Midtown venue capacity. x=venue. y=seats. series=neighborhood. 8 rows.</desc>
+  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Tabernacle still tops Midtown venue capacity</text>
+  <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
+  <g data-treemap="1">
+    <rect x="40" y="32" width="299.21" height="16" fill="#475569" fill-opacity="0.35" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Midtown" data-y="3,650"/>
+    <rect x="339.21" y="32" width="81.98" height="16" fill="#64748B" fill-opacity="0.35" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Little Five Points" data-y="1,000"/>
+    <rect x="421.19" y="32" width="24.59" height="16" fill="#0F766E" fill-opacity="0.35" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="East Atlanta" data-y="300"/>
+    <rect x="445.78" y="32" width="143.46" height="16" fill="#334155" fill-opacity="0.35" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="West Midtown" data-y="1,750"/>
+    <rect x="589.23" y="32" width="114.77" height="16" fill="#78716C" fill-opacity="0.35" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Old Fourth Ward" data-y="1,400"/>
+    <rect x="40" y="48" width="299.21" height="296.33" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Tabernacle" data-y="2,600"/>
+    <rect x="40" y="344.33" width="299.21" height="119.67" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Center Stage" data-y="1,050"/>
+    <rect x="339.21" y="48" width="81.98" height="416" fill="#0F766E" fill-opacity="0.65" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Variety Playhouse" data-y="1,000"/>
+    <rect x="421.19" y="48" width="24.59" height="416" fill="#78716C" fill-opacity="0.65" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="The Earl" data-y="300"/>
+    <rect x="445.78" y="48" width="143.46" height="249.6" fill="#475569" fill-opacity="0.65" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Terminal West" data-y="1,050"/>
+    <rect x="445.78" y="297.6" width="143.46" height="166.4" fill="#64748B" fill-opacity="0.65" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="The Mill" data-y="700"/>
+    <rect x="589.23" y="48" width="114.77" height="297.14" fill="#0F766E" fill-opacity="0.65" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="The Masquerade" data-y="1,000"/>
+    <rect x="589.23" y="345.14" width="114.77" height="118.86" fill="#334155" fill-opacity="0.65" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Skyline Park" data-y="400"/>
+  </g>
+  <g fill="#18181B" font-size="10" font-weight="500">
+    <text x="44" y="60.5" text-anchor="start" data-label-text="Tabernacle">Tabernacle</text>
+    <text x="44" y="356.83" text-anchor="start" data-label-text="Center Stage">Center Stage</text>
+    <text x="343.21" y="60.5" text-anchor="start" data-label-text="Variety Playhouse">Variety Pl…</text>
+    <text x="425.19" y="60.5" text-anchor="start" data-label-text="The Earl">T…</text>
+    <text x="449.78" y="60.5" text-anchor="start" data-label-text="Terminal West">Terminal West</text>
+    <text x="449.78" y="310.1" text-anchor="start" data-label-text="The Mill">The Mill</text>
+    <text x="593.23" y="60.5" text-anchor="start" data-label-text="The Masquerade">The Masquerade</text>
+    <text x="593.23" y="357.64" text-anchor="start" data-label-text="Skyline Park">Skyline Park</text>
+  </g>
+</svg>
