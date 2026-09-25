@@ -228,14 +228,16 @@ function inferX(type: ChartType, table: LooseTable): string {
     type === "funnel" ||
     type === "waterfall" ||
     type === "radar" ||
-    type === "gauge"
+    type === "gauge" ||
+    type === "sankey" ||
+    type === "treemap"
   ) {
     return firstCategoryColumn(table) ?? table.columns[0]!;
   }
   return table.columns[0]!;
 }
 
-/** pie/hist/funnel/waterfall/gauge ignore series on IR; heatmap requires it; radar optional. */
+/** pie/hist/funnel/waterfall/gauge ignore series on IR; heatmap/sankey require it; radar/treemap optional. */
 function keepSeriesOnIR(type: ChartType): boolean {
   return (
     type !== "pie" &&
@@ -432,7 +434,7 @@ function parseBody(
   if (typeKind === "unknown") {
     return fail(
       "E_UNKNOWN_TYPE",
-      "type is not one of bar|line|area|scatter|pie|hist|heatmap|funnel|waterfall|radar|gauge",
+      "type is not one of bar|line|area|scatter|pie|hist|heatmap|funnel|waterfall|radar|gauge|sankey|treemap",
       parsed,
       raw,
     );
@@ -508,6 +510,10 @@ function parseBody(
     return fail("E_UNKNOWN_FIELD", "heatmap requires series", parsed, raw);
   }
 
+  if (type === "sankey" && !specified.series) {
+    return fail("E_UNKNOWN_FIELD", "sankey requires series", parsed, raw);
+  }
+
   const x = specified.x ?? inferX(type, parsed);
   const y = specified.y ?? inferY(type, parsed, x);
   const series =
@@ -527,7 +533,10 @@ function parseBody(
   }
 
   if (
-    (type === "funnel" || type === "radar") &&
+    (type === "funnel" ||
+      type === "radar" ||
+      type === "sankey" ||
+      type === "treemap") &&
     y &&
     columnHasNegative(parsed, y)
   ) {
@@ -537,6 +546,25 @@ function parseBody(
       parsed,
       raw,
     );
+  }
+
+  if (type === "sankey" && specified.series && y) {
+    const xi = parsed.columns.indexOf(x);
+    const si = parsed.columns.indexOf(specified.series);
+    if (xi !== -1 && si !== -1) {
+      for (const row of parsed.rows) {
+        const src = (row[xi] ?? "").trim();
+        const tgt = (row[si] ?? "").trim();
+        if (src !== "" && src === tgt) {
+          return fail(
+            "E_UNKNOWN_FIELD",
+            "sankey self-link (source equals target)",
+            parsed,
+            raw,
+          );
+        }
+      }
+    }
   }
 
   let layout: "grouped" | "stacked" | "percent" | undefined;

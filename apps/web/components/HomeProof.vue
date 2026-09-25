@@ -21,7 +21,7 @@ function urlFor(stem: ProofStem): string {
 const views = proofViews(GALLERY_ITEMS, {
   "01-bar-basic": urlFor("01-bar-basic"),
   "02-line-multi": urlFor("02-line-multi"),
-  "05-pie-raw": urlFor("05-pie-raw"),
+  "81-sankey-airport-ground": urlFor("81-sankey-airport-ground"),
 });
 </script>
 

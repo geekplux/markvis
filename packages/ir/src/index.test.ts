@@ -20,7 +20,7 @@ const barTable = {
 };
 
 describe("@markvis/ir", () => {
-  it("freezes exactly eleven chart types", () => {
+  it("freezes exactly thirteen chart types", () => {
     expect([...CHART_TYPES]).toEqual([
       "bar",
       "line",
@@ -33,6 +33,8 @@ describe("@markvis/ir", () => {
       "waterfall",
       "radar",
       "gauge",
+      "sankey",
+      "treemap",
     ]);
   });
 
@@ -100,6 +102,8 @@ describe("@markvis/ir", () => {
   it("isChartType matches the frozen set only", () => {
     expect(isChartType("bar")).toBe(true);
     expect(isChartType("heatmap")).toBe(true);
+    expect(isChartType("sankey")).toBe(true);
+    expect(isChartType("treemap")).toBe(true);
     expect(isChartType("donut")).toBe(false);
   });
 
@@ -130,6 +134,50 @@ describe("@markvis/ir", () => {
       table,
     });
     expect(missing.success).toBe(false);
+  });
+
+  it("requires series for sankey and accepts optional series on treemap", () => {
+    const flow = {
+      columns: ["from", "to", "riders"],
+      rows: [
+        ["A", "B", "10"],
+        ["B", "C", "4"],
+      ],
+    };
+    const ok = ChartIRSchema.parse({
+      markvis: 2,
+      type: "sankey",
+      title: "Flow",
+      x: "from",
+      y: "riders",
+      series: "to",
+      table: flow,
+    });
+    expect(ok.series).toBe("to");
+    const missing = ChartIRSchema.safeParse({
+      markvis: 2,
+      type: "sankey",
+      title: "Flow",
+      x: "from",
+      y: "riders",
+      table: flow,
+    });
+    expect(missing.success).toBe(false);
+    const flat = ChartIRSchema.parse({
+      markvis: 2,
+      type: "treemap",
+      title: "Areas",
+      x: "station",
+      y: "boardings",
+      table: {
+        columns: ["station", "boardings"],
+        rows: [
+          ["Five Points", "1200"],
+          ["Midtown", "800"],
+        ],
+      },
+    });
+    expect(flat.series).toBeUndefined();
   });
 
   it("accepts min/max on gauge and rejects min >= max", () => {

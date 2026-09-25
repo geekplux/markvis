@@ -14,6 +14,8 @@ import {
   waterfall,
   radar,
   gauge,
+  sankey,
+  treemap,
 } from "../registry.js";
 import { typeExtras } from "../fence-keys.js";
 
@@ -34,6 +36,8 @@ describe("type registry", () => {
     expect(typeRegistry.waterfall).toBe(waterfall);
     expect(typeRegistry.radar).toBe(radar);
     expect(typeRegistry.gauge).toBe(gauge);
+    expect(typeRegistry.sankey).toBe(sankey);
+    expect(typeRegistry.treemap).toBe(treemap);
     for (const id of CHART_TYPES) {
       expect(typeRegistry[id].id).toBe(id);
       expect(typeRegistry[id].extras).toEqual(typeExtras[id]);
@@ -57,6 +61,11 @@ describe("type registry", () => {
     expect([...typeExtras.waterfall]).toEqual([]);
     expect([...typeExtras.radar]).toEqual([]);
     expect([...typeExtras.gauge]).toEqual(["min", "max"]);
+  });
+
+  it("locks Wave 3 typeExtras", () => {
+    expect([...typeExtras.sankey]).toEqual([]);
+    expect([...typeExtras.treemap]).toEqual([]);
   });
 
   it("fails loudly when a pack is missing", () => {

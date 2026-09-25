@@ -1,12 +1,12 @@
-<!-- intent: E_UNKNOWN_TYPE: sankey not in allowed types -->
+<!-- intent: E_UNKNOWN_TYPE: sunburst not in allowed types -->
 
 ```chart
-type: sankey
-title: Flow
-x: from
+type: sunburst
+title: Nested share
+x: label
 y: value
 
-from,value
+label,value
 a,1
 b,2
 ```

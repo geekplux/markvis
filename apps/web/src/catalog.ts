@@ -10,6 +10,8 @@ export const CHART_TYPES = [
   "waterfall",
   "radar",
   "gauge",
+  "sankey",
+  "treemap",
 ] as const;
 
 export type ChartType = (typeof CHART_TYPES)[number];

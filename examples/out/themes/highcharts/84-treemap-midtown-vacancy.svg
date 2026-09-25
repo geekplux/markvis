@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="treemap chart: Colony Square still holds the largest Midtown vacancy (sq ft), 8 rows, series corridor" aria-labelledby="mv-996e8e2a1730f1c8-title" aria-describedby="mv-996e8e2a1730f1c8-desc" data-markvis="2" data-chart-type="treemap" data-id="mv-996e8e2a1730f1c8" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-996e8e2a1730f1c8-title">Colony Square still holds the largest Midtown vacancy</title>
+  <desc id="mv-996e8e2a1730f1c8-desc">treemap chart. Colony Square still holds the largest Midtown vacancy. x=building. y=vacant. series=corridor. unit=sq ft. 8 rows.</desc>
+  <text x="56" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Colony Square still holds the largest Midtown vacancy<tspan font-size="12" font-weight="400" fill="#666666"> · sq ft</tspan></text>
+  <rect x="56" y="38" width="644" height="382" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
+  <g data-treemap="1">
+    <rect x="56" y="38" width="343.73" height="17" fill="#7cb5ec" fill-opacity="0.35" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Peachtree" data-y="87,000"/>
+    <rect x="399.73" y="38" width="193.6" height="17" fill="#434348" fill-opacity="0.35" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="14th Street" data-y="49,000"/>
+    <rect x="593.33" y="38" width="106.67" height="17" fill="#90ed7d" fill-opacity="0.35" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Tech Square" data-y="27,000"/>
+    <rect x="56" y="55" width="343.73" height="176.21" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Colony Square" data-y="42,000"/>
+    <rect x="56" y="231.21" width="343.73" height="130.06" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Promenade" data-y="31,000"/>
+    <rect x="56" y="361.26" width="343.73" height="58.74" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Campanile" data-y="14,000"/>
+    <rect x="399.73" y="55" width="193.6" height="134.08" fill="#7cb5ec" fill-opacity="0.75" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Ten Peachtree Place" data-y="18,000"/>
+    <rect x="399.73" y="189.08" width="193.6" height="163.88" fill="#434348" fill-opacity="0.75" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="One Atlantic Center" data-y="22,000"/>
+    <rect x="399.73" y="352.96" width="193.6" height="67.04" fill="#90ed7d" fill-opacity="0.75" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Midtown Center" data-y="9,000"/>
+    <rect x="593.33" y="55" width="106.67" height="216.3" fill="#7cb5ec" fill-opacity="0.75" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Technology Square" data-y="16,000"/>
+    <rect x="593.33" y="271.3" width="106.67" height="148.7" fill="#434348" fill-opacity="0.75" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Centergy One" data-y="11,000"/>
+  </g>
+  <g fill="#333333" font-size="11" font-weight="500">
+    <text x="60" y="68.35" text-anchor="start" data-label-text="Colony Square">Colony Square</text>
+    <text x="60" y="244.56" text-anchor="start" data-label-text="Promenade">Promenade</text>
+    <text x="60" y="374.61" text-anchor="start" data-label-text="Campanile">Campanile</text>
+    <text x="403.73" y="68.35" text-anchor="start" data-label-text="Ten Peachtree Place">Ten Peachtree Place</text>
+    <text x="403.73" y="202.43" text-anchor="start" data-label-text="One Atlantic Center">One Atlantic Center</text>
+    <text x="403.73" y="366.31" text-anchor="start" data-label-text="Midtown Center">Midtown Center</text>
+    <text x="597.33" y="68.35" text-anchor="start" data-label-text="Technology Square">Technology Sq…</text>
+    <text x="597.33" y="284.65" text-anchor="start" data-label-text="Centergy One">Centergy One</text>
+  </g>
+</svg>

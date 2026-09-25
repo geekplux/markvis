@@ -84,14 +84,14 @@ describe("gallery catalog", () => {
     ).toBe("pie");
   });
 
-  it("builds 63 items with themed SVGs and bans stem-slug titles", () => {
+  it("builds 87 items with themed SVGs and bans stem-slug titles", () => {
     const maps = loadDiskMaps();
     const catalog = catalogFromMaps(
       maps.markdownByStem,
       maps.svgByStem,
       maps.themedSvgByThemeStem,
     );
-    expect(catalog.length).toBe(63);
+    expect(catalog.length).toBe(87);
     expect(catalog.length).toBeGreaterThanOrEqual(40);
     const types = new Set(catalog.map((item) => item.type));
     for (const type of CHART_TYPES) {
@@ -111,10 +111,10 @@ describe("gallery catalog", () => {
     }
     expect(coversTypeThemeMatrix(catalog)).toBe(true);
     const counts = cardCounts(catalog);
-    expect(counts.byTheme.folio).toBe(63);
-    expect(counts.byTheme.highcharts).toBe(63);
-    expect(counts.byTheme.ant).toBe(63);
-    expect(counts.byTheme.recharts).toBe(63);
+    expect(counts.byTheme.folio).toBe(87);
+    expect(counts.byTheme.highcharts).toBe(87);
+    expect(counts.byTheme.ant).toBe(87);
+    expect(counts.byTheme.recharts).toBe(87);
     expect(counts.byType.bar).toBeGreaterThanOrEqual(1);
     expect(() =>
       catalogFromMaps(maps.markdownByStem, {

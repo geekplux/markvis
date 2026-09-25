@@ -10,6 +10,8 @@ export declare const CHART_TYPES: readonly [
   "waterfall",
   "radar",
   "gauge",
+  "sankey",
+  "treemap",
 ];
 export type ChartType = (typeof CHART_TYPES)[number];
 

@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Wave 3 type packs: `sankey` `treemap`. Pack-local layout only (no d3-hierarchy/sankey). Sankey self-link → `E_UNKNOWN_FIELD`; sankey/treemap negatives → `E_NEGATIVE_VALUE`.
+
 ### Added
 
 - Wave 2 type packs: `heatmap` `funnel` `waterfall` `radar` `gauge`. Gauge extras `min`/`max`. Funnel/radar negatives use `E_NEGATIVE_VALUE`.

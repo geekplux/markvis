@@ -14,12 +14,12 @@ Unicode labels inside `examples/` fixtures are data, not documentation language.
 
 Do not invent a type id. Do not add d3.
 
-Types only: `bar` | `line` | `area` | `scatter` | `pie` | `hist` | `heatmap` | `funnel` | `waterfall` | `radar` | `gauge`.
+Types only: `bar` | `line` | `area` | `scatter` | `pie` | `hist` | `heatmap` | `funnel` | `waterfall` | `radar` | `gauge` | `sankey` | `treemap`.
 Tags only: `chart` / `markvis` / `vis` → one parser.
 Fields only: `markvis`, `type`, `title`, `unit`, `x`, `y`, `series`.
 Optional `theme:` and `palette:` follow `SPEC.md`. Type-local extras: `layout`, `innerRadius`, `min`, `max`.
 Data: CSV or GFM table. No JSON as default data. No JS in a fence.
-`donut` / stacked-bar-as-type / `treemap` / `sankey` / `map`: NO.
+`donut` / stacked-bar-as-type / `sunburst` / `chord` / `map`: NO. (Wave 3: `sankey` `treemap` are in.)
 
 Forbidden in `packages/` and `apps/` (dependencies, imports, tests):
 `d3`, `d3-node`, `markvis-bar`, `markvis-line`, `markvis-pie`,
@@ -57,7 +57,7 @@ Allow:
 Forbidden in `packages/` and `apps/` dependencies (adding any item is a reject):
 d3, d3-node, markvis-bar, markvis-line, markvis-pie, markdown-it-fence, babel-preset-es2015, jsdom-as-renderer
 
-Do not invent `donut` / `sankey` / `treemap` / stacked-bar as type ids. Do not make d3 the default renderer. Do not pull d3 / d3-node / jsdom at runtime just to emit a figure.
+Do not invent `donut` / `sunburst` / `chord` / stacked-bar as type ids. Do not make d3 the default renderer. Do not pull d3 / d3-node / jsdom at runtime just to emit a figure.
 
 `legacy/` may keep old deps, but `packages/*` tests must not import `legacy`.
 

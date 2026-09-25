@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="funnel chart: Close still seals 12 of 85 Grant Park tours, 6 rows" aria-labelledby="mv-1fe5f50d0d0280e3-title" aria-describedby="mv-1fe5f50d0d0280e3-desc" data-markvis="2" data-chart-type="funnel" data-id="mv-1fe5f50d0d0280e3" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-1fe5f50d0d0280e3-title">Close still seals 12 of 85 Grant Park tours</title>
+  <desc id="mv-1fe5f50d0d0280e3-desc">funnel chart. Close still seals 12 of 85 Grant Park tours. x=stage. y=households. 6 rows.</desc>
+  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">Close still seals 12 of 85 Grant Park tours</text>
+  <rect x="48" y="36" width="553.7" height="404" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
+  <g data-funnel="1">
+    <path d="M48 36 L601.7 36 L481.19 103.33 L168.51 103.33 Z" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Inquiry" data-y="85"/>
+    <path d="M168.51 103.33 L481.19 103.33 L396.51 170.67 L253.19 170.67 Z" fill="#009689" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Tour" data-y="48"/>
+    <path d="M253.19 170.67 L396.51 170.67 L383.48 238 L266.22 238 Z" fill="#104E64" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Offer" data-y="22"/>
+    <path d="M266.22 238 L383.48 238 L373.71 305.33 L275.99 305.33 Z" fill="#FFB900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Inspection" data-y="18"/>
+    <path d="M275.99 305.33 L373.71 305.33 L363.93 372.67 L285.77 372.67 Z" fill="#FE9A00" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Earnest" data-y="15"/>
+    <path d="M285.77 372.67 L363.93 372.67 L363.93 440 L285.77 440 Z" fill="#F54900" fill-opacity="0.72" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Close" data-y="12"/>
+  </g>
+  <g fill="#0A0A0A" font-size="11" font-weight="500">
+    <text x="609.7" y="69.67" text-anchor="start" dominant-baseline="middle" data-label="Inquiry">Inquiry · 85</text>
+    <text x="609.7" y="137" text-anchor="start" dominant-baseline="middle" data-label="Tour">Tour · 48</text>
+    <text x="609.7" y="204.33" text-anchor="start" dominant-baseline="middle" data-label="Offer">Offer · 22</text>
+    <text x="609.7" y="271.67" text-anchor="start" dominant-baseline="middle" data-label="Inspection">Inspection · 18</text>
+    <text x="609.7" y="339" text-anchor="start" dominant-baseline="middle" data-label="Earnest">Earnest · 15</text>
+    <text x="609.7" y="406.33" text-anchor="start" dominant-baseline="middle" data-label="Close">Close · 12</text>
+  </g>
+</svg>

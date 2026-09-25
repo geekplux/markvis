@@ -1,35 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="waterfall chart: Concessions still cover Midtown rent after payroll (USD k), 5 rows" aria-labelledby="mv-8a5d1c459aa031da-title" aria-describedby="mv-8a5d1c459aa031da-desc" data-markvis="2" data-chart-type="waterfall" data-id="mv-8a5d1c459aa031da" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
-  <title id="mv-8a5d1c459aa031da-title">Concessions still cover Midtown rent after payroll</title>
-  <desc id="mv-8a5d1c459aa031da-desc">waterfall chart. Concessions still cover Midtown rent after payroll. x=step. y=delta. unit=USD k. 5 rows.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="waterfall chart: Concessions still cover Midtown rent after payroll (USD k), 8 rows" aria-labelledby="mv-b80f123a37aff372-title" aria-describedby="mv-b80f123a37aff372-desc" data-markvis="2" data-chart-type="waterfall" data-id="mv-b80f123a37aff372" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-b80f123a37aff372-title">Concessions still cover Midtown rent after payroll</title>
+  <desc id="mv-b80f123a37aff372-desc">waterfall chart. Concessions still cover Midtown rent after payroll. x=step. y=delta. unit=USD k. 8 rows.</desc>
   <text x="74" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Concessions still cover Midtown rent after payroll<tspan font-size="12" font-weight="400" fill="#666666"> · USD k</tspan></text>
-  <rect x="74" y="38" width="626" height="361" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
+  <rect x="74" y="38" width="626" height="304.96" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
   <g fill="none" stroke="#333333" stroke-opacity="0.22" stroke-width="1">
-    <line x1="74" x2="700" y1="278.67" y2="278.67"/>
-    <line x1="74" x2="700" y1="158.33" y2="158.33"/>
+    <line x1="74" x2="700" y1="241.31" y2="241.31"/>
+    <line x1="74" x2="700" y1="139.65" y2="139.65"/>
   </g>
-  <path d="M74 399 L700 399" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <path d="M74 342.96 L700 342.96" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <g data-waterfall="1">
-    <rect x="87.77" y="182.4" width="97.66" height="216.6" fill="#7cb5ec" rx="0" data-step="Ticket sales" data-y="180" data-baseline="0"/>
-    <rect x="212.97" y="105.39" width="97.66" height="77.01" fill="#7cb5ec" rx="0" data-step="Concessions" data-y="64" data-baseline="180"/>
-    <rect x="338.17" y="105.39" width="97.66" height="108.3" fill="#434348" rx="0" data-step="Payroll" data-y="-90" data-baseline="244"/>
-    <rect x="463.37" y="213.69" width="97.66" height="50.54" fill="#434348" rx="0" data-step="Rent" data-y="-42" data-baseline="154"/>
-    <rect x="588.57" y="264.23" width="97.66" height="14.44" fill="#434348" rx="0" data-step="Utilities" data-y="-12" data-baseline="112"/>
+    <rect x="79.48" y="159.98" width="67.3" height="182.98" fill="#7cb5ec" rx="0" data-step="Ticket sales" data-y="180" data-baseline="0"/>
+    <rect x="157.73" y="94.93" width="67.3" height="65.06" fill="#7cb5ec" rx="0" data-step="Concessions" data-y="64" data-baseline="180"/>
+    <rect x="235.98" y="66.46" width="67.3" height="28.46" fill="#7cb5ec" rx="0" data-step="Merch" data-y="28" data-baseline="244"/>
+    <rect x="314.23" y="44.1" width="67.3" height="22.36" fill="#7cb5ec" rx="0" data-step="Sponsorships" data-y="22" data-baseline="272"/>
+    <rect x="392.48" y="44.1" width="67.3" height="91.49" fill="#434348" rx="0" data-step="Payroll" data-y="-90" data-baseline="294"/>
+    <rect x="470.73" y="135.59" width="67.3" height="42.69" fill="#434348" rx="0" data-step="Rent" data-y="-42" data-baseline="204"/>
+    <rect x="548.98" y="178.28" width="67.3" height="12.2" fill="#434348" rx="0" data-step="Utilities" data-y="-12" data-baseline="162"/>
+    <rect x="627.23" y="190.48" width="67.3" height="18.3" fill="#434348" rx="0" data-step="Marketing" data-y="-18" data-baseline="150"/>
   </g>
   <g fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-waterfall-connectors="1">
-    <line x1="185.43" x2="212.97" y1="182.4" y2="182.4"/>
-    <line x1="310.63" x2="338.17" y1="105.39" y2="105.39"/>
-    <line x1="435.83" x2="463.37" y1="213.69" y2="213.69"/>
-    <line x1="561.03" x2="588.57" y1="264.23" y2="264.23"/>
+    <line x1="146.77" x2="157.73" y1="159.98" y2="159.98"/>
+    <line x1="225.02" x2="235.98" y1="94.93" y2="94.93"/>
+    <line x1="303.27" x2="314.23" y1="66.46" y2="66.46"/>
+    <line x1="381.52" x2="392.48" y1="44.1" y2="44.1"/>
+    <line x1="459.77" x2="470.73" y1="135.59" y2="135.59"/>
+    <line x1="538.02" x2="548.98" y1="178.28" y2="178.28"/>
+    <line x1="616.27" x2="627.23" y1="190.48" y2="190.48"/>
   </g>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="66" y="399" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="66" y="278.67" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="66" y="158.33" text-anchor="end" dominant-baseline="middle">200</text>
+    <text x="66" y="342.96" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="241.31" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="66" y="139.65" text-anchor="end" dominant-baseline="middle">200</text>
     <text x="66" y="38" text-anchor="end" dominant-baseline="middle">300</text>
-    <text x="136.6" y="410" text-anchor="middle" data-full-label="Ticket sales">Ticket sales</text>
-    <text x="261.8" y="410" text-anchor="middle" data-full-label="Concessions">Concessions</text>
-    <text x="387" y="410" text-anchor="middle" data-full-label="Payroll">Payroll</text>
-    <text x="512.2" y="410" text-anchor="middle" data-full-label="Rent">Rent</text>
-    <text x="637.4" y="410" text-anchor="middle" data-full-label="Utilities">Utilities</text>
+    <text x="113.13" y="350.96" text-anchor="end" dominant-baseline="middle" transform="rotate(-55 113.13 350.96)" data-full-label="Ticket sales">Ticket sales</text>
+    <text x="191.38" y="350.96" text-anchor="end" dominant-baseline="middle" transform="rotate(-55 191.38 350.96)" data-full-label="Concessions">Concessions</text>
+    <text x="269.63" y="350.96" text-anchor="end" dominant-baseline="middle" transform="rotate(-55 269.63 350.96)" data-full-label="Merch">Merch</text>
+    <text x="347.88" y="350.96" text-anchor="end" dominant-baseline="middle" transform="rotate(-55 347.88 350.96)" data-full-label="Sponsorships">Sponsorships</text>
+    <text x="426.13" y="350.96" text-anchor="end" dominant-baseline="middle" transform="rotate(-55 426.13 350.96)" data-full-label="Payroll">Payroll</text>
+    <text x="504.38" y="350.96" text-anchor="end" dominant-baseline="middle" transform="rotate(-55 504.38 350.96)" data-full-label="Rent">Rent</text>
+    <text x="582.63" y="350.96" text-anchor="end" dominant-baseline="middle" transform="rotate(-55 582.63 350.96)" data-full-label="Utilities">Utilities</text>
+    <text x="660.88" y="350.96" text-anchor="end" dominant-baseline="middle" transform="rotate(-55 660.88 350.96)" data-full-label="Marketing">Marketing</text>
   </g>
 </svg>
