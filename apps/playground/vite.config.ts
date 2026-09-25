@@ -33,6 +33,7 @@ export default defineConfig({
         repoRoot,
         "packages/render-svg/src/index.ts",
       ),
+      "@markvis/browser/preview": resolve(repoRoot, "packages/browser/src/preview.ts"),
       "@markvis/browser/enhance": resolve(repoRoot, "packages/browser/src/enhance.ts"),
       "@markvis/browser": resolve(repoRoot, "packages/browser/src/index.ts"),
     },

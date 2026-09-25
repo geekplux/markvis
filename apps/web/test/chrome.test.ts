@@ -457,6 +457,11 @@ describe("site visual chrome", () => {
     expect(vue).toContain("fenceForThemePalette");
     expect(vue).toContain("themeFilter");
     expect(vue).toContain("svgsByTheme");
+    expect(vue).toContain("previewSource");
+    expect(vue).toContain("@markvis/browser/preview");
+    expect(vue).toContain("selectedPreview");
+    expect(vue).toContain("gallery-error");
+    expect(vue).not.toContain("Pre-baked theme SVGs only");
     expect(vue).toContain("THEME_CHIPS");
     expect(vue).toContain("Open in Play");
     expect(vue).toContain("playHref");

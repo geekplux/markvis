@@ -1,9 +1,24 @@
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "vitepress";
+import type { Plugin } from "vite";
 
 const root = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(root, "../../..");
+const cryptoShim = resolve(repoRoot, "packages/browser/src/crypto-shim.ts");
+
+/** Browser-safe createHash for client-side render-svg (Examples detail). */
+function nodeCryptoShim(): Plugin {
+  return {
+    name: "node-crypto-shim",
+    enforce: "pre",
+    resolveId(id) {
+      if (id === "node:crypto" || id === "crypto") {
+        return cryptoShim;
+      }
+    },
+  };
+}
 
 function docsSidebar() {
   return [
@@ -56,11 +71,38 @@ export default defineConfig({
     ],
   ],
   vite: {
+    plugins: [nodeCryptoShim()],
     resolve: {
       alias: {
-        // Enhance-only: do not alias full @markvis/browser / render-svg (node:crypto).
-        "@markvis/browser/enhance": resolve(repoRoot, "packages/browser/src/enhance.ts"),
+        "@markvis/browser/enhance": resolve(
+          repoRoot,
+          "packages/browser/src/enhance.ts",
+        ),
+        "@markvis/browser/preview": resolve(
+          repoRoot,
+          "packages/browser/src/preview.ts",
+        ),
+        "@markvis/ir": resolve(repoRoot, "packages/ir/src/index.ts"),
+        "@markvis/types": resolve(repoRoot, "packages/types/registry.ts"),
+        "@markvis/types/fence-keys": resolve(
+          repoRoot,
+          "packages/types/fence-keys.ts",
+        ),
+        "@markvis/themes": resolve(repoRoot, "packages/themes/registry.ts"),
+        "@markvis/parser": resolve(repoRoot, "packages/parser/src/index.ts"),
+        "@markvis/render-svg": resolve(
+          repoRoot,
+          "packages/render-svg/src/index.ts",
+        ),
       },
+    },
+    optimizeDeps: {
+      exclude: [
+        "@markvis/ir",
+        "@markvis/parser",
+        "@markvis/render-svg",
+        "@markvis/browser",
+      ],
     },
     server: {
       fs: {

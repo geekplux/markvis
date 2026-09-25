@@ -31,11 +31,14 @@ export default defineConfig({
       "@markvis/markdown-it": fileURLToPath(
         new URL("./packages/markdown-it/src/index.ts", import.meta.url),
       ),
-      "@markvis/browser": fileURLToPath(
-        new URL("./packages/browser/src/index.ts", import.meta.url),
+      "@markvis/browser/preview": fileURLToPath(
+        new URL("./packages/browser/src/preview.ts", import.meta.url),
       ),
       "@markvis/browser/enhance": fileURLToPath(
         new URL("./packages/browser/src/enhance.ts", import.meta.url),
+      ),
+      "@markvis/browser": fileURLToPath(
+        new URL("./packages/browser/src/index.ts", import.meta.url),
       ),
     },
   },

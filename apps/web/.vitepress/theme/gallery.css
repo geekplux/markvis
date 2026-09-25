@@ -203,6 +203,26 @@
   max-width: 100%;
 }
 
+.gallery-error {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #b91c1c;
+}
+
+.gallery-fallback-table table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13px;
+}
+
+.gallery-fallback-table th,
+.gallery-fallback-table td {
+  border: 1px solid var(--site-rule);
+  padding: 4px 8px;
+  text-align: left;
+}
+
 .gallery-detail-themes,
 .gallery-detail-palettes {
   margin-top: 12px;
