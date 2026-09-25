@@ -7,6 +7,7 @@ export { CORE_FENCE_KEYS };
  * Type-local extras by id. Wave 1 encodings:
  * bar/line/area → layout; pie → innerRadius; scatter/hist → none.
  * Wave 2: heatmap/funnel/waterfall/radar → none; gauge → min, max.
+ * Wave 3: sankey/treemap → none.
  * Packs must keep `extras` in sync with this table (integrity test checks).
  */
 export const typeExtras: Record<ChartType, readonly string[]> = {
@@ -21,6 +22,8 @@ export const typeExtras: Record<ChartType, readonly string[]> = {
   waterfall: [],
   radar: [],
   gauge: ["min", "max"],
+  sankey: [],
+  treemap: [],
 };
 
 export function allowedFenceKeys(type: ChartType): ReadonlySet<string> {

@@ -10,6 +10,8 @@ import { funnel } from "./funnel/type.js";
 import { waterfall } from "./waterfall/type.js";
 import { radar } from "./radar/type.js";
 import { gauge } from "./gauge/type.js";
+import { sankey } from "./sankey/type.js";
+import { treemap } from "./treemap/type.js";
 import type { TypePack } from "./contract.js";
 
 export type { Painted, TypePack } from "./contract.js";
@@ -28,6 +30,8 @@ export {
   waterfall,
   radar,
   gauge,
+  sankey,
+  treemap,
 };
 
 /** id → pack. Unknown / missing packs fail loudly via resolveTypePack. */
@@ -43,6 +47,8 @@ export const typeRegistry: Record<ChartType, TypePack> = {
   waterfall,
   radar,
   gauge,
+  sankey,
+  treemap,
 };
 
 /**
