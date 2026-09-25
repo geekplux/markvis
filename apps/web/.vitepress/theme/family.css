@@ -194,6 +194,12 @@ html.dark .site-logo-dark {
   flex-shrink: 0;
 }
 
+.home-nav-github-count {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
 .home-nav-action {
   display: none;
   align-items: center;

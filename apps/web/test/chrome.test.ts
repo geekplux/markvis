@@ -309,6 +309,14 @@ describe("site visual chrome", () => {
     expect(nav).toContain("home-nav-github");
     expect(nav).toContain("https://github.com/geekplux/markvis");
     expect(nav).toContain("Star MarkVis on GitHub");
+    expect(nav).toContain("https://api.github.com/repos/geekplux/markvis");
+    expect(nav).toContain("stargazers_count");
+    expect(nav).toContain("home-nav-github-count");
+    expect(nav).toContain("loadStarCount");
+    expect(nav).toContain("sessionStorage");
+    expect(nav).toContain("formatStarCount");
+    expect(nav).toContain("starAriaLabel");
+    expect(nav).toMatch(/v-if="starCount != null"/);
     expect(nav).not.toMatch(/class="home-nav-action"[^>]*>Get started/);
     expect(nav).toContain('text: "Get started"');
     expect(nav).toContain("folio-home-page");
@@ -529,6 +537,7 @@ describe("site visual chrome", () => {
     expect(nav).toContain("home-nav-right");
     expect(family).toMatch(/\.home-nav-right/);
     expect(family).toMatch(/\.home-nav-github/);
+    expect(family).toMatch(/\.home-nav-github-count/);
     expect(nav).toContain("aria-expanded");
     expect(nav).toContain("menuOpen");
     const menuRule = family.match(/\.home-nav-menu\s*\{[^}]*\}/)?.[0] ?? "";
