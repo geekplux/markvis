@@ -55,7 +55,7 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | Field | Required | Default | Notes |
 | --- | --- | --- | --- |
 | `markvis` | no | `2` | Language version. |
-| `type` | yes | — | `bar` \| `line` \| `area` \| `scatter` \| `pie` \| `hist` \| `heatmap` \| `funnel` \| `waterfall` \| `radar` \| `gauge`. |
+| `type` | yes | — | `bar` \| `line` \| `area` \| `scatter` \| `pie` \| `hist` \| `heatmap` \| `funnel` \| `waterfall` \| `radar` \| `gauge` \| `sankey` \| `treemap`. |
 | `title` | no | derived | Conclusion title when present. |
 | `theme` | no | `folio` | Grammar only: `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts`. |
 | `palette` | no | theme default | Colors only: `ink` \| `porcelain` \| `warm` \| `cool` \| `vivid`. Omit → theme pack colors. |
@@ -86,6 +86,8 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | `waterfall` | step | signed delta | ignored | Running baseline. |
 | `radar` | spoke | number ≥ 0 | optional | Scale max = max(y) or 1. |
 | `gauge` | label | number | ignored | First row. Optional `min`/`max`. |
+| `sankey` | source | flow ≥ 0 | required (target) | One row = one link. Self-link → `E_UNKNOWN_FIELD`. |
+| `treemap` | label | number ≥ 0 | optional (parent) | Flat or two levels. `y≤0` omitted from paint. |
 
 ## Encodings
 
@@ -118,7 +120,7 @@ Do not invent `donut` or `stacked-bar` type ids.
 | `E_DUP_COLUMN` | Duplicate header names. |
 | `E_UNKNOWN_FIELD` | Missing column name; undeclared header; illegal encoding. |
 | `E_PIE_NEGATIVE` | Pie value < 0. |
-| `E_NEGATIVE_VALUE` | Funnel or radar value < 0. |
+| `E_NEGATIVE_VALUE` | Funnel, radar, sankey, or treemap value < 0. |
 | `E_YAML_TABLE_CONFLICT` | Header fields disagree with progressive table mapping. |
 | `E_EMPTY_FENCE` | Fence body empty. |
 | `E_UNKNOWN_THEME` | `theme` not in the allow-list. |

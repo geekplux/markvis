@@ -28,5 +28,5 @@ body:
     attributes:
       label: Scope check
       options:
-        - label: Stays inside the six chart types
+        - label: Stays inside the frozen chart types (no new type id)
         - label: No new core chart library

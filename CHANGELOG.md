@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Docs/catalog sync: AGENTS fence example, site Spec, home feature copy, README, and issue templates list all thirteen types (`sankey`/`treemap` included). Drop leftover Wave 3 PR body and orphan `home/03-area-basic.svg`.
+
 - Wave 3 type packs: `sankey` `treemap`. Pack-local layout only (no d3-hierarchy/sankey). Sankey self-link → `E_UNKNOWN_FIELD`; sankey/treemap negatives → `E_NEGATIVE_VALUE`.
 
 ### Added

@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Six types only: `bar` · `line` · `area` · `scatter` · `pie` · `hist`. Invalid fixtures stay off the gallery.
+        Types only: `bar` · `line` · `area` · `scatter` · `pie` · `hist` · `heatmap` · `funnel` · `waterfall` · `radar` · `gauge` · `sankey` · `treemap`. Invalid fixtures stay off the gallery.
   - type: dropdown
     id: chart_type
     attributes:
@@ -18,6 +18,13 @@ body:
         - scatter
         - pie
         - hist
+        - heatmap
+        - funnel
+        - waterfall
+        - radar
+        - gauge
+        - sankey
+        - treemap
     validations:
       required: true
   - type: input
@@ -32,7 +39,7 @@ body:
     id: why
     attributes:
       label: Why it is not already covered
-      description: What gap vs the current 52 valid cards? Conclusion title you would use?
+      description: What gap vs the current valid cards? Conclusion title you would use?
     validations:
       required: true
   - type: textarea

@@ -67,7 +67,7 @@ Language tags: `chart` / `markvis` / `vis` share one parser.
 
 Header:
     markvis: 2
-    type: bar|line|area|scatter|pie|hist|heatmap|funnel|waterfall|radar|gauge
+    type: bar|line|area|scatter|pie|hist|heatmap|funnel|waterfall|radar|gauge|sankey|treemap
     title:
     unit:
     x:

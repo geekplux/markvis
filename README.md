@@ -25,7 +25,7 @@ In 2017 this project was a renderer (GitHub Trending). This is the rewrite: the 
 
 ## An example
 
-Paste this into [Play](https://markvis.js.org/play). Six kinds: bar, line, area, scatter, pie, hist. Optional look: `theme` and `palette` — [SPEC.md](./SPEC.md).
+Paste this into [Play](https://markvis.js.org/play). Thirteen kinds: bar, line, area, scatter, pie, hist, heatmap, funnel, waterfall, radar, gauge, sankey, treemap. Optional look: `theme` and `palette` — [SPEC.md](./SPEC.md).
 
 ```chart
 markvis: 2

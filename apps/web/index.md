@@ -61,8 +61,8 @@ pageClass: folio-home-page
       <p>If something is wrong, you still see the rows — never a blank hole.</p>
     </article>
     <article class="home-feature">
-      <h3>Six kinds of chart</h3>
-      <p>bar, line, area, scatter, pie, hist. That is the set.</p>
+      <h3>Thirteen kinds of chart</h3>
+      <p>bar, line, area, scatter, pie, hist, heatmap, funnel, waterfall, radar, gauge, sankey, treemap. That is the set.</p>
     </article>
     <article class="home-feature">
       <h3>Write a table of numbers</h3>
