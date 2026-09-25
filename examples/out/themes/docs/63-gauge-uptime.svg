@@ -4,14 +4,13 @@
   <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Five Points uptime still holds at 99.4<tspan font-size="11" font-weight="400" fill="#64748B"> · %</tspan></text>
   <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
   <g data-gauge="1" data-min="90" data-max="100">
-    <path d="M219.28 428 A152.72 152.72 0 0 0 524.72 428" fill="none" stroke="#64748B" stroke-opacity="0.28" stroke-width="14" stroke-linecap="round" data-gauge-track="1"/>
-    <path d="M219.28 428 A152.72 152.72 0 0 0 522.01 456.62" fill="none" stroke="#475569" stroke-width="14" stroke-linecap="round" data-gauge-value="99.4"/>
-    <line x1="372" y1="428" x2="514.16" y2="455.12" stroke="#18181B" stroke-width="2" stroke-linecap="round" data-gauge-needle="1"/>
-    <circle cx="372" cy="428" r="5" fill="#18181B" stroke-opacity="0.16"/>
+    <path d="M66.56 428 A305.44 305.44 0 0 1 677.44 428" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="12" stroke-linecap="round" data-gauge-track="1"/>
+    <path d="M66.56 428 A305.44 305.44 0 0 1 672.03 370.77" fill="none" stroke="#475569" stroke-width="12" stroke-linecap="round" data-gauge-arc="99.4"/>
   </g>
+  <text x="372" y="299.72" text-anchor="middle" dominant-baseline="middle" font-size="28" font-weight="600" fill="#18181B" data-gauge-value="1">99.4</text>
+  <text x="372" y="321.72" text-anchor="middle" dominant-baseline="hanging" font-size="11" font-weight="400" fill="#64748B" data-gauge-label="1">Five Points</text>
   <g fill="#64748B" font-size="10" font-weight="400">
-    <text x="201.28" y="428" text-anchor="middle" dominant-baseline="hanging" data-gauge-min="1">90</text>
-    <text x="542.72" y="428" text-anchor="middle" dominant-baseline="hanging" data-gauge-max="1">100</text>
+    <text x="66.56" y="442" text-anchor="middle" dominant-baseline="hanging" data-gauge-min="1">90</text>
+    <text x="677.44" y="442" text-anchor="middle" dominant-baseline="hanging" data-gauge-max="1">100</text>
   </g>
-  <text x="372" y="450" text-anchor="middle" dominant-baseline="hanging" font-size="10" font-weight="500" fill="#18181B" data-label="Five Points">Five Points · 99.4</text>
 </svg>

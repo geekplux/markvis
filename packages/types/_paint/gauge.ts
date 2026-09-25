@@ -12,8 +12,6 @@ import { formatNumber } from "./scale.js";
 import {
   INK,
   MARGIN,
-  PIE_RADIUS_RATIO,
-  PIE_STROKE,
   PLOT_BG,
   PLOT_BORDER,
   PLOT_BORDER_WIDTH,
@@ -22,11 +20,16 @@ import {
 } from "./tokens.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
 
+const STROKE_W = 12;
+const HERO_SIZE = 28;
+const LABEL_SIZE = 11;
+
 function polar(cx: number, cy: number, r: number, a: number): { x: number; y: number } {
   return { x: cx + r * Math.cos(a), y: cy + r * Math.sin(a) };
 }
 
-function arcPath(
+/** Upper semicircle: π → 2π (through top). SVG clockwise sweep. */
+function upperArc(
   cx: number,
   cy: number,
   r: number,
@@ -35,8 +38,10 @@ function arcPath(
 ): string {
   const p0 = polar(cx, cy, r, a0);
   const p1 = polar(cx, cy, r, a1);
-  const large = Math.abs(a1 - a0) > Math.PI ? 1 : 0;
-  const sweep = a1 > a0 ? 1 : 0;
+  const delta = a1 - a0;
+  const large = Math.abs(delta) > Math.PI ? 1 : 0;
+  // Clockwise in SVG (y-down) from π through top (3π/2) to 2π.
+  const sweep = 1;
   return `M${fmtPx(p0.x)} ${fmtPx(p0.y)} A${fmtPx(r)} ${fmtPx(r)} 0 ${large} ${sweep} ${fmtPx(p1.x)} ${fmtPx(p1.y)}`;
 }
 
@@ -44,7 +49,7 @@ export function renderGauge(chart: ChartIR, _id: string): Painted {
   const rows = loadRows(chart);
   const first = rows[0];
   const value = first?.y ?? 0;
-  const label = first?.xLabel ?? "";
+  const label = (first?.xLabel ?? "").trim();
   const gmin = chart.min ?? 0;
   const gmax = chart.max !== undefined ? chart.max : Math.max(value, 1);
   const span = gmax - gmin;
@@ -65,13 +70,15 @@ export function renderGauge(chart: ChartIR, _id: string): Painted {
     height: height - top - bottom,
   };
   const cx = (box.left + box.right) / 2;
-  const r = Math.min(box.width / 2, box.height) * (PIE_RADIUS_RATIO + 0.12);
   const cy = box.bottom - 8;
+  const r = Math.min(box.width / 2, box.height) * 0.92;
+  // Upper semicircle through top: π → 2π (feet left/right).
   const aStart = Math.PI;
-  const aEnd = 0;
-  const aNeedle = aStart + t * (aEnd - aStart);
+  const aEnd = 2 * Math.PI;
+  const aValue = aStart + t * Math.PI;
   const style = seriesStyle(0);
-  const track = seriesStyle(7);
+  const minFoot = polar(cx, cy, r, aStart);
+  const maxFoot = polar(cx, cy, r, aEnd);
 
   const lines: string[] = [drawTitle(visibleTitle(chart), box.left, chart.unit)];
 
@@ -111,11 +118,11 @@ export function renderGauge(chart: ChartIR, _id: string): Painted {
   );
   lines.push(
     `    <path ${attrs({
-      d: arcPath(cx, cy, r, aStart, aEnd),
+      d: upperArc(cx, cy, r, aStart, aEnd),
       fill: "none",
-      stroke: track.color,
-      "stroke-opacity": 0.28,
-      "stroke-width": 14,
+      stroke: INK,
+      "stroke-opacity": STRUCTURE_OPACITY,
+      "stroke-width": STROKE_W,
       "stroke-linecap": "round",
       "data-gauge-track": "1",
     })}/>`,
@@ -123,39 +130,45 @@ export function renderGauge(chart: ChartIR, _id: string): Painted {
   if (t > 0) {
     lines.push(
       `    <path ${attrs({
-        d: arcPath(cx, cy, r, aStart, aNeedle),
+        d: upperArc(cx, cy, r, aStart, aValue),
         fill: "none",
         stroke: style.color,
         "stroke-opacity": style.opacity === 1 ? undefined : style.opacity,
-        "stroke-width": 14,
+        "stroke-width": STROKE_W,
         "stroke-linecap": "round",
-        "data-gauge-value": formatNumber(value),
+        "data-gauge-arc": formatNumber(value),
       })}/>`,
     );
   }
-  const tip = polar(cx, cy, r - 8, aNeedle);
-  lines.push(
-    `    <line ${attrs({
-      x1: fmtPx(cx),
-      y1: fmtPx(cy),
-      x2: fmtPx(tip.x),
-      y2: fmtPx(tip.y),
-      stroke: INK,
-      "stroke-width": PIE_STROKE + 1,
-      "stroke-linecap": "round",
-      "data-gauge-needle": "1",
-    })}/>`,
-  );
-  lines.push(
-    `    <circle ${attrs({
-      cx: fmtPx(cx),
-      cy: fmtPx(cy),
-      r: 5,
-      fill: INK,
-      "stroke-opacity": STRUCTURE_OPACITY,
-    })}/>`,
-  );
   lines.push(`  </g>`);
+
+  const heroY = cy - r * 0.42;
+  lines.push(
+    `  <text ${attrs({
+      x: fmtPx(cx),
+      y: fmtPx(heroY),
+      "text-anchor": "middle",
+      "dominant-baseline": "middle",
+      "font-size": HERO_SIZE,
+      "font-weight": 600,
+      fill: INK,
+      "data-gauge-value": "1",
+    })}>${escapeXml(formatNumber(value))}</text>`,
+  );
+  if (label !== "") {
+    lines.push(
+      `  <text ${attrs({
+        x: fmtPx(cx),
+        y: fmtPx(heroY + 22),
+        "text-anchor": "middle",
+        "dominant-baseline": "hanging",
+        "font-size": LABEL_SIZE,
+        "font-weight": 400,
+        fill: TYPE.tick.fill,
+        "data-gauge-label": "1",
+      })}>${escapeXml(label)}</text>`,
+    );
+  }
 
   lines.push(
     `  <g ${attrs({
@@ -164,12 +177,10 @@ export function renderGauge(chart: ChartIR, _id: string): Painted {
       "font-weight": TYPE.tick.weight,
     })}>`,
   );
-  const minPt = polar(cx, cy, r + 18, aStart);
-  const maxPt = polar(cx, cy, r + 18, aEnd);
   lines.push(
     `    <text ${attrs({
-      x: fmtPx(minPt.x),
-      y: fmtPx(minPt.y),
+      x: fmtPx(minFoot.x),
+      y: fmtPx(cy + 14),
       "text-anchor": "middle",
       "dominant-baseline": "hanging",
       "data-gauge-min": "1",
@@ -177,30 +188,14 @@ export function renderGauge(chart: ChartIR, _id: string): Painted {
   );
   lines.push(
     `    <text ${attrs({
-      x: fmtPx(maxPt.x),
-      y: fmtPx(maxPt.y),
+      x: fmtPx(maxFoot.x),
+      y: fmtPx(cy + 14),
       "text-anchor": "middle",
       "dominant-baseline": "hanging",
       "data-gauge-max": "1",
     })}>${escapeXml(formatNumber(gmax))}</text>`,
   );
   lines.push(`  </g>`);
-
-  const valueText = label
-    ? `${label} · ${formatNumber(value)}`
-    : formatNumber(value);
-  lines.push(
-    `  <text ${attrs({
-      x: fmtPx(cx),
-      y: fmtPx(cy + 22),
-      "text-anchor": "middle",
-      "dominant-baseline": "hanging",
-      "font-size": TYPE.value.size,
-      "font-weight": TYPE.value.weight,
-      fill: TYPE.value.fill,
-      "data-label": label,
-    })}>${escapeXml(valueText)}</text>`,
-  );
 
   return { lines, height };
 }
