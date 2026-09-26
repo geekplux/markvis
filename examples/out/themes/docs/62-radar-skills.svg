@@ -1,35 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="radar chart: Stage crew still leads box office on coverage, 15 rows, series crew" aria-labelledby="mv-56c6698d43cae5ec-title" aria-describedby="mv-56c6698d43cae5ec-desc" data-markvis="2" data-chart-type="radar" data-id="mv-56c6698d43cae5ec" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-56c6698d43cae5ec-title">Stage crew still leads box office on coverage</title>
   <desc id="mv-56c6698d43cae5ec-desc">radar chart. Stage crew still leads box office on coverage. x=skill. y=score. series=crew. 15 rows.</desc>
-  <text x="40" y="20" text-anchor="start" font-size="15" font-weight="600" fill="#18181B">Stage crew still leads box office on coverage</text>
-  <line x1="40" x2="704" y1="26" y2="26" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <g font-size="11" font-weight="500" fill="#18181B">
-    <rect x="40" y="455" width="10" height="10" fill="#475569" rx="1"/>
-    <text x="54" y="464" data-legend="Stage">Stage</text>
-    <rect x="104.1" y="455" width="10" height="10" fill="#64748B" rx="1"/>
-    <text x="118.1" y="464" data-legend="Box">Box</text>
-    <rect x="154.56" y="455" width="10" height="10" fill="#0F766E" rx="1"/>
-    <text x="168.56" y="464" data-legend="Usher">Usher</text>
+  <text x="41.76" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#18181B"><title>Stage crew still leads box office on coverage</title>Stage crew still leads box office on coverage</text>
+  <line x1="40" x2="704" y1="38" y2="38" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
+  <g font-size="13" font-weight="500" fill="#18181B">
+    <rect x="41.76" y="455" width="10" height="10" fill="#475569" rx="1"/>
+    <text x="55.76" y="464" data-legend="Stage">Stage</text>
+    <rect x="112.06" y="455" width="10" height="10" fill="#64748B" rx="1"/>
+    <text x="126.06" y="464" data-legend="Box">Box</text>
+    <rect x="166.24" y="455" width="10" height="10" fill="#0F766E" rx="1"/>
+    <text x="180.24" y="464" data-legend="Usher">Usher</text>
   </g>
   <g fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-radar-grid="1">
-    <path d="M361.6 160.7 L424.66 206.51 L400.57 280.64 L322.63 280.64 L298.54 206.51 Z"/>
-    <path d="M361.6 94.4 L487.71 186.02 L439.54 334.28 L283.66 334.28 L235.49 186.02 Z"/>
-    <line x1="361.6" y1="227" x2="361.6" y2="94.4"/>
-    <line x1="361.6" y1="227" x2="487.71" y2="186.02"/>
-    <line x1="361.6" y1="227" x2="439.54" y2="334.28"/>
-    <line x1="361.6" y1="227" x2="283.66" y2="334.28"/>
-    <line x1="361.6" y1="227" x2="235.49" y2="186.02"/>
+    <path d="M360 161.6 L427.91 210.94 L401.97 290.76 L318.03 290.76 L292.09 210.94 Z"/>
+    <line x1="360" y1="233" x2="360" y2="104.48"/>
+    <line x1="360" y1="233" x2="482.23" y2="193.29"/>
+    <line x1="360" y1="233" x2="435.54" y2="336.97"/>
+    <line x1="360" y1="233" x2="284.46" y2="336.97"/>
+    <line x1="360" y1="233" x2="237.77" y2="193.29"/>
   </g>
   <g data-radar="1">
-    <path d="M361.6 109.13 L462.49 194.22 L439.54 334.28 L287.12 329.51 L243.9 188.76 Z" fill="#475569" fill-opacity="0.12" stroke="#475569" stroke-width="1.75" data-series="Stage"/>
-    <path d="M361.6 132.71 L459.69 195.13 L411.83 296.13 L297.52 315.2 L276.13 199.23 Z" fill="#64748B" fill-opacity="0.12" stroke="#64748B" stroke-width="1.75" data-series="Box"/>
-    <path d="M361.6 122.39 L454.08 196.95 L432.61 324.74 L285.39 331.89 L264.92 195.59 Z" fill="#0F766E" fill-opacity="0.12" stroke="#0F766E" stroke-width="1.75" data-series="Usher"/>
+    <path d="M360 118.76 L457.78 201.23 L435.54 336.97 L287.82 332.35 L245.92 195.93 Z" fill="#475569" fill-opacity="0.12" stroke="#475569" stroke-width="1.75" data-series="Stage"/>
+    <path d="M360 141.61 L455.07 202.11 L408.68 300.01 L297.89 318.49 L277.16 206.08 Z" fill="#64748B" fill-opacity="0.12" stroke="#64748B" stroke-width="1.75" stroke-dasharray="6 4" data-series="Box"/>
+    <path d="M360 131.61 L449.64 203.88 L428.83 327.73 L286.14 334.66 L266.29 202.55 Z" fill="#0F766E" fill-opacity="0.12" stroke="#0F766E" stroke-width="1.75" stroke-dasharray="2 2" data-series="Usher"/>
   </g>
-  <g fill="#64748B" font-size="10" font-weight="400">
-    <text x="361.6" y="80.4" text-anchor="middle" dominant-baseline="middle" data-spoke="Speed">Speed</text>
-    <text x="501.02" y="181.7" text-anchor="middle" dominant-baseline="middle" data-spoke="Range">Range</text>
-    <text x="447.77" y="345.6" text-anchor="middle" dominant-baseline="middle" data-spoke="Coverage">Coverage</text>
-    <text x="275.43" y="345.6" text-anchor="middle" dominant-baseline="middle" data-spoke="Safety">Safety</text>
-    <text x="222.18" y="181.7" text-anchor="middle" dominant-baseline="middle" data-spoke="Cueing">Cueing</text>
+  <g fill="#64748B" font-size="12" font-weight="400">
+    <text x="360" y="90.48" text-anchor="middle" dominant-baseline="middle" data-spoke="Speed">Speed</text>
+    <text x="495.54" y="188.96" text-anchor="middle" dominant-baseline="middle" data-spoke="Range">Range</text>
+    <text x="443.77" y="348.3" text-anchor="middle" dominant-baseline="middle" data-spoke="Coverage">Coverage</text>
+    <text x="276.23" y="348.3" text-anchor="middle" dominant-baseline="middle" data-spoke="Safety">Safety</text>
+    <text x="224.46" y="188.96" text-anchor="middle" dominant-baseline="middle" data-spoke="Cueing">Cueing</text>
+    <text x="360" y="157.6" text-anchor="middle" font-size="12" fill="#64748B" data-radar-tick="50">50</text>
   </g>
 </svg>

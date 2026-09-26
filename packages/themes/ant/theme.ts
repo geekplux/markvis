@@ -20,7 +20,7 @@ export const ant = {
   STRUCTURE_OPACITY: "0.32",
 
   TYPE: {
-    title: { size: 18, weight: 600, fill: "#000000" },
+    title: { size: 22, weight: 600, fill: "#000000" },
     unit: { size: 12, weight: 400, fill: "#8C8C8C" },
     value: { size: 11, weight: 500, fill: "#000000" },
     tick: { size: 11, weight: 400, fill: "#8C8C8C" },

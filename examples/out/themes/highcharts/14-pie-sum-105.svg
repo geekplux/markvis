@@ -1,19 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="pie chart: Budget lines overrun the 100% pie, 3 slices" aria-labelledby="mv-2e7a703e9d22ed38-title" aria-describedby="mv-2e7a703e9d22ed38-desc" data-markvis="2" data-chart-type="pie" data-id="mv-2e7a703e9d22ed38" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-2e7a703e9d22ed38-title">Budget lines overrun the 100% pie</title>
   <desc id="mv-2e7a703e9d22ed38-desc">pie chart. Budget lines overrun the 100% pie. x=bucket. y=pct. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="56" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Budget lines overrun the 100% pie</text>
-  <g font-size="12" font-weight="500" fill="#333333">
-    <rect x="56" y="31" width="10" height="10" fill="#7cb5ec" rx="1"/>
-    <text x="70" y="40" data-legend="Infra">Infra</text>
-    <rect x="123.2" y="31" width="10" height="10" fill="#434348" rx="1"/>
-    <text x="137.2" y="40" data-legend="Product">Product</text>
-    <rect x="205.28" y="31" width="10" height="10" fill="#90ed7d" rx="1"/>
-    <text x="219.28" y="40" data-legend="Ops">Ops</text>
+  <text x="56" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#333333"><title>Budget lines overrun the 100% pie</title>Budget lines overrun the 100% pie</text>
+  <g font-size="14" font-weight="500" fill="#333333">
+    <rect x="56" y="41" width="10" height="10" fill="#7cb5ec" rx="1"/>
+    <text x="70" y="50" data-legend="Infra">Infra</text>
+    <rect x="129.4" y="41" width="10" height="10" fill="#434348" rx="1"/>
+    <text x="143.4" y="50" data-legend="Product">Product</text>
+    <rect x="220.16" y="41" width="10" height="10" fill="#90ed7d" rx="1"/>
+    <text x="234.16" y="50" data-legend="Ops">Ops</text>
   </g>
-  <rect x="56" y="62" width="644" height="358" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
+  <rect x="56" y="72" width="644" height="348" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0">
-    <path d="M378 241 L378 119.28 A121.72 121.72 0 0 1 430.81 350.67 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Infra" data-raw-value="45"/>
-    <path d="M378 241 L430.81 350.67 A121.72 121.72 0 0 1 256.62 231.9 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Product" data-raw-value="35"/>
-    <path d="M378 241 L256.62 231.9 A121.72 121.72 0 0 1 378 119.28 Z" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Ops" data-raw-value="25"/>
+    <path d="M378 246 L378 127.68 A118.32 118.32 0 0 1 429.34 352.6 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Infra" data-raw-value="45"/>
+    <path d="M378 246 L429.34 352.6 A118.32 118.32 0 0 1 260.01 237.16 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Product" data-raw-value="35"/>
+    <path d="M378 246 L260.01 237.16 A118.32 118.32 0 0 1 378 127.68 Z" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Ops" data-raw-value="25"/>
   </g>
 </svg>

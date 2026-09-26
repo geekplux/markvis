@@ -1,38 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="treemap chart: Red Line still carries Midtown mornings, 12 rows, series line" aria-labelledby="mv-31d2b9a15ffc9830-title" aria-describedby="mv-31d2b9a15ffc9830-desc" data-markvis="2" data-chart-type="treemap" data-id="mv-31d2b9a15ffc9830" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-31d2b9a15ffc9830-title">Red Line still carries Midtown mornings</title>
   <desc id="mv-31d2b9a15ffc9830-desc">treemap chart. Red Line still carries Midtown mornings. x=station. y=boardings. series=line. 12 rows.</desc>
-  <text x="56" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">Red Line still carries Midtown mornings</text>
-  <rect x="56" y="38" width="644" height="382" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
+  <text x="56" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#333333"><title>Red Line still carries Midtown mornings</title>Red Line still carries Midtown mornings</text>
+  <rect x="56" y="48" width="644" height="372" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
   <g data-treemap="1">
-    <rect x="56" y="38" width="350.38" height="17" fill="#7cb5ec" fill-opacity="0.35" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Red" data-y="12,100"/>
-    <rect x="406.38" y="38" width="228.18" height="17" fill="#434348" fill-opacity="0.35" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Gold" data-y="7,880"/>
-    <rect x="634.56" y="38" width="46.91" height="17" fill="#90ed7d" fill-opacity="0.35" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Green" data-y="1,620"/>
-    <rect x="681.47" y="38" width="18.53" height="17" fill="#f7a35c" fill-opacity="0.35" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Blue" data-y="640"/>
-    <rect x="56" y="55" width="350.38" height="126.69" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Five Points" data-y="4,200"/>
-    <rect x="56" y="181.69" width="350.38" height="93.51" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Midtown" data-y="3,100"/>
-    <rect x="56" y="275.21" width="350.38" height="54.3" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Arts Center" data-y="1,800"/>
-    <rect x="56" y="329.5" width="350.38" height="42.23" fill="#f7a35c" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="North Springs" data-y="1,400"/>
-    <rect x="56" y="371.74" width="350.38" height="48.26" fill="#8085e9" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Lindbergh" data-y="1,600"/>
-    <rect x="406.38" y="55" width="228.18" height="166.75" fill="#7cb5ec" fill-opacity="0.75" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Airport" data-y="3,600"/>
-    <rect x="406.38" y="221.75" width="228.18" height="101.9" fill="#434348" fill-opacity="0.75" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Peachtree Center" data-y="2,200"/>
-    <rect x="406.38" y="323.65" width="228.18" height="50.95" fill="#90ed7d" fill-opacity="0.75" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="College Park" data-y="1,100"/>
-    <rect x="406.38" y="374.61" width="228.18" height="45.39" fill="#f7a35c" fill-opacity="0.75" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Doraville" data-y="980"/>
-    <rect x="634.56" y="55" width="46.91" height="202.78" fill="#7cb5ec" fill-opacity="0.75" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Lindbergh" data-y="900"/>
-    <rect x="634.56" y="257.78" width="46.91" height="162.22" fill="#434348" fill-opacity="0.75" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Bankhead" data-y="720"/>
-    <rect x="681.47" y="55" width="18.53" height="365" fill="#7cb5ec" fill-opacity="0.75" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-label="Ashby" data-y="640"/>
+    <rect x="56" y="48" width="350.38" height="22" fill="#7cb5ec" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.5" data-label="Red" data-y="12,100" data-depth="0"/>
+    <rect x="406.38" y="48" width="293.62" height="22" fill="#434348" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.5" data-label="Gold" data-y="7,880" data-depth="0"/>
+    <rect x="406.38" y="337.09" width="210.47" height="22" fill="#90ed7d" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.5" data-label="Green" data-y="1,620" data-depth="0"/>
+    <rect x="616.85" y="337.09" width="83.15" height="22" fill="#f7a35c" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.5" data-label="Blue" data-y="640" data-depth="0"/>
+    <rect x="56" y="70" width="211.38" height="201.37" fill="#7cb5ec" fill-opacity="0.8300000000000001" stroke="#ffffff" stroke-width="1.5" data-label="Five Points" data-y="4,200" data-depth="1"/>
+    <rect x="56" y="271.37" width="211.38" height="148.63" fill="#7cb5ec" fill-opacity="0.8300000000000001" stroke="#ffffff" stroke-width="1.5" data-label="Midtown" data-y="3,100" data-depth="1"/>
+    <rect x="267.38" y="70" width="138.99" height="131.25" fill="#7cb5ec" fill-opacity="0.69" stroke="#ffffff" stroke-width="1.5" data-label="Arts Center" data-y="1,800" data-depth="1"/>
+    <rect x="267.38" y="201.25" width="138.99" height="116.67" fill="#7cb5ec" fill-opacity="0.69" stroke="#ffffff" stroke-width="1.5" data-label="Lindbergh" data-y="1,600" data-depth="1"/>
+    <rect x="267.38" y="317.92" width="138.99" height="102.08" fill="#7cb5ec" fill-opacity="0.76" stroke="#ffffff" stroke-width="1.5" data-label="North Springs" data-y="1,400" data-depth="1"/>
+    <rect x="406.38" y="70" width="134.14" height="267.09" fill="#434348" fill-opacity="0.76" stroke="#ffffff" stroke-width="1.5" data-label="Airport" data-y="3,600" data-depth="1"/>
+    <rect x="540.52" y="70" width="159.48" height="137.29" fill="#434348" fill-opacity="0.9" stroke="#ffffff" stroke-width="1.5" data-label="Peachtree Center" data-y="2,200" data-depth="1"/>
+    <rect x="540.52" y="207.29" width="84.34" height="129.8" fill="#434348" fill-opacity="0.9" stroke="#ffffff" stroke-width="1.5" data-label="College Park" data-y="1,100" data-depth="1"/>
+    <rect x="624.86" y="207.29" width="75.14" height="129.8" fill="#434348" fill-opacity="0.62" stroke="#ffffff" stroke-width="1.5" data-label="Doraville" data-y="980" data-depth="1"/>
+    <rect x="406.38" y="359.09" width="116.93" height="60.91" fill="#90ed7d" fill-opacity="0.69" stroke="#ffffff" stroke-width="1.5" data-label="Lindbergh" data-y="900" data-depth="1"/>
+    <rect x="523.31" y="359.09" width="93.54" height="60.91" fill="#90ed7d" fill-opacity="0.76" stroke="#ffffff" stroke-width="1.5" data-label="Bankhead" data-y="720" data-depth="1"/>
+    <rect x="616.85" y="359.09" width="83.15" height="60.91" fill="#f7a35c" fill-opacity="0.8300000000000001" stroke="#ffffff" stroke-width="1.5" data-label="Ashby" data-y="640" data-depth="1"/>
   </g>
-  <g fill="#333333" font-size="11" font-weight="500">
-    <text x="60" y="68.35" text-anchor="start" data-label-text="Five Points">Five Points</text>
-    <text x="60" y="195.04" text-anchor="start" data-label-text="Midtown">Midtown</text>
-    <text x="60" y="288.56" text-anchor="start" data-label-text="Arts Center">Arts Center</text>
-    <text x="60" y="342.85" text-anchor="start" data-label-text="North Springs">North Springs</text>
-    <text x="60" y="385.09" text-anchor="start" data-label-text="Lindbergh">Lindbergh</text>
-    <text x="410.38" y="68.35" text-anchor="start" data-label-text="Airport">Airport</text>
-    <text x="410.38" y="235.1" text-anchor="start" data-label-text="Peachtree Center">Peachtree Center</text>
-    <text x="410.38" y="337" text-anchor="start" data-label-text="College Park">College Park</text>
-    <text x="410.38" y="387.96" text-anchor="start" data-label-text="Doraville">Doraville</text>
-    <text x="638.56" y="68.35" text-anchor="start" data-label-text="Lindbergh">Lind…</text>
-    <text x="638.56" y="271.13" text-anchor="start" data-label-text="Bankhead">Bank…</text>
-    <text x="685.47" y="68.35" text-anchor="start" data-label-text="Ashby">…</text>
+  <g fill="#333333" font-size="13" font-weight="500">
+    <text x="60" y="63.05" text-anchor="start" fill="#171717" data-label-text="Red"><title>Red</title>Red</text>
+    <text x="410.38" y="63.05" text-anchor="start" fill="#fafaf9" data-label-text="Gold"><title>Gold</title>Gold</text>
+    <text x="410.38" y="352.14" text-anchor="start" fill="#171717" data-label-text="Green"><title>Green</title>Green</text>
+    <text x="620.85" y="352.14" text-anchor="start" fill="#171717" data-label-text="Blue"><title>Blue</title>Blue</text>
+    <text x="60" y="85.05" text-anchor="start" fill="#171717" data-label-text="Five Points"><title>Five Points</title>Five Points</text>
+    <text x="60" y="286.42" text-anchor="start" fill="#171717" data-label-text="Midtown"><title>Midtown</title>Midtown</text>
+    <text x="271.38" y="85.05" text-anchor="start" fill="#171717" data-label-text="Arts Center"><title>Arts Center</title>Arts Center</text>
+    <text x="271.38" y="216.3" text-anchor="start" fill="#171717" data-label-text="Lindbergh"><title>Lindbergh</title>Lindbergh</text>
+    <text x="271.38" y="332.97" text-anchor="start" fill="#171717" data-label-text="North Springs"><title>North Springs</title>North Springs</text>
+    <text x="410.38" y="85.05" text-anchor="start" fill="#fafaf9" data-label-text="Airport"><title>Airport</title>Airport</text>
+    <text x="544.52" y="85.05" text-anchor="start" fill="#fafaf9" data-label-text="Peachtree Center"><title>Peachtree Center</title>Peachtree Center</text>
+    <text x="544.52" y="222.34" text-anchor="start" fill="#fafaf9" data-label-text="College Park"><title>College Park</title>College…</text>
+    <text x="628.86" y="222.34" text-anchor="start" fill="#fafaf9" data-label-text="Doraville"><title>Doraville</title>Doravil…</text>
+    <text x="410.38" y="374.14" text-anchor="start" fill="#171717" data-label-text="Lindbergh"><title>Lindbergh</title>Lindbergh</text>
+    <text x="527.31" y="374.14" text-anchor="start" fill="#171717" data-label-text="Bankhead"><title>Bankhead</title>Bankhead</text>
+    <text x="620.85" y="374.14" text-anchor="start" fill="#171717" data-label-text="Ashby"><title>Ashby</title>Ashby</text>
   </g>
 </svg>

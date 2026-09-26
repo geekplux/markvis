@@ -1,6 +1,6 @@
 # Architecture
 
-How markvis turns Markdown into a figure. Grammar lives in `SPEC.md`. Types stay `bar` `line` `area` `scatter` `pie` `hist`. Data is CSV or a GFM table. JSON is not the default data form. Failures keep the rows.
+How markvis turns Markdown into a figure. Grammar lives in `SPEC.md`. Types stay `bar` `line` `area` `scatter` `pie` `hist` `heatmap` `funnel` `waterfall` `radar` `gauge` `sankey` `treemap`. Data is CSV or a GFM table. JSON is not the default data form. Failures keep the rows.
 
 ## Architecture
 
@@ -35,7 +35,7 @@ flowchart TD
 ```
 
 1. Extract a `chart` / `markvis` / `vis` fence, or a progressive HTML comment immediately followed by a GFM table.
-2. Parse header fields (`type`, optional `theme`, optional `palette`, `title`, `unit`, `x`, `y`, `series`) then CSV or GFM rows. Keep input row order.
+2. Parse header fields (`type`, optional `theme`, optional `palette`, optional `surface`, `title`, `unit`, `x`, `y`, `series`, and type-local extras) then CSV or GFM rows. Keep input row order.
 3. Validate against Chart IR (`@markvis/ir` + `schema/markvis-2.schema.json`). Unknown `theme:` → `E_UNKNOWN_THEME`. Unknown `palette:` → `E_UNKNOWN_PALETTE`.
 4. Success: `@markvis/render-svg` resolves `@markvis/themes` tokens and emits the same SVG bytes for the same IR.
 5. Failure: table fallback of recovered rows plus one line that names the error code. Never drop the numbers.

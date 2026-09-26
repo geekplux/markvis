@@ -53,6 +53,9 @@ export type ChartIR = {
   innerRadius?: number;
   min?: number;
   max?: number;
+  surface: "light" | "dark" | "export";
+  orient?: "horizontal" | "vertical";
+  role?: string;
   table: Table;
 };
 

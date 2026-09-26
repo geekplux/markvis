@@ -14,18 +14,18 @@ An agent should write a Markdown code block, not a screenshot. MarkVis draws the
 https://markvis.js.org/llms.txt
 ```
 
-Fetch `/llms.txt`. Emit **only** the fields that file lists. Do not invent keys. Do not add a seventh type. Do not emit a PNG or JSON as the default data body.
+Fetch `/llms.txt`. Emit **only** the fields that file lists. Do not invent keys. Do not invent a type id. Do not emit a PNG or JSON as the default data body.
 
 Skill (optional, same language): [skills/markvis/SKILL.md](https://github.com/geekplux/markvis/blob/master/skills/markvis/SKILL.md)
 
 ## What to emit
 
-A fenced code block tagged `chart` / `markvis` / `vis` — one language. Types: `bar` `line` `area` `scatter` `pie` `hist`.
+A fenced code block tagged `chart` / `markvis` / `vis` — one language. Types: `bar` `line` `area` `scatter` `pie` `hist` `heatmap` `funnel` `waterfall` `radar` `gauge` `sankey` `treemap`.
 
 Order inside the block:
 
 1. Optional `markvis: 2`
-2. One `key: value` per line (`type` required; `title` `theme` `unit` `x` `y` `series` as listed in `/llms.txt`)
+2. One `key: value` per line. `type` is required. Every other field must be one listed in `/llms.txt`.
 3. Blank line
 4. Comma-separated rows, or one Markdown table — not JSON
 
@@ -38,7 +38,7 @@ Order inside the block:
 ## Avoid
 
 - A flowchart tool for spreadsheet numbers
-- A seventh chart type
+- An invented type id
 - Silent sort of the categories
 - Fields not listed in `/llms.txt`
 

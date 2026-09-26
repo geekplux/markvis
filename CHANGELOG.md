@@ -4,15 +4,15 @@
 
 ### Added
 
-- (none yet)
+- Horizontal bars (`orient`), surfaces (`light` / `dark` / `export`), heatmap color domain, waterfall `role`, and width-aware `renderSvg`. See `docs/release-2.2.md`. The package version is still 2.1.0 until publish.
 
 ### Changed
 
-- (none yet)
+- Readable type, wrapped labels, explicit paper/dark/export surfaces, gauge range 0–100 when `max` is omitted, sankey thickness. Funnel stays a centered silhouette.
 
 ### Fixed
 
-- (none yet)
+- Non-numeric cells, duplicate keys, `markvis` version, multi-chart `check`, bake references, ragged fallback cells, and line gaps for missing values.
 
 ## 2.1.0 — 2026-09-25
 

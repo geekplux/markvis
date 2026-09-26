@@ -1,6 +1,6 @@
 import type { ChartIR } from "@markvis/ir";
 import { loadRows, uniqueInOrder } from "./data.js";
-import { drawTitle, visibleTitle } from "./figure.js";
+import { drawTitle, reserveTitle, visibleTitle } from "./figure.js";
 import {
   fitFrameHeight,
   titleBlockTop,
@@ -9,7 +9,7 @@ import {
 } from "./layout.js";
 import { seriesStyle } from "./palette.js";
 import { formatNumber } from "./scale.js";
-import { truncateLabel } from "./text.js";
+import { textWidth, truncateLabel } from "./text.js";
 import {
   INK,
   MARGIN,
@@ -142,6 +142,65 @@ function sumIn(id: string, links: Link[]): number {
   return s;
 }
 
+function orderColumns(
+  byCol: Map<number, string[]>,
+  links: Link[],
+  maxCol: number,
+  nodeIds: string[],
+): void {
+  const firstSeen = new Map(nodeIds.map((id, index) => [id, index]));
+  const pos = new Map<string, number>();
+  const refresh = () => {
+    pos.clear();
+    for (const ids of byCol.values()) {
+      ids.forEach((id, index) => pos.set(id, index));
+    }
+  };
+  const bary = (id: string, direction: "in" | "out") => {
+    let sum = 0;
+    let n = 0;
+    for (const link of links) {
+      const other = direction === "in" ? (link.target === id ? link.source : "") : link.source === id ? link.target : "";
+      if (other === "" || !pos.has(other)) {
+        continue;
+      }
+      sum += pos.get(other)!;
+      n += 1;
+    }
+    return n === 0 ? pos.get(id) ?? 0 : sum / n;
+  };
+  for (let pass = 0; pass < 4; pass++) {
+    refresh();
+    for (let c = 1; c <= maxCol; c++) {
+      const ids = byCol.get(c);
+      if (!ids) {
+        continue;
+      }
+      ids.sort((a, b) => {
+        const delta = bary(a, "in") - bary(b, "in");
+        if (delta !== 0) {
+          return delta;
+        }
+        return (firstSeen.get(a) ?? 0) - (firstSeen.get(b) ?? 0);
+      });
+    }
+    refresh();
+    for (let c = maxCol - 1; c >= 0; c--) {
+      const ids = byCol.get(c);
+      if (!ids) {
+        continue;
+      }
+      ids.sort((a, b) => {
+        const delta = bary(a, "out") - bary(b, "out");
+        if (delta !== 0) {
+          return delta;
+        }
+        return (firstSeen.get(a) ?? 0) - (firstSeen.get(b) ?? 0);
+      });
+    }
+  }
+}
+
 function nodeCenterY(g: NodeGeom): number {
   return g.y + g.height / 2;
 }
@@ -169,12 +228,19 @@ function ribbonPath(
 
 export function renderSankey(chart: ChartIR, _id: string): Painted {
   const rows = loadRows(chart);
-  const links: Link[] = rows.map((row, index) => ({
-    source: row.xLabel,
-    target: row.series,
-    value: Math.max(0, row.y),
-    index,
-  }));
+  const links: Link[] = rows.flatMap((row, index) => {
+    if (row.y === null) {
+      return [];
+    }
+    return [
+      {
+        source: row.xLabel,
+        target: row.series,
+        value: Math.max(0, row.y),
+        index,
+      },
+    ];
+  });
 
   const nodeIds = uniqueInOrder(
     links.flatMap((link) => [link.source, link.target]),
@@ -196,8 +262,16 @@ export function renderSankey(chart: ChartIR, _id: string): Painted {
   }
   const nCols = Math.max(maxCol + 1, 1);
 
-  const left = MARGIN.left;
-  const right = MARGIN.right;
+  orderColumns(byCol, links, maxCol, nodeIds);
+
+  const labelSize = TYPE.tick.size;
+  const widest = (ids: string[]) =>
+    Math.max(0, ...ids.map((id) => textWidth(id, labelSize)));
+  const leftLabels = byCol.get(0) ?? [];
+  const rightLabels = byCol.get(maxCol) ?? [];
+  const left = Math.max(MARGIN.left, Math.min(widest(leftLabels) + 18, SVG_WIDTH * 0.34));
+  const right = Math.max(MARGIN.right, Math.min(widest(rightLabels) + 18, SVG_WIDTH * 0.34));
+  reserveTitle(visibleTitle(chart), left, chart.unit);
   const top = titleBlockTop(0);
   const bottom = MARGIN.right;
   const height = fitFrameHeight(top, bottom);
@@ -210,22 +284,34 @@ export function renderSankey(chart: ChartIR, _id: string): Painted {
     height: height - top - bottom,
   };
 
+  let pxPerUnit = Infinity;
+  for (let c = 0; c <= maxCol; c++) {
+    const ids = byCol.get(c) ?? [];
+    const load = ids.reduce((sum, id) => sum + (values.get(id) ?? 0), 0);
+    if (load <= 0) {
+      continue;
+    }
+    const gaps = NODE_GAP * Math.max(ids.length - 1, 0);
+    pxPerUnit = Math.min(pxPerUnit, Math.max(plot.height - gaps, 1) / load);
+  }
+  if (!Number.isFinite(pxPerUnit)) {
+    pxPerUnit = 0;
+  }
+
   const colSpan =
     nCols <= 1 ? 0 : (plot.width - NODE_W - 2 * COL_PAD) / (nCols - 1);
   const geoms = new Map<string, NodeGeom>();
 
   for (let c = 0; c <= maxCol; c++) {
     const ids = byCol.get(c) ?? [];
-    const total = ids.reduce((sum, id) => sum + (values.get(id) ?? 0), 0);
-    const scale =
-      total > 0
-        ? (plot.height - NODE_GAP * Math.max(ids.length - 1, 0)) / total
-        : 0;
-    let yCursor = plot.top;
+    const stack =
+      ids.reduce((sum, id) => sum + (values.get(id) ?? 0) * pxPerUnit, 0) +
+      NODE_GAP * Math.max(ids.length - 1, 0);
+    let yCursor = plot.top + Math.max(0, (plot.height - stack) / 2);
     const x = plot.left + COL_PAD + c * colSpan;
     for (const id of ids) {
       const value = values.get(id) ?? 0;
-      const h = Math.max(scale * value, value > 0 ? 4 : 2);
+      const h = value * pxPerUnit;
       geoms.set(id, {
         id,
         col: c,
@@ -306,9 +392,8 @@ export function renderSankey(chart: ChartIR, _id: string): Painted {
     if (!src) {
       continue;
     }
-    const outSum = sumOut(id, links);
     for (const link of outLinks.get(id) ?? []) {
-      const sh = outSum > 0 ? (link.value / outSum) * src.height : 0;
+      const sh = link.value * pxPerUnit;
       const y0Top = src.y + (outAt.get(id) ?? 0);
       const y0Bot = y0Top + sh;
       outAt.set(id, (outAt.get(id) ?? 0) + sh);
@@ -324,9 +409,8 @@ export function renderSankey(chart: ChartIR, _id: string): Painted {
     if (!tgt) {
       continue;
     }
-    const inSum = sumIn(id, links);
     for (const link of inLinks.get(id) ?? []) {
-      const th = inSum > 0 ? (link.value / inSum) * tgt.height : 0;
+      const th = link.value * pxPerUnit;
       const y1Top = tgt.y + (inAt.get(id) ?? 0);
       const y1Bot = y1Top + th;
       inAt.set(id, (inAt.get(id) ?? 0) + th);
@@ -389,7 +473,8 @@ export function renderSankey(chart: ChartIR, _id: string): Painted {
 
   lines.push(`  <g ${attrs({ "data-sankey-links": "1" })}>`);
   for (const g of linkGeoms) {
-    const style = seriesStyle(g.link.index);
+    const sourceOrder = nodeIds.indexOf(g.link.source);
+    const style = seriesStyle(sourceOrder < 0 ? g.link.index : sourceOrder);
     const fillOpacity =
       style.opacity === 1
         ? LINK_FILL_OPACITY
@@ -452,13 +537,17 @@ export function renderSankey(chart: ChartIR, _id: string): Painted {
       const distRight = plot.right - midX;
       outsideLeft = distLeft <= distRight;
     }
-    const maxLabel = Math.max(colSpan - NODE_W - 8, 40);
-    // Skip when the gutter is too tight to read (~12px).
-    if (maxLabel < 12) {
-      continue;
-    }
-    const label = truncateLabel(id, maxLabel, TYPE.tick.size);
+    const edge = 8;
+    const outerLeft = g.col === 0;
+    const outerRight = g.col >= maxCol && maxCol > 0;
+    const room = outerLeft
+      ? g.x - 4 - edge
+      : outerRight
+        ? SVG_WIDTH - (g.x + g.width + 4) - edge
+        : Math.max(0, colSpan - NODE_W - 8);
     const lx = outsideLeft ? g.x - 4 : g.x + g.width + 4;
+    const label =
+      room >= 8 ? truncateLabel(id, room, TYPE.tick.size) : "";
     lines.push(
       `    <text ${attrs({
         x: fmtPx(lx),
@@ -466,7 +555,7 @@ export function renderSankey(chart: ChartIR, _id: string): Painted {
         "text-anchor": outsideLeft ? "end" : "start",
         "dominant-baseline": "middle",
         "data-node-label": id,
-      })}>${escapeXml(label)}</text>`,
+      })}><title>${escapeXml(id)}</title>${escapeXml(label)}</text>`,
     );
   }
   lines.push(`  </g>`);

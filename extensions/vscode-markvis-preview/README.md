@@ -33,4 +33,4 @@ Then **Install from VSIX...** in VS Code. Still do not publish.
 
 ## Frozen language
 
-Types: `bar` | `line` | `area` | `scatter` | `pie` | `hist`. Optional `theme:` / `palette:` per SPEC.md. No d3.
+Types: `bar` | `line` | `area` | `scatter` | `pie` | `hist` | `heatmap` | `funnel` | `waterfall` | `radar` | `gauge` | `sankey` | `treemap`. Optional `theme:` / `palette:` / `surface:` per SPEC.md. No d3.

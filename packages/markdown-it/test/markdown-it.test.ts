@@ -29,6 +29,23 @@ function toHtml(source: string, html = true): string {
   return new MarkdownIt({ html }).use(markdownItMarkvis).render(source);
 }
 
+describe("ragged fallback", () => {
+  it("keeps an extra malformed cell in the fallback table", () => {
+    const html = chartBlockHtml(`\`\`\`chart
+type: bar
+title: Ragged
+x: k
+y: v
+
+k,v
+a,1,leftover
+b,2
+\`\`\``);
+    expect(html).toContain("leftover");
+    expect(html).toContain("E_EXTRA_COLUMN");
+  });
+});
+
 describe("markdownItMarkvis", () => {
   it("turns a chart fence into HTML that contains svg and table", () => {
     const html = toHtml(valid01);

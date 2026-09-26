@@ -23,9 +23,10 @@ export function htmlTable(table: FallbackTable): string {
     .join("");
   const body = table.rows
     .map((row) => {
-      const cells = table.columns
-        .map((_, i) => `<td>${escapeHtml(row[i] ?? "")}</td>`)
-        .join("");
+      const width = Math.max(table.columns.length, row.length);
+      const cells = Array.from({ length: width }, (_, i) => {
+        return `<td>${escapeHtml(row[i] ?? "")}</td>`;
+      }).join("");
       return `<tr>${cells}</tr>`;
     })
     .join("");

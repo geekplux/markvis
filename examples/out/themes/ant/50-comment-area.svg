@@ -1,34 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="area chart: Week 2 led pipeline depth at 11, 3 rows" aria-labelledby="mv-808cf4cbc135f0df-title" aria-describedby="mv-808cf4cbc135f0df-desc" data-markvis="2" data-chart-type="area" data-id="mv-808cf4cbc135f0df" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
   <title id="mv-808cf4cbc135f0df-title">Week 2 led pipeline depth at 11</title>
   <desc id="mv-808cf4cbc135f0df-desc">area chart. Week 2 led pipeline depth at 11. x=week. y=deals. 3 rows.</desc>
-  <text x="66" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Week 2 led pipeline depth at 11</text>
-  <rect x="66" y="46" width="640" height="333" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <text x="66" y="32" text-anchor="start" font-size="22" font-weight="600" fill="#000000"><title>Week 2 led pipeline depth at 11</title>Week 2 led pipeline depth at 11</text>
+  <rect x="66" y="52" width="640" height="307" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
   <g fill="none" stroke="#000000" stroke-opacity="0.16" stroke-width="1">
-    <line x1="66" x2="706" y1="268" y2="268"/>
-    <line x1="66" x2="706" y1="157" y2="157"/>
-    <line x1="66" x2="706" y1="46" y2="46"/>
+    <line x1="66" x2="706" y1="256.67" y2="256.67"/>
+    <line x1="66" x2="706" y1="154.33" y2="154.33"/>
+    <line x1="66" x2="706" y1="52" y2="52"/>
   </g>
-  <path d="M66 379 L706 379" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
-  <g fill="#8C8C8C" font-size="11" font-weight="400">
-    <text x="58" y="379" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="58" y="268" text-anchor="end" dominant-baseline="middle">5</text>
-    <text x="58" y="157" text-anchor="end" dominant-baseline="middle">10</text>
-    <text x="58" y="46" text-anchor="end" dominant-baseline="middle">15</text>
-    <text x="74" y="390" text-anchor="middle" font-size="11" data-full-label="0">0</text>
-    <text x="230" y="390" text-anchor="middle" font-size="11" data-full-label="1">1</text>
-    <text x="386" y="390" text-anchor="middle" font-size="11" data-full-label="2">2</text>
-    <text x="542" y="390" text-anchor="middle" font-size="11" data-full-label="3">3</text>
-    <text x="698" y="390" text-anchor="middle" font-size="11" data-full-label="4">4</text>
+  <path d="M66 359 L706 359" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
+  <g fill="#8C8C8C" font-size="12" font-weight="400">
+    <text x="58" y="359" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="58" y="256.67" text-anchor="end" dominant-baseline="middle">5</text>
+    <text x="58" y="154.33" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="58" y="52" text-anchor="end" dominant-baseline="middle">15</text>
+    <text x="74" y="371" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
+    <text x="230" y="371" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
+    <text x="386" y="371" text-anchor="middle" font-size="12" data-full-label="2"><title>2</title>2</text>
+    <text x="542" y="371" text-anchor="middle" font-size="12" data-full-label="3"><title>3</title>3</text>
+    <text x="698" y="371" text-anchor="middle" font-size="12" data-full-label="4"><title>4</title>4</text>
   </g>
-  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="44" y="212.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 44 212.5)" data-axis="y">deals</text>
-    <text x="386" y="406" text-anchor="middle" dominant-baseline="hanging" data-axis="x">week</text>
+  <g fill="#8C8C8C" font-size="13" font-weight="400" data-axis-titles="1">
+    <text x="44" y="205.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 44 205.5)" data-axis="y">deals</text>
+    <text x="386" y="387" text-anchor="middle" dominant-baseline="hanging" data-axis="x">week</text>
   </g>
   <g fill="none">
-    <path d="M230 201.4 L386 134.8 L542 179.2 L542 379 L230 379 Z" fill="#5AD8A6" fill-opacity="0.25" stroke="none" data-series="deals"/>
-    <path d="M230 201.4 L386 134.8 L542 179.2" fill="none" stroke="#5AD8A6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="deals"/>
-    <circle cx="230" cy="201.4" r="3" fill="#5AD8A6" stroke="none" data-series="deals"/>
-    <circle cx="386" cy="134.8" r="3" fill="#5AD8A6" stroke="none" data-series="deals"/>
-    <circle cx="542" cy="179.2" r="3" fill="#5AD8A6" stroke="none" data-series="deals"/>
+    <path d="M230 195.27 L386 133.87 L542 174.8 L542 359 L230 359 Z" fill="#5AD8A6" fill-opacity="0.25" stroke="none" data-series="deals"/>
+    <path d="M230 195.27 L386 133.87 L542 174.8" fill="none" stroke="#5AD8A6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="deals"/>
+    <circle cx="230" cy="195.27" r="3" fill="#5AD8A6" stroke="none" data-series="deals"/>
+    <circle cx="386" cy="133.87" r="3" fill="#5AD8A6" stroke="none" data-series="deals"/>
+    <circle cx="542" cy="174.8" r="3" fill="#5AD8A6" stroke="none" data-series="deals"/>
   </g>
 </svg>

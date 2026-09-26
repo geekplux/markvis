@@ -1,27 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="bar chart: Hosting leads monthly cost at 400 (USD), 3 rows" aria-labelledby="mv-95e5ec3e61c91620-title" aria-describedby="mv-95e5ec3e61c91620-desc" data-markvis="2" data-chart-type="bar" data-id="mv-95e5ec3e61c91620" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-95e5ec3e61c91620-title">Hosting leads monthly cost at 400</title>
   <desc id="mv-95e5ec3e61c91620-desc">bar chart. Hosting leads monthly cost at 400. x=item. y=cost. unit=USD. 3 rows.</desc>
-  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">Hosting leads monthly cost at 400<tspan font-size="12" font-weight="400" fill="#737373"> · USD</tspan></text>
-  <rect x="48" y="36" width="652" height="401" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
-  <path d="M48 437 L700 437" fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1"/>
-  <g fill="#737373" font-size="11" font-weight="400">
-    <text x="40" y="437" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="40" y="336.75" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="40" y="236.5" text-anchor="end" dominant-baseline="middle">200</text>
-    <text x="40" y="136.25" text-anchor="end" dominant-baseline="middle">300</text>
-    <text x="40" y="36" text-anchor="end" dominant-baseline="middle">400</text>
-    <text x="156.67" y="448" text-anchor="middle" font-size="11" data-full-label="Hosting">Hosting</text>
-    <text x="374" y="448" text-anchor="middle" font-size="11" data-full-label="CDN">CDN</text>
-    <text x="591.33" y="448" text-anchor="middle" font-size="11" data-full-label="Logs">Logs</text>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#0A0A0A"><title>Hosting leads monthly cost at 400</title>Hosting leads monthly cost at 400<tspan font-size="13" font-weight="400" fill="#737373"> · USD</tspan></text>
+  <rect x="48" y="46" width="652" height="389" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
+  <path d="M48 435 L700 435" fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1"/>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="40" y="435" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="40" y="337.75" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="40" y="240.5" text-anchor="end" dominant-baseline="middle">200</text>
+    <text x="40" y="143.25" text-anchor="end" dominant-baseline="middle">300</text>
+    <text x="40" y="46" text-anchor="end" dominant-baseline="middle">400</text>
+    <text x="156.67" y="447" text-anchor="middle" font-size="12" data-full-label="Hosting"><title>Hosting</title>Hosting</text>
+    <text x="374" y="447" text-anchor="middle" font-size="12" data-full-label="CDN"><title>CDN</title>CDN</text>
+    <text x="591.33" y="447" text-anchor="middle" font-size="12" data-full-label="Logs"><title>Logs</title>Logs</text>
   </g>
   <g>
-    <path d="M122.67 437 L122.67 42 Q122.67 36 128.67 36 L184.67 36 Q190.67 36 190.67 42 L190.67 437 Z" fill="#F54900" data-x="Hosting" data-series="cost" data-y="400"/>
-    <path d="M340 437 L340 322.7 Q340 316.7 346 316.7 L402 316.7 Q408 316.7 408 322.7 L408 437 Z" fill="#F54900" data-x="CDN" data-series="cost" data-y="120"/>
-    <path d="M557.33 437 L557.33 362.8 Q557.33 356.8 563.33 356.8 L619.33 356.8 Q625.33 356.8 625.33 362.8 L625.33 437 Z" fill="#F54900" data-x="Logs" data-series="cost" data-y="80"/>
+    <path d="M122.67 435 L122.67 52 Q122.67 46 128.67 46 L184.67 46 Q190.67 46 190.67 52 L190.67 435 Z" fill="#F54900" data-x="Hosting" data-series="cost" data-y="400"/>
+    <path d="M340 435 L340 324.3 Q340 318.3 346 318.3 L402 318.3 Q408 318.3 408 324.3 L408 435 Z" fill="#F54900" data-x="CDN" data-series="cost" data-y="120"/>
+    <path d="M557.33 435 L557.33 363.2 Q557.33 357.2 563.33 357.2 L619.33 357.2 Q625.33 357.2 625.33 363.2 L625.33 435 Z" fill="#F54900" data-x="Logs" data-series="cost" data-y="80"/>
   </g>
   <g>
-    <text x="156.67" y="28" text-anchor="middle" font-size="11" font-weight="500" fill="#0A0A0A" data-value-label="Hosting">400</text>
-    <text x="374" y="308.7" text-anchor="middle" font-size="11" font-weight="500" fill="#0A0A0A" data-value-label="CDN">120</text>
-    <text x="591.33" y="348.8" text-anchor="middle" font-size="11" font-weight="500" fill="#0A0A0A" data-value-label="Logs">80</text>
+    <text x="156.67" y="60" text-anchor="middle" font-size="13" font-weight="500" fill="#fafaf9" data-value-label="Hosting">400</text>
+    <text x="374" y="310.3" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-value-label="CDN">120</text>
+    <text x="591.33" y="349.2" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-value-label="Logs">80</text>
   </g>
 </svg>

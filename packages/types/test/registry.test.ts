@@ -47,7 +47,7 @@ describe("type registry", () => {
   });
 
   it("locks Wave 1 typeExtras", () => {
-    expect([...typeExtras.bar]).toEqual(["layout"]);
+    expect([...typeExtras.bar]).toEqual(["layout", "orient"]);
     expect([...typeExtras.line]).toEqual(["layout"]);
     expect([...typeExtras.area]).toEqual(["layout"]);
     expect([...typeExtras.pie]).toEqual(["innerRadius"]);
@@ -56,10 +56,10 @@ describe("type registry", () => {
   });
 
   it("locks Wave 2 typeExtras", () => {
-    expect([...typeExtras.heatmap]).toEqual([]);
+    expect([...typeExtras.heatmap]).toEqual(["min", "max"]);
     expect([...typeExtras.funnel]).toEqual([]);
-    expect([...typeExtras.waterfall]).toEqual([]);
-    expect([...typeExtras.radar]).toEqual([]);
+    expect([...typeExtras.waterfall]).toEqual(["role"]);
+    expect([...typeExtras.radar]).toEqual(["max"]);
     expect([...typeExtras.gauge]).toEqual(["min", "max"]);
   });
 

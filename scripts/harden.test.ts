@@ -467,18 +467,21 @@ describe("docs: live grammar, diagrams, unused shims", () => {
       "integrate.md",
       "landing.md",
       "model-errors.md",
+      "release-2.2.md",
       "release.md",
       "research-brief.md",
       "site.md",
       "themes.md",
       "visual-spec.md",
     ]);
+    expect(names).toContain("release-2.2.md");
+    expect(names).not.toContain("engineering-summary.md");
     for (const name of names) {
       expect(statSync(join(docsDir, name)).isFile(), name).toBe(true);
     }
   });
 
-  it("deletes outdated critique, backlog, launch, and superseded copy", () => {
+  it("deletes outdated critique, backlog, launch, and superseded copy, including docs/engineering-summary.md and examples/compare, and keeps docs/release-2.2.md", () => {
     const gone = [
       "docs/visual-critique.md",
       "docs/visual-critique-b.md",
@@ -497,7 +500,10 @@ describe("docs: live grammar, diagrams, unused shims", () => {
       "docs/pages.md",
       "docs/POSITIONING.md",
       "docs/examples-data.md",
+      "docs/engineering-summary.md",
+      "examples/compare",
     ];
+    expect(existsSync(join(repoRoot, "docs/release-2.2.md"))).toBe(true);
     for (const rel of gone) {
       expect(existsSync(join(repoRoot, rel)), rel).toBe(false);
     }

@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="gauge chart: Paces Mill oxygen still holds at 8.6 mg/L (mg/L), 1 rows" aria-labelledby="mv-878bc8c254b61929-title" aria-describedby="mv-878bc8c254b61929-desc" data-markvis="2" data-chart-type="gauge" data-id="mv-878bc8c254b61929" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-878bc8c254b61929-title">Paces Mill oxygen still holds at 8.6 mg/L</title>
   <desc id="mv-878bc8c254b61929-desc">gauge chart. Paces Mill oxygen still holds at 8.6 mg/L. x=site. y=do. unit=mg/L. 1 rows.</desc>
-  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">Paces Mill oxygen still holds at 8.6 mg/L<tspan font-size="12" font-weight="400" fill="#737373"> · mg/L</tspan></text>
-  <rect x="48" y="36" width="652" height="376" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#0A0A0A"><title>Paces Mill oxygen still holds at 8.6 mg/L</title>Paces Mill oxygen still holds at 8.6 mg/L<tspan font-size="13" font-weight="400" fill="#737373"> · mg/L</tspan></text>
+  <rect x="48" y="46" width="652" height="366" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
   <g data-gauge="1" data-min="4" data-max="12">
     <path d="M74.08 404 A299.92 299.92 0 0 1 673.92 404" fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="12" stroke-linecap="round" data-gauge-track="1"/>
     <path d="M74.08 404 A299.92 299.92 0 0 1 444.01 112.37" fill="none" stroke="#F54900" stroke-width="12" stroke-linecap="round" data-gauge-arc="8.6"/>
   </g>
-  <text x="374" y="278.03" text-anchor="middle" dominant-baseline="middle" font-size="28" font-weight="600" fill="#0A0A0A" data-gauge-value="1">8.6</text>
+  <text x="374" y="278.03" text-anchor="middle" dominant-baseline="middle" font-size="28" font-weight="600" fill="#0A0A0A" data-gauge-value="1">8.6 mg/L</text>
   <text x="374" y="300.03" text-anchor="middle" dominant-baseline="hanging" font-size="11" font-weight="400" fill="#737373" data-gauge-label="1">Paces Mill</text>
-  <g fill="#737373" font-size="11" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400">
     <text x="74.08" y="418" text-anchor="middle" dominant-baseline="hanging" data-gauge-min="1">4</text>
     <text x="673.92" y="418" text-anchor="middle" dominant-baseline="hanging" data-gauge-max="1">12</text>
   </g>

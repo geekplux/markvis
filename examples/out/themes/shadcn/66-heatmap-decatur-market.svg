@@ -1,44 +1,83 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="heatmap chart: Ten o&apos;clock still fills Decatur market stalls, 22 rows, series weekday" aria-labelledby="mv-efe36f371d1d50fb-title" aria-describedby="mv-efe36f371d1d50fb-desc" data-markvis="2" data-chart-type="heatmap" data-id="mv-efe36f371d1d50fb" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-efe36f371d1d50fb-title">Ten o&apos;clock still fills Decatur market stalls</title>
   <desc id="mv-efe36f371d1d50fb-desc">heatmap chart. Ten o&apos;clock still fills Decatur market stalls. x=hour. y=visits. series=weekday. 22 rows.</desc>
-  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">Ten o&apos;clock still fills Decatur market stalls</text>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#0A0A0A"><title>Ten o&apos;clock still fills Decatur market stalls</title>Ten o&apos;clock still fills Decatur market stalls</text>
+  <defs>
+    <pattern id="mv-efe36f371d1d50fb-missing" patternUnits="userSpaceOnUse" width="6" height="6">
+      <rect width="6" height="6" fill="#f4f1ea"/>
+      <path d="M0 6 L6 0" stroke="#a8a29e" stroke-width="1"/>
+    </pattern>
+  </defs>
   <g data-heatmap="1">
-    <rect x="48" y="36" width="108.67" height="100.25" fill="#F54900" fill-opacity="0" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="8am" data-series="Wed" data-y="55"/>
-    <rect x="156.67" y="36" width="108.67" height="100.25" fill="#F54900" fill-opacity="0.06" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="9am" data-series="Wed" data-y="95"/>
-    <rect x="265.33" y="36" width="108.67" height="100.25" fill="#F54900" fill-opacity="0.13" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="10am" data-series="Wed" data-y="140"/>
-    <rect x="374" y="36" width="108.67" height="100.25" fill="#F54900" fill-opacity="0.1" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="11am" data-series="Wed" data-y="120"/>
-    <rect x="482.67" y="36" width="108.67" height="100.25" fill="#F54900" fill-opacity="0.02" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="12pm" data-series="Wed" data-y="70"/>
-    <rect x="591.33" y="36" width="108.67" height="100.25" fill="#F54900" fill-opacity="0" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="1pm" data-series="Wed" data-y="0"/>
-    <rect x="48" y="136.25" width="108.67" height="100.25" fill="#F54900" fill-opacity="0.01" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="8am" data-series="Fri" data-y="62"/>
-    <rect x="156.67" y="136.25" width="108.67" height="100.25" fill="#F54900" fill-opacity="0.08" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="9am" data-series="Fri" data-y="110"/>
-    <rect x="265.33" y="136.25" width="108.67" height="100.25" fill="#F54900" fill-opacity="0.16" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="10am" data-series="Fri" data-y="160"/>
-    <rect x="374" y="136.25" width="108.67" height="100.25" fill="#F54900" fill-opacity="0.12" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="11am" data-series="Fri" data-y="135"/>
-    <rect x="482.67" y="136.25" width="108.67" height="100.25" fill="#F54900" fill-opacity="0.05" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="12pm" data-series="Fri" data-y="85"/>
-    <rect x="591.33" y="136.25" width="108.67" height="100.25" fill="#F54900" fill-opacity="0" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="1pm" data-series="Fri" data-y="0"/>
-    <rect x="48" y="236.5" width="108.67" height="100.25" fill="#F54900" fill-opacity="0.23" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="8am" data-series="Sat" data-y="210"/>
-    <rect x="156.67" y="236.5" width="108.67" height="100.25" fill="#F54900" fill-opacity="0.64" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="9am" data-series="Sat" data-y="480"/>
-    <rect x="265.33" y="236.5" width="108.67" height="100.25" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="10am" data-series="Sat" data-y="720"/>
-    <rect x="374" y="236.5" width="108.67" height="100.25" fill="#F54900" fill-opacity="0.89" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="11am" data-series="Sat" data-y="650"/>
-    <rect x="482.67" y="236.5" width="108.67" height="100.25" fill="#F54900" fill-opacity="0.5" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="12pm" data-series="Sat" data-y="390"/>
-    <rect x="591.33" y="236.5" width="108.67" height="100.25" fill="#F54900" fill-opacity="0.25" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="1pm" data-series="Sat" data-y="220"/>
-    <rect x="48" y="336.75" width="108.67" height="100.25" fill="#F54900" fill-opacity="0.19" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="8am" data-series="Sun" data-y="180"/>
-    <rect x="156.67" y="336.75" width="108.67" height="100.25" fill="#F54900" fill-opacity="0.55" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="9am" data-series="Sun" data-y="420"/>
-    <rect x="265.33" y="336.75" width="108.67" height="100.25" fill="#F54900" fill-opacity="0.95" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="10am" data-series="Sun" data-y="690"/>
-    <rect x="374" y="336.75" width="108.67" height="100.25" fill="#F54900" fill-opacity="0.83" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="11am" data-series="Sun" data-y="610"/>
-    <rect x="482.67" y="336.75" width="108.67" height="100.25" fill="#F54900" fill-opacity="0.46" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="12pm" data-series="Sun" data-y="360"/>
-    <rect x="591.33" y="336.75" width="108.67" height="100.25" fill="#F54900" fill-opacity="0.21" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" rx="1" data-x="1pm" data-series="Sun" data-y="195"/>
+    <rect x="48" y="46" width="99.33" height="97.25" fill="#f4d6c5" stroke="#d6d3d1" stroke-width="1" data-x="8am" data-series="Wed" data-y="55"/>
+    <text x="97.67" y="94.63" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="8am:Wed">55</text>
+    <rect x="147.33" y="46" width="99.33" height="97.25" fill="#f4ceb9" stroke="#d6d3d1" stroke-width="1" data-x="9am" data-series="Wed" data-y="95"/>
+    <text x="197" y="94.63" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="9am:Wed">95</text>
+    <rect x="246.67" y="46" width="99.33" height="97.25" fill="#f4c4ab" stroke="#d6d3d1" stroke-width="1" data-x="10am" data-series="Wed" data-y="140"/>
+    <text x="296.33" y="94.63" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="10am:Wed">140</text>
+    <rect x="346" y="46" width="99.33" height="97.25" fill="#f4c8b1" stroke="#d6d3d1" stroke-width="1" data-x="11am" data-series="Wed" data-y="120"/>
+    <text x="395.67" y="94.63" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="11am:Wed">120</text>
+    <rect x="445.33" y="46" width="99.33" height="97.25" fill="#f4d3c0" stroke="#d6d3d1" stroke-width="1" data-x="12pm" data-series="Wed" data-y="70"/>
+    <text x="495" y="94.63" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="12pm:Wed">70</text>
+    <rect x="544.67" y="46" width="99.33" height="97.25" fill="url(#mv-efe36f371d1d50fb-missing)" stroke="#d6d3d1" stroke-width="1" data-x="1pm" data-series="Wed" data-missing="1"/>
+    <rect x="48" y="143.25" width="99.33" height="97.25" fill="#f4d5c2" stroke="#d6d3d1" stroke-width="1" data-x="8am" data-series="Fri" data-y="62"/>
+    <text x="97.67" y="191.88" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="8am:Fri">62</text>
+    <rect x="147.33" y="143.25" width="99.33" height="97.25" fill="#f4cab4" stroke="#d6d3d1" stroke-width="1" data-x="9am" data-series="Fri" data-y="110"/>
+    <text x="197" y="191.88" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="9am:Fri">110</text>
+    <rect x="246.67" y="143.25" width="99.33" height="97.25" fill="#f4c0a6" stroke="#d6d3d1" stroke-width="1" data-x="10am" data-series="Fri" data-y="160"/>
+    <text x="296.33" y="191.88" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="10am:Fri">160</text>
+    <rect x="346" y="143.25" width="99.33" height="97.25" fill="#f4c5ad" stroke="#d6d3d1" stroke-width="1" data-x="11am" data-series="Fri" data-y="135"/>
+    <text x="395.67" y="191.88" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="11am:Fri">135</text>
+    <rect x="445.33" y="143.25" width="99.33" height="97.25" fill="#f4d0bc" stroke="#d6d3d1" stroke-width="1" data-x="12pm" data-series="Fri" data-y="85"/>
+    <text x="495" y="191.88" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="12pm:Fri">85</text>
+    <rect x="544.67" y="143.25" width="99.33" height="97.25" fill="url(#mv-efe36f371d1d50fb-missing)" stroke="#d6d3d1" stroke-width="1" data-x="1pm" data-series="Fri" data-missing="1"/>
+    <rect x="48" y="240.5" width="99.33" height="97.25" fill="#f4b597" stroke="#d6d3d1" stroke-width="1" data-x="8am" data-series="Sat" data-y="210"/>
+    <text x="97.67" y="289.13" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="8am:Sat">210</text>
+    <rect x="147.33" y="240.5" width="99.33" height="97.25" fill="#f57c47" stroke="#d6d3d1" stroke-width="1" data-x="9am" data-series="Sat" data-y="480"/>
+    <text x="197" y="289.13" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-cell-label="9am:Sat">480</text>
+    <rect x="246.67" y="240.5" width="99.33" height="97.25" fill="#f54900" stroke="#d6d3d1" stroke-width="1" data-x="10am" data-series="Sat" data-y="720"/>
+    <text x="296.33" y="289.13" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-cell-label="10am:Sat">720</text>
+    <rect x="346" y="240.5" width="99.33" height="97.25" fill="#f55815" stroke="#d6d3d1" stroke-width="1" data-x="11am" data-series="Sat" data-y="650"/>
+    <text x="395.67" y="289.13" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-cell-label="11am:Sat">650</text>
+    <rect x="445.33" y="240.5" width="99.33" height="97.25" fill="#f58f62" stroke="#d6d3d1" stroke-width="1" data-x="12pm" data-series="Sat" data-y="390"/>
+    <text x="495" y="289.13" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="12pm:Sat">390</text>
+    <rect x="544.67" y="240.5" width="99.33" height="97.25" fill="#f4b394" stroke="#d6d3d1" stroke-width="1" data-x="1pm" data-series="Sat" data-y="220"/>
+    <text x="594.33" y="289.13" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="1pm:Sat">220</text>
+    <rect x="48" y="337.75" width="99.33" height="97.25" fill="#f4bca0" stroke="#d6d3d1" stroke-width="1" data-x="8am" data-series="Sun" data-y="180"/>
+    <text x="97.67" y="386.38" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="8am:Sun">180</text>
+    <rect x="147.33" y="337.75" width="99.33" height="97.25" fill="#f58959" stroke="#d6d3d1" stroke-width="1" data-x="9am" data-series="Sun" data-y="420"/>
+    <text x="197" y="386.38" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="9am:Sun">420</text>
+    <rect x="246.67" y="337.75" width="99.33" height="97.25" fill="#f54f09" stroke="#d6d3d1" stroke-width="1" data-x="10am" data-series="Sun" data-y="690"/>
+    <text x="296.33" y="386.38" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-cell-label="10am:Sun">690</text>
+    <rect x="346" y="337.75" width="99.33" height="97.25" fill="#f56021" stroke="#d6d3d1" stroke-width="1" data-x="11am" data-series="Sun" data-y="610"/>
+    <text x="395.67" y="386.38" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-cell-label="11am:Sun">610</text>
+    <rect x="445.33" y="337.75" width="99.33" height="97.25" fill="#f5956a" stroke="#d6d3d1" stroke-width="1" data-x="12pm" data-series="Sun" data-y="360"/>
+    <text x="495" y="386.38" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="12pm:Sun">360</text>
+    <rect x="544.67" y="337.75" width="99.33" height="97.25" fill="#f4b89b" stroke="#d6d3d1" stroke-width="1" data-x="1pm" data-series="Sun" data-y="195"/>
+    <text x="594.33" y="386.38" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="1pm:Sun">195</text>
   </g>
-  <rect x="48" y="36" width="652" height="401" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
-  <g fill="#737373" font-size="11" font-weight="400">
-    <text x="40" y="86.13" text-anchor="end" dominant-baseline="middle" data-series-label="Wed">Wed</text>
-    <text x="40" y="186.38" text-anchor="end" dominant-baseline="middle" data-series-label="Fri">Fri</text>
-    <text x="40" y="286.63" text-anchor="end" dominant-baseline="middle" data-series-label="Sat">Sat</text>
-    <text x="40" y="386.88" text-anchor="end" dominant-baseline="middle" data-series-label="Sun">Sun</text>
-    <text x="102.33" y="448" text-anchor="middle" data-full-label="8am">8am</text>
-    <text x="211" y="448" text-anchor="middle" data-full-label="9am">9am</text>
-    <text x="319.67" y="448" text-anchor="middle" data-full-label="10am">10am</text>
-    <text x="428.33" y="448" text-anchor="middle" data-full-label="11am">11am</text>
-    <text x="537" y="448" text-anchor="middle" data-full-label="12pm">12pm</text>
-    <text x="645.67" y="448" text-anchor="middle" data-full-label="1pm">1pm</text>
+  <g data-color-scale="1">
+    <rect x="660" y="386.38" width="12" height="49.13" fill="#f4d6c5"/>
+    <rect x="660" y="337.75" width="12" height="49.13" fill="#f4c2a8"/>
+    <rect x="660" y="289.13" width="12" height="49.13" fill="#f4ae8c"/>
+    <rect x="660" y="240.5" width="12" height="49.13" fill="#f59a70"/>
+    <rect x="660" y="191.88" width="12" height="49.13" fill="#f58554"/>
+    <rect x="660" y="143.25" width="12" height="49.13" fill="#f57138"/>
+    <rect x="660" y="94.63" width="12" height="49.13" fill="#f55d1c"/>
+    <rect x="660" y="46" width="12" height="49.13" fill="#f54900"/>
+    <text x="676" y="50" font-size="12" fill="#737373" dominant-baseline="hanging" data-scale-max="1">720</text>
+    <text x="676" y="435" font-size="12" fill="#737373" data-scale-min="1">55</text>
+  </g>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="40" y="94.63" text-anchor="end" dominant-baseline="middle" data-series-label="Wed"><title>Wed</title>Wed</text>
+    <text x="40" y="191.88" text-anchor="end" dominant-baseline="middle" data-series-label="Fri"><title>Fri</title>Fri</text>
+    <text x="40" y="289.13" text-anchor="end" dominant-baseline="middle" data-series-label="Sat"><title>Sat</title>Sat</text>
+    <text x="40" y="386.38" text-anchor="end" dominant-baseline="middle" data-series-label="Sun"><title>Sun</title>Sun</text>
+    <text x="97.67" y="447" text-anchor="middle" data-full-label="8am"><title>8am</title>8am</text>
+    <text x="197" y="447" text-anchor="middle" data-full-label="9am"><title>9am</title>9am</text>
+    <text x="296.33" y="447" text-anchor="middle" data-full-label="10am"><title>10am</title>10am</text>
+    <text x="395.67" y="447" text-anchor="middle" data-full-label="11am"><title>11am</title>11am</text>
+    <text x="495" y="447" text-anchor="middle" data-full-label="12pm"><title>12pm</title>12pm</text>
+    <text x="594.33" y="447" text-anchor="middle" data-full-label="1pm"><title>1pm</title>1pm</text>
   </g>
 </svg>

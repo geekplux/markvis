@@ -2,19 +2,26 @@
 
 import { folio, type ThemeTokens } from "@markvis/themes";
 
-export let SVG_WIDTH = folio.SVG_WIDTH;
-export let SVG_HEIGHT = folio.SVG_HEIGHT;
-export let SVG_HEIGHT_MAX = folio.SVG_HEIGHT_MAX;
+export let SVG_WIDTH: number = folio.SVG_WIDTH;
+export let SVG_HEIGHT: number = folio.SVG_HEIGHT;
+export let SVG_HEIGHT_MAX: number = folio.SVG_HEIGHT_MAX;
 export let PLOT_MIN_RATIO = folio.PLOT_MIN_RATIO;
 
 export let FONT = folio.FONT;
 
-export let INK = folio.INK;
-export let QUIET = folio.QUIET;
-export let HAIRLINE_OPACITY = folio.HAIRLINE_OPACITY;
+export let INK: string = folio.INK;
+export let QUIET: string = folio.QUIET;
+export let HAIRLINE_OPACITY: string = folio.HAIRLINE_OPACITY;
 export let STRUCTURE_OPACITY = folio.STRUCTURE_OPACITY;
 
-export let TYPE = folio.TYPE;
+export let TYPE: {
+  title: { size: number; weight: number; fill: string };
+  unit: { size: number; weight: number; fill: string };
+  value: { size: number; weight: number; fill: string };
+  tick: { size: number; weight: number; fill: string };
+  note: { size: number; weight: number; fill: string };
+  legend: { size: number; weight: number; fill: string };
+} = folio.TYPE;
 
 export let MARGIN = folio.MARGIN;
 
@@ -22,7 +29,7 @@ export let PALETTE = folio.PALETTE;
 
 export let WRAP_OPACITY = folio.WRAP_OPACITY;
 
-export let TITLE_BASELINE = folio.TITLE_BASELINE;
+export let TITLE_BASELINE: number = folio.TITLE_BASELINE;
 export let TITLE_TO_PLOT = folio.TITLE_TO_PLOT;
 export let TICK_TEXT_GAP = folio.TICK_TEXT_GAP;
 export let LABEL_ROTATE_DEG = folio.LABEL_ROTATE_DEG;
@@ -66,9 +73,12 @@ export let PIE_INNER_RATIO = folio.PIE_INNER_RATIO;
 
 export let COMPACT_SPAN = folio.COMPACT_SPAN;
 
-export let PLOT_BG = folio.PLOT_BG;
-export let PLOT_BORDER = folio.PLOT_BORDER;
-export let PLOT_BORDER_WIDTH = folio.PLOT_BORDER_WIDTH;
+export let PLOT_BG: string | null = folio.PLOT_BG;
+export let PLOT_BORDER: string | null = folio.PLOT_BORDER;
+export let PLOT_BORDER_WIDTH: number = folio.PLOT_BORDER_WIDTH;
+export let CANVAS = "#fafaf9";
+export type SurfaceName = "light" | "dark" | "export";
+export let SURFACE: SurfaceName = "light";
 export let AXIS_TITLES = folio.AXIS_TITLES;
 export let LEGEND_BELOW = folio.LEGEND_BELOW;
 export let TITLE_RULE = folio.TITLE_RULE;
@@ -134,4 +144,64 @@ export function applyThemeTokens(t: ThemeTokens): void {
   LEGEND_BELOW = t.LEGEND_BELOW;
   TITLE_RULE = t.TITLE_RULE;
   VERTICAL_GRID = t.VERTICAL_GRID;
+  CANVAS = "#fafaf9";
+  SURFACE = "light";
+}
+
+const READABLE = {
+  title: 21,
+  unit: 13,
+  value: 13,
+  tick: 12,
+  note: 12,
+  legend: 13,
+} as const;
+
+/** Width reflows the frame. Type sizes stay readable. Surface owns ink and paper. */
+export function applyFrame(opts: { width: number; surface: SurfaceName }): void {
+  SVG_WIDTH = opts.width;
+  SURFACE = opts.surface;
+  TITLE_BASELINE = Math.max(TITLE_BASELINE, 32);
+  TYPE = {
+    title: { ...TYPE.title, size: Math.max(TYPE.title.size, READABLE.title) },
+    unit: { ...TYPE.unit, size: Math.max(TYPE.unit.size, READABLE.unit) },
+    value: { ...TYPE.value, size: Math.max(TYPE.value.size, READABLE.value) },
+    tick: { ...TYPE.tick, size: Math.max(TYPE.tick.size, READABLE.tick) },
+    note: { ...TYPE.note, size: Math.max(TYPE.note.size, READABLE.note) },
+    legend: { ...TYPE.legend, size: Math.max(TYPE.legend.size, READABLE.legend) },
+  };
+  if (opts.surface === "dark") {
+    CANVAS = "#1c1917";
+    INK = "#f5f5f4";
+    QUIET = "#a8a29e";
+    PLOT_BG = "#292524";
+    HAIRLINE_OPACITY = "0.22";
+    TYPE = {
+      title: { ...TYPE.title, fill: "#f5f5f4" },
+      unit: { ...TYPE.unit, fill: "#a8a29e" },
+      value: { ...TYPE.value, fill: "#f5f5f4" },
+      tick: { ...TYPE.tick, fill: "#d6d3d1" },
+      note: { ...TYPE.note, fill: "#a8a29e" },
+      legend: { ...TYPE.legend, fill: "#f5f5f4" },
+    };
+    return;
+  }
+  if (opts.surface === "export") {
+    CANVAS = "#ffffff";
+    INK = "#171717";
+    QUIET = "#525252";
+    PLOT_BG = "#ffffff";
+    PLOT_BORDER = "#e7e5e4";
+    PLOT_BORDER_WIDTH = 1;
+    TYPE = {
+      title: { ...TYPE.title, fill: "#171717" },
+      unit: { ...TYPE.unit, fill: "#525252" },
+      value: { ...TYPE.value, fill: "#171717" },
+      tick: { ...TYPE.tick, fill: "#525252" },
+      note: { ...TYPE.note, fill: "#525252" },
+      legend: { ...TYPE.legend, fill: "#171717" },
+    };
+    return;
+  }
+  CANVAS = "#fafaf9";
 }

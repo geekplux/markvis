@@ -1,25 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="pie chart: MARTA takes the largest mode share, 5 slices" aria-labelledby="mv-57a6d979cf5c648a-title" aria-describedby="mv-57a6d979cf5c648a-desc" data-markvis="2" data-chart-type="pie" data-id="mv-57a6d979cf5c648a" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-57a6d979cf5c648a-title">MARTA takes the largest mode share</title>
   <desc id="mv-57a6d979cf5c648a-desc">pie chart. MARTA takes the largest mode share. x=mode. y=count. 5 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">MARTA takes the largest mode share</text>
-  <g font-size="12" font-weight="500" fill="#0A0A0A">
-    <rect x="48" y="31" width="10" height="10" fill="#F54900" rx="1"/>
-    <text x="62" y="40" data-legend="MARTA">MARTA</text>
-    <rect x="115.2" y="31" width="10" height="10" fill="#009689" rx="1"/>
-    <text x="129.2" y="40" data-legend="Walk">Walk</text>
-    <rect x="174.96" y="31" width="10" height="10" fill="#104E64" rx="1"/>
-    <text x="188.96" y="40" data-legend="Drive">Drive</text>
-    <rect x="242.16" y="31" width="10" height="10" fill="#FFB900" rx="1"/>
-    <text x="256.16" y="40" data-legend="Bike">Bike</text>
-    <rect x="301.92" y="31" width="10" height="10" fill="#FE9A00" rx="1"/>
-    <text x="315.92" y="40" data-legend="Other">Other</text>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#0A0A0A"><title>MARTA takes the largest mode share</title>MARTA takes the largest mode share</text>
+  <g font-size="13" font-weight="500" fill="#0A0A0A">
+    <rect x="48" y="41" width="10" height="10" fill="#F54900" rx="1"/>
+    <text x="62" y="50" data-legend="MARTA">MARTA</text>
+    <rect x="118.3" y="41" width="10" height="10" fill="#009689" rx="1"/>
+    <text x="132.3" y="50" data-legend="Walk">Walk</text>
+    <rect x="180.54" y="41" width="10" height="10" fill="#104E64" rx="1"/>
+    <text x="194.54" y="50" data-legend="Drive">Drive</text>
+    <rect x="250.84" y="41" width="10" height="10" fill="#FFB900" rx="1"/>
+    <text x="264.84" y="50" data-legend="Bike">Bike</text>
+    <rect x="313.08" y="41" width="10" height="10" fill="#FE9A00" rx="1"/>
+    <text x="327.08" y="50" data-legend="Other">Other</text>
   </g>
-  <rect x="48" y="60" width="652" height="380" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
+  <rect x="48" y="70" width="652" height="370" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0.5">
-    <path d="M374 120.8 A129.2 129.2 0 0 1 468.77 337.81 L421.39 293.9 A64.6 64.6 0 0 0 374 185.4 Z" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="MARTA" data-raw-value="38" data-donut="1"/>
-    <path d="M468.77 337.81 A129.2 129.2 0 0 1 296.79 353.59 L335.39 301.8 A64.6 64.6 0 0 0 421.39 293.9 Z" fill="#009689" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Walk" data-raw-value="24" data-donut="1"/>
-    <path d="M296.79 353.59 A129.2 129.2 0 0 1 255.6 198.29 L314.8 224.15 A64.6 64.6 0 0 0 335.39 301.8 Z" fill="#104E64" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Drive" data-raw-value="22" data-donut="1"/>
-    <path d="M255.6 198.29 A129.2 129.2 0 0 1 313.42 135.88 L343.71 192.94 A64.6 64.6 0 0 0 314.8 224.15 Z" fill="#FFB900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Bike" data-raw-value="11" data-donut="1"/>
-    <path d="M313.42 135.88 A129.2 129.2 0 0 1 374 120.8 L374 185.4 A64.6 64.6 0 0 0 343.71 192.94 Z" fill="#FE9A00" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Other" data-raw-value="8" data-donut="1"/>
+    <path d="M374 129.2 A125.8 125.8 0 0 1 466.28 340.5 L420.14 297.75 A62.9 62.9 0 0 0 374 192.1 Z" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="MARTA" data-raw-value="38" data-donut="1"/>
+    <path d="M466.28 340.5 A125.8 125.8 0 0 1 298.82 355.86 L336.41 305.43 A62.9 62.9 0 0 0 420.14 297.75 Z" fill="#009689" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Walk" data-raw-value="24" data-donut="1"/>
+    <path d="M298.82 355.86 A125.8 125.8 0 0 1 258.71 204.65 L316.36 229.83 A62.9 62.9 0 0 0 336.41 305.43 Z" fill="#104E64" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Drive" data-raw-value="22" data-donut="1"/>
+    <path d="M258.71 204.65 A125.8 125.8 0 0 1 315.02 143.89 L344.51 199.44 A62.9 62.9 0 0 0 316.36 229.83 Z" fill="#FFB900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Bike" data-raw-value="11" data-donut="1"/>
+    <path d="M315.02 143.89 A125.8 125.8 0 0 1 374 129.2 L374 192.1 A62.9 62.9 0 0 0 344.51 199.44 Z" fill="#FE9A00" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Other" data-raw-value="8" data-donut="1"/>
   </g>
 </svg>

@@ -53,6 +53,7 @@ function bwAxes(svg: string) {
     endLabel: /data-end-label/.test(svg),
     plotFrame: /data-plot-border=/.test(svg),
     axisTitles: /data-axis-titles=/.test(svg),
+    titleRule: /data-title-rule=/.test(svg),
     viewBox: (svg.match(/viewBox="([^"]+)"/) ?? [, ""])[1],
     titleSize: (svg.match(/font-size="(\d+(?:\.\d+)?)"[^>]*font-weight="6/) ??
       svg.match(/font-weight="6\d*"[^>]*font-size="(\d+(?:\.\d+)?)"/) ?? [, ""])[1],
@@ -71,6 +72,7 @@ function bwDiffCount(
   if (a.endLabel !== b.endLabel) n += 1;
   if (a.plotFrame !== b.plotFrame) n += 1;
   if (a.axisTitles !== b.axisTitles) n += 1;
+  if (a.titleRule !== b.titleRule) n += 1;
   if (a.viewBox !== b.viewBox) n += 1;
   if (a.titleSize !== b.titleSize) n += 1;
   if (a.markerR !== b.markerR) n += 1;
@@ -248,11 +250,12 @@ describe("cartesian rules", () => {
     expect(svg).toContain(PALETTE[0]);
     expect(svg).not.toContain('shape-rendering="crispEdges"');
     expect(svg).not.toContain('fill="#F7F4EF"');
-    expect(svg).not.toMatch(/<rect width="100%" height="100%"/);
+    expect(svg).not.toContain('data-surface="light"');
+    expect(svg).not.toContain('width="100%" height="100%"');
     expect(svg).toContain("Q3 Revenue");
     expect(svg).toContain(" · USD k");
     expect(svg).toContain('text-anchor="start"');
-    expect(svg).toContain('font-size="17"');
+    expect(svg).toContain('font-size="21"');
     expect(svg).not.toContain("revenue (USD k)");
     expect(svg).not.toContain("rotate(-90");
   });
@@ -1054,7 +1057,7 @@ describe("pie + scatter theme forks (THEMES.md)", () => {
     const scatter = renderSvg(scatterChart("shadcn"));
     expect(scatter).toContain('data-plot-border="1"');
     expect(scatter).toContain("#e5e5e5");
-    expect(scatter).not.toContain("data-axis-titles=");
+    expect(scatter).toContain("data-axis-titles=");
     expect(scatter).toMatch(/fill-opacity="0\.75/);
   });
 

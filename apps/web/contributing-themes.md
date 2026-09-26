@@ -8,7 +8,7 @@ sidebar: true
 
 A theme is a **grammar** pack: mark form, axes, legend policy, typeface, plot chrome, padding. Hex is one column — never the whole theme. Site light/dark mode is unrelated.
 
-Do not invent a seventh chart type. Do not pull a chart runtime into `packages/` or `apps/`.
+Do not invent a type id. Do not pull a chart runtime into `packages/` or `apps/`.
 
 ## Layout
 

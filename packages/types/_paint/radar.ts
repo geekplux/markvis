@@ -1,6 +1,6 @@
 import type { ChartIR } from "@markvis/ir";
-import { loadRows, seriesNames, uniqueInOrder } from "./data.js";
-import { drawTitle, visibleTitle } from "./figure.js";
+import { finiteValues, groupedValue, loadRows, seriesNames, uniqueInOrder } from "./data.js";
+import { drawTitle, reserveTitle, visibleTitle } from "./figure.js";
 import {
   fitFrameHeight,
   layoutLegend,
@@ -9,6 +9,7 @@ import {
   type Painted,
 } from "./layout.js";
 import { seriesStyle } from "./palette.js";
+import { formatNumber, niceTicks } from "./scale.js";
 import { textWidth } from "./text.js";
 import {
   AREA_OPACITY,
@@ -40,8 +41,9 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
   const rows = loadRows(chart);
   const spokes = uniqueInOrder(rows.map((row) => row.xLabel));
   const names = seriesNames(rows);
-  const maxY = Math.max(0, ...rows.map((row) => row.y));
-  const scaleMax = maxY > 0 ? maxY : 1;
+  const present = finiteValues(rows.map((row) => row.y));
+  const dataMax = present.length > 0 ? Math.max(...present) : 1;
+  const scaleMax = Math.max(dataMax > 0 ? dataMax : 1, chart.max ?? 0);
   const n = Math.max(spokes.length, 1);
 
   const styles = names.map((_, i) => seriesStyle(i));
@@ -63,6 +65,7 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
   );
   let left = Math.max(MARGIN.left, labelPad);
   let right = Math.max(MARGIN.right, labelPad);
+  reserveTitle(visibleTitle(chart), left, chart.unit);
   let top = titleBlockTop(legendDraft.height);
   let bottom = MARGIN.right + 18;
   if (LEGEND_BELOW && legendDraft.height > 0) {
@@ -114,6 +117,16 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
     right += Math.max(0, overflowRight);
     top += Math.max(0, overflowTop);
     bottom += Math.max(0, overflowBottom);
+    height = fitFrameHeight(top, bottom);
+    box = plot();
+    r = radiusOf();
+  }
+
+  const titled = titleBlockTop(legendDraft.height);
+  reserveTitle(visibleTitle(chart), left, chart.unit);
+  const retitled = titleBlockTop(legendDraft.height);
+  if (retitled !== titled) {
+    top += retitled - titled;
     height = fitFrameHeight(top, bottom);
     box = plot();
     r = radiusOf();
@@ -201,9 +214,11 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
       "data-radar-grid": "1",
     })}>`,
   );
-  for (const ring of [0.5, 1]) {
+  const ringTicks = niceTicks(0, scaleMax, 4).filter((tick) => tick > 0 && tick <= scaleMax + 1e-9);
+  const ringLevels = ringTicks.length > 0 ? ringTicks : [scaleMax];
+  for (const level of ringLevels) {
     const pts = Array.from({ length: n }, (_, i) =>
-      spokePoint(cx, cy, r * ring, i, n),
+      spokePoint(cx, cy, (level / scaleMax) * r, i, n),
     );
     const d =
       pts
@@ -231,34 +246,66 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
   for (let s = 0; s < names.length; s++) {
     const name = names[s]!;
     const style = styles[s]!;
+    const dashes = ["", "6 4", "2 2", "7 3 2 3"];
     const pts = spokes.map((spoke, i) => {
-      let found: number | undefined;
-      for (const row of rows) {
-        if (row.series === name && row.xLabel === spoke) {
-          found = row.y;
-        }
+      const value = groupedValue(rows, name, spoke);
+      if (value === null || scaleMax === 0) {
+        return null;
       }
-      const value = found ?? 0;
       return spokePoint(cx, cy, (value / scaleMax) * r, i, n);
     });
-    const d =
-      pts
-        .map(
-          (p, i) =>
-            `${i === 0 ? "M" : "L"}${fmtPx(p.x)} ${fmtPx(p.y)}`,
-        )
-        .join(" ") + " Z";
-    lines.push(
-      `    <path ${attrs({
-        d,
-        fill: style.color,
-        "fill-opacity": AREA_OPACITY * style.opacity,
-        stroke: style.color,
-        "stroke-opacity": style.opacity === 1 ? undefined : style.opacity,
-        "stroke-width": 1.75,
-        "data-series": name,
-      })}/>`,
-    );
+    const runs: { x: number; y: number }[][] = [];
+    let run: { x: number; y: number }[] = [];
+    for (const pt of pts) {
+      if (!pt) {
+        if (run.length > 0) {
+          runs.push(run);
+          run = [];
+        }
+        continue;
+      }
+      run.push(pt);
+    }
+    if (run.length > 0) {
+      runs.push(run);
+    }
+    const closed = pts.every((pt) => pt !== null) && pts.length > 2;
+    if (closed) {
+      const d =
+        pts
+          .map((p, i) => `${i === 0 ? "M" : "L"}${fmtPx(p!.x)} ${fmtPx(p!.y)}`)
+          .join(" ") + " Z";
+      lines.push(
+        `    <path ${attrs({
+          d,
+          fill: style.color,
+          "fill-opacity": 0.12 * style.opacity,
+          stroke: style.color,
+          "stroke-width": 1.75,
+          "stroke-dasharray": dashes[s % dashes.length] || undefined,
+          "data-series": name,
+        })}/>`,
+      );
+    } else {
+      for (const part of runs) {
+        if (part.length < 2) {
+          continue;
+        }
+        const d = part
+          .map((p, i) => `${i === 0 ? "M" : "L"}${fmtPx(p.x)} ${fmtPx(p.y)}`)
+          .join(" ");
+        lines.push(
+          `    <path ${attrs({
+            d,
+            fill: "none",
+            stroke: style.color,
+            "stroke-width": 1.75,
+            "stroke-dasharray": dashes[s % dashes.length] || undefined,
+            "data-series": name,
+          })}/>`,
+        );
+      }
+    }
   }
   lines.push(`  </g>`);
 
@@ -280,6 +327,19 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
         "dominant-baseline": "middle",
         "data-spoke": label,
       })}>${escapeXml(label)}</text>`,
+    );
+  }
+  for (const level of ringLevels) {
+    const p = spokePoint(cx, cy, (level / scaleMax) * r, 0, n);
+    lines.push(
+      `    <text ${attrs({
+        x: fmtPx((cx + p.x) / 2),
+        y: fmtPx(p.y - 4),
+        "text-anchor": "middle",
+        "font-size": TYPE.tick.size,
+        fill: TYPE.tick.fill,
+        "data-radar-tick": formatNumber(level),
+      })}>${escapeXml(formatNumber(level))}</text>`,
     );
   }
   lines.push(`  </g>`);

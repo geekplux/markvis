@@ -2,7 +2,7 @@ import { spawn } from "node:child_process";
 import { mkdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { basename, dirname, join, resolve } from "node:path";
-import { parseMarkdown, type ParseResult } from "@markvis/parser";
+import { parseDocument, parseMarkdown, type ParseResult } from "@markvis/parser";
 import { renderSvg } from "@markvis/render-svg";
 import {
   CliError,
@@ -161,15 +161,22 @@ function cmdCheck(paths: string[], ctx: CliContext): number {
   let errCount = 0;
   for (const abs of files) {
     const file = displayPath(abs, ctx.cwd);
-    const { result } = parseFile(abs);
-    if (result.ok) {
-      okCount += 1;
-      ctx.stdout.write(
-        `ok\t${file}\t${result.chart.type}\t${result.chart.table.rows.length}\n`,
-      );
-    } else {
-      errCount += 1;
-      ctx.stdout.write(`error\t${file}\t${result.error.code}\n`);
+    const source = readFileSync(abs, "utf8");
+    const located = parseDocument(source, { filename: basename(abs) });
+    const many = located.length > 1;
+    for (const item of located) {
+      const where = many ? `\tchart ${item.index} line ${item.line}` : "";
+      if (item.result.ok) {
+        okCount += 1;
+        ctx.stdout.write(
+          `ok\t${file}${where}\t${item.result.chart.type}\t${item.result.chart.table.rows.length}\n`,
+        );
+      } else {
+        errCount += 1;
+        ctx.stdout.write(
+          `error\t${file}${where}\t${item.result.error.code}\t${item.result.error.message}\n`,
+        );
+      }
     }
   }
   if (errCount === 0) {

@@ -1,5 +1,5 @@
 import { formatNumber } from "./scale.js";
-import { textWidth } from "./text.js";
+import { textWidth, wrapText } from "./text.js";
 import {
   AXIS_TITLES,
   BAR_LABEL_MID_MIN_W,
@@ -53,8 +53,11 @@ export type LegendLayout = {
 };
 
 export type CategoryLayout = {
+  /** Rotation is not used. Long labels wrap or truncate. */
   rotate: boolean;
   show: boolean[];
+  lines: string[][];
+  full: string[];
 };
 
 export type Frame = {
@@ -63,6 +66,8 @@ export type Frame = {
   plot: PlotBox;
   rotateX: boolean;
   show: boolean[];
+  labelLines: string[][];
+  fullLabels: string[];
   left: number;
   right: number;
   top: number;
@@ -128,70 +133,62 @@ export function categoryLayout(
   labels: string[],
   catStep: number,
 ): CategoryLayout {
-  const showAll = labels.map(() => true);
-  if (labels.length <= 1) {
-    const width = labels[0] ? textWidth(labels[0], TYPE.tick.size) : 0;
-    if (width > catStep - LABEL_MIN_GAP && labels.length === 1) {
-      return { rotate: true, show: showAll };
-    }
-    return { rotate: false, show: showAll };
-  }
-  const widths = labels.map((label) => textWidth(label, TYPE.tick.size));
-  if (!labelsOverlapZero(widths, catStep)) {
-    return { rotate: false, show: showAll };
-  }
-  if (!labelsOverlapRotated(catStep)) {
-    return { rotate: true, show: showAll };
-  }
+  const maxWidth = Math.max(catStep - LABEL_MIN_GAP, TYPE.tick.size);
+  const wrapped = labels.map((label) =>
+    wrapText(label, TYPE.tick.size, maxWidth, 3),
+  );
   return {
-    rotate: true,
-    show: labels.map((_, i) => i % 2 === 0),
+    rotate: false,
+    show: labels.map(() => true),
+    lines: wrapped.map((item) => item.lines),
+    full: labels,
   };
 }
 
-export function tickLeftMargin(yTickLabels: string[]): number {
+export function tickLeftMargin(
+  yTickLabels: string[],
+  axisTitles: boolean = AXIS_TITLES,
+): number {
   const yTickWidth = Math.max(
     0,
     ...yTickLabels.map((label) => textWidth(label, TYPE.tick.size)),
   );
-  const axisPad = AXIS_TITLES ? 18 : 0;
+  const axisPad = axisTitles ? 18 : 0;
   return Math.max(MARGIN.left, yTickWidth + TICK_TEXT_GAP) + axisPad;
 }
 
-export function categoryBottomMargin(
-  labels: string[],
-  rotate: boolean,
-): number {
+export function categoryBottomMargin(layout: CategoryLayout): number {
   const axisPad = AXIS_TITLES ? 18 : 0;
-  if (labels.length === 0) {
-    return TYPE.tick.size + 12 + axisPad;
-  }
-  if (rotate) {
-    const longest = Math.max(
-      0,
-      ...labels.map((label) => textWidth(label, TYPE.tick.size)),
-    );
-    const rad = (Math.abs(LABEL_ROTATE_DEG) * Math.PI) / 180;
-    return Math.sin(rad) * longest + 12 + axisPad;
-  }
-  return TYPE.tick.size + 12 + axisPad;
+  const lineCount = Math.max(
+    1,
+    ...layout.lines.map((lines) => Math.max(lines.length, 1)),
+  );
+  return lineCount * (TYPE.tick.size + 3) + 10 + axisPad;
 }
 
-export function titleBlockTop(legendHeight: number, legendBelow = LEGEND_BELOW): number {
+export let TITLE_LINE_COUNT = 1;
+
+export function setTitleLineCount(count: number): void {
+  TITLE_LINE_COUNT = Math.max(1, count);
+}
+
+export function titleBlockTop(legendHeight: number, legendBelow: boolean = LEGEND_BELOW): number {
+  const extra = Math.max(0, TITLE_LINE_COUNT - 1) * (TYPE.title.size + 6);
+  const base = TITLE_BASELINE + extra + TITLE_TO_PLOT;
   if (legendBelow) {
-    return TITLE_BASELINE + TITLE_TO_PLOT;
+    return base;
   }
   if (legendHeight > 0) {
-    return TITLE_BASELINE + 8 + legendHeight + TITLE_TO_PLOT;
+    return base + 8 + legendHeight;
   }
-  return TITLE_BASELINE + TITLE_TO_PLOT;
+  return base;
 }
 
 export function fitFrameHeight(top: number, bottom: number): number {
   const chrome = top + bottom;
   const needed = chrome / (1 - PLOT_MIN_RATIO);
   const rounded = Math.ceil(needed);
-  return Math.min(SVG_HEIGHT_MAX, Math.max(SVG_HEIGHT, rounded));
+  return Math.max(SVG_HEIGHT, rounded);
 }
 
 export function layoutFrame(opts: {
@@ -199,9 +196,11 @@ export function layoutFrame(opts: {
   categoryLabels: string[];
   legendHeight: number;
   rightMin?: number;
+  axisTitles?: boolean;
 }): Frame {
   const width = SVG_WIDTH;
-  const left = tickLeftMargin(opts.yTickLabels);
+  const axisTitles = opts.axisTitles ?? AXIS_TITLES;
+  const left = tickLeftMargin(opts.yTickLabels, axisTitles);
   const right = Math.max(MARGIN.right, opts.rightMin ?? MARGIN.right);
   const top = titleBlockTop(opts.legendHeight, LEGEND_BELOW);
   const draftW = Math.max(width - left - right, 1);
@@ -209,8 +208,11 @@ export function layoutFrame(opts: {
   const catLay =
     opts.categoryLabels.length > 0
       ? categoryLayout(opts.categoryLabels, draftW / nCat)
-      : { rotate: false, show: [] as boolean[] };
-  let bottom = categoryBottomMargin(opts.categoryLabels, catLay.rotate);
+      : { rotate: false, show: [] as boolean[], lines: [] as string[][], full: [] as string[] };
+  let bottom = categoryBottomMargin(catLay);
+  if (axisTitles) {
+    bottom += 18;
+  }
   if (LEGEND_BELOW && opts.legendHeight > 0) {
     bottom += opts.legendHeight + 8;
   }
@@ -229,6 +231,8 @@ export function layoutFrame(opts: {
     plot,
     rotateX: catLay.rotate,
     show: catLay.show,
+    labelLines: catLay.lines,
+    fullLabels: catLay.full,
     left,
     right,
     top,

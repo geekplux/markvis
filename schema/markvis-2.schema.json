@@ -88,6 +88,26 @@
     "max": {
       "type": "number"
     },
+    "surface": {
+      "type": "string",
+      "enum": [
+        "light",
+        "dark",
+        "export"
+      ],
+      "default": "light"
+    },
+    "orient": {
+      "type": "string",
+      "enum": [
+        "horizontal",
+        "vertical"
+      ]
+    },
+    "role": {
+      "type": "string",
+      "minLength": 1
+    },
     "table": {
       "type": "object",
       "properties": {

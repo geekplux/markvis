@@ -1,25 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="pie chart: MARTA still leads Midtown mode share, 5 slices" aria-labelledby="mv-4c2f51871bb967c8-title" aria-describedby="mv-4c2f51871bb967c8-desc" data-markvis="2" data-chart-type="pie" data-id="mv-4c2f51871bb967c8" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-4c2f51871bb967c8-title">MARTA still leads Midtown mode share</title>
   <desc id="mv-4c2f51871bb967c8-desc">pie chart. MARTA still leads Midtown mode share. x=mode. y=count. 5 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A">MARTA still leads Midtown mode share</text>
-  <g font-size="12" font-weight="500" fill="#0A0A0A">
-    <rect x="48" y="31" width="10" height="10" fill="#F54900" rx="1"/>
-    <text x="62" y="40" data-legend="MARTA">MARTA</text>
-    <rect x="115.2" y="31" width="10" height="10" fill="#009689" rx="1"/>
-    <text x="129.2" y="40" data-legend="Walk">Walk</text>
-    <rect x="174.96" y="31" width="10" height="10" fill="#104E64" rx="1"/>
-    <text x="188.96" y="40" data-legend="Drive">Drive</text>
-    <rect x="242.16" y="31" width="10" height="10" fill="#FFB900" rx="1"/>
-    <text x="256.16" y="40" data-legend="Bike">Bike</text>
-    <rect x="301.92" y="31" width="10" height="10" fill="#FE9A00" rx="1"/>
-    <text x="315.92" y="40" data-legend="Other">Other</text>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#0A0A0A"><title>MARTA still leads Midtown mode share</title>MARTA still leads Midtown mode share</text>
+  <g font-size="13" font-weight="500" fill="#0A0A0A">
+    <rect x="48" y="41" width="10" height="10" fill="#F54900" rx="1"/>
+    <text x="62" y="50" data-legend="MARTA">MARTA</text>
+    <rect x="118.3" y="41" width="10" height="10" fill="#009689" rx="1"/>
+    <text x="132.3" y="50" data-legend="Walk">Walk</text>
+    <rect x="180.54" y="41" width="10" height="10" fill="#104E64" rx="1"/>
+    <text x="194.54" y="50" data-legend="Drive">Drive</text>
+    <rect x="250.84" y="41" width="10" height="10" fill="#FFB900" rx="1"/>
+    <text x="264.84" y="50" data-legend="Bike">Bike</text>
+    <rect x="313.08" y="41" width="10" height="10" fill="#FE9A00" rx="1"/>
+    <text x="327.08" y="50" data-legend="Other">Other</text>
   </g>
-  <rect x="48" y="60" width="652" height="380" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
+  <rect x="48" y="70" width="652" height="370" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0">
-    <path d="M374 250 L374 120.8 A129.2 129.2 0 0 1 468.77 337.81 Z" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="MARTA" data-raw-value="38"/>
-    <path d="M374 250 L468.77 337.81 A129.2 129.2 0 0 1 296.79 353.59 Z" fill="#009689" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Walk" data-raw-value="24"/>
-    <path d="M374 250 L296.79 353.59 A129.2 129.2 0 0 1 255.6 198.29 Z" fill="#104E64" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Drive" data-raw-value="22"/>
-    <path d="M374 250 L255.6 198.29 A129.2 129.2 0 0 1 313.42 135.88 Z" fill="#FFB900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Bike" data-raw-value="11"/>
-    <path d="M374 250 L313.42 135.88 A129.2 129.2 0 0 1 374 120.8 Z" fill="#FE9A00" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Other" data-raw-value="8"/>
+    <path d="M374 255 L374 129.2 A125.8 125.8 0 0 1 466.28 340.5 Z" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="MARTA" data-raw-value="38"/>
+    <path d="M374 255 L466.28 340.5 A125.8 125.8 0 0 1 298.82 355.86 Z" fill="#009689" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Walk" data-raw-value="24"/>
+    <path d="M374 255 L298.82 355.86 A125.8 125.8 0 0 1 258.71 204.65 Z" fill="#104E64" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Drive" data-raw-value="22"/>
+    <path d="M374 255 L258.71 204.65 A125.8 125.8 0 0 1 315.02 143.89 Z" fill="#FFB900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Bike" data-raw-value="11"/>
+    <path d="M374 255 L315.02 143.89 A125.8 125.8 0 0 1 374 129.2 Z" fill="#FE9A00" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Other" data-raw-value="8"/>
   </g>
 </svg>

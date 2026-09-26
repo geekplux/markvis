@@ -1,30 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="640" viewBox="0 0 720 640" role="img" aria-label="bar chart: North America leads cloud spend at 420k (USD), 3 rows" aria-labelledby="mv-8e85d3644f53d3e4-title" aria-describedby="mv-8e85d3644f53d3e4-desc" data-markvis="2" data-chart-type="bar" data-id="mv-8e85d3644f53d3e4" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="bar chart: North America leads cloud spend at 420k (USD), 3 rows" aria-labelledby="mv-8e85d3644f53d3e4-title" aria-describedby="mv-8e85d3644f53d3e4-desc" data-markvis="2" data-chart-type="bar" data-id="mv-8e85d3644f53d3e4" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-8e85d3644f53d3e4-title">North America leads cloud spend at 420k</title>
   <desc id="mv-8e85d3644f53d3e4-desc">bar chart. North America leads cloud spend at 420k. x=region. y=spend. unit=USD. 3 rows.</desc>
-  <text x="74" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#333333">North America leads cloud spend at 420k<tspan font-size="12" font-weight="400" fill="#666666"> · USD</tspan></text>
-  <rect x="74" y="38" width="626" height="326.19" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
-  <path d="M74 364.19 L700 364.19" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
-  <g fill="#666666" font-size="11" font-weight="400">
-    <text x="66" y="364.19" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="66" y="255.46" text-anchor="end" dominant-baseline="middle">200,000</text>
-    <text x="66" y="146.73" text-anchor="end" dominant-baseline="middle">400,000</text>
-    <text x="66" y="38" text-anchor="end" dominant-baseline="middle">600,000</text>
-    <text x="178.33" y="372.19" text-anchor="end" dominant-baseline="middle" font-size="11" transform="rotate(-55 178.33 372.19)" data-full-label="North America enterprise expansion Q3">North America enterprise expansion Q3</text>
-    <text x="387" y="372.19" text-anchor="end" dominant-baseline="middle" font-size="11" transform="rotate(-55 387 372.19)" data-full-label="APAC partner enablement and training program">APAC partner enablement and training program</text>
-    <text x="595.67" y="372.19" text-anchor="end" dominant-baseline="middle" font-size="11" transform="rotate(-55 595.67 372.19)" data-full-label="Legacy platform decommission wave 2">Legacy platform decommission wave 2</text>
+  <text x="78.08" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#333333"><title>North America leads cloud spend at 420k</title>North America leads cloud spend at 420k<tspan font-size="13" font-weight="400" fill="#666666"> · USD</tspan></text>
+  <rect x="78.08" y="48" width="621.92" height="316" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
+  <path d="M78.08 364 L700 364" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <g fill="#666666" font-size="12" font-weight="400">
+    <text x="70.08" y="364" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="70.08" y="258.67" text-anchor="end" dominant-baseline="middle">200,000</text>
+    <text x="70.08" y="153.33" text-anchor="end" dominant-baseline="middle">400,000</text>
+    <text x="70.08" y="48" text-anchor="end" dominant-baseline="middle">600,000</text>
+    <text x="181.73" y="376" text-anchor="middle" font-size="12" data-full-label="North America enterprise expansion Q3"><title>North America enterprise expansion Q3</title><tspan x="181.73" dy="0">North America enterprise</tspan><tspan x="181.73" dy="15">expansion Q3</tspan></text>
+    <text x="389.04" y="376" text-anchor="middle" font-size="12" data-full-label="APAC partner enablement and training program"><title>APAC partner enablement and training program</title><tspan x="389.04" dy="0">APAC partner enablement and</tspan><tspan x="389.04" dy="15">training program</tspan></text>
+    <text x="596.35" y="376" text-anchor="middle" font-size="12" data-full-label="Legacy platform decommission wave 2"><title>Legacy platform decommission wave 2</title><tspan x="596.35" dy="0">Legacy platform</tspan><tspan x="596.35" dy="15">decommission wave 2</tspan></text>
   </g>
-  <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="52" y="201.09" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 52 201.09)" data-axis="y">spend · USD</text>
-    <text x="387" y="392.19" text-anchor="middle" dominant-baseline="hanging" data-axis="x">region</text>
-  </g>
-  <g>
-    <path d="M146.33 364.19 L210.33 364.19 L210.33 135.86 L146.33 135.86 Z" fill="#7cb5ec" data-x="North America enterprise expansion Q3" data-series="spend" data-y="420000"/>
-    <path d="M355 364.19 L419 364.19 L419 263.61 L355 263.61 Z" fill="#7cb5ec" data-x="APAC partner enablement and training program" data-series="spend" data-y="185000"/>
-    <path d="M563.67 364.19 L627.67 364.19 L627.67 312.54 L563.67 312.54 Z" fill="#7cb5ec" data-x="Legacy platform decommission wave 2" data-series="spend" data-y="95000"/>
+  <g fill="#666666" font-size="13" font-weight="400" data-axis-titles="1">
+    <text x="56.08" y="206" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 56.08 206)" data-axis="y">spend · USD</text>
+    <text x="389.04" y="392" text-anchor="middle" dominant-baseline="hanging" data-axis="x">region</text>
   </g>
   <g>
-    <text x="178.33" y="127.86" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="North America enterprise expansion Q3">420,000</text>
-    <text x="387" y="255.61" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="APAC partner enablement and training program">185,000</text>
-    <text x="595.67" y="304.54" text-anchor="middle" font-size="11" font-weight="500" fill="#333333" data-value-label="Legacy platform decommission wave 2">95,000</text>
+    <path d="M149.73 364 L213.73 364 L213.73 142.8 L149.73 142.8 Z" fill="#7cb5ec" data-x="North America enterprise expansion Q3" data-series="spend" data-y="420000"/>
+    <path d="M357.04 364 L421.04 364 L421.04 266.57 L357.04 266.57 Z" fill="#7cb5ec" data-x="APAC partner enablement and training program" data-series="spend" data-y="185000"/>
+    <path d="M564.35 364 L628.35 364 L628.35 313.97 L564.35 313.97 Z" fill="#7cb5ec" data-x="Legacy platform decommission wave 2" data-series="spend" data-y="95000"/>
+  </g>
+  <g>
+    <text x="181.73" y="134.8" text-anchor="middle" font-size="13" font-weight="500" fill="#333333" data-value-label="North America enterprise expansion Q3">420,000</text>
+    <text x="389.04" y="258.57" text-anchor="middle" font-size="13" font-weight="500" fill="#333333" data-value-label="APAC partner enablement and training program">185,000</text>
+    <text x="596.35" y="305.97" text-anchor="middle" font-size="13" font-weight="500" fill="#333333" data-value-label="Legacy platform decommission wave 2">95,000</text>
   </g>
 </svg>

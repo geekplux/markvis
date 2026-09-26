@@ -1,22 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="funnel chart: First ride still keeps 140 of 1,200 Midtown visits, 6 rows" aria-labelledby="mv-14b205fefc301276-title" aria-describedby="mv-14b205fefc301276-desc" data-markvis="2" data-chart-type="funnel" data-id="mv-14b205fefc301276" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
   <title id="mv-14b205fefc301276-title">First ride still keeps 140 of 1,200 Midtown visits</title>
   <desc id="mv-14b205fefc301276-desc">funnel chart. First ride still keeps 140 of 1,200 Midtown visits. x=stage. y=people. 6 rows.</desc>
-  <text x="48" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">First ride still keeps 140 of 1,200 Midtown visits</text>
-  <rect x="48" y="46" width="533.24" height="360" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
+  <text x="48" y="32" text-anchor="start" font-size="22" font-weight="600" fill="#000000"><title>First ride still keeps 140 of 1,200 Midtown visits</title><tspan x="48" dy="0">First ride still keeps 140 of 1,200 Midtown</tspan><tspan x="48" dy="28">visits</tspan></text>
+  <rect x="48" y="80" width="510.92" height="326" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
   <g data-funnel="1">
-    <path d="M48 46 L581.24 46 L421.27 106 L207.97 106 Z" fill="#5AD8A6" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Visit" data-y="1,200"/>
-    <path d="M207.97 106 L421.27 106 L383.5 166 L245.74 166 Z" fill="#E8684A" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Signup" data-y="480"/>
-    <path d="M245.74 166 L383.5 166 L354.61 226 L274.63 226 Z" fill="#5D7092" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Verify" data-y="310"/>
-    <path d="M274.63 226 L354.61 226 L345.73 286 L283.51 286 Z" fill="#F6BD16" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Activate" data-y="180"/>
-    <path d="M283.51 286 L345.73 286 L335.73 346 L293.51 346 Z" fill="#6DC8EC" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="First ride" data-y="140"/>
-    <path d="M293.51 346 L335.73 346 L335.73 406 L293.51 406 Z" fill="#9270CA" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Week-4 return" data-y="95"/>
+    <path d="M48 80 L558.92 80 L405.64 134.33 L201.28 134.33 Z" fill="#5AD8A6" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Visit" data-y="1,200"/>
+    <path d="M201.28 134.33 L405.64 134.33 L369.45 188.67 L237.47 188.67 Z" fill="#E8684A" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Signup" data-y="480"/>
+    <path d="M237.47 188.67 L369.45 188.67 L341.78 243 L265.14 243 Z" fill="#5D7092" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Verify" data-y="310"/>
+    <path d="M265.14 243 L341.78 243 L333.26 297.33 L273.66 297.33 Z" fill="#F6BD16" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Activate" data-y="180"/>
+    <path d="M273.66 297.33 L333.26 297.33 L323.68 351.67 L283.24 351.67 Z" fill="#6DC8EC" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="First ride" data-y="140"/>
+    <path d="M283.24 351.67 L323.68 351.67 L323.68 406 L283.24 406 Z" fill="#9270CA" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-stage="Week-4 return" data-y="95"/>
   </g>
-  <g fill="#000000" font-size="11" font-weight="500">
-    <text x="589.24" y="76" text-anchor="start" dominant-baseline="middle" data-label="Visit">Visit · 1,200</text>
-    <text x="589.24" y="136" text-anchor="start" dominant-baseline="middle" data-label="Signup">Signup · 480</text>
-    <text x="589.24" y="196" text-anchor="start" dominant-baseline="middle" data-label="Verify">Verify · 310</text>
-    <text x="589.24" y="256" text-anchor="start" dominant-baseline="middle" data-label="Activate">Activate · 180</text>
-    <text x="589.24" y="316" text-anchor="start" dominant-baseline="middle" data-label="First ride">First ride · 140</text>
-    <text x="589.24" y="376" text-anchor="start" dominant-baseline="middle" data-label="Week-4 return">Week-4 return · 95</text>
+  <g fill="#000000" font-size="13" font-weight="500">
+    <text x="566.92" y="107.17" text-anchor="start" dominant-baseline="middle" data-label="Visit"><title>Visit · 1,200</title>Visit · 1,200</text>
+    <text x="566.92" y="161.5" text-anchor="start" dominant-baseline="middle" data-label="Signup"><title>Signup · 480</title>Signup · 480</text>
+    <text x="566.92" y="215.83" text-anchor="start" dominant-baseline="middle" data-label="Verify"><title>Verify · 310</title>Verify · 310</text>
+    <text x="566.92" y="270.17" text-anchor="start" dominant-baseline="middle" data-label="Activate"><title>Activate · 180</title>Activate · 180</text>
+    <text x="566.92" y="324.5" text-anchor="start" dominant-baseline="middle" data-label="First ride"><title>First ride · 140</title>First ride · 140</text>
+    <text x="566.92" y="378.83" text-anchor="start" dominant-baseline="middle" data-label="Week-4 return"><title>Week-4 return · 95</title>Week-4 return · 95</text>
   </g>
 </svg>

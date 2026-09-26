@@ -1,9 +1,12 @@
-import type { ChartIR } from "@markvis/ir";
+import { columnValues, type ChartIR } from "@markvis/ir";
 import { loadRows } from "./data.js";
-import { drawTitle, visibleTitle } from "./figure.js";
+import { countTitleLines, drawTitle, visibleTitle } from "./figure.js";
 import {
   formatTickLabel,
   layoutFrame,
+  setTitleLineCount,
+  SVG_WIDTH,
+  tickLeftMargin,
   type Painted,
 } from "./layout.js";
 import { seriesStyle } from "./palette.js";
@@ -26,16 +29,32 @@ import {
   PLOT_BORDER_WIDTH,
   STRUCTURE_OPACITY,
   TICK_TEXT_GAP,
+  SURFACE,
   TYPE,
 } from "./tokens.js";
+import { placeHorizontalLabel } from "./text.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
 
 export function renderWaterfall(chart: ChartIR, _id: string): Painted {
-  const rows = loadRows(chart);
+  const loaded = loadRows(chart);
+  const roleCells = chart.role ? columnValues(chart.table, chart.role) : [];
+  const rows = loaded.flatMap((row, index) => {
+    if (row.y === null) {
+      return [];
+    }
+    const role = (roleCells[index] ?? "").trim();
+    return [{ xLabel: row.xLabel, y: row.y, role }];
+  });
   const starts: number[] = [];
   const ends: number[] = [];
   let running = 0;
   for (const row of rows) {
+    if (row.role === "total" || row.role === "subtotal") {
+      starts.push(0);
+      ends.push(row.y);
+      running = row.y;
+      continue;
+    }
     starts.push(running);
     running += row.y;
     ends.push(running);
@@ -45,6 +64,9 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
   const yTicksRaw = niceTicks(yMin, yMax);
   const yTickLabels = yTicksRaw.map((n) => formatTickLabel(n));
   const labels = rows.map((row) => row.xLabel);
+  setTitleLineCount(
+    countTitleLines(visibleTitle(chart), tickLeftMargin(yTickLabels), chart.unit),
+  );
   const frame = layoutFrame({
     yTickLabels,
     categoryLabels: labels,
@@ -63,8 +85,9 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
     barW = Math.min(barW, BAR_MAX_WIDTH);
   }
   barW = Math.max(barW, 1);
-  const pos = seriesStyle(0);
-  const neg = seriesStyle(1);
+  const pos = SURFACE === "dark" ? "#2DD4BF" : "#0F766E";
+  const neg = SURFACE === "dark" ? "#FB7185" : "#BE123C";
+  const totalFill = SURFACE === "dark" ? "#e7e5e4" : "#44403C";
 
   const lines: string[] = [drawTitle(visibleTitle(chart), plot.left, chart.unit)];
 
@@ -166,20 +189,48 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
     const y1 = yScale(ends[i]!);
     const top = Math.min(y0, y1);
     const h = Math.max(Math.abs(y1 - y0), 1);
-    const style = row.y < 0 ? neg : pos;
+    const isTotal = row.role === "total" || row.role === "subtotal";
+    const fill = isTotal ? totalFill : row.y < 0 ? neg : pos;
     lines.push(
       `    <rect ${attrs({
         x: fmtPx(x),
         y: fmtPx(top),
         width: fmtPx(barW),
         height: fmtPx(h),
-        fill: style.color,
-        "fill-opacity": style.opacity === 1 ? undefined : style.opacity,
+        fill,
         rx: BAR_RX,
         "data-step": row.xLabel,
         "data-y": formatNumber(row.y),
+        "data-level": formatNumber(ends[i]!),
+        "data-role": isTotal ? row.role : "delta",
         "data-baseline": formatNumber(starts[i]!),
       })}/>`,
+    );
+    const signed = row.y > 0 ? `+${formatNumber(row.y)}` : formatNumber(row.y);
+    const deltaText = isTotal
+      ? `${row.role} ${formatNumber(row.y)}`
+      : `${signed} → ${formatNumber(ends[i]!)}`;
+    const placed = placeHorizontalLabel(
+      cx,
+      deltaText,
+      TYPE.value.size,
+      SVG_WIDTH,
+      8,
+    );
+    const deltaTitle =
+      placed.text === deltaText
+        ? ""
+        : `<title>${escapeXml(deltaText)}</title>`;
+    lines.push(
+      `    <text ${attrs({
+        x: fmtPx(placed.x),
+        y: fmtPx(top - 6),
+        "text-anchor": placed.anchor,
+        "font-size": TYPE.value.size,
+        "font-weight": TYPE.value.weight,
+        fill: TYPE.value.fill,
+        "data-delta": row.xLabel,
+      })}>${deltaTitle}${escapeXml(placed.text)}</text>`,
     );
   }
   lines.push(`  </g>`);
@@ -245,13 +296,22 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
         })}>${escapeXml(label)}</text>`,
       );
     } else {
+      const placed = placeHorizontalLabel(
+        cx,
+        label,
+        TYPE.tick.size,
+        SVG_WIDTH,
+        4,
+      );
+      const stepTitle =
+        placed.text === label ? "" : `<title>${escapeXml(label)}</title>`;
       lines.push(
         `    <text ${attrs({
-          x: fmtPx(cx),
+          x: fmtPx(placed.x),
           y: fmtPx(plot.bottom + TYPE.tick.size),
-          "text-anchor": "middle",
+          "text-anchor": placed.anchor,
           "data-full-label": label,
-        })}>${escapeXml(label)}</text>`,
+        })}>${stepTitle}${escapeXml(placed.text)}</text>`,
       );
     }
   }

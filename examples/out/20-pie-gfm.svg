@@ -1,23 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Chrome still leads browser share at 52, 4 slices" aria-labelledby="mv-ed79d7ac4511bfdd-title" aria-describedby="mv-ed79d7ac4511bfdd-desc" data-markvis="2" data-chart-type="pie" data-id="mv-ed79d7ac4511bfdd" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-ed79d7ac4511bfdd-title">Chrome still leads browser share at 52</title>
   <desc id="mv-ed79d7ac4511bfdd-desc">pie chart. Chrome still leads browser share at 52. x=browser. y=users. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Chrome still leads browser share at 52</text>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Chrome still leads browser share at 52</title>Chrome still leads browser share at 52</text>
   <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0">
-    <path d="M374 248 L374 103.84 A144.16 144.16 0 1 1 355.93 391.02 Z" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Chrome" data-raw-value="52"/>
-    <path d="M374 248 L355.93 391.02 A144.16 144.16 0 0 1 236.9 203.45 Z" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Safari" data-raw-value="28"/>
-    <path d="M374 248 L236.9 203.45 A144.16 144.16 0 0 1 304.55 121.67 Z" fill="#10B981" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Firefox" data-raw-value="12"/>
-    <path d="M374 248 L304.55 121.67 A144.16 144.16 0 0 1 374 103.84 Z" fill="#A855F7" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Other" data-raw-value="8"/>
+    <path d="M374 252 L374 110.56 A141.44 141.44 0 1 1 356.27 392.32 Z" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Chrome" data-raw-value="52"/>
+    <path d="M374 252 L356.27 392.32 A141.44 141.44 0 0 1 239.48 208.29 Z" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Safari" data-raw-value="28"/>
+    <path d="M374 252 L239.48 208.29 A141.44 141.44 0 0 1 305.86 128.06 Z" fill="#10B981" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Firefox" data-raw-value="12"/>
+    <path d="M374 252 L305.86 128.06 A141.44 141.44 0 0 1 374 110.56 Z" fill="#A855F7" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Other" data-raw-value="8"/>
   </g>
   <g fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1">
-    <polyline points="517.88,257.05 533.84,258.06 541.84,258.06"/>
-    <polyline points="252.28,325.24 238.77,333.82 230.77,333.82"/>
-    <polyline points="262.92,156.11 250.59,145.91 242.59,145.91"/>
-    <polyline points="338.15,108.37 334.17,92.87 326.17,92.87"/>
+    <polyline points="515.16,260.88 531.13,261.89 539.13,261.89"/>
+    <polyline points="254.58,327.79 241.07,336.36 233.07,336.36"/>
+    <polyline points="265.02,161.84 252.69,151.64 244.69,151.64"/>
+    <polyline points="338.83,115 334.85,99.51 326.85,99.51"/>
   </g>
-  <g font-size="11" font-weight="500" fill="#171717">
-    <text x="553.84" y="258.06" text-anchor="start" dominant-baseline="middle" data-label="Chrome">Chrome · 52</text>
-    <text x="218.77" y="333.82" text-anchor="end" dominant-baseline="middle" data-label="Safari">Safari · 28</text>
-    <text x="230.59" y="145.91" text-anchor="end" dominant-baseline="middle" data-label="Firefox">Firefox · 12</text>
-    <text x="314.17" y="92.87" text-anchor="end" dominant-baseline="middle" data-label="Other">Other · 8</text>
+  <g font-size="13" font-weight="500" fill="#171717">
+    <text x="551.13" y="261.89" text-anchor="start" dominant-baseline="middle" data-label="Chrome">Chrome · 52</text>
+    <text x="221.07" y="336.36" text-anchor="end" dominant-baseline="middle" data-label="Safari">Safari · 28</text>
+    <text x="232.69" y="151.64" text-anchor="end" dominant-baseline="middle" data-label="Firefox">Firefox · 12</text>
+    <text x="314.85" y="99.51" text-anchor="end" dominant-baseline="middle" data-label="Other">Other · 8</text>
   </g>
 </svg>

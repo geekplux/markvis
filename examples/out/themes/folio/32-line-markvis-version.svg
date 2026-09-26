@@ -1,32 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Retention fell to 70 by week 4 (pct), 4 rows" aria-labelledby="mv-1e4c16b29ddcbf07-title" aria-describedby="mv-1e4c16b29ddcbf07-desc" data-markvis="2" data-chart-type="line" data-id="mv-1e4c16b29ddcbf07" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-1e4c16b29ddcbf07-title">Retention fell to 70 by week 4</title>
   <desc id="mv-1e4c16b29ddcbf07-desc">line chart. Retention fell to 70 by week 4. x=week. y=rate. unit=pct. 4 rows.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="17" font-weight="600" fill="#171717">Retention fell to 70 by week 4<tspan font-size="12" font-weight="400" fill="#737373"> · pct</tspan></text>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Retention fell to 70 by week 4</title>Retention fell to 70 by week 4<tspan font-size="13" font-weight="400" fill="#737373"> · pct</tspan></text>
   <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
-    <line x1="48" x2="700" y1="373.6" y2="373.6"/>
-    <line x1="48" x2="700" y1="204.8" y2="204.8"/>
-    <line x1="48" x2="700" y1="36" y2="36"/>
+    <line x1="48" x2="700" y1="372.8" y2="372.8"/>
+    <line x1="48" x2="700" y1="208.4" y2="208.4"/>
+    <line x1="48" x2="700" y1="44" y2="44"/>
   </g>
-  <path d="M48 458 L700 458" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
-  <g fill="#737373" font-size="10" font-weight="400">
-    <text x="38" y="458" text-anchor="end" dominant-baseline="middle">60</text>
-    <text x="38" y="373.6" text-anchor="end" dominant-baseline="middle">70</text>
-    <text x="38" y="289.2" text-anchor="end" dominant-baseline="middle">80</text>
-    <text x="38" y="204.8" text-anchor="end" dominant-baseline="middle">90</text>
-    <text x="38" y="120.4" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="38" y="36" text-anchor="end" dominant-baseline="middle">110</text>
-    <text x="56" y="468" text-anchor="middle" font-size="10" data-full-label="0">0</text>
-    <text x="183.2" y="468" text-anchor="middle" font-size="10" data-full-label="1">1</text>
-    <text x="310.4" y="468" text-anchor="middle" font-size="10" data-full-label="2">2</text>
-    <text x="437.6" y="468" text-anchor="middle" font-size="10" data-full-label="3">3</text>
-    <text x="564.8" y="468" text-anchor="middle" font-size="10" data-full-label="4">4</text>
-    <text x="692" y="468" text-anchor="middle" font-size="10" data-full-label="5">5</text>
+  <path d="M48 455 L700 455" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="38" y="455" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="38" y="372.8" text-anchor="end" dominant-baseline="middle">70</text>
+    <text x="38" y="290.6" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="38" y="208.4" text-anchor="end" dominant-baseline="middle">90</text>
+    <text x="38" y="126.2" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="38" y="44" text-anchor="end" dominant-baseline="middle">110</text>
+    <text x="56" y="467" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
+    <text x="183.2" y="467" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
+    <text x="310.4" y="467" text-anchor="middle" font-size="12" data-full-label="2"><title>2</title>2</text>
+    <text x="437.6" y="467" text-anchor="middle" font-size="12" data-full-label="3"><title>3</title>3</text>
+    <text x="564.8" y="467" text-anchor="middle" font-size="12" data-full-label="4"><title>4</title>4</text>
+    <text x="692" y="467" text-anchor="middle" font-size="12" data-full-label="5"><title>5</title>5</text>
   </g>
   <g fill="none">
-    <path d="M183.2 120.4 L310.4 272.32 L437.6 339.84 L564.8 373.6" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="rate"/>
-    <circle cx="183.2" cy="120.4" r="2.5" fill="#3B82F6" stroke="none" data-series="rate"/>
-    <circle cx="310.4" cy="272.32" r="2.5" fill="#3B82F6" stroke="none" data-series="rate"/>
-    <circle cx="437.6" cy="339.84" r="2.5" fill="#3B82F6" stroke="none" data-series="rate"/>
-    <circle cx="564.8" cy="373.6" r="2.5" fill="#3B82F6" stroke="none" data-series="rate"/>
+    <path d="M183.2 126.2 L310.4 274.16 L437.6 339.92 L564.8 372.8" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="rate"/>
+    <circle cx="183.2" cy="126.2" r="2.5" fill="#3B82F6" stroke="none" data-series="rate"/>
+    <circle cx="310.4" cy="274.16" r="2.5" fill="#3B82F6" stroke="none" data-series="rate"/>
+    <circle cx="437.6" cy="339.92" r="2.5" fill="#3B82F6" stroke="none" data-series="rate"/>
+    <circle cx="564.8" cy="372.8" r="2.5" fill="#3B82F6" stroke="none" data-series="rate"/>
   </g>
 </svg>

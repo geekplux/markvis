@@ -81,27 +81,120 @@ function withCommas(digits: string): string {
   return parts.join(",");
 }
 
-/** Integer ≥ 1000 → thousands separators. Never `1.2k` / `200k` here. */
-export function formatNumber(n: number): string {
-  if (!Number.isFinite(n)) {
-    return "";
+function groupNumber(body: string): string {
+  const dot = body.indexOf(".");
+  if (dot === -1) {
+    return withCommas(body);
   }
-  if (Object.is(n, -0) || n === 0) {
+  const intPart = body.slice(0, dot);
+  const frac = body.slice(dot);
+  return (intPart.length > 3 ? withCommas(intPart) : intPart) + frac;
+}
+
+function scientific(abs: number): string {
+  const exp = Math.floor(Math.log10(abs));
+  const mantissa = abs / 10 ** exp;
+  let body = mantissa.toPrecision(3);
+  if (body.includes("e") || body.includes("E")) {
+    body = mantissa.toFixed(2);
+  }
+  body = body.replace(/\.?0+$/, "");
+  if (body === "10") {
+    return `1e+${exp + 1}`;
+  }
+  const suffix = exp >= 0 ? `e+${exp}` : `e${exp}`;
+  return `${body}${suffix}`;
+}
+
+function formatAbs(abs: number): string {
+  if (abs === 0) {
+    return "0";
+  }
+  if (abs >= 1e15 || abs < 1e-4) {
+    return scientific(abs);
+  }
+  const exp = Math.floor(Math.log10(abs));
+  const digits = Math.min(8, Math.max(0, 5 - exp));
+  let body = abs.toFixed(digits);
+  if (Number(body) === 0) {
+    return scientific(abs);
+  }
+  if (body.includes(".")) {
+    body = body.replace(/0+$/, "").replace(/\.$/, "");
+  }
+  return groupNumber(body);
+}
+
+/**
+ * Shared deterministic formatter.
+ * Neighboring small values stay distinct (`0.001`, `0.002`, `0.003`).
+ * Negative zero is `0`. Compact suffixes are part of the label.
+ */
+export function formatNumber(n: number): string {
+  if (!Number.isFinite(n) || Object.is(n, -0) || n === 0) {
+    return n === 0 || Object.is(n, -0) ? "0" : "";
+  }
+  const sign = n < 0 ? "-" : "";
+  return sign + formatAbs(Math.abs(n));
+}
+
+function formatFixed(n: number, decimals: number): string {
+  if (!Number.isFinite(n) || Object.is(n, -0) || n === 0) {
     return "0";
   }
   const sign = n < 0 ? "-" : "";
   const abs = Math.abs(n);
-  if (Math.abs(abs - Math.round(abs)) < 1e-9) {
-    return sign + withCommas(String(Math.round(abs)));
+  const rounded = Number(abs.toFixed(Math.min(decimals, 12)));
+  if (rounded === 0) {
+    return formatNumber(n);
   }
-  const trimmed = trimFixed(abs);
-  const dot = trimmed.indexOf(".");
-  if (dot === -1) {
-    return sign + withCommas(trimmed);
+  if (abs >= 1e15 || (decimals > 6 && abs < 1e-4)) {
+    return sign + scientific(abs);
   }
-  const intPart = trimmed.slice(0, dot);
-  const frac = trimmed.slice(dot);
-  return sign + (intPart.length > 3 ? withCommas(intPart) : intPart) + frac;
+  let body = abs.toFixed(Math.min(decimals, 12));
+  if (body.includes(".")) {
+    body = body.replace(/0+$/, "").replace(/\.$/, "");
+  }
+  return sign + groupNumber(body);
+}
+
+function neighborClash(labels: string[]): boolean {
+  for (let i = 1; i < labels.length; i++) {
+    if (labels[i] === labels[i - 1]) {
+      return true;
+    }
+  }
+  return false;
+}
+
+/** Tick labels that stay distinct, including a gap smaller than 1. */
+export function labelTicks(ticks: number[]): string[] {
+  if (ticks.length === 0) {
+    return [];
+  }
+  let gap = Infinity;
+  for (let i = 1; i < ticks.length; i++) {
+    const delta = Math.abs(ticks[i]! - ticks[i - 1]!);
+    if (delta > 0 && delta < gap) {
+      gap = delta;
+    }
+  }
+  let decimals = 0;
+  if (Number.isFinite(gap) && gap < 1) {
+    decimals = Math.min(12, Math.max(0, Math.ceil(-Math.log10(gap) - 1e-12)));
+  }
+  const paint = (digits: number) => ticks.map((tick) => formatFixed(tick, digits));
+  let labels = paint(decimals);
+  const hides = (rendered: string[]) =>
+    ticks.some((tick, i) => tick !== 0 && rendered[i] === "0");
+  while ((neighborClash(labels) || hides(labels)) && decimals < 12) {
+    decimals += 1;
+    labels = paint(decimals);
+  }
+  if (neighborClash(labels) || hides(labels)) {
+    return ticks.map((tick) => formatNumber(tick));
+  }
+  return labels;
 }
 
 export type CompactScale = {
@@ -149,13 +242,6 @@ export function unitWithCompact(
     return trimmed;
   }
   return `${trimmed} ${compact.suffix}`;
-}
-
-function trimFixed(n: number): string {
-  if (Math.abs(n - Math.round(n)) < 1e-9) {
-    return String(Math.round(n));
-  }
-  return n.toFixed(2).replace(/\.?0+$/, "");
 }
 
 export function yExtent(

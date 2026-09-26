@@ -1,4 +1,4 @@
-export { parse, parseMarkdown, extractCharts, ERROR_CODES } from "./parser.js";
+export { parse, parseMarkdown, parseDocument, extractCharts, ERROR_CODES } from "./parser.js";
 export type {
   ErrorCode,
   FallbackTable,

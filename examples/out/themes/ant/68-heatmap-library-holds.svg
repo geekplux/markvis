@@ -1,44 +1,85 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="heatmap chart: Saturday still clears Central library holds first, 24 rows, series weekday" aria-labelledby="mv-5f95306c23bfab0b-title" aria-describedby="mv-5f95306c23bfab0b-desc" data-markvis="2" data-chart-type="heatmap" data-id="mv-5f95306c23bfab0b" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
   <title id="mv-5f95306c23bfab0b-title">Saturday still clears Central library holds first</title>
   <desc id="mv-5f95306c23bfab0b-desc">heatmap chart. Saturday still clears Central library holds first. x=branch. y=pickups. series=weekday. 24 rows.</desc>
-  <text x="66" y="26" text-anchor="start" font-size="18" font-weight="600" fill="#000000">Saturday still clears Central library holds first</text>
+  <text x="66" y="32" text-anchor="start" font-size="22" font-weight="600" fill="#000000"><title>Saturday still clears Central library holds first</title><tspan x="66" dy="0">Saturday still clears Central library holds</tspan><tspan x="66" dy="28">first</tspan></text>
+  <defs>
+    <pattern id="mv-5f95306c23bfab0b-missing" patternUnits="userSpaceOnUse" width="6" height="6">
+      <rect width="6" height="6" fill="#f4f1ea"/>
+      <path d="M0 6 L6 0" stroke="#a8a29e" stroke-width="1"/>
+    </pattern>
+  </defs>
   <g data-heatmap="1">
-    <rect x="66" y="46" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.49" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Central" data-series="Mon" data-y="84"/>
-    <rect x="226" y="46" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.08" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Kirkwood" data-series="Mon" data-y="38"/>
-    <rect x="386" y="46" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.2" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Buckhead" data-series="Mon" data-y="52"/>
-    <rect x="546" y="46" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Southeast" data-series="Mon" data-y="29"/>
-    <rect x="66" y="101.5" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.55" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Central" data-series="Tue" data-y="91"/>
-    <rect x="226" y="101.5" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.11" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Kirkwood" data-series="Tue" data-y="41"/>
-    <rect x="386" y="101.5" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.25" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Buckhead" data-series="Tue" data-y="57"/>
-    <rect x="546" y="101.5" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.02" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Southeast" data-series="Tue" data-y="31"/>
-    <rect x="66" y="157" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.59" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Central" data-series="Wed" data-y="96"/>
-    <rect x="226" y="157" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.13" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Kirkwood" data-series="Wed" data-y="44"/>
-    <rect x="386" y="157" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.28" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Buckhead" data-series="Wed" data-y="61"/>
-    <rect x="546" y="157" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.04" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Southeast" data-series="Wed" data-y="33"/>
-    <rect x="66" y="212.5" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.52" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Central" data-series="Thu" data-y="88"/>
-    <rect x="226" y="212.5" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.1" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Kirkwood" data-series="Thu" data-y="40"/>
-    <rect x="386" y="212.5" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.23" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Buckhead" data-series="Thu" data-y="55"/>
-    <rect x="546" y="212.5" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.01" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Southeast" data-series="Thu" data-y="30"/>
-    <rect x="66" y="268" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.65" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Central" data-series="Fri" data-y="102"/>
-    <rect x="226" y="268" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.17" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Kirkwood" data-series="Fri" data-y="48"/>
-    <rect x="386" y="268" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.35" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Buckhead" data-series="Fri" data-y="68"/>
-    <rect x="546" y="268" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.06" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Southeast" data-series="Fri" data-y="36"/>
-    <rect x="66" y="323.5" width="160" height="55.5" fill="#5AD8A6" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Central" data-series="Sat" data-y="142"/>
-    <rect x="226" y="323.5" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.37" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Kirkwood" data-series="Sat" data-y="71"/>
-    <rect x="386" y="323.5" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.61" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Buckhead" data-series="Sat" data-y="98"/>
-    <rect x="546" y="323.5" width="160" height="55.5" fill="#5AD8A6" fill-opacity="0.23" stroke="#000000" stroke-opacity="0.32" stroke-width="1" rx="1" data-x="Southeast" data-series="Sat" data-y="55"/>
+    <rect x="66" y="80" width="146" height="49.5" fill="#9ce3c3" stroke="#d6d3d1" stroke-width="1" data-x="Central" data-series="Mon" data-y="84"/>
+    <text x="139" y="104.75" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Central:Mon">84</text>
+    <rect x="212" y="80" width="146" height="49.5" fill="#d1ebdb" stroke="#d6d3d1" stroke-width="1" data-x="Kirkwood" data-series="Mon" data-y="38"/>
+    <text x="285" y="104.75" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Kirkwood:Mon">38</text>
+    <rect x="358" y="80" width="146" height="49.5" fill="#c1e9d3" stroke="#d6d3d1" stroke-width="1" data-x="Buckhead" data-series="Mon" data-y="52"/>
+    <text x="431" y="104.75" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Buckhead:Mon">52</text>
+    <rect x="504" y="80" width="146" height="49.5" fill="#dbeddf" stroke="#d6d3d1" stroke-width="1" data-x="Southeast" data-series="Mon" data-y="29"/>
+    <text x="577" y="104.75" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Southeast:Mon">29</text>
+    <rect x="66" y="129.5" width="146" height="49.5" fill="#94e1c0" stroke="#d6d3d1" stroke-width="1" data-x="Central" data-series="Tue" data-y="91"/>
+    <text x="139" y="154.25" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Central:Tue">91</text>
+    <rect x="212" y="129.5" width="146" height="49.5" fill="#ceebd9" stroke="#d6d3d1" stroke-width="1" data-x="Kirkwood" data-series="Tue" data-y="41"/>
+    <text x="285" y="154.25" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Kirkwood:Tue">41</text>
+    <rect x="358" y="129.5" width="146" height="49.5" fill="#bbe8d1" stroke="#d6d3d1" stroke-width="1" data-x="Buckhead" data-series="Tue" data-y="57"/>
+    <text x="431" y="154.25" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Buckhead:Tue">57</text>
+    <rect x="504" y="129.5" width="146" height="49.5" fill="#d9edde" stroke="#d6d3d1" stroke-width="1" data-x="Southeast" data-series="Tue" data-y="31"/>
+    <text x="577" y="154.25" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Southeast:Tue">31</text>
+    <rect x="66" y="179" width="146" height="49.5" fill="#8fe1bd" stroke="#d6d3d1" stroke-width="1" data-x="Central" data-series="Wed" data-y="96"/>
+    <text x="139" y="203.75" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Central:Wed">96</text>
+    <rect x="212" y="179" width="146" height="49.5" fill="#caead8" stroke="#d6d3d1" stroke-width="1" data-x="Kirkwood" data-series="Wed" data-y="44"/>
+    <text x="285" y="203.75" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Kirkwood:Wed">44</text>
+    <rect x="358" y="179" width="146" height="49.5" fill="#b7e7cf" stroke="#d6d3d1" stroke-width="1" data-x="Buckhead" data-series="Wed" data-y="61"/>
+    <text x="431" y="203.75" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Buckhead:Wed">61</text>
+    <rect x="504" y="179" width="146" height="49.5" fill="#d7ecdd" stroke="#d6d3d1" stroke-width="1" data-x="Southeast" data-series="Wed" data-y="33"/>
+    <text x="577" y="203.75" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Southeast:Wed">33</text>
+    <rect x="66" y="228.5" width="146" height="49.5" fill="#98e2c1" stroke="#d6d3d1" stroke-width="1" data-x="Central" data-series="Thu" data-y="88"/>
+    <text x="139" y="253.25" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Central:Thu">88</text>
+    <rect x="212" y="228.5" width="146" height="49.5" fill="#cfebda" stroke="#d6d3d1" stroke-width="1" data-x="Kirkwood" data-series="Thu" data-y="40"/>
+    <text x="285" y="253.25" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Kirkwood:Thu">40</text>
+    <rect x="358" y="228.5" width="146" height="49.5" fill="#bee8d2" stroke="#d6d3d1" stroke-width="1" data-x="Buckhead" data-series="Thu" data-y="55"/>
+    <text x="431" y="253.25" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Buckhead:Thu">55</text>
+    <rect x="504" y="228.5" width="146" height="49.5" fill="#daeddf" stroke="#d6d3d1" stroke-width="1" data-x="Southeast" data-series="Thu" data-y="30"/>
+    <text x="577" y="253.25" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Southeast:Thu">30</text>
+    <rect x="66" y="278" width="146" height="49.5" fill="#88dfba" stroke="#d6d3d1" stroke-width="1" data-x="Central" data-series="Fri" data-y="102"/>
+    <text x="139" y="302.75" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-cell-label="Central:Fri">102</text>
+    <rect x="212" y="278" width="146" height="49.5" fill="#c6e9d6" stroke="#d6d3d1" stroke-width="1" data-x="Kirkwood" data-series="Fri" data-y="48"/>
+    <text x="285" y="302.75" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Kirkwood:Fri">48</text>
+    <rect x="358" y="278" width="146" height="49.5" fill="#afe6cb" stroke="#d6d3d1" stroke-width="1" data-x="Buckhead" data-series="Fri" data-y="68"/>
+    <text x="431" y="302.75" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Buckhead:Fri">68</text>
+    <rect x="504" y="278" width="146" height="49.5" fill="#d3ecdc" stroke="#d6d3d1" stroke-width="1" data-x="Southeast" data-series="Fri" data-y="36"/>
+    <text x="577" y="302.75" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Southeast:Fri">36</text>
+    <rect x="66" y="327.5" width="146" height="49.5" fill="#5ad8a6" stroke="#d6d3d1" stroke-width="1" data-x="Central" data-series="Sat" data-y="142"/>
+    <text x="139" y="352.25" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#fafaf9" data-cell-label="Central:Sat">142</text>
+    <rect x="212" y="327.5" width="146" height="49.5" fill="#abe5ca" stroke="#d6d3d1" stroke-width="1" data-x="Kirkwood" data-series="Sat" data-y="71"/>
+    <text x="285" y="352.25" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Kirkwood:Sat">71</text>
+    <rect x="358" y="327.5" width="146" height="49.5" fill="#8ce0bc" stroke="#d6d3d1" stroke-width="1" data-x="Buckhead" data-series="Sat" data-y="98"/>
+    <text x="431" y="352.25" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Buckhead:Sat">98</text>
+    <rect x="504" y="327.5" width="146" height="49.5" fill="#bee8d2" stroke="#d6d3d1" stroke-width="1" data-x="Southeast" data-series="Sat" data-y="55"/>
+    <text x="577" y="352.25" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-cell-label="Southeast:Sat">55</text>
   </g>
-  <rect x="66" y="46" width="640" height="333" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
-  <g fill="#8C8C8C" font-size="11" font-weight="400">
-    <text x="58" y="73.75" text-anchor="end" dominant-baseline="middle" data-series-label="Mon">Mon</text>
-    <text x="58" y="129.25" text-anchor="end" dominant-baseline="middle" data-series-label="Tue">Tue</text>
-    <text x="58" y="184.75" text-anchor="end" dominant-baseline="middle" data-series-label="Wed">Wed</text>
-    <text x="58" y="240.25" text-anchor="end" dominant-baseline="middle" data-series-label="Thu">Thu</text>
-    <text x="58" y="295.75" text-anchor="end" dominant-baseline="middle" data-series-label="Fri">Fri</text>
-    <text x="58" y="351.25" text-anchor="end" dominant-baseline="middle" data-series-label="Sat">Sat</text>
-    <text x="146" y="390" text-anchor="middle" data-full-label="Central">Central</text>
-    <text x="306" y="390" text-anchor="middle" data-full-label="Kirkwood">Kirkwood</text>
-    <text x="466" y="390" text-anchor="middle" data-full-label="Buckhead">Buckhead</text>
-    <text x="626" y="390" text-anchor="middle" data-full-label="Southeast">Southeast</text>
+  <g data-color-scale="1">
+    <rect x="666" y="339.88" width="12" height="37.63" fill="#dbeddf"/>
+    <rect x="666" y="302.75" width="12" height="37.63" fill="#c9ead7"/>
+    <rect x="666" y="265.63" width="12" height="37.63" fill="#b6e7cf"/>
+    <rect x="666" y="228.5" width="12" height="37.63" fill="#a4e4c7"/>
+    <rect x="666" y="191.38" width="12" height="37.63" fill="#91e1be"/>
+    <rect x="666" y="154.25" width="12" height="37.63" fill="#7fdeb6"/>
+    <rect x="666" y="117.13" width="12" height="37.63" fill="#6cdbae"/>
+    <rect x="666" y="80" width="12" height="37.63" fill="#5ad8a6"/>
+    <text x="682" y="84" font-size="12" fill="#8C8C8C" dominant-baseline="hanging" data-scale-max="1">142</text>
+    <text x="682" y="377" font-size="12" fill="#8C8C8C" data-scale-min="1">29</text>
+  </g>
+  <g fill="#8C8C8C" font-size="12" font-weight="400">
+    <text x="58" y="104.75" text-anchor="end" dominant-baseline="middle" data-series-label="Mon"><title>Mon</title>Mon</text>
+    <text x="58" y="154.25" text-anchor="end" dominant-baseline="middle" data-series-label="Tue"><title>Tue</title>Tue</text>
+    <text x="58" y="203.75" text-anchor="end" dominant-baseline="middle" data-series-label="Wed"><title>Wed</title>Wed</text>
+    <text x="58" y="253.25" text-anchor="end" dominant-baseline="middle" data-series-label="Thu"><title>Thu</title>Thu</text>
+    <text x="58" y="302.75" text-anchor="end" dominant-baseline="middle" data-series-label="Fri"><title>Fri</title>Fri</text>
+    <text x="58" y="352.25" text-anchor="end" dominant-baseline="middle" data-series-label="Sat"><title>Sat</title>Sat</text>
+    <text x="139" y="389" text-anchor="middle" data-full-label="Central"><title>Central</title>Central</text>
+    <text x="285" y="389" text-anchor="middle" data-full-label="Kirkwood"><title>Kirkwood</title>Kirkwood</text>
+    <text x="431" y="389" text-anchor="middle" data-full-label="Buckhead"><title>Buckhead</title>Buckhead</text>
+    <text x="577" y="389" text-anchor="middle" data-full-label="Southeast"><title>Southeast</title>Southeast</text>
   </g>
 </svg>

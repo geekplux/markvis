@@ -1,46 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="scatter chart: Scores rise with study hours, 5 rows, series cohort" aria-labelledby="mv-0a47fcdc661403c6-title" aria-describedby="mv-0a47fcdc661403c6-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-0a47fcdc661403c6" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-0a47fcdc661403c6-title">Scores rise with study hours</title>
   <desc id="mv-0a47fcdc661403c6-desc">scatter chart. Scores rise with study hours. x=hours. y=score. series=cohort. 5 rows.</desc>
-  <text x="48" y="22" text-anchor="start" font-size="16" font-weight="600" fill="#374151">Scores rise with study hours</text>
-  <g font-size="12" font-weight="400" fill="#374151">
-    <rect x="48" y="425" width="10" height="10" fill="#8884d8" rx="1"/>
-    <text x="62" y="434" data-legend="A">A</text>
-    <rect x="85.44" y="425" width="10" height="10" fill="#82ca9d" rx="1"/>
-    <text x="99.44" y="434" data-legend="B">B</text>
+  <text x="66" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#374151"><title>Scores rise with study hours</title>Scores rise with study hours</text>
+  <g font-size="13" font-weight="400" fill="#374151">
+    <rect x="66" y="425" width="10" height="10" fill="#8884d8" rx="1"/>
+    <text x="80" y="434" data-legend="A">A</text>
+    <rect x="104.06" y="425" width="10" height="10" fill="#82ca9d" rx="1"/>
+    <text x="118.06" y="434" data-legend="B">B</text>
   </g>
-  <rect x="48" y="36" width="652" height="367" fill="none" stroke="#e2e8f0" stroke-width="1" data-plot-border="1"/>
+  <rect x="66" y="46" width="634" height="337" fill="none" stroke="#e2e8f0" stroke-width="1" data-plot-border="1"/>
   <g fill="none" stroke="#374151" stroke-opacity="0.14" stroke-width="1">
-    <line x1="48" x2="700" y1="329.6" y2="329.6"/>
-    <line x1="48" x2="700" y1="256.2" y2="256.2"/>
-    <line x1="48" x2="700" y1="109.4" y2="109.4"/>
-    <line x1="48" x2="700" y1="36" y2="36"/>
+    <line x1="66" x2="700" y1="315.6" y2="315.6"/>
+    <line x1="66" x2="700" y1="248.2" y2="248.2"/>
+    <line x1="66" x2="700" y1="113.4" y2="113.4"/>
+    <line x1="66" x2="700" y1="46" y2="46"/>
   </g>
   <g fill="none" stroke="#374151" stroke-opacity="0.14" stroke-width="1" data-v-grid="1">
-    <line x1="56" x2="56" y1="36" y2="403" data-v-grid="1"/>
-    <line x1="215" x2="215" y1="36" y2="403" data-v-grid="1"/>
-    <line x1="374" x2="374" y1="36" y2="403" data-v-grid="1"/>
-    <line x1="533" x2="533" y1="36" y2="403" data-v-grid="1"/>
-    <line x1="692" x2="692" y1="36" y2="403" data-v-grid="1"/>
+    <line x1="74" x2="74" y1="46" y2="383" data-v-grid="1"/>
+    <line x1="228.5" x2="228.5" y1="46" y2="383" data-v-grid="1"/>
+    <line x1="383" x2="383" y1="46" y2="383" data-v-grid="1"/>
+    <line x1="537.5" x2="537.5" y1="46" y2="383" data-v-grid="1"/>
+    <line x1="692" x2="692" y1="46" y2="383" data-v-grid="1"/>
   </g>
-  <path d="M48 403 L700 403" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1"/>
-  <g fill="#6B7280" font-size="11" font-weight="400">
-    <text x="40" y="403" text-anchor="end" dominant-baseline="middle">30</text>
-    <text x="40" y="329.6" text-anchor="end" dominant-baseline="middle">40</text>
-    <text x="40" y="256.2" text-anchor="end" dominant-baseline="middle">50</text>
-    <text x="40" y="182.8" text-anchor="end" dominant-baseline="middle">60</text>
-    <text x="40" y="109.4" text-anchor="end" dominant-baseline="middle">70</text>
-    <text x="40" y="36" text-anchor="end" dominant-baseline="middle">80</text>
-    <text x="56" y="414" text-anchor="middle" font-size="11" data-full-label="0">0</text>
-    <text x="215" y="414" text-anchor="middle" font-size="11" data-full-label="2">2</text>
-    <text x="374" y="414" text-anchor="middle" font-size="11" data-full-label="4">4</text>
-    <text x="533" y="414" text-anchor="middle" font-size="11" data-full-label="6">6</text>
-    <text x="692" y="414" text-anchor="middle" font-size="11" data-full-label="8">8</text>
+  <path d="M66 383 L700 383" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1"/>
+  <g fill="#6B7280" font-size="12" font-weight="400">
+    <text x="58" y="383" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="58" y="315.6" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="58" y="248.2" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="58" y="180.8" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="58" y="113.4" text-anchor="end" dominant-baseline="middle">70</text>
+    <text x="58" y="46" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="74" y="395" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
+    <text x="228.5" y="395" text-anchor="middle" font-size="12" data-full-label="2"><title>2</title>2</text>
+    <text x="383" y="395" text-anchor="middle" font-size="12" data-full-label="4"><title>4</title>4</text>
+    <text x="537.5" y="395" text-anchor="middle" font-size="12" data-full-label="6"><title>6</title>6</text>
+    <text x="692" y="395" text-anchor="middle" font-size="12" data-full-label="8"><title>8</title>8</text>
+  </g>
+  <g fill="#6B7280" font-size="13" font-weight="400" data-axis-titles="1">
+    <text x="44" y="214.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 44 214.5)" data-axis="y">score</text>
+    <text x="383" y="411" text-anchor="middle" dominant-baseline="hanging" data-axis="x">hours</text>
   </g>
   <g>
-    <circle cx="215" cy="329.6" r="3" fill="none" stroke="#8884d8" stroke-width="1.5" stroke-opacity="0.85" data-x="2" data-y="40" data-series="A" data-scatter-mark="ring"/>
-    <circle cx="374" cy="219.5" r="3" fill="none" stroke="#8884d8" stroke-width="1.5" stroke-opacity="0.85" data-x="4" data-y="55" data-series="A" data-scatter-mark="ring"/>
-    <circle cx="294.5" cy="256.2" r="3" fill="none" stroke="#82ca9d" stroke-width="1.5" stroke-opacity="0.85" data-x="3" data-y="50" data-series="B" data-scatter-mark="ring"/>
-    <circle cx="453.5" cy="109.4" r="3" fill="none" stroke="#82ca9d" stroke-width="1.5" stroke-opacity="0.85" data-x="5" data-y="70" data-series="B" data-scatter-mark="ring"/>
-    <circle cx="533" cy="94.72" r="3" fill="none" stroke="#8884d8" stroke-width="1.5" stroke-opacity="0.85" data-x="6" data-y="72" data-series="A" data-scatter-mark="ring"/>
+    <circle cx="228.5" cy="315.6" r="3" fill="none" stroke="#8884d8" stroke-width="1.5" stroke-opacity="0.85" data-x="2" data-y="40" data-series="A" data-scatter-mark="ring"/>
+    <circle cx="383" cy="214.5" r="3" fill="none" stroke="#8884d8" stroke-width="1.5" stroke-opacity="0.85" data-x="4" data-y="55" data-series="A" data-scatter-mark="ring"/>
+    <rect x="302.75" y="245.2" width="6" height="6" fill="#82ca9d" fill-opacity="0.85" data-x="3" data-y="50" data-series="B" data-scatter-mark="square"/>
+    <rect x="457.25" y="110.4" width="6" height="6" fill="#82ca9d" fill-opacity="0.85" data-x="5" data-y="70" data-series="B" data-scatter-mark="square"/>
+    <circle cx="537.5" cy="99.92" r="3" fill="none" stroke="#8884d8" stroke-width="1.5" stroke-opacity="0.85" data-x="6" data-y="72" data-series="A" data-scatter-mark="ring"/>
   </g>
 </svg>

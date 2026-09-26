@@ -17,7 +17,7 @@ Do not invent a type id. Do not add d3.
 Types only: `bar` | `line` | `area` | `scatter` | `pie` | `hist` | `heatmap` | `funnel` | `waterfall` | `radar` | `gauge` | `sankey` | `treemap`.
 Tags only: `chart` / `markvis` / `vis` → one parser.
 Fields only: `markvis`, `type`, `title`, `unit`, `x`, `y`, `series`.
-Optional `theme:` and `palette:` follow `SPEC.md`. Type-local extras: `layout`, `innerRadius`, `min`, `max`.
+Optional `theme:`, `palette:`, and `surface:` follow `SPEC.md`. Type-local extras: `layout`, `innerRadius`, `min`, `max`, `orient` (bar), `role` (waterfall).
 Data: CSV or GFM table. No JSON as default data. No JS in a fence.
 `donut` / stacked-bar-as-type / `sunburst` / `chord` / `map`: NO. (Wave 3: `sankey` `treemap` are in.)
 

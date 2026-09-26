@@ -16,12 +16,12 @@ export const folio = {
   STRUCTURE_OPACITY: "0.28",
 
   TYPE: {
-    title: { size: 17, weight: 600, fill: "#171717" },
-    unit: { size: 12, weight: 400, fill: "#737373" },
-    value: { size: 11, weight: 500, fill: "#171717" },
-    tick: { size: 10, weight: 400, fill: "#737373" },
-    note: { size: 11, weight: 400, fill: "#737373" },
-    legend: { size: 11, weight: 400, fill: "#171717" },
+    title: { size: 21, weight: 600, fill: "#171717" },
+    unit: { size: 13, weight: 400, fill: "#737373" },
+    value: { size: 13, weight: 500, fill: "#171717" },
+    tick: { size: 12, weight: 400, fill: "#737373" },
+    note: { size: 12, weight: 400, fill: "#737373" },
+    legend: { size: 13, weight: 400, fill: "#171717" },
   },
 
   MARGIN: {
@@ -45,7 +45,7 @@ export const folio = {
 
   WRAP_OPACITY: 0.7,
 
-  TITLE_BASELINE: 24,
+  TITLE_BASELINE: 32,
   TITLE_TO_PLOT: 12,
   TICK_TEXT_GAP: 10,
   LABEL_ROTATE_DEG: -55,

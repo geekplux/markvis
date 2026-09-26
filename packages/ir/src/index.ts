@@ -72,10 +72,16 @@ export const ChartIRSchema = z
     layout: z.enum(["grouped", "stacked", "percent"]).optional(),
     /** pie only. Fraction in [0, 1]. Omit → theme PIE_INNER_RATIO. */
     innerRadius: z.number().min(0).max(1).optional(),
-    /** gauge only. Omit → 0 at paint. */
+    /** gauge or heatmap. Meaning is type-local. */
     min: z.number().optional(),
-    /** gauge only. Omit → max(y, 1) at paint. */
+    /** gauge, heatmap, or radar. Meaning is type-local. */
     max: z.number().optional(),
+    /** light paper, dark paper, or opaque export. Omit → light. */
+    surface: z.enum(["light", "dark", "export"]).default("light"),
+    /** bar only. Omit → vertical. */
+    orient: z.enum(["horizontal", "vertical"]).optional(),
+    /** waterfall only. Names the column of delta | total | subtotal. */
+    role: z.string().min(1).optional(),
     table: TableSchema,
   })
   .strict()
@@ -136,22 +142,25 @@ export const ChartIRSchema = z
         path: ["innerRadius"],
       });
     }
-    if (val.min !== undefined && val.type !== "gauge") {
+    const minTypes = val.type === "gauge" || val.type === "heatmap";
+    const maxTypes =
+      val.type === "gauge" || val.type === "heatmap" || val.type === "radar";
+    if (val.min !== undefined && !minTypes) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        message: "min is only valid for gauge",
+        message: "min is only valid for gauge or heatmap",
         path: ["min"],
       });
     }
-    if (val.max !== undefined && val.type !== "gauge") {
+    if (val.max !== undefined && !maxTypes) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        message: "max is only valid for gauge",
+        message: "max is only valid for gauge, heatmap, or radar",
         path: ["max"],
       });
     }
     if (
-      val.type === "gauge" &&
+      (val.type === "gauge" || val.type === "heatmap") &&
       val.min !== undefined &&
       val.max !== undefined &&
       val.min >= val.max
@@ -160,6 +169,20 @@ export const ChartIRSchema = z
         code: z.ZodIssueCode.custom,
         message: "min must be less than max",
         path: ["min"],
+      });
+    }
+    if (val.orient !== undefined && val.type !== "bar") {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "orient is only valid for bar",
+        path: ["orient"],
+      });
+    }
+    if (val.role !== undefined && val.type !== "waterfall") {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "role is only valid for waterfall",
+        path: ["role"],
       });
     }
   });
