@@ -111,6 +111,22 @@ export default defineConfig({
     },
   },
   appearance: false,
+  markdown: {
+    // ```chart is the fence language. Shiki has no built-in chart grammar,
+    // so register one or the dev server warns and falls back to plain text.
+    languages: [
+      {
+        name: "chart",
+        scopeName: "source.chart",
+        patterns: [
+          {
+            match: "^[A-Za-z][\\w]*:",
+            name: "entity.name.tag",
+          },
+        ],
+      },
+    ],
+  },
   themeConfig: {
     siteTitle: "MarkVis",
     nav: [

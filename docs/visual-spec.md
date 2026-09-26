@@ -6,13 +6,13 @@ Constraints: static deterministic SVG · catalog types only · optional fence `t
 
 Fixture sources for 01 / 02 / 05 / 09 / 17 may receive **title-only** edits so the IR title is a conclusion (never a chart-type word). No other product escape hatches.
 
-**Host assumption:** the SVG carries its own surface. `surface: light` (default) paints warm paper `#fafaf9` and dark ink. `surface: dark` paints a dark paper and light ink. `surface: export` paints an opaque white card. Do not rely on a transparent figure with dark text. Text width is estimated at 0.62em for Latin and 1em for wide scripts (code point above U+2E80), against the theme font stack. It is not an operating-system measurement.
+**Host assumption:** the default figure is transparent. Dark ink sits on whatever background the Markdown host already paints. `surface: dark` paints a dark paper and light ink. `surface: export` paints an opaque white card for a file that leaves the page. Text width is estimated at 0.62em for Latin and 1em for wide scripts (code point above U+2E80), against the theme font stack. It is not an operating-system measurement.
 
 ## Ledger locks
 
 Editorial in-article figure: inherit the Markdown host surface — not a dashboard card, not a poster, not an instrument panel, not a paper plate. Three-second judgment first (which mark wins); thirty-second verification second (exact number).
 
-1. **Canvas:** an explicit surface fill. Light is `#fafaf9`. Never assume the host color.
+1. **Canvas:** the default light figure has no full-frame fill. The host page is the paper.
 2. **Ink / Quiet / structure:** Ink `#171717`. Quiet `#737373`. Hairline `0.10` (grid only). Structure `0.28` (baseline, leaders, slice separators).
 3. **One accent for one series;** extra hues only for extra series. Area fill opacity `0.22` under the series stroke. Accent occupies the mark, never a filled legend slab, never the canvas.
 4. **Three line grades:** hairline / structure / data. No axis box. Baseline only on the plot floor. No vertical grids. No tick lines sticking off the axis.
@@ -24,8 +24,8 @@ Editorial in-article figure: inherit the Markdown host surface — not a dashboa
 
 ## Canvas
 
-- Paint a full-frame surface rect after `<title>` / `<desc>`, tagged `data-surface`.
-- Light `#fafaf9`, dark `#1c1917`, export `#ffffff`.
+- The default light figure paints no full-frame rect.
+- `surface: dark` paints `#1c1917` and `surface: export` paints `#ffffff`, each tagged `data-surface`.
 - SVG root `width` and `viewBox` use the intended width. Layout is computed in that width.
 
 ---
@@ -35,7 +35,7 @@ Editorial in-article figure: inherit the Markdown host surface — not a dashboa
 | Token | Value |
 | --- | --- |
 | Frame default | `720` wide · height `480` minimum; **grow height** so the plot stays at least `0.55 × height` |
-| Canvas | surface fill (`light` `#fafaf9`) |
+| Canvas | transparent on `light`; `dark` `#1c1917`; `export` `#ffffff` |
 | Ink | `#171717` |
 | Quiet | `#737373` |
 | Hairline | ink `#171717` at opacity `0.10`, stroke `1` (horizontal grid only) |
@@ -164,11 +164,11 @@ Keep title, desc, role=img, labelledby/describedby, data-markvis, stable ids, se
 
 ## Out of scope
 
-Animation, tooltips, new types, marketing chrome, HTML posters, d3, vertical grids, axis boxes, tick lines, spline interpolation. Named `theme:` / `palette:` values are grammar in `SPEC.md`. The renderer paints one full-frame surface (`light`, `dark`, or `export`) behind the figure.
+Animation, tooltips, new types, marketing chrome, HTML posters, d3, vertical grids, axis boxes, tick lines, spline interpolation. Named `theme:` / `palette:` values are grammar in `SPEC.md`. The default figure does not paint a page background. `surface: dark` and `surface: export` do.
 
 ## Done when
 
-1. This file matches the folio pack plus the renderer's surface rect.
-2. Acceptance SVGs include one full-frame `data-surface` rect.
+1. This file matches the folio pack. The default figure has no canvas fill.
+2. Default acceptance SVGs include no full-frame fill. Dark and export SVGs include one `data-surface` rect.
 3. Tests green and gallery regenerated.
 4. Product owner has not rejected the five.

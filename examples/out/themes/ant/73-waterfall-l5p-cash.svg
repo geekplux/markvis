@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="waterfall chart: Weekend retail still covers L5P rent after payroll (USD), 8 rows" aria-labelledby="mv-db35afdfe14ff66f-title" aria-describedby="mv-db35afdfe14ff66f-desc" data-markvis="2" data-chart-type="waterfall" data-id="mv-db35afdfe14ff66f" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
   <title id="mv-db35afdfe14ff66f-title">Weekend retail still covers L5P rent after payroll</title>
   <desc id="mv-db35afdfe14ff66f-desc">waterfall chart. Weekend retail still covers L5P rent after payroll. x=step. y=delta. unit=USD. 8 rows.</desc>
-  <rect width="100%" height="100%" fill="#fafaf9" data-surface="light"/>
   <text x="70.64" y="32" text-anchor="start" font-size="22" font-weight="600" fill="#000000"><title>Weekend retail still covers L5P rent after payroll</title><tspan x="70.64" dy="0">Weekend retail still covers L5P rent after</tspan><tspan x="70.64" dy="28">payroll</tspan><tspan font-size="13" font-weight="400" fill="#8C8C8C"> · USD</tspan></text>
   <rect x="70.64" y="80" width="635.36" height="264" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
   <g fill="none" stroke="#000000" stroke-opacity="0.16" stroke-width="1">
@@ -25,7 +24,7 @@
     <rect x="552.72" y="244.56" width="68.3" height="42.24" fill="#BE123C" rx="2" data-step="Inventory" data-y="-2,400" data-level="3,250" data-role="delta" data-baseline="5,650"/>
     <text x="586.87" y="238.56" text-anchor="middle" font-size="13" font-weight="500" fill="#000000" data-delta="Inventory">-2,400 → 3,250</text>
     <rect x="632.14" y="286.8" width="68.3" height="6.69" fill="#BE123C" rx="2" data-step="Utilities" data-y="-380" data-level="2,870" data-role="delta" data-baseline="3,250"/>
-    <text x="666.29" y="280.8" text-anchor="middle" font-size="13" font-weight="500" fill="#000000" data-delta="Utilities">-380 → 2,870</text>
+    <text x="666.29" y="280.8" text-anchor="end" font-size="13" font-weight="500" fill="#000000" data-delta="Utilities">-380 → 2,870</text>
   </g>
   <g fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1" data-waterfall-connectors="1">
     <line x1="144.5" x2="155.62" y1="270.08" y2="270.08"/>

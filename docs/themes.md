@@ -30,7 +30,7 @@ Hex lock (series 0…7), source of truth also `packages/themes/palettes.ts`:
 
 ### Intent
 
-Ledger editorial default: hairline grid, value labels when the dual-encoding rule allows, one accent for one series. Ink near-black; quiet gray for units and ticks. The theme pack adds no plot plate. The renderer paints the light, dark, or export surface behind the figure.
+Ledger editorial default: hairline grid, value labels when the dual-encoding rule allows, one accent for one series. Ink near-black; quiet gray for units and ticks. The theme pack adds no plot plate. The default light figure paints no canvas, so the Markdown host background shows through. `surface: dark` and `surface: export` paint their own paper.
 
 ### Locked tokens (from `packages/themes/folio/theme.ts`)
 

@@ -15,7 +15,7 @@ The package version field is still `2.1.0` because this branch is not published.
 - Radar charts show numeric rings, one scale for every series, and lighter fills. A grouped bar is the clearer choice when the exact number matters.
 - Funnels stay centered bands that narrow from each stage to the next, with the stage name and value to the right of the shape.
 - Line and area charts leave a gap for an empty cell. They do not connect through it or drop it to zero.
-- `surface: light` (default), `dark`, and `export` each paint a coordinated background and ink. A transparent figure with dark text is no longer the only surface.
+- `surface: light` (default) keeps a transparent canvas and dark ink, so the figure sits on the Markdown host. `surface: dark` and `surface: export` paint their own paper.
 
 ## Correctness fixes
 
@@ -31,7 +31,7 @@ The package version field is still `2.1.0` because this branch is not published.
 ## Intentional visual changes
 
 - Default type is larger. Titles are 21px, ticks 12px, values 13px.
-- The default surface is warm paper, not a transparent canvas.
+- The default figure does not paint a background. The host page does.
 - Category labels are no longer rotated 55 degrees.
 - Theme packs still differ in chrome, palette, and any type size already larger than the readable floor.
 

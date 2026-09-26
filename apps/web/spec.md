@@ -63,7 +63,7 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | `x` | typed | first category / numeric col | Independent axis or labels. |
 | `y` | typed | first numeric col | Measure. |
 | `series` | no | — | Optional column that splits series. |
-| `surface` | no | `light` | `light` \| `dark` \| `export`. |
+| `surface` | no | `light` | `light` \| `dark` \| `export`. Light, the default, paints no canvas so the host background shows through. Dark paints a dark paper and light ink. Export paints an opaque white card. |
 | `layout` | no | `grouped` when omitted | On `bar` / `line` / `area` only: `grouped` \| `stacked` \| `percent`. |
 | `innerRadius` | no | theme `PIE_INNER_RATIO` | On `pie` only. `[0, 1]`. Omit → theme hole; `0` = solid. |
 | `min` | no | see type | Gauge omit → 0. Heatmap omit → data minimum. |

@@ -32,7 +32,7 @@ Encodings (optional, type-local — not a new type id):
 - On `bar` only: `orient: horizontal|vertical`. Omit means vertical.
 - On `waterfall` only: `role` names a column of `delta|total|subtotal`. Empty means delta. Do not treat a step label as a total.
 - On `gauge`: `min` and `max` as numbers. Omit `min` means 0. Omit `max` means 100, a labeled range, not the current value. Heatmap may set `min`/`max` as the shared color domain. Radar may set `max`.
-- `surface` optional: `light` (default) `dark` `export`.
+- `surface` optional: `light` (default, no canvas fill) `dark` `export`.
 - A measure cell that is not a number is `E_BAD_NUMBER` (row and column in the message). An empty cell is a gap on line, area, grouped bar, scatter, hist, heatmap, and radar. It is `E_MISSING_VALUE` when the chart needs every value (pie, funnel, sankey, treemap, waterfall, gauge, stacked, percent).
 - A repeated category/series key is `E_DUP_KEY`. Scatter, hist, and waterfall step labels may repeat. Do not keep the last row.
 - `markvis` other than `2` is `E_BAD_VERSION`. Omit means 2.

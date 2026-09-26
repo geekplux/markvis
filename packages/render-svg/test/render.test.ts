@@ -250,7 +250,8 @@ describe("cartesian rules", () => {
     expect(svg).toContain(PALETTE[0]);
     expect(svg).not.toContain('shape-rendering="crispEdges"');
     expect(svg).not.toContain('fill="#F7F4EF"');
-    expect(svg).toContain('data-surface="light"');
+    expect(svg).not.toContain('data-surface="light"');
+    expect(svg).not.toContain('width="100%" height="100%"');
     expect(svg).toContain("Q3 Revenue");
     expect(svg).toContain(" · USD k");
     expect(svg).toContain('text-anchor="start"');

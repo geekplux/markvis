@@ -69,7 +69,7 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | `x` | typed | first category / numeric col | Independent axis or labels. |
 | `y` | typed | first numeric col | Measure. |
 | `series` | no | — | Optional column that splits series. |
-| `surface` | no | `light` | `light` \| `dark` \| `export`. Light is warm paper with dark ink. Dark is a dark paper with light ink. Export is an opaque white card for a standalone file. |
+| `surface` | no | `light` | `light` \| `dark` \| `export`. Light, the default, paints no canvas: dark ink sits on the Markdown host's background. Dark paints a dark paper and light ink. Export paints an opaque white card for a standalone file. |
 | `layout` | no | `grouped` when omitted | Type-local. Only on `bar` \| `line` \| `area`: `grouped` \| `stacked` \| `percent`. Omit = today's paint (`grouped`). Wrong type or bad value → `E_UNKNOWN_FIELD` + table. |
 | `innerRadius` | no | theme `PIE_INNER_RATIO` | Type-local. Only on `pie`. Number in `[0, 1]`. Omit → theme default hole (folio/most = `0`; shadcn = `0.5`). Explicit `0` forces a solid pie. `(0, 1]` = donut hole as a fraction of outer radius. Wrong type or out of range → `E_UNKNOWN_FIELD` + table. |
 | `min` | no | see type | Type-local. Gauge: omit → `0`. Heatmap: omit → data minimum of the color scale. |

@@ -83,16 +83,23 @@ export function renderSvg(chart: ChartIR, options?: RenderOptions): string {
       "font-family": t.FONT,
       "font-size": 12,
     })}>`;
+    const plate =
+      surface === "dark" ? "#1c1917" : surface === "export" ? "#ffffff" : null;
     const lines = [
       open,
       `  <title id="${id}-title">${escapeXml(chart.title)}</title>`,
       `  <desc id="${id}-desc">${escapeXml(description(chart))}</desc>`,
-      `  <rect ${attrs({
-        width: "100%",
-        height: "100%",
-        fill: surface === "dark" ? "#1c1917" : surface === "export" ? "#ffffff" : "#fafaf9",
-        "data-surface": surface,
-      })}/>`,
+      // Default light stays transparent so a Markdown host supplies the page color.
+      ...(plate === null
+        ? []
+        : [
+            `  <rect ${attrs({
+              width: "100%",
+              height: "100%",
+              fill: plate,
+              "data-surface": surface,
+            })}/>`,
+          ]),
       ...painted.lines,
       `</svg>`,
     ];

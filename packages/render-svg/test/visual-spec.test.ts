@@ -94,11 +94,11 @@ function titleEl(svg: string): { x: number; anchor: string; size: string } {
 }
 
 describe("visual-spec tokens", () => {
-  it("paints an opaque light surface and the frozen font stack", () => {
+  it("leaves the default surface transparent and keeps the frozen font stack", () => {
     const svg = svgOf("01-bar-basic.md");
     const rest = afterTitleDesc(svg);
-    expect(rest).toContain('data-surface="light"');
-    expect(rest).toContain('fill="#fafaf9"');
+    expect(rest).not.toContain('data-surface="light"');
+    expect(rest).not.toContain('fill="#fafaf9"');
     expect(svg).toContain(`font-family="${FONT.replace(/"/g, "&quot;")}"`);
     expect(svg).toContain('role="img"');
     expect(svg).toMatch(/<title id="mv-[a-f0-9]+-title">/);
@@ -107,6 +107,46 @@ describe("visual-spec tokens", () => {
     expect(TYPE.title).toEqual({ size: 21, weight: 600, fill: INK });
     expect(svg).toContain(`stroke="${INK}"`);
     expect(svg).toContain(`stroke-opacity="${STRUCTURE_OPACITY}"`);
+  });
+
+  it("paints one paper plate for dark and export and none for light", () => {
+    const source = readFileSync(join(validDir, "01-bar-basic.md"), "utf8");
+    const result = parseMarkdown(source, { filename: "01-bar-basic.md" });
+    if (!result.ok) {
+      throw new Error("01-bar-basic should parse");
+    }
+    const chart = ChartIRSchema.parse(result.chart);
+    const plates = (svg: string) =>
+      [...svg.matchAll(/<rect\b[^>]*\bdata-surface="[^"]+"[^>]*\/>/g)].map(
+        (match) => match[0],
+      );
+
+    for (const svg of [
+      renderSvg(chart),
+      renderSvg(chart, { surface: "light" }),
+    ]) {
+      expect(plates(svg)).toEqual([]);
+      expect(svg).not.toContain('data-surface="light"');
+      expect(svg).not.toContain('fill="#fafaf9"');
+    }
+
+    const dark = renderSvg(chart, { surface: "dark" });
+    const darkPlates = plates(dark);
+    expect(darkPlates).toHaveLength(1);
+    expect(darkPlates[0]).toContain('fill="#1c1917"');
+    expect(darkPlates[0]).toContain('data-surface="dark"');
+
+    const exported = renderSvg(chart, { surface: "export" });
+    const exportPlates = plates(exported);
+    expect(exportPlates).toHaveLength(1);
+    expect(exportPlates[0]).toContain('fill="#ffffff"');
+    expect(exportPlates[0]).toContain('data-surface="export"');
+
+    const fromField = renderSvg(
+      ChartIRSchema.parse({ ...chart, surface: "dark" }),
+    );
+    expect(plates(fromField)).toHaveLength(1);
+    expect(fromField).toContain('data-surface="dark"');
   });
 
   it("01 bar: conclusion title, 21/600 left, 72px cap, labels XOR grid", () => {
