@@ -2,7 +2,7 @@ import { mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
-import { ChartIRSchema } from "@markvis/ir";
+import { ChartIRSchema, THEMES } from "@markvis/ir";
 import { parseMarkdown } from "@markvis/parser";
 import { renderSvg } from "@markvis/render-svg";
 
@@ -56,5 +56,30 @@ describe("valid fixture SVGs", () => {
     expect(svg, `${file} SVG bytes drifted from examples/out`).toBe(
       committed,
     );
+  });
+});
+
+const themeCases = THEMES.flatMap((theme) =>
+  validFiles.map((file) => [theme, file] as const),
+);
+
+describe("theme fixture SVGs", () => {
+  it.each(themeCases)("%s/%s", (theme, file) => {
+    const source = readFileSync(join(validDir, file), "utf8");
+    const result = parseMarkdown(source, { filename: file });
+    expect(result.ok, `${file} should parse`).toBe(true);
+    if (!result.ok) {
+      return;
+    }
+    const chart = ChartIRSchema.parse({ ...result.chart, theme });
+    const svg = renderSvg(chart);
+    const themeDir = join(outDir, "themes", theme);
+    const outPath = join(themeDir, svgName(file));
+    if (process.env["UPDATE_SNAPSHOTS"] === "1") {
+      mkdirSync(themeDir, { recursive: true });
+      writeFileSync(outPath, svg, "utf8");
+    }
+    const committed = readFileSync(outPath, "utf8");
+    expect(svg, `${theme}/${file} SVG bytes drifted`).toBe(committed);
   });
 });
