@@ -14,6 +14,9 @@ importers:
       '@markvis/cli':
         specifier: workspace:*
         version: link:packages/cli
+      '@markvis/html':
+        specifier: workspace:*
+        version: link:packages/html
       '@markvis/ir':
         specifier: workspace:*
         version: link:packages/ir
@@ -94,6 +97,9 @@ importers:
 
   packages/browser:
     dependencies:
+      '@markvis/html':
+        specifier: workspace:*
+        version: link:../html
       '@markvis/parser':
         specifier: workspace:*
         version: link:../parser
@@ -119,6 +125,18 @@ importers:
 
   packages/compat-legacy: {}
 
+  packages/html:
+    dependencies:
+      '@markvis/ir':
+        specifier: workspace:*
+        version: link:../ir
+      '@markvis/parser':
+        specifier: workspace:*
+        version: link:../parser
+      '@markvis/render-svg':
+        specifier: workspace:*
+        version: link:../render-svg
+
   packages/ir:
     dependencies:
       zod:
@@ -130,12 +148,12 @@ importers:
 
   packages/markdown-it:
     dependencies:
+      '@markvis/html':
+        specifier: workspace:*
+        version: link:../html
       '@markvis/parser':
         specifier: workspace:*
         version: link:../parser
-      '@markvis/render-svg':
-        specifier: workspace:*
-        version: link:../render-svg
     devDependencies:
       '@types/markdown-it':
         specifier: ^14.1.2
@@ -155,12 +173,12 @@ importers:
 
   packages/remark:
     dependencies:
+      '@markvis/html':
+        specifier: workspace:*
+        version: link:../html
       '@markvis/parser':
         specifier: workspace:*
         version: link:../parser
-      '@markvis/render-svg':
-        specifier: workspace:*
-        version: link:../render-svg
     devDependencies:
       remark:
         specifier: ^15.0.1

@@ -32,6 +32,7 @@ export default defineConfig({
         repoRoot,
         "packages/render-svg/src/index.ts",
       ),
+      "@markvis/html": resolve(repoRoot, "packages/html/src/index.ts"),
     },
   },
   build: {

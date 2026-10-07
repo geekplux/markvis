@@ -52,10 +52,16 @@ describe("markvis.min.js as a classic script", () => {
   const minPath = join(repoRoot, "packages/browser/dist/markvis.min.js");
 
   it.runIf(existsSync(minPath))("defines a global markvis with init", () => {
-    const sandbox: Record<string, unknown> = {};
+    // A browser always has TextEncoder; the bare vm context does not.
+    const sandbox: Record<string, unknown> = { TextEncoder };
     runInNewContext(readFileSync(minPath, "utf8"), sandbox);
-    const api = sandbox["markvis"] as { init?: unknown; parseMarkdown?: unknown } | undefined;
+    const api = sandbox["markvis"] as
+      | { init?: unknown; parseMarkdown?: unknown; render?: (text: string) => { ok: boolean; html: string } }
+      | undefined;
     expect(typeof api?.init).toBe("function");
     expect(typeof api?.parseMarkdown).toBe("function");
+    const result = api?.render?.(BODY);
+    expect(result?.ok).toBe(true);
+    expect(result?.html).toContain("<svg");
   });
 });

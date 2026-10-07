@@ -71,20 +71,20 @@ Host example: `examples/hosts/astro/` (and the package README). Same drawing as 
 
 ## 5. JavaScript
 
-Pass the inside of one chart block — the text a Markdown renderer hands a code-block plugin — and get an SVG string.
+Pass one chart block — the inside a Markdown renderer hands a code-block plugin, or the whole block with its fence lines — and get the chart in one call. It never throws.
 
 ```js
-import { parseBlock, renderSvg } from "markvis";
+import { render } from "markvis";
 
-const parsed = parseBlock(blockText);
-if (parsed.ok) {
-  const svg = renderSvg(parsed.chart, { width: 480 });
-} else {
-  // parsed.table still has the rows; parsed.error.code is stable
-}
+const result = render(blockText, { width: 480 });
+element.innerHTML = result.html;
 ```
 
-`parseBlock` also accepts the whole block with its fence lines. To read every chart in a Markdown document, use `parseDocument`.
+`result.html` is the same HTML every other path emits: a `<figure>` with the SVG, a caption, and the data table, or, when the block is wrong, the data table and one error line. When `result.ok` is true, `result.svg` is the SVG alone and `result.chart` is the parsed chart. Otherwise `result.error.code` is a stable code and `result.table` holds the rows.
+
+Options: `width` (default 720), and `theme`, `palette`, `surface` for blocks that leave them out — a block's own field always wins. `filename` names the source for a derived title. In the browser the drop-in exposes the same function as `markvis.render`.
+
+To parse without drawing, use `parseBlock(blockText)`. To read every chart in a Markdown document, use `parseDocument`.
 
 ## Also
 

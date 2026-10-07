@@ -94,6 +94,7 @@ export default defineConfig({
           repoRoot,
           "packages/render-svg/src/index.ts",
         ),
+        "@markvis/html": resolve(repoRoot, "packages/html/src/index.ts"),
       },
     },
     optimizeDeps: {
@@ -101,6 +102,7 @@ export default defineConfig({
         "@markvis/ir",
         "@markvis/parser",
         "@markvis/render-svg",
+        "@markvis/html",
         "@markvis/browser",
       ],
     },

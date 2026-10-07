@@ -4,6 +4,7 @@ export type {
   FallbackTable,
   ParseError,
   ParseFailure,
+  ParseDefaults,
   ParseOptions,
   ParseResult,
   ParseSuccess,

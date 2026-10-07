@@ -51,18 +51,22 @@ flowchart LR
   cli["@markvis/cli"]
   remark["@markvis/remark"]
   mdit["@markvis/markdown-it"]
+  html["@markvis/html"]
   browser["@markvis/browser"]
   parser --> ir
   render --> ir
   render --> themes
   cli --> parser
   cli --> render
+  html --> parser
+  html --> render
   remark --> parser
-  remark --> render
+  remark --> html
   mdit --> parser
-  mdit --> render
+  mdit --> html
   browser --> parser
   browser --> render
+  browser --> html
 ```
 
 | Package | Role |
@@ -71,6 +75,7 @@ flowchart LR
 | `@markvis/parser` | Fence / GFM / HTML comment → IR or error |
 | `@markvis/themes` | Named grammar packs + palettes |
 | `@markvis/render-svg` | IR → deterministic SVG |
+| `@markvis/html` | One block → figure HTML, or table plus one error line; `render()` |
 | `@markvis/cli` | `check` / `render` / `bake` / `stats` |
 | `@markvis/remark` | remark host plugin |
 | `@markvis/markdown-it` | markdown-it / VitePress plugin |

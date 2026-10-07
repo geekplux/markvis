@@ -1,6 +1,7 @@
 import { parseMarkdown } from "@markvis/parser";
 import { renderSvg } from "@markvis/render-svg";
 import { autoReplace, init, replaceInDocument, replaceLanguageBlocks } from "./dom.js";
+import { render } from "@markvis/html";
 import { enhanceChartSvg, tipTextForMark } from "./enhance.js";
 import {
   chartBlockHtml,
@@ -18,6 +19,7 @@ export {
   htmlTable,
   init,
   parseMarkdown,
+  render,
   renderSvg,
   replaceInDocument,
   replaceLanguageBlocks,

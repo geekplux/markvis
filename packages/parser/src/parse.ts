@@ -80,8 +80,16 @@ export type ParseFailure = {
 
 export type ParseResult = ParseSuccess | ParseFailure;
 
+export type ParseDefaults = {
+  theme?: ChartTheme;
+  palette?: ChartPalette;
+  surface?: "light" | "dark" | "export";
+};
+
 export type ParseOptions = {
   filename?: string;
+  /** Used where a block leaves the field out. A block's own field wins. */
+  defaults?: ParseDefaults;
 };
 
 const EMPTY_TABLE: FallbackTable = { columns: [], rows: [] };
@@ -499,7 +507,12 @@ function buildIR(fields: {
 
 function parseBody(
   body: string,
-  opts: { form: ChartForm; filename?: string | undefined; raw: string },
+  opts: {
+    form: ChartForm;
+    filename?: string | undefined;
+    defaults?: ParseDefaults | undefined;
+    raw: string;
+  },
 ): ParseResult {
   const raw = opts.raw;
   if (body.trim() === "") {
@@ -607,7 +620,7 @@ function parseBody(
   }
 
   const themeRaw = headers["theme"]?.trim() ?? "";
-  let theme: ChartTheme = "folio";
+  let theme: ChartTheme = opts.defaults?.theme ?? "folio";
   if (themeRaw !== "") {
     if (!isChartTheme(themeRaw)) {
       return fail(
@@ -621,7 +634,7 @@ function parseBody(
   }
 
   const paletteRaw = headers["palette"]?.trim() ?? "";
-  let palette: ChartPalette | undefined;
+  let palette: ChartPalette | undefined = opts.defaults?.palette;
   if (paletteRaw !== "") {
     if (!isChartPalette(paletteRaw)) {
       return fail(
@@ -834,7 +847,7 @@ function parseBody(
     );
   }
 
-  let surface: "light" | "dark" | "export" | undefined;
+  let surface: "light" | "dark" | "export" | undefined = opts.defaults?.surface;
   const surfaceRaw = headers["surface"]?.trim();
   if (surfaceRaw !== undefined && surfaceRaw !== "") {
     if (surfaceRaw !== "light" && surfaceRaw !== "dark" && surfaceRaw !== "export") {
@@ -1126,6 +1139,7 @@ export function parseDocument(
     result: parseBody(chart.body, {
       form: chart.form,
       filename: options.filename,
+      defaults: options.defaults,
       raw: chart.raw,
     }),
   }));
@@ -1143,6 +1157,7 @@ export function parseMarkdown(
   return parseBody(first.body, {
     form: first.form,
     filename: options.filename,
+    defaults: options.defaults,
     raw: first.raw,
   });
 }
@@ -1183,6 +1198,7 @@ export function parseBlock(
   return parseBody(inner, {
     form: "fence",
     filename: options.filename,
+    defaults: options.defaults,
     raw: text,
   });
 }

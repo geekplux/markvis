@@ -16,7 +16,7 @@ After `pnpm build` (or a packed install), drop in `dist/markvis.min.js` (or `.mj
 
 Load `markvis.min.js` with a classic `<script>` (the CDN copy is `https://cdn.jsdelivr.net/npm/markvis@2/dist/markvis.min.js`). It defines `window.markvis`; `type="module"` hides it. For content added after load, call `markvis.init(element)` once the new nodes are in the page. Blocks already drawn are skipped. Covered by `packages/browser/test/dom.test.ts`.
 
-From code, `parseBlock(blockText)` parses the inside of one chart block — what a Markdown renderer hands a code-block plugin — with the same result as the fenced block.
+From code, `render(blockText, options?)` takes one chart block — the inside a Markdown renderer hands a code-block plugin, or the whole block — and returns `{ ok, svg, html, … }` without throwing. `html` is the same figure, or table plus one error line, that markdown-it, remark, and the drop-in emit. `theme`, `palette`, and `surface` options apply only where the block leaves the field out. In the drop-in it is `markvis.render`. `parseBlock(blockText)` parses without drawing.
 
 In this monorepo: `pnpm build`, then open `apps/playground/dropin.html`. `dist/` is gitignored — without that build the script 404s. Packed consumers copy `node_modules/markvis/dist/markvis.min.js`. For the live editor, start the playground Vite app.
 
