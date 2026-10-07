@@ -65,3 +65,25 @@ export function rewriteSurfaceInFence(
   }
   return setChartField(source, "surface", surface === "light" ? null : surface);
 }
+
+/** The toolbar's choices. Undefined keeps the source's own value; a null palette removes it. */
+export type Look = {
+  theme?: ChartTheme | null;
+  palette?: ChartPalette | null;
+  surface?: ChartSurface | null;
+};
+
+/** Carry the toolbar's look onto a freshly loaded example. */
+export function applyLook(source: string, look: Look): string {
+  let next = source;
+  if (look.theme) {
+    next = rewriteThemeInFence(next, look.theme);
+  }
+  if (look.palette !== undefined) {
+    next = rewritePaletteInFence(next, look.palette);
+  }
+  if (look.surface) {
+    next = rewriteSurfaceInFence(next, look.surface);
+  }
+  return next;
+}

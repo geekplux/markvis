@@ -10,6 +10,7 @@ import {
 import { htmlTable, previewSource, type PlaygroundView } from "./preview.js";
 import { dropinSnippet } from "./snippet.js";
 import {
+  applyLook,
   readPaletteFromFence,
   readSurfaceFromFence,
   readThemeFromFence,
@@ -52,7 +53,8 @@ function searchForExample(): string {
   if (
     exampleIdFromSearch(own) ||
     themeFromSearch(own) ||
-    paletteFromSearch(own)
+    paletteFromSearch(own) ||
+    surfaceFromSearch(own)
   ) {
     return own;
   }
@@ -92,6 +94,9 @@ function paint(view: PlaygroundView, theme?: ChartTheme): void {
 }
 
 function main(): void {
+  if (window.parent !== window) {
+    document.documentElement.classList.add("embedded");
+  }
   const themeSelect = mustEl<HTMLSelectElement>("theme");
   const paletteSelect = mustEl<HTMLSelectElement>("palette");
   const surfaceSelect = mustEl<HTMLSelectElement>("surface");
@@ -187,16 +192,7 @@ function main(): void {
     surface?: ChartSurface | null,
   ): void {
     filename = name;
-    let nextSource = source;
-    if (theme) {
-      nextSource = rewriteThemeInFence(nextSource, theme);
-    }
-    if (palette !== undefined) {
-      nextSource = rewritePaletteInFence(nextSource, palette);
-    }
-    if (surface) {
-      nextSource = rewriteSurfaceInFence(nextSource, surface);
-    }
+    const nextSource = applyLook(source, { theme, palette, surface });
     editor.value = nextSource;
     syncSelects(nextSource);
     view = previewSource(nextSource, filename);
@@ -251,6 +247,7 @@ function main(): void {
       picked.id,
       currentTheme(),
       currentPalette(),
+      currentSurface(),
     );
   });
 
