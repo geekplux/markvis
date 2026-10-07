@@ -4,7 +4,7 @@
   <text x="66" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Gamma leads category share at 3</title>Gamma leads category share at 3</text>
   <path d="M66 355 L706 355" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1"/>
   <path d="M172.67 355 L172.67 359 M386 355 L386 359 M599.33 355 L599.33 359" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-axis-ticks="1"/>
-  <g fill="#8C8C8C" font-size="12" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400">
     <text x="58" y="355" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="58" y="252" text-anchor="end" dominant-baseline="middle">1</text>
     <text x="58" y="149" text-anchor="end" dominant-baseline="middle">2</text>
@@ -13,8 +13,8 @@
     <text x="386" y="371" text-anchor="middle" font-size="12" data-full-label="beta"><title>beta</title>beta</text>
     <text x="599.33" y="371" text-anchor="middle" font-size="12" data-full-label="gamma"><title>gamma</title>gamma</text>
   </g>
-  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="41.56" y="200.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 41.56 200.5)" data-axis="y">value</text>
+  <g fill="#737373" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="41.14" y="200.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 41.14 200.5)" data-axis="y">value</text>
     <text x="386" y="380.6" text-anchor="middle" dominant-baseline="hanging" data-axis="x">category</text>
   </g>
   <g>

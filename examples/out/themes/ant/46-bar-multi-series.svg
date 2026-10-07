@@ -5,12 +5,12 @@
   <g font-size="12" font-weight="400" fill="#262626">
     <circle cx="71" cy="40" r="5" fill="#5AD8A6"/>
     <text x="80" y="44" data-legend="free">free</text>
-    <circle cx="130.76" cy="40" r="5" fill="#E8684A"/>
-    <text x="139.76" y="44" data-legend="pro">pro</text>
+    <circle cx="124.7" cy="40" r="5" fill="#E8684A"/>
+    <text x="133.7" y="44" data-legend="pro">pro</text>
   </g>
   <path d="M66 355 L706 355" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1"/>
   <path d="M226 355 L226 359 M546 355 L546 359" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-axis-ticks="1"/>
-  <g fill="#8C8C8C" font-size="12" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400">
     <text x="58" y="355" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="58" y="260" text-anchor="end" dominant-baseline="middle">50</text>
     <text x="58" y="165" text-anchor="end" dominant-baseline="middle">100</text>
@@ -18,8 +18,8 @@
     <text x="226" y="371" text-anchor="middle" font-size="12" data-full-label="Jan"><title>Jan</title>Jan</text>
     <text x="546" y="371" text-anchor="middle" font-size="12" data-full-label="Feb"><title>Feb</title>Feb</text>
   </g>
-  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="26.68" y="212.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 26.68 212.5)" data-axis="y">seats</text>
+  <g fill="#737373" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="26.4" y="212.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 26.4 212.5)" data-axis="y">seats</text>
     <text x="386" y="380.6" text-anchor="middle" dominant-baseline="hanging" data-axis="x">month</text>
   </g>
   <g>

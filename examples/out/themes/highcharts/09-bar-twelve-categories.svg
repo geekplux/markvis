@@ -3,7 +3,7 @@
   <desc id="mv-ac9a8903c1bfbfcc-desc">bar chart. Jul peaked Midtown walks at 22k. x=month. y=walks. unit=walks. 12 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Jul peaked Midtown walks at 22k</title>Jul peaked Midtown walks at 22k</text>
   <text x="360" y="46" text-anchor="middle" font-size="12" font-weight="400" fill="#666666" data-subtitle="1">walks</text>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="272" y2="272"/>
     <line x1="74" x2="700" y1="170" y2="170"/>
     <line x1="74" x2="700" y1="68" y2="68"/>
@@ -29,7 +29,7 @@
     <text x="673.92" y="391" text-anchor="middle" font-size="11" data-full-label="Dec"><title>Dec</title>Dec</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="16.08" y="221" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 16.08 221)" data-axis="y">walks</text>
+    <text x="17.62" y="221" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 17.62 221)" data-axis="y">walks</text>
     <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">month</text>
   </g>
   <g>

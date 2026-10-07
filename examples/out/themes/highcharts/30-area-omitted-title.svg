@@ -2,7 +2,7 @@
   <title id="mv-cdbac949a672f636-title">Day 4 peaked warehouse intake at 120</title>
   <desc id="mv-cdbac949a672f636-desc">area chart. Day 4 peaked warehouse intake at 120. x=day. y=intake. 4 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Day 4 peaked warehouse intake at 120</title>Day 4 peaked warehouse intake at 120</text>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="264" y2="264"/>
     <line x1="74" x2="700" y1="154" y2="154"/>
     <line x1="74" x2="700" y1="44" y2="44"/>
@@ -22,7 +22,7 @@
     <text x="692" y="391" text-anchor="middle" font-size="11" data-full-label="5"><title>5</title>5</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="36.54" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 36.54 209)" data-axis="y">intake</text>
+    <text x="35.52" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 35.52 209)" data-axis="y">intake</text>
     <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">day</text>
   </g>
   <g fill="none">

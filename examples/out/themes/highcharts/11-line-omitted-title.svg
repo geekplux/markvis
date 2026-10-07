@@ -3,7 +3,7 @@
   <desc id="mv-2891e3f7754a99f2-desc">line chart. Tuesday peaked corridor delays at 120 min. x=day. y=delay_min. unit=min. 5 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Tuesday peaked corridor delays at 120 min</title>Tuesday peaked corridor delays at 120 min</text>
   <text x="360" y="46" text-anchor="middle" font-size="12" font-weight="400" fill="#666666" data-subtitle="1">min</text>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="297.5" y2="297.5"/>
     <line x1="74" x2="700" y1="221" y2="221"/>
     <line x1="74" x2="700" y1="144.5" y2="144.5"/>
@@ -24,7 +24,7 @@
     <text x="637.4" y="391" text-anchor="middle" font-size="11" data-full-label="Fri"><title>Fri</title>Fri</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="36.54" y="221" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 36.54 221)" data-axis="y">delay_min · min</text>
+    <text x="35.52" y="221" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 35.52 221)" data-axis="y">delay_min · min</text>
     <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">day</text>
   </g>
   <g fill="none">

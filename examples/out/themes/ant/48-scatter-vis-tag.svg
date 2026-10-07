@@ -2,7 +2,7 @@
   <title id="mv-a2ff55452aa66703-title">Most points sit near the axes</title>
   <desc id="mv-a2ff55452aa66703-desc">scatter chart. Most points sit near the axes. x=dx. y=dy. 4 rows.</desc>
   <text x="66" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Most points sit near the axes</title>Most points sit near the axes</text>
-  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4">
+  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4" data-grid="1">
     <line x1="66" x2="706" y1="293.2" y2="293.2"/>
     <line x1="66" x2="706" y1="231.4" y2="231.4"/>
     <line x1="66" x2="706" y1="107.8" y2="107.8"/>
@@ -11,7 +11,7 @@
   <path d="M66 355 L706 355" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1"/>
   <path d="M74 355 L74 359 M230 355 L230 359 M386 355 L386 359 M542 355 L542 359 M698 355 L698 359" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-axis-ticks="1"/>
   <line x1="66" x2="706" y1="293.2" y2="293.2" stroke="#262626" stroke-opacity="0.32" stroke-width="1"/>
-  <g fill="#8C8C8C" font-size="12" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400">
     <text x="58" y="355" text-anchor="end" dominant-baseline="middle">-1</text>
     <text x="58" y="293.2" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="58" y="231.4" text-anchor="end" dominant-baseline="middle">1</text>
@@ -24,8 +24,8 @@
     <text x="542" y="371" text-anchor="middle" font-size="12" data-full-label="2"><title>2</title>2</text>
     <text x="698" y="371" text-anchor="middle" font-size="12" data-full-label="3"><title>3</title>3</text>
   </g>
-  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="34.12" y="200.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 34.12 200.5)" data-axis="y">dy</text>
+  <g fill="#737373" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="36.22" y="200.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 36.22 200.5)" data-axis="y">dy</text>
     <text x="386" y="380.6" text-anchor="middle" dominant-baseline="hanging" data-axis="x">dx</text>
   </g>
   <g>

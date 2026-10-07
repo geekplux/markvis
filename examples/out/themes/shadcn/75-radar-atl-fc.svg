@@ -2,33 +2,33 @@
   <title id="mv-36540905858b9d72-title">Home press still leads Atlanta FC match profile at 88</title>
   <desc id="mv-36540905858b9d72-desc">radar chart. Home press still leads Atlanta FC match profile at 88. x=trait. y=score. series=venue. 12 rows.</desc>
   <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
-  <text x="49.2" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Home press still leads Atlanta FC match profile at 88</title>Home press still leads Atlanta FC match profile at 88</text>
+  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Home press still leads Atlanta FC match profile at 88</title>Home press still leads Atlanta FC match profile at 88</text>
   <g font-size="12" font-weight="500" fill="#0A0A0A">
-    <rect x="307.24" y="435" width="10" height="10" fill="#F54900" rx="3"/>
-    <text x="321.24" y="444" data-legend="Home">Home</text>
-    <rect x="367" y="435" width="10" height="10" fill="#009689" rx="3"/>
-    <text x="381" y="444" data-legend="Away">Away</text>
+    <rect x="305.58" y="435" width="10" height="10" fill="#F54900" rx="3"/>
+    <text x="319.58" y="444" data-legend="Home">Home</text>
+    <rect x="370.81" y="435" width="10" height="10" fill="#009689" rx="3"/>
+    <text x="384.81" y="444" data-legend="Away">Away</text>
   </g>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-radar-grid="1">
-    <path d="M360 156.77 L418.22 190.39 L418.22 257.61 L360 291.23 L301.78 257.61 L301.78 190.39 Z"/>
-    <line x1="360" y1="224" x2="360" y2="105.68"/>
-    <line x1="360" y1="224" x2="462.47" y2="164.84"/>
-    <line x1="360" y1="224" x2="462.47" y2="283.16"/>
-    <line x1="360" y1="224" x2="360" y2="342.32"/>
-    <line x1="360" y1="224" x2="257.53" y2="283.16"/>
-    <line x1="360" y1="224" x2="257.53" y2="164.84"/>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-grid="1" data-radar-grid="1">
+    <path d="M362.53 156.77 L420.75 190.39 L420.75 257.61 L362.53 291.23 L304.31 257.61 L304.31 190.39 Z"/>
+    <line x1="362.53" y1="224" x2="362.53" y2="105.68"/>
+    <line x1="362.53" y1="224" x2="464.99" y2="164.84"/>
+    <line x1="362.53" y1="224" x2="464.99" y2="283.16"/>
+    <line x1="362.53" y1="224" x2="362.53" y2="342.32"/>
+    <line x1="362.53" y1="224" x2="260.06" y2="283.16"/>
+    <line x1="362.53" y1="224" x2="260.06" y2="164.84"/>
   </g>
   <g data-radar="1">
-    <path d="M360 105.68 L446.17 174.25 L440.34 270.39 L360 332.91 L270.34 275.77 L276.16 175.6 Z" fill="#F54900" fill-opacity="0.12" stroke="#F54900" stroke-width="1.75" data-series="Home"/>
-    <path d="M360 128.54 L439.18 178.29 L434.52 267.03 L360 318.12 L275 273.08 L288.97 182.99 Z" fill="#009689" fill-opacity="0.12" stroke="#009689" stroke-width="1.75" data-series="Away"/>
+    <path d="M362.53 105.68 L448.69 174.25 L442.87 270.39 L362.53 332.91 L272.87 275.77 L278.69 175.6 Z" fill="#F54900" fill-opacity="0.12" stroke="#F54900" stroke-width="1.75" data-series="Home"/>
+    <path d="M362.53 128.54 L441.71 178.29 L437.05 267.03 L362.53 318.12 L277.52 273.08 L291.5 182.99 Z" fill="#009689" fill-opacity="0.12" stroke="#009689" stroke-width="1.75" data-series="Away"/>
   </g>
   <g fill="#737373" font-size="12" font-weight="400">
-    <text x="360" y="91.68" text-anchor="middle" dominant-baseline="middle" data-spoke="Press">Press</text>
-    <text x="474.59" y="157.84" text-anchor="middle" dominant-baseline="middle" data-spoke="Build">Build</text>
-    <text x="474.59" y="290.16" text-anchor="middle" dominant-baseline="middle" data-spoke="Set pieces">Set pieces</text>
-    <text x="360" y="356.32" text-anchor="middle" dominant-baseline="middle" data-spoke="Width">Width</text>
-    <text x="245.41" y="290.16" text-anchor="middle" dominant-baseline="middle" data-spoke="Recovery">Recovery</text>
-    <text x="245.41" y="157.84" text-anchor="middle" dominant-baseline="middle" data-spoke="Finishing">Finishing</text>
-    <text x="360" y="152.77" text-anchor="middle" font-size="12" fill="#737373" data-radar-tick="50">50</text>
+    <text x="362.53" y="91.68" text-anchor="middle" dominant-baseline="middle" data-spoke="Press">Press</text>
+    <text x="477.12" y="157.84" text-anchor="middle" dominant-baseline="middle" data-spoke="Build">Build</text>
+    <text x="477.12" y="290.16" text-anchor="middle" dominant-baseline="middle" data-spoke="Set pieces">Set pieces</text>
+    <text x="362.53" y="356.32" text-anchor="middle" dominant-baseline="middle" data-spoke="Width">Width</text>
+    <text x="247.93" y="290.16" text-anchor="middle" dominant-baseline="middle" data-spoke="Recovery">Recovery</text>
+    <text x="247.93" y="157.84" text-anchor="middle" dominant-baseline="middle" data-spoke="Finishing">Finishing</text>
+    <text x="362.53" y="152.77" text-anchor="middle" font-size="12" fill="#737373" data-radar-tick="50">50</text>
   </g>
 </svg>

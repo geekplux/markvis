@@ -3,7 +3,7 @@
   <desc id="mv-db35afdfe14ff66f-desc">waterfall chart. Weekend retail still covers L5P rent after payroll. x=step. y=delta. unit=USD. 8 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Weekend retail still covers L5P rent after payroll</title>Weekend retail still covers L5P rent after payroll</text>
   <text x="360" y="46" text-anchor="middle" font-size="12" font-weight="400" fill="#666666" data-subtitle="1">USD</text>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="262.67" y2="262.67"/>
     <line x1="74" x2="700" y1="165.33" y2="165.33"/>
   </g>
@@ -41,7 +41,7 @@
     <text x="66" y="165.33" text-anchor="end" dominant-baseline="middle">10,000</text>
     <text x="66" y="68" text-anchor="end" dominant-baseline="middle">15,000</text>
     <text x="113.13" y="371" text-anchor="middle" data-full-label="Weekday sales"><tspan x="113.13" dy="0">Weekday</tspan><tspan x="113.13" dy="14">sales</tspan></text>
-    <text x="191.38" y="371" text-anchor="middle" data-full-label="Weekend retail"><tspan x="191.38" dy="0">Weekend</tspan><tspan x="191.38" dy="14">retail</tspan></text>
+    <text x="191.38" y="371" text-anchor="middle" data-full-label="Weekend retail">Weekend retail</text>
     <text x="269.63" y="371" text-anchor="middle" data-full-label="Online">Online</text>
     <text x="347.88" y="371" text-anchor="middle" data-full-label="Wholesale">Wholesale</text>
     <text x="426.13" y="371" text-anchor="middle" data-full-label="Payroll">Payroll</text>

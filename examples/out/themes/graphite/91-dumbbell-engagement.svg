@@ -1,49 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="276" viewBox="0 0 720 276" role="img" aria-label="dumbbell chart: Support&apos;s engagement fell while every other team rose, 8 rows, series survey" aria-labelledby="mv-e5c4828177413941-title" aria-describedby="mv-e5c4828177413941-desc" data-markvis="2" data-chart-type="dumbbell" data-id="mv-e5c4828177413941" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="251" viewBox="0 0 720 251" role="img" aria-label="dumbbell chart: Support&apos;s engagement fell while every other team rose, 8 rows, series survey" aria-labelledby="mv-e5c4828177413941-title" aria-describedby="mv-e5c4828177413941-desc" data-markvis="2" data-chart-type="dumbbell" data-id="mv-e5c4828177413941" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-e5c4828177413941-title">Support&apos;s engagement fell while every other team rose</title>
   <desc id="mv-e5c4828177413941-desc">dumbbell chart. Support&apos;s engagement fell while every other team rose. x=team. y=score. series=survey. 8 rows.</desc>
-  <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Support&apos;s engagement fell while every other team rose</title><tspan x="52" dy="0">Support&apos;s engagement fell while every other team</tspan><tspan x="52" dy="25">rose</tspan></text>
-  <g fill="none" stroke="#1B1B19" stroke-opacity="0.22" stroke-width="0.5">
-    <line x1="97.02" x2="97.02" y1="77" y2="213"/>
-    <line x1="242.75" x2="242.75" y1="77" y2="213"/>
-    <line x1="388.48" x2="388.48" y1="77" y2="213"/>
-    <line x1="534.2" x2="534.2" y1="77" y2="213"/>
-    <line x1="679.93" x2="679.93" y1="77" y2="213"/>
+  <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Support&apos;s engagement fell while every other team rose</title>Support&apos;s engagement fell while every other team rose</text>
+  <g fill="none" stroke="#1B1B19" stroke-opacity="0.22" stroke-width="0.5" data-grid="1">
+    <line x1="83.82" x2="83.82" y1="52" y2="188"/>
+    <line x1="232.55" x2="232.55" y1="52" y2="188"/>
+    <line x1="381.28" x2="381.28" y1="52" y2="188"/>
+    <line x1="530.01" x2="530.01" y1="52" y2="188"/>
+    <line x1="678.74" x2="678.74" y1="52" y2="188"/>
   </g>
-  <g fill="#8E8D87" font-size="11" font-weight="600">
-    <text x="87.02" y="94" text-anchor="end" dominant-baseline="middle" data-full-label="Engineering"><title>Engineering</title><tspan x="87.02" dy="0">Engineering</tspan></text>
-    <text x="87.02" y="128" text-anchor="end" dominant-baseline="middle" data-full-label="Design"><title>Design</title><tspan x="87.02" dy="0">Design</tspan></text>
-    <text x="87.02" y="162" text-anchor="end" dominant-baseline="middle" data-full-label="Sales"><title>Sales</title><tspan x="87.02" dy="0">Sales</tspan></text>
-    <text x="87.02" y="196" text-anchor="end" dominant-baseline="middle" data-full-label="Support"><title>Support</title><tspan x="87.02" dy="0">Support</tspan></text>
-    <text x="97.02" y="230" text-anchor="middle">60</text>
-    <text x="242.75" y="230" text-anchor="middle">65</text>
-    <text x="388.48" y="230" text-anchor="middle">70</text>
-    <text x="534.2" y="230" text-anchor="middle">75</text>
-    <text x="679.93" y="230" text-anchor="middle">80</text>
+  <g fill="#6A6964" font-size="11" font-weight="600">
+    <text x="73.82" y="69" text-anchor="end" dominant-baseline="middle" data-full-label="Engineering"><title>Engineering</title><tspan x="73.82" dy="0">Engineering</tspan></text>
+    <text x="73.82" y="103" text-anchor="end" dominant-baseline="middle" data-full-label="Design"><title>Design</title><tspan x="73.82" dy="0">Design</tspan></text>
+    <text x="73.82" y="137" text-anchor="end" dominant-baseline="middle" data-full-label="Sales"><title>Sales</title><tspan x="73.82" dy="0">Sales</tspan></text>
+    <text x="73.82" y="171" text-anchor="end" dominant-baseline="middle" data-full-label="Support"><title>Support</title><tspan x="73.82" dy="0">Support</tspan></text>
+    <text x="83.82" y="205" text-anchor="middle">60</text>
+    <text x="232.55" y="205" text-anchor="middle">65</text>
+    <text x="381.28" y="205" text-anchor="middle">70</text>
+    <text x="530.01" y="205" text-anchor="middle">75</text>
+    <text x="678.74" y="205" text-anchor="middle">80</text>
   </g>
   <g font-size="11" font-weight="500" fill="#1B1B19">
-    <circle cx="102.02" cy="250" r="4.5" fill="#ffffff" stroke="#1B1B19" stroke-width="1.5"/>
-    <text x="111.02" y="254" data-legend="2025">2025</text>
-    <circle cx="159.3" cy="250" r="4.5" fill="#4A4945"/>
-    <text x="168.3" y="254" data-legend="2026">2026</text>
+    <circle cx="88.82" cy="225" r="4.5" fill="#ffffff" stroke="#1B1B19" stroke-width="1.5"/>
+    <text x="97.82" y="229" data-legend="2025">2025</text>
+    <circle cx="147.57" cy="225" r="4.5" fill="#4A4945"/>
+    <text x="156.57" y="229" data-legend="2026">2026</text>
   </g>
   <g data-dumbbell="1">
-    <line x1="417.62" x2="563.35" y1="94" y2="94" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="3" stroke-linecap="round" data-x="Engineering"/>
-    <circle cx="417.62" cy="94" r="6" fill="#ffffff" stroke="#1B1B19" stroke-width="2" data-x="Engineering" data-series="2025" data-y="71"/>
-    <circle cx="563.35" cy="94" r="6" fill="#4A4945" data-x="Engineering" data-series="2026" data-y="76"/>
-    <line x1="330.18" x2="505.06" y1="128" y2="128" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="3" stroke-linecap="round" data-x="Design"/>
-    <circle cx="330.18" cy="128" r="6" fill="#ffffff" stroke="#1B1B19" stroke-width="2" data-x="Design" data-series="2025" data-y="68"/>
-    <circle cx="505.06" cy="128" r="6" fill="#4A4945" data-x="Design" data-series="2026" data-y="74"/>
-    <line x1="155.31" x2="242.75" y1="162" y2="162" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="3" stroke-linecap="round" data-x="Sales"/>
-    <circle cx="155.31" cy="162" r="6" fill="#ffffff" stroke="#1B1B19" stroke-width="2" data-x="Sales" data-series="2025" data-y="62"/>
-    <circle cx="242.75" cy="162" r="6" fill="#4A4945" data-x="Sales" data-series="2026" data-y="65"/>
-    <line x1="388.48" x2="126.17" y1="196" y2="196" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="3" stroke-linecap="round" data-x="Support"/>
-    <circle cx="388.48" cy="196" r="6" fill="#ffffff" stroke="#1B1B19" stroke-width="2" data-x="Support" data-series="2025" data-y="70"/>
-    <circle cx="126.17" cy="196" r="6" fill="#4A4945" data-x="Support" data-series="2026" data-y="61"/>
+    <line x1="411.03" x2="559.76" y1="69" y2="69" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="3" stroke-linecap="round" data-x="Engineering"/>
+    <circle cx="411.03" cy="69" r="6" fill="#ffffff" stroke="#1B1B19" stroke-width="2" data-x="Engineering" data-series="2025" data-y="71"/>
+    <circle cx="559.76" cy="69" r="6" fill="#4A4945" data-x="Engineering" data-series="2026" data-y="76"/>
+    <line x1="321.79" x2="500.27" y1="103" y2="103" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="3" stroke-linecap="round" data-x="Design"/>
+    <circle cx="321.79" cy="103" r="6" fill="#ffffff" stroke="#1B1B19" stroke-width="2" data-x="Design" data-series="2025" data-y="68"/>
+    <circle cx="500.27" cy="103" r="6" fill="#4A4945" data-x="Design" data-series="2026" data-y="74"/>
+    <line x1="143.31" x2="232.55" y1="137" y2="137" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="3" stroke-linecap="round" data-x="Sales"/>
+    <circle cx="143.31" cy="137" r="6" fill="#ffffff" stroke="#1B1B19" stroke-width="2" data-x="Sales" data-series="2025" data-y="62"/>
+    <circle cx="232.55" cy="137" r="6" fill="#4A4945" data-x="Sales" data-series="2026" data-y="65"/>
+    <line x1="381.28" x2="113.56" y1="171" y2="171" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="3" stroke-linecap="round" data-x="Support"/>
+    <circle cx="381.28" cy="171" r="6" fill="#ffffff" stroke="#1B1B19" stroke-width="2" data-x="Support" data-series="2025" data-y="70"/>
+    <circle cx="113.56" cy="171" r="6" fill="#4A4945" data-x="Support" data-series="2026" data-y="61"/>
   </g>
   <g fill="#1B1B19" font-size="12" font-weight="800">
-    <text x="691.93" y="94" dominant-baseline="middle" data-delta="Engineering">+5</text>
-    <text x="691.93" y="128" dominant-baseline="middle" data-delta="Design">+6</text>
-    <text x="691.93" y="162" dominant-baseline="middle" data-delta="Sales">+3</text>
-    <text x="691.93" y="196" dominant-baseline="middle" data-delta="Support">-9</text>
+    <text x="690.74" y="69" dominant-baseline="middle" data-delta="Engineering">+5</text>
+    <text x="690.74" y="103" dominant-baseline="middle" data-delta="Design">+6</text>
+    <text x="690.74" y="137" dominant-baseline="middle" data-delta="Sales">+3</text>
+    <text x="690.74" y="171" dominant-baseline="middle" data-delta="Support">-9</text>
   </g>
 </svg>

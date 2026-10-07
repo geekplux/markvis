@@ -4,31 +4,31 @@
   <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
   <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Grady still leads Midtown High on writing readiness</title>Grady still leads Midtown High on writing readiness</text>
   <g font-size="12" font-weight="500" fill="#0A0A0A">
-    <rect x="293.62" y="435" width="10" height="10" fill="#F54900" rx="3"/>
-    <text x="307.62" y="444" data-legend="Grady">Grady</text>
-    <rect x="360.82" y="435" width="10" height="10" fill="#009689" rx="3"/>
-    <text x="374.82" y="444" data-legend="Midtown">Midtown</text>
+    <rect x="294.75" y="435" width="10" height="10" fill="#F54900" rx="3"/>
+    <text x="308.75" y="444" data-legend="Grady">Grady</text>
+    <rect x="361.34" y="435" width="10" height="10" fill="#009689" rx="3"/>
+    <text x="375.34" y="444" data-legend="Midtown">Midtown</text>
   </g>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-radar-grid="1">
-    <path d="M361.26 158.27 L418.19 191.13 L418.19 256.87 L361.26 289.73 L304.33 256.87 L304.33 191.13 Z"/>
-    <line x1="361.26" y1="224" x2="361.26" y2="105.68"/>
-    <line x1="361.26" y1="224" x2="463.73" y2="164.84"/>
-    <line x1="361.26" y1="224" x2="463.73" y2="283.16"/>
-    <line x1="361.26" y1="224" x2="361.26" y2="342.32"/>
-    <line x1="361.26" y1="224" x2="258.79" y2="283.16"/>
-    <line x1="361.26" y1="224" x2="258.79" y2="164.84"/>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-grid="1" data-radar-grid="1">
+    <path d="M361.95 158.27 L418.87 191.13 L418.87 256.87 L361.95 289.73 L305.02 256.87 L305.02 191.13 Z"/>
+    <line x1="361.95" y1="224" x2="361.95" y2="105.68"/>
+    <line x1="361.95" y1="224" x2="464.42" y2="164.84"/>
+    <line x1="361.95" y1="224" x2="464.42" y2="283.16"/>
+    <line x1="361.95" y1="224" x2="361.95" y2="342.32"/>
+    <line x1="361.95" y1="224" x2="259.48" y2="283.16"/>
+    <line x1="361.95" y1="224" x2="259.48" y2="164.84"/>
   </g>
   <g data-radar="1">
-    <path d="M361.26 116.2 L463.73 164.84 L450.07 275.27 L361.26 335.75 L269.04 277.24 L274.73 174.04 Z" fill="#F54900" fill-opacity="0.12" stroke="#F54900" stroke-width="1.75" data-series="Grady"/>
-    <path d="M361.26 124.09 L442.1 177.33 L452.34 276.59 L361.26 321.29 L279.29 271.33 L271.32 172.07 Z" fill="#009689" fill-opacity="0.12" stroke="#009689" stroke-width="1.75" data-series="Midtown"/>
+    <path d="M361.95 116.2 L464.42 164.84 L450.75 275.27 L361.95 335.75 L269.73 277.24 L275.42 174.04 Z" fill="#F54900" fill-opacity="0.12" stroke="#F54900" stroke-width="1.75" data-series="Grady"/>
+    <path d="M361.95 124.09 L442.78 177.33 L453.03 276.59 L361.95 321.29 L279.97 271.33 L272 172.07 Z" fill="#009689" fill-opacity="0.12" stroke="#009689" stroke-width="1.75" data-series="Midtown"/>
   </g>
   <g fill="#737373" font-size="12" font-weight="400">
-    <text x="361.26" y="91.68" text-anchor="middle" dominant-baseline="middle" data-spoke="Math">Math</text>
-    <text x="475.85" y="157.84" text-anchor="middle" dominant-baseline="middle" data-spoke="Writing">Writing</text>
-    <text x="475.85" y="290.16" text-anchor="middle" dominant-baseline="middle" data-spoke="Labs">Labs</text>
-    <text x="361.26" y="356.32" text-anchor="middle" dominant-baseline="middle" data-spoke="Research">Research</text>
-    <text x="246.67" y="290.16" text-anchor="middle" dominant-baseline="middle" data-spoke="History">History</text>
-    <text x="246.67" y="157.84" text-anchor="middle" dominant-baseline="middle" data-spoke="Languages">Languages</text>
-    <text x="361.26" y="154.27" text-anchor="middle" font-size="12" fill="#737373" data-radar-tick="50">50</text>
+    <text x="361.95" y="91.68" text-anchor="middle" dominant-baseline="middle" data-spoke="Math">Math</text>
+    <text x="476.54" y="157.84" text-anchor="middle" dominant-baseline="middle" data-spoke="Writing">Writing</text>
+    <text x="476.54" y="290.16" text-anchor="middle" dominant-baseline="middle" data-spoke="Labs">Labs</text>
+    <text x="361.95" y="356.32" text-anchor="middle" dominant-baseline="middle" data-spoke="Research">Research</text>
+    <text x="247.35" y="290.16" text-anchor="middle" dominant-baseline="middle" data-spoke="History">History</text>
+    <text x="247.35" y="157.84" text-anchor="middle" dominant-baseline="middle" data-spoke="Languages">Languages</text>
+    <text x="361.95" y="154.27" text-anchor="middle" font-size="12" fill="#737373" data-radar-tick="50">50</text>
   </g>
 </svg>

@@ -3,21 +3,21 @@
   <desc id="mv-edeeaf08edaeb9c1-desc">line chart. Points climb through beta weeks. x=milestone. y=points. 3 rows.</desc>
   <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
   <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Points climb through beta weeks</title>Points climb through beta weeks</text>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1">
-    <line x1="48" x2="700" y1="327.5" y2="327.5"/>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1">
+    <line x1="48" x2="700" y1="338.75" y2="338.75"/>
     <line x1="48" x2="700" y1="50" y2="50"/>
   </g>
   <g fill="#737373" font-size="12" font-weight="400">
-    <text x="40" y="420" text-anchor="end" dominant-baseline="middle">20</text>
-    <text x="40" y="327.5" text-anchor="end" dominant-baseline="middle">40</text>
-    <text x="40" y="235" text-anchor="end" dominant-baseline="middle">60</text>
-    <text x="40" y="142.5" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="40" y="435" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="40" y="338.75" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="40" y="242.5" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="40" y="146.25" text-anchor="end" dominant-baseline="middle">80</text>
     <text x="40" y="50" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="156.67" y="432" text-anchor="middle" font-size="12" data-full-label="Kickoff and discovery workshop"><title>Kickoff and discovery workshop</title><tspan x="156.67" dy="0">Kickoff and discovery</tspan><tspan x="156.67" dy="15">workshop</tspan></text>
-    <text x="374" y="432" text-anchor="middle" font-size="12" data-full-label="Alpha internal dogfood release"><title>Alpha internal dogfood release</title><tspan x="374" dy="0">Alpha internal dogfood</tspan><tspan x="374" dy="15">release</tspan></text>
-    <text x="591.33" y="432" text-anchor="middle" font-size="12" data-full-label="Public beta launch week"><title>Public beta launch week</title>Public beta launch week</text>
+    <text x="156.67" y="447" text-anchor="middle" font-size="12" data-full-label="Kickoff and discovery workshop"><title>Kickoff and discovery workshop</title>Kickoff and discovery workshop</text>
+    <text x="374" y="447" text-anchor="middle" font-size="12" data-full-label="Alpha internal dogfood release"><title>Alpha internal dogfood release</title>Alpha internal dogfood release</text>
+    <text x="591.33" y="447" text-anchor="middle" font-size="12" data-full-label="Public beta launch week"><title>Public beta launch week</title>Public beta launch week</text>
   </g>
   <g fill="none">
-    <path d="M156.67 327.5 C229.11 288.96 301.56 250.42 374 211.88 C446.44 173.33 518.89 134.79 591.33 96.25" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="points"/>
+    <path d="M156.67 338.75 C229.11 298.65 301.56 258.54 374 218.44 C446.44 178.33 518.89 138.23 591.33 98.13" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="points"/>
   </g>
 </svg>

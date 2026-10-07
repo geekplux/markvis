@@ -3,7 +3,7 @@
   <desc id="mv-a2ff55452aa66703-desc">scatter chart. Most points sit near the axes. x=dx. y=dy. 4 rows.</desc>
   <text x="58" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>Most points sit near the axes</title>MOST POINTS SIT NEAR THE AXES</text>
   <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3">
+  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3" data-grid="1">
     <line x1="58" x2="704" y1="358.8" y2="358.8"/>
     <line x1="58" x2="704" y1="200.4" y2="200.4"/>
     <line x1="58" x2="704" y1="42" y2="42"/>

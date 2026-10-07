@@ -2,47 +2,47 @@
   <title id="mv-7beccc92b6402652-title">Only West is short of its Q3 quota</title>
   <desc id="mv-7beccc92b6402652-desc">bullet chart. Only West is short of its Q3 quota. x=region. y=booked. unit=USD k. 4 rows.</desc>
   <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Only West is short of its Q3 quota</title>Only West is short of its Q3 quota</text>
-  <text x="52" y="50" text-anchor="start" font-size="12" font-weight="400" fill="#8E8D87" data-subtitle="1">USD k</text>
-  <g fill="none" stroke="#1B1B19" stroke-opacity="0.22" stroke-width="0.5">
-    <line x1="245.23" x2="245.23" y1="77" y2="213"/>
-    <line x1="434.46" x2="434.46" y1="77" y2="213"/>
-    <line x1="623.68" x2="623.68" y1="77" y2="213"/>
+  <text x="52" y="50" text-anchor="start" font-size="12" font-weight="400" fill="#6A6964" data-subtitle="1">USD k</text>
+  <g fill="none" stroke="#1B1B19" stroke-opacity="0.22" stroke-width="0.5" data-grid="1">
+    <line x1="248.3" x2="248.3" y1="77" y2="213"/>
+    <line x1="440.59" x2="440.59" y1="77" y2="213"/>
+    <line x1="632.89" x2="632.89" y1="77" y2="213"/>
   </g>
   <line x1="56" x2="56" y1="77" y2="213" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-baseline="0"/>
-  <g fill="#8E8D87" font-size="11" font-weight="600">
+  <g fill="#6A6964" font-size="11" font-weight="600">
     <text x="46" y="94" text-anchor="end" dominant-baseline="middle" data-full-label="North"><title>North</title><tspan x="46" dy="0">North</tspan></text>
     <text x="46" y="128" text-anchor="end" dominant-baseline="middle" data-full-label="South"><title>South</title><tspan x="46" dy="0">South</tspan></text>
     <text x="46" y="162" text-anchor="end" dominant-baseline="middle" data-full-label="East"><title>East</title><tspan x="46" dy="0">East</tspan></text>
     <text x="46" y="196" text-anchor="end" dominant-baseline="middle" data-full-label="West"><title>West</title><tspan x="46" dy="0">West</tspan></text>
     <text x="56" y="230" text-anchor="middle">0</text>
-    <text x="245.23" y="230" text-anchor="middle">200</text>
-    <text x="434.46" y="230" text-anchor="middle">400</text>
-    <text x="623.68" y="230" text-anchor="middle">600</text>
+    <text x="248.3" y="230" text-anchor="middle">200</text>
+    <text x="440.59" y="230" text-anchor="middle">400</text>
+    <text x="632.89" y="230" text-anchor="middle">600</text>
   </g>
   <g font-size="11" font-weight="500" fill="#1B1B19">
     <circle cx="61" cy="250" r="4.5" fill="#1B1B19"/>
     <text x="70" y="254" data-legend="booked">booked</text>
-    <rect x="130.92" y="244" width="2.5" height="12" fill="#1B1B19"/>
-    <text x="140.92" y="254" data-legend="quota">quota</text>
+    <rect x="131.16" y="244" width="2.5" height="12" fill="#1B1B19"/>
+    <text x="141.16" y="254" data-legend="quota">quota</text>
   </g>
   <g data-bullet="1">
-    <rect x="56" y="82" width="567.68" height="24" fill="#1B1B19" fill-opacity="0.07" data-track="North"/>
-    <path d="M56 89 L448.38 89 Q453.38 89 453.38 94 L453.38 94 Q453.38 99 448.38 99 L56 99 Z" fill="#1B1B19" data-x="North" data-y="420"/>
-    <line x1="434.46" x2="434.46" y1="84" y2="104" stroke="#1B1B19" stroke-width="2.5" data-target="400"/>
-    <rect x="56" y="116" width="567.68" height="24" fill="#1B1B19" fill-opacity="0.07" data-track="South"/>
-    <path d="M56 123 L396.34 123 Q401.34 123 401.34 128 L401.34 128 Q401.34 133 396.34 133 L56 133 Z" fill="#1B1B19" data-x="South" data-y="365"/>
-    <line x1="387.15" x2="387.15" y1="118" y2="138" stroke="#1B1B19" stroke-width="2.5" data-target="350"/>
-    <rect x="56" y="150" width="567.68" height="24" fill="#1B1B19" fill-opacity="0.07" data-track="East"/>
-    <path d="M56 157 L535.42 157 Q540.42 157 540.42 162 L540.42 162 Q540.42 167 535.42 167 L56 167 Z" fill="#1B1B19" data-x="East" data-y="512"/>
-    <line x1="510.15" x2="510.15" y1="152" y2="172" stroke="#1B1B19" stroke-width="2.5" data-target="480"/>
-    <rect x="56" y="184" width="567.68" height="24" fill="#1B1B19" fill-opacity="0.07" data-track="West"/>
-    <path d="M56 191 L323.49 191 Q328.49 191 328.49 196 L328.49 196 Q328.49 201 323.49 201 L56 201 Z" fill="#1B1B19" data-x="West" data-y="288"/>
-    <line x1="396.61" x2="396.61" y1="186" y2="206" stroke="#1B1B19" stroke-width="2.5" data-target="360"/>
+    <rect x="56" y="82" width="576.89" height="24" fill="#1B1B19" fill-opacity="0.07" data-track="North"/>
+    <path d="M56 89 L454.82 89 Q459.82 89 459.82 94 L459.82 94 Q459.82 99 454.82 99 L56 99 Z" fill="#1B1B19" data-x="North" data-y="420"/>
+    <line x1="440.59" x2="440.59" y1="84" y2="104" stroke="#1B1B19" stroke-width="2.5" data-target="400"/>
+    <rect x="56" y="116" width="576.89" height="24" fill="#1B1B19" fill-opacity="0.07" data-track="South"/>
+    <path d="M56 123 L401.94 123 Q406.94 123 406.94 128 L406.94 128 Q406.94 133 401.94 133 L56 133 Z" fill="#1B1B19" data-x="South" data-y="365"/>
+    <line x1="392.52" x2="392.52" y1="118" y2="138" stroke="#1B1B19" stroke-width="2.5" data-target="350"/>
+    <rect x="56" y="150" width="576.89" height="24" fill="#1B1B19" fill-opacity="0.07" data-track="East"/>
+    <path d="M56 157 L543.28 157 Q548.28 157 548.28 162 L548.28 162 Q548.28 167 543.28 167 L56 167 Z" fill="#1B1B19" data-x="East" data-y="512"/>
+    <line x1="517.51" x2="517.51" y1="152" y2="172" stroke="#1B1B19" stroke-width="2.5" data-target="480"/>
+    <rect x="56" y="184" width="576.89" height="24" fill="#1B1B19" fill-opacity="0.07" data-track="West"/>
+    <path d="M56 191 L327.91 191 Q332.91 191 332.91 196 L332.91 196 Q332.91 201 327.91 201 L56 201 Z" fill="#1B1B19" data-x="West" data-y="288"/>
+    <line x1="402.14" x2="402.14" y1="186" y2="206" stroke="#1B1B19" stroke-width="2.5" data-target="360"/>
   </g>
   <g fill="#1B1B19" font-size="12" font-weight="800">
-    <text x="635.68" y="94" dominant-baseline="middle" data-value-label="North">420<tspan fill="#8E8D87" font-weight="400"> / 400</tspan></text>
-    <text x="635.68" y="128" dominant-baseline="middle" data-value-label="South">365<tspan fill="#8E8D87" font-weight="400"> / 350</tspan></text>
-    <text x="635.68" y="162" dominant-baseline="middle" data-value-label="East">512<tspan fill="#8E8D87" font-weight="400"> / 480</tspan></text>
-    <text x="635.68" y="196" dominant-baseline="middle" data-value-label="West">288<tspan fill="#8E8D87" font-weight="400"> / 360</tspan></text>
+    <text x="644.89" y="94" dominant-baseline="middle" data-value-label="North">420<tspan fill="#6A6964" font-weight="400"> / 400</tspan></text>
+    <text x="644.89" y="128" dominant-baseline="middle" data-value-label="South">365<tspan fill="#6A6964" font-weight="400"> / 350</tspan></text>
+    <text x="644.89" y="162" dominant-baseline="middle" data-value-label="East">512<tspan fill="#6A6964" font-weight="400"> / 480</tspan></text>
+    <text x="644.89" y="196" dominant-baseline="middle" data-value-label="West">288<tspan fill="#6A6964" font-weight="400"> / 360</tspan></text>
   </g>
 </svg>

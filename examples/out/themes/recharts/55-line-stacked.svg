@@ -3,17 +3,17 @@
   <desc id="mv-61cebd44b0368518-desc">line chart. Walk-up plus member still climb through week 8. x=week. y=count. series=channel. 16 rows.</desc>
   <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>Walk-up plus member still climb through week 8</title>Walk-up plus member still climb through week 8</text>
   <g font-size="12" font-weight="400" fill="#374151">
-    <rect x="302.64" y="425" width="10" height="10" fill="#8884d8" rx="1"/>
-    <text x="316.64" y="434" data-legend="walk-up">walk-up</text>
-    <rect x="384.72" y="425" width="10" height="10" fill="#82ca9d" rx="1"/>
-    <text x="398.72" y="434" data-legend="member">member</text>
+    <rect x="303.11" y="425" width="10" height="10" fill="#8884d8" rx="1"/>
+    <text x="317.11" y="434" data-legend="walk-up">walk-up</text>
+    <rect x="380.42" y="425" width="10" height="10" fill="#82ca9d" rx="1"/>
+    <text x="394.42" y="434" data-legend="member">member</text>
   </g>
-  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3">
+  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-grid="1">
     <line x1="48" x2="700" y1="276" y2="276"/>
     <line x1="48" x2="700" y1="157" y2="157"/>
     <line x1="48" x2="700" y1="38" y2="38"/>
   </g>
-  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-v-grid="1">
+  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-grid="1" data-v-grid="1">
     <line x1="88.75" x2="88.75" y1="38" y2="395" data-v-grid="1"/>
     <line x1="170.25" x2="170.25" y1="38" y2="395" data-v-grid="1"/>
     <line x1="251.75" x2="251.75" y1="38" y2="395" data-v-grid="1"/>

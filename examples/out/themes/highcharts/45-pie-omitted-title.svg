@@ -3,12 +3,12 @@
   <desc id="mv-8636ea173fdc9363-desc">pie chart. Yes leads survey answers at 60. x=label. y=n. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Yes leads survey answers at 60</title>Yes leads survey answers at 60</text>
   <g font-size="12" font-weight="700" fill="#333333">
-    <circle cx="304.82" cy="420" r="5" fill="#7cb5ec"/>
-    <text x="313.82" y="424" data-legend="yes">yes</text>
-    <circle cx="358.93" cy="420" r="5" fill="#434348"/>
-    <text x="367.93" y="424" data-legend="no">no</text>
-    <circle cx="405" cy="420" r="5" fill="#90ed7d"/>
-    <text x="414" y="424" data-legend="other">other</text>
+    <circle cx="309.32" cy="420" r="5" fill="#7cb5ec"/>
+    <text x="318.32" y="424" data-legend="yes">yes</text>
+    <circle cx="360.76" cy="420" r="5" fill="#434348"/>
+    <text x="369.76" y="424" data-legend="no">no</text>
+    <circle cx="406.78" cy="420" r="5" fill="#90ed7d"/>
+    <text x="415.78" y="424" data-legend="other">other</text>
   </g>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0">
     <path d="M378 220 L378 100.32 A119.68 119.68 0 1 1 307.65 316.82 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="yes" data-raw-value="60"/>

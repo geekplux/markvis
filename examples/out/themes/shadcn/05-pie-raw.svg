@@ -4,16 +4,16 @@
   <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
   <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>MARTA takes the largest mode share</title>MARTA takes the largest mode share</text>
   <g font-size="12" font-weight="500" fill="#0A0A0A">
-    <rect x="220.44" y="435" width="10" height="10" fill="#F54900" rx="3"/>
-    <text x="234.44" y="444" data-legend="MARTA">MARTA</text>
-    <rect x="287.64" y="435" width="10" height="10" fill="#009689" rx="3"/>
-    <text x="301.64" y="444" data-legend="Walk">Walk</text>
-    <rect x="347.4" y="435" width="10" height="10" fill="#104E64" rx="3"/>
-    <text x="361.4" y="444" data-legend="Drive">Drive</text>
-    <rect x="414.6" y="435" width="10" height="10" fill="#FFB900" rx="3"/>
-    <text x="428.6" y="444" data-legend="Bike">Bike</text>
-    <rect x="474.36" y="435" width="10" height="10" fill="#FE9A00" rx="3"/>
-    <text x="488.36" y="444" data-legend="Other">Other</text>
+    <rect x="222.43" y="435" width="10" height="10" fill="#F54900" rx="3"/>
+    <text x="236.43" y="444" data-legend="MARTA">MARTA</text>
+    <rect x="297.7" y="435" width="10" height="10" fill="#009689" rx="3"/>
+    <text x="311.7" y="444" data-legend="Walk">Walk</text>
+    <rect x="357.36" y="435" width="10" height="10" fill="#104E64" rx="3"/>
+    <text x="371.36" y="444" data-legend="Drive">Drive</text>
+    <rect x="419.08" y="435" width="10" height="10" fill="#FFB900" rx="3"/>
+    <text x="433.08" y="444" data-legend="Bike">Bike</text>
+    <rect x="475.24" y="435" width="10" height="10" fill="#FE9A00" rx="3"/>
+    <text x="489.24" y="444" data-legend="Other">Other</text>
   </g>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0.5">
     <path d="M374 108.56 A124.44 124.44 0 0 1 465.28 317.57 L419.64 275.29 A62.22 62.22 0 0 0 374 170.78 Z" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="MARTA" data-raw-value="38" data-donut="1"/>

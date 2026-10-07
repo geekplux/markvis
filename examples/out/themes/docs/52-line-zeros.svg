@@ -3,7 +3,7 @@
   <desc id="mv-cd5ddc80008e6dc7-desc">line chart. Tuesday took 12 minutes end-to-end. x=day. y=minutes. 4 rows.</desc>
   <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>Tuesday took 12 minutes end-to-end</title>TUESDAY TOOK 12 MINUTES END-TO-END</text>
   <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3">
+  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3" data-grid="1">
     <line x1="40" x2="704" y1="352.5" y2="352.5"/>
     <line x1="40" x2="704" y1="145.5" y2="145.5"/>
     <line x1="40" x2="704" y1="42" y2="42"/>

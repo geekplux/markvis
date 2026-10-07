@@ -1,52 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="305" viewBox="0 0 720 305" role="img" aria-label="dumbbell chart: Rents rose fastest along the Eastside Trail (USD), 10 rows, series year" aria-labelledby="mv-66d019e87716dfd8-title" aria-describedby="mv-66d019e87716dfd8-desc" data-markvis="2" data-chart-type="dumbbell" data-id="mv-66d019e87716dfd8" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="278" viewBox="0 0 720 278" role="img" aria-label="dumbbell chart: Rents rose fastest along the Eastside Trail (USD), 10 rows, series year" aria-labelledby="mv-66d019e87716dfd8-title" aria-describedby="mv-66d019e87716dfd8-desc" data-markvis="2" data-chart-type="dumbbell" data-id="mv-66d019e87716dfd8" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-66d019e87716dfd8-title">Rents rose fastest along the Eastside Trail</title>
   <desc id="mv-66d019e87716dfd8-desc">dumbbell chart. Rents rose fastest along the Eastside Trail. x=neighborhood. y=rent. series=year. unit=USD. 10 rows.</desc>
-  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Rents rose fastest along the Eastside Trail</title><tspan x="48" dy="0">Rents rose fastest along the Eastside</tspan><tspan x="48" dy="27">Trail</tspan><tspan font-size="13" font-weight="400" fill="#737373"> · USD</tspan></text>
-  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
-    <line x1="127.6" x2="127.6" y1="71" y2="241"/>
-    <line x1="306.32" x2="306.32" y1="71" y2="241"/>
-    <line x1="485.04" x2="485.04" y1="71" y2="241"/>
-    <line x1="663.76" x2="663.76" y1="71" y2="241"/>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Rents rose fastest along the Eastside Trail</title>Rents rose fastest along the Eastside Trail<tspan font-size="13" font-weight="400" fill="#737373"> · USD</tspan></text>
+  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1" data-grid="1">
+    <line x1="114.1" x2="114.1" y1="44" y2="214"/>
+    <line x1="296.4" x2="296.4" y1="44" y2="214"/>
+    <line x1="478.7" x2="478.7" y1="44" y2="214"/>
+    <line x1="661" x2="661" y1="44" y2="214"/>
   </g>
   <g fill="#737373" font-size="12" font-weight="400">
-    <text x="117.6" y="88" text-anchor="end" dominant-baseline="middle" data-full-label="Old Fourth Ward"><title>Old Fourth Ward</title><tspan x="117.6" dy="0">Old Fourth Ward</tspan></text>
-    <text x="117.6" y="122" text-anchor="end" dominant-baseline="middle" data-full-label="Inman Park"><title>Inman Park</title><tspan x="117.6" dy="0">Inman Park</tspan></text>
-    <text x="117.6" y="156" text-anchor="end" dominant-baseline="middle" data-full-label="Reynoldstown"><title>Reynoldstown</title><tspan x="117.6" dy="0">Reynoldstown</tspan></text>
-    <text x="117.6" y="190" text-anchor="end" dominant-baseline="middle" data-full-label="West End"><title>West End</title><tspan x="117.6" dy="0">West End</tspan></text>
-    <text x="117.6" y="224" text-anchor="end" dominant-baseline="middle" data-full-label="Adair Park"><title>Adair Park</title><tspan x="117.6" dy="0">Adair Park</tspan></text>
-    <text x="127.6" y="259" text-anchor="middle">1,000</text>
-    <text x="306.32" y="259" text-anchor="middle">1,500</text>
-    <text x="485.04" y="259" text-anchor="middle">2,000</text>
-    <text x="663.76" y="259" text-anchor="middle">2,500</text>
+    <text x="104.1" y="61" text-anchor="end" dominant-baseline="middle" data-full-label="Old Fourth Ward"><title>Old Fourth Ward</title><tspan x="104.1" dy="0">Old Fourth Ward</tspan></text>
+    <text x="104.1" y="95" text-anchor="end" dominant-baseline="middle" data-full-label="Inman Park"><title>Inman Park</title><tspan x="104.1" dy="0">Inman Park</tspan></text>
+    <text x="104.1" y="129" text-anchor="end" dominant-baseline="middle" data-full-label="Reynoldstown"><title>Reynoldstown</title><tspan x="104.1" dy="0">Reynoldstown</tspan></text>
+    <text x="104.1" y="163" text-anchor="end" dominant-baseline="middle" data-full-label="West End"><title>West End</title><tspan x="104.1" dy="0">West End</tspan></text>
+    <text x="104.1" y="197" text-anchor="end" dominant-baseline="middle" data-full-label="Adair Park"><title>Adair Park</title><tspan x="104.1" dy="0">Adair Park</tspan></text>
+    <text x="114.1" y="232" text-anchor="middle">1,000</text>
+    <text x="296.4" y="232" text-anchor="middle">1,500</text>
+    <text x="478.7" y="232" text-anchor="middle">2,000</text>
+    <text x="661" y="232" text-anchor="middle">2,500</text>
   </g>
   <g font-size="13" font-weight="400" fill="#171717">
-    <circle cx="132.6" cy="279" r="4.5" fill="#ffffff" stroke="#3B82F6" stroke-width="1.5"/>
-    <text x="141.6" y="283" data-legend="2024">2024</text>
-    <circle cx="194.84" cy="279" r="4.5" fill="#F97316"/>
-    <text x="203.84" y="283" data-legend="2026">2026</text>
+    <circle cx="119.1" cy="252" r="4.5" fill="#ffffff" stroke="#3B82F6" stroke-width="1.5"/>
+    <text x="128.1" y="256" data-legend="2024">2024</text>
+    <circle cx="182.6" cy="252" r="4.5" fill="#F97316"/>
+    <text x="191.6" y="256" data-legend="2026">2026</text>
   </g>
   <g data-dumbbell="1">
-    <line x1="406.4" x2="535.08" y1="88" y2="88" stroke="#171717" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round" data-x="Old Fourth Ward"/>
-    <circle cx="406.4" cy="88" r="6" fill="#ffffff" stroke="#3B82F6" stroke-width="2" data-x="Old Fourth Ward" data-series="2024" data-y="1,780"/>
-    <circle cx="535.08" cy="88" r="6" fill="#F97316" data-x="Old Fourth Ward" data-series="2026" data-y="2,140"/>
-    <line x1="431.42" x2="552.95" y1="122" y2="122" stroke="#171717" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round" data-x="Inman Park"/>
-    <circle cx="431.42" cy="122" r="6" fill="#ffffff" stroke="#3B82F6" stroke-width="2" data-x="Inman Park" data-series="2024" data-y="1,850"/>
-    <circle cx="552.95" cy="122" r="6" fill="#F97316" data-x="Inman Park" data-series="2026" data-y="2,190"/>
-    <line x1="313.47" x2="399.25" y1="156" y2="156" stroke="#171717" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round" data-x="Reynoldstown"/>
-    <circle cx="313.47" cy="156" r="6" fill="#ffffff" stroke="#3B82F6" stroke-width="2" data-x="Reynoldstown" data-series="2024" data-y="1,520"/>
-    <circle cx="399.25" cy="156" r="6" fill="#F97316" data-x="Reynoldstown" data-series="2026" data-y="1,760"/>
-    <line x1="238.41" x2="277.72" y1="190" y2="190" stroke="#171717" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round" data-x="West End"/>
-    <circle cx="238.41" cy="190" r="6" fill="#ffffff" stroke="#3B82F6" stroke-width="2" data-x="West End" data-series="2024" data-y="1,310"/>
-    <circle cx="277.72" cy="190" r="6" fill="#F97316" data-x="West End" data-series="2026" data-y="1,420"/>
-    <line x1="191.94" x2="213.39" y1="224" y2="224" stroke="#171717" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round" data-x="Adair Park"/>
-    <circle cx="191.94" cy="224" r="6" fill="#ffffff" stroke="#3B82F6" stroke-width="2" data-x="Adair Park" data-series="2024" data-y="1,180"/>
-    <circle cx="213.39" cy="224" r="6" fill="#F97316" data-x="Adair Park" data-series="2026" data-y="1,240"/>
+    <line x1="398.49" x2="529.74" y1="61" y2="61" stroke="#171717" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round" data-x="Old Fourth Ward"/>
+    <circle cx="398.49" cy="61" r="6" fill="#ffffff" stroke="#3B82F6" stroke-width="2" data-x="Old Fourth Ward" data-series="2024" data-y="1,780"/>
+    <circle cx="529.74" cy="61" r="6" fill="#F97316" data-x="Old Fourth Ward" data-series="2026" data-y="2,140"/>
+    <line x1="424.01" x2="547.97" y1="95" y2="95" stroke="#171717" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round" data-x="Inman Park"/>
+    <circle cx="424.01" cy="95" r="6" fill="#ffffff" stroke="#3B82F6" stroke-width="2" data-x="Inman Park" data-series="2024" data-y="1,850"/>
+    <circle cx="547.97" cy="95" r="6" fill="#F97316" data-x="Inman Park" data-series="2026" data-y="2,190"/>
+    <line x1="303.69" x2="391.19" y1="129" y2="129" stroke="#171717" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round" data-x="Reynoldstown"/>
+    <circle cx="303.69" cy="129" r="6" fill="#ffffff" stroke="#3B82F6" stroke-width="2" data-x="Reynoldstown" data-series="2024" data-y="1,520"/>
+    <circle cx="391.19" cy="129" r="6" fill="#F97316" data-x="Reynoldstown" data-series="2026" data-y="1,760"/>
+    <line x1="227.13" x2="267.23" y1="163" y2="163" stroke="#171717" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round" data-x="West End"/>
+    <circle cx="227.13" cy="163" r="6" fill="#ffffff" stroke="#3B82F6" stroke-width="2" data-x="West End" data-series="2024" data-y="1,310"/>
+    <circle cx="267.23" cy="163" r="6" fill="#F97316" data-x="West End" data-series="2026" data-y="1,420"/>
+    <line x1="179.73" x2="201.6" y1="197" y2="197" stroke="#171717" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round" data-x="Adair Park"/>
+    <circle cx="179.73" cy="197" r="6" fill="#ffffff" stroke="#3B82F6" stroke-width="2" data-x="Adair Park" data-series="2024" data-y="1,180"/>
+    <circle cx="201.6" cy="197" r="6" fill="#F97316" data-x="Adair Park" data-series="2026" data-y="1,240"/>
   </g>
   <g fill="#171717" font-size="13" font-weight="500">
-    <text x="675.76" y="88" dominant-baseline="middle" data-delta="Old Fourth Ward">+360</text>
-    <text x="675.76" y="122" dominant-baseline="middle" data-delta="Inman Park">+340</text>
-    <text x="675.76" y="156" dominant-baseline="middle" data-delta="Reynoldstown">+240</text>
-    <text x="675.76" y="190" dominant-baseline="middle" data-delta="West End">+110</text>
-    <text x="675.76" y="224" dominant-baseline="middle" data-delta="Adair Park">+60</text>
+    <text x="673" y="61" dominant-baseline="middle" data-delta="Old Fourth Ward">+360</text>
+    <text x="673" y="95" dominant-baseline="middle" data-delta="Inman Park">+340</text>
+    <text x="673" y="129" dominant-baseline="middle" data-delta="Reynoldstown">+240</text>
+    <text x="673" y="163" dominant-baseline="middle" data-delta="West End">+110</text>
+    <text x="673" y="197" dominant-baseline="middle" data-delta="Adair Park">+60</text>
   </g>
 </svg>

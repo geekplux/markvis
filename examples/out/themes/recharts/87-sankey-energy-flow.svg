@@ -1,64 +1,64 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="sankey chart: Natural gas still outruns solar into home heat, 19 rows, series to" aria-labelledby="mv-c7e185b63a73a050-title" aria-describedby="mv-c7e185b63a73a050-desc" data-markvis="2" data-chart-type="sankey" data-id="mv-c7e185b63a73a050" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-c7e185b63a73a050-title">Natural gas still outruns solar into home heat</title>
   <desc id="mv-c7e185b63a73a050-desc">sankey chart. Natural gas still outruns solar into home heat. x=from. y=twh. series=to. 19 rows.</desc>
-  <text x="99.84" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>Natural gas still outruns solar into home heat</title>Natural gas still outruns solar into home heat</text>
+  <text x="85.46" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>Natural gas still outruns solar into home heat</title>Natural gas still outruns solar into home heat</text>
   <g data-sankey-links="1">
-    <path d="M137.84 38 C205.99 38, 205.99 103.28, 274.13 103.28 L274.13 158.32 C205.99 158.32, 205.99 93.04, 137.84 93.04 Z" fill="#8884d8" fill-opacity="0.45" stroke="none" data-source="Coal" data-target="Electricity" data-y="28"/>
-    <path d="M137.84 280.61 C205.99 280.61, 205.99 262.5, 274.13 262.5 L274.13 364.72 C205.99 364.72, 205.99 382.82, 137.84 382.82 Z" fill="#ffc658" fill-opacity="0.45" stroke="none" data-source="Natural gas" data-target="Electricity" data-y="52"/>
-    <path d="M137.84 245.22 C281.13 245.22, 281.13 120.77, 424.43 120.77 L424.43 156.15 C281.13 156.15, 281.13 280.61, 137.84 280.61 Z" fill="#ffc658" fill-opacity="0.45" stroke="none" data-source="Natural gas" data-target="Industry" data-y="18"/>
-    <path d="M137.84 382.82 C281.13 382.82, 281.13 280.26, 424.43 280.26 L424.43 327.44 C281.13 327.44, 281.13 430, 137.84 430 Z" fill="#ffc658" fill-opacity="0.45" stroke="none" data-source="Natural gas" data-target="Homes" data-y="24"/>
-    <path d="M137.84 101.04 C205.99 101.04, 205.99 158.32, 274.13 158.32 L274.13 219.26 C205.99 219.26, 205.99 161.98, 137.84 161.98 Z" fill="#00C49F" fill-opacity="0.45" stroke="none" data-source="Nuclear" data-target="Electricity" data-y="31"/>
-    <path d="M137.84 169.98 C205.99 169.98, 205.99 219.26, 274.13 219.26 L274.13 231.05 C205.99 231.05, 205.99 181.77, 137.84 181.77 Z" fill="#FFBB28" fill-opacity="0.45" stroke="none" data-source="Hydro" data-target="Electricity" data-y="6"/>
-    <path d="M137.84 189.77 C205.99 189.77, 205.99 231.05, 274.13 231.05 L274.13 248.74 C205.99 248.74, 205.99 207.46, 137.84 207.46 Z" fill="#FF8042" fill-opacity="0.45" stroke="none" data-source="Solar" data-target="Electricity" data-y="9"/>
-    <path d="M137.84 215.46 C205.99 215.46, 205.99 248.74, 274.13 248.74 L274.13 256.61 C205.99 256.61, 205.99 223.33, 137.84 223.33 Z" fill="#8884d8" fill-opacity="0.324" stroke="none" data-source="Wind" data-target="Electricity" data-y="4"/>
-    <path d="M137.84 231.33 C205.99 231.33, 205.99 256.61, 274.13 256.61 L274.13 262.5 C205.99 262.5, 205.99 237.22, 137.84 237.22 Z" fill="#82ca9d" fill-opacity="0.324" stroke="none" data-source="Biomass" data-target="Electricity" data-y="3"/>
-    <path d="M288.13 183.87 C356.28 183.87, 356.28 189.84, 424.43 189.84 L424.43 280.26 C356.28 280.26, 356.28 274.3, 288.13 274.3 Z" fill="#82ca9d" fill-opacity="0.45" stroke="none" data-source="Electricity" data-target="Homes" data-y="46"/>
-    <path d="M288.13 274.3 C356.28 274.3, 356.28 335.44, 424.43 335.44 L424.43 410.14 C356.28 410.14, 356.28 348.99, 288.13 348.99 Z" fill="#82ca9d" fill-opacity="0.45" stroke="none" data-source="Electricity" data-target="Commerce" data-y="38"/>
-    <path d="M288.13 103.28 C356.28 103.28, 356.28 57.86, 424.43 57.86 L424.43 120.77 C356.28 120.77, 356.28 166.18, 288.13 166.18 Z" fill="#82ca9d" fill-opacity="0.45" stroke="none" data-source="Electricity" data-target="Industry" data-y="32"/>
-    <path d="M288.13 166.18 C356.28 166.18, 356.28 164.15, 424.43 164.15 L424.43 181.84 C356.28 181.84, 356.28 183.87, 288.13 183.87 Z" fill="#82ca9d" fill-opacity="0.45" stroke="none" data-source="Electricity" data-target="Transport" data-y="9"/>
-    <path d="M438.43 57.86 C506.57 57.86, 506.57 87.28, 574.72 87.28 L574.72 142.32 C506.57 142.32, 506.57 112.9, 438.43 112.9 Z" fill="#ff7300" fill-opacity="0.45" stroke="none" data-source="Industry" data-target="Process heat" data-y="28"/>
-    <path d="M438.43 112.9 C506.57 112.9, 506.57 150.32, 574.72 150.32 L574.72 177.84 C506.57 177.84, 506.57 140.42, 438.43 140.42 Z" fill="#ff7300" fill-opacity="0.45" stroke="none" data-source="Industry" data-target="Losses" data-y="14"/>
-    <path d="M438.43 213.43 C506.57 213.43, 506.57 209.43, 574.72 209.43 L574.72 290.02 C506.57 290.02, 506.57 294.02, 438.43 294.02 Z" fill="#0088FE" fill-opacity="0.45" stroke="none" data-source="Homes" data-target="Space heat" data-y="41"/>
-    <path d="M438.43 189.84 C506.57 189.84, 506.57 177.84, 574.72 177.84 L574.72 201.43 C506.57 201.43, 506.57 213.43, 438.43 213.43 Z" fill="#0088FE" fill-opacity="0.45" stroke="none" data-source="Homes" data-target="Losses" data-y="12"/>
-    <path d="M438.43 335.44 C506.57 335.44, 506.57 298.02, 574.72 298.02 L574.72 341.27 C506.57 341.27, 506.57 378.69, 438.43 378.69 Z" fill="#ffc658" fill-opacity="0.324" stroke="none" data-source="Commerce" data-target="Cooling" data-y="22"/>
-    <path d="M438.43 378.69 C506.57 378.69, 506.57 349.27, 574.72 349.27 L574.72 380.72 C506.57 380.72, 506.57 410.14, 438.43 410.14 Z" fill="#ffc658" fill-opacity="0.324" stroke="none" data-source="Commerce" data-target="Lighting" data-y="16"/>
+    <path d="M123.46 38 C196.06 38, 196.06 103.28, 268.65 103.28 L268.65 158.32 C196.06 158.32, 196.06 93.04, 123.46 93.04 Z" fill="#8884d8" fill-opacity="0.45" stroke="none" data-source="Coal" data-target="Electricity" data-y="28"/>
+    <path d="M123.46 280.61 C196.06 280.61, 196.06 262.5, 268.65 262.5 L268.65 364.72 C196.06 364.72, 196.06 382.82, 123.46 382.82 Z" fill="#ffc658" fill-opacity="0.45" stroke="none" data-source="Natural gas" data-target="Electricity" data-y="52"/>
+    <path d="M123.46 245.22 C275.65 245.22, 275.65 120.77, 427.83 120.77 L427.83 156.15 C275.65 156.15, 275.65 280.61, 123.46 280.61 Z" fill="#ffc658" fill-opacity="0.45" stroke="none" data-source="Natural gas" data-target="Industry" data-y="18"/>
+    <path d="M123.46 382.82 C275.65 382.82, 275.65 280.26, 427.83 280.26 L427.83 327.44 C275.65 327.44, 275.65 430, 123.46 430 Z" fill="#ffc658" fill-opacity="0.45" stroke="none" data-source="Natural gas" data-target="Homes" data-y="24"/>
+    <path d="M123.46 101.04 C196.06 101.04, 196.06 158.32, 268.65 158.32 L268.65 219.26 C196.06 219.26, 196.06 161.98, 123.46 161.98 Z" fill="#00C49F" fill-opacity="0.45" stroke="none" data-source="Nuclear" data-target="Electricity" data-y="31"/>
+    <path d="M123.46 169.98 C196.06 169.98, 196.06 219.26, 268.65 219.26 L268.65 231.05 C196.06 231.05, 196.06 181.77, 123.46 181.77 Z" fill="#FFBB28" fill-opacity="0.45" stroke="none" data-source="Hydro" data-target="Electricity" data-y="6"/>
+    <path d="M123.46 189.77 C196.06 189.77, 196.06 231.05, 268.65 231.05 L268.65 248.74 C196.06 248.74, 196.06 207.46, 123.46 207.46 Z" fill="#FF8042" fill-opacity="0.45" stroke="none" data-source="Solar" data-target="Electricity" data-y="9"/>
+    <path d="M123.46 215.46 C196.06 215.46, 196.06 248.74, 268.65 248.74 L268.65 256.61 C196.06 256.61, 196.06 223.33, 123.46 223.33 Z" fill="#8884d8" fill-opacity="0.324" stroke="none" data-source="Wind" data-target="Electricity" data-y="4"/>
+    <path d="M123.46 231.33 C196.06 231.33, 196.06 256.61, 268.65 256.61 L268.65 262.5 C196.06 262.5, 196.06 237.22, 123.46 237.22 Z" fill="#82ca9d" fill-opacity="0.324" stroke="none" data-source="Biomass" data-target="Electricity" data-y="3"/>
+    <path d="M282.65 183.87 C355.24 183.87, 355.24 189.84, 427.83 189.84 L427.83 280.26 C355.24 280.26, 355.24 274.3, 282.65 274.3 Z" fill="#82ca9d" fill-opacity="0.45" stroke="none" data-source="Electricity" data-target="Homes" data-y="46"/>
+    <path d="M282.65 274.3 C355.24 274.3, 355.24 335.44, 427.83 335.44 L427.83 410.14 C355.24 410.14, 355.24 348.99, 282.65 348.99 Z" fill="#82ca9d" fill-opacity="0.45" stroke="none" data-source="Electricity" data-target="Commerce" data-y="38"/>
+    <path d="M282.65 103.28 C355.24 103.28, 355.24 57.86, 427.83 57.86 L427.83 120.77 C355.24 120.77, 355.24 166.18, 282.65 166.18 Z" fill="#82ca9d" fill-opacity="0.45" stroke="none" data-source="Electricity" data-target="Industry" data-y="32"/>
+    <path d="M282.65 166.18 C355.24 166.18, 355.24 164.15, 427.83 164.15 L427.83 181.84 C355.24 181.84, 355.24 183.87, 282.65 183.87 Z" fill="#82ca9d" fill-opacity="0.45" stroke="none" data-source="Electricity" data-target="Transport" data-y="9"/>
+    <path d="M441.83 57.86 C514.43 57.86, 514.43 87.28, 587.02 87.28 L587.02 142.32 C514.43 142.32, 514.43 112.9, 441.83 112.9 Z" fill="#ff7300" fill-opacity="0.45" stroke="none" data-source="Industry" data-target="Process heat" data-y="28"/>
+    <path d="M441.83 112.9 C514.43 112.9, 514.43 150.32, 587.02 150.32 L587.02 177.84 C514.43 177.84, 514.43 140.42, 441.83 140.42 Z" fill="#ff7300" fill-opacity="0.45" stroke="none" data-source="Industry" data-target="Losses" data-y="14"/>
+    <path d="M441.83 213.43 C514.43 213.43, 514.43 209.43, 587.02 209.43 L587.02 290.02 C514.43 290.02, 514.43 294.02, 441.83 294.02 Z" fill="#0088FE" fill-opacity="0.45" stroke="none" data-source="Homes" data-target="Space heat" data-y="41"/>
+    <path d="M441.83 189.84 C514.43 189.84, 514.43 177.84, 587.02 177.84 L587.02 201.43 C514.43 201.43, 514.43 213.43, 441.83 213.43 Z" fill="#0088FE" fill-opacity="0.45" stroke="none" data-source="Homes" data-target="Losses" data-y="12"/>
+    <path d="M441.83 335.44 C514.43 335.44, 514.43 298.02, 587.02 298.02 L587.02 341.27 C514.43 341.27, 514.43 378.69, 441.83 378.69 Z" fill="#ffc658" fill-opacity="0.324" stroke="none" data-source="Commerce" data-target="Cooling" data-y="22"/>
+    <path d="M441.83 378.69 C514.43 378.69, 514.43 349.27, 587.02 349.27 L587.02 380.72 C514.43 380.72, 514.43 410.14, 441.83 410.14 Z" fill="#ffc658" fill-opacity="0.324" stroke="none" data-source="Commerce" data-target="Lighting" data-y="16"/>
   </g>
   <g data-sankey-nodes="1">
-    <rect x="123.84" y="38" width="14" height="55.04" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Coal" data-y="28"/>
-    <rect x="274.13" y="103.28" width="14" height="261.44" fill="#82ca9d" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Electricity" data-y="133"/>
-    <rect x="123.84" y="245.22" width="14" height="184.78" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Natural gas" data-y="94"/>
-    <rect x="424.43" y="57.86" width="14" height="98.29" fill="#ffc658" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Industry" data-y="50"/>
-    <rect x="424.43" y="189.84" width="14" height="137.6" fill="#ffc658" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Homes" data-y="70"/>
-    <rect x="123.84" y="101.04" width="14" height="60.94" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Nuclear" data-y="31"/>
-    <rect x="123.84" y="169.98" width="14" height="11.79" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Hydro" data-y="6"/>
-    <rect x="123.84" y="189.77" width="14" height="17.69" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Solar" data-y="9"/>
-    <rect x="123.84" y="215.46" width="14" height="7.86" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Wind" data-y="4"/>
-    <rect x="123.84" y="231.33" width="14" height="5.9" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Biomass" data-y="3"/>
-    <rect x="424.43" y="335.44" width="14" height="74.7" fill="#ffc658" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Commerce" data-y="38"/>
-    <rect x="424.43" y="164.15" width="14" height="17.69" fill="#ffc658" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Transport" data-y="9"/>
-    <rect x="574.72" y="87.28" width="14" height="55.04" fill="#ff7300" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Process heat" data-y="28"/>
-    <rect x="574.72" y="150.32" width="14" height="51.11" fill="#ff7300" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Losses" data-y="26"/>
-    <rect x="574.72" y="209.43" width="14" height="80.59" fill="#ff7300" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Space heat" data-y="41"/>
-    <rect x="574.72" y="298.02" width="14" height="43.25" fill="#ff7300" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Cooling" data-y="22"/>
-    <rect x="574.72" y="349.27" width="14" height="31.45" fill="#ff7300" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Lighting" data-y="16"/>
+    <rect x="109.46" y="38" width="14" height="55.04" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Coal" data-y="28"/>
+    <rect x="268.65" y="103.28" width="14" height="261.44" fill="#82ca9d" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Electricity" data-y="133"/>
+    <rect x="109.46" y="245.22" width="14" height="184.78" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Natural gas" data-y="94"/>
+    <rect x="427.83" y="57.86" width="14" height="98.29" fill="#ffc658" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Industry" data-y="50"/>
+    <rect x="427.83" y="189.84" width="14" height="137.6" fill="#ffc658" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Homes" data-y="70"/>
+    <rect x="109.46" y="101.04" width="14" height="60.94" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Nuclear" data-y="31"/>
+    <rect x="109.46" y="169.98" width="14" height="11.79" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Hydro" data-y="6"/>
+    <rect x="109.46" y="189.77" width="14" height="17.69" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Solar" data-y="9"/>
+    <rect x="109.46" y="215.46" width="14" height="7.86" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Wind" data-y="4"/>
+    <rect x="109.46" y="231.33" width="14" height="5.9" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Biomass" data-y="3"/>
+    <rect x="427.83" y="335.44" width="14" height="74.7" fill="#ffc658" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Commerce" data-y="38"/>
+    <rect x="427.83" y="164.15" width="14" height="17.69" fill="#ffc658" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Transport" data-y="9"/>
+    <rect x="587.02" y="87.28" width="14" height="55.04" fill="#ff7300" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Process heat" data-y="28"/>
+    <rect x="587.02" y="150.32" width="14" height="51.11" fill="#ff7300" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Losses" data-y="26"/>
+    <rect x="587.02" y="209.43" width="14" height="80.59" fill="#ff7300" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Space heat" data-y="41"/>
+    <rect x="587.02" y="298.02" width="14" height="43.25" fill="#ff7300" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Cooling" data-y="22"/>
+    <rect x="587.02" y="349.27" width="14" height="31.45" fill="#ff7300" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-node="Lighting" data-y="16"/>
   </g>
   <g fill="#6B7280" font-size="12" font-weight="400" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">
-    <text x="119.84" y="65.52" text-anchor="end" dominant-baseline="middle" data-node-label="Coal"><title>Coal</title>Coal</text>
-    <text x="270.13" y="234" text-anchor="end" dominant-baseline="middle" data-node-label="Electricity"><title>Electricity</title>Electricity</text>
-    <text x="119.84" y="337.61" text-anchor="end" dominant-baseline="middle" data-node-label="Natural gas"><title>Natural gas</title>Natural gas</text>
-    <text x="442.43" y="107.01" text-anchor="start" dominant-baseline="middle" data-node-label="Industry"><title>Industry</title>Industry</text>
-    <text x="442.43" y="258.64" text-anchor="start" dominant-baseline="middle" data-node-label="Homes"><title>Homes</title>Homes</text>
-    <text x="119.84" y="131.51" text-anchor="end" dominant-baseline="middle" data-node-label="Nuclear"><title>Nuclear</title>Nuclear</text>
-    <text x="119.84" y="175.87" text-anchor="end" dominant-baseline="middle" data-node-label="Hydro"><title>Hydro</title>Hydro</text>
-    <text x="119.84" y="198.62" text-anchor="end" dominant-baseline="middle" data-node-label="Solar"><title>Solar</title>Solar</text>
-    <text x="119.84" y="219.39" text-anchor="end" dominant-baseline="middle" data-node-label="Wind"><title>Wind</title>Wind</text>
-    <text x="119.84" y="234.27" text-anchor="end" dominant-baseline="middle" data-node-label="Biomass"><title>Biomass</title>Biomass</text>
-    <text x="442.43" y="372.79" text-anchor="start" dominant-baseline="middle" data-node-label="Commerce"><title>Commerce</title>Commerce</text>
-    <text x="442.43" y="172.99" text-anchor="start" dominant-baseline="middle" data-node-label="Transport"><title>Transport</title>Transport</text>
-    <text x="592.72" y="114.8" text-anchor="start" dominant-baseline="middle" data-node-label="Process heat"><title>Process heat</title>Process heat</text>
-    <text x="592.72" y="175.87" text-anchor="start" dominant-baseline="middle" data-node-label="Losses"><title>Losses</title>Losses</text>
-    <text x="592.72" y="249.73" text-anchor="start" dominant-baseline="middle" data-node-label="Space heat"><title>Space heat</title>Space heat</text>
-    <text x="592.72" y="319.65" text-anchor="start" dominant-baseline="middle" data-node-label="Cooling"><title>Cooling</title>Cooling</text>
-    <text x="592.72" y="364.99" text-anchor="start" dominant-baseline="middle" data-node-label="Lighting"><title>Lighting</title>Lighting</text>
+    <text x="105.46" y="65.52" text-anchor="end" dominant-baseline="middle" data-node-label="Coal"><title>Coal</title>Coal</text>
+    <text x="264.65" y="234" text-anchor="end" dominant-baseline="middle" data-node-label="Electricity"><title>Electricity</title>Electricity</text>
+    <text x="105.46" y="337.61" text-anchor="end" dominant-baseline="middle" data-node-label="Natural gas"><title>Natural gas</title>Natural gas</text>
+    <text x="445.83" y="107.01" text-anchor="start" dominant-baseline="middle" data-node-label="Industry"><title>Industry</title>Industry</text>
+    <text x="445.83" y="258.64" text-anchor="start" dominant-baseline="middle" data-node-label="Homes"><title>Homes</title>Homes</text>
+    <text x="105.46" y="131.51" text-anchor="end" dominant-baseline="middle" data-node-label="Nuclear"><title>Nuclear</title>Nuclear</text>
+    <text x="105.46" y="175.87" text-anchor="end" dominant-baseline="middle" data-node-label="Hydro"><title>Hydro</title>Hydro</text>
+    <text x="105.46" y="198.62" text-anchor="end" dominant-baseline="middle" data-node-label="Solar"><title>Solar</title>Solar</text>
+    <text x="105.46" y="219.39" text-anchor="end" dominant-baseline="middle" data-node-label="Wind"><title>Wind</title>Wind</text>
+    <text x="105.46" y="234.27" text-anchor="end" dominant-baseline="middle" data-node-label="Biomass"><title>Biomass</title>Biomass</text>
+    <text x="445.83" y="372.79" text-anchor="start" dominant-baseline="middle" data-node-label="Commerce"><title>Commerce</title>Commerce</text>
+    <text x="445.83" y="172.99" text-anchor="start" dominant-baseline="middle" data-node-label="Transport"><title>Transport</title>Transport</text>
+    <text x="605.02" y="114.8" text-anchor="start" dominant-baseline="middle" data-node-label="Process heat"><title>Process heat</title>Process heat</text>
+    <text x="605.02" y="175.87" text-anchor="start" dominant-baseline="middle" data-node-label="Losses"><title>Losses</title>Losses</text>
+    <text x="605.02" y="249.73" text-anchor="start" dominant-baseline="middle" data-node-label="Space heat"><title>Space heat</title>Space heat</text>
+    <text x="605.02" y="319.65" text-anchor="start" dominant-baseline="middle" data-node-label="Cooling"><title>Cooling</title>Cooling</text>
+    <text x="605.02" y="364.99" text-anchor="start" dominant-baseline="middle" data-node-label="Lighting"><title>Lighting</title>Lighting</text>
   </g>
 </svg>

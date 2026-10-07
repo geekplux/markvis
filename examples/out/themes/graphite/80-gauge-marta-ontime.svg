@@ -2,14 +2,14 @@
   <title id="mv-b79429d614571e4c-title">Red Line mornings still hit 94 on-time</title>
   <desc id="mv-b79429d614571e4c-desc">gauge chart. Red Line mornings still hit 94 on-time. x=line. y=ontime. unit=%. 1 rows.</desc>
   <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Red Line mornings still hit 94 on-time</title>Red Line mornings still hit 94 on-time</text>
-  <text x="52" y="50" text-anchor="start" font-size="12" font-weight="400" fill="#8E8D87" data-subtitle="1">%</text>
+  <text x="52" y="50" text-anchor="start" font-size="12" font-weight="400" fill="#6A6964" data-subtitle="1">%</text>
   <g data-gauge="1" data-min="80" data-max="100">
     <path d="M77.6 416 A294.4 294.4 0 0 1 666.4 416" fill="none" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="12" stroke-linecap="round" data-gauge-track="1"/>
     <path d="M77.6 416 A294.4 294.4 0 0 1 545.04 177.83" fill="none" stroke="#1B1B19" stroke-width="12" stroke-linecap="round" data-gauge-arc="94"/>
   </g>
   <text x="372" y="292.35" text-anchor="middle" dominant-baseline="middle" font-size="28" font-weight="600" fill="#1B1B19" data-gauge-value="1">94 %</text>
-  <text x="372" y="314.35" text-anchor="middle" dominant-baseline="hanging" font-size="11" font-weight="400" fill="#8E8D87" data-gauge-label="1">Red</text>
-  <g fill="#8E8D87" font-size="11" font-weight="600">
+  <text x="372" y="314.35" text-anchor="middle" dominant-baseline="hanging" font-size="11" font-weight="400" fill="#6A6964" data-gauge-label="1">Red</text>
+  <g fill="#6A6964" font-size="11" font-weight="600">
     <text x="77.6" y="430" text-anchor="middle" dominant-baseline="hanging" data-gauge-min="1">80</text>
     <text x="666.4" y="430" text-anchor="middle" dominant-baseline="hanging" data-gauge-max="1">100</text>
   </g>

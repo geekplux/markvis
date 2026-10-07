@@ -3,12 +3,12 @@
   <desc id="mv-8636ea173fdc9363-desc">pie chart. Yes leads survey answers at 60. x=label. y=n. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>Yes leads survey answers at 60</title>Yes leads survey answers at 60</text>
   <g font-size="12" font-weight="400" fill="#374151">
-    <rect x="298.8" y="425" width="10" height="10" fill="#8884d8" rx="1"/>
-    <text x="312.8" y="434" data-legend="yes">yes</text>
-    <rect x="351.12" y="425" width="10" height="10" fill="#82ca9d" rx="1"/>
-    <text x="365.12" y="434" data-legend="no">no</text>
-    <rect x="396" y="425" width="10" height="10" fill="#ffc658" rx="1"/>
-    <text x="410" y="434" data-legend="other">other</text>
+    <rect x="302.84" y="425" width="10" height="10" fill="#8884d8" rx="1"/>
+    <text x="316.84" y="434" data-legend="yes">yes</text>
+    <rect x="353.18" y="425" width="10" height="10" fill="#82ca9d" rx="1"/>
+    <text x="367.18" y="434" data-legend="no">no</text>
+    <rect x="397.85" y="425" width="10" height="10" fill="#ffc658" rx="1"/>
+    <text x="411.85" y="434" data-legend="other">other</text>
   </g>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0">
     <path d="M374 222 L374 96.88 A125.12 125.12 0 1 1 300.46 323.22 Z" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="yes" data-raw-value="60"/>

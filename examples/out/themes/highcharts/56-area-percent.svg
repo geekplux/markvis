@@ -3,12 +3,12 @@
   <desc id="mv-e22563a32fc41eb7-desc">area chart. Queue A share stays ahead of queue B. x=minute. y=depth. series=queue. 8 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Queue A share stays ahead of queue B</title>Queue A share stays ahead of queue B</text>
   <g font-size="12" font-weight="700" fill="#333333">
-    <circle cx="360.96" cy="420" r="5" fill="#7cb5ec"/>
-    <text x="369.96" y="424" data-legend="A">A</text>
-    <circle cx="399" cy="420" r="5" fill="#434348"/>
-    <text x="408" y="424" data-legend="B">B</text>
+    <circle cx="360.56" cy="420" r="5" fill="#7cb5ec"/>
+    <text x="369.56" y="424" data-legend="A">A</text>
+    <circle cx="399.65" cy="420" r="5" fill="#434348"/>
+    <text x="408.65" y="424" data-legend="B">B</text>
   </g>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="197" y2="197"/>
     <line x1="74" x2="700" y1="44" y2="44"/>
   </g>
@@ -26,7 +26,7 @@
     <text x="692" y="367" text-anchor="middle" font-size="11" data-full-label="4"><title>4</title>4</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="36.54" y="197" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 36.54 197)" data-axis="y">depth</text>
+    <text x="35.52" y="197" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 35.52 197)" data-axis="y">depth</text>
     <text x="387" y="376.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">minute</text>
   </g>
   <g fill="none">

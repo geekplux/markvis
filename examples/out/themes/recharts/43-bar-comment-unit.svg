@@ -2,7 +2,7 @@
   <title id="mv-95e5ec3e61c91620-title">Hosting leads monthly cost at 400</title>
   <desc id="mv-95e5ec3e61c91620-desc">bar chart. Hosting leads monthly cost at 400. x=item. y=cost. unit=USD. 3 rows.</desc>
   <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>Hosting leads monthly cost at 400</title>Hosting leads monthly cost at 400<tspan font-size="12" font-weight="400" fill="#6B7280"> · USD</tspan></text>
-  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-v-grid="1">
+  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-grid="1" data-v-grid="1">
     <line x1="156.67" x2="156.67" y1="38" y2="419" data-v-grid="1"/>
     <line x1="374" x2="374" y1="38" y2="419" data-v-grid="1"/>
     <line x1="591.33" x2="591.33" y1="38" y2="419" data-v-grid="1"/>
@@ -26,7 +26,7 @@
     <path d="M561.33 419 L621.33 419 L621.33 342.8 L561.33 342.8 Z" fill="#8884d8" data-x="Logs" data-series="cost" data-y="80"/>
   </g>
   <g>
-    <text x="156.67" y="52" text-anchor="middle" font-size="12" font-weight="500" fill="#fafaf9" data-value-label="Hosting">400</text>
+    <text x="156.67" y="52" text-anchor="middle" font-size="12" font-weight="500" fill="#000000" data-value-label="Hosting">400</text>
     <text x="374" y="296.7" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-value-label="CDN">120</text>
     <text x="591.33" y="334.8" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-value-label="Logs">80</text>
   </g>

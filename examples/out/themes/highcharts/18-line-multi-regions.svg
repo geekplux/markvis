@@ -3,12 +3,12 @@
   <desc id="mv-385ac42104e6f64c-desc">line chart. US traffic still leads EU week over week. x=week. y=mau. series=region. 6 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>US traffic still leads EU week over week</title>US traffic still leads EU week over week</text>
   <g font-size="12" font-weight="700" fill="#333333">
-    <circle cx="352.93" cy="420" r="5" fill="#7cb5ec"/>
-    <text x="361.93" y="424" data-legend="us">us</text>
-    <circle cx="399" cy="420" r="5" fill="#434348"/>
-    <text x="408" y="424" data-legend="eu">eu</text>
+    <circle cx="353.76" cy="420" r="5" fill="#7cb5ec"/>
+    <text x="362.76" y="424" data-legend="us">us</text>
+    <circle cx="398.87" cy="420" r="5" fill="#434348"/>
+    <text x="407.87" y="424" data-legend="eu">eu</text>
   </g>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="288.8" y2="288.8"/>
     <line x1="74" x2="700" y1="227.6" y2="227.6"/>
     <line x1="74" x2="700" y1="166.4" y2="166.4"/>
@@ -31,7 +31,7 @@
     <text x="692" y="367" text-anchor="middle" font-size="11" data-full-label="4"><title>4</title>4</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="22.9" y="197" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 22.9 197)" data-axis="y">mau</text>
+    <text x="24.78" y="197" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 24.78 197)" data-axis="y">mau</text>
     <text x="387" y="376.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">week</text>
   </g>
   <g fill="none">

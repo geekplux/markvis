@@ -3,50 +3,50 @@
   <desc id="mv-b80f123a37aff372-desc">waterfall chart. Concessions still cover Midtown rent after payroll. x=step. y=delta. unit=USD k. 8 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Concessions still cover Midtown rent after payroll</title>Concessions still cover Midtown rent after payroll</text>
   <text x="360" y="46" text-anchor="middle" font-size="12" font-weight="400" fill="#666666" data-subtitle="1">USD k</text>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
-    <line x1="74" x2="700" y1="262.67" y2="262.67"/>
-    <line x1="74" x2="700" y1="165.33" y2="165.33"/>
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
+    <line x1="74" x2="700" y1="272" y2="272"/>
+    <line x1="74" x2="700" y1="170" y2="170"/>
   </g>
-  <path d="M74 360 L700 360" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <path d="M74 374 L700 374" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <g data-waterfall="1">
-    <rect x="79.48" y="184.8" width="67.3" height="175.2" fill="#0F766E" rx="0" data-step="Ticket sales" data-y="180" data-level="180" data-role="delta" data-baseline="0"/>
-    <text x="113.13" y="178.8" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-delta="Ticket sales">+180 → 180</text>
-    <rect x="157.73" y="122.51" width="67.3" height="62.29" fill="#0F766E" rx="0" data-step="Concessions" data-y="64" data-level="244" data-role="delta" data-baseline="180"/>
-    <text x="191.38" y="116.51" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-delta="Concessions">+64 → 244</text>
-    <rect x="235.98" y="95.25" width="67.3" height="27.25" fill="#0F766E" rx="0" data-step="Merch" data-y="28" data-level="272" data-role="delta" data-baseline="244"/>
-    <text x="269.63" y="89.25" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-delta="Merch">+28 → 272</text>
-    <rect x="314.23" y="73.84" width="67.3" height="21.41" fill="#0F766E" rx="0" data-step="Sponsorships" data-y="22" data-level="294" data-role="delta" data-baseline="272"/>
-    <text x="347.88" y="67.84" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-delta="Sponsorships">+22 → 294</text>
-    <rect x="392.48" y="73.84" width="67.3" height="87.6" fill="#BE123C" rx="0" data-step="Payroll" data-y="-90" data-level="204" data-role="delta" data-baseline="294"/>
-    <text x="426.13" y="67.84" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-delta="Payroll">-90 → 204</text>
-    <rect x="470.73" y="161.44" width="67.3" height="40.88" fill="#BE123C" rx="0" data-step="Rent" data-y="-42" data-level="162" data-role="delta" data-baseline="204"/>
-    <text x="504.38" y="155.44" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-delta="Rent">-42 → 162</text>
-    <rect x="548.98" y="202.32" width="67.3" height="11.68" fill="#BE123C" rx="0" data-step="Utilities" data-y="-12" data-level="150" data-role="delta" data-baseline="162"/>
-    <text x="582.63" y="196.32" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-delta="Utilities">-12 → 150</text>
-    <rect x="627.23" y="214" width="67.3" height="17.52" fill="#BE123C" rx="0" data-step="Marketing" data-y="-18" data-level="132" data-role="delta" data-baseline="150"/>
-    <text x="660.88" y="208" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-delta="Marketing">-18 → 132</text>
+    <rect x="79.48" y="190.4" width="67.3" height="183.6" fill="#0F766E" rx="0" data-step="Ticket sales" data-y="180" data-level="180" data-role="delta" data-baseline="0"/>
+    <text x="113.13" y="184.4" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-delta="Ticket sales">+180 → 180</text>
+    <rect x="157.73" y="125.12" width="67.3" height="65.28" fill="#0F766E" rx="0" data-step="Concessions" data-y="64" data-level="244" data-role="delta" data-baseline="180"/>
+    <text x="191.38" y="119.12" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-delta="Concessions">+64 → 244</text>
+    <rect x="235.98" y="96.56" width="67.3" height="28.56" fill="#0F766E" rx="0" data-step="Merch" data-y="28" data-level="272" data-role="delta" data-baseline="244"/>
+    <text x="269.63" y="90.56" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-delta="Merch">+28 → 272</text>
+    <rect x="314.23" y="74.12" width="67.3" height="22.44" fill="#0F766E" rx="0" data-step="Sponsorships" data-y="22" data-level="294" data-role="delta" data-baseline="272"/>
+    <text x="347.88" y="68.12" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-delta="Sponsorships">+22 → 294</text>
+    <rect x="392.48" y="74.12" width="67.3" height="91.8" fill="#BE123C" rx="0" data-step="Payroll" data-y="-90" data-level="204" data-role="delta" data-baseline="294"/>
+    <text x="426.13" y="68.12" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-delta="Payroll">-90 → 204</text>
+    <rect x="470.73" y="165.92" width="67.3" height="42.84" fill="#BE123C" rx="0" data-step="Rent" data-y="-42" data-level="162" data-role="delta" data-baseline="204"/>
+    <text x="504.38" y="159.92" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-delta="Rent">-42 → 162</text>
+    <rect x="548.98" y="208.76" width="67.3" height="12.24" fill="#BE123C" rx="0" data-step="Utilities" data-y="-12" data-level="150" data-role="delta" data-baseline="162"/>
+    <text x="582.63" y="202.76" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-delta="Utilities">-12 → 150</text>
+    <rect x="627.23" y="221" width="67.3" height="18.36" fill="#BE123C" rx="0" data-step="Marketing" data-y="-18" data-level="132" data-role="delta" data-baseline="150"/>
+    <text x="660.88" y="215" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-delta="Marketing">-18 → 132</text>
   </g>
   <g fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-waterfall-connectors="1">
-    <line x1="146.77" x2="157.73" y1="184.8" y2="184.8"/>
-    <line x1="225.02" x2="235.98" y1="122.51" y2="122.51"/>
-    <line x1="303.27" x2="314.23" y1="95.25" y2="95.25"/>
-    <line x1="381.52" x2="392.48" y1="73.84" y2="73.84"/>
-    <line x1="459.77" x2="470.73" y1="161.44" y2="161.44"/>
-    <line x1="538.02" x2="548.98" y1="202.32" y2="202.32"/>
-    <line x1="616.27" x2="627.23" y1="214" y2="214"/>
+    <line x1="146.77" x2="157.73" y1="190.4" y2="190.4"/>
+    <line x1="225.02" x2="235.98" y1="125.12" y2="125.12"/>
+    <line x1="303.27" x2="314.23" y1="96.56" y2="96.56"/>
+    <line x1="381.52" x2="392.48" y1="74.12" y2="74.12"/>
+    <line x1="459.77" x2="470.73" y1="165.92" y2="165.92"/>
+    <line x1="538.02" x2="548.98" y1="208.76" y2="208.76"/>
+    <line x1="616.27" x2="627.23" y1="221" y2="221"/>
   </g>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="66" y="360" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="66" y="262.67" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="66" y="165.33" text-anchor="end" dominant-baseline="middle">200</text>
+    <text x="66" y="374" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="272" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="66" y="170" text-anchor="end" dominant-baseline="middle">200</text>
     <text x="66" y="68" text-anchor="end" dominant-baseline="middle">300</text>
-    <text x="113.13" y="371" text-anchor="middle" data-full-label="Ticket sales"><tspan x="113.13" dy="0">Ticket</tspan><tspan x="113.13" dy="14">sales</tspan></text>
-    <text x="191.38" y="371" text-anchor="middle" data-full-label="Concessions">Concessions</text>
-    <text x="269.63" y="371" text-anchor="middle" data-full-label="Merch">Merch</text>
-    <text x="347.88" y="371" text-anchor="middle" data-full-label="Sponsorships"><title>Sponsorships</title>Sponsorshi…</text>
-    <text x="426.13" y="371" text-anchor="middle" data-full-label="Payroll">Payroll</text>
-    <text x="504.38" y="371" text-anchor="middle" data-full-label="Rent">Rent</text>
-    <text x="582.63" y="371" text-anchor="middle" data-full-label="Utilities">Utilities</text>
-    <text x="660.88" y="371" text-anchor="middle" data-full-label="Marketing">Marketing</text>
+    <text x="113.13" y="385" text-anchor="middle" data-full-label="Ticket sales">Ticket sales</text>
+    <text x="191.38" y="385" text-anchor="middle" data-full-label="Concessions">Concessions</text>
+    <text x="269.63" y="385" text-anchor="middle" data-full-label="Merch">Merch</text>
+    <text x="347.88" y="385" text-anchor="middle" data-full-label="Sponsorships">Sponsorships</text>
+    <text x="426.13" y="385" text-anchor="middle" data-full-label="Payroll">Payroll</text>
+    <text x="504.38" y="385" text-anchor="middle" data-full-label="Rent">Rent</text>
+    <text x="582.63" y="385" text-anchor="middle" data-full-label="Utilities">Utilities</text>
+    <text x="660.88" y="385" text-anchor="middle" data-full-label="Marketing">Marketing</text>
   </g>
 </svg>

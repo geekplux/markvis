@@ -2,53 +2,53 @@
   <title id="mv-e550e65bb6b7fe3b-title">Every class scored higher in the spring term</title>
   <desc id="mv-e550e65bb6b7fe3b-desc">boxplot chart. Every class scored higher in the spring term. x=class. y=score. series=term. 48 rows.</desc>
   <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Every class scored higher in the spring term</title>Every class scored higher in the spring term</text>
-  <g fill="none" stroke="#1B1B19" stroke-opacity="0.22" stroke-width="0.5">
-    <line x1="82.29" x2="82.29" y1="52" y2="154"/>
-    <line x1="234.72" x2="234.72" y1="52" y2="154"/>
-    <line x1="387.15" x2="387.15" y1="52" y2="154"/>
-    <line x1="539.57" x2="539.57" y1="52" y2="154"/>
+  <g fill="none" stroke="#1B1B19" stroke-opacity="0.22" stroke-width="0.5" data-grid="1">
+    <line x1="74.16" x2="74.16" y1="52" y2="154"/>
+    <line x1="228.62" x2="228.62" y1="52" y2="154"/>
+    <line x1="383.08" x2="383.08" y1="52" y2="154"/>
+    <line x1="537.54" x2="537.54" y1="52" y2="154"/>
     <line x1="692" x2="692" y1="52" y2="154"/>
   </g>
-  <g fill="#8E8D87" font-size="11" font-weight="600">
-    <text x="72.29" y="69" text-anchor="end" dominant-baseline="middle" data-full-label="Algebra"><title>Algebra</title><tspan x="72.29" dy="0">Algebra</tspan></text>
-    <text x="72.29" y="103" text-anchor="end" dominant-baseline="middle" data-full-label="Biology"><title>Biology</title><tspan x="72.29" dy="0">Biology</tspan></text>
-    <text x="72.29" y="137" text-anchor="end" dominant-baseline="middle" data-full-label="Chemistry"><title>Chemistry</title><tspan x="72.29" dy="0">Chemistry</tspan></text>
-    <text x="82.29" y="171" text-anchor="middle">50</text>
-    <text x="234.72" y="171" text-anchor="middle">60</text>
-    <text x="387.15" y="171" text-anchor="middle">70</text>
-    <text x="539.57" y="171" text-anchor="middle">80</text>
+  <g fill="#6A6964" font-size="11" font-weight="600">
+    <text x="64.16" y="69" text-anchor="end" dominant-baseline="middle" data-full-label="Algebra"><title>Algebra</title><tspan x="64.16" dy="0">Algebra</tspan></text>
+    <text x="64.16" y="103" text-anchor="end" dominant-baseline="middle" data-full-label="Biology"><title>Biology</title><tspan x="64.16" dy="0">Biology</tspan></text>
+    <text x="64.16" y="137" text-anchor="end" dominant-baseline="middle" data-full-label="Chemistry"><title>Chemistry</title><tspan x="64.16" dy="0">Chemistry</tspan></text>
+    <text x="74.16" y="171" text-anchor="middle">50</text>
+    <text x="228.62" y="171" text-anchor="middle">60</text>
+    <text x="383.08" y="171" text-anchor="middle">70</text>
+    <text x="537.54" y="171" text-anchor="middle">80</text>
     <text x="692" y="171" text-anchor="middle">90</text>
   </g>
   <g font-size="11" font-weight="500" fill="#1B1B19">
-    <circle cx="87.29" cy="191" r="5" fill="#1B1B19"/>
-    <text x="96.29" y="195" data-legend="Fall">Fall</text>
-    <circle cx="144.57" cy="191" r="5" fill="#4A4945"/>
-    <text x="153.57" y="195" data-legend="Spring">Spring</text>
+    <circle cx="79.16" cy="191" r="5" fill="#1B1B19"/>
+    <text x="88.16" y="195" data-legend="Fall">Fall</text>
+    <circle cx="128.73" cy="191" r="5" fill="#4A4945"/>
+    <text x="137.73" y="195" data-legend="Spring">Spring</text>
   </g>
   <g data-boxplot="1">
-    <path d="M249.96 62.5 L291.88 62.5 M371.9 62.5 L463.36 62.5 M249.96 60.25 L249.96 64.75 M463.36 60.25 L463.36 64.75" fill="none" stroke="#1B1B19" stroke-width="1.5" data-whiskers="Algebra"/>
-    <rect x="291.88" y="58" width="80.02" height="9" rx="4" fill="#1B1B19" fill-opacity="0.28" stroke="#1B1B19" stroke-width="1.5" data-x="Algebra" data-series="Fall" data-n="8" data-median="65" data-q1="63.75" data-q3="69"/>
-    <line x1="310.93" x2="310.93" y1="56" y2="69" stroke="#1B1B19" stroke-width="2.5" data-x="Algebra" data-series="Fall" data-n="8" data-median="65" data-median-tick="1"/>
-    <circle cx="554.82" cy="62.5" r="3" fill="#ffffff" stroke="#1B1B19" stroke-width="1.5" data-x="Algebra" data-y="81" data-outlier="1"/>
-    <path d="M387.15 75.5 L432.87 75.5 M486.22 75.5 L524.33 75.5 M387.15 73.25 L387.15 77.75 M524.33 73.25 L524.33 77.75" fill="none" stroke="#4A4945" stroke-width="1.5" data-whiskers="Algebra"/>
-    <rect x="432.87" y="71" width="53.35" height="9" rx="4" fill="#4A4945" fill-opacity="0.28" stroke="#4A4945" stroke-width="1.5" data-x="Algebra" data-series="Spring" data-n="8" data-median="74" data-q1="73" data-q3="76.5"/>
-    <line x1="448.12" x2="448.12" y1="69" y2="82" stroke="#1B1B19" stroke-width="2.5" data-x="Algebra" data-series="Spring" data-n="8" data-median="74" data-median-tick="1"/>
-    <circle cx="341.42" cy="75.5" r="3" fill="#ffffff" stroke="#4A4945" stroke-width="1.5" data-x="Algebra" data-y="67" data-outlier="1"/>
-    <path d="M326.17 96.5 L368.09 96.5 M448.12 96.5 L539.57 96.5 M326.17 94.25 L326.17 98.75 M539.57 94.25 L539.57 98.75" fill="none" stroke="#1B1B19" stroke-width="1.5" data-whiskers="Biology"/>
-    <rect x="368.09" y="92" width="80.02" height="9" rx="4" fill="#1B1B19" fill-opacity="0.28" stroke="#1B1B19" stroke-width="1.5" data-x="Biology" data-series="Fall" data-n="8" data-median="70" data-q1="68.75" data-q3="74"/>
-    <line x1="387.15" x2="387.15" y1="90" y2="103" stroke="#1B1B19" stroke-width="2.5" data-x="Biology" data-series="Fall" data-n="8" data-median="70" data-median-tick="1"/>
-    <circle cx="631.03" cy="96.5" r="3" fill="#ffffff" stroke="#1B1B19" stroke-width="1.5" data-x="Biology" data-y="86" data-outlier="1"/>
-    <path d="M463.36 109.5 L509.09 109.5 M562.44 109.5 L600.54 109.5 M463.36 107.25 L463.36 111.75 M600.54 107.25 L600.54 111.75" fill="none" stroke="#4A4945" stroke-width="1.5" data-whiskers="Biology"/>
-    <rect x="509.09" y="105" width="53.35" height="9" rx="4" fill="#4A4945" fill-opacity="0.28" stroke="#4A4945" stroke-width="1.5" data-x="Biology" data-series="Spring" data-n="8" data-median="79" data-q1="78" data-q3="81.5"/>
-    <line x1="524.33" x2="524.33" y1="103" y2="116" stroke="#1B1B19" stroke-width="2.5" data-x="Biology" data-series="Spring" data-n="8" data-median="79" data-median-tick="1"/>
-    <circle cx="417.63" cy="109.5" r="3" fill="#ffffff" stroke="#4A4945" stroke-width="1.5" data-x="Biology" data-y="72" data-outlier="1"/>
-    <path d="M204.23 130.5 L227.1 130.5 M322.36 130.5 L402.39 130.5 M204.23 128.25 L204.23 132.75 M402.39 128.25 L402.39 132.75" fill="none" stroke="#1B1B19" stroke-width="1.5" data-whiskers="Chemistry"/>
-    <rect x="227.1" y="126" width="95.27" height="9" rx="4" fill="#1B1B19" fill-opacity="0.28" stroke="#1B1B19" stroke-width="1.5" data-x="Chemistry" data-series="Fall" data-n="8" data-median="62" data-q1="59.5" data-q3="65.75"/>
-    <line x1="265.2" x2="265.2" y1="124" y2="137" stroke="#1B1B19" stroke-width="2.5" data-x="Chemistry" data-series="Fall" data-n="8" data-median="62" data-median-tick="1"/>
-    <circle cx="509.09" cy="130.5" r="3" fill="#ffffff" stroke="#1B1B19" stroke-width="1.5" data-x="Chemistry" data-y="78" data-outlier="1"/>
-    <path d="M295.69 143.5 L383.33 143.5 M467.17 143.5 L478.6 143.5 M295.69 141.25 L295.69 145.75 M478.6 141.25 L478.6 145.75" fill="none" stroke="#4A4945" stroke-width="1.5" data-whiskers="Chemistry"/>
-    <rect x="383.33" y="139" width="83.84" height="9" rx="4" fill="#4A4945" fill-opacity="0.28" stroke="#4A4945" stroke-width="1.5" data-x="Chemistry" data-series="Spring" data-n="8" data-median="72" data-q1="69.75" data-q3="75.25"/>
-    <line x1="417.63" x2="417.63" y1="137" y2="150" stroke="#1B1B19" stroke-width="2.5" data-x="Chemistry" data-series="Spring" data-n="8" data-median="72" data-median-tick="1"/>
-    <circle cx="631.03" cy="143.5" r="3" fill="#ffffff" stroke="#4A4945" stroke-width="1.5" data-x="Chemistry" data-y="86" data-outlier="1"/>
+    <path d="M244.06 62.5 L286.54 62.5 M367.63 62.5 L460.31 62.5 M244.06 60.25 L244.06 64.75 M460.31 60.25 L460.31 64.75" fill="none" stroke="#1B1B19" stroke-width="1.5" data-whiskers="Algebra"/>
+    <rect x="286.54" y="58" width="81.09" height="9" rx="4" fill="#1B1B19" fill-opacity="0.28" stroke="#1B1B19" stroke-width="1.5" data-x="Algebra" data-series="Fall" data-n="8" data-median="65" data-q1="63.75" data-q3="69"/>
+    <line x1="305.85" x2="305.85" y1="56" y2="69" stroke="#1B1B19" stroke-width="2.5" data-x="Algebra" data-series="Fall" data-n="8" data-median="65" data-median-tick="1"/>
+    <circle cx="552.99" cy="62.5" r="3" fill="#ffffff" stroke="#1B1B19" stroke-width="1.5" data-x="Algebra" data-y="81" data-outlier="1"/>
+    <path d="M383.08 75.5 L429.42 75.5 M483.48 75.5 L522.09 75.5 M383.08 73.25 L383.08 77.75 M522.09 73.25 L522.09 77.75" fill="none" stroke="#4A4945" stroke-width="1.5" data-whiskers="Algebra"/>
+    <rect x="429.42" y="71" width="54.06" height="9" rx="4" fill="#4A4945" fill-opacity="0.28" stroke="#4A4945" stroke-width="1.5" data-x="Algebra" data-series="Spring" data-n="8" data-median="74" data-q1="73" data-q3="76.5"/>
+    <line x1="444.86" x2="444.86" y1="69" y2="82" stroke="#1B1B19" stroke-width="2.5" data-x="Algebra" data-series="Spring" data-n="8" data-median="74" data-median-tick="1"/>
+    <circle cx="336.74" cy="75.5" r="3" fill="#ffffff" stroke="#4A4945" stroke-width="1.5" data-x="Algebra" data-y="67" data-outlier="1"/>
+    <path d="M321.29 96.5 L363.77 96.5 M444.86 96.5 L537.54 96.5 M321.29 94.25 L321.29 98.75 M537.54 94.25 L537.54 98.75" fill="none" stroke="#1B1B19" stroke-width="1.5" data-whiskers="Biology"/>
+    <rect x="363.77" y="92" width="81.09" height="9" rx="4" fill="#1B1B19" fill-opacity="0.28" stroke="#1B1B19" stroke-width="1.5" data-x="Biology" data-series="Fall" data-n="8" data-median="70" data-q1="68.75" data-q3="74"/>
+    <line x1="383.08" x2="383.08" y1="90" y2="103" stroke="#1B1B19" stroke-width="2.5" data-x="Biology" data-series="Fall" data-n="8" data-median="70" data-median-tick="1"/>
+    <circle cx="630.22" cy="96.5" r="3" fill="#ffffff" stroke="#1B1B19" stroke-width="1.5" data-x="Biology" data-y="86" data-outlier="1"/>
+    <path d="M460.31 109.5 L506.65 109.5 M560.71 109.5 L599.32 109.5 M460.31 107.25 L460.31 111.75 M599.32 107.25 L599.32 111.75" fill="none" stroke="#4A4945" stroke-width="1.5" data-whiskers="Biology"/>
+    <rect x="506.65" y="105" width="54.06" height="9" rx="4" fill="#4A4945" fill-opacity="0.28" stroke="#4A4945" stroke-width="1.5" data-x="Biology" data-series="Spring" data-n="8" data-median="79" data-q1="78" data-q3="81.5"/>
+    <line x1="522.09" x2="522.09" y1="103" y2="116" stroke="#1B1B19" stroke-width="2.5" data-x="Biology" data-series="Spring" data-n="8" data-median="79" data-median-tick="1"/>
+    <circle cx="413.97" cy="109.5" r="3" fill="#ffffff" stroke="#4A4945" stroke-width="1.5" data-x="Biology" data-y="72" data-outlier="1"/>
+    <path d="M197.73 130.5 L220.89 130.5 M317.43 130.5 L398.52 130.5 M197.73 128.25 L197.73 132.75 M398.52 128.25 L398.52 132.75" fill="none" stroke="#1B1B19" stroke-width="1.5" data-whiskers="Chemistry"/>
+    <rect x="220.89" y="126" width="96.54" height="9" rx="4" fill="#1B1B19" fill-opacity="0.28" stroke="#1B1B19" stroke-width="1.5" data-x="Chemistry" data-series="Fall" data-n="8" data-median="62" data-q1="59.5" data-q3="65.75"/>
+    <line x1="259.51" x2="259.51" y1="124" y2="137" stroke="#1B1B19" stroke-width="2.5" data-x="Chemistry" data-series="Fall" data-n="8" data-median="62" data-median-tick="1"/>
+    <circle cx="506.65" cy="130.5" r="3" fill="#ffffff" stroke="#1B1B19" stroke-width="1.5" data-x="Chemistry" data-y="78" data-outlier="1"/>
+    <path d="M290.4 143.5 L379.22 143.5 M464.17 143.5 L475.75 143.5 M290.4 141.25 L290.4 145.75 M475.75 141.25 L475.75 145.75" fill="none" stroke="#4A4945" stroke-width="1.5" data-whiskers="Chemistry"/>
+    <rect x="379.22" y="139" width="84.95" height="9" rx="4" fill="#4A4945" fill-opacity="0.28" stroke="#4A4945" stroke-width="1.5" data-x="Chemistry" data-series="Spring" data-n="8" data-median="72" data-q1="69.75" data-q3="75.25"/>
+    <line x1="413.97" x2="413.97" y1="137" y2="150" stroke="#1B1B19" stroke-width="2.5" data-x="Chemistry" data-series="Spring" data-n="8" data-median="72" data-median-tick="1"/>
+    <circle cx="630.22" cy="143.5" r="3" fill="#ffffff" stroke="#4A4945" stroke-width="1.5" data-x="Chemistry" data-y="86" data-outlier="1"/>
   </g>
 </svg>

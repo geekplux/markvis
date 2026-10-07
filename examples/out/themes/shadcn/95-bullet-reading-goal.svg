@@ -4,11 +4,11 @@
   <rect x="0.5" y="0.5" width="719" height="305" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
   <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Two of five readers already passed their 2026 goal</title>Two of five readers already passed their 2026 goal</text>
   <text x="48" y="51" text-anchor="start" font-size="13" font-weight="400" fill="#737373" data-subtitle="1">books</text>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1">
-    <line x1="201.48" x2="201.48" y1="72" y2="242"/>
-    <line x1="348.96" x2="348.96" y1="72" y2="242"/>
-    <line x1="496.44" x2="496.44" y1="72" y2="242"/>
-    <line x1="643.92" x2="643.92" y1="72" y2="242"/>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1">
+    <line x1="203.91" x2="203.91" y1="72" y2="242"/>
+    <line x1="353.81" x2="353.81" y1="72" y2="242"/>
+    <line x1="503.72" x2="503.72" y1="72" y2="242"/>
+    <line x1="653.63" x2="653.63" y1="72" y2="242"/>
   </g>
   <line x1="54" x2="54" y1="72" y2="242" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-baseline="0"/>
   <g fill="#737373" font-size="12" font-weight="400">
@@ -18,38 +18,38 @@
     <text x="46" y="191" text-anchor="end" dominant-baseline="middle" data-full-label="Dev"><title>Dev</title><tspan x="46" dy="0">Dev</tspan></text>
     <text x="46" y="225" text-anchor="end" dominant-baseline="middle" data-full-label="Eli"><title>Eli</title><tspan x="46" dy="0">Eli</tspan></text>
     <text x="54" y="260" text-anchor="middle">0</text>
-    <text x="201.48" y="260" text-anchor="middle">10</text>
-    <text x="348.96" y="260" text-anchor="middle">20</text>
-    <text x="496.44" y="260" text-anchor="middle">30</text>
-    <text x="643.92" y="260" text-anchor="middle">40</text>
+    <text x="203.91" y="260" text-anchor="middle">10</text>
+    <text x="353.81" y="260" text-anchor="middle">20</text>
+    <text x="503.72" y="260" text-anchor="middle">30</text>
+    <text x="653.63" y="260" text-anchor="middle">40</text>
   </g>
   <g font-size="12" font-weight="500" fill="#0A0A0A">
-    <circle cx="301.2" cy="280" r="4.5" fill="#F54900"/>
-    <text x="310.2" y="284" data-legend="read">read</text>
-    <rect x="359.96" y="274" width="2.5" height="12" fill="#0A0A0A"/>
-    <text x="369.96" y="284" data-legend="goal">goal</text>
+    <circle cx="309.37" cy="280" r="4.5" fill="#F54900"/>
+    <text x="318.37" y="284" data-legend="read">read</text>
+    <rect x="365.59" y="274" width="2.5" height="12" fill="#0A0A0A"/>
+    <text x="375.59" y="284" data-legend="goal">goal</text>
   </g>
   <g data-bullet="1">
-    <rect x="54" y="77" width="589.92" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Ana"/>
-    <path d="M54 84 L506.19 84 Q511.19 84 511.19 89 L511.19 89 Q511.19 94 506.19 94 L54 94 Z" fill="#F54900" data-x="Ana" data-y="31"/>
-    <line x1="407.95" x2="407.95" y1="79" y2="99" stroke="#0A0A0A" stroke-width="2.5" data-target="24"/>
-    <rect x="54" y="111" width="589.92" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Ben"/>
-    <path d="M54 118 L225.98 118 Q230.98 118 230.98 123 L230.98 123 Q230.98 128 225.98 128 L54 128 Z" fill="#F54900" data-x="Ben" data-y="12"/>
-    <line x1="348.96" x2="348.96" y1="113" y2="133" stroke="#0A0A0A" stroke-width="2.5" data-target="20"/>
-    <rect x="54" y="145" width="589.92" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Chloe"/>
-    <path d="M54 152 L432.45 152 Q437.45 152 437.45 157 L437.45 157 Q437.45 162 432.45 162 L54 162 Z" fill="#F54900" data-x="Chloe" data-y="26"/>
-    <line x1="422.7" x2="422.7" y1="147" y2="167" stroke="#0A0A0A" stroke-width="2.5" data-target="25"/>
-    <rect x="54" y="179" width="589.92" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Dev"/>
-    <path d="M54 186 L181.73 186 Q186.73 186 186.73 191 L186.73 191 Q186.73 196 181.73 196 L54 196 Z" fill="#F54900" data-x="Dev" data-y="9"/>
-    <rect x="54" y="213" width="589.92" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Eli"/>
-    <path d="M54 220 L270.22 220 Q275.22 220 275.22 225 L275.22 225 Q275.22 230 270.22 230 L54 230 Z" fill="#F54900" data-x="Eli" data-y="15"/>
-    <line x1="496.44" x2="496.44" y1="215" y2="235" stroke="#0A0A0A" stroke-width="2.5" data-target="30"/>
+    <rect x="54" y="77" width="599.63" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Ana"/>
+    <path d="M54 84 L513.71 84 Q518.71 84 518.71 89 L518.71 89 Q518.71 94 513.71 94 L54 94 Z" fill="#F54900" data-x="Ana" data-y="31"/>
+    <line x1="413.78" x2="413.78" y1="79" y2="99" stroke="#0A0A0A" stroke-width="2.5" data-target="24"/>
+    <rect x="54" y="111" width="599.63" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Ben"/>
+    <path d="M54 118 L228.89 118 Q233.89 118 233.89 123 L233.89 123 Q233.89 128 228.89 128 L54 128 Z" fill="#F54900" data-x="Ben" data-y="12"/>
+    <line x1="353.81" x2="353.81" y1="113" y2="133" stroke="#0A0A0A" stroke-width="2.5" data-target="20"/>
+    <rect x="54" y="145" width="599.63" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Chloe"/>
+    <path d="M54 152 L438.76 152 Q443.76 152 443.76 157 L443.76 157 Q443.76 162 438.76 162 L54 162 Z" fill="#F54900" data-x="Chloe" data-y="26"/>
+    <line x1="428.77" x2="428.77" y1="147" y2="167" stroke="#0A0A0A" stroke-width="2.5" data-target="25"/>
+    <rect x="54" y="179" width="599.63" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Dev"/>
+    <path d="M54 186 L183.92 186 Q188.92 186 188.92 191 L188.92 191 Q188.92 196 183.92 196 L54 196 Z" fill="#F54900" data-x="Dev" data-y="9"/>
+    <rect x="54" y="213" width="599.63" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Eli"/>
+    <path d="M54 220 L273.86 220 Q278.86 220 278.86 225 L278.86 225 Q278.86 230 273.86 230 L54 230 Z" fill="#F54900" data-x="Eli" data-y="15"/>
+    <line x1="503.72" x2="503.72" y1="215" y2="235" stroke="#0A0A0A" stroke-width="2.5" data-target="30"/>
   </g>
   <g fill="#0A0A0A" font-size="12" font-weight="500">
-    <text x="655.92" y="89" dominant-baseline="middle" data-value-label="Ana">31<tspan fill="#737373" font-weight="400"> / 24</tspan></text>
-    <text x="655.92" y="123" dominant-baseline="middle" data-value-label="Ben">12<tspan fill="#737373" font-weight="400"> / 20</tspan></text>
-    <text x="655.92" y="157" dominant-baseline="middle" data-value-label="Chloe">26<tspan fill="#737373" font-weight="400"> / 25</tspan></text>
-    <text x="655.92" y="191" dominant-baseline="middle" data-value-label="Dev">9</text>
-    <text x="655.92" y="225" dominant-baseline="middle" data-value-label="Eli">15<tspan fill="#737373" font-weight="400"> / 30</tspan></text>
+    <text x="665.63" y="89" dominant-baseline="middle" data-value-label="Ana">31<tspan fill="#737373" font-weight="400"> / 24</tspan></text>
+    <text x="665.63" y="123" dominant-baseline="middle" data-value-label="Ben">12<tspan fill="#737373" font-weight="400"> / 20</tspan></text>
+    <text x="665.63" y="157" dominant-baseline="middle" data-value-label="Chloe">26<tspan fill="#737373" font-weight="400"> / 25</tspan></text>
+    <text x="665.63" y="191" dominant-baseline="middle" data-value-label="Dev">9</text>
+    <text x="665.63" y="225" dominant-baseline="middle" data-value-label="Eli">15<tspan fill="#737373" font-weight="400"> / 30</tspan></text>
   </g>
 </svg>

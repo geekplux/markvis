@@ -1,51 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="246" viewBox="0 0 720 246" role="img" aria-label="dumbbell chart: Every MARTA line got faster after the signal upgrade (min), 8 rows, series period" aria-labelledby="mv-d5a7c0642bfb6553-title" aria-describedby="mv-d5a7c0642bfb6553-desc" data-markvis="2" data-chart-type="dumbbell" data-id="mv-d5a7c0642bfb6553" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
   <title id="mv-d5a7c0642bfb6553-title">Every MARTA line got faster after the signal upgrade</title>
   <desc id="mv-d5a7c0642bfb6553-desc">dumbbell chart. Every MARTA line got faster after the signal upgrade. x=line. y=minutes. series=period. unit=min. 8 rows.</desc>
-  <text x="48" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Every MARTA line got faster after the signal upgrade</title>Every MARTA line got faster after the signal upgrade<tspan font-size="12" font-weight="400" fill="#8C8C8C"> · min</tspan></text>
-  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4">
+  <text x="48" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Every MARTA line got faster after the signal upgrade</title>Every MARTA line got faster after the signal upgrade<tspan font-size="12" font-weight="400" fill="#737373"> · min</tspan></text>
+  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4" data-grid="1">
     <line x1="54" x2="54" y1="46" y2="182"/>
-    <line x1="179.42" x2="179.42" y1="46" y2="182"/>
-    <line x1="304.85" x2="304.85" y1="46" y2="182"/>
-    <line x1="430.27" x2="430.27" y1="46" y2="182"/>
-    <line x1="555.7" x2="555.7" y1="46" y2="182"/>
-    <line x1="681.12" x2="681.12" y1="46" y2="182"/>
+    <line x1="179.62" x2="179.62" y1="46" y2="182"/>
+    <line x1="305.23" x2="305.23" y1="46" y2="182"/>
+    <line x1="430.85" x2="430.85" y1="46" y2="182"/>
+    <line x1="556.46" x2="556.46" y1="46" y2="182"/>
+    <line x1="682.08" x2="682.08" y1="46" y2="182"/>
   </g>
-  <g fill="#8C8C8C" font-size="12" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400">
     <text x="46" y="63" text-anchor="end" dominant-baseline="middle" data-full-label="Red"><title>Red</title><tspan x="46" dy="0">Red</tspan></text>
     <text x="46" y="97" text-anchor="end" dominant-baseline="middle" data-full-label="Gold"><title>Gold</title><tspan x="46" dy="0">Gold</tspan></text>
     <text x="46" y="131" text-anchor="end" dominant-baseline="middle" data-full-label="Blue"><title>Blue</title><tspan x="46" dy="0">Blue</tspan></text>
     <text x="46" y="165" text-anchor="end" dominant-baseline="middle" data-full-label="Green"><title>Green</title><tspan x="46" dy="0">Green</tspan></text>
     <text x="54" y="200" text-anchor="middle">20</text>
-    <text x="179.42" y="200" text-anchor="middle">25</text>
-    <text x="304.85" y="200" text-anchor="middle">30</text>
-    <text x="430.27" y="200" text-anchor="middle">35</text>
-    <text x="555.7" y="200" text-anchor="middle">40</text>
-    <text x="681.12" y="200" text-anchor="middle">45</text>
+    <text x="179.62" y="200" text-anchor="middle">25</text>
+    <text x="305.23" y="200" text-anchor="middle">30</text>
+    <text x="430.85" y="200" text-anchor="middle">35</text>
+    <text x="556.46" y="200" text-anchor="middle">40</text>
+    <text x="682.08" y="200" text-anchor="middle">45</text>
   </g>
   <g font-size="12" font-weight="400" fill="#262626">
     <circle cx="59" cy="220" r="4.5" fill="#ffffff" stroke="#5AD8A6" stroke-width="1.5"/>
     <text x="68" y="224" data-legend="before">before</text>
-    <circle cx="133.64" cy="220" r="4.5" fill="#E8684A"/>
-    <text x="142.64" y="224" data-legend="after">after</text>
+    <circle cx="127.75" cy="220" r="4.5" fill="#E8684A"/>
+    <text x="136.75" y="224" data-legend="after">after</text>
   </g>
   <g data-dumbbell="1">
-    <line x1="580.78" x2="455.36" y1="63" y2="63" stroke="#262626" stroke-opacity="0.32" stroke-width="3" stroke-linecap="round" data-x="Red"/>
-    <circle cx="580.78" cy="63" r="6" fill="#ffffff" stroke="#5AD8A6" stroke-width="2" data-x="Red" data-series="before" data-y="41"/>
-    <circle cx="455.36" cy="63" r="6" fill="#E8684A" data-x="Red" data-series="after" data-y="36"/>
-    <line x1="530.61" x2="430.27" y1="97" y2="97" stroke="#262626" stroke-opacity="0.32" stroke-width="3" stroke-linecap="round" data-x="Gold"/>
-    <circle cx="530.61" cy="97" r="6" fill="#ffffff" stroke="#5AD8A6" stroke-width="2" data-x="Gold" data-series="before" data-y="39"/>
-    <circle cx="430.27" cy="97" r="6" fill="#E8684A" data-x="Gold" data-series="after" data-y="35"/>
-    <line x1="380.1" x2="329.93" y1="131" y2="131" stroke="#262626" stroke-opacity="0.32" stroke-width="3" stroke-linecap="round" data-x="Blue"/>
-    <circle cx="380.1" cy="131" r="6" fill="#ffffff" stroke="#5AD8A6" stroke-width="2" data-x="Blue" data-series="before" data-y="33"/>
-    <circle cx="329.93" cy="131" r="6" fill="#E8684A" data-x="Blue" data-series="after" data-y="31"/>
-    <line x1="154.34" x2="129.25" y1="165" y2="165" stroke="#262626" stroke-opacity="0.32" stroke-width="3" stroke-linecap="round" data-x="Green"/>
-    <circle cx="154.34" cy="165" r="6" fill="#ffffff" stroke="#5AD8A6" stroke-width="2" data-x="Green" data-series="before" data-y="24"/>
-    <circle cx="129.25" cy="165" r="6" fill="#E8684A" data-x="Green" data-series="after" data-y="23"/>
+    <line x1="581.59" x2="455.97" y1="63" y2="63" stroke="#262626" stroke-opacity="0.32" stroke-width="3" stroke-linecap="round" data-x="Red"/>
+    <circle cx="581.59" cy="63" r="6" fill="#ffffff" stroke="#5AD8A6" stroke-width="2" data-x="Red" data-series="before" data-y="41"/>
+    <circle cx="455.97" cy="63" r="6" fill="#E8684A" data-x="Red" data-series="after" data-y="36"/>
+    <line x1="531.34" x2="430.85" y1="97" y2="97" stroke="#262626" stroke-opacity="0.32" stroke-width="3" stroke-linecap="round" data-x="Gold"/>
+    <circle cx="531.34" cy="97" r="6" fill="#ffffff" stroke="#5AD8A6" stroke-width="2" data-x="Gold" data-series="before" data-y="39"/>
+    <circle cx="430.85" cy="97" r="6" fill="#E8684A" data-x="Gold" data-series="after" data-y="35"/>
+    <line x1="380.6" x2="330.36" y1="131" y2="131" stroke="#262626" stroke-opacity="0.32" stroke-width="3" stroke-linecap="round" data-x="Blue"/>
+    <circle cx="380.6" cy="131" r="6" fill="#ffffff" stroke="#5AD8A6" stroke-width="2" data-x="Blue" data-series="before" data-y="33"/>
+    <circle cx="330.36" cy="131" r="6" fill="#E8684A" data-x="Blue" data-series="after" data-y="31"/>
+    <line x1="154.49" x2="129.37" y1="165" y2="165" stroke="#262626" stroke-opacity="0.32" stroke-width="3" stroke-linecap="round" data-x="Green"/>
+    <circle cx="154.49" cy="165" r="6" fill="#ffffff" stroke="#5AD8A6" stroke-width="2" data-x="Green" data-series="before" data-y="24"/>
+    <circle cx="129.37" cy="165" r="6" fill="#E8684A" data-x="Green" data-series="after" data-y="23"/>
   </g>
   <g fill="#262626" font-size="12" font-weight="400">
-    <text x="693.12" y="63" dominant-baseline="middle" data-delta="Red">-5</text>
-    <text x="693.12" y="97" dominant-baseline="middle" data-delta="Gold">-4</text>
-    <text x="693.12" y="131" dominant-baseline="middle" data-delta="Blue">-2</text>
-    <text x="693.12" y="165" dominant-baseline="middle" data-delta="Green">-1</text>
+    <text x="694.08" y="63" dominant-baseline="middle" data-delta="Red">-5</text>
+    <text x="694.08" y="97" dominant-baseline="middle" data-delta="Gold">-4</text>
+    <text x="694.08" y="131" dominant-baseline="middle" data-delta="Blue">-2</text>
+    <text x="694.08" y="165" dominant-baseline="middle" data-delta="Green">-1</text>
   </g>
 </svg>

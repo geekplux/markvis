@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="treemap chart: Espresso still leads Octane revenue on the Eastside (USD k), 12 rows, series shop" aria-labelledby="mv-d761e5c17cb166bf-title" aria-describedby="mv-d761e5c17cb166bf-desc" data-markvis="2" data-chart-type="treemap" data-id="mv-d761e5c17cb166bf" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
   <title id="mv-d761e5c17cb166bf-title">Espresso still leads Octane revenue on the Eastside</title>
   <desc id="mv-d761e5c17cb166bf-desc">treemap chart. Espresso still leads Octane revenue on the Eastside. x=drink. y=revenue. series=shop. unit=USD k. 12 rows.</desc>
-  <text x="48" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Espresso still leads Octane revenue on the Eastside</title>Espresso still leads Octane revenue on the Eastside<tspan font-size="12" font-weight="400" fill="#8C8C8C"> · USD k</tspan></text>
+  <text x="48" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Espresso still leads Octane revenue on the Eastside</title>Espresso still leads Octane revenue on the Eastside<tspan font-size="12" font-weight="400" fill="#737373"> · USD k</tspan></text>
   <g data-treemap="1">
     <rect x="48" y="46" width="226.03" height="22" fill="#5AD8A6" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.5" data-label="Octane" data-y="90" data-depth="0"/>
     <rect x="492.53" y="46" width="213.47" height="22" fill="#E8684A" fill-opacity="0.92" stroke="#ffffff" stroke-width="1.5" data-label="Barista" data-y="85" data-depth="0"/>
@@ -22,7 +22,7 @@
   <g fill="#262626" font-size="12" font-weight="400">
     <text x="52" y="60.2" text-anchor="start" fill="#262626" data-label-text="Octane"><title>Octane</title>Octane</text>
     <text x="496.53" y="60.2" text-anchor="start" fill="#262626" data-label-text="Barista"><title>Barista</title>Barista</text>
-    <text x="278.03" y="60.2" text-anchor="start" fill="#fafaf9" data-label-text="Component"><title>Component</title>Component</text>
+    <text x="278.03" y="60.2" text-anchor="start" fill="#000000" data-label-text="Component"><title>Component</title>Component</text>
     <text x="52" y="82.2" text-anchor="start" fill="#262626" data-label-text="Espresso"><title>Espresso</title>Espresso</text>
     <text x="52" y="262.47" text-anchor="start" fill="#262626" data-label-text="Batch brew"><title>Batch brew</title>Batch brew</text>
     <text x="170.4" y="262.47" text-anchor="start" fill="#262626" data-label-text="Pastry"><title>Pastry</title>Pastry</text>
@@ -34,6 +34,6 @@
     <text x="278.03" y="82.2" text-anchor="start" fill="#262626" data-label-text="Espresso"><title>Espresso</title>Espresso</text>
     <text x="278.03" y="241.49" text-anchor="start" fill="#262626" data-label-text="Batch brew"><title>Batch brew</title>Batch brew</text>
     <text x="368.28" y="241.49" text-anchor="start" fill="#262626" data-label-text="Retail beans"><title>Retail beans</title>Retail beans</text>
-    <text x="368.28" y="354.01" text-anchor="start" fill="#262626" data-label-text="Pastry"><title>Pastry</title>Pastry</text>
+    <text x="368.28" y="354.01" text-anchor="start" fill="#000000" data-label-text="Pastry"><title>Pastry</title>Pastry</text>
   </g>
 </svg>

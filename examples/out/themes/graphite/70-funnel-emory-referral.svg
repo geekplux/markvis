@@ -3,19 +3,19 @@
   <desc id="mv-e2e3831aad1282d3-desc">funnel chart. Follow-up still lands 160 of 900 Emory referrals. x=stage. y=patients. 6 rows.</desc>
   <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Follow-up still lands 160 of 900 Emory referrals</title>Follow-up still lands 160 of 900 Emory referrals</text>
   <g data-funnel="1">
-    <path d="M52 52 L559.37 52 L457.89 118.67 L153.47 118.67 Z" fill="#1B1B19" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Referral" data-y="900"/>
-    <path d="M153.47 118.67 L457.89 118.67 L412.79 185.33 L198.57 185.33 Z" fill="#4A4945" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Scheduled" data-y="540"/>
-    <path d="M198.57 185.33 L412.79 185.33 L364.88 252 L246.49 252 Z" fill="#6E6D68" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Arrived" data-y="380"/>
-    <path d="M246.49 252 L364.88 252 L357.83 318.67 L253.54 318.67 Z" fill="#8E8D87" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Visit" data-y="210"/>
-    <path d="M253.54 318.67 L357.83 318.67 L350.78 385.33 L260.58 385.33 Z" fill="#AEADA7" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Labs ordered" data-y="185"/>
-    <path d="M260.58 385.33 L350.78 385.33 L350.78 452 L260.58 452 Z" fill="#C8C7C1" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Follow-up" data-y="160"/>
+    <path d="M52 52 L583.38 52 L477.1 118.67 L158.28 118.67 Z" fill="#1B1B19" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Referral" data-y="900"/>
+    <path d="M158.28 118.67 L477.1 118.67 L429.87 185.33 L205.51 185.33 Z" fill="#4A4945" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Scheduled" data-y="540"/>
+    <path d="M205.51 185.33 L429.87 185.33 L379.68 252 L255.69 252 Z" fill="#6E6D68" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Arrived" data-y="380"/>
+    <path d="M255.69 252 L379.68 252 L372.3 318.67 L263.07 318.67 Z" fill="#8E8D87" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Visit" data-y="210"/>
+    <path d="M263.07 318.67 L372.3 318.67 L364.92 385.33 L270.45 385.33 Z" fill="#AEADA7" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Labs ordered" data-y="185"/>
+    <path d="M270.45 385.33 L364.92 385.33 L364.92 452 L270.45 452 Z" fill="#C8C7C1" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Follow-up" data-y="160"/>
   </g>
   <g fill="#1B1B19" font-size="12" font-weight="800">
-    <text x="567.37" y="85.33" text-anchor="start" dominant-baseline="middle" data-label="Referral"><title>Referral · 900</title>Referral · 900</text>
-    <text x="567.37" y="152" text-anchor="start" dominant-baseline="middle" data-label="Scheduled"><title>Scheduled · 540</title>Scheduled · 540</text>
-    <text x="567.37" y="218.67" text-anchor="start" dominant-baseline="middle" data-label="Arrived"><title>Arrived · 380</title>Arrived · 380</text>
-    <text x="567.37" y="285.33" text-anchor="start" dominant-baseline="middle" data-label="Visit"><title>Visit · 210</title>Visit · 210</text>
-    <text x="567.37" y="352" text-anchor="start" dominant-baseline="middle" data-label="Labs ordered"><title>Labs ordered · 185</title>Labs ordered · 185</text>
-    <text x="567.37" y="418.67" text-anchor="start" dominant-baseline="middle" data-label="Follow-up"><title>Follow-up · 160</title>Follow-up · 160</text>
+    <text x="591.38" y="85.33" text-anchor="start" dominant-baseline="middle" data-label="Referral"><title>Referral · 900</title>Referral · 900</text>
+    <text x="591.38" y="152" text-anchor="start" dominant-baseline="middle" data-label="Scheduled"><title>Scheduled · 540</title>Scheduled · 540</text>
+    <text x="591.38" y="218.67" text-anchor="start" dominant-baseline="middle" data-label="Arrived"><title>Arrived · 380</title>Arrived · 380</text>
+    <text x="591.38" y="285.33" text-anchor="start" dominant-baseline="middle" data-label="Visit"><title>Visit · 210</title>Visit · 210</text>
+    <text x="591.38" y="352" text-anchor="start" dominant-baseline="middle" data-label="Labs ordered"><title>Labs ordered · 185</title>Labs ordered · 185</text>
+    <text x="591.38" y="418.67" text-anchor="start" dominant-baseline="middle" data-label="Follow-up"><title>Follow-up · 160</title>Follow-up · 160</text>
   </g>
 </svg>

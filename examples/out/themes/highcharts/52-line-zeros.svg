@@ -2,7 +2,7 @@
   <title id="mv-cd5ddc80008e6dc7-title">Tuesday took 12 minutes end-to-end</title>
   <desc id="mv-cd5ddc80008e6dc7-desc">line chart. Tuesday took 12 minutes end-to-end. x=day. y=minutes. 4 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Tuesday took 12 minutes end-to-end</title>Tuesday took 12 minutes end-to-end</text>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="291.5" y2="291.5"/>
     <line x1="74" x2="700" y1="209" y2="209"/>
     <line x1="74" x2="700" y1="126.5" y2="126.5"/>
@@ -23,7 +23,7 @@
     <text x="621.75" y="391" text-anchor="middle" font-size="11" data-full-label="Thu"><title>Thu</title>Thu</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="43.36" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 43.36 209)" data-axis="y">minutes</text>
+    <text x="42.68" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 42.68 209)" data-axis="y">minutes</text>
     <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">day</text>
   </g>
   <g fill="none">

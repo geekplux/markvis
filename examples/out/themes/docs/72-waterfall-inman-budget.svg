@@ -3,7 +3,7 @@
   <desc id="mv-b41458dc112446f3-desc">waterfall chart. Sponsorships still cover Inman Park sound after permits. x=step. y=delta. unit=USD k. 8 rows.</desc>
   <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>Sponsorships still cover Inman Park sound after permits</title>SPONSORSHIPS STILL COVER INMAN PARK SOUND AFTER PERMITS<tspan font-size="11" font-weight="400" fill="#64748B"> · USD k</tspan></text>
   <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3">
+  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3" data-grid="1">
     <line x1="40" x2="704" y1="342" y2="342"/>
     <line x1="40" x2="704" y1="242" y2="242"/>
     <line x1="40" x2="704" y1="142" y2="142"/>
@@ -43,8 +43,8 @@
     <text x="32" y="142" text-anchor="end" dominant-baseline="middle">150</text>
     <text x="32" y="42" text-anchor="end" dominant-baseline="middle">200</text>
     <text x="81.5" y="453" text-anchor="middle" data-full-label="Ticket sales"><tspan x="81.5" dy="0">Ticket</tspan><tspan x="81.5" dy="14">sales</tspan></text>
-    <text x="164.5" y="453" text-anchor="middle" data-full-label="Sponsorships"><title>Sponsorships</title>Sponsorshi…</text>
-    <text x="247.5" y="453" text-anchor="middle" data-full-label="Food vendors"><tspan x="247.5" dy="0">Food</tspan><tspan x="247.5" dy="14">vendors</tspan></text>
+    <text x="164.5" y="453" text-anchor="middle" data-full-label="Sponsorships">Sponsorships</text>
+    <text x="247.5" y="453" text-anchor="middle" data-full-label="Food vendors">Food vendors</text>
     <text x="330.5" y="453" text-anchor="middle" data-full-label="Beer garden">Beer garden</text>
     <text x="413.5" y="453" text-anchor="middle" data-full-label="Permits">Permits</text>
     <text x="496.5" y="453" text-anchor="middle" data-full-label="Sound">Sound</text>

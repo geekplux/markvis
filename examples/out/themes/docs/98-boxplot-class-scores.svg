@@ -3,7 +3,7 @@
   <desc id="mv-e550e65bb6b7fe3b-desc">boxplot chart. Every class scored higher in the spring term. x=class. y=score. series=term. 48 rows.</desc>
   <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>Every class scored higher in the spring term</title>EVERY CLASS SCORED HIGHER IN THE SPRING TERM</text>
   <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3">
+  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3" data-grid="1">
     <line x1="75.38" x2="75.38" y1="42" y2="144"/>
     <line x1="231.54" x2="231.54" y1="42" y2="144"/>
     <line x1="387.69" x2="387.69" y1="42" y2="144"/>
@@ -23,8 +23,8 @@
   <g font-size="11" font-weight="500" fill="#18181B">
     <rect x="75.38" y="179.5" width="10" height="3" fill="#475569" rx="1.5"/>
     <text x="89.38" y="185" data-legend="Fall">Fall</text>
-    <rect x="132.66" y="179.5" width="10" height="3" fill="#64748B" rx="1.5"/>
-    <text x="146.66" y="185" data-legend="Spring">Spring</text>
+    <rect x="124.95" y="179.5" width="10" height="3" fill="#64748B" rx="1.5"/>
+    <text x="138.95" y="185" data-legend="Spring">Spring</text>
   </g>
   <g data-boxplot="1">
     <path d="M247.15 52.5 L290.09 52.5 M372.07 52.5 L465.77 52.5 M247.15 50.25 L247.15 54.75 M465.77 50.25 L465.77 54.75" fill="none" stroke="#475569" stroke-width="1.5" data-whiskers="Algebra"/>

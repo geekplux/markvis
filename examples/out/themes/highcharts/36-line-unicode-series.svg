@@ -3,12 +3,12 @@
   <desc id="mv-d1bab8a68cc6db35-desc">line chart. Tokyo still leads Beijing on RSVPs. x=week. y=rsvps. series=city. 4 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Tokyo still leads Beijing on RSVPs</title>Tokyo still leads Beijing on RSVPs</text>
   <g font-size="12" font-weight="700" fill="#333333">
-    <circle cx="343.08" cy="420" r="5" fill="#7cb5ec"/>
-    <text x="352.08" y="424" data-legend="北京">北京</text>
+    <circle cx="345" cy="420" r="5" fill="#7cb5ec"/>
+    <text x="354" y="424" data-legend="北京">北京</text>
     <circle cx="399" cy="420" r="5" fill="#434348"/>
     <text x="408" y="424" data-legend="東京">東京</text>
   </g>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="288.8" y2="288.8"/>
     <line x1="74" x2="700" y1="227.6" y2="227.6"/>
     <line x1="74" x2="700" y1="166.4" y2="166.4"/>
@@ -28,7 +28,7 @@
     <text x="543.5" y="367" text-anchor="middle" font-size="11" data-full-label="W2"><title>W2</title>W2</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="36.54" y="197" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 36.54 197)" data-axis="y">rsvps</text>
+    <text x="35.52" y="197" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 35.52 197)" data-axis="y">rsvps</text>
     <text x="387" y="376.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">week</text>
   </g>
   <g fill="none">

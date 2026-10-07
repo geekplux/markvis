@@ -2,28 +2,28 @@
   <title id="mv-98eb0c18c1c67b75-title">Synthetic regional program costs</title>
   <desc id="mv-98eb0c18c1c67b75-desc">bar chart. Synthetic regional program costs. x=program. y=amount. unit=USD. 3 rows.</desc>
   <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Synthetic regional program costs</title>Synthetic regional program costs</text>
-  <text x="52" y="50" text-anchor="start" font-size="12" font-weight="400" fill="#8E8D87" data-subtitle="1">USD</text>
-  <g fill="none" stroke="#1B1B19" stroke-opacity="0.22" stroke-width="0.5">
-    <line x1="364.16" x2="364.16" y1="77" y2="191"/>
-    <line x1="506.08" x2="506.08" y1="77" y2="191"/>
+  <text x="52" y="50" text-anchor="start" font-size="12" font-weight="400" fill="#6A6964" data-subtitle="1">USD</text>
+  <g fill="none" stroke="#1B1B19" stroke-opacity="0.22" stroke-width="0.5" data-grid="1">
+    <line x1="375.77" x2="375.77" y1="77" y2="191"/>
+    <line x1="511.88" x2="511.88" y1="77" y2="191"/>
     <line x1="648" x2="648" y1="77" y2="191"/>
   </g>
-  <line x1="222.24" x2="222.24" y1="77" y2="191" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-baseline="0"/>
-  <g fill="#8E8D87" font-size="11" font-weight="600">
-    <text x="212.24" y="89" text-anchor="end" dominant-baseline="middle" data-full-label="North America enterprise expansion Q3"><title>North America enterprise expansion Q3</title><tspan x="212.24" dy="0">North America enterprise</tspan><tspan x="212.24" dy="14">expansion Q3</tspan></text>
-    <text x="212.24" y="127" text-anchor="end" dominant-baseline="middle" data-full-label="APAC partner enablement and training program"><title>APAC partner enablement and training program</title><tspan x="212.24" dy="0">APAC partner enablement and</tspan><tspan x="212.24" dy="14">training program</tspan></text>
-    <text x="212.24" y="165" text-anchor="end" dominant-baseline="middle" data-full-label="Legacy platform decommission wave 2"><title>Legacy platform decommission wave 2</title><tspan x="212.24" dy="0">Legacy platform decommission</tspan><tspan x="212.24" dy="14">wave 2</tspan></text>
-    <text x="222.24" y="206" text-anchor="middle">0</text>
-    <text x="364.16" y="206" text-anchor="middle">200,000</text>
-    <text x="506.08" y="206" text-anchor="middle">400,000</text>
+  <line x1="239.65" x2="239.65" y1="77" y2="191" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-baseline="0"/>
+  <g fill="#6A6964" font-size="11" font-weight="600">
+    <text x="229.65" y="96" text-anchor="end" dominant-baseline="middle" data-full-label="North America enterprise expansion Q3"><title>North America enterprise expansion Q3</title><tspan x="229.65" dy="0">North America enterprise expansion Q3</tspan></text>
+    <text x="229.65" y="127" text-anchor="end" dominant-baseline="middle" data-full-label="APAC partner enablement and training program"><title>APAC partner enablement and training program</title><tspan x="229.65" dy="0">APAC partner enablement and training</tspan><tspan x="229.65" dy="14">program</tspan></text>
+    <text x="229.65" y="172" text-anchor="end" dominant-baseline="middle" data-full-label="Legacy platform decommission wave 2"><title>Legacy platform decommission wave 2</title><tspan x="229.65" dy="0">Legacy platform decommission wave 2</tspan></text>
+    <text x="239.65" y="206" text-anchor="middle">0</text>
+    <text x="375.77" y="206" text-anchor="middle">200,000</text>
+    <text x="511.88" y="206" text-anchor="middle">400,000</text>
     <text x="648" y="206" text-anchor="middle">600,000</text>
   </g>
   <g data-orient="horizontal">
-    <path d="M222.24 82 L506.27 82 Q520.27 82 520.27 96 L520.27 96 Q520.27 110 506.27 110 L222.24 110 Z" fill="#E4572E" data-x="North America enterprise expansion Q3" data-series="amount" data-y="420,000"/>
-    <text x="526.27" y="96" text-anchor="start" font-size="12" font-weight="800" fill="#1B1B19" dominant-baseline="middle" data-value-label="North America enterprise expansion Q3">420,000</text>
-    <path d="M222.24 120 L339.51 120 Q353.51 120 353.51 134 L353.51 134 Q353.51 148 339.51 148 L222.24 148 Z" fill="#1B1B19" data-x="APAC partner enablement and training program" data-series="amount" data-y="185,000"/>
-    <text x="359.51" y="134" text-anchor="start" font-size="12" font-weight="800" fill="#1B1B19" dominant-baseline="middle" data-value-label="APAC partner enablement and training program">185,000</text>
-    <path d="M222.24 158 L275.65 158 Q289.65 158 289.65 172 L289.65 172 Q289.65 186 275.65 186 L222.24 186 Z" fill="#1B1B19" data-x="Legacy platform decommission wave 2" data-series="amount" data-y="95,000"/>
-    <text x="295.65" y="172" text-anchor="start" font-size="12" font-weight="800" fill="#1B1B19" dominant-baseline="middle" data-value-label="Legacy platform decommission wave 2">95,000</text>
+    <path d="M239.65 82 L511.5 82 Q525.5 82 525.5 96 L525.5 96 Q525.5 110 511.5 110 L239.65 110 Z" fill="#E4572E" data-x="North America enterprise expansion Q3" data-series="amount" data-y="420,000"/>
+    <text x="531.5" y="96" text-anchor="start" font-size="12" font-weight="800" fill="#1B1B19" dominant-baseline="middle" data-value-label="North America enterprise expansion Q3">420,000</text>
+    <path d="M239.65 120 L351.56 120 Q365.56 120 365.56 134 L365.56 134 Q365.56 148 351.56 148 L239.65 148 Z" fill="#1B1B19" data-x="APAC partner enablement and training program" data-series="amount" data-y="185,000"/>
+    <text x="371.56" y="134" text-anchor="start" font-size="12" font-weight="800" fill="#1B1B19" dominant-baseline="middle" data-value-label="APAC partner enablement and training program">185,000</text>
+    <path d="M239.65 158 L290.31 158 Q304.31 158 304.31 172 L304.31 172 Q304.31 186 290.31 186 L239.65 186 Z" fill="#1B1B19" data-x="Legacy platform decommission wave 2" data-series="amount" data-y="95,000"/>
+    <text x="310.31" y="172" text-anchor="start" font-size="12" font-weight="800" fill="#1B1B19" dominant-baseline="middle" data-value-label="Legacy platform decommission wave 2">95,000</text>
   </g>
 </svg>

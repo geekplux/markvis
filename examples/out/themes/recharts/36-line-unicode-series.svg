@@ -8,13 +8,13 @@
     <rect x="381" y="425" width="10" height="10" fill="#82ca9d" rx="1"/>
     <text x="395" y="434" data-legend="東京">東京</text>
   </g>
-  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3">
+  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-grid="1">
     <line x1="48" x2="700" y1="323.6" y2="323.6"/>
     <line x1="48" x2="700" y1="252.2" y2="252.2"/>
     <line x1="48" x2="700" y1="109.4" y2="109.4"/>
     <line x1="48" x2="700" y1="38" y2="38"/>
   </g>
-  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-v-grid="1">
+  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-grid="1" data-v-grid="1">
     <line x1="211" x2="211" y1="38" y2="395" data-v-grid="1"/>
     <line x1="537" x2="537" y1="38" y2="395" data-v-grid="1"/>
   </g>

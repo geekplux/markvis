@@ -2,7 +2,7 @@
   <title id="mv-d49564bd723e6ec0-title">FPS holds near 60 through the run</title>
   <desc id="mv-d49564bd723e6ec0-desc">line chart. FPS holds near 60 through the run. x=minute. y=fps. 4 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>FPS holds near 60 through the run</title>FPS holds near 60 through the run</text>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="308" y2="308"/>
     <line x1="74" x2="700" y1="242" y2="242"/>
     <line x1="74" x2="700" y1="176" y2="176"/>
@@ -26,7 +26,7 @@
     <text x="692" y="391" text-anchor="middle" font-size="11" data-full-label="5"><title>5</title>5</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="43.36" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 43.36 209)" data-axis="y">fps</text>
+    <text x="42.68" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 42.68 209)" data-axis="y">fps</text>
     <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">minute</text>
   </g>
   <g fill="none">

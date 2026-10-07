@@ -3,7 +3,7 @@
   <desc id="mv-7af386c80bccba57-desc">area chart. Day 6 held the deepest queue at 48 holds. x=day. y=holds. unit=holds. 10 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Day 6 held the deepest queue at 48 holds</title>Day 6 held the deepest queue at 48 holds</text>
   <text x="360" y="46" text-anchor="middle" font-size="12" font-weight="400" fill="#666666" data-subtitle="1">holds</text>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="272" y2="272"/>
     <line x1="74" x2="700" y1="170" y2="170"/>
     <line x1="74" x2="700" y1="68" y2="68"/>
@@ -27,7 +27,7 @@
     <text x="668.7" y="391" text-anchor="middle" font-size="11" data-full-label="D10"><title>D10</title>D10</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="43.36" y="221" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 43.36 221)" data-axis="y">holds</text>
+    <text x="42.68" y="221" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 42.68 221)" data-axis="y">holds</text>
     <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">day</text>
   </g>
   <g fill="none">

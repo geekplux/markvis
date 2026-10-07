@@ -2,7 +2,7 @@
   <title id="mv-2a4bdc1546ea41e2-title">Rent climbs as commute shortens on the Beltline</title>
   <desc id="mv-2a4bdc1546ea41e2-desc">scatter chart. Rent climbs as commute shortens on the Beltline. x=commute_min. y=rent_index. 12 rows.</desc>
   <text x="66" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Rent climbs as commute shortens on the Beltline</title>Rent climbs as commute shortens on the Beltline</text>
-  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4">
+  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4" data-grid="1">
     <line x1="66" x2="706" y1="293.2" y2="293.2"/>
     <line x1="66" x2="706" y1="231.4" y2="231.4"/>
     <line x1="66" x2="706" y1="107.8" y2="107.8"/>
@@ -10,7 +10,7 @@
   </g>
   <path d="M66 355 L706 355" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1"/>
   <path d="M74 355 L74 359 M282 355 L282 359 M490 355 L490 359 M698 355 L698 359" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-axis-ticks="1"/>
-  <g fill="#8C8C8C" font-size="12" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400">
     <text x="58" y="355" text-anchor="end" dominant-baseline="middle">60</text>
     <text x="58" y="293.2" text-anchor="end" dominant-baseline="middle">80</text>
     <text x="58" y="231.4" text-anchor="end" dominant-baseline="middle">100</text>
@@ -22,8 +22,8 @@
     <text x="490" y="371" text-anchor="middle" font-size="12" data-full-label="40"><title>40</title>40</text>
     <text x="698" y="371" text-anchor="middle" font-size="12" data-full-label="60"><title>60</title>60</text>
   </g>
-  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="26.68" y="200.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 26.68 200.5)" data-axis="y">rent_index</text>
+  <g fill="#737373" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="26.25" y="200.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 26.25 200.5)" data-axis="y">rent_index</text>
     <text x="386" y="380.6" text-anchor="middle" dominant-baseline="hanging" data-axis="x">commute_min</text>
   </g>
   <g>

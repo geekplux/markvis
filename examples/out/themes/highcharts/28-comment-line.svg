@@ -2,7 +2,7 @@
   <title id="mv-5d71eed81323c10e-title">Tuesday peaked error bursts at 5</title>
   <desc id="mv-5d71eed81323c10e-desc">line chart. Tuesday peaked error bursts at 5. x=day. y=errors. 3 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Tuesday peaked error bursts at 5</title>Tuesday peaked error bursts at 5</text>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="308" y2="308"/>
     <line x1="74" x2="700" y1="242" y2="242"/>
     <line x1="74" x2="700" y1="176" y2="176"/>
@@ -23,7 +23,7 @@
     <text x="595.67" y="391" text-anchor="middle" font-size="11" data-full-label="Wed"><title>Wed</title>Wed</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="50.18" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 50.18 209)" data-axis="y">errors</text>
+    <text x="49.84" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 49.84 209)" data-axis="y">errors</text>
     <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">day</text>
   </g>
   <g fill="none">

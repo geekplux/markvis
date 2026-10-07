@@ -3,19 +3,19 @@
   <desc id="mv-89cc0e6357f0924d-desc">funnel chart. Gate still seats 780 of 3,400 Piedmont browsers. x=stage. y=people. 6 rows.</desc>
   <text x="48" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Gate still seats 780 of 3,400 Piedmont browsers</title>Gate still seats 780 of 3,400 Piedmont browsers</text>
   <g data-funnel="1">
-    <path d="M48 46 L584.96 46 L506 106 L126.96 106 Z" fill="#5AD8A6" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-stage="Browse" data-y="3,400"/>
-    <path d="M126.96 106 L506 106 L458.62 166 L174.34 166 Z" fill="#E8684A" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-stage="Waitlist" data-y="2,400"/>
-    <path d="M174.34 166 L458.62 166 L414.4 226 L218.56 226 Z" fill="#5D7092" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-stage="Cart" data-y="1,800"/>
-    <path d="M218.56 226 L414.4 226 L389.13 286 L243.83 286 Z" fill="#F6BD16" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-stage="Pay" data-y="1,240"/>
-    <path d="M243.83 286 L389.13 286 L378.07 346 L254.89 346 Z" fill="#6DC8EC" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-stage="Check-in" data-y="920"/>
-    <path d="M254.89 346 L378.07 346 L378.07 406 L254.89 406 Z" fill="#9270CA" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-stage="Gate" data-y="780"/>
+    <path d="M48 46 L614.13 46 L530.88 106 L131.25 106 Z" fill="#5AD8A6" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-stage="Browse" data-y="3,400"/>
+    <path d="M131.25 106 L530.88 106 L480.92 166 L181.21 166 Z" fill="#E8684A" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-stage="Waitlist" data-y="2,400"/>
+    <path d="M181.21 166 L480.92 166 L434.3 226 L227.83 226 Z" fill="#5D7092" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-stage="Cart" data-y="1,800"/>
+    <path d="M227.83 226 L434.3 226 L407.66 286 L254.47 286 Z" fill="#F6BD16" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-stage="Pay" data-y="1,240"/>
+    <path d="M254.47 286 L407.66 286 L396 346 L266.13 346 Z" fill="#6DC8EC" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-stage="Check-in" data-y="920"/>
+    <path d="M266.13 346 L396 346 L396 406 L266.13 406 Z" fill="#9270CA" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-stage="Gate" data-y="780"/>
   </g>
   <g fill="#262626" font-size="12" font-weight="400">
-    <text x="592.96" y="76" text-anchor="start" dominant-baseline="middle" data-label="Browse"><title>Browse · 3,400</title>Browse · 3,400</text>
-    <text x="592.96" y="136" text-anchor="start" dominant-baseline="middle" data-label="Waitlist"><title>Waitlist · 2,400</title>Waitlist · 2,400</text>
-    <text x="592.96" y="196" text-anchor="start" dominant-baseline="middle" data-label="Cart"><title>Cart · 1,800</title>Cart · 1,800</text>
-    <text x="592.96" y="256" text-anchor="start" dominant-baseline="middle" data-label="Pay"><title>Pay · 1,240</title>Pay · 1,240</text>
-    <text x="592.96" y="316" text-anchor="start" dominant-baseline="middle" data-label="Check-in"><title>Check-in · 920</title>Check-in · 920</text>
-    <text x="592.96" y="376" text-anchor="start" dominant-baseline="middle" data-label="Gate"><title>Gate · 780</title>Gate · 780</text>
+    <text x="622.13" y="76" text-anchor="start" dominant-baseline="middle" data-label="Browse"><title>Browse · 3,400</title>Browse · 3,400</text>
+    <text x="622.13" y="136" text-anchor="start" dominant-baseline="middle" data-label="Waitlist"><title>Waitlist · 2,400</title>Waitlist · 2,400</text>
+    <text x="622.13" y="196" text-anchor="start" dominant-baseline="middle" data-label="Cart"><title>Cart · 1,800</title>Cart · 1,800</text>
+    <text x="622.13" y="256" text-anchor="start" dominant-baseline="middle" data-label="Pay"><title>Pay · 1,240</title>Pay · 1,240</text>
+    <text x="622.13" y="316" text-anchor="start" dominant-baseline="middle" data-label="Check-in"><title>Check-in · 920</title>Check-in · 920</text>
+    <text x="622.13" y="376" text-anchor="start" dominant-baseline="middle" data-label="Gate"><title>Gate · 780</title>Gate · 780</text>
   </g>
 </svg>

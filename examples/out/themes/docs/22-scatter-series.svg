@@ -6,10 +6,10 @@
   <g font-size="11" font-weight="500" fill="#18181B">
     <rect x="58" y="458.5" width="10" height="3" fill="#475569" rx="1.5"/>
     <text x="72" y="464" data-legend="A">A</text>
-    <rect x="94.82" y="458.5" width="10" height="3" fill="#64748B" rx="1.5"/>
-    <text x="108.82" y="464" data-legend="B">B</text>
+    <rect x="95.94" y="458.5" width="10" height="3" fill="#64748B" rx="1.5"/>
+    <text x="109.94" y="464" data-legend="B">B</text>
   </g>
-  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3">
+  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3" data-grid="1">
     <line x1="58" x2="704" y1="339.6" y2="339.6"/>
     <line x1="58" x2="704" y1="190.8" y2="190.8"/>
     <line x1="58" x2="704" y1="42" y2="42"/>

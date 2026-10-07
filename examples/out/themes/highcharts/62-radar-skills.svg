@@ -3,32 +3,32 @@
   <desc id="mv-56c6698d43cae5ec-desc">radar chart. Stage crew still leads box office on coverage. x=skill. y=score. series=crew. 15 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Stage crew still leads box office on coverage</title>Stage crew still leads box office on coverage</text>
   <g font-size="12" font-weight="700" fill="#333333">
-    <circle cx="283.13" cy="420" r="5" fill="#7cb5ec"/>
-    <text x="292.13" y="424" data-legend="Stage">Stage</text>
-    <circle cx="353.31" cy="420" r="5" fill="#434348"/>
-    <text x="362.31" y="424" data-legend="Box">Box</text>
-    <circle cx="407.41" cy="420" r="5" fill="#90ed7d"/>
-    <text x="416.41" y="424" data-legend="Usher">Usher</text>
+    <circle cx="288.78" cy="420" r="5" fill="#7cb5ec"/>
+    <text x="297.78" y="424" data-legend="Stage">Stage</text>
+    <circle cx="353.52" cy="420" r="5" fill="#434348"/>
+    <text x="362.52" y="424" data-legend="Box">Box</text>
+    <circle cx="406.51" cy="420" r="5" fill="#90ed7d"/>
+    <text x="415.51" y="424" data-legend="Usher">Usher</text>
   </g>
-  <g fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-radar-grid="1">
-    <path d="M368.36 147.91 L428.36 191.5 L405.44 262.04 L331.28 262.04 L308.36 191.5 Z"/>
-    <line x1="368.36" y1="211" x2="368.36" y2="97.44"/>
-    <line x1="368.36" y1="211" x2="476.36" y2="175.91"/>
-    <line x1="368.36" y1="211" x2="435.11" y2="302.87"/>
-    <line x1="368.36" y1="211" x2="301.61" y2="302.87"/>
-    <line x1="368.36" y1="211" x2="260.36" y2="175.91"/>
+  <g fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-grid="1" data-radar-grid="1">
+    <path d="M369.19 147.91 L429.19 191.5 L406.27 262.04 L332.1 262.04 L309.18 191.5 Z"/>
+    <line x1="369.19" y1="211" x2="369.19" y2="97.44"/>
+    <line x1="369.19" y1="211" x2="477.19" y2="175.91"/>
+    <line x1="369.19" y1="211" x2="435.93" y2="302.87"/>
+    <line x1="369.19" y1="211" x2="302.44" y2="302.87"/>
+    <line x1="369.19" y1="211" x2="261.18" y2="175.91"/>
   </g>
   <g data-radar="1">
-    <path d="M368.36 110.06 L454.76 182.93 L435.11 302.87 L304.58 298.79 L267.56 178.25 Z" fill="#7cb5ec" fill-opacity="0.12" stroke="#7cb5ec" stroke-width="1.75" data-series="Stage"/>
-    <path d="M368.36 130.25 L452.36 183.71 L411.38 270.21 L313.48 286.54 L295.16 187.22 Z" fill="#434348" fill-opacity="0.12" stroke="#434348" stroke-width="1.75" data-series="Box"/>
-    <path d="M368.36 121.41 L447.56 185.27 L429.18 294.71 L303.09 300.83 L285.56 184.1 Z" fill="#90ed7d" fill-opacity="0.12" stroke="#90ed7d" stroke-width="1.75" data-series="Usher"/>
+    <path d="M369.19 110.06 L455.59 182.93 L435.93 302.87 L305.4 298.79 L268.38 178.25 Z" fill="#7cb5ec" fill-opacity="0.12" stroke="#7cb5ec" stroke-width="1.75" data-series="Stage"/>
+    <path d="M369.19 130.25 L453.19 183.71 L412.2 270.21 L314.3 286.54 L295.98 187.22 Z" fill="#434348" fill-opacity="0.12" stroke="#434348" stroke-width="1.75" data-series="Box"/>
+    <path d="M369.19 121.41 L448.39 185.27 L430 294.71 L303.92 300.83 L286.38 184.1 Z" fill="#90ed7d" fill-opacity="0.12" stroke="#90ed7d" stroke-width="1.75" data-series="Usher"/>
   </g>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="368.36" y="83.44" text-anchor="middle" dominant-baseline="middle" data-spoke="Speed">Speed</text>
-    <text x="489.68" y="171.58" text-anchor="middle" dominant-baseline="middle" data-spoke="Range">Range</text>
-    <text x="443.34" y="314.2" text-anchor="middle" dominant-baseline="middle" data-spoke="Coverage">Coverage</text>
-    <text x="293.38" y="314.2" text-anchor="middle" dominant-baseline="middle" data-spoke="Safety">Safety</text>
-    <text x="247.04" y="171.58" text-anchor="middle" dominant-baseline="middle" data-spoke="Cueing">Cueing</text>
-    <text x="368.36" y="143.91" text-anchor="middle" font-size="11" fill="#666666" data-radar-tick="50">50</text>
+    <text x="369.19" y="83.44" text-anchor="middle" dominant-baseline="middle" data-spoke="Speed">Speed</text>
+    <text x="490.5" y="171.58" text-anchor="middle" dominant-baseline="middle" data-spoke="Range">Range</text>
+    <text x="444.16" y="314.2" text-anchor="middle" dominant-baseline="middle" data-spoke="Coverage">Coverage</text>
+    <text x="294.21" y="314.2" text-anchor="middle" dominant-baseline="middle" data-spoke="Safety">Safety</text>
+    <text x="247.87" y="171.58" text-anchor="middle" dominant-baseline="middle" data-spoke="Cueing">Cueing</text>
+    <text x="369.19" y="143.91" text-anchor="middle" font-size="11" fill="#666666" data-radar-tick="50">50</text>
   </g>
 </svg>

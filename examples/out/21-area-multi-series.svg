@@ -2,7 +2,7 @@
   <title id="mv-8c2fdefb06435294-title">Queue A stays deeper than queue B</title>
   <desc id="mv-8c2fdefb06435294-desc">area chart. Queue A stays deeper than queue B. x=minute. y=depth. series=queue. 6 rows.</desc>
   <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Queue A stays deeper than queue B</title>Queue A stays deeper than queue B</text>
-  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
+  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1" data-grid="1">
     <line x1="48" x2="700" y1="352.25" y2="352.25"/>
     <line x1="48" x2="700" y1="146.75" y2="146.75"/>
     <line x1="48" x2="700" y1="44" y2="44"/>
@@ -33,7 +33,7 @@
     <circle cx="533" cy="249.5" r="2.5" fill="#F97316" stroke="none" data-series="B"/>
   </g>
   <g font-size="13" font-weight="500">
-    <text x="541" y="146.75" text-anchor="start" dominant-baseline="middle" fill="#3B82F6" data-end-label="A">A</text>
-    <text x="541" y="249.5" text-anchor="start" dominant-baseline="middle" fill="#F97316" data-end-label="B">B</text>
+    <text x="541" y="146.75" text-anchor="start" dominant-baseline="middle" fill="#346dc9" data-end-label="A">A</text>
+    <text x="541" y="249.5" text-anchor="start" dominant-baseline="middle" fill="#b55716" data-end-label="B">B</text>
   </g>
 </svg>

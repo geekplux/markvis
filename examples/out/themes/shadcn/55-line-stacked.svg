@@ -4,12 +4,12 @@
   <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
   <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Walk-up plus member still climb through week 8</title>Walk-up plus member still climb through week 8</text>
   <g font-size="12" font-weight="500" fill="#0A0A0A">
-    <rect x="302.64" y="435" width="10" height="10" fill="#F54900" rx="3"/>
-    <text x="316.64" y="444" data-legend="walk-up">walk-up</text>
-    <rect x="384.72" y="435" width="10" height="10" fill="#009689" rx="3"/>
-    <text x="398.72" y="444" data-legend="member">member</text>
+    <rect x="301.91" y="435" width="10" height="10" fill="#F54900" rx="3"/>
+    <text x="315.91" y="444" data-legend="walk-up">walk-up</text>
+    <rect x="380.5" y="435" width="10" height="10" fill="#009689" rx="3"/>
+    <text x="394.5" y="444" data-legend="member">member</text>
   </g>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1">
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1">
     <line x1="48" x2="700" y1="290.67" y2="290.67"/>
     <line x1="48" x2="700" y1="50" y2="50"/>
   </g>

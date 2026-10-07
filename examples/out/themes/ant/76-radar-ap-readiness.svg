@@ -5,29 +5,29 @@
   <g font-size="12" font-weight="400" fill="#262626">
     <circle cx="53" cy="40" r="5" fill="#5AD8A6"/>
     <text x="62" y="44" data-legend="Grady">Grady</text>
-    <circle cx="120.2" cy="40" r="5" fill="#E8684A"/>
-    <text x="129.2" y="44" data-legend="Midtown">Midtown</text>
+    <circle cx="118.86" cy="40" r="5" fill="#E8684A"/>
+    <text x="127.86" y="44" data-legend="Midtown">Midtown</text>
   </g>
-  <g fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="4 4" data-radar-grid="1">
-    <path d="M361.26 168.93 L413.28 198.97 L413.28 259.03 L361.26 289.07 L309.24 259.03 L309.24 198.97 Z"/>
-    <line x1="361.26" y1="229" x2="361.26" y2="120.88"/>
-    <line x1="361.26" y1="229" x2="454.89" y2="174.94"/>
-    <line x1="361.26" y1="229" x2="454.89" y2="283.06"/>
-    <line x1="361.26" y1="229" x2="361.26" y2="337.12"/>
-    <line x1="361.26" y1="229" x2="267.63" y2="283.06"/>
-    <line x1="361.26" y1="229" x2="267.63" y2="174.94"/>
+  <g fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="4 4" data-grid="1" data-radar-grid="1">
+    <path d="M361.95 168.93 L413.97 198.97 L413.97 259.03 L361.95 289.07 L309.93 259.03 L309.93 198.97 Z"/>
+    <line x1="361.95" y1="229" x2="361.95" y2="120.88"/>
+    <line x1="361.95" y1="229" x2="455.58" y2="174.94"/>
+    <line x1="361.95" y1="229" x2="455.58" y2="283.06"/>
+    <line x1="361.95" y1="229" x2="361.95" y2="337.12"/>
+    <line x1="361.95" y1="229" x2="268.31" y2="283.06"/>
+    <line x1="361.95" y1="229" x2="268.31" y2="174.94"/>
   </g>
   <g data-radar="1">
-    <path d="M361.26 130.49 L454.89 174.94 L442.41 275.85 L361.26 331.11 L276.99 277.65 L282.19 183.35 Z" fill="#5AD8A6" fill-opacity="0.12" stroke="#5AD8A6" stroke-width="1.75" data-series="Grady"/>
-    <path d="M361.26 137.7 L435.13 186.35 L444.49 277.05 L361.26 317.9 L286.35 272.25 L279.07 181.55 Z" fill="#E8684A" fill-opacity="0.12" stroke="#E8684A" stroke-width="1.75" data-series="Midtown"/>
+    <path d="M361.95 130.49 L455.58 174.94 L443.1 275.85 L361.95 331.11 L277.68 277.65 L282.88 183.35 Z" fill="#5AD8A6" fill-opacity="0.12" stroke="#5AD8A6" stroke-width="1.75" data-series="Grady"/>
+    <path d="M361.95 137.7 L435.81 186.35 L445.18 277.05 L361.95 317.9 L287.04 272.25 L279.76 181.55 Z" fill="#E8684A" fill-opacity="0.12" stroke="#E8684A" stroke-width="1.75" data-series="Midtown"/>
   </g>
-  <g fill="#8C8C8C" font-size="12" font-weight="400">
-    <text x="361.26" y="106.88" text-anchor="middle" dominant-baseline="middle" data-spoke="Math">Math</text>
-    <text x="467.02" y="167.94" text-anchor="middle" dominant-baseline="middle" data-spoke="Writing">Writing</text>
-    <text x="467.02" y="290.06" text-anchor="middle" dominant-baseline="middle" data-spoke="Labs">Labs</text>
-    <text x="361.26" y="351.12" text-anchor="middle" dominant-baseline="middle" data-spoke="Research">Research</text>
-    <text x="255.5" y="290.06" text-anchor="middle" dominant-baseline="middle" data-spoke="History">History</text>
-    <text x="255.5" y="167.94" text-anchor="middle" dominant-baseline="middle" data-spoke="Languages">Languages</text>
-    <text x="361.26" y="164.93" text-anchor="middle" font-size="12" fill="#8C8C8C" data-radar-tick="50">50</text>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="361.95" y="106.88" text-anchor="middle" dominant-baseline="middle" data-spoke="Math">Math</text>
+    <text x="467.71" y="167.94" text-anchor="middle" dominant-baseline="middle" data-spoke="Writing">Writing</text>
+    <text x="467.71" y="290.06" text-anchor="middle" dominant-baseline="middle" data-spoke="Labs">Labs</text>
+    <text x="361.95" y="351.12" text-anchor="middle" dominant-baseline="middle" data-spoke="Research">Research</text>
+    <text x="256.19" y="290.06" text-anchor="middle" dominant-baseline="middle" data-spoke="History">History</text>
+    <text x="256.19" y="167.94" text-anchor="middle" dominant-baseline="middle" data-spoke="Languages">Languages</text>
+    <text x="361.95" y="164.93" text-anchor="middle" font-size="12" fill="#737373" data-radar-tick="50">50</text>
   </g>
 </svg>

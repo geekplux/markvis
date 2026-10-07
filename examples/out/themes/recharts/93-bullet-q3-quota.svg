@@ -2,10 +2,10 @@
   <title id="mv-7beccc92b6402652-title">Only West is short of its Q3 quota</title>
   <desc id="mv-7beccc92b6402652-desc">bullet chart. Only West is short of its Q3 quota. x=region. y=booked. unit=USD k. 4 rows.</desc>
   <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>Only West is short of its Q3 quota</title>Only West is short of its Q3 quota<tspan font-size="12" font-weight="400" fill="#6B7280"> · USD k</tspan></text>
-  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3">
-    <line x1="245.68" x2="245.68" y1="38" y2="174"/>
-    <line x1="437.36" x2="437.36" y1="38" y2="174"/>
-    <line x1="629.04" x2="629.04" y1="38" y2="174"/>
+  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-grid="1">
+    <line x1="248.24" x2="248.24" y1="38" y2="174"/>
+    <line x1="442.48" x2="442.48" y1="38" y2="174"/>
+    <line x1="636.72" x2="636.72" y1="38" y2="174"/>
   </g>
   <line x1="54" x2="54" y1="38" y2="174" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-baseline="0"/>
   <g fill="#6B7280" font-size="12" font-weight="400">
@@ -14,34 +14,34 @@
     <text x="46" y="123" text-anchor="end" dominant-baseline="middle" data-full-label="East"><title>East</title><tspan x="46" dy="0">East</tspan></text>
     <text x="46" y="157" text-anchor="end" dominant-baseline="middle" data-full-label="West"><title>West</title><tspan x="46" dy="0">West</tspan></text>
     <text x="54" y="192" text-anchor="middle">0</text>
-    <text x="245.68" y="192" text-anchor="middle">200</text>
-    <text x="437.36" y="192" text-anchor="middle">400</text>
-    <text x="629.04" y="192" text-anchor="middle">600</text>
+    <text x="248.24" y="192" text-anchor="middle">200</text>
+    <text x="442.48" y="192" text-anchor="middle">400</text>
+    <text x="636.72" y="192" text-anchor="middle">600</text>
   </g>
   <g font-size="12" font-weight="400" fill="#374151">
-    <circle cx="282.6" cy="212" r="4.5" fill="#8884d8"/>
-    <text x="291.6" y="216" data-legend="booked">booked</text>
-    <rect x="356.24" y="206" width="2.5" height="12" fill="#374151"/>
-    <text x="366.24" y="216" data-legend="quota">quota</text>
+    <circle cx="288.5" cy="212" r="4.5" fill="#8884d8"/>
+    <text x="297.5" y="216" data-legend="booked">booked</text>
+    <rect x="361.5" y="206" width="2.5" height="12" fill="#374151"/>
+    <text x="371.5" y="216" data-legend="quota">quota</text>
   </g>
   <g data-bullet="1">
-    <rect x="54" y="43" width="575.04" height="24" fill="#374151" fill-opacity="0.07" data-track="North"/>
-    <path d="M54 50 L456.53 50 L456.53 60 L54 60 Z" fill="#8884d8" data-x="North" data-y="420"/>
-    <line x1="437.36" x2="437.36" y1="45" y2="65" stroke="#374151" stroke-width="2.5" data-target="400"/>
-    <rect x="54" y="77" width="575.04" height="24" fill="#374151" fill-opacity="0.07" data-track="South"/>
-    <path d="M54 84 L403.82 84 L403.82 94 L54 94 Z" fill="#8884d8" data-x="South" data-y="365"/>
-    <line x1="389.44" x2="389.44" y1="79" y2="99" stroke="#374151" stroke-width="2.5" data-target="350"/>
-    <rect x="54" y="111" width="575.04" height="24" fill="#374151" fill-opacity="0.07" data-track="East"/>
-    <path d="M54 118 L544.7 118 L544.7 128 L54 128 Z" fill="#8884d8" data-x="East" data-y="512"/>
-    <line x1="514.03" x2="514.03" y1="113" y2="133" stroke="#374151" stroke-width="2.5" data-target="480"/>
-    <rect x="54" y="145" width="575.04" height="24" fill="#374151" fill-opacity="0.07" data-track="West"/>
-    <path d="M54 152 L330.02 152 L330.02 162 L54 162 Z" fill="#8884d8" data-x="West" data-y="288"/>
-    <line x1="399.02" x2="399.02" y1="147" y2="167" stroke="#374151" stroke-width="2.5" data-target="360"/>
+    <rect x="54" y="43" width="582.72" height="24" fill="#374151" fill-opacity="0.07" data-track="North"/>
+    <path d="M54 50 L461.9 50 L461.9 60 L54 60 Z" fill="#8884d8" data-x="North" data-y="420"/>
+    <line x1="442.48" x2="442.48" y1="45" y2="65" stroke="#374151" stroke-width="2.5" data-target="400"/>
+    <rect x="54" y="77" width="582.72" height="24" fill="#374151" fill-opacity="0.07" data-track="South"/>
+    <path d="M54 84 L408.49 84 L408.49 94 L54 94 Z" fill="#8884d8" data-x="South" data-y="365"/>
+    <line x1="393.92" x2="393.92" y1="79" y2="99" stroke="#374151" stroke-width="2.5" data-target="350"/>
+    <rect x="54" y="111" width="582.72" height="24" fill="#374151" fill-opacity="0.07" data-track="East"/>
+    <path d="M54 118 L551.25 118 L551.25 128 L54 128 Z" fill="#8884d8" data-x="East" data-y="512"/>
+    <line x1="520.18" x2="520.18" y1="113" y2="133" stroke="#374151" stroke-width="2.5" data-target="480"/>
+    <rect x="54" y="145" width="582.72" height="24" fill="#374151" fill-opacity="0.07" data-track="West"/>
+    <path d="M54 152 L333.71 152 L333.71 162 L54 162 Z" fill="#8884d8" data-x="West" data-y="288"/>
+    <line x1="403.63" x2="403.63" y1="147" y2="167" stroke="#374151" stroke-width="2.5" data-target="360"/>
   </g>
   <g fill="#374151" font-size="12" font-weight="500">
-    <text x="641.04" y="55" dominant-baseline="middle" data-value-label="North">420<tspan fill="#6B7280" font-weight="400"> / 400</tspan></text>
-    <text x="641.04" y="89" dominant-baseline="middle" data-value-label="South">365<tspan fill="#6B7280" font-weight="400"> / 350</tspan></text>
-    <text x="641.04" y="123" dominant-baseline="middle" data-value-label="East">512<tspan fill="#6B7280" font-weight="400"> / 480</tspan></text>
-    <text x="641.04" y="157" dominant-baseline="middle" data-value-label="West">288<tspan fill="#6B7280" font-weight="400"> / 360</tspan></text>
+    <text x="648.72" y="55" dominant-baseline="middle" data-value-label="North">420<tspan fill="#6B7280" font-weight="400"> / 400</tspan></text>
+    <text x="648.72" y="89" dominant-baseline="middle" data-value-label="South">365<tspan fill="#6B7280" font-weight="400"> / 350</tspan></text>
+    <text x="648.72" y="123" dominant-baseline="middle" data-value-label="East">512<tspan fill="#6B7280" font-weight="400"> / 480</tspan></text>
+    <text x="648.72" y="157" dominant-baseline="middle" data-value-label="West">288<tspan fill="#6B7280" font-weight="400"> / 360</tspan></text>
   </g>
 </svg>

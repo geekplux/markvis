@@ -40,7 +40,7 @@
     <rect x="344" y="254" width="97.33" height="101" fill="#2e2e2c" stroke="#E2E1DB" stroke-width="1" data-x="11am" data-series="Sat" data-y="650"/>
     <text x="392.67" y="304.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#F4F3EF" data-cell-label="11am:Sat">650</text>
     <rect x="441.33" y="254" width="97.33" height="101" fill="#757471" stroke="#E2E1DB" stroke-width="1" data-x="12pm" data-series="Sat" data-y="390"/>
-    <text x="490" y="304.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#F4F3EF" data-cell-label="12pm:Sat">390</text>
+    <text x="490" y="304.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#ffffff" data-cell-label="12pm:Sat">390</text>
     <rect x="538.67" y="254" width="97.33" height="101" fill="#a3a29f" stroke="#E2E1DB" stroke-width="1" data-x="1pm" data-series="Sat" data-y="220"/>
     <text x="587.33" y="304.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#1B1B19" data-cell-label="1pm:Sat">220</text>
     <rect x="52" y="355" width="97.33" height="101" fill="#aeadaa" stroke="#E2E1DB" stroke-width="1" data-x="8am" data-series="Sun" data-y="180"/>
@@ -52,7 +52,7 @@
     <rect x="344" y="355" width="97.33" height="101" fill="#393936" stroke="#E2E1DB" stroke-width="1" data-x="11am" data-series="Sun" data-y="610"/>
     <text x="392.67" y="405.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#F4F3EF" data-cell-label="11am:Sun">610</text>
     <rect x="441.33" y="355" width="97.33" height="101" fill="#7d7c79" stroke="#E2E1DB" stroke-width="1" data-x="12pm" data-series="Sun" data-y="360"/>
-    <text x="490" y="405.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#1B1B19" data-cell-label="12pm:Sun">360</text>
+    <text x="490" y="405.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#000000" data-cell-label="12pm:Sun">360</text>
     <rect x="538.67" y="355" width="97.33" height="101" fill="#aaa9a6" stroke="#E2E1DB" stroke-width="1" data-x="1pm" data-series="Sun" data-y="195"/>
     <text x="587.33" y="405.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#1B1B19" data-cell-label="1pm:Sun">195</text>
   </g>
@@ -65,10 +65,10 @@
     <rect x="652" y="153" width="12" height="51" fill="#4f4e4c"/>
     <rect x="652" y="102.5" width="12" height="51" fill="#353532"/>
     <rect x="652" y="52" width="12" height="51" fill="#1b1b19"/>
-    <text x="668" y="56" font-size="11" fill="#8E8D87" dominant-baseline="hanging" data-scale-max="1">720</text>
-    <text x="668" y="456" font-size="11" fill="#8E8D87" data-scale-min="1">55</text>
+    <text x="668" y="56" font-size="11" fill="#6A6964" dominant-baseline="hanging" data-scale-max="1">720</text>
+    <text x="668" y="456" font-size="11" fill="#6A6964" data-scale-min="1">55</text>
   </g>
-  <g fill="#8E8D87" font-size="11" font-weight="600">
+  <g fill="#6A6964" font-size="11" font-weight="600">
     <text x="42" y="102.5" text-anchor="end" dominant-baseline="middle" data-series-label="Wed"><title>Wed</title>Wed</text>
     <text x="42" y="203.5" text-anchor="end" dominant-baseline="middle" data-series-label="Fri"><title>Fri</title>Fri</text>
     <text x="42" y="304.5" text-anchor="end" dominant-baseline="middle" data-series-label="Sat"><title>Sat</title>Sat</text>

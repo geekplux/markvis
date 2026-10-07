@@ -3,7 +3,7 @@
   <desc id="mv-1e4c16b29ddcbf07-desc">line chart. Retention fell to 70 by week 4. x=week. y=rate. unit=pct. 4 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Retention fell to 70 by week 4</title>Retention fell to 70 by week 4</text>
   <text x="360" y="46" text-anchor="middle" font-size="12" font-weight="400" fill="#666666" data-subtitle="1">pct</text>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="312.8" y2="312.8"/>
     <line x1="74" x2="700" y1="251.6" y2="251.6"/>
     <line x1="74" x2="700" y1="190.4" y2="190.4"/>
@@ -27,7 +27,7 @@
     <text x="692" y="391" text-anchor="middle" font-size="11" data-full-label="5"><title>5</title>5</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="36.54" y="221" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 36.54 221)" data-axis="y">rate · pct</text>
+    <text x="35.52" y="221" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 35.52 221)" data-axis="y">rate · pct</text>
     <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">week</text>
   </g>
   <g fill="none">

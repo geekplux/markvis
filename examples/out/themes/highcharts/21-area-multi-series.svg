@@ -3,12 +3,12 @@
   <desc id="mv-8c2fdefb06435294-desc">area chart. Queue A stays deeper than queue B. x=minute. y=depth. series=queue. 6 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Queue A stays deeper than queue B</title>Queue A stays deeper than queue B</text>
   <g font-size="12" font-weight="700" fill="#333333">
-    <circle cx="360.96" cy="420" r="5" fill="#7cb5ec"/>
-    <text x="369.96" y="424" data-legend="A">A</text>
-    <circle cx="399" cy="420" r="5" fill="#434348"/>
-    <text x="408" y="424" data-legend="B">B</text>
+    <circle cx="360.56" cy="420" r="5" fill="#7cb5ec"/>
+    <text x="369.56" y="424" data-legend="A">A</text>
+    <circle cx="399.65" cy="420" r="5" fill="#434348"/>
+    <text x="408.65" y="424" data-legend="B">B</text>
   </g>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="273.5" y2="273.5"/>
     <line x1="74" x2="700" y1="197" y2="197"/>
     <line x1="74" x2="700" y1="120.5" y2="120.5"/>
@@ -29,7 +29,7 @@
     <text x="692" y="367" text-anchor="middle" font-size="11" data-full-label="3"><title>3</title>3</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="50.18" y="197" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 50.18 197)" data-axis="y">depth</text>
+    <text x="49.84" y="197" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 49.84 197)" data-axis="y">depth</text>
     <text x="387" y="376.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">minute</text>
   </g>
   <g fill="none">

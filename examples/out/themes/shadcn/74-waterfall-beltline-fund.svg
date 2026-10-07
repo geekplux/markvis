@@ -4,7 +4,7 @@
   <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
   <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>City match still lifts Beltline fund after resurfacing</title>City match still lifts Beltline fund after resurfacing</text>
   <text x="48" y="51" text-anchor="start" font-size="13" font-weight="400" fill="#737373" data-subtitle="1">USD k</text>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1">
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1">
     <line x1="48" x2="700" y1="304" y2="304"/>
     <line x1="48" x2="700" y1="188" y2="188"/>
   </g>
@@ -42,10 +42,10 @@
     <text x="40" y="188" text-anchor="end" dominant-baseline="middle">200</text>
     <text x="40" y="72" text-anchor="end" dominant-baseline="middle">300</text>
     <text x="88.75" y="432" text-anchor="middle" data-full-label="Opening balance"><tspan x="88.75" dy="0">Opening</tspan><tspan x="88.75" dy="15">balance</tspan></text>
-    <text x="170.25" y="432" text-anchor="middle" data-full-label="Donor gifts"><tspan x="170.25" dy="0">Donor</tspan><tspan x="170.25" dy="15">gifts</tspan></text>
+    <text x="170.25" y="432" text-anchor="middle" data-full-label="Donor gifts">Donor gifts</text>
     <text x="251.75" y="432" text-anchor="middle" data-full-label="City match">City match</text>
     <text x="333.25" y="432" text-anchor="middle" data-full-label="Event fees">Event fees</text>
-    <text x="414.75" y="432" text-anchor="middle" data-full-label="Resurfacing"><title>Resurfacing</title>Resurfaci…</text>
+    <text x="414.75" y="432" text-anchor="middle" data-full-label="Resurfacing">Resurfacing</text>
     <text x="496.25" y="432" text-anchor="middle" data-full-label="Lighting">Lighting</text>
     <text x="577.75" y="432" text-anchor="middle" data-full-label="Crew">Crew</text>
     <text x="659.25" y="432" text-anchor="middle" data-full-label="Plantings">Plantings</text>

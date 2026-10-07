@@ -4,44 +4,44 @@
   <rect x="0.5" y="0.5" width="719" height="271" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
   <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Marketing spent 18% over budget by Q3</title>Marketing spent 18% over budget by Q3</text>
   <text x="48" y="51" text-anchor="start" font-size="13" font-weight="400" fill="#737373" data-subtitle="1">USD k</text>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1">
-    <line x1="355" x2="355" y1="72" y2="208"/>
-    <line x1="614.16" x2="614.16" y1="72" y2="208"/>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1">
+    <line x1="355.14" x2="355.14" y1="72" y2="208"/>
+    <line x1="625.57" x2="625.57" y1="72" y2="208"/>
   </g>
-  <line x1="95.84" x2="95.84" y1="72" y2="208" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-baseline="0"/>
+  <line x1="84.7" x2="84.7" y1="72" y2="208" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-baseline="0"/>
   <g fill="#737373" font-size="12" font-weight="400">
-    <text x="87.84" y="89" text-anchor="end" dominant-baseline="middle" data-full-label="Engineering"><title>Engineering</title><tspan x="87.84" dy="0">Engineering</tspan></text>
-    <text x="87.84" y="123" text-anchor="end" dominant-baseline="middle" data-full-label="Marketing"><title>Marketing</title><tspan x="87.84" dy="0">Marketing</tspan></text>
-    <text x="87.84" y="157" text-anchor="end" dominant-baseline="middle" data-full-label="Sales"><title>Sales</title><tspan x="87.84" dy="0">Sales</tspan></text>
-    <text x="87.84" y="191" text-anchor="end" dominant-baseline="middle" data-full-label="Facilities"><title>Facilities</title><tspan x="87.84" dy="0">Facilities</tspan></text>
-    <text x="95.84" y="226" text-anchor="middle">0</text>
-    <text x="355" y="226" text-anchor="middle">500</text>
-    <text x="614.16" y="226" text-anchor="middle">1,000</text>
+    <text x="76.7" y="89" text-anchor="end" dominant-baseline="middle" data-full-label="Engineering"><title>Engineering</title><tspan x="76.7" dy="0">Engineering</tspan></text>
+    <text x="76.7" y="123" text-anchor="end" dominant-baseline="middle" data-full-label="Marketing"><title>Marketing</title><tspan x="76.7" dy="0">Marketing</tspan></text>
+    <text x="76.7" y="157" text-anchor="end" dominant-baseline="middle" data-full-label="Sales"><title>Sales</title><tspan x="76.7" dy="0">Sales</tspan></text>
+    <text x="76.7" y="191" text-anchor="end" dominant-baseline="middle" data-full-label="Facilities"><title>Facilities</title><tspan x="76.7" dy="0">Facilities</tspan></text>
+    <text x="84.7" y="226" text-anchor="middle">0</text>
+    <text x="355.14" y="226" text-anchor="middle">500</text>
+    <text x="625.57" y="226" text-anchor="middle">1,000</text>
   </g>
   <g font-size="12" font-weight="500" fill="#0A0A0A">
-    <circle cx="296.08" cy="246" r="4.5" fill="#F54900"/>
-    <text x="305.08" y="250" data-legend="spent">spent</text>
-    <rect x="362.28" y="240" width="2.5" height="12" fill="#0A0A0A"/>
-    <text x="372.28" y="250" data-legend="budget">budget</text>
+    <circle cx="298.73" cy="246" r="4.5" fill="#F54900"/>
+    <text x="307.73" y="250" data-legend="spent">spent</text>
+    <rect x="361.65" y="240" width="2.5" height="12" fill="#0A0A0A"/>
+    <text x="371.65" y="250" data-legend="budget">budget</text>
   </g>
   <g data-bullet="1">
-    <rect x="95.84" y="77" width="518.32" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Engineering"/>
-    <path d="M95.84 84 L578.06 84 Q583.06 84 583.06 89 L583.06 89 Q583.06 94 578.06 94 L95.84 94 Z" fill="#F54900" data-x="Engineering" data-y="940"/>
-    <line x1="614.16" x2="614.16" y1="79" y2="99" stroke="#0A0A0A" stroke-width="2.5" data-target="1,000"/>
-    <rect x="95.84" y="111" width="518.32" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Marketing"/>
-    <path d="M95.84 118 L274.33 118 Q279.33 118 279.33 123 L279.33 123 Q279.33 128 274.33 128 L95.84 128 Z" fill="#F54900" data-x="Marketing" data-y="354"/>
-    <line x1="251.34" x2="251.34" y1="113" y2="133" stroke="#0A0A0A" stroke-width="2.5" data-target="300"/>
-    <rect x="95.84" y="145" width="518.32" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Sales"/>
-    <path d="M95.84 152 L303.35 152 Q308.35 152 308.35 157 L308.35 157 Q308.35 162 303.35 162 L95.84 162 Z" fill="#F54900" data-x="Sales" data-y="410"/>
-    <line x1="329.08" x2="329.08" y1="147" y2="167" stroke="#0A0A0A" stroke-width="2.5" data-target="450"/>
-    <rect x="95.84" y="179" width="518.32" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Facilities"/>
-    <path d="M95.84 186 L153.04 186 Q158.04 186 158.04 191 L158.04 191 Q158.04 196 153.04 196 L95.84 196 Z" fill="#F54900" data-x="Facilities" data-y="120"/>
-    <line x1="168.4" x2="168.4" y1="181" y2="201" stroke="#0A0A0A" stroke-width="2.5" data-target="140"/>
+    <rect x="84.7" y="77" width="540.86" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Engineering"/>
+    <path d="M84.7 84 L588.11 84 Q593.11 84 593.11 89 L593.11 89 Q593.11 94 588.11 94 L84.7 94 Z" fill="#F54900" data-x="Engineering" data-y="940"/>
+    <line x1="625.57" x2="625.57" y1="79" y2="99" stroke="#0A0A0A" stroke-width="2.5" data-target="1,000"/>
+    <rect x="84.7" y="111" width="540.86" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Marketing"/>
+    <path d="M84.7 118 L271.17 118 Q276.17 118 276.17 123 L276.17 123 Q276.17 128 271.17 128 L84.7 128 Z" fill="#F54900" data-x="Marketing" data-y="354"/>
+    <line x1="246.96" x2="246.96" y1="113" y2="133" stroke="#0A0A0A" stroke-width="2.5" data-target="300"/>
+    <rect x="84.7" y="145" width="540.86" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Sales"/>
+    <path d="M84.7 152 L301.46 152 Q306.46 152 306.46 157 L306.46 157 Q306.46 162 301.46 162 L84.7 162 Z" fill="#F54900" data-x="Sales" data-y="410"/>
+    <line x1="328.09" x2="328.09" y1="147" y2="167" stroke="#0A0A0A" stroke-width="2.5" data-target="450"/>
+    <rect x="84.7" y="179" width="540.86" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Facilities"/>
+    <path d="M84.7 186 L144.61 186 Q149.61 186 149.61 191 L149.61 191 Q149.61 196 144.61 196 L84.7 196 Z" fill="#F54900" data-x="Facilities" data-y="120"/>
+    <line x1="160.42" x2="160.42" y1="181" y2="201" stroke="#0A0A0A" stroke-width="2.5" data-target="140"/>
   </g>
   <g fill="#0A0A0A" font-size="12" font-weight="500">
-    <text x="626.16" y="89" dominant-baseline="middle" data-value-label="Engineering">940<tspan fill="#737373" font-weight="400"> / 1,000</tspan></text>
-    <text x="626.16" y="123" dominant-baseline="middle" data-value-label="Marketing">354<tspan fill="#737373" font-weight="400"> / 300</tspan></text>
-    <text x="626.16" y="157" dominant-baseline="middle" data-value-label="Sales">410<tspan fill="#737373" font-weight="400"> / 450</tspan></text>
-    <text x="626.16" y="191" dominant-baseline="middle" data-value-label="Facilities">120<tspan fill="#737373" font-weight="400"> / 140</tspan></text>
+    <text x="637.57" y="89" dominant-baseline="middle" data-value-label="Engineering">940<tspan fill="#737373" font-weight="400"> / 1,000</tspan></text>
+    <text x="637.57" y="123" dominant-baseline="middle" data-value-label="Marketing">354<tspan fill="#737373" font-weight="400"> / 300</tspan></text>
+    <text x="637.57" y="157" dominant-baseline="middle" data-value-label="Sales">410<tspan fill="#737373" font-weight="400"> / 450</tspan></text>
+    <text x="637.57" y="191" dominant-baseline="middle" data-value-label="Facilities">120<tspan fill="#737373" font-weight="400"> / 140</tspan></text>
   </g>
 </svg>

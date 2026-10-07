@@ -3,7 +3,7 @@
   <desc id="mv-1e4c16b29ddcbf07-desc">line chart. Retention fell to 70 by week 4. x=week. y=rate. unit=pct. 4 rows.</desc>
   <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>Retention fell to 70 by week 4</title>RETENTION FELL TO 70 BY WEEK 4<tspan font-size="11" font-weight="400" fill="#64748B"> · pct</tspan></text>
   <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3">
+  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3" data-grid="1">
     <line x1="40" x2="704" y1="373.2" y2="373.2"/>
     <line x1="40" x2="704" y1="207.6" y2="207.6"/>
     <line x1="40" x2="704" y1="42" y2="42"/>
