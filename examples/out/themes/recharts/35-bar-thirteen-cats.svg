@@ -1,34 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="bar chart: A12 led units shipped at 14, 13 rows" aria-labelledby="mv-6d02158e64703f94-title" aria-describedby="mv-6d02158e64703f94-desc" data-markvis="2" data-chart-type="bar" data-id="mv-6d02158e64703f94" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-6d02158e64703f94-title">A12 led units shipped at 14</title>
   <desc id="mv-6d02158e64703f94-desc">bar chart. A12 led units shipped at 14. x=sku. y=units. 13 rows.</desc>
-  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#374151"><title>A12 led units shipped at 14</title>A12 led units shipped at 14</text>
-  <rect x="48" y="46" width="652" height="379" fill="none" stroke="#e2e8f0" stroke-width="1" data-plot-border="1"/>
-  <g fill="none" stroke="#374151" stroke-opacity="0.14" stroke-width="1">
-    <line x1="48" x2="700" y1="298.67" y2="298.67"/>
-    <line x1="48" x2="700" y1="172.33" y2="172.33"/>
-    <line x1="48" x2="700" y1="46" y2="46"/>
+  <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>A12 led units shipped at 14</title>A12 led units shipped at 14</text>
+  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3">
+    <line x1="48" x2="700" y1="292" y2="292"/>
+    <line x1="48" x2="700" y1="165" y2="165"/>
+    <line x1="48" x2="700" y1="38" y2="38"/>
   </g>
-  <g fill="none" stroke="#374151" stroke-opacity="0.14" stroke-width="1" data-v-grid="1">
-    <line x1="73.08" x2="73.08" y1="46" y2="425" data-v-grid="1"/>
-    <line x1="123.23" x2="123.23" y1="46" y2="425" data-v-grid="1"/>
-    <line x1="173.38" x2="173.38" y1="46" y2="425" data-v-grid="1"/>
-    <line x1="223.54" x2="223.54" y1="46" y2="425" data-v-grid="1"/>
-    <line x1="273.69" x2="273.69" y1="46" y2="425" data-v-grid="1"/>
-    <line x1="323.85" x2="323.85" y1="46" y2="425" data-v-grid="1"/>
-    <line x1="374" x2="374" y1="46" y2="425" data-v-grid="1"/>
-    <line x1="424.15" x2="424.15" y1="46" y2="425" data-v-grid="1"/>
-    <line x1="474.31" x2="474.31" y1="46" y2="425" data-v-grid="1"/>
-    <line x1="524.46" x2="524.46" y1="46" y2="425" data-v-grid="1"/>
-    <line x1="574.62" x2="574.62" y1="46" y2="425" data-v-grid="1"/>
-    <line x1="624.77" x2="624.77" y1="46" y2="425" data-v-grid="1"/>
-    <line x1="674.92" x2="674.92" y1="46" y2="425" data-v-grid="1"/>
+  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-v-grid="1">
+    <line x1="73.08" x2="73.08" y1="38" y2="419" data-v-grid="1"/>
+    <line x1="123.23" x2="123.23" y1="38" y2="419" data-v-grid="1"/>
+    <line x1="173.38" x2="173.38" y1="38" y2="419" data-v-grid="1"/>
+    <line x1="223.54" x2="223.54" y1="38" y2="419" data-v-grid="1"/>
+    <line x1="273.69" x2="273.69" y1="38" y2="419" data-v-grid="1"/>
+    <line x1="323.85" x2="323.85" y1="38" y2="419" data-v-grid="1"/>
+    <line x1="374" x2="374" y1="38" y2="419" data-v-grid="1"/>
+    <line x1="424.15" x2="424.15" y1="38" y2="419" data-v-grid="1"/>
+    <line x1="474.31" x2="474.31" y1="38" y2="419" data-v-grid="1"/>
+    <line x1="524.46" x2="524.46" y1="38" y2="419" data-v-grid="1"/>
+    <line x1="574.62" x2="574.62" y1="38" y2="419" data-v-grid="1"/>
+    <line x1="624.77" x2="624.77" y1="38" y2="419" data-v-grid="1"/>
+    <line x1="674.92" x2="674.92" y1="38" y2="419" data-v-grid="1"/>
   </g>
-  <path d="M48 425 L700 425" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1"/>
+  <path d="M48 419 L700 419" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1"/>
+  <path d="M48 38 L48 419" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-axis-line="y"/>
+  <path d="M73.08 419 L73.08 425 M123.23 419 L123.23 425 M173.38 419 L173.38 425 M223.54 419 L223.54 425 M273.69 419 L273.69 425 M323.85 419 L323.85 425 M374 419 L374 425 M424.15 419 L424.15 425 M474.31 419 L474.31 425 M524.46 419 L524.46 425 M574.62 419 L574.62 425 M624.77 419 L624.77 425 M674.92 419 L674.92 425 M42 419 L48 419 M42 292 L48 292 M42 165 L48 165 M42 38 L48 38" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#6B7280" font-size="12" font-weight="400">
-    <text x="40" y="425" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="40" y="298.67" text-anchor="end" dominant-baseline="middle">5</text>
-    <text x="40" y="172.33" text-anchor="end" dominant-baseline="middle">10</text>
-    <text x="40" y="46" text-anchor="end" dominant-baseline="middle">15</text>
+    <text x="34" y="419" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="34" y="292" text-anchor="end" dominant-baseline="middle">5</text>
+    <text x="34" y="165" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="34" y="38" text-anchor="end" dominant-baseline="middle">15</text>
     <text x="73.08" y="437" text-anchor="middle" font-size="12" data-full-label="A01"><title>A01</title>A01</text>
     <text x="123.23" y="437" text-anchor="middle" font-size="12" data-full-label="A02"><title>A02</title>A02</text>
     <text x="173.38" y="437" text-anchor="middle" font-size="12" data-full-label="A03"><title>A03</title>A03</text>
@@ -44,18 +45,18 @@
     <text x="674.92" y="437" text-anchor="middle" font-size="12" data-full-label="A13"><title>A13</title>A13</text>
   </g>
   <g>
-    <path d="M52.01 425 L94.14 425 L94.14 298.67 L52.01 298.67 Z" fill="#8884d8" data-x="A01" data-series="units" data-y="5"/>
-    <path d="M102.17 425 L144.3 425 L144.3 222.87 L102.17 222.87 Z" fill="#8884d8" data-x="A02" data-series="units" data-y="8"/>
-    <path d="M152.32 425 L194.45 425 L194.45 349.2 L152.32 349.2 Z" fill="#8884d8" data-x="A03" data-series="units" data-y="3"/>
-    <path d="M202.47 425 L244.6 425 L244.6 121.8 L202.47 121.8 Z" fill="#8884d8" data-x="A04" data-series="units" data-y="12"/>
-    <path d="M252.63 425 L294.76 425 L294.76 248.13 L252.63 248.13 Z" fill="#8884d8" data-x="A05" data-series="units" data-y="7"/>
-    <path d="M302.78 425 L344.91 425 L344.91 197.6 L302.78 197.6 Z" fill="#8884d8" data-x="A06" data-series="units" data-y="9"/>
-    <path d="M352.94 425 L395.06 425 L395.06 323.93 L352.94 323.93 Z" fill="#8884d8" data-x="A07" data-series="units" data-y="4"/>
-    <path d="M403.09 425 L445.22 425 L445.22 147.07 L403.09 147.07 Z" fill="#8884d8" data-x="A08" data-series="units" data-y="11"/>
-    <path d="M453.24 425 L495.37 425 L495.37 273.4 L453.24 273.4 Z" fill="#8884d8" data-x="A09" data-series="units" data-y="6"/>
-    <path d="M503.4 425 L545.53 425 L545.53 172.33 L503.4 172.33 Z" fill="#8884d8" data-x="A10" data-series="units" data-y="10"/>
-    <path d="M553.55 425 L595.68 425 L595.68 374.47 L553.55 374.47 Z" fill="#8884d8" data-x="A11" data-series="units" data-y="2"/>
-    <path d="M603.7 425 L645.83 425 L645.83 71.27 L603.7 71.27 Z" fill="#8884d8" data-x="A12" data-series="units" data-y="14"/>
-    <path d="M653.86 425 L695.99 425 L695.99 399.73 L653.86 399.73 Z" fill="#8884d8" data-x="A13" data-series="units" data-y="1"/>
+    <path d="M52.01 419 L94.14 419 L94.14 292 L52.01 292 Z" fill="#8884d8" data-x="A01" data-series="units" data-y="5"/>
+    <path d="M102.17 419 L144.3 419 L144.3 215.8 L102.17 215.8 Z" fill="#8884d8" data-x="A02" data-series="units" data-y="8"/>
+    <path d="M152.32 419 L194.45 419 L194.45 342.8 L152.32 342.8 Z" fill="#8884d8" data-x="A03" data-series="units" data-y="3"/>
+    <path d="M202.47 419 L244.6 419 L244.6 114.2 L202.47 114.2 Z" fill="#8884d8" data-x="A04" data-series="units" data-y="12"/>
+    <path d="M252.63 419 L294.76 419 L294.76 241.2 L252.63 241.2 Z" fill="#8884d8" data-x="A05" data-series="units" data-y="7"/>
+    <path d="M302.78 419 L344.91 419 L344.91 190.4 L302.78 190.4 Z" fill="#8884d8" data-x="A06" data-series="units" data-y="9"/>
+    <path d="M352.94 419 L395.06 419 L395.06 317.4 L352.94 317.4 Z" fill="#8884d8" data-x="A07" data-series="units" data-y="4"/>
+    <path d="M403.09 419 L445.22 419 L445.22 139.6 L403.09 139.6 Z" fill="#8884d8" data-x="A08" data-series="units" data-y="11"/>
+    <path d="M453.24 419 L495.37 419 L495.37 266.6 L453.24 266.6 Z" fill="#8884d8" data-x="A09" data-series="units" data-y="6"/>
+    <path d="M503.4 419 L545.53 419 L545.53 165 L503.4 165 Z" fill="#8884d8" data-x="A10" data-series="units" data-y="10"/>
+    <path d="M553.55 419 L595.68 419 L595.68 368.2 L553.55 368.2 Z" fill="#8884d8" data-x="A11" data-series="units" data-y="2"/>
+    <path d="M603.7 419 L645.83 419 L645.83 63.4 L603.7 63.4 Z" fill="#8884d8" data-x="A12" data-series="units" data-y="14"/>
+    <path d="M653.86 419 L695.99 419 L695.99 393.6 L653.86 393.6 Z" fill="#8884d8" data-x="A13" data-series="units" data-y="1"/>
   </g>
 </svg>

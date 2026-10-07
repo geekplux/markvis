@@ -1,21 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Yes leads survey answers at 60, 3 slices" aria-labelledby="mv-8636ea173fdc9363-title" aria-describedby="mv-8636ea173fdc9363-desc" data-markvis="2" data-chart-type="pie" data-id="mv-8636ea173fdc9363" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-8636ea173fdc9363-title">Yes leads survey answers at 60</title>
   <desc id="mv-8636ea173fdc9363-desc">pie chart. Yes leads survey answers at 60. x=label. y=n. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="40" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#18181B"><title>Yes leads survey answers at 60</title>Yes leads survey answers at 60</text>
-  <line x1="40" x2="704" y1="38" y2="38" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
+  <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>Yes leads survey answers at 60</title>YES LEADS SURVEY ANSWERS AT 60</text>
+  <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
   <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0">
-    <path d="M372 254 L372 111.2 A142.8 142.8 0 1 1 288.06 369.53 Z" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="yes" data-raw-value="60"/>
-    <path d="M372 254 L288.06 369.53 A142.8 142.8 0 0 1 288.06 138.47 Z" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="no" data-raw-value="30"/>
-    <path d="M372 254 L288.06 138.47 A142.8 142.8 0 0 1 372 111.2 Z" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="other" data-raw-value="10"/>
+    <path d="M372 253 L372 109.52 A143.48 143.48 0 1 1 287.66 369.08 Z" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="yes" data-raw-value="60"/>
+    <path d="M372 253 L287.66 369.08 A143.48 143.48 0 0 1 287.66 136.92 Z" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="no" data-raw-value="30"/>
+    <path d="M372 253 L287.66 136.92 A143.48 143.48 0 0 1 372 109.52 Z" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="other" data-raw-value="10"/>
   </g>
   <g fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1">
-    <polyline points="507.81,298.13 519.22,301.84 527.22,301.84"/>
-    <polyline points="229.2,254 217.2,254 209.2,254"/>
-    <polyline points="327.87,118.19 324.16,106.78 316.16,106.78"/>
+    <polyline points="508.46,297.34 519.87,301.05 527.87,301.05"/>
+    <polyline points="228.52,253 216.52,253 208.52,253"/>
+    <polyline points="327.66,116.54 323.95,105.13 315.95,105.13"/>
   </g>
-  <g font-size="13" font-weight="500" fill="#18181B">
-    <text x="539.22" y="301.84" text-anchor="start" dominant-baseline="middle" data-label="yes">yes · 60</text>
-    <text x="197.2" y="254" text-anchor="end" dominant-baseline="middle" data-label="no">no · 30</text>
-    <text x="304.16" y="106.78" text-anchor="end" dominant-baseline="middle" data-label="other">other · 10</text>
+  <g font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B">
+    <text x="539.87" y="301.05" text-anchor="start" dominant-baseline="middle" data-label="yes">yes · 60</text>
+    <text x="196.52" y="253" text-anchor="end" dominant-baseline="middle" data-label="no">no · 30</text>
+    <text x="303.95" y="105.13" text-anchor="end" dominant-baseline="middle" data-label="other">other · 10</text>
   </g>
 </svg>

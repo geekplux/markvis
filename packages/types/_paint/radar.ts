@@ -7,12 +7,14 @@ import {
   titleBlockTop,
   SVG_WIDTH,
   type Painted,
+  legendTop,
 } from "./layout.js";
 import { seriesStyle } from "./palette.js";
 import { formatNumber, niceTicks } from "./scale.js";
 import { textWidth } from "./text.js";
 import {
   AREA_OPACITY,
+  FONT_NUMERIC,
   INK,
   LEGEND_BELOW,
   MARGIN,
@@ -22,9 +24,9 @@ import {
   PLOT_BORDER_WIDTH,
   SERIES_DASH,
   STRUCTURE_OPACITY,
-  TITLE_BASELINE,
   TYPE,
 } from "./tokens.js";
+import { legendSwatch } from "./legend.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
 
 function spokePoint(
@@ -55,7 +57,7 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
         styles.map((s) => s.color),
         styles.map((s) => s.opacity),
         48,
-        TITLE_BASELINE + 18,
+        legendTop(),
         SVG_WIDTH - 96,
       )
     : { items: [] as ReturnType<typeof layoutLegend>["items"], height: 0 };
@@ -140,7 +142,7 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
   if (useLegend && legendDraft.items.length > 0) {
     const legendY = LEGEND_BELOW
       ? Math.max(box.bottom + 12, height - legendDraft.height)
-      : TITLE_BASELINE + 18;
+      : legendTop();
     const painted = layoutLegend(
       names,
       styles.map((s) => s.color),
@@ -158,15 +160,7 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
     );
     for (const item of painted.items) {
       lines.push(
-        `    <rect ${attrs({
-          x: fmtPx(item.x),
-          y: fmtPx(item.y - 9),
-          width: 10,
-          height: 10,
-          fill: item.color,
-          "fill-opacity": item.opacity === 1 ? undefined : item.opacity,
-          rx: 1,
-        })}/>`,
+        `    ${legendSwatch(item.x, item.y - 9, item.color, item.opacity)}`,
       );
       lines.push(
         `    <text ${attrs({
@@ -314,6 +308,7 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
     `  <g ${attrs({
       fill: TYPE.tick.fill,
       "font-size": TYPE.tick.size,
+      "font-family": FONT_NUMERIC,
       "font-weight": TYPE.tick.weight,
     })}>`,
   );
@@ -338,6 +333,7 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
         y: fmtPx(p.y - 4),
         "text-anchor": "middle",
         "font-size": TYPE.tick.size,
+        "font-family": FONT_NUMERIC,
         fill: TYPE.tick.fill,
         "data-radar-tick": formatNumber(level),
       })}>${escapeXml(formatNumber(level))}</text>`,

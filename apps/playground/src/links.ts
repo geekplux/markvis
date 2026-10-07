@@ -42,6 +42,14 @@ export function paletteFromSearch(search: string): ChartPalette | null {
   return isChartPalette(trimmed) ? trimmed : null;
 }
 
+export function surfaceFromSearch(
+  search: string,
+): "dark" | "export" | null {
+  const raw = search.startsWith("?") ? search.slice(1) : search;
+  const value = new URLSearchParams(raw).get("surface")?.trim();
+  return value === "dark" || value === "export" ? value : null;
+}
+
 export function galleryHref(
   id: string,
   theme?: ChartTheme,
@@ -62,6 +70,7 @@ export function playgroundSearch(
   id: string,
   theme?: ChartTheme,
   palette?: ChartPalette | null,
+  surface?: "light" | "dark" | "export",
 ): string {
   const params = new URLSearchParams();
   params.set("example", stemFromId(id));
@@ -70,6 +79,9 @@ export function playgroundSearch(
   }
   if (palette) {
     params.set("palette", palette);
+  }
+  if (surface && surface !== "light") {
+    params.set("surface", surface);
   }
   return `?${params.toString()}`;
 }

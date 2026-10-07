@@ -1,22 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="pie chart: Billing leads support tickets at 40, 4 slices" aria-labelledby="mv-084d4e3d9bba4f2b-title" aria-describedby="mv-084d4e3d9bba4f2b-desc" data-markvis="2" data-chart-type="pie" data-id="mv-084d4e3d9bba4f2b" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="pie chart: Billing leads support tickets at 40, 4 slices" aria-labelledby="mv-084d4e3d9bba4f2b-title" aria-describedby="mv-084d4e3d9bba4f2b-desc" data-markvis="2" data-chart-type="pie" data-id="mv-084d4e3d9bba4f2b" font-family="&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif" font-size="12">
   <title id="mv-084d4e3d9bba4f2b-title">Billing leads support tickets at 40</title>
   <desc id="mv-084d4e3d9bba4f2b-desc">pie chart. Billing leads support tickets at 40. x=topic. y=tickets. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="56" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#333333"><title>Billing leads support tickets at 40</title>Billing leads support tickets at 40</text>
-  <g font-size="14" font-weight="500" fill="#333333">
-    <rect x="56" y="41" width="10" height="10" fill="#7cb5ec" rx="1"/>
-    <text x="70" y="50" data-legend="Billing and invoice disputes">Billing and invoice disputes</text>
-    <rect x="329.04" y="41" width="10" height="10" fill="#434348" rx="1"/>
-    <text x="343.04" y="50" data-legend="Account access and MFA reset">Account access and MFA reset</text>
-    <rect x="56" y="59" width="10" height="10" fill="#90ed7d" rx="1"/>
-    <text x="70" y="68" data-legend="Product how-to questions">Product how-to questions</text>
-    <rect x="294.32" y="59" width="10" height="10" fill="#f7a35c" rx="1"/>
-    <text x="308.32" y="68" data-legend="Other miscellaneous">Other miscellaneous</text>
+  <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Billing leads support tickets at 40</title>Billing leads support tickets at 40</text>
+  <g font-size="12" font-weight="700" fill="#333333">
+    <circle cx="151.68" cy="402" r="5" fill="#7cb5ec"/>
+    <text x="160.68" y="406" data-legend="Billing and invoice disputes">Billing and invoice disputes</text>
+    <circle cx="390" cy="402" r="5" fill="#434348"/>
+    <text x="399" y="406" data-legend="Account access and MFA reset">Account access and MFA reset</text>
+    <circle cx="200.04" cy="420" r="5" fill="#90ed7d"/>
+    <text x="209.04" y="424" data-legend="Product how-to questions">Product how-to questions</text>
+    <circle cx="408.6" cy="420" r="5" fill="#f7a35c"/>
+    <text x="417.6" y="424" data-legend="Other miscellaneous">Other miscellaneous</text>
   </g>
-  <rect x="56" y="90" width="644" height="330" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0">
-    <path d="M378 255 L378 142.8 A112.2 112.2 0 0 1 443.95 345.77 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Billing and invoice disputes" data-raw-value="40"/>
-    <path d="M378 255 L443.95 345.77 A112.2 112.2 0 0 1 287.23 320.95 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Account access and MFA reset" data-raw-value="25"/>
-    <path d="M378 255 L287.23 320.95 A112.2 112.2 0 0 1 287.23 189.05 Z" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Product how-to questions" data-raw-value="20"/>
-    <path d="M378 255 L287.23 189.05 A112.2 112.2 0 0 1 378 142.8 Z" fill="#f7a35c" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Other miscellaneous" data-raw-value="15"/>
+    <path d="M378 211 L378 97.44 A113.56 113.56 0 0 1 444.75 302.87 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Billing and invoice disputes" data-raw-value="40"/>
+    <path d="M378 211 L444.75 302.87 A113.56 113.56 0 0 1 286.13 277.75 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Account access and MFA reset" data-raw-value="25"/>
+    <path d="M378 211 L286.13 277.75 A113.56 113.56 0 0 1 286.13 144.25 Z" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Product how-to questions" data-raw-value="20"/>
+    <path d="M378 211 L286.13 144.25 A113.56 113.56 0 0 1 378 97.44 Z" fill="#f7a35c" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Other miscellaneous" data-raw-value="15"/>
   </g>
 </svg>

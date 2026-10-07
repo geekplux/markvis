@@ -1,18 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="area chart: Day 6 held the deepest queue at 48 holds (holds), 10 rows" aria-labelledby="mv-7af386c80bccba57-title" aria-describedby="mv-7af386c80bccba57-desc" data-markvis="2" data-chart-type="area" data-id="mv-7af386c80bccba57" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="area chart: Day 6 held the deepest queue at 48 holds (holds), 10 rows" aria-labelledby="mv-7af386c80bccba57-title" aria-describedby="mv-7af386c80bccba57-desc" data-markvis="2" data-chart-type="area" data-id="mv-7af386c80bccba57" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-7af386c80bccba57-title">Day 6 held the deepest queue at 48 holds</title>
   <desc id="mv-7af386c80bccba57-desc">area chart. Day 6 held the deepest queue at 48 holds. x=day. y=holds. unit=holds. 10 rows.</desc>
-  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#0A0A0A"><title>Day 6 held the deepest queue at 48 holds</title>Day 6 held the deepest queue at 48 holds<tspan font-size="13" font-weight="400" fill="#737373"> · holds</tspan></text>
-  <rect x="48" y="46" width="652" height="389" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.06" stroke-width="1">
-    <line x1="48" x2="700" y1="305.33" y2="305.33"/>
-    <line x1="48" x2="700" y1="46" y2="46"/>
+  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
+  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Day 6 held the deepest queue at 48 holds</title>Day 6 held the deepest queue at 48 holds</text>
+  <text x="48" y="51" text-anchor="start" font-size="13" font-weight="400" fill="#737373" data-subtitle="1">holds</text>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1">
+    <line x1="48" x2="700" y1="314" y2="314"/>
+    <line x1="48" x2="700" y1="72" y2="72"/>
   </g>
-  <path d="M48 435 L700 435" fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1"/>
   <g fill="#737373" font-size="12" font-weight="400">
     <text x="40" y="435" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="40" y="305.33" text-anchor="end" dominant-baseline="middle">20</text>
-    <text x="40" y="175.67" text-anchor="end" dominant-baseline="middle">40</text>
-    <text x="40" y="46" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="40" y="314" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="40" y="193" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="40" y="72" text-anchor="end" dominant-baseline="middle">60</text>
     <text x="80.6" y="447" text-anchor="middle" font-size="12" data-full-label="D1"><title>D1</title>D1</text>
     <text x="145.8" y="447" text-anchor="middle" font-size="12" data-full-label="D2"><title>D2</title>D2</text>
     <text x="211" y="447" text-anchor="middle" font-size="12" data-full-label="D3"><title>D3</title>D3</text>
@@ -25,17 +25,7 @@
     <text x="667.4" y="447" text-anchor="middle" font-size="12" data-full-label="D10"><title>D10</title>D10</text>
   </g>
   <g fill="none">
-    <path d="M80.6 318.3 L145.8 279.4 L211 234.02 L276.2 195.12 L341.4 162.7 L406.6 123.8 L471.8 175.67 L537 221.05 L602.2 253.47 L667.4 292.37 L667.4 435 L80.6 435 Z" fill="#F54900" fill-opacity="0.18" stroke="none" data-series="holds"/>
-    <path d="M80.6 318.3 L145.8 279.4 L211 234.02 L276.2 195.12 L341.4 162.7 L406.6 123.8 L471.8 175.67 L537 221.05 L602.2 253.47 L667.4 292.37" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="holds"/>
-    <circle cx="80.6" cy="318.3" r="3.5" fill="#F54900" stroke="none" data-series="holds"/>
-    <circle cx="145.8" cy="279.4" r="3.5" fill="#F54900" stroke="none" data-series="holds"/>
-    <circle cx="211" cy="234.02" r="3.5" fill="#F54900" stroke="none" data-series="holds"/>
-    <circle cx="276.2" cy="195.12" r="3.5" fill="#F54900" stroke="none" data-series="holds"/>
-    <circle cx="341.4" cy="162.7" r="3.5" fill="#F54900" stroke="none" data-series="holds"/>
-    <circle cx="406.6" cy="123.8" r="3.5" fill="#F54900" stroke="none" data-series="holds"/>
-    <circle cx="471.8" cy="175.67" r="3.5" fill="#F54900" stroke="none" data-series="holds"/>
-    <circle cx="537" cy="221.05" r="3.5" fill="#F54900" stroke="none" data-series="holds"/>
-    <circle cx="602.2" cy="253.47" r="3.5" fill="#F54900" stroke="none" data-series="holds"/>
-    <circle cx="667.4" cy="292.37" r="3.5" fill="#F54900" stroke="none" data-series="holds"/>
+    <path d="M80.6 326.1 C102.33 314 124.07 302.83 145.8 289.8 C167.53 276.77 189.27 260.48 211 247.45 C232.73 234.42 254.47 222.15 276.2 211.15 C297.93 200.15 319.67 191.9 341.4 180.9 C363.13 169.9 384.87 144.6 406.6 144.6 C428.33 144.6 450.07 177.94 471.8 193 C493.53 208.06 515.27 223.59 537 235.35 C558.73 247.11 580.47 254.6 602.2 265.6 C623.93 276.6 645.67 289.8 667.4 301.9 L667.4 435 L80.6 435 Z" fill="#F54900" fill-opacity="0.3" stroke="none" data-series="holds"/>
+    <path d="M80.6 326.1 C102.33 314 124.07 302.83 145.8 289.8 C167.53 276.77 189.27 260.48 211 247.45 C232.73 234.42 254.47 222.15 276.2 211.15 C297.93 200.15 319.67 191.9 341.4 180.9 C363.13 169.9 384.87 144.6 406.6 144.6 C428.33 144.6 450.07 177.94 471.8 193 C493.53 208.06 515.27 223.59 537 235.35 C558.73 247.11 580.47 254.6 602.2 265.6 C623.93 276.6 645.67 289.8 667.4 301.9" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="holds"/>
   </g>
 </svg>

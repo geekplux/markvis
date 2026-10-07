@@ -19,6 +19,7 @@ import {
   tickLeftMargin,
   type Painted,
   type PlotBox,
+  legendTop,
 } from "./layout.js";
 import { seriesStyle } from "./palette.js";
 import {
@@ -35,6 +36,7 @@ import {
 import { placeHorizontalLabel, textWidth } from "./text.js";
 import {
   AREA_OPACITY,
+  AXIS,
   AXIS_TITLES,
   BAR_GAP_FEW,
   BAR_GAP_MANY,
@@ -46,15 +48,19 @@ import {
   END_LABEL_GAP,
   END_LABEL_MIN_SEP,
   END_LABEL_SERIES_MAX,
+  FONT_NUMERIC,
   GRID,
   GROUP_GAP_PX,
   HAIRLINE_OPACITY,
   INK,
   LABEL_ROTATE_DEG,
   LEGEND_BELOW,
+  LINE_CURVE,
   LINE_POINT_R,
   LINE_STROKE,
+  MARKER,
   MAX_INTERIOR_GRID,
+  PAPER,
   POINT_SKIP_AFTER,
   PLOT_BG,
   PLOT_BORDER,
@@ -66,9 +72,9 @@ import {
   SERIES_DASH,
   STRUCTURE_OPACITY,
   TICK_TEXT_GAP,
-  TITLE_BASELINE,
   TYPE,
 } from "./tokens.js";
+import { legendSwatch } from "./legend.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
 
 type LayoutMode = "grouped" | "stacked" | "percent";
@@ -100,6 +106,14 @@ type Prepared = {
   axisYTitle: string | undefined;
 };
 
+/** "field · unit", or the field alone when the unit repeats it. */
+function yAxisTitle(chart: ChartIR): string | undefined {
+  const field = chart.type === "hist" ? (chart.y ?? "count") : chart.y;
+  const unit = chart.unit?.trim();
+  const parts = [field, unit && unit.toLowerCase() !== field?.toLowerCase() ? unit : undefined];
+  return parts.filter((part): part is string => Boolean(part)).join(" · ") || undefined;
+}
+
 function finiteRuns(
   points: { x: number; y: number }[],
 ): { x: number; y: number }[][] {
@@ -128,6 +142,89 @@ function polyline(points: { x: number; y: number }[]): string {
       return `${cmd}${fmtPx(point.x)} ${fmtPx(point.y)}`;
     })
     .join(" ");
+}
+
+/**
+ * Monotone cubic through the points (Fritsch–Carlson tangents), so the curve
+ * never overshoots a data value. Falls back to straight segments when two
+ * points share an x.
+ */
+function monotonePath(points: { x: number; y: number }[]): string {
+  const n = points.length;
+  if (n < 3) {
+    return polyline(points);
+  }
+  const h: number[] = [];
+  const slope: number[] = [];
+  for (let i = 0; i < n - 1; i++) {
+    const dx = points[i + 1]!.x - points[i]!.x;
+    if (dx === 0) {
+      return polyline(points);
+    }
+    h.push(dx);
+    slope.push((points[i + 1]!.y - points[i]!.y) / dx);
+  }
+  const tangent: number[] = [slope[0]!];
+  for (let i = 1; i < n - 1; i++) {
+    const before = slope[i - 1]!;
+    const after = slope[i]!;
+    if (before * after <= 0) {
+      tangent.push(0);
+      continue;
+    }
+    const w1 = 2 * h[i]! + h[i - 1]!;
+    const w2 = h[i]! + 2 * h[i - 1]!;
+    tangent.push((w1 + w2) / (w1 / before + w2 / after));
+  }
+  tangent.push(slope[n - 2]!);
+  const first = points[0]!;
+  let d = `M${fmtPx(first.x)} ${fmtPx(first.y)}`;
+  for (let i = 0; i < n - 1; i++) {
+    const a = points[i]!;
+    const b = points[i + 1]!;
+    const third = h[i]! / 3;
+    d += ` C${fmtPx(a.x + third)} ${fmtPx(a.y + tangent[i]! * third)} ${fmtPx(b.x - third)} ${fmtPx(b.y - tangent[i + 1]! * third)} ${fmtPx(b.x)} ${fmtPx(b.y)}`;
+  }
+  return d;
+}
+
+/** Line through the points in the theme's curve. */
+function linePath(points: { x: number; y: number }[]): string {
+  return LINE_CURVE === "monotone" ? monotonePath(points) : polyline(points);
+}
+
+/** Point mark on a line or area in the theme's marker style. */
+function pointMark(
+  pt: { x: number; y: number },
+  color: string,
+  opacity: number,
+  series: string,
+): string | null {
+  if (MARKER === "none") {
+    return null;
+  }
+  if (MARKER === "hollow") {
+    return `    <circle ${attrs({
+      cx: fmtPx(pt.x),
+      cy: fmtPx(pt.y),
+      r: LINE_POINT_R,
+      fill: PAPER,
+      stroke: color,
+      "stroke-width": 1.5,
+      "stroke-opacity": opacityAttr(opacity),
+      "data-series": series,
+    })}/>`;
+  }
+  return `    <circle ${attrs({
+    cx: fmtPx(pt.x),
+    cy: fmtPx(pt.y),
+    r: LINE_POINT_R,
+    fill: color,
+    "fill-opacity": opacityAttr(opacity),
+    stroke: MARKER === "halo" ? PAPER : "none",
+    "stroke-width": MARKER === "halo" ? 1.5 : undefined,
+    "data-series": series,
+  })}/>`;
 }
 
 function bandGapRatio(nCat: number): number {
@@ -322,7 +419,7 @@ function prepare(chart: ChartIR): Prepared {
         styles.map((s) => s.color),
         styles.map((s) => s.opacity),
         48,
-        TITLE_BASELINE + 18,
+        legendTop(),
         SVG_WIDTH - 96,
       )
     : { items: [], height: 0 };
@@ -357,7 +454,7 @@ function prepare(chart: ChartIR): Prepared {
               frame.plot.bottom + TYPE.tick.size + 16,
               frame.height - legendDraft.height,
             )
-          : TITLE_BASELINE + 18,
+          : legendTop(),
         frame.plot.width,
       )
     : legendDraft;
@@ -379,7 +476,7 @@ function prepare(chart: ChartIR): Prepared {
           frame.plot.bottom + TYPE.tick.size + 16,
           frame.height - legend.height,
         )
-      : TITLE_BASELINE + 18;
+      : legendTop();
     legend = layoutLegend(
       series,
       styles.map((s) => s.color),
@@ -479,14 +576,7 @@ function prepare(chart: ChartIR): Prepared {
         ? `${chart.x} · Sturges bins`
         : chart.x
       : undefined,
-    axisYTitle: namedAxes
-      ? [
-          chart.type === "hist" ? (chart.y ?? "count") : chart.y,
-          chart.unit,
-        ]
-          .filter((part): part is string => Boolean(part))
-          .join(" · ") || undefined
-      : undefined,
+    axisYTitle: namedAxes ? yAxisTitle(chart) : undefined,
   };
 }
 
@@ -503,15 +593,7 @@ function drawLegend(prepared: Prepared): string[] {
   ];
   for (const item of prepared.legend.items) {
     lines.push(
-      `    <rect ${attrs({
-        x: fmtPx(item.x),
-        y: fmtPx(item.y - 9),
-        width: 10,
-        height: 10,
-        fill: item.color,
-        "fill-opacity": item.opacity === 1 ? undefined : item.opacity,
-        rx: 1,
-      })}/>`,
+      `    ${legendSwatch(item.x, item.y - 9, item.color, item.opacity)}`,
     );
     lines.push(
       `    <text ${attrs({
@@ -549,6 +631,39 @@ function interiorGridTicks(
     picked.push(tick);
   }
   return picked;
+}
+
+/** Short marks at each tick, outside the plot. */
+function drawTickMarks(prepared: Prepared): string[] {
+  if (AXIS.tick <= 0) {
+    return [];
+  }
+  const { plot, xTicks, yTicks } = prepared;
+  const marks: string[] = [];
+  for (const tick of xTicks) {
+    if (!tick.show) {
+      continue;
+    }
+    marks.push(`M${fmtPx(tick.pos)} ${fmtPx(plot.bottom)} L${fmtPx(tick.pos)} ${fmtPx(plot.bottom + AXIS.tick)}`);
+  }
+  if (AXIS.line === "xy") {
+    for (const tick of yTicks) {
+      marks.push(`M${fmtPx(plot.left - AXIS.tick)} ${fmtPx(tick.pos)} L${fmtPx(plot.left)} ${fmtPx(tick.pos)}`);
+    }
+  }
+  if (marks.length === 0) {
+    return [];
+  }
+  return [
+    `  <path ${attrs({
+      d: marks.join(" "),
+      fill: "none",
+      stroke: INK,
+      "stroke-opacity": STRUCTURE_OPACITY,
+      "stroke-width": 1,
+      "data-axis-ticks": "1",
+    })}/>`,
+  ];
 }
 
 function drawGridAndAxes(prepared: Prepared): string[] {
@@ -633,15 +748,30 @@ function drawGridAndAxes(prepared: Prepared): string[] {
     lines.push(`  </g>`);
   }
 
-  lines.push(
-    `  <path ${attrs({
-      d: `M${fmtPx(plot.left)} ${fmtPx(plot.bottom)} L${fmtPx(plot.right)} ${fmtPx(plot.bottom)}`,
-      fill: "none",
-      stroke: INK,
-      "stroke-opacity": STRUCTURE_OPACITY,
-      "stroke-width": 1,
-    })}/>`,
-  );
+  if (AXIS.line !== "none") {
+    lines.push(
+      `  <path ${attrs({
+        d: `M${fmtPx(plot.left)} ${fmtPx(plot.bottom)} L${fmtPx(plot.right)} ${fmtPx(plot.bottom)}`,
+        fill: "none",
+        stroke: INK,
+        "stroke-opacity": STRUCTURE_OPACITY,
+        "stroke-width": 1,
+      })}/>`,
+    );
+  }
+  if (AXIS.line === "xy") {
+    lines.push(
+      `  <path ${attrs({
+        d: `M${fmtPx(plot.left)} ${fmtPx(plot.top)} L${fmtPx(plot.left)} ${fmtPx(plot.bottom)}`,
+        fill: "none",
+        stroke: INK,
+        "stroke-opacity": STRUCTURE_OPACITY,
+        "stroke-width": 1,
+        "data-axis-line": "y",
+      })}/>`,
+    );
+  }
+  lines.push(...drawTickMarks(prepared));
 
   const zeroTick = yTicks.find((tick) => tick.label === "0");
   if (
@@ -666,13 +796,14 @@ function drawGridAndAxes(prepared: Prepared): string[] {
     `  <g ${attrs({
       fill: TYPE.tick.fill,
       "font-size": TYPE.tick.size,
+      "font-family": FONT_NUMERIC,
       "font-weight": TYPE.tick.weight,
     })}>`,
   );
   for (const tick of yTicks) {
     lines.push(
       `    <text ${attrs({
-        x: fmtPx(plot.left - TICK_TEXT_GAP),
+        x: fmtPx(plot.left - TICK_TEXT_GAP - AXIS.tick),
         y: fmtPx(tick.pos),
         "text-anchor": "end",
         "dominant-baseline": "middle",
@@ -714,9 +845,10 @@ function drawGridAndAxes(prepared: Prepared): string[] {
     lines.push(
       `    <text ${attrs({
         x: fmtPx(placed.x),
-        y: fmtPx(plot.bottom + TYPE.tick.size),
+        y: fmtPx(plot.bottom + TYPE.tick.size + AXIS.tick),
         "text-anchor": placed.anchor,
         "font-size": TYPE.tick.size,
+        "font-family": FONT_NUMERIC,
         "data-full-label": tick.label,
       })}><title>${escapeXml(tick.label)}</title>${body}</text>`,
     );
@@ -733,7 +865,16 @@ function drawGridAndAxes(prepared: Prepared): string[] {
       })}>`,
     );
     if (prepared.axisYTitle) {
-      const cx = plot.left - TICK_TEXT_GAP - 14;
+      // Center the rotated title in the gutter left of the widest tick label.
+      const widestTick = Math.max(
+        0,
+        ...yTicks.map((tick) => textWidth(tick.label, TYPE.tick.size)),
+      );
+      const tickPad = AXIS.line === "xy" ? AXIS.tick : 0;
+      const cx = Math.max(
+        TYPE.unit.size / 2 + 2,
+        plot.left - TICK_TEXT_GAP - tickPad - widestTick - 9,
+      );
       const cy = (plot.top + plot.bottom) / 2;
       lines.push(
         `    <text ${attrs({
@@ -912,6 +1053,7 @@ function drawBars(prepared: Prepared): string[] {
             y: fmtPx(placed.y),
             "text-anchor": "middle",
             "font-size": TYPE.value.size,
+            "font-family": FONT_NUMERIC,
             "font-weight": TYPE.value.weight,
             fill: placed.inside ? inkOnFill(style.color) : TYPE.value.fill,
             "data-value-label": cat,
@@ -962,6 +1104,7 @@ function drawBars(prepared: Prepared): string[] {
               y: fmtPx(y0 - BAR_LABEL_OFFSET),
               "text-anchor": "middle",
               "font-size": TYPE.value.size,
+              "font-family": FONT_NUMERIC,
               "font-weight": TYPE.value.weight,
               fill: TYPE.value.fill,
               "data-value-label": cat,
@@ -996,6 +1139,7 @@ function drawBars(prepared: Prepared): string[] {
           y: fmtPx(placed.y),
           "text-anchor": "middle",
           "font-size": TYPE.value.size,
+          "font-family": FONT_NUMERIC,
           "font-weight": TYPE.value.weight,
           fill: placed.inside ? inkOnFill(style.color) : TYPE.value.fill,
           "data-value-label": cat,
@@ -1112,6 +1256,7 @@ function drawEndLabels(prepared: Prepared): string[] {
   const lines: string[] = [
     `  <g ${attrs({
       "font-size": TYPE.value.size,
+      "font-family": FONT_NUMERIC,
       "font-weight": TYPE.value.weight,
     })}>`,
   ];
@@ -1186,7 +1331,10 @@ function drawLineOrArea(prepared: Prepared, area: boolean): string[] {
           if (fillPts.length < 2) {
             continue;
           }
-          const d = `${polyline(fillPts)} Z`;
+          const d =
+            LINE_CURVE === "monotone"
+              ? `${linePath(top)} ${linePath(revBot).replace(/^M/, "L")} Z`
+              : `${polyline(fillPts)} Z`;
           lines.push(
             `    <path ${attrs({
               d,
@@ -1200,7 +1348,7 @@ function drawLineOrArea(prepared: Prepared, area: boolean): string[] {
         }
       }
       for (const pts of topRuns) {
-        const d = polyline(pts);
+        const d = linePath(pts);
         lines.push(
           `    <path ${attrs({
             d,
@@ -1219,17 +1367,10 @@ function drawLineOrArea(prepared: Prepared, area: boolean): string[] {
       const finiteTop = topRuns.flat();
       if (finiteTop.length <= POINT_SKIP_AFTER) {
         for (const pt of finiteTop) {
-          lines.push(
-            `    <circle ${attrs({
-              cx: fmtPx(pt.x),
-              cy: fmtPx(pt.y),
-              r: LINE_POINT_R,
-              fill: style.color,
-              "fill-opacity": opacityAttr(style.opacity),
-              stroke: "none",
-              "data-series": ser,
-            })}/>`,
-          );
+          const mark = pointMark(pt, style.color, style.opacity, ser);
+          if (mark) {
+            lines.push(mark);
+          }
         }
       }
     }
@@ -1265,7 +1406,7 @@ function drawLineOrArea(prepared: Prepared, area: boolean): string[] {
     const style = styles[si]!;
     const dash = seriesDash(si);
     for (const pts of runs) {
-      const d = polyline(pts);
+      const d = linePath(pts);
       if (area && pts.length > 0) {
         const first = pts[0]!;
         const last = pts[pts.length - 1]!;
@@ -1298,17 +1439,10 @@ function drawLineOrArea(prepared: Prepared, area: boolean): string[] {
     if (pointCount <= POINT_SKIP_AFTER) {
       for (const pts of runs) {
         for (const pt of pts) {
-          lines.push(
-            `    <circle ${attrs({
-              cx: fmtPx(pt.x),
-              cy: fmtPx(pt.y),
-              r: LINE_POINT_R,
-              fill: style.color,
-              "fill-opacity": opacityAttr(style.opacity),
-              stroke: "none",
-              "data-series": ser,
-            })}/>`,
-          );
+          const mark = pointMark(pt, style.color, style.opacity, ser);
+          if (mark) {
+            lines.push(mark);
+          }
         }
       }
     }
@@ -1451,6 +1585,7 @@ function drawHist(prepared: Prepared): string[] {
         y: fmtPx(placed.y),
         "text-anchor": "middle",
         "font-size": TYPE.value.size,
+        "font-family": FONT_NUMERIC,
         "font-weight": TYPE.value.weight,
         fill: placed.inside ? inkOnFill(style.color) : TYPE.value.fill,
         "data-value-label": `${bin.left}–${bin.right}`,

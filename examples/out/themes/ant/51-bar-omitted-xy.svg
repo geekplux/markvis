@@ -1,30 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="bar chart: Gamma leads category share at 3, 3 rows" aria-labelledby="mv-36cf52585c5aecc9-title" aria-describedby="mv-36cf52585c5aecc9-desc" data-markvis="2" data-chart-type="bar" data-id="mv-36cf52585c5aecc9" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
   <title id="mv-36cf52585c5aecc9-title">Gamma leads category share at 3</title>
   <desc id="mv-36cf52585c5aecc9-desc">bar chart. Gamma leads category share at 3. x=category. y=value. 3 rows.</desc>
-  <text x="66" y="32" text-anchor="start" font-size="22" font-weight="600" fill="#000000"><title>Gamma leads category share at 3</title>Gamma leads category share at 3</text>
-  <rect x="66" y="52" width="640" height="307" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
-  <path d="M66 359 L706 359" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
+  <text x="66" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Gamma leads category share at 3</title>Gamma leads category share at 3</text>
+  <path d="M66 355 L706 355" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1"/>
+  <path d="M172.67 355 L172.67 359 M386 355 L386 359 M599.33 355 L599.33 359" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#8C8C8C" font-size="12" font-weight="400">
-    <text x="58" y="359" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="58" y="256.67" text-anchor="end" dominant-baseline="middle">1</text>
-    <text x="58" y="154.33" text-anchor="end" dominant-baseline="middle">2</text>
-    <text x="58" y="52" text-anchor="end" dominant-baseline="middle">3</text>
+    <text x="54" y="355" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="54" y="252" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="54" y="149" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="54" y="46" text-anchor="end" dominant-baseline="middle">3</text>
     <text x="172.67" y="371" text-anchor="middle" font-size="12" data-full-label="alpha"><title>alpha</title>alpha</text>
     <text x="386" y="371" text-anchor="middle" font-size="12" data-full-label="beta"><title>beta</title>beta</text>
     <text x="599.33" y="371" text-anchor="middle" font-size="12" data-full-label="gamma"><title>gamma</title>gamma</text>
   </g>
-  <g fill="#8C8C8C" font-size="13" font-weight="400" data-axis-titles="1">
-    <text x="44" y="205.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 44 205.5)" data-axis="y">value</text>
-    <text x="386" y="387" text-anchor="middle" dominant-baseline="hanging" data-axis="x">category</text>
+  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="41.56" y="200.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 41.56 200.5)" data-axis="y">value</text>
+    <text x="386" y="383" text-anchor="middle" dominant-baseline="hanging" data-axis="x">category</text>
   </g>
   <g>
-    <path d="M144.67 359 L144.67 258.67 Q144.67 256.67 146.67 256.67 L198.67 256.67 Q200.67 256.67 200.67 258.67 L200.67 359 Z" fill="#5AD8A6" data-x="alpha" data-series="value" data-y="1"/>
-    <path d="M358 359 L358 156.33 Q358 154.33 360 154.33 L412 154.33 Q414 154.33 414 156.33 L414 359 Z" fill="#5AD8A6" data-x="beta" data-series="value" data-y="2"/>
-    <path d="M571.33 359 L571.33 54 Q571.33 52 573.33 52 L625.33 52 Q627.33 52 627.33 54 L627.33 359 Z" fill="#5AD8A6" data-x="gamma" data-series="value" data-y="3"/>
+    <path d="M144.67 355 L144.67 254 Q144.67 252 146.67 252 L198.67 252 Q200.67 252 200.67 254 L200.67 355 Z" fill="#5AD8A6" data-x="alpha" data-series="value" data-y="1"/>
+    <path d="M358 355 L358 151 Q358 149 360 149 L412 149 Q414 149 414 151 L414 355 Z" fill="#5AD8A6" data-x="beta" data-series="value" data-y="2"/>
+    <path d="M571.33 355 L571.33 48 Q571.33 46 573.33 46 L625.33 46 Q627.33 46 627.33 48 L627.33 355 Z" fill="#5AD8A6" data-x="gamma" data-series="value" data-y="3"/>
   </g>
   <g>
-    <text x="172.67" y="248.67" text-anchor="middle" font-size="13" font-weight="500" fill="#000000" data-value-label="alpha">1</text>
-    <text x="386" y="146.33" text-anchor="middle" font-size="13" font-weight="500" fill="#000000" data-value-label="beta">2</text>
-    <text x="599.33" y="66" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="gamma">3</text>
+    <text x="172.67" y="244" text-anchor="middle" font-size="12" font-weight="400" fill="#262626" data-value-label="alpha">1</text>
+    <text x="386" y="141" text-anchor="middle" font-size="12" font-weight="400" fill="#262626" data-value-label="beta">2</text>
+    <text x="599.33" y="60" text-anchor="middle" font-size="12" font-weight="400" fill="#262626" data-value-label="gamma">3</text>
   </g>
 </svg>

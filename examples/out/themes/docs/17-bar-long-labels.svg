@@ -1,26 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: North America leads cloud spend at 420k (USD), 3 rows" aria-labelledby="mv-8e85d3644f53d3e4-title" aria-describedby="mv-8e85d3644f53d3e4-desc" data-markvis="2" data-chart-type="bar" data-id="mv-8e85d3644f53d3e4" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-8e85d3644f53d3e4-title">North America leads cloud spend at 420k</title>
   <desc id="mv-8e85d3644f53d3e4-desc">bar chart. North America leads cloud spend at 420k. x=region. y=spend. unit=USD. 3 rows.</desc>
-  <text x="60.08" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#18181B"><title>North America leads cloud spend at 420k</title>North America leads cloud spend at 420k<tspan font-size="13" font-weight="400" fill="#64748B"> · USD</tspan></text>
-  <line x1="40" x2="704" y1="38" y2="38" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <path d="M60.08 440 L704 440" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
-  <g fill="#64748B" font-size="12" font-weight="400">
-    <text x="52.08" y="440" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="52.08" y="308" text-anchor="end" dominant-baseline="middle">200,000</text>
-    <text x="52.08" y="176" text-anchor="end" dominant-baseline="middle">400,000</text>
-    <text x="52.08" y="44" text-anchor="end" dominant-baseline="middle">600,000</text>
-    <text x="167.4" y="452" text-anchor="middle" font-size="12" data-full-label="North America enterprise expansion Q3"><title>North America enterprise expansion Q3</title><tspan x="167.4" dy="0">North America enterprise</tspan><tspan x="167.4" dy="15">expansion Q3</tspan></text>
-    <text x="382.04" y="452" text-anchor="middle" font-size="12" data-full-label="APAC partner enablement and training program"><title>APAC partner enablement and training program</title><tspan x="382.04" dy="0">APAC partner enablement and</tspan><tspan x="382.04" dy="15">training program</tspan></text>
-    <text x="596.68" y="452" text-anchor="middle" font-size="12" data-full-label="Legacy platform decommission wave 2"><title>Legacy platform decommission wave 2</title><tspan x="596.68" dy="0">Legacy platform decommission</tspan><tspan x="596.68" dy="15">wave 2</tspan></text>
+  <text x="55.74" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>North America leads cloud spend at 420k</title>NORTH AMERICA LEADS CLOUD SPEND AT 420K<tspan font-size="11" font-weight="400" fill="#64748B"> · USD</tspan></text>
+  <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
+  <path d="M55.74 442 L704 442" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400">
+    <text x="47.74" y="442" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="47.74" y="308.67" text-anchor="end" dominant-baseline="middle">200,000</text>
+    <text x="47.74" y="175.33" text-anchor="end" dominant-baseline="middle">400,000</text>
+    <text x="47.74" y="42" text-anchor="end" dominant-baseline="middle">600,000</text>
+    <text x="163.78" y="453" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="North America enterprise expansion Q3"><title>North America enterprise expansion Q3</title><tspan x="163.78" dy="0">North America enterprise</tspan><tspan x="163.78" dy="14">expansion Q3</tspan></text>
+    <text x="379.87" y="453" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="APAC partner enablement and training program"><title>APAC partner enablement and training program</title><tspan x="379.87" dy="0">APAC partner enablement and</tspan><tspan x="379.87" dy="14">training program</tspan></text>
+    <text x="595.96" y="453" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="Legacy platform decommission wave 2"><title>Legacy platform decommission wave 2</title><tspan x="595.96" dy="0">Legacy platform decommission</tspan><tspan x="595.96" dy="14">wave 2</tspan></text>
   </g>
   <g>
-    <path d="M135.4 440 L199.4 440 L199.4 162.8 L135.4 162.8 Z" fill="#475569" data-x="North America enterprise expansion Q3" data-series="spend" data-y="420000"/>
-    <path d="M350.04 440 L414.04 440 L414.04 317.9 L350.04 317.9 Z" fill="#475569" data-x="APAC partner enablement and training program" data-series="spend" data-y="185000"/>
-    <path d="M564.68 440 L628.68 440 L628.68 377.3 L564.68 377.3 Z" fill="#475569" data-x="Legacy platform decommission wave 2" data-series="spend" data-y="95000"/>
+    <path d="M131.78 442 L195.78 442 L195.78 162 L131.78 162 Z" fill="#475569" data-x="North America enterprise expansion Q3" data-series="spend" data-y="420000"/>
+    <path d="M347.87 442 L411.87 442 L411.87 318.67 L347.87 318.67 Z" fill="#475569" data-x="APAC partner enablement and training program" data-series="spend" data-y="185000"/>
+    <path d="M563.96 442 L627.96 442 L627.96 378.67 L563.96 378.67 Z" fill="#475569" data-x="Legacy platform decommission wave 2" data-series="spend" data-y="95000"/>
   </g>
   <g>
-    <text x="167.4" y="154.8" text-anchor="middle" font-size="13" font-weight="500" fill="#18181B" data-value-label="North America enterprise expansion Q3">420,000</text>
-    <text x="382.04" y="309.9" text-anchor="middle" font-size="13" font-weight="500" fill="#18181B" data-value-label="APAC partner enablement and training program">185,000</text>
-    <text x="596.68" y="369.3" text-anchor="middle" font-size="13" font-weight="500" fill="#18181B" data-value-label="Legacy platform decommission wave 2">95,000</text>
+    <text x="163.78" y="154" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="North America enterprise expansion Q3">420,000</text>
+    <text x="379.87" y="310.67" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="APAC partner enablement and training program">185,000</text>
+    <text x="595.96" y="370.67" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="Legacy platform decommission wave 2">95,000</text>
   </g>
 </svg>

@@ -7,11 +7,13 @@ import {
   titleBlockTop,
   SVG_WIDTH,
   type Painted,
+  legendTop,
 } from "./layout.js";
 import { seriesStyle } from "./palette.js";
 import { formatNumber } from "./scale.js";
 import { textWidth, truncateLabel } from "./text.js";
 import {
+  FONT_NUMERIC,
   INK,
   LEGEND_BELOW,
   MARGIN,
@@ -27,9 +29,9 @@ import {
   PLOT_BORDER,
   PLOT_BORDER_WIDTH,
   STRUCTURE_OPACITY,
-  TITLE_BASELINE,
   TYPE,
 } from "./tokens.js";
+import { legendSwatch } from "./legend.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
 
 function slicePath(
@@ -289,15 +291,7 @@ function drawPieLegend(
   ];
   for (const item of layout.items) {
     lines.push(
-      `    <rect ${attrs({
-        x: fmtPx(item.x),
-        y: fmtPx(item.y - 9),
-        width: 10,
-        height: 10,
-        fill: item.color,
-        "fill-opacity": item.opacity === 1 ? undefined : item.opacity,
-        rx: 1,
-      })}/>`,
+      `    ${legendSwatch(item.x, item.y - 9, item.color, item.opacity)}`,
     );
     lines.push(
       `    <text ${attrs({
@@ -349,7 +343,7 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
         legendColors,
         legendOpacities,
         48,
-        TITLE_BASELINE + 18,
+        legendTop(),
         SVG_WIDTH - 96,
       )
     : { items: [] as ReturnType<typeof layoutLegend>["items"], height: 0 };
@@ -438,7 +432,7 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
   if (useLegend && legendNames.length > 0) {
     const legendY = LEGEND_BELOW
       ? Math.max(box.bottom + 12, height - legendDraft.height)
-      : TITLE_BASELINE + 18;
+      : legendTop();
     const painted = drawPieLegend(
       legendNames,
       legendColors,
@@ -459,7 +453,7 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
       box = pieBox(left, right, top, bottom, height);
       const y2 = LEGEND_BELOW
         ? Math.max(box.bottom + 12, height - legendDraft.height)
-        : TITLE_BASELINE + 18;
+        : legendTop();
       const painted2 = drawPieLegend(
         legendNames,
         legendColors,
@@ -607,6 +601,7 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
     lines.push(
       `  <g ${attrs({
         "font-size": TYPE.value.size,
+        "font-family": FONT_NUMERIC,
         "font-weight": TYPE.value.weight,
         fill: TYPE.value.fill,
       })}>`,

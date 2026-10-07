@@ -39,12 +39,150 @@ Token packs live in `packages/themes/<id>/theme.ts`, resolved by `packages/theme
 
 | id | B&W tell (short) |
 | --- | --- |
-| `folio` | Open sheet, soft bar tops, end-labels for few series |
-| `highcharts` | Hard plot box, axis titles, square bars, legend |
-| `shadcn` | Soft card frame, rounded bars, quiet grid, legend |
-| `docs` | Tight inset, thin stroke, bottom legend, no end-labels |
-| `ant` | Big title air, narrow columns, technical axes |
-| `recharts` | XY grid, bottom legend, stroked scatter rings |
+| `folio` | Open sheet, large left title, end-labels for few lines, dashed second series |
+| `highcharts` | Centered title + subtitle unit, tick marks, axis titles, circle legend below |
+| `shadcn` | Card outline, subtitle unit, no axis line, smooth lines without points, rounded bars |
+| `docs` | UPPERCASE tracked title + rule, monospace numbers, dotted grid |
+| `ant` | Dashed grid, short ticks, haloed points, donut with spider leaders |
+| `recharts` | Dashed x and y grid, both axis lines with ticks, hollow points |
+
+Each pack also has its own dark paper for `surface: dark`.
+
+## Side by side
+
+The same fence in every theme. Only the `theme:` line changes.
+
+```chart
+type: line
+theme: folio
+title: Walk-up still leads member
+unit: riders
+x: week
+y: count
+series: plan
+
+week,plan,count
+W1,walk-up,64
+W1,member,28
+W2,walk-up,69
+W2,member,33
+W3,walk-up,71
+W3,member,38
+W4,walk-up,74
+W4,member,44
+W5,walk-up,76
+W5,member,51
+```
+
+```chart
+type: line
+theme: highcharts
+title: Walk-up still leads member
+unit: riders
+x: week
+y: count
+series: plan
+
+week,plan,count
+W1,walk-up,64
+W1,member,28
+W2,walk-up,69
+W2,member,33
+W3,walk-up,71
+W3,member,38
+W4,walk-up,74
+W4,member,44
+W5,walk-up,76
+W5,member,51
+```
+
+```chart
+type: line
+theme: shadcn
+title: Walk-up still leads member
+unit: riders
+x: week
+y: count
+series: plan
+
+week,plan,count
+W1,walk-up,64
+W1,member,28
+W2,walk-up,69
+W2,member,33
+W3,walk-up,71
+W3,member,38
+W4,walk-up,74
+W4,member,44
+W5,walk-up,76
+W5,member,51
+```
+
+```chart
+type: line
+theme: docs
+title: Walk-up still leads member
+unit: riders
+x: week
+y: count
+series: plan
+
+week,plan,count
+W1,walk-up,64
+W1,member,28
+W2,walk-up,69
+W2,member,33
+W3,walk-up,71
+W3,member,38
+W4,walk-up,74
+W4,member,44
+W5,walk-up,76
+W5,member,51
+```
+
+```chart
+type: line
+theme: ant
+title: Walk-up still leads member
+unit: riders
+x: week
+y: count
+series: plan
+
+week,plan,count
+W1,walk-up,64
+W1,member,28
+W2,walk-up,69
+W2,member,33
+W3,walk-up,71
+W3,member,38
+W4,walk-up,74
+W4,member,44
+W5,walk-up,76
+W5,member,51
+```
+
+```chart
+type: line
+theme: recharts
+title: Walk-up still leads member
+unit: riders
+x: week
+y: count
+series: plan
+
+week,plan,count
+W1,walk-up,64
+W1,member,28
+W2,walk-up,69
+W2,member,33
+W3,walk-up,71
+W3,member,38
+W4,walk-up,74
+W4,member,44
+W5,walk-up,76
+W5,member,51
+```
 
 ## How to add a pack
 

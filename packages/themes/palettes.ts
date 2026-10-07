@@ -121,8 +121,12 @@ export function applyPaletteToTheme(
     return theme;
   }
   const p = resolvePalette(paletteId);
+  const { PALETTE: _dark, ...dark } = theme.SURFACES.dark;
+  const { PALETTE: _export, ...exported } = theme.SURFACES.export;
   return {
     ...theme,
     PALETTE: [...p.SERIES] as ThemeTokens["PALETTE"],
+    // An explicit palette is the reader's color choice on every surface.
+    SURFACES: { ...theme.SURFACES, dark, export: exported },
   };
 }

@@ -1,19 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="pie chart: Core still leads product mix at 50% (%), 3 slices" aria-labelledby="mv-e0c3dbc735af8720-title" aria-describedby="mv-e0c3dbc735af8720-desc" data-markvis="2" data-chart-type="pie" data-id="mv-e0c3dbc735af8720" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="pie chart: Core still leads product mix at 50% (%), 3 slices" aria-labelledby="mv-e0c3dbc735af8720-title" aria-describedby="mv-e0c3dbc735af8720-desc" data-markvis="2" data-chart-type="pie" data-id="mv-e0c3dbc735af8720" font-family="&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif" font-size="12">
   <title id="mv-e0c3dbc735af8720-title">Core still leads product mix at 50%</title>
   <desc id="mv-e0c3dbc735af8720-desc">pie chart. Core still leads product mix at 50%. x=name. y=value. unit=%. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="56" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#333333"><title>Core still leads product mix at 50%</title>Core still leads product mix at 50%<tspan font-size="13" font-weight="400" fill="#666666"> · %</tspan></text>
-  <g font-size="14" font-weight="500" fill="#333333">
-    <rect x="56" y="41" width="10" height="10" fill="#7cb5ec" rx="1"/>
-    <text x="70" y="50" data-legend="Core">Core</text>
-    <rect x="120.72" y="41" width="10" height="10" fill="#434348" rx="1"/>
-    <text x="134.72" y="50" data-legend="Addons">Addons</text>
-    <rect x="202.8" y="41" width="10" height="10" fill="#90ed7d" rx="1"/>
-    <text x="216.8" y="50" data-legend="Other">Other</text>
+  <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Core still leads product mix at 50%</title>Core still leads product mix at 50%</text>
+  <text x="360" y="46" text-anchor="middle" font-size="12" font-weight="400" fill="#666666" data-subtitle="1">%</text>
+  <g font-size="12" font-weight="700" fill="#333333">
+    <circle cx="289.2" cy="420" r="5" fill="#7cb5ec"/>
+    <text x="298.2" y="424" data-legend="Core">Core</text>
+    <circle cx="348.96" cy="420" r="5" fill="#434348"/>
+    <text x="357.96" y="424" data-legend="Addons">Addons</text>
+    <circle cx="423.6" cy="420" r="5" fill="#90ed7d"/>
+    <text x="432.6" y="424" data-legend="Other">Other</text>
   </g>
-  <rect x="56" y="72" width="644" height="348" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0">
-    <path d="M378 246 L378 127.68 A118.32 118.32 0 0 1 395.63 363 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Core" data-raw-value="50"/>
-    <path d="M378 246 L395.63 363 A118.32 118.32 0 0 1 260.01 237.16 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Addons" data-raw-value="30"/>
-    <path d="M378 246 L260.01 237.16 A118.32 118.32 0 0 1 378 127.68 Z" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Other" data-raw-value="25"/>
+    <path d="M378 232 L378 120.48 A111.52 111.52 0 0 1 394.62 342.27 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Core" data-raw-value="50"/>
+    <path d="M378 232 L394.62 342.27 A111.52 111.52 0 0 1 266.79 223.67 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Addons" data-raw-value="30"/>
+    <path d="M378 232 L266.79 223.67 A111.52 111.52 0 0 1 378 120.48 Z" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Other" data-raw-value="25"/>
   </g>
 </svg>

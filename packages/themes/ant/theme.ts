@@ -1,6 +1,6 @@
 /** Ant Design Charts–inspired look as tokens only. Same keys as folio; no @antv/g2 dep. */
 
-import { FOLIO_SURFACES, folio, type ThemeTokens } from "../folio/theme.js";
+import { SEMANTIC_LIGHT, folio, type ThemeTokens } from "../folio/theme.js";
 
 /**
  * Static SVG grammar: technical axes, muted teal/brick categorical, tight padding,
@@ -13,19 +13,20 @@ export const ant = {
   PLOT_MIN_RATIO: 0.6,
 
   FONT: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+  FONT_NUMERIC: folio.FONT_NUMERIC,
 
-  INK: "#000000",
+  INK: "#262626",
   QUIET: "#8C8C8C",
-  HAIRLINE_OPACITY: "0.16",
+  HAIRLINE_OPACITY: "0.2",
   STRUCTURE_OPACITY: "0.32",
 
   TYPE: {
-    title: { size: 22, weight: 600, fill: "#000000" },
+    title: { size: 17, weight: 600, fill: "#262626" },
     unit: { size: 12, weight: 400, fill: "#8C8C8C" },
-    value: { size: 11, weight: 500, fill: "#000000" },
-    tick: { size: 11, weight: 400, fill: "#8C8C8C" },
-    note: { size: 11, weight: 400, fill: "#8C8C8C" },
-    legend: { size: 12, weight: 400, fill: "#000000" },
+    value: { size: 12, weight: 400, fill: "#262626" },
+    tick: { size: 12, weight: 400, fill: "#8C8C8C" },
+    note: { size: 12, weight: 400, fill: "#8C8C8C" },
+    legend: { size: 12, weight: 400, fill: "#262626" },
   },
 
   /** Tight padding; room for axis titles + legend. */
@@ -50,6 +51,7 @@ export const ant = {
 
   WRAP_OPACITY: 0.7,
 
+  TITLE: folio.TITLE,
   TITLE_BASELINE: 26,
   TITLE_TO_PLOT: 20,
   TICK_TEXT_GAP: 8,
@@ -72,13 +74,15 @@ export const ant = {
   BAR_LABEL_MID_MIN_W: folio.BAR_LABEL_MID_MIN_W,
 
   LINE_STROKE: 2,
-  LINE_POINT_R: 3,
+  LINE_POINT_R: 3.5,
   POINT_SKIP_AFTER: folio.POINT_SKIP_AFTER,
   AREA_OPACITY: 0.25,
   END_LABEL_SERIES_MAX: 0,
   END_LABEL_GAP: folio.END_LABEL_GAP,
   END_LABEL_MIN_SEP: folio.END_LABEL_MIN_SEP,
-  SERIES_DASH: folio.SERIES_DASH,
+  LINE_CURVE: folio.LINE_CURVE,
+  MARKER: "halo",
+  SERIES_DASH: [""],
 
   SCATTER_R: folio.SCATTER_R,
   SCATTER_OPACITY: folio.SCATTER_OPACITY,
@@ -91,17 +95,41 @@ export const ant = {
   PIE_LABEL_MIN_SEP: folio.PIE_LABEL_MIN_SEP,
   PIE_ELBOW: folio.PIE_ELBOW,
   PIE_LABEL_MODE: "leaders",
-  PIE_INNER_RATIO: 0,
+  PIE_INNER_RATIO: 0.6,
 
   COMPACT_SPAN: folio.COMPACT_SPAN,
 
   PLOT_BG: null,
-  PLOT_BORDER: "#d9d9d9",
-  PLOT_BORDER_WIDTH: 1,
+  PLOT_BORDER: null,
+  PLOT_BORDER_WIDTH: 0,
   AXIS_TITLES: true,
   LEGEND_BELOW: false,
   TITLE_RULE: false,
-  GRID: { dash: "", width: 1, axes: "y" },
+  GRID: { dash: "4 4", width: 1, axes: "y" },
+  AXIS: { line: "baseline", tick: 4 },
+  LEGEND: { swatch: "circle", align: "start" },
+  FRAME: folio.FRAME,
 
-  SURFACES: FOLIO_SURFACES,
+  SURFACES: {
+    light: { PLATE: null, PAPER: "#ffffff", SEMANTIC: { ...SEMANTIC_LIGHT, inkOnLight: "#262626" } },
+    dark: {
+      PLATE: "#141414",
+      PAPER: "#141414",
+      INK: "#e8e8e8",
+      QUIET: "#8c8c8c",
+      TICK: "#a6a6a6",
+      HAIRLINE_OPACITY: "0.16",
+      SEMANTIC: {
+        ...SEMANTIC_LIGHT,
+        up: "#2DD4BF",
+        down: "#FB7185",
+        total: "#e8e8e8",
+        rampLow: "#1f1f1f",
+        missing: "#434343",
+        cellRule: "#303030",
+        cellGap: "#141414",
+      },
+    },
+    export: { PLATE: "#ffffff", PAPER: "#ffffff", SEMANTIC: { ...SEMANTIC_LIGHT, inkOnLight: "#262626" } },
+  },
 } as const satisfies ThemeTokens;

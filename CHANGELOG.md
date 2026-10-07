@@ -4,14 +4,17 @@
 
 ### Added
 
+- Playground **Surface** control (`?surface=dark`).
 - Horizontal bars (`orient`), surfaces (`light` / `dark` / `export`), heatmap color domain, waterfall `role`, and width-aware `renderSvg`. See `docs/release-2.2.md`. The package version is still 2.1.0 until publish.
 
 ### Changed
 
+- The six themes now look distinct in structure, not just color: each owns its type ramp (floor: title 15, other roles 11), title alignment and subtitle, grid dash, axis lines and ticks, curve, point markers, legend keys, card frame, and dark paper. Every pair differs on at least four structural switches. See `docs/themes.md`.
 - Readable type, wrapped labels, explicit paper/dark/export surfaces, gauge range 0–100 when `max` is omitted, sankey thickness. Funnel stays a centered silhouette.
 
 ### Fixed
 
+- A top legend no longer sits on a wrapped title, and the y-axis title no longer runs through tick labels or repeats the unit.
 - Non-numeric cells, duplicate keys, `markvis` version, multi-chart `check`, bake references, ragged fallback cells, and line gaps for missing values.
 
 ## 2.1.0 — 2026-09-25

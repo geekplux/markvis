@@ -1,31 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: September led park events at 40, 4 rows" aria-labelledby="mv-ea1a3e12d482ef11-title" aria-describedby="mv-ea1a3e12d482ef11-desc" data-markvis="2" data-chart-type="area" data-id="mv-ea1a3e12d482ef11" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-ea1a3e12d482ef11-title">September led park events at 40</title>
   <desc id="mv-ea1a3e12d482ef11-desc">area chart. September led park events at 40. x=month. y=count. 4 rows.</desc>
-  <text x="40" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#18181B"><title>September led park events at 40</title>September led park events at 40</text>
-  <line x1="40" x2="704" y1="38" y2="38" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <g fill="none" stroke="#18181B" stroke-opacity="0.06" stroke-width="1">
-    <line x1="40" x2="704" y1="352.25" y2="352.25"/>
-    <line x1="40" x2="704" y1="146.75" y2="146.75"/>
-    <line x1="40" x2="704" y1="44" y2="44"/>
+  <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>September led park events at 40</title>SEPTEMBER LED PARK EVENTS AT 40</text>
+  <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
+  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3">
+    <line x1="40" x2="704" y1="352.5" y2="352.5"/>
+    <line x1="40" x2="704" y1="145.5" y2="145.5"/>
+    <line x1="40" x2="704" y1="42" y2="42"/>
   </g>
-  <path d="M40 455 L704 455" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
-  <g fill="#64748B" font-size="12" font-weight="400">
-    <text x="32" y="455" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="32" y="352.25" text-anchor="end" dominant-baseline="middle">10</text>
-    <text x="32" y="249.5" text-anchor="end" dominant-baseline="middle">20</text>
-    <text x="32" y="146.75" text-anchor="end" dominant-baseline="middle">30</text>
-    <text x="32" y="44" text-anchor="end" dominant-baseline="middle">40</text>
-    <text x="123" y="467" text-anchor="middle" font-size="12" data-full-label="Sep"><title>Sep</title>Sep</text>
-    <text x="289" y="467" text-anchor="middle" font-size="12" data-full-label="Feb"><title>Feb</title>Feb</text>
-    <text x="455" y="467" text-anchor="middle" font-size="12" data-full-label="Jul"><title>Jul</title>Jul</text>
-    <text x="621" y="467" text-anchor="middle" font-size="12" data-full-label="Apr"><title>Apr</title>Apr</text>
+  <path d="M40 456 L704 456" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400">
+    <text x="32" y="456" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="32" y="352.5" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="32" y="249" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="32" y="145.5" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="32" y="42" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="123" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="Sep"><title>Sep</title>Sep</text>
+    <text x="289" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="Feb"><title>Feb</title>Feb</text>
+    <text x="455" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="Jul"><title>Jul</title>Jul</text>
+    <text x="621" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="Apr"><title>Apr</title>Apr</text>
   </g>
   <g fill="none">
-    <path d="M123 44 L289 352.25 L455 146.75 L621 249.5 L621 455 L123 455 Z" fill="#475569" fill-opacity="0.12" stroke="none" data-series="count"/>
-    <path d="M123 44 L289 352.25 L455 146.75 L621 249.5" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="count"/>
-    <circle cx="123" cy="44" r="2" fill="#475569" stroke="none" data-series="count"/>
-    <circle cx="289" cy="352.25" r="2" fill="#475569" stroke="none" data-series="count"/>
-    <circle cx="455" cy="146.75" r="2" fill="#475569" stroke="none" data-series="count"/>
-    <circle cx="621" cy="249.5" r="2" fill="#475569" stroke="none" data-series="count"/>
+    <path d="M123 42 L289 352.5 L455 145.5 L621 249 L621 456 L123 456 Z" fill="#475569" fill-opacity="0.12" stroke="none" data-series="count"/>
+    <path d="M123 42 L289 352.5 L455 145.5 L621 249" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="count"/>
+    <circle cx="123" cy="42" r="2" fill="#475569" stroke="none" data-series="count"/>
+    <circle cx="289" cy="352.5" r="2" fill="#475569" stroke="none" data-series="count"/>
+    <circle cx="455" cy="145.5" r="2" fill="#475569" stroke="none" data-series="count"/>
+    <circle cx="621" cy="249" r="2" fill="#475569" stroke="none" data-series="count"/>
   </g>
 </svg>

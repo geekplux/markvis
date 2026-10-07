@@ -4,16 +4,20 @@ import {
   galleryHref,
   paletteFromSearch,
   playgroundSearch,
+  surfaceFromSearch,
   themeFromSearch,
 } from "./links.js";
 import { htmlTable, previewSource, type PlaygroundView } from "./preview.js";
 import { dropinSnippet } from "./snippet.js";
 import {
   readPaletteFromFence,
+  readSurfaceFromFence,
   readThemeFromFence,
   rewritePaletteInFence,
+  rewriteSurfaceInFence,
   rewriteThemeInFence,
   type ChartPalette,
+  type ChartSurface,
   type ChartTheme,
 } from "./theme.js";
 import { enhanceChartSvg } from "@markvis/browser/enhance";
@@ -90,6 +94,7 @@ function paint(view: PlaygroundView, theme?: ChartTheme): void {
 function main(): void {
   const themeSelect = mustEl<HTMLSelectElement>("theme");
   const paletteSelect = mustEl<HTMLSelectElement>("palette");
+  const surfaceSelect = mustEl<HTMLSelectElement>("surface");
   const select = mustEl<HTMLSelectElement>("example");
   const editor = mustEl<HTMLTextAreaElement>("fence");
   const copyFenceBtn = mustEl<HTMLButtonElement>("copy-fence");
@@ -119,6 +124,7 @@ function main(): void {
   const fromQuery = exampleIdFromSearch(query);
   const themeQuery = themeFromSearch(query);
   const paletteQuery = paletteFromSearch(query);
+  const surfaceQuery = surfaceFromSearch(query);
   const initial =
     EXAMPLES.find((item) => item.id === fromQuery) ?? first;
   let filename = initial.filename;
@@ -133,8 +139,17 @@ function main(): void {
     return raw === "" ? null : (raw as ChartPalette);
   }
 
+  function currentSurface(): ChartSurface {
+    return surfaceSelect.value as ChartSurface;
+  }
+
   function syncUrl(id: string): void {
-    const next = playgroundSearch(id, currentTheme(), currentPalette());
+    const next = playgroundSearch(
+      id,
+      currentTheme(),
+      currentPalette(),
+      currentSurface(),
+    );
     if (`${window.location.search}` !== next) {
       window.history.replaceState(
         null,
@@ -160,6 +175,7 @@ function main(): void {
     themeSelect.value = readThemeFromFence(source);
     const palette = readPaletteFromFence(source);
     paletteSelect.value = palette ?? "";
+    surfaceSelect.value = readSurfaceFromFence(source);
   }
 
   function load(
@@ -168,6 +184,7 @@ function main(): void {
     id: string,
     theme?: ChartTheme | null,
     palette?: ChartPalette | null,
+    surface?: ChartSurface | null,
   ): void {
     filename = name;
     let nextSource = source;
@@ -176,6 +193,9 @@ function main(): void {
     }
     if (palette !== undefined) {
       nextSource = rewritePaletteInFence(nextSource, palette);
+    }
+    if (surface) {
+      nextSource = rewriteSurfaceInFence(nextSource, surface);
     }
     editor.value = nextSource;
     syncSelects(nextSource);
@@ -210,6 +230,14 @@ function main(): void {
       currentTheme(),
       currentPalette(),
     );
+    syncUrl(select.value);
+    paint(view, currentTheme());
+  });
+
+  surfaceSelect.addEventListener("change", () => {
+    const next = rewriteSurfaceInFence(editor.value, currentSurface());
+    editor.value = next;
+    view = previewSource(next, filename);
     syncUrl(select.value);
     paint(view, currentTheme());
   });
@@ -262,6 +290,7 @@ function main(): void {
     initial.id,
     themeQuery,
     paletteQuery,
+    surfaceQuery,
   );
 }
 

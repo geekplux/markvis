@@ -1,42 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="bar chart: Pro share climbs through the ATL season, 8 rows, series plan" aria-labelledby="mv-fdbecd0c85e7ae0e-title" aria-describedby="mv-fdbecd0c85e7ae0e-desc" data-markvis="2" data-chart-type="bar" data-id="mv-fdbecd0c85e7ae0e" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="bar chart: Pro share climbs through the ATL season, 8 rows, series plan" aria-labelledby="mv-fdbecd0c85e7ae0e-title" aria-describedby="mv-fdbecd0c85e7ae0e-desc" data-markvis="2" data-chart-type="bar" data-id="mv-fdbecd0c85e7ae0e" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-fdbecd0c85e7ae0e-title">Pro share climbs through the ATL season</title>
   <desc id="mv-fdbecd0c85e7ae0e-desc">bar chart. Pro share climbs through the ATL season. x=month. y=seats. series=plan. 8 rows.</desc>
-  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#0A0A0A"><title>Pro share climbs through the ATL season</title>Pro share climbs through the ATL season</text>
-  <g font-size="13" font-weight="500" fill="#0A0A0A">
-    <rect x="48" y="41" width="10" height="10" fill="#F54900" rx="1"/>
-    <text x="62" y="50" data-legend="free">free</text>
-    <rect x="110.24" y="41" width="10" height="10" fill="#009689" rx="1"/>
-    <text x="124.24" y="50" data-legend="pro">pro</text>
+  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
+  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Pro share climbs through the ATL season</title>Pro share climbs through the ATL season</text>
+  <g font-size="12" font-weight="500" fill="#0A0A0A">
+    <rect x="324.96" y="435" width="10" height="10" fill="#F54900" rx="3"/>
+    <text x="338.96" y="444" data-legend="free">free</text>
+    <rect x="384.72" y="435" width="10" height="10" fill="#009689" rx="3"/>
+    <text x="398.72" y="444" data-legend="pro">pro</text>
   </g>
-  <rect x="48" y="70" width="652" height="365" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
-  <path d="M48 435 L700 435" fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1"/>
   <g fill="#737373" font-size="12" font-weight="400">
-    <text x="40" y="435" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="40" y="252.5" text-anchor="end" dominant-baseline="middle">50</text>
-    <text x="40" y="70" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="129.5" y="447" text-anchor="middle" font-size="12" data-full-label="Jan"><title>Jan</title>Jan</text>
-    <text x="292.5" y="447" text-anchor="middle" font-size="12" data-full-label="Feb"><title>Feb</title>Feb</text>
-    <text x="455.5" y="447" text-anchor="middle" font-size="12" data-full-label="Mar"><title>Mar</title>Mar</text>
-    <text x="618.5" y="447" text-anchor="middle" font-size="12" data-full-label="Apr"><title>Apr</title>Apr</text>
+    <text x="40" y="411" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="40" y="230.5" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="40" y="50" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="129.5" y="423" text-anchor="middle" font-size="12" data-full-label="Jan"><title>Jan</title>Jan</text>
+    <text x="292.5" y="423" text-anchor="middle" font-size="12" data-full-label="Feb"><title>Feb</title>Feb</text>
+    <text x="455.5" y="423" text-anchor="middle" font-size="12" data-full-label="Mar"><title>Mar</title>Mar</text>
+    <text x="618.5" y="423" text-anchor="middle" font-size="12" data-full-label="Apr"><title>Apr</title>Apr</text>
   </g>
   <g>
-    <path d="M95.5 130.83 L163.5 130.83 L163.5 429 Q163.5 435 157.5 435 L101.5 435 Q95.5 435 95.5 429 Z" fill="#F54900" data-x="Jan" data-series="free" data-y="83.33333333333334" data-layout="percent"/>
-    <path d="M95.5 130.83 L95.5 76 Q95.5 70 101.5 70 L157.5 70 Q163.5 70 163.5 76 L163.5 130.83 Z" fill="#009689" data-x="Jan" data-series="pro" data-y="16.666666666666664" data-layout="percent"/>
-    <path d="M258.5 144.06 L326.5 144.06 L326.5 429 Q326.5 435 320.5 435 L264.5 435 Q258.5 435 258.5 429 Z" fill="#F54900" data-x="Feb" data-series="free" data-y="79.71014492753623" data-layout="percent"/>
-    <path d="M258.5 144.06 L258.5 76 Q258.5 70 264.5 70 L320.5 70 Q326.5 70 326.5 76 L326.5 144.06 Z" fill="#009689" data-x="Feb" data-series="pro" data-y="20.28985507246377" data-layout="percent"/>
-    <path d="M421.5 161.25 L489.5 161.25 L489.5 429 Q489.5 435 483.5 435 L427.5 435 Q421.5 435 421.5 429 Z" fill="#F54900" data-x="Mar" data-series="free" data-y="75" data-layout="percent"/>
-    <path d="M421.5 161.25 L421.5 76 Q421.5 70 427.5 70 L483.5 70 Q489.5 70 489.5 76 L489.5 161.25 Z" fill="#009689" data-x="Mar" data-series="pro" data-y="25" data-layout="percent"/>
-    <path d="M584.5 179.5 L652.5 179.5 L652.5 429 Q652.5 435 646.5 435 L590.5 435 Q584.5 435 584.5 429 Z" fill="#F54900" data-x="Apr" data-series="free" data-y="70" data-layout="percent"/>
-    <path d="M584.5 179.5 L584.5 76 Q584.5 70 590.5 70 L646.5 70 Q652.5 70 652.5 76 L652.5 179.5 Z" fill="#009689" data-x="Apr" data-series="pro" data-y="30" data-layout="percent"/>
+    <path d="M95.5 110.17 L163.5 110.17 L163.5 403 Q163.5 411 155.5 411 L103.5 411 Q95.5 411 95.5 403 Z" fill="#F54900" data-x="Jan" data-series="free" data-y="83.33333333333334" data-layout="percent"/>
+    <path d="M95.5 110.17 L95.5 58 Q95.5 50 103.5 50 L155.5 50 Q163.5 50 163.5 58 L163.5 110.17 Z" fill="#009689" data-x="Jan" data-series="pro" data-y="16.666666666666664" data-layout="percent"/>
+    <path d="M258.5 123.25 L326.5 123.25 L326.5 403 Q326.5 411 318.5 411 L266.5 411 Q258.5 411 258.5 403 Z" fill="#F54900" data-x="Feb" data-series="free" data-y="79.71014492753623" data-layout="percent"/>
+    <path d="M258.5 123.25 L258.5 58 Q258.5 50 266.5 50 L318.5 50 Q326.5 50 326.5 58 L326.5 123.25 Z" fill="#009689" data-x="Feb" data-series="pro" data-y="20.28985507246377" data-layout="percent"/>
+    <path d="M421.5 140.25 L489.5 140.25 L489.5 403 Q489.5 411 481.5 411 L429.5 411 Q421.5 411 421.5 403 Z" fill="#F54900" data-x="Mar" data-series="free" data-y="75" data-layout="percent"/>
+    <path d="M421.5 140.25 L421.5 58 Q421.5 50 429.5 50 L481.5 50 Q489.5 50 489.5 58 L489.5 140.25 Z" fill="#009689" data-x="Mar" data-series="pro" data-y="25" data-layout="percent"/>
+    <path d="M584.5 158.3 L652.5 158.3 L652.5 403 Q652.5 411 644.5 411 L592.5 411 Q584.5 411 584.5 403 Z" fill="#F54900" data-x="Apr" data-series="free" data-y="70" data-layout="percent"/>
+    <path d="M584.5 158.3 L584.5 58 Q584.5 50 592.5 50 L644.5 50 Q652.5 50 652.5 58 L652.5 158.3 Z" fill="#009689" data-x="Apr" data-series="pro" data-y="30" data-layout="percent"/>
   </g>
   <g>
-    <text x="129.5" y="122.83" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-value-label="Jan">83.3333</text>
-    <text x="129.5" y="84" text-anchor="middle" font-size="13" font-weight="500" fill="#fafaf9" data-value-label="Jan">16.6667</text>
-    <text x="292.5" y="136.06" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-value-label="Feb">79.7101</text>
-    <text x="292.5" y="84" text-anchor="middle" font-size="13" font-weight="500" fill="#fafaf9" data-value-label="Feb">20.2899</text>
-    <text x="455.5" y="153.25" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-value-label="Mar">75</text>
-    <text x="455.5" y="84" text-anchor="middle" font-size="13" font-weight="500" fill="#fafaf9" data-value-label="Mar">25</text>
-    <text x="618.5" y="171.5" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-value-label="Apr">70</text>
-    <text x="618.5" y="84" text-anchor="middle" font-size="13" font-weight="500" fill="#fafaf9" data-value-label="Apr">30</text>
+    <text x="129.5" y="102.17" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Jan">83.3333</text>
+    <text x="129.5" y="64" text-anchor="middle" font-size="12" font-weight="500" fill="#fafaf9" data-value-label="Jan">16.6667</text>
+    <text x="292.5" y="115.25" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Feb">79.7101</text>
+    <text x="292.5" y="64" text-anchor="middle" font-size="12" font-weight="500" fill="#fafaf9" data-value-label="Feb">20.2899</text>
+    <text x="455.5" y="132.25" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Mar">75</text>
+    <text x="455.5" y="64" text-anchor="middle" font-size="12" font-weight="500" fill="#fafaf9" data-value-label="Mar">25</text>
+    <text x="618.5" y="150.3" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Apr">70</text>
+    <text x="618.5" y="64" text-anchor="middle" font-size="12" font-weight="500" fill="#fafaf9" data-value-label="Apr">30</text>
   </g>
 </svg>

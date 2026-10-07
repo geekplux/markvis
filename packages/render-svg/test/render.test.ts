@@ -2,7 +2,7 @@ import { mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
-import { ChartIRSchema, type ChartIR } from "@markvis/ir";
+import { ChartIRSchema, THEMES, type ChartIR } from "@markvis/ir";
 import { parseMarkdown } from "@markvis/parser";
 import {
   PALETTE,
@@ -47,7 +47,31 @@ function barRxAxis(svg: string): string {
   return (svg.match(/\brx="([0-9.]+)"/) ?? [, "0"])[1]!;
 }
 
+/** First figure title element (the one carrying <title>). */
+function titleElement(svg: string): string {
+  return svg.match(/<text\b[^>]*><title>/)?.[0] ?? "";
+}
+
+function markerStyle(svg: string): string {
+  const mark = svg.match(/<circle\b[^>]*data-series=[^>]*>/)?.[0];
+  if (!mark) return "none";
+  if (/stroke-width="1\.5"/.test(mark) && !/fill-opacity/.test(mark)) {
+    return /fill="#[0-9a-fA-F]{6}" stroke="#ffffff"/.test(mark) ? "halo" : "hollow";
+  }
+  return /stroke="none"/.test(mark) ? "filled" : "halo";
+}
+
+function swatchShape(svg: string): string {
+  const legend = svg.match(/<g\b[^>]*>\s*<(rect|circle)\b[^>]*>\s*<text\b[^>]*data-legend/);
+  if (!legend) return "none";
+  const el = legend[0];
+  if (/<circle/.test(el)) return "circle";
+  if (/height="3"/.test(el)) return "line";
+  return /rx="3"/.test(el) ? "rounded" : "square";
+}
+
 function bwAxes(svg: string) {
+  const title = titleElement(svg);
   return {
     legend: /data-legend=/.test(svg),
     endLabel: /data-end-label/.test(svg),
@@ -55,29 +79,33 @@ function bwAxes(svg: string) {
     axisTitles: /data-axis-titles=/.test(svg),
     titleRule: /data-title-rule=/.test(svg),
     viewBox: (svg.match(/viewBox="([^"]+)"/) ?? [, ""])[1],
-    titleSize: (svg.match(/font-size="(\d+(?:\.\d+)?)"[^>]*font-weight="6/) ??
-      svg.match(/font-weight="6\d*"[^>]*font-size="(\d+(?:\.\d+)?)"/) ?? [, ""])[1],
+    titleSize: (title.match(/font-size="(\d+(?:\.\d+)?)"/) ?? [, ""])[1],
     markerR: (svg.match(/<circle[^>]*\br="([0-9.]+)"/) ?? [, ""])[1],
     barRx: barRxAxis(svg),
     vGrid: /data-v-grid=/.test(svg),
+    titleAlign: (title.match(/text-anchor="([^"]+)"/) ?? [, ""])[1],
+    titleTracking: /letter-spacing=/.test(title),
+    subtitle: /data-subtitle=/.test(svg),
+    gridDash: (svg.match(/<g fill="none" stroke="[^"]+" stroke-opacity="[^"]+" stroke-width="[^"]+" stroke-dasharray="([^"]+)"/) ?? [, ""])[1],
+    axisTicks: /data-axis-ticks=/.test(svg),
+    yAxisLine: /data-axis-line="y"/.test(svg),
+    curve: /<path d="M[^"]* C/.test(svg),
+    marker: markerStyle(svg),
+    swatch: swatchShape(svg),
+    figureFrame: /data-frame=/.test(svg),
+    numericFont: (svg.match(/font-family=/g) ?? []).length > 1,
   };
 }
 
+/** How many structural switches differ. Color is never counted. */
 function bwDiffCount(
   a: ReturnType<typeof bwAxes>,
   b: ReturnType<typeof bwAxes>,
 ): number {
   let n = 0;
-  if (a.legend !== b.legend) n += 1;
-  if (a.endLabel !== b.endLabel) n += 1;
-  if (a.plotFrame !== b.plotFrame) n += 1;
-  if (a.axisTitles !== b.axisTitles) n += 1;
-  if (a.titleRule !== b.titleRule) n += 1;
-  if (a.viewBox !== b.viewBox) n += 1;
-  if (a.titleSize !== b.titleSize) n += 1;
-  if (a.markerR !== b.markerR) n += 1;
-  if (a.barRx !== b.barRx) n += 1;
-  if (a.vGrid !== b.vGrid) n += 1;
+  for (const key of Object.keys(a) as (keyof typeof a)[]) {
+    if (a[key] !== b[key]) n += 1;
+  }
   return n;
 }
 
@@ -373,12 +401,14 @@ describe("highcharts tokens", () => {
     expect(highcharts.MAX_INTERIOR_GRID).toBeGreaterThan(
       folio.MAX_INTERIOR_GRID,
     );
-    expect(highcharts.TYPE.legend.size).toBeGreaterThan(folio.TYPE.legend.size);
+    expect(highcharts.TYPE.legend.weight).toBeGreaterThan(folio.TYPE.legend.weight);
     expect(highcharts.TITLE_TO_PLOT).toBeGreaterThan(folio.TITLE_TO_PLOT);
     expect(highcharts.PALETTE[0]).not.toBe(folio.PALETTE[0]);
     expect(highcharts.END_LABEL_SERIES_MAX).toBe(0);
     expect(highcharts.AXIS_TITLES).toBe(true);
-    expect(highcharts.PLOT_BORDER_WIDTH).toBeGreaterThan(0);
+    expect(highcharts.TITLE.align).toBe("middle");
+    expect(highcharts.TITLE.unit).toBe("subtitle");
+    expect(highcharts.AXIS.tick).toBeGreaterThan(0);
     expect(highcharts.PLOT_BG).toBeNull();
     expect(highcharts.LINE_POINT_R).toBeGreaterThan(folio.LINE_POINT_R);
   });
@@ -389,12 +419,13 @@ describe("highcharts tokens", () => {
     expect(a).not.toBe(b);
     expect(b).toContain(highcharts.PALETTE[0]!);
     expect(b).toContain(
-      'font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif"',
+      'font-family="&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif"',
     );
-    expect(b).toContain('data-plot-border="1"');
+    expect(b).toContain('data-axis-ticks="1"');
+    expect(b).toContain('text-anchor="middle" font-size="18"');
     expect(b).not.toContain('data-plot-bg="1"');
     expect(b).toContain('data-axis-titles="1"');
-    expect(a).not.toContain('data-plot-border="1"');
+    expect(a).not.toContain('data-axis-ticks="1"');
   });
 
   it("uses color legend for multi-series line (not end-labels)", () => {
@@ -417,12 +448,12 @@ describe("highcharts tokens", () => {
       },
     });
     const svg = renderSvg(chart);
-    expect(svg).toContain('data-plot-border="1"');
+    expect(svg).toContain('data-axis-ticks="1"');
     expect(svg).not.toContain('data-plot-bg="1"');
     expect(svg).toContain('data-legend="A"');
     expect(svg).toContain('data-legend="B"');
     expect(svg).not.toContain("data-end-label");
-    expect(svg).toContain('r="3.5"');
+    expect(svg).toContain('r="4"');
   });
 
   it("matches examples/out/themes/highcharts/02-line-multi.svg", () => {
@@ -450,9 +481,9 @@ describe("highcharts tokens", () => {
     expect(svg).toBe(committed);
     expect(committed).toContain('data-legend="walk-up"');
     expect(committed).toContain('data-legend="member"');
-    expect(committed).toContain('data-plot-border="1"');
+    expect(committed).toContain('data-axis-ticks="1"');
     expect(committed).not.toContain("data-end-label");
-    expect(committed).toContain('r="3.5"');
+    expect(committed).toContain('r="4"');
   });
 
   it("matches examples/out/themes/highcharts/01-bar-basic.svg", () => {
@@ -492,16 +523,16 @@ describe("shadcn tokens", () => {
     expect(shadcn.TYPE.tick.fill).toBe(shadcn.QUIET);
     expect(shadcn.MAX_INTERIOR_GRID).toBeLessThan(folio.MAX_INTERIOR_GRID);
     expect(shadcn.END_LABEL_SERIES_MAX).toBe(0);
-    expect(shadcn.PLOT_BORDER).toBe("#e5e5e5");
-    expect(shadcn.PLOT_BORDER_WIDTH).toBeGreaterThan(0);
+    expect(shadcn.FRAME).toEqual({ radius: 12, stroke: true });
+    expect(shadcn.LINE_CURVE).toBe("monotone");
+    expect(shadcn.MARKER).toBe("none");
     expect(shadcn.AXIS_TITLES).toBe(false);
     expect(shadcn.BAR_GAP_FEW).toBeGreaterThan(folio.BAR_GAP_FEW);
   });
 
   it("is not highcharts chrome (soft card, no axis titles, rounder bars)", () => {
-    expect(shadcn.PLOT_BORDER).not.toBe(highcharts.PLOT_BORDER);
-    expect(shadcn.PLOT_BORDER).toBe("#e5e5e5");
-    expect(highcharts.PLOT_BORDER).toBe("#ccd6eb");
+    expect(shadcn.FRAME.stroke).toBe(true);
+    expect(highcharts.FRAME.stroke).toBe(false);
     expect(shadcn.AXIS_TITLES).toBe(false);
     expect(highcharts.AXIS_TITLES).toBe(true);
     expect(shadcn.BAR_RX).toBeGreaterThan(highcharts.BAR_RX);
@@ -513,8 +544,8 @@ describe("shadcn tokens", () => {
     const shSvg = renderSvg(barChart({ theme: "shadcn" }));
     expect(shSvg).not.toBe(folioSvg);
     expect(shSvg).not.toBe(hcSvg);
-    expect(shSvg).toContain("#e5e5e5");
-    expect(shSvg).not.toContain("#ccd6eb");
+    expect(shSvg).toContain('data-frame="1"');
+    expect(hcSvg).not.toContain('data-frame="1"');
     expect(shSvg).not.toContain('data-axis-titles="1"');
     expect(hcSvg).toContain('data-axis-titles="1"');
   });
@@ -525,11 +556,11 @@ describe("shadcn tokens", () => {
     expect(a).not.toBe(b);
     expect(b).toContain(shadcn.PALETTE[0]!);
     expect(b).toContain(
-      'font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif"',
+      'font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif"',
     );
-    expect(b).toContain('data-plot-border="1"');
-    expect(b).toContain("#e5e5e5");
-    expect(a).not.toContain('data-plot-border="1"');
+    expect(b).toContain('data-frame="1"');
+    expect(b).toContain('data-subtitle="1"');
+    expect(a).not.toContain('data-frame="1"');
   });
 
   it("uses color legend for multi-series line (not end-labels)", () => {
@@ -552,12 +583,11 @@ describe("shadcn tokens", () => {
       },
     });
     const svg = renderSvg(chart);
-    expect(svg).toContain('data-plot-border="1"');
-    expect(svg).toContain("#e5e5e5");
+    expect(svg).toContain('data-frame="1"');
     expect(svg).toContain('data-legend="A"');
     expect(svg).toContain('data-legend="B"');
     expect(svg).not.toContain("data-end-label");
-    expect(svg).toContain('r="3.5"');
+    expect(svg).not.toMatch(/<circle[^>]*data-series/);
     expect(svg).not.toContain("data-axis-titles");
   });
 
@@ -606,9 +636,9 @@ describe("shadcn tokens", () => {
     const committed = readFileSync(outPath, "utf8");
     expect(svg).toBe(committed);
     expect(committed).toContain('data-legend="walk-up"');
-    expect(committed).toContain('data-plot-border="1"');
+    expect(committed).toContain('data-frame="1"');
     expect(committed).not.toContain("data-end-label");
-    expect(committed).toContain('r="3.5"');
+    expect(committed).not.toMatch(/<circle[^>]*data-series/);
   });
 });
 
@@ -618,9 +648,9 @@ describe("ant tokens", () => {
     expect(themeTokens("ant")).toBe(ant);
     expect(ant.AXIS_TITLES).toBe(true);
     expect(ant.END_LABEL_SERIES_MAX).toBe(0);
-    expect(ant.PLOT_BORDER).toBe("#d9d9d9");
-    expect(ant.PLOT_BORDER_WIDTH).toBeGreaterThan(0);
-    expect(ant.TYPE.title.size).toBeGreaterThan(folio.TYPE.title.size);
+    expect(ant.GRID.dash).toBe("4 4");
+    expect(ant.MARKER).toBe("halo");
+    expect(ant.AXIS.tick).toBeGreaterThan(0);
     expect(ant.TITLE_TO_PLOT).toBeGreaterThan(folio.TITLE_TO_PLOT);
     expect(ant.MAX_INTERIOR_GRID).toBeGreaterThan(folio.MAX_INTERIOR_GRID);
     expect(ant.SVG_HEIGHT).toBeLessThan(folio.SVG_HEIGHT);
@@ -631,8 +661,8 @@ describe("ant tokens", () => {
     expect(ant.PALETTE[0]).not.toBe(folio.PALETTE[0]);
     expect(ant.PALETTE[0]).not.toBe(highcharts.PALETTE[0]);
     expect(ant.PALETTE[0]).not.toBe(shadcn.PALETTE[0]);
-    expect(ant.PLOT_BORDER).not.toBe(highcharts.PLOT_BORDER);
-    expect(ant.PLOT_BORDER).not.toBe(shadcn.PLOT_BORDER);
+    expect(ant.MARKER).not.toBe(highcharts.MARKER);
+    expect(ant.MARKER).not.toBe(shadcn.MARKER);
   });
 
   it("renders geometry distinct from folio / highcharts / shadcn", () => {
@@ -644,8 +674,7 @@ describe("ant tokens", () => {
     expect(a).not.toBe(h);
     expect(a).not.toBe(s);
     expect(a).toContain(ant.PALETTE[0]!);
-    expect(a).toContain('data-plot-border="1"');
-    expect(a).toContain("#d9d9d9");
+    expect(a).toContain('data-axis-ticks="1"');
     expect(a).toContain('data-axis-titles="1"');
     expect(s).not.toContain('data-axis-titles="1"');
   });
@@ -673,7 +702,7 @@ describe("ant tokens", () => {
     expect(svg).toContain('data-legend="A"');
     expect(svg).toContain('data-legend="B"');
     expect(svg).not.toContain("data-end-label");
-    expect(svg).toContain('data-plot-border="1"');
+    expect(svg).toMatch(/<circle[^>]*stroke="#ffffff" stroke-width="1.5" data-series/);
   });
 
   it("matches examples/out/themes/ant/01-bar-basic.svg", () => {
@@ -746,9 +775,10 @@ describe("docs tokens", () => {
     expect(docs.INK).toBe("#18181B");
     expect(docs.QUIET).toBe("#64748B");
     expect(docs.TYPE.tick.fill).toBe(docs.QUIET);
-    expect(Number(docs.HAIRLINE_OPACITY)).toBeLessThan(
-      Number(folio.HAIRLINE_OPACITY),
-    );
+    // A dotted grid needs more ink than a solid hairline to read.
+    expect(docs.GRID.dash).toBe("1 3");
+    expect(docs.TITLE.case).toBe("upper");
+    expect(docs.FONT_NUMERIC).toMatch(/monospace/);
     expect(Number(docs.STRUCTURE_OPACITY)).toBeLessThan(
       Number(folio.STRUCTURE_OPACITY),
     );
@@ -820,7 +850,9 @@ describe("recharts tokens", () => {
     expect(recharts.AXIS_TITLES).toBe(false);
     expect(recharts.TITLE_RULE).toBe(false);
     expect(recharts.LINE_STROKE).toBe(2);
-    expect(recharts.LINE_POINT_R).toBe(3);
+    expect(recharts.LINE_POINT_R).toBe(3.5);
+    expect(recharts.MARKER).toBe("hollow");
+    expect(recharts.LINE_CURVE).toBe("monotone");
     expect(recharts.BAR_RX).toBe(0);
     expect(recharts.SVG_HEIGHT).toBe(450);
     expect(recharts.SVG_HEIGHT).not.toBe(folio.SVG_HEIGHT);
@@ -829,11 +861,8 @@ describe("recharts tokens", () => {
     expect(recharts.SVG_HEIGHT).not.toBe(ant.SVG_HEIGHT);
     expect(recharts.MAX_INTERIOR_GRID).toBe(4);
     expect(recharts.PLOT_BG).toBeNull();
-    expect(recharts.PLOT_BORDER).toBe("#e2e8f0");
-    expect(recharts.PLOT_BORDER_WIDTH).toBe(1);
-    expect(recharts.PLOT_BORDER).not.toBe(highcharts.PLOT_BORDER);
-    expect(recharts.PLOT_BORDER).not.toBe(ant.PLOT_BORDER);
-    expect(recharts.PLOT_BORDER).not.toBe(shadcn.PLOT_BORDER);
+    expect(recharts.GRID.dash).toBe("3 3");
+    expect(recharts.AXIS).toEqual({ line: "xy", tick: 6 });
     expect(recharts.PALETTE[0]).toBe("#8884d8");
     expect(recharts.PALETTE[0]).not.toBe(folio.PALETTE[0]);
     expect(recharts.PALETTE[0]).not.toBe(highcharts.PALETTE[0]);
@@ -855,8 +884,8 @@ describe("recharts tokens", () => {
     expect(rcSvg).toContain('data-v-grid="1"');
     expect(folioSvg).not.toContain('data-v-grid="1"');
     expect(rcBar).toContain('data-v-grid="1"');
-    expect(rcBar).toContain('data-plot-border="1"');
-    expect(rcBar).toContain("#e2e8f0");
+    expect(rcBar).toContain('data-axis-line="y"');
+    expect(rcBar).toContain('stroke-dasharray="3 3"');
     expect(rcBar).not.toContain('data-axis-titles="1"');
     const n = Math.max(
       bwDiffCount(bwAxes(folioSvg), bwAxes(rcSvg)),
@@ -918,6 +947,51 @@ describe("recharts tokens", () => {
 });
 
 describe("B&W theme skeletons", () => {
+  it("every pair of themes differs on at least 4 structural switches", () => {
+    const skeleton = Object.fromEntries(
+      THEMES.map((theme) => [
+        theme,
+        {
+          line: bwAxes(renderSvg(multiLine(theme))),
+          bar: bwAxes(renderSvg(barChart({ theme }))),
+        },
+      ]),
+    );
+    for (let i = 0; i < THEMES.length; i++) {
+      for (let j = i + 1; j < THEMES.length; j++) {
+        const a = skeleton[THEMES[i]!]!;
+        const b = skeleton[THEMES[j]!]!;
+        const nLine = bwDiffCount(a.line, b.line);
+        const nBar = bwDiffCount(a.bar, b.bar);
+        expect(
+          Math.min(nLine, nBar),
+          `${THEMES[i]} vs ${THEMES[j]} (line=${nLine} bar=${nBar})`,
+        ).toBeGreaterThanOrEqual(4);
+      }
+    }
+  });
+
+  it("every theme paints its own dark paper", () => {
+    const plates = THEMES.map((theme) => themeTokens(theme).SURFACES.dark.PLATE);
+    expect(new Set(plates).size).toBe(THEMES.length);
+  });
+
+  it("uses dark series colors on dark paper unless the fence sets a palette", () => {
+    const dark = renderSvg(
+      ChartIRSchema.parse({ ...multiLine("highcharts"), surface: "dark" }),
+    );
+    expect(dark).not.toContain(highcharts.PALETTE[1]!);
+    expect(dark).toContain(highcharts.SURFACES.dark.PALETTE![1]!);
+    const picked = renderSvg(
+      ChartIRSchema.parse({
+        ...multiLine("highcharts"),
+        surface: "dark",
+        palette: "vivid",
+      }),
+    );
+    expect(picked).not.toContain(highcharts.SURFACES.dark.PALETTE![1]!);
+  });
+
   it("HC / shadcn / ant each differ from folio on ≥3 structural axes", () => {
     const folioLine = renderSvg(multiLine("folio"));
     const folioBar = renderSvg(barChart({ theme: "folio" }));
@@ -1026,7 +1100,7 @@ describe("pie + scatter theme forks (THEMES.md)", () => {
     expect(scatter).toMatch(/<circle[^>]*\br="3"/);
   });
 
-  it("highcharts: pie legend no leaders + plot box; scatter r≥3.5 + axis titles", () => {
+  it("highcharts: pie legend no leaders + centered title; scatter r≥3.5 + axis ticks", () => {
     expect(highcharts.PIE_LABEL_MODE).toBe("legend");
     expect(highcharts.PIE_INNER_RATIO).toBe(0);
     expect(highcharts.SCATTER_R).toBeGreaterThanOrEqual(3.5);
@@ -1035,10 +1109,10 @@ describe("pie + scatter theme forks (THEMES.md)", () => {
     expect(pie).toContain('data-pie-label-mode="legend"');
     expect(pie).toContain("data-legend=");
     expect(pie).not.toContain("<polyline ");
-    expect(pie).toContain("data-plot-border=");
+    expect(pie).toContain('text-anchor="middle" font-size="18"');
     expect(pie).not.toContain('data-donut="1"');
     const scatter = renderSvg(scatterChart("highcharts"));
-    expect(scatter).toContain("data-plot-border=");
+    expect(scatter).toContain("data-axis-ticks=");
     expect(scatter).toContain("data-axis-titles=");
     expect(scatter).toMatch(/<circle[^>]*\br="3\.5"/);
   });
@@ -1055,8 +1129,7 @@ describe("pie + scatter theme forks (THEMES.md)", () => {
     expect(pie).toContain("data-legend=");
     expect(pie).not.toContain("<polyline ");
     const scatter = renderSvg(scatterChart("shadcn"));
-    expect(scatter).toContain('data-plot-border="1"');
-    expect(scatter).toContain("#e5e5e5");
+    expect(scatter).toContain('data-frame="1"');
     expect(scatter).toContain("data-axis-titles=");
     expect(scatter).toMatch(/fill-opacity="0\.75/);
   });
@@ -1078,16 +1151,17 @@ describe("pie + scatter theme forks (THEMES.md)", () => {
     expect(scatter).not.toContain("data-plot-border=");
   });
 
-  it("ant: leaders only + plot box; scatter box + axis titles", () => {
+  it("ant: donut with leaders; scatter dashed grid + axis ticks", () => {
     expect(ant.PIE_LABEL_MODE).toBe("leaders");
-    expect(ant.PIE_INNER_RATIO).toBe(0);
+    expect(ant.PIE_INNER_RATIO).toBe(0.6);
     const pie = renderSvg(pieChart("ant"));
     expect(pie).toContain('data-pie-label-mode="leaders"');
     expect(pie).toContain("<polyline ");
     expect(pie).not.toContain("data-legend=");
-    expect(pie).toContain("data-plot-border=");
+    expect(pie).toContain('data-donut="1"');
     const scatter = renderSvg(scatterChart("ant"));
-    expect(scatter).toContain("data-plot-border=");
+    expect(scatter).toContain("data-axis-ticks=");
+    expect(scatter).toContain('stroke-dasharray="4 4"');
     expect(scatter).toContain("data-axis-titles=");
   });
 
@@ -1100,7 +1174,7 @@ describe("pie + scatter theme forks (THEMES.md)", () => {
     expect(pie).toContain('data-pie-label-mode="legend"');
     expect(pie).toContain("data-legend=");
     expect(pie).not.toContain("<polyline ");
-    expect(pie).toContain("data-plot-border=");
+    expect(pie).not.toContain("data-plot-border=");
     const scatter = renderSvg(scatterChart("recharts"));
     expect(scatter).toContain('data-scatter-mark="ring"');
     expect(scatter).toContain("data-v-grid=");
@@ -1140,6 +1214,8 @@ describe("pie + scatter theme forks (THEMES.md)", () => {
         vgrid: /data-v-grid=/.test(svg),
         plotFrame: /data-plot-border=/.test(svg),
         titleRule: /data-title-rule=/.test(svg),
+        figureFrame: /data-frame=/.test(svg),
+        titleCentered: /<text [^>]*text-anchor="middle" font-size="\d+" font-weight/.test(svg),
         sliceStroke,
         viewBox: (svg.match(/viewBox="([^"]+)"/) ?? [, ""])[1]!,
       };
@@ -1156,6 +1232,9 @@ describe("pie + scatter theme forks (THEMES.md)", () => {
         markerR: (svg.match(/<circle[^>]*\br="([0-9.]+)"/) ?? [, ""])[1]!,
         axisTitles: /data-axis-titles=/.test(svg),
         quietOpacity: /fill-opacity="0\.75/.test(svg),
+        gridDash: (svg.match(/stroke-dasharray="([^"]+)"/) ?? [, ""])[1]!,
+        axisTicks: /data-axis-ticks=/.test(svg),
+        figureFrame: /data-frame=/.test(svg),
         viewBox: (svg.match(/viewBox="([^"]+)"/) ?? [, ""])[1]!,
       };
     }
@@ -1209,21 +1288,12 @@ describe("U6 transparent plot fill", () => {
       const svg = renderSvg(barChart({ theme }));
       expect(svg, theme).not.toContain('data-plot-bg="1"');
     }
-    // HC / card packs keep stroke-only plot frame
-    expect(renderSvg(barChart({ theme: "highcharts" }))).toContain(
-      'data-plot-border="1"',
-    );
+    // The card pack outlines the figure; nobody fills the plot.
     expect(renderSvg(barChart({ theme: "shadcn" }))).toContain(
-      'data-plot-border="1"',
-    );
-    expect(renderSvg(barChart({ theme: "ant" }))).toContain(
-      'data-plot-border="1"',
-    );
-    expect(renderSvg(barChart({ theme: "recharts" }))).toContain(
-      'data-plot-border="1"',
+      'data-frame="1"',
     );
     expect(renderSvg(barChart({ theme: "folio" }))).not.toContain(
-      'data-plot-border="1"',
+      'data-frame="1"',
     );
   });
 

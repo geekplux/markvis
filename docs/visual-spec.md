@@ -16,7 +16,7 @@ Editorial in-article figure: inherit the Markdown host surface — not a dashboa
 2. **Ink / Quiet / structure:** Ink `#171717`. Quiet `#737373`. Hairline `0.10` (grid only). Structure `0.28` (baseline, leaders, slice separators).
 3. **One accent for one series;** extra hues only for extra series. Area fill opacity `0.22` under the series stroke. Accent occupies the mark, never a filled legend slab, never the canvas.
 4. **Three line grades:** hairline / structure / data. No axis box. Baseline only on the plot floor. No vertical grids. No tick lines sticking off the axis.
-5. **Three type grades:** title 21 / 600 ink · unit 13 / 400 quiet · value 13 / 500 ink · tick 12 / 400 quiet. These sizes stay at the intended width; a narrow figure reflows instead of shrinking the type. Scatter and histogram name both axes. No axis-name layer on other types when the title already names the measure.
+5. **Three type grades:** title 21 / 600 ink · unit 13 / 400 quiet · value 13 / 500 ink · tick 12 / 400 quiet. These sizes stay at the intended width; a narrow figure reflows instead of shrinking the type. Other themes own their ramp; no theme goes below title 15 or 11 for any other role. Scatter and histogram name both axes. No axis-name layer on other types when the title already names the measure.
 6. **Corner rule:** square frame and axes. Radius only on the data mark — bar tops `rx = 3`.
 7. **Plot share & titles:** data region owns ≥55% of frame height; grow height to 640 before crushing the plot. Horizontal grid ≤3 lines (never the baseline). Titles state a conclusion — never the chart type, never a bare noun that only repeats the y-field.
 

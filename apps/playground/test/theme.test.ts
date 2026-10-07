@@ -5,8 +5,10 @@ import { describe, expect, it } from "vitest";
 import { previewSource } from "../src/preview.js";
 import {
   readPaletteFromFence,
+  readSurfaceFromFence,
   readThemeFromFence,
   rewritePaletteInFence,
+  rewriteSurfaceInFence,
   rewriteThemeInFence,
 } from "../src/theme.js";
 
@@ -81,5 +83,27 @@ describe("rewritePaletteInFence", () => {
     expect(next).toMatch(/theme:\s*highcharts/);
     expect(next).toMatch(/palette:\s*ink/);
     expect(next).not.toMatch(/theme:\s*highcharts\+ink/);
+  });
+});
+
+describe("rewriteSurfaceInFence", () => {
+  it("adds surface under the theme line and previews it", () => {
+    const themed = rewriteThemeInFence(valid01, "shadcn");
+    const next = rewriteSurfaceInFence(themed, "dark");
+    expect(next).toMatch(/theme: shadcn\nsurface: dark/);
+    expect(readSurfaceFromFence(next)).toBe("dark");
+    const view = previewSource(next, "01-bar-basic.md");
+    expect(view.ok).toBe(true);
+    expect(view.svg).toContain('data-surface="dark"');
+  });
+
+  it("replaces an existing surface and removes it for light", () => {
+    const dark = rewriteSurfaceInFence(valid01, "dark");
+    const exported = rewriteSurfaceInFence(dark, "export");
+    expect(exported.match(/surface:/g)).toHaveLength(1);
+    expect(readSurfaceFromFence(exported)).toBe("export");
+    const light = rewriteSurfaceInFence(exported, "light");
+    expect(light).not.toContain("surface:");
+    expect(readSurfaceFromFence(light)).toBe("light");
   });
 });

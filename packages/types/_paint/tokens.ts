@@ -2,9 +2,13 @@
 
 import {
   folio,
+  type AxisTokens,
+  type FrameTokens,
   type GridTokens,
+  type LegendTokens,
   type SemanticColors,
   type ThemeTokens,
+  type TitleTokens,
 } from "@markvis/themes";
 
 /** Widened view so the live bindings accept every pack, not only folio literals. */
@@ -16,6 +20,8 @@ export let SVG_HEIGHT_MAX: number = base.SVG_HEIGHT_MAX;
 export let PLOT_MIN_RATIO = base.PLOT_MIN_RATIO;
 
 export let FONT = base.FONT;
+/** Font for tick and value labels; undefined inherits FONT. */
+export let FONT_NUMERIC: string | undefined = base.FONT_NUMERIC ?? undefined;
 
 export let INK: string = base.INK;
 export let QUIET: string = base.QUIET;
@@ -37,6 +43,7 @@ export let PALETTE = base.PALETTE;
 
 export let WRAP_OPACITY = base.WRAP_OPACITY;
 
+export let TITLE: TitleTokens = base.TITLE;
 export let TITLE_BASELINE: number = base.TITLE_BASELINE;
 export let TITLE_TO_PLOT = base.TITLE_TO_PLOT;
 export let TICK_TEXT_GAP = base.TICK_TEXT_GAP;
@@ -65,6 +72,8 @@ export let AREA_OPACITY = base.AREA_OPACITY;
 export let END_LABEL_SERIES_MAX = base.END_LABEL_SERIES_MAX;
 export let END_LABEL_GAP = base.END_LABEL_GAP;
 export let END_LABEL_MIN_SEP = base.END_LABEL_MIN_SEP;
+export let LINE_CURVE = base.LINE_CURVE;
+export let MARKER = base.MARKER;
 export let SERIES_DASH: readonly string[] = base.SERIES_DASH;
 
 export let SCATTER_R = base.SCATTER_R;
@@ -89,8 +98,12 @@ export type SurfaceName = "light" | "dark" | "export";
 export let SURFACE: SurfaceName = "light";
 /** Full-frame plate for the active surface. null = the host page is the paper. */
 export let PLATE: string | null = base.SURFACES.light.PLATE;
+export let PAPER: string = base.SURFACES.light.PAPER;
 export let SEMANTIC: SemanticColors = base.SURFACES.light.SEMANTIC;
 export let GRID: GridTokens = base.GRID;
+export let AXIS: AxisTokens = base.AXIS;
+export let LEGEND: LegendTokens = base.LEGEND;
+export let FRAME: FrameTokens = base.FRAME;
 export let AXIS_TITLES = base.AXIS_TITLES;
 export let LEGEND_BELOW = base.LEGEND_BELOW;
 export let TITLE_RULE = base.TITLE_RULE;
@@ -103,6 +116,7 @@ export function applyThemeTokens(t: ThemeTokens): void {
   SVG_HEIGHT_MAX = t.SVG_HEIGHT_MAX;
   PLOT_MIN_RATIO = t.PLOT_MIN_RATIO;
   FONT = t.FONT;
+  FONT_NUMERIC = t.FONT_NUMERIC ?? undefined;
   INK = t.INK;
   QUIET = t.QUIET;
   HAIRLINE_OPACITY = t.HAIRLINE_OPACITY;
@@ -111,6 +125,7 @@ export function applyThemeTokens(t: ThemeTokens): void {
   MARGIN = t.MARGIN;
   PALETTE = t.PALETTE;
   WRAP_OPACITY = t.WRAP_OPACITY;
+  TITLE = t.TITLE;
   TITLE_BASELINE = t.TITLE_BASELINE;
   TITLE_TO_PLOT = t.TITLE_TO_PLOT;
   TICK_TEXT_GAP = t.TICK_TEXT_GAP;
@@ -137,6 +152,8 @@ export function applyThemeTokens(t: ThemeTokens): void {
   END_LABEL_SERIES_MAX = t.END_LABEL_SERIES_MAX;
   END_LABEL_GAP = t.END_LABEL_GAP;
   END_LABEL_MIN_SEP = t.END_LABEL_MIN_SEP;
+  LINE_CURVE = t.LINE_CURVE;
+  MARKER = t.MARKER;
   SERIES_DASH = t.SERIES_DASH;
   SCATTER_R = t.SCATTER_R;
   SCATTER_OPACITY = t.SCATTER_OPACITY;
@@ -157,41 +174,52 @@ export function applyThemeTokens(t: ThemeTokens): void {
   LEGEND_BELOW = t.LEGEND_BELOW;
   TITLE_RULE = t.TITLE_RULE;
   GRID = t.GRID;
+  AXIS = t.AXIS;
+  LEGEND = t.LEGEND;
+  FRAME = t.FRAME;
   SURFACES = t.SURFACES;
   SURFACE = "light";
   PLATE = t.SURFACES.light.PLATE;
+  PAPER = t.SURFACES.light.PAPER;
   SEMANTIC = t.SURFACES.light.SEMANTIC;
 }
 
-const READABLE = {
-  title: 21,
-  unit: 13,
-  value: 13,
-  tick: 12,
-  note: 12,
-  legend: 13,
+/** Hard minimum for every theme. A theme owns its ramp above it. */
+const TYPE_MIN = {
+  title: 15,
+  unit: 11,
+  value: 11,
+  tick: 11,
+  note: 11,
+  legend: 11,
 } as const;
 
-/** Width reflows the frame. Type sizes stay readable. Surface owns ink and paper. */
+/**
+ * Width reflows the frame; type never shrinks below TYPE_MIN. Each theme
+ * keeps its own ramp above that. Surface owns ink and paper.
+ */
 export function applyFrame(opts: { width: number; surface: SurfaceName }): void {
   SVG_WIDTH = opts.width;
   SURFACE = opts.surface;
-  TITLE_BASELINE = Math.max(TITLE_BASELINE, 32);
   TYPE = {
-    title: { ...TYPE.title, size: Math.max(TYPE.title.size, READABLE.title) },
-    unit: { ...TYPE.unit, size: Math.max(TYPE.unit.size, READABLE.unit) },
-    value: { ...TYPE.value, size: Math.max(TYPE.value.size, READABLE.value) },
-    tick: { ...TYPE.tick, size: Math.max(TYPE.tick.size, READABLE.tick) },
-    note: { ...TYPE.note, size: Math.max(TYPE.note.size, READABLE.note) },
-    legend: { ...TYPE.legend, size: Math.max(TYPE.legend.size, READABLE.legend) },
+    title: { ...TYPE.title, size: Math.max(TYPE.title.size, TYPE_MIN.title) },
+    unit: { ...TYPE.unit, size: Math.max(TYPE.unit.size, TYPE_MIN.unit) },
+    value: { ...TYPE.value, size: Math.max(TYPE.value.size, TYPE_MIN.value) },
+    tick: { ...TYPE.tick, size: Math.max(TYPE.tick.size, TYPE_MIN.tick) },
+    note: { ...TYPE.note, size: Math.max(TYPE.note.size, TYPE_MIN.note) },
+    legend: { ...TYPE.legend, size: Math.max(TYPE.legend.size, TYPE_MIN.legend) },
   };
+  // The first title baseline clears the cap height of the theme's own title.
+  TITLE_BASELINE = Math.max(TITLE_BASELINE, TYPE.title.size + 8);
   const s = SURFACES[opts.surface];
   PLATE = s.PLATE;
+  PAPER = s.PAPER;
   SEMANTIC = s.SEMANTIC;
   if (s.PLOT_BG !== undefined) PLOT_BG = s.PLOT_BG;
   if (s.PLOT_BORDER !== undefined) PLOT_BORDER = s.PLOT_BORDER;
   if (s.PLOT_BORDER_WIDTH !== undefined) PLOT_BORDER_WIDTH = s.PLOT_BORDER_WIDTH;
   if (s.HAIRLINE_OPACITY !== undefined) HAIRLINE_OPACITY = s.HAIRLINE_OPACITY;
+  if (s.PALETTE !== undefined) PALETTE = s.PALETTE;
   if (s.INK === undefined) {
     return;
   }
