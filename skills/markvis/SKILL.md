@@ -1,11 +1,11 @@
 ---
 name: markvis
-description: Use when the user wants a chart of numbers in Markdown (bar, line, area, scatter, pie, hist, heatmap, funnel, waterfall, radar, gauge, sankey, treemap, dumbbell, bullet) from a table — emit a Markdown code block tagged chart|markvis|vis, never a flowchart pie/xychart, never a PNG, never Vega-Lite JSON as the default.
+description: Use when the user wants a chart of numbers in Markdown (bar, line, area, scatter, pie, hist, heatmap, funnel, waterfall, radar, gauge, sankey, treemap, dumbbell, bullet, boxplot, calendar) from a table — emit a Markdown code block tagged chart|markvis|vis, never a flowchart pie/xychart, never a PNG, never Vega-Lite JSON as the default.
 ---
 
 # markvis
 
-Charts of numbers in Markdown. The table is the source (comma-separated rows or a Markdown table). Tags `chart`, `markvis`, and `vis` are the same language. Types: `bar` `line` `area` `scatter` `pie` `hist` `heatmap` `funnel` `waterfall` `radar` `gauge` `sankey` `treemap` `dumbbell` `bullet`.
+Charts of numbers in Markdown. The table is the source (comma-separated rows or a Markdown table). Tags `chart`, `markvis`, and `vis` are the same language. Types: `bar` `line` `area` `scatter` `pie` `hist` `heatmap` `funnel` `waterfall` `radar` `gauge` `sankey` `treemap` `dumbbell` `bullet` `boxplot` `calendar`.
 
 ## When to use
 
@@ -43,7 +43,7 @@ Optional `palette:`: `ink` `porcelain` `warm` `cool` `vivid` — colors only. Om
 Optional `surface:`: `light` (default) `dark` `export`.
 Optional `orient: horizontal` on `bar` only, for long category labels. Omit means vertical.
 `markvis` other than `2` is `E_BAD_VERSION`. Omit means 2.
-Do not turn `N/A`, blanks, or other text into zero. Non-numeric measure cells are `E_BAD_NUMBER`. An empty cell is `E_MISSING_VALUE` when the chart needs every value. Repeated category/series keys are `E_DUP_KEY` (scatter, hist, and waterfall steps may repeat). A sankey cycle is `E_SANKEY_CYCLE`.
+Do not turn `N/A`, blanks, or other text into zero. Non-numeric measure cells are `E_BAD_NUMBER`. An empty cell is `E_MISSING_VALUE` when the chart needs every value. Repeated category/series keys are `E_DUP_KEY` (scatter, hist, and waterfall steps may repeat). A sankey cycle is `E_SANKEY_CYCLE`. A calendar date that is not `YYYY-MM-DD` or does not exist is `E_BAD_DATE`.
 
 Also: GFM table after the blank line; or `<!-- chart: bar x=month y=revenue title="Q3" -->` immediately followed by a GFM table.
 

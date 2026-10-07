@@ -277,3 +277,78 @@ North,420,400
     expect(dup.error.code).toBe("E_DUP_KEY");
   });
 });
+
+describe("boxplot rules", () => {
+  it("keeps repeated categories and skips empty values", () => {
+    const ok = parse(`type: boxplot
+title: B
+x: service
+y: ms
+
+service,ms
+Search,42
+Search,40
+Search,
+Checkout,90
+`);
+    expect(ok.ok).toBe(true);
+    if (!ok.ok) return;
+    expect(ok.chart.table.rows).toHaveLength(4);
+  });
+
+  it("rejects text in a measure", () => {
+    const bad = parse(`type: boxplot
+title: B
+x: service
+y: ms
+
+service,ms
+Search,fast
+`);
+    expect(bad.ok).toBe(false);
+    if (bad.ok) return;
+    expect(bad.error.code).toBe("E_BAD_NUMBER");
+  });
+});
+
+describe("calendar rules", () => {
+  const body = (rows: string, extra = "") => `type: calendar
+title: C
+x: date
+y: km
+${extra}
+date,km
+${rows}`;
+
+  it("accepts dates in any order and an empty value", () => {
+    const ok = parse(body("2026-03-08,10\n2026-03-01,12\n2026-03-04,\n"));
+    expect(ok.ok).toBe(true);
+    if (!ok.ok) return;
+    expect(ok.chart.table.rows[0]?.[0]).toBe("2026-03-08");
+  });
+
+  it("rejects malformed and impossible dates with E_BAD_DATE", () => {
+    for (const date of ["2026-02-30", "2026-13-01", "2026-3-1", "03/01/2026", ""]) {
+      const bad = parse(body(`2026-03-01,1\n${date},2\n`));
+      expect(bad.ok, date).toBe(false);
+      if (bad.ok) continue;
+      expect(bad.error.code, date).toBe("E_BAD_DATE");
+      expect(bad.error.row, date).toBe(2);
+      expect(bad.table.rows, date).toHaveLength(2);
+    }
+  });
+
+  it("rejects a repeated date", () => {
+    const dup = parse(body("2026-03-01,1\n2026-03-01,2\n"));
+    expect(dup.ok).toBe(false);
+    if (dup.ok) return;
+    expect(dup.error.code).toBe("E_DUP_KEY");
+  });
+
+  it("checks min < max", () => {
+    const flipped = parse(body("2026-03-01,1\n", "min: 10\nmax: 2\n"));
+    expect(flipped.ok).toBe(false);
+    if (flipped.ok) return;
+    expect(flipped.error.code).toBe("E_UNKNOWN_FIELD");
+  });
+});

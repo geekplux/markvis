@@ -17,7 +17,7 @@ Order:
 
 Fields:
 
-- `type` required. `bar` `line` `area` `scatter` `pie` `hist` `heatmap` `funnel` `waterfall` `radar` `gauge` `sankey` `treemap` `dumbbell` `bullet`. Do not invent `donut`, `sunburst`, `chord`, or `stacked-bar`.
+- `type` required. `bar` `line` `area` `scatter` `pie` `hist` `heatmap` `funnel` `waterfall` `radar` `gauge` `sankey` `treemap` `dumbbell` `bullet` `boxplot` `calendar`. Do not invent `donut`, `sunburst`, `chord`, or `stacked-bar`.
 - `title` optional. A conclusion, not a slug.
 - `theme` optional. Omit means `folio`. Allowed: `folio` `highcharts` `shadcn` `docs` `ant` `recharts` `graphite`. Any other value is `E_UNKNOWN_THEME`: show the table, not a silent swap.
 - `palette` optional. Colors only. Allowed: `ink` `porcelain` `warm` `cool` `vivid`. Omit means the theme’s default colors. Any other value is `E_UNKNOWN_PALETTE`: show the table, not a silent swap. Never merge palette into the theme id.
@@ -33,7 +33,7 @@ Encodings (optional, type-local — not a new type id):
 - On `waterfall` only: `role` names a column of `delta|total|subtotal`. Empty means delta. Do not treat a step label as a total.
 - On `gauge`: `min` and `max` as numbers. Omit `min` means 0. Omit `max` means 100, a labeled range, not the current value. Heatmap may set `min`/`max` as the shared color domain. Radar may set `max`.
 - `surface` optional: `light` (default, no canvas fill) `dark` `export`.
-- A measure cell that is not a number is `E_BAD_NUMBER` (row and column in the message). An empty cell is a gap on line, area, grouped bar, scatter, hist, heatmap, radar, and dumbbell. It is `E_MISSING_VALUE` when the chart needs every value (pie, funnel, sankey, treemap, waterfall, gauge, stacked, percent).
+- A measure cell that is not a number is `E_BAD_NUMBER` (row and column in the message). An empty cell is a gap on line, area, grouped bar, scatter, hist, heatmap, radar, dumbbell, boxplot, and calendar. It is `E_MISSING_VALUE` when the chart needs every value (pie, funnel, sankey, treemap, waterfall, gauge, stacked, percent).
 - A repeated category/series key is `E_DUP_KEY`. Scatter, hist, and waterfall step labels may repeat. Do not keep the last row.
 - `markvis` other than `2` is `E_BAD_VERSION`. Omit means 2.
 - Sankey: one thickness scale. A cycle is `E_SANKEY_CYCLE`.
@@ -61,6 +61,8 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 - `treemap` — x label, y >= 0, optional series parent (two levels only). Negatives → `E_NEGATIVE_VALUE`. `y<=0` omitted from paint.
 - `dumbbell` — x category, y number, `series` required with exactly two values (first = from, second = to). Keep row order. A missing value is a gap. A third value → `E_UNKNOWN_FIELD`.
 - `bullet` — x label, y actual. Optional `target:` names a column of targets (empty cell = no target). Optional `min` / `max` fix the scale. `series` ignored.
+- `boxplot` — x category, y one observation per row (repeat the category). Optional `series` = one box per series. Under five values shows points, not a box.
+- `calendar` — x `YYYY-MM-DD` date, y number, one row per day. Row order does not matter. Optional `min` / `max` fix the color domain. A bad date → `E_BAD_DATE`.
 
 On any error: keep the rows, show the table, add one line with the error code. Never drop the numbers.
 

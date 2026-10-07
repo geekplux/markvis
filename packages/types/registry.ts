@@ -14,11 +14,15 @@ import { sankey } from "./sankey/type.js";
 import { treemap } from "./treemap/type.js";
 import { dumbbell } from "./dumbbell/type.js";
 import { bullet } from "./bullet/type.js";
+import { boxplot } from "./boxplot/type.js";
+import { calendar } from "./calendar/type.js";
 import type { TypePack } from "./contract.js";
 
 export type { Painted, TypePack } from "./contract.js";
 export { CORE_FENCE_KEYS } from "./contract.js";
 export { typeExtras, allowedFenceKeys } from "./fence-keys.js";
+/** Strict YYYY-MM-DD check shared by the parser and the calendar painter. */
+export { parseIsoDate } from "./_paint/date.js";
 
 export {
   bar,
@@ -36,6 +40,8 @@ export {
   treemap,
   dumbbell,
   bullet,
+  boxplot,
+  calendar,
 };
 
 /** id → pack. Unknown / missing packs fail loudly via resolveTypePack. */
@@ -55,6 +61,8 @@ export const typeRegistry: Record<ChartType, TypePack> = {
   treemap,
   dumbbell,
   bullet,
+  boxplot,
+  calendar,
 };
 
 /**

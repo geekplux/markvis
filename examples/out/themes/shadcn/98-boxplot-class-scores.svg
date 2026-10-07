@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="216" viewBox="0 0 720 216" role="img" aria-label="boxplot chart: Every class scored higher in the spring term, 48 rows, series term" aria-labelledby="mv-e550e65bb6b7fe3b-title" aria-describedby="mv-e550e65bb6b7fe3b-desc" data-markvis="2" data-chart-type="boxplot" data-id="mv-e550e65bb6b7fe3b" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-e550e65bb6b7fe3b-title">Every class scored higher in the spring term</title>
+  <desc id="mv-e550e65bb6b7fe3b-desc">boxplot chart. Every class scored higher in the spring term. x=class. y=score. series=term. 48 rows.</desc>
+  <rect x="0.5" y="0.5" width="719" height="215" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
+  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Every class scored higher in the spring term</title>Every class scored higher in the spring term</text>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1">
+    <line x1="80.96" x2="80.96" y1="50" y2="152"/>
+    <line x1="235.72" x2="235.72" y1="50" y2="152"/>
+    <line x1="390.48" x2="390.48" y1="50" y2="152"/>
+    <line x1="545.24" x2="545.24" y1="50" y2="152"/>
+    <line x1="700" x2="700" y1="50" y2="152"/>
+  </g>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="72.96" y="67" text-anchor="end" dominant-baseline="middle" data-full-label="Algebra"><title>Algebra</title><tspan x="72.96" dy="0">Algebra</tspan></text>
+    <text x="72.96" y="101" text-anchor="end" dominant-baseline="middle" data-full-label="Biology"><title>Biology</title><tspan x="72.96" dy="0">Biology</tspan></text>
+    <text x="72.96" y="135" text-anchor="end" dominant-baseline="middle" data-full-label="Chemistry"><title>Chemistry</title><tspan x="72.96" dy="0">Chemistry</tspan></text>
+    <text x="80.96" y="170" text-anchor="middle">50</text>
+    <text x="235.72" y="170" text-anchor="middle">60</text>
+    <text x="390.48" y="170" text-anchor="middle">70</text>
+    <text x="545.24" y="170" text-anchor="middle">80</text>
+    <text x="700" y="170" text-anchor="middle">90</text>
+  </g>
+  <g font-size="12" font-weight="500" fill="#0A0A0A">
+    <rect x="330.28" y="185" width="10" height="10" fill="#F54900" rx="3"/>
+    <text x="344.28" y="194" data-legend="Fall">Fall</text>
+    <rect x="390.04" y="185" width="10" height="10" fill="#009689" rx="3"/>
+    <text x="404.04" y="194" data-legend="Spring">Spring</text>
+  </g>
+  <g data-boxplot="1">
+    <path d="M251.2 60.5 L293.76 60.5 M375 60.5 L467.86 60.5 M251.2 58.25 L251.2 62.75 M467.86 58.25 L467.86 62.75" fill="none" stroke="#F54900" stroke-width="1.5" data-whiskers="Algebra"/>
+    <rect x="293.76" y="56" width="81.25" height="9" rx="4" fill="#F54900" fill-opacity="0.28" stroke="#F54900" stroke-width="1.5" data-x="Algebra" data-series="Fall" data-n="8" data-median="65" data-q1="63.75" data-q3="69"/>
+    <line x1="313.1" x2="313.1" y1="54" y2="67" stroke="#0A0A0A" stroke-width="2.5" data-x="Algebra" data-series="Fall" data-n="8" data-median="65" data-median-tick="1"/>
+    <circle cx="560.72" cy="60.5" r="3" fill="#ffffff" stroke="#F54900" stroke-width="1.5" data-x="Algebra" data-y="81" data-outlier="1"/>
+    <path d="M390.48 73.5 L436.91 73.5 M491.07 73.5 L529.76 73.5 M390.48 71.25 L390.48 75.75 M529.76 71.25 L529.76 75.75" fill="none" stroke="#009689" stroke-width="1.5" data-whiskers="Algebra"/>
+    <rect x="436.91" y="69" width="54.17" height="9" rx="4" fill="#009689" fill-opacity="0.28" stroke="#009689" stroke-width="1.5" data-x="Algebra" data-series="Spring" data-n="8" data-median="74" data-q1="73" data-q3="76.5"/>
+    <line x1="452.38" x2="452.38" y1="67" y2="80" stroke="#0A0A0A" stroke-width="2.5" data-x="Algebra" data-series="Spring" data-n="8" data-median="74" data-median-tick="1"/>
+    <circle cx="344.05" cy="73.5" r="3" fill="#ffffff" stroke="#009689" stroke-width="1.5" data-x="Algebra" data-y="67" data-outlier="1"/>
+    <path d="M328.58 94.5 L371.13 94.5 M452.38 94.5 L545.24 94.5 M328.58 92.25 L328.58 96.75 M545.24 92.25 L545.24 96.75" fill="none" stroke="#F54900" stroke-width="1.5" data-whiskers="Biology"/>
+    <rect x="371.13" y="90" width="81.25" height="9" rx="4" fill="#F54900" fill-opacity="0.28" stroke="#F54900" stroke-width="1.5" data-x="Biology" data-series="Fall" data-n="8" data-median="70" data-q1="68.75" data-q3="74"/>
+    <line x1="390.48" x2="390.48" y1="88" y2="101" stroke="#0A0A0A" stroke-width="2.5" data-x="Biology" data-series="Fall" data-n="8" data-median="70" data-median-tick="1"/>
+    <circle cx="638.1" cy="94.5" r="3" fill="#ffffff" stroke="#F54900" stroke-width="1.5" data-x="Biology" data-y="86" data-outlier="1"/>
+    <path d="M467.86 107.5 L514.29 107.5 M568.45 107.5 L607.14 107.5 M467.86 105.25 L467.86 109.75 M607.14 105.25 L607.14 109.75" fill="none" stroke="#009689" stroke-width="1.5" data-whiskers="Biology"/>
+    <rect x="514.29" y="103" width="54.17" height="9" rx="4" fill="#009689" fill-opacity="0.28" stroke="#009689" stroke-width="1.5" data-x="Biology" data-series="Spring" data-n="8" data-median="79" data-q1="78" data-q3="81.5"/>
+    <line x1="529.76" x2="529.76" y1="101" y2="114" stroke="#0A0A0A" stroke-width="2.5" data-x="Biology" data-series="Spring" data-n="8" data-median="79" data-median-tick="1"/>
+    <circle cx="421.43" cy="107.5" r="3" fill="#ffffff" stroke="#009689" stroke-width="1.5" data-x="Biology" data-y="72" data-outlier="1"/>
+    <path d="M204.77 128.5 L227.98 128.5 M324.71 128.5 L405.96 128.5 M204.77 126.25 L204.77 130.75 M405.96 126.25 L405.96 130.75" fill="none" stroke="#F54900" stroke-width="1.5" data-whiskers="Chemistry"/>
+    <rect x="227.98" y="124" width="96.73" height="9" rx="4" fill="#F54900" fill-opacity="0.28" stroke="#F54900" stroke-width="1.5" data-x="Chemistry" data-series="Fall" data-n="8" data-median="62" data-q1="59.5" data-q3="65.75"/>
+    <line x1="266.67" x2="266.67" y1="122" y2="135" stroke="#0A0A0A" stroke-width="2.5" data-x="Chemistry" data-series="Fall" data-n="8" data-median="62" data-median-tick="1"/>
+    <circle cx="514.29" cy="128.5" r="3" fill="#ffffff" stroke="#F54900" stroke-width="1.5" data-x="Chemistry" data-y="78" data-outlier="1"/>
+    <path d="M297.62 141.5 L386.61 141.5 M471.73 141.5 L483.34 141.5 M297.62 139.25 L297.62 143.75 M483.34 139.25 L483.34 143.75" fill="none" stroke="#009689" stroke-width="1.5" data-whiskers="Chemistry"/>
+    <rect x="386.61" y="137" width="85.12" height="9" rx="4" fill="#009689" fill-opacity="0.28" stroke="#009689" stroke-width="1.5" data-x="Chemistry" data-series="Spring" data-n="8" data-median="72" data-q1="69.75" data-q3="75.25"/>
+    <line x1="421.43" x2="421.43" y1="135" y2="148" stroke="#0A0A0A" stroke-width="2.5" data-x="Chemistry" data-series="Spring" data-n="8" data-median="72" data-median-tick="1"/>
+    <circle cx="638.1" cy="141.5" r="3" fill="#ffffff" stroke="#009689" stroke-width="1.5" data-x="Chemistry" data-y="86" data-outlier="1"/>
+  </g>
+</svg>

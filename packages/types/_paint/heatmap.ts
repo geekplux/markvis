@@ -28,20 +28,7 @@ import {
   TYPE,
 } from "./tokens.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
-
-function hexChannels(hex: string): [number, number, number] {
-  const body = hex.replace("#", "");
-  const n = Number.parseInt(body.length === 3 ? body.split("").map((c) => c + c).join("") : body, 16);
-  return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
-}
-
-function mixHex(from: string, to: string, t: number): string {
-  const a = hexChannels(from);
-  const b = hexChannels(to);
-  const u = Math.max(0, Math.min(1, t));
-  const ch = (i: number) => Math.round(a[i]! + (b[i]! - a[i]!) * u);
-  return `#${[ch(0), ch(1), ch(2)].map((n) => n.toString(16).padStart(2, "0")).join("")}`;
-}
+import { mixHex } from "./color.js";
 
 export function renderHeatmap(chart: ChartIR, svgId: string): Painted {
   const rows = loadRows(chart);

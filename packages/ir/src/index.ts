@@ -16,6 +16,8 @@ export const CHART_TYPES = [
   "treemap",
   "dumbbell",
   "bullet",
+  "boxplot",
+  "calendar",
 ] as const;
 
 export type ChartType = (typeof CHART_TYPES)[number];
@@ -155,28 +157,35 @@ export const ChartIRSchema = z
       });
     }
     const minTypes =
-      val.type === "gauge" || val.type === "heatmap" || val.type === "bullet";
+      val.type === "gauge" ||
+      val.type === "heatmap" ||
+      val.type === "bullet" ||
+      val.type === "calendar";
     const maxTypes =
       val.type === "gauge" ||
       val.type === "heatmap" ||
       val.type === "radar" ||
-      val.type === "bullet";
+      val.type === "bullet" ||
+      val.type === "calendar";
     if (val.min !== undefined && !minTypes) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        message: "min is only valid for gauge, heatmap, or bullet",
+        message: "min is only valid for gauge, heatmap, bullet, or calendar",
         path: ["min"],
       });
     }
     if (val.max !== undefined && !maxTypes) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        message: "max is only valid for gauge, heatmap, radar, or bullet",
+        message: "max is only valid for gauge, heatmap, radar, bullet, or calendar",
         path: ["max"],
       });
     }
     if (
-      (val.type === "gauge" || val.type === "heatmap" || val.type === "bullet") &&
+      (val.type === "gauge" ||
+        val.type === "heatmap" ||
+        val.type === "bullet" ||
+        val.type === "calendar") &&
       val.min !== undefined &&
       val.max !== undefined &&
       val.min >= val.max

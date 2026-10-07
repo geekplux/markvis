@@ -20,7 +20,7 @@ Skill (optional, same language): [skills/markvis/SKILL.md](https://github.com/ge
 
 ## What to emit
 
-A fenced code block tagged `chart` / `markvis` / `vis` — one language. Types: `bar` `line` `area` `scatter` `pie` `hist` `heatmap` `funnel` `waterfall` `radar` `gauge` `sankey` `treemap` `dumbbell` `bullet`.
+A fenced code block tagged `chart` / `markvis` / `vis` — one language. Types: `bar` `line` `area` `scatter` `pie` `hist` `heatmap` `funnel` `waterfall` `radar` `gauge` `sankey` `treemap` `dumbbell` `bullet` `boxplot` `calendar`.
 
 Order inside the block:
 

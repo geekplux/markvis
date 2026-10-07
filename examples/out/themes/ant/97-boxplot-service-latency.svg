@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="184" viewBox="0 0 720 184" role="img" aria-label="boxplot chart: Search answers fastest but has the longest tail (ms), 20 rows" aria-labelledby="mv-3dd5ad6ace5b6f47-title" aria-describedby="mv-3dd5ad6ace5b6f47-desc" data-markvis="2" data-chart-type="boxplot" data-id="mv-3dd5ad6ace5b6f47" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-3dd5ad6ace5b6f47-title">Search answers fastest but has the longest tail</title>
+  <desc id="mv-3dd5ad6ace5b6f47-desc">boxplot chart. Search answers fastest but has the longest tail. x=service. y=latency. unit=ms. 20 rows.</desc>
+  <text x="48" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Search answers fastest but has the longest tail</title>Search answers fastest but has the longest tail<tspan font-size="12" font-weight="400" fill="#8C8C8C"> · ms</tspan></text>
+  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4">
+    <line x1="256.21" x2="256.21" y1="46" y2="148"/>
+    <line x1="438.91" x2="438.91" y1="46" y2="148"/>
+    <line x1="621.6" x2="621.6" y1="46" y2="148"/>
+  </g>
+  <line x1="73.52" x2="73.52" y1="46" y2="148" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-baseline="0"/>
+  <g fill="#8C8C8C" font-size="12" font-weight="400">
+    <text x="65.52" y="63" text-anchor="end" dominant-baseline="middle" data-full-label="Search"><title>Search</title><tspan x="65.52" dy="0">Search</tspan></text>
+    <text x="65.52" y="97" text-anchor="end" dominant-baseline="middle" data-full-label="Checkout"><title>Checkout</title><tspan x="65.52" dy="0">Checkout</tspan></text>
+    <text x="65.52" y="131" text-anchor="end" dominant-baseline="middle" data-full-label="Profile"><title>Profile</title><tspan x="65.52" dy="0">Profile</tspan></text>
+    <text x="73.52" y="166" text-anchor="middle">0</text>
+    <text x="256.21" y="166" text-anchor="middle">50</text>
+    <text x="438.91" y="166" text-anchor="middle">100</text>
+    <text x="621.6" y="166" text-anchor="middle">150</text>
+  </g>
+  <g data-boxplot="1">
+    <path d="M212.37 63 L218.76 63 M235.2 63 L237.94 63 M212.37 57.5 L212.37 68.5 M237.94 57.5 L237.94 68.5" fill="none" stroke="#5AD8A6" stroke-width="1.5" data-whiskers="Search"/>
+    <rect x="218.76" y="52" width="16.44" height="22" rx="2" fill="#5AD8A6" fill-opacity="0.28" stroke="#5AD8A6" stroke-width="1.5" data-x="Search" data-n="8" data-median="41.5" data-q1="39.75" data-q3="44.25"/>
+    <line x1="225.16" x2="225.16" y1="50" y2="76" stroke="#262626" stroke-width="2.5" data-x="Search" data-n="8" data-median="41.5" data-median-tick="1"/>
+    <circle cx="511.98" cy="63" r="3" fill="#ffffff" stroke="#5AD8A6" stroke-width="1.5" data-x="Search" data-y="120" data-outlier="1"/>
+    <path d="M384.1 97 L396.89 97 M417.9 97 L435.25 97 M384.1 91.5 L384.1 102.5 M435.25 91.5 L435.25 102.5" fill="none" stroke="#5AD8A6" stroke-width="1.5" data-whiskers="Checkout"/>
+    <rect x="396.89" y="86" width="21.01" height="22" rx="2" fill="#5AD8A6" fill-opacity="0.28" stroke="#5AD8A6" stroke-width="1.5" data-x="Checkout" data-n="6" data-median="91" data-q1="88.5" data-q3="94.25"/>
+    <line x1="406.02" x2="406.02" y1="84" y2="110" stroke="#262626" stroke-width="2.5" data-x="Checkout" data-n="6" data-median="91" data-median-tick="1"/>
+    <path d="M285.44 131 L298.23 131 M325.64 131 L343.91 131 M285.44 125.5 L285.44 136.5 M343.91 125.5 L343.91 136.5" fill="none" stroke="#5AD8A6" stroke-width="1.5" data-whiskers="Profile"/>
+    <rect x="298.23" y="120" width="27.4" height="22" rx="2" fill="#5AD8A6" fill-opacity="0.28" stroke="#5AD8A6" stroke-width="1.5" data-x="Profile" data-n="6" data-median="64.5" data-q1="61.5" data-q3="69"/>
+    <line x1="309.19" x2="309.19" y1="118" y2="144" stroke="#262626" stroke-width="2.5" data-x="Profile" data-n="6" data-median="64.5" data-median-tick="1"/>
+  </g>
+  <g fill="#262626" font-size="12" font-weight="400">
+    <text x="633.6" y="63" dominant-baseline="middle" data-value-label="Search">41.5<tspan fill="#8C8C8C" font-weight="400"> · n=8</tspan></text>
+    <text x="633.6" y="97" dominant-baseline="middle" data-value-label="Checkout">91<tspan fill="#8C8C8C" font-weight="400"> · n=6</tspan></text>
+    <text x="633.6" y="131" dominant-baseline="middle" data-value-label="Profile">64.5<tspan fill="#8C8C8C" font-weight="400"> · n=6</tspan></text>
+  </g>
+</svg>
