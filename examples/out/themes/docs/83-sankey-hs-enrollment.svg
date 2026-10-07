@@ -1,42 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="sankey chart: State universities still take most Intown graduates, 14 rows, series to" aria-labelledby="mv-99b5ed29da7e1874-title" aria-describedby="mv-99b5ed29da7e1874-desc" data-markvis="2" data-chart-type="sankey" data-id="mv-99b5ed29da7e1874" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-99b5ed29da7e1874-title">State universities still take most Intown graduates</title>
   <desc id="mv-99b5ed29da7e1874-desc">sankey chart. State universities still take most Intown graduates. x=from. y=students. series=to. 14 rows.</desc>
-  <text x="107.28" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#18181B"><title>State universities still take most Intown graduates</title><tspan x="107.28" dy="0">State universities still take most Intown</tspan><tspan x="107.28" dy="27">graduates</tspan></text>
-  <line x1="40" x2="704" y1="38" y2="38" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
+  <text x="99.84" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>State universities still take most Intown graduates</title>STATE UNIVERSITIES STILL TAKE MOST INTOWN GRADUATES</text>
+  <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
   <g data-sankey-links="1">
-    <path d="M145.28 75 C256.58 75, 256.58 71, 367.88 71 L367.88 187 C256.58 187, 256.58 191, 145.28 191 Z" fill="#475569" fill-opacity="0.45" stroke="none" data-source="Grady" data-target="State university" data-y="180"/>
-    <path d="M145.28 191 C256.58 191, 256.58 291.67, 367.88 291.67 L367.88 336.78 C256.58 336.78, 256.58 236.11, 145.28 236.11 Z" fill="#475569" fill-opacity="0.45" stroke="none" data-source="Grady" data-target="Private college" data-y="70"/>
-    <path d="M145.28 236.11 C256.58 236.11, 256.58 402.78, 367.88 402.78 L367.88 438.22 C256.58 438.22, 256.58 271.56, 145.28 271.56 Z" fill="#475569" fill-opacity="0.45" stroke="none" data-source="Grady" data-target="Tech institute" data-y="55"/>
-    <path d="M145.28 279.56 C256.58 279.56, 256.58 187, 367.88 187 L367.88 283.67 C256.58 283.67, 256.58 376.22, 145.28 376.22 Z" fill="#78716C" fill-opacity="0.45" stroke="none" data-source="Midtown High" data-target="State university" data-y="150"/>
-    <path d="M145.28 376.22 C256.58 376.22, 256.58 336.78, 367.88 336.78 L367.88 394.78 C256.58 394.78, 256.58 434.22, 145.28 434.22 Z" fill="#78716C" fill-opacity="0.45" stroke="none" data-source="Midtown High" data-target="Private college" data-y="90"/>
-    <path d="M145.28 434.22 C256.58 434.22, 256.58 438.22, 367.88 438.22 L367.88 464 C256.58 464, 256.58 460, 145.28 460 Z" fill="#78716C" fill-opacity="0.45" stroke="none" data-source="Midtown High" data-target="Tech institute" data-y="40"/>
-    <path d="M381.88 129 C493.18 129, 493.18 182.11, 604.48 182.11 L604.48 272.33 C493.18 272.33, 493.18 219.22, 381.88 219.22 Z" fill="#64748B" fill-opacity="0.45" stroke="none" data-source="State university" data-target="STEM" data-y="140"/>
-    <path d="M381.88 71 C493.18 71, 493.18 71, 604.48 71 L604.48 129 C493.18 129, 493.18 129, 381.88 129 Z" fill="#64748B" fill-opacity="0.45" stroke="none" data-source="State university" data-target="Arts" data-y="90"/>
-    <path d="M381.88 219.22 C493.18 219.22, 493.18 360.89, 604.48 360.89 L604.48 425.33 C493.18 425.33, 493.18 283.67, 381.88 283.67 Z" fill="#64748B" fill-opacity="0.45" stroke="none" data-source="State university" data-target="Business" data-y="100"/>
-    <path d="M381.88 336.78 C493.18 336.78, 493.18 272.33, 604.48 272.33 L604.48 301.33 C493.18 301.33, 493.18 365.78, 381.88 365.78 Z" fill="#0F766E" fill-opacity="0.45" stroke="none" data-source="Private college" data-target="STEM" data-y="45"/>
-    <path d="M381.88 291.67 C493.18 291.67, 493.18 129, 604.48 129 L604.48 174.11 C493.18 174.11, 493.18 336.78, 381.88 336.78 Z" fill="#0F766E" fill-opacity="0.45" stroke="none" data-source="Private college" data-target="Arts" data-y="70"/>
-    <path d="M381.88 365.78 C493.18 365.78, 493.18 425.33, 604.48 425.33 L604.48 454.33 C493.18 454.33, 493.18 394.78, 381.88 394.78 Z" fill="#0F766E" fill-opacity="0.45" stroke="none" data-source="Private college" data-target="Business" data-y="45"/>
-    <path d="M381.88 402.78 C493.18 402.78, 493.18 301.33, 604.48 301.33 L604.48 352.89 C493.18 352.89, 493.18 454.33, 381.88 454.33 Z" fill="#334155" fill-opacity="0.45" stroke="none" data-source="Tech institute" data-target="STEM" data-y="80"/>
-    <path d="M381.88 454.33 C493.18 454.33, 493.18 454.33, 604.48 454.33 L604.48 464 C493.18 464, 493.18 464, 381.88 464 Z" fill="#334155" fill-opacity="0.45" stroke="none" data-source="Tech institute" data-target="Business" data-y="15"/>
+    <path d="M137.84 46 C252.24 46, 252.24 42, 366.64 42 L366.64 166.92 C252.24 166.92, 252.24 170.92, 137.84 170.92 Z" fill="#475569" fill-opacity="0.45" stroke="none" data-source="Grady" data-target="State university" data-y="180"/>
+    <path d="M137.84 170.92 C252.24 170.92, 252.24 279.03, 366.64 279.03 L366.64 327.61 C252.24 327.61, 252.24 219.5, 137.84 219.5 Z" fill="#475569" fill-opacity="0.45" stroke="none" data-source="Grady" data-target="Private college" data-y="70"/>
+    <path d="M137.84 219.5 C252.24 219.5, 252.24 398.07, 366.64 398.07 L366.64 436.24 C252.24 436.24, 252.24 257.68, 137.84 257.68 Z" fill="#475569" fill-opacity="0.45" stroke="none" data-source="Grady" data-target="Tech institute" data-y="55"/>
+    <path d="M137.84 265.68 C252.24 265.68, 252.24 166.92, 366.64 166.92 L366.64 271.03 C252.24 271.03, 252.24 369.78, 137.84 369.78 Z" fill="#78716C" fill-opacity="0.45" stroke="none" data-source="Midtown High" data-target="State university" data-y="150"/>
+    <path d="M137.84 369.78 C252.24 369.78, 252.24 327.61, 366.64 327.61 L366.64 390.07 C252.24 390.07, 252.24 432.24, 137.84 432.24 Z" fill="#78716C" fill-opacity="0.45" stroke="none" data-source="Midtown High" data-target="Private college" data-y="90"/>
+    <path d="M137.84 432.24 C252.24 432.24, 252.24 436.24, 366.64 436.24 L366.64 464 C252.24 464, 252.24 460, 137.84 460 Z" fill="#78716C" fill-opacity="0.45" stroke="none" data-source="Midtown High" data-target="Tech institute" data-y="40"/>
+    <path d="M380.64 104.46 C495.04 104.46, 495.04 161.04, 609.44 161.04 L609.44 258.21 C495.04 258.21, 495.04 201.62, 380.64 201.62 Z" fill="#64748B" fill-opacity="0.45" stroke="none" data-source="State university" data-target="STEM" data-y="140"/>
+    <path d="M380.64 42 C495.04 42, 495.04 42, 609.44 42 L609.44 104.46 C495.04 104.46, 495.04 104.46, 380.64 104.46 Z" fill="#64748B" fill-opacity="0.45" stroke="none" data-source="State university" data-target="Arts" data-y="90"/>
+    <path d="M380.64 201.62 C495.04 201.62, 495.04 352.96, 609.44 352.96 L609.44 422.36 C495.04 422.36, 495.04 271.03, 380.64 271.03 Z" fill="#64748B" fill-opacity="0.45" stroke="none" data-source="State university" data-target="Business" data-y="100"/>
+    <path d="M380.64 327.61 C495.04 327.61, 495.04 258.21, 609.44 258.21 L609.44 289.44 C495.04 289.44, 495.04 358.84, 380.64 358.84 Z" fill="#0F766E" fill-opacity="0.45" stroke="none" data-source="Private college" data-target="STEM" data-y="45"/>
+    <path d="M380.64 279.03 C495.04 279.03, 495.04 104.46, 609.44 104.46 L609.44 153.04 C495.04 153.04, 495.04 327.61, 380.64 327.61 Z" fill="#0F766E" fill-opacity="0.45" stroke="none" data-source="Private college" data-target="Arts" data-y="70"/>
+    <path d="M380.64 358.84 C495.04 358.84, 495.04 422.36, 609.44 422.36 L609.44 453.59 C495.04 453.59, 495.04 390.07, 380.64 390.07 Z" fill="#0F766E" fill-opacity="0.45" stroke="none" data-source="Private college" data-target="Business" data-y="45"/>
+    <path d="M380.64 398.07 C495.04 398.07, 495.04 289.44, 609.44 289.44 L609.44 344.96 C495.04 344.96, 495.04 453.59, 380.64 453.59 Z" fill="#334155" fill-opacity="0.45" stroke="none" data-source="Tech institute" data-target="STEM" data-y="80"/>
+    <path d="M380.64 453.59 C495.04 453.59, 495.04 453.59, 609.44 453.59 L609.44 464 C495.04 464, 495.04 464, 380.64 464 Z" fill="#334155" fill-opacity="0.45" stroke="none" data-source="Tech institute" data-target="Business" data-y="15"/>
   </g>
   <g data-sankey-nodes="1">
-    <rect x="131.28" y="75" width="14" height="196.56" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Grady" data-y="305"/>
-    <rect x="367.88" y="71" width="14" height="212.67" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="State university" data-y="330"/>
-    <rect x="367.88" y="291.67" width="14" height="103.11" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Private college" data-y="160"/>
-    <rect x="367.88" y="402.78" width="14" height="61.22" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Tech institute" data-y="95"/>
-    <rect x="131.28" y="279.56" width="14" height="180.44" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Midtown High" data-y="280"/>
-    <rect x="604.48" y="182.11" width="14" height="170.78" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="STEM" data-y="265"/>
-    <rect x="604.48" y="71" width="14" height="103.11" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Arts" data-y="160"/>
-    <rect x="604.48" y="360.89" width="14" height="103.11" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Business" data-y="160"/>
+    <rect x="123.84" y="46" width="14" height="211.68" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Grady" data-y="305"/>
+    <rect x="366.64" y="42" width="14" height="229.03" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="State university" data-y="330"/>
+    <rect x="366.64" y="279.03" width="14" height="111.04" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Private college" data-y="160"/>
+    <rect x="366.64" y="398.07" width="14" height="65.93" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Tech institute" data-y="95"/>
+    <rect x="123.84" y="265.68" width="14" height="194.32" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Midtown High" data-y="280"/>
+    <rect x="609.44" y="161.04" width="14" height="183.91" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="STEM" data-y="265"/>
+    <rect x="609.44" y="42" width="14" height="111.04" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Arts" data-y="160"/>
+    <rect x="609.44" y="352.96" width="14" height="111.04" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Business" data-y="160"/>
   </g>
-  <g fill="#64748B" font-size="12" font-weight="400">
-    <text x="127.28" y="173.28" text-anchor="end" dominant-baseline="middle" data-node-label="Grady"><title>Grady</title>Grady</text>
-    <text x="363.88" y="177.33" text-anchor="end" dominant-baseline="middle" data-node-label="State university"><title>State university</title>State university</text>
-    <text x="363.88" y="343.22" text-anchor="end" dominant-baseline="middle" data-node-label="Private college"><title>Private college</title>Private college</text>
-    <text x="363.88" y="433.39" text-anchor="end" dominant-baseline="middle" data-node-label="Tech institute"><title>Tech institute</title>Tech institute</text>
-    <text x="127.28" y="369.78" text-anchor="end" dominant-baseline="middle" data-node-label="Midtown High"><title>Midtown High</title>Midtown High</text>
-    <text x="622.48" y="267.5" text-anchor="start" dominant-baseline="middle" data-node-label="STEM"><title>STEM</title>STEM</text>
-    <text x="622.48" y="122.56" text-anchor="start" dominant-baseline="middle" data-node-label="Arts"><title>Arts</title>Arts</text>
-    <text x="622.48" y="412.44" text-anchor="start" dominant-baseline="middle" data-node-label="Business"><title>Business</title>Business</text>
+  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400">
+    <text x="119.84" y="151.84" text-anchor="end" dominant-baseline="middle" data-node-label="Grady"><title>Grady</title>Grady</text>
+    <text x="362.64" y="156.51" text-anchor="end" dominant-baseline="middle" data-node-label="State university"><title>State university</title>State university</text>
+    <text x="362.64" y="334.55" text-anchor="end" dominant-baseline="middle" data-node-label="Private college"><title>Private college</title>Private college</text>
+    <text x="362.64" y="431.03" text-anchor="end" dominant-baseline="middle" data-node-label="Tech institute"><title>Tech institute</title>Tech institute</text>
+    <text x="119.84" y="362.84" text-anchor="end" dominant-baseline="middle" data-node-label="Midtown High"><title>Midtown High</title>Midtown High</text>
+    <text x="627.44" y="253" text-anchor="start" dominant-baseline="middle" data-node-label="STEM"><title>STEM</title>STEM</text>
+    <text x="627.44" y="97.52" text-anchor="start" dominant-baseline="middle" data-node-label="Arts"><title>Arts</title>Arts</text>
+    <text x="627.44" y="408.48" text-anchor="start" dominant-baseline="middle" data-node-label="Business"><title>Business</title>Business</text>
   </g>
 </svg>

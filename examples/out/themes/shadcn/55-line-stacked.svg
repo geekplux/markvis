@@ -1,51 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="line chart: Walk-up plus member still climb through week 8, 16 rows, series channel" aria-labelledby="mv-61cebd44b0368518-title" aria-describedby="mv-61cebd44b0368518-desc" data-markvis="2" data-chart-type="line" data-id="mv-61cebd44b0368518" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="line chart: Walk-up plus member still climb through week 8, 16 rows, series channel" aria-labelledby="mv-61cebd44b0368518-title" aria-describedby="mv-61cebd44b0368518-desc" data-markvis="2" data-chart-type="line" data-id="mv-61cebd44b0368518" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-61cebd44b0368518-title">Walk-up plus member still climb through week 8</title>
   <desc id="mv-61cebd44b0368518-desc">line chart. Walk-up plus member still climb through week 8. x=week. y=count. series=channel. 16 rows.</desc>
-  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#0A0A0A"><title>Walk-up plus member still climb through week 8</title>Walk-up plus member still climb through week 8</text>
-  <g font-size="13" font-weight="500" fill="#0A0A0A">
-    <rect x="48" y="41" width="10" height="10" fill="#F54900" rx="1"/>
-    <text x="62" y="50" data-legend="walk-up">walk-up</text>
-    <rect x="134.42" y="41" width="10" height="10" fill="#009689" rx="1"/>
-    <text x="148.42" y="50" data-legend="member">member</text>
+  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
+  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Walk-up plus member still climb through week 8</title>Walk-up plus member still climb through week 8</text>
+  <g font-size="12" font-weight="500" fill="#0A0A0A">
+    <rect x="302.64" y="435" width="10" height="10" fill="#F54900" rx="3"/>
+    <text x="316.64" y="444" data-legend="walk-up">walk-up</text>
+    <rect x="384.72" y="435" width="10" height="10" fill="#009689" rx="3"/>
+    <text x="398.72" y="444" data-legend="member">member</text>
   </g>
-  <rect x="48" y="70" width="652" height="365" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.06" stroke-width="1">
-    <line x1="48" x2="700" y1="313.33" y2="313.33"/>
-    <line x1="48" x2="700" y1="70" y2="70"/>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1">
+    <line x1="48" x2="700" y1="290.67" y2="290.67"/>
+    <line x1="48" x2="700" y1="50" y2="50"/>
   </g>
-  <path d="M48 435 L700 435" fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1"/>
   <g fill="#737373" font-size="12" font-weight="400">
-    <text x="40" y="435" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="40" y="313.33" text-anchor="end" dominant-baseline="middle">50</text>
-    <text x="40" y="191.67" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="40" y="70" text-anchor="end" dominant-baseline="middle">150</text>
-    <text x="88.75" y="447" text-anchor="middle" font-size="12" data-full-label="W1"><title>W1</title>W1</text>
-    <text x="170.25" y="447" text-anchor="middle" font-size="12" data-full-label="W2"><title>W2</title>W2</text>
-    <text x="251.75" y="447" text-anchor="middle" font-size="12" data-full-label="W3"><title>W3</title>W3</text>
-    <text x="333.25" y="447" text-anchor="middle" font-size="12" data-full-label="W4"><title>W4</title>W4</text>
-    <text x="414.75" y="447" text-anchor="middle" font-size="12" data-full-label="W5"><title>W5</title>W5</text>
-    <text x="496.25" y="447" text-anchor="middle" font-size="12" data-full-label="W6"><title>W6</title>W6</text>
-    <text x="577.75" y="447" text-anchor="middle" font-size="12" data-full-label="W7"><title>W7</title>W7</text>
-    <text x="659.25" y="447" text-anchor="middle" font-size="12" data-full-label="W8"><title>W8</title>W8</text>
+    <text x="40" y="411" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="40" y="290.67" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="40" y="170.33" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="40" y="50" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="88.75" y="423" text-anchor="middle" font-size="12" data-full-label="W1"><title>W1</title>W1</text>
+    <text x="170.25" y="423" text-anchor="middle" font-size="12" data-full-label="W2"><title>W2</title>W2</text>
+    <text x="251.75" y="423" text-anchor="middle" font-size="12" data-full-label="W3"><title>W3</title>W3</text>
+    <text x="333.25" y="423" text-anchor="middle" font-size="12" data-full-label="W4"><title>W4</title>W4</text>
+    <text x="414.75" y="423" text-anchor="middle" font-size="12" data-full-label="W5"><title>W5</title>W5</text>
+    <text x="496.25" y="423" text-anchor="middle" font-size="12" data-full-label="W6"><title>W6</title>W6</text>
+    <text x="577.75" y="423" text-anchor="middle" font-size="12" data-full-label="W7"><title>W7</title>W7</text>
+    <text x="659.25" y="423" text-anchor="middle" font-size="12" data-full-label="W8"><title>W8</title>W8</text>
   </g>
   <g fill="none">
-    <path d="M88.75 279.27 L170.25 269.53 L251.75 262.23 L333.25 267.1 L414.75 254.93 L496.25 259.8 L577.75 252.5 L659.25 257.37" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="walk-up" data-layout="stacked"/>
-    <circle cx="88.75" cy="279.27" r="3.5" fill="#F54900" stroke="none" data-series="walk-up"/>
-    <circle cx="170.25" cy="269.53" r="3.5" fill="#F54900" stroke="none" data-series="walk-up"/>
-    <circle cx="251.75" cy="262.23" r="3.5" fill="#F54900" stroke="none" data-series="walk-up"/>
-    <circle cx="333.25" cy="267.1" r="3.5" fill="#F54900" stroke="none" data-series="walk-up"/>
-    <circle cx="414.75" cy="254.93" r="3.5" fill="#F54900" stroke="none" data-series="walk-up"/>
-    <circle cx="496.25" cy="259.8" r="3.5" fill="#F54900" stroke="none" data-series="walk-up"/>
-    <circle cx="577.75" cy="252.5" r="3.5" fill="#F54900" stroke="none" data-series="walk-up"/>
-    <circle cx="659.25" cy="257.37" r="3.5" fill="#F54900" stroke="none" data-series="walk-up"/>
-    <path d="M88.75 211.13 L170.25 191.67 L251.75 177.07 L333.25 174.63 L414.75 155.17 L496.25 152.73 L577.75 138.13 L659.25 135.7" fill="none" stroke="#009689" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6 4" data-series="member" data-layout="stacked"/>
-    <circle cx="88.75" cy="211.13" r="3.5" fill="#009689" stroke="none" data-series="member"/>
-    <circle cx="170.25" cy="191.67" r="3.5" fill="#009689" stroke="none" data-series="member"/>
-    <circle cx="251.75" cy="177.07" r="3.5" fill="#009689" stroke="none" data-series="member"/>
-    <circle cx="333.25" cy="174.63" r="3.5" fill="#009689" stroke="none" data-series="member"/>
-    <circle cx="414.75" cy="155.17" r="3.5" fill="#009689" stroke="none" data-series="member"/>
-    <circle cx="496.25" cy="152.73" r="3.5" fill="#009689" stroke="none" data-series="member"/>
-    <circle cx="577.75" cy="138.13" r="3.5" fill="#009689" stroke="none" data-series="member"/>
-    <circle cx="659.25" cy="135.7" r="3.5" fill="#009689" stroke="none" data-series="member"/>
+    <path d="M88.75 256.97 C115.92 253.76 143.08 250.1 170.25 247.35 C197.42 244.6 224.58 240.13 251.75 240.13 C278.92 240.13 306.08 244.94 333.25 244.94 C360.42 244.94 387.58 232.91 414.75 232.91 C441.92 232.91 469.08 237.72 496.25 237.72 C523.42 237.72 550.58 230.5 577.75 230.5 C604.92 230.5 632.08 233.71 659.25 235.31" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="walk-up" data-layout="stacked"/>
+    <path d="M88.75 189.59 C115.92 183.17 143.08 175.83 170.25 170.33 C197.42 164.83 224.58 157.27 251.75 155.89 C278.92 154.52 306.08 154.91 333.25 153.49 C360.42 152.06 387.58 135.66 414.75 134.23 C441.92 132.81 469.08 133.2 496.25 131.83 C523.42 130.45 550.58 118.76 577.75 117.39 C604.92 116.01 632.08 115.78 659.25 114.98" fill="none" stroke="#009689" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="member" data-layout="stacked"/>
   </g>
 </svg>

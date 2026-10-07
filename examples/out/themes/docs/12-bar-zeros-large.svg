@@ -1,35 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Friday spike dwarfs quiet weekdays (hits), 6 rows" aria-labelledby="mv-1ea1fec35b551bf2-title" aria-describedby="mv-1ea1fec35b551bf2-desc" data-markvis="2" data-chart-type="bar" data-id="mv-1ea1fec35b551bf2" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-1ea1fec35b551bf2-title">Friday spike dwarfs quiet weekdays</title>
   <desc id="mv-1ea1fec35b551bf2-desc">bar chart. Friday spike dwarfs quiet weekdays. x=day. y=hits. unit=hits. 6 rows.</desc>
-  <text x="74.96" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#18181B"><title>Friday spike dwarfs quiet weekdays</title>Friday spike dwarfs quiet weekdays<tspan font-size="13" font-weight="400" fill="#64748B"> · hits</tspan></text>
-  <line x1="40" x2="704" y1="38" y2="38" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <path d="M74.96 455 L704 455" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
-  <g fill="#64748B" font-size="12" font-weight="400">
-    <text x="66.96" y="455" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="66.96" y="318" text-anchor="end" dominant-baseline="middle">500,000</text>
-    <text x="66.96" y="181" text-anchor="end" dominant-baseline="middle">1,000,000</text>
-    <text x="66.96" y="44" text-anchor="end" dominant-baseline="middle">1,500,000</text>
-    <text x="127.38" y="467" text-anchor="middle" font-size="12" data-full-label="Mon"><title>Mon</title>Mon</text>
-    <text x="232.22" y="467" text-anchor="middle" font-size="12" data-full-label="Tue"><title>Tue</title>Tue</text>
-    <text x="337.06" y="467" text-anchor="middle" font-size="12" data-full-label="Wed"><title>Wed</title>Wed</text>
-    <text x="441.9" y="467" text-anchor="middle" font-size="12" data-full-label="Thu"><title>Thu</title>Thu</text>
-    <text x="546.74" y="467" text-anchor="middle" font-size="12" data-full-label="Fri"><title>Fri</title>Fri</text>
-    <text x="651.58" y="467" text-anchor="middle" font-size="12" data-full-label="Sat"><title>Sat</title>Sat</text>
+  <text x="69.38" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>Friday spike dwarfs quiet weekdays</title>FRIDAY SPIKE DWARFS QUIET WEEKDAYS<tspan font-size="11" font-weight="400" fill="#64748B"> · hits</tspan></text>
+  <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
+  <path d="M69.38 456 L704 456" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
+  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400">
+    <text x="61.38" y="456" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="61.38" y="318" text-anchor="end" dominant-baseline="middle">500,000</text>
+    <text x="61.38" y="180" text-anchor="end" dominant-baseline="middle">1,000,000</text>
+    <text x="61.38" y="42" text-anchor="end" dominant-baseline="middle">1,500,000</text>
+    <text x="122.26" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="Mon"><title>Mon</title>Mon</text>
+    <text x="228.04" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="Tue"><title>Tue</title>Tue</text>
+    <text x="333.81" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="Wed"><title>Wed</title>Wed</text>
+    <text x="439.58" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="Thu"><title>Thu</title>Thu</text>
+    <text x="545.35" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="Fri"><title>Fri</title>Fri</text>
+    <text x="651.12" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="Sat"><title>Sat</title>Sat</text>
   </g>
   <g>
-    <line x1="90.69" x2="164.07" y1="455" y2="455" stroke="#475569" stroke-width="2" data-x="Mon" data-series="hits" data-y="0"/>
-    <path d="M195.53 455 L268.91 455 L268.91 455 L195.53 455 Z" fill="#475569" data-x="Tue" data-series="hits" data-y="12"/>
-    <line x1="300.37" x2="373.75" y1="455" y2="455" stroke="#475569" stroke-width="2" data-x="Wed" data-series="hits" data-y="0"/>
-    <path d="M405.21 455 L478.59 455 L478.59 455 L405.21 455 Z" fill="#475569" data-x="Thu" data-series="hits" data-y="8"/>
-    <path d="M510.05 455 L583.43 455 L583.43 44 L510.05 44 Z" fill="#475569" data-x="Fri" data-series="hits" data-y="1500000"/>
-    <path d="M614.89 455 L688.27 455 L688.27 455 L614.89 455 Z" fill="#475569" data-x="Sat" data-series="hits" data-y="3"/>
+    <line x1="85.25" x2="159.28" y1="456" y2="456" stroke="#475569" stroke-width="2" data-x="Mon" data-series="hits" data-y="0"/>
+    <path d="M191.02 456 L265.05 456 L265.05 456 L191.02 456 Z" fill="#475569" data-x="Tue" data-series="hits" data-y="12"/>
+    <line x1="296.79" x2="370.82" y1="456" y2="456" stroke="#475569" stroke-width="2" data-x="Wed" data-series="hits" data-y="0"/>
+    <path d="M402.56 456 L476.59 456 L476.59 456 L402.56 456 Z" fill="#475569" data-x="Thu" data-series="hits" data-y="8"/>
+    <path d="M508.33 456 L582.36 456 L582.36 42 L508.33 42 Z" fill="#475569" data-x="Fri" data-series="hits" data-y="1500000"/>
+    <path d="M614.1 456 L688.13 456 L688.13 456 L614.1 456 Z" fill="#475569" data-x="Sat" data-series="hits" data-y="3"/>
   </g>
   <g>
-    <text x="127.38" y="447" text-anchor="middle" font-size="13" font-weight="500" fill="#18181B" data-value-label="Mon">0</text>
-    <text x="232.22" y="447" text-anchor="middle" font-size="13" font-weight="500" fill="#18181B" data-value-label="Tue">12</text>
-    <text x="337.06" y="447" text-anchor="middle" font-size="13" font-weight="500" fill="#18181B" data-value-label="Wed">0</text>
-    <text x="441.9" y="447" text-anchor="middle" font-size="13" font-weight="500" fill="#18181B" data-value-label="Thu">8</text>
-    <text x="546.74" y="58" text-anchor="middle" font-size="13" font-weight="500" fill="#fafaf9" data-value-label="Fri">1,500,000</text>
-    <text x="651.58" y="447" text-anchor="middle" font-size="13" font-weight="500" fill="#18181B" data-value-label="Sat">3</text>
+    <text x="122.26" y="448" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="Mon">0</text>
+    <text x="228.03" y="448" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="Tue">12</text>
+    <text x="333.8" y="448" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="Wed">0</text>
+    <text x="439.58" y="448" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="Thu">8</text>
+    <text x="545.35" y="56" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#fafaf9" data-value-label="Fri">1,500,000</text>
+    <text x="651.12" y="448" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="Sat">3</text>
   </g>
 </svg>

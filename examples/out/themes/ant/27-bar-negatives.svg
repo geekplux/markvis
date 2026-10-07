@@ -1,35 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="bar chart: Sales led the net at +120 (USD), 4 rows" aria-labelledby="mv-400c492f32b093b6-title" aria-describedby="mv-400c492f32b093b6-desc" data-markvis="2" data-chart-type="bar" data-id="mv-400c492f32b093b6" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
   <title id="mv-400c492f32b093b6-title">Sales led the net at +120</title>
   <desc id="mv-400c492f32b093b6-desc">bar chart. Sales led the net at +120. x=dept. y=delta. unit=USD. 4 rows.</desc>
-  <text x="66" y="32" text-anchor="start" font-size="22" font-weight="600" fill="#000000"><title>Sales led the net at +120</title>Sales led the net at +120<tspan font-size="13" font-weight="400" fill="#8C8C8C"> · USD</tspan></text>
-  <rect x="66" y="52" width="640" height="307" fill="none" stroke="#d9d9d9" stroke-width="1" data-plot-border="1"/>
-  <path d="M66 359 L706 359" fill="none" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
-  <line x1="66" x2="706" y1="282.25" y2="282.25" stroke="#000000" stroke-opacity="0.32" stroke-width="1"/>
+  <text x="66" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Sales led the net at +120</title>Sales led the net at +120<tspan font-size="12" font-weight="400" fill="#8C8C8C"> · USD</tspan></text>
+  <path d="M66 355 L706 355" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1"/>
+  <path d="M146 355 L146 359 M306 355 L306 359 M466 355 L466 359 M626 355 L626 359" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-axis-ticks="1"/>
+  <line x1="66" x2="706" y1="277.75" y2="277.75" stroke="#262626" stroke-opacity="0.32" stroke-width="1"/>
   <g fill="#8C8C8C" font-size="12" font-weight="400">
-    <text x="58" y="359" text-anchor="end" dominant-baseline="middle">-50</text>
-    <text x="58" y="282.25" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="58" y="205.5" text-anchor="end" dominant-baseline="middle">50</text>
-    <text x="58" y="128.75" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="58" y="52" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="54" y="355" text-anchor="end" dominant-baseline="middle">-50</text>
+    <text x="54" y="277.75" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="54" y="200.5" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="54" y="123.25" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="54" y="46" text-anchor="end" dominant-baseline="middle">150</text>
     <text x="146" y="371" text-anchor="middle" font-size="12" data-full-label="Sales"><title>Sales</title>Sales</text>
     <text x="306" y="371" text-anchor="middle" font-size="12" data-full-label="Support"><title>Support</title>Support</text>
     <text x="466" y="371" text-anchor="middle" font-size="12" data-full-label="R&amp;D"><title>R&amp;D</title>R&amp;D</text>
     <text x="626" y="371" text-anchor="middle" font-size="12" data-full-label="Ops"><title>Ops</title>Ops</text>
   </g>
-  <g fill="#8C8C8C" font-size="13" font-weight="400" data-axis-titles="1">
-    <text x="44" y="205.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 44 205.5)" data-axis="y">delta · USD</text>
-    <text x="386" y="387" text-anchor="middle" dominant-baseline="hanging" data-axis="x">dept</text>
+  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="26.68" y="200.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 26.68 200.5)" data-axis="y">delta · USD</text>
+    <text x="386" y="383" text-anchor="middle" dominant-baseline="hanging" data-axis="x">dept</text>
   </g>
   <g>
-    <path d="M118 282.25 L118 100.05 Q118 98.05 120 98.05 L172 98.05 Q174 98.05 174 100.05 L174 282.25 Z" fill="#5AD8A6" data-x="Sales" data-series="delta" data-y="120"/>
-    <path d="M278 282.25 L334 282.25 L334 341.65 Q334 343.65 332 343.65 L280 343.65 Q278 343.65 278 341.65 Z" fill="#5AD8A6" data-x="Support" data-series="delta" data-y="-40"/>
-    <path d="M438 282.25 L438 161.45 Q438 159.45 440 159.45 L492 159.45 Q494 159.45 494 161.45 L494 282.25 Z" fill="#5AD8A6" data-x="R&amp;D" data-series="delta" data-y="80"/>
-    <path d="M598 282.25 L654 282.25 L654 303.27 Q654 305.27 652 305.27 L600 305.27 Q598 305.27 598 303.27 Z" fill="#5AD8A6" data-x="Ops" data-series="delta" data-y="-15"/>
+    <path d="M118 277.75 L118 94.35 Q118 92.35 120 92.35 L172 92.35 Q174 92.35 174 94.35 L174 277.75 Z" fill="#5AD8A6" data-x="Sales" data-series="delta" data-y="120"/>
+    <path d="M278 277.75 L334 277.75 L334 337.55 Q334 339.55 332 339.55 L280 339.55 Q278 339.55 278 337.55 Z" fill="#5AD8A6" data-x="Support" data-series="delta" data-y="-40"/>
+    <path d="M438 277.75 L438 156.15 Q438 154.15 440 154.15 L492 154.15 Q494 154.15 494 156.15 L494 277.75 Z" fill="#5AD8A6" data-x="R&amp;D" data-series="delta" data-y="80"/>
+    <path d="M598 277.75 L654 277.75 L654 298.93 Q654 300.93 652 300.93 L600 300.93 Q598 300.93 598 298.93 Z" fill="#5AD8A6" data-x="Ops" data-series="delta" data-y="-15"/>
   </g>
   <g>
-    <text x="146" y="90.05" text-anchor="middle" font-size="13" font-weight="500" fill="#000000" data-value-label="Sales">120</text>
-    <text x="306" y="329.65" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Support">-40</text>
-    <text x="466" y="151.45" text-anchor="middle" font-size="13" font-weight="500" fill="#000000" data-value-label="R&amp;D">80</text>
-    <text x="626" y="299.27" text-anchor="middle" font-size="13" font-weight="500" fill="#000000" data-value-label="Ops">-15</text>
+    <text x="146" y="84.35" text-anchor="middle" font-size="12" font-weight="400" fill="#262626" data-value-label="Sales">120</text>
+    <text x="306" y="325.55" text-anchor="middle" font-size="12" font-weight="400" fill="#262626" data-value-label="Support">-40</text>
+    <text x="466" y="146.15" text-anchor="middle" font-size="12" font-weight="400" fill="#262626" data-value-label="R&amp;D">80</text>
+    <text x="626" y="294.93" text-anchor="middle" font-size="12" font-weight="400" fill="#262626" data-value-label="Ops">-15</text>
   </g>
 </svg>

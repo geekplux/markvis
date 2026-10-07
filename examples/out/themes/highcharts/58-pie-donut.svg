@@ -1,22 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="pie chart: Billing still leads support tickets at 40, 4 slices" aria-labelledby="mv-398374c454625ec9-title" aria-describedby="mv-398374c454625ec9-desc" data-markvis="2" data-chart-type="pie" data-id="mv-398374c454625ec9" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="pie chart: Billing still leads support tickets at 40, 4 slices" aria-labelledby="mv-398374c454625ec9-title" aria-describedby="mv-398374c454625ec9-desc" data-markvis="2" data-chart-type="pie" data-id="mv-398374c454625ec9" font-family="&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif" font-size="12">
   <title id="mv-398374c454625ec9-title">Billing still leads support tickets at 40</title>
   <desc id="mv-398374c454625ec9-desc">pie chart. Billing still leads support tickets at 40. x=topic. y=tickets. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="56" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#333333"><title>Billing still leads support tickets at 40</title>Billing still leads support tickets at 40</text>
-  <g font-size="14" font-weight="500" fill="#333333">
-    <rect x="56" y="41" width="10" height="10" fill="#7cb5ec" rx="1"/>
-    <text x="70" y="50" data-legend="Billing">Billing</text>
-    <rect x="146.76" y="41" width="10" height="10" fill="#434348" rx="1"/>
-    <text x="160.76" y="50" data-legend="Access">Access</text>
-    <rect x="228.84" y="41" width="10" height="10" fill="#90ed7d" rx="1"/>
-    <text x="242.84" y="50" data-legend="How-to">How-to</text>
-    <rect x="310.92" y="41" width="10" height="10" fill="#f7a35c" rx="1"/>
-    <text x="324.92" y="50" data-legend="Other">Other</text>
+  <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Billing still leads support tickets at 40</title>Billing still leads support tickets at 40</text>
+  <g font-size="12" font-weight="700" fill="#333333">
+    <circle cx="240.72" cy="420" r="5" fill="#7cb5ec"/>
+    <text x="249.72" y="424" data-legend="Billing">Billing</text>
+    <circle cx="322.8" cy="420" r="5" fill="#434348"/>
+    <text x="331.8" y="424" data-legend="Access">Access</text>
+    <circle cx="397.44" cy="420" r="5" fill="#90ed7d"/>
+    <text x="406.44" y="424" data-legend="How-to">How-to</text>
+    <circle cx="472.08" cy="420" r="5" fill="#f7a35c"/>
+    <text x="481.08" y="424" data-legend="Other">Other</text>
   </g>
-  <rect x="56" y="72" width="644" height="348" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0.5">
-    <path d="M378 127.68 A118.32 118.32 0 0 1 447.55 341.72 L412.77 293.86 A59.16 59.16 0 0 0 378 186.84 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Billing" data-raw-value="40" data-donut="1"/>
-    <path d="M447.55 341.72 A118.32 118.32 0 0 1 282.28 315.55 L330.14 280.77 A59.16 59.16 0 0 0 412.77 293.86 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Access" data-raw-value="25" data-donut="1"/>
-    <path d="M282.28 315.55 A118.32 118.32 0 0 1 282.28 176.45 L330.14 211.23 A59.16 59.16 0 0 0 330.14 280.77 Z" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="How-to" data-raw-value="20" data-donut="1"/>
-    <path d="M282.28 176.45 A118.32 118.32 0 0 1 378 127.68 L378 186.84 A59.16 59.16 0 0 0 330.14 211.23 Z" fill="#f7a35c" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Other" data-raw-value="15" data-donut="1"/>
+    <path d="M378 100.32 A119.68 119.68 0 0 1 448.35 316.82 L413.17 268.41 A59.84 59.84 0 0 0 378 160.16 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Billing" data-raw-value="40" data-donut="1"/>
+    <path d="M448.35 316.82 A119.68 119.68 0 0 1 281.18 290.35 L329.59 255.17 A59.84 59.84 0 0 0 413.17 268.41 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Access" data-raw-value="25" data-donut="1"/>
+    <path d="M281.18 290.35 A119.68 119.68 0 0 1 281.18 149.65 L329.59 184.83 A59.84 59.84 0 0 0 329.59 255.17 Z" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="How-to" data-raw-value="20" data-donut="1"/>
+    <path d="M281.18 149.65 A119.68 119.68 0 0 1 378 100.32 L378 160.16 A59.84 59.84 0 0 0 329.59 184.83 Z" fill="#f7a35c" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Other" data-raw-value="15" data-donut="1"/>
   </g>
 </svg>

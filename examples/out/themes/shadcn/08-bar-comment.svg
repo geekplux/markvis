@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="bar chart: Mar led Midtown box office at 9.2k tickets (tickets), 8 rows" aria-labelledby="mv-0ef80d8d5cbdaf6b-title" aria-describedby="mv-0ef80d8d5cbdaf6b-desc" data-markvis="2" data-chart-type="bar" data-id="mv-0ef80d8d5cbdaf6b" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="bar chart: Mar led Midtown box office at 9.2k tickets (tickets), 8 rows" aria-labelledby="mv-0ef80d8d5cbdaf6b-title" aria-describedby="mv-0ef80d8d5cbdaf6b-desc" data-markvis="2" data-chart-type="bar" data-id="mv-0ef80d8d5cbdaf6b" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-0ef80d8d5cbdaf6b-title">Mar led Midtown box office at 9.2k tickets</title>
   <desc id="mv-0ef80d8d5cbdaf6b-desc">bar chart. Mar led Midtown box office at 9.2k tickets. x=month. y=tickets. unit=tickets. 8 rows.</desc>
-  <text x="52.64" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#0A0A0A"><title>Mar led Midtown box office at 9.2k tickets</title>Mar led Midtown box office at 9.2k tickets<tspan font-size="13" font-weight="400" fill="#737373"> · tickets</tspan></text>
-  <rect x="52.64" y="46" width="647.36" height="389" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
-  <path d="M52.64 435 L700 435" fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
+  <text x="52.64" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Mar led Midtown box office at 9.2k tickets</title>Mar led Midtown box office at 9.2k tickets</text>
+  <text x="52.64" y="51" text-anchor="start" font-size="13" font-weight="400" fill="#737373" data-subtitle="1">tickets</text>
   <g fill="#737373" font-size="12" font-weight="400">
     <text x="44.64" y="435" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="44.64" y="240.5" text-anchor="end" dominant-baseline="middle">5,000</text>
-    <text x="44.64" y="46" text-anchor="end" dominant-baseline="middle">10,000</text>
+    <text x="44.64" y="253.5" text-anchor="end" dominant-baseline="middle">5,000</text>
+    <text x="44.64" y="72" text-anchor="end" dominant-baseline="middle">10,000</text>
     <text x="93.1" y="447" text-anchor="middle" font-size="12" data-full-label="Sep"><title>Sep</title>Sep</text>
     <text x="174.02" y="447" text-anchor="middle" font-size="12" data-full-label="Oct"><title>Oct</title>Oct</text>
     <text x="254.94" y="447" text-anchor="middle" font-size="12" data-full-label="Nov"><title>Nov</title>Nov</text>
@@ -18,23 +18,23 @@
     <text x="659.54" y="447" text-anchor="middle" font-size="12" data-full-label="Apr"><title>Apr</title>Apr</text>
   </g>
   <g>
-    <path d="M60.73 435 L60.73 238.72 Q60.73 232.72 66.73 232.72 L119.47 232.72 Q125.47 232.72 125.47 238.72 L125.47 435 Z" fill="#F54900" data-x="Sep" data-series="tickets" data-y="5200"/>
-    <path d="M141.65 435 L141.65 203.71 Q141.65 197.71 147.65 197.71 L200.39 197.71 Q206.39 197.71 206.39 203.71 L206.39 435 Z" fill="#F54900" data-x="Oct" data-series="tickets" data-y="6100"/>
-    <path d="M222.57 435 L222.57 137.58 Q222.57 131.58 228.57 131.58 L281.31 131.58 Q287.31 131.58 287.31 137.58 L287.31 435 Z" fill="#F54900" data-x="Nov" data-series="tickets" data-y="7800"/>
-    <path d="M303.49 435 L303.49 110.35 Q303.49 104.35 309.49 104.35 L362.23 104.35 Q368.23 104.35 368.23 110.35 L368.23 435 Z" fill="#F54900" data-x="Dec" data-series="tickets" data-y="8500"/>
-    <path d="M384.41 435 L384.41 254.28 Q384.41 248.28 390.41 248.28 L443.15 248.28 Q449.15 248.28 449.15 254.28 L449.15 435 Z" fill="#F54900" data-x="Jan" data-series="tickets" data-y="4800"/>
-    <path d="M465.33 435 L465.33 160.92 Q465.33 154.92 471.33 154.92 L524.07 154.92 Q530.07 154.92 530.07 160.92 L530.07 435 Z" fill="#F54900" data-x="Feb" data-series="tickets" data-y="7200"/>
-    <path d="M546.25 435 L546.25 83.12 Q546.25 77.12 552.25 77.12 L604.99 77.12 Q610.99 77.12 610.99 83.12 L610.99 435 Z" fill="#F54900" data-x="Mar" data-series="tickets" data-y="9200"/>
-    <path d="M627.17 435 L627.17 172.59 Q627.17 166.59 633.17 166.59 L685.91 166.59 Q691.91 166.59 691.91 172.59 L691.91 435 Z" fill="#F54900" data-x="Apr" data-series="tickets" data-y="6900"/>
+    <path d="M60.73 435 L60.73 254.24 Q60.73 246.24 68.73 246.24 L117.47 246.24 Q125.47 246.24 125.47 254.24 L125.47 435 Z" fill="#F54900" data-x="Sep" data-series="tickets" data-y="5200"/>
+    <path d="M141.65 435 L141.65 221.57 Q141.65 213.57 149.65 213.57 L198.39 213.57 Q206.39 213.57 206.39 221.57 L206.39 435 Z" fill="#F54900" data-x="Oct" data-series="tickets" data-y="6100"/>
+    <path d="M222.57 435 L222.57 159.86 Q222.57 151.86 230.57 151.86 L279.31 151.86 Q287.31 151.86 287.31 159.86 L287.31 435 Z" fill="#F54900" data-x="Nov" data-series="tickets" data-y="7800"/>
+    <path d="M303.49 435 L303.49 134.45 Q303.49 126.45 311.49 126.45 L360.23 126.45 Q368.23 126.45 368.23 134.45 L368.23 435 Z" fill="#F54900" data-x="Dec" data-series="tickets" data-y="8500"/>
+    <path d="M384.41 435 L384.41 268.76 Q384.41 260.76 392.41 260.76 L441.15 260.76 Q449.15 260.76 449.15 268.76 L449.15 435 Z" fill="#F54900" data-x="Jan" data-series="tickets" data-y="4800"/>
+    <path d="M465.33 435 L465.33 181.64 Q465.33 173.64 473.33 173.64 L522.07 173.64 Q530.07 173.64 530.07 181.64 L530.07 435 Z" fill="#F54900" data-x="Feb" data-series="tickets" data-y="7200"/>
+    <path d="M546.25 435 L546.25 109.04 Q546.25 101.04 554.25 101.04 L602.99 101.04 Q610.99 101.04 610.99 109.04 L610.99 435 Z" fill="#F54900" data-x="Mar" data-series="tickets" data-y="9200"/>
+    <path d="M627.17 435 L627.17 192.53 Q627.17 184.53 635.17 184.53 L683.91 184.53 Q691.91 184.53 691.91 192.53 L691.91 435 Z" fill="#F54900" data-x="Apr" data-series="tickets" data-y="6900"/>
   </g>
   <g>
-    <text x="93.1" y="224.72" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-value-label="Sep">5,200</text>
-    <text x="174.02" y="189.71" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-value-label="Oct">6,100</text>
-    <text x="254.94" y="123.58" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-value-label="Nov">7,800</text>
-    <text x="335.86" y="96.35" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-value-label="Dec">8,500</text>
-    <text x="416.78" y="240.28" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-value-label="Jan">4,800</text>
-    <text x="497.7" y="146.92" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-value-label="Feb">7,200</text>
-    <text x="578.62" y="69.12" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-value-label="Mar">9,200</text>
-    <text x="659.54" y="158.59" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-value-label="Apr">6,900</text>
+    <text x="93.1" y="238.24" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Sep">5,200</text>
+    <text x="174.02" y="205.57" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Oct">6,100</text>
+    <text x="254.94" y="143.86" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Nov">7,800</text>
+    <text x="335.86" y="118.45" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Dec">8,500</text>
+    <text x="416.78" y="252.76" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Jan">4,800</text>
+    <text x="497.7" y="165.64" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Feb">7,200</text>
+    <text x="578.62" y="93.04" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Mar">9,200</text>
+    <text x="659.54" y="176.53" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Apr">6,900</text>
   </g>
 </svg>

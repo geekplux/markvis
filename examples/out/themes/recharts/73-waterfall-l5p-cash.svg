@@ -1,52 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="waterfall chart: Weekend retail still covers L5P rent after payroll (USD), 8 rows" aria-labelledby="mv-db35afdfe14ff66f-title" aria-describedby="mv-db35afdfe14ff66f-desc" data-markvis="2" data-chart-type="waterfall" data-id="mv-db35afdfe14ff66f" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-db35afdfe14ff66f-title">Weekend retail still covers L5P rent after payroll</title>
   <desc id="mv-db35afdfe14ff66f-desc">waterfall chart. Weekend retail still covers L5P rent after payroll. x=step. y=delta. unit=USD. 8 rows.</desc>
-  <text x="52.64" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#374151"><title>Weekend retail still covers L5P rent after payroll</title><tspan x="52.64" dy="0">Weekend retail still covers L5P rent after</tspan><tspan x="52.64" dy="27">payroll</tspan><tspan font-size="13" font-weight="400" fill="#6B7280"> · USD</tspan></text>
-  <rect x="52.64" y="73" width="647.36" height="337" fill="none" stroke="#e2e8f0" stroke-width="1" data-plot-border="1"/>
-  <g fill="none" stroke="#374151" stroke-opacity="0.14" stroke-width="1">
-    <line x1="52.64" x2="700" y1="297.67" y2="297.67"/>
-    <line x1="52.64" x2="700" y1="185.33" y2="185.33"/>
+  <text x="58.64" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>Weekend retail still covers L5P rent after payroll</title>Weekend retail still covers L5P rent after payroll<tspan font-size="12" font-weight="400" fill="#6B7280"> · USD</tspan></text>
+  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1">
+    <line x1="58.64" x2="700" y1="282" y2="282"/>
+    <line x1="58.64" x2="700" y1="160" y2="160"/>
   </g>
-  <path d="M52.64 410 L700 410" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1"/>
+  <path d="M58.64 404 L700 404" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1"/>
   <g data-waterfall="1">
-    <rect x="59.11" y="315.64" width="67.97" height="94.36" fill="#0F766E" rx="0" data-step="Weekday sales" data-y="4,200" data-level="4,200" data-role="delta" data-baseline="0"/>
-    <text x="93.1" y="309.64" text-anchor="middle" font-size="13" font-weight="500" fill="#374151" data-delta="Weekday sales">+4,200 → 4,200</text>
-    <rect x="140.03" y="178.59" width="67.97" height="137.05" fill="#0F766E" rx="0" data-step="Weekend retail" data-y="6,100" data-level="10,300" data-role="delta" data-baseline="4,200"/>
-    <text x="174.02" y="172.59" text-anchor="middle" font-size="13" font-weight="500" fill="#374151" data-delta="Weekend retail">+6,100 → 10,300</text>
-    <rect x="220.95" y="158.37" width="67.97" height="20.22" fill="#0F766E" rx="0" data-step="Online" data-y="900" data-level="11,200" data-role="delta" data-baseline="10,300"/>
-    <text x="254.94" y="152.37" text-anchor="middle" font-size="13" font-weight="500" fill="#374151" data-delta="Online">+900 → 11,200</text>
-    <rect x="301.87" y="148.26" width="67.97" height="10.11" fill="#0F766E" rx="0" data-step="Wholesale" data-y="450" data-level="11,650" data-role="delta" data-baseline="11,200"/>
-    <text x="335.86" y="142.26" text-anchor="middle" font-size="13" font-weight="500" fill="#374151" data-delta="Wholesale">+450 → 11,650</text>
-    <rect x="382.79" y="148.26" width="67.97" height="85.37" fill="#BE123C" rx="0" data-step="Payroll" data-y="-3,800" data-level="7,850" data-role="delta" data-baseline="11,650"/>
-    <text x="416.78" y="142.26" text-anchor="middle" font-size="13" font-weight="500" fill="#374151" data-delta="Payroll">-3,800 → 7,850</text>
-    <rect x="463.71" y="233.64" width="67.97" height="49.43" fill="#BE123C" rx="0" data-step="Rent" data-y="-2,200" data-level="5,650" data-role="delta" data-baseline="7,850"/>
-    <text x="497.7" y="227.64" text-anchor="middle" font-size="13" font-weight="500" fill="#374151" data-delta="Rent">-2,200 → 5,650</text>
-    <rect x="544.63" y="283.06" width="67.97" height="53.92" fill="#BE123C" rx="0" data-step="Inventory" data-y="-2,400" data-level="3,250" data-role="delta" data-baseline="5,650"/>
-    <text x="578.62" y="277.06" text-anchor="middle" font-size="13" font-weight="500" fill="#374151" data-delta="Inventory">-2,400 → 3,250</text>
-    <rect x="625.55" y="336.98" width="67.97" height="8.54" fill="#BE123C" rx="0" data-step="Utilities" data-y="-380" data-level="2,870" data-role="delta" data-baseline="3,250"/>
-    <text x="659.54" y="330.98" text-anchor="middle" font-size="13" font-weight="500" fill="#374151" data-delta="Utilities">-380 → 2,870</text>
+    <rect x="65.05" y="301.52" width="67.34" height="102.48" fill="#0F766E" rx="0" data-step="Weekday sales" data-y="4,200" data-level="4,200" data-role="delta" data-baseline="0"/>
+    <text x="98.73" y="295.52" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Weekday sales">+4,200 → 4,200</text>
+    <rect x="145.22" y="152.68" width="67.34" height="148.84" fill="#0F766E" rx="0" data-step="Weekend retail" data-y="6,100" data-level="10,300" data-role="delta" data-baseline="4,200"/>
+    <text x="178.9" y="146.68" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Weekend retail">+6,100 → 10,300</text>
+    <rect x="225.39" y="130.72" width="67.34" height="21.96" fill="#0F766E" rx="0" data-step="Online" data-y="900" data-level="11,200" data-role="delta" data-baseline="10,300"/>
+    <text x="259.07" y="124.72" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Online">+900 → 11,200</text>
+    <rect x="305.56" y="119.74" width="67.34" height="10.98" fill="#0F766E" rx="0" data-step="Wholesale" data-y="450" data-level="11,650" data-role="delta" data-baseline="11,200"/>
+    <text x="339.24" y="113.74" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Wholesale">+450 → 11,650</text>
+    <rect x="385.73" y="119.74" width="67.34" height="92.72" fill="#BE123C" rx="0" data-step="Payroll" data-y="-3,800" data-level="7,850" data-role="delta" data-baseline="11,650"/>
+    <text x="419.41" y="113.74" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Payroll">-3,800 → 7,850</text>
+    <rect x="465.9" y="212.46" width="67.34" height="53.68" fill="#BE123C" rx="0" data-step="Rent" data-y="-2,200" data-level="5,650" data-role="delta" data-baseline="7,850"/>
+    <text x="499.58" y="206.46" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Rent">-2,200 → 5,650</text>
+    <rect x="546.07" y="266.14" width="67.34" height="58.56" fill="#BE123C" rx="0" data-step="Inventory" data-y="-2,400" data-level="3,250" data-role="delta" data-baseline="5,650"/>
+    <text x="579.75" y="260.14" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Inventory">-2,400 → 3,250</text>
+    <rect x="626.24" y="324.7" width="67.34" height="9.27" fill="#BE123C" rx="0" data-step="Utilities" data-y="-380" data-level="2,870" data-role="delta" data-baseline="3,250"/>
+    <text x="659.92" y="318.7" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Utilities">-380 → 2,870</text>
   </g>
   <g fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-waterfall-connectors="1">
-    <line x1="127.09" x2="140.03" y1="315.64" y2="315.64"/>
-    <line x1="208.01" x2="220.95" y1="178.59" y2="178.59"/>
-    <line x1="288.93" x2="301.87" y1="158.37" y2="158.37"/>
-    <line x1="369.85" x2="382.79" y1="148.26" y2="148.26"/>
-    <line x1="450.77" x2="463.71" y1="233.64" y2="233.64"/>
-    <line x1="531.69" x2="544.63" y1="283.06" y2="283.06"/>
-    <line x1="612.61" x2="625.55" y1="336.98" y2="336.98"/>
+    <line x1="132.4" x2="145.22" y1="301.52" y2="301.52"/>
+    <line x1="212.57" x2="225.39" y1="152.68" y2="152.68"/>
+    <line x1="292.74" x2="305.56" y1="130.72" y2="130.72"/>
+    <line x1="372.91" x2="385.73" y1="119.74" y2="119.74"/>
+    <line x1="453.08" x2="465.9" y1="212.46" y2="212.46"/>
+    <line x1="533.25" x2="546.07" y1="266.14" y2="266.14"/>
+    <line x1="613.42" x2="626.24" y1="324.7" y2="324.7"/>
   </g>
   <g fill="#6B7280" font-size="12" font-weight="400">
-    <text x="44.64" y="410" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="44.64" y="297.67" text-anchor="end" dominant-baseline="middle">5,000</text>
-    <text x="44.64" y="185.33" text-anchor="end" dominant-baseline="middle">10,000</text>
-    <text x="44.64" y="73" text-anchor="end" dominant-baseline="middle">15,000</text>
-    <text x="93.1" y="422" text-anchor="middle" data-full-label="Weekday sales">Weekday sales</text>
-    <text x="174.02" y="422" text-anchor="middle" data-full-label="Weekend retail">Weekend retail</text>
-    <text x="254.94" y="422" text-anchor="middle" data-full-label="Online">Online</text>
-    <text x="335.86" y="422" text-anchor="middle" data-full-label="Wholesale">Wholesale</text>
-    <text x="416.78" y="422" text-anchor="middle" data-full-label="Payroll">Payroll</text>
-    <text x="497.7" y="422" text-anchor="middle" data-full-label="Rent">Rent</text>
-    <text x="578.62" y="422" text-anchor="middle" data-full-label="Inventory">Inventory</text>
-    <text x="659.54" y="422" text-anchor="middle" data-full-label="Utilities">Utilities</text>
+    <text x="50.64" y="404" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="50.64" y="282" text-anchor="end" dominant-baseline="middle">5,000</text>
+    <text x="50.64" y="160" text-anchor="end" dominant-baseline="middle">10,000</text>
+    <text x="50.64" y="38" text-anchor="end" dominant-baseline="middle">15,000</text>
+    <text x="98.73" y="416" text-anchor="middle" data-full-label="Weekday sales">Weekday sales</text>
+    <text x="178.9" y="416" text-anchor="middle" data-full-label="Weekend retail">Weekend retail</text>
+    <text x="259.07" y="416" text-anchor="middle" data-full-label="Online">Online</text>
+    <text x="339.24" y="416" text-anchor="middle" data-full-label="Wholesale">Wholesale</text>
+    <text x="419.41" y="416" text-anchor="middle" data-full-label="Payroll">Payroll</text>
+    <text x="499.58" y="416" text-anchor="middle" data-full-label="Rent">Rent</text>
+    <text x="579.75" y="416" text-anchor="middle" data-full-label="Inventory">Inventory</text>
+    <text x="659.92" y="416" text-anchor="middle" data-full-label="Utilities">Utilities</text>
   </g>
 </svg>

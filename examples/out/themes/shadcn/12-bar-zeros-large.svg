@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="bar chart: Friday spike dwarfs quiet weekdays (hits), 6 rows" aria-labelledby="mv-1ea1fec35b551bf2-title" aria-describedby="mv-1ea1fec35b551bf2-desc" data-markvis="2" data-chart-type="bar" data-id="mv-1ea1fec35b551bf2" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="bar chart: Friday spike dwarfs quiet weekdays (hits), 6 rows" aria-labelledby="mv-1ea1fec35b551bf2-title" aria-describedby="mv-1ea1fec35b551bf2-desc" data-markvis="2" data-chart-type="bar" data-id="mv-1ea1fec35b551bf2" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-1ea1fec35b551bf2-title">Friday spike dwarfs quiet weekdays</title>
   <desc id="mv-1ea1fec35b551bf2-desc">bar chart. Friday spike dwarfs quiet weekdays. x=day. y=hits. unit=hits. 6 rows.</desc>
-  <text x="74.96" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#0A0A0A"><title>Friday spike dwarfs quiet weekdays</title>Friday spike dwarfs quiet weekdays<tspan font-size="13" font-weight="400" fill="#737373"> · hits</tspan></text>
-  <rect x="74.96" y="46" width="625.04" height="389" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
-  <path d="M74.96 435 L700 435" fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
+  <text x="74.96" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Friday spike dwarfs quiet weekdays</title>Friday spike dwarfs quiet weekdays</text>
+  <text x="74.96" y="51" text-anchor="start" font-size="13" font-weight="400" fill="#737373" data-subtitle="1">hits</text>
   <g fill="#737373" font-size="12" font-weight="400">
     <text x="66.96" y="435" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="66.96" y="305.33" text-anchor="end" dominant-baseline="middle">500,000</text>
-    <text x="66.96" y="175.67" text-anchor="end" dominant-baseline="middle">1,000,000</text>
-    <text x="66.96" y="46" text-anchor="end" dominant-baseline="middle">1,500,000</text>
+    <text x="66.96" y="314" text-anchor="end" dominant-baseline="middle">500,000</text>
+    <text x="66.96" y="193" text-anchor="end" dominant-baseline="middle">1,000,000</text>
+    <text x="66.96" y="72" text-anchor="end" dominant-baseline="middle">1,500,000</text>
     <text x="127.05" y="447" text-anchor="middle" font-size="12" data-full-label="Mon"><title>Mon</title>Mon</text>
     <text x="231.22" y="447" text-anchor="middle" font-size="12" data-full-label="Tue"><title>Tue</title>Tue</text>
     <text x="335.39" y="447" text-anchor="middle" font-size="12" data-full-label="Wed"><title>Wed</title>Wed</text>
@@ -21,15 +21,15 @@
     <path d="M195.8 435 L266.64 435 L266.64 435 L195.8 435 Z" fill="#F54900" data-x="Tue" data-series="hits" data-y="12"/>
     <line x1="299.97" x2="370.81" y1="435" y2="435" stroke="#F54900" stroke-width="2" data-x="Wed" data-series="hits" data-y="0"/>
     <path d="M404.15 435 L474.99 435 L474.99 435 L404.15 435 Z" fill="#F54900" data-x="Thu" data-series="hits" data-y="8"/>
-    <path d="M508.32 435 L508.32 52 Q508.32 46 514.32 46 L573.16 46 Q579.16 46 579.16 52 L579.16 435 Z" fill="#F54900" data-x="Fri" data-series="hits" data-y="1500000"/>
+    <path d="M508.32 435 L508.32 80 Q508.32 72 516.32 72 L571.16 72 Q579.16 72 579.16 80 L579.16 435 Z" fill="#F54900" data-x="Fri" data-series="hits" data-y="1500000"/>
     <path d="M612.49 435 L683.33 435 L683.33 435 L612.49 435 Z" fill="#F54900" data-x="Sat" data-series="hits" data-y="3"/>
   </g>
   <g>
-    <text x="127.05" y="427" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-value-label="Mon">0</text>
-    <text x="231.22" y="427" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-value-label="Tue">12</text>
-    <text x="335.39" y="427" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-value-label="Wed">0</text>
-    <text x="439.57" y="427" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-value-label="Thu">8</text>
-    <text x="543.74" y="60" text-anchor="middle" font-size="13" font-weight="500" fill="#fafaf9" data-value-label="Fri">1,500,000</text>
-    <text x="647.91" y="427" text-anchor="middle" font-size="13" font-weight="500" fill="#0A0A0A" data-value-label="Sat">3</text>
+    <text x="127.05" y="427" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Mon">0</text>
+    <text x="231.22" y="427" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Tue">12</text>
+    <text x="335.39" y="427" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Wed">0</text>
+    <text x="439.57" y="427" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Thu">8</text>
+    <text x="543.74" y="86" text-anchor="middle" font-size="12" font-weight="500" fill="#fafaf9" data-value-label="Fri">1,500,000</text>
+    <text x="647.91" y="427" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Sat">3</text>
   </g>
 </svg>

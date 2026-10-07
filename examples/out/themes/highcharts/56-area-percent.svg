@@ -1,46 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="area chart: Queue A share stays ahead of queue B, 8 rows, series queue" aria-labelledby="mv-e22563a32fc41eb7-title" aria-describedby="mv-e22563a32fc41eb7-desc" data-markvis="2" data-chart-type="area" data-id="mv-e22563a32fc41eb7" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="area chart: Queue A share stays ahead of queue B, 8 rows, series queue" aria-labelledby="mv-e22563a32fc41eb7-title" aria-describedby="mv-e22563a32fc41eb7-desc" data-markvis="2" data-chart-type="area" data-id="mv-e22563a32fc41eb7" font-family="&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif" font-size="12">
   <title id="mv-e22563a32fc41eb7-title">Queue A share stays ahead of queue B</title>
   <desc id="mv-e22563a32fc41eb7-desc">area chart. Queue A share stays ahead of queue B. x=minute. y=depth. series=queue. 8 rows.</desc>
-  <text x="74" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#333333"><title>Queue A share stays ahead of queue B</title>Queue A share stays ahead of queue B</text>
-  <g font-size="14" font-weight="500" fill="#333333">
-    <rect x="74" y="41" width="10" height="10" fill="#7cb5ec" rx="1"/>
-    <text x="88" y="50" data-legend="A">A</text>
-    <rect x="112.68" y="41" width="10" height="10" fill="#434348" rx="1"/>
-    <text x="126.68" y="50" data-legend="B">B</text>
+  <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Queue A share stays ahead of queue B</title>Queue A share stays ahead of queue B</text>
+  <g font-size="12" font-weight="700" fill="#333333">
+    <circle cx="361.56" cy="420" r="5" fill="#7cb5ec"/>
+    <text x="370.56" y="424" data-legend="A">A</text>
+    <circle cx="399" cy="420" r="5" fill="#434348"/>
+    <text x="408" y="424" data-legend="B">B</text>
   </g>
-  <rect x="74" y="72" width="626" height="307" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
-  <g fill="none" stroke="#333333" stroke-opacity="0.22" stroke-width="1">
-    <line x1="74" x2="700" y1="225.5" y2="225.5"/>
-    <line x1="74" x2="700" y1="72" y2="72"/>
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+    <line x1="74" x2="700" y1="197" y2="197"/>
+    <line x1="74" x2="700" y1="44" y2="44"/>
   </g>
-  <path d="M74 379 L700 379" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
-  <g fill="#666666" font-size="12" font-weight="400">
-    <text x="66" y="379" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="66" y="225.5" text-anchor="end" dominant-baseline="middle">50</text>
-    <text x="66" y="72" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="82" y="391" text-anchor="middle" font-size="12" data-full-label="-1"><title>-1</title>-1</text>
-    <text x="204" y="391" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
-    <text x="326" y="391" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
-    <text x="448" y="391" text-anchor="middle" font-size="12" data-full-label="2"><title>2</title>2</text>
-    <text x="570" y="391" text-anchor="middle" font-size="12" data-full-label="3"><title>3</title>3</text>
-    <text x="692" y="391" text-anchor="middle" font-size="12" data-full-label="4"><title>4</title>4</text>
+  <path d="M74 350 L700 350" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <path d="M82 350 L82 356 M204 350 L204 356 M326 350 L326 356 M448 350 L448 356 M570 350 L570 356 M692 350 L692 356" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
+  <g fill="#666666" font-size="11" font-weight="400">
+    <text x="60" y="350" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="60" y="197" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="60" y="44" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="82" y="367" text-anchor="middle" font-size="11" data-full-label="-1"><title>-1</title>-1</text>
+    <text x="204" y="367" text-anchor="middle" font-size="11" data-full-label="0"><title>0</title>0</text>
+    <text x="326" y="367" text-anchor="middle" font-size="11" data-full-label="1"><title>1</title>1</text>
+    <text x="448" y="367" text-anchor="middle" font-size="11" data-full-label="2"><title>2</title>2</text>
+    <text x="570" y="367" text-anchor="middle" font-size="11" data-full-label="3"><title>3</title>3</text>
+    <text x="692" y="367" text-anchor="middle" font-size="11" data-full-label="4"><title>4</title>4</text>
   </g>
-  <g fill="#666666" font-size="13" font-weight="400" data-axis-titles="1">
-    <text x="52" y="225.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 52 225.5)" data-axis="y">depth</text>
-    <text x="387" y="407" text-anchor="middle" dominant-baseline="hanging" data-axis="x">minute</text>
+  <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="36.54" y="197" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 36.54 197)" data-axis="y">depth</text>
+    <text x="387" y="377" text-anchor="middle" dominant-baseline="hanging" data-axis="x">minute</text>
   </g>
   <g fill="none">
-    <path d="M152.25 159.71 L308.75 164.1 L465.25 194.8 L621.75 155.73 L621.75 379 L465.25 379 L308.75 379 L152.25 379 Z" fill="#7cb5ec" fill-opacity="0.28" stroke="none" data-series="A" data-layout="percent"/>
-    <path d="M152.25 159.71 L308.75 164.1 L465.25 194.8 L621.75 155.73" fill="none" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="A" data-layout="percent"/>
-    <circle cx="152.25" cy="159.71" r="3.5" fill="#7cb5ec" stroke="none" data-series="A"/>
-    <circle cx="308.75" cy="164.1" r="3.5" fill="#7cb5ec" stroke="none" data-series="A"/>
-    <circle cx="465.25" cy="194.8" r="3.5" fill="#7cb5ec" stroke="none" data-series="A"/>
-    <circle cx="621.75" cy="155.73" r="3.5" fill="#7cb5ec" stroke="none" data-series="A"/>
-    <path d="M152.25 72 L308.75 72 L465.25 72 L621.75 72 L621.75 155.73 L465.25 194.8 L308.75 164.1 L152.25 159.71 Z" fill="#434348" fill-opacity="0.28" stroke="none" data-series="B" data-layout="percent"/>
-    <path d="M152.25 72 L308.75 72 L465.25 72 L621.75 72" fill="none" stroke="#434348" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6 4" data-series="B" data-layout="percent"/>
-    <circle cx="152.25" cy="72" r="3.5" fill="#434348" stroke="none" data-series="B"/>
-    <circle cx="308.75" cy="72" r="3.5" fill="#434348" stroke="none" data-series="B"/>
-    <circle cx="465.25" cy="72" r="3.5" fill="#434348" stroke="none" data-series="B"/>
-    <circle cx="621.75" cy="72" r="3.5" fill="#434348" stroke="none" data-series="B"/>
+    <path d="M152.25 131.43 L308.75 135.8 L465.25 166.4 L621.75 127.45 L621.75 350 L465.25 350 L308.75 350 L152.25 350 Z" fill="#7cb5ec" fill-opacity="0.28" stroke="none" data-series="A" data-layout="percent"/>
+    <path d="M152.25 131.43 L308.75 135.8 L465.25 166.4 L621.75 127.45" fill="none" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="A" data-layout="percent"/>
+    <circle cx="152.25" cy="131.43" r="4" fill="#7cb5ec" stroke="none" data-series="A"/>
+    <circle cx="308.75" cy="135.8" r="4" fill="#7cb5ec" stroke="none" data-series="A"/>
+    <circle cx="465.25" cy="166.4" r="4" fill="#7cb5ec" stroke="none" data-series="A"/>
+    <circle cx="621.75" cy="127.45" r="4" fill="#7cb5ec" stroke="none" data-series="A"/>
+    <path d="M152.25 44 L308.75 44 L465.25 44 L621.75 44 L621.75 127.45 L465.25 166.4 L308.75 135.8 L152.25 131.43 Z" fill="#434348" fill-opacity="0.28" stroke="none" data-series="B" data-layout="percent"/>
+    <path d="M152.25 44 L308.75 44 L465.25 44 L621.75 44" fill="none" stroke="#434348" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="B" data-layout="percent"/>
+    <circle cx="152.25" cy="44" r="4" fill="#434348" stroke="none" data-series="B"/>
+    <circle cx="308.75" cy="44" r="4" fill="#434348" stroke="none" data-series="B"/>
+    <circle cx="465.25" cy="44" r="4" fill="#434348" stroke="none" data-series="B"/>
+    <circle cx="621.75" cy="44" r="4" fill="#434348" stroke="none" data-series="B"/>
   </g>
 </svg>

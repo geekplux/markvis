@@ -1,30 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="bar chart: API leads p99 latency at 120 ms (ms), 3 rows" aria-labelledby="mv-20a2729dcd062f24-title" aria-describedby="mv-20a2729dcd062f24-desc" data-markvis="2" data-chart-type="bar" data-id="mv-20a2729dcd062f24" font-family="Arial, Helvetica, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="bar chart: API leads p99 latency at 120 ms (ms), 3 rows" aria-labelledby="mv-20a2729dcd062f24-title" aria-describedby="mv-20a2729dcd062f24-desc" data-markvis="2" data-chart-type="bar" data-id="mv-20a2729dcd062f24" font-family="&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif" font-size="12">
   <title id="mv-20a2729dcd062f24-title">API leads p99 latency at 120 ms</title>
   <desc id="mv-20a2729dcd062f24-desc">bar chart. API leads p99 latency at 120 ms. x=service. y=p99. unit=ms. 3 rows.</desc>
-  <text x="74" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#333333"><title>API leads p99 latency at 120 ms</title>API leads p99 latency at 120 ms<tspan font-size="13" font-weight="400" fill="#666666"> · ms</tspan></text>
-  <rect x="74" y="48" width="626" height="331" fill="none" stroke="#ccd6eb" stroke-width="1" data-plot-border="1"/>
-  <path d="M74 379 L700 379" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
-  <g fill="#666666" font-size="12" font-weight="400">
-    <text x="66" y="379" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="66" y="268.67" text-anchor="end" dominant-baseline="middle">50</text>
-    <text x="66" y="158.33" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="66" y="48" text-anchor="end" dominant-baseline="middle">150</text>
-    <text x="178.33" y="391" text-anchor="middle" font-size="12" data-full-label="api"><title>api</title>api</text>
-    <text x="387" y="391" text-anchor="middle" font-size="12" data-full-label="auth"><title>auth</title>auth</text>
-    <text x="595.67" y="391" text-anchor="middle" font-size="12" data-full-label="cdn"><title>cdn</title>cdn</text>
+  <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>API leads p99 latency at 120 ms</title>API leads p99 latency at 120 ms</text>
+  <text x="360" y="46" text-anchor="middle" font-size="12" font-weight="400" fill="#666666" data-subtitle="1">ms</text>
+  <path d="M74 374 L700 374" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
+  <path d="M178.33 374 L178.33 380 M387 374 L387 380 M595.67 374 L595.67 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
+  <g fill="#666666" font-size="11" font-weight="400">
+    <text x="60" y="374" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="60" y="272" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="60" y="170" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="60" y="68" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="178.33" y="391" text-anchor="middle" font-size="11" data-full-label="api"><title>api</title>api</text>
+    <text x="387" y="391" text-anchor="middle" font-size="11" data-full-label="auth"><title>auth</title>auth</text>
+    <text x="595.67" y="391" text-anchor="middle" font-size="11" data-full-label="cdn"><title>cdn</title>cdn</text>
   </g>
-  <g fill="#666666" font-size="13" font-weight="400" data-axis-titles="1">
-    <text x="52" y="213.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 52 213.5)" data-axis="y">p99 · ms</text>
-    <text x="387" y="407" text-anchor="middle" dominant-baseline="hanging" data-axis="x">service</text>
-  </g>
-  <g>
-    <path d="M146.33 379 L210.33 379 L210.33 114.2 L146.33 114.2 Z" fill="#7cb5ec" data-x="api" data-series="p99" data-y="120"/>
-    <path d="M355 379 L419 379 L419 202.47 L355 202.47 Z" fill="#7cb5ec" data-x="auth" data-series="p99" data-y="80"/>
-    <path d="M563.67 379 L627.67 379 L627.67 279.7 L563.67 279.7 Z" fill="#7cb5ec" data-x="cdn" data-series="p99" data-y="45"/>
+  <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="36.54" y="221" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 36.54 221)" data-axis="y">p99 · ms</text>
+    <text x="387" y="401" text-anchor="middle" dominant-baseline="hanging" data-axis="x">service</text>
   </g>
   <g>
-    <text x="178.33" y="106.2" text-anchor="middle" font-size="13" font-weight="500" fill="#333333" data-value-label="api">120</text>
-    <text x="387" y="194.47" text-anchor="middle" font-size="13" font-weight="500" fill="#333333" data-value-label="auth">80</text>
-    <text x="595.67" y="271.7" text-anchor="middle" font-size="13" font-weight="500" fill="#333333" data-value-label="cdn">45</text>
+    <path d="M146.33 374 L210.33 374 L210.33 129.2 L146.33 129.2 Z" fill="#7cb5ec" data-x="api" data-series="p99" data-y="120"/>
+    <path d="M355 374 L419 374 L419 210.8 L355 210.8 Z" fill="#7cb5ec" data-x="auth" data-series="p99" data-y="80"/>
+    <path d="M563.67 374 L627.67 374 L627.67 282.2 L563.67 282.2 Z" fill="#7cb5ec" data-x="cdn" data-series="p99" data-y="45"/>
+  </g>
+  <g>
+    <text x="178.33" y="121.2" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-value-label="api">120</text>
+    <text x="387" y="202.8" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-value-label="auth">80</text>
+    <text x="595.67" y="274.2" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-value-label="cdn">45</text>
   </g>
 </svg>

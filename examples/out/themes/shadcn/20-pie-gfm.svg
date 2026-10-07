@@ -1,22 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="pie chart: Chrome still leads browser share at 52, 4 slices" aria-labelledby="mv-ed79d7ac4511bfdd-title" aria-describedby="mv-ed79d7ac4511bfdd-desc" data-markvis="2" data-chart-type="pie" data-id="mv-ed79d7ac4511bfdd" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="pie chart: Chrome still leads browser share at 52, 4 slices" aria-labelledby="mv-ed79d7ac4511bfdd-title" aria-describedby="mv-ed79d7ac4511bfdd-desc" data-markvis="2" data-chart-type="pie" data-id="mv-ed79d7ac4511bfdd" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-ed79d7ac4511bfdd-title">Chrome still leads browser share at 52</title>
   <desc id="mv-ed79d7ac4511bfdd-desc">pie chart. Chrome still leads browser share at 52. x=browser. y=users. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#0A0A0A"><title>Chrome still leads browser share at 52</title>Chrome still leads browser share at 52</text>
-  <g font-size="13" font-weight="500" fill="#0A0A0A">
-    <rect x="48" y="41" width="10" height="10" fill="#F54900" rx="1"/>
-    <text x="62" y="50" data-legend="Chrome">Chrome</text>
-    <rect x="126.36" y="41" width="10" height="10" fill="#009689" rx="1"/>
-    <text x="140.36" y="50" data-legend="Safari">Safari</text>
-    <rect x="204.72" y="41" width="10" height="10" fill="#104E64" rx="1"/>
-    <text x="218.72" y="50" data-legend="Firefox">Firefox</text>
-    <rect x="291.14" y="41" width="10" height="10" fill="#FFB900" rx="1"/>
-    <text x="305.14" y="50" data-legend="Other">Other</text>
+  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
+  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Chrome still leads browser share at 52</title>Chrome still leads browser share at 52</text>
+  <g font-size="12" font-weight="500" fill="#0A0A0A">
+    <rect x="231.72" y="435" width="10" height="10" fill="#F54900" rx="3"/>
+    <text x="245.72" y="444" data-legend="Chrome">Chrome</text>
+    <rect x="306.36" y="435" width="10" height="10" fill="#009689" rx="3"/>
+    <text x="320.36" y="444" data-legend="Safari">Safari</text>
+    <rect x="381" y="435" width="10" height="10" fill="#104E64" rx="3"/>
+    <text x="395" y="444" data-legend="Firefox">Firefox</text>
+    <rect x="463.08" y="435" width="10" height="10" fill="#FFB900" rx="3"/>
+    <text x="477.08" y="444" data-legend="Other">Other</text>
   </g>
-  <rect x="48" y="70" width="652" height="370" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0.5">
-    <path d="M374 129.2 A125.8 125.8 0 1 1 358.23 379.81 L366.12 317.4 A62.9 62.9 0 1 0 374 192.1 Z" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Chrome" data-raw-value="52" data-donut="1"/>
-    <path d="M358.23 379.81 A125.8 125.8 0 0 1 254.36 216.13 L314.18 235.56 A62.9 62.9 0 0 0 366.12 317.4 Z" fill="#009689" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Safari" data-raw-value="28" data-donut="1"/>
-    <path d="M254.36 216.13 A125.8 125.8 0 0 1 313.4 144.76 L343.7 199.88 A62.9 62.9 0 0 0 314.18 235.56 Z" fill="#104E64" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Firefox" data-raw-value="12" data-donut="1"/>
-    <path d="M313.4 144.76 A125.8 125.8 0 0 1 374 129.2 L374 192.1 A62.9 62.9 0 0 0 343.7 199.88 Z" fill="#FFB900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Other" data-raw-value="8" data-donut="1"/>
+    <path d="M374 108.56 A124.44 124.44 0 1 1 358.4 356.46 L366.2 294.73 A62.22 62.22 0 1 0 374 170.78 Z" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Chrome" data-raw-value="52" data-donut="1"/>
+    <path d="M358.4 356.46 A124.44 124.44 0 0 1 255.65 194.55 L314.83 213.77 A62.22 62.22 0 0 0 366.2 294.73 Z" fill="#009689" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Safari" data-raw-value="28" data-donut="1"/>
+    <path d="M255.65 194.55 A124.44 124.44 0 0 1 314.05 123.95 L344.03 178.48 A62.22 62.22 0 0 0 314.83 213.77 Z" fill="#104E64" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Firefox" data-raw-value="12" data-donut="1"/>
+    <path d="M314.05 123.95 A124.44 124.44 0 0 1 374 108.56 L374 170.78 A62.22 62.22 0 0 0 344.03 178.48 Z" fill="#FFB900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Other" data-raw-value="8" data-donut="1"/>
   </g>
 </svg>

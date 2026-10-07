@@ -1,18 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="bar chart: A12 led units shipped at 14, 13 rows" aria-labelledby="mv-6d02158e64703f94-title" aria-describedby="mv-6d02158e64703f94-desc" data-markvis="2" data-chart-type="bar" data-id="mv-6d02158e64703f94" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="bar chart: A12 led units shipped at 14, 13 rows" aria-labelledby="mv-6d02158e64703f94-title" aria-describedby="mv-6d02158e64703f94-desc" data-markvis="2" data-chart-type="bar" data-id="mv-6d02158e64703f94" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-6d02158e64703f94-title">A12 led units shipped at 14</title>
   <desc id="mv-6d02158e64703f94-desc">bar chart. A12 led units shipped at 14. x=sku. y=units. 13 rows.</desc>
-  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#0A0A0A"><title>A12 led units shipped at 14</title>A12 led units shipped at 14</text>
-  <rect x="48" y="46" width="652" height="389" fill="none" stroke="#e5e5e5" stroke-width="1" data-plot-border="1"/>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.06" stroke-width="1">
-    <line x1="48" x2="700" y1="305.33" y2="305.33"/>
-    <line x1="48" x2="700" y1="46" y2="46"/>
+  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
+  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>A12 led units shipped at 14</title>A12 led units shipped at 14</text>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1">
+    <line x1="48" x2="700" y1="306.67" y2="306.67"/>
+    <line x1="48" x2="700" y1="50" y2="50"/>
   </g>
-  <path d="M48 435 L700 435" fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1"/>
   <g fill="#737373" font-size="12" font-weight="400">
     <text x="40" y="435" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="40" y="305.33" text-anchor="end" dominant-baseline="middle">5</text>
-    <text x="40" y="175.67" text-anchor="end" dominant-baseline="middle">10</text>
-    <text x="40" y="46" text-anchor="end" dominant-baseline="middle">15</text>
+    <text x="40" y="306.67" text-anchor="end" dominant-baseline="middle">5</text>
+    <text x="40" y="178.33" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="40" y="50" text-anchor="end" dominant-baseline="middle">15</text>
     <text x="73.08" y="447" text-anchor="middle" font-size="12" data-full-label="A01"><title>A01</title>A01</text>
     <text x="123.23" y="447" text-anchor="middle" font-size="12" data-full-label="A02"><title>A02</title>A02</text>
     <text x="173.38" y="447" text-anchor="middle" font-size="12" data-full-label="A03"><title>A03</title>A03</text>
@@ -28,18 +27,18 @@
     <text x="674.92" y="447" text-anchor="middle" font-size="12" data-full-label="A13"><title>A13</title>A13</text>
   </g>
   <g>
-    <path d="M53.02 435 L53.02 311.33 Q53.02 305.33 59.02 305.33 L87.14 305.33 Q93.14 305.33 93.14 311.33 L93.14 435 Z" fill="#F54900" data-x="A01" data-series="units" data-y="5"/>
-    <path d="M103.17 435 L103.17 233.53 Q103.17 227.53 109.17 227.53 L137.29 227.53 Q143.29 227.53 143.29 233.53 L143.29 435 Z" fill="#F54900" data-x="A02" data-series="units" data-y="8"/>
-    <path d="M153.32 435 L153.32 363.2 Q153.32 357.2 159.32 357.2 L187.45 357.2 Q193.45 357.2 193.45 363.2 L193.45 435 Z" fill="#F54900" data-x="A03" data-series="units" data-y="3"/>
-    <path d="M203.48 435 L203.48 129.8 Q203.48 123.8 209.48 123.8 L237.6 123.8 Q243.6 123.8 243.6 129.8 L243.6 435 Z" fill="#F54900" data-x="A04" data-series="units" data-y="12"/>
-    <path d="M253.63 435 L253.63 259.47 Q253.63 253.47 259.63 253.47 L287.75 253.47 Q293.75 253.47 293.75 259.47 L293.75 435 Z" fill="#F54900" data-x="A05" data-series="units" data-y="7"/>
-    <path d="M303.78 435 L303.78 207.6 Q303.78 201.6 309.78 201.6 L337.91 201.6 Q343.91 201.6 343.91 207.6 L343.91 435 Z" fill="#F54900" data-x="A06" data-series="units" data-y="9"/>
-    <path d="M353.94 435 L353.94 337.27 Q353.94 331.27 359.94 331.27 L388.06 331.27 Q394.06 331.27 394.06 337.27 L394.06 435 Z" fill="#F54900" data-x="A07" data-series="units" data-y="4"/>
-    <path d="M404.09 435 L404.09 155.73 Q404.09 149.73 410.09 149.73 L438.22 149.73 Q444.22 149.73 444.22 155.73 L444.22 435 Z" fill="#F54900" data-x="A08" data-series="units" data-y="11"/>
-    <path d="M454.25 435 L454.25 285.4 Q454.25 279.4 460.25 279.4 L488.37 279.4 Q494.37 279.4 494.37 285.4 L494.37 435 Z" fill="#F54900" data-x="A09" data-series="units" data-y="6"/>
-    <path d="M504.4 435 L504.4 181.67 Q504.4 175.67 510.4 175.67 L538.52 175.67 Q544.52 175.67 544.52 181.67 L544.52 435 Z" fill="#F54900" data-x="A10" data-series="units" data-y="10"/>
-    <path d="M554.55 435 L554.55 389.13 Q554.55 383.13 560.55 383.13 L588.68 383.13 Q594.68 383.13 594.68 389.13 L594.68 435 Z" fill="#F54900" data-x="A11" data-series="units" data-y="2"/>
-    <path d="M604.71 435 L604.71 77.93 Q604.71 71.93 610.71 71.93 L638.83 71.93 Q644.83 71.93 644.83 77.93 L644.83 435 Z" fill="#F54900" data-x="A12" data-series="units" data-y="14"/>
-    <path d="M654.86 435 L654.86 415.07 Q654.86 409.07 660.86 409.07 L688.98 409.07 Q694.98 409.07 694.98 415.07 L694.98 435 Z" fill="#F54900" data-x="A13" data-series="units" data-y="1"/>
+    <path d="M53.02 435 L53.02 314.67 Q53.02 306.67 61.02 306.67 L85.14 306.67 Q93.14 306.67 93.14 314.67 L93.14 435 Z" fill="#F54900" data-x="A01" data-series="units" data-y="5"/>
+    <path d="M103.17 435 L103.17 237.67 Q103.17 229.67 111.17 229.67 L135.29 229.67 Q143.29 229.67 143.29 237.67 L143.29 435 Z" fill="#F54900" data-x="A02" data-series="units" data-y="8"/>
+    <path d="M153.32 435 L153.32 366 Q153.32 358 161.32 358 L185.45 358 Q193.45 358 193.45 366 L193.45 435 Z" fill="#F54900" data-x="A03" data-series="units" data-y="3"/>
+    <path d="M203.48 435 L203.48 135 Q203.48 127 211.48 127 L235.6 127 Q243.6 127 243.6 135 L243.6 435 Z" fill="#F54900" data-x="A04" data-series="units" data-y="12"/>
+    <path d="M253.63 435 L253.63 263.33 Q253.63 255.33 261.63 255.33 L285.75 255.33 Q293.75 255.33 293.75 263.33 L293.75 435 Z" fill="#F54900" data-x="A05" data-series="units" data-y="7"/>
+    <path d="M303.78 435 L303.78 212 Q303.78 204 311.78 204 L335.91 204 Q343.91 204 343.91 212 L343.91 435 Z" fill="#F54900" data-x="A06" data-series="units" data-y="9"/>
+    <path d="M353.94 435 L353.94 340.33 Q353.94 332.33 361.94 332.33 L386.06 332.33 Q394.06 332.33 394.06 340.33 L394.06 435 Z" fill="#F54900" data-x="A07" data-series="units" data-y="4"/>
+    <path d="M404.09 435 L404.09 160.67 Q404.09 152.67 412.09 152.67 L436.22 152.67 Q444.22 152.67 444.22 160.67 L444.22 435 Z" fill="#F54900" data-x="A08" data-series="units" data-y="11"/>
+    <path d="M454.25 435 L454.25 289 Q454.25 281 462.25 281 L486.37 281 Q494.37 281 494.37 289 L494.37 435 Z" fill="#F54900" data-x="A09" data-series="units" data-y="6"/>
+    <path d="M504.4 435 L504.4 186.33 Q504.4 178.33 512.4 178.33 L536.52 178.33 Q544.52 178.33 544.52 186.33 L544.52 435 Z" fill="#F54900" data-x="A10" data-series="units" data-y="10"/>
+    <path d="M554.55 435 L554.55 391.67 Q554.55 383.67 562.55 383.67 L586.68 383.67 Q594.68 383.67 594.68 391.67 L594.68 435 Z" fill="#F54900" data-x="A11" data-series="units" data-y="2"/>
+    <path d="M604.71 435 L604.71 83.67 Q604.71 75.67 612.71 75.67 L636.83 75.67 Q644.83 75.67 644.83 83.67 L644.83 435 Z" fill="#F54900" data-x="A12" data-series="units" data-y="14"/>
+    <path d="M654.86 435 L654.86 417.33 Q654.86 409.33 662.86 409.33 L686.98 409.33 Q694.98 409.33 694.98 417.33 L694.98 435 Z" fill="#F54900" data-x="A13" data-series="units" data-y="1"/>
   </g>
 </svg>
