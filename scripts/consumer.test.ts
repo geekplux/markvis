@@ -193,6 +193,27 @@ process.stdout.write(md.render(readFileSync(process.argv[2], "utf8")));
     expect(invalid.stdout.trim().length).toBeGreaterThan(0);
   }, TIMEOUT);
 
+  it("turns a chart code block into hast with markvis/rehype", () => {
+    writeFileSync(
+      join(temp, "rehype.mjs"),
+      `import rehypeMarkvis from "markvis/rehype";
+
+const code = { type: "element", tagName: "code", properties: { className: ["language-chart"] },
+  children: [{ type: "text", value: "type: bar\\nx: k\\ny: v\\n\\nk,v\\nA,1\\n" }] };
+const tree = { type: "root", children: [{ type: "element", tagName: "pre", properties: {}, children: [code] }] };
+rehypeMarkvis()(tree);
+const figure = tree.children[0];
+const tags = [];
+const walk = (n) => { if (n.type === "element") tags.push(n.tagName); (n.children || []).forEach(walk); };
+walk(tree);
+process.stdout.write(JSON.stringify({ root: figure.tagName, svg: tags.includes("svg"), table: tags.includes("table") }));
+`,
+    );
+    const out = run(temp, process.execPath, ["rehype.mjs"]);
+    expect(out.status, out.stderr).toBe(0);
+    expect(JSON.parse(out.stdout)).toEqual({ root: "figure", svg: true, table: true });
+  });
+
   it("renders both React forms from markvis/react", () => {
     const install = run(temp, "npm", ["install", "react@19", "react-dom@19"]);
     expect(install.status, install.stderr).toBe(0);

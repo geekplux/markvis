@@ -56,6 +56,10 @@
       "types": "./dist/remark.d.ts",
       "import": "./dist/remark.js"
     },
+    "./rehype": {
+      "types": "./dist/rehype.d.ts",
+      "import": "./dist/rehype.js"
+    },
     "./markdown-it": {
       "types": "./dist/markdown-it.d.ts",
       "import": "./dist/markdown-it.js"
@@ -125,8 +129,10 @@
     "happy-dom": "18",
     "markdown-it": "^14.1.0",
     "react": "^19.3.0",
+    "rehype-stringify": "^10.0.1",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
+    "remark-rehype": "^11.1.2",
     "tsup": "^8.5.0",
     "tsx": "^4.23.13",
     "typescript": "^7.0.2",

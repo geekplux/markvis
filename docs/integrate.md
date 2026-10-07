@@ -41,11 +41,15 @@ Host example: `examples/hosts/react-markdown/`. Tests: `packages/react/test/`.
 | Host | Path |
 | --- | --- |
 | VitePress | examples/hosts/vitepress/ — wire `markvis/markdown-it` (this monorepo still imports `@markvis/markdown-it`) |
-| Astro | examples/hosts/astro/ |
+| Astro | examples/hosts/astro/ — Astro 7 needs `@astrojs/markdown-remark`, `processor: unified({ rehypePlugins })`, and Shiki `excludeLangs` for chart tags; checked with 7.3.7 |
 | markdown-it | examples/hosts/markdown-it/ + `import markdownItMarkvis from "markvis/markdown-it"` |
 | remark | `import remarkMarkvis from "markvis/remark"` |
+| rehype / MDX | `import rehypeMarkvis from "markvis/rehype"` — real hast (figure, SVG subtree, table), no raw nodes |
+| Docusaurus | examples/hosts/docusaurus/ — `rehypePlugins: [rehypeMarkvis]` in the docs preset; checked with 3.10.2 |
 
 Each host example renders at least one valid fence to HTML with svg and table elements.
+
+`markvis/rehype` turns `render().html` into hast with a small parser for markvis's own output (double-quoted attributes, `/>`, the entities markvis emits); it adds no runtime dependency. It also draws a chart comment followed by a table when the tree keeps comments (for example after rehype-raw). Its output equals `render().html` once both are parsed (`packages/remark/test/rehype.test.ts`); hast stringifiers escape `>` and quotes differently, so the bytes differ. react-markdown can use it as a rehype plugin too; `markvis/react` adds width-following and streaming.
 
 ## VS Code
 

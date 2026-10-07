@@ -9,6 +9,7 @@ export default defineConfig({
     "render-svg": "src/render-svg.ts",
     ir: "src/ir.ts",
     remark: "src/remark.ts",
+    rehype: "src/rehype.ts",
     "markdown-it": "src/markdown-it.ts",
     react: "src/react.ts",
     themes: "src/themes.ts",

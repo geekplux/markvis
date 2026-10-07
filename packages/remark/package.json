@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "license": "MIT",
-  "description": "Thin remark adapter: chart fences to SVG + table",
+  "description": "Thin remark and rehype adapters: chart fences to SVG + table",
   "exports": {
     ".": "./src/index.ts"
   },
@@ -19,7 +19,13 @@
     "@markvis/parser": "workspace:*"
   },
   "devDependencies": {
+    "@mdx-js/mdx": "^3.1.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "rehype-stringify": "^10.0.1",
     "remark": "^15.0.1",
-    "remark-html": "^16.0.1"
+    "remark-html": "^16.0.1",
+    "remark-rehype": "^11.1.2",
+    "unified": "^11.0.5"
   }
 }

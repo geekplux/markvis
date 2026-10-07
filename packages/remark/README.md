@@ -17,3 +17,13 @@ const html = String(
 ```
 
 No extra types. No d3. Same parser and render-svg as the CLI.
+
+## rehype
+
+`markvis/rehype` does the same on an HTML tree: each chart code block becomes real elements (figure, SVG, table), so MDX hosts (Docusaurus, Astro, Next.js MDX) accept it.
+
+```js
+import rehypeMarkvis from "markvis/rehype";
+
+unified().use(remarkParse).use(remarkRehype).use(rehypeMarkvis).use(rehypeStringify);
+```

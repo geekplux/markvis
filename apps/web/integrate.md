@@ -6,7 +6,7 @@ sidebar: true
 
 # Integrate
 
-Six ways to show the chart. If none of them run, the table of numbers is still in the file.
+Seven ways to show the chart. If none of them run, the table of numbers is still in the file.
 
 ## 1. Save a picture (bake)
 
@@ -96,7 +96,23 @@ const html = String(
 
 Host example: `examples/hosts/astro/` (and the package README). Same drawing as the command line. No extra chart kinds.
 
-## 5. JavaScript
+## 5. rehype and MDX
+
+For pipelines that work on HTML trees — MDX docs sites, Astro, Next.js MDX, or `unified` with `remark-rehype` — use `markvis/rehype`. It replaces each chart code block with real elements (figure, SVG, table), not a raw HTML string, so MDX accepts it.
+
+```js
+import rehypeMarkvis from "markvis/rehype";
+
+// unified
+unified().use(remarkParse).use(remarkRehype).use(rehypeMarkvis).use(rehypeStringify);
+
+// a docs preset that takes rehype plugins
+presets: [["classic", { docs: { rehypePlugins: [rehypeMarkvis] } }]];
+```
+
+Astro 7: install `@astrojs/markdown-remark`, then set `markdown.processor: unified({ rehypePlugins: [rehypeMarkvis] })` and `markdown.syntaxHighlight: { type: "shiki", excludeLangs: ["chart", "markvis", "vis"] }` so Shiki leaves chart blocks alone. Host examples: `examples/hosts/docusaurus/`, `examples/hosts/astro/`.
+
+## 6. JavaScript
 
 Pass one chart block — the inside a Markdown renderer hands a code-block plugin, or the whole block with its fence lines — and get the chart in one call. It never throws.
 
@@ -113,7 +129,7 @@ Options: `width` (default 720), and `theme`, `palette`, `surface` for blocks tha
 
 To parse without drawing, use `parseBlock(blockText)`. To read every chart in a Markdown document, use `parseDocument`.
 
-## 6. React
+## 7. React
 
 `markvis/react` draws a block in a React app. `react` 18 or later is the only peer; nothing else is installed.
 
