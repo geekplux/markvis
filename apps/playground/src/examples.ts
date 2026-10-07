@@ -21,7 +21,7 @@ export function catalogFromModules(
         source,
       };
     })
-    .sort((a, b) => a.filename.localeCompare(b.filename));
+    .sort((a, b) => a.filename.localeCompare(b.filename, "en", { numeric: true }));
 }
 
 const modules = import.meta.glob("../../../examples/valid/*.md", {

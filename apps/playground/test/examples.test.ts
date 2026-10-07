@@ -15,7 +15,7 @@ const validDir = join(repoRoot, "examples/valid");
 
 const validFiles = readdirSync(validDir)
   .filter((name) => name.endsWith(".md"))
-  .sort();
+  .sort((a, b) => a.localeCompare(b, "en", { numeric: true }));
 
 describe("example catalog", () => {
   it("parses filenames from glob paths", () => {
@@ -43,6 +43,7 @@ describe("example catalog", () => {
     expect(EXAMPLES.map((item) => item.filename)).toEqual(validFiles);
     const first = EXAMPLES[0];
     expect(first?.filename).toBe("01-bar-basic.md");
+    expect(EXAMPLES.at(-1)?.filename).toBe("104-calendar-steps-gfm.md");
     expect(first?.source).toBe(
       readFileSync(join(validDir, "01-bar-basic.md"), "utf8"),
     );

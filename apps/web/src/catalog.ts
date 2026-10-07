@@ -289,7 +289,9 @@ export function catalogFromMaps(
   svgByStem: Record<string, string>,
   themedSvgByThemeStem?: Record<ChartTheme, Record<string, string>>,
 ): GalleryItem[] {
-  const stems = Object.keys(markdownByStem).sort();
+  const stems = Object.keys(markdownByStem).sort((a, b) =>
+    a.localeCompare(b, "en", { numeric: true }),
+  );
   if (stems.length === 0) {
     throw new Error("gallery: no examples/valid markdown");
   }

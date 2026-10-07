@@ -1,6 +1,11 @@
 import { readdirSync, statSync } from "node:fs";
 import { extname, join, relative, resolve } from "node:path";
 
+/** "9-…" before "10-…" before "100-…": numbered fixtures keep their order past 99. */
+export function byNumberedName(a: string, b: string): number {
+  return a.localeCompare(b, "en", { numeric: true });
+}
+
 const SKIP_DIRS = new Set([
   "node_modules",
   ".git",
@@ -32,7 +37,7 @@ export function collectMarkdownFiles(inputs: string[], cwd: string): string[] {
   for (const input of inputs) {
     walk(resolve(cwd, input), out);
   }
-  return [...new Set(out)].sort();
+  return [...new Set(out)].sort(byNumberedName);
 }
 
 export function collectSvgFiles(inputs: string[], cwd: string): string[] {
@@ -58,7 +63,7 @@ export function collectSvgFiles(inputs: string[], cwd: string): string[] {
     if (!st.isDirectory()) {
       throw new CliError(`not an svg file: ${abs}`);
     }
-    const names = readdirSync(abs).sort();
+    const names = readdirSync(abs).sort(byNumberedName);
     for (const name of names) {
       if (name.startsWith(".")) {
         continue;
@@ -72,7 +77,7 @@ export function collectSvgFiles(inputs: string[], cwd: string): string[] {
       }
     }
   }
-  return [...new Set(out)].sort();
+  return [...new Set(out)].sort(byNumberedName);
 }
 
 function walk(path: string, out: string[]): void {
@@ -92,7 +97,7 @@ function walk(path: string, out: string[]): void {
   if (!st.isDirectory()) {
     throw new CliError(`not a markdown file: ${path}`);
   }
-  const names = readdirSync(path).sort();
+  const names = readdirSync(path).sort(byNumberedName);
   for (const name of names) {
     if (name.startsWith(".")) {
       continue;
