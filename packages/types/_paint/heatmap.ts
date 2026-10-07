@@ -22,6 +22,7 @@ import { textWidth } from "./text.js";
 import {
   MARGIN,
   PLOT_BG,
+  SEMANTIC,
   TICK_TEXT_GAP,
   TYPE,
 } from "./tokens.js";
@@ -105,8 +106,8 @@ export function renderHeatmap(chart: ChartIR, svgId: string): Painted {
       width: 6,
       height: 6,
     })}>`,
-    `      <rect width="6" height="6" fill="#f4f1ea"/>`,
-    `      <path d="M0 6 L6 0" stroke="#a8a29e" stroke-width="1"/>`,
+    `      <rect width="6" height="6" fill="${SEMANTIC.rampLow}"/>`,
+    `      <path d="M0 6 L6 0" stroke="${SEMANTIC.missing}" stroke-width="1"/>`,
     `    </pattern>`,
     `  </defs>`,
   ];
@@ -135,7 +136,7 @@ export function renderHeatmap(chart: ChartIR, svgId: string): Painted {
       const missing = value === null;
       const t = !missing && span !== 0 ? (value - ymin) / span : 1;
       const clamped = Math.max(0, Math.min(1, t));
-      const fill = missing ? `url(#${patternId})` : mixHex("#f4f1ea", hue, 0.16 + 0.84 * clamped);
+      const fill = missing ? `url(#${patternId})` : mixHex(SEMANTIC.rampLow, hue, 0.16 + 0.84 * clamped);
       lines.push(
         `    <rect ${attrs({
           x: fmtPx(x),
@@ -143,7 +144,7 @@ export function renderHeatmap(chart: ChartIR, svgId: string): Painted {
           width: fmtPx(Math.max(cellW, 0)),
           height: fmtPx(Math.max(cellH, 0)),
           fill,
-          stroke: "#d6d3d1",
+          stroke: SEMANTIC.cellRule,
           "stroke-width": 1,
           "data-x": cat,
           "data-series": series,
@@ -159,7 +160,7 @@ export function renderHeatmap(chart: ChartIR, svgId: string): Painted {
         cellW >= textWidth(label, TYPE.value.size) + 8 &&
         cellH >= TYPE.value.size + 8
       ) {
-        const ink = clamped > 0.62 ? "#fafaf9" : "#171717";
+        const ink = clamped > 0.62 ? SEMANTIC.inkOnDark : SEMANTIC.inkOnLight;
         lines.push(
           `    <text ${attrs({
             x: fmtPx(x + cellW / 2),
@@ -191,7 +192,7 @@ export function renderHeatmap(chart: ChartIR, svgId: string): Painted {
         y: fmtPx(y),
         width: 12,
         height: fmtPx(scaleH / steps + 0.5),
-        fill: mixHex("#f4f1ea", hue, 0.16 + 0.84 * t),
+        fill: mixHex(SEMANTIC.rampLow, hue, 0.16 + 0.84 * t),
       })}/>`,
     );
   }

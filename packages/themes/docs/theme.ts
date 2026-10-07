@@ -1,6 +1,6 @@
 /** Vite/VitePress page-figure look as tokens only. Same keys as folio; no vendor deps. */
 
-import { folio, type ThemeTokens } from "../folio/theme.js";
+import { FOLIO_SURFACES, folio, type ThemeTokens } from "../folio/theme.js";
 
 /**
  * Zinc/slate ink, thin ticks, no loud fill — reads native on a docs site page.
@@ -80,6 +80,7 @@ export const docs = {
   END_LABEL_SERIES_MAX: 0,
   END_LABEL_GAP: folio.END_LABEL_GAP,
   END_LABEL_MIN_SEP: folio.END_LABEL_MIN_SEP,
+  SERIES_DASH: folio.SERIES_DASH,
 
   SCATTER_R: 2.5,
   SCATTER_OPACITY: 0.75,
@@ -104,5 +105,7 @@ export const docs = {
   LEGEND_BELOW: true,
   /** Hairline under title — not a four-sided plot rect. */
   TITLE_RULE: true,
-  VERTICAL_GRID: false,
-} as ThemeTokens;
+  GRID: { dash: "", width: 1, axes: "y" },
+
+  SURFACES: FOLIO_SURFACES,
+} as const satisfies ThemeTokens;

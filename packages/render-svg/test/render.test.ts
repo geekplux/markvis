@@ -813,8 +813,8 @@ describe("docs tokens", () => {
 describe("recharts tokens", () => {
   it("is an XY-grid, bottom-legend pack", () => {
     expect(themeTokens("recharts")).toBe(recharts);
-    expect(recharts.VERTICAL_GRID).toBe(true);
-    expect(folio.VERTICAL_GRID).toBe(false);
+    expect(recharts.GRID.axes).toBe("xy");
+    expect(folio.GRID.axes).toBe("y");
     expect(recharts.LEGEND_BELOW).toBe(true);
     expect(recharts.END_LABEL_SERIES_MAX).toBe(0);
     expect(recharts.AXIS_TITLES).toBe(false);
@@ -1095,7 +1095,7 @@ describe("pie + scatter theme forks (THEMES.md)", () => {
     expect(recharts.PIE_LABEL_MODE).toBe("legend");
     expect(recharts.SCATTER_MARK).toBe("ring");
     expect(recharts.LEGEND_BELOW).toBe(true);
-    expect(recharts.VERTICAL_GRID).toBe(true);
+    expect(recharts.GRID.axes).toBe("xy");
     const pie = renderSvg(pieChart("recharts"));
     expect(pie).toContain('data-pie-label-mode="legend"');
     expect(pie).toContain("data-legend=");

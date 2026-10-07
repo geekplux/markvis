@@ -27,9 +27,9 @@ import {
   PLOT_BG,
   PLOT_BORDER,
   PLOT_BORDER_WIDTH,
+  SEMANTIC,
   STRUCTURE_OPACITY,
   TICK_TEXT_GAP,
-  SURFACE,
   TYPE,
 } from "./tokens.js";
 import { placeHorizontalLabel } from "./text.js";
@@ -85,9 +85,9 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
     barW = Math.min(barW, BAR_MAX_WIDTH);
   }
   barW = Math.max(barW, 1);
-  const pos = SURFACE === "dark" ? "#2DD4BF" : "#0F766E";
-  const neg = SURFACE === "dark" ? "#FB7185" : "#BE123C";
-  const totalFill = SURFACE === "dark" ? "#e7e5e4" : "#44403C";
+  const pos = SEMANTIC.up;
+  const neg = SEMANTIC.down;
+  const totalFill = SEMANTIC.total;
 
   const lines: string[] = [drawTitle(visibleTitle(chart), plot.left, chart.unit)];
 

@@ -6,6 +6,7 @@
   "description": "markvis theme grammar packs + color palettes (U5)",
   "exports": {
     ".": "./registry.ts",
+    "./contract": "./contract.ts",
     "./folio": "./folio/theme.ts",
     "./highcharts": "./highcharts/theme.ts",
     "./shadcn": "./shadcn/theme.ts",

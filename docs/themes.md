@@ -367,7 +367,7 @@ Hover waits.
 | Plot min ratio | `0.58` |
 | Margins | top `32`, right `20`, bottom `36`, left `48` |
 | Max interior grid | `4` |
-| `VERTICAL_GRID` | `true` |
+| `GRID.axes` | `"xy"` |
 | `END_LABEL_SERIES_MAX` | `0` |
 | `LEGEND_BELOW` | `true` |
 | `AXIS_TITLES` | `false` |

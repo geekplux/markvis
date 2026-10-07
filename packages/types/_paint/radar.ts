@@ -20,6 +20,7 @@ import {
   PLOT_BG,
   PLOT_BORDER,
   PLOT_BORDER_WIDTH,
+  SERIES_DASH,
   STRUCTURE_OPACITY,
   TITLE_BASELINE,
   TYPE,
@@ -246,7 +247,7 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
   for (let s = 0; s < names.length; s++) {
     const name = names[s]!;
     const style = styles[s]!;
-    const dashes = ["", "6 4", "2 2", "7 3 2 3"];
+    const dashes = SERIES_DASH;
     const pts = spokes.map((spoke, i) => {
       const value = groupedValue(rows, name, spoke);
       if (value === null || scaleMax === 0) {
