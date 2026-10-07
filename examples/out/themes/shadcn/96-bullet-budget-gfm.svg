@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="272" viewBox="0 0 720 272" role="img" aria-label="bullet chart: Marketing spent 18% over budget by Q3 (USD k), 4 rows" aria-labelledby="mv-7e8680a743ccf52c-title" aria-describedby="mv-7e8680a743ccf52c-desc" data-markvis="2" data-chart-type="bullet" data-id="mv-7e8680a743ccf52c" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-7e8680a743ccf52c-title">Marketing spent 18% over budget by Q3</title>
+  <desc id="mv-7e8680a743ccf52c-desc">bullet chart. Marketing spent 18% over budget by Q3. x=department. y=spent. unit=USD k. 4 rows.</desc>
+  <rect x="0.5" y="0.5" width="719" height="271" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
+  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Marketing spent 18% over budget by Q3</title>Marketing spent 18% over budget by Q3</text>
+  <text x="48" y="51" text-anchor="start" font-size="13" font-weight="400" fill="#737373" data-subtitle="1">USD k</text>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1">
+    <line x1="355" x2="355" y1="72" y2="208"/>
+    <line x1="614.16" x2="614.16" y1="72" y2="208"/>
+  </g>
+  <line x1="95.84" x2="95.84" y1="72" y2="208" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-baseline="0"/>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="87.84" y="89" text-anchor="end" dominant-baseline="middle" data-full-label="Engineering"><title>Engineering</title><tspan x="87.84" dy="0">Engineering</tspan></text>
+    <text x="87.84" y="123" text-anchor="end" dominant-baseline="middle" data-full-label="Marketing"><title>Marketing</title><tspan x="87.84" dy="0">Marketing</tspan></text>
+    <text x="87.84" y="157" text-anchor="end" dominant-baseline="middle" data-full-label="Sales"><title>Sales</title><tspan x="87.84" dy="0">Sales</tspan></text>
+    <text x="87.84" y="191" text-anchor="end" dominant-baseline="middle" data-full-label="Facilities"><title>Facilities</title><tspan x="87.84" dy="0">Facilities</tspan></text>
+    <text x="95.84" y="226" text-anchor="middle">0</text>
+    <text x="355" y="226" text-anchor="middle">500</text>
+    <text x="614.16" y="226" text-anchor="middle">1,000</text>
+  </g>
+  <g font-size="12" font-weight="500" fill="#0A0A0A">
+    <circle cx="296.08" cy="246" r="4.5" fill="#F54900"/>
+    <text x="305.08" y="250" data-legend="spent">spent</text>
+    <rect x="362.28" y="240" width="2.5" height="12" fill="#0A0A0A"/>
+    <text x="372.28" y="250" data-legend="budget">budget</text>
+  </g>
+  <g data-bullet="1">
+    <rect x="95.84" y="77" width="518.32" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Engineering"/>
+    <path d="M95.84 84 L578.06 84 Q583.06 84 583.06 89 L583.06 89 Q583.06 94 578.06 94 L95.84 94 Z" fill="#F54900" data-x="Engineering" data-y="940"/>
+    <line x1="614.16" x2="614.16" y1="79" y2="99" stroke="#0A0A0A" stroke-width="2.5" data-target="1,000"/>
+    <rect x="95.84" y="111" width="518.32" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Marketing"/>
+    <path d="M95.84 118 L274.33 118 Q279.33 118 279.33 123 L279.33 123 Q279.33 128 274.33 128 L95.84 128 Z" fill="#F54900" data-x="Marketing" data-y="354"/>
+    <line x1="251.34" x2="251.34" y1="113" y2="133" stroke="#0A0A0A" stroke-width="2.5" data-target="300"/>
+    <rect x="95.84" y="145" width="518.32" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Sales"/>
+    <path d="M95.84 152 L303.35 152 Q308.35 152 308.35 157 L308.35 157 Q308.35 162 303.35 162 L95.84 162 Z" fill="#F54900" data-x="Sales" data-y="410"/>
+    <line x1="329.08" x2="329.08" y1="147" y2="167" stroke="#0A0A0A" stroke-width="2.5" data-target="450"/>
+    <rect x="95.84" y="179" width="518.32" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Facilities"/>
+    <path d="M95.84 186 L153.04 186 Q158.04 186 158.04 191 L158.04 191 Q158.04 196 153.04 196 L95.84 196 Z" fill="#F54900" data-x="Facilities" data-y="120"/>
+    <line x1="168.4" x2="168.4" y1="181" y2="201" stroke="#0A0A0A" stroke-width="2.5" data-target="140"/>
+  </g>
+  <g fill="#0A0A0A" font-size="12" font-weight="500">
+    <text x="626.16" y="89" dominant-baseline="middle" data-value-label="Engineering">940<tspan fill="#737373" font-weight="400"> / 1,000</tspan></text>
+    <text x="626.16" y="123" dominant-baseline="middle" data-value-label="Marketing">354<tspan fill="#737373" font-weight="400"> / 300</tspan></text>
+    <text x="626.16" y="157" dominant-baseline="middle" data-value-label="Sales">410<tspan fill="#737373" font-weight="400"> / 450</tspan></text>
+    <text x="626.16" y="191" dominant-baseline="middle" data-value-label="Facilities">120<tspan fill="#737373" font-weight="400"> / 140</tspan></text>
+  </g>
+</svg>

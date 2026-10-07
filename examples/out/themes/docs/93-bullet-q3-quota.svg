@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="241" viewBox="0 0 720 241" role="img" aria-label="bullet chart: Only West is short of its Q3 quota (USD k), 4 rows" aria-labelledby="mv-7beccc92b6402652-title" aria-describedby="mv-7beccc92b6402652-desc" data-markvis="2" data-chart-type="bullet" data-id="mv-7beccc92b6402652" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-7beccc92b6402652-title">Only West is short of its Q3 quota</title>
+  <desc id="mv-7beccc92b6402652-desc">bullet chart. Only West is short of its Q3 quota. x=region. y=booked. unit=USD k. 4 rows.</desc>
+  <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>Only West is short of its Q3 quota</title>ONLY WEST IS SHORT OF ITS Q3 QUOTA<tspan font-size="11" font-weight="400" fill="#64748B"> · USD k</tspan></text>
+  <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
+  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3">
+    <line x1="247.54" x2="247.54" y1="42" y2="178"/>
+    <line x1="441.08" x2="441.08" y1="42" y2="178"/>
+    <line x1="634.62" x2="634.62" y1="42" y2="178"/>
+  </g>
+  <line x1="54" x2="54" y1="42" y2="178" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-baseline="0"/>
+  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400">
+    <text x="46" y="59" text-anchor="end" dominant-baseline="middle" data-full-label="North"><title>North</title><tspan x="46" dy="0">North</tspan></text>
+    <text x="46" y="93" text-anchor="end" dominant-baseline="middle" data-full-label="South"><title>South</title><tspan x="46" dy="0">South</tspan></text>
+    <text x="46" y="127" text-anchor="end" dominant-baseline="middle" data-full-label="East"><title>East</title><tspan x="46" dy="0">East</tspan></text>
+    <text x="46" y="161" text-anchor="end" dominant-baseline="middle" data-full-label="West"><title>West</title><tspan x="46" dy="0">West</tspan></text>
+    <text x="54" y="195" text-anchor="middle">0</text>
+    <text x="247.54" y="195" text-anchor="middle">200</text>
+    <text x="441.08" y="195" text-anchor="middle">400</text>
+    <text x="634.62" y="195" text-anchor="middle">600</text>
+  </g>
+  <g font-size="11" font-weight="500" fill="#18181B">
+    <circle cx="59" cy="215" r="4.5" fill="#475569"/>
+    <text x="68" y="219" data-legend="booked">booked</text>
+    <rect x="128.92" y="209" width="2.5" height="12" fill="#18181B"/>
+    <text x="138.92" y="219" data-legend="quota">quota</text>
+  </g>
+  <g data-bullet="1">
+    <rect x="54" y="47" width="580.62" height="24" fill="#18181B" fill-opacity="0.07" data-track="North"/>
+    <path d="M54 54 L460.43 54 L460.43 64 L54 64 Z" fill="#475569" data-x="North" data-y="420"/>
+    <line x1="441.08" x2="441.08" y1="49" y2="69" stroke="#18181B" stroke-width="2.5" data-target="400"/>
+    <rect x="54" y="81" width="580.62" height="24" fill="#18181B" fill-opacity="0.07" data-track="South"/>
+    <path d="M54 88 L407.21 88 L407.21 98 L54 98 Z" fill="#475569" data-x="South" data-y="365"/>
+    <line x1="392.7" x2="392.7" y1="83" y2="103" stroke="#18181B" stroke-width="2.5" data-target="350"/>
+    <rect x="54" y="115" width="580.62" height="24" fill="#18181B" fill-opacity="0.07" data-track="East"/>
+    <path d="M54 122 L549.46 122 L549.46 132 L54 132 Z" fill="#475569" data-x="East" data-y="512"/>
+    <line x1="518.5" x2="518.5" y1="117" y2="137" stroke="#18181B" stroke-width="2.5" data-target="480"/>
+    <rect x="54" y="149" width="580.62" height="24" fill="#18181B" fill-opacity="0.07" data-track="West"/>
+    <path d="M54 156 L332.7 156 L332.7 166 L54 166 Z" fill="#475569" data-x="West" data-y="288"/>
+    <line x1="402.37" x2="402.37" y1="151" y2="171" stroke="#18181B" stroke-width="2.5" data-target="360"/>
+  </g>
+  <g fill="#18181B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500">
+    <text x="646.62" y="59" dominant-baseline="middle" data-value-label="North">420<tspan fill="#64748B" font-weight="400"> / 400</tspan></text>
+    <text x="646.62" y="93" dominant-baseline="middle" data-value-label="South">365<tspan fill="#64748B" font-weight="400"> / 350</tspan></text>
+    <text x="646.62" y="127" dominant-baseline="middle" data-value-label="East">512<tspan fill="#64748B" font-weight="400"> / 480</tspan></text>
+    <text x="646.62" y="161" dominant-baseline="middle" data-value-label="West">288<tspan fill="#64748B" font-weight="400"> / 360</tspan></text>
+  </g>
+</svg>

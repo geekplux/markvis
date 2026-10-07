@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="272" viewBox="0 0 720 272" role="img" aria-label="bullet chart: Two of five readers already passed their 2026 goal (books), 5 rows" aria-labelledby="mv-e8c40170994cd529-title" aria-describedby="mv-e8c40170994cd529-desc" data-markvis="2" data-chart-type="bullet" data-id="mv-e8c40170994cd529" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-e8c40170994cd529-title">Two of five readers already passed their 2026 goal</title>
+  <desc id="mv-e8c40170994cd529-desc">bullet chart. Two of five readers already passed their 2026 goal. x=reader. y=read. unit=books. 5 rows.</desc>
+  <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>Two of five readers already passed their 2026 goal</title>Two of five readers already passed their 2026 goal<tspan font-size="12" font-weight="400" fill="#6B7280"> · books</tspan></text>
+  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3">
+    <line x1="201.48" x2="201.48" y1="38" y2="208"/>
+    <line x1="348.96" x2="348.96" y1="38" y2="208"/>
+    <line x1="496.44" x2="496.44" y1="38" y2="208"/>
+    <line x1="643.92" x2="643.92" y1="38" y2="208"/>
+  </g>
+  <line x1="54" x2="54" y1="38" y2="208" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-baseline="0"/>
+  <g fill="#6B7280" font-size="12" font-weight="400">
+    <text x="46" y="55" text-anchor="end" dominant-baseline="middle" data-full-label="Ana"><title>Ana</title><tspan x="46" dy="0">Ana</tspan></text>
+    <text x="46" y="89" text-anchor="end" dominant-baseline="middle" data-full-label="Ben"><title>Ben</title><tspan x="46" dy="0">Ben</tspan></text>
+    <text x="46" y="123" text-anchor="end" dominant-baseline="middle" data-full-label="Chloe"><title>Chloe</title><tspan x="46" dy="0">Chloe</tspan></text>
+    <text x="46" y="157" text-anchor="end" dominant-baseline="middle" data-full-label="Dev"><title>Dev</title><tspan x="46" dy="0">Dev</tspan></text>
+    <text x="46" y="191" text-anchor="end" dominant-baseline="middle" data-full-label="Eli"><title>Eli</title><tspan x="46" dy="0">Eli</tspan></text>
+    <text x="54" y="226" text-anchor="middle">0</text>
+    <text x="201.48" y="226" text-anchor="middle">10</text>
+    <text x="348.96" y="226" text-anchor="middle">20</text>
+    <text x="496.44" y="226" text-anchor="middle">30</text>
+    <text x="643.92" y="226" text-anchor="middle">40</text>
+  </g>
+  <g font-size="12" font-weight="400" fill="#374151">
+    <circle cx="301.2" cy="246" r="4.5" fill="#8884d8"/>
+    <text x="310.2" y="250" data-legend="read">read</text>
+    <rect x="359.96" y="240" width="2.5" height="12" fill="#374151"/>
+    <text x="369.96" y="250" data-legend="goal">goal</text>
+  </g>
+  <g data-bullet="1">
+    <rect x="54" y="43" width="589.92" height="24" fill="#374151" fill-opacity="0.07" data-track="Ana"/>
+    <path d="M54 50 L511.19 50 L511.19 60 L54 60 Z" fill="#8884d8" data-x="Ana" data-y="31"/>
+    <line x1="407.95" x2="407.95" y1="45" y2="65" stroke="#374151" stroke-width="2.5" data-target="24"/>
+    <rect x="54" y="77" width="589.92" height="24" fill="#374151" fill-opacity="0.07" data-track="Ben"/>
+    <path d="M54 84 L230.98 84 L230.98 94 L54 94 Z" fill="#8884d8" data-x="Ben" data-y="12"/>
+    <line x1="348.96" x2="348.96" y1="79" y2="99" stroke="#374151" stroke-width="2.5" data-target="20"/>
+    <rect x="54" y="111" width="589.92" height="24" fill="#374151" fill-opacity="0.07" data-track="Chloe"/>
+    <path d="M54 118 L437.45 118 L437.45 128 L54 128 Z" fill="#8884d8" data-x="Chloe" data-y="26"/>
+    <line x1="422.7" x2="422.7" y1="113" y2="133" stroke="#374151" stroke-width="2.5" data-target="25"/>
+    <rect x="54" y="145" width="589.92" height="24" fill="#374151" fill-opacity="0.07" data-track="Dev"/>
+    <path d="M54 152 L186.73 152 L186.73 162 L54 162 Z" fill="#8884d8" data-x="Dev" data-y="9"/>
+    <rect x="54" y="179" width="589.92" height="24" fill="#374151" fill-opacity="0.07" data-track="Eli"/>
+    <path d="M54 186 L275.22 186 L275.22 196 L54 196 Z" fill="#8884d8" data-x="Eli" data-y="15"/>
+    <line x1="496.44" x2="496.44" y1="181" y2="201" stroke="#374151" stroke-width="2.5" data-target="30"/>
+  </g>
+  <g fill="#374151" font-size="12" font-weight="500">
+    <text x="655.92" y="55" dominant-baseline="middle" data-value-label="Ana">31<tspan fill="#6B7280" font-weight="400"> / 24</tspan></text>
+    <text x="655.92" y="89" dominant-baseline="middle" data-value-label="Ben">12<tspan fill="#6B7280" font-weight="400"> / 20</tspan></text>
+    <text x="655.92" y="123" dominant-baseline="middle" data-value-label="Chloe">26<tspan fill="#6B7280" font-weight="400"> / 25</tspan></text>
+    <text x="655.92" y="157" dominant-baseline="middle" data-value-label="Dev">9</text>
+    <text x="655.92" y="191" dominant-baseline="middle" data-value-label="Eli">15<tspan fill="#6B7280" font-weight="400"> / 30</tspan></text>
+  </g>
+</svg>
