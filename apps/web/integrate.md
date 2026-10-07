@@ -6,7 +6,7 @@ sidebar: true
 
 # Integrate
 
-Four ways to show the chart. If none of them run, the table of numbers is still in the file.
+Five ways to show the chart. If none of them run, the table of numbers is still in the file.
 
 ## 1. Save a picture (bake)
 
@@ -24,10 +24,18 @@ Running bake again does nothing if nothing changed. CI can run bake on push. **2
 If the page already runs JavaScript, drop in the one-file build. After load it finds blocks tagged `chart` / `markvis` / `vis` and replaces them with the same picture as on the server.
 
 ```html
-<script type="module" src="./markvis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markvis@2/dist/markvis.min.js"></script>
 ```
 
-After `pnpm build`, use `dist/markvis.min.js` (not in git until you build). Packed install: `node_modules/markvis/dist/markvis.min.js`. Demo: `apps/playground/dropin.html`. The script does not re-read Markdown — comment-plus-table charts only work if the host already put them in the page.
+Use a plain `<script>`, not `type="module"`, so the page can reach `window.markvis`. A local copy works the same: `node_modules/markvis/dist/markvis.min.js`.
+
+Content that arrives later — a chat reply, a client-side route — needs one more call after it is in the page. Blocks already drawn are left alone.
+
+```js
+markvis.init(messageElement);
+```
+
+Demo: `apps/playground/dropin.html`. The script does not re-read Markdown — comment-plus-table charts only work if the host already put them in the page.
 
 ## 3. markdown-it
 
@@ -60,6 +68,23 @@ const html = String(
 ```
 
 Host example: `examples/hosts/astro/` (and the package README). Same drawing as the command line. No extra chart kinds.
+
+## 5. JavaScript
+
+Pass the inside of one chart block — the text a Markdown renderer hands a code-block plugin — and get an SVG string.
+
+```js
+import { parseBlock, renderSvg } from "markvis";
+
+const parsed = parseBlock(blockText);
+if (parsed.ok) {
+  const svg = renderSvg(parsed.chart, { width: 480 });
+} else {
+  // parsed.table still has the rows; parsed.error.code is stable
+}
+```
+
+`parseBlock` also accepts the whole block with its fence lines. To read every chart in a Markdown document, use `parseDocument`.
 
 ## Also
 

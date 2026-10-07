@@ -1153,3 +1153,36 @@ export function parse(
 ): ParseResult {
   return parseMarkdown(source, options);
 }
+
+const WRAPPED_RE = /^\s*(?:```(?:chart|markvis|vis)\b|<!--\s*(?:chart|markvis|vis)\s*:)/i;
+const OPEN_FENCE_RE = /^(?:[ \t]*\r?\n)*[ ]{0,3}```(?:chart|markvis|vis)[ \t]*\r?\n/;
+const CLOSE_FENCE_RE = /\r?\n[ ]{0,3}```\s*$/;
+
+/**
+ * Parse the inside of one chart block: header lines, a blank line, then
+ * CSV or a GFM table — what a Markdown renderer hands a code-block plugin.
+ * A whole fenced block or a chart comment is accepted too.
+ */
+export function parseBlock(
+  body: string,
+  options: ParseOptions = {},
+): ParseResult {
+  const text = body.replace(/^\uFEFF/, "");
+  let inner = text;
+  if (WRAPPED_RE.test(text)) {
+    if (extractCharts(text).length > 0) {
+      return parseMarkdown(text, options);
+    }
+    // A fence cut off before its closing line, or indented: keep the rows.
+    const open = OPEN_FENCE_RE.exec(text);
+    if (!open) {
+      return parseMarkdown(text, options);
+    }
+    inner = text.slice(open[0].length).replace(CLOSE_FENCE_RE, "");
+  }
+  return parseBody(inner, {
+    form: "fence",
+    filename: options.filename,
+    raw: text,
+  });
+}

@@ -14,6 +14,10 @@ GitHub will not grow a native chart fence. Use markvis bake on README.md and doc
 
 After `pnpm build` (or a packed install), drop in `dist/markvis.min.js` (or `.mjs`). Zero network. Finds pre/code with language chart, markvis, or vis and replaces with the same SVG as Node.
 
+Load `markvis.min.js` with a classic `<script>` (the CDN copy is `https://cdn.jsdelivr.net/npm/markvis@2/dist/markvis.min.js`). It defines `window.markvis`; `type="module"` hides it. For content added after load, call `markvis.init(element)` once the new nodes are in the page. Blocks already drawn are skipped. Covered by `packages/browser/test/dom.test.ts`.
+
+From code, `parseBlock(blockText)` parses the inside of one chart block — what a Markdown renderer hands a code-block plugin — with the same result as the fenced block.
+
 In this monorepo: `pnpm build`, then open `apps/playground/dropin.html`. `dist/` is gitignored — without that build the script 404s. Packed consumers copy `node_modules/markvis/dist/markvis.min.js`. For the live editor, start the playground Vite app.
 
 Demo: apps/playground/dropin.html.
