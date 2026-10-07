@@ -83,6 +83,12 @@ export type FrameTokens = {
   readonly stroke: boolean;
 };
 
+export type HeroTokens = {
+  /** max: the largest value in a single-series bar, hist, or pie takes the accent. null: no accent. */
+  readonly rule: "max" | null;
+  readonly color: string;
+};
+
 export interface ThemeTokens {
   readonly SVG_WIDTH: number;
   readonly SVG_HEIGHT: number;
@@ -169,6 +175,8 @@ export interface ThemeTokens {
   readonly PIE_LABEL_MODE: "leaders" | "legend" | "none";
   /** 0 = solid; ~0.5 = donut hole ratio of outer radius. */
   readonly PIE_INNER_RATIO: number;
+  /** ink: hairline slice edges in ink. paper: slices cut apart by the paper color. */
+  readonly PIE_SEPARATOR: "ink" | "paper";
 
   readonly COMPACT_SPAN: number;
 
@@ -180,6 +188,8 @@ export interface ThemeTokens {
   readonly AXIS: AxisTokens;
   readonly LEGEND: LegendTokens;
   readonly FRAME: FrameTokens;
+  /** One accent mark per chart. Turned off when the fence sets `palette:`. */
+  readonly HERO: HeroTokens;
   /** When true, paint x/y axis titles from IR field names / unit. */
   readonly AXIS_TITLES: boolean;
   /** When true, the color legend sits under the plot (not in the title block). */

@@ -21,7 +21,7 @@ import {
   type PlotBox,
   legendTop,
 } from "./layout.js";
-import { seriesStyle } from "./palette.js";
+import { heroFill, heroIndex, seriesStyle } from "./palette.js";
 import {
   compactScale,
   formatNumber,
@@ -976,6 +976,17 @@ function valueLabelPlacement(
 }
 
 function drawBars(prepared: Prepared): string[] {
+  // The accent applies to a single series only; with two the colors already carry meaning.
+  const hero =
+    prepared.series.length === 1 &&
+    prepared.layout !== "stacked" &&
+    prepared.layout !== "percent"
+      ? heroIndex(
+          prepared.categories.map((cat) =>
+            groupedValue(prepared.rows, prepared.series[0]!, cat),
+          ),
+        )
+      : -1;
   const {
     plot,
     series,
@@ -1067,7 +1078,10 @@ function drawBars(prepared: Prepared): string[] {
       const ser = series[si]!;
       const val = groupedValue(rows, ser, cat);
       const { x, barW } = barSlot(nCat, nS, catStep, plot.left, ci, si);
-      const style = styles[si]!;
+      const style = {
+        ...styles[si]!,
+        color: heroFill(ci, hero, styles[si]!.color),
+      };
       if (val === null) {
         lines.push(
           `    <rect ${attrs({
@@ -1543,7 +1557,7 @@ function drawScatter(prepared: Prepared): string[] {
 function drawHist(prepared: Prepared): string[] {
   const { bins, xScaleNum, yScale, styles, showValueLabels } = prepared;
   const y0 = yScale(0);
-  const style = styles[0]!;
+  const hero = heroIndex(bins.map((bin) => bin.weight));
   const nCat = Math.max(bins.length, 1);
   const lines: string[] = [`  <g>`];
   const labels: string[] = [];
@@ -1553,6 +1567,7 @@ function drawHist(prepared: Prepared): string[] {
     const xRight = xScaleNum(bin.right);
     const band = xRight - xLeft;
     const { x, barW } = barSlot(nCat, 1, band, xLeft, 0, 0);
+    const style = { ...styles[0]!, color: heroFill(i, hero, styles[0]!.color) };
     const y1 = yScale(bin.weight);
     const y = Math.min(y0, y1);
     const h = Math.abs(y1 - y0);

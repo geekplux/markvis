@@ -98,6 +98,7 @@ export const docs = {
   PIE_ELBOW: folio.PIE_ELBOW,
   PIE_LABEL_MODE: "leaders",
   PIE_INNER_RATIO: 0,
+  PIE_SEPARATOR: folio.PIE_SEPARATOR,
 
   COMPACT_SPAN: folio.COMPACT_SPAN,
 
@@ -113,6 +114,7 @@ export const docs = {
   AXIS: folio.AXIS,
   LEGEND: { swatch: "line", align: "start" },
   FRAME: folio.FRAME,
+  HERO: folio.HERO,
 
   SURFACES: {
     light: { PLATE: null, PAPER: "#ffffff", SEMANTIC: { ...SEMANTIC_LIGHT, inkOnLight: "#18181B" } },

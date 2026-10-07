@@ -10,6 +10,7 @@ export type {
   AxisTokens,
   FrameTokens,
   GridTokens,
+  HeroTokens,
   LegendTokens,
   SemanticColors,
   SurfaceTokens,

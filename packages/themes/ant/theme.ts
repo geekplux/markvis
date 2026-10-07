@@ -96,6 +96,7 @@ export const ant = {
   PIE_ELBOW: folio.PIE_ELBOW,
   PIE_LABEL_MODE: "leaders",
   PIE_INNER_RATIO: 0.6,
+  PIE_SEPARATOR: folio.PIE_SEPARATOR,
 
   COMPACT_SPAN: folio.COMPACT_SPAN,
 
@@ -109,6 +110,7 @@ export const ant = {
   AXIS: { line: "baseline", tick: 4 },
   LEGEND: { swatch: "circle", align: "start" },
   FRAME: folio.FRAME,
+  HERO: folio.HERO,
 
   SURFACES: {
     light: { PLATE: null, PAPER: "#ffffff", SEMANTIC: { ...SEMANTIC_LIGHT, inkOnLight: "#262626" } },
