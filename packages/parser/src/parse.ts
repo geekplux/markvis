@@ -9,7 +9,11 @@ import {
   type ChartTheme,
   type ChartType,
 } from "@markvis/ir";
-import { allowedFenceKeys, parseIsoDate } from "@markvis/types";
+import {
+  allowedFenceKeys,
+  CALENDAR_MAX_YEARS,
+  parseIsoDate,
+} from "@markvis/types";
 import { extractCharts, type ChartForm } from "./extract.js";
 import {
   columnIsNumeric,
@@ -858,9 +862,16 @@ function parseBody(
 
   if (type === "calendar") {
     const xi = parsed.columns.indexOf(x);
+    let firstYear = Infinity;
+    let lastYear = -Infinity;
     for (let r = 0; r < parsed.rows.length; r++) {
       const cell = (parsed.rows[r]![xi] ?? "").trim();
-      if (!parseIsoDate(cell)) {
+      const date = parseIsoDate(cell);
+      if (date) {
+        firstYear = Math.min(firstYear, date.year);
+        lastYear = Math.max(lastYear, date.year);
+      }
+      if (!date) {
         return fail(
           "E_BAD_DATE",
           `row ${r + 1}, column ${x}: "${cell}" is not a YYYY-MM-DD date`,
@@ -869,6 +880,16 @@ function parseBody(
           { row: r + 1, column: x },
         );
       }
+    }
+    const years = lastYear - firstYear + 1;
+    if (years > CALENDAR_MAX_YEARS) {
+      return fail(
+        "E_BAD_DATE",
+        `calendar dates span ${years} calendar years (${firstYear}–${lastYear}); at most ${CALENDAR_MAX_YEARS} fit one figure`,
+        parsed,
+        raw,
+        { column: x },
+      );
     }
   }
 

@@ -103,7 +103,7 @@ CORE fence keys: `markvis` `type` `title` `theme` `palette` `surface` `unit` `x`
 | `dumbbell` | category | number | required, exactly two values | Keep row order. The first series value seen is drawn hollow, the second filled, joined by a rule; the signed change prints at the right. A missing value is a gap (one dot, no rule). A third value or no series → `E_UNKNOWN_FIELD`. A repeated category/series pair → `E_DUP_KEY`. |
 | `bullet` | label | number (actual) | ignored | Keep row order. One row per label on one shared scale. Optional `target` column and `min`/`max`. A value past `min`/`max` is drawn to the edge and still labeled with its number. Every actual is required. A repeated label → `E_DUP_KEY`. |
 | `boxplot` | category | number (one observation per row) | optional (one box per series) | Repeated categories are expected; keep first-seen order. Type-7 quartiles; whiskers at the furthest points inside 1.5 × IQR; points beyond are outliers. A group under five values shows its points and a median tick, not a box. An empty y is skipped. |
-| `calendar` | `YYYY-MM-DD` date | number | ignored | One row per day. Position comes from the date, not row order. A day absent from the table is an empty cell; an empty y is a missing cell, not zero. Optional `min`/`max` fix the color domain. A malformed or impossible date → `E_BAD_DATE`. A repeated date → `E_DUP_KEY`. |
+| `calendar` | `YYYY-MM-DD` date | number | ignored | One row per day. Position comes from the date, not row order. A day absent from the table is an empty cell; an empty y is a missing cell, not zero. Optional `min`/`max` fix the color domain. A malformed or impossible date, or dates spanning more than five calendar years → `E_BAD_DATE`. A repeated date → `E_DUP_KEY`. |
 
 Zeros are legal. Negatives are legal on bar/line/area/scatter/waterfall/dumbbell/bullet/boxplot/calendar, except `layout: percent`, which rejects them with `E_NEGATIVE_VALUE`. Negatives are illegal on `pie` (`E_PIE_NEGATIVE`) and funnel/radar/sankey/treemap (`E_NEGATIVE_VALUE`).
 
@@ -156,7 +156,7 @@ Optional fields that change paint on an existing type. Same `type` id — not a 
 | `E_MISSING_VALUE` | A required measure cell is empty. Line, area, grouped bar, scatter, hist, heatmap, radar, dumbbell, boxplot, and calendar may leave a gap instead. |
 | `E_DUP_KEY` | The same category/series key (or that chart's equivalent) appears twice. Scatter, hist, boxplot, and waterfall steps may repeat. |
 | `E_SANKEY_CYCLE` | Sankey links form a cycle. The table is kept. |
-| `E_BAD_DATE` | A calendar date is not `YYYY-MM-DD` or does not exist (`2026-02-30`). The message names the row. |
+| `E_BAD_DATE` | A calendar date is not `YYYY-MM-DD` or does not exist (`2026-02-30`), or the dates span more than five calendar years. The message names the row or the span. |
 
 Unknown failures still degrade to table + one line; prefer a listed code when it fits.
 

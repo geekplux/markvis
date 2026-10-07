@@ -141,6 +141,6 @@ Do not invent `donut` or `stacked-bar` type ids.
 | `E_MISSING_VALUE` | A required measure cell is empty. |
 | `E_DUP_KEY` | The same category/series key appears twice. Scatter, hist, and waterfall steps may repeat. |
 | `E_SANKEY_CYCLE` | Sankey links form a cycle. The table is kept. |
-| `E_BAD_DATE` | A calendar date is not `YYYY-MM-DD` or does not exist. |
+| `E_BAD_DATE` | A calendar date is not `YYYY-MM-DD` or does not exist, or the dates span more than five calendar years. |
 
 `theme` is grammar. `palette` is colors only. Never merge them. Contribute a type: repo `docs/TYPES.md`.
