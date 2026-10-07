@@ -290,7 +290,7 @@ export function renderHorizontalBar(chart: ChartIR, _id: string): Painted {
           );
           continue;
         }
-        paintBar(lines, xScale, zeroX, y, h, val, styles[si]?.color ?? "#3B82F6", cat, ser);
+        paintBar(lines, xScale, zeroX, y, h, val, styles[si]?.color ?? seriesStyle(0).color, cat, ser);
       }
       continue;
     }
@@ -326,7 +326,7 @@ export function renderHorizontalBar(chart: ChartIR, _id: string): Painted {
           y: fmtPx(y),
           width: fmtPx(w),
           height: fmtPx(h),
-          fill: styles[si]?.color ?? "#3B82F6",
+          fill: styles[si]?.color ?? seriesStyle(0).color,
           "data-x": cat,
           "data-series": ser,
           "data-y": formatNumber(val),

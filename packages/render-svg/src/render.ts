@@ -3,7 +3,7 @@ import { resolveTypePack } from "@markvis/types";
 import { folio } from "@markvis/themes";
 import { countTitleLines, visibleTitle } from "../../types/_paint/figure.js";
 import { setTitleLineCount } from "../../types/_paint/layout.js";
-import { MARGIN } from "../../types/_paint/tokens.js";
+import { MARGIN, PLATE } from "../../types/_paint/tokens.js";
 import { themeTokens } from "./theme.js";
 import { applyFrame, applyThemeTokens, type SurfaceName } from "./tokens.js";
 import { chartId } from "./chart-id.js";
@@ -83,8 +83,7 @@ export function renderSvg(chart: ChartIR, options?: RenderOptions): string {
       "font-family": t.FONT,
       "font-size": 12,
     })}>`;
-    const plate =
-      surface === "dark" ? "#1c1917" : surface === "export" ? "#ffffff" : null;
+    const plate = PLATE;
     const lines = [
       open,
       `  <title id="${id}-title">${escapeXml(chart.title)}</title>`,

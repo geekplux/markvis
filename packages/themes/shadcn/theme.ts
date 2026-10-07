@@ -1,6 +1,6 @@
 /** shadcn/ui chart look as tokens only. Same keys as folio; no vendor chart deps. */
 
-import { folio, type ThemeTokens } from "../folio/theme.js";
+import { FOLIO_SURFACES, folio, type ThemeTokens } from "../folio/theme.js";
 
 /**
  * Static SVG grammar: rounded marks, chart-1..5 categorical, card-quiet axes,
@@ -81,6 +81,7 @@ export const shadcn = {
   END_LABEL_SERIES_MAX: 0,
   END_LABEL_GAP: folio.END_LABEL_GAP,
   END_LABEL_MIN_SEP: folio.END_LABEL_MIN_SEP,
+  SERIES_DASH: folio.SERIES_DASH,
 
   SCATTER_R: folio.SCATTER_R,
   SCATTER_OPACITY: 0.75,
@@ -105,5 +106,7 @@ export const shadcn = {
   AXIS_TITLES: false,
   LEGEND_BELOW: false,
   TITLE_RULE: false,
-  VERTICAL_GRID: false,
-} as ThemeTokens;
+  GRID: { dash: "", width: 1, axes: "y" },
+
+  SURFACES: FOLIO_SURFACES,
+} as const satisfies ThemeTokens;

@@ -1,6 +1,6 @@
 /** Highcharts-demo-inspired look as tokens only. Same keys as folio; no vendor deps. */
 
-import { folio, type ThemeTokens } from "../folio/theme.js";
+import { FOLIO_SURFACES, folio, type ThemeTokens } from "../folio/theme.js";
 
 /**
  * Static SVG grammar (START §3.1): denser grid, plot border/bg, axis titles,
@@ -79,6 +79,7 @@ export const highcharts = {
   END_LABEL_SERIES_MAX: 0,
   END_LABEL_GAP: folio.END_LABEL_GAP,
   END_LABEL_MIN_SEP: folio.END_LABEL_MIN_SEP,
+  SERIES_DASH: folio.SERIES_DASH,
 
   SCATTER_R: 3.5,
   SCATTER_OPACITY: folio.SCATTER_OPACITY,
@@ -101,5 +102,7 @@ export const highcharts = {
   AXIS_TITLES: true,
   LEGEND_BELOW: false,
   TITLE_RULE: false,
-  VERTICAL_GRID: false,
-} as ThemeTokens;
+  GRID: { dash: "", width: 1, axes: "y" },
+
+  SURFACES: FOLIO_SURFACES,
+} as const satisfies ThemeTokens;

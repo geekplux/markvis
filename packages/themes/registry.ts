@@ -6,6 +6,12 @@ import { docs } from "./docs/theme.js";
 import { ant } from "./ant/theme.js";
 import { recharts } from "./recharts/theme.js";
 export type { ThemeTokens };
+export type {
+  GridTokens,
+  SemanticColors,
+  SurfaceTokens,
+  TypeRole,
+} from "./contract.js";
 export { folio, highcharts, shadcn, docs, ant, recharts };
 
 export {

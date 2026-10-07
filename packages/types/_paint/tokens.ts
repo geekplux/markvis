@@ -1,18 +1,26 @@
 /** Named constants for the active look. Source of truth: @markvis/themes via applyThemeTokens. */
 
-import { folio, type ThemeTokens } from "@markvis/themes";
+import {
+  folio,
+  type GridTokens,
+  type SemanticColors,
+  type ThemeTokens,
+} from "@markvis/themes";
 
-export let SVG_WIDTH: number = folio.SVG_WIDTH;
-export let SVG_HEIGHT: number = folio.SVG_HEIGHT;
-export let SVG_HEIGHT_MAX: number = folio.SVG_HEIGHT_MAX;
-export let PLOT_MIN_RATIO = folio.PLOT_MIN_RATIO;
+/** Widened view so the live bindings accept every pack, not only folio literals. */
+const base: ThemeTokens = folio;
 
-export let FONT = folio.FONT;
+export let SVG_WIDTH: number = base.SVG_WIDTH;
+export let SVG_HEIGHT: number = base.SVG_HEIGHT;
+export let SVG_HEIGHT_MAX: number = base.SVG_HEIGHT_MAX;
+export let PLOT_MIN_RATIO = base.PLOT_MIN_RATIO;
 
-export let INK: string = folio.INK;
-export let QUIET: string = folio.QUIET;
-export let HAIRLINE_OPACITY: string = folio.HAIRLINE_OPACITY;
-export let STRUCTURE_OPACITY = folio.STRUCTURE_OPACITY;
+export let FONT = base.FONT;
+
+export let INK: string = base.INK;
+export let QUIET: string = base.QUIET;
+export let HAIRLINE_OPACITY: string = base.HAIRLINE_OPACITY;
+export let STRUCTURE_OPACITY = base.STRUCTURE_OPACITY;
 
 export let TYPE: {
   title: { size: number; weight: number; fill: string };
@@ -21,68 +29,72 @@ export let TYPE: {
   tick: { size: number; weight: number; fill: string };
   note: { size: number; weight: number; fill: string };
   legend: { size: number; weight: number; fill: string };
-} = folio.TYPE;
+} = base.TYPE;
 
-export let MARGIN = folio.MARGIN;
+export let MARGIN = base.MARGIN;
 
-export let PALETTE = folio.PALETTE;
+export let PALETTE = base.PALETTE;
 
-export let WRAP_OPACITY = folio.WRAP_OPACITY;
+export let WRAP_OPACITY = base.WRAP_OPACITY;
 
-export let TITLE_BASELINE: number = folio.TITLE_BASELINE;
-export let TITLE_TO_PLOT = folio.TITLE_TO_PLOT;
-export let TICK_TEXT_GAP = folio.TICK_TEXT_GAP;
-export let LABEL_ROTATE_DEG = folio.LABEL_ROTATE_DEG;
-export let LABEL_MIN_GAP = folio.LABEL_MIN_GAP;
-export let ROTATE_LINE_HEIGHT = folio.ROTATE_LINE_HEIGHT;
-export let MAX_INTERIOR_GRID = folio.MAX_INTERIOR_GRID;
+export let TITLE_BASELINE: number = base.TITLE_BASELINE;
+export let TITLE_TO_PLOT = base.TITLE_TO_PLOT;
+export let TICK_TEXT_GAP = base.TICK_TEXT_GAP;
+export let LABEL_ROTATE_DEG = base.LABEL_ROTATE_DEG;
+export let LABEL_MIN_GAP = base.LABEL_MIN_GAP;
+export let ROTATE_LINE_HEIGHT = base.ROTATE_LINE_HEIGHT;
+export let MAX_INTERIOR_GRID = base.MAX_INTERIOR_GRID;
 
-export let BAR_GAP_FEW = folio.BAR_GAP_FEW;
-export let BAR_GAP_MANY = folio.BAR_GAP_MANY;
-export let GROUP_GAP_PX = folio.GROUP_GAP_PX;
-export let BAR_RX = folio.BAR_RX;
-export let BAR_MAX_WIDTH = folio.BAR_MAX_WIDTH;
-export let BAR_MAX_WIDTH_N = folio.BAR_MAX_WIDTH_N;
-export let BAR_LABEL_MIN_WIDTH = folio.BAR_LABEL_MIN_WIDTH;
-export let BAR_LABEL_INSIDE_H = folio.BAR_LABEL_INSIDE_H;
-export let BAR_LABEL_OFFSET = folio.BAR_LABEL_OFFSET;
-export let BAR_LABEL_N_ON = folio.BAR_LABEL_N_ON;
-export let BAR_LABEL_N_OFF = folio.BAR_LABEL_N_OFF;
-export let BAR_LABEL_MID_MIN_W = folio.BAR_LABEL_MID_MIN_W;
+export let BAR_GAP_FEW = base.BAR_GAP_FEW;
+export let BAR_GAP_MANY = base.BAR_GAP_MANY;
+export let GROUP_GAP_PX = base.GROUP_GAP_PX;
+export let BAR_RX = base.BAR_RX;
+export let BAR_MAX_WIDTH = base.BAR_MAX_WIDTH;
+export let BAR_MAX_WIDTH_N = base.BAR_MAX_WIDTH_N;
+export let BAR_LABEL_MIN_WIDTH = base.BAR_LABEL_MIN_WIDTH;
+export let BAR_LABEL_INSIDE_H = base.BAR_LABEL_INSIDE_H;
+export let BAR_LABEL_OFFSET = base.BAR_LABEL_OFFSET;
+export let BAR_LABEL_N_ON = base.BAR_LABEL_N_ON;
+export let BAR_LABEL_N_OFF = base.BAR_LABEL_N_OFF;
+export let BAR_LABEL_MID_MIN_W = base.BAR_LABEL_MID_MIN_W;
 
-export let LINE_STROKE = folio.LINE_STROKE;
-export let LINE_POINT_R = folio.LINE_POINT_R;
-export let POINT_SKIP_AFTER = folio.POINT_SKIP_AFTER;
-export let AREA_OPACITY = folio.AREA_OPACITY;
-export let END_LABEL_SERIES_MAX = folio.END_LABEL_SERIES_MAX;
-export let END_LABEL_GAP = folio.END_LABEL_GAP;
-export let END_LABEL_MIN_SEP = folio.END_LABEL_MIN_SEP;
+export let LINE_STROKE = base.LINE_STROKE;
+export let LINE_POINT_R = base.LINE_POINT_R;
+export let POINT_SKIP_AFTER = base.POINT_SKIP_AFTER;
+export let AREA_OPACITY = base.AREA_OPACITY;
+export let END_LABEL_SERIES_MAX = base.END_LABEL_SERIES_MAX;
+export let END_LABEL_GAP = base.END_LABEL_GAP;
+export let END_LABEL_MIN_SEP = base.END_LABEL_MIN_SEP;
+export let SERIES_DASH: readonly string[] = base.SERIES_DASH;
 
-export let SCATTER_R = folio.SCATTER_R;
-export let SCATTER_OPACITY = folio.SCATTER_OPACITY;
-export let SCATTER_MARK = folio.SCATTER_MARK;
+export let SCATTER_R = base.SCATTER_R;
+export let SCATTER_OPACITY = base.SCATTER_OPACITY;
+export let SCATTER_MARK = base.SCATTER_MARK;
 
-export let PIE_RADIUS_RATIO = folio.PIE_RADIUS_RATIO;
-export let PIE_STROKE = folio.PIE_STROKE;
-export let PIE_LEADER = folio.PIE_LEADER;
-export let PIE_LABEL_GAP = folio.PIE_LABEL_GAP;
-export let PIE_LABEL_MIN_SEP = folio.PIE_LABEL_MIN_SEP;
-export let PIE_ELBOW = folio.PIE_ELBOW;
-export let PIE_LABEL_MODE = folio.PIE_LABEL_MODE;
-export let PIE_INNER_RATIO = folio.PIE_INNER_RATIO;
+export let PIE_RADIUS_RATIO = base.PIE_RADIUS_RATIO;
+export let PIE_STROKE = base.PIE_STROKE;
+export let PIE_LEADER = base.PIE_LEADER;
+export let PIE_LABEL_GAP = base.PIE_LABEL_GAP;
+export let PIE_LABEL_MIN_SEP = base.PIE_LABEL_MIN_SEP;
+export let PIE_ELBOW = base.PIE_ELBOW;
+export let PIE_LABEL_MODE = base.PIE_LABEL_MODE;
+export let PIE_INNER_RATIO = base.PIE_INNER_RATIO;
 
-export let COMPACT_SPAN = folio.COMPACT_SPAN;
+export let COMPACT_SPAN = base.COMPACT_SPAN;
 
-export let PLOT_BG: string | null = folio.PLOT_BG;
-export let PLOT_BORDER: string | null = folio.PLOT_BORDER;
-export let PLOT_BORDER_WIDTH: number = folio.PLOT_BORDER_WIDTH;
-export let CANVAS = "#fafaf9";
+export let PLOT_BG: string | null = base.PLOT_BG;
+export let PLOT_BORDER: string | null = base.PLOT_BORDER;
+export let PLOT_BORDER_WIDTH: number = base.PLOT_BORDER_WIDTH;
 export type SurfaceName = "light" | "dark" | "export";
 export let SURFACE: SurfaceName = "light";
-export let AXIS_TITLES = folio.AXIS_TITLES;
-export let LEGEND_BELOW = folio.LEGEND_BELOW;
-export let TITLE_RULE = folio.TITLE_RULE;
-export let VERTICAL_GRID = folio.VERTICAL_GRID;
+/** Full-frame plate for the active surface. null = the host page is the paper. */
+export let PLATE: string | null = base.SURFACES.light.PLATE;
+export let SEMANTIC: SemanticColors = base.SURFACES.light.SEMANTIC;
+export let GRID: GridTokens = base.GRID;
+export let AXIS_TITLES = base.AXIS_TITLES;
+export let LEGEND_BELOW = base.LEGEND_BELOW;
+export let TITLE_RULE = base.TITLE_RULE;
+let SURFACES: ThemeTokens["SURFACES"] = base.SURFACES;
 
 /** Apply a theme pack to the live token bindings used by layout/paint. */
 export function applyThemeTokens(t: ThemeTokens): void {
@@ -125,6 +137,7 @@ export function applyThemeTokens(t: ThemeTokens): void {
   END_LABEL_SERIES_MAX = t.END_LABEL_SERIES_MAX;
   END_LABEL_GAP = t.END_LABEL_GAP;
   END_LABEL_MIN_SEP = t.END_LABEL_MIN_SEP;
+  SERIES_DASH = t.SERIES_DASH;
   SCATTER_R = t.SCATTER_R;
   SCATTER_OPACITY = t.SCATTER_OPACITY;
   SCATTER_MARK = t.SCATTER_MARK;
@@ -143,9 +156,11 @@ export function applyThemeTokens(t: ThemeTokens): void {
   AXIS_TITLES = t.AXIS_TITLES;
   LEGEND_BELOW = t.LEGEND_BELOW;
   TITLE_RULE = t.TITLE_RULE;
-  VERTICAL_GRID = t.VERTICAL_GRID;
-  CANVAS = "#fafaf9";
+  GRID = t.GRID;
+  SURFACES = t.SURFACES;
   SURFACE = "light";
+  PLATE = t.SURFACES.light.PLATE;
+  SEMANTIC = t.SURFACES.light.SEMANTIC;
 }
 
 const READABLE = {
@@ -170,38 +185,24 @@ export function applyFrame(opts: { width: number; surface: SurfaceName }): void 
     note: { ...TYPE.note, size: Math.max(TYPE.note.size, READABLE.note) },
     legend: { ...TYPE.legend, size: Math.max(TYPE.legend.size, READABLE.legend) },
   };
-  if (opts.surface === "dark") {
-    CANVAS = "#1c1917";
-    INK = "#f5f5f4";
-    QUIET = "#a8a29e";
-    PLOT_BG = "#292524";
-    HAIRLINE_OPACITY = "0.22";
-    TYPE = {
-      title: { ...TYPE.title, fill: "#f5f5f4" },
-      unit: { ...TYPE.unit, fill: "#a8a29e" },
-      value: { ...TYPE.value, fill: "#f5f5f4" },
-      tick: { ...TYPE.tick, fill: "#d6d3d1" },
-      note: { ...TYPE.note, fill: "#a8a29e" },
-      legend: { ...TYPE.legend, fill: "#f5f5f4" },
-    };
+  const s = SURFACES[opts.surface];
+  PLATE = s.PLATE;
+  SEMANTIC = s.SEMANTIC;
+  if (s.PLOT_BG !== undefined) PLOT_BG = s.PLOT_BG;
+  if (s.PLOT_BORDER !== undefined) PLOT_BORDER = s.PLOT_BORDER;
+  if (s.PLOT_BORDER_WIDTH !== undefined) PLOT_BORDER_WIDTH = s.PLOT_BORDER_WIDTH;
+  if (s.HAIRLINE_OPACITY !== undefined) HAIRLINE_OPACITY = s.HAIRLINE_OPACITY;
+  if (s.INK === undefined) {
     return;
   }
-  if (opts.surface === "export") {
-    CANVAS = "#ffffff";
-    INK = "#171717";
-    QUIET = "#525252";
-    PLOT_BG = "#ffffff";
-    PLOT_BORDER = "#e7e5e4";
-    PLOT_BORDER_WIDTH = 1;
-    TYPE = {
-      title: { ...TYPE.title, fill: "#171717" },
-      unit: { ...TYPE.unit, fill: "#525252" },
-      value: { ...TYPE.value, fill: "#171717" },
-      tick: { ...TYPE.tick, fill: "#525252" },
-      note: { ...TYPE.note, fill: "#525252" },
-      legend: { ...TYPE.legend, fill: "#171717" },
-    };
-    return;
-  }
-  CANVAS = "#fafaf9";
+  INK = s.INK;
+  QUIET = s.QUIET ?? QUIET;
+  TYPE = {
+    title: { ...TYPE.title, fill: INK },
+    unit: { ...TYPE.unit, fill: QUIET },
+    value: { ...TYPE.value, fill: INK },
+    tick: { ...TYPE.tick, fill: s.TICK ?? QUIET },
+    note: { ...TYPE.note, fill: QUIET },
+    legend: { ...TYPE.legend, fill: INK },
+  };
 }

@@ -16,6 +16,7 @@ import {
   PLOT_BG,
   PLOT_BORDER,
   PLOT_BORDER_WIDTH,
+  SEMANTIC,
   STRUCTURE_OPACITY,
   TYPE,
 } from "./tokens.js";
@@ -301,7 +302,7 @@ export function renderTreemap(chart: ChartIR, _id: string): Painted {
         height: fmtPx(r.h),
         fill: style.color,
         "fill-opacity": opacity,
-        stroke: tiny ? "none" : "#ffffff",
+        stroke: tiny ? "none" : SEMANTIC.cellGap,
         "stroke-width": tiny ? undefined : 1.5,
         "data-label": r.label,
         "data-y": formatNumber(r.value),
@@ -329,7 +330,7 @@ export function renderTreemap(chart: ChartIR, _id: string): Painted {
     if (textWidth(label, TYPE.value.size) > availW) {
       continue;
     }
-    const ink = luminance(seriesStyle(r.colorIndex).color) > 0.45 ? "#171717" : "#fafaf9";
+    const ink = luminance(seriesStyle(r.colorIndex).color) > 0.45 ? SEMANTIC.inkOnLight : SEMANTIC.inkOnDark;
     lines.push(
       `    <text ${attrs({
         x: fmtPx(r.x + pad),

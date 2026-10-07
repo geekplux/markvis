@@ -46,6 +46,7 @@ import {
   END_LABEL_GAP,
   END_LABEL_MIN_SEP,
   END_LABEL_SERIES_MAX,
+  GRID,
   GROUP_GAP_PX,
   HAIRLINE_OPACITY,
   INK,
@@ -54,7 +55,6 @@ import {
   LINE_POINT_R,
   LINE_STROKE,
   MAX_INTERIOR_GRID,
-  VERTICAL_GRID,
   POINT_SKIP_AFTER,
   PLOT_BG,
   PLOT_BORDER,
@@ -62,6 +62,8 @@ import {
   SCATTER_MARK,
   SCATTER_OPACITY,
   SCATTER_R,
+  SEMANTIC,
+  SERIES_DASH,
   STRUCTURE_OPACITY,
   TICK_TEXT_GAP,
   TITLE_BASELINE,
@@ -232,8 +234,6 @@ function stackTotals(matrix: Array<Array<number | null>>): number[] {
   }
   return totals;
 }
-
-const SERIES_DASH = ["", "6 4", "2 2", "7 3 2 3"] as const;
 
 function seriesDash(index: number): string | undefined {
   const dash = SERIES_DASH[index % SERIES_DASH.length] ?? "";
@@ -590,7 +590,8 @@ function drawGridAndAxes(prepared: Prepared): string[] {
           fill: "none",
           stroke: INK,
           "stroke-opacity": HAIRLINE_OPACITY,
-          "stroke-width": 1,
+          "stroke-width": GRID.width,
+          "stroke-dasharray": GRID.dash || undefined,
         })}>`,
       );
       for (const tick of gridTicks) {
@@ -607,13 +608,14 @@ function drawGridAndAxes(prepared: Prepared): string[] {
     }
   }
 
-  if (VERTICAL_GRID && prepared.xTicks.length > 0) {
+  if (GRID.axes === "xy" && prepared.xTicks.length > 0) {
     lines.push(
       `  <g ${attrs({
         fill: "none",
         stroke: INK,
         "stroke-opacity": HAIRLINE_OPACITY,
-        "stroke-width": 1,
+        "stroke-width": GRID.width,
+        "stroke-dasharray": GRID.dash || undefined,
         "data-v-grid": "1",
       })}>`,
     );
@@ -776,8 +778,6 @@ function roundedBarPath(
   if (h <= 0.01 || r <= 0) {
     return `M${x0} ${fmtPx(y + h)} L${x1} ${fmtPx(y + h)} L${x1} ${y0} L${x0} ${y0} Z`;
   }
-  const rr = fmtPx(r);
-  void rr;
   if (roundAwayFromBaselineUp) {
     return `M${x0} ${y1} L${x0} ${fmtPx(y + r)} Q${x0} ${y0} ${fmtPx(x + r)} ${y0} L${fmtPx(x + w - r)} ${y0} Q${x1} ${y0} ${x1} ${fmtPx(y + r)} L${x1} ${y1} Z`;
   }
@@ -798,7 +798,7 @@ function luminance(hex: string): number {
 
 /** Ink that stays readable on a bar fill. */
 function inkOnFill(fill: string): string {
-  return luminance(fill) > 0.62 ? "#171717" : "#fafaf9";
+  return luminance(fill) > 0.62 ? SEMANTIC.inkOnLight : SEMANTIC.inkOnDark;
 }
 
 /**

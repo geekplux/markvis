@@ -1,5 +1,53 @@
 /** Current default SVG look as a named token table. Values match tokens.ts / visual-spec; no redesign. */
 
+import type { SemanticColors, SurfaceTokens, ThemeTokens } from "../contract.js";
+
+export type { ThemeTokens } from "../contract.js";
+
+const SEMANTIC_LIGHT: SemanticColors = {
+  up: "#0F766E",
+  down: "#BE123C",
+  total: "#44403C",
+  rampLow: "#f4f1ea",
+  missing: "#a8a29e",
+  cellRule: "#d6d3d1",
+  cellGap: "#ffffff",
+  inkOnLight: "#171717",
+  inkOnDark: "#fafaf9",
+};
+
+/** Warm stone dark paper and a white export card. */
+export const FOLIO_SURFACES: {
+  readonly light: SurfaceTokens;
+  readonly dark: SurfaceTokens;
+  readonly export: SurfaceTokens;
+} = {
+  light: { PLATE: null, SEMANTIC: SEMANTIC_LIGHT },
+  dark: {
+    PLATE: "#1c1917",
+    INK: "#f5f5f4",
+    QUIET: "#a8a29e",
+    TICK: "#d6d3d1",
+    PLOT_BG: "#292524",
+    HAIRLINE_OPACITY: "0.22",
+    SEMANTIC: {
+      ...SEMANTIC_LIGHT,
+      up: "#2DD4BF",
+      down: "#FB7185",
+      total: "#e7e5e4",
+    },
+  },
+  export: {
+    PLATE: "#ffffff",
+    INK: "#171717",
+    QUIET: "#525252",
+    PLOT_BG: "#ffffff",
+    PLOT_BORDER: "#e7e5e4",
+    PLOT_BORDER_WIDTH: 1,
+    SEMANTIC: SEMANTIC_LIGHT,
+  },
+};
+
 export const folio = {
   SVG_WIDTH: 720,
   SVG_HEIGHT: 480,
@@ -73,10 +121,12 @@ export const folio = {
   END_LABEL_SERIES_MAX: 4,
   END_LABEL_GAP: 8,
   END_LABEL_MIN_SEP: 14,
+  /** Dashes keep series apart in black and white. */
+  SERIES_DASH: ["", "6 4", "2 2", "7 3 2 3"],
 
   SCATTER_R: 3,
   SCATTER_OPACITY: 0.85,
-  SCATTER_MARK: "circle" as "circle" | "ring",
+  SCATTER_MARK: "circle",
 
   PIE_RADIUS_RATIO: 0.34,
   PIE_STROKE: 1.5,
@@ -85,15 +135,15 @@ export const folio = {
   PIE_LABEL_MIN_SEP: 14,
   PIE_ELBOW: 8,
   /** leaders = outside labels; legend = color legend; none = bare pie. */
-  PIE_LABEL_MODE: "leaders" as "leaders" | "legend" | "none",
+  PIE_LABEL_MODE: "leaders",
   /** 0 = solid; ~0.5 = donut hole ratio of outer radius. */
   PIE_INNER_RATIO: 0,
 
   COMPACT_SPAN: 10_000,
 
   /** Plot chrome (U6: PLOT_BG null = transparent; border optional stroke-only). */
-  PLOT_BG: null as string | null,
-  PLOT_BORDER: null as string | null,
+  PLOT_BG: null,
+  PLOT_BORDER: null,
   PLOT_BORDER_WIDTH: 0,
   /** When true, paint x/y axis titles from IR field names / unit. */
   AXIS_TITLES: false,
@@ -101,8 +151,7 @@ export const folio = {
   LEGEND_BELOW: false,
   /** When true, draw a hairline rule under the title. */
   TITLE_RULE: false,
-  /** When true, draw vertical grid lines at x tick / category centers. */
-  VERTICAL_GRID: false,
-} as const;
+  GRID: { dash: "", width: 1, axes: "y" },
 
-export type ThemeTokens = typeof folio;
+  SURFACES: FOLIO_SURFACES,
+} as const satisfies ThemeTokens;

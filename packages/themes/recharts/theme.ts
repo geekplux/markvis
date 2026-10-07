@@ -1,6 +1,6 @@
 /** Recharts-inspired look as tokens only. Same keys as folio; no vendor chart deps. */
 
-import { folio, type ThemeTokens } from "../folio/theme.js";
+import { FOLIO_SURFACES, folio, type ThemeTokens } from "../folio/theme.js";
 
 /**
  * Static SVG grammar: Cartesian XY grid, legend below, stroke 2 / r=3, square bars,
@@ -77,6 +77,7 @@ export const recharts = {
   END_LABEL_SERIES_MAX: 0,
   END_LABEL_GAP: folio.END_LABEL_GAP,
   END_LABEL_MIN_SEP: folio.END_LABEL_MIN_SEP,
+  SERIES_DASH: folio.SERIES_DASH,
 
   SCATTER_R: folio.SCATTER_R,
   SCATTER_OPACITY: folio.SCATTER_OPACITY,
@@ -99,5 +100,7 @@ export const recharts = {
   AXIS_TITLES: false,
   LEGEND_BELOW: true,
   TITLE_RULE: false,
-  VERTICAL_GRID: true,
-} as ThemeTokens;
+  GRID: { dash: "", width: 1, axes: "xy" },
+
+  SURFACES: FOLIO_SURFACES,
+} as const satisfies ThemeTokens;
