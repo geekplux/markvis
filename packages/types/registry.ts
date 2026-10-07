@@ -12,6 +12,8 @@ import { radar } from "./radar/type.js";
 import { gauge } from "./gauge/type.js";
 import { sankey } from "./sankey/type.js";
 import { treemap } from "./treemap/type.js";
+import { dumbbell } from "./dumbbell/type.js";
+import { bullet } from "./bullet/type.js";
 import type { TypePack } from "./contract.js";
 
 export type { Painted, TypePack } from "./contract.js";
@@ -32,6 +34,8 @@ export {
   gauge,
   sankey,
   treemap,
+  dumbbell,
+  bullet,
 };
 
 /** id → pack. Unknown / missing packs fail loudly via resolveTypePack. */
@@ -49,6 +53,8 @@ export const typeRegistry: Record<ChartType, TypePack> = {
   gauge,
   sankey,
   treemap,
+  dumbbell,
+  bullet,
 };
 
 /**

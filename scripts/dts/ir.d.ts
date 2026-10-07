@@ -12,6 +12,8 @@ export declare const CHART_TYPES: readonly [
   "gauge",
   "sankey",
   "treemap",
+  "dumbbell",
+  "bullet",
 ];
 export type ChartType = (typeof CHART_TYPES)[number];
 
@@ -57,6 +59,7 @@ export type ChartIR = {
   surface: "light" | "dark" | "export";
   orient?: "horizontal" | "vertical";
   role?: string;
+  target?: string;
   table: Table;
 };
 

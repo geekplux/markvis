@@ -8,6 +8,7 @@ export { CORE_FENCE_KEYS };
  * bar/line/area → layout; pie → innerRadius; scatter/hist → none.
  * Wave 2: heatmap → min, max; waterfall → role; radar → max; funnel → none; gauge → min, max.
  * Wave 3: sankey/treemap → none.
+ * Wave 4: dumbbell → none; bullet → target, min, max.
  * Packs must keep `extras` in sync with this table (integrity test checks).
  */
 export const typeExtras: Record<ChartType, readonly string[]> = {
@@ -24,6 +25,8 @@ export const typeExtras: Record<ChartType, readonly string[]> = {
   gauge: ["min", "max"],
   sankey: [],
   treemap: [],
+  dumbbell: [],
+  bullet: ["target", "min", "max"],
 };
 
 export function allowedFenceKeys(type: ChartType): ReadonlySet<string> {

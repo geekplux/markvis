@@ -14,6 +14,8 @@ export const CHART_TYPES = [
   "gauge",
   "sankey",
   "treemap",
+  "dumbbell",
+  "bullet",
 ] as const;
 
 export type ChartType = (typeof CHART_TYPES)[number];
@@ -83,6 +85,8 @@ export const ChartIRSchema = z
     orient: z.enum(["horizontal", "vertical"]).optional(),
     /** waterfall only. Names the column of delta | total | subtotal. */
     role: z.string().min(1).optional(),
+    /** bullet only. Names the column of target values; an empty cell has no target. */
+    target: z.string().min(1).optional(),
     table: TableSchema,
   })
   .strict()
@@ -122,6 +126,13 @@ export const ChartIRSchema = z
         path: ["series"],
       });
     }
+    if (val.type === "dumbbell" && val.series === undefined) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "series is required for dumbbell",
+        path: ["series"],
+      });
+    }
     if (val.type === "sankey" && val.series === undefined) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
@@ -143,25 +154,29 @@ export const ChartIRSchema = z
         path: ["innerRadius"],
       });
     }
-    const minTypes = val.type === "gauge" || val.type === "heatmap";
+    const minTypes =
+      val.type === "gauge" || val.type === "heatmap" || val.type === "bullet";
     const maxTypes =
-      val.type === "gauge" || val.type === "heatmap" || val.type === "radar";
+      val.type === "gauge" ||
+      val.type === "heatmap" ||
+      val.type === "radar" ||
+      val.type === "bullet";
     if (val.min !== undefined && !minTypes) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        message: "min is only valid for gauge or heatmap",
+        message: "min is only valid for gauge, heatmap, or bullet",
         path: ["min"],
       });
     }
     if (val.max !== undefined && !maxTypes) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        message: "max is only valid for gauge, heatmap, or radar",
+        message: "max is only valid for gauge, heatmap, radar, or bullet",
         path: ["max"],
       });
     }
     if (
-      (val.type === "gauge" || val.type === "heatmap") &&
+      (val.type === "gauge" || val.type === "heatmap" || val.type === "bullet") &&
       val.min !== undefined &&
       val.max !== undefined &&
       val.min >= val.max
@@ -177,6 +192,20 @@ export const ChartIRSchema = z
         code: z.ZodIssueCode.custom,
         message: "orient is only valid for bar",
         path: ["orient"],
+      });
+    }
+    if (val.target !== undefined && val.type !== "bullet") {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "target is only valid for bullet",
+        path: ["target"],
+      });
+    }
+    if (val.target !== undefined && !val.table.columns.includes(val.target)) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "target must name a table column",
+        path: ["target"],
       });
     }
     if (val.role !== undefined && val.type !== "waterfall") {

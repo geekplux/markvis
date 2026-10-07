@@ -173,3 +173,107 @@ b,2
     expect(ragged.table.rows[0]).toEqual(["a", "1", "leftover"]);
   });
 });
+
+describe("dumbbell rules", () => {
+  const body = (rows: string, series = "series: period\n") => `type: dumbbell
+title: D
+x: line
+y: minutes
+${series}
+line,period,minutes
+${rows}`;
+
+  it("keeps the pair in input order and allows a missing value", () => {
+    const ok = parse(body("Red,before,41\nRed,after,36\nGold,before,\nGold,after,35\n"));
+    expect(ok.ok).toBe(true);
+    if (!ok.ok) return;
+    expect(ok.chart.series).toBe("period");
+  });
+
+  it("requires series", () => {
+    const out = parse(body("Red,before,41\n", ""));
+    expect(out.ok).toBe(false);
+    if (out.ok) return;
+    expect(out.error.code).toBe("E_UNKNOWN_FIELD");
+    expect(out.error.message).toContain("dumbbell requires series");
+  });
+
+  it("needs exactly two series values", () => {
+    const three = parse(body("Red,before,41\nRed,after,36\nRed,later,34\n"));
+    expect(three.ok).toBe(false);
+    if (three.ok) return;
+    expect(three.error.code).toBe("E_UNKNOWN_FIELD");
+    expect(three.error.message).toContain("exactly two period values (got 3)");
+    expect(three.table.rows).toHaveLength(3);
+  });
+
+  it("rejects a repeated category and period", () => {
+    const dup = parse(body("Red,before,41\nRed,before,40\nRed,after,36\n"));
+    expect(dup.ok).toBe(false);
+    if (dup.ok) return;
+    expect(dup.error.code).toBe("E_DUP_KEY");
+  });
+});
+
+describe("bullet rules", () => {
+  const body = (rows: string, extra = "target: quota\n") => `type: bullet
+title: B
+x: region
+y: booked
+${extra}
+region,booked,quota
+${rows}`;
+
+  it("keeps target on the IR and allows an empty target cell", () => {
+    const ok = parse(body("North,420,400\nSouth,365,\n"));
+    expect(ok.ok).toBe(true);
+    if (!ok.ok) return;
+    expect(ok.chart.target).toBe("quota");
+    expect(ok.chart.series).toBeUndefined();
+  });
+
+  it("rejects a target that is not a number", () => {
+    const bad = parse(body("North,420,lots\n"));
+    expect(bad.ok).toBe(false);
+    if (bad.ok) return;
+    expect(bad.error.code).toBe("E_BAD_NUMBER");
+    expect(bad.error.column).toBe("quota");
+  });
+
+  it("rejects a target column that does not exist", () => {
+    const missing = parse(body("North,420,400\n", "target: goal\n"));
+    expect(missing.ok).toBe(false);
+    if (missing.ok) return;
+    expect(missing.error.code).toBe("E_UNKNOWN_FIELD");
+  });
+
+  it("rejects target on another type and min >= max", () => {
+    const wrongType = parse(`type: bar
+title: B
+x: region
+y: booked
+target: quota
+
+region,booked,quota
+North,420,400
+`);
+    expect(wrongType.ok).toBe(false);
+    if (wrongType.ok) return;
+    expect(wrongType.error.code).toBe("E_UNKNOWN_FIELD");
+    const flipped = parse(body("North,420,400\n", "target: quota\nmin: 500\nmax: 100\n"));
+    expect(flipped.ok).toBe(false);
+    if (flipped.ok) return;
+    expect(flipped.error.code).toBe("E_UNKNOWN_FIELD");
+  });
+
+  it("requires every actual value and rejects a repeated label", () => {
+    const empty = parse(body("North,,400\n"));
+    expect(empty.ok).toBe(false);
+    if (empty.ok) return;
+    expect(empty.error.code).toBe("E_MISSING_VALUE");
+    const dup = parse(body("North,420,400\nNorth,410,400\n"));
+    expect(dup.ok).toBe(false);
+    if (dup.ok) return;
+    expect(dup.error.code).toBe("E_DUP_KEY");
+  });
+});
