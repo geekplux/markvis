@@ -11,6 +11,7 @@ import { seriesStyle } from "./palette.js";
 import { formatNumber } from "./scale.js";
 import { textWidth, truncateLabel } from "./text.js";
 import {
+  FONT_NUMERIC,
   INK,
   MARGIN,
   PLOT_BG,
@@ -146,6 +147,7 @@ export function renderFunnel(chart: ChartIR, _id: string): Painted {
     `  <g ${attrs({
       fill: TYPE.value.fill,
       "font-size": TYPE.value.size,
+      "font-family": FONT_NUMERIC,
       "font-weight": TYPE.value.weight,
     })}>`,
   );

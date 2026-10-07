@@ -13,6 +13,7 @@ export const highcharts = {
   PLOT_MIN_RATIO: 0.62,
 
   FONT: 'Arial, Helvetica, "Segoe UI", sans-serif',
+  FONT_NUMERIC: folio.FONT_NUMERIC,
 
   INK: "#333333",
   QUIET: "#666666",
@@ -50,6 +51,7 @@ export const highcharts = {
 
   WRAP_OPACITY: 0.75,
 
+  TITLE: folio.TITLE,
   TITLE_BASELINE: 22,
   TITLE_TO_PLOT: 16,
   TICK_TEXT_GAP: 8,
@@ -79,6 +81,8 @@ export const highcharts = {
   END_LABEL_SERIES_MAX: 0,
   END_LABEL_GAP: folio.END_LABEL_GAP,
   END_LABEL_MIN_SEP: folio.END_LABEL_MIN_SEP,
+  LINE_CURVE: folio.LINE_CURVE,
+  MARKER: folio.MARKER,
   SERIES_DASH: folio.SERIES_DASH,
 
   SCATTER_R: 3.5,
@@ -103,6 +107,9 @@ export const highcharts = {
   LEGEND_BELOW: false,
   TITLE_RULE: false,
   GRID: { dash: "", width: 1, axes: "y" },
+  AXIS: folio.AXIS,
+  LEGEND: folio.LEGEND,
+  FRAME: folio.FRAME,
 
   SURFACES: FOLIO_SURFACES,
 } as const satisfies ThemeTokens;

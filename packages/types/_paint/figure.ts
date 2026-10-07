@@ -6,6 +6,7 @@ import {
   MARGIN,
   STRUCTURE_OPACITY,
   SVG_WIDTH,
+  TITLE,
   TITLE_BASELINE,
   TITLE_RULE,
   TYPE,
@@ -26,9 +27,35 @@ export function titleWrapWidth(x = MARGIN.left): number {
   return Math.max(80, SVG_WIDTH - x - MARGIN.right - 4);
 }
 
+function unitText(unit?: string): string {
+  return unit?.trim() ?? "";
+}
+
+/** " · unit" when the unit rides the last title line; "" otherwise. */
 function unitSuffix(unit?: string): string {
-  const trimmed = unit?.trim() ?? "";
-  return trimmed === "" ? "" : ` · ${trimmed}`;
+  const trimmed = unitText(unit);
+  return trimmed === "" || TITLE.unit !== "inline" ? "" : ` · ${trimmed}`;
+}
+
+/** True when the unit sits on its own line under the title. */
+function hasSubtitle(unit?: string): boolean {
+  return TITLE.unit === "subtitle" && unitText(unit) !== "";
+}
+
+/** Title as painted: the theme may set it in capitals. */
+function titleCase(text: string): string {
+  return TITLE.case === "upper" ? text.toUpperCase() : text;
+}
+
+/** Title width including theme letter-spacing. */
+function titleWidth(text: string): number {
+  const tracking = TITLE.tracking * TYPE.title.size * text.length;
+  return textWidth(text, TYPE.title.size) + tracking;
+}
+
+/** A centered title wraps across the full frame, not from the plot left. */
+function wrapX(x: number): number {
+  return TITLE.align === "middle" ? MARGIN.left : x;
 }
 
 function titleWords(text: string, maxWidth: number): string[] {
@@ -37,14 +64,14 @@ function titleWords(text: string, maxWidth: number): string[] {
     if (part === "") {
       continue;
     }
-    if (textWidth(part, TYPE.title.size) <= maxWidth) {
+    if (titleWidth(part) <= maxWidth) {
       words.push(part);
       continue;
     }
     let chunk = "";
     for (const char of part) {
       const next = chunk + char;
-      if (chunk !== "" && textWidth(next, TYPE.title.size) > maxWidth) {
+      if (chunk !== "" && titleWidth(next) > maxWidth) {
         words.push(chunk);
         chunk = char;
       } else {
@@ -63,12 +90,12 @@ function titleWords(text: string, maxWidth: number): string[] {
  * The unit suffix shares the last line, so that line is shorter.
  */
 export function wrapTitle(title: string, x: number, unit?: string): string[] {
-  const maxWidth = titleWrapWidth(x);
+  const maxWidth = titleWrapWidth(wrapX(x));
   const suffixW =
     unitSuffix(unit) === "" ? 0 : textWidth(unitSuffix(unit), TYPE.unit.size);
   const lastMax = Math.max(12, maxWidth - suffixW);
   const cap = 4;
-  const source = title.trim();
+  const source = titleCase(title.trim());
   if (source === "") {
     return [""];
   }
@@ -78,7 +105,7 @@ export function wrapTitle(title: string, x: number, unit?: string): string[] {
   while (i < words.length && lines.length < cap) {
     const rest = words.slice(i).join(" ");
     const lastSlot = lines.length === cap - 1;
-    if (textWidth(rest, TYPE.title.size) <= lastMax) {
+    if (titleWidth(rest) <= lastMax) {
       lines.push(rest);
       break;
     }
@@ -91,7 +118,7 @@ export function wrapTitle(title: string, x: number, unit?: string): string[] {
     while (j < words.length) {
       const nextWord = words[j]!;
       const candidate = taken === "" ? nextWord : `${taken} ${nextWord}`;
-      if (textWidth(candidate, TYPE.title.size) > maxWidth) {
+      if (titleWidth(candidate) > maxWidth) {
         break;
       }
       taken = candidate;
@@ -102,7 +129,7 @@ export function wrapTitle(title: string, x: number, unit?: string): string[] {
       i += 1;
       continue;
     }
-    if (j >= words.length && textWidth(taken, TYPE.title.size) > lastMax) {
+    if (j >= words.length && titleWidth(taken) > lastMax) {
       if (j > i + 1) {
         j -= 1;
         taken = words.slice(i, j).join(" ");
@@ -123,7 +150,7 @@ export function countTitleLines(
   x = MARGIN.left,
   unit?: string,
 ): number {
-  return wrapTitle(title, x, unit).length;
+  return wrapTitle(title, x, unit).length + (hasSubtitle(unit) ? 1 : 0);
 }
 
 /** Remember the line count for the x and unit the title will actually use. */
@@ -131,9 +158,15 @@ export function reserveTitle(title: string, x: number, unit?: string): void {
   setTitleLineCount(countTitleLines(title, x, unit));
 }
 
-/** Left-aligned to plot left. A long title wraps. Unit rides the last line. */
+/**
+ * Drawn at the plot left, or centered on the frame when the theme says so.
+ * A long title wraps. The unit rides the last line or sits on its own line.
+ */
 export function drawTitle(title: string, x: number, unit?: string): string {
   const lines = wrapTitle(title, x, unit);
+  const middle = TITLE.align === "middle";
+  const tx = middle ? SVG_WIDTH / 2 : x;
+  const anchor = middle ? "middle" : "start";
   const lineH = TYPE.title.size + 6;
   const suffix = unitSuffix(unit);
   const unitSpan =
@@ -147,29 +180,46 @@ export function drawTitle(title: string, x: number, unit?: string): string {
         return `${escapeXml(line)}${tail}`;
       }
       const dy = i === 0 ? 0 : lineH;
-      return `<tspan x="${fmtPx(x)}" dy="${dy}">${escapeXml(line)}</tspan>${tail}`;
+      return `<tspan x="${fmtPx(tx)}" dy="${dy}">${escapeXml(line)}</tspan>${tail}`;
     })
     .join("");
-  const text = `  <text ${attrs({
-    x: fmtPx(x),
-    y: TITLE_BASELINE,
-    "text-anchor": "start",
-    "font-size": TYPE.title.size,
-    "font-weight": TYPE.title.weight,
-    fill: TYPE.title.fill,
-  })}><title>${escapeXml(title)}</title>${body}</text>`;
-  if (!TITLE_RULE) {
-    return text;
+  const parts = [
+    `  <text ${attrs({
+      x: fmtPx(tx),
+      y: TITLE_BASELINE,
+      "text-anchor": anchor,
+      "font-size": TYPE.title.size,
+      "font-weight": TYPE.title.weight,
+      "letter-spacing": TITLE.tracking === 0 ? undefined : `${TITLE.tracking}em`,
+      fill: TYPE.title.fill,
+    })}><title>${escapeXml(title)}</title>${body}</text>`,
+  ];
+  if (hasSubtitle(unit)) {
+    parts.push(
+      `  <text ${attrs({
+        x: fmtPx(tx),
+        y: TITLE_BASELINE + (lines.length - 1) * lineH + TYPE.unit.size + 8,
+        "text-anchor": anchor,
+        "font-size": TYPE.unit.size,
+        "font-weight": TYPE.unit.weight,
+        fill: TYPE.unit.fill,
+        "data-subtitle": "1",
+      })}>${escapeXml(unitText(unit))}</text>`,
+    );
   }
-  const rule = `  <line ${attrs({
-    x1: fmtPx(MARGIN.left),
-    x2: fmtPx(SVG_WIDTH - MARGIN.right),
-    y1: fmtPx(TITLE_BASELINE + 6),
-    y2: fmtPx(TITLE_BASELINE + 6),
-    stroke: INK,
-    "stroke-opacity": STRUCTURE_OPACITY,
-    "stroke-width": 1,
-    "data-title-rule": "1",
-  })}/>`;
-  return `${text}\n${rule}`;
+  if (TITLE_RULE) {
+    parts.push(
+      `  <line ${attrs({
+        x1: fmtPx(MARGIN.left),
+        x2: fmtPx(SVG_WIDTH - MARGIN.right),
+        y1: fmtPx(TITLE_BASELINE + 6),
+        y2: fmtPx(TITLE_BASELINE + 6),
+        stroke: INK,
+        "stroke-opacity": STRUCTURE_OPACITY,
+        "stroke-width": 1,
+        "data-title-rule": "1",
+      })}/>`,
+    );
+  }
+  return parts.join("\n");
 }

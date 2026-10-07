@@ -12,6 +12,7 @@ import { seriesStyle } from "./palette.js";
 import { formatNumber, labelTicks, niceTicks, scaleLinear, yExtent } from "./scale.js";
 import { textWidth, wrapText } from "./text.js";
 import {
+  FONT_NUMERIC,
   HAIRLINE_OPACITY,
   INK,
   MARGIN,
@@ -21,6 +22,7 @@ import {
   TICK_TEXT_GAP,
   TYPE,
 } from "./tokens.js";
+import { legendSwatch } from "./legend.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
 
 /**
@@ -149,14 +151,7 @@ export function renderHorizontalBar(chart: ChartIR, _id: string): Painted {
     );
     for (const item of placed.items) {
       lines.push(
-        `    <rect ${attrs({
-          x: fmtPx(item.x),
-          y: fmtPx(item.y - 8),
-          width: 10,
-          height: 10,
-          fill: item.color,
-          rx: 1,
-        })}/>`,
+        `    ${legendSwatch(item.x, item.y - 8, item.color)}`,
       );
       lines.push(
         `    <text ${attrs({
@@ -225,6 +220,7 @@ export function renderHorizontalBar(chart: ChartIR, _id: string): Painted {
     `  <g ${attrs({
       fill: TYPE.tick.fill,
       "font-size": TYPE.tick.size,
+      "font-family": FONT_NUMERIC,
       "font-weight": TYPE.tick.weight,
     })}>`,
   );
@@ -342,6 +338,7 @@ export function renderHorizontalBar(chart: ChartIR, _id: string): Painted {
           x: fmtPx(xScale(cursor) + 6),
           y: fmtPx(y + h / 2),
           "font-size": TYPE.value.size,
+          "font-family": FONT_NUMERIC,
           "font-weight": TYPE.value.weight,
           fill: TYPE.value.fill,
           "dominant-baseline": "middle",
@@ -385,6 +382,7 @@ function paintBar(
         x: fmtPx(zeroX + 6),
         y: fmtPx(y + h / 2),
         "font-size": TYPE.value.size,
+        "font-family": FONT_NUMERIC,
         "font-weight": TYPE.value.weight,
         fill: TYPE.value.fill,
         "dominant-baseline": "middle",
@@ -415,6 +413,7 @@ function paintBar(
       y: fmtPx(y + h / 2),
       "text-anchor": val >= 0 ? "start" : "end",
       "font-size": TYPE.value.size,
+      "font-family": FONT_NUMERIC,
       "font-weight": TYPE.value.weight,
       fill: TYPE.value.fill,
       "dominant-baseline": "middle",

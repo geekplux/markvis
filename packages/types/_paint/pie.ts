@@ -13,6 +13,7 @@ import { seriesStyle } from "./palette.js";
 import { formatNumber } from "./scale.js";
 import { textWidth, truncateLabel } from "./text.js";
 import {
+  FONT_NUMERIC,
   INK,
   LEGEND_BELOW,
   MARGIN,
@@ -30,6 +31,7 @@ import {
   STRUCTURE_OPACITY,
   TYPE,
 } from "./tokens.js";
+import { legendSwatch } from "./legend.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
 
 function slicePath(
@@ -289,15 +291,7 @@ function drawPieLegend(
   ];
   for (const item of layout.items) {
     lines.push(
-      `    <rect ${attrs({
-        x: fmtPx(item.x),
-        y: fmtPx(item.y - 9),
-        width: 10,
-        height: 10,
-        fill: item.color,
-        "fill-opacity": item.opacity === 1 ? undefined : item.opacity,
-        rx: 1,
-      })}/>`,
+      `    ${legendSwatch(item.x, item.y - 9, item.color, item.opacity)}`,
     );
     lines.push(
       `    <text ${attrs({
@@ -607,6 +601,7 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
     lines.push(
       `  <g ${attrs({
         "font-size": TYPE.value.size,
+        "font-family": FONT_NUMERIC,
         "font-weight": TYPE.value.weight,
         fill: TYPE.value.fill,
       })}>`,

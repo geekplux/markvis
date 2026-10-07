@@ -32,6 +32,8 @@ export type SemanticColors = {
 export type SurfaceTokens = {
   /** Full-frame plate. null paints none: the host page is the paper. */
   readonly PLATE: string | null;
+  /** Fill behind hollow marks and gaps cut into marks. Matches the plate when one is painted. */
+  readonly PAPER: string;
   readonly INK?: string;
   readonly QUIET?: string;
   /** Tick label fill. Defaults to QUIET. */
@@ -51,6 +53,34 @@ export type GridTokens = {
   readonly axes: "y" | "xy";
 };
 
+export type TitleTokens = {
+  readonly align: "start" | "middle";
+  readonly case: "none" | "upper";
+  /** letter-spacing in em. 0 leaves it unset. */
+  readonly tracking: number;
+  /** inline: " · unit" rides the last title line. subtitle: unit gets its own quiet line. */
+  readonly unit: "inline" | "subtitle";
+};
+
+export type AxisTokens = {
+  /** none: no baseline. baseline: x baseline only. xy: baseline plus a y-axis line. */
+  readonly line: "none" | "baseline" | "xy";
+  /** Tick mark length in px. 0 draws none. */
+  readonly tick: number;
+};
+
+export type LegendTokens = {
+  readonly swatch: "square" | "rounded" | "circle" | "line";
+  readonly align: "start" | "middle";
+};
+
+export type FrameTokens = {
+  /** Corner radius of the plate and outline. */
+  readonly radius: number;
+  /** When true, draw a hairline outline around the whole figure. */
+  readonly stroke: boolean;
+};
+
 export interface ThemeTokens {
   readonly SVG_WIDTH: number;
   readonly SVG_HEIGHT: number;
@@ -58,6 +88,8 @@ export interface ThemeTokens {
   readonly PLOT_MIN_RATIO: number;
 
   readonly FONT: string;
+  /** Font for tick and value labels. null uses FONT. */
+  readonly FONT_NUMERIC: string | null;
 
   readonly INK: string;
   readonly QUIET: string;
@@ -86,6 +118,7 @@ export interface ThemeTokens {
   readonly PALETTE: readonly string[];
   readonly WRAP_OPACITY: number;
 
+  readonly TITLE: TitleTokens;
   readonly TITLE_BASELINE: number;
   readonly TITLE_TO_PLOT: number;
   readonly TICK_TEXT_GAP: number;
@@ -114,6 +147,9 @@ export interface ThemeTokens {
   readonly END_LABEL_SERIES_MAX: number;
   readonly END_LABEL_GAP: number;
   readonly END_LABEL_MIN_SEP: number;
+  readonly LINE_CURVE: "linear" | "monotone";
+  /** Point marks on line and area. halo = filled with a paper ring. */
+  readonly MARKER: "filled" | "hollow" | "halo" | "none";
   /** stroke-dasharray per series index, cycled. "" draws solid. */
   readonly SERIES_DASH: readonly string[];
 
@@ -139,6 +175,9 @@ export interface ThemeTokens {
   readonly PLOT_BORDER: string | null;
   readonly PLOT_BORDER_WIDTH: number;
   readonly GRID: GridTokens;
+  readonly AXIS: AxisTokens;
+  readonly LEGEND: LegendTokens;
+  readonly FRAME: FrameTokens;
   /** When true, paint x/y axis titles from IR field names / unit. */
   readonly AXIS_TITLES: boolean;
   /** When true, the color legend sits under the plot (not in the title block). */

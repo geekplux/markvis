@@ -14,6 +14,7 @@ import { formatNumber, niceTicks } from "./scale.js";
 import { textWidth } from "./text.js";
 import {
   AREA_OPACITY,
+  FONT_NUMERIC,
   INK,
   LEGEND_BELOW,
   MARGIN,
@@ -25,6 +26,7 @@ import {
   STRUCTURE_OPACITY,
   TYPE,
 } from "./tokens.js";
+import { legendSwatch } from "./legend.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
 
 function spokePoint(
@@ -158,15 +160,7 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
     );
     for (const item of painted.items) {
       lines.push(
-        `    <rect ${attrs({
-          x: fmtPx(item.x),
-          y: fmtPx(item.y - 9),
-          width: 10,
-          height: 10,
-          fill: item.color,
-          "fill-opacity": item.opacity === 1 ? undefined : item.opacity,
-          rx: 1,
-        })}/>`,
+        `    ${legendSwatch(item.x, item.y - 9, item.color, item.opacity)}`,
       );
       lines.push(
         `    <text ${attrs({
@@ -314,6 +308,7 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
     `  <g ${attrs({
       fill: TYPE.tick.fill,
       "font-size": TYPE.tick.size,
+      "font-family": FONT_NUMERIC,
       "font-weight": TYPE.tick.weight,
     })}>`,
   );
@@ -338,6 +333,7 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
         y: fmtPx(p.y - 4),
         "text-anchor": "middle",
         "font-size": TYPE.tick.size,
+        "font-family": FONT_NUMERIC,
         fill: TYPE.tick.fill,
         "data-radar-tick": formatNumber(level),
       })}>${escapeXml(formatNumber(level))}</text>`,

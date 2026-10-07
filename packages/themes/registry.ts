@@ -7,9 +7,13 @@ import { ant } from "./ant/theme.js";
 import { recharts } from "./recharts/theme.js";
 export type { ThemeTokens };
 export type {
+  AxisTokens,
+  FrameTokens,
   GridTokens,
+  LegendTokens,
   SemanticColors,
   SurfaceTokens,
+  TitleTokens,
   TypeRole,
 } from "./contract.js";
 export { folio, highcharts, shadcn, docs, ant, recharts };

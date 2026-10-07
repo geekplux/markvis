@@ -10,6 +10,7 @@ import {
 import { seriesStyle } from "./palette.js";
 import { formatNumber } from "./scale.js";
 import {
+  FONT_NUMERIC,
   INK,
   MARGIN,
   PLOT_BG,
@@ -184,6 +185,7 @@ export function renderGauge(chart: ChartIR, _id: string): Painted {
     `  <g ${attrs({
       fill: TYPE.tick.fill,
       "font-size": TYPE.tick.size,
+      "font-family": FONT_NUMERIC,
       "font-weight": TYPE.tick.weight,
     })}>`,
   );
@@ -215,6 +217,7 @@ export function renderGauge(chart: ChartIR, _id: string): Painted {
         y: fmtPx(cy + 32),
         "text-anchor": "middle",
         "font-size": TYPE.tick.size,
+        "font-family": FONT_NUMERIC,
         fill: TYPE.tick.fill,
         "data-out-of-range": "1",
       })}>${escapeXml(note)}</text>`,

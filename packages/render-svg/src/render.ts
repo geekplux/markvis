@@ -3,7 +3,13 @@ import { resolveTypePack } from "@markvis/types";
 import { folio } from "@markvis/themes";
 import { countTitleLines, visibleTitle } from "../../types/_paint/figure.js";
 import { setTitleLineCount } from "../../types/_paint/layout.js";
-import { MARGIN, PLATE } from "../../types/_paint/tokens.js";
+import {
+  FRAME,
+  HAIRLINE_OPACITY,
+  INK,
+  MARGIN,
+  PLATE,
+} from "../../types/_paint/tokens.js";
 import { themeTokens } from "./theme.js";
 import { applyFrame, applyThemeTokens, type SurfaceName } from "./tokens.js";
 import { chartId } from "./chart-id.js";
@@ -95,10 +101,26 @@ export function renderSvg(chart: ChartIR, options?: RenderOptions): string {
             `  <rect ${attrs({
               width: "100%",
               height: "100%",
+              rx: FRAME.radius === 0 ? undefined : FRAME.radius,
               fill: plate,
               "data-surface": surface,
             })}/>`,
           ]),
+      ...(FRAME.stroke
+        ? [
+            `  <rect ${attrs({
+              x: 0.5,
+              y: 0.5,
+              width: width - 1,
+              height: painted.height - 1,
+              rx: FRAME.radius === 0 ? undefined : FRAME.radius,
+              fill: "none",
+              stroke: INK,
+              "stroke-opacity": HAIRLINE_OPACITY,
+              "data-frame": "1",
+            })}/>`,
+          ]
+        : []),
       ...painted.lines,
       `</svg>`,
     ];

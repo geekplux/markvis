@@ -21,6 +21,7 @@ import {
   BAR_MAX_WIDTH,
   BAR_MAX_WIDTH_N,
   BAR_RX,
+  FONT_NUMERIC,
   HAIRLINE_OPACITY,
   INK,
   LABEL_ROTATE_DEG,
@@ -227,6 +228,7 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
         y: fmtPx(top - 6),
         "text-anchor": placed.anchor,
         "font-size": TYPE.value.size,
+        "font-family": FONT_NUMERIC,
         "font-weight": TYPE.value.weight,
         fill: TYPE.value.fill,
         "data-delta": row.xLabel,
@@ -263,6 +265,7 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
     `  <g ${attrs({
       fill: TYPE.tick.fill,
       "font-size": TYPE.tick.size,
+      "font-family": FONT_NUMERIC,
       "font-weight": TYPE.tick.weight,
     })}>`,
   );

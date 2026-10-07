@@ -12,6 +12,7 @@ export const docs = {
   PLOT_MIN_RATIO: folio.PLOT_MIN_RATIO,
 
   FONT: 'Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif',
+  FONT_NUMERIC: folio.FONT_NUMERIC,
 
   /** zinc-900 */
   INK: "#18181B",
@@ -49,6 +50,7 @@ export const docs = {
 
   WRAP_OPACITY: 0.65,
 
+  TITLE: folio.TITLE,
   TITLE_BASELINE: 20,
   TITLE_TO_PLOT: 12,
   TICK_TEXT_GAP: 8,
@@ -80,6 +82,8 @@ export const docs = {
   END_LABEL_SERIES_MAX: 0,
   END_LABEL_GAP: folio.END_LABEL_GAP,
   END_LABEL_MIN_SEP: folio.END_LABEL_MIN_SEP,
+  LINE_CURVE: folio.LINE_CURVE,
+  MARKER: folio.MARKER,
   SERIES_DASH: folio.SERIES_DASH,
 
   SCATTER_R: 2.5,
@@ -106,6 +110,9 @@ export const docs = {
   /** Hairline under title — not a four-sided plot rect. */
   TITLE_RULE: true,
   GRID: { dash: "", width: 1, axes: "y" },
+  AXIS: folio.AXIS,
+  LEGEND: folio.LEGEND,
+  FRAME: folio.FRAME,
 
   SURFACES: FOLIO_SURFACES,
 } as const satisfies ThemeTokens;

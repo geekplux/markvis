@@ -13,6 +13,7 @@ export const recharts = {
   PLOT_MIN_RATIO: 0.58,
 
   FONT: folio.FONT,
+  FONT_NUMERIC: folio.FONT_NUMERIC,
 
   INK: "#374151",
   QUIET: "#6B7280",
@@ -49,6 +50,7 @@ export const recharts = {
 
   WRAP_OPACITY: 0.72,
 
+  TITLE: folio.TITLE,
   TITLE_BASELINE: 22,
   TITLE_TO_PLOT: 14,
   TICK_TEXT_GAP: 8,
@@ -77,6 +79,8 @@ export const recharts = {
   END_LABEL_SERIES_MAX: 0,
   END_LABEL_GAP: folio.END_LABEL_GAP,
   END_LABEL_MIN_SEP: folio.END_LABEL_MIN_SEP,
+  LINE_CURVE: folio.LINE_CURVE,
+  MARKER: folio.MARKER,
   SERIES_DASH: folio.SERIES_DASH,
 
   SCATTER_R: folio.SCATTER_R,
@@ -101,6 +105,9 @@ export const recharts = {
   LEGEND_BELOW: true,
   TITLE_RULE: false,
   GRID: { dash: "", width: 1, axes: "xy" },
+  AXIS: folio.AXIS,
+  LEGEND: folio.LEGEND,
+  FRAME: folio.FRAME,
 
   SURFACES: FOLIO_SURFACES,
 } as const satisfies ThemeTokens;

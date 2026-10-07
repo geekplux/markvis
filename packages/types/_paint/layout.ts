@@ -1,6 +1,7 @@
 import { formatNumber } from "./scale.js";
 import { textWidth, wrapText } from "./text.js";
 import {
+  AXIS,
   AXIS_TITLES,
   BAR_LABEL_MID_MIN_W,
   BAR_LABEL_MIN_WIDTH,
@@ -9,6 +10,7 @@ import {
   FONT,
   LABEL_MIN_GAP,
   LABEL_ROTATE_DEG,
+  LEGEND,
   LEGEND_BELOW,
   MARGIN,
   PALETTE,
@@ -103,7 +105,32 @@ export function layoutLegend(
     x += width;
     rowHeight = y - top + 16;
   }
+  if (LEGEND.align === "middle") {
+    centerLegendRows(items, names, left, maxWidth);
+  }
   return { items, height: names.length === 0 ? 0 : rowHeight };
+}
+
+/** Shift each legend row so it sits centered in the band. */
+function centerLegendRows(
+  items: LegendItem[],
+  names: string[],
+  left: number,
+  maxWidth: number,
+): void {
+  const rows = new Map<number, number[]>();
+  items.forEach((item, i) => {
+    rows.set(item.y, [...(rows.get(item.y) ?? []), i]);
+  });
+  for (const indexes of rows.values()) {
+    const lastIndex = indexes[indexes.length - 1]!;
+    const last = items[lastIndex]!;
+    const right = last.x + 16 + textWidth(names[lastIndex]!, TYPE.legend.size);
+    const shift = Math.max(0, (maxWidth - (right - left)) / 2);
+    for (const i of indexes) {
+      items[i]!.x += shift;
+    }
+  }
 }
 
 function labelsOverlapZero(widths: number[], catStep: number): boolean {
@@ -154,7 +181,8 @@ export function tickLeftMargin(
     ...yTickLabels.map((label) => textWidth(label, TYPE.tick.size)),
   );
   const axisPad = axisTitles ? 18 : 0;
-  return Math.max(MARGIN.left, yTickWidth + TICK_TEXT_GAP) + axisPad;
+  const tickPad = AXIS.line === "xy" ? AXIS.tick : 0;
+  return Math.max(MARGIN.left, yTickWidth + TICK_TEXT_GAP + tickPad) + axisPad;
 }
 
 export function categoryBottomMargin(layout: CategoryLayout): number {
@@ -163,7 +191,7 @@ export function categoryBottomMargin(layout: CategoryLayout): number {
     1,
     ...layout.lines.map((lines) => Math.max(lines.length, 1)),
   );
-  return lineCount * (TYPE.tick.size + 3) + 10 + axisPad;
+  return lineCount * (TYPE.tick.size + 3) + 10 + axisPad + AXIS.tick;
 }
 
 export let TITLE_LINE_COUNT = 1;

@@ -22,9 +22,10 @@ export const FOLIO_SURFACES: {
   readonly dark: SurfaceTokens;
   readonly export: SurfaceTokens;
 } = {
-  light: { PLATE: null, SEMANTIC: SEMANTIC_LIGHT },
+  light: { PLATE: null, PAPER: "#ffffff", SEMANTIC: SEMANTIC_LIGHT },
   dark: {
     PLATE: "#1c1917",
+    PAPER: "#1c1917",
     INK: "#f5f5f4",
     QUIET: "#a8a29e",
     TICK: "#d6d3d1",
@@ -39,6 +40,7 @@ export const FOLIO_SURFACES: {
   },
   export: {
     PLATE: "#ffffff",
+    PAPER: "#ffffff",
     INK: "#171717",
     QUIET: "#525252",
     PLOT_BG: "#ffffff",
@@ -55,6 +57,7 @@ export const folio = {
   PLOT_MIN_RATIO: 0.55,
 
   FONT: 'ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif',
+  FONT_NUMERIC: null,
 
   INK: "#171717",
   QUIET: "#737373",
@@ -93,6 +96,7 @@ export const folio = {
 
   WRAP_OPACITY: 0.7,
 
+  TITLE: { align: "start", case: "none", tracking: 0, unit: "inline" },
   TITLE_BASELINE: 32,
   TITLE_TO_PLOT: 12,
   TICK_TEXT_GAP: 10,
@@ -121,6 +125,8 @@ export const folio = {
   END_LABEL_SERIES_MAX: 4,
   END_LABEL_GAP: 8,
   END_LABEL_MIN_SEP: 14,
+  LINE_CURVE: "linear",
+  MARKER: "filled",
   /** Dashes keep series apart in black and white. */
   SERIES_DASH: ["", "6 4", "2 2", "7 3 2 3"],
 
@@ -152,6 +158,9 @@ export const folio = {
   /** When true, draw a hairline rule under the title. */
   TITLE_RULE: false,
   GRID: { dash: "", width: 1, axes: "y" },
+  AXIS: { line: "baseline", tick: 0 },
+  LEGEND: { swatch: "square", align: "start" },
+  FRAME: { radius: 0, stroke: false },
 
   SURFACES: FOLIO_SURFACES,
 } as const satisfies ThemeTokens;

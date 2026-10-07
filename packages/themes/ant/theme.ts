@@ -13,6 +13,7 @@ export const ant = {
   PLOT_MIN_RATIO: 0.6,
 
   FONT: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+  FONT_NUMERIC: folio.FONT_NUMERIC,
 
   INK: "#000000",
   QUIET: "#8C8C8C",
@@ -50,6 +51,7 @@ export const ant = {
 
   WRAP_OPACITY: 0.7,
 
+  TITLE: folio.TITLE,
   TITLE_BASELINE: 26,
   TITLE_TO_PLOT: 20,
   TICK_TEXT_GAP: 8,
@@ -78,6 +80,8 @@ export const ant = {
   END_LABEL_SERIES_MAX: 0,
   END_LABEL_GAP: folio.END_LABEL_GAP,
   END_LABEL_MIN_SEP: folio.END_LABEL_MIN_SEP,
+  LINE_CURVE: folio.LINE_CURVE,
+  MARKER: folio.MARKER,
   SERIES_DASH: folio.SERIES_DASH,
 
   SCATTER_R: folio.SCATTER_R,
@@ -102,6 +106,9 @@ export const ant = {
   LEGEND_BELOW: false,
   TITLE_RULE: false,
   GRID: { dash: "", width: 1, axes: "y" },
+  AXIS: folio.AXIS,
+  LEGEND: folio.LEGEND,
+  FRAME: folio.FRAME,
 
   SURFACES: FOLIO_SURFACES,
 } as const satisfies ThemeTokens;

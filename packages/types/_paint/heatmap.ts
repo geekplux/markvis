@@ -20,6 +20,7 @@ import { seriesStyle } from "./palette.js";
 import { formatNumber } from "./scale.js";
 import { textWidth } from "./text.js";
 import {
+  FONT_NUMERIC,
   MARGIN,
   PLOT_BG,
   SEMANTIC,
@@ -168,6 +169,7 @@ export function renderHeatmap(chart: ChartIR, svgId: string): Painted {
             "text-anchor": "middle",
             "dominant-baseline": "middle",
             "font-size": TYPE.value.size,
+            "font-family": FONT_NUMERIC,
             "font-weight": TYPE.value.weight,
             fill: ink,
             "data-cell-label": `${cat}:${series}`,
@@ -201,6 +203,7 @@ export function renderHeatmap(chart: ChartIR, svgId: string): Painted {
       x: fmtPx(labelX),
       y: fmtPx(plot.top + 4),
       "font-size": TYPE.tick.size,
+      "font-family": FONT_NUMERIC,
       fill: TYPE.tick.fill,
       "dominant-baseline": "hanging",
       "data-scale-max": "1",
@@ -211,6 +214,7 @@ export function renderHeatmap(chart: ChartIR, svgId: string): Painted {
       x: fmtPx(labelX),
       y: fmtPx(plot.top + scaleH),
       "font-size": TYPE.tick.size,
+      "font-family": FONT_NUMERIC,
       fill: TYPE.tick.fill,
       "data-scale-min": "1",
     })}>${escapeXml(formatNumber(ymin))}</text>`,
@@ -221,6 +225,7 @@ export function renderHeatmap(chart: ChartIR, svgId: string): Painted {
     `  <g ${attrs({
       fill: TYPE.tick.fill,
       "font-size": TYPE.tick.size,
+      "font-family": FONT_NUMERIC,
       "font-weight": TYPE.tick.weight,
     })}>`,
   );
