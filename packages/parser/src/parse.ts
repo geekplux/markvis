@@ -674,6 +674,18 @@ function parseBody(
 
   if (type === "dumbbell" && specified.series) {
     const si = parsed.columns.indexOf(specified.series);
+    // Each value names its side of the pair; a blank name would be a blank legend entry.
+    for (let r = 0; r < parsed.rows.length; r++) {
+      if ((parsed.rows[r]![si] ?? "").trim() === "") {
+        return fail(
+          "E_MISSING_VALUE",
+          `row ${r + 1}, column ${specified.series}: dumbbell needs a ${specified.series} value on every row`,
+          parsed,
+          raw,
+          { row: r + 1, column: specified.series },
+        );
+      }
+    }
     const names = new Set(parsed.rows.map((row) => (row[si] ?? "").trim()));
     if (names.size !== 2) {
       return fail(

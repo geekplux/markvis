@@ -377,3 +377,23 @@ ${rows}`;
     }
   });
 });
+
+describe("dumbbell series cells", () => {
+  it("rejects an empty series cell instead of drawing a blank legend entry", () => {
+    const out = parse(`type: dumbbell
+title: D
+x: line
+y: minutes
+series: period
+
+line,period,minutes
+Red,before,41
+Red,,36
+`);
+    expect(out.ok).toBe(false);
+    if (out.ok) return;
+    expect(out.error.code).toBe("E_MISSING_VALUE");
+    expect(out.error.row).toBe(2);
+    expect(out.error.column).toBe("period");
+  });
+});
