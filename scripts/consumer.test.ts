@@ -49,7 +49,9 @@ describe("packed consumer", { timeout: TIMEOUT }, () => {
   let tgz = "";
 
   beforeAll(() => {
-    tgz = packLib();
+    // Pack the dist/ CI just built: a prepack rebuild would wipe dist/ under
+    // the CLI tests running in parallel.
+    tgz = packLib({ rebuild: false });
     temp = mkdtempSync(join(tmpdir(), "markvis-consumer-"));
     const init = run(temp, "npm", ["init", "-y"]);
     expect(init.status, init.stderr).toBe(0);
