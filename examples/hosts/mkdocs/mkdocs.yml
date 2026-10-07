@@ -1,0 +1,12 @@
+site_name: markvis in MkDocs
+markdown_extensions:
+  - tables
+  - pymdownx.highlight
+  # Keep the chart language on the block, so the drop-in can find it.
+  - pymdownx.superfences:
+      custom_fences:
+        - name: chart
+          class: language-chart
+          format: !!python/name:pymdownx.superfences.fence_code_format
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/markvis@2/dist/markvis.min.js

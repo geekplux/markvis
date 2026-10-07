@@ -12,8 +12,8 @@ import { describe, expect, it } from "vitest";
 import { extractCharts } from "@markvis/parser";
 import { markdownItMarkvis } from "@markvis/markdown-it";
 import { remarkMarkvis } from "@markvis/remark";
-import { chartBlockHtml as browserBlockHtml } from "@markvis/browser";
-import { chartBlockHtml, htmlTable, render } from "../src/index.js";
+import { chartBlockHtml as browserBlockHtml, replaceLanguageBlocks } from "@markvis/browser";
+import { chartBlockHtml, escapeHtml, htmlTable, render } from "../src/index.js";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const repoRoot = join(here, "../../..");
@@ -48,9 +48,15 @@ describe("every adapter emits render().html", () => {
         expect(chartBlockHtml(chart.raw)).toBe(html);
         expect(fromMarkdownIt).toContain(html);
         expect(fromRemark).toContain(render(chart.raw, { filename: path }).html);
-        // An empty block: the browser echoes the fence it wrapped around nothing.
-        if (chart.form === "fence" && chart.body.trim() !== "") {
-          expect(browserBlockHtml(chart.body, undefined, chart.lang)).toBe(html);
+        // The browser sees only the inside of a code block, and draws it as render() does.
+        if (chart.form === "fence") {
+          const code = `<pre><code class="language-${chart.lang}">${escapeHtml(chart.body)}</code></pre>`;
+          expect(replaceLanguageBlocks(code)).toBe(render(chart.body).html);
+          // With no rows read, the raw text is echoed: the body, or the whole block.
+          const whole = render(chart.raw);
+          if (whole.ok || whole.table.columns.length > 0) {
+            expect(render(chart.body).html).toBe(html);
+          }
         }
       }
     });

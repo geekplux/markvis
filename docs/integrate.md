@@ -12,17 +12,17 @@ GitHub will not grow a native chart fence. Use markvis bake on README.md and doc
 
 ## Any JS preview
 
-After `pnpm build` (or a packed install), drop in `dist/markvis.min.js` (or `.mjs`). Zero network. Finds pre/code with language chart, markvis, or vis and replaces with the same SVG as Node.
+After `pnpm build` (or a packed install), drop in `dist/markvis.min.js` (or `.mjs`). Zero network. Load it with a classic `<script>` (the CDN copy is `https://cdn.jsdelivr.net/npm/markvis@2/dist/markvis.min.js`); it defines `window.markvis`, and `type="module"` hides it.
 
-Load `markvis.min.js` with a classic `<script>` (the CDN copy is `https://cdn.jsdelivr.net/npm/markvis@2/dist/markvis.min.js`). It defines `window.markvis`; `type="module"` hides it. For content added after load, call `markvis.init(element)` once the new nodes are in the page. Blocks already drawn are skipped. Covered by `packages/browser/test/dom.test.ts`.
+Detection (`packages/browser/src/dom.ts`): a `pre` is a chart block when `chart`, `markvis`, or `vis` appears as `language-X`, `lang-X`, or `data-lang="X"` on its `code`, on the `pre`, or on a wrapper `div` up to two levels out, or as a bare class on the `pre` (Pandoc). A chart `code` outside any `pre` counts too. The outermost highlighter wrapper (`highlight`, `highlighter-rouge`, `sourceCode`, `codehilite`, `code-block`, `language-*`) is replaced, so its chrome goes with it. Text is read with `textContent`, so highlighter spans do not matter. Every block renders through `render()`.
 
-From code, `render(blockText, options?)` takes one chart block — the inside a Markdown renderer hands a code-block plugin, or the whole block — and returns `{ ok, svg, html, … }` without throwing. `html` is the same figure, or table plus one error line, that markdown-it, remark, and the drop-in emit. `theme`, `palette`, and `surface` options apply only where the block leaves the field out. In the drop-in it is `markvis.render`. `parseBlock(blockText)` parses without drawing.
+Comment form: a comment whose text starts with `chart:`, `markvis:`, or `vis:`, followed (only whitespace between) by a `<table>` or by a paragraph of pipe rows (kramdown leaves the table unparsed right after a comment, and turns `---` into dashes), is rebuilt as a block and replaced with the figure, which keeps the table.
 
-In this monorepo: `pnpm build`, then open `apps/playground/dropin.html`. `dist/` is gitignored — without that build the script 404s. Packed consumers copy `node_modules/markvis/dist/markvis.min.js`. For the live editor, start the playground Vite app.
+API on the global and the ES module: `run({ nodes?, querySelector?, root? })` returns how many it drew; `init(root)` is `run({ root })`; `initialize({ theme, palette, surface, width })` sets page defaults (a block's own field wins); `render(text, options?)` uses the same defaults. The classic script runs once the DOM is ready (at `DOMContentLoaded` while the page loads, at once after); `data-start-on-load="false"` on its tag turns that off. The ES module never runs on import. A drawn block leaves the page, so a second run draws nothing new.
 
-Demo: apps/playground/dropin.html.
+Host fixtures: `packages/browser/test/fixtures/hosts/*.html`, each rendered from `source.md` by the real tool (marked, markdown-it, markdown-it + highlight.js, Jekyll with kramdown GFM + rouge, Hugo with goldmark + chroma, MkDocs with a custom fence, MkDocs with defaults, Pandoc, docsify); the first line names the tool, version, and command. Hugo needs `markup.goldmark.renderer.unsafe = true` for raw HTML. MkDocs with Pygments keeps no language name unless a superfences custom fence sets the class; `pygments_lang_class` names the lexer (`language-text`), not the fence. docsify renders after load: call `markvis.run()` from a `doneEach` hook.
 
-HTML comment plus GFM table charts only survive if the host already emitted them into the DOM; the browser script does not re-parse Markdown.
+In this monorepo: `pnpm build`, then open `apps/playground/dropin.html`. `dist/` is gitignored — without that build the script 404s.
 
 ## React
 

@@ -1,0 +1,40 @@
+<!-- markdown-it 14.3.1. Command: new MarkdownIt({ html: true }).render(source). -->
+<h1>Visits</h1>
+<p>The fenced block:</p>
+<pre><code class="language-chart">type: bar
+title: Visits by day
+x: day
+y: visits
+
+day,visits
+Mon,3
+Tue,5
+Wed,4
+</code></pre>
+<p>The comment form:</p>
+<!-- chart: line x=week y=signups title="Signups by week" -->
+<table>
+<thead>
+<tr>
+<th>week</th>
+<th>signups</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>12</td>
+</tr>
+<tr>
+<td>2</td>
+<td>18</td>
+</tr>
+<tr>
+<td>3</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<p>Other code stays code:</p>
+<pre><code class="language-js">const total = 3 + 5 &lt; 9 &amp;&amp; &quot;a&amp;b&quot;;
+</code></pre>

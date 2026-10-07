@@ -19,23 +19,50 @@ npx markvis bake path/to.md
 
 Running bake again does nothing if nothing changed. CI can run bake on push. **2.0.0 replaces 0.0.13.**
 
-## 2. Browser script
+## 2. One script tag, in a page or a Markdown file
 
-If the page already runs JavaScript, drop in the one-file build. After load it finds blocks tagged `chart` / `markvis` / `vis` and replaces them with the same picture as on the server.
+Put one `<script>` in a Markdown file, or in the HTML page around it. Once the page is ready, every chart block on it becomes a chart.
 
-```html
+````markdown
 <script src="https://cdn.jsdelivr.net/npm/markvis@2/dist/markvis.min.js"></script>
+
+```chart
+type: bar
+title: Visits
+x: day
+y: visits
+
+day,visits
+Mon,3
+Tue,5
 ```
+````
+
+The tag can sit at the top or the bottom, with or without `defer`. It finds the block whatever HTML the renderer made of it — `language-chart`, `lang-chart`, `data-lang="chart"`, or Pandoc's `class="chart"`, on the `code`, the `pre`, or a highlighter wrapper — and replaces the wrapper with the figure, copy buttons and all. The comment form works too: `<!-- chart: bar x=day y=visits -->` right above a Markdown table becomes a chart, and stays a plain table wherever scripts do not run.
+
+**Works** wherever Markdown becomes HTML and the page may run a script: Jekyll and GitHub Pages sites, Hugo, MkDocs, Hexo, Eleventy, docsify, Pandoc HTML, plain HTML pages, and most hand-built Markdown viewers.
+
+- Hugo: raw HTML is off by default. Set `markup.goldmark.renderer.unsafe = true` for the script tag and the comment form, or add the script to your layout.
+- MkDocs: add a custom fence so the block keeps its language (see `examples/hosts/mkdocs/`), and the script under `extra_javascript`.
+- docsify renders after load: add `plugins: [(hook) => hook.doneEach(() => markvis.run())]` to `window.$docsify`.
+
+**Does not work** where scripts are stripped: README and file views on github.com, the default VS Code preview, Obsidian, Notion. There, bake a picture (section 1), use the VS Code preview extension, or write the comment form so readers see the table.
 
 Use a plain `<script>`, not `type="module"`, so the page can reach `window.markvis`. A local copy works the same: `node_modules/markvis/dist/markvis.min.js`.
 
-Content that arrives later — a chat reply, a client-side route — needs one more call after it is in the page. Blocks already drawn are left alone.
+Content that arrives later — a chat reply, a client-side route — needs one call once it is in the page. Blocks already drawn are left alone, so running twice never draws twice.
 
 ```js
-markvis.init(messageElement);
+markvis.run();                              // the whole page
+markvis.run({ root: messageElement });      // one part of it
+markvis.run({ querySelector: ".my-chart" }); // these elements hold chart text
 ```
 
-Demo: `apps/playground/dropin.html`. The script does not re-read Markdown — comment-plus-table charts only work if the host already put them in the page.
+`run` returns how many charts it drew. `markvis.init(element)` is the short form of `run({ root: element })`.
+
+Page defaults for blocks that leave a field out: `markvis.initialize({ theme: "docs", palette: "cool", surface: "dark", width: 640 })`. A block's own field wins. To keep the script from drawing on load, use `<script src="…/markvis.min.js" data-start-on-load="false">` and call `run()` yourself. The ES module, `markvis.mjs`, never draws on import: `import { run, initialize } from "https://cdn.jsdelivr.net/npm/markvis@2/dist/markvis.mjs"`.
+
+Demos: `apps/playground/dropin.html`, `examples/hosts/script-tag/`, `examples/hosts/mkdocs/`.
 
 ## 3. markdown-it
 

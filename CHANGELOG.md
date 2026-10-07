@@ -4,6 +4,7 @@
 
 ### Added
 
+- One script tag in any Markdown page: the drop-in finds chart blocks in the HTML of marked, markdown-it, highlight.js, Jekyll (kramdown + rouge), Hugo, MkDocs (custom fence), Pandoc, and docsify, and draws the comment + table form from the page. `markvis.run({ nodes, querySelector, root })`, `markvis.initialize({ theme, palette, surface, width })`, and `data-start-on-load="false"`.
 - A 250-token model instruction (`docs/prompt.md`, also the opening of `llms.txt` and the site AI page). `pnpm eval-prompts --outputs <dir>` scores a directory of model answers: valid blocks, error codes, and chart type against `examples/prompts.md`.
 - `markvis/react`: `<Markvis source>` or `<Markvis chart data>` draws one block at the width of its container; `markvisComponents` draws chart code blocks in react-markdown; `remarkMarkvisStreaming` shows a placeholder and the rows so far while a block streams, never an error. `react` is an optional peer.
 
@@ -14,6 +15,8 @@
 
 ### Changed
 
+- The ES module `markvis.mjs` no longer draws on import; call `run()`. The classic `markvis.min.js` still draws once the page is ready.
+- The drop-in renders through `render()`: an empty block's error table shows the block as the page holds it, not a fence wrapped around it.
 - The six themes now look distinct in structure, not just color: each owns its type ramp (floor: title 15, other roles 11), title alignment and subtitle, grid dash, axis lines and ticks, curve, point markers, legend keys, card frame, and dark paper. Every pair differs on at least four structural switches. See `docs/themes.md`.
 - Readable type, wrapped labels, explicit paper/dark/export surfaces, gauge range 0–100 when `max` is omitted, sankey thickness. Funnel stays a centered silhouette.
 
