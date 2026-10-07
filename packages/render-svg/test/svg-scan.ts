@@ -29,6 +29,9 @@ export type Label = {
   size: number;
   fill: string;
   middle: boolean;
+  /** Visible lines (tspans with their own x) and the step between them. */
+  lines: number;
+  lineStep: number;
   /** dominant-baseline="hanging": y is the top of the text. */
   hanging: boolean;
   /** Turned -90°: the text runs up the page from (x, y). */
@@ -147,8 +150,8 @@ export function scanSvg(svg: string): Scan {
       }
       continue;
     }
-    // Bars and other data marks drawn as paths carry data-y; areas and slices do not count.
-    if (line.startsWith("<path") && /data-y=/.test(line) && !/data-label=/.test(line)) {
+    // Bars and other data marks drawn as paths (data-y, or a hist bin); areas and slices do not count.
+    if (line.startsWith("<path") && /data-(?:y|bin-left)=/.test(line) && !/data-label=/.test(line)) {
       const fill = attr(line, "fill");
       const box = pathBox(attr(line, "d") ?? "");
       if (isHex(fill) && box) {
@@ -187,7 +190,10 @@ export function scanSvg(svg: string): Scan {
       const measured = lineTexts[widest] ?? "";
       if (!isHex(fill) || lineTexts.join("").trim() === "") continue;
       inlineExtra = widest === lineTexts.length - 1 ? inlineExtra : 0;
+      const step = Number(plain.match(/<tspan[^>]*\sdy="([\d.]+)"/)?.[1] ?? size + 3);
       scan.labels.push({
+        lines: lineTexts.length,
+        lineStep: step > 0 ? step : size + 3,
         text: measured,
         weight,
         family,
@@ -252,12 +258,15 @@ export function labelBox(label: Label): { left: number; right: number; top: numb
   }
   const left =
     label.anchor === "middle" ? label.x - w / 2 : label.anchor === "end" ? label.x - w : label.x;
-  const top = label.middle
+  const first = label.middle
     ? label.y - label.size / 2
     : label.hanging
       ? label.y
       : label.y - label.size * 0.8;
-  return { left, right: left + w, top, bottom: top + label.size };
+  // Middle-anchored stacks are centered on y; others grow downward.
+  const extra = (label.lines - 1) * label.lineStep;
+  const top = label.middle ? first - extra / 2 : first;
+  return { left, right: left + w, top, bottom: top + label.size + extra };
 }
 
 /** The topmost opaque-enough shape under the label's center, if any. */

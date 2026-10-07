@@ -45,20 +45,21 @@ function renders(): { where: string; svg: string; surface: string }[] {
 
 const all = renders();
 
-/** WCAG's floor for large or bold text; chart labels must at least clear it. */
-const MIN_CONTRAST = 3;
+/** WCAG AA for text below 18px regular / 14px bold: every chart label qualifies. */
+const MIN_CONTRAST = 4.5;
 
 describe("rendered figure invariants", () => {
-  it("draws text on a filled mark with readable contrast", () => {
+  it("draws every label with readable contrast, on a mark or on the paper", () => {
     const failures: string[] = [];
+    let onMarks = 0;
     for (const { where, svg, surface } of all) {
       const scan = scanSvg(svg);
       // Light paints no paper: assume a light host page, the case light is for.
       const paper = scan.plate ?? (surface === "light" ? "#ffffff" : "#000000");
       for (const label of scan.labels) {
         const shape = shapeUnder(scan, label);
-        if (!shape) continue;
-        const under = composite(shape.fill, shape.opacity, paper);
+        if (shape) onMarks += 1;
+        const under = shape ? composite(shape.fill, shape.opacity, paper) : paper;
         const ratio = contrast(label.fill, under);
         if (ratio < MIN_CONTRAST) {
           failures.push(`${where}: "${label.text}" ${label.fill} on ${under} = ${ratio.toFixed(2)}`);
@@ -66,6 +67,8 @@ describe("rendered figure invariants", () => {
       }
     }
     expect(failures.slice(0, 20), `${failures.length} low-contrast labels`).toEqual([]);
+    // Not vacuous: thousands of labels sit on bars, cells, and tiles.
+    expect(onMarks).toBeGreaterThan(3000);
   });
 
   it("never rounds a rect past half its width or height", () => {
@@ -86,8 +89,10 @@ describe("rendered figure invariants", () => {
       const scan = scanSvg(svg);
       for (const label of scan.labels) {
         const box = labelBox(label);
-        if (box.left < -1 || box.right > scan.width + 1) {
-          failures.push(`${where}: "${label.text}" spans ${box.left.toFixed(1)}..${box.right.toFixed(1)} of ${scan.width}`);
+        if (box.left < -1 || box.right > scan.width + 1 || box.top < -1 || box.bottom > scan.height + 1) {
+          failures.push(
+            `${where}: "${label.text}" spans x ${box.left.toFixed(1)}..${box.right.toFixed(1)} y ${box.top.toFixed(1)}..${box.bottom.toFixed(1)} of ${scan.width}×${scan.height}`,
+          );
         }
       }
     }
@@ -115,21 +120,15 @@ describe("rendered figure invariants", () => {
 
   it("draws every grid in the theme's grid style", () => {
     const failures: string[] = [];
+    let grids = 0;
     for (const [file, chart] of charts) {
       for (const theme of THEMES) {
         const grid = themeTokens(theme).GRID;
         const svg = renderSvg(ChartIRSchema.parse({ ...chart, theme }));
-        // Grid groups: stroke-only hairline groups, plus the radar web.
-        const groups = svg
-          .split("\n")
-          .filter(
-            (line) =>
-              /^\s*<g fill="none" stroke="#[0-9a-fA-F]+" stroke-opacity="[\d.]+" stroke-width="[\d.]+"/.test(line) &&
-              !/data-waterfall-connectors|data-axis|data-leaders/.test(line),
-          );
-        for (const line of groups) {
-          const dash = line.match(/stroke-dasharray="([^"]*)"/)?.[1] ?? "";
-          const width = Number(line.match(/stroke-width="([\d.]+)"/)?.[1]);
+        for (const line of svg.split("\n").filter((l) => /data-grid="1"/.test(l))) {
+          grids += 1;
+          const dash = line.match(/\sstroke-dasharray="([^"]*)"/)?.[1] ?? "";
+          const width = Number(line.match(/\sstroke-width="([\d.]+)"/)?.[1]);
           if (dash !== grid.dash || width !== grid.width) {
             failures.push(`${theme}/${file}: dash "${dash}" width ${width}, want "${grid.dash}" ${grid.width}`);
           }
@@ -137,6 +136,7 @@ describe("rendered figure invariants", () => {
       }
     }
     expect(failures.slice(0, 20), `${failures.length} off-style grids`).toEqual([]);
+    expect(grids).toBeGreaterThan(300);
   });
 
   it("never splits a word across lines", () => {
