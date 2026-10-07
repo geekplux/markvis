@@ -133,6 +133,7 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
         "stroke-opacity": HAIRLINE_OPACITY,
         "stroke-width": GRID.width,
         "stroke-dasharray": GRID.dash || undefined,
+        "data-grid": "1",
       })}>`,
     );
     for (const tick of interior) {

@@ -16,16 +16,16 @@ export const ant = {
   FONT_NUMERIC: folio.FONT_NUMERIC,
 
   INK: "#262626",
-  QUIET: "#8C8C8C",
+  QUIET: "#737373",
   HAIRLINE_OPACITY: "0.2",
   STRUCTURE_OPACITY: "0.32",
 
   TYPE: {
     title: { size: 17, weight: 600, fill: "#262626" },
-    unit: { size: 12, weight: 400, fill: "#8C8C8C" },
+    unit: { size: 12, weight: 400, fill: "#737373" },
     value: { size: 12, weight: 400, fill: "#262626" },
-    tick: { size: 12, weight: 400, fill: "#8C8C8C" },
-    note: { size: 12, weight: 400, fill: "#8C8C8C" },
+    tick: { size: 12, weight: 400, fill: "#737373" },
+    note: { size: 12, weight: 400, fill: "#737373" },
     legend: { size: 12, weight: 400, fill: "#262626" },
   },
 

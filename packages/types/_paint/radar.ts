@@ -209,6 +209,7 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
       "stroke-opacity": STRUCTURE_OPACITY,
       "stroke-width": GRID.width,
       "stroke-dasharray": GRID.dash || undefined,
+      "data-grid": "1",
       "data-radar-grid": "1",
     })}>`,
   );

@@ -156,6 +156,7 @@ export function drawRowAxes(frame: RowFrame, categories: string[]): string[] {
       "stroke-opacity": HAIRLINE_OPACITY,
       "stroke-width": GRID.width,
       "stroke-dasharray": GRID.dash || undefined,
+      "data-grid": "1",
     })}>`,
   ];
   for (const tick of ticks) {

@@ -187,6 +187,7 @@ export function renderHorizontalBar(chart: ChartIR, _id: string): Painted {
       "stroke-opacity": HAIRLINE_OPACITY,
       "stroke-width": GRID.width,
       "stroke-dasharray": GRID.dash || undefined,
+      "data-grid": "1",
     })}>`,
   );
   for (let i = 0; i < ticks.length; i++) {

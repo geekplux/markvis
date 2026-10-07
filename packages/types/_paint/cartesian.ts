@@ -22,7 +22,7 @@ import {
   type PlotBox,
   legendTop,
 } from "./layout.js";
-import { readableInk } from "./contrast.js";
+import { legibleOnPaper, readableInk } from "./contrast.js";
 import { heroFill, heroIndex, seriesStyle } from "./palette.js";
 import {
   compactScale,
@@ -64,6 +64,7 @@ import {
   MARKER,
   MAX_INTERIOR_GRID,
   PAPER,
+  PLATE,
   PLOT_BG,
   PLOT_BORDER,
   PLOT_BORDER_WIDTH,
@@ -710,6 +711,7 @@ function drawGridAndAxes(prepared: Prepared): string[] {
           "stroke-opacity": HAIRLINE_OPACITY,
           "stroke-width": GRID.width,
           "stroke-dasharray": GRID.dash || undefined,
+          "data-grid": "1",
         })}>`,
       );
       for (const tick of gridTicks) {
@@ -734,6 +736,7 @@ function drawGridAndAxes(prepared: Prepared): string[] {
         "stroke-opacity": HAIRLINE_OPACITY,
         "stroke-width": GRID.width,
         "stroke-dasharray": GRID.dash || undefined,
+        "data-grid": "1",
         "data-v-grid": "1",
       })}>`,
     );
@@ -1296,7 +1299,7 @@ function drawEndLabels(prepared: Prepared): string[] {
         y: fmtPx(ys[i]!),
         "text-anchor": "start",
         "dominant-baseline": "middle",
-        fill: item.color,
+        fill: legibleOnPaper(item.color, PLATE ?? PAPER),
         "data-end-label": item.name,
       })}>${escapeXml(item.name)}</text>`,
     );
