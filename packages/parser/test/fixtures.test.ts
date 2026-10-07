@@ -51,12 +51,12 @@ function expectedError(source: string, file: string): ErrorCode {
 }
 
 describe("fixture inventory", () => {
-  it("covers 87 valid fixtures", () => {
-    expect(validFiles).toHaveLength(88);
+  it("covers 96 valid fixtures", () => {
+    expect(validFiles).toHaveLength(96);
   });
 
-  it("covers 34 invalid fixtures", () => {
-    expect(invalidFiles).toHaveLength(39);
+  it("covers 43 invalid fixtures", () => {
+    expect(invalidFiles).toHaveLength(43);
   });
 });
 
