@@ -1,6 +1,6 @@
 {
   "name": "markvis",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "private": false,
   "type": "module",
   "description": "Charts as text in Markdown. Write a short chart block; markvis draws it as SVG from a script tag, JavaScript, React, or any Markdown renderer. Where it cannot draw, the numbers stay as a table.",

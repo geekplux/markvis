@@ -12,6 +12,11 @@ for (const rel of [
   "dist/index.d.ts",
   "dist/cli.bin.js",
   "dist/markvis.min.js",
+  "dist/markvis.mjs",
+  "dist/react.js",
+  "dist/react.d.ts",
+  "dist/rehype.js",
+  "dist/rehype.d.ts",
 ]) {
   const path = join(root, rel);
   if (!existsSync(path)) {
