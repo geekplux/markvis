@@ -5,6 +5,7 @@ import {
   paletteFromSearch,
   playgroundSearch,
   stemFromId,
+  surfaceFromSearch,
   themeFromSearch,
 } from "../src/links.js";
 
@@ -64,5 +65,17 @@ describe("playground links", () => {
     expect(playgroundSearch("01-bar-basic", "folio", "ink")).toBe(
       "?example=01-bar-basic&theme=folio&palette=ink",
     );
+  });
+
+  it("round-trips a non-default surface through the URL", () => {
+    expect(playgroundSearch("01-bar-basic", "ant", null, "dark")).toBe(
+      "?example=01-bar-basic&theme=ant&surface=dark",
+    );
+    expect(playgroundSearch("01-bar-basic", "ant", null, "light")).toBe(
+      "?example=01-bar-basic&theme=ant",
+    );
+    expect(surfaceFromSearch("?surface=dark")).toBe("dark");
+    expect(surfaceFromSearch("?surface=light")).toBeNull();
+    expect(surfaceFromSearch("?surface=neon")).toBeNull();
   });
 });
