@@ -290,7 +290,7 @@ y: n
 
 | Mistake | Fix |
 | --- | --- |
-| Mermaid `pie` / `xychart` for tabular numbers | Use markvis. Mermaid is structure. |
+| A diagram tool's pie or xy chart for tabular numbers | Use a markvis fence. |
 | JSON as the data body | CSV or GFM table. |
 | Invented type (`donut`, `stacked-bar`, `sunburst`, `chord`) | Use a real type id. Donut = `pie` + `innerRadius`. Stacked = `layout`. |
 | Assuming omit `innerRadius` is always solid | Omit → theme `PIE_INNER_RATIO`; use `0` to force solid. |

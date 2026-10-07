@@ -1,6 +1,6 @@
 # Public site: VitePress apps/web → GitHub Pages.
 # Replaces docsify for markvis.js.org. Does not touch markvis-editor.
-# Settings (GeekPlux): GitHub Pages source must be GitHub Actions.
+# Repository settings: GitHub Pages source must be GitHub Actions.
 # Gate: reusable check via workflow_call so Pages never deploys if check fails.
 # Fire on v2 until the merge-commit onto master, then master is the default.
 name: pages

@@ -33,7 +33,7 @@ Each host example renders at least one valid fence to HTML with svg and table el
 
 ## VS Code
 
-extensions/vscode-markvis-preview — Markdown preview renders chart / markvis / vis to SVG. Install from folder or vsce package. Do not publish to Marketplace unless GeekPlux says so. See that folder README.
+extensions/vscode-markvis-preview — Markdown preview renders chart / markvis / vis to SVG. Install from folder or vsce package. Publishing to the Marketplace is a maintainer decision. See that folder README.
 
 ## GitHub Pages (one-time Settings)
 

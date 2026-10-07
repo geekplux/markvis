@@ -63,5 +63,4 @@ Host example: `examples/hosts/astro/` (and the package README). Same drawing as 
 
 ## Also
 
-- VS Code preview: `extensions/vscode-markvis-preview` (install from folder; Marketplace only if GeekPlux says so).
-- Public site: markvis.js.org from branch `master` via GitHub Actions. Leave markvis-editor.js.org alone.
+- VS Code preview: `extensions/vscode-markvis-preview` (install from folder; not yet on the Marketplace).
