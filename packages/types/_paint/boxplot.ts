@@ -51,7 +51,7 @@ export function renderBoxplot(chart: ChartIR, _id: string): Painted {
         ...groups.flat().map((box) => {
           if (!box) return 0;
           const label = medianLabel(box);
-          return textWidth(label.main + label.rest, TYPE.value.size);
+          return textWidth(label.main + label.rest, TYPE.value.size, TYPE.value.weight);
         }),
       ) + 24
     : 20;

@@ -155,8 +155,8 @@ function clipLeaderLabels(items: LabelPos[]): void {
     item.elbowX = Math.max(pad, Math.min(limit, item.elbowX));
     item.lx = Math.max(pad, Math.min(limit, item.lx));
     const room = item.side > 0 ? limit - item.lx : item.lx - pad;
-    item.text = truncateLabel(item.full, Math.max(0, room), TYPE.value.size);
-    item.width = textWidth(item.text, TYPE.value.size);
+    item.text = truncateLabel(item.full, Math.max(0, room), TYPE.value.size, TYPE.value.weight);
+    item.width = textWidth(item.text, TYPE.value.size, TYPE.value.weight);
   }
 }
 
@@ -177,7 +177,7 @@ function placeLabels(
         side,
         text,
         full: text,
-        width: textWidth(text, TYPE.value.size),
+        width: textWidth(text, TYPE.value.size, TYPE.value.weight),
         x0: 0,
         y0: 0,
         x1: 0,
@@ -595,6 +595,7 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
         stroke: INK,
         "stroke-opacity": STRUCTURE_OPACITY,
         "stroke-width": 1,
+        "data-leaders": "1",
       })}>`,
     );
     for (const item of labels) {

@@ -15,6 +15,7 @@ import { textWidth } from "./text.js";
 import {
   AREA_OPACITY,
   FONT_NUMERIC,
+  GRID,
   INK,
   LEGEND_BELOW,
   MARGIN,
@@ -64,7 +65,7 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
 
   const labelPad = Math.max(
     36,
-    ...spokes.map((s) => textWidth(s, TYPE.tick.size) / 2 + 12),
+    ...spokes.map((s) => textWidth(s, TYPE.tick.size, TYPE.tick.weight) / 2 + 12),
   );
   let left = Math.max(MARGIN.left, labelPad);
   let right = Math.max(MARGIN.right, labelPad);
@@ -99,7 +100,7 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
     const cy = cyOf();
     for (let i = 0; i < spokes.length; i++) {
       const p = spokePoint(cx, cy, r + 14, i, n);
-      const w = textWidth(spokes[i]!, TYPE.tick.size);
+      const w = textWidth(spokes[i]!, TYPE.tick.size, TYPE.tick.weight);
       overflowLeft = Math.max(overflowLeft, 8 - (p.x - w / 2));
       overflowRight = Math.max(overflowRight, p.x + w / 2 - (SVG_WIDTH - 8));
       overflowTop = Math.max(overflowTop, 4 - (p.y - TYPE.tick.size));
@@ -205,7 +206,8 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
       fill: "none",
       stroke: INK,
       "stroke-opacity": STRUCTURE_OPACITY,
-      "stroke-width": 1,
+      "stroke-width": GRID.width,
+      "stroke-dasharray": GRID.dash || undefined,
       "data-radar-grid": "1",
     })}>`,
   );

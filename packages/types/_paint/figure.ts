@@ -50,7 +50,7 @@ function titleCase(text: string): string {
 /** Title width including theme letter-spacing. */
 function titleWidth(text: string): number {
   const tracking = TITLE.tracking * TYPE.title.size * text.length;
-  return textWidth(text, TYPE.title.size) + tracking;
+  return textWidth(text, TYPE.title.size, TYPE.title.weight) + tracking;
 }
 
 /** A centered title wraps across the full frame, not from the plot left. */
@@ -92,7 +92,7 @@ function titleWords(text: string, maxWidth: number): string[] {
 export function wrapTitle(title: string, x: number, unit?: string): string[] {
   const maxWidth = titleWrapWidth(wrapX(x));
   const suffixW =
-    unitSuffix(unit) === "" ? 0 : textWidth(unitSuffix(unit), TYPE.unit.size);
+    unitSuffix(unit) === "" ? 0 : textWidth(unitSuffix(unit), TYPE.unit.size, TYPE.unit.weight);
   const lastMax = Math.max(12, maxWidth - suffixW);
   const cap = 4;
   const source = titleCase(title.trim());
@@ -110,7 +110,7 @@ export function wrapTitle(title: string, x: number, unit?: string): string[] {
       break;
     }
     if (lastSlot) {
-      lines.push(truncateLabel(rest, lastMax, TYPE.title.size));
+      lines.push(truncateLabel(rest, lastMax, TYPE.title.size, TYPE.title.weight));
       break;
     }
     let taken = "";
@@ -125,7 +125,7 @@ export function wrapTitle(title: string, x: number, unit?: string): string[] {
       j += 1;
     }
     if (taken === "") {
-      lines.push(truncateLabel(words[i]!, maxWidth, TYPE.title.size));
+      lines.push(truncateLabel(words[i]!, maxWidth, TYPE.title.size, TYPE.title.weight));
       i += 1;
       continue;
     }
@@ -134,7 +134,7 @@ export function wrapTitle(title: string, x: number, unit?: string): string[] {
         j -= 1;
         taken = words.slice(i, j).join(" ");
       } else {
-        lines.push(truncateLabel(taken, lastMax, TYPE.title.size));
+        lines.push(truncateLabel(taken, lastMax, TYPE.title.size, TYPE.title.weight));
         break;
       }
     }

@@ -4,26 +4,31 @@
  * This is not an operating-system font measurement. The theme FONT stack
  * is the typeface the estimate stands in for.
  */
-export function textWidth(text: string, fontSize: number): number {
+/**
+ * Estimated advance width. Semibold and heavier faces run about 8% wider,
+ * so pass the weight wherever a bold label must fit a measured gutter.
+ */
+export function textWidth(text: string, fontSize: number, weight = 400): number {
   let width = 0;
   for (const char of text) {
     const code = char.codePointAt(0) ?? 0;
     const em = code > 0x2e80 ? 1 : 0.62;
     width += fontSize * em;
   }
-  return width;
+  return weight >= 600 ? width * 1.08 : width;
 }
 
 export function truncateLabel(
   text: string,
   maxPx: number,
   fontSize: number,
+  weight = 400,
 ): string {
-  if (textWidth(text, fontSize) <= maxPx) {
+  if (textWidth(text, fontSize, weight) <= maxPx) {
     return text;
   }
   let out = text;
-  while (out.length > 0 && textWidth(`${out}…`, fontSize) > maxPx) {
+  while (out.length > 0 && textWidth(`${out}…`, fontSize, weight) > maxPx) {
     out = out.slice(0, -1);
   }
   const trimmed = out.trimEnd();
@@ -79,28 +84,37 @@ export function wrapText(
   fontSize: number,
   maxWidth: number,
   maxLines = 4,
+  weight = 400,
 ): WrappedText {
   const limit = Math.max(1, maxLines);
   if (text.length === 0) {
     return { lines: [""], truncated: false };
   }
-  if (!(maxWidth > 0) || textWidth(text, fontSize) <= maxWidth) {
+  if (!(maxWidth > 0) || textWidth(text, fontSize, weight) <= maxWidth) {
     return { lines: [text], truncated: false };
   }
 
   const words: string[] = [];
+  let cut = false;
   for (const part of text.split(/\s+/)) {
     if (part === "") {
       continue;
     }
-    if (textWidth(part, fontSize) <= maxWidth) {
+    if (textWidth(part, fontSize, weight) <= maxWidth) {
       words.push(part);
+      continue;
+    }
+    // A long Latin word keeps its letters together and ends in "…"; text
+    // without spaces (CJK) can only wrap between characters.
+    if (![...part].some((char) => (char.codePointAt(0) ?? 0) > 0x2e80)) {
+      words.push(truncateLabel(part, maxWidth, fontSize, weight));
+      cut = true;
       continue;
     }
     let chunk = "";
     for (const char of part) {
       const next = chunk + char;
-      if (chunk !== "" && textWidth(next, fontSize) > maxWidth) {
+      if (chunk !== "" && textWidth(next, fontSize, weight) > maxWidth) {
         words.push(chunk);
         chunk = char;
       } else {
@@ -118,7 +132,7 @@ export function wrapText(
   while (i < words.length) {
     const word = words[i]!;
     const candidate = current === "" ? word : `${current} ${word}`;
-    if (textWidth(candidate, fontSize) <= maxWidth) {
+    if (textWidth(candidate, fontSize, weight) <= maxWidth) {
       current = candidate;
       i += 1;
       continue;
@@ -142,12 +156,12 @@ export function wrapText(
     }
     return {
       lines: lines.length > 0 ? lines : [text],
-      truncated: false,
+      truncated: cut,
     };
   }
 
   const rest = [current, ...words.slice(i)].filter((part) => part !== "").join(" ");
-  const last = truncateLabel(rest, maxWidth, fontSize);
+  const last = truncateLabel(rest, maxWidth, fontSize, weight);
   lines.push(last);
   return { lines: lines.slice(0, limit), truncated: last !== rest };
 }

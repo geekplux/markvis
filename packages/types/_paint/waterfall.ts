@@ -22,6 +22,7 @@ import {
   BAR_MAX_WIDTH_N,
   BAR_RX,
   FONT_NUMERIC,
+  GRID,
   HAIRLINE_OPACITY,
   INK,
   LABEL_ROTATE_DEG,
@@ -33,7 +34,7 @@ import {
   TICK_TEXT_GAP,
   TYPE,
 } from "./tokens.js";
-import { placeHorizontalLabel } from "./text.js";
+import { placeHorizontalLabel, textWidth } from "./text.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
 
 export function renderWaterfall(chart: ChartIR, _id: string): Painted {
@@ -73,7 +74,7 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
     categoryLabels: labels,
     legendHeight: 0,
   });
-  const { plot, height, rotateX, show } = frame;
+  const { plot, height, rotateX, show, labelLines } = frame;
   const yScale = scaleLinear(
     [yTicksRaw[0] ?? yMin, yTicksRaw[yTicksRaw.length - 1] ?? yMax],
     [plot.bottom, plot.top],
@@ -129,7 +130,8 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
         fill: "none",
         stroke: INK,
         "stroke-opacity": HAIRLINE_OPACITY,
-        "stroke-width": 1,
+        "stroke-width": GRID.width,
+        "stroke-dasharray": GRID.dash || undefined,
       })}>`,
     );
     for (const tick of interior) {
@@ -199,7 +201,9 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
         width: fmtPx(barW),
         height: fmtPx(h),
         fill,
-        rx: BAR_RX,
+        // Both ends of a floating step are data, so corners stay small
+        // whatever the theme's bar radius (graphite's pill would blur them).
+        rx: Math.min(BAR_RX, 4, barW / 2, h / 2),
         "data-step": row.xLabel,
         "data-y": formatNumber(row.y),
         "data-level": formatNumber(ends[i]!),
@@ -211,28 +215,33 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
     const deltaText = isTotal
       ? `${row.role} ${formatNumber(row.y)}`
       : `${signed} → ${formatNumber(ends[i]!)}`;
-    const placed = placeHorizontalLabel(
-      cx,
-      deltaText,
-      TYPE.value.size,
-      SVG_WIDTH,
-      8,
-    );
+    // Too wide for its slot: the change on one line, the level under it.
+    const [head, tail] = isTotal
+      ? [row.role, formatNumber(row.y)]
+      : [signed, `→ ${formatNumber(ends[i]!)}`];
+    const split = textWidth(deltaText, TYPE.value.size, TYPE.value.weight) > catStep - 4;
+    const shown = split ? [head, tail] : [deltaText];
+    const widest = shown.reduce((w, t) => (t.length > w.length ? t : w), "");
+    const placed = placeHorizontalLabel(cx, widest, TYPE.value.size, SVG_WIDTH, 8);
+    const lineH = TYPE.value.size + 2;
+    const body = split
+      ? shown
+          .map((t, li) => `<tspan x="${fmtPx(placed.x)}" dy="${li === 0 ? 0 : lineH}">${escapeXml(t)}</tspan>`)
+          .join("")
+      : escapeXml(placed.text);
     const deltaTitle =
-      placed.text === deltaText
-        ? ""
-        : `<title>${escapeXml(deltaText)}</title>`;
+      !split && placed.text === deltaText ? "" : `<title>${escapeXml(deltaText)}</title>`;
     lines.push(
       `    <text ${attrs({
         x: fmtPx(placed.x),
-        y: fmtPx(top - 6),
+        y: fmtPx(top - 6 - (shown.length - 1) * lineH),
         "text-anchor": placed.anchor,
         "font-size": TYPE.value.size,
         "font-family": FONT_NUMERIC,
         "font-weight": TYPE.value.weight,
         fill: TYPE.value.fill,
         "data-delta": row.xLabel,
-      })}>${deltaTitle}${escapeXml(placed.text)}</text>`,
+      })}>${deltaTitle}${body}</text>`,
     );
   }
   lines.push(`  </g>`);
@@ -299,22 +308,23 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
         })}>${escapeXml(label)}</text>`,
       );
     } else {
-      const placed = placeHorizontalLabel(
-        cx,
-        label,
-        TYPE.tick.size,
-        SVG_WIDTH,
-        4,
-      );
-      const stepTitle =
-        placed.text === label ? "" : `<title>${escapeXml(label)}</title>`;
+      // Step names wrap into the slot the frame measured for them.
+      const wrapped = labelLines[i] && labelLines[i]!.length > 0 ? labelLines[i]! : [label];
+      const lineH = TYPE.tick.size + 3;
+      const body =
+        wrapped.length === 1
+          ? escapeXml(wrapped[0]!)
+          : wrapped
+              .map((line, li) => `<tspan x="${fmtPx(cx)}" dy="${li === 0 ? 0 : lineH}">${escapeXml(line)}</tspan>`)
+              .join("");
+      const stepTitle = wrapped.join(" ") === label ? "" : `<title>${escapeXml(label)}</title>`;
       lines.push(
         `    <text ${attrs({
-          x: fmtPx(placed.x),
+          x: fmtPx(cx),
           y: fmtPx(plot.bottom + TYPE.tick.size),
-          "text-anchor": placed.anchor,
+          "text-anchor": "middle",
           "data-full-label": label,
-        })}>${stepTitle}${escapeXml(placed.text)}</text>`,
+        })}>${stepTitle}${body}</text>`,
       );
     }
   }

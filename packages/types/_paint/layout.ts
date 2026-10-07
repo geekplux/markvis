@@ -90,7 +90,7 @@ export function layoutLegend(
   let rowHeight = 16;
   for (let i = 0; i < names.length; i++) {
     const name = names[i]!;
-    const width = 16 + textWidth(name, TYPE.legend.size) + 14;
+    const width = 16 + textWidth(name, TYPE.legend.size, TYPE.legend.weight) + 14;
     if (i > 0 && x + width > left + maxWidth) {
       x = left;
       y += 18;
@@ -125,7 +125,7 @@ function centerLegendRows(
   for (const indexes of rows.values()) {
     const lastIndex = indexes[indexes.length - 1]!;
     const last = items[lastIndex]!;
-    const right = last.x + 16 + textWidth(names[lastIndex]!, TYPE.legend.size);
+    const right = last.x + 16 + textWidth(names[lastIndex]!, TYPE.legend.size, TYPE.legend.weight);
     const shift = Math.max(0, (maxWidth - (right - left)) / 2);
     for (const i of indexes) {
       items[i]!.x += shift;
@@ -162,7 +162,7 @@ export function categoryLayout(
 ): CategoryLayout {
   const maxWidth = Math.max(catStep - LABEL_MIN_GAP, TYPE.tick.size);
   const wrapped = labels.map((label) =>
-    wrapText(label, TYPE.tick.size, maxWidth, 3),
+    wrapText(label, TYPE.tick.size, maxWidth, 3, TYPE.tick.weight),
   );
   return {
     rotate: false,
@@ -172,17 +172,21 @@ export function categoryLayout(
   };
 }
 
+/** Room the y tick marks take left of the plot: only when the theme draws them. */
+export function yTickPad(): number {
+  return AXIS.line === "xy" ? AXIS.tick : 0;
+}
+
 export function tickLeftMargin(
   yTickLabels: string[],
   axisTitles: boolean = AXIS_TITLES,
 ): number {
   const yTickWidth = Math.max(
     0,
-    ...yTickLabels.map((label) => textWidth(label, TYPE.tick.size)),
+    ...yTickLabels.map((label) => textWidth(label, TYPE.tick.size, TYPE.tick.weight)),
   );
   const axisPad = axisTitles ? 18 : 0;
-  const tickPad = AXIS.line === "xy" ? AXIS.tick : 0;
-  return Math.max(MARGIN.left, yTickWidth + TICK_TEXT_GAP + tickPad) + axisPad;
+  return Math.max(MARGIN.left, yTickWidth + TICK_TEXT_GAP + yTickPad()) + axisPad;
 }
 
 export function categoryBottomMargin(layout: CategoryLayout): number {

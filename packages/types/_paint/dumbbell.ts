@@ -44,7 +44,7 @@ export function renderDumbbell(chart: ChartIR, _id: string): Painted {
     pair.from !== null && pair.to !== null ? deltaLabel(pair.from, pair.to) : "",
   );
   const rightPad =
-    Math.max(0, ...deltas.map((label) => textWidth(label, TYPE.value.size))) + 24;
+    Math.max(0, ...deltas.map((label) => textWidth(label, TYPE.value.size, TYPE.value.weight))) + 24;
   const fromStyle = seriesStyle(0);
   const toStyle = seriesStyle(1);
   const frame = layoutRows(chart, {

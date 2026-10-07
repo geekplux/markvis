@@ -70,7 +70,7 @@ export function renderBullet(chart: ChartIR, _id: string): Painted {
       0,
       ...rows.map((row) => {
         const label = labelOf(row);
-        return textWidth(label.main + label.rest, TYPE.value.size);
+        return textWidth(label.main + label.rest, TYPE.value.size, TYPE.value.weight);
       }),
     ) + 24;
   const barColor = seriesStyle(0).color;

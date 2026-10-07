@@ -82,12 +82,12 @@ export function renderHorizontalBar(chart: ChartIR, _id: string): Painted {
 
   const labelBudget = Math.min(240, Math.max(96, SVG_WIDTH * 0.4));
   const wrapped = categories.map((label) =>
-    wrapText(label, TYPE.tick.size, labelBudget, 3),
+    wrapText(label, TYPE.tick.size, labelBudget, 3, TYPE.tick.weight),
   );
   const labelW = Math.max(
     48,
     ...wrapped.map((item) =>
-      Math.max(...item.lines.map((line) => textWidth(line, TYPE.tick.size)), 0),
+      Math.max(...item.lines.map((line) => textWidth(line, TYPE.tick.size, TYPE.tick.weight)), 0),
     ),
   );
   const nS = Math.max(series.length, 1);

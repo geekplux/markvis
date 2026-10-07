@@ -13,6 +13,7 @@ import { binHistogram, histSamplesFromChart, type HistBin } from "./hist.js";
 import {
   layoutFrame,
   layoutLegend,
+  yTickPad,
   setTitleLineCount,
   showBarValueLabels,
   SVG_WIDTH,
@@ -21,6 +22,7 @@ import {
   type PlotBox,
   legendTop,
 } from "./layout.js";
+import { readableInk } from "./contrast.js";
 import { heroFill, heroIndex, seriesStyle } from "./palette.js";
 import {
   compactScale,
@@ -350,7 +352,7 @@ function usesColorLegend(chart: ChartIR, seriesCount: number): boolean {
 function endLabelRightMin(series: string[]): number {
   const widest = Math.max(
     0,
-    ...series.map((name) => textWidth(name, TYPE.value.size)),
+    ...series.map((name) => textWidth(name, TYPE.value.size, TYPE.value.weight)),
   );
   return END_LABEL_GAP + widest;
 }
@@ -803,7 +805,7 @@ function drawGridAndAxes(prepared: Prepared): string[] {
   for (const tick of yTicks) {
     lines.push(
       `    <text ${attrs({
-        x: fmtPx(plot.left - TICK_TEXT_GAP - AXIS.tick),
+        x: fmtPx(plot.left - TICK_TEXT_GAP - yTickPad()),
         y: fmtPx(tick.pos),
         "text-anchor": "end",
         "dominant-baseline": "middle",
@@ -818,17 +820,31 @@ function drawGridAndAxes(prepared: Prepared): string[] {
     const lineH = TYPE.tick.size + 3;
     let widest = display[0] ?? "";
     for (const line of display) {
-      if (textWidth(line, TYPE.tick.size) > textWidth(widest, TYPE.tick.size)) {
+      if (textWidth(line, TYPE.tick.size, TYPE.tick.weight) > textWidth(widest, TYPE.tick.size, TYPE.tick.weight)) {
         widest = line;
       }
     }
-    const placed = placeHorizontalLabel(
+    let placed = placeHorizontalLabel(
       tick.pos,
       widest,
       TYPE.tick.size,
       SVG_WIDTH,
       4,
     );
+    // A wide label near the corner would run into the lowest y label: start it at its tick.
+    const atCorner =
+      tick.pos - plot.left < TICK_TEXT_GAP + 8 &&
+      yTicks.some((y) => Math.abs(y.pos - plot.bottom) < 0.5);
+    const placedW = textWidth(placed.text, TYPE.tick.size, TYPE.tick.weight);
+    const placedLeft =
+      placed.anchor === "middle"
+        ? placed.x - placedW / 2
+        : placed.anchor === "end"
+          ? placed.x - placedW
+          : placed.x;
+    if (atCorner && placedLeft < plot.left - TICK_TEXT_GAP - yTickPad()) {
+      placed = { ...placed, x: tick.pos, anchor: "start" };
+    }
     const shown =
       placed.text === widest
         ? display
@@ -868,12 +884,11 @@ function drawGridAndAxes(prepared: Prepared): string[] {
       // Center the rotated title in the gutter left of the widest tick label.
       const widestTick = Math.max(
         0,
-        ...yTicks.map((tick) => textWidth(tick.label, TYPE.tick.size)),
+        ...yTicks.map((tick) => textWidth(tick.label, TYPE.tick.size, TYPE.tick.weight)),
       );
-      const tickPad = AXIS.line === "xy" ? AXIS.tick : 0;
       const cx = Math.max(
         TYPE.unit.size / 2 + 2,
-        plot.left - TICK_TEXT_GAP - tickPad - widestTick - 9,
+        plot.left - TICK_TEXT_GAP - yTickPad() - widestTick - 9,
       );
       const cy = (plot.top + plot.bottom) / 2;
       lines.push(
@@ -888,10 +903,17 @@ function drawGridAndAxes(prepared: Prepared): string[] {
       );
     }
     if (prepared.axisXTitle) {
+      // Below the last line of the x labels, which sit under any tick marks.
+      const labelLines = Math.max(
+        1,
+        ...xTicks.filter((tick) => tick.show).map((tick) => Math.max(tick.lines.length, 1)),
+      );
+      const lastBaseline =
+        plot.bottom + AXIS.tick + TYPE.tick.size + (labelLines - 1) * (TYPE.tick.size + 3);
       lines.push(
         `    <text ${attrs({
           x: fmtPx((plot.left + plot.right) / 2),
-          y: fmtPx(plot.bottom + TYPE.tick.size + 16),
+          y: fmtPx(lastBaseline + TYPE.tick.size * 0.3 + 6),
           "text-anchor": "middle",
           "dominant-baseline": "hanging",
           "data-axis": "x",
@@ -925,23 +947,6 @@ function roundedBarPath(
   return `M${x0} ${y0} L${x1} ${y0} L${x1} ${fmtPx(y + h - r)} Q${x1} ${y1} ${fmtPx(x + w - r)} ${y1} L${fmtPx(x + r)} ${y1} Q${x0} ${y1} ${x0} ${fmtPx(y + h - r)} Z`;
 }
 
-function luminance(hex: string): number {
-  const body = hex.replace("#", "");
-  const n = Number.parseInt(body.length === 3 ? body.replace(/./g, "$&$&") : body, 16);
-  if (!Number.isFinite(n)) {
-    return 0;
-  }
-  const r = ((n >> 16) & 255) / 255;
-  const g = ((n >> 8) & 255) / 255;
-  const b = (n & 255) / 255;
-  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
-}
-
-/** Ink that stays readable on a bar fill. */
-function inkOnFill(fill: string): string {
-  return luminance(fill) > 0.62 ? SEMANTIC.inkOnLight : SEMANTIC.inkOnDark;
-}
-
 /**
  * Place a value label outside the bar when it fits in the plot.
  * A bar that reaches the plot edge would otherwise draw through the title,
@@ -964,6 +969,8 @@ function valueLabelPlacement(
     }
     return roundUp ? y + 12 : y + h - 6;
   })();
+  // A short bar keeps its label inside, so it is drawn in ink for the fill.
+  const shortInside = h >= 8 && h < BAR_LABEL_INSIDE_H;
   const hitsTitle = roundUp && outside < plotTop + 2;
   const hitsBottom = !roundUp && outside > plotBottom - 2;
   if ((hitsTitle || hitsBottom) && h >= 16) {
@@ -972,7 +979,7 @@ function valueLabelPlacement(
       inside: true,
     };
   }
-  return { y: outside, inside: false };
+  return { y: outside, inside: shortInside };
 }
 
 function drawBars(prepared: Prepared): string[] {
@@ -1056,17 +1063,23 @@ function drawBars(prepared: Prepared): string[] {
           continue;
         }
         const text = formatNumber(val);
-        const cx = x + barW / 2;
-        const placed = valueLabelPlacement(roundUp, y, h, y0, plot.top, plot.bottom);
+        // A segment label sits inside its own segment; above it is the next segment.
+        if (
+          h < TYPE.value.size + 4 ||
+          textWidth(text, TYPE.value.size, TYPE.value.weight) > barW - 4
+        ) {
+          continue;
+        }
         labels.push(
           `    <text ${attrs({
-            x: fmtPx(cx),
-            y: fmtPx(placed.y),
+            x: fmtPx(x + barW / 2),
+            y: fmtPx(y + h / 2),
             "text-anchor": "middle",
+            "dominant-baseline": "middle",
             "font-size": TYPE.value.size,
             "font-family": FONT_NUMERIC,
             "font-weight": TYPE.value.weight,
-            fill: placed.inside ? inkOnFill(style.color) : TYPE.value.fill,
+            fill: readableInk(style.color, style.opacity),
             "data-value-label": cat,
           })}>${escapeXml(text)}</text>`,
         );
@@ -1155,7 +1168,7 @@ function drawBars(prepared: Prepared): string[] {
           "font-size": TYPE.value.size,
           "font-family": FONT_NUMERIC,
           "font-weight": TYPE.value.weight,
-          fill: placed.inside ? inkOnFill(style.color) : TYPE.value.fill,
+          fill: placed.inside ? readableInk(style.color, style.opacity) : TYPE.value.fill,
           "data-value-label": cat,
         })}>${escapeXml(text)}</text>`,
       );
@@ -1602,7 +1615,7 @@ function drawHist(prepared: Prepared): string[] {
         "font-size": TYPE.value.size,
         "font-family": FONT_NUMERIC,
         "font-weight": TYPE.value.weight,
-        fill: placed.inside ? inkOnFill(style.color) : TYPE.value.fill,
+        fill: placed.inside ? readableInk(style.color, style.opacity) : TYPE.value.fill,
         "data-value-label": `${bin.left}–${bin.right}`,
       })}>${escapeXml(formatNumber(bin.weight))}</text>`,
     );

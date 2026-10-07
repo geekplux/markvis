@@ -73,12 +73,12 @@ export function niceDomain(values: number[], includeZero: boolean): {
 export function layoutRows(chart: ChartIR, opts: RowOptions): RowFrame {
   const labelBudget = Math.min(220, Math.max(96, SVG_WIDTH * 0.34));
   const wrapped = opts.categories.map((label) =>
-    wrapText(label, TYPE.tick.size, labelBudget, 3),
+    wrapText(label, TYPE.tick.size, labelBudget, 3, TYPE.tick.weight),
   );
   const labelW = Math.max(
     40,
     ...wrapped.map((item) =>
-      Math.max(0, ...item.lines.map((line) => textWidth(line, TYPE.tick.size))),
+      Math.max(0, ...item.lines.map((line) => textWidth(line, TYPE.tick.size, TYPE.tick.weight))),
     ),
   );
   const rowH = Math.max(
