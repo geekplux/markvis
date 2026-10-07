@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="306" viewBox="0 0 720 306" role="img" aria-label="dumbbell chart: Rents rose fastest along the Eastside Trail (USD), 10 rows, series year" aria-labelledby="mv-66d019e87716dfd8-title" aria-describedby="mv-66d019e87716dfd8-desc" data-markvis="2" data-chart-type="dumbbell" data-id="mv-66d019e87716dfd8" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-66d019e87716dfd8-title">Rents rose fastest along the Eastside Trail</title>
+  <desc id="mv-66d019e87716dfd8-desc">dumbbell chart. Rents rose fastest along the Eastside Trail. x=neighborhood. y=rent. series=year. unit=USD. 10 rows.</desc>
+  <rect x="0.5" y="0.5" width="719" height="305" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
+  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Rents rose fastest along the Eastside Trail</title>Rents rose fastest along the Eastside Trail</text>
+  <text x="48" y="51" text-anchor="start" font-size="13" font-weight="400" fill="#737373" data-subtitle="1">USD</text>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1">
+    <line x1="125.6" x2="125.6" y1="72" y2="242"/>
+    <line x1="305.81" x2="305.81" y1="72" y2="242"/>
+    <line x1="486.03" x2="486.03" y1="72" y2="242"/>
+    <line x1="666.24" x2="666.24" y1="72" y2="242"/>
+  </g>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="117.6" y="89" text-anchor="end" dominant-baseline="middle" data-full-label="Old Fourth Ward"><title>Old Fourth Ward</title><tspan x="117.6" dy="0">Old Fourth Ward</tspan></text>
+    <text x="117.6" y="123" text-anchor="end" dominant-baseline="middle" data-full-label="Inman Park"><title>Inman Park</title><tspan x="117.6" dy="0">Inman Park</tspan></text>
+    <text x="117.6" y="157" text-anchor="end" dominant-baseline="middle" data-full-label="Reynoldstown"><title>Reynoldstown</title><tspan x="117.6" dy="0">Reynoldstown</tspan></text>
+    <text x="117.6" y="191" text-anchor="end" dominant-baseline="middle" data-full-label="West End"><title>West End</title><tspan x="117.6" dy="0">West End</tspan></text>
+    <text x="117.6" y="225" text-anchor="end" dominant-baseline="middle" data-full-label="Adair Park"><title>Adair Park</title><tspan x="117.6" dy="0">Adair Park</tspan></text>
+    <text x="125.6" y="260" text-anchor="middle">1,000</text>
+    <text x="305.81" y="260" text-anchor="middle">1,500</text>
+    <text x="486.03" y="260" text-anchor="middle">2,000</text>
+    <text x="666.24" y="260" text-anchor="middle">2,500</text>
+  </g>
+  <g font-size="12" font-weight="500" fill="#0A0A0A">
+    <circle cx="348.16" cy="280" r="4.5" fill="#ffffff" stroke="#F54900" stroke-width="1.5"/>
+    <text x="357.16" y="284" data-legend="2024">2024</text>
+    <circle cx="407.92" cy="280" r="4.5" fill="#009689"/>
+    <text x="416.92" y="284" data-legend="2026">2026</text>
+  </g>
+  <g data-dumbbell="1">
+    <line x1="406.73" x2="536.49" y1="89" y2="89" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round" data-x="Old Fourth Ward"/>
+    <circle cx="406.73" cy="89" r="6" fill="#ffffff" stroke="#F54900" stroke-width="2" data-x="Old Fourth Ward" data-series="2024" data-y="1,780"/>
+    <circle cx="536.49" cy="89" r="6" fill="#009689" data-x="Old Fourth Ward" data-series="2026" data-y="2,140"/>
+    <line x1="431.96" x2="554.51" y1="123" y2="123" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round" data-x="Inman Park"/>
+    <circle cx="431.96" cy="123" r="6" fill="#ffffff" stroke="#F54900" stroke-width="2" data-x="Inman Park" data-series="2024" data-y="1,850"/>
+    <circle cx="554.51" cy="123" r="6" fill="#009689" data-x="Inman Park" data-series="2026" data-y="2,190"/>
+    <line x1="313.02" x2="399.52" y1="157" y2="157" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round" data-x="Reynoldstown"/>
+    <circle cx="313.02" cy="157" r="6" fill="#ffffff" stroke="#F54900" stroke-width="2" data-x="Reynoldstown" data-series="2024" data-y="1,520"/>
+    <circle cx="399.52" cy="157" r="6" fill="#009689" data-x="Reynoldstown" data-series="2026" data-y="1,760"/>
+    <line x1="237.33" x2="276.98" y1="191" y2="191" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round" data-x="West End"/>
+    <circle cx="237.33" cy="191" r="6" fill="#ffffff" stroke="#F54900" stroke-width="2" data-x="West End" data-series="2024" data-y="1,310"/>
+    <circle cx="276.98" cy="191" r="6" fill="#009689" data-x="West End" data-series="2026" data-y="1,420"/>
+    <line x1="190.48" x2="212.1" y1="225" y2="225" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round" data-x="Adair Park"/>
+    <circle cx="190.48" cy="225" r="6" fill="#ffffff" stroke="#F54900" stroke-width="2" data-x="Adair Park" data-series="2024" data-y="1,180"/>
+    <circle cx="212.1" cy="225" r="6" fill="#009689" data-x="Adair Park" data-series="2026" data-y="1,240"/>
+  </g>
+  <g fill="#0A0A0A" font-size="12" font-weight="500">
+    <text x="678.24" y="89" dominant-baseline="middle" data-delta="Old Fourth Ward">+360</text>
+    <text x="678.24" y="123" dominant-baseline="middle" data-delta="Inman Park">+340</text>
+    <text x="678.24" y="157" dominant-baseline="middle" data-delta="Reynoldstown">+240</text>
+    <text x="678.24" y="191" dominant-baseline="middle" data-delta="West End">+110</text>
+    <text x="678.24" y="225" dominant-baseline="middle" data-delta="Adair Park">+60</text>
+  </g>
+</svg>

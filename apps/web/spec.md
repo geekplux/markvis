@@ -48,14 +48,14 @@ Progressive form — comment immediately followed by a GFM table:
 | Mar | 150 |
 ```
 
-Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`, `surface`, plus legal encodings (`layout`, `innerRadius`, `min`, `max`, `orient`, `role`). Same meaning as fence headers.
+Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`, `surface`, plus legal encodings (`layout`, `innerRadius`, `min`, `max`, `orient`, `role`, `target`). Same meaning as fence headers.
 
 ## Fields
 
 | Field | Required | Default | Notes |
 | --- | --- | --- | --- |
 | `markvis` | no | `2` | Language version. Any other value → `E_BAD_VERSION`. It is not rewritten to 2. |
-| `type` | yes | — | `bar` \| `line` \| `area` \| `scatter` \| `pie` \| `hist` \| `heatmap` \| `funnel` \| `waterfall` \| `radar` \| `gauge` \| `sankey` \| `treemap`. |
+| `type` | yes | — | `bar` \| `line` \| `area` \| `scatter` \| `pie` \| `hist` \| `heatmap` \| `funnel` \| `waterfall` \| `radar` \| `gauge` \| `sankey` \| `treemap` \| `dumbbell` \| `bullet`. |
 | `title` | no | derived | Conclusion title when present. |
 | `theme` | no | `folio` | Grammar only: `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts` \| `graphite`. |
 | `palette` | no | theme default | Colors only: `ink` \| `porcelain` \| `warm` \| `cool` \| `vivid`. Omit → theme pack colors. |
@@ -66,10 +66,11 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | `surface` | no | `light` | `light` \| `dark` \| `export`. Light, the default, paints no canvas so the host background shows through. Dark paints a dark paper and light ink. Export paints an opaque white card. |
 | `layout` | no | `grouped` when omitted | On `bar` / `line` / `area` only: `grouped` \| `stacked` \| `percent`. |
 | `innerRadius` | no | theme `PIE_INNER_RATIO` | On `pie` only. `[0, 1]`. Omit → theme hole; `0` = solid. |
-| `min` | no | see type | Gauge omit → 0. Heatmap omit → data minimum. |
-| `max` | no | gauge `100` | Gauge, heatmap, or radar. Omit on a gauge means a labeled 0–100 range, not the current value. |
+| `min` | no | see type | Gauge omit → 0. Heatmap omit → data minimum. Bullet omit → min(0, data). |
+| `max` | no | gauge `100` | Gauge, heatmap, radar, or bullet. Omit on a gauge means a labeled 0–100 range, not the current value. |
 | `orient` | no | `vertical` | On `bar` only: `horizontal` \| `vertical`. |
 | `role` | no | every row is a delta | On `waterfall` only. Names a column of `delta` \| `total` \| `subtotal`. |
+| `target` | no | no target | On `bullet` only. Names a column of targets; an empty cell has no target. |
 | data | yes | — | CSV or GFM after a blank line. |
 
 `x` / `y` / `series` must name real header columns. CORE keys stay separate from type-local encodings. Undeclared or illegal encodings → `E_UNKNOWN_FIELD` + table.
@@ -91,6 +92,8 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | `gauge` | label | number | ignored | One row. A second row → `E_DUP_KEY`. Omit max → 100, omit min → 0. |
 | `sankey` | source | flow ≥ 0 | required (target) | One row = one link. Equal values share one thickness. A cycle → `E_SANKEY_CYCLE`. |
 | `treemap` | label | number ≥ 0 | optional (parent) | Flat or two levels. `y≤0` omitted from paint. |
+| `dumbbell` | category | number | required, exactly two values | First value hollow, second filled; the change prints at the right. A missing value is a gap. |
+| `bullet` | label | number (actual) | ignored | Optional `target` column and `min`/`max`. Past the scale → drawn to the edge, still labeled. |
 
 ## Encodings
 
@@ -98,10 +101,11 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | --- | --- | --- | --- |
 | `layout` | `bar` `line` `area` | `grouped` \| `stacked` \| `percent` | `grouped` |
 | `innerRadius` | `pie` | `[0, 1]` | theme `PIE_INNER_RATIO` (explicit `0` = solid) |
-| `min` | `gauge` `heatmap` | number | gauge 0; heatmap data min |
-| `max` | `gauge` `heatmap` `radar` | number | gauge 100; heatmap data max; radar data max |
+| `min` | `gauge` `heatmap` `bullet` | number | gauge 0; heatmap data min; bullet min(0, data) |
+| `max` | `gauge` `heatmap` `radar` `bullet` | number | gauge 100; heatmap data max; radar data max; bullet data max |
 | `orient` | `bar` | `horizontal` \| `vertical` | vertical |
 | `role` | `waterfall` | column of `delta` \| `total` \| `subtotal` | every row is a delta |
+| `target` | `bullet` | column of numbers | no target marker |
 
 Do not invent `donut` or `stacked-bar` type ids.
 

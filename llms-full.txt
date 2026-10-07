@@ -29,6 +29,8 @@ Language tags `chart`, `markvis`, `vis` share one parser.
 | gauge | one row (a second row is E_DUP_KEY); omit max → 100; series ignored |
 | sankey | x source, series target (required), y flow ≥ 0; one thickness scale; a cycle is E_SANKEY_CYCLE |
 | treemap | x label, y ≥ 0; optional series parent; two levels max |
+| dumbbell | x category, y number; series required with exactly two values; first hollow, second filled; missing value is a gap |
+| bullet | x label, y actual; optional `target` column; optional `min` / `max`; series ignored |
 
 ## Encodings
 

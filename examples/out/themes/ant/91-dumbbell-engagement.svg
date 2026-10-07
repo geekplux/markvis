@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="246" viewBox="0 0 720 246" role="img" aria-label="dumbbell chart: Support&apos;s engagement fell while every other team rose, 8 rows, series survey" aria-labelledby="mv-e5c4828177413941-title" aria-describedby="mv-e5c4828177413941-desc" data-markvis="2" data-chart-type="dumbbell" data-id="mv-e5c4828177413941" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+  <title id="mv-e5c4828177413941-title">Support&apos;s engagement fell while every other team rose</title>
+  <desc id="mv-e5c4828177413941-desc">dumbbell chart. Support&apos;s engagement fell while every other team rose. x=team. y=score. series=survey. 8 rows.</desc>
+  <text x="48" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Support&apos;s engagement fell while every other team rose</title>Support&apos;s engagement fell while every other team rose</text>
+  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4">
+    <line x1="95.84" x2="95.84" y1="46" y2="182"/>
+    <line x1="242.16" x2="242.16" y1="46" y2="182"/>
+    <line x1="388.48" x2="388.48" y1="46" y2="182"/>
+    <line x1="534.8" x2="534.8" y1="46" y2="182"/>
+    <line x1="681.12" x2="681.12" y1="46" y2="182"/>
+  </g>
+  <g fill="#8C8C8C" font-size="12" font-weight="400">
+    <text x="87.84" y="63" text-anchor="end" dominant-baseline="middle" data-full-label="Engineering"><title>Engineering</title><tspan x="87.84" dy="0">Engineering</tspan></text>
+    <text x="87.84" y="97" text-anchor="end" dominant-baseline="middle" data-full-label="Design"><title>Design</title><tspan x="87.84" dy="0">Design</tspan></text>
+    <text x="87.84" y="131" text-anchor="end" dominant-baseline="middle" data-full-label="Sales"><title>Sales</title><tspan x="87.84" dy="0">Sales</tspan></text>
+    <text x="87.84" y="165" text-anchor="end" dominant-baseline="middle" data-full-label="Support"><title>Support</title><tspan x="87.84" dy="0">Support</tspan></text>
+    <text x="95.84" y="200" text-anchor="middle">60</text>
+    <text x="242.16" y="200" text-anchor="middle">65</text>
+    <text x="388.48" y="200" text-anchor="middle">70</text>
+    <text x="534.8" y="200" text-anchor="middle">75</text>
+    <text x="681.12" y="200" text-anchor="middle">80</text>
+  </g>
+  <g font-size="12" font-weight="400" fill="#262626">
+    <circle cx="100.84" cy="220" r="4.5" fill="#ffffff" stroke="#5AD8A6" stroke-width="1.5"/>
+    <text x="109.84" y="224" data-legend="2025">2025</text>
+    <circle cx="160.6" cy="220" r="4.5" fill="#E8684A"/>
+    <text x="169.6" y="224" data-legend="2026">2026</text>
+  </g>
+  <g data-dumbbell="1">
+    <line x1="417.74" x2="564.06" y1="63" y2="63" stroke="#262626" stroke-opacity="0.32" stroke-width="3" stroke-linecap="round" data-x="Engineering"/>
+    <circle cx="417.74" cy="63" r="6" fill="#ffffff" stroke="#5AD8A6" stroke-width="2" data-x="Engineering" data-series="2025" data-y="71"/>
+    <circle cx="564.06" cy="63" r="6" fill="#E8684A" data-x="Engineering" data-series="2026" data-y="76"/>
+    <line x1="329.95" x2="505.54" y1="97" y2="97" stroke="#262626" stroke-opacity="0.32" stroke-width="3" stroke-linecap="round" data-x="Design"/>
+    <circle cx="329.95" cy="97" r="6" fill="#ffffff" stroke="#5AD8A6" stroke-width="2" data-x="Design" data-series="2025" data-y="68"/>
+    <circle cx="505.54" cy="97" r="6" fill="#E8684A" data-x="Design" data-series="2026" data-y="74"/>
+    <line x1="154.37" x2="242.16" y1="131" y2="131" stroke="#262626" stroke-opacity="0.32" stroke-width="3" stroke-linecap="round" data-x="Sales"/>
+    <circle cx="154.37" cy="131" r="6" fill="#ffffff" stroke="#5AD8A6" stroke-width="2" data-x="Sales" data-series="2025" data-y="62"/>
+    <circle cx="242.16" cy="131" r="6" fill="#E8684A" data-x="Sales" data-series="2026" data-y="65"/>
+    <line x1="388.48" x2="125.1" y1="165" y2="165" stroke="#262626" stroke-opacity="0.32" stroke-width="3" stroke-linecap="round" data-x="Support"/>
+    <circle cx="388.48" cy="165" r="6" fill="#ffffff" stroke="#5AD8A6" stroke-width="2" data-x="Support" data-series="2025" data-y="70"/>
+    <circle cx="125.1" cy="165" r="6" fill="#E8684A" data-x="Support" data-series="2026" data-y="61"/>
+  </g>
+  <g fill="#262626" font-size="12" font-weight="400">
+    <text x="693.12" y="63" dominant-baseline="middle" data-delta="Engineering">+5</text>
+    <text x="693.12" y="97" dominant-baseline="middle" data-delta="Design">+6</text>
+    <text x="693.12" y="131" dominant-baseline="middle" data-delta="Sales">+3</text>
+    <text x="693.12" y="165" dominant-baseline="middle" data-delta="Support">-9</text>
+  </g>
+</svg>

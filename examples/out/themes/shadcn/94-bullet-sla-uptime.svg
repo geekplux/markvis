@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="272" viewBox="0 0 720 272" role="img" aria-label="bullet chart: Payments missed its 99.95% uptime SLA in September (%), 4 rows" aria-labelledby="mv-41d7c697f82ccc88-title" aria-describedby="mv-41d7c697f82ccc88-desc" data-markvis="2" data-chart-type="bullet" data-id="mv-41d7c697f82ccc88" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-41d7c697f82ccc88-title">Payments missed its 99.95% uptime SLA in September</title>
+  <desc id="mv-41d7c697f82ccc88-desc">bullet chart. Payments missed its 99.95% uptime SLA in September. x=service. y=uptime. unit=%. 4 rows.</desc>
+  <rect x="0.5" y="0.5" width="719" height="271" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
+  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Payments missed its 99.95% uptime SLA in September</title>Payments missed its 99.95% uptime SLA in September</text>
+  <text x="48" y="51" text-anchor="start" font-size="13" font-weight="400" fill="#737373" data-subtitle="1">%</text>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1">
+    <line x1="110.72" x2="110.72" y1="72" y2="208"/>
+    <line x1="355" x2="355" y1="72" y2="208"/>
+    <line x1="599.28" x2="599.28" y1="72" y2="208"/>
+  </g>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="102.72" y="89" text-anchor="end" dominant-baseline="middle" data-full-label="Checkout"><title>Checkout</title><tspan x="102.72" dy="0">Checkout</tspan></text>
+    <text x="102.72" y="123" text-anchor="end" dominant-baseline="middle" data-full-label="Payments"><title>Payments</title><tspan x="102.72" dy="0">Payments</tspan></text>
+    <text x="102.72" y="157" text-anchor="end" dominant-baseline="middle" data-full-label="Search"><title>Search</title><tspan x="102.72" dy="0">Search</tspan></text>
+    <text x="102.72" y="191" text-anchor="end" dominant-baseline="middle" data-full-label="Notifications"><title>Notifications</title><tspan x="102.72" dy="0">Notifications</tspan></text>
+    <text x="110.72" y="226" text-anchor="middle">99</text>
+    <text x="355" y="226" text-anchor="middle">99.5</text>
+    <text x="599.28" y="226" text-anchor="middle">100</text>
+  </g>
+  <g font-size="12" font-weight="500" fill="#0A0A0A">
+    <circle cx="303.52" cy="246" r="4.5" fill="#F54900"/>
+    <text x="312.52" y="250" data-legend="uptime">uptime</text>
+    <rect x="377.16" y="240" width="2.5" height="12" fill="#0A0A0A"/>
+    <text x="387.16" y="250" data-legend="sla">sla</text>
+  </g>
+  <g data-bullet="1">
+    <rect x="110.72" y="77" width="488.56" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Checkout"/>
+    <path d="M110.72 84 L584.51 84 Q589.51 84 589.51 89 L589.51 89 Q589.51 94 584.51 94 L110.72 94 Z" fill="#F54900" data-x="Checkout" data-y="99.98"/>
+    <line x1="574.85" x2="574.85" y1="79" y2="99" stroke="#0A0A0A" stroke-width="2.5" data-target="99.95"/>
+    <rect x="110.72" y="111" width="488.56" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Payments"/>
+    <path d="M110.72 118 L550.31 118 Q555.31 118 555.31 123 L555.31 123 Q555.31 128 550.31 128 L110.72 128 Z" fill="#F54900" data-x="Payments" data-y="99.91"/>
+    <line x1="574.85" x2="574.85" y1="113" y2="133" stroke="#0A0A0A" stroke-width="2.5" data-target="99.95"/>
+    <rect x="110.72" y="145" width="488.56" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Search"/>
+    <path d="M110.72 152 L579.62 152 Q584.62 152 584.62 157 L584.62 157 Q584.62 162 579.62 162 L110.72 162 Z" fill="#F54900" data-x="Search" data-y="99.97"/>
+    <line x1="550.42" x2="550.42" y1="147" y2="167" stroke="#0A0A0A" stroke-width="2.5" data-target="99.9"/>
+    <rect x="110.72" y="179" width="488.56" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Notifications"/>
+    <path d="M110.72 186 L408.63 186 Q413.63 186 413.63 191 L413.63 191 Q413.63 196 408.63 196 L110.72 196 Z" fill="#F54900" data-x="Notifications" data-y="99.62"/>
+    <line x1="355" x2="355" y1="181" y2="201" stroke="#0A0A0A" stroke-width="2.5" data-target="99.5"/>
+  </g>
+  <g fill="#0A0A0A" font-size="12" font-weight="500">
+    <text x="611.28" y="89" dominant-baseline="middle" data-value-label="Checkout">99.98<tspan fill="#737373" font-weight="400"> / 99.95</tspan></text>
+    <text x="611.28" y="123" dominant-baseline="middle" data-value-label="Payments">99.91<tspan fill="#737373" font-weight="400"> / 99.95</tspan></text>
+    <text x="611.28" y="157" dominant-baseline="middle" data-value-label="Search">99.97<tspan fill="#737373" font-weight="400"> / 99.9</tspan></text>
+    <text x="611.28" y="191" dominant-baseline="middle" data-value-label="Notifications">99.62<tspan fill="#737373" font-weight="400"> / 99.5</tspan></text>
+  </g>
+</svg>

@@ -54,14 +54,14 @@ Progressive form (comment immediately followed by a GFM table):
 | Mar | 150 |
 ```
 
-Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`, `surface`, plus type-local encodings `layout` / `innerRadius` / `min` / `max` / `orient` / `role` when legal. Same meaning as fence headers.
+Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`, `surface`, plus type-local encodings `layout` / `innerRadius` / `min` / `max` / `orient` / `role` / `target` when legal. Same meaning as fence headers.
 
 ## Field table
 
 | Field | Required | Default | Notes |
 | --- | --- | --- | --- |
 | `markvis` | no | `2` | Language version. Omit or leave blank → `2`. Any other value → `E_BAD_VERSION` + table. It is not rewritten to 2. |
-| `type` | yes | — | `bar` \| `line` \| `area` \| `scatter` \| `pie` \| `hist` \| `heatmap` \| `funnel` \| `waterfall` \| `radar` \| `gauge` \| `sankey` \| `treemap`. |
+| `type` | yes | — | `bar` \| `line` \| `area` \| `scatter` \| `pie` \| `hist` \| `heatmap` \| `funnel` \| `waterfall` \| `radar` \| `gauge` \| `sankey` \| `treemap` \| `dumbbell` \| `bullet`. |
 | `title` | no | derived | From filename or first column / `y` if omitted. |
 | `theme` | no | `folio` | Grammar only: `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts` \| `graphite`. |
 | `palette` | no | theme default | Colors only: `ink` \| `porcelain` \| `warm` \| `cool` \| `vivid`. Omit → theme pack colors. |
@@ -72,10 +72,11 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | `surface` | no | `light` | `light` \| `dark` \| `export`. Light, the default, paints no canvas: dark ink sits on the Markdown host's background. Dark paints a dark paper and light ink. Export paints an opaque white card for a standalone file. |
 | `layout` | no | `grouped` when omitted | Type-local. Only on `bar` \| `line` \| `area`: `grouped` \| `stacked` \| `percent`. Omit = today's paint (`grouped`). Wrong type or bad value → `E_UNKNOWN_FIELD` + table. |
 | `innerRadius` | no | theme `PIE_INNER_RATIO` | Type-local. Only on `pie`. Number in `[0, 1]`. Omit → theme default hole (folio/most = `0`; shadcn = `0.5`). Explicit `0` forces a solid pie. `(0, 1]` = donut hole as a fraction of outer radius. Wrong type or out of range → `E_UNKNOWN_FIELD` + table. |
-| `min` | no | see type | Type-local. Gauge: omit → `0`. Heatmap: omit → data minimum of the color scale. |
-| `max` | no | see type | Type-local. Gauge: omit → `100` (a labeled 0–100 range, not the current value). Heatmap: omit → data maximum. Radar: omit → max of the values (or 1). Both set on gauge or heatmap ⇒ `min < max` else `E_UNKNOWN_FIELD`. |
+| `min` | no | see type | Type-local. Gauge: omit → `0`. Heatmap: omit → data minimum of the color scale. Bullet: omit → the smaller of 0 and the data, on a nice tick. |
+| `max` | no | see type | Type-local. Gauge: omit → `100` (a labeled 0–100 range, not the current value). Heatmap: omit → data maximum. Radar: omit → max of the values (or 1). Bullet: omit → the data maximum, actual or target, on a nice tick. Both set on gauge, heatmap, or bullet ⇒ `min < max` else `E_UNKNOWN_FIELD`. |
 | `orient` | no | `vertical` | Type-local. Only on `bar`: `horizontal` \| `vertical`. |
 | `role` | no | every row is a delta | Type-local. Only on `waterfall`. Names a column whose cells are `delta`, `total`, or `subtotal`. Empty means delta. Totals are never inferred from the step label. |
+| `target` | no | no target | Type-local. Only on `bullet`. Names a column of target values. An empty cell has no target; text that is not a number → `E_BAD_NUMBER`. A missing column → `E_UNKNOWN_FIELD`. |
 | data | yes | — | CSV or GFM after a blank line. |
 
 `x` / `y` / `series` must name real header columns. Unnamed extra columns stay in the fallback table, not in the mark geometry.
@@ -99,8 +100,10 @@ CORE fence keys: `markvis` `type` `title` `theme` `palette` `surface` `unit` `x`
 | `gauge` | label | number | ignored | One row. A second row → `E_DUP_KEY`. Optional `min`/`max`. Omit max → 100, omit min → 0. Out-of-range values stay visible and are labeled above or below range. |
 | `sankey` | category (source) | number (flow ≥ 0) | required (target) | One row = one link. Keep order. Self-link → `E_UNKNOWN_FIELD`. A cycle → `E_SANKEY_CYCLE`. Equal values share one thickness. A repeated source/target pair → `E_DUP_KEY`. |
 | `treemap` | category (label) | number (≥ 0) | optional (parent) | Flat or two levels only. Rows with y≤0 omitted from paint. A repeated label under the same parent → `E_DUP_KEY`. |
+| `dumbbell` | category | number | required, exactly two values | Keep row order. The first series value seen is drawn hollow, the second filled, joined by a rule; the signed change prints at the right. A missing value is a gap (one dot, no rule). A third value or no series → `E_UNKNOWN_FIELD`. A repeated category/series pair → `E_DUP_KEY`. |
+| `bullet` | label | number (actual) | ignored | Keep row order. One row per label on one shared scale. Optional `target` column and `min`/`max`. A value past `min`/`max` is drawn to the edge and still labeled with its number. Every actual is required. A repeated label → `E_DUP_KEY`. |
 
-Zeros are legal. Negatives are legal on bar/line/area/scatter/waterfall, except `layout: percent`, which rejects them with `E_NEGATIVE_VALUE`. Negatives are illegal on `pie` (`E_PIE_NEGATIVE`) and funnel/radar/sankey/treemap (`E_NEGATIVE_VALUE`).
+Zeros are legal. Negatives are legal on bar/line/area/scatter/waterfall/dumbbell/bullet, except `layout: percent`, which rejects them with `E_NEGATIVE_VALUE`. Negatives are illegal on `pie` (`E_PIE_NEGATIVE`) and funnel/radar/sankey/treemap (`E_NEGATIVE_VALUE`).
 
 
 ## Encodings (Wave 1)
@@ -111,10 +114,11 @@ Optional fields that change paint on an existing type. Same `type` id — not a 
 | --- | --- | --- | --- |
 | `layout` | `bar` `line` `area` | `grouped` \| `stacked` \| `percent` | Today's look (`grouped`) |
 | `innerRadius` | `pie` | number in `[0, 1]` | Theme `PIE_INNER_RATIO` (not always solid) |
-| `min` | `gauge` `heatmap` | number | gauge 0; heatmap data min |
-| `max` | `gauge` `heatmap` `radar` | number | gauge 100; heatmap data max; radar data max |
+| `min` | `gauge` `heatmap` `bullet` | number | gauge 0; heatmap data min; bullet min(0, data) |
+| `max` | `gauge` `heatmap` `radar` `bullet` | number | gauge 100; heatmap data max; radar data max; bullet data max |
 | `orient` | `bar` | `horizontal` \| `vertical` | vertical |
 | `role` | `waterfall` | column of `delta` \| `total` \| `subtotal` | every row is a delta |
+| `target` | `bullet` | column of numbers | no target marker |
 
 - Explicit `innerRadius: 0` forces a solid pie and overrides the theme.
 - Bad value (`layout: foo`, `innerRadius: 2`) or encoding on the wrong type → parse fail + table with `E_UNKNOWN_FIELD` (clear detail string; no new error code in Wave 1).
@@ -147,7 +151,7 @@ Optional fields that change paint on an existing type. Same `type` id — not a 
 | `E_UNKNOWN_PALETTE` | `palette` not in `ink` \| `porcelain` \| `warm` \| `cool` \| `vivid`. |
 | `E_BAD_VERSION` | `markvis` is present and is not `2`. |
 | `E_BAD_NUMBER` | A measure cell is not a finite number. The message names the row and column. |
-| `E_MISSING_VALUE` | A required measure cell is empty. Line, area, grouped bar, scatter, hist, heatmap, and radar may leave a gap instead. |
+| `E_MISSING_VALUE` | A required measure cell is empty. Line, area, grouped bar, scatter, hist, heatmap, radar, and dumbbell may leave a gap instead. |
 | `E_DUP_KEY` | The same category/series key (or that chart's equivalent) appears twice. Scatter, hist, and waterfall steps may repeat. |
 | `E_SANKEY_CYCLE` | Sankey links form a cycle. The table is kept. |
 

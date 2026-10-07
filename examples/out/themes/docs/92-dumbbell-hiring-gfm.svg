@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="241" viewBox="0 0 720 241" role="img" aria-label="dumbbell chart: Engineering hired past plan; Design fell short, 8 rows, series kind" aria-labelledby="mv-4ede4566e9df31bd-title" aria-describedby="mv-4ede4566e9df31bd-desc" data-markvis="2" data-chart-type="dumbbell" data-id="mv-4ede4566e9df31bd" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-4ede4566e9df31bd-title">Engineering hired past plan; Design fell short</title>
+  <desc id="mv-4ede4566e9df31bd-desc">dumbbell chart. Engineering hired past plan; Design fell short. x=team. y=hires. series=kind. 8 rows.</desc>
+  <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>Engineering hired past plan; Design fell short</title>ENGINEERING HIRED PAST PLAN; DESIGN FELL SHORT</text>
+  <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
+  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3">
+    <line x1="286.8" x2="286.8" y1="42" y2="178"/>
+    <line x1="484.58" x2="484.58" y1="42" y2="178"/>
+    <line x1="682.36" x2="682.36" y1="42" y2="178"/>
+  </g>
+  <line x1="89.02" x2="89.02" y1="42" y2="178" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-baseline="0"/>
+  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400">
+    <text x="81.02" y="59" text-anchor="end" dominant-baseline="middle" data-full-label="Engineering"><title>Engineering</title><tspan x="81.02" dy="0">Engineering</tspan></text>
+    <text x="81.02" y="93" text-anchor="end" dominant-baseline="middle" data-full-label="Design"><title>Design</title><tspan x="81.02" dy="0">Design</tspan></text>
+    <text x="81.02" y="127" text-anchor="end" dominant-baseline="middle" data-full-label="Sales"><title>Sales</title><tspan x="81.02" dy="0">Sales</tspan></text>
+    <text x="81.02" y="161" text-anchor="end" dominant-baseline="middle" data-full-label="Ops"><title>Ops</title><tspan x="81.02" dy="0">Ops</tspan></text>
+    <text x="89.02" y="195" text-anchor="middle">0</text>
+    <text x="286.8" y="195" text-anchor="middle">5</text>
+    <text x="484.58" y="195" text-anchor="middle">10</text>
+    <text x="682.36" y="195" text-anchor="middle">15</text>
+  </g>
+  <g font-size="11" font-weight="500" fill="#18181B">
+    <circle cx="94.02" cy="215" r="4.5" fill="#ffffff" stroke="#475569" stroke-width="1.5"/>
+    <text x="103.02" y="219" data-legend="plan">plan</text>
+    <circle cx="151.3" cy="215" r="4.5" fill="#64748B"/>
+    <text x="160.3" y="219" data-legend="actual">actual</text>
+  </g>
+  <g data-dumbbell="1">
+    <line x1="563.69" x2="682.36" y1="59" y2="59" stroke="#18181B" stroke-opacity="0.16" stroke-width="3" stroke-linecap="round" data-x="Engineering"/>
+    <circle cx="563.69" cy="59" r="6" fill="#ffffff" stroke="#475569" stroke-width="2" data-x="Engineering" data-series="plan" data-y="12"/>
+    <circle cx="682.36" cy="59" r="6" fill="#64748B" data-x="Engineering" data-series="actual" data-y="15"/>
+    <line x1="326.36" x2="207.69" y1="93" y2="93" stroke="#18181B" stroke-opacity="0.16" stroke-width="3" stroke-linecap="round" data-x="Design"/>
+    <circle cx="326.36" cy="93" r="6" fill="#ffffff" stroke="#475569" stroke-width="2" data-x="Design" data-series="plan" data-y="6"/>
+    <circle cx="207.69" cy="93" r="6" fill="#64748B" data-x="Design" data-series="actual" data-y="3"/>
+    <line x1="405.47" x2="405.47" y1="127" y2="127" stroke="#18181B" stroke-opacity="0.16" stroke-width="3" stroke-linecap="round" data-x="Sales"/>
+    <circle cx="405.47" cy="127" r="6" fill="#ffffff" stroke="#475569" stroke-width="2" data-x="Sales" data-series="plan" data-y="8"/>
+    <circle cx="405.47" cy="127" r="6" fill="#64748B" data-x="Sales" data-series="actual" data-y="8"/>
+    <circle cx="247.24" cy="161" r="6" fill="#ffffff" stroke="#475569" stroke-width="2" data-x="Ops" data-series="plan" data-y="4"/>
+  </g>
+  <g fill="#18181B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500">
+    <text x="694.36" y="59" dominant-baseline="middle" data-delta="Engineering">+3</text>
+    <text x="694.36" y="93" dominant-baseline="middle" data-delta="Design">-3</text>
+    <text x="694.36" y="127" dominant-baseline="middle" data-delta="Sales">0</text>
+  </g>
+</svg>

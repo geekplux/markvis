@@ -169,7 +169,7 @@ describe("vitest covers parser, render-svg, cli", () => {
 });
 
 describe("frozen language", () => {
-  it("freezes thirteen chart types", () => {
+  it("freezes fifteen chart types", () => {
     expect([...CHART_TYPES]).toEqual([
       "bar",
       "line",
@@ -184,6 +184,8 @@ describe("frozen language", () => {
       "gauge",
       "sankey",
       "treemap",
+      "dumbbell",
+      "bullet",
     ]);
   });
 

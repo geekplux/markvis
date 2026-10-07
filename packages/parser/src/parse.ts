@@ -247,21 +247,24 @@ function inferX(type: ChartType, table: LooseTable): string {
     type === "radar" ||
     type === "gauge" ||
     type === "sankey" ||
-    type === "treemap"
+    type === "treemap" ||
+    type === "dumbbell" ||
+    type === "bullet"
   ) {
     return firstCategoryColumn(table) ?? table.columns[0]!;
   }
   return table.columns[0]!;
 }
 
-/** pie/hist/funnel/waterfall/gauge ignore series on IR; heatmap/sankey require it; radar/treemap optional. */
+/** pie/hist/funnel/waterfall/gauge/bullet ignore series on IR; heatmap/sankey/dumbbell require it; radar/treemap optional. */
 function keepSeriesOnIR(type: ChartType): boolean {
   return (
     type !== "pie" &&
     type !== "hist" &&
     type !== "funnel" &&
     type !== "waterfall" &&
-    type !== "gauge"
+    type !== "gauge" &&
+    type !== "bullet"
   );
 }
 
@@ -290,7 +293,8 @@ function missingPolicy(
     type === "scatter" ||
     type === "hist" ||
     type === "heatmap" ||
-    type === "radar"
+    type === "radar" ||
+    type === "dumbbell"
   ) {
     return "gap";
   }
@@ -319,7 +323,7 @@ function duplicateKey(
   if (type === "scatter" || type === "hist" || type === "waterfall") {
     return null;
   }
-  if (type === "pie" || type === "funnel" || type === "gauge") {
+  if (type === "pie" || type === "funnel" || type === "gauge" || type === "bullet") {
     return xValue;
   }
   if (type === "sankey" || type === "treemap") {
@@ -446,6 +450,7 @@ function buildIR(fields: {
   surface?: "light" | "dark" | "export" | undefined;
   orient?: "horizontal" | "vertical" | undefined;
   role?: string | undefined;
+  target?: string | undefined;
   table: LooseTable;
 }): ChartIR {
   return ChartIRSchema.parse({
@@ -470,6 +475,7 @@ function buildIR(fields: {
     ...(fields.surface ? { surface: fields.surface } : {}),
     ...(fields.orient ? { orient: fields.orient } : {}),
     ...(fields.role ? { role: fields.role } : {}),
+    ...(fields.target ? { target: fields.target } : {}),
   });
 }
 
@@ -564,7 +570,7 @@ function parseBody(
   if (typeKind === "unknown") {
     return fail(
       "E_UNKNOWN_TYPE",
-      "type is not one of bar|line|area|scatter|pie|hist|heatmap|funnel|waterfall|radar|gauge|sankey|treemap",
+      "type is not one of bar|line|area|scatter|pie|hist|heatmap|funnel|waterfall|radar|gauge|sankey|treemap|dumbbell|bullet",
       parsed,
       raw,
     );
@@ -642,6 +648,23 @@ function parseBody(
 
   if (type === "sankey" && !specified.series) {
     return fail("E_UNKNOWN_FIELD", "sankey requires series", parsed, raw);
+  }
+
+  if (type === "dumbbell" && !specified.series) {
+    return fail("E_UNKNOWN_FIELD", "dumbbell requires series", parsed, raw);
+  }
+
+  if (type === "dumbbell" && specified.series) {
+    const si = parsed.columns.indexOf(specified.series);
+    const names = new Set(parsed.rows.map((row) => (row[si] ?? "").trim()));
+    if (names.size !== 2) {
+      return fail(
+        "E_UNKNOWN_FIELD",
+        `dumbbell needs exactly two ${specified.series} values (got ${names.size})`,
+        parsed,
+        raw,
+      );
+    }
   }
 
   const x = specified.x ?? inferX(type, parsed);
@@ -755,7 +778,7 @@ function parseBody(
     max = n;
   }
   if (
-    (type === "gauge" || type === "heatmap") &&
+    (type === "gauge" || type === "heatmap" || type === "bullet") &&
     min !== undefined &&
     max !== undefined &&
     min >= max
@@ -814,6 +837,32 @@ function parseBody(
       parsed,
       raw,
     );
+  }
+
+  const target = headers["target"]?.trim() || undefined;
+  if (target && !parsed.columns.includes(target)) {
+    return fail(
+      "E_UNKNOWN_FIELD",
+      "target names a missing column",
+      parsed,
+      raw,
+    );
+  }
+  if (target) {
+    // An empty target cell means "no target"; anything else must be a number.
+    const ti = parsed.columns.indexOf(target);
+    for (let r = 0; r < parsed.rows.length; r++) {
+      const cell = (parsed.rows[r]![ti] ?? "").trim();
+      if (cell !== "" && !isNumericString(cell)) {
+        return fail(
+          "E_BAD_NUMBER",
+          `row ${r + 1}, column ${target}: "${cell}" is not a number`,
+          parsed,
+          raw,
+          { row: r + 1, column: target },
+        );
+      }
+    }
   }
 
   const measures = measureColumns(type, x, y);
@@ -905,7 +954,11 @@ function parseBody(
       const where =
         type === "sankey"
           ? `duplicate link "${xValue}" → "${seriesValue}"`
-          : seriesColumn && type !== "pie" && type !== "funnel" && type !== "gauge"
+          : seriesColumn &&
+              type !== "pie" &&
+              type !== "funnel" &&
+              type !== "gauge" &&
+              type !== "bullet"
             ? `duplicate ${x} "${xValue}" for ${seriesColumn} "${seriesValue}"`
             : `duplicate ${x} "${xValue}"`;
       return fail(
@@ -960,6 +1013,7 @@ function parseBody(
     surface,
     orient,
     role,
+    target,
     table: parsed,
   });
   return { ok: true, chart };

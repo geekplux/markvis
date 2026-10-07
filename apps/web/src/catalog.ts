@@ -12,6 +12,8 @@ export const CHART_TYPES = [
   "gauge",
   "sankey",
   "treemap",
+  "dumbbell",
+  "bullet",
 ] as const;
 
 export type ChartType = (typeof CHART_TYPES)[number];
@@ -150,7 +152,7 @@ export function isStemSlugTitle(title: string, id: string): boolean {
   if (/^[0-9]{2}-[a-z0-9-]+$/i.test(trimmed)) {
     return true;
   }
-  if (/^(bar|line|area|scatter|pie|hist|heatmap|funnel|waterfall|radar|gauge|sankey|treemap)(\s+chart)?$/i.test(trimmed)) {
+  if (/^(bar|line|area|scatter|pie|hist|heatmap|funnel|waterfall|radar|gauge|sankey|treemap|dumbbell|bullet)(\s+chart)?$/i.test(trimmed)) {
     return true;
   }
   return false;
