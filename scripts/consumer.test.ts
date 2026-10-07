@@ -193,6 +193,46 @@ process.stdout.write(md.render(readFileSync(process.argv[2], "utf8")));
     expect(invalid.stdout.trim().length).toBeGreaterThan(0);
   }, TIMEOUT);
 
+  it("renders both React forms from markvis/react", () => {
+    const install = run(temp, "npm", ["install", "react@19", "react-dom@19"]);
+    expect(install.status, install.stderr).toBe(0);
+    writeFileSync(
+      join(temp, "react.mjs"),
+      `import { createElement } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
+import { Markvis, markvisComponents, remarkMarkvisStreaming } from "markvis/react";
+
+const source = "type: bar\\nx: k\\ny: v\\n\\nk,v\\nA,1\\nB,2\\n";
+const text = renderToStaticMarkup(createElement(Markvis, { source }));
+const data = renderToStaticMarkup(
+  createElement(Markvis, { chart: { type: "pie", x: "k", y: "v" }, data: [{ k: "A", v: -1 }] }),
+);
+process.stdout.write(JSON.stringify({
+  text,
+  data,
+  components: Object.keys(markvisComponents).sort(),
+  plugin: typeof remarkMarkvisStreaming,
+}));
+`,
+    );
+    const out = run(temp, process.execPath, ["react.mjs"]);
+    expect(out.status, out.stderr).toBe(0);
+    const result = JSON.parse(out.stdout) as {
+      text: string;
+      data: string;
+      components: string[];
+      plugin: string;
+    };
+    expect(result.text).toContain("<svg");
+    expect(result.data).toContain("E_PIE_NEGATIVE");
+    expect(result.data).toContain("<td>A</td><td>-1</td>");
+    expect(result.components).toEqual(["code", "pre"]);
+    expect(result.plugin).toBe("function");
+    const listed = run(repoRoot, "tar", ["-tzf", tgz]);
+    expect(listed.stdout).toContain("package/dist/react.js");
+    expect(listed.stdout).toContain("package/dist/react.d.ts");
+  }, TIMEOUT);
+
   it("runs npx markvis check and bake", () => {
     const version = run(temp, "npx", ["--no-install", "markvis", "-v"]);
     expect(version.status, version.stderr).toBe(0);

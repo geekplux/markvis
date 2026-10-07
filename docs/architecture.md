@@ -52,6 +52,7 @@ flowchart LR
   remark["@markvis/remark"]
   mdit["@markvis/markdown-it"]
   html["@markvis/html"]
+  react["@markvis/react"]
   browser["@markvis/browser"]
   parser --> ir
   render --> ir
@@ -64,6 +65,8 @@ flowchart LR
   remark --> html
   mdit --> parser
   mdit --> html
+  react --> parser
+  react --> html
   browser --> parser
   browser --> render
   browser --> html
@@ -79,10 +82,11 @@ flowchart LR
 | `@markvis/cli` | `check` / `render` / `bake` / `stats` |
 | `@markvis/remark` | remark host plugin |
 | `@markvis/markdown-it` | markdown-it / VitePress plugin |
+| `@markvis/react` | `Markvis` component, react-markdown components, streaming remark plugin |
 | `@markvis/browser` | Zero-network drop-in + SVG enhance |
 | `packages/compat-legacy` | Optional, default off |
 | `apps/playground` | Fence in, figure out |
 | `apps/web` | Public VitePress site |
 | `legacy/` | Frozen 0.0.13. Not imported by `packages/*` tests |
 
-Root `markvis` is the packed consumer artifact (`parseMarkdown`, `renderSvg`, `markvis/remark`, `markvis/markdown-it`) and owns the `markvis` bin. Workspace `@markvis/*` packages stay private to this monorepo.
+Root `markvis` is the packed consumer artifact (`parseMarkdown`, `renderSvg`, `render`, `markvis/remark`, `markvis/markdown-it`, `markvis/react`) and owns the `markvis` bin. Workspace `@markvis/*` packages stay private to this monorepo.

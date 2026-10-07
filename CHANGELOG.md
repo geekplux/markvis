@@ -4,6 +4,8 @@
 
 ### Added
 
+- `markvis/react`: `<Markvis source>` or `<Markvis chart data>` draws one block at the width of its container; `markvisComponents` draws chart code blocks in react-markdown; `remarkMarkvisStreaming` shows a placeholder and the rows so far while a block streams, never an error. `react` is an optional peer.
+
 - **Wave 4 types:** `dumbbell` (two values per category, first hollow and second filled, signed change at the right) `bullet` (actual against an optional `target:` column, optional `min` / `max`), `boxplot` (distributions from raw rows, type-7 quartiles, Tukey whiskers), and `calendar` (one cell per `YYYY-MM-DD` day; new code `E_BAD_DATE`).
 - `graphite` theme: editorial mono with a gray ladder, one accent on the largest value, pill bars, and heavy numbers. Inspired by lieflat-charts.
 - Playground **Surface** control (`?surface=dark`).

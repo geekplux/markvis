@@ -24,6 +24,18 @@ Demo: apps/playground/dropin.html.
 
 HTML comment plus GFM table charts only survive if the host already emitted them into the DOM; the browser script does not re-parse Markdown.
 
+## React
+
+`markvis/react` exports `Markvis`, `markvisComponents`, and `remarkMarkvisStreaming`. `react` 18 or later is an optional peer of `markvis`; nothing else is installed.
+
+- `<Markvis source={blockText} />` draws one block. `<Markvis chart={{ type, x, y, … }} data={rows} />` turns the object and rows into a block (header lines, then CSV with `,` and `"` quoted) and parses it the same way, so error codes match text input. Columns come in this order: `x`, then the other columns the chart names, then remaining keys as first seen. A value with a line break is put on one line, since a CSV row is one line.
+- Width follows the element around the chart (`ResizeObserver`, redrawn 100 ms after resizing stops). `width` fixes it. A server render uses 720 until hydration.
+- The HTML inside the wrapper `div` is `render().html`, byte for byte. The SVG is inserted as HTML; render-svg escapes every text node and attribute.
+- `markvisComponents` replaces `pre` and `code` only for `language-chart|markvis|vis` (any case, as the other code-block adapters). Other code passes through.
+- `remarkMarkvisStreaming` marks a chart fence that has no closing line and runs to the end of the source. That block shows "Drawing chart…" plus the whole rows so far (a cut-off last line waits) and draws when the closing line arrives. A fence closed early by a list or quote is not held.
+
+Host example: `examples/hosts/react-markdown/`. Tests: `packages/react/test/`.
+
 ## VitePress / Astro / markdown-it / remark
 
 | Host | Path |

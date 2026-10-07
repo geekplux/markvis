@@ -60,6 +60,10 @@
       "types": "./dist/markdown-it.d.ts",
       "import": "./dist/markdown-it.js"
     },
+    "./react": {
+      "types": "./dist/react.d.ts",
+      "import": "./dist/react.js"
+    },
     "./themes": {
       "types": "./dist/themes.d.ts",
       "import": "./dist/themes.js"
@@ -91,10 +95,14 @@
   },
   "peerDependencies": {
     "markdown-it": "^14.0.0",
+    "react": ">=18",
     "remark": "^15.0.0"
   },
   "peerDependenciesMeta": {
     "markdown-it": {
+      "optional": true
+    },
+    "react": {
       "optional": true
     },
     "remark": {
@@ -108,6 +116,7 @@
     "@markvis/ir": "workspace:*",
     "@markvis/markdown-it": "workspace:*",
     "@markvis/parser": "workspace:*",
+    "@markvis/react": "workspace:*",
     "@markvis/remark": "workspace:*",
     "@markvis/render-svg": "workspace:*",
     "@markvis/themes": "workspace:*",
@@ -115,6 +124,7 @@
     "@types/node": "^26.4.1",
     "happy-dom": "18",
     "markdown-it": "^14.1.0",
+    "react": "^19.3.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "tsup": "^8.5.0",

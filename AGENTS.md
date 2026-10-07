@@ -68,7 +68,7 @@ Allow:
 - Playground: Vite + the same parser and render-svg in the browser, zero backend
 - SVG: handwritten deterministic strings or a minimal in-house layout; forbidden to pull d3 / d3-node / jsdom at runtime just to emit a figure
 - CI: GitHub Actions `.github/workflows/check.yml`; the same commands must run locally
-- Packages: `@markvis/ir` `@markvis/parser` `@markvis/themes` `@markvis/types` `@markvis/render-svg` `@markvis/html` `@markvis/cli` `@markvis/remark` `@markvis/markdown-it` `@markvis/browser`
+- Packages: `@markvis/ir` `@markvis/parser` `@markvis/themes` `@markvis/types` `@markvis/render-svg` `@markvis/html` `@markvis/cli` `@markvis/remark` `@markvis/markdown-it` `@markvis/react` `@markvis/browser`
 - Root package `markvis` is the public library + CLI bin
 
 Forbidden in `packages/` and `apps/` dependencies (adding any item is a reject):

@@ -6,7 +6,7 @@ sidebar: true
 
 # Integrate
 
-Five ways to show the chart. If none of them run, the table of numbers is still in the file.
+Six ways to show the chart. If none of them run, the table of numbers is still in the file.
 
 ## 1. Save a picture (bake)
 
@@ -85,6 +85,45 @@ element.innerHTML = result.html;
 Options: `width` (default 720), and `theme`, `palette`, `surface` for blocks that leave them out — a block's own field always wins. `filename` names the source for a derived title. In the browser the drop-in exposes the same function as `markvis.render`.
 
 To parse without drawing, use `parseBlock(blockText)`. To read every chart in a Markdown document, use `parseDocument`.
+
+## 6. React
+
+`markvis/react` draws a block in a React app. `react` 18 or later is the only peer; nothing else is installed.
+
+```jsx
+import { Markvis } from "markvis/react";
+
+// Block text: from Markdown, an API field, or a file
+<Markvis source={blockText} />
+
+// A chart object and rows: from a backend, no Markdown
+<Markvis
+  chart={{ type: "bar", title: "Revenue by month", x: "month", y: "revenue", unit: "USD" }}
+  data={[{ month: "Jan", revenue: 120 }, { month: "Feb", revenue: 95 }]}
+/>
+```
+
+Both forms go through the same parser. `chart` + `data` becomes a block (header lines, then CSV), so it is checked like text and fails with the same error codes, keeping the rows. The chart takes the width of the element around it and redraws after that width changes. Props: `width`, `theme`, `palette`, and `surface` (used where the block leaves them out), `className`, and `onError(error)`.
+
+In react-markdown, or anything that takes a `components` map:
+
+```jsx
+import Markdown from "react-markdown";
+import { markvisComponents, remarkMarkvisStreaming } from "markvis/react";
+
+<Markdown
+  remarkPlugins={streaming ? [remarkMarkvisStreaming] : []}
+  components={markvisComponents}
+>
+  {reply}
+</Markdown>
+```
+
+Only `chart` / `markvis` / `vis` code blocks change. Merge your own with `{ ...markvisComponents, ...mine }`. While a reply streams, `remarkMarkvisStreaming` holds a block whose closing fence has not arrived: it shows "Drawing chart…" and the whole rows so far, never an error, and draws when the fence closes. Leave the plugin out once the reply is complete, so a block that was never closed still draws. No `rehype-raw` is needed.
+
+A server render uses the default width (720) until the page hydrates. To let the SVG shrink to its box before then, add `.markvis svg { max-width: 100%; height: auto; }`.
+
+Host example: `examples/hosts/react-markdown/`.
 
 ## Also
 

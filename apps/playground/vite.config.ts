@@ -20,6 +20,7 @@ export default defineConfig({
         "packages/render-svg/src/index.ts",
       ),
       "@markvis/html": resolve(repoRoot, "packages/html/src/index.ts"),
+      "@markvis/react": resolve(repoRoot, "packages/react/src/index.ts"),
       "@markvis/browser/preview": resolve(repoRoot, "packages/browser/src/preview.ts"),
       "@markvis/browser/enhance": resolve(repoRoot, "packages/browser/src/enhance.ts"),
       "@markvis/browser": resolve(repoRoot, "packages/browser/src/index.ts"),

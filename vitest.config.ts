@@ -25,6 +25,9 @@ export default defineConfig({
       "@markvis/html": fileURLToPath(
         new URL("./packages/html/src/index.ts", import.meta.url),
       ),
+      "@markvis/react": fileURLToPath(
+        new URL("./packages/react/src/index.ts", import.meta.url),
+      ),
       "@markvis/cli": fileURLToPath(
         new URL("./packages/cli/src/index.ts", import.meta.url),
       ),
@@ -62,6 +65,7 @@ export default defineConfig({
       "packages/markdown-it/test/**/*.test.ts",
 
       "packages/html/test/**/*.test.ts",
+      "packages/react/test/**/*.test.ts",
       "packages/browser/src/**/*.test.ts",
       "packages/browser/test/**/*.test.ts",
       "apps/playground/src/**/*.test.ts",
