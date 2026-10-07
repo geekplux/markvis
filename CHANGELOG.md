@@ -4,7 +4,7 @@
 
 ### Added
 
-- **Wave 4 types:** `dumbbell` (two values per category, first hollow and second filled, signed change at the right) and `bullet` (actual against an optional `target:` column, optional `min` / `max`).
+- **Wave 4 types:** `dumbbell` (two values per category, first hollow and second filled, signed change at the right) `bullet` (actual against an optional `target:` column, optional `min` / `max`), `boxplot` (distributions from raw rows, type-7 quartiles, Tukey whiskers), and `calendar` (one cell per `YYYY-MM-DD` day; new code `E_BAD_DATE`).
 - `graphite` theme: editorial mono with a gray ladder, one accent on the largest value, pill bars, and heavy numbers. Inspired by lieflat-charts.
 - Playground **Surface** control (`?surface=dark`).
 - Horizontal bars (`orient`), surfaces (`light` / `dark` / `export`), heatmap color domain, waterfall `role`, and width-aware `renderSvg`. See `docs/release-2.2.md`. The package version is still 2.1.0 until publish.

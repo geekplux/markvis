@@ -25,7 +25,7 @@ In 2017 this project was a renderer (GitHub Trending). This is the rewrite: the 
 
 ## An example
 
-Paste this into [Play](https://markvis.js.org/play). Fifteen kinds: bar, line, area, scatter, pie, hist, heatmap, funnel, waterfall, radar, gauge, sankey, treemap, dumbbell, bullet. Optional look: `theme` and `palette` — [SPEC.md](./SPEC.md).
+Paste this into [Play](https://markvis.js.org/play). Seventeen kinds: bar, line, area, scatter, pie, hist, heatmap, funnel, waterfall, radar, gauge, sankey, treemap, dumbbell, bullet, boxplot, calendar. Optional look: `theme` and `palette` — [SPEC.md](./SPEC.md).
 
 ```chart
 markvis: 2
@@ -107,7 +107,7 @@ You can also put the numbers in a Markdown table, or use the HTML comment form i
 | | |
 | --- | --- |
 | Code block tags | `chart` `markvis` `vis` |
-| Chart kinds | `bar` `line` `area` `scatter` `pie` `hist` `heatmap` `funnel` `waterfall` `radar` `gauge` `sankey` `treemap` `dumbbell` `bullet` |
+| Chart kinds | `bar` `line` `area` `scatter` `pie` `hist` `heatmap` `funnel` `waterfall` `radar` `gauge` `sankey` `treemap` `dumbbell` `bullet` `boxplot` `calendar` |
 | Fields | `markvis` `type` `title` `unit` `x` `y` `series` plus `theme` `palette` `surface`. Type-local: `layout` `innerRadius` `min` `max` `orient` `role` |
 | Numbers | Comma-separated rows, or one Markdown table. Not JSON as the default. No JavaScript in the block. |
 

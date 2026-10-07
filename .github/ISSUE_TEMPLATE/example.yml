@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Types only: `bar` · `line` · `area` · `scatter` · `pie` · `hist` · `heatmap` · `funnel` · `waterfall` · `radar` · `gauge` · `sankey` · `treemap` `dumbbell` `bullet`. Invalid fixtures stay off the gallery.
+        Types only: `bar` · `line` · `area` · `scatter` · `pie` · `hist` · `heatmap` · `funnel` · `waterfall` · `radar` · `gauge` · `sankey` · `treemap` · `dumbbell` · `bullet` · `boxplot` · `calendar`. Invalid fixtures stay off the gallery.
   - type: dropdown
     id: chart_type
     attributes:
@@ -27,6 +27,8 @@ body:
         - treemap
         - dumbbell
         - bullet
+        - boxplot
+        - calendar
     validations:
       required: true
   - type: input

@@ -55,7 +55,7 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | Field | Required | Default | Notes |
 | --- | --- | --- | --- |
 | `markvis` | no | `2` | Language version. Any other value → `E_BAD_VERSION`. It is not rewritten to 2. |
-| `type` | yes | — | `bar` \| `line` \| `area` \| `scatter` \| `pie` \| `hist` \| `heatmap` \| `funnel` \| `waterfall` \| `radar` \| `gauge` \| `sankey` \| `treemap` \| `dumbbell` \| `bullet`. |
+| `type` | yes | — | `bar` \| `line` \| `area` \| `scatter` \| `pie` \| `hist` \| `heatmap` \| `funnel` \| `waterfall` \| `radar` \| `gauge` \| `sankey` \| `treemap` \| `dumbbell` \| `bullet` \| `boxplot` \| `calendar`. |
 | `title` | no | derived | Conclusion title when present. |
 | `theme` | no | `folio` | Grammar only: `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts` \| `graphite`. |
 | `palette` | no | theme default | Colors only: `ink` \| `porcelain` \| `warm` \| `cool` \| `vivid`. Omit → theme pack colors. |
@@ -94,6 +94,8 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | `treemap` | label | number ≥ 0 | optional (parent) | Flat or two levels. `y≤0` omitted from paint. |
 | `dumbbell` | category | number | required, exactly two values | First value hollow, second filled; the change prints at the right. A missing value is a gap. |
 | `bullet` | label | number (actual) | ignored | Optional `target` column and `min`/`max`. Past the scale → drawn to the edge, still labeled. |
+| `boxplot` | category | one observation per row | optional | Repeated categories expected. Tukey box; under five values shows points and a median. |
+| `calendar` | `YYYY-MM-DD` date | number | ignored | One cell per day; position from the date. Bad date → `E_BAD_DATE`. |
 
 ## Encodings
 
@@ -101,8 +103,8 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | --- | --- | --- | --- |
 | `layout` | `bar` `line` `area` | `grouped` \| `stacked` \| `percent` | `grouped` |
 | `innerRadius` | `pie` | `[0, 1]` | theme `PIE_INNER_RATIO` (explicit `0` = solid) |
-| `min` | `gauge` `heatmap` `bullet` | number | gauge 0; heatmap data min; bullet min(0, data) |
-| `max` | `gauge` `heatmap` `radar` `bullet` | number | gauge 100; heatmap data max; radar data max; bullet data max |
+| `min` | `gauge` `heatmap` `bullet` `calendar` | number | gauge 0; heatmap and calendar data min; bullet min(0, data) |
+| `max` | `gauge` `heatmap` `radar` `bullet` `calendar` | number | gauge 100; heatmap and calendar data max; radar data max; bullet data max |
 | `orient` | `bar` | `horizontal` \| `vertical` | vertical |
 | `role` | `waterfall` | column of `delta` \| `total` \| `subtotal` | every row is a delta |
 | `target` | `bullet` | column of numbers | no target marker |
@@ -139,5 +141,6 @@ Do not invent `donut` or `stacked-bar` type ids.
 | `E_MISSING_VALUE` | A required measure cell is empty. |
 | `E_DUP_KEY` | The same category/series key appears twice. Scatter, hist, and waterfall steps may repeat. |
 | `E_SANKEY_CYCLE` | Sankey links form a cycle. The table is kept. |
+| `E_BAD_DATE` | A calendar date is not `YYYY-MM-DD` or does not exist. |
 
 `theme` is grammar. `palette` is colors only. Never merge them. Contribute a type: repo `docs/TYPES.md`.

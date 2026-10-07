@@ -14,12 +14,12 @@ Unicode labels inside `examples/` fixtures are data, not documentation language.
 
 Do not invent a type id. Do not add d3.
 
-Types only: `bar` | `line` | `area` | `scatter` | `pie` | `hist` | `heatmap` | `funnel` | `waterfall` | `radar` | `gauge` | `sankey` | `treemap` | `dumbbell` | `bullet`.
+Types only: `bar` | `line` | `area` | `scatter` | `pie` | `hist` | `heatmap` | `funnel` | `waterfall` | `radar` | `gauge` | `sankey` | `treemap` | `dumbbell` | `bullet` | `boxplot` | `calendar`.
 Tags only: `chart` / `markvis` / `vis` → one parser.
 Fields only: `markvis`, `type`, `title`, `unit`, `x`, `y`, `series`.
 Optional `theme:`, `palette:`, and `surface:` follow `SPEC.md`. Type-local extras: `layout`, `innerRadius`, `min`, `max`, `orient` (bar), `role` (waterfall), `target` (bullet).
 Data: CSV or GFM table. No JSON as default data. No JS in a fence.
-`donut` / stacked-bar-as-type / `sunburst` / `chord` / `map`: NO. (Wave 3: `sankey` `treemap` are in. Wave 4: `dumbbell` `bullet` are in.)
+`donut` / stacked-bar-as-type / `sunburst` / `chord` / `map`: NO. (Wave 3: `sankey` `treemap` are in. Wave 4: `dumbbell` `bullet` `boxplot` `calendar` are in.)
 
 Forbidden in `packages/` and `apps/` (dependencies, imports, tests):
 `d3`, `d3-node`, `markvis-bar`, `markvis-line`, `markvis-pie`,
@@ -67,7 +67,7 @@ Language tags: `chart` / `markvis` / `vis` share one parser.
 
 Header:
     markvis: 2
-    type: bar|line|area|scatter|pie|hist|heatmap|funnel|waterfall|radar|gauge|sankey|treemap|dumbbell|bullet
+    type: bar|line|area|scatter|pie|hist|heatmap|funnel|waterfall|radar|gauge|sankey|treemap|dumbbell|bullet|boxplot|calendar
     title:
     unit:
     x:

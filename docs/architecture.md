@@ -1,6 +1,6 @@
 # Architecture
 
-How markvis turns Markdown into a figure. Grammar lives in `SPEC.md`. Types stay `bar` `line` `area` `scatter` `pie` `hist` `heatmap` `funnel` `waterfall` `radar` `gauge` `sankey` `treemap` `dumbbell` `bullet`. Data is CSV or a GFM table. JSON is not the default data form. Failures keep the rows.
+How markvis turns Markdown into a figure. Grammar lives in `SPEC.md`. Types stay `bar` `line` `area` `scatter` `pie` `hist` `heatmap` `funnel` `waterfall` `radar` `gauge` `sankey` `treemap` `dumbbell` `bullet` `boxplot` `calendar`. Data is CSV or a GFM table. JSON is not the default data form. Failures keep the rows.
 
 ## Architecture
 
