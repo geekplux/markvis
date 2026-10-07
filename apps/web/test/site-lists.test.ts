@@ -27,5 +27,9 @@ describe("the site's copies of the language lists", () => {
     expect(strip).toContain("<ThemeStrip");
     expect(strip.match(/```chart/g)?.length ?? 0).toBeLessThanOrEqual(1);
     expect(read("../.vitepress/theme/index.ts")).toContain('app.component("ThemeStrip", ThemeStrip)');
+    // The strip is registered site-wide: it must bundle only the figures it shows.
+    const component = read("../components/ThemeStrip.vue");
+    expect(component).not.toMatch(/themes\/\*\/\*\.svg/);
+    expect(component).toContain("{01-bar-basic,02-line-multi}.svg");
   });
 });

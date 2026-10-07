@@ -2,11 +2,13 @@
 import { THEMES } from "../src/catalog";
 
 /** One fixture drawn in every theme, from the committed per-theme goldens. */
-const props = withDefaults(defineProps<{ stem?: string }>(), {
-  stem: "02-line-multi",
-});
+const props = withDefaults(
+  defineProps<{ stem?: "01-bar-basic" | "02-line-multi" }>(),
+  { stem: "02-line-multi" },
+);
 
-const svgModules = import.meta.glob("../../../examples/out/themes/*/*.svg", {
+// Only the figures the strip can show, so the site bundles 14 SVGs, not 728.
+const svgModules = import.meta.glob("../../../examples/out/themes/*/{01-bar-basic,02-line-multi}.svg", {
   query: "?url",
   import: "default",
   eager: true,
