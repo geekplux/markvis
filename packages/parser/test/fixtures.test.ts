@@ -265,7 +265,7 @@ describe("language rules", () => {
     expect(result.chart.theme).toBe("folio");
   });
 
-  it.each(["folio", "highcharts", "shadcn", "docs", "ant", "recharts"] as const)(
+  it.each(["folio", "highcharts", "shadcn", "docs", "ant", "recharts", "graphite"] as const)(
     "accepts theme %s",
     (theme) => {
       const source = [

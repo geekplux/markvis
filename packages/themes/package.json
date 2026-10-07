@@ -13,6 +13,7 @@
     "./docs": "./docs/theme.ts",
     "./ant": "./ant/theme.ts",
     "./recharts": "./recharts/theme.ts",
+    "./graphite": "./graphite/theme.ts",
     "./palettes": "./palettes.ts"
   },
   "main": "./registry.ts",

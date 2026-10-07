@@ -5,6 +5,7 @@ import { shadcn } from "./shadcn/theme.js";
 import { docs } from "./docs/theme.js";
 import { ant } from "./ant/theme.js";
 import { recharts } from "./recharts/theme.js";
+import { graphite } from "./graphite/theme.js";
 export type { ThemeTokens };
 export type {
   AxisTokens,
@@ -17,7 +18,7 @@ export type {
   TitleTokens,
   TypeRole,
 } from "./contract.js";
-export { folio, highcharts, shadcn, docs, ant, recharts };
+export { folio, highcharts, shadcn, docs, ant, recharts, graphite };
 
 export {
   applyPaletteToTheme,
@@ -39,6 +40,7 @@ export const themeRegistry: Record<ChartTheme, ThemeTokens> = {
   docs,
   ant,
   recharts,
+  graphite,
 };
 
 /**

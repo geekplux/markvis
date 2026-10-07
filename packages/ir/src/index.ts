@@ -28,6 +28,7 @@ export const THEMES = [
   "docs",
   "ant",
   "recharts",
+  "graphite",
 ] as const;
 
 export type ChartTheme = (typeof THEMES)[number];

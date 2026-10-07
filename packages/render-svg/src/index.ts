@@ -9,6 +9,7 @@ export {
   docs,
   ant,
   recharts,
+  graphite,
   applyPaletteToTheme,
   ink,
   porcelain,

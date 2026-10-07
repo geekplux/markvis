@@ -18,6 +18,7 @@ const THEME_MOTION: Record<string, ThemeMotion> = {
   shadcn: { totalMs: 320, staggerMs: 22, soft: true },
   ant: { totalMs: 280, staggerMs: 18, soft: false },
   recharts: { totalMs: 300, staggerMs: 20, soft: false, tipBelow: true },
+  graphite: { totalMs: 360, staggerMs: 24, soft: true },
 };
 
 const STYLE_ID = "markvis-enhance-css";
@@ -101,6 +102,12 @@ function ensureStyles(): void {
   border-radius: 2px;
   padding: 4px 10px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+.${TIP_CLASS}[data-theme="graphite"] {
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
 }
 .${TIP_CLASS}[data-theme="recharts"] {
   border-radius: 4px;
