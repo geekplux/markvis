@@ -258,7 +258,7 @@ describe("@markvis/ir", () => {
   });
 
   it("accepts the five themes", () => {
-    expect([...THEMES]).toEqual(["folio", "highcharts", "shadcn", "docs", "ant", "recharts"]);
+    expect([...THEMES]).toEqual(["folio", "highcharts", "shadcn", "docs", "ant", "recharts", "graphite"]);
     for (const theme of THEMES) {
       const ir = ChartIRSchema.parse({
         markvis: 2,

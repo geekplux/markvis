@@ -660,6 +660,7 @@ describe("site visual chrome", () => {
     expect(html).toContain('value="docs"');
     expect(html).toContain('value="ant"');
     expect(html).toContain('value="recharts"');
+    expect(html).toContain('value="graphite"');
     const main = read("../playground/src/main.ts");
     expect(main).toContain("enhanceChartSvg");
     expect(main).toContain("@markvis/browser/enhance");

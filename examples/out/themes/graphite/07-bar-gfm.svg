@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Engineering still leads headcount at 24, 3 rows" aria-labelledby="mv-8ff3eda5dfc540f7-title" aria-describedby="mv-8ff3eda5dfc540f7-desc" data-markvis="2" data-chart-type="bar" data-id="mv-8ff3eda5dfc540f7" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-8ff3eda5dfc540f7-title">Engineering still leads headcount at 24</title>
+  <desc id="mv-8ff3eda5dfc540f7-desc">bar chart. Engineering still leads headcount at 24. x=team. y=n. 3 rows.</desc>
+  <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Engineering still leads headcount at 24</title>Engineering still leads headcount at 24</text>
+  <path d="M52 456 L692 456" fill="none" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1"/>
+  <g fill="#8E8D87" font-size="11" font-weight="600">
+    <text x="42" y="456" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="42" y="321.33" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="42" y="186.67" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="42" y="52" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="158.67" y="467" text-anchor="middle" font-size="11" data-full-label="Engineering"><title>Engineering</title>Engineering</text>
+    <text x="372" y="467" text-anchor="middle" font-size="11" data-full-label="Design"><title>Design</title>Design</text>
+    <text x="585.33" y="467" text-anchor="middle" font-size="11" data-full-label="Ops"><title>Ops</title>Ops</text>
+  </g>
+  <g>
+    <path d="M136.67 456 L136.67 154.8 Q136.67 132.8 158.67 132.8 L158.67 132.8 Q180.67 132.8 180.67 154.8 L180.67 456 Z" fill="#E4572E" data-x="Engineering" data-series="n" data-y="24"/>
+    <path d="M350 456 L350 397.2 Q350 375.2 372 375.2 L372 375.2 Q394 375.2 394 397.2 L394 456 Z" fill="#1B1B19" data-x="Design" data-series="n" data-y="6"/>
+    <path d="M563.33 456 L563.33 356.8 Q563.33 334.8 585.33 334.8 L585.33 334.8 Q607.33 334.8 607.33 356.8 L607.33 456 Z" fill="#1B1B19" data-x="Ops" data-series="n" data-y="9"/>
+  </g>
+  <g>
+    <text x="158.67" y="124.8" text-anchor="middle" font-size="12" font-weight="800" fill="#1B1B19" data-value-label="Engineering">24</text>
+    <text x="372" y="367.2" text-anchor="middle" font-size="12" font-weight="800" fill="#1B1B19" data-value-label="Design">6</text>
+    <text x="585.33" y="326.8" text-anchor="middle" font-size="12" font-weight="800" fill="#1B1B19" data-value-label="Ops">9</text>
+  </g>
+</svg>

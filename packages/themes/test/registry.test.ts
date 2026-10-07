@@ -5,6 +5,7 @@ import {
   applyPaletteToTheme,
   docs,
   folio,
+  graphite,
   highcharts,
   ink,
   paletteRegistry,
@@ -24,6 +25,7 @@ describe("theme registry", () => {
     expect(resolveThemePack("docs")).toBe(docs);
     expect(resolveThemePack("ant")).toBe(ant);
     expect(resolveThemePack("recharts")).toBe(recharts);
+    expect(resolveThemePack("graphite")).toBe(graphite);
     for (const id of THEMES) {
       expect(themeRegistry[id]).toBe(resolveThemePack(id));
     }

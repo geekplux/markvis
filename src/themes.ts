@@ -5,6 +5,7 @@ export {
   docs,
   ant,
   recharts,
+  graphite,
   themeRegistry,
   resolveThemePack,
   applyPaletteToTheme,

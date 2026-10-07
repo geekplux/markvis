@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Chrome still leads browser share at 52, 4 slices" aria-labelledby="mv-ed79d7ac4511bfdd-title" aria-describedby="mv-ed79d7ac4511bfdd-desc" data-markvis="2" data-chart-type="pie" data-id="mv-ed79d7ac4511bfdd" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-ed79d7ac4511bfdd-title">Chrome still leads browser share at 52</title>
+  <desc id="mv-ed79d7ac4511bfdd-desc">pie chart. Chrome still leads browser share at 52. x=browser. y=users. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Chrome still leads browser share at 52</title>Chrome still leads browser share at 52</text>
+  <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0.6">
+    <path d="M372 116 A136 136 0 1 1 354.95 386.93 L361.77 332.96 A81.6 81.6 0 1 0 372 170.4 Z" fill="#E4572E" stroke="#ffffff" stroke-width="2" data-label="Chrome" data-raw-value="52" data-donut="1"/>
+    <path d="M354.95 386.93 A136 136 0 0 1 242.66 209.97 L294.39 226.78 A81.6 81.6 0 0 0 361.77 332.96 Z" fill="#4A4945" stroke="#ffffff" stroke-width="2" data-label="Safari" data-raw-value="28" data-donut="1"/>
+    <path d="M242.66 209.97 A136 136 0 0 1 306.48 132.82 L332.69 180.49 A81.6 81.6 0 0 0 294.39 226.78 Z" fill="#6E6D68" stroke="#ffffff" stroke-width="2" data-label="Firefox" data-raw-value="12" data-donut="1"/>
+    <path d="M306.48 132.82 A136 136 0 0 1 372 116 L372 170.4 A81.6 81.6 0 0 0 332.69 180.49 Z" fill="#8E8D87" stroke="#ffffff" stroke-width="2" data-label="Other" data-raw-value="8" data-donut="1"/>
+  </g>
+  <g fill="none" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1">
+    <polyline points="507.73,260.54 523.7,261.54 531.7,261.54"/>
+    <polyline points="257.17,324.87 243.66,333.45 235.66,333.45"/>
+    <polyline points="267.21,165.31 254.88,155.11 246.88,155.11"/>
+    <polyline points="338.18,120.27 334.2,104.78 326.2,104.78"/>
+  </g>
+  <g font-size="12" font-weight="800" fill="#1B1B19">
+    <text x="543.7" y="261.54" text-anchor="start" dominant-baseline="middle" data-label="Chrome">Chrome · 52</text>
+    <text x="223.66" y="333.45" text-anchor="end" dominant-baseline="middle" data-label="Safari">Safari · 28</text>
+    <text x="234.88" y="155.11" text-anchor="end" dominant-baseline="middle" data-label="Firefox">Firefox · 12</text>
+    <text x="314.2" y="104.78" text-anchor="end" dominant-baseline="middle" data-label="Other">Other · 8</text>
+  </g>
+</svg>

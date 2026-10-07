@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="hist chart: Most API samples stay under 40 ms (ms), 20 rows" aria-labelledby="mv-aec9ba0b09e2e382-title" aria-describedby="mv-aec9ba0b09e2e382-desc" data-markvis="2" data-chart-type="hist" data-id="mv-aec9ba0b09e2e382" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-aec9ba0b09e2e382-title">Most API samples stay under 40 ms</title>
+  <desc id="mv-aec9ba0b09e2e382-desc">hist chart. Most API samples stay under 40 ms. x=ms. unit=ms. 20 rows. x is binned with Sturges equal-width bins.</desc>
+  <text x="70" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Most API samples stay under 40 ms</title>Most API samples stay under 40 ms</text>
+  <text x="70" y="50" text-anchor="start" font-size="12" font-weight="400" fill="#8E8D87" data-subtitle="1">ms</text>
+  <path d="M70 438 L692 438" fill="none" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1"/>
+  <g fill="#8E8D87" font-size="11" font-weight="600">
+    <text x="60" y="438" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="60" y="347.75" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="60" y="257.5" text-anchor="end" dominant-baseline="middle">4</text>
+    <text x="60" y="167.25" text-anchor="end" dominant-baseline="middle">6</text>
+    <text x="60" y="77" text-anchor="end" dominant-baseline="middle">8</text>
+    <text x="70" y="449" text-anchor="middle" font-size="11" data-full-label="18"><title>18</title>18</text>
+    <text x="173.67" y="449" text-anchor="middle" font-size="11" data-full-label="24"><title>24</title>24</text>
+    <text x="277.33" y="449" text-anchor="middle" font-size="11" data-full-label="30"><title>30</title>30</text>
+    <text x="381" y="449" text-anchor="middle" font-size="11" data-full-label="37"><title>37</title>37</text>
+    <text x="484.67" y="449" text-anchor="middle" font-size="11" data-full-label="43"><title>43</title>43</text>
+    <text x="588.33" y="449" text-anchor="middle" font-size="11" data-full-label="49"><title>49</title>49</text>
+    <text x="692" y="449" text-anchor="middle" font-size="11" data-full-label="55"><title>55</title>55</text>
+  </g>
+  <g fill="#8E8D87" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="44.18" y="257.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 44.18 257.5)" data-axis="y">count · ms</text>
+    <text x="381" y="465" text-anchor="middle" dominant-baseline="hanging" data-axis="x">ms · Sturges bins</text>
+  </g>
+  <g>
+    <path d="M91.77 438 L91.77 197.31 Q91.77 167.25 121.83 167.25 L121.83 167.25 Q151.9 167.25 151.9 197.31 L151.9 438 Z" fill="#1B1B19" data-bin-left="18" data-bin-right="24.1666666667" data-weight="6" data-count="6"/>
+    <path d="M195.44 438 L195.44 152.19 Q195.44 122.13 225.5 122.13 L225.5 122.13 Q255.56 122.13 255.56 152.19 L255.56 438 Z" fill="#E4572E" data-bin-left="24.1666666667" data-bin-right="30.3333333333" data-weight="7" data-count="7"/>
+    <path d="M299.1 438 L299.1 332.69 Q299.1 302.63 329.17 302.63 L329.17 302.63 Q359.23 302.63 359.23 332.69 L359.23 438 Z" fill="#1B1B19" data-bin-left="30.3333333333" data-bin-right="36.5" data-weight="3" data-count="3"/>
+    <path d="M402.77 438 L402.77 377.81 Q402.77 347.75 432.83 347.75 L432.83 347.75 Q462.9 347.75 462.9 377.81 L462.9 438 Z" fill="#1B1B19" data-bin-left="36.5" data-bin-right="42.6666666667" data-weight="2" data-count="2"/>
+    <path d="M506.44 438 L506.44 422.94 Q506.44 392.88 536.5 392.88 L536.5 392.88 Q566.56 392.88 566.56 422.94 L566.56 438 Z" fill="#1B1B19" data-bin-left="42.6666666667" data-bin-right="48.8333333333" data-weight="1" data-count="1"/>
+    <path d="M610.1 438 L610.1 422.94 Q610.1 392.88 640.17 392.88 L640.17 392.88 Q670.23 392.88 670.23 422.94 L670.23 438 Z" fill="#1B1B19" data-bin-left="48.8333333333" data-bin-right="55" data-weight="1" data-count="1"/>
+  </g>
+  <g>
+    <text x="121.83" y="159.25" text-anchor="middle" font-size="12" font-weight="800" fill="#1B1B19" data-value-label="18–24.1666666667">6</text>
+    <text x="225.5" y="114.13" text-anchor="middle" font-size="12" font-weight="800" fill="#1B1B19" data-value-label="24.1666666667–30.3333333333">7</text>
+    <text x="329.17" y="294.63" text-anchor="middle" font-size="12" font-weight="800" fill="#1B1B19" data-value-label="30.3333333333–36.5">3</text>
+    <text x="432.83" y="339.75" text-anchor="middle" font-size="12" font-weight="800" fill="#1B1B19" data-value-label="36.5–42.6666666667">2</text>
+    <text x="536.5" y="384.88" text-anchor="middle" font-size="12" font-weight="800" fill="#1B1B19" data-value-label="42.6666666667–48.8333333333">1</text>
+    <text x="640.17" y="384.88" text-anchor="middle" font-size="12" font-weight="800" fill="#1B1B19" data-value-label="48.8333333333–55">1</text>
+  </g>
+</svg>

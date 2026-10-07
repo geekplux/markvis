@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Budget lines overrun the 100% pie, 3 slices" aria-labelledby="mv-2e7a703e9d22ed38-title" aria-describedby="mv-2e7a703e9d22ed38-desc" data-markvis="2" data-chart-type="pie" data-id="mv-2e7a703e9d22ed38" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-2e7a703e9d22ed38-title">Budget lines overrun the 100% pie</title>
+  <desc id="mv-2e7a703e9d22ed38-desc">pie chart. Budget lines overrun the 100% pie. x=bucket. y=pct. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Budget lines overrun the 100% pie</title>Budget lines overrun the 100% pie</text>
+  <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0.6">
+    <path d="M372 116 A136 136 0 0 1 431.01 374.53 L407.4 325.52 A81.6 81.6 0 0 0 372 170.4 Z" fill="#E4572E" stroke="#ffffff" stroke-width="2" data-label="Infra" data-raw-value="45" data-donut="1"/>
+    <path d="M431.01 374.53 A136 136 0 0 1 236.38 241.84 L290.63 245.9 A81.6 81.6 0 0 0 407.4 325.52 Z" fill="#4A4945" stroke="#ffffff" stroke-width="2" data-label="Product" data-raw-value="35" data-donut="1"/>
+    <path d="M236.38 241.84 A136 136 0 0 1 372 116 L372 170.4 A81.6 81.6 0 0 0 290.63 245.9 Z" fill="#6E6D68" stroke="#ffffff" stroke-width="2" data-label="Ops" data-raw-value="25" data-donut="1"/>
+  </g>
+  <g fill="none" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1">
+    <polyline points="504.59,221.74 520.19,218.18 528.19,218.18"/>
+    <polyline points="295.39,364.37 286.38,377.59 278.38,377.59"/>
+    <polyline points="279.5,152.3 268.61,140.58 260.61,140.58"/>
+  </g>
+  <g font-size="12" font-weight="800" fill="#1B1B19">
+    <text x="540.19" y="218.18" text-anchor="start" dominant-baseline="middle" data-label="Infra">Infra · 45</text>
+    <text x="266.38" y="377.59" text-anchor="end" dominant-baseline="middle" data-label="Product">Product · 35</text>
+    <text x="248.61" y="140.58" text-anchor="end" dominant-baseline="middle" data-label="Ops">Ops · 25</text>
+  </g>
+</svg>

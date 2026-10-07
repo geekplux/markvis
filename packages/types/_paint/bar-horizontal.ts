@@ -8,7 +8,7 @@ import {
 } from "./data.js";
 import { drawTitle, reserveTitle, visibleTitle } from "./figure.js";
 import { layoutLegend, titleBlockTop, type Painted } from "./layout.js";
-import { seriesStyle } from "./palette.js";
+import { heroFill, heroIndex, seriesStyle } from "./palette.js";
 import { formatNumber, labelTicks, niceTicks, scaleLinear, yExtent } from "./scale.js";
 import { textWidth, wrapText } from "./text.js";
 import {
@@ -261,6 +261,10 @@ export function renderHorizontalBar(chart: ChartIR, _id: string): Painted {
   }
   lines.push(`  </g>`);
 
+  const hero =
+    !stacking && series.length === 1
+      ? heroIndex(categories.map((_, ci) => matrix[0]?.[ci] ?? null))
+      : -1;
   lines.push(`  <g ${attrs({ "data-orient": "horizontal" })}>`);
   for (let ci = 0; ci < categories.length; ci++) {
     const cat = categories[ci]!;
@@ -289,7 +293,7 @@ export function renderHorizontalBar(chart: ChartIR, _id: string): Painted {
           );
           continue;
         }
-        paintBar(lines, xScale, zeroX, y, h, val, styles[si]?.color ?? seriesStyle(0).color, cat, ser);
+        paintBar(lines, xScale, zeroX, y, h, val, heroFill(ci, hero, styles[si]?.color ?? seriesStyle(0).color), cat, ser);
       }
       continue;
     }

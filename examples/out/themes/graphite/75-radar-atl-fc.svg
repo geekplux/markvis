@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="radar chart: Home press still leads Atlanta FC match profile at 88, 12 rows, series venue" aria-labelledby="mv-36540905858b9d72-title" aria-describedby="mv-36540905858b9d72-desc" data-markvis="2" data-chart-type="radar" data-id="mv-36540905858b9d72" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-36540905858b9d72-title">Home press still leads Atlanta FC match profile at 88</title>
+  <desc id="mv-36540905858b9d72-desc">radar chart. Home press still leads Atlanta FC match profile at 88. x=trait. y=score. series=venue. 12 rows.</desc>
+  <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Home press still leads Atlanta FC match profile at 88</title>Home press still leads Atlanta FC match profile at 88</text>
+  <g font-size="11" font-weight="500" fill="#1B1B19">
+    <circle cx="57" cy="44" r="5" fill="#1B1B19"/>
+    <text x="66" y="48" data-legend="Home">Home</text>
+    <circle cx="114.28" cy="44" r="5" fill="#4A4945"/>
+    <text x="123.28" y="48" data-legend="Away">Away</text>
+  </g>
+  <g fill="none" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-radar-grid="1">
+    <path d="M362.95 185.84 L422.84 220.42 L422.84 289.58 L362.95 324.16 L303.06 289.58 L303.06 220.42 Z"/>
+    <line x1="362.95" y1="255" x2="362.95" y2="133.28"/>
+    <line x1="362.95" y1="255" x2="468.36" y2="194.14"/>
+    <line x1="362.95" y1="255" x2="468.36" y2="315.86"/>
+    <line x1="362.95" y1="255" x2="362.95" y2="376.72"/>
+    <line x1="362.95" y1="255" x2="257.54" y2="315.86"/>
+    <line x1="362.95" y1="255" x2="257.54" y2="194.14"/>
+  </g>
+  <g data-radar="1">
+    <path d="M362.95 133.28 L451.59 203.82 L445.6 302.72 L362.95 367.04 L270.71 308.25 L276.7 205.21 Z" fill="#1B1B19" fill-opacity="0.12" stroke="#1B1B19" stroke-width="1.75" data-series="Home"/>
+    <path d="M362.95 156.79 L444.41 207.97 L439.61 299.26 L362.95 351.82 L275.51 305.49 L289.88 212.81 Z" fill="#4A4945" fill-opacity="0.12" stroke="#4A4945" stroke-width="1.75" data-series="Away"/>
+  </g>
+  <g fill="#8E8D87" font-size="11" font-weight="600">
+    <text x="362.95" y="119.28" text-anchor="middle" dominant-baseline="middle" data-spoke="Press">Press</text>
+    <text x="480.49" y="187.14" text-anchor="middle" dominant-baseline="middle" data-spoke="Build">Build</text>
+    <text x="480.49" y="322.86" text-anchor="middle" dominant-baseline="middle" data-spoke="Set pieces">Set pieces</text>
+    <text x="362.95" y="390.72" text-anchor="middle" dominant-baseline="middle" data-spoke="Width">Width</text>
+    <text x="245.41" y="322.86" text-anchor="middle" dominant-baseline="middle" data-spoke="Recovery">Recovery</text>
+    <text x="245.41" y="187.14" text-anchor="middle" dominant-baseline="middle" data-spoke="Finishing">Finishing</text>
+    <text x="362.95" y="181.84" text-anchor="middle" font-size="11" fill="#8E8D87" data-radar-tick="50">50</text>
+  </g>
+</svg>

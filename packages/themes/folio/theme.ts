@@ -148,6 +148,7 @@ export const folio = {
   PIE_LABEL_MODE: "leaders",
   /** 0 = solid; ~0.5 = donut hole ratio of outer radius. */
   PIE_INNER_RATIO: 0,
+  PIE_SEPARATOR: "ink",
 
   COMPACT_SPAN: 10_000,
 
@@ -165,6 +166,7 @@ export const folio = {
   AXIS: { line: "baseline", tick: 0 },
   LEGEND: { swatch: "square", align: "start" },
   FRAME: { radius: 0, stroke: false },
+  HERO: { rule: null, color: "#3B82F6" },
 
   SURFACES: FOLIO_SURFACES,
 } as const satisfies ThemeTokens;

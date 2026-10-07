@@ -126,7 +126,9 @@ export function applyPaletteToTheme(
   return {
     ...theme,
     PALETTE: [...p.SERIES] as ThemeTokens["PALETTE"],
-    // An explicit palette is the reader's color choice on every surface.
+    // An explicit palette is the reader's color choice on every surface,
+    // so the theme's accent mark steps aside too.
     SURFACES: { ...theme.SURFACES, dark, export: exported },
+    HERO: { ...theme.HERO, rule: null },
   };
 }

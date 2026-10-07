@@ -44,4 +44,4 @@ Feb,180
 Mar,150
 ```
 
-Allowed today: `folio` · `highcharts` · `shadcn` · `docs` · `ant` · `recharts`. See [Themes](/themes) for grammar vs palette.
+Allowed today: `folio` · `highcharts` · `shadcn` · `docs` · `ant` · `recharts` · `graphite`. See [Themes](/themes) for grammar vs palette.

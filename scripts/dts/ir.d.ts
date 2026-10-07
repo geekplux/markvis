@@ -22,6 +22,7 @@ export declare const THEMES: readonly [
   "docs",
   "ant",
   "recharts",
+  "graphite",
 ];
 export type ChartTheme = (typeof THEMES)[number];
 

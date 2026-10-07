@@ -5,6 +5,7 @@ import {
   type AxisTokens,
   type FrameTokens,
   type GridTokens,
+  type HeroTokens,
   type LegendTokens,
   type SemanticColors,
   type ThemeTokens,
@@ -88,6 +89,7 @@ export let PIE_LABEL_MIN_SEP = base.PIE_LABEL_MIN_SEP;
 export let PIE_ELBOW = base.PIE_ELBOW;
 export let PIE_LABEL_MODE = base.PIE_LABEL_MODE;
 export let PIE_INNER_RATIO = base.PIE_INNER_RATIO;
+export let PIE_SEPARATOR = base.PIE_SEPARATOR;
 
 export let COMPACT_SPAN = base.COMPACT_SPAN;
 
@@ -104,6 +106,7 @@ export let GRID: GridTokens = base.GRID;
 export let AXIS: AxisTokens = base.AXIS;
 export let LEGEND: LegendTokens = base.LEGEND;
 export let FRAME: FrameTokens = base.FRAME;
+export let HERO: HeroTokens = base.HERO;
 export let AXIS_TITLES = base.AXIS_TITLES;
 export let LEGEND_BELOW = base.LEGEND_BELOW;
 export let TITLE_RULE = base.TITLE_RULE;
@@ -166,6 +169,7 @@ export function applyThemeTokens(t: ThemeTokens): void {
   PIE_ELBOW = t.PIE_ELBOW;
   PIE_LABEL_MODE = t.PIE_LABEL_MODE;
   PIE_INNER_RATIO = t.PIE_INNER_RATIO;
+  PIE_SEPARATOR = t.PIE_SEPARATOR;
   COMPACT_SPAN = t.COMPACT_SPAN;
   PLOT_BG = t.PLOT_BG;
   PLOT_BORDER = t.PLOT_BORDER;
@@ -177,6 +181,7 @@ export function applyThemeTokens(t: ThemeTokens): void {
   AXIS = t.AXIS;
   LEGEND = t.LEGEND;
   FRAME = t.FRAME;
+  HERO = t.HERO;
   SURFACES = t.SURFACES;
   SURFACE = "light";
   PLATE = t.SURFACES.light.PLATE;

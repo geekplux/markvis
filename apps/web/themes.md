@@ -21,7 +21,7 @@ Feb,180
 Mar,150
 ```
 
-Allowed ids: `folio` · `highcharts` · `shadcn` · `docs` · `ant` · `recharts`.
+Allowed ids: `folio` · `highcharts` · `shadcn` · `docs` · `ant` · `recharts` · `graphite`.
 
 ## Theme vs palette
 
@@ -45,6 +45,7 @@ Token packs live in `packages/themes/<id>/theme.ts`, resolved by `packages/theme
 | `docs` | UPPERCASE tracked title + rule, monospace numbers, dotted grid |
 | `ant` | Dashed grid, short ticks, haloed points, donut with spider leaders |
 | `recharts` | Dashed x and y grid, both axis lines with ticks, hollow points |
+| `graphite` | Charcoal gray ladder, one accent on the largest value, pill bars, heavy numbers |
 
 Each pack also has its own dark paper for `surface: dark`.
 
@@ -165,6 +166,28 @@ W5,member,51
 ```chart
 type: line
 theme: recharts
+title: Walk-up still leads member
+unit: riders
+x: week
+y: count
+series: plan
+
+week,plan,count
+W1,walk-up,64
+W1,member,28
+W2,walk-up,69
+W2,member,33
+W3,walk-up,71
+W3,member,38
+W4,walk-up,74
+W4,member,44
+W5,walk-up,76
+W5,member,51
+```
+
+```chart
+type: line
+theme: graphite
 title: Walk-up still leads member
 unit: riders
 x: week

@@ -9,6 +9,7 @@ import {
   binHistogram,
   chartId,
   folio,
+  graphite,
   highcharts,
   shadcn,
   docs,
@@ -80,6 +81,8 @@ function bwAxes(svg: string) {
     titleRule: /data-title-rule=/.test(svg),
     viewBox: (svg.match(/viewBox="([^"]+)"/) ?? [, ""])[1],
     titleSize: (title.match(/font-size="(\d+(?:\.\d+)?)"/) ?? [, ""])[1],
+    titleWeight: (title.match(/font-weight="(\d+)"/) ?? [, ""])[1],
+    valueWeight: (svg.match(/<text\b[^>]*font-weight="(\d+)"[^>]*data-value-label=/) ?? [, ""])[1],
     markerR: (svg.match(/<circle[^>]*\br="([0-9.]+)"/) ?? [, ""])[1],
     barRx: barRxAxis(svg),
     vGrid: /data-v-grid=/.test(svg),
@@ -1416,5 +1419,66 @@ describe("source discipline", () => {
       expect(source, file).not.toMatch(/from\s+["']recharts["']/);
       expect(source, file).not.toMatch(/require\(\s*["']recharts["']\s*\)/);
     }
+  });
+});
+
+describe("graphite accent", () => {
+  const accent = graphite.HERO.color;
+  const barsOf = (svg: string) =>
+    [...svg.matchAll(/<path\b[^>]*fill="([^"]+)"[^>]*data-x="([^"]+)"/g)].map(
+      (m) => ({ fill: m[1]!, x: m[2]! }),
+    );
+  const table = (rows: string[][]) => ({
+    columns: ["month", "revenue"],
+    rows,
+  });
+
+  it("marks only the largest bar", () => {
+    const bars = barsOf(renderSvg(barChart({ theme: "graphite" })));
+    expect(bars.filter((bar) => bar.fill === accent).map((bar) => bar.x)).toEqual([
+      "Feb",
+    ]);
+  });
+
+  it("gives a tie to the first bar", () => {
+    const svg = renderSvg(
+      barChart({
+        theme: "graphite",
+        table: table([
+          ["Jan", "180"],
+          ["Feb", "180"],
+        ]),
+      }),
+    );
+    expect(barsOf(svg).filter((bar) => bar.fill === accent).map((bar) => bar.x)).toEqual([
+      "Jan",
+    ]);
+  });
+
+  it("marks nothing when no value is positive", () => {
+    const svg = renderSvg(
+      barChart({
+        theme: "graphite",
+        table: table([
+          ["Jan", "0"],
+          ["Feb", "-4"],
+        ]),
+      }),
+    );
+    expect(svg).not.toContain(accent);
+  });
+
+  it("steps aside for two series and for an explicit palette", () => {
+    const multi = renderSvg(multiLine("graphite"));
+    expect(multi).not.toContain(accent);
+    const picked = renderSvg(barChart({ theme: "graphite", palette: "vivid" }));
+    expect(picked).not.toContain(accent);
+  });
+
+  it("marks the largest pie slice and cuts slices with paper", () => {
+    const svg = renderSvg(pieChart("graphite"));
+    const slices = [...svg.matchAll(/<path\b[^>]*fill="([^"]+)"[^>]*stroke="([^"]+)"[^>]*data-label="([^"]+)"/g)];
+    expect(slices.find((m) => m[1] === accent)?.[3]).toBe("A");
+    expect(slices.every((m) => m[2] === "#ffffff")).toBe(true);
   });
 });

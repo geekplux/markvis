@@ -7,6 +7,7 @@ export declare const shadcn: ThemeTokens;
 export declare const docs: ThemeTokens;
 export declare const ant: ThemeTokens;
 export declare const recharts: ThemeTokens;
+export declare const graphite: ThemeTokens;
 export declare const themeRegistry: Record<string, ThemeTokens>;
 export declare function resolveThemePack(id: string): ThemeTokens;
 export declare function applyPaletteToTheme(

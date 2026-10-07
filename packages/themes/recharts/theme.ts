@@ -95,6 +95,7 @@ export const recharts = {
   PIE_ELBOW: folio.PIE_ELBOW,
   PIE_LABEL_MODE: "legend",
   PIE_INNER_RATIO: 0,
+  PIE_SEPARATOR: folio.PIE_SEPARATOR,
 
   COMPACT_SPAN: folio.COMPACT_SPAN,
 
@@ -108,6 +109,7 @@ export const recharts = {
   AXIS: { line: "xy", tick: 6 },
   LEGEND: { swatch: "square", align: "middle" },
   FRAME: folio.FRAME,
+  HERO: folio.HERO,
 
   SURFACES: {
     light: { PLATE: null, PAPER: "#ffffff", SEMANTIC: { ...SEMANTIC_LIGHT, inkOnLight: "#374151" } },

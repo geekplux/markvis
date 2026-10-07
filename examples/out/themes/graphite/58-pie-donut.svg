@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Billing still leads support tickets at 40, 4 slices" aria-labelledby="mv-398374c454625ec9-title" aria-describedby="mv-398374c454625ec9-desc" data-markvis="2" data-chart-type="pie" data-id="mv-398374c454625ec9" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-398374c454625ec9-title">Billing still leads support tickets at 40</title>
+  <desc id="mv-398374c454625ec9-desc">pie chart. Billing still leads support tickets at 40. x=topic. y=tickets. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Billing still leads support tickets at 40</title>Billing still leads support tickets at 40</text>
+  <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0.5">
+    <path d="M372 116 A136 136 0 0 1 451.94 362.03 L411.97 307.01 A68 68 0 0 0 372 184 Z" fill="#E4572E" stroke="#ffffff" stroke-width="2" data-label="Billing" data-raw-value="40" data-donut="1"/>
+    <path d="M451.94 362.03 A136 136 0 0 1 261.97 331.94 L316.99 291.97 A68 68 0 0 0 411.97 307.01 Z" fill="#4A4945" stroke="#ffffff" stroke-width="2" data-label="Access" data-raw-value="25" data-donut="1"/>
+    <path d="M261.97 331.94 A136 136 0 0 1 261.97 172.06 L316.99 212.03 A68 68 0 0 0 316.99 291.97 Z" fill="#6E6D68" stroke="#ffffff" stroke-width="2" data-label="How-to" data-raw-value="20" data-donut="1"/>
+    <path d="M261.97 172.06 A136 136 0 0 1 372 116 L372 184 A68 68 0 0 0 316.99 212.03 Z" fill="#8E8D87" stroke="#ffffff" stroke-width="2" data-label="Other" data-raw-value="15" data-donut="1"/>
+  </g>
+  <g fill="none" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1">
+    <polyline points="501.34,209.97 516.56,205.03 524.56,205.03"/>
+    <polyline points="350.72,386.33 348.22,402.13 340.22,402.13"/>
+    <polyline points="236,252 220,252 212,252"/>
+    <polyline points="310.26,130.82 302.99,116.57 294.99,116.57"/>
+  </g>
+  <g font-size="12" font-weight="800" fill="#1B1B19">
+    <text x="536.56" y="205.03" text-anchor="start" dominant-baseline="middle" data-label="Billing">Billing · 40</text>
+    <text x="328.22" y="402.13" text-anchor="end" dominant-baseline="middle" data-label="Access">Access · 25</text>
+    <text x="200" y="252" text-anchor="end" dominant-baseline="middle" data-label="How-to">How-to · 20</text>
+    <text x="282.99" y="116.57" text-anchor="end" dominant-baseline="middle" data-label="Other">Other · 15</text>
+  </g>
+</svg>

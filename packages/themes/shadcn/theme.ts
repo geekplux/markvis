@@ -99,6 +99,7 @@ export const shadcn = {
   PIE_ELBOW: folio.PIE_ELBOW,
   PIE_LABEL_MODE: "legend",
   PIE_INNER_RATIO: 0.5,
+  PIE_SEPARATOR: folio.PIE_SEPARATOR,
 
   COMPACT_SPAN: folio.COMPACT_SPAN,
 
@@ -114,6 +115,7 @@ export const shadcn = {
   AXIS: { line: "none", tick: 0 },
   LEGEND: { swatch: "rounded", align: "middle" },
   FRAME: { radius: 12, stroke: true },
+  HERO: folio.HERO,
 
   SURFACES: {
     light: { PLATE: null, PAPER: "#ffffff", SEMANTIC: { ...SEMANTIC_LIGHT, inkOnLight: "#0A0A0A" } },

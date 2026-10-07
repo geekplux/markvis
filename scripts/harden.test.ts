@@ -299,6 +299,7 @@ describe("docs: live grammar, diagrams, unused shims", () => {
       "docs",
       "ant",
       "recharts",
+      "graphite",
     ]) {
       expect(themeNotes).toContain(value);
     }
@@ -322,6 +323,7 @@ describe("docs: live grammar, diagrams, unused shims", () => {
       "docs",
       "ant",
       "recharts",
+      "graphite",
     ]);
     expect(paletteValues).toEqual([
       "ink",

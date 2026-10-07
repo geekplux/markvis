@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Yes leads survey answers at 60, 3 slices" aria-labelledby="mv-8636ea173fdc9363-title" aria-describedby="mv-8636ea173fdc9363-desc" data-markvis="2" data-chart-type="pie" data-id="mv-8636ea173fdc9363" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-8636ea173fdc9363-title">Yes leads survey answers at 60</title>
+  <desc id="mv-8636ea173fdc9363-desc">pie chart. Yes leads survey answers at 60. x=label. y=n. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Yes leads survey answers at 60</title>Yes leads survey answers at 60</text>
+  <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0.6">
+    <path d="M372 116 A136 136 0 1 1 292.06 362.03 L324.04 318.02 A81.6 81.6 0 1 0 372 170.4 Z" fill="#E4572E" stroke="#ffffff" stroke-width="2" data-label="yes" data-raw-value="60" data-donut="1"/>
+    <path d="M292.06 362.03 A136 136 0 0 1 292.06 141.97 L324.04 185.98 A81.6 81.6 0 0 0 324.04 318.02 Z" fill="#4A4945" stroke="#ffffff" stroke-width="2" data-label="no" data-raw-value="30" data-donut="1"/>
+    <path d="M292.06 141.97 A136 136 0 0 1 372 116 L372 170.4 A81.6 81.6 0 0 0 324.04 185.98 Z" fill="#6E6D68" stroke="#ffffff" stroke-width="2" data-label="other" data-raw-value="10" data-donut="1"/>
+  </g>
+  <g fill="none" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1">
+    <polyline points="501.34,294.03 516.56,298.97 524.56,298.97"/>
+    <polyline points="236,252 220,252 212,252"/>
+    <polyline points="329.97,122.66 325.03,107.44 317.03,107.44"/>
+  </g>
+  <g font-size="12" font-weight="800" fill="#1B1B19">
+    <text x="536.56" y="298.97" text-anchor="start" dominant-baseline="middle" data-label="yes">yes · 60</text>
+    <text x="200" y="252" text-anchor="end" dominant-baseline="middle" data-label="no">no · 30</text>
+    <text x="305.03" y="107.44" text-anchor="end" dominant-baseline="middle" data-label="other">other · 10</text>
+  </g>
+</svg>

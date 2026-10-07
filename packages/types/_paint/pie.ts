@@ -9,7 +9,7 @@ import {
   type Painted,
   legendTop,
 } from "./layout.js";
-import { seriesStyle } from "./palette.js";
+import { heroFill, heroIndex, seriesStyle } from "./palette.js";
 import { formatNumber } from "./scale.js";
 import { textWidth, truncateLabel } from "./text.js";
 import {
@@ -17,6 +17,7 @@ import {
   INK,
   LEGEND_BELOW,
   MARGIN,
+  PAPER,
   PIE_ELBOW,
   PIE_INNER_RATIO,
   PIE_LABEL_GAP,
@@ -24,6 +25,7 @@ import {
   PIE_LABEL_MODE,
   PIE_LEADER,
   PIE_RADIUS_RATIO,
+  PIE_SEPARATOR,
   PIE_STROKE,
   PLOT_BG,
   PLOT_BORDER,
@@ -309,12 +311,13 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
   const rows = loadRows(chart).flatMap((row) =>
     row.y === null ? [] : [{ label: row.xLabel, y: row.y }],
   );
+  const hero = heroIndex(rows.map((row) => row.y));
   const raw: Omit<Slice, "a0" | "a1" | "mid">[] = rows.map((row, i) => {
     const style = seriesStyle(i);
     return {
       label: row.label,
       value: Math.max(0, row.y),
-      color: style.color,
+      color: heroFill(i, hero, style.color),
       opacity: style.opacity,
     };
   });
@@ -523,6 +526,10 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
       })}/>`,
     );
   } else {
+    // Ink edges, or paper gaps that cut the slices apart.
+    const sliceEdge = PIE_SEPARATOR === "paper" ? PAPER : INK;
+    const sliceEdgeOpacity =
+      PIE_SEPARATOR === "paper" ? undefined : STRUCTURE_OPACITY;
     for (const slice of slices) {
       if (slice.value <= 0) {
         continue;
@@ -535,8 +542,8 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
               fill: slice.color,
               "fill-opacity": slice.opacity === 1 ? undefined : slice.opacity,
               "fill-rule": "evenodd",
-              stroke: INK,
-              "stroke-opacity": STRUCTURE_OPACITY,
+              stroke: sliceEdge,
+              "stroke-opacity": sliceEdgeOpacity,
               "stroke-width": PIE_STROKE,
               "data-label": slice.label,
               "data-raw-value": String(slice.value),
@@ -551,8 +558,8 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
               r: fmtPx(r),
               fill: slice.color,
               "fill-opacity": slice.opacity === 1 ? undefined : slice.opacity,
-              stroke: INK,
-              "stroke-opacity": STRUCTURE_OPACITY,
+              stroke: sliceEdge,
+              "stroke-opacity": sliceEdgeOpacity,
               "stroke-width": PIE_STROKE,
               "data-label": slice.label,
               "data-raw-value": String(slice.value),
@@ -569,8 +576,8 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
           d,
           fill: slice.color,
           "fill-opacity": slice.opacity === 1 ? undefined : slice.opacity,
-          stroke: INK,
-          "stroke-opacity": STRUCTURE_OPACITY,
+          stroke: sliceEdge,
+          "stroke-opacity": sliceEdgeOpacity,
           "stroke-width": PIE_STROKE,
           "data-label": slice.label,
           "data-raw-value": String(slice.value),
