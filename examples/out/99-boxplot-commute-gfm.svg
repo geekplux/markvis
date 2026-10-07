@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="182" viewBox="0 0 720 182" role="img" aria-label="boxplot chart: Decatur commutes vary the most (min), 15 rows" aria-labelledby="mv-fa11680937f4a339-title" aria-describedby="mv-fa11680937f4a339-desc" data-markvis="2" data-chart-type="boxplot" data-id="mv-fa11680937f4a339" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-fa11680937f4a339-title">Decatur commutes vary the most</title>
+  <desc id="mv-fa11680937f4a339-desc">boxplot chart. Decatur commutes vary the most. x=neighborhood. y=minutes. unit=min. 15 rows.</desc>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Decatur commutes vary the most</title>Decatur commutes vary the most<tspan font-size="13" font-weight="400" fill="#737373"> · min</tspan></text>
+  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
+    <line x1="90.4" x2="90.4" y1="44" y2="146"/>
+    <line x1="195.4" x2="195.4" y1="44" y2="146"/>
+    <line x1="300.4" x2="300.4" y1="44" y2="146"/>
+    <line x1="405.4" x2="405.4" y1="44" y2="146"/>
+    <line x1="510.4" x2="510.4" y1="44" y2="146"/>
+    <line x1="615.4" x2="615.4" y1="44" y2="146"/>
+  </g>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="80.4" y="61" text-anchor="end" dominant-baseline="middle" data-full-label="Midtown"><title>Midtown</title><tspan x="80.4" dy="0">Midtown</tspan></text>
+    <text x="80.4" y="95" text-anchor="end" dominant-baseline="middle" data-full-label="Decatur"><title>Decatur</title><tspan x="80.4" dy="0">Decatur</tspan></text>
+    <text x="80.4" y="129" text-anchor="end" dominant-baseline="middle" data-full-label="Grant Park"><title>Grant Park</title><tspan x="80.4" dy="0">Grant Park</tspan></text>
+    <text x="90.4" y="164" text-anchor="middle">10</text>
+    <text x="195.4" y="164" text-anchor="middle">20</text>
+    <text x="300.4" y="164" text-anchor="middle">30</text>
+    <text x="405.4" y="164" text-anchor="middle">40</text>
+    <text x="510.4" y="164" text-anchor="middle">50</text>
+    <text x="615.4" y="164" text-anchor="middle">60</text>
+  </g>
+  <g data-boxplot="1">
+    <path d="M174.4 61 L187.52 61 M213.77 61 L247.9 61 M174.4 55.5 L174.4 66.5 M247.9 55.5 L247.9 66.5" fill="none" stroke="#3B82F6" stroke-width="1.5" data-whiskers="Midtown"/>
+    <rect x="187.52" y="50" width="26.25" height="22" rx="3" fill="#3B82F6" fill-opacity="0.28" stroke="#3B82F6" stroke-width="1.5" data-x="Midtown" data-n="6" data-median="20.5" data-q1="19.25" data-q3="21.75"/>
+    <line x1="200.65" x2="200.65" y1="48" y2="74" stroke="#171717" stroke-width="2.5" data-x="Midtown" data-n="6" data-median="20.5" data-median-tick="1"/>
+    <path d="M237.4 95 L300.4 95 M405.4 95 L531.4 95 M237.4 89.5 L237.4 100.5 M531.4 89.5 L531.4 100.5" fill="none" stroke="#3B82F6" stroke-width="1.5" data-whiskers="Decatur"/>
+    <rect x="300.4" y="84" width="105" height="22" rx="3" fill="#3B82F6" fill-opacity="0.28" stroke="#3B82F6" stroke-width="1.5" data-x="Decatur" data-n="6" data-median="35" data-q1="30" data-q3="40"/>
+    <line x1="352.9" x2="352.9" y1="82" y2="108" stroke="#171717" stroke-width="2.5" data-x="Decatur" data-n="6" data-median="35" data-median-tick="1"/>
+    <circle cx="268.9" cy="129" r="3.5" fill="#3B82F6" fill-opacity="0.75" data-x="Grant Park" data-y="27" data-point="1"/>
+    <circle cx="310.9" cy="129" r="3.5" fill="#3B82F6" fill-opacity="0.75" data-x="Grant Park" data-y="31" data-point="1"/>
+    <circle cx="258.4" cy="129" r="3.5" fill="#3B82F6" fill-opacity="0.75" data-x="Grant Park" data-y="26" data-point="1"/>
+    <line x1="268.9" x2="268.9" y1="116" y2="142" stroke="#171717" stroke-width="2.5" data-x="Grant Park" data-n="3" data-median="27" data-median-tick="1"/>
+  </g>
+  <g fill="#171717" font-size="13" font-weight="500">
+    <text x="627.4" y="61" dominant-baseline="middle" data-value-label="Midtown">20.5<tspan fill="#737373" font-weight="400"> · n=6</tspan></text>
+    <text x="627.4" y="95" dominant-baseline="middle" data-value-label="Decatur">35<tspan fill="#737373" font-weight="400"> · n=6</tspan></text>
+    <text x="627.4" y="129" dominant-baseline="middle" data-value-label="Grant Park">27<tspan fill="#737373" font-weight="400"> · n=3</tspan></text>
+  </g>
+</svg>
