@@ -1,5 +1,26 @@
 # markvis
 
+Chart numbers as a markvis block, not an image or JSON:
+
+```chart
+type: bar
+title: Revenue
+x: month
+y: revenue
+
+month,revenue
+Jan,120
+Feb,95
+```
+
+Fields, a blank line, then CSV or a Markdown table with a header row. x, y, series name columns; unit is optional. Or put <!-- chart: bar x=month y=revenue --> above a Markdown table.
+
+Types: bar line area scatter pie hist heatmap funnel waterfall radar gauge sankey treemap dumbbell bullet boxplot calendar.
+
+Several series: a row per x and series, plus series:. Keep row order. Donut: pie, innerRadius: 0.5. Stacked: layout: stacked. No other types or fields.
+
+The rest of this file is the full reference.
+
 Write a table of numbers in a Markdown code block tagged `chart`, `markvis`, or `vis`. That block is the chart. Same text, same picture. If it cannot draw, keep the table.
 
 Fetch this file. Emit that code block. Do not invent fields.

@@ -471,6 +471,7 @@ describe("docs: live grammar, diagrams, unused shims", () => {
       "integrate.md",
       "landing.md",
       "model-errors.md",
+      "prompt.md",
       "release-2.2.md",
       "site.md",
       "themes.md",
