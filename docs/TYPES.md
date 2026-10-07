@@ -25,6 +25,8 @@ These stay valid forever. Additive only.
 | `gauge` | One row. A second row is `E_DUP_KEY`. Optional `min`/`max`; omit max → 100. `series` ignored. |
 | `sankey` | x source, series target (required), y flow ≥ 0. One row = one link. |
 | `treemap` | x label, y ≥ 0, optional series parent (two levels max). |
+| `dumbbell` | x category, y number, `series` required with exactly two values. First hollow, second filled. |
+| `bullet` | x label, y actual. Optional `target` column and `min`/`max`. `series` ignored. |
 
 Unknown `type` → `E_UNKNOWN_TYPE` + table. Near-miss spelling → `E_TYPE_TYPO` (still invalid). Failure always keeps the rows.
 
@@ -40,6 +42,7 @@ Unknown `type` → `E_UNKNOWN_TYPE` + table. Near-miss spelling → `E_TYPE_TYPO
 | Donut look | `type: pie` + `innerRadius` in `(0, 1]` (omit = theme `PIE_INNER_RATIO`; `0` = solid) | Invent `donut` |
 | Heatmap, funnel, waterfall, radar, gauge | Wave 2 type packs (`heatmap` `funnel` `waterfall` `radar` `gauge`) | Stuff them into pie/bar with magic fields |
 | Sankey / treemap | Wave 3 type packs (`sankey` `treemap`) | Invent node extras, curvature keys, or >2-level trees |
+| Before/after per category; actual vs target | Wave 4 type packs (`dumbbell` `bullet`) | Fake them with grouped bars plus magic fields; add qualitative bands |
 
 Type-local extra keys only. Undeclared keys → `E_UNKNOWN_FIELD`.
 
@@ -52,6 +55,7 @@ Type-local extra keys only. Undeclared keys → `E_UNKNOWN_FIELD`.
 - Wave 2 packs: heatmap, funnel, waterfall, radar, gauge
 - Gauge extras: `min` / `max` (omit min → 0, omit max → 100; both set ⇒ min < max)
 - Wave 3 packs: sankey, treemap (pack-local layout; no d3-hierarchy/sankey)
+- Wave 4 packs: dumbbell, bullet (bullet extras: `target` column, `min` / `max`)
 
 ## OUT
 
