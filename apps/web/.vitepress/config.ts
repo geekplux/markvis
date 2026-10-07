@@ -1,6 +1,7 @@
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "vitepress";
+import { TYPE_IDS } from "../src/type-pages";
 
 const root = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(root, "../../..");
@@ -9,7 +10,14 @@ function docsSidebar() {
   return [
     { text: "Get started", link: "/get-started" },
     { text: "Integrate", link: "/integrate" },
+    { text: "Integrations", link: "/integrations" },
     { text: "Spec", link: "/spec" },
+    {
+      text: "Chart types",
+      link: "/types/",
+      collapsed: true,
+      items: TYPE_IDS.map((type) => ({ text: type, link: `/types/${type}` })),
+    },
     { text: "Themes", link: "/themes" },
     { text: "AI", link: "/ai" },
     { text: "Contributing themes", link: "/contributing-themes" },
@@ -20,7 +28,9 @@ const docsSidebarPaths = [
   "/docs",
   "/get-started",
   "/integrate",
+  "/integrations",
   "/spec",
+  "/types/",
   "/themes",
   "/ai",
   "/contributing-themes",
@@ -30,7 +40,7 @@ const siteModeBoot = `(function(){try{var k='markvis-site-mode';var m=localStora
 
 export default defineConfig({
   title: "MarkVis",
-  description: "Quantitative charts in Markdown — the fence is the data.",
+  description: "Charts as text in Markdown. Where they cannot draw, the numbers stay as a table.",
   head: [
     ["script", {}, siteModeBoot],
     ["link", { rel: "icon", href: "/favicon.png", type: "image/png" }],
@@ -40,7 +50,7 @@ export default defineConfig({
       "meta",
       {
         property: "og:description",
-        content: "Quantitative charts in Markdown — the fence is the data.",
+        content: "Charts as text in Markdown. Where they cannot draw, the numbers stay as a table.",
       },
     ],
     [

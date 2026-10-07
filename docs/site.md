@@ -30,11 +30,13 @@ Badge: OPEN SOURCE | v2 · MIT.
 
 Headline: Charts in Markdown. / The numbers are the picture.
 
-Sub: Write a table in a Markdown code block. MarkVis draws the chart. Change a number — the picture changes. If the chart cannot draw, you still see the table.
+Sub: Write a short chart block in Markdown; markvis draws it as SVG — from a script tag, JavaScript, React, or any Markdown renderer. Where it cannot draw, the numbers stay as a table.
 
 Filled: Get started → `#quickstart`.
 
-Outline: Docs → `/get-started`. Examples → `/examples`.
+Outline: Docs → `/get-started`. Examples → `/examples`. Play → `/play`.
+
+Live example: an editable block beside its chart (`ChartBlock` with `editable`), drawn by `render()`; an invalid edit shows the rows and one error line.
 
 Install chip: `$ npx markvis bake README.md` (copyable). Public install: `npm install markvis`. 2.0.0 replaces 0.0.13.
 
@@ -44,13 +46,13 @@ Proof figures (folio, uncropped; conclusion captions):
 2. Walk-up still leads member — `examples/out/02-line-multi.svg`
 3. MARTA still carries more airport guests than rideshare — `examples/out/81-sankey-airport-ground.svg`
 
-Feature grid (1px gutter): Try it in the browser; Lives in your Markdown; Same text, same picture; The table never disappears; Thirteen kinds of chart; Write a table of numbers; Built for people and AI; Looks you can pick; Show it on GitHub too.
+Feature grid (1px gutter): The data never disappears; Try it in the browser; Lives in your Markdown; Same text, same picture; Safe by design; Seventeen kinds of chart; Write a table of numbers; Built for people and AI; Looks you can pick; Show it on GitHub too.
 
 Tabbed examples: bar / line / sankey from those three stems.
 
-Quickstart: 01 Try it · 02 Save a picture · 03 Ask an AI.
+Quickstart: 01 One script tag · 02 JavaScript · 03 React · 04 GitHub, with a link to `/integrations`.
 
-Hosts: npm · script · skill — available now.
+Hosts: npm · script · skill · action — available now; react · rehype — in 2.2.
 
 Final CTA: logo, Get started with MarkVis, “Write the numbers. Get the chart.”, Playground / Docs / Examples / Star on GitHub.
 
@@ -72,6 +74,10 @@ Gallery stories for every card: `docs/examples.md`.
 ## Play
 
 Two panes under the site nav: fence left, figure right. Each at least 40% at `>=768px`. Theme and Color selects rewrite the fence and re-render. Copy fence / Copy SVG / Open in gallery. Invalid input shows the table + error, never a blank screen.
+
+## Integrations and chart types
+
+`/integrations`: every way to show a block, each with a status ("available now" or "2.2") and a snippet, plus the security note. `/types/<type>`: one page per chart type, generated at build time (`apps/web/src/type-pages.ts`, dynamic route `apps/web/types/[type].paths.ts`) from `packages/types/<type>/README.md`, its `examples/valid.md` and `examples/invalid.md`, and the type's row in `SPEC.md`, so the pages cannot drift. `ChartBlock` draws the examples.
 
 ## Integrate / Spec / AI / Themes pages
 

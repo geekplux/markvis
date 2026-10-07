@@ -602,3 +602,33 @@ html.dark .site-logo-dark {
     display: none;
   }
 }
+
+/* A drawn chart block (type pages, home): light card so the default ink reads in both site modes. */
+.chart-block-figure {
+  padding: 0.75rem;
+  border: 1px solid var(--site-border);
+  border-radius: var(--site-radius);
+  background: #ffffff;
+  color: #171717;
+  overflow-x: auto;
+}
+
+.chart-block-figure figure {
+  margin: 0;
+}
+
+.chart-block-figure svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.chart-block-figure table {
+  margin: 0.75rem 0 0;
+  font-size: 13px;
+}
+
+.chart-block-figure figcaption {
+  font-size: 13px;
+  color: #5a6a8a;
+}

@@ -688,3 +688,41 @@
     transition: none !important;
   }
 }
+
+/* Live example in the hero: the block on the left, its chart on the right. */
+.home-live {
+  margin: 1.75rem 0 0;
+}
+
+.home-live-note {
+  margin: 0.5rem 0 0;
+  font-size: 13px;
+  color: var(--site-muted);
+}
+
+.chart-block-live {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+.chart-block-source {
+  width: 100%;
+  min-height: 15rem;
+  padding: 0.75rem;
+  border: 1px solid var(--site-border);
+  border-radius: var(--site-radius);
+  background: var(--site-card-2);
+  color: var(--site-fg);
+  font-family: var(--site-mono);
+  font-size: 13px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+@media (max-width: 719px) {
+  .chart-block-live {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

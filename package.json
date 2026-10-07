@@ -3,7 +3,7 @@
   "version": "2.1.0",
   "private": false,
   "type": "module",
-  "description": "Charts in Markdown. Write a table in a code block; MarkVis draws the SVG. Same text, same picture.",
+  "description": "Charts as text in Markdown. Write a short chart block; markvis draws it as SVG from a script tag, JavaScript, React, or any Markdown renderer. Where it cannot draw, the numbers stay as a table.",
   "keywords": [
     "markdown",
     "chart",
@@ -13,6 +13,13 @@
     "data-visualization",
     "markdown-it",
     "remark",
+    "rehype",
+    "mdx",
+    "react",
+    "react-markdown",
+    "streaming",
+    "llm",
+    "github-action",
     "cli",
     "bar-chart"
   ],

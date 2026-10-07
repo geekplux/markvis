@@ -20,12 +20,17 @@ pageClass: folio-home-page
     <span>Charts in Markdown.</span>
     <span>The numbers are the picture.</span>
   </h1>
-  <p class="home-sub">Write a table in a Markdown code block. MarkVis draws the chart. Change a number — the picture changes. If the chart cannot draw, you still see the table.</p>
+  <p class="home-sub">Write a short chart block in Markdown; markvis draws it as SVG — from a script tag, JavaScript, React, or any Markdown renderer. Where it cannot draw, the numbers stay as a table.</p>
   <p class="home-cta">
     <a class="home-btn filled" href="#quickstart">Get started</a>
     <a class="home-btn outline" href="/get-started">Docs <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
     <a class="home-btn outline" href="/examples">Examples <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
+    <a class="home-btn outline" href="/play">Play <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
   </p>
+  <div class="home-live">
+    <ChartBlock editable :block='"type: bar\ntitle: Visits by day\nx: day\ny: visits\n\nday,visits\nMon,3\nTue,5\nWed,4\nThu,6\nFri,8\n"' />
+    <p class="home-live-note">Edit a number in the block; the chart redraws. That text is the whole chart.</p>
+  </div>
   <div class="home-install">
     <CopyChip command="npx markvis bake README.md" />
   </div>
@@ -45,6 +50,10 @@ pageClass: folio-home-page
   </div>
   <div class="home-grid home-features-grid">
     <article class="home-feature">
+      <h3>The data never disappears</h3>
+      <p>Without markvis the block is readable text, and the comment form is a plain table. A block that cannot draw keeps its rows and shows one error line.</p>
+    </article>
+    <article class="home-feature">
       <h3>Try it in the browser</h3>
       <p>Open Play. Paste a block. No account, no install.</p>
     </article>
@@ -57,8 +66,8 @@ pageClass: folio-home-page
       <p>The same block always draws the same chart. Not a one-off screenshot.</p>
     </article>
     <article class="home-feature">
-      <h3>The table never disappears</h3>
-      <p>If something is wrong, you still see the rows — never a blank hole.</p>
+      <h3>Safe by design</h3>
+      <p>A block holds data only: no HTML, no scripts. Every title, label, and cell is escaped.</p>
     </article>
     <article class="home-feature">
       <h3>Seventeen kinds of chart</h3>
@@ -97,19 +106,27 @@ pageClass: folio-home-page
   </div>
   <div class="home-grid home-quick-grid">
     <article class="home-quick">
-      <div class="home-quick-title"><span>01</span><h3>Try it</h3></div>
-      <pre class="home-quick-code">Open /play. Paste a block. The chart appears.</pre>
-      <p>Same text, same picture.</p>
+      <div class="home-quick-title"><span>01</span><h3>One script tag</h3></div>
+      <pre class="home-quick-code">&lt;script src="https://cdn.jsdelivr.net/npm/markvis@2/dist/markvis.min.js"&gt;&lt;/script&gt;</pre>
+      <p>In a page or a Markdown file. Every chart block on it draws.</p>
     </article>
     <article class="home-quick">
-      <div class="home-quick-title"><span>02</span><h3>Save a picture</h3></div>
-      <CopyChip command="npx markvis bake README.md" />
-      <p>Keeps the Markdown; writes the picture after it so GitHub can show it.</p>
+      <div class="home-quick-title"><span>02</span><h3>JavaScript</h3></div>
+      <pre class="home-quick-code">import { render } from "markvis";
+el.innerHTML = render(block).html;</pre>
+      <p>One call; it never throws.</p>
     </article>
     <article class="home-quick">
-      <div class="home-quick-title"><span>03</span><h3>Ask an AI</h3></div>
-      <pre class="home-quick-code">skills/markvis/SKILL.md</pre>
-      <p>Point an agent at the Skill or /llms.txt. It writes the block, not a screenshot.</p>
+      <div class="home-quick-title"><span>03</span><h3>React</h3></div>
+      <pre class="home-quick-code">import { Markvis } from "markvis/react";
+&lt;Markvis source={block} /&gt;</pre>
+      <p>Follows its container; streams in react-markdown.</p>
+    </article>
+    <article class="home-quick">
+      <div class="home-quick-title"><span>04</span><h3>GitHub</h3></div>
+      <pre class="home-quick-code">- uses: geekplux/markvis@master
+  with: { paths: README.md }</pre>
+      <p>Bakes pictures so github.com shows the charts. <a href="/integrations">All integrations</a></p>
     </article>
   </div>
 </section>
@@ -130,6 +147,21 @@ pageClass: folio-home-page
       <span class="home-host-dot" aria-hidden="true"></span>
       <span class="home-host-name">skill</span>
       <span class="home-host-status">available now</span>
+    </div>
+    <div class="home-host">
+      <span class="home-host-dot" aria-hidden="true"></span>
+      <span class="home-host-name">action</span>
+      <span class="home-host-status">available now</span>
+    </div>
+    <div class="home-host">
+      <span class="home-host-dot" aria-hidden="true"></span>
+      <span class="home-host-name">react</span>
+      <span class="home-host-status">in 2.2</span>
+    </div>
+    <div class="home-host">
+      <span class="home-host-dot" aria-hidden="true"></span>
+      <span class="home-host-name">rehype</span>
+      <span class="home-host-status">in 2.2</span>
     </div>
   </div>
 </section>

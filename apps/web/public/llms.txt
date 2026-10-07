@@ -21,7 +21,7 @@ Several series: a row per x and series, plus series:. Keep row order. Donut: pie
 
 The rest of this file is the full reference.
 
-Write a table of numbers in a Markdown code block tagged `chart`, `markvis`, or `vis`. That block is the chart. Same text, same picture. If it cannot draw, keep the table.
+markvis is charts as text in Markdown. A chart block is a code block tagged `chart`, `markvis`, or `vis`: a few header lines and a table of rows. markvis draws it as SVG from a script tag, JavaScript, React, or any Markdown renderer. Where it cannot draw, the rows stay as a table, so the data never disappears.
 
 Fetch this file. Emit that code block. Do not invent fields.
 
