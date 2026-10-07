@@ -3,6 +3,7 @@ import {
   exampleIdFromSearch,
   galleryHref,
   paletteFromSearch,
+  pickSearch,
   playgroundSearch,
   stemFromId,
   surfaceFromSearch,
@@ -77,5 +78,18 @@ describe("playground links", () => {
     expect(surfaceFromSearch("?surface=dark")).toBe("dark");
     expect(surfaceFromSearch("?surface=light")).toBeNull();
     expect(surfaceFromSearch("?surface=neon")).toBeNull();
+  });
+});
+
+describe("pickSearch", () => {
+  it("uses its own query when it names a surface only", () => {
+    expect(pickSearch("?surface=dark", "?example=01-bar-basic")).toBe("?surface=dark");
+  });
+
+  it("falls back to the parent page when its own query is empty", () => {
+    expect(pickSearch("", "?example=02-line-multi&surface=export")).toBe(
+      "?example=02-line-multi&surface=export",
+    );
+    expect(pickSearch("", null)).toBe("");
   });
 });

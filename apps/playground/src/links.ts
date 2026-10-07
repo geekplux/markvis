@@ -85,3 +85,17 @@ export function playgroundSearch(
   }
   return `?${params.toString()}`;
 }
+
+/**
+ * The query the playground starts from: its own when it names anything the
+ * toolbar reads (example, theme, palette, or surface), else the parent page's
+ * when embedded.
+ */
+export function pickSearch(own: string, parent: string | null): string {
+  const named =
+    exampleIdFromSearch(own) ||
+    themeFromSearch(own) ||
+    paletteFromSearch(own) ||
+    surfaceFromSearch(own);
+  return named || parent === null ? own : parent;
+}

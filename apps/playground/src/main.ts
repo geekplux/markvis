@@ -3,6 +3,7 @@ import {
   exampleIdFromSearch,
   galleryHref,
   paletteFromSearch,
+  pickSearch,
   playgroundSearch,
   surfaceFromSearch,
   themeFromSearch,
@@ -50,22 +51,15 @@ async function copyText(text: string): Promise<void> {
 
 function searchForExample(): string {
   const own = window.location.search;
-  if (
-    exampleIdFromSearch(own) ||
-    themeFromSearch(own) ||
-    paletteFromSearch(own) ||
-    surfaceFromSearch(own)
-  ) {
-    return own;
-  }
+  let parent: string | null = null;
   try {
     if (window.parent !== window) {
-      return window.parent.location.search;
+      parent = window.parent.location.search;
     }
   } catch {
-    return own;
+    parent = null;
   }
-  return own;
+  return pickSearch(own, parent);
 }
 
 let disposeEnhance: (() => void) | undefined;
