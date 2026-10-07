@@ -12,7 +12,9 @@ import { seriesStyle } from "./palette.js";
 import { formatNumber, labelTicks, niceTicks, scaleLinear, yExtent } from "./scale.js";
 import { textWidth, wrapText } from "./text.js";
 import {
+  BAR_RX,
   FONT_NUMERIC,
+  GRID,
   HAIRLINE_OPACITY,
   INK,
   MARGIN,
@@ -182,7 +184,8 @@ export function renderHorizontalBar(chart: ChartIR, _id: string): Painted {
       fill: "none",
       stroke: INK,
       "stroke-opacity": HAIRLINE_OPACITY,
-      "stroke-width": 1,
+      "stroke-width": GRID.width,
+      "stroke-dasharray": GRID.dash || undefined,
     })}>`,
   );
   for (let i = 0; i < ticks.length; i++) {
@@ -352,6 +355,25 @@ export function renderHorizontalBar(chart: ChartIR, _id: string): Painted {
   return { lines, height };
 }
 
+/** Bar rounded only at the end away from zero. */
+function roundedEndPath(
+  x: number,
+  y: number,
+  w: number,
+  h: number,
+  r: number,
+  roundRight: boolean,
+): string {
+  const x0 = fmtPx(x);
+  const x1 = fmtPx(x + w);
+  const y0 = fmtPx(y);
+  const y1 = fmtPx(y + h);
+  if (roundRight) {
+    return `M${x0} ${y0} L${fmtPx(x + w - r)} ${y0} Q${x1} ${y0} ${x1} ${fmtPx(y + r)} L${x1} ${fmtPx(y + h - r)} Q${x1} ${y1} ${fmtPx(x + w - r)} ${y1} L${x0} ${y1} Z`;
+  }
+  return `M${x1} ${y0} L${fmtPx(x + r)} ${y0} Q${x0} ${y0} ${x0} ${fmtPx(y + r)} L${x0} ${fmtPx(y + h - r)} Q${x0} ${y1} ${fmtPx(x + r)} ${y1} L${x1} ${y1} Z`;
+}
+
 function paintBar(
   lines: string[],
   xScale: (value: number) => number,
@@ -394,17 +416,26 @@ function paintBar(
   const x1 = xScale(val);
   const x = Math.min(zeroX, x1);
   const w = Math.abs(x1 - zeroX);
+  const r = Math.min(BAR_RX, h / 2, w);
   lines.push(
-    `    <rect ${attrs({
-      x: fmtPx(x),
-      y: fmtPx(y),
-      width: fmtPx(Math.max(w, 0)),
-      height: fmtPx(h),
-      fill: color,
-      "data-x": cat,
-      "data-series": series,
-      "data-y": formatNumber(val),
-    })}/>`,
+    r > 0
+      ? `    <path ${attrs({
+          d: roundedEndPath(x, y, w, h, r, val >= 0),
+          fill: color,
+          "data-x": cat,
+          "data-series": series,
+          "data-y": formatNumber(val),
+        })}/>`
+      : `    <rect ${attrs({
+          x: fmtPx(x),
+          y: fmtPx(y),
+          width: fmtPx(Math.max(w, 0)),
+          height: fmtPx(h),
+          fill: color,
+          "data-x": cat,
+          "data-series": series,
+          "data-y": formatNumber(val),
+        })}/>`,
   );
   const labelX = val >= 0 ? x1 + 6 : x1 - 6;
   lines.push(

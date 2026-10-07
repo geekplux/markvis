@@ -272,9 +272,11 @@ program,amount
       }
       lastLine = text;
     }
-    const barY = Number(
-      [...out.matchAll(/<rect\b[^>]*\by="([^"]+)"[^>]*\bdata-y=/g)][0]?.[1],
+    // A bar is a rect, or a path when the theme rounds its end.
+    const bar = out.match(
+      /<(?:rect\b[^>]*\by="([^"]+)"|path\b[^>]*\bd="M[-\d.]+ ([-\d.]+))[^>]*\bdata-y=/,
     );
+    const barY = Number(bar?.[1] ?? bar?.[2]);
     const lineCount = parts.filter((part) => {
       const attrs = part[1] ?? "";
       const text = part[2] ?? "";

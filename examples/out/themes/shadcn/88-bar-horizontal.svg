@@ -18,11 +18,11 @@
     <text x="648" y="182" text-anchor="middle">600,000</text>
   </g>
   <g data-orient="horizontal">
-    <rect x="224.32" y="51" width="296.58" height="30" fill="#F54900" data-x="North America enterprise expansion Q3" data-series="amount" data-y="420,000"/>
+    <path d="M224.32 51 L514.9 51 Q520.9 51 520.9 57 L520.9 75 Q520.9 81 514.9 81 L224.32 81 Z" fill="#F54900" data-x="North America enterprise expansion Q3" data-series="amount" data-y="420,000"/>
     <text x="526.9" y="66" text-anchor="start" font-size="13" font-weight="500" fill="#0A0A0A" dominant-baseline="middle" data-value-label="North America enterprise expansion Q3">420,000</text>
-    <rect x="224.32" y="91" width="130.63" height="30" fill="#F54900" data-x="APAC partner enablement and training program" data-series="amount" data-y="185,000"/>
+    <path d="M224.32 91 L348.95 91 Q354.95 91 354.95 97 L354.95 115 Q354.95 121 348.95 121 L224.32 121 Z" fill="#F54900" data-x="APAC partner enablement and training program" data-series="amount" data-y="185,000"/>
     <text x="360.95" y="106" text-anchor="start" font-size="13" font-weight="500" fill="#0A0A0A" dominant-baseline="middle" data-value-label="APAC partner enablement and training program">185,000</text>
-    <rect x="224.32" y="131" width="67.08" height="30" fill="#F54900" data-x="Legacy platform decommission wave 2" data-series="amount" data-y="95,000"/>
+    <path d="M224.32 131 L285.4 131 Q291.4 131 291.4 137 L291.4 155 Q291.4 161 285.4 161 L224.32 161 Z" fill="#F54900" data-x="Legacy platform decommission wave 2" data-series="amount" data-y="95,000"/>
     <text x="297.4" y="146" text-anchor="start" font-size="13" font-weight="500" fill="#0A0A0A" dominant-baseline="middle" data-value-label="Legacy platform decommission wave 2">95,000</text>
   </g>
 </svg>
