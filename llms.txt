@@ -19,7 +19,7 @@ Fields:
 
 - `type` required. `bar` `line` `area` `scatter` `pie` `hist` `heatmap` `funnel` `waterfall` `radar` `gauge` `sankey` `treemap`. Do not invent `donut`, `sunburst`, `chord`, or `stacked-bar`.
 - `title` optional. A conclusion, not a slug.
-- `theme` optional. Omit means `folio`. Allowed: `folio` `highcharts` `shadcn` `docs` `ant` `recharts`. Any other value is `E_UNKNOWN_THEME`: show the table, not a silent swap.
+- `theme` optional. Omit means `folio`. Allowed: `folio` `highcharts` `shadcn` `docs` `ant` `recharts` `graphite`. Any other value is `E_UNKNOWN_THEME`: show the table, not a silent swap.
 - `palette` optional. Colors only. Allowed: `ink` `porcelain` `warm` `cool` `vivid`. Omit means the theme’s default colors. Any other value is `E_UNKNOWN_PALETTE`: show the table, not a silent swap. Never merge palette into the theme id.
 - `unit` optional.
 - `x` `y` `series` name real columns. `series` splits series.

@@ -111,7 +111,7 @@ You can also put the numbers in a Markdown table, or use the HTML comment form i
 | Fields | `markvis` `type` `title` `unit` `x` `y` `series` plus `theme` `palette` `surface`. Type-local: `layout` `innerRadius` `min` `max` `orient` `role` |
 | Numbers | Comma-separated rows, or one Markdown table. Not JSON as the default. No JavaScript in the block. |
 
-`theme:` how it is drawn: `folio` (default) `highcharts` `shadcn` `docs` `ant` `recharts`. `palette:` colors only: `ink` `porcelain` `warm` `cool` `vivid`. Unknown look → table + error, never a silent swap. Pie slices are not forced to 100. Rows stay in the order you wrote them.
+`theme:` how it is drawn: `folio` (default) `highcharts` `shadcn` `docs` `ant` `recharts` `graphite`. `palette:` colors only: `ink` `porcelain` `warm` `cool` `vivid`. Unknown look → table + error, never a silent swap. Pie slices are not forced to 100. Rows stay in the order you wrote them.
 
 ## Docs
 

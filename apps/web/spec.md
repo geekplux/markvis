@@ -57,7 +57,7 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | `markvis` | no | `2` | Language version. Any other value → `E_BAD_VERSION`. It is not rewritten to 2. |
 | `type` | yes | — | `bar` \| `line` \| `area` \| `scatter` \| `pie` \| `hist` \| `heatmap` \| `funnel` \| `waterfall` \| `radar` \| `gauge` \| `sankey` \| `treemap`. |
 | `title` | no | derived | Conclusion title when present. |
-| `theme` | no | `folio` | Grammar only: `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts`. |
+| `theme` | no | `folio` | Grammar only: `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts` \| `graphite`. |
 | `palette` | no | theme default | Colors only: `ink` \| `porcelain` \| `warm` \| `cool` \| `vivid`. Omit → theme pack colors. |
 | `unit` | no | — | Display suffix for values. |
 | `x` | typed | first category / numeric col | Independent axis or labels. |

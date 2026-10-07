@@ -1,6 +1,6 @@
 # themes.md — markvis theme token packs
 
-Scope: optional fence `theme: folio|highcharts|shadcn|docs|ant|recharts` (grammar). Omitted = folio. Unknown = E_UNKNOWN_THEME + table. Optional `palette: ink|porcelain|warm|cool|vivid` (colors). Omitted = theme pack default colors. Unknown = E_UNKNOWN_PALETTE + table. Themes are token packs in `packages/themes/<id>/theme.ts`, typed by `packages/themes/contract.ts` and resolved by `packages/themes/registry.ts`. No Highcharts/d3/Unovis/Recharts deps. No new chart types. Public UI: two controls (Theme + Color). Labels may say Folio / Highcharts-style / shadcn-style / Docs — avoid trademark claims in marketing copy.
+Scope: optional fence `theme: folio|highcharts|shadcn|docs|ant|recharts|graphite` (grammar). Omitted = folio. Unknown = E_UNKNOWN_THEME + table. Optional `palette: ink|porcelain|warm|cool|vivid` (colors). Omitted = theme pack default colors. Unknown = E_UNKNOWN_PALETTE + table. Themes are token packs in `packages/themes/<id>/theme.ts`, typed by `packages/themes/contract.ts` and resolved by `packages/themes/registry.ts`. No Highcharts/d3/Unovis/Recharts deps. No new chart types. Public UI: two controls (Theme + Color). Labels may say Folio / Highcharts-style / shadcn-style / Docs — avoid trademark claims in marketing copy.
 
 Default site figures stay folio.
 
@@ -22,6 +22,8 @@ A theme is structure first. Every pair of packs must differ on at least four str
 | Lines | `LINE_CURVE`, `MARKER`, `SERIES_DASH` | linear or monotone · filled, hollow, haloed, or no points · per-series dashes |
 | Legend | `LEGEND`, `LEGEND_BELOW`, `END_LABEL_SERIES_MAX` | square, rounded, circle, or line keys · left or centered · top or bottom · end labels |
 | Chrome | `FRAME`, `PLOT_BG`, `PLOT_BORDER` | card outline and radius · plot fill (always `null`) · plot border |
+| Accent | `HERO` | one accent on the largest value of a single-series bar, hist, or pie; off under `palette:` |
+| Pie edges | `PIE_SEPARATOR` | ink hairlines or paper gaps |
 | Surfaces | `SURFACES.light/dark/export` | plate, paper, ink, semantic colors (waterfall, heatmap, treemap), optional dark series colors |
 
 `palette:` replaces series colors on every surface, including a surface's own dark series colors. It never changes structure.
@@ -276,6 +278,45 @@ Dashed `3 3` grid in x and y · x and y axis lines with ticks · hollow points
 - Rounded bars
 - Single-axis grid
 - Shipping the Recharts runtime
+
+---
+
+## graphite
+
+### Intent
+
+Editorial mono. Charcoal on warm paper, no hue: lightness carries the order of the series and one accent marks the largest value. Tight bold title over a quiet subtitle, heavy numbers, hairline grid, pill-capped bars, generous air. Inspired by the lieflat-charts editorial style; values are markvis' own.
+
+### Tell
+
+Gray ladder with a single orange-red bar · pill caps · 800-weight value labels · paper gaps in a 0.6 donut
+
+### Tokens (from `packages/themes/graphite/theme.ts`)
+
+| Token | Value |
+| --- | --- |
+| Font | `Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif` |
+| Ink / quiet | `#1B1B19` / `#8E8D87` |
+| Type — title / unit | `19` / `700` · `12` / `400` |
+| Type — value / tick / legend | `12` / `800` · `11` / `600` · `11` / `500` |
+| Title | left, tracking `-0.02em` |
+| Unit | subtitle line |
+| Grid | solid `0.5px`, y only, ink at `0.22` |
+| Axes | x baseline, no ticks |
+| Lines | linear, stroke `2`, no points; end labels for ≤ 4 lines |
+| Bars | pill caps (radius `999`, clamped to half the width), max width `44` |
+| Pie | donut `0.6`, leaders, paper gaps between slices |
+| Accent | `#E4572E` on the largest value (single-series bar, hist, pie); off when the fence sets `palette:` |
+| Legend | circle keys, left, under the title |
+| Frame | none on light; `24px` paper card on export (`#EFEEEA`) |
+| Dark paper / ink | `#1B1B19` / `#EFEEEA`, gray ladder reversed |
+| Series palette | `#1B1B19`, `#4A4945`, `#6E6D68`, `#8E8D87`, `#AEADA7`, `#C8C7C1`, `#DCDBD5` |
+
+### Ban list
+
+- A second accent, or hue to separate series
+- Opaque paper on the light surface
+- Point markers on lines
 
 ---
 

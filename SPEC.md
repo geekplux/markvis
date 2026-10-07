@@ -63,7 +63,7 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | `markvis` | no | `2` | Language version. Omit or leave blank → `2`. Any other value → `E_BAD_VERSION` + table. It is not rewritten to 2. |
 | `type` | yes | — | `bar` \| `line` \| `area` \| `scatter` \| `pie` \| `hist` \| `heatmap` \| `funnel` \| `waterfall` \| `radar` \| `gauge` \| `sankey` \| `treemap`. |
 | `title` | no | derived | From filename or first column / `y` if omitted. |
-| `theme` | no | `folio` | Grammar only: `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts`. |
+| `theme` | no | `folio` | Grammar only: `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts` \| `graphite`. |
 | `palette` | no | theme default | Colors only: `ink` \| `porcelain` \| `warm` \| `cool` \| `vivid`. Omit → theme pack colors. |
 | `unit` | no | — | Display suffix for values. |
 | `x` | typed | first category / numeric col | Independent axis or labels. |
@@ -143,7 +143,7 @@ Optional fields that change paint on an existing type. Same `type` id — not a 
 | `E_NEGATIVE_VALUE` | Funnel, radar, sankey, or treemap value < 0, or a `percent` layout that includes a negative. |
 | `E_YAML_TABLE_CONFLICT` | Header fields disagree with progressive table mapping. |
 | `E_EMPTY_FENCE` | Fence body empty. |
-| `E_UNKNOWN_THEME` | `theme` not in `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts`. |
+| `E_UNKNOWN_THEME` | `theme` not in `folio` \| `highcharts` \| `shadcn` \| `docs` \| `ant` \| `recharts` \| `graphite`. |
 | `E_UNKNOWN_PALETTE` | `palette` not in `ink` \| `porcelain` \| `warm` \| `cool` \| `vivid`. |
 | `E_BAD_VERSION` | `markvis` is present and is not `2`. |
 | `E_BAD_NUMBER` | A measure cell is not a finite number. The message names the row and column. |
@@ -157,7 +157,7 @@ Unknown failures still degrade to table + one line; prefer a listed code when it
 
 ## Themes
 
-Optional fence header `theme:` selects a named look. Allowed values: `folio` (default), `highcharts`, `shadcn`, `docs`, `ant`, `recharts`. Omit the field to get `folio`. An unknown value is a stable parse error (`E_UNKNOWN_THEME`) with table fallback — never a silent default swap. Themes are IR metadata only in this unit; they do not add chart types or pull Highcharts/d3/Unovis.
+Optional fence header `theme:` selects a named look. Allowed values: `folio` (default), `highcharts`, `shadcn`, `docs`, `ant`, `recharts`, `graphite`. Omit the field to get `folio`. An unknown value is a stable parse error (`E_UNKNOWN_THEME`) with table fallback — never a silent default swap. Themes are IR metadata only in this unit; they do not add chart types or pull Highcharts/d3/Unovis.
 
 ## Eight copy-paste examples
 

@@ -38,7 +38,7 @@ Mar,150
 ```
 ```
 
-Optional `theme:`: `folio` (default) `highcharts` `shadcn` `docs` `ant` `recharts` — grammar packs only, no chart runtimes.
+Optional `theme:`: `folio` (default) `highcharts` `shadcn` `docs` `ant` `recharts` `graphite` — grammar packs only, no chart runtimes.
 Optional `palette:`: `ink` `porcelain` `warm` `cool` `vivid` — colors only. Omit → theme default colors. Unknown → `E_UNKNOWN_PALETTE` + table. Never merge palette into the theme id.
 Optional `surface:`: `light` (default) `dark` `export`.
 Optional `orient: horizontal` on `bar` only, for long category labels. Omit means vertical.
