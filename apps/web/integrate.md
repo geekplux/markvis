@@ -17,7 +17,36 @@ npm install markvis
 npx markvis bake path/to.md
 ```
 
-Running bake again does nothing if nothing changed. CI can run bake on push. **2.0.0 replaces 0.0.13.**
+Running bake again does nothing if nothing changed. **2.0.0 replaces 0.0.13.**
+
+### GitHub Action
+
+github.com runs no scripts, so a README shows a picture or a table. This workflow bakes the pictures on every push and commits them; the chart blocks stay.
+
+```yaml
+name: bake charts
+on: { push: { branches: [main] } }
+permissions: { contents: write }
+jobs:
+  bake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: geekplux/markvis@master
+        with: { paths: README.md docs }
+```
+
+Inputs: `paths` (files or folders, space-separated; default `README.md`), `commit` (`"false"` bakes without committing), and `message` (default `chore: bake markvis charts`). A second run with nothing new commits nothing. On pull requests, check out the pull request's branch (set the checkout `ref` to `github.head_ref`); a pull request from a fork is baked but not committed.
+
+Without the Action, write the comment form. github.com shows it as a plain table, and every markvis host draws it:
+
+```markdown
+<!-- chart: bar x=day y=visits title="Visits" -->
+| day | visits |
+| --- | --- |
+| Mon | 3 |
+| Tue | 5 |
+```
 
 ## 2. One script tag, in a page or a Markdown file
 

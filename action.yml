@@ -1,0 +1,62 @@
+name: markvis bake
+description: Draw markvis chart blocks in Markdown as SVG files, so github.com shows the charts. The blocks stay.
+author: geekplux
+branding:
+  icon: bar-chart-2
+  color: blue
+
+inputs:
+  paths:
+    description: Markdown files or folders to bake, separated by spaces.
+    required: false
+    default: README.md
+  commit:
+    description: Commit and push the baked files when anything changed ("true" or "false").
+    required: false
+    default: "true"
+  message:
+    description: Commit message.
+    required: false
+    default: "chore: bake markvis charts"
+
+runs:
+  using: composite
+  steps:
+    - name: Set up Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: Bake
+      shell: bash
+      env:
+        MARKVIS_PATHS: ${{ inputs.paths }}
+      run: |
+        # Space-separated paths, split on purpose.
+        npx --yes markvis@2 bake $MARKVIS_PATHS
+
+    - name: Commit and push
+      if: inputs.commit == 'true'
+      shell: bash
+      env:
+        MARKVIS_PATHS: ${{ inputs.paths }}
+        MARKVIS_MESSAGE: ${{ inputs.message }}
+        MARKVIS_EVENT: ${{ github.event_name }}
+        MARKVIS_HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+        MARKVIS_REPO: ${{ github.repository }}
+        MARKVIS_BRANCH: ${{ github.head_ref || github.ref_name }}
+      run: |
+        git add -A -- $MARKVIS_PATHS '*.svg'
+        if git diff --cached --quiet; then
+          echo "markvis: nothing to commit"
+          exit 0
+        fi
+        if [ "$MARKVIS_EVENT" = "pull_request" ] && [ "$MARKVIS_HEAD_REPO" != "$MARKVIS_REPO" ]; then
+          echo "markvis: pull request from a fork; baked without committing"
+          git diff --cached --stat
+          exit 0
+        fi
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git commit -m "$MARKVIS_MESSAGE"
+        git push origin "HEAD:$MARKVIS_BRANCH"

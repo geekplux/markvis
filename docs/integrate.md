@@ -8,7 +8,11 @@ markvis.js.org is the VitePress site in apps/web, built from branch master. GitH
 
 ## GitHub README
 
-GitHub will not grow a native chart fence. Use markvis bake on README.md and docs/landing.md. Keeps the fence; inserts a markdown image after it. Second bake is a no-op. CI workflow bake.yml runs on master push and PR.
+GitHub will not grow a native chart fence. Use markvis bake on README.md and docs/landing.md. Keeps the fence; inserts a markdown image after it. Second bake is a no-op. CI workflow bake.yml runs on master push and PR, with this branch's own build.
+
+Other repositories use the root `action.yml` (composite): `uses: geekplux/markvis@master` with inputs `paths` (space-separated, default `README.md`), `commit` (default `true`), `message` (default `chore: bake markvis charts`). It sets up Node 20, runs `npx --yes markvis@2 bake <paths>`, then stages the paths and `*.svg` changes and, if anything changed, commits as github-actions[bot] and pushes `HEAD` to the branch. A fork pull request is baked without a commit. Inputs and context reach the shell through `env` only. `scripts/action.test.ts` runs the action's own steps twice in a scratch repository with a bare remote. bake.yml stays as is: it bakes with the branch's build, not the published package. Release tags for `uses: geekplux/markvis@v2` are the maintainer's call.
+
+Without the Action, the comment + table form shows as a plain table on github.com.
 
 ## Any JS preview
 

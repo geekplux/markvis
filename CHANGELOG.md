@@ -4,6 +4,7 @@
 
 ### Added
 
+- A GitHub Action for any repository: `uses: geekplux/markvis@master` bakes chart blocks to SVG and commits them, so github.com shows the charts. Inputs `paths`, `commit`, `message`; a second run commits nothing.
 - `markvis/rehype`: chart code blocks become real hast (figure, SVG, table) for MDX hosts such as Docusaurus and Astro. No raw HTML nodes, no new runtime dependency.
 - One script tag in any Markdown page: the drop-in finds chart blocks in the HTML of marked, markdown-it, highlight.js, Jekyll (kramdown + rouge), Hugo, MkDocs (custom fence), Pandoc, and docsify, and draws the comment + table form from the page. `markvis.run({ nodes, querySelector, root })`, `markvis.initialize({ theme, palette, surface, width })`, and `data-start-on-load="false"`.
 - A 250-token model instruction (`docs/prompt.md`, also the opening of `llms.txt` and the site AI page). `pnpm eval-prompts --outputs <dir>` scores a directory of model answers: valid blocks, error codes, and chart type against `examples/prompts.md`.
