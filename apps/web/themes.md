@@ -51,145 +51,18 @@ Each pack also has its own dark paper for `surface: dark`.
 
 ## Side by side
 
-The same fence in every theme. Only the `theme:` line changes.
+The same chart in every theme. Open one to see it in Examples, where every figure has every theme.
 
-```chart
-type: line
-theme: folio
-title: Walk-up still leads member
-unit: riders
-x: week
-y: count
-series: plan
+<ThemeStrip stem="02-line-multi" />
 
-week,plan,count
-W1,walk-up,64
-W1,member,28
-W2,walk-up,69
-W2,member,33
-W3,walk-up,71
-W3,member,38
-W4,walk-up,74
-W4,member,44
-W5,walk-up,76
-W5,member,51
-```
+<ThemeStrip stem="01-bar-basic" />
 
-```chart
-type: line
-theme: highcharts
-title: Walk-up still leads member
-unit: riders
-x: week
-y: count
-series: plan
-
-week,plan,count
-W1,walk-up,64
-W1,member,28
-W2,walk-up,69
-W2,member,33
-W3,walk-up,71
-W3,member,38
-W4,walk-up,74
-W4,member,44
-W5,walk-up,76
-W5,member,51
-```
-
-```chart
-type: line
-theme: shadcn
-title: Walk-up still leads member
-unit: riders
-x: week
-y: count
-series: plan
-
-week,plan,count
-W1,walk-up,64
-W1,member,28
-W2,walk-up,69
-W2,member,33
-W3,walk-up,71
-W3,member,38
-W4,walk-up,74
-W4,member,44
-W5,walk-up,76
-W5,member,51
-```
-
-```chart
-type: line
-theme: docs
-title: Walk-up still leads member
-unit: riders
-x: week
-y: count
-series: plan
-
-week,plan,count
-W1,walk-up,64
-W1,member,28
-W2,walk-up,69
-W2,member,33
-W3,walk-up,71
-W3,member,38
-W4,walk-up,74
-W4,member,44
-W5,walk-up,76
-W5,member,51
-```
-
-```chart
-type: line
-theme: ant
-title: Walk-up still leads member
-unit: riders
-x: week
-y: count
-series: plan
-
-week,plan,count
-W1,walk-up,64
-W1,member,28
-W2,walk-up,69
-W2,member,33
-W3,walk-up,71
-W3,member,38
-W4,walk-up,74
-W4,member,44
-W5,walk-up,76
-W5,member,51
-```
-
-```chart
-type: line
-theme: recharts
-title: Walk-up still leads member
-unit: riders
-x: week
-y: count
-series: plan
-
-week,plan,count
-W1,walk-up,64
-W1,member,28
-W2,walk-up,69
-W2,member,33
-W3,walk-up,71
-W3,member,38
-W4,walk-up,74
-W4,member,44
-W5,walk-up,76
-W5,member,51
-```
+To try a theme on your own data, change one line in the fence:
 
 ```chart
 type: line
 theme: graphite
 title: Walk-up still leads member
-unit: riders
 x: week
 y: count
 series: plan
@@ -199,12 +72,6 @@ W1,walk-up,64
 W1,member,28
 W2,walk-up,69
 W2,member,33
-W3,walk-up,71
-W3,member,38
-W4,walk-up,74
-W4,member,44
-W5,walk-up,76
-W5,member,51
 ```
 
 ## How to add a pack

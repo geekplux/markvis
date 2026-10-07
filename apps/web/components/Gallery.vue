@@ -83,7 +83,7 @@ const selectedPlayHref = computed(() => {
 const subline = computed(() => {
   const theme = themeFilter.value;
   if (typeFilter.value === "all") {
-    return `${visible.value.length} figures · ${theme} · thirteen types · from examples/valid`;
+    return `${visible.value.length} figures · ${theme} · ${CHART_TYPES.length} types · from examples/valid`;
   }
   return `${visible.value.length} figures · ${typeFilter.value} · ${theme}`;
 });
