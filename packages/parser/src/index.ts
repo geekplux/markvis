@@ -10,4 +10,5 @@ export type {
   LocatedChart,
 } from "./parse.js";
 export { extractCharts } from "./extract.js";
+export { readChartField, setChartField } from "./edit.js";
 export type { ChartForm, ExtractedChart } from "./extract.js";
