@@ -20,7 +20,7 @@ const barTable = {
 };
 
 describe("@markvis/ir", () => {
-  it("freezes exactly fifteen chart types", () => {
+  it("freezes exactly seventeen chart types", () => {
     expect([...CHART_TYPES]).toEqual([
       "bar",
       "line",
@@ -37,6 +37,8 @@ describe("@markvis/ir", () => {
       "treemap",
       "dumbbell",
       "bullet",
+      "boxplot",
+      "calendar",
     ]);
   });
 

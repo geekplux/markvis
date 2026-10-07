@@ -88,3 +88,78 @@ West,288,360`;
     expect(render(body())).toBe(render(body()));
   });
 });
+
+describe("boxplot", () => {
+  const svg = render(`type: boxplot
+title: Latency
+x: service
+y: ms
+
+service,ms
+Search,12
+Search,15
+Search,14
+Search,13
+Search,16
+Search,15
+Search,14
+Search,40
+Search,2
+Checkout,90
+Checkout,92
+Checkout,88`);
+
+  it("draws a Tukey box with type-7 quartiles and outliers", () => {
+    expect(svg).toMatch(/<rect\b[^>]*data-x="Search"[^>]*data-n="9"[^>]*data-median="14"[^>]*data-q1="13"[^>]*data-q3="15"/);
+    const outliers = [...svg.matchAll(/data-x="Search" data-y="([^"]+)" data-outlier="1"/g)].map((m) => m[1]);
+    expect(outliers).toEqual(["2", "40"]);
+  });
+
+  it("shows points and a median tick, not a box, under five values", () => {
+    expect(svg).not.toMatch(/<rect\b[^>]*data-x="Checkout"/);
+    expect(svg.match(/data-x="Checkout" data-y="[^"]+" data-point="1"/g)).toHaveLength(3);
+    expect(svg).toMatch(/<line\b[^>]*data-x="Checkout"[^>]*data-median="90"[^>]*data-median-tick="1"/);
+  });
+
+  it("labels the median and the count", () => {
+    expect(svg).toContain('data-value-label="Search">14<tspan');
+    expect(svg).toContain(" · n=9</tspan>");
+  });
+});
+
+describe("calendar", () => {
+  const svg = render(`type: calendar
+title: Runs
+x: date
+y: km
+
+date,km
+2026-03-08,10
+2026-03-01,12
+2026-03-04,
+2026-03-14,16`);
+
+  it("places days by weekday, Monday first", () => {
+    const cell = (date: string) =>
+      svg.match(new RegExp(`<rect x="([^"]+)" y="([^"]+)"[^>]*data-date="${date}"`))!;
+    // 2026-03-01 is a Sunday (bottom row); 2026-03-02 a Monday, one column right, top row.
+    const sunday = cell("2026-03-01");
+    const monday = cell("2026-03-02");
+    expect(Number(monday[1])).toBeGreaterThan(Number(sunday[1]));
+    expect(Number(monday[2])).toBeLessThan(Number(sunday[2]));
+  });
+
+  it("keeps absent days faint and empty values hatched, never zero", () => {
+    expect(svg).toMatch(/data-date="2026-03-02"/);
+    expect(svg).toMatch(/fill-opacity="0.06" data-date="2026-03-02"/);
+    expect(svg).toMatch(/fill="url\(#[^)]+-missing\)"[^>]*data-date="2026-03-04"[^>]*data-missing="1"/);
+    expect(svg).toMatch(/data-date="2026-03-14" data-y="16"/);
+  });
+
+  it("covers only the dated range and keys the color domain", () => {
+    expect(svg).not.toContain('data-date="2026-02-28"');
+    expect(svg).not.toContain('data-date="2026-03-15"');
+    expect(svg).toContain('data-key="low">10<');
+    expect(svg).toContain('data-key="high">16<');
+  });
+});

@@ -9,7 +9,7 @@ import {
   type ChartTheme,
   type ChartType,
 } from "@markvis/ir";
-import { allowedFenceKeys } from "@markvis/types";
+import { allowedFenceKeys, parseIsoDate } from "@markvis/types";
 import { extractCharts, type ChartForm } from "./extract.js";
 import {
   columnIsNumeric,
@@ -43,6 +43,7 @@ export const ERROR_CODES = [
   "E_MISSING_VALUE",
   "E_DUP_KEY",
   "E_SANKEY_CYCLE",
+  "E_BAD_DATE",
 ] as const;
 
 export type ErrorCode = (typeof ERROR_CODES)[number];
@@ -249,7 +250,9 @@ function inferX(type: ChartType, table: LooseTable): string {
     type === "sankey" ||
     type === "treemap" ||
     type === "dumbbell" ||
-    type === "bullet"
+    type === "bullet" ||
+    type === "boxplot" ||
+    type === "calendar"
   ) {
     return firstCategoryColumn(table) ?? table.columns[0]!;
   }
@@ -264,7 +267,8 @@ function keepSeriesOnIR(type: ChartType): boolean {
     type !== "funnel" &&
     type !== "waterfall" &&
     type !== "gauge" &&
-    type !== "bullet"
+    type !== "bullet" &&
+    type !== "calendar"
   );
 }
 
@@ -294,7 +298,9 @@ function missingPolicy(
     type === "hist" ||
     type === "heatmap" ||
     type === "radar" ||
-    type === "dumbbell"
+    type === "dumbbell" ||
+    type === "boxplot" ||
+    type === "calendar"
   ) {
     return "gap";
   }
@@ -320,8 +326,16 @@ function duplicateKey(
   xValue: string,
   seriesValue: string,
 ): string | null {
-  if (type === "scatter" || type === "hist" || type === "waterfall") {
+  if (
+    type === "scatter" ||
+    type === "hist" ||
+    type === "waterfall" ||
+    type === "boxplot"
+  ) {
     return null;
+  }
+  if (type === "calendar") {
+    return xValue.trim();
   }
   if (type === "pie" || type === "funnel" || type === "gauge" || type === "bullet") {
     return xValue;
@@ -570,7 +584,7 @@ function parseBody(
   if (typeKind === "unknown") {
     return fail(
       "E_UNKNOWN_TYPE",
-      "type is not one of bar|line|area|scatter|pie|hist|heatmap|funnel|waterfall|radar|gauge|sankey|treemap|dumbbell|bullet",
+      "type is not one of bar|line|area|scatter|pie|hist|heatmap|funnel|waterfall|radar|gauge|sankey|treemap|dumbbell|bullet|boxplot|calendar",
       parsed,
       raw,
     );
@@ -778,7 +792,10 @@ function parseBody(
     max = n;
   }
   if (
-    (type === "gauge" || type === "heatmap" || type === "bullet") &&
+    (type === "gauge" ||
+      type === "heatmap" ||
+      type === "bullet" ||
+      type === "calendar") &&
     min !== undefined &&
     max !== undefined &&
     min >= max
@@ -837,6 +854,22 @@ function parseBody(
       parsed,
       raw,
     );
+  }
+
+  if (type === "calendar") {
+    const xi = parsed.columns.indexOf(x);
+    for (let r = 0; r < parsed.rows.length; r++) {
+      const cell = (parsed.rows[r]![xi] ?? "").trim();
+      if (!parseIsoDate(cell)) {
+        return fail(
+          "E_BAD_DATE",
+          `row ${r + 1}, column ${x}: "${cell}" is not a YYYY-MM-DD date`,
+          parsed,
+          raw,
+          { row: r + 1, column: x },
+        );
+      }
+    }
   }
 
   const target = headers["target"]?.trim() || undefined;
@@ -958,7 +991,8 @@ function parseBody(
               type !== "pie" &&
               type !== "funnel" &&
               type !== "gauge" &&
-              type !== "bullet"
+              type !== "bullet" &&
+              type !== "calendar"
             ? `duplicate ${x} "${xValue}" for ${seriesColumn} "${seriesValue}"`
             : `duplicate ${x} "${xValue}"`;
       return fail(

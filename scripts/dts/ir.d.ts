@@ -14,6 +14,8 @@ export declare const CHART_TYPES: readonly [
   "treemap",
   "dumbbell",
   "bullet",
+  "boxplot",
+  "calendar",
 ];
 export type ChartType = (typeof CHART_TYPES)[number];
 
