@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: On still leads status mix at 70, 3 slices" aria-labelledby="mv-046c245537a98d47-title" aria-describedby="mv-046c245537a98d47-desc" data-markvis="2" data-chart-type="pie" data-id="mv-046c245537a98d47" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-046c245537a98d47-title">On still leads status mix at 70</title>
+  <desc id="mv-046c245537a98d47-desc">pie chart. On still leads status mix at 70. x=flag. y=count. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
+  <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>On still leads status mix at 70</title>On still leads status mix at 70</text>
+  <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0.6">
+    <path d="M372 116 A136 136 0 1 1 242.66 294.03 L294.39 277.22 A81.6 81.6 0 1 0 372 170.4 Z" fill="#E4572E" stroke="#ffffff" stroke-width="2" data-label="on" data-raw-value="70" data-donut="1"/>
+    <path d="M242.66 294.03 A136 136 0 0 1 372 116 L372 170.4 A81.6 81.6 0 0 0 294.39 277.22 Z" fill="#4A4945" stroke="#ffffff" stroke-width="2" data-label="off" data-raw-value="30" data-donut="1"/>
+  </g>
+  <g fill="none" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1">
+    <polyline points="482.03,331.94 494.97,341.34 502.97,341.34"/>
+    <polyline points="261.97,172.06 249.03,162.66 241.03,162.66"/>
+  </g>
+  <g font-size="12" font-weight="800" fill="#1B1B19">
+    <text x="514.97" y="341.34" text-anchor="start" dominant-baseline="middle" data-label="on">on · 70</text>
+    <text x="229.03" y="162.66" text-anchor="end" dominant-baseline="middle" data-label="off">off · 30</text>
+  </g>
+</svg>

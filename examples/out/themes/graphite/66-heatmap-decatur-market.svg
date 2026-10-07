@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="heatmap chart: Ten o&apos;clock still fills Decatur market stalls, 22 rows, series weekday" aria-labelledby="mv-efe36f371d1d50fb-title" aria-describedby="mv-efe36f371d1d50fb-desc" data-markvis="2" data-chart-type="heatmap" data-id="mv-efe36f371d1d50fb" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-efe36f371d1d50fb-title">Ten o&apos;clock still fills Decatur market stalls</title>
+  <desc id="mv-efe36f371d1d50fb-desc">heatmap chart. Ten o&apos;clock still fills Decatur market stalls. x=hour. y=visits. series=weekday. 22 rows.</desc>
+  <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Ten o&apos;clock still fills Decatur market stalls</title>Ten o&apos;clock still fills Decatur market stalls</text>
+  <defs>
+    <pattern id="mv-efe36f371d1d50fb-missing" patternUnits="userSpaceOnUse" width="6" height="6">
+      <rect width="6" height="6" fill="#F2F1ED"/>
+      <path d="M0 6 L6 0" stroke="#B5B4AE" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <g data-heatmap="1">
+    <rect x="52" y="52" width="97.33" height="101" fill="#d0cfcb" stroke="#E2E1DB" stroke-width="1" data-x="8am" data-series="Wed" data-y="55"/>
+    <text x="100.67" y="102.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#1B1B19" data-cell-label="8am:Wed">55</text>
+    <rect x="149.33" y="52" width="97.33" height="101" fill="#c5c4c0" stroke="#E2E1DB" stroke-width="1" data-x="9am" data-series="Wed" data-y="95"/>
+    <text x="198" y="102.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#1B1B19" data-cell-label="9am:Wed">95</text>
+    <rect x="246.67" y="52" width="97.33" height="101" fill="#b9b8b4" stroke="#E2E1DB" stroke-width="1" data-x="10am" data-series="Wed" data-y="140"/>
+    <text x="295.33" y="102.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#1B1B19" data-cell-label="10am:Wed">140</text>
+    <rect x="344" y="52" width="97.33" height="101" fill="#bebdba" stroke="#E2E1DB" stroke-width="1" data-x="11am" data-series="Wed" data-y="120"/>
+    <text x="392.67" y="102.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#1B1B19" data-cell-label="11am:Wed">120</text>
+    <rect x="441.33" y="52" width="97.33" height="101" fill="#cccbc7" stroke="#E2E1DB" stroke-width="1" data-x="12pm" data-series="Wed" data-y="70"/>
+    <text x="490" y="102.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#1B1B19" data-cell-label="12pm:Wed">70</text>
+    <rect x="538.67" y="52" width="97.33" height="101" fill="url(#mv-efe36f371d1d50fb-missing)" stroke="#E2E1DB" stroke-width="1" data-x="1pm" data-series="Wed" data-missing="1"/>
+    <rect x="52" y="153" width="97.33" height="101" fill="#cecdc9" stroke="#E2E1DB" stroke-width="1" data-x="8am" data-series="Fri" data-y="62"/>
+    <text x="100.67" y="203.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#1B1B19" data-cell-label="8am:Fri">62</text>
+    <rect x="149.33" y="153" width="97.33" height="101" fill="#c1c0bc" stroke="#E2E1DB" stroke-width="1" data-x="9am" data-series="Fri" data-y="110"/>
+    <text x="198" y="203.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#1B1B19" data-cell-label="9am:Fri">110</text>
+    <rect x="246.67" y="153" width="97.33" height="101" fill="#b3b2af" stroke="#E2E1DB" stroke-width="1" data-x="10am" data-series="Fri" data-y="160"/>
+    <text x="295.33" y="203.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#1B1B19" data-cell-label="10am:Fri">160</text>
+    <rect x="344" y="153" width="97.33" height="101" fill="#bab9b6" stroke="#E2E1DB" stroke-width="1" data-x="11am" data-series="Fri" data-y="135"/>
+    <text x="392.67" y="203.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#1B1B19" data-cell-label="11am:Fri">135</text>
+    <rect x="441.33" y="153" width="97.33" height="101" fill="#c7c7c3" stroke="#E2E1DB" stroke-width="1" data-x="12pm" data-series="Fri" data-y="85"/>
+    <text x="490" y="203.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#1B1B19" data-cell-label="12pm:Fri">85</text>
+    <rect x="538.67" y="153" width="97.33" height="101" fill="url(#mv-efe36f371d1d50fb-missing)" stroke="#E2E1DB" stroke-width="1" data-x="1pm" data-series="Fri" data-missing="1"/>
+    <rect x="52" y="254" width="97.33" height="101" fill="#a6a5a2" stroke="#E2E1DB" stroke-width="1" data-x="8am" data-series="Sat" data-y="210"/>
+    <text x="100.67" y="304.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#1B1B19" data-cell-label="8am:Sat">210</text>
+    <rect x="149.33" y="254" width="97.33" height="101" fill="#5c5c59" stroke="#E2E1DB" stroke-width="1" data-x="9am" data-series="Sat" data-y="480"/>
+    <text x="198" y="304.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#F4F3EF" data-cell-label="9am:Sat">480</text>
+    <rect x="246.67" y="254" width="97.33" height="101" fill="#1b1b19" stroke="#E2E1DB" stroke-width="1" data-x="10am" data-series="Sat" data-y="720"/>
+    <text x="295.33" y="304.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#F4F3EF" data-cell-label="10am:Sat">720</text>
+    <rect x="344" y="254" width="97.33" height="101" fill="#2e2e2c" stroke="#E2E1DB" stroke-width="1" data-x="11am" data-series="Sat" data-y="650"/>
+    <text x="392.67" y="304.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#F4F3EF" data-cell-label="11am:Sat">650</text>
+    <rect x="441.33" y="254" width="97.33" height="101" fill="#757471" stroke="#E2E1DB" stroke-width="1" data-x="12pm" data-series="Sat" data-y="390"/>
+    <text x="490" y="304.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#1B1B19" data-cell-label="12pm:Sat">390</text>
+    <rect x="538.67" y="254" width="97.33" height="101" fill="#a3a29f" stroke="#E2E1DB" stroke-width="1" data-x="1pm" data-series="Sat" data-y="220"/>
+    <text x="587.33" y="304.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#1B1B19" data-cell-label="1pm:Sat">220</text>
+    <rect x="52" y="355" width="97.33" height="101" fill="#aeadaa" stroke="#E2E1DB" stroke-width="1" data-x="8am" data-series="Sun" data-y="180"/>
+    <text x="100.67" y="405.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#1B1B19" data-cell-label="8am:Sun">180</text>
+    <rect x="149.33" y="355" width="97.33" height="101" fill="#6c6c69" stroke="#E2E1DB" stroke-width="1" data-x="9am" data-series="Sun" data-y="420"/>
+    <text x="198" y="405.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#1B1B19" data-cell-label="9am:Sun">420</text>
+    <rect x="246.67" y="355" width="97.33" height="101" fill="#232321" stroke="#E2E1DB" stroke-width="1" data-x="10am" data-series="Sun" data-y="690"/>
+    <text x="295.33" y="405.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#F4F3EF" data-cell-label="10am:Sun">690</text>
+    <rect x="344" y="355" width="97.33" height="101" fill="#393936" stroke="#E2E1DB" stroke-width="1" data-x="11am" data-series="Sun" data-y="610"/>
+    <text x="392.67" y="405.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#F4F3EF" data-cell-label="11am:Sun">610</text>
+    <rect x="441.33" y="355" width="97.33" height="101" fill="#7d7c79" stroke="#E2E1DB" stroke-width="1" data-x="12pm" data-series="Sun" data-y="360"/>
+    <text x="490" y="405.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#1B1B19" data-cell-label="12pm:Sun">360</text>
+    <rect x="538.67" y="355" width="97.33" height="101" fill="#aaa9a6" stroke="#E2E1DB" stroke-width="1" data-x="1pm" data-series="Sun" data-y="195"/>
+    <text x="587.33" y="405.5" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="#1B1B19" data-cell-label="1pm:Sun">195</text>
+  </g>
+  <g data-color-scale="1">
+    <rect x="652" y="405.5" width="12" height="51" fill="#d0cfcb"/>
+    <rect x="652" y="355" width="12" height="51" fill="#b6b5b2"/>
+    <rect x="652" y="304.5" width="12" height="51" fill="#9c9b98"/>
+    <rect x="652" y="254" width="12" height="51" fill="#82827f"/>
+    <rect x="652" y="203.5" width="12" height="51" fill="#686865"/>
+    <rect x="652" y="153" width="12" height="51" fill="#4f4e4c"/>
+    <rect x="652" y="102.5" width="12" height="51" fill="#353532"/>
+    <rect x="652" y="52" width="12" height="51" fill="#1b1b19"/>
+    <text x="668" y="56" font-size="11" fill="#8E8D87" dominant-baseline="hanging" data-scale-max="1">720</text>
+    <text x="668" y="456" font-size="11" fill="#8E8D87" data-scale-min="1">55</text>
+  </g>
+  <g fill="#8E8D87" font-size="11" font-weight="600">
+    <text x="42" y="102.5" text-anchor="end" dominant-baseline="middle" data-series-label="Wed"><title>Wed</title>Wed</text>
+    <text x="42" y="203.5" text-anchor="end" dominant-baseline="middle" data-series-label="Fri"><title>Fri</title>Fri</text>
+    <text x="42" y="304.5" text-anchor="end" dominant-baseline="middle" data-series-label="Sat"><title>Sat</title>Sat</text>
+    <text x="42" y="405.5" text-anchor="end" dominant-baseline="middle" data-series-label="Sun"><title>Sun</title>Sun</text>
+    <text x="100.67" y="467" text-anchor="middle" data-full-label="8am"><title>8am</title>8am</text>
+    <text x="198" y="467" text-anchor="middle" data-full-label="9am"><title>9am</title>9am</text>
+    <text x="295.33" y="467" text-anchor="middle" data-full-label="10am"><title>10am</title>10am</text>
+    <text x="392.67" y="467" text-anchor="middle" data-full-label="11am"><title>11am</title>11am</text>
+    <text x="490" y="467" text-anchor="middle" data-full-label="12pm"><title>12pm</title>12pm</text>
+    <text x="587.33" y="467" text-anchor="middle" data-full-label="1pm"><title>1pm</title>1pm</text>
+  </g>
+</svg>

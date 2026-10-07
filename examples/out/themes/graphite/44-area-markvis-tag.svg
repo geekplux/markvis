@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: RSS climbed then eased after noon (hits), 7 rows" aria-labelledby="mv-6c937ae59f8d092f-title" aria-describedby="mv-6c937ae59f8d092f-desc" data-markvis="2" data-chart-type="area" data-id="mv-6c937ae59f8d092f" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-6c937ae59f8d092f-title">RSS climbed then eased after noon</title>
+  <desc id="mv-6c937ae59f8d092f-desc">area chart. RSS climbed then eased after noon. x=hour. y=hits. unit=hits. 7 rows.</desc>
+  <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>RSS climbed then eased after noon</title>RSS climbed then eased after noon</text>
+  <text x="52" y="50" text-anchor="start" font-size="12" font-weight="400" fill="#8E8D87" data-subtitle="1">hits</text>
+  <g fill="none" stroke="#1B1B19" stroke-opacity="0.22" stroke-width="0.5">
+    <line x1="52" x2="692" y1="329.67" y2="329.67"/>
+    <line x1="52" x2="692" y1="203.33" y2="203.33"/>
+    <line x1="52" x2="692" y1="77" y2="77"/>
+  </g>
+  <path d="M52 456 L692 456" fill="none" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1"/>
+  <g fill="#8E8D87" font-size="11" font-weight="600">
+    <text x="42" y="456" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="42" y="329.67" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="42" y="203.33" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="42" y="77" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="60" y="467" text-anchor="middle" font-size="11" data-full-label="-10"><title>-10</title>-10</text>
+    <text x="216" y="467" text-anchor="middle" font-size="11" data-full-label="0"><title>0</title>0</text>
+    <text x="372" y="467" text-anchor="middle" font-size="11" data-full-label="10"><title>10</title>10</text>
+    <text x="528" y="467" text-anchor="middle" font-size="11" data-full-label="20"><title>20</title>20</text>
+    <text x="684" y="467" text-anchor="middle" font-size="11" data-full-label="30"><title>30</title>30</text>
+  </g>
+  <g fill="none">
+    <path d="M216 354.93 L309.6 317.03 L356.4 228.6 L403.2 127.53 L450 157.85 L496.8 215.97 L543.6 279.13 L543.6 456 L216 456 Z" fill="#1B1B19" fill-opacity="0.14" stroke="none" data-series="hits"/>
+    <path d="M216 354.93 L309.6 317.03 L356.4 228.6 L403.2 127.53 L450 157.85 L496.8 215.97 L543.6 279.13" fill="none" stroke="#1B1B19" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="hits"/>
+  </g>
+</svg>

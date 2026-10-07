@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: API leads p99 latency at 120 ms (ms), 3 rows" aria-labelledby="mv-20a2729dcd062f24-title" aria-describedby="mv-20a2729dcd062f24-desc" data-markvis="2" data-chart-type="bar" data-id="mv-20a2729dcd062f24" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-20a2729dcd062f24-title">API leads p99 latency at 120 ms</title>
+  <desc id="mv-20a2729dcd062f24-desc">bar chart. API leads p99 latency at 120 ms. x=service. y=p99. unit=ms. 3 rows.</desc>
+  <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>API leads p99 latency at 120 ms</title>API leads p99 latency at 120 ms</text>
+  <text x="52" y="50" text-anchor="start" font-size="12" font-weight="400" fill="#8E8D87" data-subtitle="1">ms</text>
+  <path d="M52 456 L692 456" fill="none" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1"/>
+  <g fill="#8E8D87" font-size="11" font-weight="600">
+    <text x="42" y="456" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="42" y="329.67" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="42" y="203.33" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="42" y="77" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="158.67" y="467" text-anchor="middle" font-size="11" data-full-label="api"><title>api</title>api</text>
+    <text x="372" y="467" text-anchor="middle" font-size="11" data-full-label="auth"><title>auth</title>auth</text>
+    <text x="585.33" y="467" text-anchor="middle" font-size="11" data-full-label="cdn"><title>cdn</title>cdn</text>
+  </g>
+  <g>
+    <path d="M136.67 456 L136.67 174.8 Q136.67 152.8 158.67 152.8 L158.67 152.8 Q180.67 152.8 180.67 174.8 L180.67 456 Z" fill="#E4572E" data-x="api" data-series="p99" data-y="120"/>
+    <path d="M350 456 L350 275.87 Q350 253.87 372 253.87 L372 253.87 Q394 253.87 394 275.87 L394 456 Z" fill="#1B1B19" data-x="auth" data-series="p99" data-y="80"/>
+    <path d="M563.33 456 L563.33 364.3 Q563.33 342.3 585.33 342.3 L585.33 342.3 Q607.33 342.3 607.33 364.3 L607.33 456 Z" fill="#1B1B19" data-x="cdn" data-series="p99" data-y="45"/>
+  </g>
+  <g>
+    <text x="158.67" y="144.8" text-anchor="middle" font-size="12" font-weight="800" fill="#1B1B19" data-value-label="api">120</text>
+    <text x="372" y="245.87" text-anchor="middle" font-size="12" font-weight="800" fill="#1B1B19" data-value-label="auth">80</text>
+    <text x="585.33" y="334.3" text-anchor="middle" font-size="12" font-weight="800" fill="#1B1B19" data-value-label="cdn">45</text>
+  </g>
+</svg>

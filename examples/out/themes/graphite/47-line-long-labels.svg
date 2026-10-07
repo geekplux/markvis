@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: Points climb through beta weeks, 3 rows" aria-labelledby="mv-edeeaf08edaeb9c1-title" aria-describedby="mv-edeeaf08edaeb9c1-desc" data-markvis="2" data-chart-type="line" data-id="mv-edeeaf08edaeb9c1" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-edeeaf08edaeb9c1-title">Points climb through beta weeks</title>
+  <desc id="mv-edeeaf08edaeb9c1-desc">line chart. Points climb through beta weeks. x=milestone. y=points. 3 rows.</desc>
+  <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Points climb through beta weeks</title>Points climb through beta weeks</text>
+  <g fill="none" stroke="#1B1B19" stroke-opacity="0.22" stroke-width="0.5">
+    <line x1="52" x2="692" y1="355" y2="355"/>
+    <line x1="52" x2="692" y1="153" y2="153"/>
+    <line x1="52" x2="692" y1="52" y2="52"/>
+  </g>
+  <path d="M52 456 L692 456" fill="none" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1"/>
+  <g fill="#8E8D87" font-size="11" font-weight="600">
+    <text x="42" y="456" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="42" y="355" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="42" y="254" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="42" y="153" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="42" y="52" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="158.67" y="467" text-anchor="middle" font-size="11" data-full-label="Kickoff and discovery workshop"><title>Kickoff and discovery workshop</title>Kickoff and discovery workshop</text>
+    <text x="372" y="467" text-anchor="middle" font-size="11" data-full-label="Alpha internal dogfood release"><title>Alpha internal dogfood release</title>Alpha internal dogfood release</text>
+    <text x="585.33" y="467" text-anchor="middle" font-size="11" data-full-label="Public beta launch week"><title>Public beta launch week</title>Public beta launch week</text>
+  </g>
+  <g fill="none">
+    <path d="M158.67 355 L372 228.75 L585.33 102.5" fill="none" stroke="#1B1B19" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="points"/>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="funnel chart: Follow-up still lands 160 of 900 Emory referrals, 6 rows" aria-labelledby="mv-e2e3831aad1282d3-title" aria-describedby="mv-e2e3831aad1282d3-desc" data-markvis="2" data-chart-type="funnel" data-id="mv-e2e3831aad1282d3" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-e2e3831aad1282d3-title">Follow-up still lands 160 of 900 Emory referrals</title>
+  <desc id="mv-e2e3831aad1282d3-desc">funnel chart. Follow-up still lands 160 of 900 Emory referrals. x=stage. y=patients. 6 rows.</desc>
+  <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Follow-up still lands 160 of 900 Emory referrals</title>Follow-up still lands 160 of 900 Emory referrals</text>
+  <g data-funnel="1">
+    <path d="M52 52 L570.08 52 L466.46 118.67 L155.62 118.67 Z" fill="#1B1B19" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Referral" data-y="900"/>
+    <path d="M155.62 118.67 L466.46 118.67 L420.41 185.33 L201.67 185.33 Z" fill="#4A4945" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Scheduled" data-y="540"/>
+    <path d="M201.67 185.33 L420.41 185.33 L371.48 252 L250.6 252 Z" fill="#6E6D68" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Arrived" data-y="380"/>
+    <path d="M250.6 252 L371.48 252 L364.29 318.67 L257.79 318.67 Z" fill="#8E8D87" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Visit" data-y="210"/>
+    <path d="M257.79 318.67 L364.29 318.67 L357.09 385.33 L264.99 385.33 Z" fill="#AEADA7" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Labs ordered" data-y="185"/>
+    <path d="M264.99 385.33 L357.09 385.33 L357.09 452 L264.99 452 Z" fill="#C8C7C1" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Follow-up" data-y="160"/>
+  </g>
+  <g fill="#1B1B19" font-size="12" font-weight="800">
+    <text x="578.08" y="85.33" text-anchor="start" dominant-baseline="middle" data-label="Referral"><title>Referral · 900</title>Referral · 900</text>
+    <text x="578.08" y="152" text-anchor="start" dominant-baseline="middle" data-label="Scheduled"><title>Scheduled · 540</title>Scheduled · 540</text>
+    <text x="578.08" y="218.67" text-anchor="start" dominant-baseline="middle" data-label="Arrived"><title>Arrived · 380</title>Arrived · 380</text>
+    <text x="578.08" y="285.33" text-anchor="start" dominant-baseline="middle" data-label="Visit"><title>Visit · 210</title>Visit · 210</text>
+    <text x="578.08" y="352" text-anchor="start" dominant-baseline="middle" data-label="Labs ordered"><title>Labs ordered · 185</title>Labs ordered · 185</text>
+    <text x="578.08" y="418.67" text-anchor="start" dominant-baseline="middle" data-label="Follow-up"><title>Follow-up · 160</title>Follow-up · 160</text>
+  </g>
+</svg>

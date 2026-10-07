@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: US traffic still leads EU week over week, 6 rows, series region" aria-labelledby="mv-385ac42104e6f64c-title" aria-describedby="mv-385ac42104e6f64c-desc" data-markvis="2" data-chart-type="line" data-id="mv-385ac42104e6f64c" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+  <title id="mv-385ac42104e6f64c-title">US traffic still leads EU week over week</title>
+  <desc id="mv-385ac42104e6f64c-desc">line chart. US traffic still leads EU week over week. x=week. y=mau. series=region. 6 rows.</desc>
+  <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>US traffic still leads EU week over week</title>US traffic still leads EU week over week</text>
+  <g fill="none" stroke="#1B1B19" stroke-opacity="0.22" stroke-width="0.5">
+    <line x1="52" x2="692" y1="375.2" y2="375.2"/>
+    <line x1="52" x2="692" y1="213.6" y2="213.6"/>
+    <line x1="52" x2="692" y1="52" y2="52"/>
+  </g>
+  <path d="M52 456 L692 456" fill="none" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1"/>
+  <g fill="#8E8D87" font-size="11" font-weight="600">
+    <text x="42" y="456" text-anchor="end" dominant-baseline="middle">700</text>
+    <text x="42" y="375.2" text-anchor="end" dominant-baseline="middle">800</text>
+    <text x="42" y="294.4" text-anchor="end" dominant-baseline="middle">900</text>
+    <text x="42" y="213.6" text-anchor="end" dominant-baseline="middle">1,000</text>
+    <text x="42" y="132.8" text-anchor="end" dominant-baseline="middle">1,100</text>
+    <text x="42" y="52" text-anchor="end" dominant-baseline="middle">1,200</text>
+    <text x="60" y="467" text-anchor="middle" font-size="11" data-full-label="0"><title>0</title>0</text>
+    <text x="216" y="467" text-anchor="middle" font-size="11" data-full-label="1"><title>1</title>1</text>
+    <text x="372" y="467" text-anchor="middle" font-size="11" data-full-label="2"><title>2</title>2</text>
+    <text x="528" y="467" text-anchor="middle" font-size="11" data-full-label="3"><title>3</title>3</text>
+    <text x="684" y="467" text-anchor="middle" font-size="11" data-full-label="4"><title>4</title>4</text>
+  </g>
+  <g fill="none">
+    <path d="M216 213.6 L372 132.8 L528 173.2" fill="none" stroke="#1B1B19" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="us"/>
+    <path d="M216 375.2 L372 359.04 L528 294.4" fill="none" stroke="#4A4945" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="eu"/>
+  </g>
+  <g font-size="12" font-weight="800">
+    <text x="536" y="173.2" text-anchor="start" dominant-baseline="middle" fill="#1B1B19" data-end-label="us">us</text>
+    <text x="536" y="294.4" text-anchor="start" dominant-baseline="middle" fill="#4A4945" data-end-label="eu">eu</text>
+  </g>
+</svg>
