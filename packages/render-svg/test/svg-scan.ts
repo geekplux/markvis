@@ -81,7 +81,7 @@ export function scanSvg(svg: string): Scan {
     labels: [],
     rects: [],
   };
-  const stack: { fill?: string; size?: number; halo?: boolean; weight?: number }[] = [
+  const stack: { fill?: string | undefined; size?: number | undefined; halo?: boolean | undefined; weight?: number | undefined }[] = [
     { size: num(root, "font-size") ?? 12 },
   ];
   const inherited = <K extends "fill" | "size" | "halo" | "weight">(key: K) => {
