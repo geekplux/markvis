@@ -7,6 +7,7 @@ import {
   titleBlockTop,
   SVG_WIDTH,
   type Painted,
+  legendTop,
 } from "./layout.js";
 import { seriesStyle } from "./palette.js";
 import { formatNumber } from "./scale.js";
@@ -27,7 +28,6 @@ import {
   PLOT_BORDER,
   PLOT_BORDER_WIDTH,
   STRUCTURE_OPACITY,
-  TITLE_BASELINE,
   TYPE,
 } from "./tokens.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
@@ -349,7 +349,7 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
         legendColors,
         legendOpacities,
         48,
-        TITLE_BASELINE + 18,
+        legendTop(),
         SVG_WIDTH - 96,
       )
     : { items: [] as ReturnType<typeof layoutLegend>["items"], height: 0 };
@@ -438,7 +438,7 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
   if (useLegend && legendNames.length > 0) {
     const legendY = LEGEND_BELOW
       ? Math.max(box.bottom + 12, height - legendDraft.height)
-      : TITLE_BASELINE + 18;
+      : legendTop();
     const painted = drawPieLegend(
       legendNames,
       legendColors,
@@ -459,7 +459,7 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
       box = pieBox(left, right, top, bottom, height);
       const y2 = LEGEND_BELOW
         ? Math.max(box.bottom + 12, height - legendDraft.height)
-        : TITLE_BASELINE + 18;
+        : legendTop();
       const painted2 = drawPieLegend(
         legendNames,
         legendColors,

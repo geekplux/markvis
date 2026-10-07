@@ -7,6 +7,7 @@ import {
   titleBlockTop,
   SVG_WIDTH,
   type Painted,
+  legendTop,
 } from "./layout.js";
 import { seriesStyle } from "./palette.js";
 import { formatNumber, niceTicks } from "./scale.js";
@@ -22,7 +23,6 @@ import {
   PLOT_BORDER_WIDTH,
   SERIES_DASH,
   STRUCTURE_OPACITY,
-  TITLE_BASELINE,
   TYPE,
 } from "./tokens.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
@@ -55,7 +55,7 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
         styles.map((s) => s.color),
         styles.map((s) => s.opacity),
         48,
-        TITLE_BASELINE + 18,
+        legendTop(),
         SVG_WIDTH - 96,
       )
     : { items: [] as ReturnType<typeof layoutLegend>["items"], height: 0 };
@@ -140,7 +140,7 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
   if (useLegend && legendDraft.items.length > 0) {
     const legendY = LEGEND_BELOW
       ? Math.max(box.bottom + 12, height - legendDraft.height)
-      : TITLE_BASELINE + 18;
+      : legendTop();
     const painted = layoutLegend(
       names,
       styles.map((s) => s.color),

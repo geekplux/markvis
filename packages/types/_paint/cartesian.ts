@@ -19,6 +19,7 @@ import {
   tickLeftMargin,
   type Painted,
   type PlotBox,
+  legendTop,
 } from "./layout.js";
 import { seriesStyle } from "./palette.js";
 import {
@@ -66,7 +67,6 @@ import {
   SERIES_DASH,
   STRUCTURE_OPACITY,
   TICK_TEXT_GAP,
-  TITLE_BASELINE,
   TYPE,
 } from "./tokens.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
@@ -322,7 +322,7 @@ function prepare(chart: ChartIR): Prepared {
         styles.map((s) => s.color),
         styles.map((s) => s.opacity),
         48,
-        TITLE_BASELINE + 18,
+        legendTop(),
         SVG_WIDTH - 96,
       )
     : { items: [], height: 0 };
@@ -357,7 +357,7 @@ function prepare(chart: ChartIR): Prepared {
               frame.plot.bottom + TYPE.tick.size + 16,
               frame.height - legendDraft.height,
             )
-          : TITLE_BASELINE + 18,
+          : legendTop(),
         frame.plot.width,
       )
     : legendDraft;
@@ -379,7 +379,7 @@ function prepare(chart: ChartIR): Prepared {
           frame.plot.bottom + TYPE.tick.size + 16,
           frame.height - legend.height,
         )
-      : TITLE_BASELINE + 18;
+      : legendTop();
     legend = layoutLegend(
       series,
       styles.map((s) => s.color),

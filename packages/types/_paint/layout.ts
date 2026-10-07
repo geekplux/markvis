@@ -172,6 +172,16 @@ export function setTitleLineCount(count: number): void {
   TITLE_LINE_COUNT = Math.max(1, count);
 }
 
+/** Baseline of the last title line. */
+export function titleBlockBottom(): number {
+  return TITLE_BASELINE + Math.max(0, TITLE_LINE_COUNT - 1) * (TYPE.title.size + 6);
+}
+
+/** Top band legend row, clear of every title line. */
+export function legendTop(): number {
+  return titleBlockBottom() + 18;
+}
+
 export function titleBlockTop(legendHeight: number, legendBelow: boolean = LEGEND_BELOW): number {
   const extra = Math.max(0, TITLE_LINE_COUNT - 1) * (TYPE.title.size + 6);
   const base = TITLE_BASELINE + extra + TITLE_TO_PLOT;
