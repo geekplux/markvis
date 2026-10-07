@@ -11,12 +11,12 @@
   <path d="M66 355 L706 355" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1"/>
   <path d="M74 355 L74 359 M198.8 355 L198.8 359 M323.6 355 L323.6 359 M448.4 355 L448.4 359 M573.2 355 L573.2 359 M698 355 L698 359" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#8C8C8C" font-size="12" font-weight="400">
-    <text x="54" y="355" text-anchor="end" dominant-baseline="middle">1.5</text>
-    <text x="54" y="293.2" text-anchor="end" dominant-baseline="middle">2</text>
-    <text x="54" y="231.4" text-anchor="end" dominant-baseline="middle">2.5</text>
-    <text x="54" y="169.6" text-anchor="end" dominant-baseline="middle">3</text>
-    <text x="54" y="107.8" text-anchor="end" dominant-baseline="middle">3.5</text>
-    <text x="54" y="46" text-anchor="end" dominant-baseline="middle">4</text>
+    <text x="58" y="355" text-anchor="end" dominant-baseline="middle">1.5</text>
+    <text x="58" y="293.2" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="58" y="231.4" text-anchor="end" dominant-baseline="middle">2.5</text>
+    <text x="58" y="169.6" text-anchor="end" dominant-baseline="middle">3</text>
+    <text x="58" y="107.8" text-anchor="end" dominant-baseline="middle">3.5</text>
+    <text x="58" y="46" text-anchor="end" dominant-baseline="middle">4</text>
     <text x="74" y="371" text-anchor="middle" font-size="12" data-full-label="0.5"><title>0.5</title>0.5</text>
     <text x="198.8" y="371" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
     <text x="323.6" y="371" text-anchor="middle" font-size="12" data-full-label="1.5"><title>1.5</title>1.5</text>
@@ -26,7 +26,7 @@
   </g>
   <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
     <text x="26.68" y="200.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 26.68 200.5)" data-axis="y">minutes</text>
-    <text x="386" y="383" text-anchor="middle" dominant-baseline="hanging" data-axis="x">distance_km</text>
+    <text x="386" y="380.6" text-anchor="middle" dominant-baseline="hanging" data-axis="x">distance_km</text>
   </g>
   <g>
     <circle cx="198.8" cy="280.84" r="3" fill="#5AD8A6" fill-opacity="0.85" stroke="none" data-x="1.0" data-y="2.1" data-series="minutes"/>

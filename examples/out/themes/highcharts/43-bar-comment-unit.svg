@@ -6,18 +6,18 @@
   <path d="M74 374 L700 374" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <path d="M178.33 374 L178.33 380 M387 374 L387 380 M595.67 374 L595.67 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="374" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="60" y="297.5" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="60" y="221" text-anchor="end" dominant-baseline="middle">200</text>
-    <text x="60" y="144.5" text-anchor="end" dominant-baseline="middle">300</text>
-    <text x="60" y="68" text-anchor="end" dominant-baseline="middle">400</text>
+    <text x="66" y="374" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="297.5" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="66" y="221" text-anchor="end" dominant-baseline="middle">200</text>
+    <text x="66" y="144.5" text-anchor="end" dominant-baseline="middle">300</text>
+    <text x="66" y="68" text-anchor="end" dominant-baseline="middle">400</text>
     <text x="178.33" y="391" text-anchor="middle" font-size="11" data-full-label="Hosting"><title>Hosting</title>Hosting</text>
     <text x="387" y="391" text-anchor="middle" font-size="11" data-full-label="CDN"><title>CDN</title>CDN</text>
     <text x="595.67" y="391" text-anchor="middle" font-size="11" data-full-label="Logs"><title>Logs</title>Logs</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
     <text x="36.54" y="221" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 36.54 221)" data-axis="y">cost · USD</text>
-    <text x="387" y="401" text-anchor="middle" dominant-baseline="hanging" data-axis="x">item</text>
+    <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">item</text>
   </g>
   <g>
     <path d="M146.33 374 L210.33 374 L210.33 68 L146.33 68 Z" fill="#7cb5ec" data-x="Hosting" data-series="cost" data-y="400"/>

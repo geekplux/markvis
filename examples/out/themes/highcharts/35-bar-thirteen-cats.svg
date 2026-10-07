@@ -10,10 +10,10 @@
   <path d="M74 374 L700 374" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <path d="M98.08 374 L98.08 380 M146.23 374 L146.23 380 M194.38 374 L194.38 380 M242.54 374 L242.54 380 M290.69 374 L290.69 380 M338.85 374 L338.85 380 M387 374 L387 380 M435.15 374 L435.15 380 M483.31 374 L483.31 380 M531.46 374 L531.46 380 M579.62 374 L579.62 380 M627.77 374 L627.77 380 M675.92 374 L675.92 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="374" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="60" y="264" text-anchor="end" dominant-baseline="middle">5</text>
-    <text x="60" y="154" text-anchor="end" dominant-baseline="middle">10</text>
-    <text x="60" y="44" text-anchor="end" dominant-baseline="middle">15</text>
+    <text x="66" y="374" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="264" text-anchor="end" dominant-baseline="middle">5</text>
+    <text x="66" y="154" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="66" y="44" text-anchor="end" dominant-baseline="middle">15</text>
     <text x="98.08" y="391" text-anchor="middle" font-size="11" data-full-label="A01"><title>A01</title>A01</text>
     <text x="146.23" y="391" text-anchor="middle" font-size="11" data-full-label="A02"><title>A02</title>A02</text>
     <text x="194.38" y="391" text-anchor="middle" font-size="11" data-full-label="A03"><title>A03</title>A03</text>
@@ -30,7 +30,7 @@
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
     <text x="43.36" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 43.36 209)" data-axis="y">units</text>
-    <text x="387" y="401" text-anchor="middle" dominant-baseline="hanging" data-axis="x">sku</text>
+    <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">sku</text>
   </g>
   <g>
     <path d="M77.37 374 L118.78 374 L118.78 264 L77.37 264 Z" fill="#7cb5ec" data-x="A01" data-series="units" data-y="5"/>

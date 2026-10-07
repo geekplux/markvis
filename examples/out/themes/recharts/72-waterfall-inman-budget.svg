@@ -1,50 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="waterfall chart: Sponsorships still cover Inman Park sound after permits (USD k), 8 rows" aria-labelledby="mv-b41458dc112446f3-title" aria-describedby="mv-b41458dc112446f3-desc" data-markvis="2" data-chart-type="waterfall" data-id="mv-b41458dc112446f3" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-b41458dc112446f3-title">Sponsorships still cover Inman Park sound after permits</title>
   <desc id="mv-b41458dc112446f3-desc">waterfall chart. Sponsorships still cover Inman Park sound after permits. x=step. y=delta. unit=USD k. 8 rows.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>Sponsorships still cover Inman Park sound after permits</title>Sponsorships still cover Inman Park sound after permits<tspan font-size="12" font-weight="400" fill="#6B7280"> · USD k</tspan></text>
-  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1">
-    <line x1="48" x2="700" y1="312.5" y2="312.5"/>
-    <line x1="48" x2="700" y1="221" y2="221"/>
-    <line x1="48" x2="700" y1="129.5" y2="129.5"/>
+  <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>Sponsorships still cover Inman Park sound after permits</title><tspan x="48" dy="0">Sponsorships still cover Inman Park sound after</tspan><tspan x="48" dy="22">permits</tspan><tspan font-size="12" font-weight="400" fill="#6B7280"> · USD k</tspan></text>
+  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3">
+    <line x1="48" x2="700" y1="318" y2="318"/>
+    <line x1="48" x2="700" y1="232" y2="232"/>
+    <line x1="48" x2="700" y1="146" y2="146"/>
   </g>
   <path d="M48 404 L700 404" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1"/>
   <g data-waterfall="1">
-    <rect x="54.52" y="230.15" width="68.46" height="173.85" fill="#0F766E" rx="0" data-step="Ticket sales" data-y="95" data-level="95" data-role="delta" data-baseline="0"/>
-    <text x="88.75" y="224.15" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Ticket sales">+95 → 95</text>
-    <rect x="136.02" y="142.31" width="68.46" height="87.84" fill="#0F766E" rx="0" data-step="Sponsorships" data-y="48" data-level="143" data-role="delta" data-baseline="95"/>
-    <text x="170.25" y="136.31" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Sponsorships">+48 → 143</text>
-    <rect x="217.52" y="102.05" width="68.46" height="40.26" fill="#0F766E" rx="0" data-step="Food vendors" data-y="22" data-level="165" data-role="delta" data-baseline="143"/>
-    <text x="251.75" y="96.05" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Food vendors">+22 → 165</text>
-    <rect x="299.02" y="69.11" width="68.46" height="32.94" fill="#0F766E" rx="0" data-step="Beer garden" data-y="18" data-level="183" data-role="delta" data-baseline="165"/>
-    <text x="333.25" y="63.11" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Beer garden">+18 → 183</text>
-    <rect x="380.52" y="69.11" width="68.46" height="32.94" fill="#BE123C" rx="0" data-step="Permits" data-y="-18" data-level="165" data-role="delta" data-baseline="183"/>
-    <text x="414.75" y="63.11" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Permits">-18 → 165</text>
-    <rect x="462.02" y="102.05" width="68.46" height="54.9" fill="#BE123C" rx="0" data-step="Sound" data-y="-30" data-level="135" data-role="delta" data-baseline="165"/>
-    <text x="496.25" y="96.05" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Sound">-30 → 135</text>
-    <rect x="543.52" y="156.95" width="68.46" height="51.24" fill="#BE123C" rx="0" data-step="Staff" data-y="-28" data-level="107" data-role="delta" data-baseline="135"/>
-    <text x="577.75" y="150.95" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Staff">-28 → 107</text>
-    <rect x="625.02" y="208.19" width="68.46" height="21.96" fill="#BE123C" rx="0" data-step="Insurance" data-y="-12" data-level="95" data-role="delta" data-baseline="107"/>
-    <text x="659.25" y="202.19" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Insurance">-12 → 95</text>
+    <rect x="54.52" y="240.6" width="68.46" height="163.4" fill="#0F766E" rx="0" data-step="Ticket sales" data-y="95" data-level="95" data-role="delta" data-baseline="0"/>
+    <text x="88.75" y="234.6" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Ticket sales">+95 → 95</text>
+    <rect x="136.02" y="158.04" width="68.46" height="82.56" fill="#0F766E" rx="0" data-step="Sponsorships" data-y="48" data-level="143" data-role="delta" data-baseline="95"/>
+    <text x="170.25" y="152.04" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Sponsorships">+48 → 143</text>
+    <rect x="217.52" y="120.2" width="68.46" height="37.84" fill="#0F766E" rx="0" data-step="Food vendors" data-y="22" data-level="165" data-role="delta" data-baseline="143"/>
+    <text x="251.75" y="114.2" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Food vendors">+22 → 165</text>
+    <rect x="299.02" y="89.24" width="68.46" height="30.96" fill="#0F766E" rx="0" data-step="Beer garden" data-y="18" data-level="183" data-role="delta" data-baseline="165"/>
+    <text x="333.25" y="83.24" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Beer garden">+18 → 183</text>
+    <rect x="380.52" y="89.24" width="68.46" height="30.96" fill="#BE123C" rx="0" data-step="Permits" data-y="-18" data-level="165" data-role="delta" data-baseline="183"/>
+    <text x="414.75" y="83.24" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Permits">-18 → 165</text>
+    <rect x="462.02" y="120.2" width="68.46" height="51.6" fill="#BE123C" rx="0" data-step="Sound" data-y="-30" data-level="135" data-role="delta" data-baseline="165"/>
+    <text x="496.25" y="114.2" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Sound">-30 → 135</text>
+    <rect x="543.52" y="171.8" width="68.46" height="48.16" fill="#BE123C" rx="0" data-step="Staff" data-y="-28" data-level="107" data-role="delta" data-baseline="135"/>
+    <text x="577.75" y="165.8" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Staff">-28 → 107</text>
+    <rect x="625.02" y="219.96" width="68.46" height="20.64" fill="#BE123C" rx="0" data-step="Insurance" data-y="-12" data-level="95" data-role="delta" data-baseline="107"/>
+    <text x="659.25" y="213.96" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-delta="Insurance">-12 → 95</text>
   </g>
   <g fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-waterfall-connectors="1">
-    <line x1="122.98" x2="136.02" y1="230.15" y2="230.15"/>
-    <line x1="204.48" x2="217.52" y1="142.31" y2="142.31"/>
-    <line x1="285.98" x2="299.02" y1="102.05" y2="102.05"/>
-    <line x1="367.48" x2="380.52" y1="69.11" y2="69.11"/>
-    <line x1="448.98" x2="462.02" y1="102.05" y2="102.05"/>
-    <line x1="530.48" x2="543.52" y1="156.95" y2="156.95"/>
-    <line x1="611.98" x2="625.02" y1="208.19" y2="208.19"/>
+    <line x1="122.98" x2="136.02" y1="240.6" y2="240.6"/>
+    <line x1="204.48" x2="217.52" y1="158.04" y2="158.04"/>
+    <line x1="285.98" x2="299.02" y1="120.2" y2="120.2"/>
+    <line x1="367.48" x2="380.52" y1="89.24" y2="89.24"/>
+    <line x1="448.98" x2="462.02" y1="120.2" y2="120.2"/>
+    <line x1="530.48" x2="543.52" y1="171.8" y2="171.8"/>
+    <line x1="611.98" x2="625.02" y1="219.96" y2="219.96"/>
   </g>
   <g fill="#6B7280" font-size="12" font-weight="400">
     <text x="40" y="404" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="40" y="312.5" text-anchor="end" dominant-baseline="middle">50</text>
-    <text x="40" y="221" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="40" y="129.5" text-anchor="end" dominant-baseline="middle">150</text>
-    <text x="40" y="38" text-anchor="end" dominant-baseline="middle">200</text>
-    <text x="88.75" y="416" text-anchor="middle" data-full-label="Ticket sales">Ticket sales</text>
-    <text x="170.25" y="416" text-anchor="middle" data-full-label="Sponsorships">Sponsorships</text>
-    <text x="251.75" y="416" text-anchor="middle" data-full-label="Food vendors">Food vendors</text>
-    <text x="333.25" y="416" text-anchor="middle" data-full-label="Beer garden">Beer garden</text>
+    <text x="40" y="318" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="40" y="232" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="40" y="146" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="40" y="60" text-anchor="end" dominant-baseline="middle">200</text>
+    <text x="88.75" y="416" text-anchor="middle" data-full-label="Ticket sales"><tspan x="88.75" dy="0">Ticket</tspan><tspan x="88.75" dy="15">sales</tspan></text>
+    <text x="170.25" y="416" text-anchor="middle" data-full-label="Sponsorships"><title>Sponsorships</title>Sponsorsh…</text>
+    <text x="251.75" y="416" text-anchor="middle" data-full-label="Food vendors"><tspan x="251.75" dy="0">Food</tspan><tspan x="251.75" dy="15">vendors</tspan></text>
+    <text x="333.25" y="416" text-anchor="middle" data-full-label="Beer garden"><tspan x="333.25" dy="0">Beer</tspan><tspan x="333.25" dy="15">garden</tspan></text>
     <text x="414.75" y="416" text-anchor="middle" data-full-label="Permits">Permits</text>
     <text x="496.25" y="416" text-anchor="middle" data-full-label="Sound">Sound</text>
     <text x="577.75" y="416" text-anchor="middle" data-full-label="Staff">Staff</text>

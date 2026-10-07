@@ -2,7 +2,7 @@
   <title id="mv-b80f123a37aff372-title">Concessions still cover Midtown rent after payroll</title>
   <desc id="mv-b80f123a37aff372-desc">waterfall chart. Concessions still cover Midtown rent after payroll. x=step. y=delta. unit=USD k. 8 rows.</desc>
   <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>Concessions still cover Midtown rent after payroll</title>Concessions still cover Midtown rent after payroll<tspan font-size="12" font-weight="400" fill="#6B7280"> · USD k</tspan></text>
-  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1">
+  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3">
     <line x1="48" x2="700" y1="282" y2="282"/>
     <line x1="48" x2="700" y1="160" y2="160"/>
   </g>
@@ -39,10 +39,10 @@
     <text x="40" y="282" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="40" y="160" text-anchor="end" dominant-baseline="middle">200</text>
     <text x="40" y="38" text-anchor="end" dominant-baseline="middle">300</text>
-    <text x="88.75" y="416" text-anchor="middle" data-full-label="Ticket sales">Ticket sales</text>
-    <text x="170.25" y="416" text-anchor="middle" data-full-label="Concessions">Concessions</text>
+    <text x="88.75" y="416" text-anchor="middle" data-full-label="Ticket sales"><tspan x="88.75" dy="0">Ticket</tspan><tspan x="88.75" dy="15">sales</tspan></text>
+    <text x="170.25" y="416" text-anchor="middle" data-full-label="Concessions"><title>Concessions</title>Concessio…</text>
     <text x="251.75" y="416" text-anchor="middle" data-full-label="Merch">Merch</text>
-    <text x="333.25" y="416" text-anchor="middle" data-full-label="Sponsorships">Sponsorships</text>
+    <text x="333.25" y="416" text-anchor="middle" data-full-label="Sponsorships"><title>Sponsorships</title>Sponsorsh…</text>
     <text x="414.75" y="416" text-anchor="middle" data-full-label="Payroll">Payroll</text>
     <text x="496.25" y="416" text-anchor="middle" data-full-label="Rent">Rent</text>
     <text x="577.75" y="416" text-anchor="middle" data-full-label="Utilities">Utilities</text>

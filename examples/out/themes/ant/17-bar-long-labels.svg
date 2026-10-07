@@ -5,17 +5,17 @@
   <path d="M78.08 340 L706 340" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1"/>
   <path d="M182.73 340 L182.73 344 M392.04 340 L392.04 344 M601.35 340 L601.35 344" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#8C8C8C" font-size="12" font-weight="400">
-    <text x="66.08" y="340" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="66.08" y="242" text-anchor="end" dominant-baseline="middle">200,000</text>
-    <text x="66.08" y="144" text-anchor="end" dominant-baseline="middle">400,000</text>
-    <text x="66.08" y="46" text-anchor="end" dominant-baseline="middle">600,000</text>
+    <text x="70.08" y="340" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="70.08" y="242" text-anchor="end" dominant-baseline="middle">200,000</text>
+    <text x="70.08" y="144" text-anchor="end" dominant-baseline="middle">400,000</text>
+    <text x="70.08" y="46" text-anchor="end" dominant-baseline="middle">600,000</text>
     <text x="182.73" y="356" text-anchor="middle" font-size="12" data-full-label="North America enterprise expansion Q3"><title>North America enterprise expansion Q3</title><tspan x="182.73" dy="0">North America enterprise</tspan><tspan x="182.73" dy="15">expansion Q3</tspan></text>
     <text x="392.04" y="356" text-anchor="middle" font-size="12" data-full-label="APAC partner enablement and training program"><title>APAC partner enablement and training program</title><tspan x="392.04" dy="0">APAC partner enablement and</tspan><tspan x="392.04" dy="15">training program</tspan></text>
     <text x="601.35" y="356" text-anchor="middle" font-size="12" data-full-label="Legacy platform decommission wave 2"><title>Legacy platform decommission wave 2</title><tspan x="601.35" dy="0">Legacy platform</tspan><tspan x="601.35" dy="15">decommission wave 2</tspan></text>
   </g>
   <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
     <text x="9" y="193" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 9 193)" data-axis="y">spend · USD</text>
-    <text x="392.04" y="368" text-anchor="middle" dominant-baseline="hanging" data-axis="x">region</text>
+    <text x="392.04" y="380.6" text-anchor="middle" dominant-baseline="hanging" data-axis="x">region</text>
   </g>
   <g>
     <path d="M154.73 340 L154.73 136.2 Q154.73 134.2 156.73 134.2 L208.73 134.2 Q210.73 134.2 210.73 136.2 L210.73 340 Z" fill="#5AD8A6" data-x="North America enterprise expansion Q3" data-series="spend" data-y="420000"/>

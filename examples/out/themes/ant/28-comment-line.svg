@@ -11,19 +11,19 @@
   <path d="M66 355 L706 355" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1"/>
   <path d="M172.67 355 L172.67 359 M386 355 L386 359 M599.33 355 L599.33 359" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#8C8C8C" font-size="12" font-weight="400">
-    <text x="54" y="355" text-anchor="end" dominant-baseline="middle">1</text>
-    <text x="54" y="293.2" text-anchor="end" dominant-baseline="middle">2</text>
-    <text x="54" y="231.4" text-anchor="end" dominant-baseline="middle">3</text>
-    <text x="54" y="169.6" text-anchor="end" dominant-baseline="middle">4</text>
-    <text x="54" y="107.8" text-anchor="end" dominant-baseline="middle">5</text>
-    <text x="54" y="46" text-anchor="end" dominant-baseline="middle">6</text>
+    <text x="58" y="355" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="58" y="293.2" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="58" y="231.4" text-anchor="end" dominant-baseline="middle">3</text>
+    <text x="58" y="169.6" text-anchor="end" dominant-baseline="middle">4</text>
+    <text x="58" y="107.8" text-anchor="end" dominant-baseline="middle">5</text>
+    <text x="58" y="46" text-anchor="end" dominant-baseline="middle">6</text>
     <text x="172.67" y="371" text-anchor="middle" font-size="12" data-full-label="Mon"><title>Mon</title>Mon</text>
     <text x="386" y="371" text-anchor="middle" font-size="12" data-full-label="Tue"><title>Tue</title>Tue</text>
     <text x="599.33" y="371" text-anchor="middle" font-size="12" data-full-label="Wed"><title>Wed</title>Wed</text>
   </g>
   <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
     <text x="41.56" y="200.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 41.56 200.5)" data-axis="y">errors</text>
-    <text x="386" y="383" text-anchor="middle" dominant-baseline="hanging" data-axis="x">day</text>
+    <text x="386" y="380.6" text-anchor="middle" dominant-baseline="hanging" data-axis="x">day</text>
   </g>
   <g fill="none">
     <path d="M172.67 231.4 L386 107.8 L599.33 293.2" fill="none" stroke="#5AD8A6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="errors"/>

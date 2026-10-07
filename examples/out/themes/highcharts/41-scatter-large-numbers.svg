@@ -12,19 +12,19 @@
   <path d="M143.12 374 L143.12 380 M326.08 374 L326.08 380 M509.04 374 L509.04 380 M692 374 L692 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <line x1="135.12" x2="700" y1="291.5" y2="291.5" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="121.12" y="374" text-anchor="end" dominant-baseline="middle">-100,000,000,000</text>
-    <text x="121.12" y="291.5" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="121.12" y="209" text-anchor="end" dominant-baseline="middle">100,000,000,000</text>
-    <text x="121.12" y="126.5" text-anchor="end" dominant-baseline="middle">200,000,000,000</text>
-    <text x="121.12" y="44" text-anchor="end" dominant-baseline="middle">300,000,000,000</text>
-    <text x="143.12" y="391" text-anchor="middle" font-size="11" data-full-label="-5,000,000"><title>-5,000,000</title>-5,000,000</text>
+    <text x="127.12" y="374" text-anchor="end" dominant-baseline="middle">-100,000,000,000</text>
+    <text x="127.12" y="291.5" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="127.12" y="209" text-anchor="end" dominant-baseline="middle">100,000,000,000</text>
+    <text x="127.12" y="126.5" text-anchor="end" dominant-baseline="middle">200,000,000,000</text>
+    <text x="127.12" y="44" text-anchor="end" dominant-baseline="middle">300,000,000,000</text>
+    <text x="143.12" y="391" text-anchor="start" font-size="11" data-full-label="-5,000,000"><title>-5,000,000</title>-5,000,000</text>
     <text x="326.08" y="391" text-anchor="middle" font-size="11" data-full-label="0"><title>0</title>0</text>
     <text x="509.04" y="391" text-anchor="middle" font-size="11" data-full-label="5,000,000"><title>5,000,000</title>5,000,000</text>
     <text x="692" y="391" text-anchor="end" font-size="11" data-full-label="10,000,000"><title>10,000,000</title>10,000,000</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
     <text x="9" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 9 209)" data-axis="y">gdp</text>
-    <text x="417.56" y="401" text-anchor="middle" dominant-baseline="hanging" data-axis="x">pop</text>
+    <text x="417.56" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">pop</text>
   </g>
   <g>
     <circle cx="362.67" cy="254.38" r="3.5" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="1000000" data-y="45000000000" data-series="gdp"/>

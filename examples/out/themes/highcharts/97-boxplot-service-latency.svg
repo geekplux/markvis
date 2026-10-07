@@ -4,9 +4,9 @@
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Search answers fastest but has the longest tail</title>Search answers fastest but has the longest tail</text>
   <text x="360" y="46" text-anchor="middle" font-size="12" font-weight="400" fill="#666666" data-subtitle="1">ms</text>
   <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
-    <line x1="254.97" x2="254.97" y1="68" y2="170"/>
-    <line x1="441.39" x2="441.39" y1="68" y2="170"/>
-    <line x1="627.8" x2="627.8" y1="68" y2="170"/>
+    <line x1="253.15" x2="253.15" y1="68" y2="170"/>
+    <line x1="437.75" x2="437.75" y1="68" y2="170"/>
+    <line x1="622.34" x2="622.34" y1="68" y2="170"/>
   </g>
   <line x1="68.56" x2="68.56" y1="68" y2="170" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-baseline="0"/>
   <g fill="#666666" font-size="11" font-weight="400">
@@ -14,25 +14,25 @@
     <text x="60.56" y="119" text-anchor="end" dominant-baseline="middle" data-full-label="Checkout"><title>Checkout</title><tspan x="60.56" dy="0">Checkout</tspan></text>
     <text x="60.56" y="153" text-anchor="end" dominant-baseline="middle" data-full-label="Profile"><title>Profile</title><tspan x="60.56" dy="0">Profile</tspan></text>
     <text x="68.56" y="187" text-anchor="middle">0</text>
-    <text x="254.97" y="187" text-anchor="middle">50</text>
-    <text x="441.39" y="187" text-anchor="middle">100</text>
-    <text x="627.8" y="187" text-anchor="middle">150</text>
+    <text x="253.15" y="187" text-anchor="middle">50</text>
+    <text x="437.75" y="187" text-anchor="middle">100</text>
+    <text x="622.34" y="187" text-anchor="middle">150</text>
   </g>
   <g data-boxplot="1">
-    <path d="M210.23 85 L216.76 85 M233.54 85 L236.33 85 M210.23 79.5 L210.23 90.5 M236.33 79.5 L236.33 90.5" fill="none" stroke="#7cb5ec" stroke-width="1.5" data-whiskers="Search"/>
-    <rect x="216.76" y="74" width="16.78" height="22" fill="#7cb5ec" fill-opacity="0.28" stroke="#7cb5ec" stroke-width="1.5" data-x="Search" data-n="8" data-median="41.5" data-q1="39.75" data-q3="44.25"/>
-    <line x1="223.28" x2="223.28" y1="72" y2="98" stroke="#333333" stroke-width="2.5" data-x="Search" data-n="8" data-median="41.5" data-median-tick="1"/>
-    <circle cx="515.95" cy="85" r="3" fill="#ffffff" stroke="#7cb5ec" stroke-width="1.5" data-x="Search" data-y="120" data-outlier="1"/>
-    <path d="M385.46 119 L398.51 119 M419.95 119 L437.66 119 M385.46 113.5 L385.46 124.5 M437.66 113.5 L437.66 124.5" fill="none" stroke="#7cb5ec" stroke-width="1.5" data-whiskers="Checkout"/>
-    <rect x="398.51" y="108" width="21.44" height="22" fill="#7cb5ec" fill-opacity="0.28" stroke="#7cb5ec" stroke-width="1.5" data-x="Checkout" data-n="6" data-median="91" data-q1="88.5" data-q3="94.25"/>
-    <line x1="407.83" x2="407.83" y1="106" y2="132" stroke="#333333" stroke-width="2.5" data-x="Checkout" data-n="6" data-median="91" data-median-tick="1"/>
-    <path d="M284.8 153 L297.85 153 M325.81 153 L344.45 153 M284.8 147.5 L284.8 158.5 M344.45 147.5 L344.45 158.5" fill="none" stroke="#7cb5ec" stroke-width="1.5" data-whiskers="Profile"/>
-    <rect x="297.85" y="142" width="27.96" height="22" fill="#7cb5ec" fill-opacity="0.28" stroke="#7cb5ec" stroke-width="1.5" data-x="Profile" data-n="6" data-median="64.5" data-q1="61.5" data-q3="69"/>
-    <line x1="309.03" x2="309.03" y1="140" y2="166" stroke="#333333" stroke-width="2.5" data-x="Profile" data-n="6" data-median="64.5" data-median-tick="1"/>
+    <path d="M208.85 85 L215.31 85 M231.93 85 L234.7 85 M208.85 79.5 L208.85 90.5 M234.7 79.5 L234.7 90.5" fill="none" stroke="#7cb5ec" stroke-width="1.5" data-whiskers="Search"/>
+    <rect x="215.31" y="74" width="16.61" height="22" fill="#7cb5ec" fill-opacity="0.28" stroke="#7cb5ec" stroke-width="1.5" data-x="Search" data-n="8" data-median="41.5" data-q1="39.75" data-q3="44.25"/>
+    <line x1="221.77" x2="221.77" y1="72" y2="98" stroke="#333333" stroke-width="2.5" data-x="Search" data-n="8" data-median="41.5" data-median-tick="1"/>
+    <circle cx="511.59" cy="85" r="3" fill="#ffffff" stroke="#7cb5ec" stroke-width="1.5" data-x="Search" data-y="120" data-outlier="1"/>
+    <path d="M382.37 119 L395.29 119 M416.52 119 L434.06 119 M382.37 113.5 L382.37 124.5 M434.06 113.5 L434.06 124.5" fill="none" stroke="#7cb5ec" stroke-width="1.5" data-whiskers="Checkout"/>
+    <rect x="395.29" y="108" width="21.23" height="22" fill="#7cb5ec" fill-opacity="0.28" stroke="#7cb5ec" stroke-width="1.5" data-x="Checkout" data-n="6" data-median="91" data-q1="88.5" data-q3="94.25"/>
+    <line x1="404.52" x2="404.52" y1="106" y2="132" stroke="#333333" stroke-width="2.5" data-x="Checkout" data-n="6" data-median="91" data-median-tick="1"/>
+    <path d="M282.69 153 L295.61 153 M323.3 153 L341.76 153 M282.69 147.5 L282.69 158.5 M341.76 147.5 L341.76 158.5" fill="none" stroke="#7cb5ec" stroke-width="1.5" data-whiskers="Profile"/>
+    <rect x="295.61" y="142" width="27.69" height="22" fill="#7cb5ec" fill-opacity="0.28" stroke="#7cb5ec" stroke-width="1.5" data-x="Profile" data-n="6" data-median="64.5" data-q1="61.5" data-q3="69"/>
+    <line x1="306.69" x2="306.69" y1="140" y2="166" stroke="#333333" stroke-width="2.5" data-x="Profile" data-n="6" data-median="64.5" data-median-tick="1"/>
   </g>
   <g fill="#333333" font-size="11" font-weight="700">
-    <text x="639.8" y="85" dominant-baseline="middle" data-value-label="Search">41.5<tspan fill="#666666" font-weight="400"> · n=8</tspan></text>
-    <text x="639.8" y="119" dominant-baseline="middle" data-value-label="Checkout">91<tspan fill="#666666" font-weight="400"> · n=6</tspan></text>
-    <text x="639.8" y="153" dominant-baseline="middle" data-value-label="Profile">64.5<tspan fill="#666666" font-weight="400"> · n=6</tspan></text>
+    <text x="634.34" y="85" dominant-baseline="middle" data-value-label="Search">41.5<tspan fill="#666666" font-weight="400"> · n=8</tspan></text>
+    <text x="634.34" y="119" dominant-baseline="middle" data-value-label="Checkout">91<tspan fill="#666666" font-weight="400"> · n=6</tspan></text>
+    <text x="634.34" y="153" dominant-baseline="middle" data-value-label="Profile">64.5<tspan fill="#666666" font-weight="400"> · n=6</tspan></text>
   </g>
 </svg>

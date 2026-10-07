@@ -9,7 +9,7 @@
     <rect x="103.38" y="458.5" width="10" height="3" fill="#64748B" rx="1.5"/>
     <text x="117.38" y="464" data-legend="Away">Away</text>
   </g>
-  <g fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-radar-grid="1">
+  <g fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" stroke-dasharray="1 3" data-radar-grid="1">
     <path d="M360 158.59 L423.57 195.3 L423.57 268.7 L360 305.41 L296.43 268.7 L296.43 195.3 Z"/>
     <line x1="360" y1="232" x2="360" y2="102.8"/>
     <line x1="360" y1="232" x2="471.89" y2="167.4"/>

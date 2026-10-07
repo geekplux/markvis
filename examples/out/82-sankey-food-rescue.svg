@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="sankey chart: Kitchens still send most Midtown surplus to compost, 14 rows, series to" aria-labelledby="mv-75dec1650bdfdd07-title" aria-describedby="mv-75dec1650bdfdd07-desc" data-markvis="2" data-chart-type="sankey" data-id="mv-75dec1650bdfdd07" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-75dec1650bdfdd07-title">Kitchens still send most Midtown surplus to compost</title>
   <desc id="mv-75dec1650bdfdd07-desc">sankey chart. Kitchens still send most Midtown surplus to compost. x=from. y=pounds. series=to. 14 rows.</desc>
-  <text x="114.72" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Kitchens still send most Midtown surplus to compost</title><tspan x="114.72" dy="0">Kitchens still send most Midtown surplus to</tspan><tspan x="114.72" dy="27">compost</tspan></text>
+  <text x="114.72" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Kitchens still send most Midtown surplus to compost</title><tspan x="114.72" dy="0">Kitchens still send most Midtown surplus</tspan><tspan x="114.72" dy="27">to compost</tspan></text>
   <g data-sankey-links="1">
     <path d="M152.72 71.82 C245.42 71.82, 245.42 79.82, 338.12 79.82 L338.12 140.14 C245.42 140.14, 245.42 132.14, 152.72 132.14 Z" fill="#3B82F6" fill-opacity="0.45" stroke="none" data-source="Restaurants" data-target="Food bank" data-y="420"/>
     <path d="M152.72 132.14 C245.42 132.14, 245.42 251.55, 338.12 251.55 L338.12 349.21 C245.42 349.21, 245.42 229.8, 152.72 229.8 Z" fill="#3B82F6" fill-opacity="0.45" stroke="none" data-source="Restaurants" data-target="Compost" data-y="680"/>
@@ -32,7 +32,7 @@
     <rect x="537.52" y="384.5" width="14" height="41.65" fill="#10B981" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-node="Parks mulch" data-y="290"/>
     <rect x="537.52" y="434.15" width="14" height="25.85" fill="#10B981" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-node="Community gardens" data-y="180"/>
   </g>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">
     <text x="134.72" y="150.81" text-anchor="end" dominant-baseline="middle" data-node-label="Restaurants"><title>Restaurants</title>Restaurants</text>
     <text x="356.12" y="161.68" text-anchor="start" dominant-baseline="middle" data-node-label="Food bank"><title>Food bank</title>Food bank</text>
     <text x="356.12" y="351.36" text-anchor="start" dominant-baseline="middle" data-node-label="Compost"><title>Compost</title>Compost</text>

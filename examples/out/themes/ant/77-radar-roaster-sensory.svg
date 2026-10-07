@@ -10,7 +10,7 @@
     <circle cx="209.72" cy="40" r="5" fill="#5D7092"/>
     <text x="218.72" y="44" data-legend="Component">Component</text>
   </g>
-  <g fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-radar-grid="1">
+  <g fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="4 4" data-radar-grid="1">
     <path d="M361.26 166.14 L421.04 209.58 L398.21 279.86 L324.31 279.86 L301.48 209.58 Z"/>
     <line x1="361.26" y1="229" x2="361.26" y2="120.88"/>
     <line x1="361.26" y1="229" x2="464.09" y2="195.59"/>

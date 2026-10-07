@@ -11,21 +11,21 @@
   </g>
   <path d="M48 420 L700 420" fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1"/>
   <g data-waterfall="1">
-    <rect x="56.15" y="254.7" width="65.2" height="165.3" fill="#0F766E" rx="8" data-step="Ticket sales" data-y="95" data-level="95" data-role="delta" data-baseline="0"/>
+    <rect x="56.15" y="254.7" width="65.2" height="165.3" fill="#0F766E" rx="4" data-step="Ticket sales" data-y="95" data-level="95" data-role="delta" data-baseline="0"/>
     <text x="88.75" y="248.7" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-delta="Ticket sales">+95 → 95</text>
-    <rect x="137.65" y="171.18" width="65.2" height="83.52" fill="#0F766E" rx="8" data-step="Sponsorships" data-y="48" data-level="143" data-role="delta" data-baseline="95"/>
+    <rect x="137.65" y="171.18" width="65.2" height="83.52" fill="#0F766E" rx="4" data-step="Sponsorships" data-y="48" data-level="143" data-role="delta" data-baseline="95"/>
     <text x="170.25" y="165.18" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-delta="Sponsorships">+48 → 143</text>
-    <rect x="219.15" y="132.9" width="65.2" height="38.28" fill="#0F766E" rx="8" data-step="Food vendors" data-y="22" data-level="165" data-role="delta" data-baseline="143"/>
+    <rect x="219.15" y="132.9" width="65.2" height="38.28" fill="#0F766E" rx="4" data-step="Food vendors" data-y="22" data-level="165" data-role="delta" data-baseline="143"/>
     <text x="251.75" y="126.9" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-delta="Food vendors">+22 → 165</text>
-    <rect x="300.65" y="101.58" width="65.2" height="31.32" fill="#0F766E" rx="8" data-step="Beer garden" data-y="18" data-level="183" data-role="delta" data-baseline="165"/>
+    <rect x="300.65" y="101.58" width="65.2" height="31.32" fill="#0F766E" rx="4" data-step="Beer garden" data-y="18" data-level="183" data-role="delta" data-baseline="165"/>
     <text x="333.25" y="95.58" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-delta="Beer garden">+18 → 183</text>
-    <rect x="382.15" y="101.58" width="65.2" height="31.32" fill="#BE123C" rx="8" data-step="Permits" data-y="-18" data-level="165" data-role="delta" data-baseline="183"/>
+    <rect x="382.15" y="101.58" width="65.2" height="31.32" fill="#BE123C" rx="4" data-step="Permits" data-y="-18" data-level="165" data-role="delta" data-baseline="183"/>
     <text x="414.75" y="95.58" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-delta="Permits">-18 → 165</text>
-    <rect x="463.65" y="132.9" width="65.2" height="52.2" fill="#BE123C" rx="8" data-step="Sound" data-y="-30" data-level="135" data-role="delta" data-baseline="165"/>
+    <rect x="463.65" y="132.9" width="65.2" height="52.2" fill="#BE123C" rx="4" data-step="Sound" data-y="-30" data-level="135" data-role="delta" data-baseline="165"/>
     <text x="496.25" y="126.9" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-delta="Sound">-30 → 135</text>
-    <rect x="545.15" y="185.1" width="65.2" height="48.72" fill="#BE123C" rx="8" data-step="Staff" data-y="-28" data-level="107" data-role="delta" data-baseline="135"/>
+    <rect x="545.15" y="185.1" width="65.2" height="48.72" fill="#BE123C" rx="4" data-step="Staff" data-y="-28" data-level="107" data-role="delta" data-baseline="135"/>
     <text x="577.75" y="179.1" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-delta="Staff">-28 → 107</text>
-    <rect x="626.65" y="233.82" width="65.2" height="20.88" fill="#BE123C" rx="8" data-step="Insurance" data-y="-12" data-level="95" data-role="delta" data-baseline="107"/>
+    <rect x="626.65" y="233.82" width="65.2" height="20.88" fill="#BE123C" rx="4" data-step="Insurance" data-y="-12" data-level="95" data-role="delta" data-baseline="107"/>
     <text x="659.25" y="227.82" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-delta="Insurance">-12 → 95</text>
   </g>
   <g fill="none" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-waterfall-connectors="1">
@@ -43,10 +43,10 @@
     <text x="40" y="246" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="40" y="159" text-anchor="end" dominant-baseline="middle">150</text>
     <text x="40" y="72" text-anchor="end" dominant-baseline="middle">200</text>
-    <text x="88.75" y="432" text-anchor="middle" data-full-label="Ticket sales">Ticket sales</text>
-    <text x="170.25" y="432" text-anchor="middle" data-full-label="Sponsorships">Sponsorships</text>
-    <text x="251.75" y="432" text-anchor="middle" data-full-label="Food vendors">Food vendors</text>
-    <text x="333.25" y="432" text-anchor="middle" data-full-label="Beer garden">Beer garden</text>
+    <text x="88.75" y="432" text-anchor="middle" data-full-label="Ticket sales"><tspan x="88.75" dy="0">Ticket</tspan><tspan x="88.75" dy="15">sales</tspan></text>
+    <text x="170.25" y="432" text-anchor="middle" data-full-label="Sponsorships"><title>Sponsorships</title>Sponsorsh…</text>
+    <text x="251.75" y="432" text-anchor="middle" data-full-label="Food vendors"><tspan x="251.75" dy="0">Food</tspan><tspan x="251.75" dy="15">vendors</tspan></text>
+    <text x="333.25" y="432" text-anchor="middle" data-full-label="Beer garden"><tspan x="333.25" dy="0">Beer</tspan><tspan x="333.25" dy="15">garden</tspan></text>
     <text x="414.75" y="432" text-anchor="middle" data-full-label="Permits">Permits</text>
     <text x="496.25" y="432" text-anchor="middle" data-full-label="Sound">Sound</text>
     <text x="577.75" y="432" text-anchor="middle" data-full-label="Staff">Staff</text>

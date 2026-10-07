@@ -6,18 +6,18 @@
   <path d="M74 374 L700 374" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <path d="M178.33 374 L178.33 380 M387 374 L387 380 M595.67 374 L595.67 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="374" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="60" y="297.5" text-anchor="end" dominant-baseline="middle">2,000</text>
-    <text x="60" y="221" text-anchor="end" dominant-baseline="middle">4,000</text>
-    <text x="60" y="144.5" text-anchor="end" dominant-baseline="middle">6,000</text>
-    <text x="60" y="68" text-anchor="end" dominant-baseline="middle">8,000</text>
+    <text x="66" y="374" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="297.5" text-anchor="end" dominant-baseline="middle">2,000</text>
+    <text x="66" y="221" text-anchor="end" dominant-baseline="middle">4,000</text>
+    <text x="66" y="144.5" text-anchor="end" dominant-baseline="middle">6,000</text>
+    <text x="66" y="68" text-anchor="end" dominant-baseline="middle">8,000</text>
     <text x="178.33" y="391" text-anchor="middle" font-size="11" data-full-label="raw"><title>raw</title>raw</text>
     <text x="387" y="391" text-anchor="middle" font-size="11" data-full-label="processed"><title>processed</title>processed</text>
     <text x="595.67" y="391" text-anchor="middle" font-size="11" data-full-label="archive"><title>archive</title>archive</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
     <text x="22.9" y="221" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 22.9 221)" data-axis="y">size · GB</text>
-    <text x="387" y="401" text-anchor="middle" dominant-baseline="hanging" data-axis="x">bucket</text>
+    <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">bucket</text>
   </g>
   <g>
     <path d="M146.33 374 L210.33 374 L210.33 328.1 L146.33 328.1 Z" fill="#7cb5ec" data-x="raw" data-series="size" data-y="1200"/>

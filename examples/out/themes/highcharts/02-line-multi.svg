@@ -3,10 +3,10 @@
   <desc id="mv-d5898bacb5e8c64d-desc">line chart. Walk-up still leads member through week 12. x=week. y=count. series=channel. 24 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Walk-up still leads member through week 12</title>Walk-up still leads member through week 12</text>
   <g font-size="12" font-weight="700" fill="#333333">
-    <circle cx="320.64" cy="420" r="5" fill="#7cb5ec"/>
-    <text x="329.64" y="424" data-legend="walk-up">walk-up</text>
-    <circle cx="402.72" cy="420" r="5" fill="#434348"/>
-    <text x="411.72" y="424" data-legend="member">member</text>
+    <circle cx="316.77" cy="420" r="5" fill="#7cb5ec"/>
+    <text x="325.77" y="424" data-legend="walk-up">walk-up</text>
+    <circle cx="403.02" cy="420" r="5" fill="#434348"/>
+    <text x="412.02" y="424" data-legend="member">member</text>
   </g>
   <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
     <line x1="74" x2="700" y1="273.5" y2="273.5"/>
@@ -17,11 +17,11 @@
   <path d="M74 350 L700 350" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <path d="M100.08 350 L100.08 356 M152.25 350 L152.25 356 M204.42 350 L204.42 356 M256.58 350 L256.58 356 M308.75 350 L308.75 356 M360.92 350 L360.92 356 M413.08 350 L413.08 356 M465.25 350 L465.25 356 M517.42 350 L517.42 356 M569.58 350 L569.58 356 M621.75 350 L621.75 356 M673.92 350 L673.92 356" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="350" text-anchor="end" dominant-baseline="middle">20</text>
-    <text x="60" y="273.5" text-anchor="end" dominant-baseline="middle">40</text>
-    <text x="60" y="197" text-anchor="end" dominant-baseline="middle">60</text>
-    <text x="60" y="120.5" text-anchor="end" dominant-baseline="middle">80</text>
-    <text x="60" y="44" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="66" y="350" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="66" y="273.5" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="66" y="197" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="66" y="120.5" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="66" y="44" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="100.08" y="367" text-anchor="middle" font-size="11" data-full-label="W1"><title>W1</title>W1</text>
     <text x="152.25" y="367" text-anchor="middle" font-size="11" data-full-label="W2"><title>W2</title>W2</text>
     <text x="204.42" y="367" text-anchor="middle" font-size="11" data-full-label="W3"><title>W3</title>W3</text>
@@ -37,7 +37,7 @@
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
     <text x="36.54" y="197" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 36.54 197)" data-axis="y">count</text>
-    <text x="387" y="377" text-anchor="middle" dominant-baseline="hanging" data-axis="x">week</text>
+    <text x="387" y="376.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">week</text>
   </g>
   <g fill="none">
     <path d="M100.08 181.7 L152.25 166.4 L204.42 154.93 L256.58 162.57 L308.75 143.45 L360.92 151.1 L413.08 139.63 L465.25 147.28 L517.42 135.8 L569.58 143.45 L621.75 131.98 L673.92 128.15" fill="none" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="walk-up"/>

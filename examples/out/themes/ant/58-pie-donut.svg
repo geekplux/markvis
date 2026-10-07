@@ -8,7 +8,7 @@
     <path d="M277.98 297.94 A122.4 122.4 0 0 1 277.98 154.06 L327.49 190.03 A61.2 61.2 0 0 0 327.49 261.97 Z" fill="#5D7092" stroke="#262626" stroke-opacity="0.32" stroke-width="1.5" data-label="How-to" data-raw-value="20" data-donut="1"/>
     <path d="M277.98 154.06 A122.4 122.4 0 0 1 377 103.6 L377 164.8 A61.2 61.2 0 0 0 327.49 190.03 Z" fill="#F6BD16" stroke="#262626" stroke-opacity="0.32" stroke-width="1.5" data-label="Other" data-raw-value="15" data-donut="1"/>
   </g>
-  <g fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1">
+  <g fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-leaders="1">
     <polyline points="493.41,188.18 508.63,183.23 516.63,183.23"/>
     <polyline points="357.85,346.89 355.35,362.7 347.35,362.7"/>
     <polyline points="254.6,226 238.6,226 230.6,226"/>

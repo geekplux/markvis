@@ -3,14 +3,14 @@
   <desc id="mv-ed79d7ac4511bfdd-desc">pie chart. Chrome still leads browser share at 52. x=browser. y=users. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Chrome still leads browser share at 52</title>Chrome still leads browser share at 52</text>
   <g font-size="12" font-weight="700" fill="#333333">
-    <circle cx="240.72" cy="420" r="5" fill="#7cb5ec"/>
-    <text x="249.72" y="424" data-legend="Chrome">Chrome</text>
-    <circle cx="315.36" cy="420" r="5" fill="#434348"/>
-    <text x="324.36" y="424" data-legend="Safari">Safari</text>
+    <circle cx="233.58" cy="420" r="5" fill="#7cb5ec"/>
+    <text x="242.58" y="424" data-legend="Chrome">Chrome</text>
+    <circle cx="311.79" cy="420" r="5" fill="#434348"/>
+    <text x="320.79" y="424" data-legend="Safari">Safari</text>
     <circle cx="390" cy="420" r="5" fill="#90ed7d"/>
     <text x="399" y="424" data-legend="Firefox">Firefox</text>
-    <circle cx="472.08" cy="420" r="5" fill="#f7a35c"/>
-    <text x="481.08" y="424" data-legend="Other">Other</text>
+    <circle cx="476.25" cy="420" r="5" fill="#f7a35c"/>
+    <text x="485.25" y="424" data-legend="Other">Other</text>
   </g>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0">
     <path d="M378 220 L378 100.32 A119.68 119.68 0 1 1 363 338.74 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Chrome" data-raw-value="52"/>

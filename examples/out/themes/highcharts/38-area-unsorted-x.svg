@@ -11,11 +11,11 @@
   <path d="M74 374 L700 374" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <path d="M152.25 374 L152.25 380 M308.75 374 L308.75 380 M465.25 374 L465.25 380 M621.75 374 L621.75 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="374" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="60" y="291.5" text-anchor="end" dominant-baseline="middle">10</text>
-    <text x="60" y="209" text-anchor="end" dominant-baseline="middle">20</text>
-    <text x="60" y="126.5" text-anchor="end" dominant-baseline="middle">30</text>
-    <text x="60" y="44" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="66" y="374" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="291.5" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="66" y="209" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="66" y="126.5" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="66" y="44" text-anchor="end" dominant-baseline="middle">40</text>
     <text x="152.25" y="391" text-anchor="middle" font-size="11" data-full-label="Sep"><title>Sep</title>Sep</text>
     <text x="308.75" y="391" text-anchor="middle" font-size="11" data-full-label="Feb"><title>Feb</title>Feb</text>
     <text x="465.25" y="391" text-anchor="middle" font-size="11" data-full-label="Jul"><title>Jul</title>Jul</text>
@@ -23,7 +23,7 @@
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
     <text x="43.36" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 43.36 209)" data-axis="y">count</text>
-    <text x="387" y="401" text-anchor="middle" dominant-baseline="hanging" data-axis="x">month</text>
+    <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">month</text>
   </g>
   <g fill="none">
     <path d="M152.25 44 L308.75 291.5 L465.25 126.5 L621.75 209 L621.75 374 L152.25 374 Z" fill="#7cb5ec" fill-opacity="0.28" stroke="none" data-series="count"/>

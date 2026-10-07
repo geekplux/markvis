@@ -10,10 +10,10 @@
   <path d="M74 374 L700 374" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <path d="M82 374 L82 380 M204 374 L204 380 M326 374 L326 380 M448 374 L448 380 M570 374 L570 380 M692 374 L692 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="374" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="60" y="264" text-anchor="end" dominant-baseline="middle">10</text>
-    <text x="60" y="154" text-anchor="end" dominant-baseline="middle">20</text>
-    <text x="60" y="44" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="66" y="374" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="264" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="66" y="154" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="66" y="44" text-anchor="end" dominant-baseline="middle">30</text>
     <text x="82" y="391" text-anchor="middle" font-size="11" data-full-label="0"><title>0</title>0</text>
     <text x="204" y="391" text-anchor="middle" font-size="11" data-full-label="1"><title>1</title>1</text>
     <text x="326" y="391" text-anchor="middle" font-size="11" data-full-label="2"><title>2</title>2</text>
@@ -23,7 +23,7 @@
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
     <text x="43.36" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 43.36 209)" data-axis="y">stories</text>
-    <text x="387" y="401" text-anchor="middle" dominant-baseline="hanging" data-axis="x">sprint</text>
+    <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">sprint</text>
   </g>
   <g fill="none">
     <path d="M204 154 L326 110 L448 176 L570 132 L570 374 L204 374 Z" fill="#7cb5ec" fill-opacity="0.28" stroke="none" data-series="stories"/>

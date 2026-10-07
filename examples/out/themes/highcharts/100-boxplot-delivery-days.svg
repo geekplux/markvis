@@ -5,37 +5,37 @@
   <text x="360" y="46" text-anchor="middle" font-size="12" font-weight="400" fill="#666666" data-subtitle="1">days late</text>
   <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
     <line x1="68.56" x2="68.56" y1="68" y2="170"/>
-    <line x1="211.78" x2="211.78" y1="68" y2="170"/>
-    <line x1="498.22" x2="498.22" y1="68" y2="170"/>
-    <line x1="641.44" x2="641.44" y1="68" y2="170"/>
+    <line x1="210.69" x2="210.69" y1="68" y2="170"/>
+    <line x1="494.95" x2="494.95" y1="68" y2="170"/>
+    <line x1="637.08" x2="637.08" y1="68" y2="170"/>
   </g>
-  <line x1="355" x2="355" y1="68" y2="170" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-baseline="0"/>
+  <line x1="352.82" x2="352.82" y1="68" y2="170" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-baseline="0"/>
   <g fill="#666666" font-size="11" font-weight="400">
     <text x="60.56" y="85" text-anchor="end" dominant-baseline="middle" data-full-label="Vendor A"><title>Vendor A</title><tspan x="60.56" dy="0">Vendor A</tspan></text>
     <text x="60.56" y="119" text-anchor="end" dominant-baseline="middle" data-full-label="Vendor B"><title>Vendor B</title><tspan x="60.56" dy="0">Vendor B</tspan></text>
     <text x="60.56" y="153" text-anchor="end" dominant-baseline="middle" data-full-label="Vendor C"><title>Vendor C</title><tspan x="60.56" dy="0">Vendor C</tspan></text>
     <text x="68.56" y="187" text-anchor="middle">-4</text>
-    <text x="211.78" y="187" text-anchor="middle">-2</text>
-    <text x="355" y="187" text-anchor="middle">0</text>
-    <text x="498.22" y="187" text-anchor="middle">2</text>
-    <text x="641.44" y="187" text-anchor="middle">4</text>
+    <text x="210.69" y="187" text-anchor="middle">-2</text>
+    <text x="352.82" y="187" text-anchor="middle">0</text>
+    <text x="494.95" y="187" text-anchor="middle">2</text>
+    <text x="637.08" y="187" text-anchor="middle">4</text>
   </g>
   <g data-boxplot="1">
-    <path d="M211.78 85 L283.39 85 M355 85 L355 85 M211.78 79.5 L211.78 90.5 M355 79.5 L355 90.5" fill="none" stroke="#7cb5ec" stroke-width="1.5" data-whiskers="Vendor A"/>
-    <rect x="283.39" y="74" width="71.61" height="22" fill="#7cb5ec" fill-opacity="0.28" stroke="#7cb5ec" stroke-width="1.5" data-x="Vendor A" data-n="9" data-median="0" data-q1="-1" data-q3="0"/>
-    <line x1="355" x2="355" y1="72" y2="98" stroke="#333333" stroke-width="2.5" data-x="Vendor A" data-n="9" data-median="0" data-median-tick="1"/>
-    <circle cx="498.22" cy="85" r="3" fill="#ffffff" stroke="#7cb5ec" stroke-width="1.5" data-x="Vendor A" data-y="2" data-outlier="1"/>
-    <circle cx="498.22" cy="85" r="3" fill="#ffffff" stroke="#7cb5ec" stroke-width="1.5" data-x="Vendor A" data-y="2" data-outlier="1"/>
-    <path d="M140.17 119 L211.78 119 M283.39 119 L355 119 M140.17 113.5 L140.17 124.5 M355 113.5 L355 124.5" fill="none" stroke="#7cb5ec" stroke-width="1.5" data-whiskers="Vendor B"/>
-    <rect x="211.78" y="108" width="71.61" height="22" fill="#7cb5ec" fill-opacity="0.28" stroke="#7cb5ec" stroke-width="1.5" data-x="Vendor B" data-n="9" data-median="-1" data-q1="-2" data-q3="-1"/>
-    <line x1="283.39" x2="283.39" y1="106" y2="132" stroke="#333333" stroke-width="2.5" data-x="Vendor B" data-n="9" data-median="-1" data-median-tick="1"/>
-    <path d="M498.22 153 L498.22 153 M569.83 153 L569.83 153 M498.22 147.5 L498.22 158.5 M569.83 147.5 L569.83 158.5" fill="none" stroke="#7cb5ec" stroke-width="1.5" data-whiskers="Vendor C"/>
-    <rect x="498.22" y="142" width="71.61" height="22" fill="#7cb5ec" fill-opacity="0.28" stroke="#7cb5ec" stroke-width="1.5" data-x="Vendor C" data-n="9" data-median="2" data-q1="2" data-q3="3"/>
-    <line x1="498.22" x2="498.22" y1="140" y2="166" stroke="#333333" stroke-width="2.5" data-x="Vendor C" data-n="9" data-median="2" data-median-tick="1"/>
+    <path d="M210.69 85 L281.75 85 M352.82 85 L352.82 85 M210.69 79.5 L210.69 90.5 M352.82 79.5 L352.82 90.5" fill="none" stroke="#7cb5ec" stroke-width="1.5" data-whiskers="Vendor A"/>
+    <rect x="281.75" y="74" width="71.06" height="22" fill="#7cb5ec" fill-opacity="0.28" stroke="#7cb5ec" stroke-width="1.5" data-x="Vendor A" data-n="9" data-median="0" data-q1="-1" data-q3="0"/>
+    <line x1="352.82" x2="352.82" y1="72" y2="98" stroke="#333333" stroke-width="2.5" data-x="Vendor A" data-n="9" data-median="0" data-median-tick="1"/>
+    <circle cx="494.95" cy="85" r="3" fill="#ffffff" stroke="#7cb5ec" stroke-width="1.5" data-x="Vendor A" data-y="2" data-outlier="1"/>
+    <circle cx="494.95" cy="85" r="3" fill="#ffffff" stroke="#7cb5ec" stroke-width="1.5" data-x="Vendor A" data-y="2" data-outlier="1"/>
+    <path d="M139.62 119 L210.69 119 M281.75 119 L352.82 119 M139.62 113.5 L139.62 124.5 M352.82 113.5 L352.82 124.5" fill="none" stroke="#7cb5ec" stroke-width="1.5" data-whiskers="Vendor B"/>
+    <rect x="210.69" y="108" width="71.06" height="22" fill="#7cb5ec" fill-opacity="0.28" stroke="#7cb5ec" stroke-width="1.5" data-x="Vendor B" data-n="9" data-median="-1" data-q1="-2" data-q3="-1"/>
+    <line x1="281.75" x2="281.75" y1="106" y2="132" stroke="#333333" stroke-width="2.5" data-x="Vendor B" data-n="9" data-median="-1" data-median-tick="1"/>
+    <path d="M494.95 153 L494.95 153 M566.01 153 L566.01 153 M494.95 147.5 L494.95 158.5 M566.01 147.5 L566.01 158.5" fill="none" stroke="#7cb5ec" stroke-width="1.5" data-whiskers="Vendor C"/>
+    <rect x="494.95" y="142" width="71.06" height="22" fill="#7cb5ec" fill-opacity="0.28" stroke="#7cb5ec" stroke-width="1.5" data-x="Vendor C" data-n="9" data-median="2" data-q1="2" data-q3="3"/>
+    <line x1="494.95" x2="494.95" y1="140" y2="166" stroke="#333333" stroke-width="2.5" data-x="Vendor C" data-n="9" data-median="2" data-median-tick="1"/>
   </g>
   <g fill="#333333" font-size="11" font-weight="700">
-    <text x="653.44" y="85" dominant-baseline="middle" data-value-label="Vendor A">0<tspan fill="#666666" font-weight="400"> · n=9</tspan></text>
-    <text x="653.44" y="119" dominant-baseline="middle" data-value-label="Vendor B">-1<tspan fill="#666666" font-weight="400"> · n=9</tspan></text>
-    <text x="653.44" y="153" dominant-baseline="middle" data-value-label="Vendor C">2<tspan fill="#666666" font-weight="400"> · n=9</tspan></text>
+    <text x="649.08" y="85" dominant-baseline="middle" data-value-label="Vendor A">0<tspan fill="#666666" font-weight="400"> · n=9</tspan></text>
+    <text x="649.08" y="119" dominant-baseline="middle" data-value-label="Vendor B">-1<tspan fill="#666666" font-weight="400"> · n=9</tspan></text>
+    <text x="649.08" y="153" dominant-baseline="middle" data-value-label="Vendor C">2<tspan fill="#666666" font-weight="400"> · n=9</tspan></text>
   </g>
 </svg>

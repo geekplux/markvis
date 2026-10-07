@@ -43,7 +43,7 @@
     <rect x="582.16" y="321.91" width="14" height="47.02" fill="#334155" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Cooling" data-y="22"/>
     <rect x="582.16" y="376.93" width="14" height="34.19" fill="#334155" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Lighting" data-y="16"/>
   </g>
-  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400">
+  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">
     <text x="113.02" y="71.92" text-anchor="end" dominant-baseline="middle" data-node-label="Coal"><title>Coal</title>Coal</text>
     <text x="268.07" y="253" text-anchor="end" dominant-baseline="middle" data-node-label="Electricity"><title>Electricity</title>Electricity</text>
     <text x="113.02" y="363.55" text-anchor="end" dominant-baseline="middle" data-node-label="Natural gas"><title>Natural gas</title>Natural gas</text>

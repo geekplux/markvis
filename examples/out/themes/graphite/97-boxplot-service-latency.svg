@@ -4,35 +4,35 @@
   <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Search answers fastest but has the longest tail</title>Search answers fastest but has the longest tail</text>
   <text x="52" y="50" text-anchor="start" font-size="12" font-weight="400" fill="#8E8D87" data-subtitle="1">ms</text>
   <g fill="none" stroke="#1B1B19" stroke-opacity="0.22" stroke-width="0.5">
-    <line x1="254.24" x2="254.24" y1="77" y2="179"/>
-    <line x1="437.92" x2="437.92" y1="77" y2="179"/>
-    <line x1="621.6" x2="621.6" y1="77" y2="179"/>
+    <line x1="255.17" x2="255.17" y1="77" y2="179"/>
+    <line x1="435.41" x2="435.41" y1="77" y2="179"/>
+    <line x1="615.65" x2="615.65" y1="77" y2="179"/>
   </g>
-  <line x1="70.56" x2="70.56" y1="77" y2="179" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-baseline="0"/>
+  <line x1="74.92" x2="74.92" y1="77" y2="179" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-baseline="0"/>
   <g fill="#8E8D87" font-size="11" font-weight="600">
-    <text x="60.56" y="94" text-anchor="end" dominant-baseline="middle" data-full-label="Search"><title>Search</title><tspan x="60.56" dy="0">Search</tspan></text>
-    <text x="60.56" y="128" text-anchor="end" dominant-baseline="middle" data-full-label="Checkout"><title>Checkout</title><tspan x="60.56" dy="0">Checkout</tspan></text>
-    <text x="60.56" y="162" text-anchor="end" dominant-baseline="middle" data-full-label="Profile"><title>Profile</title><tspan x="60.56" dy="0">Profile</tspan></text>
-    <text x="70.56" y="196" text-anchor="middle">0</text>
-    <text x="254.24" y="196" text-anchor="middle">50</text>
-    <text x="437.92" y="196" text-anchor="middle">100</text>
-    <text x="621.6" y="196" text-anchor="middle">150</text>
+    <text x="64.92" y="94" text-anchor="end" dominant-baseline="middle" data-full-label="Search"><title>Search</title><tspan x="64.92" dy="0">Search</tspan></text>
+    <text x="64.92" y="128" text-anchor="end" dominant-baseline="middle" data-full-label="Checkout"><title>Checkout</title><tspan x="64.92" dy="0">Checkout</tspan></text>
+    <text x="64.92" y="162" text-anchor="end" dominant-baseline="middle" data-full-label="Profile"><title>Profile</title><tspan x="64.92" dy="0">Profile</tspan></text>
+    <text x="74.92" y="196" text-anchor="middle">0</text>
+    <text x="255.17" y="196" text-anchor="middle">50</text>
+    <text x="435.41" y="196" text-anchor="middle">100</text>
+    <text x="615.65" y="196" text-anchor="middle">150</text>
   </g>
   <g data-boxplot="1">
-    <path d="M210.16 94 L216.59 94 M233.12 94 L235.87 94 M210.16 88.5 L210.16 99.5 M235.87 88.5 L235.87 99.5" fill="none" stroke="#1B1B19" stroke-width="1.5" data-whiskers="Search"/>
-    <rect x="216.59" y="83" width="16.53" height="22" rx="4" fill="#1B1B19" fill-opacity="0.28" stroke="#1B1B19" stroke-width="1.5" data-x="Search" data-n="8" data-median="41.5" data-q1="39.75" data-q3="44.25"/>
-    <line x1="223.01" x2="223.01" y1="81" y2="107" stroke="#1B1B19" stroke-width="2.5" data-x="Search" data-n="8" data-median="41.5" data-median-tick="1"/>
-    <circle cx="511.39" cy="94" r="3" fill="#ffffff" stroke="#1B1B19" stroke-width="1.5" data-x="Search" data-y="120" data-outlier="1"/>
-    <path d="M382.82 128 L395.67 128 M416.8 128 L434.25 128 M382.82 122.5 L382.82 133.5 M434.25 122.5 L434.25 133.5" fill="none" stroke="#1B1B19" stroke-width="1.5" data-whiskers="Checkout"/>
-    <rect x="395.67" y="117" width="21.12" height="22" rx="4" fill="#1B1B19" fill-opacity="0.28" stroke="#1B1B19" stroke-width="1.5" data-x="Checkout" data-n="6" data-median="91" data-q1="88.5" data-q3="94.25"/>
-    <line x1="404.86" x2="404.86" y1="115" y2="141" stroke="#1B1B19" stroke-width="2.5" data-x="Checkout" data-n="6" data-median="91" data-median-tick="1"/>
-    <path d="M283.63 162 L296.49 162 M324.04 162 L342.41 162 M283.63 156.5 L283.63 167.5 M342.41 156.5 L342.41 167.5" fill="none" stroke="#1B1B19" stroke-width="1.5" data-whiskers="Profile"/>
-    <rect x="296.49" y="151" width="27.55" height="22" rx="4" fill="#1B1B19" fill-opacity="0.28" stroke="#1B1B19" stroke-width="1.5" data-x="Profile" data-n="6" data-median="64.5" data-q1="61.5" data-q3="69"/>
-    <line x1="307.51" x2="307.51" y1="149" y2="175" stroke="#1B1B19" stroke-width="2.5" data-x="Profile" data-n="6" data-median="64.5" data-median-tick="1"/>
+    <path d="M211.91 94 L218.22 94 M234.44 94 L237.14 94 M211.91 88.5 L211.91 99.5 M237.14 88.5 L237.14 99.5" fill="none" stroke="#1B1B19" stroke-width="1.5" data-whiskers="Search"/>
+    <rect x="218.22" y="83" width="16.22" height="22" rx="4" fill="#1B1B19" fill-opacity="0.28" stroke="#1B1B19" stroke-width="1.5" data-x="Search" data-n="8" data-median="41.5" data-q1="39.75" data-q3="44.25"/>
+    <line x1="224.52" x2="224.52" y1="81" y2="107" stroke="#1B1B19" stroke-width="2.5" data-x="Search" data-n="8" data-median="41.5" data-median-tick="1"/>
+    <circle cx="507.5" cy="94" r="3" fill="#ffffff" stroke="#1B1B19" stroke-width="1.5" data-x="Search" data-y="120" data-outlier="1"/>
+    <path d="M381.33 128 L393.95 128 M414.68 128 L431.8 128 M381.33 122.5 L381.33 133.5 M431.8 122.5 L431.8 133.5" fill="none" stroke="#1B1B19" stroke-width="1.5" data-whiskers="Checkout"/>
+    <rect x="393.95" y="117" width="20.73" height="22" rx="4" fill="#1B1B19" fill-opacity="0.28" stroke="#1B1B19" stroke-width="1.5" data-x="Checkout" data-n="6" data-median="91" data-q1="88.5" data-q3="94.25"/>
+    <line x1="402.96" x2="402.96" y1="115" y2="141" stroke="#1B1B19" stroke-width="2.5" data-x="Checkout" data-n="6" data-median="91" data-median-tick="1"/>
+    <path d="M284 162 L296.62 162 M323.66 162 L341.68 162 M284 156.5 L284 167.5 M341.68 156.5 L341.68 167.5" fill="none" stroke="#1B1B19" stroke-width="1.5" data-whiskers="Profile"/>
+    <rect x="296.62" y="151" width="27.04" height="22" rx="4" fill="#1B1B19" fill-opacity="0.28" stroke="#1B1B19" stroke-width="1.5" data-x="Profile" data-n="6" data-median="64.5" data-q1="61.5" data-q3="69"/>
+    <line x1="307.44" x2="307.44" y1="149" y2="175" stroke="#1B1B19" stroke-width="2.5" data-x="Profile" data-n="6" data-median="64.5" data-median-tick="1"/>
   </g>
   <g fill="#1B1B19" font-size="12" font-weight="800">
-    <text x="633.6" y="94" dominant-baseline="middle" data-value-label="Search">41.5<tspan fill="#8E8D87" font-weight="400"> · n=8</tspan></text>
-    <text x="633.6" y="128" dominant-baseline="middle" data-value-label="Checkout">91<tspan fill="#8E8D87" font-weight="400"> · n=6</tspan></text>
-    <text x="633.6" y="162" dominant-baseline="middle" data-value-label="Profile">64.5<tspan fill="#8E8D87" font-weight="400"> · n=6</tspan></text>
+    <text x="627.65" y="94" dominant-baseline="middle" data-value-label="Search">41.5<tspan fill="#8E8D87" font-weight="400"> · n=8</tspan></text>
+    <text x="627.65" y="128" dominant-baseline="middle" data-value-label="Checkout">91<tspan fill="#8E8D87" font-weight="400"> · n=6</tspan></text>
+    <text x="627.65" y="162" dominant-baseline="middle" data-value-label="Profile">64.5<tspan fill="#8E8D87" font-weight="400"> · n=6</tspan></text>
   </g>
 </svg>

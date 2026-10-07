@@ -4,39 +4,39 @@
   <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Decatur commutes vary the most</title>Decatur commutes vary the most</text>
   <text x="52" y="50" text-anchor="start" font-size="12" font-weight="400" fill="#8E8D87" data-subtitle="1">min</text>
   <g fill="none" stroke="#1B1B19" stroke-opacity="0.22" stroke-width="0.5">
-    <line x1="84.2" x2="84.2" y1="77" y2="179"/>
-    <line x1="191.68" x2="191.68" y1="77" y2="179"/>
-    <line x1="299.16" x2="299.16" y1="77" y2="179"/>
-    <line x1="406.64" x2="406.64" y1="77" y2="179"/>
-    <line x1="514.12" x2="514.12" y1="77" y2="179"/>
-    <line x1="621.6" x2="621.6" y1="77" y2="179"/>
+    <line x1="89.66" x2="89.66" y1="77" y2="179"/>
+    <line x1="194.85" x2="194.85" y1="77" y2="179"/>
+    <line x1="300.05" x2="300.05" y1="77" y2="179"/>
+    <line x1="405.25" x2="405.25" y1="77" y2="179"/>
+    <line x1="510.45" x2="510.45" y1="77" y2="179"/>
+    <line x1="615.65" x2="615.65" y1="77" y2="179"/>
   </g>
   <g fill="#8E8D87" font-size="11" font-weight="600">
-    <text x="74.2" y="94" text-anchor="end" dominant-baseline="middle" data-full-label="Midtown"><title>Midtown</title><tspan x="74.2" dy="0">Midtown</tspan></text>
-    <text x="74.2" y="128" text-anchor="end" dominant-baseline="middle" data-full-label="Decatur"><title>Decatur</title><tspan x="74.2" dy="0">Decatur</tspan></text>
-    <text x="74.2" y="162" text-anchor="end" dominant-baseline="middle" data-full-label="Grant Park"><title>Grant Park</title><tspan x="74.2" dy="0">Grant Park</tspan></text>
-    <text x="84.2" y="196" text-anchor="middle">10</text>
-    <text x="191.68" y="196" text-anchor="middle">20</text>
-    <text x="299.16" y="196" text-anchor="middle">30</text>
-    <text x="406.64" y="196" text-anchor="middle">40</text>
-    <text x="514.12" y="196" text-anchor="middle">50</text>
-    <text x="621.6" y="196" text-anchor="middle">60</text>
+    <text x="79.66" y="94" text-anchor="end" dominant-baseline="middle" data-full-label="Midtown"><title>Midtown</title><tspan x="79.66" dy="0">Midtown</tspan></text>
+    <text x="79.66" y="128" text-anchor="end" dominant-baseline="middle" data-full-label="Decatur"><title>Decatur</title><tspan x="79.66" dy="0">Decatur</tspan></text>
+    <text x="79.66" y="162" text-anchor="end" dominant-baseline="middle" data-full-label="Grant Park"><title>Grant Park</title><tspan x="79.66" dy="0">Grant Park</tspan></text>
+    <text x="89.66" y="196" text-anchor="middle">10</text>
+    <text x="194.85" y="196" text-anchor="middle">20</text>
+    <text x="300.05" y="196" text-anchor="middle">30</text>
+    <text x="405.25" y="196" text-anchor="middle">40</text>
+    <text x="510.45" y="196" text-anchor="middle">50</text>
+    <text x="615.65" y="196" text-anchor="middle">60</text>
   </g>
   <g data-boxplot="1">
-    <path d="M170.18 94 L183.62 94 M210.49 94 L245.42 94 M170.18 88.5 L170.18 99.5 M245.42 88.5 L245.42 99.5" fill="none" stroke="#1B1B19" stroke-width="1.5" data-whiskers="Midtown"/>
-    <rect x="183.62" y="83" width="26.87" height="22" rx="4" fill="#1B1B19" fill-opacity="0.28" stroke="#1B1B19" stroke-width="1.5" data-x="Midtown" data-n="6" data-median="20.5" data-q1="19.25" data-q3="21.75"/>
-    <line x1="197.05" x2="197.05" y1="81" y2="107" stroke="#1B1B19" stroke-width="2.5" data-x="Midtown" data-n="6" data-median="20.5" data-median-tick="1"/>
-    <path d="M234.67 128 L299.16 128 M406.64 128 L535.62 128 M234.67 122.5 L234.67 133.5 M535.62 122.5 L535.62 133.5" fill="none" stroke="#1B1B19" stroke-width="1.5" data-whiskers="Decatur"/>
-    <rect x="299.16" y="117" width="107.48" height="22" rx="4" fill="#1B1B19" fill-opacity="0.28" stroke="#1B1B19" stroke-width="1.5" data-x="Decatur" data-n="6" data-median="35" data-q1="30" data-q3="40"/>
-    <line x1="352.9" x2="352.9" y1="115" y2="141" stroke="#1B1B19" stroke-width="2.5" data-x="Decatur" data-n="6" data-median="35" data-median-tick="1"/>
-    <circle cx="266.92" cy="162" r="3.5" fill="#1B1B19" fill-opacity="0.75" data-x="Grant Park" data-y="27" data-point="1"/>
-    <circle cx="309.91" cy="162" r="3.5" fill="#1B1B19" fill-opacity="0.75" data-x="Grant Park" data-y="31" data-point="1"/>
-    <circle cx="256.17" cy="162" r="3.5" fill="#1B1B19" fill-opacity="0.75" data-x="Grant Park" data-y="26" data-point="1"/>
-    <line x1="266.92" x2="266.92" y1="149" y2="175" stroke="#1B1B19" stroke-width="2.5" data-x="Grant Park" data-n="3" data-median="27" data-median-tick="1"/>
+    <path d="M173.81 94 L186.96 94 M213.26 94 L247.45 94 M173.81 88.5 L173.81 99.5 M247.45 88.5 L247.45 99.5" fill="none" stroke="#1B1B19" stroke-width="1.5" data-whiskers="Midtown"/>
+    <rect x="186.96" y="83" width="26.3" height="22" rx="4" fill="#1B1B19" fill-opacity="0.28" stroke="#1B1B19" stroke-width="1.5" data-x="Midtown" data-n="6" data-median="20.5" data-q1="19.25" data-q3="21.75"/>
+    <line x1="200.11" x2="200.11" y1="81" y2="107" stroke="#1B1B19" stroke-width="2.5" data-x="Midtown" data-n="6" data-median="20.5" data-median-tick="1"/>
+    <path d="M236.93 128 L300.05 128 M405.25 128 L531.49 128 M236.93 122.5 L236.93 133.5 M531.49 122.5 L531.49 133.5" fill="none" stroke="#1B1B19" stroke-width="1.5" data-whiskers="Decatur"/>
+    <rect x="300.05" y="117" width="105.2" height="22" rx="4" fill="#1B1B19" fill-opacity="0.28" stroke="#1B1B19" stroke-width="1.5" data-x="Decatur" data-n="6" data-median="35" data-q1="30" data-q3="40"/>
+    <line x1="352.65" x2="352.65" y1="115" y2="141" stroke="#1B1B19" stroke-width="2.5" data-x="Decatur" data-n="6" data-median="35" data-median-tick="1"/>
+    <circle cx="268.49" cy="162" r="3.5" fill="#1B1B19" fill-opacity="0.75" data-x="Grant Park" data-y="27" data-point="1"/>
+    <circle cx="310.57" cy="162" r="3.5" fill="#1B1B19" fill-opacity="0.75" data-x="Grant Park" data-y="31" data-point="1"/>
+    <circle cx="257.97" cy="162" r="3.5" fill="#1B1B19" fill-opacity="0.75" data-x="Grant Park" data-y="26" data-point="1"/>
+    <line x1="268.49" x2="268.49" y1="149" y2="175" stroke="#1B1B19" stroke-width="2.5" data-x="Grant Park" data-n="3" data-median="27" data-median-tick="1"/>
   </g>
   <g fill="#1B1B19" font-size="12" font-weight="800">
-    <text x="633.6" y="94" dominant-baseline="middle" data-value-label="Midtown">20.5<tspan fill="#8E8D87" font-weight="400"> · n=6</tspan></text>
-    <text x="633.6" y="128" dominant-baseline="middle" data-value-label="Decatur">35<tspan fill="#8E8D87" font-weight="400"> · n=6</tspan></text>
-    <text x="633.6" y="162" dominant-baseline="middle" data-value-label="Grant Park">27<tspan fill="#8E8D87" font-weight="400"> · n=3</tspan></text>
+    <text x="627.65" y="94" dominant-baseline="middle" data-value-label="Midtown">20.5<tspan fill="#8E8D87" font-weight="400"> · n=6</tspan></text>
+    <text x="627.65" y="128" dominant-baseline="middle" data-value-label="Decatur">35<tspan fill="#8E8D87" font-weight="400"> · n=6</tspan></text>
+    <text x="627.65" y="162" dominant-baseline="middle" data-value-label="Grant Park">27<tspan fill="#8E8D87" font-weight="400"> · n=3</tspan></text>
   </g>
 </svg>

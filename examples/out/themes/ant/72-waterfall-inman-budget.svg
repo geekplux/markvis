@@ -2,7 +2,7 @@
   <title id="mv-b41458dc112446f3-title">Sponsorships still cover Inman Park sound after permits</title>
   <desc id="mv-b41458dc112446f3-desc">waterfall chart. Sponsorships still cover Inman Park sound after permits. x=step. y=delta. unit=USD k. 8 rows.</desc>
   <text x="66" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Sponsorships still cover Inman Park sound after permits</title><tspan x="66" dy="0">Sponsorships still cover Inman Park sound after</tspan><tspan x="66" dy="23">permits</tspan><tspan font-size="12" font-weight="400" fill="#8C8C8C"> · USD k</tspan></text>
-  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1">
+  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4">
     <line x1="66" x2="706" y1="272.25" y2="272.25"/>
     <line x1="66" x2="706" y1="204.5" y2="204.5"/>
     <line x1="66" x2="706" y1="136.75" y2="136.75"/>
@@ -41,10 +41,10 @@
     <text x="58" y="204.5" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="58" y="136.75" text-anchor="end" dominant-baseline="middle">150</text>
     <text x="58" y="69" text-anchor="end" dominant-baseline="middle">200</text>
-    <text x="106" y="352" text-anchor="middle" data-full-label="Ticket sales">Ticket sales</text>
-    <text x="186" y="352" text-anchor="middle" data-full-label="Sponsorships">Sponsorships</text>
-    <text x="266" y="352" text-anchor="middle" data-full-label="Food vendors">Food vendors</text>
-    <text x="346" y="352" text-anchor="middle" data-full-label="Beer garden">Beer garden</text>
+    <text x="106" y="352" text-anchor="middle" data-full-label="Ticket sales"><tspan x="106" dy="0">Ticket</tspan><tspan x="106" dy="15">sales</tspan></text>
+    <text x="186" y="352" text-anchor="middle" data-full-label="Sponsorships"><title>Sponsorships</title>Sponsorsh…</text>
+    <text x="266" y="352" text-anchor="middle" data-full-label="Food vendors"><tspan x="266" dy="0">Food</tspan><tspan x="266" dy="15">vendors</tspan></text>
+    <text x="346" y="352" text-anchor="middle" data-full-label="Beer garden"><tspan x="346" dy="0">Beer</tspan><tspan x="346" dy="15">garden</tspan></text>
     <text x="426" y="352" text-anchor="middle" data-full-label="Permits">Permits</text>
     <text x="506" y="352" text-anchor="middle" data-full-label="Sound">Sound</text>
     <text x="586" y="352" text-anchor="middle" data-full-label="Staff">Staff</text>

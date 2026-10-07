@@ -29,7 +29,7 @@
     <rect x="561.7" y="52" width="14" height="240.58" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-node="Midtown hotels" data-y="1,900"/>
     <rect x="561.7" y="300.58" width="14" height="111.42" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-node="Downtown hotels" data-y="880"/>
   </g>
-  <g fill="#666666" font-size="11" font-weight="400">
+  <g fill="#666666" font-size="11" font-weight="400" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">
     <text x="153.94" y="176.09" text-anchor="end" dominant-baseline="middle" data-node-label="Domestic Terminal"><title>Domestic Terminal</title>Domestic Terminal</text>
     <text x="377.82" y="114.27" text-anchor="start" dominant-baseline="middle" data-node-label="MARTA"><title>MARTA</title>MARTA</text>
     <text x="377.82" y="259.02" text-anchor="start" dominant-baseline="middle" data-node-label="Rideshare"><title>Rideshare</title>Rideshare</text>

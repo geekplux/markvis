@@ -10,7 +10,7 @@
     <rect x="396.28" y="425" width="10" height="10" fill="#ffc658" rx="1"/>
     <text x="410.28" y="434" data-legend="Usher">Usher</text>
   </g>
-  <g fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-radar-grid="1">
+  <g fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1" stroke-dasharray="3 3" data-radar-grid="1">
     <path d="M363.12 146.89 L426 192.57 L401.98 266.49 L324.26 266.49 L300.24 192.57 Z"/>
     <line x1="363.12" y1="213" x2="363.12" y2="94"/>
     <line x1="363.12" y1="213" x2="476.3" y2="176.23"/>

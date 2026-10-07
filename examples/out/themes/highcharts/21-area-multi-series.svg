@@ -3,8 +3,8 @@
   <desc id="mv-8c2fdefb06435294-desc">area chart. Queue A stays deeper than queue B. x=minute. y=depth. series=queue. 6 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Queue A stays deeper than queue B</title>Queue A stays deeper than queue B</text>
   <g font-size="12" font-weight="700" fill="#333333">
-    <circle cx="361.56" cy="420" r="5" fill="#7cb5ec"/>
-    <text x="370.56" y="424" data-legend="A">A</text>
+    <circle cx="360.96" cy="420" r="5" fill="#7cb5ec"/>
+    <text x="369.96" y="424" data-legend="A">A</text>
     <circle cx="399" cy="420" r="5" fill="#434348"/>
     <text x="408" y="424" data-legend="B">B</text>
   </g>
@@ -17,11 +17,11 @@
   <path d="M74 350 L700 350" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <path d="M82 350 L82 356 M234.5 350 L234.5 356 M387 350 L387 356 M539.5 350 L539.5 356 M692 350 L692 356" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="350" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="60" y="273.5" text-anchor="end" dominant-baseline="middle">2</text>
-    <text x="60" y="197" text-anchor="end" dominant-baseline="middle">4</text>
-    <text x="60" y="120.5" text-anchor="end" dominant-baseline="middle">6</text>
-    <text x="60" y="44" text-anchor="end" dominant-baseline="middle">8</text>
+    <text x="66" y="350" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="273.5" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="66" y="197" text-anchor="end" dominant-baseline="middle">4</text>
+    <text x="66" y="120.5" text-anchor="end" dominant-baseline="middle">6</text>
+    <text x="66" y="44" text-anchor="end" dominant-baseline="middle">8</text>
     <text x="82" y="367" text-anchor="middle" font-size="11" data-full-label="-1"><title>-1</title>-1</text>
     <text x="234.5" y="367" text-anchor="middle" font-size="11" data-full-label="0"><title>0</title>0</text>
     <text x="387" y="367" text-anchor="middle" font-size="11" data-full-label="1"><title>1</title>1</text>
@@ -30,7 +30,7 @@
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
     <text x="50.18" y="197" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 50.18 197)" data-axis="y">depth</text>
-    <text x="387" y="377" text-anchor="middle" dominant-baseline="hanging" data-axis="x">minute</text>
+    <text x="387" y="376.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">minute</text>
   </g>
   <g fill="none">
     <path d="M234.5 158.75 L387 82.25 L539.5 120.5 L539.5 350 L234.5 350 Z" fill="#7cb5ec" fill-opacity="0.28" stroke="none" data-series="A"/>

@@ -4,43 +4,43 @@
   <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Payments missed its 99.95% uptime SLA in September</title>Payments missed its 99.95% uptime SLA in September</text>
   <text x="52" y="50" text-anchor="start" font-size="12" font-weight="400" fill="#8E8D87" data-subtitle="1">%</text>
   <g fill="none" stroke="#1B1B19" stroke-opacity="0.22" stroke-width="0.5">
-    <line x1="104.66" x2="104.66" y1="77" y2="213"/>
-    <line x1="351.97" x2="351.97" y1="77" y2="213"/>
-    <line x1="599.28" x2="599.28" y1="77" y2="213"/>
+    <line x1="111.75" x2="111.75" y1="77" y2="213"/>
+    <line x1="351.65" x2="351.65" y1="77" y2="213"/>
+    <line x1="591.54" x2="591.54" y1="77" y2="213"/>
   </g>
   <g fill="#8E8D87" font-size="11" font-weight="600">
-    <text x="94.66" y="94" text-anchor="end" dominant-baseline="middle" data-full-label="Checkout"><title>Checkout</title><tspan x="94.66" dy="0">Checkout</tspan></text>
-    <text x="94.66" y="128" text-anchor="end" dominant-baseline="middle" data-full-label="Payments"><title>Payments</title><tspan x="94.66" dy="0">Payments</tspan></text>
-    <text x="94.66" y="162" text-anchor="end" dominant-baseline="middle" data-full-label="Search"><title>Search</title><tspan x="94.66" dy="0">Search</tspan></text>
-    <text x="94.66" y="196" text-anchor="end" dominant-baseline="middle" data-full-label="Notifications"><title>Notifications</title><tspan x="94.66" dy="0">Notifications</tspan></text>
-    <text x="104.66" y="230" text-anchor="middle">99</text>
-    <text x="351.97" y="230" text-anchor="middle">99.5</text>
-    <text x="599.28" y="230" text-anchor="middle">100</text>
+    <text x="101.75" y="94" text-anchor="end" dominant-baseline="middle" data-full-label="Checkout"><title>Checkout</title><tspan x="101.75" dy="0">Checkout</tspan></text>
+    <text x="101.75" y="128" text-anchor="end" dominant-baseline="middle" data-full-label="Payments"><title>Payments</title><tspan x="101.75" dy="0">Payments</tspan></text>
+    <text x="101.75" y="162" text-anchor="end" dominant-baseline="middle" data-full-label="Search"><title>Search</title><tspan x="101.75" dy="0">Search</tspan></text>
+    <text x="101.75" y="196" text-anchor="end" dominant-baseline="middle" data-full-label="Notifications"><title>Notifications</title><tspan x="101.75" dy="0">Notifications</tspan></text>
+    <text x="111.75" y="230" text-anchor="middle">99</text>
+    <text x="351.65" y="230" text-anchor="middle">99.5</text>
+    <text x="591.54" y="230" text-anchor="middle">100</text>
   </g>
   <g font-size="11" font-weight="500" fill="#1B1B19">
-    <circle cx="109.66" cy="250" r="4.5" fill="#1B1B19"/>
-    <text x="118.66" y="254" data-legend="uptime">uptime</text>
-    <rect x="179.58" y="244" width="2.5" height="12" fill="#1B1B19"/>
-    <text x="189.58" y="254" data-legend="sla">sla</text>
+    <circle cx="116.75" cy="250" r="4.5" fill="#1B1B19"/>
+    <text x="125.75" y="254" data-legend="uptime">uptime</text>
+    <rect x="186.67" y="244" width="2.5" height="12" fill="#1B1B19"/>
+    <text x="196.67" y="254" data-legend="sla">sla</text>
   </g>
   <g data-bullet="1">
-    <rect x="104.66" y="82" width="494.62" height="24" fill="#1B1B19" fill-opacity="0.07" data-track="Checkout"/>
-    <path d="M104.66 89 L584.39 89 Q589.39 89 589.39 94 L589.39 94 Q589.39 99 584.39 99 L104.66 99 Z" fill="#1B1B19" data-x="Checkout" data-y="99.98"/>
-    <line x1="574.55" x2="574.55" y1="84" y2="104" stroke="#1B1B19" stroke-width="2.5" data-target="99.95"/>
-    <rect x="104.66" y="116" width="494.62" height="24" fill="#1B1B19" fill-opacity="0.07" data-track="Payments"/>
-    <path d="M104.66 123 L549.76 123 Q554.76 123 554.76 128 L554.76 128 Q554.76 133 549.76 133 L104.66 133 Z" fill="#1B1B19" data-x="Payments" data-y="99.91"/>
-    <line x1="574.55" x2="574.55" y1="118" y2="138" stroke="#1B1B19" stroke-width="2.5" data-target="99.95"/>
-    <rect x="104.66" y="150" width="494.62" height="24" fill="#1B1B19" fill-opacity="0.07" data-track="Search"/>
-    <path d="M104.66 157 L579.44 157 Q584.44 157 584.44 162 L584.44 162 Q584.44 167 579.44 167 L104.66 167 Z" fill="#1B1B19" data-x="Search" data-y="99.97"/>
-    <line x1="549.82" x2="549.82" y1="152" y2="172" stroke="#1B1B19" stroke-width="2.5" data-target="99.9"/>
-    <rect x="104.66" y="184" width="494.62" height="24" fill="#1B1B19" fill-opacity="0.07" data-track="Notifications"/>
-    <path d="M104.66 191 L406.32 191 Q411.32 191 411.32 196 L411.32 196 Q411.32 201 406.32 201 L104.66 201 Z" fill="#1B1B19" data-x="Notifications" data-y="99.62"/>
-    <line x1="351.97" x2="351.97" y1="186" y2="206" stroke="#1B1B19" stroke-width="2.5" data-target="99.5"/>
+    <rect x="111.75" y="82" width="479.79" height="24" fill="#1B1B19" fill-opacity="0.07" data-track="Checkout"/>
+    <path d="M111.75 89 L576.95 89 Q581.95 89 581.95 94 L581.95 94 Q581.95 99 576.95 99 L111.75 99 Z" fill="#1B1B19" data-x="Checkout" data-y="99.98"/>
+    <line x1="567.55" x2="567.55" y1="84" y2="104" stroke="#1B1B19" stroke-width="2.5" data-target="99.95"/>
+    <rect x="111.75" y="116" width="479.79" height="24" fill="#1B1B19" fill-opacity="0.07" data-track="Payments"/>
+    <path d="M111.75 123 L543.36 123 Q548.36 123 548.36 128 L548.36 128 Q548.36 133 543.36 133 L111.75 133 Z" fill="#1B1B19" data-x="Payments" data-y="99.91"/>
+    <line x1="567.55" x2="567.55" y1="118" y2="138" stroke="#1B1B19" stroke-width="2.5" data-target="99.95"/>
+    <rect x="111.75" y="150" width="479.79" height="24" fill="#1B1B19" fill-opacity="0.07" data-track="Search"/>
+    <path d="M111.75 157 L572.15 157 Q577.15 157 577.15 162 L577.15 162 Q577.15 167 572.15 167 L111.75 167 Z" fill="#1B1B19" data-x="Search" data-y="99.97"/>
+    <line x1="543.56" x2="543.56" y1="152" y2="172" stroke="#1B1B19" stroke-width="2.5" data-target="99.9"/>
+    <rect x="111.75" y="184" width="479.79" height="24" fill="#1B1B19" fill-opacity="0.07" data-track="Notifications"/>
+    <path d="M111.75 191 L404.22 191 Q409.22 191 409.22 196 L409.22 196 Q409.22 201 404.22 201 L111.75 201 Z" fill="#1B1B19" data-x="Notifications" data-y="99.62"/>
+    <line x1="351.65" x2="351.65" y1="186" y2="206" stroke="#1B1B19" stroke-width="2.5" data-target="99.5"/>
   </g>
   <g fill="#1B1B19" font-size="12" font-weight="800">
-    <text x="611.28" y="94" dominant-baseline="middle" data-value-label="Checkout">99.98<tspan fill="#8E8D87" font-weight="400"> / 99.95</tspan></text>
-    <text x="611.28" y="128" dominant-baseline="middle" data-value-label="Payments">99.91<tspan fill="#8E8D87" font-weight="400"> / 99.95</tspan></text>
-    <text x="611.28" y="162" dominant-baseline="middle" data-value-label="Search">99.97<tspan fill="#8E8D87" font-weight="400"> / 99.9</tspan></text>
-    <text x="611.28" y="196" dominant-baseline="middle" data-value-label="Notifications">99.62<tspan fill="#8E8D87" font-weight="400"> / 99.5</tspan></text>
+    <text x="603.54" y="94" dominant-baseline="middle" data-value-label="Checkout">99.98<tspan fill="#8E8D87" font-weight="400"> / 99.95</tspan></text>
+    <text x="603.54" y="128" dominant-baseline="middle" data-value-label="Payments">99.91<tspan fill="#8E8D87" font-weight="400"> / 99.95</tspan></text>
+    <text x="603.54" y="162" dominant-baseline="middle" data-value-label="Search">99.97<tspan fill="#8E8D87" font-weight="400"> / 99.9</tspan></text>
+    <text x="603.54" y="196" dominant-baseline="middle" data-value-label="Notifications">99.62<tspan fill="#8E8D87" font-weight="400"> / 99.5</tspan></text>
   </g>
 </svg>

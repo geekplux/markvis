@@ -6,7 +6,7 @@
     <path d="M377 103.6 A122.4 122.4 0 1 1 260.59 263.82 L307.15 248.69 A73.44 73.44 0 1 0 377 152.56 Z" fill="#5AD8A6" stroke="#262626" stroke-opacity="0.32" stroke-width="1.5" data-label="on" data-raw-value="70" data-donut="1"/>
     <path d="M260.59 263.82 A122.4 122.4 0 0 1 377 103.6 L377 152.56 A73.44 73.44 0 0 0 307.15 248.69 Z" fill="#E8684A" stroke="#262626" stroke-opacity="0.32" stroke-width="1.5" data-label="off" data-raw-value="30" data-donut="1"/>
   </g>
-  <g fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1">
+  <g fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-leaders="1">
     <polyline points="476.02,297.94 488.97,307.35 496.97,307.35"/>
     <polyline points="277.98,154.06 265.03,144.65 257.03,144.65"/>
   </g>

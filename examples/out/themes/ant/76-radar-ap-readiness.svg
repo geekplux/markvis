@@ -8,7 +8,7 @@
     <circle cx="120.2" cy="40" r="5" fill="#E8684A"/>
     <text x="129.2" y="44" data-legend="Midtown">Midtown</text>
   </g>
-  <g fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-radar-grid="1">
+  <g fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="4 4" data-radar-grid="1">
     <path d="M361.26 168.93 L413.28 198.97 L413.28 259.03 L361.26 289.07 L309.24 259.03 L309.24 198.97 Z"/>
     <line x1="361.26" y1="229" x2="361.26" y2="120.88"/>
     <line x1="361.26" y1="229" x2="454.89" y2="174.94"/>

@@ -20,10 +20,10 @@
     <text x="700" y="163" text-anchor="middle">90</text>
   </g>
   <g font-size="12" font-weight="700" fill="#333333">
-    <circle cx="332.49" cy="183" r="5" fill="#7cb5ec"/>
-    <text x="341.49" y="187" data-legend="Fall">Fall</text>
-    <circle cx="392.25" cy="183" r="5" fill="#434348"/>
-    <text x="401.25" y="187" data-legend="Spring">Spring</text>
+    <circle cx="329.51" cy="183" r="5" fill="#7cb5ec"/>
+    <text x="338.51" y="187" data-legend="Fall">Fall</text>
+    <circle cx="391.65" cy="183" r="5" fill="#434348"/>
+    <text x="400.65" y="187" data-legend="Spring">Spring</text>
   </g>
   <g data-boxplot="1">
     <path d="M247.15 54.5 L290.09 54.5 M372.07 54.5 L465.77 54.5 M247.15 52.25 L247.15 56.75 M465.77 52.25 L465.77 56.75" fill="none" stroke="#7cb5ec" stroke-width="1.5" data-whiskers="Algebra"/>

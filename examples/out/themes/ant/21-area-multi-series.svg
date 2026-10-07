@@ -17,11 +17,11 @@
   <path d="M66 355 L706 355" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1"/>
   <path d="M74 355 L74 359 M230 355 L230 359 M386 355 L386 359 M542 355 L542 359 M698 355 L698 359" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#8C8C8C" font-size="12" font-weight="400">
-    <text x="54" y="355" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="54" y="283.75" text-anchor="end" dominant-baseline="middle">2</text>
-    <text x="54" y="212.5" text-anchor="end" dominant-baseline="middle">4</text>
-    <text x="54" y="141.25" text-anchor="end" dominant-baseline="middle">6</text>
-    <text x="54" y="70" text-anchor="end" dominant-baseline="middle">8</text>
+    <text x="58" y="355" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="58" y="283.75" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="58" y="212.5" text-anchor="end" dominant-baseline="middle">4</text>
+    <text x="58" y="141.25" text-anchor="end" dominant-baseline="middle">6</text>
+    <text x="58" y="70" text-anchor="end" dominant-baseline="middle">8</text>
     <text x="74" y="371" text-anchor="middle" font-size="12" data-full-label="-1"><title>-1</title>-1</text>
     <text x="230" y="371" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
     <text x="386" y="371" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
@@ -30,7 +30,7 @@
   </g>
   <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
     <text x="41.56" y="212.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 41.56 212.5)" data-axis="y">depth</text>
-    <text x="386" y="383" text-anchor="middle" dominant-baseline="hanging" data-axis="x">minute</text>
+    <text x="386" y="380.6" text-anchor="middle" dominant-baseline="hanging" data-axis="x">minute</text>
   </g>
   <g fill="none">
     <path d="M230 176.88 L386 105.63 L542 141.25 L542 355 L230 355 Z" fill="#5AD8A6" fill-opacity="0.25" stroke="none" data-series="A"/>

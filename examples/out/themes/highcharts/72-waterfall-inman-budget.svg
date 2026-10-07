@@ -42,9 +42,9 @@
     <text x="66" y="214" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="66" y="141" text-anchor="end" dominant-baseline="middle">150</text>
     <text x="66" y="68" text-anchor="end" dominant-baseline="middle">200</text>
-    <text x="113.13" y="371" text-anchor="middle" data-full-label="Ticket sales">Ticket sales</text>
-    <text x="191.38" y="371" text-anchor="middle" data-full-label="Sponsorships">Sponsorships</text>
-    <text x="269.63" y="371" text-anchor="middle" data-full-label="Food vendors">Food vendors</text>
+    <text x="113.13" y="371" text-anchor="middle" data-full-label="Ticket sales"><tspan x="113.13" dy="0">Ticket</tspan><tspan x="113.13" dy="14">sales</tspan></text>
+    <text x="191.38" y="371" text-anchor="middle" data-full-label="Sponsorships"><title>Sponsorships</title>Sponsorshi…</text>
+    <text x="269.63" y="371" text-anchor="middle" data-full-label="Food vendors"><tspan x="269.63" dy="0">Food</tspan><tspan x="269.63" dy="14">vendors</tspan></text>
     <text x="347.88" y="371" text-anchor="middle" data-full-label="Beer garden">Beer garden</text>
     <text x="426.13" y="371" text-anchor="middle" data-full-label="Permits">Permits</text>
     <text x="504.38" y="371" text-anchor="middle" data-full-label="Sound">Sound</text>

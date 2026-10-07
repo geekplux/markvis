@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="sankey chart: Five Points still feeds Midtown before Arts Center, 10 rows, series to" aria-labelledby="mv-f456bfd03bc51c29-title" aria-describedby="mv-f456bfd03bc51c29-desc" data-markvis="2" data-chart-type="sankey" data-id="mv-f456bfd03bc51c29" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-f456bfd03bc51c29-title">Five Points still feeds Midtown before Arts Center</title>
   <desc id="mv-f456bfd03bc51c29-desc">sankey chart. Five Points still feeds Midtown before Arts Center. x=from. y=riders. series=to. 10 rows.</desc>
-  <text x="114.72" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Five Points still feeds Midtown before Arts Center</title><tspan x="114.72" dy="0">Five Points still feeds Midtown before Arts</tspan><tspan x="114.72" dy="27">Center</tspan></text>
+  <text x="114.72" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Five Points still feeds Midtown before Arts Center</title><tspan x="114.72" dy="0">Five Points still feeds Midtown before</tspan><tspan x="114.72" dy="27">Arts Center</tspan></text>
   <g data-sankey-links="1">
     <path d="M152.72 73.76 C217.15 73.76, 217.15 71, 281.57 71 L281.57 210.78 C217.15 210.78, 217.15 213.54, 152.72 213.54 Z" fill="#3B82F6" fill-opacity="0.45" stroke="none" data-source="North Springs" data-target="Five Points" data-y="620"/>
     <path d="M152.72 299.43 C217.15 299.43, 217.15 280.66, 281.57 280.66 L281.57 402.4 C217.15 402.4, 217.15 421.17, 152.72 421.17 Z" fill="#10B981" fill-opacity="0.45" stroke="none" data-source="Airport" data-target="Five Points" data-y="540"/>
@@ -26,7 +26,7 @@
     <rect x="281.57" y="423.93" width="14" height="36.07" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-node="College Park" data-y="160"/>
     <rect x="567.28" y="326.42" width="14" height="21.42" fill="#A855F7" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-node="King Memorial" data-y="95"/>
   </g>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">
     <text x="134.72" y="143.65" text-anchor="end" dominant-baseline="middle" data-node-label="North Springs"><title>North Springs</title>North Springs</text>
     <text x="277.57" y="243.46" text-anchor="end" dominant-baseline="middle" data-node-label="Five Points"><title>Five Points</title>Five Points</text>
     <text x="134.72" y="378.33" text-anchor="end" dominant-baseline="middle" data-node-label="Airport"><title>Airport</title>Airport</text>

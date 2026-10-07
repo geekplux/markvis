@@ -3,16 +3,16 @@
   <desc id="mv-57a6d979cf5c648a-desc">pie chart. MARTA takes the largest mode share. x=mode. y=count. 5 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>MARTA takes the largest mode share</title>MARTA takes the largest mode share</text>
   <g font-size="12" font-weight="700" fill="#333333">
-    <circle cx="229.44" cy="420" r="5" fill="#7cb5ec"/>
-    <text x="238.44" y="424" data-legend="MARTA">MARTA</text>
-    <circle cx="296.64" cy="420" r="5" fill="#434348"/>
-    <text x="305.64" y="424" data-legend="Walk">Walk</text>
-    <circle cx="356.4" cy="420" r="5" fill="#90ed7d"/>
-    <text x="365.4" y="424" data-legend="Drive">Drive</text>
-    <circle cx="423.6" cy="420" r="5" fill="#f7a35c"/>
-    <text x="432.6" y="424" data-legend="Bike">Bike</text>
-    <circle cx="483.36" cy="420" r="5" fill="#8085e9"/>
-    <text x="492.36" y="424" data-legend="Other">Other</text>
+    <circle cx="222.6" cy="420" r="5" fill="#7cb5ec"/>
+    <text x="231.6" y="424" data-legend="MARTA">MARTA</text>
+    <circle cx="292.77" cy="420" r="5" fill="#434348"/>
+    <text x="301.77" y="424" data-legend="Walk">Walk</text>
+    <circle cx="354.91" cy="420" r="5" fill="#90ed7d"/>
+    <text x="363.91" y="424" data-legend="Drive">Drive</text>
+    <circle cx="425.09" cy="420" r="5" fill="#f7a35c"/>
+    <text x="434.09" y="424" data-legend="Bike">Bike</text>
+    <circle cx="487.23" cy="420" r="5" fill="#8085e9"/>
+    <text x="496.23" y="424" data-legend="Other">Other</text>
   </g>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0">
     <path d="M378 220 L378 100.32 A119.68 119.68 0 0 1 465.79 301.34 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="MARTA" data-raw-value="38"/>

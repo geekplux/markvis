@@ -7,7 +7,7 @@
     <path d="M374 252 L435.37 379.43 A141.44 141.44 0 0 1 232.96 241.43 Z" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Product" data-raw-value="35"/>
     <path d="M374 252 L232.96 241.43 A141.44 141.44 0 0 1 374 110.56 Z" fill="#10B981" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Ops" data-raw-value="25"/>
   </g>
-  <g fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1">
+  <g fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-leaders="1">
     <polyline points="511.89,220.53 527.49,216.97 535.49,216.97"/>
     <polyline points="294.32,368.86 285.31,382.08 277.31,382.08"/>
     <polyline points="277.8,148.32 266.91,136.59 258.91,136.59"/>

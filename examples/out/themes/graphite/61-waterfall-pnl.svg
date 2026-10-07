@@ -3,27 +3,27 @@
   <desc id="mv-b80f123a37aff372-desc">waterfall chart. Concessions still cover Midtown rent after payroll. x=step. y=delta. unit=USD k. 8 rows.</desc>
   <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Concessions still cover Midtown rent after payroll</title>Concessions still cover Midtown rent after payroll</text>
   <text x="52" y="50" text-anchor="start" font-size="12" font-weight="400" fill="#8E8D87" data-subtitle="1">USD k</text>
-  <g fill="none" stroke="#1B1B19" stroke-opacity="0.22" stroke-width="1">
+  <g fill="none" stroke="#1B1B19" stroke-opacity="0.22" stroke-width="0.5">
     <line x1="52" x2="692" y1="320.33" y2="320.33"/>
     <line x1="52" x2="692" y1="198.67" y2="198.67"/>
   </g>
   <path d="M52 442 L692 442" fill="none" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1"/>
   <g data-waterfall="1">
-    <rect x="64" y="223" width="56" height="219" fill="#1B1B19" rx="999" data-step="Ticket sales" data-y="180" data-level="180" data-role="delta" data-baseline="0"/>
-    <text x="92" y="217" text-anchor="middle" font-size="12" font-weight="800" fill="#1B1B19" data-delta="Ticket sales">+180 → 180</text>
-    <rect x="144" y="145.13" width="56" height="77.87" fill="#1B1B19" rx="999" data-step="Concessions" data-y="64" data-level="244" data-role="delta" data-baseline="180"/>
+    <rect x="64" y="223" width="56" height="219" fill="#1B1B19" rx="4" data-step="Ticket sales" data-y="180" data-level="180" data-role="delta" data-baseline="0"/>
+    <text x="92" y="203" text-anchor="middle" font-size="12" font-weight="800" fill="#1B1B19" data-delta="Ticket sales"><title>+180 → 180</title><tspan x="92" dy="0">+180</tspan><tspan x="92" dy="14">→ 180</tspan></text>
+    <rect x="144" y="145.13" width="56" height="77.87" fill="#1B1B19" rx="4" data-step="Concessions" data-y="64" data-level="244" data-role="delta" data-baseline="180"/>
     <text x="172" y="139.13" text-anchor="middle" font-size="12" font-weight="800" fill="#1B1B19" data-delta="Concessions">+64 → 244</text>
-    <rect x="224" y="111.07" width="56" height="34.07" fill="#1B1B19" rx="999" data-step="Merch" data-y="28" data-level="272" data-role="delta" data-baseline="244"/>
+    <rect x="224" y="111.07" width="56" height="34.07" fill="#1B1B19" rx="4" data-step="Merch" data-y="28" data-level="272" data-role="delta" data-baseline="244"/>
     <text x="252" y="105.07" text-anchor="middle" font-size="12" font-weight="800" fill="#1B1B19" data-delta="Merch">+28 → 272</text>
-    <rect x="304" y="84.3" width="56" height="26.77" fill="#1B1B19" rx="999" data-step="Sponsorships" data-y="22" data-level="294" data-role="delta" data-baseline="272"/>
+    <rect x="304" y="84.3" width="56" height="26.77" fill="#1B1B19" rx="4" data-step="Sponsorships" data-y="22" data-level="294" data-role="delta" data-baseline="272"/>
     <text x="332" y="78.3" text-anchor="middle" font-size="12" font-weight="800" fill="#1B1B19" data-delta="Sponsorships">+22 → 294</text>
-    <rect x="384" y="84.3" width="56" height="109.5" fill="#9A9993" rx="999" data-step="Payroll" data-y="-90" data-level="204" data-role="delta" data-baseline="294"/>
+    <rect x="384" y="84.3" width="56" height="109.5" fill="#9A9993" rx="4" data-step="Payroll" data-y="-90" data-level="204" data-role="delta" data-baseline="294"/>
     <text x="412" y="78.3" text-anchor="middle" font-size="12" font-weight="800" fill="#1B1B19" data-delta="Payroll">-90 → 204</text>
-    <rect x="464" y="193.8" width="56" height="51.1" fill="#9A9993" rx="999" data-step="Rent" data-y="-42" data-level="162" data-role="delta" data-baseline="204"/>
+    <rect x="464" y="193.8" width="56" height="51.1" fill="#9A9993" rx="4" data-step="Rent" data-y="-42" data-level="162" data-role="delta" data-baseline="204"/>
     <text x="492" y="187.8" text-anchor="middle" font-size="12" font-weight="800" fill="#1B1B19" data-delta="Rent">-42 → 162</text>
-    <rect x="544" y="244.9" width="56" height="14.6" fill="#9A9993" rx="999" data-step="Utilities" data-y="-12" data-level="150" data-role="delta" data-baseline="162"/>
+    <rect x="544" y="244.9" width="56" height="14.6" fill="#9A9993" rx="4" data-step="Utilities" data-y="-12" data-level="150" data-role="delta" data-baseline="162"/>
     <text x="572" y="238.9" text-anchor="middle" font-size="12" font-weight="800" fill="#1B1B19" data-delta="Utilities">-12 → 150</text>
-    <rect x="624" y="259.5" width="56" height="21.9" fill="#9A9993" rx="999" data-step="Marketing" data-y="-18" data-level="132" data-role="delta" data-baseline="150"/>
+    <rect x="624" y="259.5" width="56" height="21.9" fill="#9A9993" rx="4" data-step="Marketing" data-y="-18" data-level="132" data-role="delta" data-baseline="150"/>
     <text x="652" y="253.5" text-anchor="middle" font-size="12" font-weight="800" fill="#1B1B19" data-delta="Marketing">-18 → 132</text>
   </g>
   <g fill="none" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-waterfall-connectors="1">
@@ -40,10 +40,10 @@
     <text x="42" y="320.33" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="42" y="198.67" text-anchor="end" dominant-baseline="middle">200</text>
     <text x="42" y="77" text-anchor="end" dominant-baseline="middle">300</text>
-    <text x="92" y="453" text-anchor="middle" data-full-label="Ticket sales">Ticket sales</text>
-    <text x="172" y="453" text-anchor="middle" data-full-label="Concessions">Concessions</text>
+    <text x="92" y="453" text-anchor="middle" data-full-label="Ticket sales"><tspan x="92" dy="0">Ticket</tspan><tspan x="92" dy="14">sales</tspan></text>
+    <text x="172" y="453" text-anchor="middle" data-full-label="Concessions"><title>Concessions</title>Concessio…</text>
     <text x="252" y="453" text-anchor="middle" data-full-label="Merch">Merch</text>
-    <text x="332" y="453" text-anchor="middle" data-full-label="Sponsorships">Sponsorships</text>
+    <text x="332" y="453" text-anchor="middle" data-full-label="Sponsorships"><title>Sponsorships</title>Sponsorsh…</text>
     <text x="412" y="453" text-anchor="middle" data-full-label="Payroll">Payroll</text>
     <text x="492" y="453" text-anchor="middle" data-full-label="Rent">Rent</text>
     <text x="572" y="453" text-anchor="middle" data-full-label="Utilities">Utilities</text>
