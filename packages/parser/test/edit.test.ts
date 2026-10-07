@@ -76,3 +76,16 @@ describe("bare bodies", () => {
     expect(setChartField("Just a note.\n", "theme", "docs")).toBe("Just a note.\n");
   });
 });
+
+describe("quoted comment values", () => {
+  const quoted = '<!-- chart: bar x=k y=v title="Why theme=dark wins" -->\n| k | v |\n| --- | --- |\n| a | 1 |\n';
+
+  it("never reads or edits text inside a quoted value", () => {
+    expect(readChartField(quoted, "theme")).toBeUndefined();
+    const out = setChartField(quoted, "theme", "ant");
+    expect(out).toContain('title="Why theme=dark wins"');
+    expect(out).toContain('title="Why theme=dark wins" theme=ant -->');
+    expect(readChartField(out, "theme")).toBe("ant");
+    expect(setChartField(out, "theme", null)).toBe(quoted);
+  });
+});

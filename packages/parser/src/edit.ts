@@ -46,7 +46,23 @@ function firstChart(source: string): Located | null {
 }
 
 const headerLine = (key: string) => new RegExp(`^[ \\t]*${key}[ \\t]*:[ \\t]*(.*?)[ \\t]*$`, "m");
-const commentAttr = (key: string) => new RegExp(`(\\s)${key}\\s*=\\s*(?:"([^"]*)"|(\\S+))`);
+/**
+ * The `key=value` pair for `key`, scanned left to right like the parser
+ * reads a chart comment, so text inside a quoted value is never a match.
+ */
+function findCommentAttr(
+  inner: string,
+  key: string,
+): { start: number; end: number; value: string } | undefined {
+  const pairs = /(\s)([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(?:"([^"]*)"|(\S+))/g;
+  for (const m of inner.matchAll(pairs)) {
+    if (m[2] === key) {
+      const start = m.index! + m[1]!.length;
+      return { start, end: m.index! + m[0].length, value: m[3] ?? m[4] ?? "" };
+    }
+  }
+  return undefined;
+}
 
 /** The field's value on the first chart, or undefined when it is not set. */
 export function readChartField(source: string, key: string): string | undefined {
@@ -56,8 +72,7 @@ export function readChartField(source: string, key: string): string | undefined 
     const value = chart.header.match(headerLine(key))?.[1];
     return value === undefined || value === "" ? undefined : value;
   }
-  const match = chart.inner.match(commentAttr(key));
-  return match ? (match[2] ?? match[3]) : undefined;
+  return findCommentAttr(chart.inner, key)?.value;
 }
 
 /** Set the field on the first chart, or remove it when `value` is null. */
@@ -94,10 +109,12 @@ function setHeaderLine(header: string, key: string, value: string | null): strin
 }
 
 function setCommentAttr(inner: string, key: string, value: string | null): string {
-  const re = commentAttr(key);
   const pair = value === null ? "" : `${key}=${/\s/.test(value) ? `"${value}"` : value}`;
-  if (re.test(inner)) {
-    return inner.replace(re, value === null ? "" : `$1${pair}`);
+  const found = findCommentAttr(inner, key);
+  if (found) {
+    // Removing also drops the space before the pair.
+    const from = value === null ? found.start - 1 : found.start;
+    return inner.slice(0, from) + pair + inner.slice(found.end);
   }
   if (value === null) return inner;
   const trailing = inner.match(/\s*$/)?.[0] ?? "";
