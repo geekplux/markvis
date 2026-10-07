@@ -106,6 +106,14 @@ type Prepared = {
   axisYTitle: string | undefined;
 };
 
+/** "field · unit", or the field alone when the unit repeats it. */
+function yAxisTitle(chart: ChartIR): string | undefined {
+  const field = chart.type === "hist" ? (chart.y ?? "count") : chart.y;
+  const unit = chart.unit?.trim();
+  const parts = [field, unit && unit.toLowerCase() !== field?.toLowerCase() ? unit : undefined];
+  return parts.filter((part): part is string => Boolean(part)).join(" · ") || undefined;
+}
+
 function finiteRuns(
   points: { x: number; y: number }[],
 ): { x: number; y: number }[][] {
@@ -568,14 +576,7 @@ function prepare(chart: ChartIR): Prepared {
         ? `${chart.x} · Sturges bins`
         : chart.x
       : undefined,
-    axisYTitle: namedAxes
-      ? [
-          chart.type === "hist" ? (chart.y ?? "count") : chart.y,
-          chart.unit,
-        ]
-          .filter((part): part is string => Boolean(part))
-          .join(" · ") || undefined
-      : undefined,
+    axisYTitle: namedAxes ? yAxisTitle(chart) : undefined,
   };
 }
 
@@ -864,7 +865,16 @@ function drawGridAndAxes(prepared: Prepared): string[] {
       })}>`,
     );
     if (prepared.axisYTitle) {
-      const cx = plot.left - TICK_TEXT_GAP - 14;
+      // Center the rotated title in the gutter left of the widest tick label.
+      const widestTick = Math.max(
+        0,
+        ...yTicks.map((tick) => textWidth(tick.label, TYPE.tick.size)),
+      );
+      const tickPad = AXIS.line === "xy" ? AXIS.tick : 0;
+      const cx = Math.max(
+        TYPE.unit.size / 2 + 2,
+        plot.left - TICK_TEXT_GAP - tickPad - widestTick - 9,
+      );
       const cy = (plot.top + plot.bottom) / 2;
       lines.push(
         `    <text ${attrs({
