@@ -513,6 +513,25 @@ html.dark .site-logo-dark {
 }
 
 @media (min-width: 1024px) {
+  /*
+   * Three columns: the side columns share the leftover width equally, so the
+   * links sit on the header's true center however wide the wordmark and the
+   * right-hand actions are. With flex space-between they centered only
+   * between those two and drifted left.
+   */
+  .home-nav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  .home-wordmark {
+    justify-self: start;
+  }
+
+  .home-nav-right {
+    justify-self: end;
+  }
+
   .home-nav-links {
     display: flex;
   }
