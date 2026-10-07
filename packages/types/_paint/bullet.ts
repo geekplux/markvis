@@ -7,6 +7,7 @@ import { formatNumber, niceTicks } from "./scale.js";
 import { textWidth } from "./text.js";
 import {
   BAR_RX,
+  FONT,
   FONT_NUMERIC,
   INK,
   TYPE,
@@ -70,7 +71,7 @@ export function renderBullet(chart: ChartIR, _id: string): Painted {
       0,
       ...rows.map((row) => {
         const label = labelOf(row);
-        return textWidth(label.main + label.rest, TYPE.value.size, TYPE.value.weight);
+        return textWidth(label.main + label.rest, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT);
       }),
     ) + 24;
   const barColor = seriesStyle(0).color;

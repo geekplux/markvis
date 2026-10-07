@@ -50,6 +50,7 @@ import {
   END_LABEL_GAP,
   END_LABEL_MIN_SEP,
   END_LABEL_SERIES_MAX,
+  FONT,
   FONT_NUMERIC,
   GRID,
   GROUP_GAP_PX,
@@ -63,10 +64,10 @@ import {
   MARKER,
   MAX_INTERIOR_GRID,
   PAPER,
-  POINT_SKIP_AFTER,
   PLOT_BG,
   PLOT_BORDER,
   PLOT_BORDER_WIDTH,
+  POINT_SKIP_AFTER,
   SCATTER_MARK,
   SCATTER_OPACITY,
   SCATTER_R,
@@ -352,7 +353,7 @@ function usesColorLegend(chart: ChartIR, seriesCount: number): boolean {
 function endLabelRightMin(series: string[]): number {
   const widest = Math.max(
     0,
-    ...series.map((name) => textWidth(name, TYPE.value.size, TYPE.value.weight)),
+    ...series.map((name) => textWidth(name, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT)),
   );
   return END_LABEL_GAP + widest;
 }
@@ -820,7 +821,7 @@ function drawGridAndAxes(prepared: Prepared): string[] {
     const lineH = TYPE.tick.size + 3;
     let widest = display[0] ?? "";
     for (const line of display) {
-      if (textWidth(line, TYPE.tick.size, TYPE.tick.weight) > textWidth(widest, TYPE.tick.size, TYPE.tick.weight)) {
+      if (textWidth(line, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT) > textWidth(widest, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT)) {
         widest = line;
       }
     }
@@ -835,7 +836,7 @@ function drawGridAndAxes(prepared: Prepared): string[] {
     const atCorner =
       tick.pos - plot.left < TICK_TEXT_GAP + 8 &&
       yTicks.some((y) => Math.abs(y.pos - plot.bottom) < 0.5);
-    const placedW = textWidth(placed.text, TYPE.tick.size, TYPE.tick.weight);
+    const placedW = textWidth(placed.text, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT);
     const placedLeft =
       placed.anchor === "middle"
         ? placed.x - placedW / 2
@@ -884,7 +885,7 @@ function drawGridAndAxes(prepared: Prepared): string[] {
       // Center the rotated title in the gutter left of the widest tick label.
       const widestTick = Math.max(
         0,
-        ...yTicks.map((tick) => textWidth(tick.label, TYPE.tick.size, TYPE.tick.weight)),
+        ...yTicks.map((tick) => textWidth(tick.label, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT)),
       );
       const cx = Math.max(
         TYPE.unit.size / 2 + 2,
@@ -1066,7 +1067,7 @@ function drawBars(prepared: Prepared): string[] {
         // A segment label sits inside its own segment; above it is the next segment.
         if (
           h < TYPE.value.size + 4 ||
-          textWidth(text, TYPE.value.size, TYPE.value.weight) > barW - 4
+          textWidth(text, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT) > barW - 4
         ) {
           continue;
         }

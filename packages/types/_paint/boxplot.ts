@@ -8,6 +8,7 @@ import { boxStats, type BoxStats } from "./stats.js";
 import { textWidth } from "./text.js";
 import {
   BAR_RX,
+  FONT,
   FONT_NUMERIC,
   INK,
   PAPER,
@@ -51,7 +52,7 @@ export function renderBoxplot(chart: ChartIR, _id: string): Painted {
         ...groups.flat().map((box) => {
           if (!box) return 0;
           const label = medianLabel(box);
-          return textWidth(label.main + label.rest, TYPE.value.size, TYPE.value.weight);
+          return textWidth(label.main + label.rest, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT);
         }),
       ) + 24
     : 20;

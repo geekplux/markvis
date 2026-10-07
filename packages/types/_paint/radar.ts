@@ -14,6 +14,7 @@ import { formatNumber, niceTicks } from "./scale.js";
 import { textWidth } from "./text.js";
 import {
   AREA_OPACITY,
+  FONT,
   FONT_NUMERIC,
   GRID,
   INK,
@@ -65,7 +66,7 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
 
   const labelPad = Math.max(
     36,
-    ...spokes.map((s) => textWidth(s, TYPE.tick.size, TYPE.tick.weight) / 2 + 12),
+    ...spokes.map((s) => textWidth(s, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT) / 2 + 12),
   );
   let left = Math.max(MARGIN.left, labelPad);
   let right = Math.max(MARGIN.right, labelPad);
@@ -100,7 +101,7 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
     const cy = cyOf();
     for (let i = 0; i < spokes.length; i++) {
       const p = spokePoint(cx, cy, r + 14, i, n);
-      const w = textWidth(spokes[i]!, TYPE.tick.size, TYPE.tick.weight);
+      const w = textWidth(spokes[i]!, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT);
       overflowLeft = Math.max(overflowLeft, 8 - (p.x - w / 2));
       overflowRight = Math.max(overflowRight, p.x + w / 2 - (SVG_WIDTH - 8));
       overflowTop = Math.max(overflowTop, 4 - (p.y - TYPE.tick.size));

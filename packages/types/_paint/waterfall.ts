@@ -21,6 +21,7 @@ import {
   BAR_MAX_WIDTH,
   BAR_MAX_WIDTH_N,
   BAR_RX,
+  FONT,
   FONT_NUMERIC,
   GRID,
   HAIRLINE_OPACITY,
@@ -219,7 +220,7 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
     const [head, tail] = isTotal
       ? [row.role, formatNumber(row.y)]
       : [signed, `→ ${formatNumber(ends[i]!)}`];
-    const split = textWidth(deltaText, TYPE.value.size, TYPE.value.weight) > catStep - 4;
+    const split = textWidth(deltaText, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT) > catStep - 4;
     const shown = split ? [head, tail] : [deltaText];
     const widest = shown.reduce((w, t) => (t.length > w.length ? t : w), "");
     const placed = placeHorizontalLabel(cx, widest, TYPE.value.size, SVG_WIDTH, 8);

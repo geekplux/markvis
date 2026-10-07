@@ -12,6 +12,7 @@ import { titleBlockTop, type Painted } from "./layout.js";
 import { formatNumber } from "./scale.js";
 import { textWidth } from "./text.js";
 import {
+  FONT,
   FONT_NUMERIC,
   INK,
   MARGIN,
@@ -77,7 +78,7 @@ export function renderCalendar(chart: ChartIR, svgId: string): Painted {
   const hi = chart.max ?? (Number.isFinite(dataHi) ? dataHi : 1);
   const shade = (value: number) => rampFill(hi === lo ? 1 : (value - lo) / (hi - lo));
 
-  const gutter = Math.max(...WEEKDAY_LABELS.map(([, label]) => textWidth(label, TYPE.tick.size, TYPE.tick.weight))) + 10;
+  const gutter = Math.max(...WEEKDAY_LABELS.map(([, label]) => textWidth(label, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT))) + 10;
   const left = MARGIN.left + gutter;
   const maxWeeks = Math.max(1, ...bands.map((band) => band.weeks));
   const step = Math.max(7, Math.min(18, Math.floor((SVG_WIDTH - left - MARGIN.right) / maxWeeks)));
@@ -127,7 +128,7 @@ export function renderCalendar(chart: ChartIR, svgId: string): Painted {
       const x = colX(day) + (weekdayMonday0(day) === 0 ? 0 : step);
       const label = MONTHS[date.month - 1]!;
       if (
-        x - lastLabelX < textWidth("Mmm", TYPE.tick.size, TYPE.tick.weight) + 4 ||
+        x - lastLabelX < textWidth("Mmm", TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT) + 4 ||
         x > left + band.weeks * step - 8
       ) {
         continue;
@@ -178,7 +179,7 @@ export function renderCalendar(chart: ChartIR, svgId: string): Painted {
 
   // Color key: low value, five steps, high value.
   const keyLo = formatNumber(lo);
-  const keyX = left + textWidth(keyLo, TYPE.tick.size, TYPE.tick.weight) + 6;
+  const keyX = left + textWidth(keyLo, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT) + 6;
   labels.push(
     `    <text ${attrs({ x: fmtPx(left), y: fmtPx(legendY + cell - 1), "data-key": "low" })}>${escapeXml(keyLo)}</text>`,
   );

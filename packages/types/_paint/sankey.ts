@@ -11,6 +11,7 @@ import { seriesStyle } from "./palette.js";
 import { formatNumber } from "./scale.js";
 import { textWidth, truncateLabel } from "./text.js";
 import {
+  FONT,
   FONT_NUMERIC,
   INK,
   MARGIN,
@@ -555,7 +556,7 @@ export function renderSankey(chart: ChartIR, _id: string): Painted {
         : Math.max(0, colSpan - NODE_W - 8);
     const lx = outsideLeft ? g.x - 4 : g.x + g.width + 4;
     const label =
-      room >= 8 ? truncateLabel(id, room, TYPE.tick.size, TYPE.tick.weight) : "";
+      room >= 8 ? truncateLabel(id, room, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT) : "";
     lines.push(
       `    <text ${attrs({
         x: fmtPx(lx),

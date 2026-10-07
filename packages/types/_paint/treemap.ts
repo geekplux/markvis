@@ -12,6 +12,7 @@ import { seriesStyle } from "./palette.js";
 import { formatNumber } from "./scale.js";
 import { textWidth, truncateLabel } from "./text.js";
 import {
+  FONT,
   FONT_NUMERIC,
   INK,
   MARGIN,
@@ -325,8 +326,8 @@ export function renderTreemap(chart: ChartIR, _id: string): Painted {
     if (availW < 8 || availH < TYPE.value.size) {
       continue;
     }
-    const label = truncateLabel(r.label, availW, TYPE.value.size, TYPE.value.weight);
-    if (textWidth(label, TYPE.value.size, TYPE.value.weight) > availW) {
+    const label = truncateLabel(r.label, availW, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT);
+    if (textWidth(label, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT) > availW) {
       continue;
     }
     const ink = readableInk(

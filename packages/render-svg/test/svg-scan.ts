@@ -19,6 +19,8 @@ export type Shape = {
 export type Label = {
   text: string;
   weight: number;
+  /** The font stack the label renders in (own, inherited, or the root's). */
+  family: string;
   /** Extra width from inline tspans set at their own font size (e.g. " · unit"). */
   inlineExtra: number;
   x: number;
@@ -81,10 +83,15 @@ export function scanSvg(svg: string): Scan {
     labels: [],
     rects: [],
   };
-  const stack: { fill?: string | undefined; size?: number | undefined; halo?: boolean | undefined; weight?: number | undefined }[] = [
-    { size: num(root, "font-size") ?? 12 },
-  ];
-  const inherited = <K extends "fill" | "size" | "halo" | "weight">(key: K) => {
+  const decodeAttr = (v: string | undefined) => v?.replace(/&quot;/g, '"');
+  const stack: {
+    fill?: string | undefined;
+    size?: number | undefined;
+    halo?: boolean | undefined;
+    weight?: number | undefined;
+    family?: string | undefined;
+  }[] = [{ size: num(root, "font-size") ?? 12, family: decodeAttr(attr(root, "font-family")) }];
+  const inherited = <K extends "fill" | "size" | "halo" | "weight" | "family">(key: K) => {
     for (let i = stack.length - 1; i >= 0; i--) {
       const value = stack[i]![key];
       if (value !== undefined) return value;
@@ -106,6 +113,7 @@ export function scanSvg(svg: string): Scan {
         size: num(line, "font-size"),
         halo: attr(line, "paint-order") === "stroke" ? true : undefined,
         weight: num(line, "font-weight"),
+        family: decodeAttr(attr(line, "font-family")),
       });
       continue;
     }
@@ -160,11 +168,12 @@ export function scanSvg(svg: string): Scan {
       const fill = attr(line, "fill") ?? inherited("fill");
       const size = num(line, "font-size") ?? inherited("size") ?? 12;
       const weight = num(line, "font-weight") ?? inherited("weight") ?? 400;
+      const family = decodeAttr(attr(line, "font-family")) ?? inherited("family") ?? "sans-serif";
       // Inline tspans at their own size (the title's " · unit") ride on the last line.
       let inlineExtra = 0;
       let plain = body;
       for (const m of body.matchAll(/<tspan(?![^>]*\sx=)[^>]*font-size="([\d.]+)"[^>]*>([^<]*)<\/tspan>/g)) {
-        inlineExtra += textWidth(decode(m[2]!), Number(m[1]));
+        inlineExtra += textWidth(decode(m[2]!), Number(m[1]), 400, family);
         plain = plain.replace(m[0], "");
       }
       // Tspans that set their own x are separate lines.
@@ -172,7 +181,7 @@ export function scanSvg(svg: string): Scan {
         ? [...plain.matchAll(/<tspan[^>]*\sx=[^>]*>([^<]*)<\/tspan>/g)].map((m) => decode(m[1]!))
         : [decode(plain.replace(/<[^>]+>/g, ""))];
       const widths = lineTexts.map(
-        (t, i) => textWidth(t, size, weight) + (i === lineTexts.length - 1 ? inlineExtra : 0),
+        (t, i) => textWidth(t, size, weight, family) + (i === lineTexts.length - 1 ? inlineExtra : 0),
       );
       const widest = widths.indexOf(Math.max(...widths));
       const measured = lineTexts[widest] ?? "";
@@ -181,6 +190,7 @@ export function scanSvg(svg: string): Scan {
       scan.labels.push({
         text: measured,
         weight,
+        family,
         inlineExtra,
         x: num(line, "x") ?? 0,
         y: num(line, "y") ?? 0,
@@ -231,7 +241,7 @@ export function contrast(a: string, b: string): number {
 
 /** Horizontal extent of a label, from the same width estimate layout uses. */
 export function labelBox(label: Label): { left: number; right: number; top: number; bottom: number } {
-  const w = textWidth(label.text, label.size, label.weight) + label.inlineExtra;
+  const w = textWidth(label.text, label.size, label.weight, label.family) + label.inlineExtra;
   if (label.rotated) {
     return {
       left: label.x - label.size / 2,
