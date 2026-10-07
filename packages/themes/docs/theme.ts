@@ -123,6 +123,7 @@ export const docs = {
       QUIET: "#94a3b8",
       TICK: "#94a3b8",
       HAIRLINE_OPACITY: "0.3",
+      PALETTE: ["#94A3B8", "#5EEAD4", "#CBD5E1", "#A8A29E", "#E2E8F0", "#D6D3D1"],
       SEMANTIC: {
         ...SEMANTIC_LIGHT,
         up: "#2DD4BF",

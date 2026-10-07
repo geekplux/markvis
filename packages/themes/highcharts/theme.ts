@@ -19,7 +19,7 @@ export const highcharts = {
   QUIET: "#666666",
   /** Stronger horizontal grid than folio hairline. */
   HAIRLINE_OPACITY: "0.14",
-  STRUCTURE_OPACITY: "0.36",
+  STRUCTURE_OPACITY: "0.42",
 
   TYPE: {
     title: { size: 18, weight: 400, fill: "#333333" },
@@ -120,6 +120,7 @@ export const highcharts = {
       QUIET: "#a0a0a8",
       TICK: "#c4c4cc",
       HAIRLINE_OPACITY: "0.16",
+      PALETTE: ["#2b908f", "#90ee7e", "#f45b5b", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee", "#55BF3B"],
       SEMANTIC: {
         ...SEMANTIC_LIGHT,
         up: "#2DD4BF",

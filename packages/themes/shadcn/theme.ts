@@ -124,6 +124,7 @@ export const shadcn = {
       QUIET: "#a1a1aa",
       TICK: "#a1a1aa",
       HAIRLINE_OPACITY: "0.12",
+      PALETTE: ["#1447E6", "#00BC7D", "#FE9A00", "#AD46FF", "#FF2056"],
       SEMANTIC: {
         ...SEMANTIC_LIGHT,
         up: "#2DD4BF",

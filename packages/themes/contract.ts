@@ -42,6 +42,8 @@ export type SurfaceTokens = {
   readonly PLOT_BORDER?: string;
   readonly PLOT_BORDER_WIDTH?: number;
   readonly HAIRLINE_OPACITY?: string;
+  /** Series colors that hold contrast on this paper. Ignored when the fence sets `palette:`. */
+  readonly PALETTE?: readonly string[];
   readonly SEMANTIC: SemanticColors;
 };
 

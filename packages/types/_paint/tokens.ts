@@ -219,6 +219,7 @@ export function applyFrame(opts: { width: number; surface: SurfaceName }): void 
   if (s.PLOT_BORDER !== undefined) PLOT_BORDER = s.PLOT_BORDER;
   if (s.PLOT_BORDER_WIDTH !== undefined) PLOT_BORDER_WIDTH = s.PLOT_BORDER_WIDTH;
   if (s.HAIRLINE_OPACITY !== undefined) HAIRLINE_OPACITY = s.HAIRLINE_OPACITY;
+  if (s.PALETTE !== undefined) PALETTE = s.PALETTE;
   if (s.INK === undefined) {
     return;
   }

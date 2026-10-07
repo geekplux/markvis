@@ -95,7 +95,7 @@ export const ant = {
   PIE_LABEL_MIN_SEP: folio.PIE_LABEL_MIN_SEP,
   PIE_ELBOW: folio.PIE_ELBOW,
   PIE_LABEL_MODE: "leaders",
-  PIE_INNER_RATIO: 0,
+  PIE_INNER_RATIO: 0.6,
 
   COMPACT_SPAN: folio.COMPACT_SPAN,
 
