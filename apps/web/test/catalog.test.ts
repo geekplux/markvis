@@ -2,7 +2,9 @@ import { readdirSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
+import { parseMarkdown } from "@markvis/parser";
 import {
+  fenceForThemePalette,
   catalogFromMaps,
   cardCounts,
   CHART_TYPES,
@@ -166,5 +168,26 @@ describe("gallery catalog", () => {
     expect(Object.keys(maps.markdownByStem).some((k) => k.includes("invalid"))).toBe(
       false,
     );
+  });
+});
+
+describe("gallery theme and color chips", () => {
+  const validDir = join(here, "../../../examples/valid");
+  const sources = readdirSync(validDir)
+    .filter((name) => name.endsWith(".md"))
+    .map((name) => [name, readFileSync(join(validDir, name), "utf8")] as const);
+
+  it.each(sources)("%s re-renders in the chosen theme and color", (name, source) => {
+    for (const theme of THEMES) {
+      for (const palette of [null, "vivid"] as const) {
+        const result = parseMarkdown(fenceForThemePalette(source, theme, palette), {
+          filename: name,
+        });
+        expect(result.ok, `${name} ${theme}`).toBe(true);
+        if (!result.ok) return;
+        expect(result.chart.theme, `${name} ${theme}`).toBe(theme);
+        expect(result.chart.palette ?? null).toBe(palette);
+      }
+    }
   });
 });

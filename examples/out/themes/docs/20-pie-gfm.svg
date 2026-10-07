@@ -9,7 +9,7 @@
     <path d="M372 253 L235.54 208.66 A143.48 143.48 0 0 1 302.88 127.27 Z" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Firefox" data-raw-value="12"/>
     <path d="M372 253 L302.88 127.27 A143.48 143.48 0 0 1 372 109.52 Z" fill="#334155" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Other" data-raw-value="8"/>
   </g>
-  <g fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1">
+  <g fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-leaders="1">
     <polyline points="515.2,262.01 527.17,262.76 535.17,262.76"/>
     <polyline points="250.86,329.88 240.72,336.31 232.72,336.31"/>
     <polyline points="261.45,161.54 252.2,153.89 244.2,153.89"/>

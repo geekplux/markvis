@@ -8,6 +8,7 @@ import {
   BAR_LABEL_N_OFF,
   BAR_LABEL_N_ON,
   FONT,
+  FONT_NUMERIC,
   LABEL_MIN_GAP,
   LABEL_ROTATE_DEG,
   LEGEND,
@@ -90,7 +91,7 @@ export function layoutLegend(
   let rowHeight = 16;
   for (let i = 0; i < names.length; i++) {
     const name = names[i]!;
-    const width = 16 + textWidth(name, TYPE.legend.size) + 14;
+    const width = 16 + textWidth(name, TYPE.legend.size, TYPE.legend.weight) + 14;
     if (i > 0 && x + width > left + maxWidth) {
       x = left;
       y += 18;
@@ -125,7 +126,7 @@ function centerLegendRows(
   for (const indexes of rows.values()) {
     const lastIndex = indexes[indexes.length - 1]!;
     const last = items[lastIndex]!;
-    const right = last.x + 16 + textWidth(names[lastIndex]!, TYPE.legend.size);
+    const right = last.x + 16 + textWidth(names[lastIndex]!, TYPE.legend.size, TYPE.legend.weight);
     const shift = Math.max(0, (maxWidth - (right - left)) / 2);
     for (const i of indexes) {
       items[i]!.x += shift;
@@ -161,8 +162,30 @@ export function categoryLayout(
   catStep: number,
 ): CategoryLayout {
   const maxWidth = Math.max(catStep - LABEL_MIN_GAP, TYPE.tick.size);
-  const wrapped = labels.map((label) =>
-    wrapText(label, TYPE.tick.size, maxWidth, 3),
+  const family = FONT_NUMERIC ?? FONT;
+  // Widest line each label needs at its own slot width.
+  const widest = labels.map((label) =>
+    Math.max(
+      0,
+      ...wrapText(label, TYPE.tick.size, maxWidth, 3, TYPE.tick.weight, family).lines.map((line) =>
+        textWidth(line, TYPE.tick.size, TYPE.tick.weight, family),
+      ),
+    ),
+  );
+  // Room a label leaves free on each side of its slot.
+  const slack = (i: number) =>
+    i < 0 || i >= labels.length ? 0 : Math.max(0, (maxWidth - widest[i]!) / 2);
+  // A centered label may spread into what both neighbors leave free, so a
+  // long word beside short ones is shown whole instead of cut.
+  const wrapped = labels.map((label, i) =>
+    wrapText(
+      label,
+      TYPE.tick.size,
+      maxWidth + 2 * Math.min(slack(i - 1), slack(i + 1)),
+      3,
+      TYPE.tick.weight,
+      family,
+    ),
   );
   return {
     rotate: false,
@@ -172,17 +195,21 @@ export function categoryLayout(
   };
 }
 
+/** Room the y tick marks take left of the plot: only when the theme draws them. */
+export function yTickPad(): number {
+  return AXIS.line === "xy" ? AXIS.tick : 0;
+}
+
 export function tickLeftMargin(
   yTickLabels: string[],
   axisTitles: boolean = AXIS_TITLES,
 ): number {
   const yTickWidth = Math.max(
     0,
-    ...yTickLabels.map((label) => textWidth(label, TYPE.tick.size)),
+    ...yTickLabels.map((label) => textWidth(label, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT)),
   );
   const axisPad = axisTitles ? 18 : 0;
-  const tickPad = AXIS.line === "xy" ? AXIS.tick : 0;
-  return Math.max(MARGIN.left, yTickWidth + TICK_TEXT_GAP + tickPad) + axisPad;
+  return Math.max(MARGIN.left, yTickWidth + TICK_TEXT_GAP + yTickPad()) + axisPad;
 }
 
 export function categoryBottomMargin(layout: CategoryLayout): number {

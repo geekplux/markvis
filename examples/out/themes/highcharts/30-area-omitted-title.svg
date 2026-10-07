@@ -2,7 +2,7 @@
   <title id="mv-cdbac949a672f636-title">Day 4 peaked warehouse intake at 120</title>
   <desc id="mv-cdbac949a672f636-desc">area chart. Day 4 peaked warehouse intake at 120. x=day. y=intake. 4 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Day 4 peaked warehouse intake at 120</title>Day 4 peaked warehouse intake at 120</text>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="264" y2="264"/>
     <line x1="74" x2="700" y1="154" y2="154"/>
     <line x1="74" x2="700" y1="44" y2="44"/>
@@ -10,10 +10,10 @@
   <path d="M74 374 L700 374" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <path d="M82 374 L82 380 M204 374 L204 380 M326 374 L326 380 M448 374 L448 380 M570 374 L570 380 M692 374 L692 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="374" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="60" y="264" text-anchor="end" dominant-baseline="middle">50</text>
-    <text x="60" y="154" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="60" y="44" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="66" y="374" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="264" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="66" y="154" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="66" y="44" text-anchor="end" dominant-baseline="middle">150</text>
     <text x="82" y="391" text-anchor="middle" font-size="11" data-full-label="0"><title>0</title>0</text>
     <text x="204" y="391" text-anchor="middle" font-size="11" data-full-label="1"><title>1</title>1</text>
     <text x="326" y="391" text-anchor="middle" font-size="11" data-full-label="2"><title>2</title>2</text>
@@ -22,8 +22,8 @@
     <text x="692" y="391" text-anchor="middle" font-size="11" data-full-label="5"><title>5</title>5</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="36.54" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 36.54 209)" data-axis="y">intake</text>
-    <text x="387" y="401" text-anchor="middle" dominant-baseline="hanging" data-axis="x">day</text>
+    <text x="35.52" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 35.52 209)" data-axis="y">intake</text>
+    <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">day</text>
   </g>
   <g fill="none">
     <path d="M204 154 L326 132 L448 143 L570 110 L570 374 L204 374 Z" fill="#7cb5ec" fill-opacity="0.28" stroke="none" data-series="intake"/>

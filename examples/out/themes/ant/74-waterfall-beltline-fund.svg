@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="waterfall chart: City match still lifts Beltline fund after resurfacing (USD k), 8 rows" aria-labelledby="mv-4f95b76943f773ed-title" aria-describedby="mv-4f95b76943f773ed-desc" data-markvis="2" data-chart-type="waterfall" data-id="mv-4f95b76943f773ed" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
   <title id="mv-4f95b76943f773ed-title">City match still lifts Beltline fund after resurfacing</title>
   <desc id="mv-4f95b76943f773ed-desc">waterfall chart. City match still lifts Beltline fund after resurfacing. x=step. y=delta. unit=USD k. 8 rows.</desc>
-  <text x="66" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>City match still lifts Beltline fund after resurfacing</title>City match still lifts Beltline fund after resurfacing<tspan font-size="12" font-weight="400" fill="#8C8C8C"> · USD k</tspan></text>
-  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1">
+  <text x="66" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>City match still lifts Beltline fund after resurfacing</title>City match still lifts Beltline fund after resurfacing<tspan font-size="12" font-weight="400" fill="#737373"> · USD k</tspan></text>
+  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4" data-grid="1">
     <line x1="66" x2="706" y1="242" y2="242"/>
     <line x1="66" x2="706" y1="144" y2="144"/>
   </g>
@@ -34,12 +34,12 @@
     <line x1="540.4" x2="551.6" y1="204.76" y2="204.76"/>
     <line x1="620.4" x2="631.6" y1="234.16" y2="234.16"/>
   </g>
-  <g fill="#8C8C8C" font-size="12" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400">
     <text x="58" y="340" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="58" y="242" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="58" y="144" text-anchor="end" dominant-baseline="middle">200</text>
     <text x="58" y="46" text-anchor="end" dominant-baseline="middle">300</text>
-    <text x="106" y="352" text-anchor="middle" data-full-label="Opening balance">Opening balance</text>
+    <text x="106" y="352" text-anchor="middle" data-full-label="Opening balance"><tspan x="106" dy="0">Opening</tspan><tspan x="106" dy="15">balance</tspan></text>
     <text x="186" y="352" text-anchor="middle" data-full-label="Donor gifts">Donor gifts</text>
     <text x="266" y="352" text-anchor="middle" data-full-label="City match">City match</text>
     <text x="346" y="352" text-anchor="middle" data-full-label="Event fees">Event fees</text>

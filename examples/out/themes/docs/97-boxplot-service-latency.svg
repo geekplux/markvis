@@ -3,7 +3,7 @@
   <desc id="mv-3dd5ad6ace5b6f47-desc">boxplot chart. Search answers fastest but has the longest tail. x=service. y=latency. unit=ms. 20 rows.</desc>
   <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>Search answers fastest but has the longest tail</title>SEARCH ANSWERS FASTEST BUT HAS THE LONGEST TAIL<tspan font-size="11" font-weight="400" fill="#64748B"> · ms</tspan></text>
   <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3">
+  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3" data-grid="1">
     <line x1="254.97" x2="254.97" y1="42" y2="144"/>
     <line x1="441.39" x2="441.39" y1="42" y2="144"/>
     <line x1="627.8" x2="627.8" y1="42" y2="144"/>

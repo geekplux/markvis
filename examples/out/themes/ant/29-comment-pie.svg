@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="pie chart: Core still leads product mix at 50% (%), 3 slices" aria-labelledby="mv-e0c3dbc735af8720-title" aria-describedby="mv-e0c3dbc735af8720-desc" data-markvis="2" data-chart-type="pie" data-id="mv-e0c3dbc735af8720" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
   <title id="mv-e0c3dbc735af8720-title">Core still leads product mix at 50%</title>
   <desc id="mv-e0c3dbc735af8720-desc">pie chart. Core still leads product mix at 50%. x=name. y=value. unit=%. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="48" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Core still leads product mix at 50%</title>Core still leads product mix at 50%<tspan font-size="12" font-weight="400" fill="#8C8C8C"> · %</tspan></text>
+  <text x="48" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Core still leads product mix at 50%</title>Core still leads product mix at 50%<tspan font-size="12" font-weight="400" fill="#737373"> · %</tspan></text>
   <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0.6">
     <path d="M377 103.6 A122.4 122.4 0 0 1 395.24 347.03 L387.95 298.62 A73.44 73.44 0 0 0 377 152.56 Z" fill="#5AD8A6" stroke="#262626" stroke-opacity="0.32" stroke-width="1.5" data-label="Core" data-raw-value="50" data-donut="1"/>
     <path d="M395.24 347.03 A122.4 122.4 0 0 1 254.94 216.85 L303.77 220.51 A73.44 73.44 0 0 0 387.95 298.62 Z" fill="#E8684A" stroke="#262626" stroke-opacity="0.32" stroke-width="1.5" data-label="Addons" data-raw-value="30" data-donut="1"/>
     <path d="M254.94 216.85 A122.4 122.4 0 0 1 377 103.6 L377 152.56 A73.44 73.44 0 0 0 303.77 220.51 Z" fill="#5D7092" stroke="#262626" stroke-opacity="0.32" stroke-width="1.5" data-label="Other" data-raw-value="25" data-donut="1"/>
   </g>
-  <g fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1">
+  <g fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-leaders="1">
     <polyline points="499.06,216.85 515.01,215.66 523.01,215.66"/>
     <polyline points="293.75,315.73 282.86,327.45 274.86,327.45"/>
     <polyline points="293.75,136.27 282.86,124.55 274.86,124.55"/>

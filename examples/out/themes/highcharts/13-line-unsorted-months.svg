@@ -2,7 +2,7 @@
   <title id="mv-38d53de0cc111dae-title">December led signups at 55</title>
   <desc id="mv-38d53de0cc111dae-desc">line chart. December led signups at 55. x=month. y=signups. 4 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>December led signups at 55</title>December led signups at 55</text>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="308" y2="308"/>
     <line x1="74" x2="700" y1="242" y2="242"/>
     <line x1="74" x2="700" y1="176" y2="176"/>
@@ -12,20 +12,20 @@
   <path d="M74 374 L700 374" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <path d="M152.25 374 L152.25 380 M308.75 374 L308.75 380 M465.25 374 L465.25 380 M621.75 374 L621.75 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="374" text-anchor="end" dominant-baseline="middle">10</text>
-    <text x="60" y="308" text-anchor="end" dominant-baseline="middle">20</text>
-    <text x="60" y="242" text-anchor="end" dominant-baseline="middle">30</text>
-    <text x="60" y="176" text-anchor="end" dominant-baseline="middle">40</text>
-    <text x="60" y="110" text-anchor="end" dominant-baseline="middle">50</text>
-    <text x="60" y="44" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="66" y="374" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="66" y="308" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="66" y="242" text-anchor="end" dominant-baseline="middle">30</text>
+    <text x="66" y="176" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="66" y="110" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="66" y="44" text-anchor="end" dominant-baseline="middle">60</text>
     <text x="152.25" y="391" text-anchor="middle" font-size="11" data-full-label="Mar"><title>Mar</title>Mar</text>
     <text x="308.75" y="391" text-anchor="middle" font-size="11" data-full-label="Jan"><title>Jan</title>Jan</text>
     <text x="465.25" y="391" text-anchor="middle" font-size="11" data-full-label="Dec"><title>Dec</title>Dec</text>
     <text x="621.75" y="391" text-anchor="middle" font-size="11" data-full-label="Jun"><title>Jun</title>Jun</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="43.36" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 43.36 209)" data-axis="y">signups</text>
-    <text x="387" y="401" text-anchor="middle" dominant-baseline="hanging" data-axis="x">month</text>
+    <text x="42.68" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 42.68 209)" data-axis="y">signups</text>
+    <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">month</text>
   </g>
   <g fill="none">
     <path d="M152.25 176 L308.75 294.8 L465.25 77 L621.75 242" fill="none" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="signups"/>

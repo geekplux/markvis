@@ -20,6 +20,7 @@ export declare const ERROR_CODES: readonly [
   "E_MISSING_VALUE",
   "E_DUP_KEY",
   "E_SANKEY_CYCLE",
+  "E_BAD_DATE",
 ];
 export type ErrorCode = (typeof ERROR_CODES)[number];
 
@@ -82,3 +83,7 @@ export declare function parseDocument(
   options?: ParseOptions,
 ): LocatedChart[];
 export declare function extractCharts(source: string): ExtractedChart[];
+/** A header field of the first chart (fence header, chart comment, or bare body), or undefined. */
+export declare function readChartField(source: string, key: string): string | undefined;
+/** Set a header field on the first chart in place, or remove it when value is null. */
+export declare function setChartField(source: string, key: string, value: string | null): string;

@@ -22,6 +22,11 @@ export function exampleQuery(search: string): string {
   if (paletteRaw && PALETTE_SET.has(paletteRaw)) {
     out.set("palette", paletteRaw);
   }
+  // Light is the default and stays implicit.
+  const surfaceRaw = params.get("surface");
+  if (surfaceRaw === "dark" || surfaceRaw === "export") {
+    out.set("surface", surfaceRaw);
+  }
   const qs = out.toString();
   return qs.length > 0 ? `?${qs}` : "";
 }

@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="line chart: Retention fell to 70 by week 4 (pct), 4 rows" aria-labelledby="mv-1e4c16b29ddcbf07-title" aria-describedby="mv-1e4c16b29ddcbf07-desc" data-markvis="2" data-chart-type="line" data-id="mv-1e4c16b29ddcbf07" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
   <title id="mv-1e4c16b29ddcbf07-title">Retention fell to 70 by week 4</title>
   <desc id="mv-1e4c16b29ddcbf07-desc">line chart. Retention fell to 70 by week 4. x=week. y=rate. unit=pct. 4 rows.</desc>
-  <text x="66" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Retention fell to 70 by week 4</title>Retention fell to 70 by week 4<tspan font-size="12" font-weight="400" fill="#8C8C8C"> · pct</tspan></text>
-  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4">
+  <text x="66" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Retention fell to 70 by week 4</title>Retention fell to 70 by week 4<tspan font-size="12" font-weight="400" fill="#737373"> · pct</tspan></text>
+  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4" data-grid="1">
     <line x1="66" x2="706" y1="293.2" y2="293.2"/>
     <line x1="66" x2="706" y1="231.4" y2="231.4"/>
     <line x1="66" x2="706" y1="107.8" y2="107.8"/>
@@ -10,13 +10,13 @@
   </g>
   <path d="M66 355 L706 355" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1"/>
   <path d="M74 355 L74 359 M198.8 355 L198.8 359 M323.6 355 L323.6 359 M448.4 355 L448.4 359 M573.2 355 L573.2 359 M698 355 L698 359" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-axis-ticks="1"/>
-  <g fill="#8C8C8C" font-size="12" font-weight="400">
-    <text x="54" y="355" text-anchor="end" dominant-baseline="middle">60</text>
-    <text x="54" y="293.2" text-anchor="end" dominant-baseline="middle">70</text>
-    <text x="54" y="231.4" text-anchor="end" dominant-baseline="middle">80</text>
-    <text x="54" y="169.6" text-anchor="end" dominant-baseline="middle">90</text>
-    <text x="54" y="107.8" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="54" y="46" text-anchor="end" dominant-baseline="middle">110</text>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="58" y="355" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="58" y="293.2" text-anchor="end" dominant-baseline="middle">70</text>
+    <text x="58" y="231.4" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="58" y="169.6" text-anchor="end" dominant-baseline="middle">90</text>
+    <text x="58" y="107.8" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="58" y="46" text-anchor="end" dominant-baseline="middle">110</text>
     <text x="74" y="371" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
     <text x="198.8" y="371" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
     <text x="323.6" y="371" text-anchor="middle" font-size="12" data-full-label="2"><title>2</title>2</text>
@@ -24,9 +24,9 @@
     <text x="573.2" y="371" text-anchor="middle" font-size="12" data-full-label="4"><title>4</title>4</text>
     <text x="698" y="371" text-anchor="middle" font-size="12" data-full-label="5"><title>5</title>5</text>
   </g>
-  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="26.68" y="200.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 26.68 200.5)" data-axis="y">rate · pct</text>
-    <text x="386" y="383" text-anchor="middle" dominant-baseline="hanging" data-axis="x">week</text>
+  <g fill="#737373" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="26.4" y="200.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 26.4 200.5)" data-axis="y">rate · pct</text>
+    <text x="386" y="380.6" text-anchor="middle" dominant-baseline="hanging" data-axis="x">week</text>
   </g>
   <g fill="none">
     <path d="M198.8 107.8 L323.6 219.04 L448.4 268.48 L573.2 293.2" fill="none" stroke="#5AD8A6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="rate"/>

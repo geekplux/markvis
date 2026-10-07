@@ -3,7 +3,7 @@
   <desc id="mv-2891e3f7754a99f2-desc">line chart. Tuesday peaked corridor delays at 120 min. x=day. y=delay_min. unit=min. 5 rows.</desc>
   <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>Tuesday peaked corridor delays at 120 min</title>TUESDAY PEAKED CORRIDOR DELAYS AT 120 MIN<tspan font-size="11" font-weight="400" fill="#64748B"> · min</tspan></text>
   <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3">
+  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3" data-grid="1">
     <line x1="40" x2="704" y1="352.5" y2="352.5"/>
     <line x1="40" x2="704" y1="145.5" y2="145.5"/>
     <line x1="40" x2="704" y1="42" y2="42"/>

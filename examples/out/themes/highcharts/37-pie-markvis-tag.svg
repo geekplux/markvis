@@ -3,14 +3,14 @@
   <desc id="mv-084d4e3d9bba4f2b-desc">pie chart. Billing leads support tickets at 40. x=topic. y=tickets. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Billing leads support tickets at 40</title>Billing leads support tickets at 40</text>
   <g font-size="12" font-weight="700" fill="#333333">
-    <circle cx="151.68" cy="402" r="5" fill="#7cb5ec"/>
-    <text x="160.68" y="406" data-legend="Billing and invoice disputes">Billing and invoice disputes</text>
-    <circle cx="390" cy="402" r="5" fill="#434348"/>
-    <text x="399" y="406" data-legend="Account access and MFA reset">Account access and MFA reset</text>
-    <circle cx="200.04" cy="420" r="5" fill="#90ed7d"/>
-    <text x="209.04" y="424" data-legend="Product how-to questions">Product how-to questions</text>
-    <circle cx="408.6" cy="420" r="5" fill="#f7a35c"/>
-    <text x="417.6" y="424" data-legend="Other miscellaneous">Other miscellaneous</text>
+    <circle cx="77.18" cy="402" r="5" fill="#7cb5ec"/>
+    <text x="86.18" y="406" data-legend="Billing and invoice disputes">Billing and invoice disputes</text>
+    <circle cx="283.13" cy="402" r="5" fill="#434348"/>
+    <text x="292.13" y="406" data-legend="Account access and MFA reset">Account access and MFA reset</text>
+    <circle cx="505.6" cy="402" r="5" fill="#90ed7d"/>
+    <text x="514.6" y="406" data-legend="Product how-to questions">Product how-to questions</text>
+    <circle cx="309.62" cy="420" r="5" fill="#f7a35c"/>
+    <text x="318.62" y="424" data-legend="Other miscellaneous">Other miscellaneous</text>
   </g>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0">
     <path d="M378 211 L378 97.44 A113.56 113.56 0 0 1 444.75 302.87 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Billing and invoice disputes" data-raw-value="40"/>

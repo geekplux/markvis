@@ -11,9 +11,11 @@ import { seriesStyle } from "./palette.js";
 import { formatNumber } from "./scale.js";
 import { textWidth, truncateLabel } from "./text.js";
 import {
+  FONT,
   FONT_NUMERIC,
   INK,
   MARGIN,
+  PAPER,
   PLOT_BG,
   PLOT_BORDER,
   PLOT_BORDER_WIDTH,
@@ -523,6 +525,11 @@ export function renderSankey(chart: ChartIR, _id: string): Painted {
       "font-size": TYPE.tick.size,
       "font-family": FONT_NUMERIC,
       "font-weight": TYPE.tick.weight,
+      // Middle-column labels cross the ribbons; a paper halo keeps them legible.
+      stroke: PAPER,
+      "stroke-width": 3,
+      "stroke-linejoin": "round",
+      "paint-order": "stroke",
     })}>`,
   );
   for (const id of nodeIds) {
@@ -549,7 +556,7 @@ export function renderSankey(chart: ChartIR, _id: string): Painted {
         : Math.max(0, colSpan - NODE_W - 8);
     const lx = outsideLeft ? g.x - 4 : g.x + g.width + 4;
     const label =
-      room >= 8 ? truncateLabel(id, room, TYPE.tick.size) : "";
+      room >= 8 ? truncateLabel(id, room, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT) : "";
     lines.push(
       `    <text ${attrs({
         x: fmtPx(lx),

@@ -8,6 +8,7 @@ import FamilyFoot from "../../components/FamilyFoot.vue";
 import CopyChip from "../../components/CopyChip.vue";
 import HomeProof from "../../components/HomeProof.vue";
 import FenceTabs from "../../components/FenceTabs.vue";
+import ThemeStrip from "../../components/ThemeStrip.vue";
 import { initSiteMode } from "./siteMode";
 import "./site-mode.css";
 import "./site.css";
@@ -29,6 +30,7 @@ export default {
     app.component("CopyChip", CopyChip);
     app.component("HomeProof", HomeProof);
     app.component("FenceTabs", FenceTabs);
+    app.component("ThemeStrip", ThemeStrip);
     if (typeof window !== "undefined") {
       initSiteMode();
     }

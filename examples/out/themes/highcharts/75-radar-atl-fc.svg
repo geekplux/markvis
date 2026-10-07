@@ -3,31 +3,31 @@
   <desc id="mv-36540905858b9d72-desc">radar chart. Home press still leads Atlanta FC match profile at 88. x=trait. y=score. series=venue. 12 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Home press still leads Atlanta FC match profile at 88</title>Home press still leads Atlanta FC match profile at 88</text>
   <g font-size="12" font-weight="700" fill="#333333">
-    <circle cx="317.19" cy="420" r="5" fill="#7cb5ec"/>
-    <text x="326.19" y="424" data-legend="Home">Home</text>
-    <circle cx="376.95" cy="420" r="5" fill="#434348"/>
-    <text x="385.95" y="424" data-legend="Away">Away</text>
+    <circle cx="314.79" cy="420" r="5" fill="#7cb5ec"/>
+    <text x="323.79" y="424" data-legend="Home">Home</text>
+    <circle cx="381.56" cy="420" r="5" fill="#434348"/>
+    <text x="390.56" y="424" data-legend="Away">Away</text>
   </g>
-  <g fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-radar-grid="1">
-    <path d="M364.95 146.48 L420.83 178.74 L420.83 243.26 L364.95 275.52 L309.07 243.26 L309.07 178.74 Z"/>
-    <line x1="364.95" y1="211" x2="364.95" y2="97.44"/>
-    <line x1="364.95" y1="211" x2="463.3" y2="154.22"/>
-    <line x1="364.95" y1="211" x2="463.3" y2="267.78"/>
-    <line x1="364.95" y1="211" x2="364.95" y2="324.56"/>
-    <line x1="364.95" y1="211" x2="266.6" y2="267.78"/>
-    <line x1="364.95" y1="211" x2="266.6" y2="154.22"/>
+  <g fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-grid="1" data-radar-grid="1">
+    <path d="M368.29 146.48 L424.17 178.74 L424.17 243.26 L368.29 275.52 L312.41 243.26 L312.41 178.74 Z"/>
+    <line x1="368.29" y1="211" x2="368.29" y2="97.44"/>
+    <line x1="368.29" y1="211" x2="466.64" y2="154.22"/>
+    <line x1="368.29" y1="211" x2="466.64" y2="267.78"/>
+    <line x1="368.29" y1="211" x2="368.29" y2="324.56"/>
+    <line x1="368.29" y1="211" x2="269.95" y2="267.78"/>
+    <line x1="368.29" y1="211" x2="269.95" y2="154.22"/>
   </g>
   <g data-radar="1">
-    <path d="M364.95 97.44 L447.65 163.25 L442.06 255.52 L364.95 315.53 L278.9 260.68 L284.49 164.54 Z" fill="#7cb5ec" fill-opacity="0.12" stroke="#7cb5ec" stroke-width="1.75" data-series="Home"/>
-    <path d="M364.95 119.38 L440.94 167.12 L436.47 252.29 L364.95 301.33 L283.37 258.1 L296.78 171.64 Z" fill="#434348" fill-opacity="0.12" stroke="#434348" stroke-width="1.75" data-series="Away"/>
+    <path d="M368.29 97.44 L450.99 163.25 L445.4 255.52 L368.29 315.53 L282.24 260.68 L287.83 164.54 Z" fill="#7cb5ec" fill-opacity="0.12" stroke="#7cb5ec" stroke-width="1.75" data-series="Home"/>
+    <path d="M368.29 119.38 L444.29 167.12 L439.82 252.29 L368.29 301.33 L286.71 258.1 L300.12 171.64 Z" fill="#434348" fill-opacity="0.12" stroke="#434348" stroke-width="1.75" data-series="Away"/>
   </g>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="364.95" y="83.44" text-anchor="middle" dominant-baseline="middle" data-spoke="Press">Press</text>
-    <text x="475.42" y="147.22" text-anchor="middle" dominant-baseline="middle" data-spoke="Build">Build</text>
-    <text x="475.42" y="274.78" text-anchor="middle" dominant-baseline="middle" data-spoke="Set pieces">Set pieces</text>
-    <text x="364.95" y="338.56" text-anchor="middle" dominant-baseline="middle" data-spoke="Width">Width</text>
-    <text x="254.48" y="274.78" text-anchor="middle" dominant-baseline="middle" data-spoke="Recovery">Recovery</text>
-    <text x="254.48" y="147.22" text-anchor="middle" dominant-baseline="middle" data-spoke="Finishing">Finishing</text>
-    <text x="364.95" y="142.48" text-anchor="middle" font-size="11" fill="#666666" data-radar-tick="50">50</text>
+    <text x="368.29" y="83.44" text-anchor="middle" dominant-baseline="middle" data-spoke="Press">Press</text>
+    <text x="478.76" y="147.22" text-anchor="middle" dominant-baseline="middle" data-spoke="Build">Build</text>
+    <text x="478.76" y="274.78" text-anchor="middle" dominant-baseline="middle" data-spoke="Set pieces">Set pieces</text>
+    <text x="368.29" y="338.56" text-anchor="middle" dominant-baseline="middle" data-spoke="Width">Width</text>
+    <text x="257.82" y="274.78" text-anchor="middle" dominant-baseline="middle" data-spoke="Recovery">Recovery</text>
+    <text x="257.82" y="147.22" text-anchor="middle" dominant-baseline="middle" data-spoke="Finishing">Finishing</text>
+    <text x="368.29" y="142.48" text-anchor="middle" font-size="11" fill="#666666" data-radar-tick="50">50</text>
   </g>
 </svg>

@@ -12,6 +12,7 @@ import { titleBlockTop, type Painted } from "./layout.js";
 import { formatNumber } from "./scale.js";
 import { textWidth } from "./text.js";
 import {
+  FONT,
   FONT_NUMERIC,
   INK,
   MARGIN,
@@ -27,6 +28,8 @@ const WEEKDAY_LABELS: [number, string][] = [
   [2, "Wed"],
   [4, "Fri"],
 ];
+/** Most year bands one figure draws. The parser rejects a wider span. */
+export const CALENDAR_MAX_YEARS = 5;
 /** A day with no row: present in the range, not in the table. */
 const EMPTY_OPACITY = 0.06;
 
@@ -48,8 +51,14 @@ export function renderCalendar(chart: ChartIR, svgId: string): Painted {
     }
   }
   const days = [...values.keys()].sort((a, b) => a - b);
-  const first = days[0] ?? 0;
   const last = days[days.length - 1] ?? 0;
+  // Defensive: an IR that skipped the parser still draws at most the latest years.
+  const earliest = daysFromCivil({
+    year: civilFromDays(last).year - CALENDAR_MAX_YEARS + 1,
+    month: 1,
+    day: 1,
+  });
+  const first = Math.max(days[0] ?? 0, earliest);
   const bands: Band[] = [];
   for (let year = civilFromDays(first).year; year <= civilFromDays(last).year; year++) {
     const start = Math.max(first, daysFromCivil({ year, month: 1, day: 1 }));
@@ -57,18 +66,27 @@ export function renderCalendar(chart: ChartIR, svgId: string): Painted {
     const weekStart = start - weekdayMonday0(start);
     bands.push({ year, start, end, weekStart, weeks: Math.floor((end - weekStart) / 7) + 1 });
   }
-  const present = [...values.values()].filter((v): v is number => v !== null);
-  const lo = chart.min ?? (present.length > 0 ? Math.min(...present) : 0);
-  const hi = chart.max ?? (present.length > 0 ? Math.max(...present) : 1);
+  let dataLo = Infinity;
+  let dataHi = -Infinity;
+  for (const value of values.values()) {
+    if (value !== null) {
+      dataLo = Math.min(dataLo, value);
+      dataHi = Math.max(dataHi, value);
+    }
+  }
+  const lo = chart.min ?? (Number.isFinite(dataLo) ? dataLo : 0);
+  const hi = chart.max ?? (Number.isFinite(dataHi) ? dataHi : 1);
   const shade = (value: number) => rampFill(hi === lo ? 1 : (value - lo) / (hi - lo));
 
-  const gutter = Math.max(...WEEKDAY_LABELS.map(([, label]) => textWidth(label, TYPE.tick.size))) + 10;
+  const gutter = Math.max(...WEEKDAY_LABELS.map(([, label]) => textWidth(label, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT))) + 10;
   const left = MARGIN.left + gutter;
   const maxWeeks = Math.max(1, ...bands.map((band) => band.weeks));
   const step = Math.max(7, Math.min(18, Math.floor((SVG_WIDTH - left - MARGIN.right) / maxWeeks)));
   const cell = step - (step >= 10 ? 2 : 1);
   const monthRow = TYPE.tick.size + 8;
-  const bandH = monthRow + 7 * step + 18;
+  // Several years: each band gets its own year line above its months.
+  const yearRow = bands.length > 1 ? TYPE.tick.size + 8 : 0;
+  const bandH = yearRow + monthRow + 7 * step + 18;
 
   reserveTitle(visibleTitle(chart), MARGIN.left, chart.unit);
   const top = titleBlockTop(0);
@@ -87,14 +105,14 @@ export function renderCalendar(chart: ChartIR, svgId: string): Painted {
   const labels: string[] = [];
 
   bands.forEach((band, bi) => {
-    const gridTop = top + bi * bandH + monthRow;
+    const gridTop = top + bi * bandH + yearRow + monthRow;
     const colX = (day: number) => left + Math.floor((day - band.weekStart) / 7) * step;
     const rowY = (day: number) => gridTop + weekdayMonday0(day) * step;
     if (bands.length > 1) {
       labels.push(
         `    <text ${attrs({
           x: fmtPx(MARGIN.left),
-          y: fmtPx(gridTop - 8),
+          y: fmtPx(gridTop - monthRow - 6),
           "font-weight": 600,
           fill: TYPE.title.fill,
           "data-year": band.year,
@@ -109,7 +127,10 @@ export function renderCalendar(chart: ChartIR, svgId: string): Painted {
       }
       const x = colX(day) + (weekdayMonday0(day) === 0 ? 0 : step);
       const label = MONTHS[date.month - 1]!;
-      if (x - lastLabelX < textWidth("Mmm", TYPE.tick.size) + 4 || x > left + band.weeks * step - 8) {
+      if (
+        x - lastLabelX < textWidth("Mmm", TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT) + 4 ||
+        x > left + band.weeks * step - 8
+      ) {
         continue;
       }
       lastLabelX = x;
@@ -158,7 +179,7 @@ export function renderCalendar(chart: ChartIR, svgId: string): Painted {
 
   // Color key: low value, five steps, high value.
   const keyLo = formatNumber(lo);
-  const keyX = left + textWidth(keyLo, TYPE.tick.size) + 6;
+  const keyX = left + textWidth(keyLo, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT) + 6;
   labels.push(
     `    <text ${attrs({ x: fmtPx(left), y: fmtPx(legendY + cell - 1), "data-key": "low" })}>${escapeXml(keyLo)}</text>`,
   );
@@ -191,8 +212,11 @@ export function renderCalendar(chart: ChartIR, svgId: string): Painted {
       "font-family": FONT_NUMERIC,
       "font-weight": TYPE.tick.weight,
     })}>`,
-    ...labels,
-    `  </g>`,
   );
+  // One push per label: a long range must never become one huge argument list.
+  for (const label of labels) {
+    lines.push(label);
+  }
+  lines.push(`  </g>`);
   return { lines, height };
 }

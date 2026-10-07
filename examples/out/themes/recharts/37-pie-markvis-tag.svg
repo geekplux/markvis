@@ -3,14 +3,14 @@
   <desc id="mv-084d4e3d9bba4f2b-desc">pie chart. Billing leads support tickets at 40. x=topic. y=tickets. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>Billing leads support tickets at 40</title>Billing leads support tickets at 40</text>
   <g font-size="12" font-weight="400" fill="#374151">
-    <rect x="142.68" y="407" width="10" height="10" fill="#8884d8" rx="1"/>
-    <text x="156.68" y="416" data-legend="Billing and invoice disputes">Billing and invoice disputes</text>
-    <rect x="381" y="407" width="10" height="10" fill="#82ca9d" rx="1"/>
-    <text x="395" y="416" data-legend="Account access and MFA reset">Account access and MFA reset</text>
-    <rect x="191.04" y="425" width="10" height="10" fill="#ffc658" rx="1"/>
-    <text x="205.04" y="434" data-legend="Product how-to questions">Product how-to questions</text>
-    <rect x="399.6" y="425" width="10" height="10" fill="#ff7300" rx="1"/>
-    <text x="413.6" y="434" data-legend="Other miscellaneous">Other miscellaneous</text>
+    <rect x="87.67" y="407" width="10" height="10" fill="#8884d8" rx="1"/>
+    <text x="101.67" y="416" data-legend="Billing and invoice disputes">Billing and invoice disputes</text>
+    <rect x="278.02" y="407" width="10" height="10" fill="#82ca9d" rx="1"/>
+    <text x="292.02" y="416" data-legend="Account access and MFA reset">Account access and MFA reset</text>
+    <rect x="490.78" y="407" width="10" height="10" fill="#ffc658" rx="1"/>
+    <text x="504.78" y="416" data-legend="Product how-to questions">Product how-to questions</text>
+    <rect x="305.8" y="425" width="10" height="10" fill="#ff7300" rx="1"/>
+    <text x="319.8" y="434" data-legend="Other miscellaneous">Other miscellaneous</text>
   </g>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0">
     <path d="M374 213 L374 94 A119 119 0 0 1 443.95 309.27 Z" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="Billing and invoice disputes" data-raw-value="40"/>

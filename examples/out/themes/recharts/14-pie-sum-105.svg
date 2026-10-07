@@ -3,12 +3,12 @@
   <desc id="mv-2e7a703e9d22ed38-desc">pie chart. Budget lines overrun the 100% pie. x=bucket. y=pct. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>Budget lines overrun the 100% pie</title>Budget lines overrun the 100% pie</text>
   <g font-size="12" font-weight="400" fill="#374151">
-    <rect x="280.2" y="425" width="10" height="10" fill="#8884d8" rx="1"/>
-    <text x="294.2" y="434" data-legend="Infra">Infra</text>
-    <rect x="347.4" y="425" width="10" height="10" fill="#82ca9d" rx="1"/>
-    <text x="361.4" y="434" data-legend="Product">Product</text>
-    <rect x="429.48" y="425" width="10" height="10" fill="#ffc658" rx="1"/>
-    <text x="443.48" y="434" data-legend="Ops">Ops</text>
+    <rect x="287.14" y="425" width="10" height="10" fill="#8884d8" rx="1"/>
+    <text x="301.14" y="434" data-legend="Infra">Infra</text>
+    <rect x="344.2" y="425" width="10" height="10" fill="#82ca9d" rx="1"/>
+    <text x="358.2" y="434" data-legend="Product">Product</text>
+    <rect x="421.21" y="425" width="10" height="10" fill="#ffc658" rx="1"/>
+    <text x="435.21" y="434" data-legend="Ops">Ops</text>
   </g>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0">
     <path d="M374 222 L374 96.88 A125.12 125.12 0 0 1 428.29 334.73 Z" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="Infra" data-raw-value="45"/>

@@ -10,7 +10,7 @@
     <path d="M372 253 L240.51 195.58 A143.48 143.48 0 0 1 304.73 126.27 Z" fill="#334155" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Bike" data-raw-value="11"/>
     <path d="M372 253 L304.73 126.27 A143.48 143.48 0 0 1 372 109.52 Z" fill="#78716C" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-label="Other" data-raw-value="8"/>
   </g>
-  <g fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1">
+  <g fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-leaders="1">
     <polyline points="503.49,195.58 514.48,190.77 522.48,190.77"/>
     <polyline points="385.11,395.88 386.21,407.83 394.21,407.83"/>
     <polyline points="233.32,289.78 221.72,292.86 213.72,292.86"/>

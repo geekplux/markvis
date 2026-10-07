@@ -23,6 +23,7 @@ export { CORE_FENCE_KEYS } from "./contract.js";
 export { typeExtras, allowedFenceKeys } from "./fence-keys.js";
 /** Strict YYYY-MM-DD check shared by the parser and the calendar painter. */
 export { parseIsoDate } from "./_paint/date.js";
+export { CALENDAR_MAX_YEARS } from "./_paint/calendar.js";
 
 export {
   bar,

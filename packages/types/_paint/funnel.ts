@@ -11,6 +11,7 @@ import { seriesStyle } from "./palette.js";
 import { formatNumber } from "./scale.js";
 import { textWidth, truncateLabel } from "./text.js";
 import {
+  FONT,
   FONT_NUMERIC,
   INK,
   MARGIN,
@@ -45,7 +46,7 @@ export function renderFunnel(chart: ChartIR, _id: string): Painted {
   });
   const labelW = Math.max(
     0,
-    ...labelText.map((label) => textWidth(label, TYPE.value.size)),
+    ...labelText.map((label) => textWidth(label, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT)),
   );
   const left = MARGIN.left;
   const right = Math.min(
@@ -159,9 +160,9 @@ export function renderFunnel(chart: ChartIR, _id: string): Painted {
     // Recomputing the margin from rounded coordinates can miss by a fraction
     // of a pixel. That is still the same label, not a truncation.
     const shown =
-      textWidth(full, TYPE.value.size) <= room + 0.5
+      textWidth(full, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT) <= room + 0.5
         ? full
-        : truncateLabel(full, room, TYPE.value.size);
+        : truncateLabel(full, room, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT);
     const cy = plot.top + (i + 0.5) * stageH;
     lines.push(
       `    <text ${attrs({

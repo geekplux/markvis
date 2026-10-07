@@ -2,7 +2,7 @@
   <title id="mv-a2ff55452aa66703-title">Most points sit near the axes</title>
   <desc id="mv-a2ff55452aa66703-desc">scatter chart. Most points sit near the axes. x=dx. y=dy. 4 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Most points sit near the axes</title>Most points sit near the axes</text>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="308" y2="308"/>
     <line x1="74" x2="700" y1="242" y2="242"/>
     <line x1="74" x2="700" y1="176" y2="176"/>
@@ -13,12 +13,12 @@
   <path d="M82 374 L82 380 M234.5 374 L234.5 380 M387 374 L387 380 M539.5 374 L539.5 380 M692 374 L692 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <line x1="74" x2="700" y1="308" y2="308" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="374" text-anchor="end" dominant-baseline="middle">-1</text>
-    <text x="60" y="308" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="60" y="242" text-anchor="end" dominant-baseline="middle">1</text>
-    <text x="60" y="176" text-anchor="end" dominant-baseline="middle">2</text>
-    <text x="60" y="110" text-anchor="end" dominant-baseline="middle">3</text>
-    <text x="60" y="44" text-anchor="end" dominant-baseline="middle">4</text>
+    <text x="66" y="374" text-anchor="end" dominant-baseline="middle">-1</text>
+    <text x="66" y="308" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="242" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="66" y="176" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="66" y="110" text-anchor="end" dominant-baseline="middle">3</text>
+    <text x="66" y="44" text-anchor="end" dominant-baseline="middle">4</text>
     <text x="82" y="391" text-anchor="middle" font-size="11" data-full-label="-1"><title>-1</title>-1</text>
     <text x="234.5" y="391" text-anchor="middle" font-size="11" data-full-label="0"><title>0</title>0</text>
     <text x="387" y="391" text-anchor="middle" font-size="11" data-full-label="1"><title>1</title>1</text>
@@ -26,8 +26,8 @@
     <text x="692" y="391" text-anchor="middle" font-size="11" data-full-label="3"><title>3</title>3</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="43.36" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 43.36 209)" data-axis="y">dy</text>
-    <text x="387" y="401" text-anchor="middle" dominant-baseline="hanging" data-axis="x">dx</text>
+    <text x="43.28" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 43.28 209)" data-axis="y">dy</text>
+    <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">dx</text>
   </g>
   <g>
     <circle cx="234.5" cy="308" r="3.5" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="0" data-y="0" data-series="dy"/>

@@ -7,19 +7,19 @@
   <path d="M152.25 374 L152.25 380 M308.75 374 L308.75 380 M465.25 374 L465.25 380 M621.75 374 L621.75 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <line x1="74" x2="700" y1="297.5" y2="297.5" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="374" text-anchor="end" dominant-baseline="middle">-50</text>
-    <text x="60" y="297.5" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="60" y="221" text-anchor="end" dominant-baseline="middle">50</text>
-    <text x="60" y="144.5" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="60" y="68" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="66" y="374" text-anchor="end" dominant-baseline="middle">-50</text>
+    <text x="66" y="297.5" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="221" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="66" y="144.5" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="66" y="68" text-anchor="end" dominant-baseline="middle">150</text>
     <text x="152.25" y="391" text-anchor="middle" font-size="11" data-full-label="Sales"><title>Sales</title>Sales</text>
     <text x="308.75" y="391" text-anchor="middle" font-size="11" data-full-label="Support"><title>Support</title>Support</text>
     <text x="465.25" y="391" text-anchor="middle" font-size="11" data-full-label="R&amp;D"><title>R&amp;D</title>R&amp;D</text>
     <text x="621.75" y="391" text-anchor="middle" font-size="11" data-full-label="Ops"><title>Ops</title>Ops</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="36.54" y="221" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 36.54 221)" data-axis="y">delta · USD</text>
-    <text x="387" y="401" text-anchor="middle" dominant-baseline="hanging" data-axis="x">dept</text>
+    <text x="35.52" y="221" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 35.52 221)" data-axis="y">delta · USD</text>
+    <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">dept</text>
   </g>
   <g>
     <path d="M120.25 297.5 L184.25 297.5 L184.25 113.9 L120.25 113.9 Z" fill="#7cb5ec" data-x="Sales" data-series="delta" data-y="120"/>

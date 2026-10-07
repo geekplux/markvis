@@ -42,3 +42,15 @@ describe("play embed", () => {
     expect(pkg.scripts.build).toContain("build:embed");
   });
 });
+
+describe("surface reaches the embedded playground", () => {
+  it("forwards dark and export, drops light and junk", () => {
+    expect(exampleQuery("?example=02-line-multi&theme=ant&surface=dark")).toBe(
+      "?example=02-line-multi&theme=ant&surface=dark",
+    );
+    expect(exampleQuery("?surface=export")).toBe("?surface=export");
+    expect(exampleQuery("?example=01-bar-basic&surface=light")).toBe("?example=01-bar-basic");
+    expect(exampleQuery("?surface=neon")).toBe("");
+  });
+});
+

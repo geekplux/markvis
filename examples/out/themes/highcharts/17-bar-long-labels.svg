@@ -6,17 +6,17 @@
   <path d="M74 360 L700 360" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <path d="M178.33 360 L178.33 366 M387 360 L387 366 M595.67 360 L595.67 366" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="360" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="60" y="262.67" text-anchor="end" dominant-baseline="middle">200,000</text>
-    <text x="60" y="165.33" text-anchor="end" dominant-baseline="middle">400,000</text>
-    <text x="60" y="68" text-anchor="end" dominant-baseline="middle">600,000</text>
-    <text x="178.33" y="377" text-anchor="middle" font-size="11" data-full-label="North America enterprise expansion Q3"><title>North America enterprise expansion Q3</title><tspan x="178.33" dy="0">North America enterprise</tspan><tspan x="178.33" dy="14">expansion Q3</tspan></text>
+    <text x="66" y="360" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="262.67" text-anchor="end" dominant-baseline="middle">200,000</text>
+    <text x="66" y="165.33" text-anchor="end" dominant-baseline="middle">400,000</text>
+    <text x="66" y="68" text-anchor="end" dominant-baseline="middle">600,000</text>
+    <text x="178.33" y="377" text-anchor="middle" font-size="11" data-full-label="North America enterprise expansion Q3"><title>North America enterprise expansion Q3</title><tspan x="178.33" dy="0">North America enterprise expansion</tspan><tspan x="178.33" dy="14">Q3</tspan></text>
     <text x="387" y="377" text-anchor="middle" font-size="11" data-full-label="APAC partner enablement and training program"><title>APAC partner enablement and training program</title><tspan x="387" dy="0">APAC partner enablement and</tspan><tspan x="387" dy="14">training program</tspan></text>
-    <text x="595.67" y="377" text-anchor="middle" font-size="11" data-full-label="Legacy platform decommission wave 2"><title>Legacy platform decommission wave 2</title><tspan x="595.67" dy="0">Legacy platform decommission</tspan><tspan x="595.67" dy="14">wave 2</tspan></text>
+    <text x="595.67" y="377" text-anchor="middle" font-size="11" data-full-label="Legacy platform decommission wave 2"><title>Legacy platform decommission wave 2</title><tspan x="595.67" dy="0">Legacy platform decommission wave</tspan><tspan x="595.67" dy="14">2</tspan></text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="9.26" y="214" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 9.26 214)" data-axis="y">spend · USD</text>
-    <text x="387" y="387" text-anchor="middle" dominant-baseline="hanging" data-axis="x">region</text>
+    <text x="10.46" y="214" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 10.46 214)" data-axis="y">spend · USD</text>
+    <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">region</text>
   </g>
   <g>
     <path d="M146.33 360 L210.33 360 L210.33 155.6 L146.33 155.6 Z" fill="#7cb5ec" data-x="North America enterprise expansion Q3" data-series="spend" data-y="420000"/>

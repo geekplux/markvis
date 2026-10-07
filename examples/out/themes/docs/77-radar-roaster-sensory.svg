@@ -6,12 +6,12 @@
   <g font-size="11" font-weight="500" fill="#18181B">
     <rect x="42.69" y="458.5" width="10" height="3" fill="#475569" rx="1.5"/>
     <text x="56.69" y="464" data-legend="Octane">Octane</text>
-    <rect x="113.61" y="458.5" width="10" height="3" fill="#64748B" rx="1.5"/>
-    <text x="127.61" y="464" data-legend="Barista">Barista</text>
-    <rect x="191.35" y="458.5" width="10" height="3" fill="#0F766E" rx="1.5"/>
-    <text x="205.35" y="464" data-legend="Component">Component</text>
+    <rect x="112.41" y="458.5" width="10" height="3" fill="#64748B" rx="1.5"/>
+    <text x="126.41" y="464" data-legend="Barista">Barista</text>
+    <rect x="181.38" y="458.5" width="10" height="3" fill="#0F766E" rx="1.5"/>
+    <text x="195.38" y="464" data-legend="Component">Component</text>
   </g>
-  <g fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-radar-grid="1">
+  <g fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" stroke-dasharray="1 3" data-grid="1" data-radar-grid="1">
     <path d="M360 156.88 L431.44 208.79 L404.15 292.77 L315.85 292.77 L288.56 208.79 Z"/>
     <line x1="360" y1="232" x2="360" y2="102.8"/>
     <line x1="360" y1="232" x2="482.88" y2="192.08"/>

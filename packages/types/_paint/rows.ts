@@ -5,6 +5,7 @@ import { legendSwatch } from "./legend.js";
 import { formatNumber, labelTicks, niceTicks, scaleLinear } from "./scale.js";
 import { textWidth, wrapText, type WrappedText } from "./text.js";
 import {
+  FONT,
   FONT_NUMERIC,
   GRID,
   HAIRLINE_OPACITY,
@@ -73,12 +74,12 @@ export function niceDomain(values: number[], includeZero: boolean): {
 export function layoutRows(chart: ChartIR, opts: RowOptions): RowFrame {
   const labelBudget = Math.min(220, Math.max(96, SVG_WIDTH * 0.34));
   const wrapped = opts.categories.map((label) =>
-    wrapText(label, TYPE.tick.size, labelBudget, 3),
+    wrapText(label, TYPE.tick.size, labelBudget, 3, TYPE.tick.weight, FONT_NUMERIC ?? FONT),
   );
   const labelW = Math.max(
     40,
     ...wrapped.map((item) =>
-      Math.max(0, ...item.lines.map((line) => textWidth(line, TYPE.tick.size))),
+      Math.max(0, ...item.lines.map((line) => textWidth(line, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT))),
     ),
   );
   const rowH = Math.max(
@@ -155,6 +156,7 @@ export function drawRowAxes(frame: RowFrame, categories: string[]): string[] {
       "stroke-opacity": HAIRLINE_OPACITY,
       "stroke-width": GRID.width,
       "stroke-dasharray": GRID.dash || undefined,
+      "data-grid": "1",
     })}>`,
   ];
   for (const tick of ticks) {

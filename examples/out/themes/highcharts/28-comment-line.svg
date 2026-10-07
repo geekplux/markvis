@@ -2,7 +2,7 @@
   <title id="mv-5d71eed81323c10e-title">Tuesday peaked error bursts at 5</title>
   <desc id="mv-5d71eed81323c10e-desc">line chart. Tuesday peaked error bursts at 5. x=day. y=errors. 3 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Tuesday peaked error bursts at 5</title>Tuesday peaked error bursts at 5</text>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="308" y2="308"/>
     <line x1="74" x2="700" y1="242" y2="242"/>
     <line x1="74" x2="700" y1="176" y2="176"/>
@@ -12,19 +12,19 @@
   <path d="M74 374 L700 374" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <path d="M178.33 374 L178.33 380 M387 374 L387 380 M595.67 374 L595.67 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="374" text-anchor="end" dominant-baseline="middle">1</text>
-    <text x="60" y="308" text-anchor="end" dominant-baseline="middle">2</text>
-    <text x="60" y="242" text-anchor="end" dominant-baseline="middle">3</text>
-    <text x="60" y="176" text-anchor="end" dominant-baseline="middle">4</text>
-    <text x="60" y="110" text-anchor="end" dominant-baseline="middle">5</text>
-    <text x="60" y="44" text-anchor="end" dominant-baseline="middle">6</text>
+    <text x="66" y="374" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="66" y="308" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="66" y="242" text-anchor="end" dominant-baseline="middle">3</text>
+    <text x="66" y="176" text-anchor="end" dominant-baseline="middle">4</text>
+    <text x="66" y="110" text-anchor="end" dominant-baseline="middle">5</text>
+    <text x="66" y="44" text-anchor="end" dominant-baseline="middle">6</text>
     <text x="178.33" y="391" text-anchor="middle" font-size="11" data-full-label="Mon"><title>Mon</title>Mon</text>
     <text x="387" y="391" text-anchor="middle" font-size="11" data-full-label="Tue"><title>Tue</title>Tue</text>
     <text x="595.67" y="391" text-anchor="middle" font-size="11" data-full-label="Wed"><title>Wed</title>Wed</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="50.18" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 50.18 209)" data-axis="y">errors</text>
-    <text x="387" y="401" text-anchor="middle" dominant-baseline="hanging" data-axis="x">day</text>
+    <text x="49.84" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 49.84 209)" data-axis="y">errors</text>
+    <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">day</text>
   </g>
   <g fill="none">
     <path d="M178.33 242 L387 110 L595.67 308" fill="none" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="errors"/>

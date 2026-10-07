@@ -68,6 +68,11 @@ body {
   flex-shrink: 0;
 }
 
+/* Inside the site's Play page the page already names itself; give the row its controls. */
+.embedded .toolbar h1 {
+  display: none;
+}
+
 .toolbar h1 {
   font-family: var(--mono);
   font-size: 11px;

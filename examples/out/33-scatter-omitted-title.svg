@@ -2,7 +2,7 @@
   <title id="mv-34d4b0503681798c-title">Delivery time rises with distance</title>
   <desc id="mv-34d4b0503681798c-desc">scatter chart. Delivery time rises with distance. x=distance_km. y=minutes. 4 rows.</desc>
   <text x="66" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Delivery time rises with distance</title>Delivery time rises with distance</text>
-  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1">
+  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1" data-grid="1">
     <line x1="66" x2="700" y1="358.4" y2="358.4"/>
     <line x1="66" x2="700" y1="201.2" y2="201.2"/>
     <line x1="66" x2="700" y1="44" y2="44"/>
@@ -23,8 +23,8 @@
     <text x="692" y="449" text-anchor="middle" font-size="12" data-full-label="3"><title>3</title>3</text>
   </g>
   <g fill="#737373" font-size="13" font-weight="400" data-axis-titles="1">
-    <text x="24.68" y="240.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 24.68 240.5)" data-axis="y">minutes</text>
-    <text x="383" y="465" text-anchor="middle" dominant-baseline="hanging" data-axis="x">distance_km</text>
+    <text x="27.72" y="240.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 27.72 240.5)" data-axis="y">minutes</text>
+    <text x="383" y="458.6" text-anchor="middle" dominant-baseline="hanging" data-axis="x">distance_km</text>
   </g>
   <g>
     <circle cx="197.6" cy="342.68" r="3" fill="#3B82F6" fill-opacity="0.85" stroke="none" data-x="1.0" data-y="2.1" data-series="minutes"/>

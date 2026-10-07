@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { ChartIRSchema } from "@markvis/ir";
 import { parseMarkdown } from "@markvis/parser";
 import { renderSvg } from "@markvis/render-svg";
+import { labelBox, scanSvg } from "./svg-scan.js";
 
 function render(body: string): string {
   const result = parseMarkdown(`\`\`\`chart\n${body}\n\`\`\``);
@@ -161,5 +162,59 @@ date,km
     expect(svg).not.toContain('data-date="2026-03-15"');
     expect(svg).toContain('data-key="low">10<');
     expect(svg).toContain('data-key="high">16<');
+  });
+});
+
+describe("whatever the parser accepts renders", () => {
+  // Adversarial fences: if check says ok, render must not throw or explode.
+  const fences = [
+    "type: calendar\ntitle: Span\nx: d\ny: n\n\nd,n\n2020-01-01,1\n2024-12-31,2",
+    "type: calendar\ntitle: One\nx: d\ny: n\n\nd,n\n2026-02-28,",
+    "type: boxplot\ntitle: One\nx: k\ny: v\n\nk,v\na,1",
+    "type: boxplot\ntitle: Same\nx: k\ny: v\n\nk,v\na,5\na,5\na,5\na,5\na,5\na,5",
+    "type: bullet\ntitle: Off scale\nx: k\ny: v\ntarget: t\nmin: 0\nmax: 10\n\nk,v,t\na,-50,900",
+    "type: dumbbell\ntitle: Huge\nx: k\ny: v\nseries: s\n\nk,s,v\na,p,1e15\na,q,-1e15",
+    "type: bar\ntheme: graphite\ntitle: Tiny\nx: k\ny: v\n\nk,v\na,500\nb,-40",
+  ];
+  it.each(fences)("%s", (body) => {
+    const result = parseMarkdown(`\`\`\`chart\n${body}\n\`\`\``);
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    const svg = renderSvg(ChartIRSchema.parse(result.chart));
+    expect(svg.length).toBeLessThan(1_000_000);
+    expect(svg).not.toMatch(/NaN|undefined|Infinity/);
+  });
+
+  it("draws at most five years even from an IR that skipped the parser", () => {
+    const ok = parseMarkdown("```chart\ntype: calendar\ntitle: C\nx: d\ny: n\n\nd,n\n2020-01-01,1\n2021-01-01,2\n```");
+    if (!ok.ok) throw new Error(ok.error.message);
+    const chart = ChartIRSchema.parse({
+      ...ok.chart,
+      table: { columns: ["d", "n"], rows: [["0001-01-01", "1"], ["9999-12-31", "2"]] },
+    });
+    const svg = renderSvg(chart);
+    expect(svg.match(/<g data-year=/g)).toHaveLength(5);
+  });
+});
+
+describe("calendar year label", () => {
+  it("shows both the year and Jan when 1 January is a Monday", () => {
+    const svg = render(`type: calendar
+title: Turn of 2024
+x: d
+y: n
+
+d,n
+2023-12-25,1
+2024-01-01,2
+2024-01-14,3`);
+    const scan = scanSvg(svg);
+    const year = scan.labels.find((l) => /data-year="2024"/.test(l.line))!;
+    const jan = scan.labels.filter((l) => /data-month="Jan"/.test(l.line));
+    expect(jan).toHaveLength(1);
+    for (const month of jan) {
+      // The year sits on its own line above the months.
+      expect(labelBox(month).top).toBeGreaterThan(labelBox(year).bottom);
+    }
   });
 });

@@ -3,25 +3,25 @@
   <desc id="mv-fdbecd0c85e7ae0e-desc">bar chart. Pro share climbs through the ATL season. x=month. y=seats. series=plan. 8 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Pro share climbs through the ATL season</title>Pro share climbs through the ATL season</text>
   <g font-size="12" font-weight="700" fill="#333333">
-    <circle cx="342.96" cy="420" r="5" fill="#7cb5ec"/>
-    <text x="351.96" y="424" data-legend="free">free</text>
-    <circle cx="402.72" cy="420" r="5" fill="#434348"/>
-    <text x="411.72" y="424" data-legend="pro">pro</text>
+    <circle cx="345.76" cy="420" r="5" fill="#7cb5ec"/>
+    <text x="354.76" y="424" data-legend="free">free</text>
+    <circle cx="400.52" cy="420" r="5" fill="#434348"/>
+    <text x="409.52" y="424" data-legend="pro">pro</text>
   </g>
   <path d="M74 350 L700 350" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <path d="M152.25 350 L152.25 356 M308.75 350 L308.75 356 M465.25 350 L465.25 356 M621.75 350 L621.75 356" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="350" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="60" y="197" text-anchor="end" dominant-baseline="middle">50</text>
-    <text x="60" y="44" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="66" y="350" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="197" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="66" y="44" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="152.25" y="367" text-anchor="middle" font-size="11" data-full-label="Jan"><title>Jan</title>Jan</text>
     <text x="308.75" y="367" text-anchor="middle" font-size="11" data-full-label="Feb"><title>Feb</title>Feb</text>
     <text x="465.25" y="367" text-anchor="middle" font-size="11" data-full-label="Mar"><title>Mar</title>Mar</text>
     <text x="621.75" y="367" text-anchor="middle" font-size="11" data-full-label="Apr"><title>Apr</title>Apr</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="36.54" y="197" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 36.54 197)" data-axis="y">seats</text>
-    <text x="387" y="377" text-anchor="middle" dominant-baseline="hanging" data-axis="x">month</text>
+    <text x="35.52" y="197" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 35.52 197)" data-axis="y">seats</text>
+    <text x="387" y="376.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">month</text>
   </g>
   <g>
     <path d="M120.25 350 L184.25 350 L184.25 95 L120.25 95 Z" fill="#7cb5ec" data-x="Jan" data-series="free" data-y="83.33333333333334" data-layout="percent"/>
@@ -34,13 +34,13 @@
     <path d="M589.75 135.8 L653.75 135.8 L653.75 44 L589.75 44 Z" fill="#434348" data-x="Apr" data-series="pro" data-y="30" data-layout="percent"/>
   </g>
   <g>
-    <text x="152.25" y="87" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-value-label="Jan">83.3333</text>
-    <text x="152.25" y="58" text-anchor="middle" font-size="11" font-weight="700" fill="#fafaf9" data-value-label="Jan">16.6667</text>
-    <text x="308.75" y="98.09" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-value-label="Feb">79.7101</text>
-    <text x="308.75" y="58" text-anchor="middle" font-size="11" font-weight="700" fill="#fafaf9" data-value-label="Feb">20.2899</text>
-    <text x="465.25" y="112.5" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-value-label="Mar">75</text>
-    <text x="465.25" y="58" text-anchor="middle" font-size="11" font-weight="700" fill="#fafaf9" data-value-label="Mar">25</text>
-    <text x="621.75" y="127.8" text-anchor="middle" font-size="11" font-weight="700" fill="#333333" data-value-label="Apr">70</text>
-    <text x="621.75" y="58" text-anchor="middle" font-size="11" font-weight="700" fill="#fafaf9" data-value-label="Apr">30</text>
+    <text x="152.25" y="222.5" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="700" fill="#333333" data-value-label="Jan">83.3333</text>
+    <text x="152.25" y="69.5" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="700" fill="#fafaf9" data-value-label="Jan">16.6667</text>
+    <text x="308.75" y="228.04" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="700" fill="#333333" data-value-label="Feb">79.7101</text>
+    <text x="308.75" y="75.04" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="700" fill="#fafaf9" data-value-label="Feb">20.2899</text>
+    <text x="465.25" y="235.25" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="700" fill="#333333" data-value-label="Mar">75</text>
+    <text x="465.25" y="82.25" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="700" fill="#fafaf9" data-value-label="Mar">25</text>
+    <text x="621.75" y="242.9" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="700" fill="#333333" data-value-label="Apr">70</text>
+    <text x="621.75" y="89.9" text-anchor="middle" dominant-baseline="middle" font-size="11" font-weight="700" fill="#fafaf9" data-value-label="Apr">30</text>
   </g>
 </svg>

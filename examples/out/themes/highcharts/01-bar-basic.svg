@@ -6,9 +6,9 @@
   <path d="M74 374 L700 374" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <path d="M113.13 374 L113.13 380 M191.38 374 L191.38 380 M269.63 374 L269.63 380 M347.88 374 L347.88 380 M426.13 374 L426.13 380 M504.38 374 L504.38 380 M582.63 374 L582.63 380 M660.88 374 L660.88 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="374" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="60" y="221" text-anchor="end" dominant-baseline="middle">5,000</text>
-    <text x="60" y="68" text-anchor="end" dominant-baseline="middle">10,000</text>
+    <text x="66" y="374" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="221" text-anchor="end" dominant-baseline="middle">5,000</text>
+    <text x="66" y="68" text-anchor="end" dominant-baseline="middle">10,000</text>
     <text x="113.13" y="391" text-anchor="middle" font-size="11" data-full-label="Sep"><title>Sep</title>Sep</text>
     <text x="191.38" y="391" text-anchor="middle" font-size="11" data-full-label="Oct"><title>Oct</title>Oct</text>
     <text x="269.63" y="391" text-anchor="middle" font-size="11" data-full-label="Nov"><title>Nov</title>Nov</text>
@@ -19,8 +19,8 @@
     <text x="660.88" y="391" text-anchor="middle" font-size="11" data-full-label="Apr"><title>Apr</title>Apr</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="16.08" y="221" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 16.08 221)" data-axis="y">tickets</text>
-    <text x="387" y="401" text-anchor="middle" dominant-baseline="hanging" data-axis="x">month</text>
+    <text x="17.62" y="221" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 17.62 221)" data-axis="y">tickets</text>
+    <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">month</text>
   </g>
   <g>
     <path d="M79.48 374 L146.77 374 L146.77 214.88 L79.48 214.88 Z" fill="#7cb5ec" data-x="Sep" data-series="tickets" data-y="5200"/>

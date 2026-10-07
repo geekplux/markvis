@@ -4,7 +4,7 @@
   <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
   <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Day 6 held the deepest queue at 48 holds</title>Day 6 held the deepest queue at 48 holds</text>
   <text x="48" y="51" text-anchor="start" font-size="13" font-weight="400" fill="#737373" data-subtitle="1">holds</text>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1">
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1">
     <line x1="48" x2="700" y1="314" y2="314"/>
     <line x1="48" x2="700" y1="72" y2="72"/>
   </g>

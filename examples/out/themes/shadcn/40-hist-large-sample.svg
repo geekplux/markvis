@@ -17,8 +17,8 @@
     <text x="700" y="429" text-anchor="middle" font-size="12" data-full-label="20"><title>20</title>20</text>
   </g>
   <g fill="#737373" font-size="13" font-weight="400" data-axis-titles="1">
-    <text x="41.56" y="233.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 41.56 233.5)" data-axis="y">count</text>
-    <text x="383" y="445" text-anchor="middle" dominant-baseline="hanging" data-axis="x">idle_pct · Sturges bins</text>
+    <text x="40.98" y="233.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 40.98 233.5)" data-axis="y">count</text>
+    <text x="383" y="438.6" text-anchor="middle" dominant-baseline="hanging" data-axis="x">idle_pct · Sturges bins</text>
   </g>
   <g>
     <path d="M86.29 417 L86.29 58 Q86.29 50 94.29 50 L164.51 50 Q172.51 50 172.51 58 L172.51 417 Z" fill="#F54900" data-bin-left="0" data-bin-right="4" data-weight="4" data-count="4"/>
@@ -28,7 +28,7 @@
     <path d="M593.49 417 L593.49 333.25 Q593.49 325.25 601.49 325.25 L671.71 325.25 Q679.71 325.25 679.71 333.25 L679.71 417 Z" fill="#F54900" data-bin-left="16" data-bin-right="20" data-weight="1" data-count="1"/>
   </g>
   <g>
-    <text x="129.4" y="64" text-anchor="middle" font-size="12" font-weight="500" fill="#fafaf9" data-value-label="0–4">4</text>
+    <text x="129.4" y="64" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="0–4">4</text>
     <text x="256.2" y="317.25" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="4–8">1</text>
     <text x="383" y="133.75" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="8–12">3</text>
     <text x="509.8" y="225.5" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="12–16">2</text>

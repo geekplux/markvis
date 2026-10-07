@@ -7,10 +7,12 @@ import {
   SVG_WIDTH,
   type Painted,
 } from "./layout.js";
+import { readableInk } from "./contrast.js";
 import { seriesStyle } from "./palette.js";
 import { formatNumber } from "./scale.js";
 import { textWidth, truncateLabel } from "./text.js";
 import {
+  FONT,
   FONT_NUMERIC,
   INK,
   MARGIN,
@@ -28,13 +30,13 @@ type Group = { label: string; value: number; children: Leaf[]; colorIndex: numbe
 
 type Rect = { x: number; y: number; w: number; h: number; label: string; value: number; colorIndex: number; depth: number };
 
-function luminance(hex: string): number {
-  const body = hex.replace("#", "");
-  const n = Number.parseInt(body, 16);
-  const r = ((n >> 16) & 255) / 255;
-  const g = ((n >> 8) & 255) / 255;
-  const b = (n & 255) / 255;
-  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+/** Tile fill opacity: headers solid, tiny tiles faint, the rest varied by label. */
+function tileOpacity(label: string, isHeader: boolean, tiny: boolean): number {
+  let hash = 0;
+  for (const ch of label) {
+    hash = (hash + ch.charCodeAt(0)) % 5;
+  }
+  return isHeader ? 0.92 : tiny ? 0.45 : 0.62 + hash * 0.07;
 }
 
 type Tile = {
@@ -290,11 +292,7 @@ export function renderTreemap(chart: ChartIR, _id: string): Painted {
     const style = seriesStyle(r.colorIndex);
     const isHeader = hasParent && r.depth === 0;
     const tiny = r.w < 14 || r.h < 14;
-    let hash = 0;
-    for (const ch of r.label) {
-      hash = (hash + ch.charCodeAt(0)) % 5;
-    }
-    const opacity = isHeader ? 0.92 : tiny ? 0.45 : 0.62 + hash * 0.07;
+    const opacity = tileOpacity(r.label, isHeader, tiny);
     lines.push(
       `    <rect ${attrs({
         x: fmtPx(r.x),
@@ -328,11 +326,14 @@ export function renderTreemap(chart: ChartIR, _id: string): Painted {
     if (availW < 8 || availH < TYPE.value.size) {
       continue;
     }
-    const label = truncateLabel(r.label, availW, TYPE.value.size);
-    if (textWidth(label, TYPE.value.size) > availW) {
+    const label = truncateLabel(r.label, availW, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT);
+    if (textWidth(label, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT) > availW) {
       continue;
     }
-    const ink = luminance(seriesStyle(r.colorIndex).color) > 0.45 ? SEMANTIC.inkOnLight : SEMANTIC.inkOnDark;
+    const ink = readableInk(
+      seriesStyle(r.colorIndex).color,
+      tileOpacity(r.label, hasParent && r.depth === 0, r.w < 14 || r.h < 14),
+    );
     lines.push(
       `    <text ${attrs({
         x: fmtPx(r.x + pad),

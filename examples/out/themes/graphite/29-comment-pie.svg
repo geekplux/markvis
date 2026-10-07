@@ -2,13 +2,13 @@
   <title id="mv-e0c3dbc735af8720-title">Core still leads product mix at 50%</title>
   <desc id="mv-e0c3dbc735af8720-desc">pie chart. Core still leads product mix at 50%. x=name. y=value. unit=%. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Core still leads product mix at 50%</title>Core still leads product mix at 50%</text>
-  <text x="52" y="50" text-anchor="start" font-size="12" font-weight="400" fill="#8E8D87" data-subtitle="1">%</text>
+  <text x="52" y="50" text-anchor="start" font-size="12" font-weight="400" fill="#6A6964" data-subtitle="1">%</text>
   <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0.6">
     <path d="M372 137 A127.5 127.5 0 0 1 391 390.58 L383.4 340.15 A76.5 76.5 0 0 0 372 188 Z" fill="#E4572E" stroke="#ffffff" stroke-width="2" data-label="Core" data-raw-value="50" data-donut="1"/>
     <path d="M391 390.58 A127.5 127.5 0 0 1 244.86 254.97 L295.71 258.78 A76.5 76.5 0 0 0 383.4 340.15 Z" fill="#4A4945" stroke="#ffffff" stroke-width="2" data-label="Addons" data-raw-value="30" data-donut="1"/>
     <path d="M244.86 254.97 A127.5 127.5 0 0 1 372 137 L372 188 A76.5 76.5 0 0 0 295.71 258.78 Z" fill="#6E6D68" stroke="#ffffff" stroke-width="2" data-label="Other" data-raw-value="25" data-donut="1"/>
   </g>
-  <g fill="none" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1">
+  <g fill="none" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-leaders="1">
     <polyline points="499.14,254.97 515.1,253.78 523.1,253.78"/>
     <polyline points="285.28,357.96 274.4,369.69 266.4,369.69"/>
     <polyline points="285.28,171.04 274.4,159.31 266.4,159.31"/>

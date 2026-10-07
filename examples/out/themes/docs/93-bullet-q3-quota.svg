@@ -3,7 +3,7 @@
   <desc id="mv-7beccc92b6402652-desc">bullet chart. Only West is short of its Q3 quota. x=region. y=booked. unit=USD k. 4 rows.</desc>
   <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>Only West is short of its Q3 quota</title>ONLY WEST IS SHORT OF ITS Q3 QUOTA<tspan font-size="11" font-weight="400" fill="#64748B"> · USD k</tspan></text>
   <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3">
+  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3" data-grid="1">
     <line x1="247.54" x2="247.54" y1="42" y2="178"/>
     <line x1="441.08" x2="441.08" y1="42" y2="178"/>
     <line x1="634.62" x2="634.62" y1="42" y2="178"/>
@@ -22,8 +22,8 @@
   <g font-size="11" font-weight="500" fill="#18181B">
     <circle cx="59" cy="215" r="4.5" fill="#475569"/>
     <text x="68" y="219" data-legend="booked">booked</text>
-    <rect x="128.92" y="209" width="2.5" height="12" fill="#18181B"/>
-    <text x="138.92" y="219" data-legend="quota">quota</text>
+    <rect x="129.16" y="209" width="2.5" height="12" fill="#18181B"/>
+    <text x="139.16" y="219" data-legend="quota">quota</text>
   </g>
   <g data-bullet="1">
     <rect x="54" y="47" width="580.62" height="24" fill="#18181B" fill-opacity="0.07" data-track="North"/>

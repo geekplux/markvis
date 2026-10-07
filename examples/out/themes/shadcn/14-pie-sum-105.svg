@@ -4,12 +4,12 @@
   <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
   <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Budget lines overrun the 100% pie</title>Budget lines overrun the 100% pie</text>
   <g font-size="12" font-weight="500" fill="#0A0A0A">
-    <rect x="280.2" y="435" width="10" height="10" fill="#F54900" rx="3"/>
-    <text x="294.2" y="444" data-legend="Infra">Infra</text>
-    <rect x="347.4" y="435" width="10" height="10" fill="#009689" rx="3"/>
-    <text x="361.4" y="444" data-legend="Product">Product</text>
-    <rect x="429.48" y="435" width="10" height="10" fill="#104E64" rx="3"/>
-    <text x="443.48" y="444" data-legend="Ops">Ops</text>
+    <rect x="285.95" y="435" width="10" height="10" fill="#F54900" rx="3"/>
+    <text x="299.95" y="444" data-legend="Infra">Infra</text>
+    <rect x="343.94" y="435" width="10" height="10" fill="#009689" rx="3"/>
+    <text x="357.94" y="444" data-legend="Product">Product</text>
+    <rect x="421.96" y="435" width="10" height="10" fill="#104E64" rx="3"/>
+    <text x="435.96" y="444" data-legend="Ops">Ops</text>
   </g>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0.5">
     <path d="M374 108.56 A124.44 124.44 0 0 1 427.99 345.12 L401 289.06 A62.22 62.22 0 0 0 374 170.78 Z" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Infra" data-raw-value="45" data-donut="1"/>

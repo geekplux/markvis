@@ -2,7 +2,7 @@
   <title id="mv-edeeaf08edaeb9c1-title">Points climb through beta weeks</title>
   <desc id="mv-edeeaf08edaeb9c1-desc">line chart. Points climb through beta weeks. x=milestone. y=points. 3 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Points climb through beta weeks</title>Points climb through beta weeks</text>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="291.5" y2="291.5"/>
     <line x1="74" x2="700" y1="209" y2="209"/>
     <line x1="74" x2="700" y1="126.5" y2="126.5"/>
@@ -11,18 +11,18 @@
   <path d="M74 374 L700 374" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <path d="M178.33 374 L178.33 380 M387 374 L387 380 M595.67 374 L595.67 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="374" text-anchor="end" dominant-baseline="middle">20</text>
-    <text x="60" y="291.5" text-anchor="end" dominant-baseline="middle">40</text>
-    <text x="60" y="209" text-anchor="end" dominant-baseline="middle">60</text>
-    <text x="60" y="126.5" text-anchor="end" dominant-baseline="middle">80</text>
-    <text x="60" y="44" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="66" y="374" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="66" y="291.5" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="66" y="209" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="66" y="126.5" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="66" y="44" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="178.33" y="391" text-anchor="middle" font-size="11" data-full-label="Kickoff and discovery workshop"><title>Kickoff and discovery workshop</title>Kickoff and discovery workshop</text>
     <text x="387" y="391" text-anchor="middle" font-size="11" data-full-label="Alpha internal dogfood release"><title>Alpha internal dogfood release</title>Alpha internal dogfood release</text>
     <text x="595.67" y="391" text-anchor="middle" font-size="11" data-full-label="Public beta launch week"><title>Public beta launch week</title>Public beta launch week</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="36.54" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 36.54 209)" data-axis="y">points</text>
-    <text x="387" y="401" text-anchor="middle" dominant-baseline="hanging" data-axis="x">milestone</text>
+    <text x="35.52" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 35.52 209)" data-axis="y">points</text>
+    <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">milestone</text>
   </g>
   <g fill="none">
     <path d="M178.33 291.5 L387 188.38 L595.67 85.25" fill="none" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="points"/>

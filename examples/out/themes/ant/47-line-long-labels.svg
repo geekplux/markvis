@@ -2,32 +2,32 @@
   <title id="mv-edeeaf08edaeb9c1-title">Points climb through beta weeks</title>
   <desc id="mv-edeeaf08edaeb9c1-desc">line chart. Points climb through beta weeks. x=milestone. y=points. 3 rows.</desc>
   <text x="66" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Points climb through beta weeks</title>Points climb through beta weeks</text>
-  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4">
-    <line x1="66" x2="706" y1="266.5" y2="266.5"/>
-    <line x1="66" x2="706" y1="193" y2="193"/>
-    <line x1="66" x2="706" y1="119.5" y2="119.5"/>
+  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4" data-grid="1">
+    <line x1="66" x2="706" y1="277.75" y2="277.75"/>
+    <line x1="66" x2="706" y1="200.5" y2="200.5"/>
+    <line x1="66" x2="706" y1="123.25" y2="123.25"/>
     <line x1="66" x2="706" y1="46" y2="46"/>
   </g>
-  <path d="M66 340 L706 340" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1"/>
-  <path d="M172.67 340 L172.67 344 M386 340 L386 344 M599.33 340 L599.33 344" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-axis-ticks="1"/>
-  <g fill="#8C8C8C" font-size="12" font-weight="400">
-    <text x="54" y="340" text-anchor="end" dominant-baseline="middle">20</text>
-    <text x="54" y="266.5" text-anchor="end" dominant-baseline="middle">40</text>
-    <text x="54" y="193" text-anchor="end" dominant-baseline="middle">60</text>
-    <text x="54" y="119.5" text-anchor="end" dominant-baseline="middle">80</text>
-    <text x="54" y="46" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="172.67" y="356" text-anchor="middle" font-size="12" data-full-label="Kickoff and discovery workshop"><title>Kickoff and discovery workshop</title><tspan x="172.67" dy="0">Kickoff and discovery</tspan><tspan x="172.67" dy="15">workshop</tspan></text>
-    <text x="386" y="356" text-anchor="middle" font-size="12" data-full-label="Alpha internal dogfood release"><title>Alpha internal dogfood release</title><tspan x="386" dy="0">Alpha internal dogfood</tspan><tspan x="386" dy="15">release</tspan></text>
-    <text x="599.33" y="356" text-anchor="middle" font-size="12" data-full-label="Public beta launch week"><title>Public beta launch week</title>Public beta launch week</text>
+  <path d="M66 355 L706 355" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1"/>
+  <path d="M172.67 355 L172.67 359 M386 355 L386 359 M599.33 355 L599.33 359" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-axis-ticks="1"/>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="58" y="355" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="58" y="277.75" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="58" y="200.5" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="58" y="123.25" text-anchor="end" dominant-baseline="middle">80</text>
+    <text x="58" y="46" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="172.67" y="371" text-anchor="middle" font-size="12" data-full-label="Kickoff and discovery workshop"><title>Kickoff and discovery workshop</title>Kickoff and discovery workshop</text>
+    <text x="386" y="371" text-anchor="middle" font-size="12" data-full-label="Alpha internal dogfood release"><title>Alpha internal dogfood release</title>Alpha internal dogfood release</text>
+    <text x="599.33" y="371" text-anchor="middle" font-size="12" data-full-label="Public beta launch week"><title>Public beta launch week</title>Public beta launch week</text>
   </g>
-  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="26.68" y="193" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 26.68 193)" data-axis="y">points</text>
-    <text x="386" y="368" text-anchor="middle" dominant-baseline="hanging" data-axis="x">milestone</text>
+  <g fill="#737373" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="26.4" y="200.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 26.4 200.5)" data-axis="y">points</text>
+    <text x="386" y="380.6" text-anchor="middle" dominant-baseline="hanging" data-axis="x">milestone</text>
   </g>
   <g fill="none">
-    <path d="M172.67 266.5 L386 174.63 L599.33 82.75" fill="none" stroke="#5AD8A6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="points"/>
-    <circle cx="172.67" cy="266.5" r="3.5" fill="#5AD8A6" stroke="#ffffff" stroke-width="1.5" data-series="points"/>
-    <circle cx="386" cy="174.63" r="3.5" fill="#5AD8A6" stroke="#ffffff" stroke-width="1.5" data-series="points"/>
-    <circle cx="599.33" cy="82.75" r="3.5" fill="#5AD8A6" stroke="#ffffff" stroke-width="1.5" data-series="points"/>
+    <path d="M172.67 277.75 L386 181.19 L599.33 84.63" fill="none" stroke="#5AD8A6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="points"/>
+    <circle cx="172.67" cy="277.75" r="3.5" fill="#5AD8A6" stroke="#ffffff" stroke-width="1.5" data-series="points"/>
+    <circle cx="386" cy="181.19" r="3.5" fill="#5AD8A6" stroke="#ffffff" stroke-width="1.5" data-series="points"/>
+    <circle cx="599.33" cy="84.63" r="3.5" fill="#5AD8A6" stroke="#ffffff" stroke-width="1.5" data-series="points"/>
   </g>
 </svg>

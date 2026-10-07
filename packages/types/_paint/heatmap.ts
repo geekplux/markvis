@@ -20,6 +20,7 @@ import { seriesStyle } from "./palette.js";
 import { formatNumber } from "./scale.js";
 import { textWidth } from "./text.js";
 import {
+  FONT,
   FONT_NUMERIC,
   MARGIN,
   PLOT_BG,
@@ -29,6 +30,7 @@ import {
 } from "./tokens.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
 import { mixHex } from "./color.js";
+import { readableInk } from "./contrast.js";
 
 export function renderHeatmap(chart: ChartIR, svgId: string): Painted {
   const rows = loadRows(chart);
@@ -45,8 +47,8 @@ export function renderHeatmap(chart: ChartIR, svgId: string): Painted {
   // A label that only slightly overruns the 8px pad slides left. A label
   // that would cover the ramp grows the right reserve instead.
   const scaleLabelW = Math.max(
-    textWidth(formatNumber(ymax), TYPE.tick.size),
-    textWidth(formatNumber(ymin), TYPE.tick.size),
+    textWidth(formatNumber(ymax), TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT),
+    textWidth(formatNumber(ymin), TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT),
   );
   const rampW = 56;
   const baseRight = MARGIN.right + rampW;
@@ -145,10 +147,10 @@ export function renderHeatmap(chart: ChartIR, svgId: string): Painted {
       }
       const label = formatNumber(value);
       if (
-        cellW >= textWidth(label, TYPE.value.size) + 8 &&
+        cellW >= textWidth(label, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT) + 8 &&
         cellH >= TYPE.value.size + 8
       ) {
-        const ink = clamped > 0.62 ? SEMANTIC.inkOnDark : SEMANTIC.inkOnLight;
+        const ink = readableInk(fill);
         lines.push(
           `    <text ${attrs({
             x: fmtPx(x + cellW / 2),

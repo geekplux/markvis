@@ -62,7 +62,7 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 - `dumbbell` — x category, y number, `series` required with exactly two values (first = from, second = to). Keep row order. A missing value is a gap. A third value → `E_UNKNOWN_FIELD`.
 - `bullet` — x label, y actual. Optional `target:` names a column of targets (empty cell = no target). Optional `min` / `max` fix the scale. `series` ignored.
 - `boxplot` — x category, y one observation per row (repeat the category). Optional `series` = one box per series. Under five values shows points, not a box.
-- `calendar` — x `YYYY-MM-DD` date, y number, one row per day. Row order does not matter. Optional `min` / `max` fix the color domain. A bad date → `E_BAD_DATE`.
+- `calendar` — x `YYYY-MM-DD` date, y number, one row per day. Row order does not matter. Optional `min` / `max` fix the color domain. At most five calendar years. A bad date or a wider span → `E_BAD_DATE`.
 
 On any error: keep the rows, show the table, add one line with the error code. Never drop the numbers.
 

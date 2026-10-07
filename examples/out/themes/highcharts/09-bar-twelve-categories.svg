@@ -3,7 +3,7 @@
   <desc id="mv-ac9a8903c1bfbfcc-desc">bar chart. Jul peaked Midtown walks at 22k. x=month. y=walks. unit=walks. 12 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Jul peaked Midtown walks at 22k</title>Jul peaked Midtown walks at 22k</text>
   <text x="360" y="46" text-anchor="middle" font-size="12" font-weight="400" fill="#666666" data-subtitle="1">walks</text>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="272" y2="272"/>
     <line x1="74" x2="700" y1="170" y2="170"/>
     <line x1="74" x2="700" y1="68" y2="68"/>
@@ -11,10 +11,10 @@
   <path d="M74 374 L700 374" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <path d="M100.08 374 L100.08 380 M152.25 374 L152.25 380 M204.42 374 L204.42 380 M256.58 374 L256.58 380 M308.75 374 L308.75 380 M360.92 374 L360.92 380 M413.08 374 L413.08 380 M465.25 374 L465.25 380 M517.42 374 L517.42 380 M569.58 374 L569.58 380 M621.75 374 L621.75 380 M673.92 374 L673.92 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="374" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="60" y="272" text-anchor="end" dominant-baseline="middle">10,000</text>
-    <text x="60" y="170" text-anchor="end" dominant-baseline="middle">20,000</text>
-    <text x="60" y="68" text-anchor="end" dominant-baseline="middle">30,000</text>
+    <text x="66" y="374" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="272" text-anchor="end" dominant-baseline="middle">10,000</text>
+    <text x="66" y="170" text-anchor="end" dominant-baseline="middle">20,000</text>
+    <text x="66" y="68" text-anchor="end" dominant-baseline="middle">30,000</text>
     <text x="100.08" y="391" text-anchor="middle" font-size="11" data-full-label="Jan"><title>Jan</title>Jan</text>
     <text x="152.25" y="391" text-anchor="middle" font-size="11" data-full-label="Feb"><title>Feb</title>Feb</text>
     <text x="204.42" y="391" text-anchor="middle" font-size="11" data-full-label="Mar"><title>Mar</title>Mar</text>
@@ -29,8 +29,8 @@
     <text x="673.92" y="391" text-anchor="middle" font-size="11" data-full-label="Dec"><title>Dec</title>Dec</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="16.08" y="221" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 16.08 221)" data-axis="y">walks</text>
-    <text x="387" y="401" text-anchor="middle" dominant-baseline="hanging" data-axis="x">month</text>
+    <text x="17.62" y="221" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 17.62 221)" data-axis="y">walks</text>
+    <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">month</text>
   </g>
   <g>
     <path d="M77.65 374 L122.52 374 L122.52 290.36 L77.65 290.36 Z" fill="#7cb5ec" data-x="Jan" data-series="walks" data-y="8200"/>

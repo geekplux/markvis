@@ -3,7 +3,7 @@
   <desc id="mv-41d7c697f82ccc88-desc">bullet chart. Payments missed its 99.95% uptime SLA in September. x=service. y=uptime. unit=%. 4 rows.</desc>
   <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>Payments missed its 99.95% uptime SLA in September</title>PAYMENTS MISSED ITS 99.95% UPTIME SLA IN SEPTEMBER<tspan font-size="11" font-weight="400" fill="#64748B"> · %</tspan></text>
   <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3">
+  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3" data-grid="1">
     <line x1="102.66" x2="102.66" y1="42" y2="178"/>
     <line x1="355" x2="355" y1="42" y2="178"/>
     <line x1="607.34" x2="607.34" y1="42" y2="178"/>
@@ -20,8 +20,8 @@
   <g font-size="11" font-weight="500" fill="#18181B">
     <circle cx="107.66" cy="215" r="4.5" fill="#475569"/>
     <text x="116.66" y="219" data-legend="uptime">uptime</text>
-    <rect x="177.58" y="209" width="2.5" height="12" fill="#18181B"/>
-    <text x="187.58" y="219" data-legend="sla">sla</text>
+    <rect x="174.84" y="209" width="2.5" height="12" fill="#18181B"/>
+    <text x="184.84" y="219" data-legend="sla">sla</text>
   </g>
   <g data-bullet="1">
     <rect x="102.66" y="47" width="504.68" height="24" fill="#18181B" fill-opacity="0.07" data-track="Checkout"/>

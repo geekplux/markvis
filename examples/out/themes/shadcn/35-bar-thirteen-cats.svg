@@ -3,7 +3,7 @@
   <desc id="mv-6d02158e64703f94-desc">bar chart. A12 led units shipped at 14. x=sku. y=units. 13 rows.</desc>
   <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
   <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>A12 led units shipped at 14</title>A12 led units shipped at 14</text>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1">
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1">
     <line x1="48" x2="700" y1="306.67" y2="306.67"/>
     <line x1="48" x2="700" y1="50" y2="50"/>
   </g>

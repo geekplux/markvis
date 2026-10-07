@@ -5,16 +5,16 @@
   <g font-size="11" font-weight="500" fill="#1B1B19">
     <circle cx="75" cy="44" r="5" fill="#1B1B19"/>
     <text x="84" y="48" data-legend="A">A</text>
-    <circle cx="111.82" cy="44" r="5" fill="#4A4945"/>
-    <text x="120.82" y="48" data-legend="B">B</text>
+    <circle cx="112.94" cy="44" r="5" fill="#4A4945"/>
+    <text x="121.94" y="48" data-legend="B">B</text>
   </g>
-  <g fill="none" stroke="#1B1B19" stroke-opacity="0.22" stroke-width="0.5">
+  <g fill="none" stroke="#1B1B19" stroke-opacity="0.22" stroke-width="0.5" data-grid="1">
     <line x1="70" x2="692" y1="365.6" y2="365.6"/>
     <line x1="70" x2="692" y1="220.8" y2="220.8"/>
     <line x1="70" x2="692" y1="76" y2="76"/>
   </g>
   <path d="M70 438 L692 438" fill="none" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1"/>
-  <g fill="#8E8D87" font-size="11" font-weight="600">
+  <g fill="#6A6964" font-size="11" font-weight="600">
     <text x="60" y="438" text-anchor="end" dominant-baseline="middle">30</text>
     <text x="60" y="365.6" text-anchor="end" dominant-baseline="middle">40</text>
     <text x="60" y="293.2" text-anchor="end" dominant-baseline="middle">50</text>
@@ -27,9 +27,9 @@
     <text x="532.5" y="449" text-anchor="middle" font-size="11" data-full-label="6"><title>6</title>6</text>
     <text x="684" y="449" text-anchor="middle" font-size="11" data-full-label="8"><title>8</title>8</text>
   </g>
-  <g fill="#8E8D87" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="37.36" y="257" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 37.36 257)" data-axis="y">score</text>
-    <text x="381" y="465" text-anchor="middle" dominant-baseline="hanging" data-axis="x">hours</text>
+  <g fill="#6A6964" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="35.68" y="257" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 35.68 257)" data-axis="y">score</text>
+    <text x="381" y="458.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">hours</text>
   </g>
   <g>
     <circle cx="229.5" cy="365.6" r="3.5" fill="#1B1B19" fill-opacity="0.8" stroke="none" data-x="2" data-y="40" data-series="A"/>

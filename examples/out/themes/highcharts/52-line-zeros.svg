@@ -2,7 +2,7 @@
   <title id="mv-cd5ddc80008e6dc7-title">Tuesday took 12 minutes end-to-end</title>
   <desc id="mv-cd5ddc80008e6dc7-desc">line chart. Tuesday took 12 minutes end-to-end. x=day. y=minutes. 4 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Tuesday took 12 minutes end-to-end</title>Tuesday took 12 minutes end-to-end</text>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="291.5" y2="291.5"/>
     <line x1="74" x2="700" y1="209" y2="209"/>
     <line x1="74" x2="700" y1="126.5" y2="126.5"/>
@@ -12,19 +12,19 @@
   <path d="M152.25 374 L152.25 380 M308.75 374 L308.75 380 M465.25 374 L465.25 380 M621.75 374 L621.75 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <line x1="74" x2="700" y1="291.5" y2="291.5" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="374" text-anchor="end" dominant-baseline="middle">-5</text>
-    <text x="60" y="291.5" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="60" y="209" text-anchor="end" dominant-baseline="middle">5</text>
-    <text x="60" y="126.5" text-anchor="end" dominant-baseline="middle">10</text>
-    <text x="60" y="44" text-anchor="end" dominant-baseline="middle">15</text>
+    <text x="66" y="374" text-anchor="end" dominant-baseline="middle">-5</text>
+    <text x="66" y="291.5" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="209" text-anchor="end" dominant-baseline="middle">5</text>
+    <text x="66" y="126.5" text-anchor="end" dominant-baseline="middle">10</text>
+    <text x="66" y="44" text-anchor="end" dominant-baseline="middle">15</text>
     <text x="152.25" y="391" text-anchor="middle" font-size="11" data-full-label="Mon"><title>Mon</title>Mon</text>
     <text x="308.75" y="391" text-anchor="middle" font-size="11" data-full-label="Tue"><title>Tue</title>Tue</text>
     <text x="465.25" y="391" text-anchor="middle" font-size="11" data-full-label="Wed"><title>Wed</title>Wed</text>
     <text x="621.75" y="391" text-anchor="middle" font-size="11" data-full-label="Thu"><title>Thu</title>Thu</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="43.36" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 43.36 209)" data-axis="y">minutes</text>
-    <text x="387" y="401" text-anchor="middle" dominant-baseline="hanging" data-axis="x">day</text>
+    <text x="42.68" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 42.68 209)" data-axis="y">minutes</text>
+    <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">day</text>
   </g>
   <g fill="none">
     <path d="M152.25 291.5 L308.75 93.5 L465.25 291.5 L621.75 209" fill="none" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="minutes"/>

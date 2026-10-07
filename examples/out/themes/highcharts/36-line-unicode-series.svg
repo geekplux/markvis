@@ -8,7 +8,7 @@
     <circle cx="399" cy="420" r="5" fill="#434348"/>
     <text x="408" y="424" data-legend="東京">東京</text>
   </g>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="288.8" y2="288.8"/>
     <line x1="74" x2="700" y1="227.6" y2="227.6"/>
     <line x1="74" x2="700" y1="166.4" y2="166.4"/>
@@ -18,18 +18,18 @@
   <path d="M74 350 L700 350" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <path d="M230.5 350 L230.5 356 M543.5 350 L543.5 356" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="350" text-anchor="end" dominant-baseline="middle">90</text>
-    <text x="60" y="288.8" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="60" y="227.6" text-anchor="end" dominant-baseline="middle">110</text>
-    <text x="60" y="166.4" text-anchor="end" dominant-baseline="middle">120</text>
-    <text x="60" y="105.2" text-anchor="end" dominant-baseline="middle">130</text>
-    <text x="60" y="44" text-anchor="end" dominant-baseline="middle">140</text>
+    <text x="66" y="350" text-anchor="end" dominant-baseline="middle">90</text>
+    <text x="66" y="288.8" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="66" y="227.6" text-anchor="end" dominant-baseline="middle">110</text>
+    <text x="66" y="166.4" text-anchor="end" dominant-baseline="middle">120</text>
+    <text x="66" y="105.2" text-anchor="end" dominant-baseline="middle">130</text>
+    <text x="66" y="44" text-anchor="end" dominant-baseline="middle">140</text>
     <text x="230.5" y="367" text-anchor="middle" font-size="11" data-full-label="W1"><title>W1</title>W1</text>
     <text x="543.5" y="367" text-anchor="middle" font-size="11" data-full-label="W2"><title>W2</title>W2</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="36.54" y="197" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 36.54 197)" data-axis="y">rsvps</text>
-    <text x="387" y="377" text-anchor="middle" dominant-baseline="hanging" data-axis="x">week</text>
+    <text x="35.52" y="197" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 35.52 197)" data-axis="y">rsvps</text>
+    <text x="387" y="376.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">week</text>
   </g>
   <g fill="none">
     <path d="M230.5 288.8 L543.5 227.6" fill="none" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="北京"/>

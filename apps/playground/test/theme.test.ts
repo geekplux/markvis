@@ -1,9 +1,12 @@
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
+import { THEMES } from "@markvis/ir";
+import { themeTokens } from "@markvis/render-svg";
 import { previewSource } from "../src/preview.js";
 import {
+  applyLook,
   readPaletteFromFence,
   readSurfaceFromFence,
   readThemeFromFence,
@@ -105,5 +108,53 @@ describe("rewriteSurfaceInFence", () => {
     const light = rewriteSurfaceInFence(exported, "light");
     expect(light).not.toContain("surface:");
     expect(readSurfaceFromFence(light)).toBe("light");
+  });
+});
+
+describe("every example follows Theme, Color, and Surface", () => {
+  const validDir = join(here, "../../../examples/valid");
+  const sources = readdirSync(validDir)
+    .filter((name) => name.endsWith(".md"))
+    .map((name) => [name, readFileSync(join(validDir, name), "utf8")] as const);
+
+  it.each(sources)("%s", (name, source) => {
+    for (const theme of THEMES) {
+      let next = rewriteThemeInFence(source, theme);
+      next = rewritePaletteInFence(next, "warm");
+      next = rewriteSurfaceInFence(next, "dark");
+      expect(readThemeFromFence(next)).toBe(theme);
+      expect(readSurfaceFromFence(next)).toBe("dark");
+      const view = previewSource(next, name);
+      expect(view.ok, `${name} ${theme}`).toBe(true);
+      expect(view.svg).toContain('data-surface="dark"');
+      expect(view.svg).toContain(`font-family="${themeFontAttr(theme)}"`);
+    }
+  });
+});
+
+function themeFontAttr(theme: (typeof THEMES)[number]): string {
+  return themeTokens(theme).FONT.replace(/"/g, "&quot;");
+}
+
+describe("applyLook", () => {
+  it("carries theme, color, and surface onto the next example", () => {
+    const next = applyLook(valid01, { theme: "ant", palette: "vivid", surface: "dark" });
+    expect(readThemeFromFence(next)).toBe("ant");
+    expect(readPaletteFromFence(next)).toBe("vivid");
+    expect(readSurfaceFromFence(next)).toBe("dark");
+  });
+
+  it("keeps the example's own fields when the toolbar says nothing", () => {
+    const own = rewriteSurfaceInFence(valid01, "export");
+    expect(readSurfaceFromFence(applyLook(own, {}))).toBe("export");
+  });
+});
+
+describe("embedded toolbar", () => {
+  it("drops the page heading inside the site so the controls fit", () => {
+    const css = readFileSync(join(here, "../src/style.css"), "utf8");
+    expect(css).toMatch(/\.embedded \.toolbar h1 \{\s*display: none;/);
+    const main = readFileSync(join(here, "../src/main.ts"), "utf8");
+    expect(main).toMatch(/window\.parent !== window\)\s*\{\s*document\.documentElement\.classList\.add\("embedded"\)/);
   });
 });

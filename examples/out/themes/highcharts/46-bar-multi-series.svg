@@ -3,24 +3,24 @@
   <desc id="mv-5045ce5a4f128422-desc">bar chart. Free still outnumbers pro seats. x=month. y=seats. series=plan. 4 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Free still outnumbers pro seats</title>Free still outnumbers pro seats</text>
   <g font-size="12" font-weight="700" fill="#333333">
-    <circle cx="342.96" cy="420" r="5" fill="#7cb5ec"/>
-    <text x="351.96" y="424" data-legend="free">free</text>
-    <circle cx="402.72" cy="420" r="5" fill="#434348"/>
-    <text x="411.72" y="424" data-legend="pro">pro</text>
+    <circle cx="345.76" cy="420" r="5" fill="#7cb5ec"/>
+    <text x="354.76" y="424" data-legend="free">free</text>
+    <circle cx="400.52" cy="420" r="5" fill="#434348"/>
+    <text x="409.52" y="424" data-legend="pro">pro</text>
   </g>
   <path d="M74 350 L700 350" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <path d="M230.5 350 L230.5 356 M543.5 350 L543.5 356" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="350" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="60" y="248" text-anchor="end" dominant-baseline="middle">50</text>
-    <text x="60" y="146" text-anchor="end" dominant-baseline="middle">100</text>
-    <text x="60" y="44" text-anchor="end" dominant-baseline="middle">150</text>
+    <text x="66" y="350" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="248" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="66" y="146" text-anchor="end" dominant-baseline="middle">100</text>
+    <text x="66" y="44" text-anchor="end" dominant-baseline="middle">150</text>
     <text x="230.5" y="367" text-anchor="middle" font-size="11" data-full-label="Jan"><title>Jan</title>Jan</text>
     <text x="543.5" y="367" text-anchor="middle" font-size="11" data-full-label="Feb"><title>Feb</title>Feb</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="36.54" y="197" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 36.54 197)" data-axis="y">seats</text>
-    <text x="387" y="377" text-anchor="middle" dominant-baseline="hanging" data-axis="x">month</text>
+    <text x="35.52" y="197" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 35.52 197)" data-axis="y">seats</text>
+    <text x="387" y="376.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">month</text>
   </g>
   <g>
     <path d="M165.5 350 L229.5 350 L229.5 146 L165.5 146 Z" fill="#7cb5ec" data-x="Jan" data-series="free" data-y="100"/>

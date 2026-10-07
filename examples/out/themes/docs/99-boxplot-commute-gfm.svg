@@ -3,7 +3,7 @@
   <desc id="mv-fa11680937f4a339-desc">boxplot chart. Decatur commutes vary the most. x=neighborhood. y=minutes. unit=min. 15 rows.</desc>
   <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>Decatur commutes vary the most</title>DECATUR COMMUTES VARY THE MOST<tspan font-size="11" font-weight="400" fill="#64748B"> · min</tspan></text>
   <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3">
+  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3" data-grid="1">
     <line x1="82.2" x2="82.2" y1="42" y2="144"/>
     <line x1="191.32" x2="191.32" y1="42" y2="144"/>
     <line x1="300.44" x2="300.44" y1="42" y2="144"/>

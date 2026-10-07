@@ -2,7 +2,7 @@
   <title id="mv-4f95b76943f773ed-title">City match still lifts Beltline fund after resurfacing</title>
   <desc id="mv-4f95b76943f773ed-desc">waterfall chart. City match still lifts Beltline fund after resurfacing. x=step. y=delta. unit=USD k. 8 rows.</desc>
   <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>City match still lifts Beltline fund after resurfacing</title>City match still lifts Beltline fund after resurfacing<tspan font-size="12" font-weight="400" fill="#6B7280"> · USD k</tspan></text>
-  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1">
+  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-grid="1">
     <line x1="48" x2="700" y1="282" y2="282"/>
     <line x1="48" x2="700" y1="160" y2="160"/>
   </g>
@@ -39,7 +39,7 @@
     <text x="40" y="282" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="40" y="160" text-anchor="end" dominant-baseline="middle">200</text>
     <text x="40" y="38" text-anchor="end" dominant-baseline="middle">300</text>
-    <text x="88.75" y="416" text-anchor="middle" data-full-label="Opening balance">Opening balance</text>
+    <text x="88.75" y="416" text-anchor="middle" data-full-label="Opening balance"><tspan x="88.75" dy="0">Opening</tspan><tspan x="88.75" dy="15">balance</tspan></text>
     <text x="170.25" y="416" text-anchor="middle" data-full-label="Donor gifts">Donor gifts</text>
     <text x="251.75" y="416" text-anchor="middle" data-full-label="City match">City match</text>
     <text x="333.25" y="416" text-anchor="middle" data-full-label="Event fees">Event fees</text>

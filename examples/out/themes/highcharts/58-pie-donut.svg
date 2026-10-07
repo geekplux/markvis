@@ -3,14 +3,14 @@
   <desc id="mv-398374c454625ec9-desc">pie chart. Billing still leads support tickets at 40. x=topic. y=tickets. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Billing still leads support tickets at 40</title>Billing still leads support tickets at 40</text>
   <g font-size="12" font-weight="700" fill="#333333">
-    <circle cx="240.72" cy="420" r="5" fill="#7cb5ec"/>
-    <text x="249.72" y="424" data-legend="Billing">Billing</text>
-    <circle cx="322.8" cy="420" r="5" fill="#434348"/>
-    <text x="331.8" y="424" data-legend="Access">Access</text>
-    <circle cx="397.44" cy="420" r="5" fill="#90ed7d"/>
-    <text x="406.44" y="424" data-legend="How-to">How-to</text>
-    <circle cx="472.08" cy="420" r="5" fill="#f7a35c"/>
-    <text x="481.08" y="424" data-legend="Other">Other</text>
+    <circle cx="245.6" cy="420" r="5" fill="#7cb5ec"/>
+    <text x="254.6" y="424" data-legend="Billing">Billing</text>
+    <circle cx="315.76" cy="420" r="5" fill="#434348"/>
+    <text x="324.76" y="424" data-legend="Access">Access</text>
+    <circle cx="389.22" cy="420" r="5" fill="#90ed7d"/>
+    <text x="398.22" y="424" data-legend="How-to">How-to</text>
+    <circle cx="468.22" cy="420" r="5" fill="#f7a35c"/>
+    <text x="477.22" y="424" data-legend="Other">Other</text>
   </g>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0.5">
     <path d="M378 100.32 A119.68 119.68 0 0 1 448.35 316.82 L413.17 268.41 A59.84 59.84 0 0 0 378 160.16 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Billing" data-raw-value="40" data-donut="1"/>

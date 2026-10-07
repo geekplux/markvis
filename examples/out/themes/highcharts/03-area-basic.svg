@@ -3,7 +3,7 @@
   <desc id="mv-7af386c80bccba57-desc">area chart. Day 6 held the deepest queue at 48 holds. x=day. y=holds. unit=holds. 10 rows.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Day 6 held the deepest queue at 48 holds</title>Day 6 held the deepest queue at 48 holds</text>
   <text x="360" y="46" text-anchor="middle" font-size="12" font-weight="400" fill="#666666" data-subtitle="1">holds</text>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
     <line x1="74" x2="700" y1="272" y2="272"/>
     <line x1="74" x2="700" y1="170" y2="170"/>
     <line x1="74" x2="700" y1="68" y2="68"/>
@@ -11,10 +11,10 @@
   <path d="M74 374 L700 374" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <path d="M105.3 374 L105.3 380 M167.9 374 L167.9 380 M230.5 374 L230.5 380 M293.1 374 L293.1 380 M355.7 374 L355.7 380 M418.3 374 L418.3 380 M480.9 374 L480.9 380 M543.5 374 L543.5 380 M606.1 374 L606.1 380 M668.7 374 L668.7 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="374" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="60" y="272" text-anchor="end" dominant-baseline="middle">20</text>
-    <text x="60" y="170" text-anchor="end" dominant-baseline="middle">40</text>
-    <text x="60" y="68" text-anchor="end" dominant-baseline="middle">60</text>
+    <text x="66" y="374" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="272" text-anchor="end" dominant-baseline="middle">20</text>
+    <text x="66" y="170" text-anchor="end" dominant-baseline="middle">40</text>
+    <text x="66" y="68" text-anchor="end" dominant-baseline="middle">60</text>
     <text x="105.3" y="391" text-anchor="middle" font-size="11" data-full-label="D1"><title>D1</title>D1</text>
     <text x="167.9" y="391" text-anchor="middle" font-size="11" data-full-label="D2"><title>D2</title>D2</text>
     <text x="230.5" y="391" text-anchor="middle" font-size="11" data-full-label="D3"><title>D3</title>D3</text>
@@ -27,8 +27,8 @@
     <text x="668.7" y="391" text-anchor="middle" font-size="11" data-full-label="D10"><title>D10</title>D10</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="43.36" y="221" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 43.36 221)" data-axis="y">holds</text>
-    <text x="387" y="401" text-anchor="middle" dominant-baseline="hanging" data-axis="x">day</text>
+    <text x="42.68" y="221" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 42.68 221)" data-axis="y">holds</text>
+    <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">day</text>
   </g>
   <g fill="none">
     <path d="M105.3 282.2 L167.9 251.6 L230.5 215.9 L293.1 185.3 L355.7 159.8 L418.3 129.2 L480.9 170 L543.5 205.7 L606.1 231.2 L668.7 261.8 L668.7 374 L105.3 374 Z" fill="#7cb5ec" fill-opacity="0.28" stroke="none" data-series="holds"/>

@@ -3,7 +3,7 @@
   <desc id="mv-5d71eed81323c10e-desc">line chart. Tuesday peaked error bursts at 5. x=day. y=errors. 3 rows.</desc>
   <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
   <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Tuesday peaked error bursts at 5</title>Tuesday peaked error bursts at 5</text>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1">
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1">
     <line x1="48" x2="700" y1="358" y2="358"/>
     <line x1="48" x2="700" y1="50" y2="50"/>
   </g>

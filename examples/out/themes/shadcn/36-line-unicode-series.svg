@@ -9,7 +9,7 @@
     <rect x="381" y="435" width="10" height="10" fill="#009689" rx="3"/>
     <text x="395" y="444" data-legend="東京">東京</text>
   </g>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1">
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1">
     <line x1="48" x2="700" y1="338.8" y2="338.8"/>
     <line x1="48" x2="700" y1="50" y2="50"/>
   </g>

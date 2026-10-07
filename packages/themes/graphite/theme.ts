@@ -4,7 +4,7 @@ import type { SemanticColors, SurfaceTokens, ThemeTokens } from "../contract.js"
 import { folio } from "../folio/theme.js";
 
 const INK = "#1B1B19";
-const QUIET = "#8E8D87";
+const QUIET = "#6A6964";
 const PAPER = "#EFEEEA";
 const ACCENT = "#E4572E";
 

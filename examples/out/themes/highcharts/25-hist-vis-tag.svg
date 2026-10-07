@@ -5,11 +5,11 @@
   <path d="M74 374 L700 374" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
   <path d="M74 374 L74 380 M230.5 374 L230.5 380 M387 374 L387 380 M543.5 374 L543.5 380 M700 374 L700 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
   <g fill="#666666" font-size="11" font-weight="400">
-    <text x="60" y="374" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="60" y="291.5" text-anchor="end" dominant-baseline="middle">1</text>
-    <text x="60" y="209" text-anchor="end" dominant-baseline="middle">2</text>
-    <text x="60" y="126.5" text-anchor="end" dominant-baseline="middle">3</text>
-    <text x="60" y="44" text-anchor="end" dominant-baseline="middle">4</text>
+    <text x="66" y="374" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="66" y="291.5" text-anchor="end" dominant-baseline="middle">1</text>
+    <text x="66" y="209" text-anchor="end" dominant-baseline="middle">2</text>
+    <text x="66" y="126.5" text-anchor="end" dominant-baseline="middle">3</text>
+    <text x="66" y="44" text-anchor="end" dominant-baseline="middle">4</text>
     <text x="74" y="391" text-anchor="middle" font-size="11" data-full-label="4"><title>4</title>4</text>
     <text x="230.5" y="391" text-anchor="middle" font-size="11" data-full-label="11"><title>11</title>11</text>
     <text x="387" y="391" text-anchor="middle" font-size="11" data-full-label="18"><title>18</title>18</text>
@@ -17,8 +17,8 @@
     <text x="700" y="391" text-anchor="middle" font-size="11" data-full-label="32"><title>32</title>32</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="50.18" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 50.18 209)" data-axis="y">count</text>
-    <text x="387" y="401" text-anchor="middle" dominant-baseline="hanging" data-axis="x">kb · Sturges bins</text>
+    <text x="49.84" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 49.84 209)" data-axis="y">count</text>
+    <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">kb · Sturges bins</text>
   </g>
   <g>
     <path d="M120.25 374 L184.25 374 L184.25 44 L120.25 44 Z" fill="#7cb5ec" data-bin-left="4" data-bin-right="11" data-weight="4" data-count="4"/>

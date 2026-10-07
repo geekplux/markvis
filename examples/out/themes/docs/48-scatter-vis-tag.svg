@@ -3,7 +3,7 @@
   <desc id="mv-a2ff55452aa66703-desc">scatter chart. Most points sit near the axes. x=dx. y=dy. 4 rows.</desc>
   <text x="58" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>Most points sit near the axes</title>MOST POINTS SIT NEAR THE AXES</text>
   <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3">
+  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3" data-grid="1">
     <line x1="58" x2="704" y1="358.8" y2="358.8"/>
     <line x1="58" x2="704" y1="200.4" y2="200.4"/>
     <line x1="58" x2="704" y1="42" y2="42"/>
@@ -25,7 +25,7 @@
   </g>
   <g fill="#64748B" font-size="11" font-weight="400" data-axis-titles="1">
     <text x="27.36" y="240" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 27.36 240)" data-axis="y">dy</text>
-    <text x="381" y="465" text-anchor="middle" dominant-baseline="hanging" data-axis="x">dx</text>
+    <text x="381" y="458.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">dx</text>
   </g>
   <g>
     <circle cx="223.5" cy="358.8" r="2.5" fill="#475569" fill-opacity="0.75" stroke="none" data-x="0" data-y="0" data-series="dy"/>

@@ -8,7 +8,7 @@
     <path d="M374 252 L239.48 208.29 A141.44 141.44 0 0 1 305.86 128.06 Z" fill="#10B981" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Firefox" data-raw-value="12"/>
     <path d="M374 252 L305.86 128.06 A141.44 141.44 0 0 1 374 110.56 Z" fill="#A855F7" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Other" data-raw-value="8"/>
   </g>
-  <g fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1">
+  <g fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-leaders="1">
     <polyline points="515.16,260.88 531.13,261.89 539.13,261.89"/>
     <polyline points="254.58,327.79 241.07,336.36 233.07,336.36"/>
     <polyline points="265.02,161.84 252.69,151.64 244.69,151.64"/>

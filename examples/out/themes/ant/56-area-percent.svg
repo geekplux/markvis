@@ -5,19 +5,19 @@
   <g font-size="12" font-weight="400" fill="#262626">
     <circle cx="71" cy="40" r="5" fill="#5AD8A6"/>
     <text x="80" y="44" data-legend="A">A</text>
-    <circle cx="108.44" cy="40" r="5" fill="#E8684A"/>
-    <text x="117.44" y="44" data-legend="B">B</text>
+    <circle cx="109.4" cy="40" r="5" fill="#E8684A"/>
+    <text x="118.4" y="44" data-legend="B">B</text>
   </g>
-  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4">
+  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4" data-grid="1">
     <line x1="66" x2="706" y1="212.5" y2="212.5"/>
     <line x1="66" x2="706" y1="70" y2="70"/>
   </g>
   <path d="M66 355 L706 355" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1"/>
   <path d="M74 355 L74 359 M198.8 355 L198.8 359 M323.6 355 L323.6 359 M448.4 355 L448.4 359 M573.2 355 L573.2 359 M698 355 L698 359" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-axis-ticks="1"/>
-  <g fill="#8C8C8C" font-size="12" font-weight="400">
-    <text x="54" y="355" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="54" y="212.5" text-anchor="end" dominant-baseline="middle">50</text>
-    <text x="54" y="70" text-anchor="end" dominant-baseline="middle">100</text>
+  <g fill="#737373" font-size="12" font-weight="400">
+    <text x="58" y="355" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="58" y="212.5" text-anchor="end" dominant-baseline="middle">50</text>
+    <text x="58" y="70" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="74" y="371" text-anchor="middle" font-size="12" data-full-label="-1"><title>-1</title>-1</text>
     <text x="198.8" y="371" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
     <text x="323.6" y="371" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
@@ -25,9 +25,9 @@
     <text x="573.2" y="371" text-anchor="middle" font-size="12" data-full-label="3"><title>3</title>3</text>
     <text x="698" y="371" text-anchor="middle" font-size="12" data-full-label="4"><title>4</title>4</text>
   </g>
-  <g fill="#8C8C8C" font-size="12" font-weight="400" data-axis-titles="1">
-    <text x="26.68" y="212.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 26.68 212.5)" data-axis="y">depth</text>
-    <text x="386" y="383" text-anchor="middle" dominant-baseline="hanging" data-axis="x">minute</text>
+  <g fill="#737373" font-size="12" font-weight="400" data-axis-titles="1">
+    <text x="26.4" y="212.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 26.4 212.5)" data-axis="y">depth</text>
+    <text x="386" y="380.6" text-anchor="middle" dominant-baseline="hanging" data-axis="x">minute</text>
   </g>
   <g fill="none">
     <path d="M146 151.43 L306 155.5 L466 184 L626 147.73 L626 355 L466 355 L306 355 L146 355 Z" fill="#5AD8A6" fill-opacity="0.25" stroke="none" data-series="A" data-layout="percent"/>

@@ -1,3 +1,4 @@
+import { setChartField } from "@markvis/parser";
 export const CHART_TYPES = [
   "bar",
   "line",
@@ -43,10 +44,6 @@ const TYPE_SET = new Set<string>(CHART_TYPES);
 const THEME_SET = new Set<string>(THEMES);
 const PALETTE_SET = new Set<string>(PALETTES);
 
-const FENCE_RE =
-  /(```(?:chart|markvis|vis)[ \t]*\r?\n)([\s\S]*?)(\r?\n```)/;
-const THEME_HEADER_RE = /^[ \t]*theme:[ \t]*(\S+)[ \t]*$/m;
-const PALETTE_HEADER_RE = /^[ \t]*palette:[ \t]*(\S+)[ \t]*$/m;
 
 function filenameFromPath(path: string): string {
   const parts = path.split(/[/\\]/);
@@ -160,77 +157,15 @@ export function isStemSlugTitle(title: string, id: string): boolean {
   return false;
 }
 
-function rewriteThemeInBody(body: string, theme: ChartTheme): string {
-  if (THEME_HEADER_RE.test(body)) {
-    return body.replace(THEME_HEADER_RE, `theme: ${theme}`);
-  }
-  if (/^[ \t]*markvis:[ \t]*.*$/m.test(body)) {
-    return body.replace(
-      /^[ \t]*markvis:[ \t]*.*$/m,
-      (line) => `${line}\ntheme: ${theme}`,
-    );
-  }
-  if (body.length === 0) {
-    return `theme: ${theme}`;
-  }
-  return `theme: ${theme}\n${body}`;
-}
-
-/** Insert or replace theme: in a fence body. Comment-only sources unchanged. */
+/** Set theme on the first chart, fence or `<!-- chart: … -->` comment. */
 export function rewriteThemeInFence(
   source: string,
   theme: ChartTheme,
 ): string {
-  if (!isChartTheme(theme)) {
-    return source;
-  }
-  const match = FENCE_RE.exec(source);
-  if (!match || match.index === undefined) {
-    return source;
-  }
-  const [full, open, body, close] = match;
-  const nextBody = rewriteThemeInBody(body, theme);
-  return (
-    source.slice(0, match.index) +
-    open +
-    nextBody +
-    close +
-    source.slice(match.index + full.length)
-  );
+  return isChartTheme(theme) ? setChartField(source, "theme", theme) : source;
 }
 
-
-function rewritePaletteInBody(
-  body: string,
-  palette: ChartPalette | null,
-): string {
-  if (palette === null) {
-    return body
-      .replace(/^[ \t]*palette:[ \t]*\S+[ \t]*\r?\n?/m, "")
-      .replace(/\n{3,}/g, "\n\n");
-  }
-  if (PALETTE_HEADER_RE.test(body)) {
-    return body.replace(PALETTE_HEADER_RE, `palette: ${palette}`);
-  }
-  if (THEME_HEADER_RE.test(body)) {
-    return body.replace(
-      THEME_HEADER_RE,
-      (line) => `${line}\npalette: ${palette}`,
-    );
-  }
-  if (/^[ \t]*markvis:[ \t]*.*$/m.test(body)) {
-    return body.replace(
-      /^[ \t]*markvis:[ \t]*.*$/m,
-      (line) => `${line}\npalette: ${palette}`,
-    );
-  }
-  if (body.length === 0) {
-    return `palette: ${palette}`;
-  }
-  return `palette: ${palette}\n${body}`;
-}
-
-/** Insert, replace, or remove palette: in a fence body. */
+/** Set or remove palette on the first chart, fence or comment. */
 export function rewritePaletteInFence(
   source: string,
   palette: ChartPalette | null,
@@ -238,19 +173,7 @@ export function rewritePaletteInFence(
   if (palette !== null && !isChartPalette(palette)) {
     return source;
   }
-  const match = FENCE_RE.exec(source);
-  if (!match || match.index === undefined) {
-    return source;
-  }
-  const [full, open, body, close] = match;
-  const nextBody = rewritePaletteInBody(body, palette);
-  return (
-    source.slice(0, match.index) +
-    open +
-    nextBody +
-    close +
-    source.slice(match.index + full.length)
-  );
+  return setChartField(source, "palette", palette);
 }
 
 export function fenceForTheme(fence: string, theme: ChartTheme): string {

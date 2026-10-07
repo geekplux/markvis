@@ -3,18 +3,18 @@
   <desc id="mv-8c2fdefb06435294-desc">area chart. Queue A stays deeper than queue B. x=minute. y=depth. series=queue. 6 rows.</desc>
   <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>Queue A stays deeper than queue B</title>Queue A stays deeper than queue B</text>
   <g font-size="12" font-weight="400" fill="#374151">
-    <rect x="343.56" y="425" width="10" height="10" fill="#8884d8" rx="1"/>
-    <text x="357.56" y="434" data-legend="A">A</text>
-    <rect x="381" y="425" width="10" height="10" fill="#82ca9d" rx="1"/>
-    <text x="395" y="434" data-legend="B">B</text>
+    <rect x="342.68" y="425" width="10" height="10" fill="#8884d8" rx="1"/>
+    <text x="356.68" y="434" data-legend="A">A</text>
+    <rect x="381.08" y="425" width="10" height="10" fill="#82ca9d" rx="1"/>
+    <text x="395.08" y="434" data-legend="B">B</text>
   </g>
-  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3">
+  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-grid="1">
     <line x1="48" x2="700" y1="305.75" y2="305.75"/>
     <line x1="48" x2="700" y1="216.5" y2="216.5"/>
     <line x1="48" x2="700" y1="127.25" y2="127.25"/>
     <line x1="48" x2="700" y1="38" y2="38"/>
   </g>
-  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-v-grid="1">
+  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-grid="1" data-v-grid="1">
     <line x1="56" x2="56" y1="38" y2="395" data-v-grid="1"/>
     <line x1="215" x2="215" y1="38" y2="395" data-v-grid="1"/>
     <line x1="374" x2="374" y1="38" y2="395" data-v-grid="1"/>

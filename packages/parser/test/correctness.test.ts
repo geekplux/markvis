@@ -352,3 +352,48 @@ ${rows}`;
     expect(flipped.error.code).toBe("E_UNKNOWN_FIELD");
   });
 });
+
+describe("calendar span", () => {
+  const body = (rows: string) => `type: calendar
+title: C
+x: date
+y: n
+
+date,n
+${rows}`;
+
+  it("accepts up to five calendar years", () => {
+    expect(parse(body("2020-01-01,1\n2024-12-31,2\n")).ok).toBe(true);
+  });
+
+  it("rejects a wider span with E_BAD_DATE, keeping the rows", () => {
+    for (const rows of ["2020-01-01,1\n2025-01-01,2\n", "0001-01-01,1\n9999-12-31,2\n"]) {
+      const out = parse(body(rows));
+      expect(out.ok, rows).toBe(false);
+      if (out.ok) continue;
+      expect(out.error.code).toBe("E_BAD_DATE");
+      expect(out.error.message).toContain("at most 5");
+      expect(out.table.rows).toHaveLength(2);
+    }
+  });
+});
+
+describe("dumbbell series cells", () => {
+  it("rejects an empty series cell instead of drawing a blank legend entry", () => {
+    const out = parse(`type: dumbbell
+title: D
+x: line
+y: minutes
+series: period
+
+line,period,minutes
+Red,before,41
+Red,,36
+`);
+    expect(out.ok).toBe(false);
+    if (out.ok) return;
+    expect(out.error.code).toBe("E_MISSING_VALUE");
+    expect(out.error.row).toBe(2);
+    expect(out.error.column).toBe("period");
+  });
+});

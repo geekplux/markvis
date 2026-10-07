@@ -1,42 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="sankey chart: Five Points still feeds Midtown before Arts Center, 10 rows, series to" aria-labelledby="mv-f456bfd03bc51c29-title" aria-describedby="mv-f456bfd03bc51c29-desc" data-markvis="2" data-chart-type="sankey" data-id="mv-f456bfd03bc51c29" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
   <title id="mv-f456bfd03bc51c29-title">Five Points still feeds Midtown before Arts Center</title>
   <desc id="mv-f456bfd03bc51c29-desc">sankey chart. Five Points still feeds Midtown before Arts Center. x=from. y=riders. series=to. 10 rows.</desc>
-  <text x="106.66" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>Five Points still feeds Midtown before Arts Center</title>FIVE POINTS STILL FEEDS MIDTOWN BEFORE ARTS CENTER</text>
+  <text x="93.32" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>Five Points still feeds Midtown before Arts Center</title>FIVE POINTS STILL FEEDS MIDTOWN BEFORE ARTS CENTER</text>
   <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
   <g data-sankey-links="1">
-    <path d="M144.66 45.35 C211.77 45.35, 211.77 42, 278.89 42 L278.89 193.88 C211.77 193.88, 211.77 197.23, 144.66 197.23 Z" fill="#475569" fill-opacity="0.45" stroke="none" data-source="North Springs" data-target="Five Points" data-y="620"/>
-    <path d="M144.66 289.17 C211.77 289.17, 211.77 269.82, 278.89 269.82 L278.89 402.11 C211.77 402.11, 211.77 421.46, 144.66 421.46 Z" fill="#0F766E" fill-opacity="0.45" stroke="none" data-source="Airport" data-target="Five Points" data-y="540"/>
-    <path d="M144.66 205.23 C211.77 205.23, 211.77 193.88, 278.89 193.88 L278.89 269.82 C211.77 269.82, 211.77 281.17, 144.66 281.17 Z" fill="#334155" fill-opacity="0.45" stroke="none" data-source="Doraville" data-target="Five Points" data-y="310"/>
-    <path d="M292.89 42 C360 42, 360 57.6, 427.11 57.6 L427.11 273.17 C360 273.17, 360 257.57, 292.89 257.57 Z" fill="#64748B" fill-opacity="0.45" stroke="none" data-source="Five Points" data-target="Midtown" data-y="880"/>
-    <path d="M292.89 257.57 C360 257.57, 360 281.17, 427.11 281.17 L427.11 381.61 C360 381.61, 360 358.01, 292.89 358.01 Z" fill="#64748B" fill-opacity="0.45" stroke="none" data-source="Five Points" data-target="Peachtree Center" data-y="410"/>
-    <path d="M292.89 358.01 C360 358.01, 360 389.61, 427.11 389.61 L427.11 448.4 C360 448.4, 360 416.8, 292.89 416.8 Z" fill="#64748B" fill-opacity="0.45" stroke="none" data-source="Five Points" data-target="Georgia State" data-y="240"/>
-    <path d="M441.11 57.6 C508.23 57.6, 508.23 163.87, 575.34 163.87 L575.34 259.41 C508.23 259.41, 508.23 153.14, 441.11 153.14 Z" fill="#78716C" fill-opacity="0.45" stroke="none" data-source="Midtown" data-target="Arts Center" data-y="390"/>
-    <path d="M441.11 281.17 C508.23 281.17, 508.23 259.41, 575.34 259.41 L575.34 310.86 C508.23 310.86, 508.23 332.62, 441.11 332.62 Z" fill="#57534E" fill-opacity="0.45" stroke="none" data-source="Peachtree Center" data-target="Arts Center" data-y="210"/>
-    <path d="M144.66 421.46 C211.77 421.46, 211.77 424.8, 278.89 424.8 L278.89 464 C211.77 464, 211.77 460.65, 144.66 460.65 Z" fill="#0F766E" fill-opacity="0.45" stroke="none" data-source="Airport" data-target="College Park" data-y="160"/>
-    <path d="M441.11 389.61 C508.23 389.61, 508.23 318.86, 575.34 318.86 L575.34 342.13 C508.23 342.13, 508.23 412.88, 441.11 412.88 Z" fill="#475569" fill-opacity="0.29250000000000004" stroke="none" data-source="Georgia State" data-target="King Memorial" data-y="95"/>
+    <path d="M131.32 45.35 C202.58 45.35, 202.58 42, 273.83 42 L273.83 193.88 C202.58 193.88, 202.58 197.23, 131.32 197.23 Z" fill="#475569" fill-opacity="0.45" stroke="none" data-source="North Springs" data-target="Five Points" data-y="620"/>
+    <path d="M131.32 289.17 C202.58 289.17, 202.58 269.82, 273.83 269.82 L273.83 402.11 C202.58 402.11, 202.58 421.46, 131.32 421.46 Z" fill="#0F766E" fill-opacity="0.45" stroke="none" data-source="Airport" data-target="Five Points" data-y="540"/>
+    <path d="M131.32 205.23 C202.58 205.23, 202.58 193.88, 273.83 193.88 L273.83 269.82 C202.58 269.82, 202.58 281.17, 131.32 281.17 Z" fill="#334155" fill-opacity="0.45" stroke="none" data-source="Doraville" data-target="Five Points" data-y="310"/>
+    <path d="M287.83 42 C359.09 42, 359.09 57.6, 430.35 57.6 L430.35 273.17 C359.09 273.17, 359.09 257.57, 287.83 257.57 Z" fill="#64748B" fill-opacity="0.45" stroke="none" data-source="Five Points" data-target="Midtown" data-y="880"/>
+    <path d="M287.83 257.57 C359.09 257.57, 359.09 281.17, 430.35 281.17 L430.35 381.61 C359.09 381.61, 359.09 358.01, 287.83 358.01 Z" fill="#64748B" fill-opacity="0.45" stroke="none" data-source="Five Points" data-target="Peachtree Center" data-y="410"/>
+    <path d="M287.83 358.01 C359.09 358.01, 359.09 389.61, 430.35 389.61 L430.35 448.4 C359.09 448.4, 359.09 416.8, 287.83 416.8 Z" fill="#64748B" fill-opacity="0.45" stroke="none" data-source="Five Points" data-target="Georgia State" data-y="240"/>
+    <path d="M444.35 57.6 C515.61 57.6, 515.61 163.87, 586.87 163.87 L586.87 259.41 C515.61 259.41, 515.61 153.14, 444.35 153.14 Z" fill="#78716C" fill-opacity="0.45" stroke="none" data-source="Midtown" data-target="Arts Center" data-y="390"/>
+    <path d="M444.35 281.17 C515.61 281.17, 515.61 259.41, 586.87 259.41 L586.87 310.86 C515.61 310.86, 515.61 332.62, 444.35 332.62 Z" fill="#57534E" fill-opacity="0.45" stroke="none" data-source="Peachtree Center" data-target="Arts Center" data-y="210"/>
+    <path d="M131.32 421.46 C202.58 421.46, 202.58 424.8, 273.83 424.8 L273.83 464 C202.58 464, 202.58 460.65, 131.32 460.65 Z" fill="#0F766E" fill-opacity="0.45" stroke="none" data-source="Airport" data-target="College Park" data-y="160"/>
+    <path d="M444.35 389.61 C515.61 389.61, 515.61 318.86, 586.87 318.86 L586.87 342.13 C515.61 342.13, 515.61 412.88, 444.35 412.88 Z" fill="#475569" fill-opacity="0.29250000000000004" stroke="none" data-source="Georgia State" data-target="King Memorial" data-y="95"/>
   </g>
   <g data-sankey-nodes="1">
-    <rect x="130.66" y="45.35" width="14" height="151.88" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="North Springs" data-y="620"/>
-    <rect x="278.89" y="42" width="14" height="374.8" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Five Points" data-y="1,530"/>
-    <rect x="130.66" y="289.17" width="14" height="171.48" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Airport" data-y="700"/>
-    <rect x="130.66" y="205.23" width="14" height="75.94" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Doraville" data-y="310"/>
-    <rect x="427.11" y="57.6" width="14" height="215.57" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Midtown" data-y="880"/>
-    <rect x="427.11" y="281.17" width="14" height="100.44" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Peachtree Center" data-y="410"/>
-    <rect x="427.11" y="389.61" width="14" height="58.79" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Georgia State" data-y="240"/>
-    <rect x="575.34" y="163.87" width="14" height="146.98" fill="#334155" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Arts Center" data-y="600"/>
-    <rect x="278.89" y="424.8" width="14" height="39.2" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="College Park" data-y="160"/>
-    <rect x="575.34" y="318.86" width="14" height="23.27" fill="#334155" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="King Memorial" data-y="95"/>
+    <rect x="117.32" y="45.35" width="14" height="151.88" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="North Springs" data-y="620"/>
+    <rect x="273.83" y="42" width="14" height="374.8" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Five Points" data-y="1,530"/>
+    <rect x="117.32" y="289.17" width="14" height="171.48" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Airport" data-y="700"/>
+    <rect x="117.32" y="205.23" width="14" height="75.94" fill="#475569" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Doraville" data-y="310"/>
+    <rect x="430.35" y="57.6" width="14" height="215.57" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Midtown" data-y="880"/>
+    <rect x="430.35" y="281.17" width="14" height="100.44" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Peachtree Center" data-y="410"/>
+    <rect x="430.35" y="389.61" width="14" height="58.79" fill="#0F766E" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Georgia State" data-y="240"/>
+    <rect x="586.87" y="163.87" width="14" height="146.98" fill="#334155" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="Arts Center" data-y="600"/>
+    <rect x="273.83" y="424.8" width="14" height="39.2" fill="#64748B" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="College Park" data-y="160"/>
+    <rect x="586.87" y="318.86" width="14" height="23.27" fill="#334155" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-node="King Memorial" data-y="95"/>
   </g>
-  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400">
-    <text x="126.66" y="121.29" text-anchor="end" dominant-baseline="middle" data-node-label="North Springs"><title>North Springs</title>North Springs</text>
-    <text x="274.89" y="229.4" text-anchor="end" dominant-baseline="middle" data-node-label="Five Points"><title>Five Points</title>Five Points</text>
-    <text x="126.66" y="374.91" text-anchor="end" dominant-baseline="middle" data-node-label="Airport"><title>Airport</title>Airport</text>
-    <text x="126.66" y="243.2" text-anchor="end" dominant-baseline="middle" data-node-label="Doraville"><title>Doraville</title>Doraville</text>
-    <text x="445.11" y="165.38" text-anchor="start" dominant-baseline="middle" data-node-label="Midtown"><title>Midtown</title>Midtown</text>
-    <text x="445.11" y="331.39" text-anchor="start" dominant-baseline="middle" data-node-label="Peachtree Center"><title>Peachtree Center</title>Peachtree Center</text>
-    <text x="445.11" y="419.01" text-anchor="start" dominant-baseline="middle" data-node-label="Georgia State"><title>Georgia State</title>Georgia State</text>
-    <text x="593.34" y="237.36" text-anchor="start" dominant-baseline="middle" data-node-label="Arts Center"><title>Arts Center</title>Arts Center</text>
-    <text x="274.89" y="444.4" text-anchor="end" dominant-baseline="middle" data-node-label="College Park"><title>College Park</title>College Park</text>
-    <text x="593.34" y="330.49" text-anchor="start" dominant-baseline="middle" data-node-label="King Memorial"><title>King Memorial</title>King Memorial</text>
+  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" paint-order="stroke">
+    <text x="113.32" y="121.29" text-anchor="end" dominant-baseline="middle" data-node-label="North Springs"><title>North Springs</title>North Springs</text>
+    <text x="269.83" y="229.4" text-anchor="end" dominant-baseline="middle" data-node-label="Five Points"><title>Five Points</title>Five Points</text>
+    <text x="113.32" y="374.91" text-anchor="end" dominant-baseline="middle" data-node-label="Airport"><title>Airport</title>Airport</text>
+    <text x="113.32" y="243.2" text-anchor="end" dominant-baseline="middle" data-node-label="Doraville"><title>Doraville</title>Doraville</text>
+    <text x="448.35" y="165.38" text-anchor="start" dominant-baseline="middle" data-node-label="Midtown"><title>Midtown</title>Midtown</text>
+    <text x="448.35" y="331.39" text-anchor="start" dominant-baseline="middle" data-node-label="Peachtree Center"><title>Peachtree Center</title>Peachtree Center</text>
+    <text x="448.35" y="419.01" text-anchor="start" dominant-baseline="middle" data-node-label="Georgia State"><title>Georgia State</title>Georgia State</text>
+    <text x="604.87" y="237.36" text-anchor="start" dominant-baseline="middle" data-node-label="Arts Center"><title>Arts Center</title>Arts Center</text>
+    <text x="269.83" y="444.4" text-anchor="end" dominant-baseline="middle" data-node-label="College Park"><title>College Park</title>College Park</text>
+    <text x="604.87" y="330.49" text-anchor="start" dominant-baseline="middle" data-node-label="King Memorial"><title>King Memorial</title>King Memorial</text>
   </g>
 </svg>

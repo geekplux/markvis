@@ -2,30 +2,30 @@
   <title id="mv-06366ce7bfbead72-title">Bigger metros, bigger GDP</title>
   <desc id="mv-06366ce7bfbead72-desc">scatter chart. Bigger metros, bigger GDP. x=pop. y=gdp. 3 rows.</desc>
   <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
-  <text x="145.04" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Bigger metros, bigger GDP</title>Bigger metros, bigger GDP</text>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1">
-    <line x1="145.04" x2="700" y1="325.25" y2="325.25"/>
-    <line x1="145.04" x2="700" y1="50" y2="50"/>
+  <text x="136.47" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Bigger metros, bigger GDP</title>Bigger metros, bigger GDP</text>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1">
+    <line x1="136.47" x2="700" y1="325.25" y2="325.25"/>
+    <line x1="136.47" x2="700" y1="50" y2="50"/>
   </g>
-  <line x1="145.04" x2="700" y1="325.25" y2="325.25" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1"/>
+  <line x1="136.47" x2="700" y1="325.25" y2="325.25" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1"/>
   <g fill="#737373" font-size="12" font-weight="400">
-    <text x="137.04" y="417" text-anchor="end" dominant-baseline="middle">-100,000,000,000</text>
-    <text x="137.04" y="325.25" text-anchor="end" dominant-baseline="middle">0</text>
-    <text x="137.04" y="233.5" text-anchor="end" dominant-baseline="middle">100,000,000,000</text>
-    <text x="137.04" y="141.75" text-anchor="end" dominant-baseline="middle">200,000,000,000</text>
-    <text x="137.04" y="50" text-anchor="end" dominant-baseline="middle">300,000,000,000</text>
-    <text x="153.04" y="429" text-anchor="middle" font-size="12" data-full-label="-5,000,000"><title>-5,000,000</title>-5,000,000</text>
-    <text x="332.69" y="429" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
-    <text x="512.35" y="429" text-anchor="middle" font-size="12" data-full-label="5,000,000"><title>5,000,000</title>5,000,000</text>
+    <text x="128.47" y="417" text-anchor="end" dominant-baseline="middle">-100,000,000,000</text>
+    <text x="128.47" y="325.25" text-anchor="end" dominant-baseline="middle">0</text>
+    <text x="128.47" y="233.5" text-anchor="end" dominant-baseline="middle">100,000,000,000</text>
+    <text x="128.47" y="141.75" text-anchor="end" dominant-baseline="middle">200,000,000,000</text>
+    <text x="128.47" y="50" text-anchor="end" dominant-baseline="middle">300,000,000,000</text>
+    <text x="144.47" y="429" text-anchor="start" font-size="12" data-full-label="-5,000,000"><title>-5,000,000</title>-5,000,000</text>
+    <text x="326.98" y="429" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
+    <text x="509.49" y="429" text-anchor="middle" font-size="12" data-full-label="5,000,000"><title>5,000,000</title>5,000,000</text>
     <text x="692" y="429" text-anchor="end" font-size="12" data-full-label="10,000,000"><title>10,000,000</title>10,000,000</text>
   </g>
   <g fill="#737373" font-size="13" font-weight="400" data-axis-titles="1">
     <text x="9" y="233.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 9 233.5)" data-axis="y">gdp</text>
-    <text x="422.52" y="445" text-anchor="middle" dominant-baseline="hanging" data-axis="x">pop</text>
+    <text x="418.24" y="438.6" text-anchor="middle" dominant-baseline="hanging" data-axis="x">pop</text>
   </g>
   <g>
-    <circle cx="368.62" cy="283.96" r="3" fill="#F54900" fill-opacity="0.75" stroke="none" data-x="1000000" data-y="45000000000" data-series="gdp"/>
-    <circle cx="638.1" cy="132.57" r="3" fill="#F54900" fill-opacity="0.75" stroke="none" data-x="8500000" data-y="210000000000" data-series="gdp"/>
-    <circle cx="350.66" cy="314.24" r="3" fill="#F54900" fill-opacity="0.75" stroke="none" data-x="500000" data-y="12000000000" data-series="gdp"/>
+    <circle cx="363.48" cy="283.96" r="3" fill="#F54900" fill-opacity="0.75" stroke="none" data-x="1000000" data-y="45000000000" data-series="gdp"/>
+    <circle cx="637.25" cy="132.57" r="3" fill="#F54900" fill-opacity="0.75" stroke="none" data-x="8500000" data-y="210000000000" data-series="gdp"/>
+    <circle cx="345.23" cy="314.24" r="3" fill="#F54900" fill-opacity="0.75" stroke="none" data-x="500000" data-y="12000000000" data-series="gdp"/>
   </g>
 </svg>

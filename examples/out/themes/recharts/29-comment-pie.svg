@@ -3,12 +3,12 @@
   <desc id="mv-e0c3dbc735af8720-desc">pie chart. Core still leads product mix at 50%. x=name. y=value. unit=%. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>Core still leads product mix at 50%</title>Core still leads product mix at 50%<tspan font-size="12" font-weight="400" fill="#6B7280"> · %</tspan></text>
   <g font-size="12" font-weight="400" fill="#374151">
-    <rect x="280.2" y="425" width="10" height="10" fill="#8884d8" rx="1"/>
-    <text x="294.2" y="434" data-legend="Core">Core</text>
-    <rect x="339.96" y="425" width="10" height="10" fill="#82ca9d" rx="1"/>
-    <text x="353.96" y="434" data-legend="Addons">Addons</text>
-    <rect x="414.6" y="425" width="10" height="10" fill="#ffc658" rx="1"/>
-    <text x="428.6" y="434" data-legend="Other">Other</text>
+    <rect x="282.65" y="425" width="10" height="10" fill="#8884d8" rx="1"/>
+    <text x="296.65" y="434" data-legend="Core">Core</text>
+    <rect x="340.98" y="425" width="10" height="10" fill="#82ca9d" rx="1"/>
+    <text x="354.98" y="434" data-legend="Addons">Addons</text>
+    <rect x="415.81" y="425" width="10" height="10" fill="#ffc658" rx="1"/>
+    <text x="429.81" y="434" data-legend="Other">Other</text>
   </g>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0">
     <path d="M374 222 L374 96.88 A125.12 125.12 0 0 1 392.65 345.72 Z" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="Core" data-raw-value="50"/>

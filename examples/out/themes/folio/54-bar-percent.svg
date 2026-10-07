@@ -5,8 +5,8 @@
   <g font-size="13" font-weight="400" fill="#171717">
     <rect x="48" y="41" width="10" height="10" fill="#3B82F6" rx="1"/>
     <text x="62" y="50" data-legend="free">free</text>
-    <rect x="110.24" y="41" width="10" height="10" fill="#F97316" rx="1"/>
-    <text x="124.24" y="50" data-legend="pro">pro</text>
+    <rect x="103.68" y="41" width="10" height="10" fill="#F97316" rx="1"/>
+    <text x="117.68" y="50" data-legend="pro">pro</text>
   </g>
   <path d="M48 455 L700 455" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
   <g fill="#737373" font-size="12" font-weight="400">
@@ -29,13 +29,13 @@
     <path d="M582.5 184.1 L582.5 71 Q582.5 68 585.5 68 L651.5 68 Q654.5 68 654.5 71 L654.5 184.1 Z" fill="#F97316" data-x="Apr" data-series="pro" data-y="30" data-layout="percent"/>
   </g>
   <g>
-    <text x="129.5" y="124.5" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Jan">83.3333</text>
-    <text x="129.5" y="82" text-anchor="middle" font-size="13" font-weight="500" fill="#fafaf9" data-value-label="Jan">16.6667</text>
-    <text x="292.5" y="138.52" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Feb">79.7101</text>
-    <text x="292.5" y="82" text-anchor="middle" font-size="13" font-weight="500" fill="#fafaf9" data-value-label="Feb">20.2899</text>
-    <text x="455.5" y="156.75" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Mar">75</text>
-    <text x="455.5" y="82" text-anchor="middle" font-size="13" font-weight="500" fill="#fafaf9" data-value-label="Mar">25</text>
-    <text x="618.5" y="176.1" text-anchor="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Apr">70</text>
-    <text x="618.5" y="82" text-anchor="middle" font-size="13" font-weight="500" fill="#fafaf9" data-value-label="Apr">30</text>
+    <text x="129.5" y="293.75" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Jan">83.3333</text>
+    <text x="129.5" y="100.25" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Jan">16.6667</text>
+    <text x="292.5" y="300.76" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Feb">79.7101</text>
+    <text x="292.5" y="107.26" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Feb">20.2899</text>
+    <text x="455.5" y="309.88" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Mar">75</text>
+    <text x="455.5" y="116.38" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Mar">25</text>
+    <text x="618.5" y="319.55" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Apr">70</text>
+    <text x="618.5" y="126.05" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Apr">30</text>
   </g>
 </svg>

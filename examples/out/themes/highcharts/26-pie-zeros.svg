@@ -3,10 +3,10 @@
   <desc id="mv-046c245537a98d47-desc">pie chart. On still leads status mix at 70. x=flag. y=count. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
   <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>On still leads status mix at 70</title>On still leads status mix at 70</text>
   <g font-size="12" font-weight="700" fill="#333333">
-    <circle cx="341.4" cy="420" r="5" fill="#7cb5ec"/>
-    <text x="350.4" y="424" data-legend="on">on</text>
-    <circle cx="386.28" cy="420" r="5" fill="#434348"/>
-    <text x="395.28" y="424" data-legend="off">off</text>
+    <circle cx="343.4" cy="420" r="5" fill="#7cb5ec"/>
+    <text x="352.4" y="424" data-legend="on">on</text>
+    <circle cx="389.42" cy="420" r="5" fill="#434348"/>
+    <text x="398.42" y="424" data-legend="off">off</text>
   </g>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0">
     <path d="M378 220 L378 100.32 A119.68 119.68 0 1 1 264.18 256.98 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="on" data-raw-value="70"/>

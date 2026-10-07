@@ -2,27 +2,27 @@
   <title id="mv-98eb0c18c1c67b75-title">Synthetic regional program costs</title>
   <desc id="mv-98eb0c18c1c67b75-desc">bar chart. Synthetic regional program costs. x=program. y=amount. unit=USD. 3 rows.</desc>
   <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>Synthetic regional program costs</title>Synthetic regional program costs<tspan font-size="12" font-weight="400" fill="#6B7280"> · USD</tspan></text>
-  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3">
-    <line x1="365.55" x2="365.55" y1="38" y2="158"/>
-    <line x1="506.77" x2="506.77" y1="38" y2="158"/>
+  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-grid="1">
+    <line x1="382.15" x2="382.15" y1="38" y2="158"/>
+    <line x1="515.07" x2="515.07" y1="38" y2="158"/>
     <line x1="648" x2="648" y1="38" y2="158"/>
   </g>
-  <line x1="224.32" x2="224.32" y1="38" y2="158" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-baseline="0"/>
+  <line x1="249.22" x2="249.22" y1="38" y2="158" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-baseline="0"/>
   <g fill="#6B7280" font-size="12" font-weight="400">
-    <text x="216.32" y="50.5" text-anchor="end" dominant-baseline="middle" data-full-label="North America enterprise expansion Q3"><title>North America enterprise expansion Q3</title><tspan x="216.32" dy="0">North America enterprise</tspan><tspan x="216.32" dy="15">expansion Q3</tspan></text>
-    <text x="216.32" y="90.5" text-anchor="end" dominant-baseline="middle" data-full-label="APAC partner enablement and training program"><title>APAC partner enablement and training program</title><tspan x="216.32" dy="0">APAC partner enablement and</tspan><tspan x="216.32" dy="15">training program</tspan></text>
-    <text x="216.32" y="130.5" text-anchor="end" dominant-baseline="middle" data-full-label="Legacy platform decommission wave 2"><title>Legacy platform decommission wave 2</title><tspan x="216.32" dy="0">Legacy platform decommission</tspan><tspan x="216.32" dy="15">wave 2</tspan></text>
-    <text x="224.32" y="174" text-anchor="middle">0</text>
-    <text x="365.55" y="174" text-anchor="middle">200,000</text>
-    <text x="506.77" y="174" text-anchor="middle">400,000</text>
+    <text x="241.22" y="58" text-anchor="end" dominant-baseline="middle" data-full-label="North America enterprise expansion Q3"><title>North America enterprise expansion Q3</title><tspan x="241.22" dy="0">North America enterprise expansion Q3</tspan></text>
+    <text x="241.22" y="90.5" text-anchor="end" dominant-baseline="middle" data-full-label="APAC partner enablement and training program"><title>APAC partner enablement and training program</title><tspan x="241.22" dy="0">APAC partner enablement and training</tspan><tspan x="241.22" dy="15">program</tspan></text>
+    <text x="241.22" y="138" text-anchor="end" dominant-baseline="middle" data-full-label="Legacy platform decommission wave 2"><title>Legacy platform decommission wave 2</title><tspan x="241.22" dy="0">Legacy platform decommission wave 2</tspan></text>
+    <text x="249.22" y="174" text-anchor="middle">0</text>
+    <text x="382.15" y="174" text-anchor="middle">200,000</text>
+    <text x="515.07" y="174" text-anchor="middle">400,000</text>
     <text x="648" y="174" text-anchor="middle">600,000</text>
   </g>
   <g data-orient="horizontal">
-    <rect x="224.32" y="43" width="296.58" height="30" fill="#8884d8" data-x="North America enterprise expansion Q3" data-series="amount" data-y="420,000"/>
-    <text x="526.9" y="58" text-anchor="start" font-size="12" font-weight="500" fill="#374151" dominant-baseline="middle" data-value-label="North America enterprise expansion Q3">420,000</text>
-    <rect x="224.32" y="83" width="130.63" height="30" fill="#8884d8" data-x="APAC partner enablement and training program" data-series="amount" data-y="185,000"/>
-    <text x="360.95" y="98" text-anchor="start" font-size="12" font-weight="500" fill="#374151" dominant-baseline="middle" data-value-label="APAC partner enablement and training program">185,000</text>
-    <rect x="224.32" y="123" width="67.08" height="30" fill="#8884d8" data-x="Legacy platform decommission wave 2" data-series="amount" data-y="95,000"/>
-    <text x="297.4" y="138" text-anchor="start" font-size="12" font-weight="500" fill="#374151" dominant-baseline="middle" data-value-label="Legacy platform decommission wave 2">95,000</text>
+    <rect x="249.22" y="43" width="279.15" height="30" fill="#8884d8" data-x="North America enterprise expansion Q3" data-series="amount" data-y="420,000"/>
+    <text x="534.37" y="58" text-anchor="start" font-size="12" font-weight="500" fill="#374151" dominant-baseline="middle" data-value-label="North America enterprise expansion Q3">420,000</text>
+    <rect x="249.22" y="83" width="122.96" height="30" fill="#8884d8" data-x="APAC partner enablement and training program" data-series="amount" data-y="185,000"/>
+    <text x="378.18" y="98" text-anchor="start" font-size="12" font-weight="500" fill="#374151" dominant-baseline="middle" data-value-label="APAC partner enablement and training program">185,000</text>
+    <rect x="249.22" y="123" width="63.14" height="30" fill="#8884d8" data-x="Legacy platform decommission wave 2" data-series="amount" data-y="95,000"/>
+    <text x="318.36" y="138" text-anchor="start" font-size="12" font-weight="500" fill="#374151" dominant-baseline="middle" data-value-label="Legacy platform decommission wave 2">95,000</text>
   </g>
 </svg>

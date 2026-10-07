@@ -2,7 +2,7 @@
   <title id="mv-36cf52585c5aecc9-title">Gamma leads category share at 3</title>
   <desc id="mv-36cf52585c5aecc9-desc">bar chart. Gamma leads category share at 3. x=category. y=value. 3 rows.</desc>
   <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>Gamma leads category share at 3</title>Gamma leads category share at 3</text>
-  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-v-grid="1">
+  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-grid="1" data-v-grid="1">
     <line x1="156.67" x2="156.67" y1="38" y2="419" data-v-grid="1"/>
     <line x1="374" x2="374" y1="38" y2="419" data-v-grid="1"/>
     <line x1="591.33" x2="591.33" y1="38" y2="419" data-v-grid="1"/>
@@ -27,6 +27,6 @@
   <g>
     <text x="156.67" y="284" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-value-label="alpha">1</text>
     <text x="374" y="157" text-anchor="middle" font-size="12" font-weight="500" fill="#374151" data-value-label="beta">2</text>
-    <text x="591.33" y="52" text-anchor="middle" font-size="12" font-weight="500" fill="#fafaf9" data-value-label="gamma">3</text>
+    <text x="591.33" y="52" text-anchor="middle" font-size="12" font-weight="500" fill="#000000" data-value-label="gamma">3</text>
   </g>
 </svg>
