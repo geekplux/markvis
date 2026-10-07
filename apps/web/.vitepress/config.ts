@@ -1,24 +1,9 @@
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "vitepress";
-import type { Plugin } from "vite";
 
 const root = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(root, "../../..");
-const cryptoShim = resolve(repoRoot, "packages/browser/src/crypto-shim.ts");
-
-/** Browser-safe createHash for client-side render-svg (Examples detail). */
-function nodeCryptoShim(): Plugin {
-  return {
-    name: "node-crypto-shim",
-    enforce: "pre",
-    resolveId(id) {
-      if (id === "node:crypto" || id === "crypto") {
-        return cryptoShim;
-      }
-    },
-  };
-}
 
 function docsSidebar() {
   return [
@@ -71,7 +56,6 @@ export default defineConfig({
     ],
   ],
   vite: {
-    plugins: [nodeCryptoShim()],
     resolve: {
       alias: {
         "@markvis/browser/enhance": resolve(
