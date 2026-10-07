@@ -208,12 +208,17 @@ export function drawTitle(title: string, x: number, unit?: string): string {
     );
   }
   if (TITLE_RULE) {
+    // Under the last title line, and under the subtitle when there is one.
+    const ruleY =
+      TITLE_BASELINE +
+      (lines.length - 1 + (hasSubtitle(unit) ? 1 : 0)) * lineH +
+      6;
     parts.push(
       `  <line ${attrs({
         x1: fmtPx(MARGIN.left),
         x2: fmtPx(SVG_WIDTH - MARGIN.right),
-        y1: fmtPx(TITLE_BASELINE + 6),
-        y2: fmtPx(TITLE_BASELINE + 6),
+        y1: fmtPx(ruleY),
+        y2: fmtPx(ruleY),
         stroke: INK,
         "stroke-opacity": STRUCTURE_OPACITY,
         "stroke-width": 1,

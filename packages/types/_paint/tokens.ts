@@ -184,28 +184,33 @@ export function applyThemeTokens(t: ThemeTokens): void {
   SEMANTIC = t.SURFACES.light.SEMANTIC;
 }
 
-const READABLE = {
-  title: 21,
-  unit: 13,
-  value: 13,
-  tick: 12,
-  note: 12,
-  legend: 13,
+/** Hard minimum for every theme. A theme owns its ramp above it. */
+const TYPE_MIN = {
+  title: 15,
+  unit: 11,
+  value: 11,
+  tick: 11,
+  note: 11,
+  legend: 11,
 } as const;
 
-/** Width reflows the frame. Type sizes stay readable. Surface owns ink and paper. */
+/**
+ * Width reflows the frame; type never shrinks below TYPE_MIN. Each theme
+ * keeps its own ramp above that. Surface owns ink and paper.
+ */
 export function applyFrame(opts: { width: number; surface: SurfaceName }): void {
   SVG_WIDTH = opts.width;
   SURFACE = opts.surface;
-  TITLE_BASELINE = Math.max(TITLE_BASELINE, 32);
   TYPE = {
-    title: { ...TYPE.title, size: Math.max(TYPE.title.size, READABLE.title) },
-    unit: { ...TYPE.unit, size: Math.max(TYPE.unit.size, READABLE.unit) },
-    value: { ...TYPE.value, size: Math.max(TYPE.value.size, READABLE.value) },
-    tick: { ...TYPE.tick, size: Math.max(TYPE.tick.size, READABLE.tick) },
-    note: { ...TYPE.note, size: Math.max(TYPE.note.size, READABLE.note) },
-    legend: { ...TYPE.legend, size: Math.max(TYPE.legend.size, READABLE.legend) },
+    title: { ...TYPE.title, size: Math.max(TYPE.title.size, TYPE_MIN.title) },
+    unit: { ...TYPE.unit, size: Math.max(TYPE.unit.size, TYPE_MIN.unit) },
+    value: { ...TYPE.value, size: Math.max(TYPE.value.size, TYPE_MIN.value) },
+    tick: { ...TYPE.tick, size: Math.max(TYPE.tick.size, TYPE_MIN.tick) },
+    note: { ...TYPE.note, size: Math.max(TYPE.note.size, TYPE_MIN.note) },
+    legend: { ...TYPE.legend, size: Math.max(TYPE.legend.size, TYPE_MIN.legend) },
   };
+  // The first title baseline clears the cap height of the theme's own title.
+  TITLE_BASELINE = Math.max(TITLE_BASELINE, TYPE.title.size + 8);
   const s = SURFACES[opts.surface];
   PLATE = s.PLATE;
   PAPER = s.PAPER;
