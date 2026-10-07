@@ -1,6 +1,6 @@
 /** Recharts-inspired look as tokens only. Same keys as folio; no vendor chart deps. */
 
-import { FOLIO_SURFACES, folio, type ThemeTokens } from "../folio/theme.js";
+import { SEMANTIC_LIGHT, folio, type ThemeTokens } from "../folio/theme.js";
 
 /**
  * Static SVG grammar: Cartesian XY grid, legend below, stroke 2 / r=3, square bars,
@@ -17,15 +17,15 @@ export const recharts = {
 
   INK: "#374151",
   QUIET: "#6B7280",
-  HAIRLINE_OPACITY: "0.14",
+  HAIRLINE_OPACITY: "0.22",
   STRUCTURE_OPACITY: "0.28",
 
   TYPE: {
     title: { size: 16, weight: 600, fill: "#374151" },
     unit: { size: 12, weight: 400, fill: "#6B7280" },
-    value: { size: 11, weight: 500, fill: "#374151" },
-    tick: { size: 11, weight: 400, fill: "#6B7280" },
-    note: { size: 11, weight: 400, fill: "#6B7280" },
+    value: { size: 12, weight: 500, fill: "#374151" },
+    tick: { size: 12, weight: 400, fill: "#6B7280" },
+    note: { size: 12, weight: 400, fill: "#6B7280" },
     legend: { size: 12, weight: 400, fill: "#374151" },
   },
 
@@ -73,15 +73,15 @@ export const recharts = {
   BAR_LABEL_MID_MIN_W: folio.BAR_LABEL_MID_MIN_W,
 
   LINE_STROKE: 2,
-  LINE_POINT_R: 3,
+  LINE_POINT_R: 3.5,
   POINT_SKIP_AFTER: folio.POINT_SKIP_AFTER,
   AREA_OPACITY: 0.2,
   END_LABEL_SERIES_MAX: 0,
   END_LABEL_GAP: folio.END_LABEL_GAP,
   END_LABEL_MIN_SEP: folio.END_LABEL_MIN_SEP,
-  LINE_CURVE: folio.LINE_CURVE,
-  MARKER: folio.MARKER,
-  SERIES_DASH: folio.SERIES_DASH,
+  LINE_CURVE: "monotone",
+  MARKER: "hollow",
+  SERIES_DASH: [""],
 
   SCATTER_R: folio.SCATTER_R,
   SCATTER_OPACITY: folio.SCATTER_OPACITY,
@@ -99,15 +99,36 @@ export const recharts = {
   COMPACT_SPAN: folio.COMPACT_SPAN,
 
   PLOT_BG: null,
-  PLOT_BORDER: "#e2e8f0",
-  PLOT_BORDER_WIDTH: 1,
+  PLOT_BORDER: null,
+  PLOT_BORDER_WIDTH: 0,
   AXIS_TITLES: false,
   LEGEND_BELOW: true,
   TITLE_RULE: false,
-  GRID: { dash: "", width: 1, axes: "xy" },
-  AXIS: folio.AXIS,
-  LEGEND: folio.LEGEND,
+  GRID: { dash: "3 3", width: 1, axes: "xy" },
+  AXIS: { line: "xy", tick: 6 },
+  LEGEND: { swatch: "square", align: "middle" },
   FRAME: folio.FRAME,
 
-  SURFACES: FOLIO_SURFACES,
+  SURFACES: {
+    light: { PLATE: null, PAPER: "#ffffff", SEMANTIC: { ...SEMANTIC_LIGHT, inkOnLight: "#374151" } },
+    dark: {
+      PLATE: "#111827",
+      PAPER: "#111827",
+      INK: "#f3f4f6",
+      QUIET: "#9ca3af",
+      TICK: "#9ca3af",
+      HAIRLINE_OPACITY: "0.2",
+      SEMANTIC: {
+        ...SEMANTIC_LIGHT,
+        up: "#2DD4BF",
+        down: "#FB7185",
+        total: "#f3f4f6",
+        rampLow: "#1f2937",
+        missing: "#4b5563",
+        cellRule: "#374151",
+        cellGap: "#111827",
+      },
+    },
+    export: { PLATE: "#ffffff", PAPER: "#ffffff", SEMANTIC: { ...SEMANTIC_LIGHT, inkOnLight: "#374151" } },
+  },
 } as const satisfies ThemeTokens;

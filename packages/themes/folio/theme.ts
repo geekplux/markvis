@@ -4,7 +4,7 @@ import type { SemanticColors, SurfaceTokens, ThemeTokens } from "../contract.js"
 
 export type { ThemeTokens } from "../contract.js";
 
-const SEMANTIC_LIGHT: SemanticColors = {
+export const SEMANTIC_LIGHT: SemanticColors = {
   up: "#0F766E",
   down: "#BE123C",
   total: "#44403C",
@@ -36,6 +36,10 @@ export const FOLIO_SURFACES: {
       up: "#2DD4BF",
       down: "#FB7185",
       total: "#e7e5e4",
+      rampLow: "#292524",
+      missing: "#57534e",
+      cellRule: "#44403c",
+      cellGap: "#1c1917",
     },
   },
   export: {

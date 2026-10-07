@@ -1,6 +1,6 @@
 /** Vite/VitePress page-figure look as tokens only. Same keys as folio; no vendor deps. */
 
-import { FOLIO_SURFACES, folio, type ThemeTokens } from "../folio/theme.js";
+import { SEMANTIC_LIGHT, folio, type ThemeTokens } from "../folio/theme.js";
 
 /**
  * Zinc/slate ink, thin ticks, no loud fill — reads native on a docs site page.
@@ -12,21 +12,21 @@ export const docs = {
   PLOT_MIN_RATIO: folio.PLOT_MIN_RATIO,
 
   FONT: 'Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif',
-  FONT_NUMERIC: folio.FONT_NUMERIC,
+  FONT_NUMERIC: 'ui-monospace, SFMono-Regular, Menlo, Consolas, monospace',
 
   /** zinc-900 */
   INK: "#18181B",
   /** slate-500 — muted tick/unit ink for page figures */
   QUIET: "#64748B",
   /** Thin hairlines — barely-there grid on docs paper */
-  HAIRLINE_OPACITY: "0.06",
+  HAIRLINE_OPACITY: "0.32",
   STRUCTURE_OPACITY: "0.16",
 
   TYPE: {
     title: { size: 15, weight: 600, fill: "#18181B" },
     unit: { size: 11, weight: 400, fill: "#64748B" },
-    value: { size: 10, weight: 500, fill: "#18181B" },
-    tick: { size: 10, weight: 400, fill: "#64748B" },
+    value: { size: 11, weight: 500, fill: "#18181B" },
+    tick: { size: 11, weight: 400, fill: "#64748B" },
     note: { size: 11, weight: 400, fill: "#64748B" },
     legend: { size: 11, weight: 500, fill: "#18181B" },
   },
@@ -50,9 +50,9 @@ export const docs = {
 
   WRAP_OPACITY: 0.65,
 
-  TITLE: folio.TITLE,
-  TITLE_BASELINE: 20,
-  TITLE_TO_PLOT: 12,
+  TITLE: { align: "start", case: "upper", tracking: 0.06, unit: "inline" },
+  TITLE_BASELINE: 24,
+  TITLE_TO_PLOT: 18,
   TICK_TEXT_GAP: 8,
   LABEL_ROTATE_DEG: folio.LABEL_ROTATE_DEG,
   LABEL_MIN_GAP: folio.LABEL_MIN_GAP,
@@ -109,10 +109,31 @@ export const docs = {
   LEGEND_BELOW: true,
   /** Hairline under title — not a four-sided plot rect. */
   TITLE_RULE: true,
-  GRID: { dash: "", width: 1, axes: "y" },
+  GRID: { dash: "1 3", width: 1, axes: "y" },
   AXIS: folio.AXIS,
-  LEGEND: folio.LEGEND,
+  LEGEND: { swatch: "line", align: "start" },
   FRAME: folio.FRAME,
 
-  SURFACES: FOLIO_SURFACES,
+  SURFACES: {
+    light: { PLATE: null, PAPER: "#ffffff", SEMANTIC: { ...SEMANTIC_LIGHT, inkOnLight: "#18181B" } },
+    dark: {
+      PLATE: "#0f172a",
+      PAPER: "#0f172a",
+      INK: "#e2e8f0",
+      QUIET: "#94a3b8",
+      TICK: "#94a3b8",
+      HAIRLINE_OPACITY: "0.3",
+      SEMANTIC: {
+        ...SEMANTIC_LIGHT,
+        up: "#2DD4BF",
+        down: "#FB7185",
+        total: "#e2e8f0",
+        rampLow: "#1e293b",
+        missing: "#475569",
+        cellRule: "#334155",
+        cellGap: "#0f172a",
+      },
+    },
+    export: { PLATE: "#ffffff", PAPER: "#ffffff", SEMANTIC: { ...SEMANTIC_LIGHT, inkOnLight: "#18181B" } },
+  },
 } as const satisfies ThemeTokens;
