@@ -1,6 +1,6 @@
 # docs
 
-Zinc/slate ink, thin ticks, quiet fill — page-figure language for docs sites. Tokens only — no VitePress/d3 deps.
+Technical-manual figures for docs sites: uppercase tracked title with a rule, monospace numbers, dotted grid, slate ink. Tokens only — no VitePress/d3 deps.
 
 Source of truth: `theme.ts`. Fence id: `docs`.
 

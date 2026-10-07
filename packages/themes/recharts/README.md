@@ -3,11 +3,11 @@
 Static SVG grammar inspired by Recharts demos — without the `recharts` npm package.
 
 ## Steal
-- Cartesian XY grid (horizontal + vertical lines; `GRID.axes: "xy"`)
-- Legend **below** the plot for multi-series (`LEGEND_BELOW: true`, `END_LABEL_SERIES_MAX: 0`)
-- Stroke `2`, markers `r=3`, square bars (`BAR_RX: 0`)
-- Light plot border `#e2e8f0` stroke-only (transparent fill)
-- System UI face (folio stack)
+- Dashed Cartesian grid in x and y (`GRID: { dash: "3 3", axes: "xy" }`)
+- Both axis lines with 6px ticks (`AXIS: { line: "xy", tick: 6 }`)
+- Monotone curves with hollow points (`LINE_CURVE: "monotone"`, `MARKER: "hollow"`)
+- Legend **below** the plot, centered; scatter rings
+- Square bars (`BAR_RX: 0`), system UI face
 - Classic categorical blues / greens / oranges
 
 ## Don't steal

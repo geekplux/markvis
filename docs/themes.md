@@ -1,12 +1,30 @@
 # themes.md — markvis theme token packs
 
-Scope: optional fence `theme: folio|highcharts|shadcn|docs|ant|recharts` (grammar). Omitted = folio. Unknown = E_UNKNOWN_THEME + table. Optional `palette: ink|porcelain|warm|cool|vivid` (colors). Omitted = theme pack default colors. Unknown = E_UNKNOWN_PALETTE + table. Hex tables: this file and `packages/themes/palettes.ts`. Themes are token packs in `packages/themes/<id>/theme.ts`, resolved by `packages/themes/registry.ts`. No Highcharts/d3/Unovis/Recharts deps. No new chart types. Public UI: two controls (Theme + Color). Labels may say Folio / Highcharts-style / shadcn-style / Docs — avoid trademark claims in marketing copy.
+Scope: optional fence `theme: folio|highcharts|shadcn|docs|ant|recharts` (grammar). Omitted = folio. Unknown = E_UNKNOWN_THEME + table. Optional `palette: ink|porcelain|warm|cool|vivid` (colors). Omitted = theme pack default colors. Unknown = E_UNKNOWN_PALETTE + table. Themes are token packs in `packages/themes/<id>/theme.ts`, typed by `packages/themes/contract.ts` and resolved by `packages/themes/registry.ts`. No Highcharts/d3/Unovis/Recharts deps. No new chart types. Public UI: two controls (Theme + Color). Labels may say Folio / Highcharts-style / shadcn-style / Docs — avoid trademark claims in marketing copy.
 
 Default site figures stay folio.
 
-This file is token truth: theme grammar packs plus the color-only palette tables. Site chrome is `docs/site.md`. Ledger / folio look is `docs/visual-spec.md`.
+This file is token truth: theme grammar packs plus the color-only palette tables. Site chrome is `docs/site.md`. Ledger / folio look is `docs/visual-spec.md`. The token tables below are generated from the packs; when a pack changes, regenerate them rather than editing by hand.
 
 ---
+
+## What a theme owns
+
+A theme is structure first. Every pair of packs must differ on at least four structural switches in both a line and a bar chart (`packages/render-svg/test/render.test.ts`, "B&W theme skeletons"), so readers can tell them apart in black and white.
+
+| Group | Tokens | Choices |
+| --- | --- | --- |
+| Type ramp | `TYPE.*` | Any size at or above the floor: title `15`, every other role `11` |
+| Title | `TITLE`, `TITLE_RULE` | left or centered · capitals · letter-spacing · unit inline or as a subtitle · rule |
+| Numbers | `FONT_NUMERIC` | Separate face for tick and value labels |
+| Grid | `GRID` | dash pattern · width · y only or x and y |
+| Axes | `AXIS`, `AXIS_TITLES` | no baseline · baseline · x and y lines · tick length · axis titles |
+| Lines | `LINE_CURVE`, `MARKER`, `SERIES_DASH` | linear or monotone · filled, hollow, haloed, or no points · per-series dashes |
+| Legend | `LEGEND`, `LEGEND_BELOW`, `END_LABEL_SERIES_MAX` | square, rounded, circle, or line keys · left or centered · top or bottom · end labels |
+| Chrome | `FRAME`, `PLOT_BG`, `PLOT_BORDER` | card outline and radius · plot fill (always `null`) · plot border |
+| Surfaces | `SURFACES.light/dark/export` | plate, paper, ink, semantic colors (waterfall, heatmap, treemap), optional dark series colors |
+
+`palette:` replaces series colors on every surface, including a surface's own dark series colors. It never changes structure.
 
 ## Palettes (color axis)
 
@@ -30,53 +48,39 @@ Hex lock (series 0…7), source of truth also `packages/themes/palettes.ts`:
 
 ### Intent
 
-Ledger editorial default: hairline grid, value labels when the dual-encoding rule allows, one accent for one series. Ink near-black; quiet gray for units and ticks. The theme pack adds no plot plate. The default light figure paints no canvas, so the Markdown host background shows through. `surface: dark` and `surface: export` paint their own paper.
+Ledger editorial default. Quiet hairline grid, value labels when the dual-encoding rule allows, end labels for a few lines, dashed series so a printout still separates them. The light figure paints no canvas; the Markdown host is the paper.
 
-### Locked tokens (from `packages/themes/folio/theme.ts`)
+### Tell
+
+Large left title with the unit inline · end labels instead of a legend for 2–4 lines · dashed second series
+
+### Tokens (from `packages/themes/folio/theme.ts`)
 
 | Token | Value |
 | --- | --- |
-| Canvas / paper | transparent (no full-frame fill; host shows through) |
-| Ink | `#171717` |
-| Quiet | `#737373` |
-| Hairline opacity (grid) | `0.10` |
-| Structure opacity (baseline, leaders, pie separators) | `0.28` |
-| Series palette (cap 8) | `#3B82F6`, `#F97316`, `#10B981`, `#A855F7`, `#EAB308`, `#14B8A6`, `#F43F5E`, `#64748B` |
-| Wrap opacity | `0.7` |
-| Bar radius `BAR_RX` | `3` |
-| Line stroke | `1.75` |
-| Line point `r` | `2.5` |
-| Area fill opacity | `0.22` |
-| Type — title | `17` / `600` / `#171717` |
-| Type — unit | `12` / `400` / `#737373` |
-| Type — value | `11` / `500` / `#171717` |
-| Type — tick | `10` / `400` / `#737373` |
-| Type — note | `11` / `400` / `#737373` |
-| Type — legend | `11` / `400` / `#171717` |
-| Frame | `720×480` (max height `640`) |
-| Plot min ratio | `0.55` |
-| Margins | top `36`, right `20`, bottom `26`, left `48` |
-| Max interior grid | `3` |
 | Font | `ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif` |
-
-### Differentiator vs folio
-
-N/A — folio is the reference pack. Site default figures resolve here.
+| Numeric font (ticks, values) | same as Font |
+| Ink / quiet | `#171717` / `#737373` |
+| Type — title / unit | `21` / `600` · `13` / `400` |
+| Type — value / tick / legend | `13` / `500` · `12` / `400` · `13` / `400` |
+| Title | left |
+| Unit | inline (` · unit` on the last title line) |
+| Grid | solid, y only, ink at `0.10` |
+| Axes | x baseline, no ticks |
+| Lines | linear, stroke `1.75`, filled points (r `2.5`), dashed series for B&W |
+| Bars | radius `3`, max width `72` |
+| Pie | solid, leaders |
+| Legend | square keys, left, under the title; end labels for ≤ 4 lines |
+| Frame | none |
+| Dark paper / ink | `#1c1917` / `#f5f5f4` |
+| Series palette | `#3B82F6`, `#F97316`, `#10B981`, `#A855F7`, `#EAB308`, `#14B8A6`, `#F43F5E`, `#64748B` |
 
 ### Ban list
 
-- Full-frame paper / canvas fill (`#F7F4EF`, card slab, or any painted plate)
-- Vertical grids, axis boxes, tick lines sticking off the axis
-- Neon / rainbow defaults; accent on legend slabs or canvas
-- Bar tops with `rx` other than `3`; card radius on the frame
-- Stronger grid than hairline `0.10` / structure `0.28`
-- Second ink world or dark mode inside this pack
-
-### OPEN — D hour goal "one tier up"
-
-Observation: empty gutter around site figures reads sparse next to denser demos.
-Judgment: less empty gutter is **site chrome** (page layout, card pad, gallery thumb frame) — not a folio token change.
-Instruction: keep folio chart locks — transparent canvas, hairline grid, value labels per dual-encoding rule, one accent for one series. Do not densify folio margins or grid to chase gallery density; that work stays in site / examples chrome.
+- Full-frame paper or card on the light surface
+- Vertical grid, axis boxes, tick marks
+- Centered title or subtitle unit
+- Stronger grid than hairline `0.10`
 
 ---
 
@@ -84,67 +88,38 @@ Instruction: keep folio chart locks — transparent canvas, hairline grid, value
 
 ### Intent
 
-Static SVG grammar: denser plot, plot border (transparent fill), axis titles, legend for series ≥ 2, line markers. Highcharts-demo-inspired tokens only — no vendor deps. Hover/draw-in lives in `@markvis/browser/enhance`.
+Classic dashboard. Centered light title with the unit as a subtitle, bold legend centered under the plot, tick marks on the category axis, axis titles. Highcharts-demo-inspired tokens only; no vendor dependency.
 
-### Locked tokens (from `packages/themes/highcharts/theme.ts`)
+### Tell
+
+Centered 18/400 title · subtitle unit · circle legend keys centered below · 6px x ticks
+
+### Tokens (from `packages/themes/highcharts/theme.ts`)
 
 | Token | Value |
 | --- | --- |
-| Canvas / paper | transparent plot fill + border `#ccd6eb` (1px stroke-only) |
-| Ink | `#333333` |
-| Quiet | `#666666` |
-| Hairline opacity (grid) | `0.22` |
-| Structure opacity | `0.42` |
+| Font | `"Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif` |
+| Numeric font (ticks, values) | same as Font |
+| Ink / quiet | `#333333` / `#666666` |
+| Type — title / unit | `18` / `400` · `12` / `400` |
+| Type — value / tick / legend | `11` / `700` · `11` / `400` · `12` / `700` |
+| Title | centered |
+| Unit | subtitle line |
+| Grid | solid, y only, ink at `0.14` |
+| Axes | x baseline, `6px` ticks, axis titles |
+| Lines | linear, stroke `2`, filled points (r `4`) |
+| Bars | radius `0`, max width `64` |
+| Pie | solid, legend |
+| Legend | circle keys, centered, below the plot |
+| Frame | none |
+| Dark paper / ink | `#1f2433` / `#e0e0e3` with its own series colors |
 | Series palette | `#7cb5ec`, `#434348`, `#90ed7d`, `#f7a35c`, `#8085e9`, `#f15c80`, `#e4d354`, `#2b908f` |
-| Wrap opacity | `0.75` |
-| Bar radius `BAR_RX` | `0` |
-| Line stroke | `2` |
-| Line point `r` | `3.5` |
-| Area fill opacity | `0.28` |
-| Type — title | `16` / `600` / `#333333` |
-| Type — unit | `12` / `400` / `#666666` |
-| Type — value | `11` / `500` / `#333333` |
-| Type — tick | `11` / `400` / `#666666` |
-| Type — note | `11` / `400` / `#666666` |
-| Type — legend | `12` / `500` / `#333333` |
-| Frame | `720×440` (max height `640`) |
-| Plot min ratio | `0.62` |
-| Margins | top `36`, right `20`, bottom `36`, left `56` |
-| `END_LABEL_SERIES_MAX` | `0` (legend for series ≥ 2) |
-| `AXIS_TITLES` | `true` |
-| Max interior grid | `5` |
-| Font | `Arial, Helvetica, "Segoe UI", sans-serif` |
-
-### Differentiator vs folio (measured)
-
-| Lock | folio | highcharts |
-| --- | --- | --- |
-| Ink | `#171717` | `#333333` |
-| Quiet | `#737373` | `#666666` |
-| Hairline | `0.10` | `0.22` |
-| Structure | `0.28` | `0.42` |
-| SVG height | `480` | `440` |
-| Plot min ratio | `0.55` | `0.62` |
-| Max interior grid | `3` | `5` |
-| Margins | `36/20/26/48` | `36/20/36/56` |
-| Plot chrome | none | border only (transparent fill) |
-| Axis titles | off | on (`x`/`y`/`unit`) |
-| Line/area multi-series | end-labels (≤4) | color legend |
-| `END_LABEL_SERIES_MAX` | `4` | `0` |
-| `BAR_RX` | `3` | `0` |
-| Line stroke / point | `1.75` / `2.5` | `2` / `3.5` |
-| Area opacity | `0.22` | `0.28` |
-| Legend type | `11/400` | `12/500` |
-| Palette | mid-chroma Ledger set | demo blues/greens/oranges (`#7cb5ec`…) |
-| Font | system ui-sans | Arial/Helvetica stack |
 
 ### Ban list
 
-- Soft Ledger hairline (`0.10`) — this pack’s grid is stronger by design
 - Rounded bar tops (`BAR_RX > 0`)
-- Claiming Highcharts product affiliation or shipping Highcharts JS
-- Dropping plot density back to folio’s `0.55` / height `480` while keeping the name
-- Folio’s single soft accent language when multi-series legend chrome is the point
+- Left-aligned title
+- Claiming Highcharts affiliation or shipping Highcharts JS
 
 ---
 
@@ -152,69 +127,38 @@ Static SVG grammar: denser plot, plot border (transparent fill), axis titles, le
 
 ### Intent
 
-Static SVG grammar: rounded marks, categorical chart-1..5 hues, card-quiet axes, soft card plot border, legend for series ≥ 2, sparse grid. Not folio-with-new-blue. No shadcn/ui runtime. Hover waits.
+Card UI. The figure sits in a hairline card with a 12px radius. Title and muted description stack at the top left. No axis line, smooth monotone curves without point marks, rounded bars and keys, legend centered below.
 
-### Locked tokens (from `packages/themes/shadcn/theme.ts`)
+### Tell
+
+Card outline · subtitle unit · monotone lines with no points · bar radius 8
+
+### Tokens (from `packages/themes/shadcn/theme.ts`)
 
 | Token | Value |
 | --- | --- |
-| Canvas / paper | transparent plot fill + border `#e5e5e5` (1px card edge) |
-| Ink | `#0A0A0A` |
-| Quiet | `#737373` |
-| Hairline opacity (grid) | `0.06` |
-| Structure opacity | `0.14` |
-| Series palette (chart-1..5) | `#F54900`, `#009689`, `#104E64`, `#FFB900`, `#FE9A00` |
-| Wrap opacity | `0.72` |
-| Bar radius `BAR_RX` | `6` |
-| Line stroke | `2` |
-| Line point `r` | `3.5` |
-| Area fill opacity | `0.18` |
-| Type — title | `16` / `600` / `#0A0A0A` |
-| Type — unit | `12` / `400` / `#737373` |
-| Type — value | `11` / `500` / `#0A0A0A` |
-| Type — tick | `11` / `400` / `#737373` |
-| Type — note | `11` / `400` / `#737373` |
-| Type — legend | `12` / `500` / `#0A0A0A` |
-| Frame | `720×460` (max height `640`) |
-| Plot min ratio | `0.58` |
-| Margins | top `36`, right `20`, bottom `28`, left `48` |
-| Max interior grid | `2` |
-| `END_LABEL_SERIES_MAX` | `0` (legend for series ≥ 2) |
-| `AXIS_TITLES` | `false` |
-| Font | `Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif` |
-
-### Differentiator vs folio (measured)
-
-| Lock | folio | shadcn |
-| --- | --- | --- |
-| Ink | `#171717` | `#0A0A0A` |
-| Hairline | `0.10` | `0.06` |
-| Structure | `0.28` | `0.14` |
-| SVG height | `480` | `460` |
-| Plot min ratio | `0.55` | `0.58` |
-| Max interior grid | `3` | `2` |
-| Plot chrome | none | bg + `#e5e5e5` border |
-| Axis titles | off | off |
-| Line/area multi-series | end-labels (≤4) | color legend |
-| `END_LABEL_SERIES_MAX` | `4` | `0` |
-| `BAR_RX` | `3` | `6` |
-| Bar gaps | `0.28` / `0.18` | `0.32` / `0.2` |
-| Line stroke / point | `1.75` / `2.5` | `2` / `3.5` |
-| Area opacity | `0.22` | `0.18` |
-| Palette | 8 mid-chroma hues | 5 categorical (`#F54900`…`#FE9A00`) |
-| Title size | `17` | `16` |
-| Legend | `11/400` | `12/500` |
-| Margins | `36/20/26/48` | `36/20/28/48` |
-| Font | system ui-sans | Inter-first stack |
+| Font | `Geist, Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif` |
+| Numeric font (ticks, values) | same as Font |
+| Ink / quiet | `#0A0A0A` / `#737373` |
+| Type — title / unit | `16` / `600` · `13` / `400` |
+| Type — value / tick / legend | `12` / `500` · `12` / `400` · `12` / `500` |
+| Title | left |
+| Unit | subtitle line |
+| Grid | solid, y only, ink at `0.08` |
+| Axes | no baseline, no ticks |
+| Lines | monotone, stroke `2`, none points (r `3.5`) |
+| Bars | radius `8`, max width `68` |
+| Pie | donut `0.5`, legend |
+| Legend | rounded keys, centered, below the plot |
+| Frame | card outline, radius `12` |
+| Dark paper / ink | `#09090b` / `#fafafa` with its own series colors |
+| Series palette | `#F54900`, `#009689`, `#104E64`, `#FFB900`, `#FE9A00` |
 
 ### Ban list
 
-- Square bar tops (`BAR_RX = 0`) — rounded marks are the lock
-- Folio blue-first palette or highcharts demo blues / `#ccd6eb` plot border
-- Stronger structure than `0.14` / hairline louder than `0.06` (axes stay quiet)
-- Shipping shadcn/ui or Recharts as a runtime dependency
-- Loud filled legend slabs; accent must stay on the mark
-- Axis field titles (`AXIS_TITLES`) — card figures stay quiet
+- Axis lines or tick marks
+- Point markers on lines
+- A filled plot well
 
 ---
 
@@ -222,122 +166,77 @@ Static SVG grammar: rounded marks, categorical chart-1..5 hues, card-quiet axes,
 
 ### Intent
 
-Zinc/slate ink, thin ticks, no loud fill — page-figure language that reads native on a docs site surface (Vite/VitePress-adjacent), still as tokens only.
+Technical manual. Uppercase tracked title with a rule, monospace numbers, dotted grid, thin lines, line-style legend keys at the bottom. Built to sit inside documentation pages.
 
-### Locked tokens (from `packages/themes/docs/theme.ts`)
+### Tell
+
+UPPERCASE tracked title + rule · monospace tick and value labels · dotted `1 3` grid
+
+### Tokens (from `packages/themes/docs/theme.ts`)
 
 | Token | Value |
 | --- | --- |
-| Canvas / paper | transparent (docs page paper is site chrome, not SVG fill) |
-| Ink | `#18181B` (zinc-900) |
-| Quiet | `#64748B` (slate-500) |
-| Hairline opacity (grid) | `0.06` |
-| Structure opacity | `0.16` |
-| Series palette | `#475569`, `#64748B`, `#0F766E`, `#334155`, `#78716C`, `#57534E` |
-| Wrap opacity | `0.65` |
-| Bar radius `BAR_RX` | `0` |
-| Line stroke | `1.5` |
-| Line point `r` | `2` |
-| Area fill opacity | `0.12` |
-| Type — title | `15` / `600` / `#18181B` |
-| Type — unit | `11` / `400` / `#64748B` |
-| Type — value | `10` / `500` / `#18181B` |
-| Type — tick | `10` / `400` / `#64748B` |
-| Type — note | `11` / `400` / `#64748B` |
-| Type — legend | `11` / `500` / `#18181B` |
-| Frame | `720×480` (max height `640`) |
-| Plot min ratio | `0.55` |
-| Margins | top `28`, right `16`, bottom `22`, left `40` |
-| Max interior grid | `3` |
-| Scatter `r` / opacity | `2.5` / `0.75` |
 | Font | `Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif` |
-
-Status: `packages/themes/docs/theme.ts` is present on disk with the values above (not stub-equal to folio). Keep these measured locks; do not silently revert to folio hex.
-
-### Differentiator vs folio (measured)
-
-| Lock | folio | docs |
-| --- | --- | --- |
-| Ink | `#171717` | `#18181B` |
-| Quiet | `#737373` | `#64748B` |
-| Hairline | `0.10` | `0.06` |
-| Structure | `0.28` | `0.16` |
-| `BAR_RX` | `3` | `0` |
-| Line stroke / point | `1.75` / `2.5` | `1.5` / `2` |
-| Area opacity | `0.22` | `0.12` |
-| Palette | mid-chroma Ledger set | muted zinc/slate/teal |
-| Title / value sizes | `17` / `11` | `15` / `10` |
-| Margins | `36/20/26/48` | `28/16/22/40` |
-| Wrap opacity | `0.7` | `0.65` |
-| Scatter | `3` / `0.85` | `2.5` / `0.75` |
-
-### What must stay true
-
-- Ink stays zinc/slate (`#18181B` / `#64748B`), not folio `#171717` / `#737373`
-- Hairline ≤ `0.06`, structure ≤ `0.16` — thinner than folio
-- Area opacity stays quiet (`0.12`); no loud fill wash
-- `BAR_RX = 0` (crisp docs rects, not card-rounded)
-- Palette stays muted zinc/slate — no Ledger blue `#3B82F6` as series-1 default
-- No full-frame paper painted into the SVG; page paper remains site chrome
+| Numeric font (ticks, values) | `ui-monospace, SFMono-Regular, Menlo, Consolas, monospace` |
+| Ink / quiet | `#18181B` / `#64748B` |
+| Type — title / unit | `15` / `600` · `11` / `400` |
+| Type — value / tick / legend | `11` / `500` · `11` / `400` · `11` / `500` |
+| Title | left, capitals, tracking `0.06em`, rule under |
+| Unit | inline (` · unit` on the last title line) |
+| Grid | dashed `1 3`, y only, ink at `0.32` |
+| Axes | x baseline, no ticks |
+| Lines | linear, stroke `1.5`, filled points (r `2`), dashed series for B&W |
+| Bars | radius `0`, max width `64` |
+| Pie | solid, leaders |
+| Legend | line keys, left, below the plot |
+| Frame | none |
+| Dark paper / ink | `#0f172a` / `#e2e8f0` with its own series colors |
+| Series palette | `#475569`, `#64748B`, `#0F766E`, `#334155`, `#78716C`, `#57534E` |
 
 ### Ban list
 
-- Loud mid-chroma folio accents as the default series set
-- Rounded card marks (`BAR_RX` like shadcn `6` or folio `3`)
-- Area fills at folio `0.22` or highcharts `0.28`
-- Strong demo grids (highcharts `0.22` hairline)
-- Claiming VitePress/Vite product affiliation or adding their chart libs
-
+- Rounded bars
+- Color-heavy palettes on light paper
+- End labels
 
 ---
-
 
 ## ant
 
 ### Intent
 
-Static SVG grammar inspired by Ant Design Charts: technical axes, muted teal/brick categorical, tight padding, annotation-friendly title. Tokens only — no `@antv/g2`. Hover waits.
+Data product. Dashed grid, short ticks, haloed points, circle legend keys under the title, axis titles. AntV-inspired tokens only; no `@antv/*` dependency.
 
-### Locked tokens (from `packages/themes/ant/theme.ts`)
+### Tell
+
+Dashed `4 4` grid · haloed points · 0.6 donut with spider leaders
+
+### Tokens (from `packages/themes/ant/theme.ts`)
 
 | Token | Value |
 | --- | --- |
-| Canvas / paper | transparent plot fill + border `#d9d9d9` (1px stroke-only) |
-| Ink | `#000000` |
-| Quiet | `#8C8C8C` |
-| Hairline opacity (grid) | `0.16` |
-| Structure opacity | `0.32` |
+| Font | `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif` |
+| Numeric font (ticks, values) | same as Font |
+| Ink / quiet | `#262626` / `#8C8C8C` |
+| Type — title / unit | `17` / `600` · `12` / `400` |
+| Type — value / tick / legend | `12` / `400` · `12` / `400` · `12` / `400` |
+| Title | left |
+| Unit | inline (` · unit` on the last title line) |
+| Grid | dashed `4 4`, y only, ink at `0.2` |
+| Axes | x baseline, `4px` ticks, axis titles |
+| Lines | linear, stroke `2`, halo points (r `3.5`) |
+| Bars | radius `2`, max width `56` |
+| Pie | donut `0.6`, leaders |
+| Legend | circle keys, left, under the title |
+| Frame | none |
+| Dark paper / ink | `#141414` / `#e8e8e8` |
 | Series palette | `#5AD8A6`, `#E8684A`, `#5D7092`, `#F6BD16`, `#6DC8EC`, `#9270CA`, `#FF9D4D`, `#269A99` |
-| Bar radius `BAR_RX` | `2` |
-| Line stroke / point | `2` / `3` |
-| Area opacity | `0.25` |
-| Type — title | `18` / `600` / `#000000` |
-| Frame | `720×420` |
-| Plot min ratio | `0.6` |
-| Margins | top `28`, right `14`, bottom `28`, left `48` |
-| Max interior grid | `4` |
-| `END_LABEL_SERIES_MAX` | `0` |
-| `AXIS_TITLES` | `true` |
-| Font | system Ant stack (San Francisco / Segoe / Roboto) |
-
-### Differentiator vs folio / highcharts / shadcn
-
-| Lock | folio | highcharts | shadcn | ant |
-| --- | --- | --- | --- | --- |
-| Plot border | none | `#ccd6eb` | `#e5e5e5` | `#d9d9d9` |
-| Axis titles | off | on | off | on |
-| Height | 480 | 440 | 460 | 420 |
-| `BAR_RX` | 3 | 0 | 6 | 2 |
-| Palette lead | `#3B82F6` | `#7cb5ec` | `#F54900` | `#5AD8A6` |
-| Title size | 17 | 16 | 16 | 18 |
-| Grid max | 3 | 5 | 2 | 4 |
 
 ### Ban list
 
-- `@antv/g2` / AntV chart runtime
-- Folio blue-first or highcharts `#7cb5ec` as series-1
-- Soft card-only shadcn look without technical axes
-- Hover/tooltip in this unit
+- Solid grid
+- Centered title
+- Shipping G2 or Ant Design Charts
 
 ---
 
@@ -345,52 +244,38 @@ Static SVG grammar inspired by Ant Design Charts: technical axes, muted teal/bri
 
 ### Intent
 
-Static SVG grammar inspired by Recharts demos: Cartesian XY grid, legend below plot,
-stroke 2 / markers r=3, square bars, light `#e2e8f0` plot border. Tokens only — no `recharts` npm.
-Hover waits.
+React default. Dashed x and y grid, both axis lines with 6px ticks, monotone curves with hollow points, scatter rings, legend centered below.
 
-### Locked tokens (from `packages/themes/recharts/theme.ts`)
+### Tell
+
+Dashed `3 3` grid in x and y · x and y axis lines with ticks · hollow points
+
+### Tokens (from `packages/themes/recharts/theme.ts`)
 
 | Token | Value |
 | --- | --- |
-| Canvas / paper | transparent plot fill + border `#e2e8f0` (1px stroke-only) |
-| Ink | `#374151` |
-| Quiet | `#6B7280` |
-| Hairline opacity (grid) | `0.14` |
-| Structure opacity | `0.28` |
+| Font | `ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif` |
+| Numeric font (ticks, values) | same as Font |
+| Ink / quiet | `#374151` / `#6B7280` |
+| Type — title / unit | `16` / `600` · `12` / `400` |
+| Type — value / tick / legend | `12` / `500` · `12` / `400` · `12` / `400` |
+| Title | left |
+| Unit | inline (` · unit` on the last title line) |
+| Grid | dashed `3 3`, x and y, ink at `0.22` |
+| Axes | x and y axis lines, `6px` ticks |
+| Lines | monotone, stroke `2`, hollow points (r `3.5`) |
+| Bars | radius `0`, max width `60` |
+| Pie | solid, legend |
+| Legend | square keys, centered, below the plot |
+| Frame | none |
+| Dark paper / ink | `#111827` / `#f3f4f6` |
 | Series palette | `#8884d8`, `#82ca9d`, `#ffc658`, `#ff7300`, `#0088FE`, `#00C49F`, `#FFBB28`, `#FF8042` |
-| Bar radius `BAR_RX` | `0` |
-| Line stroke / point | `2` / `3` |
-| Area opacity | `0.2` |
-| Type — title | `16` / `600` / `#374151` |
-| Frame | `720×450` |
-| Plot min ratio | `0.58` |
-| Margins | top `32`, right `20`, bottom `36`, left `48` |
-| Max interior grid | `4` |
-| `GRID.axes` | `"xy"` |
-| `END_LABEL_SERIES_MAX` | `0` |
-| `LEGEND_BELOW` | `true` |
-| `AXIS_TITLES` | `false` |
-| Font | system UI (folio stack) |
-
-### Differentiator vs folio / highcharts / docs / ant
-
-| Lock | folio | highcharts | docs | ant | recharts |
-| --- | --- | --- | --- | --- | --- |
-| Vertical grid | off | off | off | off | **on** |
-| Legend | end-labels | top band | below | top band | **below** |
-| Plot border | none | `#ccd6eb` | none | `#d9d9d9` | `#e2e8f0` |
-| Height | 480 | 440 | 480 | 420 | **450** |
-| `BAR_RX` | 3 | 0 | 0 | 2 | 0 |
-| Palette lead | `#3B82F6` | `#7cb5ec` | `#475569` | `#5AD8A6` | `#8884d8` |
 
 ### Ban list
 
-- `recharts` npm / vendor chart runtime
-- HC denser-horiz-only grid without verticals
-- Soft card-only shadcn look / Inter-only face
-- Axis field titles
-- Hover/tooltip in this unit
+- Rounded bars
+- Single-axis grid
+- Shipping the Recharts runtime
 
 ---
 
@@ -400,16 +285,15 @@ Add a theme pack under `packages/themes/<id>/`:
 
 ```
 packages/themes/<id>/
-  theme.ts          # token table (same keys as folio); or theme.json
+  theme.ts          # token table that `satisfies ThemeTokens`
   README.md         # intent + fence id
   examples/         # ≥ bar, line, pie fences with theme: <id>
 ```
 
-1. Implement `theme.ts` with the same `ThemeTokens` keys as folio (no vendor chart deps).
+1. Implement `theme.ts` against `ThemeTokens` in `packages/themes/contract.ts` (no vendor chart deps). Give it its own dark surface.
 2. Register the pack in `packages/themes/registry.ts` (`themeRegistry` + exports). Missing packs fail loudly via `resolveThemePack`.
 3. Add the id to `THEMES` in `@markvis/ir` so the parser accepts the fence string (omit → folio; unknown → `E_UNKNOWN_THEME` + table).
 4. Wire playground / examples UI labels separately; this package is token truth only.
-5. Keep snapshots under `examples/out/themes/` green when visuals change intentionally (`UPDATE_SNAPSHOTS=1`).
+5. Bake `examples/out/themes/<id>/` with `UPDATE_SNAPSHOTS=1`. `packages/render-svg/test/fixtures.test.ts` byte-checks every theme against every valid fixture, and the B&W skeleton test requires the new pack to differ from every other on at least four structural switches.
 
 `@markvis/render-svg` imports the registry only (`themeTokens` → `resolveThemePack`). Do not add Highcharts/d3/Unovis/Recharts runtime deps.
-
