@@ -12,6 +12,7 @@ import {
   parseBlock,
   parseDocument,
   parseMarkdown,
+  type ParseOptions,
   type ParseResult,
 } from "../src/index.js";
 
@@ -108,5 +109,48 @@ describe("parseBlock input edges", () => {
   it("does not change what parse() accepts", () => {
     const result = parseMarkdown(body);
     expect(!result.ok && result.error.code).toBe("E_EMPTY_FENCE");
+  });
+});
+
+describe("parseBlock defaults", () => {
+  const body = "type: bar\ntitle: Visits\nx: day\ny: visits\n\nday,visits\nMon,3\nTue,5";
+  // Defaults can come from untyped script or props, so they are checked too.
+  const loose = (defaults: Record<string, unknown>) =>
+    parseBlock(body, { defaults: defaults as ParseOptions["defaults"] });
+
+  it("uses a default where the block leaves the field out", () => {
+    const result = parseBlock(body, { defaults: { theme: "docs", palette: "warm", surface: "dark" } });
+    expect(result.ok && [result.chart.theme, result.chart.palette, result.chart.surface]).toEqual(["docs", "warm", "dark"]);
+  });
+
+  it("lets the block's own field win", () => {
+    const result = parseBlock(`theme: shadcn\n${body}`, { defaults: { theme: "docs" } });
+    expect(result.ok && result.chart.theme).toBe("shadcn");
+  });
+
+  const bad: Array<[string, Record<string, unknown>, string]> = [
+    ["a surface value as theme", { theme: "dark" }, "E_UNKNOWN_THEME"],
+    ["a theme in the wrong case", { theme: "Docs" }, "E_UNKNOWN_THEME"],
+    ["an unknown palette", { palette: "blue" }, "E_UNKNOWN_PALETTE"],
+    ["an unknown surface", { surface: "auto" }, "E_UNKNOWN_FIELD"],
+    ["a theme that is not a string", { theme: 42 }, "E_UNKNOWN_THEME"],
+  ];
+
+  for (const [label, defaults, code] of bad) {
+    it(`fails without throwing, rows kept, for ${label}`, () => {
+      const result = loose(defaults);
+      expect(result.ok).toBe(false);
+      expect(!result.ok && result.error.code).toBe(code);
+      expect(!result.ok && result.error.message).toContain("option");
+      expect(!result.ok && result.table.rows).toEqual([
+        ["Mon", "3"],
+        ["Tue", "5"],
+      ]);
+    });
+  }
+
+  it("ignores a bad default the block overrides", () => {
+    const result = parseBlock(`theme: docs\n${body}`, { defaults: { theme: "dark" } as ParseOptions["defaults"] });
+    expect(result.ok).toBe(true);
   });
 });

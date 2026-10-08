@@ -620,7 +620,7 @@ function parseBody(
   }
 
   const themeRaw = headers["theme"]?.trim() ?? "";
-  let theme: ChartTheme = opts.defaults?.theme ?? "folio";
+  let theme: ChartTheme = "folio";
   if (themeRaw !== "") {
     if (!isChartTheme(themeRaw)) {
       return fail(
@@ -631,10 +631,21 @@ function parseBody(
       );
     }
     theme = themeRaw;
+  } else if (opts.defaults?.theme !== undefined) {
+    // Defaults can come from untyped script or props: check, never throw.
+    if (!isChartTheme(opts.defaults.theme)) {
+      return fail(
+        "E_UNKNOWN_THEME",
+        `the theme option is not one of folio|highcharts|shadcn|docs|ant|recharts|graphite (got ${String(opts.defaults.theme)})`,
+        parsed,
+        raw,
+      );
+    }
+    theme = opts.defaults.theme;
   }
 
   const paletteRaw = headers["palette"]?.trim() ?? "";
-  let palette: ChartPalette | undefined = opts.defaults?.palette;
+  let palette: ChartPalette | undefined;
   if (paletteRaw !== "") {
     if (!isChartPalette(paletteRaw)) {
       return fail(
@@ -645,6 +656,16 @@ function parseBody(
       );
     }
     palette = paletteRaw;
+  } else if (opts.defaults?.palette !== undefined) {
+    if (!isChartPalette(opts.defaults.palette)) {
+      return fail(
+        "E_UNKNOWN_PALETTE",
+        `the palette option is not one of ink|porcelain|warm|cool|vivid (got ${String(opts.defaults.palette)})`,
+        parsed,
+        raw,
+      );
+    }
+    palette = opts.defaults.palette;
   }
 
   const specified = {
@@ -847,7 +868,7 @@ function parseBody(
     );
   }
 
-  let surface: "light" | "dark" | "export" | undefined = opts.defaults?.surface;
+  let surface: "light" | "dark" | "export" | undefined;
   const surfaceRaw = headers["surface"]?.trim();
   if (surfaceRaw !== undefined && surfaceRaw !== "") {
     if (surfaceRaw !== "light" && surfaceRaw !== "dark" && surfaceRaw !== "export") {
@@ -859,6 +880,17 @@ function parseBody(
       );
     }
     surface = surfaceRaw;
+  } else if (opts.defaults?.surface !== undefined) {
+    const option: unknown = opts.defaults.surface;
+    if (option !== "light" && option !== "dark" && option !== "export") {
+      return fail(
+        "E_UNKNOWN_FIELD",
+        `the surface option must be light|dark|export (got ${String(option)})`,
+        parsed,
+        raw,
+      );
+    }
+    surface = option;
   }
 
   let orient: "horizontal" | "vertical" | undefined;

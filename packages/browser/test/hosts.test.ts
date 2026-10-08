@@ -213,6 +213,16 @@ describe("run", () => {
     expect(run()).toBe(1);
   });
 
+  it("keeps drawing the page when a page default is bad", () => {
+    initialize({ theme: "Docs" } as unknown as Parameters<typeof initialize>[0]);
+    const root = document.createElement("section");
+    root.innerHTML = block(GOOD) + block(`theme: folio\n${GOOD}`);
+    expect(() => run({ root })).not.toThrow();
+    expect(root.querySelectorAll("pre")).toHaveLength(0);
+    expect(root.querySelectorAll("p.markvis-error")).toHaveLength(1);
+    expect(root.querySelectorAll("svg")).toHaveLength(1);
+  });
+
   it("applies page defaults, and a block's own field wins", () => {
     initialize({ theme: "graphite", surface: "dark", width: 480 });
     const root = document.createElement("section");

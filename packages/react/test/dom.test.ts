@@ -171,6 +171,17 @@ describe("onError", () => {
     expect(host.textContent).toContain("E_UNKNOWN_TYPE");
   });
 
+  it("reports a bad theme prop instead of throwing", () => {
+    const onError = vi.fn();
+    act(() => {
+      root = createRoot(host);
+      root.render(createElement(Markvis, { source, onError, width: 300, theme: "dark" as never }));
+    });
+    expect(onError).toHaveBeenCalledTimes(1);
+    expect(onError.mock.calls[0]?.[0]).toMatchObject({ code: "E_UNKNOWN_THEME" });
+    expect(host.textContent).toContain("Mon");
+  });
+
   it("is not called for a good block", () => {
     const onError = vi.fn();
     act(() => {

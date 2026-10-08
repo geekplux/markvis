@@ -219,3 +219,17 @@ describe("render never throws", () => {
     }
   });
 });
+
+describe("render options from untyped callers", () => {
+  const body = "type: bar\nx: day\ny: visits\n\nday,visits\nMon,3";
+  const loose = render as (text: string, options: Record<string, unknown>) => ReturnType<typeof render>;
+
+  for (const options of [{ theme: "dark" }, { theme: "Docs" }, { palette: "blue" }, { surface: "Dark" }]) {
+    it(`degrades instead of throwing: ${JSON.stringify(options)}`, () => {
+      const result = loose(body, options);
+      expect(result.ok).toBe(false);
+      expect(result.html).toContain("<td>Mon</td>");
+      expect(result.html.match(/class="markvis-error"/g)).toHaveLength(1);
+    });
+  }
+});
