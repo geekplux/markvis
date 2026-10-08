@@ -12,6 +12,7 @@ import { afterEach, beforeEach, describe, expect, it } from "vitest";
 
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
 const cli = join(repoRoot, "dist/cli.bin.js");
+const version = (JSON.parse(readFileSync(join(repoRoot, "package.json"), "utf8")) as { version: string }).version;
 
 type Step = { name?: string; uses?: string; if?: string; shell?: string; run?: string; with: Record<string, string>; env: Record<string, string> };
 type Action = { top: Record<string, string>; inputs: Record<string, Record<string, string>>; using: string; steps: Step[] };
@@ -84,11 +85,12 @@ describe("action.yml", () => {
     expect(action.inputs["message"]!["default"]).toBe("chore: bake markvis charts");
   });
 
-  it("sets up Node 20, bakes with markvis@2, then commits only when asked", () => {
+  it("sets up Node 20, bakes with this release of markvis, then commits only when asked", () => {
     const [setup, bake, commit] = action.steps;
     expect(action.steps).toHaveLength(3);
     expect(setup).toMatchObject({ uses: "actions/setup-node@v4", with: { "node-version": "20" } });
-    expect(bake!.run).toContain("npx --yes markvis@2 bake $MARKVIS_PATHS");
+    // Pinned to the package version, so a tagged action always runs the same CLI.
+    expect(bake!.run).toContain(`npx --yes markvis@${version} bake $MARKVIS_PATHS`);
     expect(commit!.if).toBe("inputs.commit == 'true'");
     expect(commit!.run).toContain('git push origin "HEAD:$MARKVIS_BRANCH"');
   });
@@ -114,22 +116,24 @@ describe.runIf(existsSync(cli))("the action's steps in a scratch repository", ()
     });
   const git = (args: string) => sh(work, `git ${args}`).stdout.trim();
 
-  function runAction(env: Record<string, string>): { bake: string; commit: string } {
+  function runAction(env: Record<string, string>, status = 0): { bake: string; commit: string } {
     const [, bake, commit] = action.steps;
-    const shared = { MARKVIS_PATHS: "README.md docs" };
-    const baked = sh(work, bake!.run!, shared);
+    const before = { MARKVIS_BEFORE: join(dir, "before.txt") };
+    const baked = sh(work, bake!.run!, { ...before, MARKVIS_PATHS: "README.md docs" });
     expect(baked.status, baked.stderr).toBe(0);
     const committed = sh(work, commit!.run!, {
-      ...shared,
+      ...before,
+      MARKVIS_CHANGED: join(dir, "changed.txt"),
       MARKVIS_MESSAGE: "chore: bake markvis charts",
       MARKVIS_EVENT: "push",
       MARKVIS_HEAD_REPO: "",
+      MARKVIS_HEAD_SHA: "",
       MARKVIS_REPO: "someone/site",
       MARKVIS_BRANCH: "main",
       ...env,
     });
-    expect(committed.status, committed.stderr).toBe(0);
-    return { bake: baked.stdout, commit: committed.stdout };
+    expect(committed.status, committed.stderr).toBe(status);
+    return { bake: baked.stdout, commit: `${committed.stdout}${committed.stderr}` };
   }
 
   beforeEach(() => {
@@ -137,10 +141,10 @@ describe.runIf(existsSync(cli))("the action's steps in a scratch repository", ()
     bin = join(dir, "bin");
     work = join(dir, "work");
     sh(dir, `mkdir -p bin work/docs && git init -q --bare remote.git`);
-    // npx --yes markvis@2 … runs this repository's CLI instead of the registry.
+    // npx --yes markvis@<version> … runs this repository's CLI instead of the registry.
     writeFileSync(
       join(bin, "npx"),
-      `#!/bin/sh\n[ "$1" = "--yes" ] && [ "$2" = "markvis@2" ] || { echo "unexpected npx $*" >&2; exit 2; }\nshift 2\nexec node "${cli}" "$@"\n`,
+      `#!/bin/sh\n[ "$1" = "--yes" ] && [ "$2" = "markvis@${version}" ] || { echo "unexpected npx $*" >&2; exit 2; }\nshift 2\nexec node "${cli}" "$@"\n`,
     );
     chmodSync(join(bin, "npx"), 0o755);
     cpSync(join(repoRoot, "examples/valid/01-bar-basic.md"), join(work, "README.md"));
@@ -183,8 +187,47 @@ describe.runIf(existsSync(cli))("the action's steps in a scratch repository", ()
 
   it("commits a same-repository pull request to its branch", () => {
     sh(work, "git checkout -q -b feature && git push -q origin feature");
-    runAction({ MARKVIS_EVENT: "pull_request", MARKVIS_HEAD_REPO: "someone/site", MARKVIS_BRANCH: "feature" });
+    const head = git("rev-parse HEAD");
+    runAction({ MARKVIS_EVENT: "pull_request", MARKVIS_HEAD_REPO: "someone/site", MARKVIS_HEAD_SHA: head, MARKVIS_BRANCH: "feature" });
     expect(git("log --format=%s -1 origin/feature")).toBe("chore: bake markvis charts");
     expect(git("log --format=%s -1 origin/main")).toBe("init");
+  });
+
+  it("never pushes a fork's pull_request_target run to the base repository", () => {
+    const head = git("rev-parse HEAD");
+    const result = runAction({
+      MARKVIS_EVENT: "pull_request_target",
+      MARKVIS_HEAD_REPO: "fork/site",
+      MARKVIS_BRANCH: "release",
+    });
+    expect(result.commit).toContain("pull request from a fork");
+    expect(git("rev-parse HEAD")).toBe(head);
+    expect(git("ls-remote --heads origin release")).toBe("");
+  });
+
+  it("refuses to push a pull request merge commit onto the branch", () => {
+    sh(work, "git checkout -q -b feature && git push -q origin feature");
+    const remoteBefore = git("rev-parse origin/feature");
+    const result = runAction(
+      { MARKVIS_EVENT: "pull_request", MARKVIS_HEAD_REPO: "someone/site", MARKVIS_HEAD_SHA: "0".repeat(40), MARKVIS_BRANCH: "feature" },
+      1,
+    );
+    expect(result.commit).toContain("HEAD is not the pull request head");
+    expect(git("ls-remote origin refs/heads/feature").split("\t")[0]).toBe(remoteBefore);
+  });
+
+  it("commits only what bake wrote, not other changes in the tree", () => {
+    sh(
+      work,
+      [
+        "mkdir -p build",
+        "printf '<svg/>' > build/coverage.svg",
+        "printf 'scratch' > docs/notes.txt",
+        "printf '\\nedited by an earlier step\\n' >> docs/usage.md",
+      ].join(" && "),
+    );
+    runAction({});
+    expect(git("show --name-only --format= HEAD").split("\n").sort()).toEqual(["README.md", "README.svg", "docs/usage.svg"]);
+    expect(git("status --porcelain").split("\n").map((line) => line.trim()).sort()).toEqual(["?? build/", "?? docs/notes.txt", "M docs/usage.md"]);
   });
 });

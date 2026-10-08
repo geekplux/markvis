@@ -36,7 +36,7 @@ jobs:
         with: { paths: README.md docs }
 ```
 
-Inputs: `paths` (files or folders, space-separated; default `README.md`), `commit` (`"false"` bakes without committing), and `message` (default `chore: bake markvis charts`). A second run with nothing new commits nothing. On pull requests, check out the pull request's branch (set the checkout `ref` to `github.head_ref`); a pull request from a fork is baked but not committed.
+Inputs: `paths` (files or folders, space-separated; default `README.md`), `commit` (`"false"` bakes without committing), and `message` (default `chore: bake markvis charts`). A second run with nothing new commits nothing. On pull requests, check out the pull request's branch (set the checkout `ref` to `github.head_ref`); otherwise the step fails instead of pushing a merge commit. A pull request from a fork is baked but not committed. Only the files bake writes are committed.
 
 Without the Action, write the comment form. github.com shows it as a plain table, and every markvis host draws it:
 
