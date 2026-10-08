@@ -1,0 +1,84 @@
+name: markvis bake
+description: Draw markvis chart blocks in Markdown as SVG files, so github.com shows the charts. The blocks stay.
+author: geekplux
+branding:
+  icon: bar-chart-2
+  color: blue
+
+inputs:
+  paths:
+    description: Markdown files or folders to bake, separated by spaces.
+    required: false
+    default: README.md
+  commit:
+    description: Commit and push the baked files when anything changed ("true" or "false").
+    required: false
+    default: "true"
+  message:
+    description: Commit message.
+    required: false
+    default: "chore: bake markvis charts"
+
+runs:
+  using: composite
+  steps:
+    - name: Set up Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: Bake
+      shell: bash
+      env:
+        MARKVIS_PATHS: ${{ inputs.paths }}
+        MARKVIS_BEFORE: ${{ runner.temp }}/markvis-before.txt
+      run: |
+        # What was already changed, so the commit step stages only bake's files.
+        { git -c core.quotePath=false diff HEAD --name-only; git -c core.quotePath=false ls-files -o --exclude-standard; } | LC_ALL=C sort -u > "$MARKVIS_BEFORE"
+        # Space-separated paths, split on purpose. Pinned to this release.
+        npx --yes markvis@2.2.0 bake $MARKVIS_PATHS
+
+    - name: Commit and push
+      if: inputs.commit == 'true'
+      shell: bash
+      env:
+        MARKVIS_MESSAGE: ${{ inputs.message }}
+        MARKVIS_BEFORE: ${{ runner.temp }}/markvis-before.txt
+        MARKVIS_CHANGED: ${{ runner.temp }}/markvis-changed.txt
+        MARKVIS_EVENT: ${{ github.event_name }}
+        MARKVIS_HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+        MARKVIS_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        MARKVIS_REPO: ${{ github.repository }}
+        MARKVIS_BRANCH: ${{ github.head_ref || github.ref_name }}
+      run: |
+        # Only the files bake wrote or removed; nothing else in the tree.
+        { git -c core.quotePath=false diff HEAD --name-only; git -c core.quotePath=false ls-files -o --exclude-standard; } | LC_ALL=C sort -u \
+          | LC_ALL=C comm -13 "$MARKVIS_BEFORE" - > "$MARKVIS_CHANGED"
+        if [ ! -s "$MARKVIS_CHANGED" ]; then
+          echo "markvis: nothing to commit"
+          exit 0
+        fi
+        # Any pull request event (pull_request_target too) from another repository.
+        fork=false
+        if [ -n "$MARKVIS_HEAD_REPO" ] && [ "$MARKVIS_HEAD_REPO" != "$MARKVIS_REPO" ]; then
+          fork=true
+        fi
+        case "$MARKVIS_EVENT" in
+          pull_request*) [ "$MARKVIS_HEAD_REPO" = "$MARKVIS_REPO" ] || fork=true ;;
+        esac
+        if [ "$fork" = true ]; then
+          echo "markvis: pull request from a fork; baked without committing"
+          cat "$MARKVIS_CHANGED"
+          exit 0
+        fi
+        # A pull request checkout defaults to a merge commit; pushing it would merge the base in.
+        if [ -n "$MARKVIS_HEAD_SHA" ] && [ "$(git rev-parse HEAD)" != "$MARKVIS_HEAD_SHA" ]; then
+          echo "::error::markvis: HEAD is not the pull request head. Check out the branch (actions/checkout with ref set to github.head_ref) to commit."
+          exit 1
+        fi
+        export GIT_LITERAL_PATHSPECS=1
+        git add -A --pathspec-from-file="$MARKVIS_CHANGED"
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git commit -m "$MARKVIS_MESSAGE" --only --pathspec-from-file="$MARKVIS_CHANGED"
+        git push origin "HEAD:$MARKVIS_BRANCH"

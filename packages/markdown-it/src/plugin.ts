@@ -1,5 +1,5 @@
 import { extractCharts } from "@markvis/parser";
-import { chartBlockHtml } from "./html.js";
+import { chartBlockHtml } from "@markvis/html";
 
 const LANGS = new Set(["chart", "markvis", "vis"]);
 

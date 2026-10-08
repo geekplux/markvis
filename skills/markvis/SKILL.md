@@ -7,6 +7,8 @@ description: Use when the user wants a chart of numbers in Markdown (bar, line, 
 
 Charts of numbers in Markdown. The table is the source (comma-separated rows or a Markdown table). Tags `chart`, `markvis`, and `vis` are the same language. Types: `bar` `line` `area` `scatter` `pie` `hist` `heatmap` `funnel` `waterfall` `radar` `gauge` `sankey` `treemap` `dumbbell` `bullet` `boxplot` `calendar`.
 
+Short form for a system prompt (250 tokens, same language): [docs/prompt.md](https://github.com/geekplux/markvis/blob/master/docs/prompt.md).
+
 ## When to use
 
 - Numbers in a doc need a chart and the rows must stay editable.

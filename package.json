@@ -1,9 +1,9 @@
 {
   "name": "markvis",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "private": false,
   "type": "module",
-  "description": "Charts in Markdown. Write a table in a code block; MarkVis draws the SVG. Same text, same picture.",
+  "description": "Charts as text in Markdown. Write a short chart block; markvis draws it as SVG from a script tag, JavaScript, React, or any Markdown renderer. Where it cannot draw, the numbers stay as a table.",
   "keywords": [
     "markdown",
     "chart",
@@ -13,6 +13,13 @@
     "data-visualization",
     "markdown-it",
     "remark",
+    "rehype",
+    "mdx",
+    "react",
+    "react-markdown",
+    "streaming",
+    "llm",
+    "github-action",
     "cli",
     "bar-chart"
   ],
@@ -56,9 +63,17 @@
       "types": "./dist/remark.d.ts",
       "import": "./dist/remark.js"
     },
+    "./rehype": {
+      "types": "./dist/rehype.d.ts",
+      "import": "./dist/rehype.js"
+    },
     "./markdown-it": {
       "types": "./dist/markdown-it.d.ts",
       "import": "./dist/markdown-it.js"
+    },
+    "./react": {
+      "types": "./dist/react.d.ts",
+      "import": "./dist/react.js"
     },
     "./themes": {
       "types": "./dist/themes.d.ts",
@@ -91,10 +106,14 @@
   },
   "peerDependencies": {
     "markdown-it": "^14.0.0",
+    "react": ">=18",
     "remark": "^15.0.0"
   },
   "peerDependenciesMeta": {
     "markdown-it": {
+      "optional": true
+    },
+    "react": {
       "optional": true
     },
     "remark": {
@@ -104,9 +123,11 @@
   "devDependencies": {
     "@markvis/browser": "workspace:*",
     "@markvis/cli": "workspace:*",
+    "@markvis/html": "workspace:*",
     "@markvis/ir": "workspace:*",
     "@markvis/markdown-it": "workspace:*",
     "@markvis/parser": "workspace:*",
+    "@markvis/react": "workspace:*",
     "@markvis/remark": "workspace:*",
     "@markvis/render-svg": "workspace:*",
     "@markvis/themes": "workspace:*",
@@ -114,8 +135,11 @@
     "@types/node": "^26.4.1",
     "happy-dom": "18",
     "markdown-it": "^14.1.0",
+    "react": "^19.3.0",
+    "rehype-stringify": "^10.0.1",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
+    "remark-rehype": "^11.1.2",
     "tsup": "^8.5.0",
     "tsx": "^4.23.13",
     "typescript": "^7.0.2",

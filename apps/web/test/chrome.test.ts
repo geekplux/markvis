@@ -755,6 +755,8 @@ describe("site visual chrome", () => {
     expect(integrate).toContain("markvis.min.js");
     expect(integrate).toContain("markvis/markdown-it");
     expect(integrate).toContain("markvis/remark");
+    expect(integrate).toContain("markvis/react");
+    expect(integrate).toContain("remarkMarkvisStreaming");
 
     const themes = read("themes.md");
     expect(themes).toMatch(/theme vs palette/i);

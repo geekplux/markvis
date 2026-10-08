@@ -1,0 +1,558 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`htmlToHast > matches a snapshot for one small chart 1`] = `
+[
+  {
+    "children": [
+      {
+        "type": "text",
+        "value": "
+",
+      },
+      {
+        "children": [
+          {
+            "type": "text",
+            "value": "
+  ",
+          },
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "Visits",
+              },
+            ],
+            "properties": {
+              "id": "mv-7f4a8eb0864f1794-title",
+            },
+            "tagName": "title",
+            "type": "element",
+          },
+          {
+            "type": "text",
+            "value": "
+  ",
+          },
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "bar chart. Visits. x=day. y=visits. 2 rows.",
+              },
+            ],
+            "properties": {
+              "id": "mv-7f4a8eb0864f1794-desc",
+            },
+            "tagName": "desc",
+            "type": "element",
+          },
+          {
+            "type": "text",
+            "value": "
+  ",
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "Visits",
+                  },
+                ],
+                "properties": {},
+                "tagName": "title",
+                "type": "element",
+              },
+              {
+                "type": "text",
+                "value": "Visits",
+              },
+            ],
+            "properties": {
+              "fill": "#171717",
+              "fontSize": "21",
+              "fontWeight": "600",
+              "textAnchor": "start",
+              "x": "48",
+              "y": "32",
+            },
+            "tagName": "text",
+            "type": "element",
+          },
+          {
+            "type": "text",
+            "value": "
+  ",
+          },
+          {
+            "children": [],
+            "properties": {
+              "d": "M48 455 L700 455",
+              "fill": "none",
+              "stroke": "#171717",
+              "strokeOpacity": "0.28",
+              "strokeWidth": "1",
+            },
+            "tagName": "path",
+            "type": "element",
+          },
+          {
+            "type": "text",
+            "value": "
+  ",
+          },
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "
+    ",
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "0",
+                  },
+                ],
+                "properties": {
+                  "dominantBaseline": "middle",
+                  "textAnchor": "end",
+                  "x": "38",
+                  "y": "455",
+                },
+                "tagName": "text",
+                "type": "element",
+              },
+              {
+                "type": "text",
+                "value": "
+    ",
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "2",
+                  },
+                ],
+                "properties": {
+                  "dominantBaseline": "middle",
+                  "textAnchor": "end",
+                  "x": "38",
+                  "y": "318",
+                },
+                "tagName": "text",
+                "type": "element",
+              },
+              {
+                "type": "text",
+                "value": "
+    ",
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "4",
+                  },
+                ],
+                "properties": {
+                  "dominantBaseline": "middle",
+                  "textAnchor": "end",
+                  "x": "38",
+                  "y": "181",
+                },
+                "tagName": "text",
+                "type": "element",
+              },
+              {
+                "type": "text",
+                "value": "
+    ",
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "6",
+                  },
+                ],
+                "properties": {
+                  "dominantBaseline": "middle",
+                  "textAnchor": "end",
+                  "x": "38",
+                  "y": "44",
+                },
+                "tagName": "text",
+                "type": "element",
+              },
+              {
+                "type": "text",
+                "value": "
+    ",
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Mon",
+                      },
+                    ],
+                    "properties": {},
+                    "tagName": "title",
+                    "type": "element",
+                  },
+                  {
+                    "type": "text",
+                    "value": "Mon",
+                  },
+                ],
+                "properties": {
+                  "dataFullLabel": "Mon",
+                  "fontSize": "12",
+                  "textAnchor": "middle",
+                  "x": "211",
+                  "y": "467",
+                },
+                "tagName": "text",
+                "type": "element",
+              },
+              {
+                "type": "text",
+                "value": "
+    ",
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Tue",
+                      },
+                    ],
+                    "properties": {},
+                    "tagName": "title",
+                    "type": "element",
+                  },
+                  {
+                    "type": "text",
+                    "value": "Tue",
+                  },
+                ],
+                "properties": {
+                  "dataFullLabel": "Tue",
+                  "fontSize": "12",
+                  "textAnchor": "middle",
+                  "x": "537",
+                  "y": "467",
+                },
+                "tagName": "text",
+                "type": "element",
+              },
+              {
+                "type": "text",
+                "value": "
+  ",
+              },
+            ],
+            "properties": {
+              "fill": "#737373",
+              "fontSize": "12",
+              "fontWeight": "400",
+            },
+            "tagName": "g",
+            "type": "element",
+          },
+          {
+            "type": "text",
+            "value": "
+  ",
+          },
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "
+    ",
+              },
+              {
+                "children": [],
+                "properties": {
+                  "d": "M175 455 L175 252.5 Q175 249.5 178 249.5 L244 249.5 Q247 249.5 247 252.5 L247 455 Z",
+                  "dataSeries": "visits",
+                  "dataX": "Mon",
+                  "dataY": "3",
+                  "fill": "#3B82F6",
+                },
+                "tagName": "path",
+                "type": "element",
+              },
+              {
+                "type": "text",
+                "value": "
+    ",
+              },
+              {
+                "children": [],
+                "properties": {
+                  "d": "M501 455 L501 115.5 Q501 112.5 504 112.5 L570 112.5 Q573 112.5 573 115.5 L573 455 Z",
+                  "dataSeries": "visits",
+                  "dataX": "Tue",
+                  "dataY": "5",
+                  "fill": "#3B82F6",
+                },
+                "tagName": "path",
+                "type": "element",
+              },
+              {
+                "type": "text",
+                "value": "
+  ",
+              },
+            ],
+            "properties": {},
+            "tagName": "g",
+            "type": "element",
+          },
+          {
+            "type": "text",
+            "value": "
+  ",
+          },
+          {
+            "children": [
+              {
+                "type": "text",
+                "value": "
+    ",
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "3",
+                  },
+                ],
+                "properties": {
+                  "dataValueLabel": "Mon",
+                  "fill": "#171717",
+                  "fontSize": "13",
+                  "fontWeight": "500",
+                  "textAnchor": "middle",
+                  "x": "211",
+                  "y": "241.5",
+                },
+                "tagName": "text",
+                "type": "element",
+              },
+              {
+                "type": "text",
+                "value": "
+    ",
+              },
+              {
+                "children": [
+                  {
+                    "type": "text",
+                    "value": "5",
+                  },
+                ],
+                "properties": {
+                  "dataValueLabel": "Tue",
+                  "fill": "#171717",
+                  "fontSize": "13",
+                  "fontWeight": "500",
+                  "textAnchor": "middle",
+                  "x": "537",
+                  "y": "104.5",
+                },
+                "tagName": "text",
+                "type": "element",
+              },
+              {
+                "type": "text",
+                "value": "
+  ",
+              },
+            ],
+            "properties": {},
+            "tagName": "g",
+            "type": "element",
+          },
+          {
+            "type": "text",
+            "value": "
+",
+          },
+        ],
+        "properties": {
+          "ariaDescribedBy": "mv-7f4a8eb0864f1794-desc",
+          "ariaLabel": "bar chart: Visits, 2 rows",
+          "ariaLabelledBy": "mv-7f4a8eb0864f1794-title",
+          "dataChartType": "bar",
+          "dataId": "mv-7f4a8eb0864f1794",
+          "dataMarkvis": "2",
+          "fontFamily": "ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif",
+          "fontSize": "12",
+          "height": "480",
+          "role": "img",
+          "viewBox": "0 0 720 480",
+          "width": "720",
+          "xmlns": "http://www.w3.org/2000/svg",
+        },
+        "tagName": "svg",
+        "type": "element",
+      },
+      {
+        "type": "text",
+        "value": "
+",
+      },
+      {
+        "children": [
+          {
+            "type": "text",
+            "value": "Visits",
+          },
+        ],
+        "properties": {},
+        "tagName": "figcaption",
+        "type": "element",
+      },
+      {
+        "type": "text",
+        "value": "
+",
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "day",
+                      },
+                    ],
+                    "properties": {},
+                    "tagName": "th",
+                    "type": "element",
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "visits",
+                      },
+                    ],
+                    "properties": {},
+                    "tagName": "th",
+                    "type": "element",
+                  },
+                ],
+                "properties": {},
+                "tagName": "tr",
+                "type": "element",
+              },
+            ],
+            "properties": {},
+            "tagName": "thead",
+            "type": "element",
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Mon",
+                      },
+                    ],
+                    "properties": {},
+                    "tagName": "td",
+                    "type": "element",
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "3",
+                      },
+                    ],
+                    "properties": {},
+                    "tagName": "td",
+                    "type": "element",
+                  },
+                ],
+                "properties": {},
+                "tagName": "tr",
+                "type": "element",
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "Tue",
+                      },
+                    ],
+                    "properties": {},
+                    "tagName": "td",
+                    "type": "element",
+                  },
+                  {
+                    "children": [
+                      {
+                        "type": "text",
+                        "value": "5",
+                      },
+                    ],
+                    "properties": {},
+                    "tagName": "td",
+                    "type": "element",
+                  },
+                ],
+                "properties": {},
+                "tagName": "tr",
+                "type": "element",
+              },
+            ],
+            "properties": {},
+            "tagName": "tbody",
+            "type": "element",
+          },
+        ],
+        "properties": {},
+        "tagName": "table",
+        "type": "element",
+      },
+      {
+        "type": "text",
+        "value": "
+",
+      },
+    ],
+    "properties": {
+      "className": [
+        "markvis",
+      ],
+      "dataChartType": "bar",
+      "dataMarkvis": "2",
+    },
+    "tagName": "figure",
+    "type": "element",
+  },
+]
+`;

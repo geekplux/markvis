@@ -10,6 +10,23 @@ English is the only source language in the repo. Do not add extra README locales
 Frozen `legacy/` (including `legacy/docs/zh-cn`) is not rewritten.
 Unicode labels inside `examples/` fixtures are data, not documentation language.
 
+## Public repo: commit with care
+
+This repository is public and has outside contributors. Everything committed is public, and git history keeps it after a file is deleted. Check every file before committing.
+
+Commit only what users and contributors need: code, tests, fixtures, schema, the spec, and user or contributor docs.
+
+Keep these in `.workbench/` (gitignored), never in a commit:
+- Plans, roadmaps, strategy, positioning drafts, and competitor research.
+- Status logs, decision logs, design journals, and agent run notes.
+- Maintainer runbooks that involve accounts, tokens, publishing, or repository settings.
+
+In committed text:
+- Describe markvis on its own terms. Do not name other products to position or compare markvis. Dependency rules above and license attribution are fine.
+- No personal information beyond the maintainer contact already in `LICENSE`, `SECURITY.md`, `CODE_OF_CONDUCT.md`, and `package.json`.
+- No local paths, machine names, account names, tokens, or private URLs.
+- Do not address a person by name ("unless X says so"). Write "the maintainer".
+
 ## Language frozen
 
 Do not invent a type id. Do not add d3.
@@ -51,7 +68,7 @@ Allow:
 - Playground: Vite + the same parser and render-svg in the browser, zero backend
 - SVG: handwritten deterministic strings or a minimal in-house layout; forbidden to pull d3 / d3-node / jsdom at runtime just to emit a figure
 - CI: GitHub Actions `.github/workflows/check.yml`; the same commands must run locally
-- Packages: `@markvis/ir` `@markvis/parser` `@markvis/render-svg` `@markvis/cli` `@markvis/remark` `@markvis/markdown-it`
+- Packages: `@markvis/ir` `@markvis/parser` `@markvis/themes` `@markvis/types` `@markvis/render-svg` `@markvis/html` `@markvis/cli` `@markvis/remark` `@markvis/markdown-it` `@markvis/react` `@markvis/browser`
 - Root package `markvis` is the public library + CLI bin
 
 Forbidden in `packages/` and `apps/` dependencies (adding any item is a reject):

@@ -9,7 +9,7 @@ import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const ENTRIES = ["index", "parser", "render-svg", "ir", "remark", "markdown-it", "themes", "cli"];
+const ENTRIES = ["index", "parser", "render-svg", "ir", "remark", "rehype", "markdown-it", "react", "themes", "cli"];
 
 function dts(name: string): string {
   return readFileSync(join(root, "scripts/dts", `${name}.d.ts`), "utf8");

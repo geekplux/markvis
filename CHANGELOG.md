@@ -1,21 +1,41 @@
 # Changelog
 
-## Unreleased
+## 2.2.0
+
+Draw a chart block anywhere Markdown is shown: one call from JavaScript, React with streaming, one script tag in any Markdown page, rehype for MDX hosts, and a GitHub Action. Four more chart types, the graphite theme, and a measured instruction for models. The language stays `markvis: 2`; every 2.1 block still parses.
+
+### Breaking
+
+- The ES module `markvis.mjs` no longer draws on import. A page that loads it with `<script type="module" src=".../markvis@2/dist/markvis.mjs">` and relied on charts drawing by themselves now draws nothing. Import it and call `run()`, or load the classic `markvis.min.js`, which still draws once the page is ready.
 
 ### Added
 
+- `parseBlock(text, { filename? })` parses one chart block: the inside a Markdown renderer hands a code-block plugin, or the whole block.
+- `render(text, options?)` returns `{ ok, svg, html, chart }` or `{ ok: false, error, html, table }` in one call and never throws. `html` is the same figure, or table and one error line, that every adapter emits. Options: `width`, and `theme` / `palette` / `surface` for blocks that leave them out.
+- `markvis/react`: `<Markvis source>` or `<Markvis chart data>` draws one block at the width of its container; `markvisComponents` draws chart code blocks in react-markdown; `remarkMarkvisStreaming` shows a placeholder and the rows so far while a block streams, never an error. `react` is an optional peer.
+- One script tag in any Markdown page: the drop-in finds chart blocks in the HTML of marked, markdown-it, highlight.js, Jekyll (kramdown + rouge), Hugo, MkDocs (custom fence), Pandoc, and docsify, and draws the comment + table form from the page. `markvis.run({ nodes, querySelector, root })`, `markvis.initialize({ theme, palette, surface, width })`, and `data-start-on-load="false"`.
+- `markvis/rehype`: chart code blocks become real hast (figure, SVG, table) for MDX hosts such as Docusaurus and Astro. No raw HTML nodes, no new runtime dependency.
+- A GitHub Action for any repository: `uses: geekplux/markvis@master` bakes chart blocks to SVG and commits them, so github.com shows the charts. Inputs `paths`, `commit`, `message`; a second run commits nothing. It runs the markvis release it ships with, commits only the files bake writes, and never pushes for a pull request from a fork.
+- A 250-token model instruction (`docs/prompt.md`, also the opening of `llms.txt` and the site AI page). `pnpm eval-prompts --outputs <dir>` scores a directory of model answers: valid blocks, error codes, and chart type against `examples/prompts.md`.
+- Site: an Integrations page and one generated page per chart type.
 - **Wave 4 types:** `dumbbell` (two values per category, first hollow and second filled, signed change at the right) `bullet` (actual against an optional `target:` column, optional `min` / `max`), `boxplot` (distributions from raw rows, type-7 quartiles, Tukey whiskers), and `calendar` (one cell per `YYYY-MM-DD` day; new code `E_BAD_DATE`).
 - `graphite` theme: editorial mono with a gray ladder, one accent on the largest value, pill bars, and heavy numbers. Inspired by lieflat-charts.
 - Playground **Surface** control (`?surface=dark`).
-- Horizontal bars (`orient`), surfaces (`light` / `dark` / `export`), heatmap color domain, waterfall `role`, and width-aware `renderSvg`. See `docs/release-2.2.md`. The package version is still 2.1.0 until publish.
+- Horizontal bars (`orient`), surfaces (`light` / `dark` / `export`), heatmap color domain, waterfall `role`, and width-aware `renderSvg`. See `docs/release-2.2.md`.
 
 ### Changed
 
+- The drop-in renders through `render()`: an empty block's error table shows the block as the page holds it, not a fence wrapped around it.
+- The browser drop-in keeps cells past the header width in the error table, like every other path.
+- markdown-it, remark, and the drop-in share one HTML module, so their output is the same.
 - The six themes now look distinct in structure, not just color: each owns its type ramp (floor: title 15, other roles 11), title alignment and subtitle, grid dash, axis lines and ticks, curve, point markers, legend keys, card frame, and dark paper. Every pair differs on at least four structural switches. See `docs/themes.md`.
 - Readable type, wrapped labels, explicit paper/dark/export surfaces, gauge range 0–100 when `max` is omitted, sankey thickness. Funnel stays a centered silhouette.
 
 ### Fixed
 
+- Values spanning about -1e308 to 1e308 no longer hang axis ticks (bar, dumbbell, bullet, boxplot) or crash histogram bins.
+- A fence cut off before its closing line, or an indented fence, keeps its rows when parsed as one block.
+- Chart ids no longer import `node:crypto`, so `render()` and `markvis/react` bundle for the browser without a shim. Ids are unchanged.
 - A top legend no longer sits on a wrapped title, and the y-axis title no longer runs through tick labels or repeats the unit.
 - Non-numeric cells, duplicate keys, `markvis` version, multi-chart `check`, bake references, ragged fallback cells, and line gaps for missing values.
 

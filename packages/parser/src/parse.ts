@@ -80,8 +80,16 @@ export type ParseFailure = {
 
 export type ParseResult = ParseSuccess | ParseFailure;
 
+export type ParseDefaults = {
+  theme?: ChartTheme;
+  palette?: ChartPalette;
+  surface?: "light" | "dark" | "export";
+};
+
 export type ParseOptions = {
   filename?: string;
+  /** Used where a block leaves the field out. A block's own field wins. */
+  defaults?: ParseDefaults;
 };
 
 const EMPTY_TABLE: FallbackTable = { columns: [], rows: [] };
@@ -499,7 +507,12 @@ function buildIR(fields: {
 
 function parseBody(
   body: string,
-  opts: { form: ChartForm; filename?: string | undefined; raw: string },
+  opts: {
+    form: ChartForm;
+    filename?: string | undefined;
+    defaults?: ParseDefaults | undefined;
+    raw: string;
+  },
 ): ParseResult {
   const raw = opts.raw;
   if (body.trim() === "") {
@@ -618,6 +631,17 @@ function parseBody(
       );
     }
     theme = themeRaw;
+  } else if (opts.defaults?.theme !== undefined) {
+    // Defaults can come from untyped script or props: check, never throw.
+    if (!isChartTheme(opts.defaults.theme)) {
+      return fail(
+        "E_UNKNOWN_THEME",
+        `the theme option is not one of folio|highcharts|shadcn|docs|ant|recharts|graphite (got ${String(opts.defaults.theme)})`,
+        parsed,
+        raw,
+      );
+    }
+    theme = opts.defaults.theme;
   }
 
   const paletteRaw = headers["palette"]?.trim() ?? "";
@@ -632,6 +656,16 @@ function parseBody(
       );
     }
     palette = paletteRaw;
+  } else if (opts.defaults?.palette !== undefined) {
+    if (!isChartPalette(opts.defaults.palette)) {
+      return fail(
+        "E_UNKNOWN_PALETTE",
+        `the palette option is not one of ink|porcelain|warm|cool|vivid (got ${String(opts.defaults.palette)})`,
+        parsed,
+        raw,
+      );
+    }
+    palette = opts.defaults.palette;
   }
 
   const specified = {
@@ -846,6 +880,17 @@ function parseBody(
       );
     }
     surface = surfaceRaw;
+  } else if (opts.defaults?.surface !== undefined) {
+    const option: unknown = opts.defaults.surface;
+    if (option !== "light" && option !== "dark" && option !== "export") {
+      return fail(
+        "E_UNKNOWN_FIELD",
+        `the surface option must be light|dark|export (got ${String(option)})`,
+        parsed,
+        raw,
+      );
+    }
+    surface = option;
   }
 
   let orient: "horizontal" | "vertical" | undefined;
@@ -1126,6 +1171,7 @@ export function parseDocument(
     result: parseBody(chart.body, {
       form: chart.form,
       filename: options.filename,
+      defaults: options.defaults,
       raw: chart.raw,
     }),
   }));
@@ -1143,6 +1189,7 @@ export function parseMarkdown(
   return parseBody(first.body, {
     form: first.form,
     filename: options.filename,
+    defaults: options.defaults,
     raw: first.raw,
   });
 }
@@ -1152,4 +1199,38 @@ export function parse(
   options: ParseOptions = {},
 ): ParseResult {
   return parseMarkdown(source, options);
+}
+
+const WRAPPED_RE = /^\s*(?:```(?:chart|markvis|vis)\b|<!--\s*(?:chart|markvis|vis)\s*:)/i;
+const OPEN_FENCE_RE = /^(?:[ \t]*\r?\n)*[ ]{0,3}```(?:chart|markvis|vis)[ \t]*\r?\n/;
+const CLOSE_FENCE_RE = /\r?\n[ ]{0,3}```\s*$/;
+
+/**
+ * Parse the inside of one chart block: header lines, a blank line, then
+ * CSV or a GFM table — what a Markdown renderer hands a code-block plugin.
+ * A whole fenced block or a chart comment is accepted too.
+ */
+export function parseBlock(
+  body: string,
+  options: ParseOptions = {},
+): ParseResult {
+  const text = body.replace(/^\uFEFF/, "");
+  let inner = text;
+  if (WRAPPED_RE.test(text)) {
+    if (extractCharts(text).length > 0) {
+      return parseMarkdown(text, options);
+    }
+    // A fence cut off before its closing line, or indented: keep the rows.
+    const open = OPEN_FENCE_RE.exec(text);
+    if (!open) {
+      return parseMarkdown(text, options);
+    }
+    inner = text.slice(open[0].length).replace(CLOSE_FENCE_RE, "");
+  }
+  return parseBody(inner, {
+    form: "fence",
+    filename: options.filename,
+    defaults: options.defaults,
+    raw: text,
+  });
 }

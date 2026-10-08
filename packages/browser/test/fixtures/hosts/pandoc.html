@@ -1,0 +1,39 @@
+<!-- Pandoc 3.12. Command: pandoc -f gfm -t html source.md. -->
+<h1 id="visits">Visits</h1>
+<p>The fenced block:</p>
+<pre class="chart"><code>type: bar
+title: Visits by day
+x: day
+y: visits
+
+day,visits
+Mon,3
+Tue,5
+Wed,4</code></pre>
+<p>The comment form:</p>
+<!-- chart: line x=week y=signups title="Signups by week" -->
+
+<table>
+<thead>
+<tr>
+<th>week</th>
+<th>signups</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>12</td>
+</tr>
+<tr>
+<td>2</td>
+<td>18</td>
+</tr>
+<tr>
+<td>3</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<p>Other code stays code:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> total <span class="op">=</span> <span class="dv">3</span> <span class="op">+</span> <span class="dv">5</span> <span class="op">&lt;</span> <span class="dv">9</span> <span class="op">&amp;&amp;</span> <span class="st">&quot;a&amp;b&quot;</span><span class="op">;</span></span></code></pre></div>

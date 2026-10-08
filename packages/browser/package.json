@@ -16,9 +16,10 @@
     "src"
   ],
   "scripts": {
-    "build": "vite build"
+    "build": "vite build && vite build --mode iife"
   },
   "dependencies": {
+    "@markvis/html": "workspace:*",
     "@markvis/parser": "workspace:*",
     "@markvis/render-svg": "workspace:*"
   },

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>markvis in a streaming chat</title>
+    <!-- No build step: modules from a CDN, markvis/react from this repo's dist/. -->
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@19.3.0",
+          "react/jsx-runtime": "https://esm.sh/react@19.3.0/jsx-runtime",
+          "react-dom/client": "https://esm.sh/react-dom@19.3.0/client?external=react",
+          "react-markdown": "https://esm.sh/react-markdown@10.1.0?external=react",
+          "markvis/react": "../../../dist/react.js"
+        }
+      }
+    </script>
+    <style>
+      body { margin: 0; font: 15px/1.5 system-ui, sans-serif; color: #171717; background: #fafafa; }
+      main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+      h2 { font-size: 15px; margin: 32px 0 8px; }
+      .message { background: #fff; border: 1px solid #e5e5e5; border-radius: 12px; padding: 4px 16px; margin: 12px 0; }
+      .message.user { background: #eef2ff; }
+      button { font: inherit; padding: 6px 14px; border-radius: 8px; border: 1px solid #c7c7c7; background: #fff; cursor: pointer; }
+      .markvis svg { max-width: 100%; height: auto; }
+      .markvis table, .markvis-pending table { font-size: 13px; border-collapse: collapse; margin: 8px 0; }
+      .markvis td, .markvis th, .markvis-pending td, .markvis-pending th { border: 1px solid #e5e5e5; padding: 2px 8px; }
+      .markvis-pending-note { color: #737373; }
+    </style>
+  </head>
+  <body>
+    <main id="app"></main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
