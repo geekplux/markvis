@@ -1,6 +1,7 @@
 import {
   createElement,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -58,9 +59,30 @@ function contentWidth(el: HTMLElement): number {
   return Math.floor(width);
 }
 
-/** The container's width, measured after mount and on resize (debounced). */
-function useContainerWidth(ref: RefObject<HTMLDivElement | null>, fixed: number | undefined) {
+/** A layout effect in the browser; a plain effect on the server, where it never runs. */
+const useBrowserLayoutEffect = typeof window === "undefined" ? useEffect : useLayoutEffect;
+
+/**
+ * The container's width, measured after mount and on resize (debounced).
+ * It is measured again, before paint, when a streamed block is drawn: the
+ * figure's own margins only count once the figure is there.
+ */
+function useContainerWidth(
+  ref: RefObject<HTMLDivElement | null>,
+  fixed: number | undefined,
+  drawn: boolean,
+) {
   const [measured, setMeasured] = useState<number | undefined>(undefined);
+  useBrowserLayoutEffect(() => {
+    const el = ref.current;
+    if (fixed !== undefined || !el || !drawn) {
+      return;
+    }
+    const width = contentWidth(el);
+    if (width > 0) {
+      setMeasured(width);
+    }
+  }, [ref, fixed, drawn]);
   useEffect(() => {
     const el = ref.current;
     if (fixed !== undefined || !el) {
@@ -104,7 +126,7 @@ type ChartProps = CommonProps & { source: string; open?: boolean };
 export function Chart(props: ChartProps): ReactElement {
   const { source, open = false, theme, palette, surface, className, onError } = props;
   const ref = useRef<HTMLDivElement | null>(null);
-  const width = useContainerWidth(ref, props.width);
+  const width = useContainerWidth(ref, props.width, !open);
   const result = useMemo(() => {
     if (open) {
       return undefined;
@@ -122,11 +144,23 @@ export function Chart(props: ChartProps): ReactElement {
   useEffect(() => {
     onErrorRef.current = onError;
   });
+  // Report each failure once: a redraw at a new width or theme, or a
+  // StrictMode re-run, gives a new result but not a new error.
+  const reported = useRef<string | undefined>(undefined);
   useEffect(() => {
-    if (result && !result.ok) {
+    if (!result) {
+      return;
+    }
+    if (result.ok) {
+      reported.current = undefined;
+      return;
+    }
+    const key = `${source}\u0000${result.error.code}\u0000${result.error.message}`;
+    if (reported.current !== key) {
+      reported.current = key;
       onErrorRef.current?.(result.error);
     }
-  }, [result]);
+  }, [result, source]);
 
   const html = pending ?? result?.html ?? "";
   return createElement("div", { ref, className, dangerouslySetInnerHTML: { __html: html } });

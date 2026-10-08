@@ -3,12 +3,12 @@
  * In a browser: the chart follows its container's width (debounced),
  * hydrates without a mismatch, and reports a bad block once.
  */
-import { act, createElement } from "react";
+import { act, createElement, StrictMode } from "react";
 import { createRoot, hydrateRoot, type Root } from "react-dom/client";
 import { renderToString } from "react-dom/server";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { Markvis } from "../src/index.js";
-import { RESIZE_DEBOUNCE_MS } from "../src/markvis.js";
+import { Chart, RESIZE_DEBOUNCE_MS } from "../src/markvis.js";
 
 (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
 
@@ -142,6 +142,26 @@ describe("width follows the container", () => {
   });
 });
 
+describe("a streamed block", () => {
+  it("draws at the width that counts the figure's margins as soon as it closes", () => {
+    const style = document.createElement("style");
+    style.textContent = "figure { margin: 0 40px; }";
+    document.head.append(style);
+    try {
+      act(() => {
+        root = createRoot(host);
+        root.render(createElement(Chart, { source: "type: bar\nx: day\ny: visits\n\nday,visits\nMon,3", open: true }));
+      });
+      expect(svgWidth(host)).toBeNull();
+      // No resize tick: the closing fence alone must give the right width.
+      act(() => root?.render(createElement(Chart, { source, open: false })));
+      expect(svgWidth(host)).toBe(String(400 - 2 * 40));
+    } finally {
+      style.remove();
+    }
+  });
+});
+
 describe("hydration", () => {
   it("hydrates the server HTML without a mismatch, then fits the container", () => {
     host.innerHTML = renderToString(createElement(Markvis, { source }));
@@ -180,6 +200,26 @@ describe("onError", () => {
     expect(onError).toHaveBeenCalledTimes(1);
     expect(onError.mock.calls[0]?.[0]).toMatchObject({ code: "E_UNKNOWN_THEME" });
     expect(host.textContent).toContain("Mon");
+  });
+
+  it("is called once when the width is measured, resized, and the theme changes", () => {
+    vi.useFakeTimers();
+    const onError = vi.fn();
+    const bad = "type: donut\nx: a\ny: b\n\na,b\nA,1\n";
+    act(() => {
+      root = createRoot(host);
+      root.render(createElement(StrictMode, null, createElement(Markvis, { source: bad, onError })));
+    });
+    for (const width of [300, 280]) {
+      containerWidth = width;
+      act(() => observers.forEach((cb) => cb()));
+      act(() => vi.advanceTimersByTime(RESIZE_DEBOUNCE_MS));
+    }
+    act(() => root?.render(createElement(StrictMode, null, createElement(Markvis, { source: bad, onError, theme: "docs" }))));
+    expect(onError).toHaveBeenCalledTimes(1);
+    // A new failure is new news.
+    act(() => root?.render(createElement(StrictMode, null, createElement(Markvis, { source: `${bad}B,2\n`, onError }))));
+    expect(onError).toHaveBeenCalledTimes(2);
   });
 
   it("is not called for a good block", () => {
