@@ -107,12 +107,30 @@ export function isChartBlock(pre: Element): boolean {
   return false;
 }
 
-/** The element to replace: the `pre`, or the highlighter wrappers around it. */
+/** Copy buttons, language labels, and icons a highlighter puts beside `pre`. */
+const CHROME_TAGS = new Set(["button", "span", "small", "label", "svg"]);
+
+/** True when everything in `wrapper` but `inner` is chrome or blank text. */
+function onlyChromeBeside(wrapper: Element, inner: Element): boolean {
+  return Array.from(wrapper.childNodes).every((node) => {
+    if (node === inner) return true;
+    if (node.nodeType === 3) return (node.textContent ?? "").trim() === "";
+    if (node.nodeType !== 1) return true;
+    return CHROME_TAGS.has((node as Element).tagName.toLowerCase());
+  });
+}
+
+/**
+ * The element to replace: the `pre`, or the highlighter wrappers around
+ * it. A wrapper that holds anything but the block and its chrome stays,
+ * so no page text goes with the block.
+ */
 function outermost(pre: Element): Element {
   let host = pre;
   for (let depth = 0; depth < 2; depth++) {
     const parent = host.parentElement;
     if (!isTag(parent, "div") || !WRAPPER_CLASS.test(parent.className)) break;
+    if (!onlyChromeBeside(parent, host)) break;
     host = parent;
   }
   return host;

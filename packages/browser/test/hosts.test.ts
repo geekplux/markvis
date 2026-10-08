@@ -113,6 +113,31 @@ describe("wrappers and chrome", () => {
     expect(charts(root)).toEqual(["pie"]);
   });
 
+  it("climbs past chrome inside the wrapper", () => {
+    const root = document.createElement("section");
+    root.innerHTML = `<div class="highlight"><span class="lang">chart</span><pre><code class="language-chart">${BODY}</code></pre><button>copy</button></div>`;
+    expect(run({ root })).toBe(1);
+    expect(Array.from(root.children).map((el) => el.tagName.toLowerCase())).toEqual(["figure"]);
+  });
+
+  const holders: Array<[string, string]> = [
+    ["a paragraph in a highlight div", `<div class="highlight"><p>KEEP</p><pre><code class="language-chart">${BODY}</code></pre></div>`],
+    ["another code block in a code-block div", `<div class="code-block"><pre><code class="language-chart">${BODY}</code></pre><pre><code class="language-js">KEEP</code></pre></div>`],
+    ["a language-en content container", `<div class="language-en"><p>KEEP</p><pre><code class="language-chart">${BODY}</code></pre></div>`],
+    ["text beside the block", `<div class="highlight">KEEP<pre><code class="language-chart">${BODY}</code></pre></div>`],
+    ["content two levels out", `<div class="language-chart highlighter-rouge"><p>KEEP</p><div class="highlight"><pre class="highlight"><code>${BODY}</code></pre></div></div>`],
+  ];
+
+  for (const [label, html] of holders) {
+    it(`keeps page content in the wrapper: ${label}`, () => {
+      const root = document.createElement("section");
+      root.innerHTML = html;
+      expect(run({ root })).toBe(1);
+      expect(root.querySelector("figure.markvis")).not.toBeNull();
+      expect(root.textContent).toContain("KEEP");
+    });
+  }
+
   it("does not climb into a container that is not a highlighter", () => {
     const root = document.createElement("section");
     root.innerHTML = `<div class="post"><pre><code class="language-chart">${BODY}</code></pre></div>`;
