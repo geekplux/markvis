@@ -29,6 +29,32 @@ export function decodeEntities(value: string): string {
 const TAG = /<(\/?)([a-zA-Z][\w:-]*)((?:\s+[^\s=/>]+="[^"]*")*)\s*(\/?)>/g;
 const ATTR = /([^\s=/>]+)="([^"]*)"/g;
 
+/** Attribute names whose hast property name is not the camel-cased name. */
+const PROPERTY: Record<string, string> = {
+  class: "className",
+  "aria-labelledby": "ariaLabelledBy",
+  "aria-describedby": "ariaDescribedBy",
+  "stroke-dasharray": "strokeDashArray",
+  "stroke-dashoffset": "strokeDashOffset",
+  "stroke-linecap": "strokeLineCap",
+  "stroke-linejoin": "strokeLineJoin",
+  "stroke-miterlimit": "strokeMiterLimit",
+  "xlink:href": "xLinkHref",
+  "xmlns:xlink": "xmlnsXLink",
+  "xml:space": "xmlSpace",
+  "xml:lang": "xmlLang",
+};
+
+/**
+ * The hast property for an attribute: `data-chart-type` is `dataChartType`,
+ * `stroke-width` is `strokeWidth`, `viewBox` stays. Plugins that query hast
+ * (hast-util-select and the like) look properties up by these names. The
+ * test checks every name markvis writes against property-information.
+ */
+export function propertyName(attribute: string): string {
+  return PROPERTY[attribute] ?? attribute.replace(/-([a-z])/g, (_, c: string) => c.toUpperCase());
+}
+
 function properties(attrs: string): Record<string, string | string[]> {
   const props: Record<string, string | string[]> = {};
   for (const m of attrs.matchAll(ATTR)) {
@@ -37,7 +63,7 @@ function properties(attrs: string): Record<string, string | string[]> {
     if (name === "class") {
       props["className"] = value.split(/\s+/).filter(Boolean);
     } else {
-      props[name] = value;
+      props[propertyName(name)] = value;
     }
   }
   return props;

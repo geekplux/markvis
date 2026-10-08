@@ -6,6 +6,7 @@ import { readdirSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { evaluate } from "@mdx-js/mdx";
+import { find, html as htmlSchema, svg as svgSchema } from "property-information";
 import { Window } from "happy-dom";
 import { createElement } from "react";
 import * as jsxRuntime from "react/jsx-runtime";
@@ -14,9 +15,10 @@ import { remark } from "remark";
 import rehypeStringify from "rehype-stringify";
 import remarkRehype from "remark-rehype";
 import { describe, expect, it } from "vitest";
+import { THEMES } from "@markvis/ir";
 import { render } from "@markvis/html";
 import { extractCharts } from "@markvis/parser";
-import { decodeEntities, htmlToHast } from "../src/hast.js";
+import { decodeEntities, htmlToHast, propertyName, type HastNode } from "../src/hast.js";
 import { rehypeMarkvis } from "../src/index.js";
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -92,6 +94,47 @@ describe("htmlToHast", () => {
   it("matches a snapshot for one small chart", () => {
     const hast = htmlToHast(render("type: bar\ntitle: Visits\nx: day\ny: visits\n\nday,visits\nMon,3\nTue,5").html);
     expect(hast).toMatchSnapshot();
+  });
+});
+
+describe("hast property names", () => {
+  /** The tags markvis writes outside an SVG; every other tag is inside one. */
+  const HTML_TAGS = new Set(["figure", "figcaption", "table", "thead", "tbody", "tr", "th", "td", "p", "div"]);
+
+  /** Every (tag, attribute) markvis writes, over all examples, themes, and surfaces. */
+  function written(): Map<string, "html" | "svg"> {
+    const seen = new Map<string, "html" | "svg">();
+    for (const [, source] of files) {
+      for (const chart of extractCharts(source)) {
+        for (const theme of THEMES) {
+          for (const surface of ["light", "dark", "export"] as const) {
+            const { html } = render(chart.raw, { theme, surface });
+            for (const tag of html.matchAll(/<([a-zA-Z][\w:-]*)((?:\s+[^\s=/>]+="[^"]*")*)/g)) {
+              const space = HTML_TAGS.has(tag[1]!) ? "html" : "svg";
+              for (const attr of tag[2]!.matchAll(/([^\s=/>]+)="/g)) seen.set(`${space} ${attr[1]}`, space);
+            }
+          }
+        }
+      }
+    }
+    return seen;
+  }
+
+  it("match property-information for every attribute markvis writes", () => {
+    const seen = written();
+    expect(seen.size).toBeGreaterThan(20);
+    const wrong: string[] = [];
+    for (const [key, space] of seen) {
+      const attribute = key.slice(space.length + 1);
+      const expected = find(space === "svg" ? svgSchema : htmlSchema, attribute).property;
+      if (propertyName(attribute) !== expected) wrong.push(`${key} -> ${expected}`);
+    }
+    expect(wrong).toEqual([]);
+  });
+
+  it("let a plugin find the figure by its data attribute", () => {
+    const [figure] = htmlToHast(render("type: bar\nx: a\ny: b\n\na,b\nA,1").html) as HastNode[];
+    expect(figure).toMatchObject({ tagName: "figure", properties: { dataChartType: "bar", dataMarkvis: "2" } });
   });
 });
 
