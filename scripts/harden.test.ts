@@ -781,7 +781,7 @@ describe("public contract", () => {
 
   it("points Skill blob URLs at master, not v2", () => {
     const files = [
-      "apps/web/ai.md",
+      "apps/web/integrate.md",
       "apps/web/get-started.md",
       "README.md",
       "CONTRIBUTING.md",
@@ -791,7 +791,7 @@ describe("public contract", () => {
       const text = readRepo(rel);
       expect(text, rel).not.toContain("/blob/v2/");
     }
-    expect(readRepo("apps/web/ai.md")).toContain(
+    expect(readRepo("apps/web/integrate.md")).toContain(
       "github.com/geekplux/markvis/blob/master/skills/markvis/SKILL.md",
     );
   });

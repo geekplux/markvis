@@ -201,5 +201,61 @@ Host example: `examples/hosts/react-markdown/`.
 
 - **Check from the command line.** `npx markvis check notes.md` exits non-zero if any block is wrong, so CI can run it.
 - **VS Code.** The preview extension in `extensions/vscode-markvis-preview` draws chart blocks in the Markdown preview. Install it from the folder; it is not yet on the Marketplace.
-- **Tell a model.** A 250-token instruction for a system prompt: see [AI](/ai).
+- **Tell a model.** A 250-token instruction for a system prompt: see [Tell a model](#tell-a-model) below.
 - **Security.** A chart block holds data only: header lines and rows. It cannot carry HTML or scripts, and markvis escapes every title, label, cell, and series name in the SVG and the table it writes. The script tag, React, and rehype paths insert only that output.
+
+## Tell a model
+
+An agent should write a Markdown code block, not a screenshot. MarkVis draws the chart from that block. No one has to fix the text by hand.
+
+### Short instruction
+
+Put this in a system prompt, a tool description, or a skill. It is 250 tokens and adds nothing to the language.
+
+````text
+Chart numbers as a markvis block, not an image or JSON:
+
+```chart
+type: bar
+title: Revenue
+x: month
+y: revenue
+
+month,revenue
+Jan,120
+Feb,95
+```
+
+Fields, a blank line, then CSV or a Markdown table with a header row. x, y, series name columns; unit is optional. Or put <!-- chart: bar x=month y=revenue --> above a Markdown table.
+
+Types: bar line area scatter pie hist heatmap funnel waterfall radar gauge sankey treemap dumbbell bullet boxplot calendar.
+
+Several series: a row per x and series, plus series:. Keep row order. Donut: pie, innerRadius: 0.5. Stacked: layout: stacked. No other types or fields.
+````
+
+With this instruction, each of four models gave a valid block for 29 or 30 of the 30 prompts in `examples/prompts.md`, in two runs, and chose the expected chart type for 29 or 30 of them. With no instruction, only told that the app draws markvis blocks, the same models gave 0 to 2 valid blocks: most wrote JSON or invented fields. Details: [docs/prompt.md](https://github.com/geekplux/markvis/blob/master/docs/prompt.md).
+
+### Fetch this
+
+```
+https://markvis.js.org/llms.txt
+```
+
+Fetch `/llms.txt`. Emit **only** the fields that file lists. Do not invent keys. Do not invent a type id. Do not emit a PNG or JSON as the default data body.
+
+Skill (optional, same language): [skills/markvis/SKILL.md](https://github.com/geekplux/markvis/blob/master/skills/markvis/SKILL.md)
+
+### What to emit
+
+A fenced code block tagged `chart` / `markvis` / `vis` — one language. Types: `bar` `line` `area` `scatter` `pie` `hist` `heatmap` `funnel` `waterfall` `radar` `gauge` `sankey` `treemap` `dumbbell` `bullet` `boxplot` `calendar`.
+
+Order inside the block:
+
+1. Optional `markvis: 2`
+2. One `key: value` per line. `type` is required. Every other field must be one listed in `/llms.txt`.
+3. Blank line
+4. Comma-separated rows, or one Markdown table — not JSON
+
+Prefer a table of numbers (CSV or a Markdown table), keep row order, and do not force pie slices to 100. On error, the table stays with one line that names the stable error code.
+
+Avoid an invented type id, a silent sort of the categories, and fields not listed in `/llms.txt`. Eval pairs: `examples/prompts.md` in the repo.

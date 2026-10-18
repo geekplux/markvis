@@ -26,6 +26,7 @@ pageClass: folio-home-page
     <a class="home-btn outline" href="/get-started">Docs <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
     <a class="home-btn outline" href="/examples">Examples <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
   </p>
+  <p class="home-numbers">56 kB gzip · 0 dependencies · under 1 ms a chart · plain SVG</p>
   <div class="home-live">
     <ChartBlock editable :block='"type: bar\ntitle: Visits by day\nx: day\ny: visits\n\nday,visits\nMon,3\nTue,5\nWed,4\nThu,6\nFri,8\n"' />
     <p class="home-live-note">Edit a number; the chart redraws. That text is the whole chart. <a href="/play">Open Play <span aria-hidden="true">↗</span></a></p>
@@ -146,6 +147,14 @@ el.innerHTML = render(block).html;</pre>
   </div>
 </section>
 
+<section id="types">
+  <div class="home-section-head">
+    <h2>Seventeen kinds of chart</h2>
+    <p>bar, line, area, scatter, pie, hist, heatmap, funnel, waterfall, radar, gauge, sankey, treemap, dumbbell, bullet, boxplot, calendar. That is the set, and each one is a block you can copy.</p>
+  </div>
+  <TypeGrid />
+</section>
+
 <section id="cta" class="home-final">
   <div class="home-dots" aria-hidden="true"></div>
   <div class="home-final-inner">
@@ -154,7 +163,7 @@ el.innerHTML = render(block).html;</pre>
     <h2>Get started with MarkVis</h2>
     <p class="home-final-lead">Write the numbers. Get the chart. The table stays in the file.</p>
     <p class="home-final-actions">
-      <a class="home-btn filled" href="/play">Playground</a>
+      <a class="home-btn filled" href="/play">Play</a>
       <a class="home-btn outline" href="/get-started">Docs <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
       <a class="home-btn outline" href="/examples">Examples <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
       <a class="home-btn outline" href="https://github.com/geekplux/markvis" target="_blank" rel="noreferrer"><span class="home-gh" aria-hidden="true"></span> Star on GitHub</a>

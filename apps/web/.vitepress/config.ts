@@ -10,28 +10,30 @@ function docsSidebar() {
   return [
     { text: "Get started", link: "/get-started" },
     { text: "Integrate", link: "/integrate" },
-    { text: "Spec", link: "/spec" },
+    { text: "Theming", link: "/theming" },
     {
       text: "Chart types",
       link: "/types/",
       collapsed: true,
       items: TYPE_IDS.map((type) => ({ text: type, link: `/types/${type}` })),
     },
-    { text: "Themes", link: "/themes" },
-    { text: "AI", link: "/ai" },
-    { text: "Contributing themes", link: "/contributing-themes" },
+    { text: "Spec", link: "/spec" },
+    { text: "Contributing", link: "/contributing-themes" },
   ];
 }
 
+// /themes and /ai stay as redirects (to /theming and to Integrate's
+// "Tell a model"), so old links still land on the content.
 const docsSidebarPaths = [
   "/docs",
   "/get-started",
   "/integrate",
-  "/spec",
+  "/theming",
   "/types/",
+  "/spec",
+  "/contributing-themes",
   "/themes",
   "/ai",
-  "/contributing-themes",
 ];
 
 const siteModeBoot = `(function(){try{var k='markvis-site-mode';var m=localStorage.getItem(k);if(m!=='light'&&m!=='dark'){m=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.classList.remove('light','dark');document.documentElement.classList.add(m);}catch(e){document.documentElement.classList.add('dark');}})();`;
@@ -127,8 +129,7 @@ export default defineConfig({
     nav: [
       { text: "Docs", link: "/get-started" },
       { text: "Examples", link: "/examples" },
-      { text: "Playground", link: "/play" },
-      { text: "AI", link: "/ai" },
+      { text: "Play", link: "/play" },
       { text: "GitHub", link: "https://github.com/geekplux/markvis" },
     ],
     sidebar: Object.fromEntries(

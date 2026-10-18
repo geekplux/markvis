@@ -57,6 +57,18 @@ describe("chart type pages", () => {
     expect(config).toContain('link: "/types/"');
     expect(config).toContain("TYPE_IDS.map");
   });
+
+  it("the docs sidebar runs Get started, Integrate, Theming, Chart types, Spec, Contributing", () => {
+    const config = read("apps/web/.vitepress/config.ts");
+    const sidebar = config.slice(config.indexOf("function docsSidebar()"), config.indexOf("const docsSidebarPaths"));
+    // Top-level entries: `    { text: "…"` on one line, or `      text: "…"` inside a multi-line entry.
+    const top = [...sidebar.matchAll(/^(?: {4}\{ | {6})text: "([^"]+)"/gm)].map((m) => m[1]);
+    expect(top).toEqual(["Get started", "Integrate", "Theming", "Chart types", "Spec", "Contributing"]);
+    expect(sidebar).toContain('{ text: "Theming", link: "/theming" }');
+    expect(sidebar).toContain('{ text: "Contributing", link: "/contributing-themes" }');
+    expect(sidebar).not.toContain('"/themes"');
+    expect(sidebar).not.toContain('"/ai"');
+  });
 });
 
 describe("integrate page", () => {

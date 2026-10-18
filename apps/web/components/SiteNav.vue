@@ -25,6 +25,7 @@ const isDocs = computed(() => {
     path === "/get-started" ||
     path === "/spec" ||
     path === "/integrate" ||
+    path === "/theming" ||
     path === "/ai" ||
     path === "/themes" ||
     path === "/contributing-themes"
@@ -34,10 +35,10 @@ const isDocs = computed(() => {
 const docsLinks = [
   { href: "/get-started", text: "Get started" },
   { href: "/integrate", text: "Integrate" },
+  { href: "/theming", text: "Theming" },
+  { href: "/types/", text: "Chart types" },
   { href: "/spec", text: "Spec" },
-  { href: "/themes", text: "Themes" },
-  { href: "/ai", text: "AI" },
-  { href: "/contributing-themes", text: "Contributing themes" },
+  { href: "/contributing-themes", text: "Contributing" },
 ] as const;
 
 const menuOpen = ref(false);
@@ -127,6 +128,7 @@ const show = computed(() => {
     path === "/get-started" ||
     path === "/spec" ||
     path === "/integrate" ||
+    path === "/theming" ||
     path === "/ai" ||
     path === "/themes" ||
     path === "/contributing-themes" ||
@@ -156,8 +158,7 @@ onMounted(() => {
       <div id="site-nav-links" class="home-nav-links">
         <a href="/get-started" @click="closeMenu">Docs</a>
         <a href="/examples" @click="closeMenu">Examples</a>
-        <a href="/play" @click="closeMenu">Playground</a>
-        <a href="/ai" @click="closeMenu">AI</a>
+        <a href="/play" @click="closeMenu">Play</a>
         <div v-if="isDocs" class="home-nav-docs">
           <p class="home-nav-docs-label">Docs</p>
           <a
@@ -236,7 +237,7 @@ onMounted(() => {
             />
           </svg>
         </button>
-        <a class="home-nav-action" href="/play">Playground</a>
+        <a class="home-nav-action" href="/play">Play</a>
       </div>
     </nav>
   </header>

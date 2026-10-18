@@ -3,8 +3,11 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { inflateSync } from "node:zlib";
 import { describe, expect, it } from "vitest";
+import { CHART_TYPES } from "@markvis/ir";
+import { render } from "@markvis/html";
 import { PROOF_STEMS, proofViews } from "../src/homeProof";
 import type { GalleryItem } from "../src/catalog";
+import { typeCards } from "../src/type-pages";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const webRoot = join(here, "..");
@@ -195,13 +198,15 @@ describe("site visual chrome", () => {
     expect(home).toContain('id="code"');
     expect(home).toContain('id="quickstart"');
     expect(home).toContain('id="hosts"');
+    expect(home).toContain('id="types"');
     expect(home).toContain('id="cta"');
     expect(home.indexOf('id="hero"')).toBeLessThan(home.indexOf('id="proof"'));
     expect(home.indexOf('id="proof"')).toBeLessThan(home.indexOf('id="features"'));
     expect(home.indexOf('id="features"')).toBeLessThan(home.indexOf('id="code"'));
     expect(home.indexOf('id="code"')).toBeLessThan(home.indexOf('id="quickstart"'));
     expect(home.indexOf('id="quickstart"')).toBeLessThan(home.indexOf('id="hosts"'));
-    expect(home.indexOf('id="hosts"')).toBeLessThan(home.indexOf('id="cta"'));
+    expect(home.indexOf('id="hosts"')).toBeLessThan(home.indexOf('id="types"'));
+    expect(home.indexOf('id="types"')).toBeLessThan(home.indexOf('id="cta"'));
 
     expect(home).toContain("OPEN SOURCE");
     expect(home).toContain("v2");
@@ -218,8 +223,9 @@ describe("site visual chrome", () => {
     expect(home).toMatch(
       /site-logo-lg" src="\/logo.png" width="64" height="64"/,
     );
-    expect(home).toContain('href="/play">Playground');
-    expect(home).toContain('class="home-btn filled" href="/play">Playground');
+    expect(home).toContain('href="/play">Play<');
+    expect(home).toContain('class="home-btn filled" href="/play">Play</a>');
+    expect(home).not.toContain(">Playground<");
     expect(home).toContain('<CopyChip command="npx markvis bake README.md"');
     const chip = read("components/CopyChip.vue");
     expect(chip).toMatch(/prefix:\s*"\$"/);
@@ -285,6 +291,71 @@ describe("site visual chrome", () => {
     expect(theme).toContain("FenceTabs");
   });
 
+  it("home shows all seventeen kinds of chart through TypeGrid", () => {
+    const home = read("index.md");
+    const css = read(".vitepress/theme/home.css");
+    const theme = read(".vitepress/theme/index.ts");
+    const grid = read("components/TypeGrid.vue");
+    const loader = read("src/typeCards.data.ts");
+
+    const types = home.slice(home.indexOf('id="types"'), home.indexOf('id="cta"'));
+    expect(types).toContain("<h2>Seventeen kinds of chart</h2>");
+    expect(types).toContain(
+      `${CHART_TYPES.join(", ")}. That is the set, and each one is a block you can copy.`,
+    );
+    expect(types).toContain("<TypeGrid />");
+    expect(theme).toContain('app.component("TypeGrid", TypeGrid)');
+    expect(theme.indexOf('app.component("ChartBlock"')).toBeLessThan(
+      theme.indexOf('app.component("TypeGrid"'),
+    );
+
+    // One card per type, in SPEC order. Each draws the same examples/valid
+    // file its Play link opens: the first valid file of that type.
+    const cards = typeCards();
+    expect(cards).toHaveLength(17);
+    expect(cards).toHaveLength(CHART_TYPES.length);
+    expect(cards.map((card) => card.type)).toEqual([...CHART_TYPES]);
+    const validDir = join(webRoot, "../../examples/valid");
+    const validFiles = readdirSync(validDir)
+      .filter((name) => name.endsWith(".md"))
+      .sort((a, b) => a.localeCompare(b, "en", { numeric: true }));
+    for (const card of cards) {
+      expect(card.use, card.type).not.toBe("");
+      expect(card.play, card.type).toBe(`/play?example=${card.stem}`);
+      const example = readFileSync(join(validDir, `${card.stem}.md`), "utf8");
+      expect(example, card.type).toContain(card.block);
+      expect(card.block, card.type).toMatch(/^```(?:chart|markvis|vis)\n[\s\S]*\n```$/);
+      expect(card.block, card.type).toMatch(new RegExp(`^type: ${card.type}$`, "m"));
+      expect(render(card.block).ok, card.type).toBe(true);
+      const first = validFiles.find((name) =>
+        new RegExp(`^\`\`\`(?:chart|markvis|vis)\\n[^\`]*?^type: ${card.type}$`, "m").test(
+          readFileSync(join(validDir, name), "utf8"),
+        ),
+      );
+      expect(`${card.stem}.md`, card.type).toBe(first);
+    }
+    expect(loader).toContain("typeCards()");
+    expect(grid).toContain('from "../src/typeCards.data"');
+
+    // Lazy: a card draws its ChartBlock only once an IntersectionObserver sees it.
+    expect(grid).toContain("new IntersectionObserver");
+    expect(grid).toMatch(/<ChartBlock v-if="drawn\[card\.type\]"/);
+    expect(grid).toContain('class="type-card"');
+    expect(grid).toContain('class="type-grid"');
+    expect(grid).toContain("<summary>block ▾</summary>");
+    expect(grid).toContain("Open in Play <span");
+    expect(grid).toContain(':href="card.play"');
+
+    // 3 / 2 / 1 columns.
+    expect(css).toMatch(/\.type-grid \{[^}]*grid-template-columns: minmax\(0, 1fr\);/);
+    expect(css).toMatch(
+      /@media \(min-width: 640px\) \{\s*\.type-grid \{\s*grid-template-columns: repeat\(2, minmax\(0, 1fr\)\);/,
+    );
+    expect(css).toMatch(
+      /@media \(min-width: 1024px\) \{\s*\.type-grid \{\s*grid-template-columns: repeat\(3, minmax\(0, 1fr\)\);/,
+    );
+  });
+
   it("commits a logo and wires header, CTA, and favicon", () => {
     expect(existsSync(join(webRoot, "public/logo.png"))).toBe(true);
     expect(existsSync(join(webRoot, "public/logo-dark.png"))).toBe(true);
@@ -312,9 +383,11 @@ describe("site visual chrome", () => {
     expect(nav).toContain('class="home-wordmark"');
     expect(nav).toContain("<span>MarkVis</span>");
     expect(nav).toMatch(
-      /class="home-nav-links">[\s\S]*href="\/get-started"[\s\S]*>Docs<\/a>[\s\S]*href="\/examples"[\s\S]*>Examples<\/a>[\s\S]*href="\/play"[\s\S]*>Playground<\/a>[\s\S]*href="\/ai"[\s\S]*>AI<\/a>/,
+      /class="home-nav-links">[\s\S]*href="\/get-started"[\s\S]*>Docs<\/a>[\s\S]*href="\/examples"[\s\S]*>Examples<\/a>[\s\S]*href="\/play"[\s\S]*>Play<\/a>/,
     );
-    expect(nav).toContain('class="home-nav-action" href="/play">Playground');
+    expect(nav).toContain('class="home-nav-action" href="/play">Play</a>');
+    expect(nav).not.toContain("Playground");
+    expect(nav).not.toContain(">AI<");
     expect(nav).toContain("home-nav-github");
     expect(nav).toContain("https://github.com/geekplux/markvis");
     expect(nav).toContain("Star MarkVis on GitHub");
@@ -352,6 +425,7 @@ describe("site visual chrome", () => {
         "code",
         "quickstart",
         "hosts",
+        "types",
         "cta",
       ]) {
         expect(html).toContain(`id="${id}"`);
@@ -376,6 +450,20 @@ describe("site visual chrome", () => {
     },
   );
 
+  it.skipIf(!existsSync(distIndex))(
+    "built dist home ships one .type-card per chart type",
+    () => {
+      const html = read(".vitepress/dist/index.html");
+      const cards = [...html.matchAll(/<article\b[^>]*\bclass="type-card"[^>]*>/g)];
+      expect(cards).toHaveLength(17);
+      expect(cards).toHaveLength(CHART_TYPES.length);
+      expect(cards.map((m) => m[0].match(/data-type="([a-z]+)"/)?.[1])).toEqual([
+        ...CHART_TYPES,
+      ]);
+      expect(html.match(/<summary>block ▾<\/summary>/g)).toHaveLength(17);
+    },
+  );
+
   const distDocs = join(webRoot, ".vitepress/dist/get-started.html");
   it.skipIf(!existsSync(distDocs))(
     "built dist docs ships section links in the site Menu drawer",
@@ -388,13 +476,15 @@ describe("site visual chrome", () => {
       for (const label of [
         "Get started",
         "Integrate",
+        "Theming",
+        "Chart types",
         "Spec",
-        "Themes",
-        "AI",
-        "Contributing themes",
+        "Contributing",
       ]) {
-        expect(html).toContain(label);
+        expect(html).toContain(`>${label}<`);
       }
+      expect(html).not.toContain(">Contributing themes<");
+      expect(html).not.toContain(">Themes<");
     },
   );
 
@@ -542,8 +632,8 @@ describe("site visual chrome", () => {
     expect(nav).toContain("pageClass");
     expect(nav).not.toContain("useRoute");
     expect(nav).toContain('href="/play"');
-    expect(nav).toContain('href="/ai"');
-    expect(nav).toContain("Playground");
+    expect(nav).not.toContain('href="/ai"');
+    expect(nav).toContain(">Play<");
     expect(nav).toContain("data-site-mode-toggle");
     expect(nav).toContain("home-nav-mode");
     expect(nav).toContain("home-nav-mode-sun");
@@ -567,7 +657,8 @@ describe("site visual chrome", () => {
     expect(family).toMatch(
       /@media\s*\(max-width:\s*1023px\)[\s\S]*?\.home-nav\.is-open \.home-nav-links\s*\{[^}]*display:\s*flex/,
     );
-    expect(nav).toContain("Contributing themes");
+    expect(nav).toContain('text: "Contributing"');
+    expect(nav).toContain('href: "/theming"');
     expect(nav).toContain('href: "/integrate"');
     expect(nav).toContain(':href="link.href"');
     expect(family).toMatch(/\.home-nav-docs/);
@@ -708,6 +799,7 @@ describe("site visual chrome", () => {
       "docs.md",
       "integrate.md",
       "spec.md",
+      "theming.md",
       "themes.md",
       "ai.md",
       "contributing-themes.md",
@@ -723,12 +815,20 @@ describe("site visual chrome", () => {
     expect(read("examples.md")).toMatch(/pageClass:\s*folio-examples/);
     expect(read("examples.md")).toContain("site-rail");
     expect(read("play.md")).toMatch(/pageClass:\s*folio-play/);
+    // One name for it on the site: Play.
+    expect(read("play.md")).toMatch(/^title: Play$/m);
+    expect(read("examples.md")).toContain("Open one in Play.");
+    expect(read("components/PlayEmbed.vue")).toContain('title="Play"');
+    for (const rel of ["play.md", "examples.md", "components/PlayEmbed.vue"]) {
+      expect(read(rel), rel).not.toContain("Playground");
+    }
 
     expect(config).toContain('link: "/get-started"');
     expect(config).toContain('link: "/integrate"');
     expect(config).toContain('link: "/spec"');
-    expect(config).toContain('link: "/themes"');
-    expect(config).toContain('link: "/ai"');
+    expect(config).toContain('link: "/theming"');
+    expect(config).not.toContain('link: "/themes"');
+    expect(config).not.toContain('link: "/ai"');
     expect(config).toContain('link: "/contributing-themes"');
     expect(config).toContain('"/docs"');
     expect(config).toContain('link: "/play"');
@@ -767,16 +867,36 @@ describe("site visual chrome", () => {
     expect(integrate).toContain("markvis/react");
     expect(integrate).toContain("remarkMarkvisStreaming");
 
-    const themes = read("themes.md");
-    expect(themes).toMatch(/theme vs palette/i);
-    expect(themes).toContain("second axis");
-    expect(themes).toContain("Contributing themes");
-    expect(themes).not.toMatch(/#[0-9A-Fa-f]{6}/);
+    const theming = read("theming.md");
+    expect(theming).toMatch(/^# Theming$/m);
+    expect(theming).toMatch(/theme vs palette/i);
+    expect(theming).toContain("second axis");
+    expect(theming).toContain("Contributing themes");
+    expect(theming).not.toMatch(/#[0-9A-Fa-f]{6}/);
 
+    // The model instruction lives on Integrate, as its last section.
+    const tell = integrate.slice(integrate.indexOf("## Tell a model"));
+    expect(integrate.indexOf("## Tell a model")).toBeGreaterThan(integrate.indexOf("## Also"));
+    expect(tell).not.toMatch(/^## (?!Tell a model)/m);
+    expect(tell).toContain("/llms.txt");
+    expect(tell).toContain("Emit **only** the fields");
+    expect(tell).toContain("markvis.js.org/llms.txt");
+
+    // /themes and /ai redirect, the way /docs does.
+    for (const [page, heading] of [
+      ["themes.md", "Theming"],
+      ["ai.md", "Tell a model"],
+    ] as const) {
+      const md = read(page);
+      expect(md, page).toContain(`title: ${heading}\n`);
+      expect(md, page).toMatch(new RegExp(`^# ${heading}$`, "m"));
+    }
+    const themes = read("themes.md");
+    expect(themes).toContain('window.location.replace("/theming")');
+    expect(themes).toContain("(/theming)");
     const ai = read("ai.md");
-    expect(ai).toContain("/llms.txt");
-    expect(ai).toContain("Emit **only** the fields");
-    expect(ai).toContain("markvis.js.org/llms.txt");
+    expect(ai).toContain('window.location.replace("/integrate#tell-a-model")');
+    expect(ai).toContain("(/integrate#tell-a-model)");
 
     const llms = read("public/llms.txt");
     expect(llms).toMatch(/`palette`/i);

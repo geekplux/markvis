@@ -16,9 +16,11 @@ Public pages never name competing diagram tools.
 
 Mark + wordmark: MarkVis. Header is 64px, sticky, on the 72rem rails. Same links on every public page.
 
-Links: Docs · Examples · Playground · AI.
+Links: Docs · Examples · Play.
 
-Filled: Playground → `/play`.
+Filled: Play → `/play`.
+
+Docs sidebar, in this order: Get started → Integrate → Theming → Chart types → Spec → Contributing. `/themes` redirects to `/theming`, and `/ai` redirects to Integrate's last section, "Tell a model" (the model instruction), the way `/docs` redirects to `/get-started`.
 
 Site mode toggle lives in the right cluster. Mode is site mode, not chart theme.
 
@@ -35,6 +37,10 @@ Sub: Write a short chart block in Markdown. markvis draws it as SVG from a scrip
 Filled: Get started → `#quickstart`.
 
 Outline: Docs → `/get-started`. Examples → `/examples`.
+
+Numbers line (mono, muted), under the buttons: `56 kB gzip · 0 dependencies · under 1 ms a chart · plain SVG`. The README carries the same line; `apps/web/test/numbers.test.ts` keeps the gzip figure within 10 % of `dist/markvis.min.js`.
+
+README picture: the README's chart block (Visits by day) shows `https://markvis.js.org/home/visits-by-day.svg`, because npmjs.com cannot load a relative image. `apps/web/public/home/visits-by-day.svg` is byte-equal to the `README.svg` that bake writes (`apps/web/test/readme-image.test.ts`).
 
 Live example: an editable block beside its chart (`ChartBlock` with `editable`), drawn by `render()`; the hero shows the chart only, and an invalid edit shows the rows and one error line. A note under it links to `/play`.
 
@@ -54,7 +60,9 @@ Quickstart (two per row): 01 One script tag · 02 JavaScript · 03 React · 04 G
 
 Hosts: npm · script · skill · react · rehype · action, all available now.
 
-Final CTA: logo, Get started with MarkVis, “Write the numbers. Get the chart.”, Playground / Docs / Examples / Star on GitHub.
+Seventeen kinds of chart (`#types`): one card per type in SPEC order (`TypeGrid`, data from `apps/web/src/type-pages.ts`), 3 / 2 / 1 columns. Each card: the type name (links to `/types/<type>`), its "Use for" line, the chart block of the first `examples/valid` file of that type drawn by `ChartBlock` once the card nears the viewport, a `block ▾` disclosure with that block's text, and `Open in Play ↗` (Play opened on that same file, so the card and Play show one chart).
+
+Final CTA: logo, Get started with MarkVis, “Write the numbers. Get the chart.”, Play / Docs / Examples / Star on GitHub.
 
 Footer: © 2026 GeekPlux · MIT · 0.0.13 under `legacy/`.
 
@@ -79,6 +87,6 @@ Two panes under the site nav: fence left, figure right. Each at least 40% at `>=
 
 `/integrate` is the one page for every way to show a block; there is no second overview. `/types/<type>`: one page per chart type, generated at build time (`apps/web/src/type-pages.ts`, dynamic route `apps/web/types/[type].paths.ts`) from `packages/types/<type>/README.md`, its `examples/valid.md` and `examples/invalid.md`, and the type's row in `SPEC.md`, so the pages cannot drift. `ChartBlock` draws the examples.
 
-## Integrate / Spec / AI / Themes pages
+## Integrate / Theming / Spec pages
 
-Same family as the rest of the site. Body copy in `apps/web/*.md`. Pipeline diagrams stay in repo `docs/architecture.md` so public pages stay free of competitor diagram fences.
+Same family as the rest of the site. Body copy in `apps/web/*.md`. Integrate ends with "Tell a model" (the model instruction from `docs/prompt.md`). Theming holds themes, palettes, and the side-by-side strip. `apps/web/ai.md` and `apps/web/themes.md` are redirect stubs. Pipeline diagrams stay in repo `docs/architecture.md` so public pages stay free of competitor diagram fences.

@@ -1,6 +1,7 @@
 /**
  * docs/prompt.md holds the short model instruction. The same text opens
- * llms.txt (both copies) and sits on the site's AI page, and it may only
+ * llms.txt (both copies) and sits on the site's Integrate page ("Tell a
+ * model"), and it may only
  * say what SPEC.md says.
  */
 import { readFileSync } from "node:fs";
@@ -22,11 +23,14 @@ function instruction(): string {
 describe("model instruction", () => {
   const text = instruction();
 
-  it("opens both llms.txt copies and sits on the AI page", () => {
+  it("opens both llms.txt copies and sits in Integrate's Tell a model section", () => {
     for (const rel of ["llms.txt", "apps/web/public/llms.txt"]) {
       expect(read(rel).startsWith(`# markvis\n\n${text}\n\n`), rel).toBe(true);
     }
-    expect(read("apps/web/ai.md")).toContain(`\`\`\`\`text\n${text}\n\`\`\`\``);
+    const integrate = read("apps/web/integrate.md");
+    expect(integrate.slice(integrate.indexOf("## Tell a model"))).toContain(
+      `\`\`\`\`text\n${text}\n\`\`\`\``,
+    );
     expect(read("skills/markvis/SKILL.md")).toContain("docs/prompt.md");
   });
 

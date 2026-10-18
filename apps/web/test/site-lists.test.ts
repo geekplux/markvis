@@ -22,7 +22,7 @@ describe("the site's copies of the language lists", () => {
   });
 
   it("shows themes side by side as figures, not as source", () => {
-    const page = read("../themes.md");
+    const page = read("../theming.md");
     const strip = page.slice(page.indexOf("## Side by side"), page.indexOf("## How to add a pack"));
     expect(strip).toContain("<ThemeStrip");
     expect(strip.match(/```chart/g)?.length ?? 0).toBeLessThanOrEqual(1);
