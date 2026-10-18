@@ -72,6 +72,14 @@ export declare function parse(
   source: string,
   options?: ParseOptions,
 ): ParseResult;
+/**
+ * Parse the inside of one chart block: header lines, a blank line, then
+ * CSV or a GFM table. A whole fenced block or a chart comment is accepted too.
+ */
+export declare function parseBlock(
+  body: string,
+  options?: ParseOptions,
+): ParseResult;
 export type LocatedChart = {
   index: number;
   line: number;

@@ -9,7 +9,7 @@ sidebar: true
 Same family as the rest of the site. Start here, then follow the side links.
 
 - [Get started](/get-started) — play, bake, script, skill
-- [Integrate](/integrate) — four paste blocks
+- [Integrate](/integrate) — script tag, JavaScript, React, Markdown plugins, bake
 - [Spec](/spec) — grammar, fields, types, errors
 - [Themes](/themes) — theme vs palette, packs
 - [AI](/ai) — fetch `/llms.txt`, emit only those fields

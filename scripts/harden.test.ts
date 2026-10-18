@@ -439,10 +439,8 @@ describe("docs: live grammar, diagrams, unused shims", () => {
       "docs/site.md",
       "docs/examples.md",
       "docs/landing.md",
-      "docs/research-brief.md",
       "docs/model-errors.md",
       "docs/best-practices.md",
-      "docs/release.md",
       "packages/compat-legacy",
       "legacy",
     ];
@@ -473,9 +471,8 @@ describe("docs: live grammar, diagrams, unused shims", () => {
       "integrate.md",
       "landing.md",
       "model-errors.md",
+      "prompt.md",
       "release-2.2.md",
-      "release.md",
-      "research-brief.md",
       "site.md",
       "themes.md",
       "visual-spec.md",
@@ -507,6 +504,9 @@ describe("docs: live grammar, diagrams, unused shims", () => {
       "docs/POSITIONING.md",
       "docs/examples-data.md",
       "docs/engineering-summary.md",
+      "docs/release.md",
+      "docs/research-brief.md",
+      "apps/web/pages.md",
       "examples/compare",
     ];
     expect(existsSync(join(repoRoot, "docs/release-2.2.md"))).toBe(true);
@@ -570,7 +570,6 @@ describe("public contract", () => {
       "CODE_OF_CONDUCT.md",
       "SECURITY.md",
       "CHANGELOG.md",
-      "docs/release.md",
     ]) {
       expect(existsSync(join(repoRoot, rel)), rel).toBe(true);
     }
@@ -614,7 +613,7 @@ describe("public contract", () => {
       private?: boolean;
       keywords?: string[];
     };
-    expect(pkg.version).toBe("2.1.0");
+    expect(pkg.version).toBe("2.2.0");
     expect(pkg.keywords?.includes("markdown")).toBe(true);
     expect(pkg.private).not.toBe(true);
     expect(pkg.main).toBe("./dist/index.js");
@@ -720,10 +719,6 @@ describe("public contract", () => {
     const bake = readRepo(".github/workflows/bake.yml");
     expect(pages).toMatch(/branches:\s*\[v2, master\]/);
     expect(bake).toMatch(/branches:\s*\[v2, master\]/);
-    expect(readRepo("docs/release.md")).toContain("git merge --no-ff v2");
-    expect(readRepo("docs/release.md")).toMatch(/[Ff]orbidden/);
-    expect(readRepo("docs/release.md")).toMatch(/[Ss]quash-merge/);
-    expect(readRepo("docs/release.md")).toMatch(/force-push|push --force/);
   });
 
   it("stamps npm, script, and skill as available now", () => {

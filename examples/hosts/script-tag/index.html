@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>markvis with one script tag</title>
+    <style>
+      body { font: 15px/1.5 system-ui, sans-serif; max-width: 760px; margin: 0 auto; padding: 24px 16px; }
+      .markvis svg { max-width: 100%; height: auto; }
+    </style>
+  </head>
+  <body>
+    <main id="page">Loading page.md…</main>
+    <!-- Any Markdown renderer works; marked is used here. -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@18.1.0/lib/marked.umd.js"></script>
+    <!-- The page renders later, so the drop-in waits and is run by hand. -->
+    <script src="../../../dist/markvis.min.js" data-start-on-load="false"></script>
+    <script>
+      fetch("page.md")
+        .then((response) => response.text())
+        .then((text) => {
+          document.getElementById("page").innerHTML = marked.parse(text);
+          markvis.run();
+        });
+    </script>
+  </body>
+</html>

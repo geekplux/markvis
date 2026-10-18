@@ -13,6 +13,7 @@
   "main": "./src/index.ts",
   "types": "./src/index.ts",
   "dependencies": {
+    "@markvis/html": "workspace:*",
     "@markvis/ir": "workspace:*",
     "@markvis/parser": "workspace:*",
     "@markvis/render-svg": "workspace:*"

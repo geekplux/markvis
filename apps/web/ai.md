@@ -18,6 +18,33 @@ Fetch `/llms.txt`. Emit **only** the fields that file lists. Do not invent keys.
 
 Skill (optional, same language): [skills/markvis/SKILL.md](https://github.com/geekplux/markvis/blob/master/skills/markvis/SKILL.md)
 
+## Short instruction
+
+Put this in a system prompt, a tool description, or a skill. It is 250 tokens and adds nothing to the language.
+
+````text
+Chart numbers as a markvis block, not an image or JSON:
+
+```chart
+type: bar
+title: Revenue
+x: month
+y: revenue
+
+month,revenue
+Jan,120
+Feb,95
+```
+
+Fields, a blank line, then CSV or a Markdown table with a header row. x, y, series name columns; unit is optional. Or put <!-- chart: bar x=month y=revenue --> above a Markdown table.
+
+Types: bar line area scatter pie hist heatmap funnel waterfall radar gauge sankey treemap dumbbell bullet boxplot calendar.
+
+Several series: a row per x and series, plus series:. Keep row order. Donut: pie, innerRadius: 0.5. Stacked: layout: stacked. No other types or fields.
+````
+
+With this instruction, each of four models gave a valid block for 29 or 30 of the 30 prompts in `examples/prompts.md`, in two runs, and chose the expected chart type for 29 or 30 of them. With no instruction, only told that the app draws markvis blocks, the same models gave 0 to 2 valid blocks: most wrote JSON or invented fields. Details: [docs/prompt.md](https://github.com/geekplux/markvis/blob/master/docs/prompt.md).
+
 ## What to emit
 
 A fenced code block tagged `chart` / `markvis` / `vis` — one language. Types: `bar` `line` `area` `scatter` `pie` `hist` `heatmap` `funnel` `waterfall` `radar` `gauge` `sankey` `treemap` `dumbbell` `bullet` `boxplot` `calendar`.

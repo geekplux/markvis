@@ -55,6 +55,5 @@ Use the templates. Prefer a full fence over a description. Check [Play](https://
 
 - [Code of Conduct](./CODE_OF_CONDUCT.md)
 - [Security](./SECURITY.md)
-- How v2 lands on `master` without rewriting history: [docs/release.md](./docs/release.md)
 
 `legacy/` is the frozen 0.0.13 tree. Do not modernize it in this repository.

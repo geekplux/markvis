@@ -39,10 +39,3 @@ export function failureToGfm(failure: ParseFailure): string {
   return tableToGfm({ columns: ["_raw"], rows: [[raw]] });
 }
 
-export function escapeHtml(value: string): string {
-  return value
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
-}

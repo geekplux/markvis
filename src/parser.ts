@@ -1,5 +1,6 @@
 export {
   parse,
+  parseBlock,
   parseMarkdown,
   parseDocument,
   extractCharts,

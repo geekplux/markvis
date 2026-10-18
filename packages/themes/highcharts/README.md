@@ -12,6 +12,6 @@ Static SVG grammar that reads like Highcharts demos — without Highcharts.
 
 ## Don't steal
 - Highcharts JS runtime, modules, or license
-- Opaque plot wallpaper (U6: transparent fill)
+- Opaque plot wallpaper (transparent fill)
 - Exporting chrome
 - Chart types Markvis does not have

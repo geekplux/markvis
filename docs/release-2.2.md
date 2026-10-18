@@ -1,6 +1,6 @@
-# Release note — 2.2 candidate
+# Release note — 2.2.0
 
-The package version field is still `2.1.0` because this branch is not published. The behavior below is what a 2.2 release would ship. Language version stays `markvis: 2`.
+What 2.2.0 ships. Language version stays `markvis: 2`. The new ways to draw a block (`render`, `markvis/react`, the script tag in any Markdown page, `markvis/rehype`, the GitHub Action, the model instruction) are listed in `CHANGELOG.md`; this note covers the chart changes.
 
 ## User-visible improvements
 

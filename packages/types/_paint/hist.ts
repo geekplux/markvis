@@ -62,19 +62,28 @@ export function binHistogram(samples: HistSample[]): HistBin[] {
   }
   const n = samples.length;
   const k = Math.min(20, Math.max(1, Math.ceil(Math.log2(n) + 1)));
-  const width = (vmax - vmin) / k;
+  // Near ±1e308, vmax - vmin overflows; divide first so width stays finite.
+  const span = vmax - vmin;
+  const width = Number.isFinite(span) ? span / k : vmax / k - vmin / k;
+  const edge = (i: number): number => {
+    const at = vmin + i * width;
+    return Number.isFinite(at) ? at : vmin * (1 - i / k) + vmax * (i / k);
+  };
   const bins: HistBin[] = [];
   for (let i = 0; i < k; i++) {
     bins.push({
-      left: cleanFloat(vmin + i * width),
-      right: cleanFloat(vmin + (i + 1) * width),
+      left: cleanFloat(edge(i)),
+      right: cleanFloat(edge(i + 1)),
       weight: 0,
       count: 0,
     });
   }
   for (const sample of samples) {
     let index = Math.floor((sample.value - vmin) / width);
-    if (index < 0) {
+    if (!Number.isFinite(index)) {
+      index = Math.floor(sample.value / width - vmin / width);
+    }
+    if (!(index >= 0)) {
       index = 0;
     }
     if (index >= k) {

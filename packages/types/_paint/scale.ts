@@ -8,6 +8,9 @@ export function cleanFloat(n: number): number {
   return Object.is(rounded, -0) ? 0 : rounded;
 }
 
+/** A guard, far above any real axis: a bad step must not loop for ever. */
+const MAX_TICKS = 1000;
+
 function niceStep(rough: number): number {
   if (!(rough > 0) || !Number.isFinite(rough)) {
     return 1;
@@ -43,10 +46,18 @@ export function niceTicks(min: number, max: number, count = 5): number[] {
     const pad = Math.abs(min) * 0.1 || 1;
     return niceTicks(min - pad, max + pad, count);
   }
+  const intervals = Math.max(count - 1, 1);
   const span = max - min;
-  const step = niceStep(span / Math.max(count - 1, 1));
+  // Near ±1e308, max - min overflows; divide first so the step stays finite.
+  const rough = Number.isFinite(span)
+    ? span / intervals
+    : max / intervals - min / intervals;
+  const step = niceStep(rough);
   const startN = Math.floor(min / step);
   const endN = Math.ceil(max / step);
+  if (endN - startN > MAX_TICKS) {
+    return [min, max];
+  }
   const ticks: number[] = [];
   for (let i = startN; i <= endN; i++) {
     ticks.push(cleanFloat(i * step));

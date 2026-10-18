@@ -8,7 +8,7 @@ import {
   surfaceFromSearch,
   themeFromSearch,
 } from "./links.js";
-import { htmlTable, previewSource, type PlaygroundView } from "./preview.js";
+import { htmlTable, previewSource, type PreviewView } from "./preview.js";
 import { dropinSnippet } from "./snippet.js";
 import {
   applyLook,
@@ -64,7 +64,7 @@ function searchForExample(): string {
 
 let disposeEnhance: (() => void) | undefined;
 
-function paint(view: PlaygroundView, theme?: ChartTheme): void {
+function paint(view: PreviewView, theme?: ChartTheme): void {
   const errorEl = mustEl<HTMLParagraphElement>("error");
   const svgHost = mustEl<HTMLDivElement>("svg-host");
   const tableHost = mustEl<HTMLDivElement>("table-host");

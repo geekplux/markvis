@@ -9,8 +9,13 @@ import {
   PROMPTS_RELATIVE_PATH,
   checkEmittedFences,
   loadPromptPairs,
+  evaluateOutputs,
+  formatOutputReport,
+  outputFileName,
   parsePromptPairs,
+  runEvalOutputs,
   runEvalPrompts,
+  scoreOutput,
 } from "./eval-prompts.js";
 
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
@@ -111,5 +116,83 @@ describe("runEvalPrompts", () => {
     );
     expect(code).toBe(1);
     expect(stderr).toContain("expected 30 prompts, got 1");
+  });
+});
+
+describe("--outputs mode", () => {
+  const pairs = loadPromptPairs(promptsPath);
+
+  function outputsDir(answers: Record<number, string>): string {
+    const dir = mkdtempSync(join(tmpdir(), "markvis-eval-outputs-"));
+    for (const [n, text] of Object.entries(answers)) {
+      writeFileSync(join(dir, outputFileName(Number(n))), text, "utf8");
+    }
+    return dir;
+  }
+
+  const all = (make: (gold: string, n: number) => string) =>
+    Object.fromEntries(pairs.map((pair) => [pair.n, make(pair.gold, pair.n)]));
+
+  it("scores gold answers inside prose as all valid and all matching", () => {
+    const dir = outputsDir(all((gold) => `Here is the chart.\n\n${gold}\n\nThe table stays.\n`));
+    const report = evaluateOutputs(pairs, dir);
+    expect(report.valid).toBe(30);
+    expect(report.typeMatch).toBe(30);
+    expect(report.codes).toEqual({});
+    const { code, stdout } = capture((io) => runEvalOutputs({ outputsDir: dir, ...io }));
+    expect(code).toBe(0);
+    expect(stdout).toContain("valid 30/30 (100%)");
+    expect(stdout).toContain("type match 30/30 (100%)");
+    expect(stdout).toContain("failures none");
+  });
+
+  it("reports a mix of valid, invalid, missing, and wrong-type answers", () => {
+    const answers = all((gold) => gold);
+    answers[1] = "```chart\ntype: donut\nx: name\ny: n\n\nname,n\nA,1\n```\n";
+    answers[2] = '```chart\ntype: line\nx: month\ny: count\n\n[{"month":"Jan","count":1}]\n```\n';
+    answers[4] = "```chart\ntype: bar\nx: height\ny: weight\n\nheight,weight\n160,55\n```\n";
+    delete answers[5];
+    const report = evaluateOutputs(pairs, outputsDir(answers));
+    expect(report.valid).toBe(27);
+    expect(report.typeMatch).toBe(27);
+    expect(report.codes).toEqual({ E_JSON_DATA: 1, E_UNKNOWN_TYPE: 1, missing: 1 });
+    expect(report.results[0]).toMatchObject({ status: "invalid", code: "E_UNKNOWN_TYPE", type: "donut", goldType: "bar", typeMatch: false });
+    expect(report.results[1]).toMatchObject({ status: "invalid", code: "E_JSON_DATA", type: "line", typeMatch: true });
+    expect(report.results[3]).toMatchObject({ status: "valid", type: "bar", goldType: "scatter", typeMatch: false });
+    expect(report.results[4]).toMatchObject({ status: "missing", typeMatch: false });
+    const text = formatOutputReport(report);
+    expect(text).toContain("01.md\tinvalid E_UNKNOWN_TYPE\ttype=donut\tgold=bar\tmismatch");
+    expect(text).toContain("valid 27/30 (90%)");
+    expect(text).toContain("failures E_JSON_DATA=1 E_UNKNOWN_TYPE=1 missing=1");
+  });
+
+  it("scores answers that pick the wrong type as valid but mismatched", () => {
+    const answers = all((gold) => gold.replace(/(type: |chart: )(\w+)/, (_, k, t) => `${k}${t === "line" ? "area" : "line"}`));
+    const report = evaluateOutputs(pairs, outputsDir(answers));
+    expect(report.typeMatch).toBe(0);
+  });
+
+  it("scores answers with no chart block at all", () => {
+    const dir = outputsDir(all(() => "Revenue rose from 120 to 180.\n\n| month | revenue |\n| --- | --- |\n| Jan | 120 |\n"));
+    const report = evaluateOutputs(pairs, dir);
+    expect(report.valid).toBe(0);
+    expect(report.codes).toEqual({ "no-block": 30 });
+    const { code, stdout } = capture((io) => runEvalOutputs({ outputsDir: dir, ...io }));
+    expect(code).toBe(1);
+    expect(stdout).toContain("valid 0/30 (0%)");
+  });
+
+  it("counts the first block and reads the type of the comment form", () => {
+    const pair = pairs[0]!;
+    const comment = '<!-- chart: bar x=m y=n -->\n| m | n |\n| --- | --- |\n| A | 1 |\n';
+    expect(scoreOutput(pair, comment)).toMatchObject({ status: "valid", type: "bar", typeMatch: true });
+    const two = "```chart\ntype: pie\nx: a\ny: b\n\na,b\nA,1\n```\n\n" + pair.gold;
+    expect(scoreOutput(pair, two)).toMatchObject({ type: "pie", typeMatch: false });
+  });
+
+  it("fails cleanly for a missing directory", () => {
+    const { code, stderr } = capture((io) => runEvalOutputs({ outputsDir: join(tmpdir(), "markvis-no-such-dir"), ...io }));
+    expect(code).toBe(1);
+    expect(stderr).toContain("no such directory");
   });
 });

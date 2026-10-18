@@ -1,8 +1,11 @@
-import remarkMarkvis from "@markvis/remark";
+import { unified } from "@astrojs/markdown-remark";
+import rehypeMarkvis from "markvis/rehype";
 
-/** Astro markdown uses remark. No astro runtime required to read this config. */
+// Astro 7: remark/rehype plugins need `npm install @astrojs/markdown-remark`.
+// Shiki must skip chart blocks, or it rewrites them before rehypeMarkvis runs.
 export default {
   markdown: {
-    remarkPlugins: [remarkMarkvis],
+    processor: unified({ rehypePlugins: [rehypeMarkvis] }),
+    syntaxHighlight: { type: "shiki", excludeLangs: ["chart", "markvis", "vis"] },
   },
 };

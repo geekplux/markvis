@@ -249,11 +249,20 @@ describe("site visual chrome", () => {
     expect(home.match(/home-host-name">skill<\/span>\s*<span class="home-host-status">([^<]+)/)?.[1]).toBe(
       "available now",
     );
-    expect(home).toContain("Try it in the browser");
-    expect(home).toContain("Lives in your Markdown");
-    expect(home).toContain("Same text, same picture");
-    expect(home).toContain("Built for people and AI");
-    expect(home).toContain("Looks you can pick");
+    // Six feature cards: three per row, no orphan row.
+    const features = [
+      "The data never disappears",
+      "Same text, same picture",
+      "Runs where Markdown runs",
+      "Built for people and AI",
+      "Seventeen kinds of chart",
+      "Safe by design",
+    ];
+    for (const title of features) expect(home).toContain(`<h3>${title}</h3>`);
+    expect(home.match(/class="home-feature"/g)).toHaveLength(6);
+    expect(home.match(/class="home-quick"/g)).toHaveLength(4);
+    expect(css).toMatch(/\.home-quick-grid \{\s*grid-template-columns: repeat\(2, minmax\(0, 1fr\)\);/);
+    expect(css).not.toMatch(/home-feature:last-child/);
     expect(home).not.toMatch(/\bIR\b/);
     expect(home).not.toContain("home-lattice");
     expect(home).not.toContain("home-field");
@@ -679,10 +688,10 @@ describe("site visual chrome", () => {
     expect(playShellRule).not.toMatch(/100vw/);
   });
 
-  it("browser package exports enhanceChartSvg", () => {
-    const idx = read("../../packages/browser/src/index.ts");
+  it("browser package exports enhanceChartSvg on its enhance subpath", () => {
+    const pkg = read("../../packages/browser/package.json");
     const enhance = read("../../packages/browser/src/enhance.ts");
-    expect(idx).toContain("enhanceChartSvg");
+    expect(pkg).toContain('"./enhance": "./src/enhance.ts"');
     expect(enhance).toContain("export function enhanceChartSvg");
     expect(enhance).toContain("prefers-reduced-motion");
   });
@@ -755,6 +764,8 @@ describe("site visual chrome", () => {
     expect(integrate).toContain("markvis.min.js");
     expect(integrate).toContain("markvis/markdown-it");
     expect(integrate).toContain("markvis/remark");
+    expect(integrate).toContain("markvis/react");
+    expect(integrate).toContain("remarkMarkvisStreaming");
 
     const themes = read("themes.md");
     expect(themes).toMatch(/theme vs palette/i);

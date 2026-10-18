@@ -5,6 +5,8 @@ import {
   parseIsoDate,
   weekdayMonday0,
 } from "../_paint/date.js";
+import { binHistogram } from "../_paint/hist.js";
+import { niceTicks } from "../_paint/scale.js";
 import { boxStats, quantile } from "../_paint/stats.js";
 
 describe("quantile (type 7)", () => {
@@ -64,5 +66,29 @@ describe("calendar math", () => {
     expect(weekdayMonday0(day("2026-10-11"))).toBe(6);
     expect(weekdayMonday0(day("1969-12-29"))).toBe(0);
     expect(weekdayMonday0(day("2100-01-01"))).toBe(4);
+  });
+});
+
+describe("scales near the largest double", () => {
+  it("gives a few ticks when max - min overflows", () => {
+    const ticks = niceTicks(-1e308, 1e308);
+    expect(ticks.length).toBeGreaterThan(1);
+    expect(ticks.length).toBeLessThan(20);
+    expect(ticks.every(Number.isFinite)).toBe(true);
+    expect(ticks[0]).toBeLessThanOrEqual(-1e308);
+    expect(ticks.at(-1)).toBeGreaterThanOrEqual(1e308);
+  });
+
+  it("keeps the usual ticks for an ordinary range", () => {
+    expect(niceTicks(0, 180)).toEqual([0, 50, 100, 150, 200]);
+  });
+
+  it("bins every sample when max - min overflows", () => {
+    const values = [-1e308, -1, 0, 1, 1e308];
+    const bins = binHistogram(values.map((value) => ({ value, weight: 1 })));
+    expect(bins.reduce((n, bin) => n + bin.count, 0)).toBe(values.length);
+    expect(bins.every((bin) => Number.isFinite(bin.left) && Number.isFinite(bin.right))).toBe(true);
+    expect(bins[0]!.left).toBe(-1e308);
+    expect(bins.at(-1)!.right).toBe(1e308);
   });
 });

@@ -8,7 +8,7 @@ sidebar: true
 
 A **fence** is a Markdown code block tagged `chart`. The numbers live in that block. MarkVis draws the picture. You do not need any other jargon.
 
-Four ways in. Pick one.
+Five ways in. Pick one.
 
 ## Try it (no install)
 
@@ -43,13 +43,25 @@ Running bake again does nothing if nothing changed. **2.0.0 replaces 0.0.13.**
 
 ## Put it on a web page (script)
 
-If the page already runs JavaScript, drop in one file. After it loads, it finds code blocks tagged `chart` / `markvis` / `vis` and replaces them with the same picture as on the server. No extra network.
+One `<script>` in the page, or in the Markdown file itself. Once the page is ready, every code block tagged `chart` / `markvis` / `vis` becomes a chart. Nothing else to install.
 
 ```html
-<script type="module" src="./markvis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markvis@2/dist/markvis.min.js"></script>
 ```
 
-After `pnpm build`, copy `dist/markvis.min.js`. Packed install: `node_modules/markvis/dist/markvis.min.js`. Demo page: `apps/playground/dropin.html`.
+Works wherever Markdown becomes HTML and the page may run a script: Jekyll, Hugo, MkDocs, docsify, plain HTML. Not on github.com, where scripts are stripped; bake a picture there. Content that arrives later, such as a chat reply: `markvis.init(element)`. Details: [Integrate](/integrate).
+
+## Use it in your own app (JavaScript, React)
+
+One call draws one block. It never throws: a wrong block comes back as its rows and one error line.
+
+```js
+import { render } from "markvis";
+
+element.innerHTML = render(blockText).html;
+```
+
+In React, `import { Markvis } from "markvis/react"` and write `<Markvis source={blockText} />`. For react-markdown there is a `components` map that also handles a reply while it streams. Details: [Integrate](/integrate).
 
 ## Ask an AI (Skill)
 

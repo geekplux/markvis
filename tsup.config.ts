@@ -9,7 +9,9 @@ export default defineConfig({
     "render-svg": "src/render-svg.ts",
     ir: "src/ir.ts",
     remark: "src/remark.ts",
+    rehype: "src/rehype.ts",
     "markdown-it": "src/markdown-it.ts",
+    react: "src/react.ts",
     themes: "src/themes.ts",
     cli: "src/cli.ts",
     "cli.bin": "src/cli.bin.ts",
@@ -22,6 +24,6 @@ export default defineConfig({
   clean: true,
   splitting: false,
   treeshake: true,
-  external: ["markdown-it", "remark", "zod-to-json-schema"],
+  external: ["markdown-it", "remark", "react", "zod-to-json-schema"],
   noExternal,
 });

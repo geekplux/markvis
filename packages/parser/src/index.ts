@@ -1,9 +1,10 @@
-export { parse, parseMarkdown, parseDocument, ERROR_CODES } from "./parse.js";
+export { parse, parseBlock, parseMarkdown, parseDocument, ERROR_CODES } from "./parse.js";
 export type {
   ErrorCode,
   FallbackTable,
   ParseError,
   ParseFailure,
+  ParseDefaults,
   ParseOptions,
   ParseResult,
   ParseSuccess,

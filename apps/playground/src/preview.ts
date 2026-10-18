@@ -8,6 +8,5 @@ export {
   escapeHtml,
   htmlTable,
   previewSource,
-  type PlaygroundView,
   type PreviewView,
 } from "@markvis/browser/preview";

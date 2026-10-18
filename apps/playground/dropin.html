@@ -16,9 +16,9 @@
   <body>
     <h1>markvis drop-in</h1>
     <p>
-      Same IIFE as <code>packages/browser/dist/markvis.min.js</code>. Auto-replaces
-      <code>language-chart</code> / <code>language-markvis</code> /
-      <code>language-vis</code>.
+      Same IIFE as <code>packages/browser/dist/markvis.min.js</code>. Once the page
+      is ready it draws <code>language-chart</code> / <code>language-markvis</code> /
+      <code>language-vis</code> blocks and chart comments followed by a table.
     </p>
     <pre><code class="language-chart">markvis: 2
 type: bar
@@ -37,6 +37,30 @@ Feb,7200
 Mar,9200
 Apr,6900
 </code></pre>
+    <h2>Content added later</h2>
+    <p>
+      A chat reply or a client-side route arrives after load. Call
+      <code>markvis.run()</code> once it is in the page; blocks already drawn
+      are left alone.
+    </p>
+    <button id="add" type="button">Add a message</button>
+    <div id="messages"></div>
     <script src="../../packages/browser/dist/markvis.min.js"></script>
+    <script>
+      let n = 0;
+      document.getElementById("add").addEventListener("click", () => {
+        n += 1;
+        const message = document.createElement("div");
+        const pre = document.createElement("pre");
+        const code = document.createElement("code");
+        code.className = "language-chart";
+        code.textContent =
+          "type: line\ntitle: Message " + n + "\nx: hour\ny: replies\n\nhour,replies\n9," + n + "\n10," + (n + 3) + "\n11," + (2 * n + 1);
+        pre.append(code);
+        message.append(pre);
+        document.getElementById("messages").append(message);
+        markvis.run({ root: message });
+      });
+    </script>
   </body>
 </html>

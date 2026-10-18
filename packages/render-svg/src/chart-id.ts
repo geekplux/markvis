@@ -1,12 +1,8 @@
-import { createHash } from "node:crypto";
 import type { ChartIR } from "@markvis/ir";
+import { sha256Hex } from "./sha256.js";
 import { canonicalJson } from "./xml.js";
 
-/** Stable id from a SHA-256 of the canonical IR. No clocks or random. Node-only. */
+/** Stable id from a SHA-256 of the canonical IR. No clocks or random. */
 export function chartId(chart: ChartIR): string {
-  const hash = createHash("sha256")
-    .update(canonicalJson(chart), "utf8")
-    .digest("hex")
-    .slice(0, 16);
-  return `mv-${hash}`;
+  return `mv-${sha256Hex(canonicalJson(chart)).slice(0, 16)}`;
 }

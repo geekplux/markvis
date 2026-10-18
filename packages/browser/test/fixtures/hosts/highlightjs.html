@@ -1,0 +1,40 @@
+<!-- markdown-it + highlight.js 14.3.1 / 11.12.0. Command: new MarkdownIt({ html: true, langPrefix: 'hljs language-', highlight: (code) => hljs.highlightAuto(code).value }). -->
+<h1>Visits</h1>
+<p>The fenced block:</p>
+<pre><code class="hljs language-chart"><span class="hljs-symbol">type:</span> bar
+<span class="hljs-symbol">title:</span> Visits <span class="hljs-keyword">by</span> day
+<span class="hljs-symbol">x:</span> day
+<span class="hljs-symbol">y:</span> visits
+
+day,visits
+Mon,<span class="hljs-number">3</span>
+Tue,<span class="hljs-number">5</span>
+Wed,<span class="hljs-number">4</span>
+</code></pre>
+<p>The comment form:</p>
+<!-- chart: line x=week y=signups title="Signups by week" -->
+<table>
+<thead>
+<tr>
+<th>week</th>
+<th>signups</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>12</td>
+</tr>
+<tr>
+<td>2</td>
+<td>18</td>
+</tr>
+<tr>
+<td>3</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<p>Other code stays code:</p>
+<pre><code class="hljs language-js"><span class="hljs-attribute">const</span> total = <span class="hljs-number">3</span> + <span class="hljs-number">5</span> &lt; <span class="hljs-number">9</span> &amp;&amp; <span class="hljs-string">&quot;a&amp;b&quot;</span>;
+</code></pre>

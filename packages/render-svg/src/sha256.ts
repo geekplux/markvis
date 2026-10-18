@@ -1,4 +1,4 @@
-/** Browser-safe `createHash("sha256")` matching node:crypto for render-svg ids. */
+/** SHA-256 in plain JavaScript, so chart ids are the same in Node, browsers, and bundlers. */
 
 const K = new Uint32Array([
   0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b, 0x59f111f1,
@@ -16,20 +16,6 @@ const K = new Uint32Array([
 
 function rotr(x: number, n: number): number {
   return (x >>> n) | (x << (32 - n));
-}
-
-function concat(chunks: Uint8Array[]): Uint8Array {
-  let length = 0;
-  for (const chunk of chunks) {
-    length += chunk.length;
-  }
-  const out = new Uint8Array(length);
-  let offset = 0;
-  for (const chunk of chunks) {
-    out.set(chunk, offset);
-    offset += chunk.length;
-  }
-  return out;
 }
 
 function toUtf8(data: string): Uint8Array {
@@ -132,38 +118,7 @@ export function sha256(message: Uint8Array): Uint8Array {
   return out;
 }
 
-export type Hash = {
-  update(data: string | Uint8Array, encoding?: string): Hash;
-  digest(encoding: "hex"): string;
-};
-
-export function createHash(algorithm: string): Hash {
-  if (algorithm !== "sha256") {
-    throw new Error(`unsupported hash algorithm: ${algorithm}`);
-  }
-  const chunks: Uint8Array[] = [];
-  const hash: Hash = {
-    update(data: string | Uint8Array, encoding?: string) {
-      if (typeof data === "string") {
-        if (
-          encoding !== undefined &&
-          encoding !== "utf8" &&
-          encoding !== "utf-8"
-        ) {
-          throw new Error(`unsupported encoding: ${encoding}`);
-        }
-        chunks.push(toUtf8(data));
-      } else {
-        chunks.push(data);
-      }
-      return hash;
-    },
-    digest(encoding: "hex") {
-      if (encoding !== "hex") {
-        throw new Error(`unsupported digest encoding: ${String(encoding)}`);
-      }
-      return toHex(sha256(concat(chunks)));
-    },
-  };
-  return hash;
+/** Hex SHA-256 of a string's UTF-8 bytes. */
+export function sha256Hex(text: string): string {
+  return toHex(sha256(toUtf8(text)));
 }
