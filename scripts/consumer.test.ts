@@ -19,6 +19,76 @@ const PKG_VERSION = JSON.parse(
   readFileSync(join(repoRoot, "package.json"), "utf8"),
 ).version as string;
 const TGZ_NAME = `markvis-${PKG_VERSION}.tgz`;
+const EXPORTS = JSON.parse(readFileSync(join(repoRoot, "package.json"), "utf8"))
+  .exports as Record<string, unknown>;
+
+/**
+ * Every runtime name each public subpath must expose, as re-exported from
+ * the workspace packages by src/<entry>.ts. "./min" is the classic script
+ * (it runs on load), so it is checked as a file, not imported.
+ */
+const SUBPATH_NAMES: Record<string, { entry: string; names: string[] } | "file"> = {
+  ".": {
+    entry: "index",
+    names: [
+      "parse", "parseBlock", "parseMarkdown", "parseDocument", "extractCharts", "ERROR_CODES",
+      "renderSvg", "render", "remarkMarkvis", "markdownItMarkvis",
+      "CHART_TYPES", "THEMES", "PALETTES", "ChartIRSchema",
+    ],
+  },
+  "./parser": {
+    entry: "parser",
+    names: [
+      "parse", "parseBlock", "parseMarkdown", "parseDocument", "extractCharts",
+      "readChartField", "setChartField", "ERROR_CODES",
+    ],
+  },
+  "./render-svg": { entry: "render-svg", names: ["renderSvg"] },
+  "./ir": { entry: "ir", names: ["CHART_TYPES", "THEMES", "PALETTES", "ChartIRSchema"] },
+  "./remark": {
+    entry: "remark",
+    names: ["default", "remarkMarkvis", "chartBlockHtml", "resultToHtml", "htmlTable", "escapeHtml"],
+  },
+  "./rehype": { entry: "rehype", names: ["default", "rehypeMarkvis"] },
+  "./markdown-it": {
+    entry: "markdown-it",
+    names: ["default", "markdownItMarkvis", "chartBlockHtml", "resultToHtml", "htmlTable", "escapeHtml"],
+  },
+  "./react": { entry: "react", names: ["Markvis", "markvisComponents", "remarkMarkvisStreaming"] },
+  "./themes": {
+    entry: "themes",
+    names: [
+      "folio", "highcharts", "shadcn", "docs", "ant", "recharts", "graphite",
+      "themeRegistry", "resolveThemePack", "applyPaletteToTheme",
+      "cool", "ink", "paletteRegistry", "porcelain", "resolvePalette", "vivid", "warm",
+      "CSS_VARIABLES", "PAINT_NAMES",
+    ],
+  },
+  "./cli": {
+    entry: "cli",
+    names: [
+      "bakeMarkdown", "writeBake", "runCli", "USAGE", "VERSION", "collectMarkdownFiles",
+      "collectSvgFiles", "displayPath", "CliError", "buildGalleryHtml", "chartStats",
+      "STATS_HEADER", "failureToGfm", "formatStatsRow", "tableToGfm", "buildPreviewHtml",
+    ],
+  },
+  "./min": "file",
+};
+
+describe("subpath export table", () => {
+  it("has a row for every key of package.json#exports", () => {
+    expect(Object.keys(SUBPATH_NAMES).sort()).toEqual(Object.keys(EXPORTS).sort());
+  });
+
+  it.each(
+    Object.entries(SUBPATH_NAMES).filter(
+      (row): row is [string, { entry: string; names: string[] }] => row[1] !== "file",
+    ),
+  )("lists every runtime export of %s", async (_subpath, { entry, names }) => {
+    const runtime = await import(join(repoRoot, "src", `${entry}.ts`));
+    expect([...names].sort()).toEqual(Object.keys(runtime).sort());
+  });
+});
 
 function consumerEnv(): NodeJS.ProcessEnv {
   const env = { ...process.env };
@@ -286,5 +356,52 @@ process.stdout.write(JSON.stringify({
     expect(bakeAgain.status, bakeAgain.stderr).toBe(0);
     const mdTwice = readFileSync(join(temp, "bake.md"));
     expect(Buffer.compare(mdOnce, mdTwice)).toBe(0);
+  }, TIMEOUT);
+
+  it("resolves every package.json#exports subpath and exposes its names", () => {
+    // markvis/react needs its optional peer; the React test above installs it
+    // too, so this is a no-op when the file runs in order.
+    const peers = run(temp, "npm", ["install", "react@19", "react-dom@19", "markdown-it"]);
+    expect(peers.status, peers.stderr).toBe(0);
+    writeFileSync(
+      join(temp, "subpaths.mjs"),
+      `import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+
+const table = JSON.parse(process.argv[2]);
+const report = {};
+for (const [subpath, want] of Object.entries(table)) {
+  const specifier = subpath === "." ? "markvis" : "markvis" + subpath.slice(1);
+  try {
+    const url = import.meta.resolve(specifier);
+    if (want === "file") {
+      report[subpath] = { bytes: readFileSync(fileURLToPath(url)).length };
+      continue;
+    }
+    const mod = await import(specifier);
+    report[subpath] = { missing: want.names.filter((name) => mod[name] === undefined) };
+  } catch (err) {
+    report[subpath] = { error: String(err) };
+  }
+}
+process.stdout.write(JSON.stringify(report));
+`,
+    );
+    const out = run(temp, process.execPath, ["subpaths.mjs", JSON.stringify(SUBPATH_NAMES)]);
+    expect(out.status, out.stderr).toBe(0);
+    const report = JSON.parse(out.stdout) as Record<
+      string,
+      { missing?: string[]; bytes?: number; error?: string }
+    >;
+    expect(Object.keys(report).sort()).toEqual(Object.keys(EXPORTS).sort());
+    for (const [subpath, want] of Object.entries(SUBPATH_NAMES)) {
+      const got = report[subpath]!;
+      expect(got.error, subpath).toBeUndefined();
+      if (want === "file") {
+        expect(got.bytes, subpath).toBeGreaterThan(0);
+      } else {
+        expect(got.missing, subpath).toEqual([]);
+      }
+    }
   }, TIMEOUT);
 });

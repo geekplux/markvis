@@ -1,5 +1,9 @@
 const CHART_LANG = /^(chart|markvis|vis)$/i;
-const OPEN_FENCE = /^[ \t>]*(`{3,}|~{3,})/;
+// An opening fence may sit behind indentation, `>` quote marks, and one list
+// marker (`- `, `* `, `+ `, `1. `, `1) `). This is defensive: remark starts a
+// code node at its first backtick, so the marker never reaches this test.
+// What holds a fence inside a quote is the tail rule in `isOpen`.
+export const OPEN_FENCE = /^[ \t>]*(?:(?:[-*+]|\d{1,9}[.)])[ \t]+)?(`{3,}|~{3,})/;
 const CLOSE_FENCE = /^[ \t>]*(`{3,}|~{3,})[ \t]*$/;
 
 type Point = { offset?: number };
@@ -32,7 +36,8 @@ function closes(open: string, line: string): boolean {
  * the source: the part of a reply that is still arriving.
  */
 function isOpen(source: string, start: number, end: number): boolean {
-  if (source.slice(end).trim() !== "") {
+  // Only blank lines may follow, or bare `>` marks of a quote the fence is in.
+  if (!/^[\s>]*$/.test(source.slice(end))) {
     return false;
   }
   const lines = source.slice(start, end).split(/\r?\n/);

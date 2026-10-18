@@ -60,13 +60,24 @@ describe("streaming never flashes an error", () => {
   const PROSE = ["", "Here is the chart.\n\n", "- item\n\n", "> quote\n\n", "Text ``` not a fence\n\n"];
   const FENCES = ["```", "````", "~~~"];
 
+  // [first line, every later line]: plain, list items, a nested item, a quote.
+  const PREFIXES: ReadonlyArray<readonly [string, string]> = [
+    ["", ""], ["", ""], ["- ", "  "], ["* ", "  "], ["+ ", "  "], ["1. ", "   "], ["3) ", "   "],
+    ["  - ", "    "], ["> ", "> "], ["> - ", ">   "],
+  ];
+  const INFO = ["", "", " title=x", " {.wide}"];
+
   function randomReply(): { text: string; closedAt: number } {
     const { chart, data } = randomChart();
     const fence = pick(FENCES);
-    const head = `${pick(PROSE)}${fence}${pick(["chart", "markvis", "vis"])}\n`;
+    const [first, rest] = pick(PREFIXES);
+    const prose = pick(PROSE);
+    const head = `${prose}${first}${fence}${pick(["chart", "markvis", "vis"])}${pick(INFO)}\n`;
     const body = rnd() < 0.2 ? String(pick(VALUES)) : chartBlock(chart, data);
-    const text = `${head}${body}${body.endsWith("\n") ? "" : "\n"}${fence}\n${pick(PROSE)}`;
-    return { text, closedAt: text.indexOf(`\n${fence}\n`, head.length - 1) + 1 + fence.length };
+    const lines = (body.endsWith("\n") ? body.slice(0, -1) : body).split("\n").map((line) => `${rest}${line}\n`);
+    const close = `${rest}${fence}\n`;
+    const text = `${head}${lines.join("")}${close}${pick(PROSE)}`;
+    return { text, closedAt: text.indexOf(`\n${close}`, head.length - 1) + close.length };
   }
 
   it("handles 300 random replies cut at random points", () => {
