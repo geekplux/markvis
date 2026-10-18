@@ -212,7 +212,7 @@ Host example: `examples/hosts/react-markdown/`.
 ## Also
 
 - **Check from the command line.** `npx markvis check notes.md` exits non-zero if any block is wrong, so CI can run it.
-- **VS Code.** The preview extension in `extensions/vscode-markvis-preview` draws chart blocks in the Markdown preview. Install it from the folder; it is not yet on the Marketplace.
+- **VS Code.** The preview extension `markvis preview` (`geekplux.markvis-preview`, source in `hosts/vscode`) draws chart blocks in the built-in Markdown preview, in the editor theme's colors. To try it before it is listed, build it from that folder and install the `.vsix` (see the folder README).
 - **Tell a model.** A 250-token instruction for a system prompt: see [Tell a model](#tell-a-model) below.
 - **Security.** A chart block holds data only: header lines and rows. It cannot carry HTML or scripts, and markvis escapes every title, label, cell, and series name in the SVG and the table it writes. The script tag, React, and rehype paths insert only that output.
 

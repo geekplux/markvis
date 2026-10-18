@@ -60,3 +60,7 @@ jobs:
           for t in folio highcharts shadcn docs; do
             test -f "examples/out/themes/${t}/01-bar-basic.svg"
           done
+
+      - name: VS Code extension (compile, list package)
+        working-directory: hosts/vscode
+        run: pnpm --filter markvis-preview compile && npx --yes @vscode/vsce@3.9.2 ls

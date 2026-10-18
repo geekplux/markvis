@@ -1,12 +1,12 @@
-import { markdownItMarkvis } from "../../../packages/markdown-it/src/plugin.ts";
+import { markdownItMarkvis } from "markvis/markdown-it";
 
 type MarkdownItLike = Parameters<typeof markdownItMarkvis>[0];
 
 export function activate(): {
-  extendMarkdownIt: (md: MarkdownItLike) => MarkdownItLike;
+  extendMarkdownIt: <T extends MarkdownItLike>(md: T) => T;
 } {
   return {
-    extendMarkdownIt(md: MarkdownItLike) {
+    extendMarkdownIt<T extends MarkdownItLike>(md: T): T {
       markdownItMarkvis(md);
       return md;
     },

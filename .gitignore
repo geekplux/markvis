@@ -11,3 +11,5 @@ apps/web/public/play-app
 
 # host recipes install from a packed tarball; no lockfiles
 examples/hosts/*/package-lock.json
+hosts/vscode/dist/
+*.vsix

@@ -52,7 +52,7 @@ Each host example renders at least one valid fence to HTML with svg and table el
 
 ## VS Code
 
-extensions/vscode-markvis-preview — Markdown preview renders chart / markvis / vis to SVG. Install from folder or vsce package. Publishing to the Marketplace is a maintainer decision. See that folder README.
+hosts/vscode — the `markvis preview` extension (`geekplux.markvis-preview`). The built-in Markdown preview renders chart / markvis / vis blocks to SVG in the editor theme's colors (`preview.css` maps the `--vscode-*` theme colors onto the `--markvis-*` variables). CI compiles it and lists the package contents; the maintainer publishes it to the Marketplace and Open VSX. See that folder README.
 
 ## Explicit non-goals
 

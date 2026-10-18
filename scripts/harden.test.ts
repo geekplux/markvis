@@ -25,7 +25,7 @@ const FORBIDDEN_IMPORT =
 
 function listWorkspacePackageJsons(): string[] {
   const out: string[] = [];
-  for (const top of ["packages", "apps"] as const) {
+  for (const top of ["packages", "apps", "hosts"] as const) {
     const dir = join(repoRoot, top);
     for (const name of readdirSync(dir)) {
       const pkg = join(dir, name, "package.json");
@@ -205,7 +205,7 @@ describe("frozen language", () => {
   });
 });
 
-describe("no d3 in packages or apps", () => {
+describe("no d3 in packages, apps, or hosts", () => {
   it("has no forbidden dependency names", () => {
     const pkgs = listWorkspacePackageJsons();
     expect(pkgs.length).toBeGreaterThan(0);
@@ -229,6 +229,7 @@ describe("no d3 in packages or apps", () => {
     const files = [
       ...walkSourceFiles(join(repoRoot, "packages")),
       ...walkSourceFiles(join(repoRoot, "apps")),
+      ...walkSourceFiles(join(repoRoot, "hosts")),
     ];
     expect(files.length).toBeGreaterThan(0);
     for (const file of files) {
@@ -366,7 +367,7 @@ describe("docs: live grammar, diagrams, unused shims", () => {
       "docs/site.md",
       "docs/themes.md",
       "apps/web/spec.md",
-      "extensions/vscode-markvis-preview/README.md",
+      "hosts/vscode/README.md",
     ];
     const stale = [
       /(?:\*\*)?no(?:\*\*)? `theme:`/,
