@@ -485,7 +485,8 @@
   font-family: var(--site-mono);
   font-size: 13px;
   line-height: 1.7;
-  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
   border-radius: var(--site-radius);
 }
 
@@ -603,12 +604,12 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .home-feature:last-child {
-    grid-column: span 2;
-  }
-
   .home-hosts {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .home-quick-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .fence-tabs {
@@ -645,14 +646,6 @@
   }
 
   .home-features-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .home-feature:last-child {
-    grid-column: span 1;
-  }
-
-  .home-quick-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
@@ -695,9 +688,32 @@
 }
 
 .home-live-note {
-  margin: 0.5rem 0 0;
+  margin: 0.75rem 0 0;
   font-size: 13px;
   color: var(--site-muted);
+}
+
+.home-live-note a {
+  color: var(--site-primary);
+  text-decoration: none;
+}
+
+.home-live-note a:hover {
+  text-decoration: underline;
+}
+
+.home-live .chart-block-figure {
+  display: flex;
+  align-items: center;
+}
+
+.home-live .chart-block-figure figure {
+  width: 100%;
+}
+
+.home-live .chart-block-figure table,
+.home-live .chart-block-figure figcaption {
+  display: none;
 }
 
 .chart-block-live {
@@ -709,7 +725,9 @@
 
 .chart-block-source {
   width: 100%;
-  min-height: 15rem;
+  min-height: 12rem;
+  margin: 0;
+  box-sizing: border-box;
   padding: 0.75rem;
   border: 1px solid var(--site-border);
   border-radius: var(--site-radius);

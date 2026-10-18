@@ -1,9 +1,9 @@
 /**
- * Generated chart-type pages and the integrations page: one page per
- * type, built from the type's own README, examples, and SPEC row; every
- * integration listed with a status.
+ * Generated chart-type pages and the Integrate page: one page per
+ * type, built from the type's own README, examples, and SPEC row; and the
+ * Integrate page as the one overview of the ways in.
  */
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
@@ -52,52 +52,24 @@ describe("chart type pages", () => {
     expect(links).toEqual([...CHART_TYPES]);
   });
 
-  it("sit in the docs sidebar with Integrations", () => {
+  it("sit in the docs sidebar", () => {
     const config = read("apps/web/.vitepress/config.ts");
-    expect(config).toContain('{ text: "Integrations", link: "/integrations" }');
     expect(config).toContain('link: "/types/"');
     expect(config).toContain("TYPE_IDS.map");
   });
 });
 
-describe("integrations page", () => {
-  const page = read("apps/web/integrations.md");
-  const entries = [
-    "Script tag in a page",
-    "Script tag in a Markdown file",
-    "JavaScript",
-    "React",
-    "react-markdown, streaming",
-    "markdown-it and VitePress",
-    "remark",
-    "rehype, MDX, Astro",
-    "Command line",
-    "GitHub Action",
-    "VS Code",
-    "Model instruction",
-    "Security",
-  ];
-
-  it("lists every way in, in order", () => {
-    const headings = [...page.matchAll(/^## (.+)$/gm)].map((m) => m[1]);
-    expect(headings).toEqual(entries);
-  });
-
-  it("gives every integration a status", () => {
-    const sections = page.split(/^## /m).slice(1, -1);
-    for (const section of sections) {
-      expect(section, section.split("\n")[0]).toMatch(/\*\*(Available now|2\.2|From source)\b/);
-    }
-  });
-
-  it("keeps snippets short", () => {
-    for (const m of page.matchAll(/```\w*\n([\s\S]*?)```/g)) {
-      expect(m[1]!.trimEnd().split("\n").length, m[1]).toBeLessThanOrEqual(5);
-    }
+describe("integrate page", () => {
+  it("is the one overview: no second integrations page", () => {
+    expect(existsSync(join(repoRoot, "apps/web/integrations.md"))).toBe(false);
+    expect(read("apps/web/.vitepress/config.ts")).not.toContain("/integrations");
+    expect(read("apps/web/index.md")).not.toContain("/integrations");
+    expect(read("README.md")).not.toContain("/integrations");
   });
 
   it("says what a block can and cannot carry", () => {
-    expect(page).toContain("A chart block holds data only");
+    expect(read("apps/web/integrate.md")).toContain("A chart block holds data only");
     expect(read("README.md")).toContain("**Safe by design.**");
   });
 });
+

@@ -61,13 +61,13 @@ import { Markvis } from "markvis/react";
 - uses: geekplux/markvis@master
 ```
 
-**Try:** [Play](https://markvis.js.org/play) · [Examples](https://markvis.js.org/examples) · [Integrations](https://markvis.js.org/integrations) · [Chart types](https://markvis.js.org/types/) · [For AI](./docs/prompt.md)
+**Try:** [Play](https://markvis.js.org/play) · [Examples](https://markvis.js.org/examples) · [Integrate](https://markvis.js.org/integrate) · [Chart types](https://markvis.js.org/types/) · [For AI](./docs/prompt.md)
 
 ## Why markvis
 
 - **The chart is a table of text.** Readable in raw Markdown, changed by editing one number, and a model can read the numbers back.
 - **It runs wherever Markdown runs:** a script tag, JavaScript, React and react-markdown (with streaming), markdown-it, remark and rehype (MDX), the command line, a GitHub Action.
-- **Models write it from a short instruction.** With the 250-token [model instruction](./docs/prompt.md), models gave a valid block for 29 or 30 of 30 test prompts; without it, 0 to 2.
+- **Models write it from a short instruction.** A 250-token [model instruction](./docs/prompt.md) for a system prompt; the same text opens [llms.txt](./llms.txt).
 - **Safe by design.** A block holds data only: no HTML, no scripts. Every title, label, and cell is escaped in the SVG and the table.
 - **Seventeen chart types** with readable defaults, and no d3.
 
@@ -97,16 +97,7 @@ npx markvis bake README.md
 
 A blank measure cell is missing, not zero. Text such as `N/A` is an error (`E_BAD_NUMBER`) and the table stays. Omit `markvis` for version 2; any other version is rejected.
 
-```js
-import { parseMarkdown, renderSvg } from "markvis";
-
-const parsed = parseMarkdown(markdown);
-if (parsed.ok) {
-  const svg = renderSvg(parsed.chart);
-} else {
-  // parsed.table still has the rows; parsed.error.code is stable
-}
-```
+To parse without drawing, `parseBlock(text)` returns the chart or a stable error code with the rows. To read every chart in a document, `parseDocument(markdown)`.
 
 In a Markdown site — markdown-it, remark, or rehype. Each returns the picture and the data table:
 
@@ -120,6 +111,6 @@ With an AI: put [docs/prompt.md](./docs/prompt.md) in the system prompt, or poin
 
 ## Docs
 
-[Get started](https://markvis.js.org/get-started) · [Integrations](https://markvis.js.org/integrations) · [Integrate](./docs/integrate.md) · [SPEC.md](./SPEC.md) · [Themes](./docs/themes.md) · [Architecture](./docs/architecture.md) · [Contributing](./CONTRIBUTING.md) · [Changelog](./CHANGELOG.md)
+[Get started](https://markvis.js.org/get-started) · [Integrate](https://markvis.js.org/integrate) · [SPEC.md](./SPEC.md) · [Themes](./docs/themes.md) · [Architecture](./docs/architecture.md) · [Contributing](./CONTRIBUTING.md) · [Changelog](./CHANGELOG.md)
 
 0.0.13 (the old d3 renderer): [legacy/](./legacy/).

@@ -10,7 +10,6 @@ function docsSidebar() {
   return [
     { text: "Get started", link: "/get-started" },
     { text: "Integrate", link: "/integrate" },
-    { text: "Integrations", link: "/integrations" },
     { text: "Spec", link: "/spec" },
     {
       text: "Chart types",
@@ -28,7 +27,6 @@ const docsSidebarPaths = [
   "/docs",
   "/get-started",
   "/integrate",
-  "/integrations",
   "/spec",
   "/types/",
   "/themes",
