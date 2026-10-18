@@ -13,14 +13,16 @@
     <text x="40" y="314" text-anchor="end" dominant-baseline="middle">50</text>
     <text x="40" y="193" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="40" y="72" text-anchor="end" dominant-baseline="middle">150</text>
-    <text x="56" y="447" text-anchor="middle" font-size="12" data-full-label="-10"><title>-10</title>-10</text>
-    <text x="215" y="447" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
-    <text x="374" y="447" text-anchor="middle" font-size="12" data-full-label="10"><title>10</title>10</text>
-    <text x="533" y="447" text-anchor="middle" font-size="12" data-full-label="20"><title>20</title>20</text>
-    <text x="692" y="447" text-anchor="middle" font-size="12" data-full-label="30"><title>30</title>30</text>
+    <text x="56" y="447" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
+    <text x="237.71" y="447" text-anchor="middle" font-size="12" data-full-label="6"><title>6</title>6</text>
+    <text x="328.57" y="447" text-anchor="middle" font-size="12" data-full-label="9"><title>9</title>9</text>
+    <text x="419.43" y="447" text-anchor="middle" font-size="12" data-full-label="12"><title>12</title>12</text>
+    <text x="510.29" y="447" text-anchor="middle" font-size="12" data-full-label="15"><title>15</title>15</text>
+    <text x="601.14" y="447" text-anchor="middle" font-size="12" data-full-label="18"><title>18</title>18</text>
+    <text x="692" y="447" text-anchor="middle" font-size="12" data-full-label="21"><title>21</title>21</text>
   </g>
   <g fill="none">
-    <path d="M215 338.2 C246.8 326.1 278.6 323.37 310.4 301.9 C326.3 291.16 342.2 247.32 358.1 217.2 C374 187.08 389.9 120.4 405.8 120.4 C421.7 120.4 437.6 136.72 453.5 149.44 C469.4 162.16 485.3 185.77 501.2 205.1 C517.1 224.43 533 245.43 548.9 265.6 L548.9 435 L215 435 Z" fill="#F54900" fill-opacity="0.3" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#F54900)"/>
-    <path d="M215 338.2 C246.8 326.1 278.6 323.37 310.4 301.9 C326.3 291.16 342.2 247.32 358.1 217.2 C374 187.08 389.9 120.4 405.8 120.4 C421.7 120.4 437.6 136.72 453.5 149.44 C469.4 162.16 485.3 185.77 501.2 205.1 C517.1 224.43 533 245.43 548.9 265.6" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="hits" style="stroke:var(--markvis-series-1,#F54900)"/>
+    <path d="M56 338.2 C116.57 326.1 177.14 323.37 237.71 301.9 C268 291.16 298.29 247.32 328.57 217.2 C358.86 187.08 389.14 120.4 419.43 120.4 C449.71 120.4 480 136.72 510.29 149.44 C540.57 162.16 570.86 185.77 601.14 205.1 C631.43 224.43 661.71 245.43 692 265.6 L692 435 L56 435 Z" fill="#F54900" fill-opacity="0.3" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M56 338.2 C116.57 326.1 177.14 323.37 237.71 301.9 C268 291.16 298.29 247.32 328.57 217.2 C358.86 187.08 389.14 120.4 419.43 120.4 C449.71 120.4 480 136.72 510.29 149.44 C540.57 162.16 570.86 185.77 601.14 205.1 C631.43 224.43 661.71 245.43 692 265.6" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="hits" style="stroke:var(--markvis-series-1,#F54900)"/>
   </g>
 </svg>

@@ -15,24 +15,22 @@
     <text x="38" y="208.4" text-anchor="end" dominant-baseline="middle">1,000</text>
     <text x="38" y="126.2" text-anchor="end" dominant-baseline="middle">1,100</text>
     <text x="38" y="44" text-anchor="end" dominant-baseline="middle">1,200</text>
-    <text x="56" y="467" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
-    <text x="214.01" y="467" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
+    <text x="56" y="467" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
     <text x="372.02" y="467" text-anchor="middle" font-size="12" data-full-label="2"><title>2</title>2</text>
-    <text x="530.04" y="467" text-anchor="middle" font-size="12" data-full-label="3"><title>3</title>3</text>
-    <text x="688.05" y="467" text-anchor="middle" font-size="12" data-full-label="4"><title>4</title>4</text>
+    <text x="688.05" y="467" text-anchor="middle" font-size="12" data-full-label="3"><title>3</title>3</text>
   </g>
   <g fill="none">
-    <path d="M214.01 208.4 L372.02 126.2 L530.04 167.3" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="us" style="stroke:var(--markvis-series-1,#3B82F6)"/>
-    <circle cx="214.01" cy="208.4" r="2.5" fill="#3B82F6" stroke="none" data-series="us" style="fill:var(--markvis-series-1,#3B82F6)"/>
+    <path d="M56 208.4 L372.02 126.2 L688.05 167.3" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="us" style="stroke:var(--markvis-series-1,#3B82F6)"/>
+    <circle cx="56" cy="208.4" r="2.5" fill="#3B82F6" stroke="none" data-series="us" style="fill:var(--markvis-series-1,#3B82F6)"/>
     <circle cx="372.02" cy="126.2" r="2.5" fill="#3B82F6" stroke="none" data-series="us" style="fill:var(--markvis-series-1,#3B82F6)"/>
-    <circle cx="530.04" cy="167.3" r="2.5" fill="#3B82F6" stroke="none" data-series="us" style="fill:var(--markvis-series-1,#3B82F6)"/>
-    <path d="M214.01 372.8 L372.02 356.36 L530.04 290.6" fill="none" stroke="#F97316" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6 4" data-series="eu" style="stroke:var(--markvis-series-2,#F97316)"/>
-    <circle cx="214.01" cy="372.8" r="2.5" fill="#F97316" stroke="none" data-series="eu" style="fill:var(--markvis-series-2,#F97316)"/>
+    <circle cx="688.05" cy="167.3" r="2.5" fill="#3B82F6" stroke="none" data-series="us" style="fill:var(--markvis-series-1,#3B82F6)"/>
+    <path d="M56 372.8 L372.02 356.36 L688.05 290.6" fill="none" stroke="#F97316" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6 4" data-series="eu" style="stroke:var(--markvis-series-2,#F97316)"/>
+    <circle cx="56" cy="372.8" r="2.5" fill="#F97316" stroke="none" data-series="eu" style="fill:var(--markvis-series-2,#F97316)"/>
     <circle cx="372.02" cy="356.36" r="2.5" fill="#F97316" stroke="none" data-series="eu" style="fill:var(--markvis-series-2,#F97316)"/>
-    <circle cx="530.04" cy="290.6" r="2.5" fill="#F97316" stroke="none" data-series="eu" style="fill:var(--markvis-series-2,#F97316)"/>
+    <circle cx="688.05" cy="290.6" r="2.5" fill="#F97316" stroke="none" data-series="eu" style="fill:var(--markvis-series-2,#F97316)"/>
   </g>
   <g font-size="13" font-weight="500">
-    <text x="538.04" y="167.3" text-anchor="start" dominant-baseline="middle" fill="#346dc9" data-end-label="us" style="fill:var(--markvis-series-1,#346dc9)">us</text>
-    <text x="538.04" y="290.6" text-anchor="start" dominant-baseline="middle" fill="#b55716" data-end-label="eu" style="fill:var(--markvis-series-2,#b55716)">eu</text>
+    <text x="696.05" y="167.3" text-anchor="start" dominant-baseline="middle" fill="#346dc9" data-end-label="us" style="fill:var(--markvis-series-1,#346dc9)">us</text>
+    <text x="696.05" y="290.6" text-anchor="start" dominant-baseline="middle" fill="#b55716" data-end-label="eu" style="fill:var(--markvis-series-2,#b55716)">eu</text>
   </g>
 </svg>

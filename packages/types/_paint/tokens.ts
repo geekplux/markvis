@@ -265,6 +265,9 @@ export function applyThemeTokens(t: ThemeTokens): void {
   SEMANTIC = liveSemantic(t.SURFACES.light.SEMANTIC);
 }
 
+/** Shortest frame a narrow width scales down to. */
+export const FRAME_MIN_HEIGHT = 200;
+
 /** Hard minimum for every theme. A theme owns its ramp above it. */
 const TYPE_MIN = {
   title: 15,
@@ -284,6 +287,15 @@ export function applyFrame(opts: {
   surface: SurfaceName;
   colors?: ColorMode | undefined;
 }): void {
+  // Narrower than the theme's own width, height follows width at the
+  // theme's aspect, never under FRAME_MIN_HEIGHT; at or above it, the
+  // theme's height is the cap.
+  if (opts.width < SVG_WIDTH) {
+    SVG_HEIGHT = Math.max(
+      FRAME_MIN_HEIGHT,
+      Math.min(SVG_HEIGHT, Math.round((SVG_HEIGHT * opts.width) / SVG_WIDTH)),
+    );
+  }
   SVG_WIDTH = opts.width;
   SURFACE = opts.surface;
   COLOR_MODE = opts.colors ?? "host";

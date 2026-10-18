@@ -8,29 +8,27 @@
     <line x1="74" x2="700" y1="44" y2="44"/>
   </g>
   <path d="M74 374 L700 374" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" style="stroke:var(--markvis-ink,#333333)"/>
-  <path d="M82 374 L82 380 M204 374 L204 380 M326 374 L326 380 M448 374 L448 380 M570 374 L570 380 M692 374 L692 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1" style="stroke:var(--markvis-ink,#333333)"/>
+  <path d="M82 374 L82 380 M285.33 374 L285.33 380 M488.67 374 L488.67 380 M692 374 L692 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1" style="stroke:var(--markvis-ink,#333333)"/>
   <g fill="#666666" font-size="11" font-weight="400" style="fill:var(--markvis-muted,#666666)">
     <text x="66" y="374" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="66" y="264" text-anchor="end" dominant-baseline="middle">10</text>
     <text x="66" y="154" text-anchor="end" dominant-baseline="middle">20</text>
     <text x="66" y="44" text-anchor="end" dominant-baseline="middle">30</text>
-    <text x="82" y="391" text-anchor="middle" font-size="11" data-full-label="0"><title>0</title>0</text>
-    <text x="204" y="391" text-anchor="middle" font-size="11" data-full-label="1"><title>1</title>1</text>
-    <text x="326" y="391" text-anchor="middle" font-size="11" data-full-label="2"><title>2</title>2</text>
-    <text x="448" y="391" text-anchor="middle" font-size="11" data-full-label="3"><title>3</title>3</text>
-    <text x="570" y="391" text-anchor="middle" font-size="11" data-full-label="4"><title>4</title>4</text>
-    <text x="692" y="391" text-anchor="middle" font-size="11" data-full-label="5"><title>5</title>5</text>
+    <text x="82" y="391" text-anchor="middle" font-size="11" data-full-label="1"><title>1</title>1</text>
+    <text x="285.33" y="391" text-anchor="middle" font-size="11" data-full-label="2"><title>2</title>2</text>
+    <text x="488.67" y="391" text-anchor="middle" font-size="11" data-full-label="3"><title>3</title>3</text>
+    <text x="692" y="391" text-anchor="middle" font-size="11" data-full-label="4"><title>4</title>4</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1" style="fill:var(--markvis-muted,#666666)">
     <text x="42.68" y="209" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 42.68 209)" data-axis="y">stories</text>
     <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">sprint</text>
   </g>
   <g fill="none">
-    <path d="M204 154 L326 110 L448 176 L570 132 L570 374 L204 374 Z" fill="#7cb5ec" fill-opacity="0.28" stroke="none" data-series="stories" style="fill:var(--markvis-series-1,#7cb5ec)"/>
-    <path d="M204 154 L326 110 L448 176 L570 132" fill="none" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="stories" style="stroke:var(--markvis-series-1,#7cb5ec)"/>
-    <circle cx="204" cy="154" r="4" fill="#7cb5ec" stroke="none" data-series="stories" style="fill:var(--markvis-series-1,#7cb5ec)"/>
-    <circle cx="326" cy="110" r="4" fill="#7cb5ec" stroke="none" data-series="stories" style="fill:var(--markvis-series-1,#7cb5ec)"/>
-    <circle cx="448" cy="176" r="4" fill="#7cb5ec" stroke="none" data-series="stories" style="fill:var(--markvis-series-1,#7cb5ec)"/>
-    <circle cx="570" cy="132" r="4" fill="#7cb5ec" stroke="none" data-series="stories" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <path d="M82 154 L285.33 110 L488.67 176 L692 132 L692 374 L82 374 Z" fill="#7cb5ec" fill-opacity="0.28" stroke="none" data-series="stories" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <path d="M82 154 L285.33 110 L488.67 176 L692 132" fill="none" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="stories" style="stroke:var(--markvis-series-1,#7cb5ec)"/>
+    <circle cx="82" cy="154" r="4" fill="#7cb5ec" stroke="none" data-series="stories" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <circle cx="285.33" cy="110" r="4" fill="#7cb5ec" stroke="none" data-series="stories" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <circle cx="488.67" cy="176" r="4" fill="#7cb5ec" stroke="none" data-series="stories" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <circle cx="692" cy="132" r="4" fill="#7cb5ec" stroke="none" data-series="stories" style="fill:var(--markvis-series-1,#7cb5ec)"/>
   </g>
 </svg>

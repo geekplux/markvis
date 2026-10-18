@@ -36,6 +36,8 @@ Draw a chart block anywhere Markdown is shown: one call from JavaScript, React w
 
 ### Fixed
 
+- Narrow widths: below the theme's width (720) a chart's height follows its width at the theme's aspect (never under 200), and waterfall step labels split over two lines no longer reach into the title. A title wraps at most once at any width and ends in an ellipsis; the full title stays in the tooltip.
+- A line or area over whole-number x (weeks 1–4, years) spans its data instead of padding to a 0 or 5 that no row has: up to 12 distinct values, each is a tick; past that, only whole-number ticks inside the data.
 - Values spanning about -1e308 to 1e308 no longer hang axis ticks (bar, dumbbell, bullet, boxplot) or crash histogram bins.
 - A fence cut off before its closing line, or an indented fence, keeps its rows when parsed as one block.
 - Chart ids no longer import `node:crypto`, so `render()` and `markvis/react` bundle for the browser without a shim. Ids are unchanged.

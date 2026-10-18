@@ -12,15 +12,13 @@
     <text x="40" y="306.67" text-anchor="end" dominant-baseline="middle">10</text>
     <text x="40" y="178.33" text-anchor="end" dominant-baseline="middle">20</text>
     <text x="40" y="50" text-anchor="end" dominant-baseline="middle">30</text>
-    <text x="56" y="447" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
-    <text x="183.2" y="447" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
-    <text x="310.4" y="447" text-anchor="middle" font-size="12" data-full-label="2"><title>2</title>2</text>
-    <text x="437.6" y="447" text-anchor="middle" font-size="12" data-full-label="3"><title>3</title>3</text>
-    <text x="564.8" y="447" text-anchor="middle" font-size="12" data-full-label="4"><title>4</title>4</text>
-    <text x="692" y="447" text-anchor="middle" font-size="12" data-full-label="5"><title>5</title>5</text>
+    <text x="56" y="447" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
+    <text x="268" y="447" text-anchor="middle" font-size="12" data-full-label="2"><title>2</title>2</text>
+    <text x="480" y="447" text-anchor="middle" font-size="12" data-full-label="3"><title>3</title>3</text>
+    <text x="692" y="447" text-anchor="middle" font-size="12" data-full-label="4"><title>4</title>4</text>
   </g>
   <g fill="none">
-    <path d="M183.2 178.33 C225.6 161.22 268 127 310.4 127 C352.8 127 395.2 204 437.6 204 C480 204 522.4 169.78 564.8 152.67 L564.8 435 L183.2 435 Z" fill="#F54900" fill-opacity="0.3" stroke="none" data-series="stories" style="fill:var(--markvis-series-1,#F54900)"/>
-    <path d="M183.2 178.33 C225.6 161.22 268 127 310.4 127 C352.8 127 395.2 204 437.6 204 C480 204 522.4 169.78 564.8 152.67" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="stories" style="stroke:var(--markvis-series-1,#F54900)"/>
+    <path d="M56 178.33 C126.67 161.22 197.33 127 268 127 C338.67 127 409.33 204 480 204 C550.67 204 621.33 169.78 692 152.67 L692 435 L56 435 Z" fill="#F54900" fill-opacity="0.3" stroke="none" data-series="stories" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M56 178.33 C126.67 161.22 197.33 127 268 127 C338.67 127 409.33 204 480 204 C550.67 204 621.33 169.78 692 152.67" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="stories" style="stroke:var(--markvis-series-1,#F54900)"/>
   </g>
 </svg>

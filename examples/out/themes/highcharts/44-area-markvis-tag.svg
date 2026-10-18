@@ -9,31 +9,33 @@
     <line x1="74" x2="700" y1="68" y2="68"/>
   </g>
   <path d="M74 374 L700 374" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" style="stroke:var(--markvis-ink,#333333)"/>
-  <path d="M82 374 L82 380 M234.5 374 L234.5 380 M387 374 L387 380 M539.5 374 L539.5 380 M692 374 L692 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1" style="stroke:var(--markvis-ink,#333333)"/>
+  <path d="M82 374 L82 380 M256.29 374 L256.29 380 M343.43 374 L343.43 380 M430.57 374 L430.57 380 M517.71 374 L517.71 380 M604.86 374 L604.86 380 M692 374 L692 380" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1" style="stroke:var(--markvis-ink,#333333)"/>
   <g fill="#666666" font-size="11" font-weight="400" style="fill:var(--markvis-muted,#666666)">
     <text x="66" y="374" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="66" y="272" text-anchor="end" dominant-baseline="middle">50</text>
     <text x="66" y="170" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="66" y="68" text-anchor="end" dominant-baseline="middle">150</text>
-    <text x="82" y="391" text-anchor="middle" font-size="11" data-full-label="-10"><title>-10</title>-10</text>
-    <text x="234.5" y="391" text-anchor="middle" font-size="11" data-full-label="0"><title>0</title>0</text>
-    <text x="387" y="391" text-anchor="middle" font-size="11" data-full-label="10"><title>10</title>10</text>
-    <text x="539.5" y="391" text-anchor="middle" font-size="11" data-full-label="20"><title>20</title>20</text>
-    <text x="692" y="391" text-anchor="middle" font-size="11" data-full-label="30"><title>30</title>30</text>
+    <text x="82" y="391" text-anchor="middle" font-size="11" data-full-label="0"><title>0</title>0</text>
+    <text x="256.29" y="391" text-anchor="middle" font-size="11" data-full-label="6"><title>6</title>6</text>
+    <text x="343.43" y="391" text-anchor="middle" font-size="11" data-full-label="9"><title>9</title>9</text>
+    <text x="430.57" y="391" text-anchor="middle" font-size="11" data-full-label="12"><title>12</title>12</text>
+    <text x="517.71" y="391" text-anchor="middle" font-size="11" data-full-label="15"><title>15</title>15</text>
+    <text x="604.86" y="391" text-anchor="middle" font-size="11" data-full-label="18"><title>18</title>18</text>
+    <text x="692" y="391" text-anchor="middle" font-size="11" data-full-label="21"><title>21</title>21</text>
   </g>
   <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1" style="fill:var(--markvis-muted,#666666)">
     <text x="35.52" y="221" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 35.52 221)" data-axis="y">hits</text>
     <text x="387" y="400.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">hour</text>
   </g>
   <g fill="none">
-    <path d="M234.5 292.4 L326 261.8 L371.75 190.4 L417.5 108.8 L463.25 133.28 L509 180.2 L554.75 231.2 L554.75 374 L234.5 374 Z" fill="#7cb5ec" fill-opacity="0.28" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#7cb5ec)"/>
-    <path d="M234.5 292.4 L326 261.8 L371.75 190.4 L417.5 108.8 L463.25 133.28 L509 180.2 L554.75 231.2" fill="none" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="hits" style="stroke:var(--markvis-series-1,#7cb5ec)"/>
-    <circle cx="234.5" cy="292.4" r="4" fill="#7cb5ec" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#7cb5ec)"/>
-    <circle cx="326" cy="261.8" r="4" fill="#7cb5ec" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#7cb5ec)"/>
-    <circle cx="371.75" cy="190.4" r="4" fill="#7cb5ec" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#7cb5ec)"/>
-    <circle cx="417.5" cy="108.8" r="4" fill="#7cb5ec" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#7cb5ec)"/>
-    <circle cx="463.25" cy="133.28" r="4" fill="#7cb5ec" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#7cb5ec)"/>
-    <circle cx="509" cy="180.2" r="4" fill="#7cb5ec" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#7cb5ec)"/>
-    <circle cx="554.75" cy="231.2" r="4" fill="#7cb5ec" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <path d="M82 292.4 L256.29 261.8 L343.43 190.4 L430.57 108.8 L517.71 133.28 L604.86 180.2 L692 231.2 L692 374 L82 374 Z" fill="#7cb5ec" fill-opacity="0.28" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <path d="M82 292.4 L256.29 261.8 L343.43 190.4 L430.57 108.8 L517.71 133.28 L604.86 180.2 L692 231.2" fill="none" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="hits" style="stroke:var(--markvis-series-1,#7cb5ec)"/>
+    <circle cx="82" cy="292.4" r="4" fill="#7cb5ec" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <circle cx="256.29" cy="261.8" r="4" fill="#7cb5ec" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <circle cx="343.43" cy="190.4" r="4" fill="#7cb5ec" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <circle cx="430.57" cy="108.8" r="4" fill="#7cb5ec" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <circle cx="517.71" cy="133.28" r="4" fill="#7cb5ec" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <circle cx="604.86" cy="180.2" r="4" fill="#7cb5ec" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <circle cx="692" cy="231.2" r="4" fill="#7cb5ec" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#7cb5ec)"/>
   </g>
 </svg>

@@ -94,7 +94,8 @@ export function wrapTitle(title: string, x: number, unit?: string): string[] {
   const suffixW =
     unitSuffix(unit) === "" ? 0 : textWidth(unitSuffix(unit), TYPE.unit.size, TYPE.unit.weight);
   const lastMax = Math.max(12, maxWidth - suffixW);
-  const cap = 4;
+  // A title wraps at most once; the second line ends in an ellipsis.
+  const cap = 2;
   const source = titleCase(title.trim());
   if (source === "") {
     return [""];

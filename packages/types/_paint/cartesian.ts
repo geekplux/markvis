@@ -534,11 +534,33 @@ function prepare(chart: ChartIR): Prepared {
       .map((row) => row.xNum)
       .filter((n): n is number => n !== undefined);
     const xDom = xExtent(xs, chart.type === "scatter" ? 0.08 : 0.05);
-    const xTickNums = niceTicks(xDom[0], xDom[1]);
-    const xMin = xTickNums[0] ?? xDom[0];
-    const xMax = xTickNums[xTickNums.length - 1] ?? xDom[1];
+    let xTickNums = niceTicks(xDom[0], xDom[1]);
+    let xMin = xTickNums[0] ?? xDom[0];
+    let xMax = xTickNums[xTickNums.length - 1] ?? xDom[1];
+    /** Ticks that are data values read as the data is written (2024, not 2,024). */
+    let dataTicks = false;
+    // A line or area over whole numbers (weeks 1-4, years) is an index:
+    // the axis spans the data, never a padding 0 or 5 that no row has. Up
+    // to 12 distinct values, each one is a tick; past that, the nice ticks
+    // that are whole numbers inside the data.
+    const lo = Math.min(...xs);
+    const hi = Math.max(...xs);
+    if (chart.type !== "scatter" && hi > lo && xs.every(Number.isInteger)) {
+      const distinct = [...new Set(xs)].sort((a, b) => a - b);
+      const inside = xTickNums.filter((n) => n >= lo && n <= hi && Number.isInteger(n));
+      const ticks = distinct.length <= 12 ? distinct : inside;
+      if (ticks.length >= 2) {
+        dataTicks = ticks === distinct;
+        xTickNums = ticks;
+        xMin = lo;
+        xMax = hi;
+      }
+    }
     xScaleNum = scaleLinear([xMin, xMax], [plot.left + 8, plot.right - 8]);
-    const xLabels = labelTicks(xTickNums);
+    const asWritten = (n: number) => rows.find((row) => row.xNum === n)?.xLabel.trim();
+    const xLabels = dataTicks
+      ? xTickNums.map((n) => asWritten(n) ?? formatNumber(n))
+      : labelTicks(xTickNums);
     xTicks = xTickNums.map((n, i) => ({
       pos: xScaleNum(n),
       label: xLabels[i] ?? formatNumber(n),

@@ -9,32 +9,28 @@
   </g>
   <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-grid="1" data-v-grid="1" style="stroke:var(--markvis-grid,#374151)">
     <line x1="56" x2="56" y1="38" y2="419" data-v-grid="1"/>
-    <line x1="183.2" x2="183.2" y1="38" y2="419" data-v-grid="1"/>
-    <line x1="310.4" x2="310.4" y1="38" y2="419" data-v-grid="1"/>
-    <line x1="437.6" x2="437.6" y1="38" y2="419" data-v-grid="1"/>
-    <line x1="564.8" x2="564.8" y1="38" y2="419" data-v-grid="1"/>
+    <line x1="268" x2="268" y1="38" y2="419" data-v-grid="1"/>
+    <line x1="480" x2="480" y1="38" y2="419" data-v-grid="1"/>
     <line x1="692" x2="692" y1="38" y2="419" data-v-grid="1"/>
   </g>
   <path d="M48 419 L700 419" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1" style="stroke:var(--markvis-ink,#374151)"/>
   <path d="M48 38 L48 419" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-axis-line="y" style="stroke:var(--markvis-ink,#374151)"/>
-  <path d="M56 419 L56 425 M183.2 419 L183.2 425 M310.4 419 L310.4 425 M437.6 419 L437.6 425 M564.8 419 L564.8 425 M692 419 L692 425 M42 419 L48 419 M42 292 L48 292 M42 165 L48 165 M42 38 L48 38" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-axis-ticks="1" style="stroke:var(--markvis-ink,#374151)"/>
+  <path d="M56 419 L56 425 M268 419 L268 425 M480 419 L480 425 M692 419 L692 425 M42 419 L48 419 M42 292 L48 292 M42 165 L48 165 M42 38 L48 38" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-axis-ticks="1" style="stroke:var(--markvis-ink,#374151)"/>
   <g fill="#6B7280" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#6B7280)">
     <text x="34" y="419" text-anchor="end" dominant-baseline="middle">10</text>
     <text x="34" y="292" text-anchor="end" dominant-baseline="middle">15</text>
     <text x="34" y="165" text-anchor="end" dominant-baseline="middle">20</text>
     <text x="34" y="38" text-anchor="end" dominant-baseline="middle">25</text>
-    <text x="56" y="437" text-anchor="middle" font-size="12" data-full-label="-5"><title>-5</title>-5</text>
-    <text x="183.2" y="437" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
-    <text x="310.4" y="437" text-anchor="middle" font-size="12" data-full-label="5"><title>5</title>5</text>
-    <text x="437.6" y="437" text-anchor="middle" font-size="12" data-full-label="10"><title>10</title>10</text>
-    <text x="564.8" y="437" text-anchor="middle" font-size="12" data-full-label="15"><title>15</title>15</text>
-    <text x="692" y="437" text-anchor="middle" font-size="12" data-full-label="20"><title>20</title>20</text>
+    <text x="56" y="437" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
+    <text x="268" y="437" text-anchor="middle" font-size="12" data-full-label="6"><title>6</title>6</text>
+    <text x="480" y="437" text-anchor="middle" font-size="12" data-full-label="12"><title>12</title>12</text>
+    <text x="692" y="437" text-anchor="middle" font-size="12" data-full-label="18"><title>18</title>18</text>
   </g>
   <g fill="none">
-    <path d="M183.2 292 C234.08 317.4 284.96 368.2 335.84 368.2 C386.72 368.2 437.6 114.2 488.48 114.2 C539.36 114.2 590.24 165 641.12 190.4" fill="none" stroke="#8884d8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="celsius" style="stroke:var(--markvis-series-1,#8884d8)"/>
-    <circle cx="183.2" cy="292" r="3.5" fill="#ffffff" stroke="#8884d8" stroke-width="1.5" data-series="celsius" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#8884d8)"/>
-    <circle cx="335.84" cy="368.2" r="3.5" fill="#ffffff" stroke="#8884d8" stroke-width="1.5" data-series="celsius" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#8884d8)"/>
-    <circle cx="488.48" cy="114.2" r="3.5" fill="#ffffff" stroke="#8884d8" stroke-width="1.5" data-series="celsius" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#8884d8)"/>
-    <circle cx="641.12" cy="190.4" r="3.5" fill="#ffffff" stroke="#8884d8" stroke-width="1.5" data-series="celsius" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#8884d8)"/>
+    <path d="M56 292 C126.67 317.4 197.33 368.2 268 368.2 C338.67 368.2 409.33 114.2 480 114.2 C550.67 114.2 621.33 165 692 190.4" fill="none" stroke="#8884d8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="celsius" style="stroke:var(--markvis-series-1,#8884d8)"/>
+    <circle cx="56" cy="292" r="3.5" fill="#ffffff" stroke="#8884d8" stroke-width="1.5" data-series="celsius" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#8884d8)"/>
+    <circle cx="268" cy="368.2" r="3.5" fill="#ffffff" stroke="#8884d8" stroke-width="1.5" data-series="celsius" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#8884d8)"/>
+    <circle cx="480" cy="114.2" r="3.5" fill="#ffffff" stroke="#8884d8" stroke-width="1.5" data-series="celsius" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#8884d8)"/>
+    <circle cx="692" cy="190.4" r="3.5" fill="#ffffff" stroke="#8884d8" stroke-width="1.5" data-series="celsius" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#8884d8)"/>
   </g>
 </svg>

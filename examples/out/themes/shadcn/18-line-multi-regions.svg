@@ -20,14 +20,12 @@
     <text x="40" y="194.4" text-anchor="end" dominant-baseline="middle">1,000</text>
     <text x="40" y="122.2" text-anchor="end" dominant-baseline="middle">1,100</text>
     <text x="40" y="50" text-anchor="end" dominant-baseline="middle">1,200</text>
-    <text x="56" y="423" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
-    <text x="215" y="423" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
+    <text x="56" y="423" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
     <text x="374" y="423" text-anchor="middle" font-size="12" data-full-label="2"><title>2</title>2</text>
-    <text x="533" y="423" text-anchor="middle" font-size="12" data-full-label="3"><title>3</title>3</text>
-    <text x="692" y="423" text-anchor="middle" font-size="12" data-full-label="4"><title>4</title>4</text>
+    <text x="692" y="423" text-anchor="middle" font-size="12" data-full-label="3"><title>3</title>3</text>
   </g>
   <g fill="none">
-    <path d="M215 194.4 C268 170.33 321 122.2 374 122.2 C427 122.2 480 146.27 533 158.3" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="us" style="stroke:var(--markvis-series-1,#F54900)"/>
-    <path d="M215 338.8 C268 333.99 321 332.06 374 324.36 C427 316.66 480 285.85 533 266.6" fill="none" stroke="#009689" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="eu" style="stroke:var(--markvis-series-2,#009689)"/>
+    <path d="M56 194.4 C162 170.33 268 122.2 374 122.2 C480 122.2 586 146.27 692 158.3" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="us" style="stroke:var(--markvis-series-1,#F54900)"/>
+    <path d="M56 338.8 C162 333.99 268 332.06 374 324.36 C480 316.66 586 285.85 692 266.6" fill="none" stroke="#009689" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="eu" style="stroke:var(--markvis-series-2,#009689)"/>
   </g>
 </svg>

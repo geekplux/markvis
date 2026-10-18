@@ -14,20 +14,18 @@
     <text x="42" y="254" text-anchor="end" dominant-baseline="middle">4</text>
     <text x="42" y="153" text-anchor="end" dominant-baseline="middle">6</text>
     <text x="42" y="52" text-anchor="end" dominant-baseline="middle">8</text>
-    <text x="60" y="467" text-anchor="middle" font-size="11" data-full-label="-1"><title>-1</title>-1</text>
-    <text x="216" y="467" text-anchor="middle" font-size="11" data-full-label="0"><title>0</title>0</text>
+    <text x="60" y="467" text-anchor="middle" font-size="11" data-full-label="0"><title>0</title>0</text>
     <text x="372" y="467" text-anchor="middle" font-size="11" data-full-label="1"><title>1</title>1</text>
-    <text x="528" y="467" text-anchor="middle" font-size="11" data-full-label="2"><title>2</title>2</text>
-    <text x="684" y="467" text-anchor="middle" font-size="11" data-full-label="3"><title>3</title>3</text>
+    <text x="684" y="467" text-anchor="middle" font-size="11" data-full-label="2"><title>2</title>2</text>
   </g>
   <g fill="none">
-    <path d="M216 203.5 L372 102.5 L528 153 L528 456 L216 456 Z" fill="#1B1B19" fill-opacity="0.14" stroke="none" data-series="A" style="fill:var(--markvis-series-1,#1B1B19)"/>
-    <path d="M216 203.5 L372 102.5 L528 153" fill="none" stroke="#1B1B19" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="A" style="stroke:var(--markvis-series-1,#1B1B19)"/>
-    <path d="M216 355 L372 304.5 L528 254 L528 456 L216 456 Z" fill="#4A4945" fill-opacity="0.14" stroke="none" data-series="B" style="fill:var(--markvis-series-2,#4A4945)"/>
-    <path d="M216 355 L372 304.5 L528 254" fill="none" stroke="#4A4945" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="B" style="stroke:var(--markvis-series-2,#4A4945)"/>
+    <path d="M60 203.5 L372 102.5 L684 153 L684 456 L60 456 Z" fill="#1B1B19" fill-opacity="0.14" stroke="none" data-series="A" style="fill:var(--markvis-series-1,#1B1B19)"/>
+    <path d="M60 203.5 L372 102.5 L684 153" fill="none" stroke="#1B1B19" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="A" style="stroke:var(--markvis-series-1,#1B1B19)"/>
+    <path d="M60 355 L372 304.5 L684 254 L684 456 L60 456 Z" fill="#4A4945" fill-opacity="0.14" stroke="none" data-series="B" style="fill:var(--markvis-series-2,#4A4945)"/>
+    <path d="M60 355 L372 304.5 L684 254" fill="none" stroke="#4A4945" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="B" style="stroke:var(--markvis-series-2,#4A4945)"/>
   </g>
   <g font-size="12" font-weight="800">
-    <text x="536" y="153" text-anchor="start" dominant-baseline="middle" fill="#1B1B19" data-end-label="A" style="fill:var(--markvis-series-1,#1B1B19)">A</text>
-    <text x="536" y="254" text-anchor="start" dominant-baseline="middle" fill="#4A4945" data-end-label="B" style="fill:var(--markvis-series-2,#4A4945)">B</text>
+    <text x="692" y="153" text-anchor="start" dominant-baseline="middle" fill="#1B1B19" data-end-label="A" style="fill:var(--markvis-series-1,#1B1B19)">A</text>
+    <text x="692" y="254" text-anchor="start" dominant-baseline="middle" fill="#4A4945" data-end-label="B" style="fill:var(--markvis-series-2,#4A4945)">B</text>
   </g>
 </svg>

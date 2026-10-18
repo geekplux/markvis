@@ -15,18 +15,16 @@
     <text x="38" y="208.4" text-anchor="end" dominant-baseline="middle">90</text>
     <text x="38" y="126.2" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="38" y="44" text-anchor="end" dominant-baseline="middle">110</text>
-    <text x="56" y="467" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
-    <text x="183.2" y="467" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
-    <text x="310.4" y="467" text-anchor="middle" font-size="12" data-full-label="2"><title>2</title>2</text>
-    <text x="437.6" y="467" text-anchor="middle" font-size="12" data-full-label="3"><title>3</title>3</text>
-    <text x="564.8" y="467" text-anchor="middle" font-size="12" data-full-label="4"><title>4</title>4</text>
-    <text x="692" y="467" text-anchor="middle" font-size="12" data-full-label="5"><title>5</title>5</text>
+    <text x="56" y="467" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
+    <text x="268" y="467" text-anchor="middle" font-size="12" data-full-label="2"><title>2</title>2</text>
+    <text x="480" y="467" text-anchor="middle" font-size="12" data-full-label="3"><title>3</title>3</text>
+    <text x="692" y="467" text-anchor="middle" font-size="12" data-full-label="4"><title>4</title>4</text>
   </g>
   <g fill="none">
-    <path d="M183.2 126.2 L310.4 274.16 L437.6 339.92 L564.8 372.8" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="rate" style="stroke:var(--markvis-series-1,#3B82F6)"/>
-    <circle cx="183.2" cy="126.2" r="2.5" fill="#3B82F6" stroke="none" data-series="rate" style="fill:var(--markvis-series-1,#3B82F6)"/>
-    <circle cx="310.4" cy="274.16" r="2.5" fill="#3B82F6" stroke="none" data-series="rate" style="fill:var(--markvis-series-1,#3B82F6)"/>
-    <circle cx="437.6" cy="339.92" r="2.5" fill="#3B82F6" stroke="none" data-series="rate" style="fill:var(--markvis-series-1,#3B82F6)"/>
-    <circle cx="564.8" cy="372.8" r="2.5" fill="#3B82F6" stroke="none" data-series="rate" style="fill:var(--markvis-series-1,#3B82F6)"/>
+    <path d="M56 126.2 L268 274.16 L480 339.92 L692 372.8" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="rate" style="stroke:var(--markvis-series-1,#3B82F6)"/>
+    <circle cx="56" cy="126.2" r="2.5" fill="#3B82F6" stroke="none" data-series="rate" style="fill:var(--markvis-series-1,#3B82F6)"/>
+    <circle cx="268" cy="274.16" r="2.5" fill="#3B82F6" stroke="none" data-series="rate" style="fill:var(--markvis-series-1,#3B82F6)"/>
+    <circle cx="480" cy="339.92" r="2.5" fill="#3B82F6" stroke="none" data-series="rate" style="fill:var(--markvis-series-1,#3B82F6)"/>
+    <circle cx="692" cy="372.8" r="2.5" fill="#3B82F6" stroke="none" data-series="rate" style="fill:var(--markvis-series-1,#3B82F6)"/>
   </g>
 </svg>

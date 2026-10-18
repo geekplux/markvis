@@ -19,16 +19,14 @@
     <text x="40" y="230.5" text-anchor="end" dominant-baseline="middle">4</text>
     <text x="40" y="140.25" text-anchor="end" dominant-baseline="middle">6</text>
     <text x="40" y="50" text-anchor="end" dominant-baseline="middle">8</text>
-    <text x="56" y="423" text-anchor="middle" font-size="12" data-full-label="-1"><title>-1</title>-1</text>
-    <text x="215" y="423" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
+    <text x="56" y="423" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
     <text x="374" y="423" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
-    <text x="533" y="423" text-anchor="middle" font-size="12" data-full-label="2"><title>2</title>2</text>
-    <text x="692" y="423" text-anchor="middle" font-size="12" data-full-label="3"><title>3</title>3</text>
+    <text x="692" y="423" text-anchor="middle" font-size="12" data-full-label="2"><title>2</title>2</text>
   </g>
   <g fill="none">
-    <path d="M215 185.38 C268 155.29 321 95.13 374 95.13 C427 95.13 480 125.21 533 140.25 L533 411 L215 411 Z" fill="#F54900" fill-opacity="0.3" stroke="none" data-series="A" style="fill:var(--markvis-series-1,#F54900)"/>
-    <path d="M215 185.38 C268 155.29 321 95.13 374 95.13 C427 95.13 480 125.21 533 140.25" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="A" style="stroke:var(--markvis-series-1,#F54900)"/>
-    <path d="M215 320.75 C268 305.71 321 290.67 374 275.63 C427 260.58 480 245.54 533 230.5 L533 411 L215 411 Z" fill="#009689" fill-opacity="0.3" stroke="none" data-series="B" style="fill:var(--markvis-series-2,#009689)"/>
-    <path d="M215 320.75 C268 305.71 321 290.67 374 275.63 C427 260.58 480 245.54 533 230.5" fill="none" stroke="#009689" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="B" style="stroke:var(--markvis-series-2,#009689)"/>
+    <path d="M56 185.38 C162 155.29 268 95.13 374 95.13 C480 95.13 586 125.21 692 140.25 L692 411 L56 411 Z" fill="#F54900" fill-opacity="0.3" stroke="none" data-series="A" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M56 185.38 C162 155.29 268 95.13 374 95.13 C480 95.13 586 125.21 692 140.25" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="A" style="stroke:var(--markvis-series-1,#F54900)"/>
+    <path d="M56 320.75 C162 305.71 268 290.67 374 275.63 C480 260.58 586 245.54 692 230.5 L692 411 L56 411 Z" fill="#009689" fill-opacity="0.3" stroke="none" data-series="B" style="fill:var(--markvis-series-2,#009689)"/>
+    <path d="M56 320.75 C162 305.71 268 290.67 374 275.63 C480 260.58 586 245.54 692 230.5" fill="none" stroke="#009689" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="B" style="stroke:var(--markvis-series-2,#009689)"/>
   </g>
 </svg>

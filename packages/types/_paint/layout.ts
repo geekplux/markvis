@@ -263,12 +263,14 @@ export function layoutFrame(opts: {
   legendHeight: number;
   rightMin?: number;
   axisTitles?: boolean;
+  /** Extra room above the plot, for labels that sit over the tallest mark. */
+  topExtra?: number;
 }): Frame {
   const width = SVG_WIDTH;
   const axisTitles = opts.axisTitles ?? AXIS_TITLES;
   const left = tickLeftMargin(opts.yTickLabels, axisTitles);
   const right = Math.max(MARGIN.right, opts.rightMin ?? MARGIN.right);
-  const top = titleBlockTop(opts.legendHeight, LEGEND_BELOW);
+  const top = titleBlockTop(opts.legendHeight, LEGEND_BELOW) + (opts.topExtra ?? 0);
   const draftW = Math.max(width - left - right, 1);
   const nCat = Math.max(opts.categoryLabels.length, 1);
   const catLay =

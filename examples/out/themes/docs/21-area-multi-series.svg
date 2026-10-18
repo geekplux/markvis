@@ -21,22 +21,20 @@
     <text x="32" y="237" text-anchor="end" dominant-baseline="middle">4</text>
     <text x="32" y="139.5" text-anchor="end" dominant-baseline="middle">6</text>
     <text x="32" y="42" text-anchor="end" dominant-baseline="middle">8</text>
-    <text x="48" y="443" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="-1"><title>-1</title>-1</text>
-    <text x="210" y="443" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="0"><title>0</title>0</text>
+    <text x="48" y="443" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="0"><title>0</title>0</text>
     <text x="372" y="443" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="1"><title>1</title>1</text>
-    <text x="534" y="443" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="2"><title>2</title>2</text>
-    <text x="696" y="443" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="3"><title>3</title>3</text>
+    <text x="696" y="443" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="2"><title>2</title>2</text>
   </g>
   <g fill="none">
-    <path d="M210 188.25 L372 90.75 L534 139.5 L534 432 L210 432 Z" fill="#475569" fill-opacity="0.12" stroke="none" data-series="A" style="fill:var(--markvis-series-1,#475569)"/>
-    <path d="M210 188.25 L372 90.75 L534 139.5" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="A" style="stroke:var(--markvis-series-1,#475569)"/>
-    <circle cx="210" cy="188.25" r="2" fill="#475569" stroke="none" data-series="A" style="fill:var(--markvis-series-1,#475569)"/>
+    <path d="M48 188.25 L372 90.75 L696 139.5 L696 432 L48 432 Z" fill="#475569" fill-opacity="0.12" stroke="none" data-series="A" style="fill:var(--markvis-series-1,#475569)"/>
+    <path d="M48 188.25 L372 90.75 L696 139.5" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="A" style="stroke:var(--markvis-series-1,#475569)"/>
+    <circle cx="48" cy="188.25" r="2" fill="#475569" stroke="none" data-series="A" style="fill:var(--markvis-series-1,#475569)"/>
     <circle cx="372" cy="90.75" r="2" fill="#475569" stroke="none" data-series="A" style="fill:var(--markvis-series-1,#475569)"/>
-    <circle cx="534" cy="139.5" r="2" fill="#475569" stroke="none" data-series="A" style="fill:var(--markvis-series-1,#475569)"/>
-    <path d="M210 334.5 L372 285.75 L534 237 L534 432 L210 432 Z" fill="#64748B" fill-opacity="0.12" stroke="none" data-series="B" style="fill:var(--markvis-series-2,#64748B)"/>
-    <path d="M210 334.5 L372 285.75 L534 237" fill="none" stroke="#64748B" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6 4" data-series="B" style="stroke:var(--markvis-series-2,#64748B)"/>
-    <circle cx="210" cy="334.5" r="2" fill="#64748B" stroke="none" data-series="B" style="fill:var(--markvis-series-2,#64748B)"/>
+    <circle cx="696" cy="139.5" r="2" fill="#475569" stroke="none" data-series="A" style="fill:var(--markvis-series-1,#475569)"/>
+    <path d="M48 334.5 L372 285.75 L696 237 L696 432 L48 432 Z" fill="#64748B" fill-opacity="0.12" stroke="none" data-series="B" style="fill:var(--markvis-series-2,#64748B)"/>
+    <path d="M48 334.5 L372 285.75 L696 237" fill="none" stroke="#64748B" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6 4" data-series="B" style="stroke:var(--markvis-series-2,#64748B)"/>
+    <circle cx="48" cy="334.5" r="2" fill="#64748B" stroke="none" data-series="B" style="fill:var(--markvis-series-2,#64748B)"/>
     <circle cx="372" cy="285.75" r="2" fill="#64748B" stroke="none" data-series="B" style="fill:var(--markvis-series-2,#64748B)"/>
-    <circle cx="534" cy="237" r="2" fill="#64748B" stroke="none" data-series="B" style="fill:var(--markvis-series-2,#64748B)"/>
+    <circle cx="696" cy="237" r="2" fill="#64748B" stroke="none" data-series="B" style="fill:var(--markvis-series-2,#64748B)"/>
   </g>
 </svg>

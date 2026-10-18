@@ -14,19 +14,17 @@
     <text x="32" y="318" text-anchor="end" dominant-baseline="middle">50</text>
     <text x="32" y="180" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="32" y="42" text-anchor="end" dominant-baseline="middle">150</text>
-    <text x="48" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="0"><title>0</title>0</text>
-    <text x="177.6" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="1"><title>1</title>1</text>
-    <text x="307.2" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="2"><title>2</title>2</text>
-    <text x="436.8" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="3"><title>3</title>3</text>
-    <text x="566.4" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="4"><title>4</title>4</text>
-    <text x="696" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="5"><title>5</title>5</text>
+    <text x="48" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="1"><title>1</title>1</text>
+    <text x="264" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="2"><title>2</title>2</text>
+    <text x="480" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="3"><title>3</title>3</text>
+    <text x="696" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="4"><title>4</title>4</text>
   </g>
   <g fill="none">
-    <path d="M177.6 180 L307.2 152.4 L436.8 166.2 L566.4 124.8 L566.4 456 L177.6 456 Z" fill="#475569" fill-opacity="0.12" stroke="none" data-series="intake" style="fill:var(--markvis-series-1,#475569)"/>
-    <path d="M177.6 180 L307.2 152.4 L436.8 166.2 L566.4 124.8" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="intake" style="stroke:var(--markvis-series-1,#475569)"/>
-    <circle cx="177.6" cy="180" r="2" fill="#475569" stroke="none" data-series="intake" style="fill:var(--markvis-series-1,#475569)"/>
-    <circle cx="307.2" cy="152.4" r="2" fill="#475569" stroke="none" data-series="intake" style="fill:var(--markvis-series-1,#475569)"/>
-    <circle cx="436.8" cy="166.2" r="2" fill="#475569" stroke="none" data-series="intake" style="fill:var(--markvis-series-1,#475569)"/>
-    <circle cx="566.4" cy="124.8" r="2" fill="#475569" stroke="none" data-series="intake" style="fill:var(--markvis-series-1,#475569)"/>
+    <path d="M48 180 L264 152.4 L480 166.2 L696 124.8 L696 456 L48 456 Z" fill="#475569" fill-opacity="0.12" stroke="none" data-series="intake" style="fill:var(--markvis-series-1,#475569)"/>
+    <path d="M48 180 L264 152.4 L480 166.2 L696 124.8" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="intake" style="stroke:var(--markvis-series-1,#475569)"/>
+    <circle cx="48" cy="180" r="2" fill="#475569" stroke="none" data-series="intake" style="fill:var(--markvis-series-1,#475569)"/>
+    <circle cx="264" cy="152.4" r="2" fill="#475569" stroke="none" data-series="intake" style="fill:var(--markvis-series-1,#475569)"/>
+    <circle cx="480" cy="166.2" r="2" fill="#475569" stroke="none" data-series="intake" style="fill:var(--markvis-series-1,#475569)"/>
+    <circle cx="696" cy="124.8" r="2" fill="#475569" stroke="none" data-series="intake" style="fill:var(--markvis-series-1,#475569)"/>
   </g>
 </svg>
