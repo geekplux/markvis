@@ -1,3 +1,16 @@
+/* Thumbs and the detail chart read the site mode through their CSS variables
+   (grid takes the text color: it is drawn at the theme's faint opacity).
+   The detail drawer is teleported out of the page, so it gets the same lines. */
+.gallery-page,
+.gallery-overlay {
+  --markvis-ink: var(--site-fg);
+  --markvis-muted: var(--site-muted);
+  --markvis-grid: var(--site-fg);
+  --markvis-paper: var(--site-bg);
+  --markvis-plate: var(--site-bg);
+  --markvis-plot: var(--site-card-2);
+}
+
 .gallery-page {
   position: relative;
   max-width: none;
@@ -280,8 +293,8 @@
   font-size: 12px;
   line-height: 1.4;
   overflow: auto;
-  background: #fafaf9;
-  border: 1px solid rgba(8, 11, 8, 0.28);
+  background: var(--site-card-2);
+  border: 1px solid var(--site-border);
   white-space: pre-wrap;
 }
 

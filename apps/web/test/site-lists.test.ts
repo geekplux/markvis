@@ -25,6 +25,8 @@ describe("the site's copies of the language lists", () => {
     const page = read("../theming.md");
     const strip = page.slice(page.indexOf("## Side by side"), page.indexOf("## How to add a pack"));
     expect(strip).toContain("<ThemeStrip");
+    // The strip lives on Theming, not on the home page.
+    expect(read("../index.md")).not.toContain("ThemeStrip");
     expect(strip.match(/```chart/g)?.length ?? 0).toBeLessThanOrEqual(1);
     expect(read("../.vitepress/theme/index.ts")).toContain('app.component("ThemeStrip", ThemeStrip)');
     // The strip is registered site-wide: it must bundle only the figures it shows.

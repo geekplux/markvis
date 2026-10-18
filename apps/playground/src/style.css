@@ -205,6 +205,19 @@ section.preview {
   background: var(--bg);
 }
 
+/* A chart that paints no surface of its own (the light surface) reads the
+   page's mode through its CSS variables; grid takes the text color because
+   it is drawn at the theme's faint opacity. A block that asks for the dark
+   or export surface keeps that surface's own colors. */
+#svg-host:not(:has([data-surface])) {
+  --markvis-ink: var(--ink);
+  --markvis-muted: var(--muted);
+  --markvis-grid: var(--ink);
+  --markvis-paper: var(--bg);
+  --markvis-plate: var(--bg);
+  --markvis-plot: var(--editor-bg);
+}
+
 section.preview h2 {
   font-size: 14px;
   margin: 0 0 12px;

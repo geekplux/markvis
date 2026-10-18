@@ -57,6 +57,9 @@ export default defineConfig({
       "meta",
       { property: "og:image", content: "https://markvis.js.org/og.png" },
     ],
+    // The hero poster, captured from the built home page at 1200 x 630.
+    ["meta", { property: "og:image:width", content: "1200" }],
+    ["meta", { property: "og:image:height", content: "630" }],
     ["meta", { property: "og:url", content: "https://markvis.js.org/" }],
     ["meta", { property: "og:type", content: "website" }],
     ["meta", { name: "twitter:card", content: "summary_large_image" }],

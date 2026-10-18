@@ -722,28 +722,25 @@ describe("public contract", () => {
     expect(bake).toMatch(/branches:\s*\[v2, master\]/);
   });
 
-  it("stamps npm, script, and skill as available now", () => {
-    const home = readRepo("apps/web/index.md");
-    expect(
-      home.match(/home-host-name">npm<\/span>\s*<span class="home-host-status">([^<]+)/)?.[1],
-    ).toBe("available now");
-    expect(
-      home.match(/home-host-name">script<\/span>\s*<span class="home-host-status">([^<]+)/)?.[1],
-    ).toBe("available now");
-    expect(
-      home.match(/home-host-name">skill<\/span>\s*<span class="home-host-status">([^<]+)/)?.[1],
-    ).toBe("available now");
+  it("lists npm, the script tag, and the skill on /integrate", () => {
+    // The home hosts strip is gone; Integrate is the one list of ways in.
+    const integrate = readRepo("apps/web/integrate.md");
+    expect(integrate).toContain("npm install markvis");
+    expect(integrate).toContain("cdn.jsdelivr.net/npm/markvis@2/dist/markvis.min.js");
+    expect(integrate).toContain("skills/markvis/SKILL.md");
+    expect(integrate).toContain("markvis/react");
+    expect(integrate).toContain("rehype");
+    expect(integrate).toContain("uses: geekplux/markvis@master");
+    expect(readRepo("apps/web/index.md")).not.toContain("available now");
   });
 
   it("homepage copy does not say IR or fence", () => {
     const home = readRepo("apps/web/index.md");
     expect(home).not.toMatch(/\bIR\b/);
-    expect(home.replace(/<FenceTabs\s*\/>/g, "")).not.toMatch(/fence/i);
-    expect(home).toContain("The numbers are the picture.");
+    expect(home).not.toMatch(/fence/i);
+    expect(home).toContain("Charts as text in Markdown.");
     expect(readRepo("apps/web/get-started.md")).not.toMatch(/\bIR\b/);
-    expect(readRepo("docs/site.md")).toContain(
-      "Headline: Charts in Markdown. / The numbers are the picture.",
-    );
+    expect(readRepo("docs/site.md")).toContain("Headline: Charts as text in Markdown.");
     const slogan = readRepo("README.md")
       .split("\n")
       .find((line) => line.includes("**Charts in Markdown."));

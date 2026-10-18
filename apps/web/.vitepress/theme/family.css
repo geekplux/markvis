@@ -622,13 +622,21 @@ html.dark .site-logo-dark {
   }
 }
 
-/* A drawn chart block (type pages, home): light card so the default ink reads in both site modes. */
+/* A drawn chart block (type pages, home): no card of its own. The chart reads
+   the site mode through its CSS variables, so it follows light and dark. Grid
+   is drawn at the theme's faint opacity, so it takes the text color. */
 .chart-block-figure {
+  --markvis-ink: var(--site-fg);
+  --markvis-muted: var(--site-muted);
+  --markvis-grid: var(--site-fg);
+  --markvis-paper: var(--site-bg);
+  --markvis-plate: var(--site-bg);
+  --markvis-plot: var(--site-card-2);
   padding: 0.75rem;
   border: 1px solid var(--site-border);
   border-radius: var(--site-radius);
-  background: #ffffff;
-  color: #171717;
+  background: transparent;
+  color: inherit;
   overflow-x: auto;
 }
 
@@ -649,5 +657,5 @@ html.dark .site-logo-dark {
 
 .chart-block-figure figcaption {
   font-size: 13px;
-  color: #5a6a8a;
+  color: var(--site-muted);
 }

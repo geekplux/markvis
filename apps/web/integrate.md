@@ -8,7 +8,7 @@ sidebar: true
 
 Seven ways to show the chart. If none of them run, the table of numbers is still in the file.
 
-## 1. Save a picture (bake)
+## 1. Save a picture (bake) {#bake}
 
 Write a picture next to the Markdown and add an image so GitHub, static hosts, and plain viewers can show it. The code block stays.
 
@@ -50,7 +50,7 @@ Without the Action, write the comment form. github.com shows it as a plain table
 | Tue | 5 |
 ```
 
-## 2. One script tag, in a page or a Markdown file
+## 2. One script tag, in a page or a Markdown file {#script-tag}
 
 Put one `<script>` in a Markdown file, or in the HTML page around it. Once the page is ready, every chart block on it becomes a chart.
 
@@ -151,7 +151,7 @@ Astro 7: install `@astrojs/markdown-remark`, then set `markdown.processor: unifi
 
 Colors: inline charts follow your [CSS variables](/theming#your-colors), with fixed colors as fallbacks. A sanitizer that drops `style` leaves the fixed colors.
 
-## 6. JavaScript
+## 6. JavaScript {#javascript}
 
 Pass one chart block — the inside a Markdown renderer hands a code-block plugin, or the whole block with its fence lines — and get the chart in one call. It never throws.
 
@@ -168,7 +168,7 @@ Options: `width` (default 720), and `theme`, `palette`, `surface` for blocks tha
 
 To parse without drawing, use `parseBlock(blockText)`. To read every chart in a Markdown document, use `parseDocument`.
 
-## 7. React
+## 7. React {#react}
 
 `markvis/react` draws a block in a React app. `react` 18 or later is the only peer; nothing else is installed.
 

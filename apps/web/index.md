@@ -13,138 +13,57 @@ pageClass: folio-home-page
 
 <section id="hero" class="home-hero">
   <p class="home-badge">
-    <span class="home-badge-left">OPEN SOURCE</span>
-    <span class="home-badge-right">v2 · MIT</span>
+    <span class="home-badge-left">MARKVIS 2</span>
+    <span class="home-badge-right">CHARTS AS TEXT</span>
   </p>
-  <h1 class="home-headline">
-    <span>Charts in Markdown.</span>
-    <span>The numbers are the picture.</span>
-  </h1>
-  <p class="home-sub">Write a short chart block in Markdown. markvis draws it as SVG from a script tag, JavaScript, React, or any Markdown renderer. Where it cannot draw, the numbers stay as a table.</p>
+  <h1 class="home-headline">Charts as text in Markdown.</h1>
+  <p class="home-sub">Write a short chart block. markvis draws it as plain SVG wherever Markdown is rendered. Where it cannot draw, the numbers stay as a table.</p>
   <p class="home-cta">
-    <a class="home-btn filled" href="#quickstart">Get started</a>
-    <a class="home-btn outline" href="/get-started">Docs <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
-    <a class="home-btn outline" href="/examples">Examples <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
+    <a class="home-btn filled" href="#use">Get started</a>
+    <a class="home-btn outline" href="https://github.com/geekplux/markvis" target="_blank" rel="noreferrer">GitHub <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
   </p>
+  <HeroStage>
   <p class="home-numbers">56 kB gzip · 0 dependencies · under 1 ms a chart · plain SVG</p>
-  <div class="home-live">
-    <ChartBlock editable :block='"type: bar\ntitle: Visits by day\nx: day\ny: visits\n\nday,visits\nMon,3\nTue,5\nWed,4\nThu,6\nFri,8\n"' />
-    <p class="home-live-note">Edit a number; the chart redraws. That text is the whole chart. <a href="/play">Open Play <span aria-hidden="true">↗</span></a></p>
-  </div>
+  </HeroStage>
 </section>
 
-<section id="proof">
+<section id="use">
   <div class="home-section-head">
-    <h2>Figures</h2>
-    <p>The pictures below come from the same Markdown as the numbers. Nothing is hand-traced.</p>
-  </div>
-  <HomeProof />
-</section>
-
-<section id="features">
-  <div class="home-section-head">
-    <h2>Features</h2>
-  </div>
-  <div class="home-grid home-features-grid">
-    <article class="home-feature">
-      <h3>The data never disappears</h3>
-      <p>Without markvis the block is readable text. A block that cannot draw keeps its rows and shows one error line.</p>
-    </article>
-    <article class="home-feature">
-      <h3>Same text, same picture</h3>
-      <p>The same block always draws the same chart. Not a one-off screenshot.</p>
-    </article>
-    <article class="home-feature">
-      <h3>Runs where Markdown runs</h3>
-      <p>A script tag, JavaScript, React, markdown-it, remark, rehype, the command line. One renderer behind all of them.</p>
-    </article>
-    <article class="home-feature">
-      <h3>Built for people and AI</h3>
-      <p>A person or a model writes the same block: a few header lines and a table of numbers. Not JSON, not a screenshot.</p>
-    </article>
-    <article class="home-feature">
-      <h3>Seventeen kinds of chart</h3>
-      <p>bar, line, area, scatter, pie, hist, heatmap, funnel, waterfall, radar, gauge, sankey, treemap, dumbbell, bullet, boxplot, calendar. That is the set.</p>
-    </article>
-    <article class="home-feature">
-      <h3>Safe by design</h3>
-      <p>A block holds data only: no HTML, no scripts. Every title, label, and cell is escaped.</p>
-    </article>
-  </div>
-</section>
-
-<section id="code">
-  <div class="home-section-head">
-    <h2>Examples</h2>
-    <p>Copy a block. Paste it in Play. That Markdown code block is the chart.</p>
-  </div>
-  <FenceTabs />
-</section>
-
-<section id="quickstart">
-  <div class="home-section-head">
-    <h2>Quickstart</h2>
+    <h2>Use it</h2>
     <p>Four ways in. <a href="/integrate">All of them</a> draw the same chart.</p>
   </div>
   <div class="home-grid home-quick-grid">
     <article class="home-quick">
       <div class="home-quick-title"><span>01</span><h3>One script tag</h3></div>
       <pre class="home-quick-code">&lt;script src="https://cdn.jsdelivr.net/npm/markvis@2/dist/markvis.min.js"&gt;&lt;/script&gt;</pre>
-      <p>In a page or a Markdown file. Every chart block on it draws.</p>
+      <p>In a page or a Markdown file. Every chart block draws. <a class="home-quick-more" href="/integrate#script-tag">more →</a></p>
     </article>
     <article class="home-quick">
       <div class="home-quick-title"><span>02</span><h3>JavaScript</h3></div>
       <pre class="home-quick-code">import { render } from "markvis";
 el.innerHTML = render(block).html;</pre>
-      <p>One call; it never throws.</p>
+      <p>One call. It never throws. <a class="home-quick-more" href="/integrate#javascript">more →</a></p>
     </article>
     <article class="home-quick">
       <div class="home-quick-title"><span>03</span><h3>React</h3></div>
       <pre class="home-quick-code">import { Markvis } from "markvis/react";
 &lt;Markvis source={block} /&gt;</pre>
-      <p>Follows its container; streams in react-markdown.</p>
+      <p>Follows its container. Streams in react-markdown. <a class="home-quick-more" href="/integrate#react">more →</a></p>
     </article>
     <article class="home-quick">
       <div class="home-quick-title"><span>04</span><h3>GitHub</h3></div>
       <CopyChip command="npx markvis bake README.md" />
-      <p>Writes a picture next to the block so github.com shows it. A workflow step can run it on every push.</p>
+      <p>Writes a picture github.com can show. The block stays. <a class="home-quick-more" href="/integrate#bake">more →</a></p>
     </article>
   </div>
 </section>
 
-<section id="hosts">
-  <div class="home-grid home-hosts">
-    <div class="home-host">
-      <span class="home-host-dot" aria-hidden="true"></span>
-      <span class="home-host-name">npm</span>
-      <span class="home-host-status">available now</span>
-    </div>
-    <div class="home-host">
-      <span class="home-host-dot" aria-hidden="true"></span>
-      <span class="home-host-name">script</span>
-      <span class="home-host-status">available now</span>
-    </div>
-    <div class="home-host">
-      <span class="home-host-dot" aria-hidden="true"></span>
-      <span class="home-host-name">skill</span>
-      <span class="home-host-status">available now</span>
-    </div>
-    <div class="home-host">
-      <span class="home-host-dot" aria-hidden="true"></span>
-      <span class="home-host-name">react</span>
-      <span class="home-host-status">available now</span>
-    </div>
-    <div class="home-host">
-      <span class="home-host-dot" aria-hidden="true"></span>
-      <span class="home-host-name">rehype</span>
-      <span class="home-host-status">available now</span>
-    </div>
-    <div class="home-host">
-      <span class="home-host-dot" aria-hidden="true"></span>
-      <span class="home-host-name">action</span>
-      <span class="home-host-status">available now</span>
-    </div>
+<section id="colors">
+  <div class="home-section-head">
+    <h2>Your colors</h2>
+    <p>The chart reads the page. Set a few CSS variables and every chart follows your text color, your grid, your series hues; switch to dark and nothing redraws. <a href="/theming#your-colors">Theming</a></p>
   </div>
+  <ColorsDemo />
 </section>
 
 <section id="types">
@@ -160,13 +79,10 @@ el.innerHTML = render(block).html;</pre>
   <div class="home-final-inner">
     <img class="site-logo site-logo-light site-logo-lg" src="/logo.png" width="64" height="64" alt="" />
     <img class="site-logo site-logo-dark site-logo-lg" src="/logo-dark.png" width="64" height="64" alt="" />
-    <h2>Get started with MarkVis</h2>
-    <p class="home-final-lead">Write the numbers. Get the chart. The table stays in the file.</p>
+    <h2>Write the numbers. Get the chart.</h2>
     <p class="home-final-actions">
       <a class="home-btn filled" href="/play">Play</a>
-      <a class="home-btn outline" href="/get-started">Docs <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
-      <a class="home-btn outline" href="/examples">Examples <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
-      <a class="home-btn outline" href="https://github.com/geekplux/markvis" target="_blank" rel="noreferrer"><span class="home-gh" aria-hidden="true"></span> Star on GitHub</a>
+      <a class="home-btn outline" href="https://github.com/geekplux/markvis" target="_blank" rel="noreferrer"><span class="home-gh" aria-hidden="true"></span> GitHub <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
     </p>
   </div>
 </section>
