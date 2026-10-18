@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="254" viewBox="0 0 720 254" role="img" aria-label="calendar chart: Commits stayed on weekdays all quarter, 90 rows" aria-labelledby="mv-a534944de0af6a45-title" aria-describedby="mv-a534944de0af6a45-desc" data-markvis="2" data-chart-type="calendar" data-id="mv-a534944de0af6a45" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="254" viewBox="0 0 720 254" role="img" aria-label="calendar chart: Commits stayed on weekdays all quarter, 90 rows" aria-labelledby="mv-a534944de0af6a45-title" aria-describedby="mv-a534944de0af6a45-desc" data-markvis="2" data-chart-type="calendar" data-id="mv-a534944de0af6a45" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-a534944de0af6a45-title">Commits stayed on weekdays all quarter</title>
   <desc id="mv-a534944de0af6a45-desc">calendar chart. Commits stayed on weekdays all quarter. x=day. y=commits. 90 rows.</desc>
-  <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Commits stayed on weekdays all quarter</title>Commits stayed on weekdays all quarter</text>
+  <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19" style="fill:var(--markvis-ink,#1B1B19)"><title>Commits stayed on weekdays all quarter</title>Commits stayed on weekdays all quarter</text>
   <defs>
     <pattern id="mv-a534944de0af6a45-missing" patternUnits="userSpaceOnUse" width="4" height="4">
       <rect width="4" height="4" fill="#F2F1ED"/>
@@ -105,7 +105,7 @@
   <rect x="137.02" y="219" width="16" height="16" rx="2" fill="#757572" data-key-step="2"/>
   <rect x="155.02" y="219" width="16" height="16" rx="2" fill="#484846" data-key-step="3"/>
   <rect x="173.02" y="219" width="16" height="16" rx="2" fill="#1b1b19" data-key-step="4"/>
-  <g fill="#6A6964" font-size="11" font-weight="600">
+  <g fill="#6A6964" font-size="11" font-weight="600" style="fill:var(--markvis-muted,#6A6964)">
     <text x="105.41" y="63" data-month="Jan">Jan</text>
     <text x="177.41" y="63" data-month="Feb">Feb</text>
     <text x="249.41" y="63" data-month="Mar">Mar</text>

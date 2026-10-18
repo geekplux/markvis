@@ -9,6 +9,7 @@ import {
   FONT,
   FONT_NUMERIC,
   GRID,
+  GRID_INK,
   HAIRLINE_OPACITY,
   INK,
   MARGIN,
@@ -153,7 +154,7 @@ export function drawRowAxes(frame: RowFrame, categories: string[]): string[] {
   const lines: string[] = [
     `  <g ${attrs({
       fill: "none",
-      stroke: INK,
+      stroke: GRID_INK,
       "stroke-opacity": HAIRLINE_OPACITY,
       "stroke-width": GRID.width,
       "stroke-dasharray": GRID.dash || undefined,

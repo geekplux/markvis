@@ -1,15 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="bar chart: Free still outnumbers pro seats, 4 rows, series plan" aria-labelledby="mv-5045ce5a4f128422-title" aria-describedby="mv-5045ce5a4f128422-desc" data-markvis="2" data-chart-type="bar" data-id="mv-5045ce5a4f128422" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="bar chart: Free still outnumbers pro seats, 4 rows, series plan" aria-labelledby="mv-5045ce5a4f128422-title" aria-describedby="mv-5045ce5a4f128422-desc" data-markvis="2" data-chart-type="bar" data-id="mv-5045ce5a4f128422" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-5045ce5a4f128422-title">Free still outnumbers pro seats</title>
   <desc id="mv-5045ce5a4f128422-desc">bar chart. Free still outnumbers pro seats. x=month. y=seats. series=plan. 4 rows.</desc>
-  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
-  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Free still outnumbers pro seats</title>Free still outnumbers pro seats</text>
-  <g font-size="12" font-weight="500" fill="#0A0A0A">
-    <rect x="328.64" y="435" width="10" height="10" fill="#F54900" rx="3"/>
+  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1" style="stroke:var(--markvis-grid,#0A0A0A)"/>
+  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A" style="fill:var(--markvis-ink,#0A0A0A)"><title>Free still outnumbers pro seats</title>Free still outnumbers pro seats</text>
+  <g font-size="12" font-weight="500" fill="#0A0A0A" style="fill:var(--markvis-ink,#0A0A0A)">
+    <rect x="328.64" y="435" width="10" height="10" fill="#F54900" rx="3" style="fill:var(--markvis-series-1,#F54900)"/>
     <text x="342.64" y="444" data-legend="free">free</text>
-    <rect x="383" y="435" width="10" height="10" fill="#009689" rx="3"/>
+    <rect x="383" y="435" width="10" height="10" fill="#009689" rx="3" style="fill:var(--markvis-series-2,#009689)"/>
     <text x="397" y="444" data-legend="pro">pro</text>
   </g>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#737373)">
     <text x="40" y="411" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="40" y="290.67" text-anchor="end" dominant-baseline="middle">50</text>
     <text x="40" y="170.33" text-anchor="end" dominant-baseline="middle">100</text>
@@ -18,15 +18,15 @@
     <text x="537" y="423" text-anchor="middle" font-size="12" data-full-label="Feb"><title>Feb</title>Feb</text>
   </g>
   <g>
-    <path d="M142 411 L142 178.33 Q142 170.33 150 170.33 L202 170.33 Q210 170.33 210 178.33 L210 411 Z" fill="#F54900" data-x="Jan" data-series="free" data-y="100"/>
-    <path d="M212 411 L212 370.87 Q212 362.87 220 362.87 L272 362.87 Q280 362.87 280 370.87 L280 411 Z" fill="#009689" data-x="Jan" data-series="pro" data-y="20"/>
-    <path d="M468 411 L468 154.27 Q468 146.27 476 146.27 L528 146.27 Q536 146.27 536 154.27 L536 411 Z" fill="#F54900" data-x="Feb" data-series="free" data-y="110"/>
-    <path d="M538 411 L538 351.61 Q538 343.61 546 343.61 L598 343.61 Q606 343.61 606 351.61 L606 411 Z" fill="#009689" data-x="Feb" data-series="pro" data-y="28"/>
+    <path d="M142 411 L142 178.33 Q142 170.33 150 170.33 L202 170.33 Q210 170.33 210 178.33 L210 411 Z" fill="#F54900" data-x="Jan" data-series="free" data-y="100" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M212 411 L212 370.87 Q212 362.87 220 362.87 L272 362.87 Q280 362.87 280 370.87 L280 411 Z" fill="#009689" data-x="Jan" data-series="pro" data-y="20" style="fill:var(--markvis-series-2,#009689)"/>
+    <path d="M468 411 L468 154.27 Q468 146.27 476 146.27 L528 146.27 Q536 146.27 536 154.27 L536 411 Z" fill="#F54900" data-x="Feb" data-series="free" data-y="110" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M538 411 L538 351.61 Q538 343.61 546 343.61 L598 343.61 Q606 343.61 606 351.61 L606 411 Z" fill="#009689" data-x="Feb" data-series="pro" data-y="28" style="fill:var(--markvis-series-2,#009689)"/>
   </g>
   <g>
-    <text x="176" y="162.33" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Jan">100</text>
-    <text x="246" y="354.87" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Jan">20</text>
-    <text x="502" y="138.27" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Feb">110</text>
-    <text x="572" y="335.61" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Feb">28</text>
+    <text x="176" y="162.33" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Jan" style="fill:var(--markvis-ink,#0A0A0A)">100</text>
+    <text x="246" y="354.87" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Jan" style="fill:var(--markvis-ink,#0A0A0A)">20</text>
+    <text x="502" y="138.27" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Feb" style="fill:var(--markvis-ink,#0A0A0A)">110</text>
+    <text x="572" y="335.61" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Feb" style="fill:var(--markvis-ink,#0A0A0A)">28</text>
   </g>
 </svg>

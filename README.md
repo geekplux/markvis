@@ -54,7 +54,9 @@ npx markvis bake README.md
 
 **Tell your model.** Put the 250-token [instruction](./docs/prompt.md) in a system prompt and it writes this block instead of an image or JSON. The same text opens [llms.txt](./llms.txt).
 
-[Play](https://markvis.js.org/play) · [Examples](https://markvis.js.org/examples) · [Integrate](https://markvis.js.org/integrate) · [Chart types](https://markvis.js.org/types/)
+**Your colors.** A chart drawn in your page reads your CSS variables (`--markvis-ink`, `--markvis-grid`, `--markvis-series-1` …), so it follows light, dark, and brand colors. Each color keeps a fixed fallback, and `bake` writes fixed colors only.
+
+[Play](https://markvis.js.org/play) · [Examples](https://markvis.js.org/examples) · [Integrate](https://markvis.js.org/integrate) · [Theming](https://markvis.js.org/theming) · [Chart types](https://markvis.js.org/types/)
 
 ## Why markvis
 

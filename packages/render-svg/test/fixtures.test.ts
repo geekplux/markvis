@@ -6,10 +6,6 @@ import { ChartIRSchema, THEMES } from "@markvis/ir";
 import { parseMarkdown } from "@markvis/parser";
 import { renderSvg } from "@markvis/render-svg";
 import { stripVars } from "../../../scripts/svg-normalize.js";
-// Goldens compare stripVars(svg) against the raw committed file. One-sided on
-// purpose: identical today. Before re-baking, the host-theming step uses this
-// to show geometry is unchanged, then switches the goldens back to a raw
-// svg === committed compare.
 
 const here = dirname(fileURLToPath(import.meta.url));
 const repoRoot = join(here, "../../..");
@@ -58,7 +54,7 @@ describe("valid fixture SVGs", () => {
       writeFileSync(outPath, svg, "utf8");
     }
     const committed = readFileSync(outPath, "utf8");
-    expect(stripVars(svg), `${file} SVG bytes drifted from examples/out`).toBe(
+    expect(svg, `${file} SVG bytes drifted from examples/out`).toBe(
       committed,
     );
   });
@@ -85,6 +81,43 @@ describe("theme fixture SVGs", () => {
       writeFileSync(outPath, svg, "utf8");
     }
     const committed = readFileSync(outPath, "utf8");
-    expect(stripVars(svg), `${theme}/${file} SVG bytes drifted`).toBe(committed);
+    expect(svg, `${theme}/${file} SVG bytes drifted`).toBe(committed);
+  });
+});
+
+/**
+ * Fixed-color goldens: what `bake`, `markvis render`, and the export surface
+ * write. Each must be its host-colors golden with the variables taken out.
+ */
+const STATIC_FILES = [
+  "01-bar-basic.md",
+  "02-line-multi.md",
+  "05-pie-raw.md",
+  "59-heatmap-atl.md",
+  "65-treemap-marta-boardings.md",
+];
+
+describe("static fixture SVGs", () => {
+  it.each(STATIC_FILES)("%s", (file) => {
+    const source = readFileSync(join(validDir, file), "utf8");
+    const result = parseMarkdown(source, { filename: file });
+    expect(result.ok, `${file} should parse`).toBe(true);
+    if (!result.ok) {
+      return;
+    }
+    const chart = ChartIRSchema.parse(result.chart);
+    const svg = renderSvg(chart, { colors: "static" });
+    const staticDir = join(outDir, "static");
+    const outPath = join(staticDir, svgName(file));
+    if (process.env["UPDATE_SNAPSHOTS"] === "1") {
+      mkdirSync(staticDir, { recursive: true });
+      writeFileSync(outPath, svg, "utf8");
+    }
+    const committed = readFileSync(outPath, "utf8");
+    expect(svg, `static/${file} SVG bytes drifted`).toBe(committed);
+    expect(committed).not.toContain("var(");
+    const host = readFileSync(join(outDir, svgName(file)), "utf8");
+    expect(host).toContain("var(--markvis-");
+    expect(stripVars(host)).toBe(committed);
   });
 });

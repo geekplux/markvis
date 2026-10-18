@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="heatmap chart: Saturday still clears Central library holds first, 24 rows, series weekday" aria-labelledby="mv-5f95306c23bfab0b-title" aria-describedby="mv-5f95306c23bfab0b-desc" data-markvis="2" data-chart-type="heatmap" data-id="mv-5f95306c23bfab0b" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="heatmap chart: Saturday still clears Central library holds first, 24 rows, series weekday" aria-labelledby="mv-5f95306c23bfab0b-title" aria-describedby="mv-5f95306c23bfab0b-desc" data-markvis="2" data-chart-type="heatmap" data-id="mv-5f95306c23bfab0b" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-5f95306c23bfab0b-title">Saturday still clears Central library holds first</title>
   <desc id="mv-5f95306c23bfab0b-desc">heatmap chart. Saturday still clears Central library holds first. x=branch. y=pickups. series=weekday. 24 rows.</desc>
-  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Saturday still clears Central library holds first</title>Saturday still clears Central library holds first</text>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717" style="fill:var(--markvis-ink,#171717)"><title>Saturday still clears Central library holds first</title>Saturday still clears Central library holds first</text>
   <defs>
     <pattern id="mv-5f95306c23bfab0b-missing" patternUnits="userSpaceOnUse" width="6" height="6">
       <rect width="6" height="6" fill="#f4f1ea"/>
@@ -67,10 +67,10 @@
     <rect x="660" y="146.75" width="12" height="51.88" fill="#679df3"/>
     <rect x="660" y="95.38" width="12" height="51.88" fill="#518ff5"/>
     <rect x="660" y="44" width="12" height="51.88" fill="#3b82f6"/>
-    <text x="676" y="48" font-size="12" fill="#737373" dominant-baseline="hanging" data-scale-max="1">142</text>
-    <text x="676" y="455" font-size="12" fill="#737373" data-scale-min="1">29</text>
+    <text x="676" y="48" font-size="12" fill="#737373" dominant-baseline="hanging" data-scale-max="1" style="fill:var(--markvis-muted,#737373)">142</text>
+    <text x="676" y="455" font-size="12" fill="#737373" data-scale-min="1" style="fill:var(--markvis-muted,#737373)">29</text>
   </g>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#737373)">
     <text x="38" y="78.25" text-anchor="end" dominant-baseline="middle" data-series-label="Mon"><title>Mon</title>Mon</text>
     <text x="38" y="146.75" text-anchor="end" dominant-baseline="middle" data-series-label="Tue"><title>Tue</title>Tue</text>
     <text x="38" y="215.25" text-anchor="end" dominant-baseline="middle" data-series-label="Wed"><title>Wed</title>Wed</text>

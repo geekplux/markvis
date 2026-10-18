@@ -12,3 +12,6 @@ createElement(Markdown, { components: { ...markvisComponents, p: () => null }, c
 createElement(Markvis, { source: "x", chart: { type: "bar" }, data: [] });
 // @ts-expect-error unknown theme
 createElement(Markvis, { source: "x", theme: "neon" });
+createElement(Markvis, { source: "x", colors: "static" });
+// @ts-expect-error colors is host or static
+createElement(Markvis, { source: "x", colors: "dark" });

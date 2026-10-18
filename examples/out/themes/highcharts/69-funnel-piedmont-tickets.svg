@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="funnel chart: Gate still seats 780 of 3,400 Piedmont browsers, 6 rows" aria-labelledby="mv-89cc0e6357f0924d-title" aria-describedby="mv-89cc0e6357f0924d-desc" data-markvis="2" data-chart-type="funnel" data-id="mv-89cc0e6357f0924d" font-family="&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="funnel chart: Gate still seats 780 of 3,400 Piedmont browsers, 6 rows" aria-labelledby="mv-89cc0e6357f0924d-title" aria-describedby="mv-89cc0e6357f0924d-desc" data-markvis="2" data-chart-type="funnel" data-id="mv-89cc0e6357f0924d" font-family="&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif" font-size="12" style="font-family:var(--markvis-font,&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif)">
   <title id="mv-89cc0e6357f0924d-title">Gate still seats 780 of 3,400 Piedmont browsers</title>
   <desc id="mv-89cc0e6357f0924d-desc">funnel chart. Gate still seats 780 of 3,400 Piedmont browsers. x=stage. y=people. 6 rows.</desc>
-  <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Gate still seats 780 of 3,400 Piedmont browsers</title>Gate still seats 780 of 3,400 Piedmont browsers</text>
+  <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333" style="fill:var(--markvis-ink,#333333)"><title>Gate still seats 780 of 3,400 Piedmont browsers</title>Gate still seats 780 of 3,400 Piedmont browsers</text>
   <g data-funnel="1">
-    <path d="M56 44 L613.03 44 L531.11 106.67 L137.92 106.67 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-stage="Browse" data-y="3,400"/>
-    <path d="M137.92 106.67 L531.11 106.67 L481.96 169.33 L187.07 169.33 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-stage="Waitlist" data-y="2,400"/>
-    <path d="M187.07 169.33 L481.96 169.33 L436.09 232 L232.94 232 Z" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-stage="Cart" data-y="1,800"/>
-    <path d="M232.94 232 L436.09 232 L409.88 294.67 L259.15 294.67 Z" fill="#f7a35c" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-stage="Pay" data-y="1,240"/>
-    <path d="M259.15 294.67 L409.88 294.67 L398.41 357.33 L270.62 357.33 Z" fill="#8085e9" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-stage="Check-in" data-y="920"/>
-    <path d="M270.62 357.33 L398.41 357.33 L398.41 420 L270.62 420 Z" fill="#f15c80" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-stage="Gate" data-y="780"/>
+    <path d="M56 44 L613.03 44 L531.11 106.67 L137.92 106.67 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-stage="Browse" data-y="3,400" style="fill:var(--markvis-series-1,#7cb5ec);stroke:var(--markvis-ink,#333333)"/>
+    <path d="M137.92 106.67 L531.11 106.67 L481.96 169.33 L187.07 169.33 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-stage="Waitlist" data-y="2,400" style="fill:var(--markvis-series-2,#434348);stroke:var(--markvis-ink,#333333)"/>
+    <path d="M187.07 169.33 L481.96 169.33 L436.09 232 L232.94 232 Z" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-stage="Cart" data-y="1,800" style="fill:var(--markvis-series-3,#90ed7d);stroke:var(--markvis-ink,#333333)"/>
+    <path d="M232.94 232 L436.09 232 L409.88 294.67 L259.15 294.67 Z" fill="#f7a35c" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-stage="Pay" data-y="1,240" style="fill:var(--markvis-series-4,#f7a35c);stroke:var(--markvis-ink,#333333)"/>
+    <path d="M259.15 294.67 L409.88 294.67 L398.41 357.33 L270.62 357.33 Z" fill="#8085e9" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-stage="Check-in" data-y="920" style="fill:var(--markvis-series-5,#8085e9);stroke:var(--markvis-ink,#333333)"/>
+    <path d="M270.62 357.33 L398.41 357.33 L398.41 420 L270.62 420 Z" fill="#f15c80" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-stage="Gate" data-y="780" style="fill:var(--markvis-series-6,#f15c80);stroke:var(--markvis-ink,#333333)"/>
   </g>
-  <g fill="#333333" font-size="11" font-weight="700">
+  <g fill="#333333" font-size="11" font-weight="700" style="fill:var(--markvis-ink,#333333)">
     <text x="621.03" y="75.33" text-anchor="start" dominant-baseline="middle" data-label="Browse"><title>Browse · 3,400</title>Browse · 3,400</text>
     <text x="621.03" y="138" text-anchor="start" dominant-baseline="middle" data-label="Waitlist"><title>Waitlist · 2,400</title>Waitlist · 2,400</text>
     <text x="621.03" y="200.67" text-anchor="start" dominant-baseline="middle" data-label="Cart"><title>Cart · 1,800</title>Cart · 1,800</text>

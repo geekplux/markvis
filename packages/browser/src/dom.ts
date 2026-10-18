@@ -1,14 +1,19 @@
 import { render, type RenderOptions } from "@markvis/html";
 
 /** Page defaults set by `initialize`. A block's own fields still win. */
-export type PageDefaults = Pick<RenderOptions, "theme" | "palette" | "surface" | "width">;
+export type PageDefaults = Pick<
+  RenderOptions,
+  "theme" | "palette" | "surface" | "width" | "colors"
+>;
 
 let pageDefaults: PageDefaults = {};
 
 /**
  * Set page defaults for `run`, `init`, and `render`: `theme`, `palette`,
- * `surface`, and `width`. A block's own `theme:` / `palette:` /
- * `surface:` win. Calling it again replaces the defaults.
+ * `surface`, `width`, and `colors` ("host" by default: charts read the
+ * page's `--markvis-*` CSS variables; "static" writes fixed colors only).
+ * A block's own `theme:` / `palette:` / `surface:` win. Calling it again
+ * replaces the defaults.
  */
 export function initialize(defaults: PageDefaults = {}): void {
   const next: PageDefaults = {};
@@ -16,6 +21,7 @@ export function initialize(defaults: PageDefaults = {}): void {
   if (defaults.palette !== undefined) next.palette = defaults.palette;
   if (defaults.surface !== undefined) next.surface = defaults.surface;
   if (defaults.width !== undefined) next.width = defaults.width;
+  if (defaults.colors !== undefined) next.colors = defaults.colors;
   pageDefaults = next;
 }
 

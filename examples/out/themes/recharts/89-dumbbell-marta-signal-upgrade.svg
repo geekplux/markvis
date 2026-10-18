@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="238" viewBox="0 0 720 238" role="img" aria-label="dumbbell chart: Every MARTA line got faster after the signal upgrade (min), 8 rows, series period" aria-labelledby="mv-d5a7c0642bfb6553-title" aria-describedby="mv-d5a7c0642bfb6553-desc" data-markvis="2" data-chart-type="dumbbell" data-id="mv-d5a7c0642bfb6553" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="238" viewBox="0 0 720 238" role="img" aria-label="dumbbell chart: Every MARTA line got faster after the signal upgrade (min), 8 rows, series period" aria-labelledby="mv-d5a7c0642bfb6553-title" aria-describedby="mv-d5a7c0642bfb6553-desc" data-markvis="2" data-chart-type="dumbbell" data-id="mv-d5a7c0642bfb6553" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-d5a7c0642bfb6553-title">Every MARTA line got faster after the signal upgrade</title>
   <desc id="mv-d5a7c0642bfb6553-desc">dumbbell chart. Every MARTA line got faster after the signal upgrade. x=line. y=minutes. series=period. unit=min. 8 rows.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>Every MARTA line got faster after the signal upgrade</title>Every MARTA line got faster after the signal upgrade<tspan font-size="12" font-weight="400" fill="#6B7280"> · min</tspan></text>
-  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-grid="1">
+  <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151" style="fill:var(--markvis-ink,#374151)"><title>Every MARTA line got faster after the signal upgrade</title>Every MARTA line got faster after the signal upgrade<tspan font-size="12" font-weight="400" fill="#6B7280" style="fill:var(--markvis-muted,#6B7280)"> · min</tspan></text>
+  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-grid="1" style="stroke:var(--markvis-grid,#374151)">
     <line x1="54" x2="54" y1="38" y2="174"/>
     <line x1="179.57" x2="179.57" y1="38" y2="174"/>
     <line x1="305.14" x2="305.14" y1="38" y2="174"/>
@@ -10,7 +10,7 @@
     <line x1="556.28" x2="556.28" y1="38" y2="174"/>
     <line x1="681.85" x2="681.85" y1="38" y2="174"/>
   </g>
-  <g fill="#6B7280" font-size="12" font-weight="400">
+  <g fill="#6B7280" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#6B7280)">
     <text x="46" y="55" text-anchor="end" dominant-baseline="middle" data-full-label="Red"><title>Red</title><tspan x="46" dy="0">Red</tspan></text>
     <text x="46" y="89" text-anchor="end" dominant-baseline="middle" data-full-label="Gold"><title>Gold</title><tspan x="46" dy="0">Gold</tspan></text>
     <text x="46" y="123" text-anchor="end" dominant-baseline="middle" data-full-label="Blue"><title>Blue</title><tspan x="46" dy="0">Blue</tspan></text>
@@ -22,27 +22,27 @@
     <text x="556.28" y="192" text-anchor="middle">40</text>
     <text x="681.85" y="192" text-anchor="middle">45</text>
   </g>
-  <g font-size="12" font-weight="400" fill="#374151">
-    <circle cx="316.53" cy="212" r="4.5" fill="#ffffff" stroke="#8884d8" stroke-width="1.5"/>
+  <g font-size="12" font-weight="400" fill="#374151" style="fill:var(--markvis-ink,#374151)">
+    <circle cx="316.53" cy="212" r="4.5" fill="#ffffff" stroke="#8884d8" stroke-width="1.5" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#8884d8)"/>
     <text x="325.53" y="216" data-legend="before">before</text>
-    <circle cx="385.28" cy="212" r="4.5" fill="#82ca9d"/>
+    <circle cx="385.28" cy="212" r="4.5" fill="#82ca9d" style="fill:var(--markvis-series-2,#82ca9d)"/>
     <text x="394.28" y="216" data-legend="after">after</text>
   </g>
   <g data-dumbbell="1">
-    <line x1="581.39" x2="455.82" y1="55" y2="55" stroke="#374151" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round" data-x="Red"/>
-    <circle cx="581.39" cy="55" r="6" fill="#ffffff" stroke="#8884d8" stroke-width="2" data-x="Red" data-series="before" data-y="41"/>
-    <circle cx="455.82" cy="55" r="6" fill="#82ca9d" data-x="Red" data-series="after" data-y="36"/>
-    <line x1="531.16" x2="430.71" y1="89" y2="89" stroke="#374151" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round" data-x="Gold"/>
-    <circle cx="531.16" cy="89" r="6" fill="#ffffff" stroke="#8884d8" stroke-width="2" data-x="Gold" data-series="before" data-y="39"/>
-    <circle cx="430.71" cy="89" r="6" fill="#82ca9d" data-x="Gold" data-series="after" data-y="35"/>
-    <line x1="380.48" x2="330.25" y1="123" y2="123" stroke="#374151" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round" data-x="Blue"/>
-    <circle cx="380.48" cy="123" r="6" fill="#ffffff" stroke="#8884d8" stroke-width="2" data-x="Blue" data-series="before" data-y="33"/>
-    <circle cx="330.25" cy="123" r="6" fill="#82ca9d" data-x="Blue" data-series="after" data-y="31"/>
-    <line x1="154.46" x2="129.34" y1="157" y2="157" stroke="#374151" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round" data-x="Green"/>
-    <circle cx="154.46" cy="157" r="6" fill="#ffffff" stroke="#8884d8" stroke-width="2" data-x="Green" data-series="before" data-y="24"/>
-    <circle cx="129.34" cy="157" r="6" fill="#82ca9d" data-x="Green" data-series="after" data-y="23"/>
+    <line x1="581.39" x2="455.82" y1="55" y2="55" stroke="#374151" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round" data-x="Red" style="stroke:var(--markvis-ink,#374151)"/>
+    <circle cx="581.39" cy="55" r="6" fill="#ffffff" stroke="#8884d8" stroke-width="2" data-x="Red" data-series="before" data-y="41" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#8884d8)"/>
+    <circle cx="455.82" cy="55" r="6" fill="#82ca9d" data-x="Red" data-series="after" data-y="36" style="fill:var(--markvis-series-2,#82ca9d)"/>
+    <line x1="531.16" x2="430.71" y1="89" y2="89" stroke="#374151" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round" data-x="Gold" style="stroke:var(--markvis-ink,#374151)"/>
+    <circle cx="531.16" cy="89" r="6" fill="#ffffff" stroke="#8884d8" stroke-width="2" data-x="Gold" data-series="before" data-y="39" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#8884d8)"/>
+    <circle cx="430.71" cy="89" r="6" fill="#82ca9d" data-x="Gold" data-series="after" data-y="35" style="fill:var(--markvis-series-2,#82ca9d)"/>
+    <line x1="380.48" x2="330.25" y1="123" y2="123" stroke="#374151" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round" data-x="Blue" style="stroke:var(--markvis-ink,#374151)"/>
+    <circle cx="380.48" cy="123" r="6" fill="#ffffff" stroke="#8884d8" stroke-width="2" data-x="Blue" data-series="before" data-y="33" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#8884d8)"/>
+    <circle cx="330.25" cy="123" r="6" fill="#82ca9d" data-x="Blue" data-series="after" data-y="31" style="fill:var(--markvis-series-2,#82ca9d)"/>
+    <line x1="154.46" x2="129.34" y1="157" y2="157" stroke="#374151" stroke-opacity="0.28" stroke-width="3" stroke-linecap="round" data-x="Green" style="stroke:var(--markvis-ink,#374151)"/>
+    <circle cx="154.46" cy="157" r="6" fill="#ffffff" stroke="#8884d8" stroke-width="2" data-x="Green" data-series="before" data-y="24" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#8884d8)"/>
+    <circle cx="129.34" cy="157" r="6" fill="#82ca9d" data-x="Green" data-series="after" data-y="23" style="fill:var(--markvis-series-2,#82ca9d)"/>
   </g>
-  <g fill="#374151" font-size="12" font-weight="500">
+  <g fill="#374151" font-size="12" font-weight="500" style="fill:var(--markvis-ink,#374151)">
     <text x="693.85" y="55" dominant-baseline="middle" data-delta="Red">-5</text>
     <text x="693.85" y="89" dominant-baseline="middle" data-delta="Gold">-4</text>
     <text x="693.85" y="123" dominant-baseline="middle" data-delta="Blue">-2</text>

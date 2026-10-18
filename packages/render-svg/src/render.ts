@@ -5,6 +5,7 @@ import { countTitleLines, visibleTitle } from "../../types/_paint/figure.js";
 import { setTitleLineCount } from "../../types/_paint/layout.js";
 import {
   FRAME,
+  GRID_INK,
   HAIRLINE_OPACITY,
   INK,
   MARGIN,
@@ -21,8 +22,11 @@ export type RenderOptions = {
   /** Overrides the chart's surface field. */
   surface?: SurfaceName;
   /**
-   * How colors are written. Both modes write fixed hex values today; the
-   * option is accepted so callers can pass it ahead of host-page theming.
+   * How colors are written. `host` (the default) writes each color as a
+   * fixed attribute plus a `style` declaration reading the page's
+   * `--markvis-*` variable, with the fixed color as its fallback, so an inline
+   * chart follows the page. `static` writes the fixed colors only, for a file
+   * with no host page. `surface: "export"` defaults to `static`.
    */
   colors?: "host" | "static";
 };
@@ -72,7 +76,8 @@ export function renderSvg(chart: ChartIR, options?: RenderOptions): string {
   applyThemeTokens(t);
   const width = options?.width ?? t.SVG_WIDTH;
   const surface = options?.surface ?? chart.surface ?? "light";
-  applyFrame({ width, surface, colors: options?.colors });
+  const colors = options?.colors ?? (surface === "export" ? "static" : "host");
+  applyFrame({ width, surface, colors });
   setTitleLineCount(
     countTitleLines(visibleTitle(chart), MARGIN.left, chart.unit),
   );
@@ -93,6 +98,7 @@ export function renderSvg(chart: ChartIR, options?: RenderOptions): string {
       "data-id": id,
       "font-family": t.FONT,
       "font-size": 12,
+      style: colors === "host" ? `font-family:var(--markvis-font,${t.FONT})` : undefined,
     })}>`;
     const plate = PLATE;
     const lines = [
@@ -120,7 +126,7 @@ export function renderSvg(chart: ChartIR, options?: RenderOptions): string {
               height: painted.height - 1,
               rx: FRAME.radius === 0 ? undefined : FRAME.radius,
               fill: "none",
-              stroke: INK,
+              stroke: GRID_INK,
               "stroke-opacity": HAIRLINE_OPACITY,
               "data-frame": "1",
             })}/>`,

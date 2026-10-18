@@ -60,5 +60,7 @@ describe("shipped type declarations", () => {
     expect(declaredTuple("THEMES")).toEqual([...ir.THEMES]);
     expect(declaredTuple("PALETTES")).toEqual([...ir.PALETTES]);
     expect(declaredTuple("ERROR_CODES")).toEqual([...parser.ERROR_CODES]);
+    const themes = await import("@markvis/themes");
+    expect(declaredTuple("PAINT_NAMES")).toEqual([...themes.PAINT_NAMES]);
   });
 });

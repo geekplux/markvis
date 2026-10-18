@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="radar chart: Octane still leads sweetness among Eastside roasters, 15 rows, series roaster" aria-labelledby="mv-8ea7187fd1d29496-title" aria-describedby="mv-8ea7187fd1d29496-desc" data-markvis="2" data-chart-type="radar" data-id="mv-8ea7187fd1d29496" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="radar chart: Octane still leads sweetness among Eastside roasters, 15 rows, series roaster" aria-labelledby="mv-8ea7187fd1d29496-title" aria-describedby="mv-8ea7187fd1d29496-desc" data-markvis="2" data-chart-type="radar" data-id="mv-8ea7187fd1d29496" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" style="font-family:var(--markvis-font,-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif)">
   <title id="mv-8ea7187fd1d29496-title">Octane still leads sweetness among Eastside roasters</title>
   <desc id="mv-8ea7187fd1d29496-desc">radar chart. Octane still leads sweetness among Eastside roasters. x=note. y=score. series=roaster. 15 rows.</desc>
-  <text x="48" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Octane still leads sweetness among Eastside roasters</title>Octane still leads sweetness among Eastside roasters</text>
-  <g font-size="12" font-weight="400" fill="#262626">
-    <circle cx="53" cy="40" r="5" fill="#5AD8A6"/>
+  <text x="48" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626" style="fill:var(--markvis-ink,#262626)"><title>Octane still leads sweetness among Eastside roasters</title>Octane still leads sweetness among Eastside roasters</text>
+  <g font-size="12" font-weight="400" fill="#262626" style="fill:var(--markvis-ink,#262626)">
+    <circle cx="53" cy="40" r="5" fill="#5AD8A6" style="fill:var(--markvis-series-1,#5AD8A6)"/>
     <text x="62" y="44" data-legend="Octane">Octane</text>
-    <circle cx="125.47" cy="40" r="5" fill="#E8684A"/>
+    <circle cx="125.47" cy="40" r="5" fill="#E8684A" style="fill:var(--markvis-series-2,#E8684A)"/>
     <text x="134.47" y="44" data-legend="Barista">Barista</text>
-    <circle cx="196.53" cy="40" r="5" fill="#5D7092"/>
+    <circle cx="196.53" cy="40" r="5" fill="#5D7092" style="fill:var(--markvis-series-3,#5D7092)"/>
     <text x="205.53" y="44" data-legend="Component">Component</text>
   </g>
-  <g fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="4 4" data-grid="1" data-radar-grid="1">
+  <g fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="4 4" data-grid="1" data-radar-grid="1" style="stroke:var(--markvis-grid,#262626)">
     <path d="M362.01 166.14 L421.79 209.58 L398.96 279.86 L325.06 279.86 L302.22 209.58 Z"/>
     <line x1="362.01" y1="229" x2="362.01" y2="120.88"/>
     <line x1="362.01" y1="229" x2="464.84" y2="195.59"/>
@@ -19,16 +19,16 @@
     <line x1="362.01" y1="229" x2="259.18" y2="195.59"/>
   </g>
   <g data-radar="1">
-    <path d="M362.01 120.88 L448.1 201.03 L419.65 308.33 L302.89 310.37 L262.77 196.75 Z" fill="#5AD8A6" fill-opacity="0.12" stroke="#5AD8A6" stroke-width="1.75" data-series="Octane"/>
-    <path d="M362.01 135.97 L458.86 197.53 L413.73 300.2 L305.85 306.3 L272.33 199.86 Z" fill="#E8684A" fill-opacity="0.12" stroke="#E8684A" stroke-width="1.75" data-series="Barista"/>
-    <path d="M362.01 129.68 L454.07 199.09 L424.08 314.44 L301.41 312.4 L266.35 197.92 Z" fill="#5D7092" fill-opacity="0.12" stroke="#5D7092" stroke-width="1.75" data-series="Component"/>
+    <path d="M362.01 120.88 L448.1 201.03 L419.65 308.33 L302.89 310.37 L262.77 196.75 Z" fill="#5AD8A6" fill-opacity="0.12" stroke="#5AD8A6" stroke-width="1.75" data-series="Octane" style="fill:var(--markvis-series-1,#5AD8A6);stroke:var(--markvis-series-1,#5AD8A6)"/>
+    <path d="M362.01 135.97 L458.86 197.53 L413.73 300.2 L305.85 306.3 L272.33 199.86 Z" fill="#E8684A" fill-opacity="0.12" stroke="#E8684A" stroke-width="1.75" data-series="Barista" style="fill:var(--markvis-series-2,#E8684A);stroke:var(--markvis-series-2,#E8684A)"/>
+    <path d="M362.01 129.68 L454.07 199.09 L424.08 314.44 L301.41 312.4 L266.35 197.92 Z" fill="#5D7092" fill-opacity="0.12" stroke="#5D7092" stroke-width="1.75" data-series="Component" style="fill:var(--markvis-series-3,#5D7092);stroke:var(--markvis-series-3,#5D7092)"/>
   </g>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#737373)">
     <text x="362.01" y="106.88" text-anchor="middle" dominant-baseline="middle" data-spoke="Sweetness">Sweetness</text>
     <text x="478.15" y="191.26" text-anchor="middle" dominant-baseline="middle" data-spoke="Acidity">Acidity</text>
     <text x="433.79" y="327.8" text-anchor="middle" dominant-baseline="middle" data-spoke="Body">Body</text>
     <text x="290.23" y="327.8" text-anchor="middle" dominant-baseline="middle" data-spoke="Finish">Finish</text>
     <text x="245.86" y="191.26" text-anchor="middle" dominant-baseline="middle" data-spoke="Aroma">Aroma</text>
-    <text x="362.01" y="162.14" text-anchor="middle" font-size="12" fill="#737373" data-radar-tick="50">50</text>
+    <text x="362.01" y="162.14" text-anchor="middle" font-size="12" fill="#737373" data-radar-tick="50" style="fill:var(--markvis-muted,#737373)">50</text>
   </g>
 </svg>

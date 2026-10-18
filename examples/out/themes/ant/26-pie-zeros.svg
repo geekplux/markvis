@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="pie chart: On still leads status mix at 70, 3 slices" aria-labelledby="mv-046c245537a98d47-title" aria-describedby="mv-046c245537a98d47-desc" data-markvis="2" data-chart-type="pie" data-id="mv-046c245537a98d47" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="pie chart: On still leads status mix at 70, 3 slices" aria-labelledby="mv-046c245537a98d47-title" aria-describedby="mv-046c245537a98d47-desc" data-markvis="2" data-chart-type="pie" data-id="mv-046c245537a98d47" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" style="font-family:var(--markvis-font,-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif)">
   <title id="mv-046c245537a98d47-title">On still leads status mix at 70</title>
   <desc id="mv-046c245537a98d47-desc">pie chart. On still leads status mix at 70. x=flag. y=count. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="48" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>On still leads status mix at 70</title>On still leads status mix at 70</text>
+  <text x="48" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626" style="fill:var(--markvis-ink,#262626)"><title>On still leads status mix at 70</title>On still leads status mix at 70</text>
   <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0.6">
-    <path d="M377 103.6 A122.4 122.4 0 1 1 260.59 263.82 L307.15 248.69 A73.44 73.44 0 1 0 377 152.56 Z" fill="#5AD8A6" stroke="#262626" stroke-opacity="0.32" stroke-width="1.5" data-label="on" data-raw-value="70" data-donut="1"/>
-    <path d="M260.59 263.82 A122.4 122.4 0 0 1 377 103.6 L377 152.56 A73.44 73.44 0 0 0 307.15 248.69 Z" fill="#E8684A" stroke="#262626" stroke-opacity="0.32" stroke-width="1.5" data-label="off" data-raw-value="30" data-donut="1"/>
+    <path d="M377 103.6 A122.4 122.4 0 1 1 260.59 263.82 L307.15 248.69 A73.44 73.44 0 1 0 377 152.56 Z" fill="#5AD8A6" stroke="#262626" stroke-opacity="0.32" stroke-width="1.5" data-label="on" data-raw-value="70" data-donut="1" style="fill:var(--markvis-series-1,#5AD8A6);stroke:var(--markvis-ink,#262626)"/>
+    <path d="M260.59 263.82 A122.4 122.4 0 0 1 377 103.6 L377 152.56 A73.44 73.44 0 0 0 307.15 248.69 Z" fill="#E8684A" stroke="#262626" stroke-opacity="0.32" stroke-width="1.5" data-label="off" data-raw-value="30" data-donut="1" style="fill:var(--markvis-series-2,#E8684A);stroke:var(--markvis-ink,#262626)"/>
   </g>
-  <g fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-leaders="1">
+  <g fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-leaders="1" style="stroke:var(--markvis-ink,#262626)">
     <polyline points="476.02,297.94 488.97,307.35 496.97,307.35"/>
     <polyline points="277.98,154.06 265.03,144.65 257.03,144.65"/>
   </g>
-  <g font-size="12" font-weight="400" fill="#262626">
+  <g font-size="12" font-weight="400" fill="#262626" style="fill:var(--markvis-ink,#262626)">
     <text x="508.97" y="307.35" text-anchor="start" dominant-baseline="middle" data-label="on">on · 70</text>
     <text x="245.03" y="144.65" text-anchor="end" dominant-baseline="middle" data-label="off">off · 30</text>
   </g>

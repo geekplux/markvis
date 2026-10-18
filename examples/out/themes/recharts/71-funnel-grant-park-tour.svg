@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="funnel chart: Close still seals 12 of 85 Grant Park tours, 6 rows" aria-labelledby="mv-1fe5f50d0d0280e3-title" aria-describedby="mv-1fe5f50d0d0280e3-desc" data-markvis="2" data-chart-type="funnel" data-id="mv-1fe5f50d0d0280e3" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="funnel chart: Close still seals 12 of 85 Grant Park tours, 6 rows" aria-labelledby="mv-1fe5f50d0d0280e3-title" aria-describedby="mv-1fe5f50d0d0280e3-desc" data-markvis="2" data-chart-type="funnel" data-id="mv-1fe5f50d0d0280e3" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-1fe5f50d0d0280e3-title">Close still seals 12 of 85 Grant Park tours</title>
   <desc id="mv-1fe5f50d0d0280e3-desc">funnel chart. Close still seals 12 of 85 Grant Park tours. x=stage. y=households. 6 rows.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>Close still seals 12 of 85 Grant Park tours</title>Close still seals 12 of 85 Grant Park tours</text>
+  <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151" style="fill:var(--markvis-ink,#374151)"><title>Close still seals 12 of 85 Grant Park tours</title>Close still seals 12 of 85 Grant Park tours</text>
   <g data-funnel="1">
-    <path d="M48 38 L615.1 38 L491.68 103.33 L171.43 103.33 Z" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-stage="Inquiry" data-y="85"/>
-    <path d="M171.43 103.33 L491.68 103.33 L404.94 168.67 L258.16 168.67 Z" fill="#82ca9d" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-stage="Tour" data-y="48"/>
-    <path d="M258.16 168.67 L404.94 168.67 L391.6 234 L271.51 234 Z" fill="#ffc658" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-stage="Offer" data-y="22"/>
-    <path d="M271.51 234 L391.6 234 L381.59 299.33 L281.51 299.33 Z" fill="#ff7300" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-stage="Inspection" data-y="18"/>
-    <path d="M281.51 299.33 L381.59 299.33 L371.58 364.67 L291.52 364.67 Z" fill="#0088FE" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-stage="Earnest" data-y="15"/>
-    <path d="M291.52 364.67 L371.58 364.67 L371.58 430 L291.52 430 Z" fill="#00C49F" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-stage="Close" data-y="12"/>
+    <path d="M48 38 L615.1 38 L491.68 103.33 L171.43 103.33 Z" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-stage="Inquiry" data-y="85" style="fill:var(--markvis-series-1,#8884d8);stroke:var(--markvis-ink,#374151)"/>
+    <path d="M171.43 103.33 L491.68 103.33 L404.94 168.67 L258.16 168.67 Z" fill="#82ca9d" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-stage="Tour" data-y="48" style="fill:var(--markvis-series-2,#82ca9d);stroke:var(--markvis-ink,#374151)"/>
+    <path d="M258.16 168.67 L404.94 168.67 L391.6 234 L271.51 234 Z" fill="#ffc658" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-stage="Offer" data-y="22" style="fill:var(--markvis-series-3,#ffc658);stroke:var(--markvis-ink,#374151)"/>
+    <path d="M271.51 234 L391.6 234 L381.59 299.33 L281.51 299.33 Z" fill="#ff7300" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-stage="Inspection" data-y="18" style="fill:var(--markvis-series-4,#ff7300);stroke:var(--markvis-ink,#374151)"/>
+    <path d="M281.51 299.33 L381.59 299.33 L371.58 364.67 L291.52 364.67 Z" fill="#0088FE" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-stage="Earnest" data-y="15" style="fill:var(--markvis-series-5,#0088FE);stroke:var(--markvis-ink,#374151)"/>
+    <path d="M291.52 364.67 L371.58 364.67 L371.58 430 L291.52 430 Z" fill="#00C49F" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-stage="Close" data-y="12" style="fill:var(--markvis-series-6,#00C49F);stroke:var(--markvis-ink,#374151)"/>
   </g>
-  <g fill="#374151" font-size="12" font-weight="500">
+  <g fill="#374151" font-size="12" font-weight="500" style="fill:var(--markvis-ink,#374151)">
     <text x="623.1" y="70.67" text-anchor="start" dominant-baseline="middle" data-label="Inquiry"><title>Inquiry · 85</title>Inquiry · 85</text>
     <text x="623.1" y="136" text-anchor="start" dominant-baseline="middle" data-label="Tour"><title>Tour · 48</title>Tour · 48</text>
     <text x="623.1" y="201.33" text-anchor="start" dominant-baseline="middle" data-label="Offer"><title>Offer · 22</title>Offer · 22</text>

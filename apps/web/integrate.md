@@ -19,6 +19,8 @@ npx markvis bake path/to.md
 
 Running bake again does nothing if nothing changed. **2.0.0 replaces 0.0.13.**
 
+Colors: `bake` writes fixed colors, since a picture has no page to follow (`--colors host` keeps the [CSS variables](/theming#your-colors)).
+
 ### GitHub Action
 
 github.com runs no scripts, so a README shows a picture or a table. This workflow bakes the pictures on every push and commits them; the chart blocks stay.
@@ -93,6 +95,8 @@ Page defaults for blocks that leave a field out: `markvis.initialize({ theme: "d
 
 Demos: `apps/playground/dropin.html`, `examples/hosts/script-tag/`, `examples/hosts/mkdocs/`.
 
+Colors: inline charts follow your [CSS variables](/theming#your-colors); `markvis.initialize({ colors: "static" })` writes fixed colors.
+
 ## 3. markdown-it
 
 ```js
@@ -106,6 +110,8 @@ const html = new MarkdownIt({ html: true })
 ```
 
 VitePress: `markdown.config(md) { md.use(markdownItMarkvis) }`. Host example: `examples/hosts/vitepress/`, `examples/hosts/markdown-it/`.
+
+Colors: inline charts follow your [CSS variables](/theming#your-colors), with fixed colors as fallbacks.
 
 ## 4. remark
 
@@ -125,6 +131,8 @@ const html = String(
 
 Host example: `examples/hosts/astro/` (and the package README). Same drawing as the command line. No extra chart kinds.
 
+Colors: inline charts follow your [CSS variables](/theming#your-colors), with fixed colors as fallbacks.
+
 ## 5. rehype and MDX
 
 For pipelines that work on HTML trees — MDX docs sites, Astro, Next.js MDX, or `unified` with `remark-rehype` — use `markvis/rehype`. It replaces each chart code block with real elements (figure, SVG, table), not a raw HTML string, so MDX accepts it.
@@ -141,6 +149,8 @@ presets: [["classic", { docs: { rehypePlugins: [rehypeMarkvis] } }]];
 
 Astro 7: install `@astrojs/markdown-remark`, then set `markdown.processor: unified({ rehypePlugins: [rehypeMarkvis] })` and `markdown.syntaxHighlight: { type: "shiki", excludeLangs: ["chart", "markvis", "vis"] }` so Shiki leaves chart blocks alone. Host examples: `examples/hosts/docusaurus/`, `examples/hosts/astro/`.
 
+Colors: inline charts follow your [CSS variables](/theming#your-colors), with fixed colors as fallbacks. A sanitizer that drops `style` leaves the fixed colors.
+
 ## 6. JavaScript
 
 Pass one chart block — the inside a Markdown renderer hands a code-block plugin, or the whole block with its fence lines — and get the chart in one call. It never throws.
@@ -154,7 +164,7 @@ element.innerHTML = result.html;
 
 `result.html` is the same HTML every other path emits: a `<figure>` with the SVG, a caption, and the data table, or, when the block is wrong, the data table and one error line. When `result.ok` is true, `result.svg` is the SVG alone and `result.chart` is the parsed chart. Otherwise `result.error.code` is a stable code and `result.table` holds the rows.
 
-Options: `width` (default 720), and `theme`, `palette`, `surface` for blocks that leave them out — a block's own field always wins. `filename` names the source for a derived title. In the browser the drop-in exposes the same function as `markvis.render`.
+Options: `width` (default 720), and `theme`, `palette`, `surface` for blocks that leave them out — a block's own field always wins. `filename` names the source for a derived title. `colors`: `"host"` (default) follows your [CSS variables](/theming#your-colors); `"static"` writes fixed colors. In the browser the drop-in exposes the same function as `markvis.render`.
 
 To parse without drawing, use `parseBlock(blockText)`. To read every chart in a Markdown document, use `parseDocument`.
 
@@ -175,7 +185,7 @@ import { Markvis } from "markvis/react";
 />
 ```
 
-Both forms go through the same parser. `chart` + `data` becomes a block (header lines, then CSV), so it is checked like text and fails with the same error codes, keeping the rows. The chart takes the width of the element around it and redraws after that width changes. Props: `width`, `theme`, `palette`, and `surface` (used where the block leaves them out), `className`, and `onError(error)`.
+Both forms go through the same parser. `chart` + `data` becomes a block (header lines, then CSV), so it is checked like text and fails with the same error codes, keeping the rows. The chart takes the width of the element around it and redraws after that width changes. Props: `width`, `theme`, `palette`, and `surface` (used where the block leaves them out), `colors` (`"host"` follows your [CSS variables](/theming#your-colors), the default; `"static"` writes fixed colors), `className`, and `onError(error)`.
 
 In react-markdown, or anything that takes a `components` map:
 

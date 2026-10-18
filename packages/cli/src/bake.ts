@@ -119,7 +119,16 @@ function gapEnd(source: string, from: number, nextIndex: number | undefined): nu
   return Math.max(from, Math.min(nextIndex, source.length));
 }
 
-export function bakeMarkdown(source: string, mdAbs: string): BakeFileResult {
+export type BakeOptions = {
+  /** How colors are written. Default static: a baked file has no host page. */
+  colors?: "host" | "static";
+};
+
+export function bakeMarkdown(
+  source: string,
+  mdAbs: string,
+  options: BakeOptions = {},
+): BakeFileResult {
   const charts = extractCharts(source);
   const stem = basename(mdAbs).replace(/\.md$/i, "");
   const dir = dirname(mdAbs);
@@ -163,7 +172,7 @@ export function bakeMarkdown(source: string, mdAbs: string): BakeFileResult {
       continue;
     }
 
-    const svg = renderSvg(parsed.chart);
+    const svg = renderSvg(parsed.chart, { colors: options.colors ?? "static" });
     const alt = parsed.chart.title.replace(/]/g, "");
     let inserted = false;
 

@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="heatmap chart: Fall still leads Eastside Beltline walks at Ponce (walkers), 16 rows, series season" aria-labelledby="mv-f20ff20e0aaf08c6-title" aria-describedby="mv-f20ff20e0aaf08c6-desc" data-markvis="2" data-chart-type="heatmap" data-id="mv-f20ff20e0aaf08c6" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="heatmap chart: Fall still leads Eastside Beltline walks at Ponce (walkers), 16 rows, series season" aria-labelledby="mv-f20ff20e0aaf08c6-title" aria-describedby="mv-f20ff20e0aaf08c6-desc" data-markvis="2" data-chart-type="heatmap" data-id="mv-f20ff20e0aaf08c6" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" style="font-family:var(--markvis-font,-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif)">
   <title id="mv-f20ff20e0aaf08c6-title">Fall still leads Eastside Beltline walks at Ponce</title>
   <desc id="mv-f20ff20e0aaf08c6-desc">heatmap chart. Fall still leads Eastside Beltline walks at Ponce. x=segment. y=walkers. series=season. unit=walkers. 16 rows.</desc>
-  <text x="75.2" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Fall still leads Eastside Beltline walks at Ponce</title>Fall still leads Eastside Beltline walks at Ponce<tspan font-size="12" font-weight="400" fill="#737373"> · walkers</tspan></text>
+  <text x="75.2" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626" style="fill:var(--markvis-ink,#262626)"><title>Fall still leads Eastside Beltline walks at Ponce</title>Fall still leads Eastside Beltline walks at Ponce<tspan font-size="12" font-weight="400" fill="#737373" style="fill:var(--markvis-muted,#737373)"> · walkers</tspan></text>
   <defs>
     <pattern id="mv-f20ff20e0aaf08c6-missing" patternUnits="userSpaceOnUse" width="6" height="6">
       <rect width="6" height="6" fill="#f4f1ea"/>
@@ -51,10 +51,10 @@
     <rect x="660.88" y="127.75" width="12" height="41.38" fill="#7fdeb6"/>
     <rect x="660.88" y="86.88" width="12" height="41.38" fill="#6cdbae"/>
     <rect x="660.88" y="46" width="12" height="41.38" fill="#5ad8a6"/>
-    <text x="676.88" y="50" font-size="12" fill="#737373" dominant-baseline="hanging" data-scale-max="1">5,600</text>
-    <text x="676.88" y="373" font-size="12" fill="#737373" data-scale-min="1">1,200</text>
+    <text x="676.88" y="50" font-size="12" fill="#737373" dominant-baseline="hanging" data-scale-max="1" style="fill:var(--markvis-muted,#737373)">5,600</text>
+    <text x="676.88" y="373" font-size="12" fill="#737373" data-scale-min="1" style="fill:var(--markvis-muted,#737373)">1,200</text>
   </g>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#737373)">
     <text x="67.2" y="86.88" text-anchor="end" dominant-baseline="middle" data-series-label="Spring"><title>Spring</title>Spring</text>
     <text x="67.2" y="168.63" text-anchor="end" dominant-baseline="middle" data-series-label="Summer"><title>Summer</title>Summer</text>
     <text x="67.2" y="250.38" text-anchor="end" dominant-baseline="middle" data-series-label="Fall"><title>Fall</title>Fall</text>

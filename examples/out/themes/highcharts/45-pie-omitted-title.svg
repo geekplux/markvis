@@ -1,18 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="pie chart: Yes leads survey answers at 60, 3 slices" aria-labelledby="mv-8636ea173fdc9363-title" aria-describedby="mv-8636ea173fdc9363-desc" data-markvis="2" data-chart-type="pie" data-id="mv-8636ea173fdc9363" font-family="&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="pie chart: Yes leads survey answers at 60, 3 slices" aria-labelledby="mv-8636ea173fdc9363-title" aria-describedby="mv-8636ea173fdc9363-desc" data-markvis="2" data-chart-type="pie" data-id="mv-8636ea173fdc9363" font-family="&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif" font-size="12" style="font-family:var(--markvis-font,&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif)">
   <title id="mv-8636ea173fdc9363-title">Yes leads survey answers at 60</title>
   <desc id="mv-8636ea173fdc9363-desc">pie chart. Yes leads survey answers at 60. x=label. y=n. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Yes leads survey answers at 60</title>Yes leads survey answers at 60</text>
-  <g font-size="12" font-weight="700" fill="#333333">
-    <circle cx="309.32" cy="420" r="5" fill="#7cb5ec"/>
+  <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333" style="fill:var(--markvis-ink,#333333)"><title>Yes leads survey answers at 60</title>Yes leads survey answers at 60</text>
+  <g font-size="12" font-weight="700" fill="#333333" style="fill:var(--markvis-ink,#333333)">
+    <circle cx="309.32" cy="420" r="5" fill="#7cb5ec" style="fill:var(--markvis-series-1,#7cb5ec)"/>
     <text x="318.32" y="424" data-legend="yes">yes</text>
-    <circle cx="360.76" cy="420" r="5" fill="#434348"/>
+    <circle cx="360.76" cy="420" r="5" fill="#434348" style="fill:var(--markvis-series-2,#434348)"/>
     <text x="369.76" y="424" data-legend="no">no</text>
-    <circle cx="406.78" cy="420" r="5" fill="#90ed7d"/>
+    <circle cx="406.78" cy="420" r="5" fill="#90ed7d" style="fill:var(--markvis-series-3,#90ed7d)"/>
     <text x="415.78" y="424" data-legend="other">other</text>
   </g>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0">
-    <path d="M378 220 L378 100.32 A119.68 119.68 0 1 1 307.65 316.82 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="yes" data-raw-value="60"/>
-    <path d="M378 220 L307.65 316.82 A119.68 119.68 0 0 1 307.65 123.18 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="no" data-raw-value="30"/>
-    <path d="M378 220 L307.65 123.18 A119.68 119.68 0 0 1 378 100.32 Z" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="other" data-raw-value="10"/>
+    <path d="M378 220 L378 100.32 A119.68 119.68 0 1 1 307.65 316.82 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="yes" data-raw-value="60" style="fill:var(--markvis-series-1,#7cb5ec);stroke:var(--markvis-ink,#333333)"/>
+    <path d="M378 220 L307.65 316.82 A119.68 119.68 0 0 1 307.65 123.18 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="no" data-raw-value="30" style="fill:var(--markvis-series-2,#434348);stroke:var(--markvis-ink,#333333)"/>
+    <path d="M378 220 L307.65 123.18 A119.68 119.68 0 0 1 378 100.32 Z" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="other" data-raw-value="10" style="fill:var(--markvis-series-3,#90ed7d);stroke:var(--markvis-ink,#333333)"/>
   </g>
 </svg>

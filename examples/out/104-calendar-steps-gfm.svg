@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="248" viewBox="0 0 720 248" role="img" aria-label="calendar chart: February steps on a fixed 0–15k scale (steps), 28 rows" aria-labelledby="mv-a68090a478feaa55-title" aria-describedby="mv-a68090a478feaa55-desc" data-markvis="2" data-chart-type="calendar" data-id="mv-a68090a478feaa55" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="248" viewBox="0 0 720 248" role="img" aria-label="calendar chart: February steps on a fixed 0–15k scale (steps), 28 rows" aria-labelledby="mv-a68090a478feaa55-title" aria-describedby="mv-a68090a478feaa55-desc" data-markvis="2" data-chart-type="calendar" data-id="mv-a68090a478feaa55" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-a68090a478feaa55-title">February steps on a fixed 0–15k scale</title>
   <desc id="mv-a68090a478feaa55-desc">calendar chart. February steps on a fixed 0–15k scale. x=date. y=steps. unit=steps. 28 rows.</desc>
-  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>February steps on a fixed 0–15k scale</title>February steps on a fixed 0–15k scale<tspan font-size="13" font-weight="400" fill="#737373"> · steps</tspan></text>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717" style="fill:var(--markvis-ink,#171717)"><title>February steps on a fixed 0–15k scale</title>February steps on a fixed 0–15k scale<tspan font-size="13" font-weight="400" fill="#737373" style="fill:var(--markvis-muted,#737373)"> · steps</tspan></text>
   <defs>
     <pattern id="mv-a68090a478feaa55-missing" patternUnits="userSpaceOnUse" width="4" height="4">
       <rect width="4" height="4" fill="#f4f1ea"/>
@@ -43,7 +43,7 @@
   <rect x="134.69" y="212" width="16" height="16" rx="2" fill="#89b1f1" data-key-step="2"/>
   <rect x="152.69" y="212" width="16" height="16" rx="2" fill="#6299f3" data-key-step="3"/>
   <rect x="170.69" y="212" width="16" height="16" rx="2" fill="#3b82f6" data-key-step="4"/>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#737373)">
     <text x="102.83" y="56" data-month="Feb">Feb</text>
     <text x="76.83" y="72" text-anchor="end" dominant-baseline="middle">Mon</text>
     <text x="76.83" y="108" text-anchor="end" dominant-baseline="middle">Wed</text>

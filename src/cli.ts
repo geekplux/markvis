@@ -19,6 +19,7 @@ export {
 export type {
   BakeChartResult,
   BakeFileResult,
+  BakeOptions,
   CliContext,
   GalleryItem,
   ChartStats,

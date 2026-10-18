@@ -1,19 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="pie chart: Budget lines overrun the 100% pie, 3 slices" aria-labelledby="mv-2e7a703e9d22ed38-title" aria-describedby="mv-2e7a703e9d22ed38-desc" data-markvis="2" data-chart-type="pie" data-id="mv-2e7a703e9d22ed38" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="pie chart: Budget lines overrun the 100% pie, 3 slices" aria-labelledby="mv-2e7a703e9d22ed38-title" aria-describedby="mv-2e7a703e9d22ed38-desc" data-markvis="2" data-chart-type="pie" data-id="mv-2e7a703e9d22ed38" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-2e7a703e9d22ed38-title">Budget lines overrun the 100% pie</title>
   <desc id="mv-2e7a703e9d22ed38-desc">pie chart. Budget lines overrun the 100% pie. x=bucket. y=pct. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
-  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Budget lines overrun the 100% pie</title>Budget lines overrun the 100% pie</text>
-  <g font-size="12" font-weight="500" fill="#0A0A0A">
-    <rect x="285.95" y="435" width="10" height="10" fill="#F54900" rx="3"/>
+  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1" style="stroke:var(--markvis-grid,#0A0A0A)"/>
+  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A" style="fill:var(--markvis-ink,#0A0A0A)"><title>Budget lines overrun the 100% pie</title>Budget lines overrun the 100% pie</text>
+  <g font-size="12" font-weight="500" fill="#0A0A0A" style="fill:var(--markvis-ink,#0A0A0A)">
+    <rect x="285.95" y="435" width="10" height="10" fill="#F54900" rx="3" style="fill:var(--markvis-series-1,#F54900)"/>
     <text x="299.95" y="444" data-legend="Infra">Infra</text>
-    <rect x="343.94" y="435" width="10" height="10" fill="#009689" rx="3"/>
+    <rect x="343.94" y="435" width="10" height="10" fill="#009689" rx="3" style="fill:var(--markvis-series-2,#009689)"/>
     <text x="357.94" y="444" data-legend="Product">Product</text>
-    <rect x="421.96" y="435" width="10" height="10" fill="#104E64" rx="3"/>
+    <rect x="421.96" y="435" width="10" height="10" fill="#104E64" rx="3" style="fill:var(--markvis-series-3,#104E64)"/>
     <text x="435.96" y="444" data-legend="Ops">Ops</text>
   </g>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0.5">
-    <path d="M374 108.56 A124.44 124.44 0 0 1 427.99 345.12 L401 289.06 A62.22 62.22 0 0 0 374 170.78 Z" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Infra" data-raw-value="45" data-donut="1"/>
-    <path d="M427.99 345.12 A124.44 124.44 0 0 1 249.91 223.7 L311.95 228.35 A62.22 62.22 0 0 0 401 289.06 Z" fill="#009689" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Product" data-raw-value="35" data-donut="1"/>
-    <path d="M249.91 223.7 A124.44 124.44 0 0 1 374 108.56 L374 170.78 A62.22 62.22 0 0 0 311.95 228.35 Z" fill="#104E64" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Ops" data-raw-value="25" data-donut="1"/>
+    <path d="M374 108.56 A124.44 124.44 0 0 1 427.99 345.12 L401 289.06 A62.22 62.22 0 0 0 374 170.78 Z" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Infra" data-raw-value="45" data-donut="1" style="fill:var(--markvis-series-1,#F54900);stroke:var(--markvis-ink,#0A0A0A)"/>
+    <path d="M427.99 345.12 A124.44 124.44 0 0 1 249.91 223.7 L311.95 228.35 A62.22 62.22 0 0 0 401 289.06 Z" fill="#009689" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Product" data-raw-value="35" data-donut="1" style="fill:var(--markvis-series-2,#009689);stroke:var(--markvis-ink,#0A0A0A)"/>
+    <path d="M249.91 223.7 A124.44 124.44 0 0 1 374 108.56 L374 170.78 A62.22 62.22 0 0 0 311.95 228.35 Z" fill="#104E64" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1.5" data-label="Ops" data-raw-value="25" data-donut="1" style="fill:var(--markvis-series-3,#104E64);stroke:var(--markvis-ink,#0A0A0A)"/>
   </g>
 </svg>

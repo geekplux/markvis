@@ -70,6 +70,17 @@ describe("<Markvis source>", () => {
     expect(html).toBe(`<div class="answer-chart">${render(source, options).html}</div>`);
     expect(html).toContain('width="480"');
   });
+
+  it("reads the page's CSS variables by default, and not with colors static", () => {
+    const source = "type: bar\nx: day\ny: visits\n\nday,visits\nMon,3\n";
+    const host = renderToStaticMarkup(createElement(Markvis, { source, width: 480 }));
+    expect(host).toContain("var(--markvis-series-1,");
+    const fixed = renderToStaticMarkup(
+      createElement(Markvis, { source, width: 480, colors: "static" }),
+    );
+    expect(fixed).toBe(`<div>${render(source, { width: 480, colors: "static" }).html}</div>`);
+    expect(fixed).not.toContain("var(");
+  });
 });
 
 describe("golden: every example equals render().html", () => {

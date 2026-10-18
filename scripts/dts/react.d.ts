@@ -11,6 +11,11 @@ type MarkvisCommonProps = {
   palette?: ChartPalette | undefined;
   /** Used when the block has no `surface:`. */
   surface?: "light" | "dark" | "export" | undefined;
+  /**
+   * "host" (default) reads the page's `--markvis-*` CSS variables, with the
+   * fixed colors as fallbacks; "static" writes fixed colors only.
+   */
+  colors?: "host" | "static" | undefined;
   className?: string | undefined;
   /** Called after a block fails to parse, with its stable error. */
   onError?: ((error: ParseError) => void) | undefined;

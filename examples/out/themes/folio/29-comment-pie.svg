@@ -1,18 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Core still leads product mix at 50% (%), 3 slices" aria-labelledby="mv-e0c3dbc735af8720-title" aria-describedby="mv-e0c3dbc735af8720-desc" data-markvis="2" data-chart-type="pie" data-id="mv-e0c3dbc735af8720" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="pie chart: Core still leads product mix at 50% (%), 3 slices" aria-labelledby="mv-e0c3dbc735af8720-title" aria-describedby="mv-e0c3dbc735af8720-desc" data-markvis="2" data-chart-type="pie" data-id="mv-e0c3dbc735af8720" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-e0c3dbc735af8720-title">Core still leads product mix at 50%</title>
   <desc id="mv-e0c3dbc735af8720-desc">pie chart. Core still leads product mix at 50%. x=name. y=value. unit=%. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Core still leads product mix at 50%</title>Core still leads product mix at 50%<tspan font-size="13" font-weight="400" fill="#737373"> · %</tspan></text>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717" style="fill:var(--markvis-ink,#171717)"><title>Core still leads product mix at 50%</title>Core still leads product mix at 50%<tspan font-size="13" font-weight="400" fill="#737373" style="fill:var(--markvis-muted,#737373)"> · %</tspan></text>
   <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0">
-    <path d="M374 252 L374 110.56 A141.44 141.44 0 0 1 395.08 391.86 Z" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Core" data-raw-value="50"/>
-    <path d="M374 252 L395.08 391.86 A141.44 141.44 0 0 1 232.96 241.43 Z" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Addons" data-raw-value="30"/>
-    <path d="M374 252 L232.96 241.43 A141.44 141.44 0 0 1 374 110.56 Z" fill="#10B981" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Other" data-raw-value="25"/>
+    <path d="M374 252 L374 110.56 A141.44 141.44 0 0 1 395.08 391.86 Z" fill="#3B82F6" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Core" data-raw-value="50" style="fill:var(--markvis-series-1,#3B82F6);stroke:var(--markvis-ink,#171717)"/>
+    <path d="M374 252 L395.08 391.86 A141.44 141.44 0 0 1 232.96 241.43 Z" fill="#F97316" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Addons" data-raw-value="30" style="fill:var(--markvis-series-2,#F97316);stroke:var(--markvis-ink,#171717)"/>
+    <path d="M374 252 L232.96 241.43 A141.44 141.44 0 0 1 374 110.56 Z" fill="#10B981" stroke="#171717" stroke-opacity="0.28" stroke-width="1.5" data-label="Other" data-raw-value="25" style="fill:var(--markvis-series-3,#10B981);stroke:var(--markvis-ink,#171717)"/>
   </g>
-  <g fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-leaders="1">
+  <g fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-leaders="1" style="stroke:var(--markvis-ink,#171717)">
     <polyline points="515.04,241.43 531,240.23 539,240.23"/>
     <polyline points="277.8,355.68 266.91,367.41 258.91,367.41"/>
     <polyline points="277.8,148.32 266.91,136.59 258.91,136.59"/>
   </g>
-  <g font-size="13" font-weight="500" fill="#171717">
+  <g font-size="13" font-weight="500" fill="#171717" style="fill:var(--markvis-ink,#171717)">
     <text x="551" y="240.23" text-anchor="start" dominant-baseline="middle" data-label="Core">Core · 50</text>
     <text x="246.91" y="367.41" text-anchor="end" dominant-baseline="middle" data-label="Addons">Addons · 30</text>
     <text x="246.91" y="136.59" text-anchor="end" dominant-baseline="middle" data-label="Other">Other · 25</text>

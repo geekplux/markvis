@@ -22,6 +22,11 @@ type CommonProps = {
   theme?: ChartTheme | undefined;
   palette?: ChartPalette | undefined;
   surface?: "light" | "dark" | "export" | undefined;
+  /**
+   * "host" (default) reads the page's `--markvis-*` CSS variables, with the
+   * fixed colors as fallbacks; "static" writes fixed colors only.
+   */
+  colors?: "host" | "static" | undefined;
   className?: string | undefined;
   /** Called after a block fails to parse, with its stable error. */
   onError?: ((error: ParseError) => void) | undefined;
@@ -124,7 +129,7 @@ type ChartProps = CommonProps & { source: string; open?: boolean };
 
 /** One block to a figure, or its rows and one error line. Internal. */
 export function Chart(props: ChartProps): ReactElement {
-  const { source, open = false, theme, palette, surface, className, onError } = props;
+  const { source, open = false, theme, palette, surface, colors, className, onError } = props;
   const ref = useRef<HTMLDivElement | null>(null);
   const width = useContainerWidth(ref, props.width, !open);
   const result = useMemo(() => {
@@ -136,8 +141,9 @@ export function Chart(props: ChartProps): ReactElement {
     if (theme !== undefined) options.theme = theme;
     if (palette !== undefined) options.palette = palette;
     if (surface !== undefined) options.surface = surface;
+    if (colors !== undefined) options.colors = colors;
     return render(source, options);
-  }, [source, open, width, theme, palette, surface]);
+  }, [source, open, width, theme, palette, surface, colors]);
   const pending = useMemo(() => (open ? pendingHtml(source) : undefined), [source, open]);
 
   const onErrorRef = useRef(onError);

@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="bar chart: North America leads cloud spend at 420k (USD), 3 rows" aria-labelledby="mv-8e85d3644f53d3e4-title" aria-describedby="mv-8e85d3644f53d3e4-desc" data-markvis="2" data-chart-type="bar" data-id="mv-8e85d3644f53d3e4" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="bar chart: North America leads cloud spend at 420k (USD), 3 rows" aria-labelledby="mv-8e85d3644f53d3e4-title" aria-describedby="mv-8e85d3644f53d3e4-desc" data-markvis="2" data-chart-type="bar" data-id="mv-8e85d3644f53d3e4" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-8e85d3644f53d3e4-title">North America leads cloud spend at 420k</title>
   <desc id="mv-8e85d3644f53d3e4-desc">bar chart. North America leads cloud spend at 420k. x=region. y=spend. unit=USD. 3 rows.</desc>
-  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
-  <text x="59.06" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>North America leads cloud spend at 420k</title>North America leads cloud spend at 420k</text>
-  <text x="59.06" y="51" text-anchor="start" font-size="13" font-weight="400" fill="#737373" data-subtitle="1">USD</text>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1" style="stroke:var(--markvis-grid,#0A0A0A)"/>
+  <text x="59.06" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A" style="fill:var(--markvis-ink,#0A0A0A)"><title>North America leads cloud spend at 420k</title>North America leads cloud spend at 420k</text>
+  <text x="59.06" y="51" text-anchor="start" font-size="13" font-weight="400" fill="#737373" data-subtitle="1" style="fill:var(--markvis-muted,#737373)">USD</text>
+  <g fill="#737373" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#737373)">
     <text x="51.06" y="420" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="51.06" y="304" text-anchor="end" dominant-baseline="middle">200,000</text>
     <text x="51.06" y="188" text-anchor="end" dominant-baseline="middle">400,000</text>
@@ -14,13 +14,13 @@
     <text x="593.18" y="432" text-anchor="middle" font-size="12" data-full-label="Legacy platform decommission wave 2"><title>Legacy platform decommission wave 2</title><tspan x="593.18" dy="0">Legacy platform decommission</tspan><tspan x="593.18" dy="15">wave 2</tspan></text>
   </g>
   <g>
-    <path d="M131.88 420 L131.88 184.4 Q131.88 176.4 139.88 176.4 L191.88 176.4 Q199.88 176.4 199.88 184.4 L199.88 420 Z" fill="#F54900" data-x="North America enterprise expansion Q3" data-series="spend" data-y="420000"/>
-    <path d="M345.53 420 L345.53 320.7 Q345.53 312.7 353.53 312.7 L405.53 312.7 Q413.53 312.7 413.53 320.7 L413.53 420 Z" fill="#F54900" data-x="APAC partner enablement and training program" data-series="spend" data-y="185000"/>
-    <path d="M559.18 420 L559.18 372.9 Q559.18 364.9 567.18 364.9 L619.18 364.9 Q627.18 364.9 627.18 372.9 L627.18 420 Z" fill="#F54900" data-x="Legacy platform decommission wave 2" data-series="spend" data-y="95000"/>
+    <path d="M131.88 420 L131.88 184.4 Q131.88 176.4 139.88 176.4 L191.88 176.4 Q199.88 176.4 199.88 184.4 L199.88 420 Z" fill="#F54900" data-x="North America enterprise expansion Q3" data-series="spend" data-y="420000" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M345.53 420 L345.53 320.7 Q345.53 312.7 353.53 312.7 L405.53 312.7 Q413.53 312.7 413.53 320.7 L413.53 420 Z" fill="#F54900" data-x="APAC partner enablement and training program" data-series="spend" data-y="185000" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M559.18 420 L559.18 372.9 Q559.18 364.9 567.18 364.9 L619.18 364.9 Q627.18 364.9 627.18 372.9 L627.18 420 Z" fill="#F54900" data-x="Legacy platform decommission wave 2" data-series="spend" data-y="95000" style="fill:var(--markvis-series-1,#F54900)"/>
   </g>
   <g>
-    <text x="165.88" y="168.4" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="North America enterprise expansion Q3">420,000</text>
-    <text x="379.53" y="304.7" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="APAC partner enablement and training program">185,000</text>
-    <text x="593.18" y="356.9" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Legacy platform decommission wave 2">95,000</text>
+    <text x="165.88" y="168.4" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="North America enterprise expansion Q3" style="fill:var(--markvis-ink,#0A0A0A)">420,000</text>
+    <text x="379.53" y="304.7" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="APAC partner enablement and training program" style="fill:var(--markvis-ink,#0A0A0A)">185,000</text>
+    <text x="593.18" y="356.9" text-anchor="middle" font-size="12" font-weight="500" fill="#0A0A0A" data-value-label="Legacy platform decommission wave 2" style="fill:var(--markvis-ink,#0A0A0A)">95,000</text>
   </g>
 </svg>

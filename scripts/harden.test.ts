@@ -797,3 +797,16 @@ describe("public contract", () => {
   });
 });
 
+
+describe("theming page", () => {
+  it("documents every CSS variable a chart reads", async () => {
+    const { CSS_VARIABLES } = await import("@markvis/themes");
+    const page = readRepo("apps/web/theming.md");
+    const yours = page.slice(page.indexOf("## Your colors"), page.indexOf("## Themes"));
+    expect(CSS_VARIABLES).toHaveLength(19);
+    for (const name of CSS_VARIABLES) {
+      expect(yours, name).toMatch(new RegExp(`\\| \`${name}\` \\| \\S`));
+    }
+    expect(yours).toContain("### What does not follow the page");
+  });
+});

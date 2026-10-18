@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="hist chart: Most API samples stay under 40 ms (ms), 20 rows" aria-labelledby="mv-aec9ba0b09e2e382-title" aria-describedby="mv-aec9ba0b09e2e382-desc" data-markvis="2" data-chart-type="hist" data-id="mv-aec9ba0b09e2e382" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="hist chart: Most API samples stay under 40 ms (ms), 20 rows" aria-labelledby="mv-aec9ba0b09e2e382-title" aria-describedby="mv-aec9ba0b09e2e382-desc" data-markvis="2" data-chart-type="hist" data-id="mv-aec9ba0b09e2e382" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" style="font-family:var(--markvis-font,-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif)">
   <title id="mv-aec9ba0b09e2e382-title">Most API samples stay under 40 ms</title>
   <desc id="mv-aec9ba0b09e2e382-desc">hist chart. Most API samples stay under 40 ms. x=ms. unit=ms. 20 rows. x is binned with Sturges equal-width bins.</desc>
-  <text x="66" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Most API samples stay under 40 ms</title>Most API samples stay under 40 ms<tspan font-size="12" font-weight="400" fill="#737373"> · ms</tspan></text>
-  <path d="M66 355 L706 355" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1"/>
-  <path d="M66 355 L66 359 M172.67 355 L172.67 359 M279.33 355 L279.33 359 M386 355 L386 359 M492.67 355 L492.67 359 M599.33 355 L599.33 359 M706 355 L706 359" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-axis-ticks="1"/>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <text x="66" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626" style="fill:var(--markvis-ink,#262626)"><title>Most API samples stay under 40 ms</title>Most API samples stay under 40 ms<tspan font-size="12" font-weight="400" fill="#737373" style="fill:var(--markvis-muted,#737373)"> · ms</tspan></text>
+  <path d="M66 355 L706 355" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" style="stroke:var(--markvis-ink,#262626)"/>
+  <path d="M66 355 L66 359 M172.67 355 L172.67 359 M279.33 355 L279.33 359 M386 355 L386 359 M492.67 355 L492.67 359 M599.33 355 L599.33 359 M706 355 L706 359" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-axis-ticks="1" style="stroke:var(--markvis-ink,#262626)"/>
+  <g fill="#737373" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#737373)">
     <text x="58" y="355" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="58" y="277.75" text-anchor="end" dominant-baseline="middle">2</text>
     <text x="58" y="200.5" text-anchor="end" dominant-baseline="middle">4</text>
@@ -18,24 +18,24 @@
     <text x="599.33" y="371" text-anchor="middle" font-size="12" data-full-label="49"><title>49</title>49</text>
     <text x="706" y="371" text-anchor="middle" font-size="12" data-full-label="55"><title>55</title>55</text>
   </g>
-  <g fill="#737373" font-size="12" font-weight="400" data-axis-titles="1">
+  <g fill="#737373" font-size="12" font-weight="400" data-axis-titles="1" style="fill:var(--markvis-muted,#737373)">
     <text x="40.98" y="200.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 40.98 200.5)" data-axis="y">count · ms</text>
     <text x="386" y="380.6" text-anchor="middle" dominant-baseline="hanging" data-axis="x">ms · Sturges bins</text>
   </g>
   <g>
-    <path d="M78.8 355 L78.8 125.25 Q78.8 123.25 80.8 123.25 L157.87 123.25 Q159.87 123.25 159.87 125.25 L159.87 355 Z" fill="#5AD8A6" data-bin-left="18" data-bin-right="24.1666666667" data-weight="6" data-count="6"/>
-    <path d="M185.47 355 L185.47 86.63 Q185.47 84.63 187.47 84.63 L264.53 84.63 Q266.53 84.63 266.53 86.63 L266.53 355 Z" fill="#5AD8A6" data-bin-left="24.1666666667" data-bin-right="30.3333333333" data-weight="7" data-count="7"/>
-    <path d="M292.13 355 L292.13 241.13 Q292.13 239.13 294.13 239.13 L371.2 239.13 Q373.2 239.13 373.2 241.13 L373.2 355 Z" fill="#5AD8A6" data-bin-left="30.3333333333" data-bin-right="36.5" data-weight="3" data-count="3"/>
-    <path d="M398.8 355 L398.8 279.75 Q398.8 277.75 400.8 277.75 L477.87 277.75 Q479.87 277.75 479.87 279.75 L479.87 355 Z" fill="#5AD8A6" data-bin-left="36.5" data-bin-right="42.6666666667" data-weight="2" data-count="2"/>
-    <path d="M505.47 355 L505.47 318.38 Q505.47 316.38 507.47 316.38 L584.53 316.38 Q586.53 316.38 586.53 318.38 L586.53 355 Z" fill="#5AD8A6" data-bin-left="42.6666666667" data-bin-right="48.8333333333" data-weight="1" data-count="1"/>
-    <path d="M612.13 355 L612.13 318.38 Q612.13 316.38 614.13 316.38 L691.2 316.38 Q693.2 316.38 693.2 318.38 L693.2 355 Z" fill="#5AD8A6" data-bin-left="48.8333333333" data-bin-right="55" data-weight="1" data-count="1"/>
+    <path d="M78.8 355 L78.8 125.25 Q78.8 123.25 80.8 123.25 L157.87 123.25 Q159.87 123.25 159.87 125.25 L159.87 355 Z" fill="#5AD8A6" data-bin-left="18" data-bin-right="24.1666666667" data-weight="6" data-count="6" style="fill:var(--markvis-series-1,#5AD8A6)"/>
+    <path d="M185.47 355 L185.47 86.63 Q185.47 84.63 187.47 84.63 L264.53 84.63 Q266.53 84.63 266.53 86.63 L266.53 355 Z" fill="#5AD8A6" data-bin-left="24.1666666667" data-bin-right="30.3333333333" data-weight="7" data-count="7" style="fill:var(--markvis-series-1,#5AD8A6)"/>
+    <path d="M292.13 355 L292.13 241.13 Q292.13 239.13 294.13 239.13 L371.2 239.13 Q373.2 239.13 373.2 241.13 L373.2 355 Z" fill="#5AD8A6" data-bin-left="30.3333333333" data-bin-right="36.5" data-weight="3" data-count="3" style="fill:var(--markvis-series-1,#5AD8A6)"/>
+    <path d="M398.8 355 L398.8 279.75 Q398.8 277.75 400.8 277.75 L477.87 277.75 Q479.87 277.75 479.87 279.75 L479.87 355 Z" fill="#5AD8A6" data-bin-left="36.5" data-bin-right="42.6666666667" data-weight="2" data-count="2" style="fill:var(--markvis-series-1,#5AD8A6)"/>
+    <path d="M505.47 355 L505.47 318.38 Q505.47 316.38 507.47 316.38 L584.53 316.38 Q586.53 316.38 586.53 318.38 L586.53 355 Z" fill="#5AD8A6" data-bin-left="42.6666666667" data-bin-right="48.8333333333" data-weight="1" data-count="1" style="fill:var(--markvis-series-1,#5AD8A6)"/>
+    <path d="M612.13 355 L612.13 318.38 Q612.13 316.38 614.13 316.38 L691.2 316.38 Q693.2 316.38 693.2 318.38 L693.2 355 Z" fill="#5AD8A6" data-bin-left="48.8333333333" data-bin-right="55" data-weight="1" data-count="1" style="fill:var(--markvis-series-1,#5AD8A6)"/>
   </g>
   <g>
-    <text x="119.33" y="115.25" text-anchor="middle" font-size="12" font-weight="400" fill="#262626" data-value-label="18–24.1666666667">6</text>
-    <text x="226" y="76.63" text-anchor="middle" font-size="12" font-weight="400" fill="#262626" data-value-label="24.1666666667–30.3333333333">7</text>
-    <text x="332.67" y="231.13" text-anchor="middle" font-size="12" font-weight="400" fill="#262626" data-value-label="30.3333333333–36.5">3</text>
-    <text x="439.33" y="269.75" text-anchor="middle" font-size="12" font-weight="400" fill="#262626" data-value-label="36.5–42.6666666667">2</text>
-    <text x="546" y="308.38" text-anchor="middle" font-size="12" font-weight="400" fill="#262626" data-value-label="42.6666666667–48.8333333333">1</text>
-    <text x="652.67" y="308.38" text-anchor="middle" font-size="12" font-weight="400" fill="#262626" data-value-label="48.8333333333–55">1</text>
+    <text x="119.33" y="115.25" text-anchor="middle" font-size="12" font-weight="400" fill="#262626" data-value-label="18–24.1666666667" style="fill:var(--markvis-ink,#262626)">6</text>
+    <text x="226" y="76.63" text-anchor="middle" font-size="12" font-weight="400" fill="#262626" data-value-label="24.1666666667–30.3333333333" style="fill:var(--markvis-ink,#262626)">7</text>
+    <text x="332.67" y="231.13" text-anchor="middle" font-size="12" font-weight="400" fill="#262626" data-value-label="30.3333333333–36.5" style="fill:var(--markvis-ink,#262626)">3</text>
+    <text x="439.33" y="269.75" text-anchor="middle" font-size="12" font-weight="400" fill="#262626" data-value-label="36.5–42.6666666667" style="fill:var(--markvis-ink,#262626)">2</text>
+    <text x="546" y="308.38" text-anchor="middle" font-size="12" font-weight="400" fill="#262626" data-value-label="42.6666666667–48.8333333333" style="fill:var(--markvis-ink,#262626)">1</text>
+    <text x="652.67" y="308.38" text-anchor="middle" font-size="12" font-weight="400" fill="#262626" data-value-label="48.8333333333–55" style="fill:var(--markvis-ink,#262626)">1</text>
   </g>
 </svg>

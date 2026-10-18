@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="244" viewBox="0 0 720 244" role="img" aria-label="calendar chart: February steps on a fixed 0–15k scale (steps), 28 rows" aria-labelledby="mv-a68090a478feaa55-title" aria-describedby="mv-a68090a478feaa55-desc" data-markvis="2" data-chart-type="calendar" data-id="mv-a68090a478feaa55" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="244" viewBox="0 0 720 244" role="img" aria-label="calendar chart: February steps on a fixed 0–15k scale (steps), 28 rows" aria-labelledby="mv-a68090a478feaa55-title" aria-describedby="mv-a68090a478feaa55-desc" data-markvis="2" data-chart-type="calendar" data-id="mv-a68090a478feaa55" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-a68090a478feaa55-title">February steps on a fixed 0–15k scale</title>
   <desc id="mv-a68090a478feaa55-desc">calendar chart. February steps on a fixed 0–15k scale. x=date. y=steps. unit=steps. 28 rows.</desc>
-  <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>February steps on a fixed 0–15k scale</title>FEBRUARY STEPS ON A FIXED 0–15K SCALE<tspan font-size="11" font-weight="400" fill="#64748B"> · steps</tspan></text>
-  <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
+  <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B" style="fill:var(--markvis-ink,#18181B)"><title>February steps on a fixed 0–15k scale</title>FEBRUARY STEPS ON A FIXED 0–15K SCALE<tspan font-size="11" font-weight="400" fill="#64748B" style="fill:var(--markvis-muted,#64748B)"> · steps</tspan></text>
+  <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1" style="stroke:var(--markvis-ink,#18181B)"/>
   <defs>
     <pattern id="mv-a68090a478feaa55-missing" patternUnits="userSpaceOnUse" width="4" height="4">
       <rect width="4" height="4" fill="#f4f1ea"/>
@@ -44,7 +44,7 @@
   <rect x="119.28" y="209" width="16" height="16" rx="2" fill="#90979f" data-key-step="2"/>
   <rect x="137.28" y="209" width="16" height="16" rx="2" fill="#6b7684" data-key-step="3"/>
   <rect x="155.28" y="209" width="16" height="16" rx="2" fill="#475569" data-key-step="4"/>
-  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400">
+  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400" style="fill:var(--markvis-muted,#64748B)">
     <text x="88.46" y="53" data-month="Feb">Feb</text>
     <text x="62.46" y="69" text-anchor="end" dominant-baseline="middle">Mon</text>
     <text x="62.46" y="105" text-anchor="end" dominant-baseline="middle">Wed</text>

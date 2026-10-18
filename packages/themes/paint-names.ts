@@ -25,3 +25,17 @@ export const PAINT_NAMES = [
 ] as const;
 
 export type PaintName = (typeof PAINT_NAMES)[number];
+
+/** A CSS custom property an inline chart reads from its page. */
+export type CssVariable = `--markvis-${PaintName}` | "--markvis-font";
+
+/**
+ * The CSS custom properties an inline chart reads from its page: one per
+ * paint name, in the same order, then `--markvis-font` (opt-in: a chart
+ * keeps its theme font unless the page sets it). Each falls back to the
+ * chart's fixed value.
+ */
+export const CSS_VARIABLES: readonly CssVariable[] = Object.freeze([
+  ...PAINT_NAMES.map((name): CssVariable => `--markvis-${name}`),
+  "--markvis-font",
+]);

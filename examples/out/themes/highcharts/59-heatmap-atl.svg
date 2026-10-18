@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="heatmap chart: Eight o&apos;clock still packs Five Points entries, 40 rows, series weekday" aria-labelledby="mv-eb13f98aca2e4a22-title" aria-describedby="mv-eb13f98aca2e4a22-desc" data-markvis="2" data-chart-type="heatmap" data-id="mv-eb13f98aca2e4a22" font-family="&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="heatmap chart: Eight o&apos;clock still packs Five Points entries, 40 rows, series weekday" aria-labelledby="mv-eb13f98aca2e4a22-title" aria-describedby="mv-eb13f98aca2e4a22-desc" data-markvis="2" data-chart-type="heatmap" data-id="mv-eb13f98aca2e4a22" font-family="&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif" font-size="12" style="font-family:var(--markvis-font,&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif)">
   <title id="mv-eb13f98aca2e4a22-title">Eight o&apos;clock still packs Five Points entries</title>
   <desc id="mv-eb13f98aca2e4a22-desc">heatmap chart. Eight o&apos;clock still packs Five Points entries. x=hour. y=entries. series=weekday. 40 rows.</desc>
-  <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Eight o&apos;clock still packs Five Points entries</title>Eight o&apos;clock still packs Five Points entries</text>
+  <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333" style="fill:var(--markvis-ink,#333333)"><title>Eight o&apos;clock still packs Five Points entries</title>Eight o&apos;clock still packs Five Points entries</text>
   <defs>
     <pattern id="mv-eb13f98aca2e4a22-missing" patternUnits="userSpaceOnUse" width="6" height="6">
       <rect width="6" height="6" fill="#f4f1ea"/>
@@ -99,10 +99,10 @@
     <rect x="660" y="131" width="12" height="44" fill="#99c3ec"/>
     <rect x="660" y="87.5" width="12" height="44" fill="#8abcec"/>
     <rect x="660" y="44" width="12" height="44" fill="#7cb5ec"/>
-    <text x="676" y="48" font-size="11" fill="#666666" dominant-baseline="hanging" data-scale-max="1">910</text>
-    <text x="676" y="392" font-size="11" fill="#666666" data-scale-min="1">155</text>
+    <text x="676" y="48" font-size="11" fill="#666666" dominant-baseline="hanging" data-scale-max="1" style="fill:var(--markvis-muted,#666666)">910</text>
+    <text x="676" y="392" font-size="11" fill="#666666" data-scale-min="1" style="fill:var(--markvis-muted,#666666)">155</text>
   </g>
-  <g fill="#666666" font-size="11" font-weight="400">
+  <g fill="#666666" font-size="11" font-weight="400" style="fill:var(--markvis-muted,#666666)">
     <text x="66" y="78.8" text-anchor="end" dominant-baseline="middle" data-series-label="Mon"><title>Mon</title>Mon</text>
     <text x="66" y="148.4" text-anchor="end" dominant-baseline="middle" data-series-label="Tue"><title>Tue</title>Tue</text>
     <text x="66" y="218" text-anchor="end" dominant-baseline="middle" data-series-label="Wed"><title>Wed</title>Wed</text>

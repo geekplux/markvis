@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="306" viewBox="0 0 720 306" role="img" aria-label="dumbbell chart: Rents rose fastest along the Eastside Trail (USD), 10 rows, series year" aria-labelledby="mv-66d019e87716dfd8-title" aria-describedby="mv-66d019e87716dfd8-desc" data-markvis="2" data-chart-type="dumbbell" data-id="mv-66d019e87716dfd8" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="306" viewBox="0 0 720 306" role="img" aria-label="dumbbell chart: Rents rose fastest along the Eastside Trail (USD), 10 rows, series year" aria-labelledby="mv-66d019e87716dfd8-title" aria-describedby="mv-66d019e87716dfd8-desc" data-markvis="2" data-chart-type="dumbbell" data-id="mv-66d019e87716dfd8" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-66d019e87716dfd8-title">Rents rose fastest along the Eastside Trail</title>
   <desc id="mv-66d019e87716dfd8-desc">dumbbell chart. Rents rose fastest along the Eastside Trail. x=neighborhood. y=rent. series=year. unit=USD. 10 rows.</desc>
-  <rect x="0.5" y="0.5" width="719" height="305" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
-  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Rents rose fastest along the Eastside Trail</title>Rents rose fastest along the Eastside Trail</text>
-  <text x="48" y="51" text-anchor="start" font-size="13" font-weight="400" fill="#737373" data-subtitle="1">USD</text>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1">
+  <rect x="0.5" y="0.5" width="719" height="305" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1" style="stroke:var(--markvis-grid,#0A0A0A)"/>
+  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A" style="fill:var(--markvis-ink,#0A0A0A)"><title>Rents rose fastest along the Eastside Trail</title>Rents rose fastest along the Eastside Trail</text>
+  <text x="48" y="51" text-anchor="start" font-size="13" font-weight="400" fill="#737373" data-subtitle="1" style="fill:var(--markvis-muted,#737373)">USD</text>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1" style="stroke:var(--markvis-grid,#0A0A0A)">
     <line x1="112.1" x2="112.1" y1="72" y2="242"/>
     <line x1="295.96" x2="295.96" y1="72" y2="242"/>
     <line x1="479.83" x2="479.83" y1="72" y2="242"/>
     <line x1="663.69" x2="663.69" y1="72" y2="242"/>
   </g>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#737373)">
     <text x="104.1" y="89" text-anchor="end" dominant-baseline="middle" data-full-label="Old Fourth Ward"><title>Old Fourth Ward</title><tspan x="104.1" dy="0">Old Fourth Ward</tspan></text>
     <text x="104.1" y="123" text-anchor="end" dominant-baseline="middle" data-full-label="Inman Park"><title>Inman Park</title><tspan x="104.1" dy="0">Inman Park</tspan></text>
     <text x="104.1" y="157" text-anchor="end" dominant-baseline="middle" data-full-label="Reynoldstown"><title>Reynoldstown</title><tspan x="104.1" dy="0">Reynoldstown</tspan></text>
@@ -21,30 +21,30 @@
     <text x="479.83" y="260" text-anchor="middle">2,000</text>
     <text x="663.69" y="260" text-anchor="middle">2,500</text>
   </g>
-  <g font-size="12" font-weight="500" fill="#0A0A0A">
-    <circle cx="338.26" cy="280" r="4.5" fill="#ffffff" stroke="#F54900" stroke-width="1.5"/>
+  <g font-size="12" font-weight="500" fill="#0A0A0A" style="fill:var(--markvis-ink,#0A0A0A)">
+    <circle cx="338.26" cy="280" r="4.5" fill="#ffffff" stroke="#F54900" stroke-width="1.5" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#F54900)"/>
     <text x="347.26" y="284" data-legend="2024">2024</text>
-    <circle cx="399.92" cy="280" r="4.5" fill="#009689"/>
+    <circle cx="399.92" cy="280" r="4.5" fill="#009689" style="fill:var(--markvis-series-2,#009689)"/>
     <text x="408.92" y="284" data-legend="2026">2026</text>
   </g>
   <g data-dumbbell="1">
-    <line x1="398.93" x2="531.31" y1="89" y2="89" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round" data-x="Old Fourth Ward"/>
-    <circle cx="398.93" cy="89" r="6" fill="#ffffff" stroke="#F54900" stroke-width="2" data-x="Old Fourth Ward" data-series="2024" data-y="1,780"/>
-    <circle cx="531.31" cy="89" r="6" fill="#009689" data-x="Old Fourth Ward" data-series="2026" data-y="2,140"/>
-    <line x1="424.67" x2="549.69" y1="123" y2="123" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round" data-x="Inman Park"/>
-    <circle cx="424.67" cy="123" r="6" fill="#ffffff" stroke="#F54900" stroke-width="2" data-x="Inman Park" data-series="2024" data-y="1,850"/>
-    <circle cx="549.69" cy="123" r="6" fill="#009689" data-x="Inman Park" data-series="2026" data-y="2,190"/>
-    <line x1="303.32" x2="391.57" y1="157" y2="157" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round" data-x="Reynoldstown"/>
-    <circle cx="303.32" cy="157" r="6" fill="#ffffff" stroke="#F54900" stroke-width="2" data-x="Reynoldstown" data-series="2024" data-y="1,520"/>
-    <circle cx="391.57" cy="157" r="6" fill="#009689" data-x="Reynoldstown" data-series="2026" data-y="1,760"/>
-    <line x1="226.1" x2="266.55" y1="191" y2="191" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round" data-x="West End"/>
-    <circle cx="226.1" cy="191" r="6" fill="#ffffff" stroke="#F54900" stroke-width="2" data-x="West End" data-series="2024" data-y="1,310"/>
-    <circle cx="266.55" cy="191" r="6" fill="#009689" data-x="West End" data-series="2026" data-y="1,420"/>
-    <line x1="178.29" x2="200.35" y1="225" y2="225" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round" data-x="Adair Park"/>
-    <circle cx="178.29" cy="225" r="6" fill="#ffffff" stroke="#F54900" stroke-width="2" data-x="Adair Park" data-series="2024" data-y="1,180"/>
-    <circle cx="200.35" cy="225" r="6" fill="#009689" data-x="Adair Park" data-series="2026" data-y="1,240"/>
+    <line x1="398.93" x2="531.31" y1="89" y2="89" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round" data-x="Old Fourth Ward" style="stroke:var(--markvis-ink,#0A0A0A)"/>
+    <circle cx="398.93" cy="89" r="6" fill="#ffffff" stroke="#F54900" stroke-width="2" data-x="Old Fourth Ward" data-series="2024" data-y="1,780" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#F54900)"/>
+    <circle cx="531.31" cy="89" r="6" fill="#009689" data-x="Old Fourth Ward" data-series="2026" data-y="2,140" style="fill:var(--markvis-series-2,#009689)"/>
+    <line x1="424.67" x2="549.69" y1="123" y2="123" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round" data-x="Inman Park" style="stroke:var(--markvis-ink,#0A0A0A)"/>
+    <circle cx="424.67" cy="123" r="6" fill="#ffffff" stroke="#F54900" stroke-width="2" data-x="Inman Park" data-series="2024" data-y="1,850" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#F54900)"/>
+    <circle cx="549.69" cy="123" r="6" fill="#009689" data-x="Inman Park" data-series="2026" data-y="2,190" style="fill:var(--markvis-series-2,#009689)"/>
+    <line x1="303.32" x2="391.57" y1="157" y2="157" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round" data-x="Reynoldstown" style="stroke:var(--markvis-ink,#0A0A0A)"/>
+    <circle cx="303.32" cy="157" r="6" fill="#ffffff" stroke="#F54900" stroke-width="2" data-x="Reynoldstown" data-series="2024" data-y="1,520" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#F54900)"/>
+    <circle cx="391.57" cy="157" r="6" fill="#009689" data-x="Reynoldstown" data-series="2026" data-y="1,760" style="fill:var(--markvis-series-2,#009689)"/>
+    <line x1="226.1" x2="266.55" y1="191" y2="191" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round" data-x="West End" style="stroke:var(--markvis-ink,#0A0A0A)"/>
+    <circle cx="226.1" cy="191" r="6" fill="#ffffff" stroke="#F54900" stroke-width="2" data-x="West End" data-series="2024" data-y="1,310" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#F54900)"/>
+    <circle cx="266.55" cy="191" r="6" fill="#009689" data-x="West End" data-series="2026" data-y="1,420" style="fill:var(--markvis-series-2,#009689)"/>
+    <line x1="178.29" x2="200.35" y1="225" y2="225" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="3" stroke-linecap="round" data-x="Adair Park" style="stroke:var(--markvis-ink,#0A0A0A)"/>
+    <circle cx="178.29" cy="225" r="6" fill="#ffffff" stroke="#F54900" stroke-width="2" data-x="Adair Park" data-series="2024" data-y="1,180" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#F54900)"/>
+    <circle cx="200.35" cy="225" r="6" fill="#009689" data-x="Adair Park" data-series="2026" data-y="1,240" style="fill:var(--markvis-series-2,#009689)"/>
   </g>
-  <g fill="#0A0A0A" font-size="12" font-weight="500">
+  <g fill="#0A0A0A" font-size="12" font-weight="500" style="fill:var(--markvis-ink,#0A0A0A)">
     <text x="675.69" y="89" dominant-baseline="middle" data-delta="Old Fourth Ward">+360</text>
     <text x="675.69" y="123" dominant-baseline="middle" data-delta="Inman Park">+340</text>
     <text x="675.69" y="157" dominant-baseline="middle" data-delta="Reynoldstown">+240</text>

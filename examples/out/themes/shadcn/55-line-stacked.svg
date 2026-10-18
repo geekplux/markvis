@@ -1,19 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="line chart: Walk-up plus member still climb through week 8, 16 rows, series channel" aria-labelledby="mv-61cebd44b0368518-title" aria-describedby="mv-61cebd44b0368518-desc" data-markvis="2" data-chart-type="line" data-id="mv-61cebd44b0368518" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="line chart: Walk-up plus member still climb through week 8, 16 rows, series channel" aria-labelledby="mv-61cebd44b0368518-title" aria-describedby="mv-61cebd44b0368518-desc" data-markvis="2" data-chart-type="line" data-id="mv-61cebd44b0368518" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-61cebd44b0368518-title">Walk-up plus member still climb through week 8</title>
   <desc id="mv-61cebd44b0368518-desc">line chart. Walk-up plus member still climb through week 8. x=week. y=count. series=channel. 16 rows.</desc>
-  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
-  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Walk-up plus member still climb through week 8</title>Walk-up plus member still climb through week 8</text>
-  <g font-size="12" font-weight="500" fill="#0A0A0A">
-    <rect x="301.91" y="435" width="10" height="10" fill="#F54900" rx="3"/>
+  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1" style="stroke:var(--markvis-grid,#0A0A0A)"/>
+  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A" style="fill:var(--markvis-ink,#0A0A0A)"><title>Walk-up plus member still climb through week 8</title>Walk-up plus member still climb through week 8</text>
+  <g font-size="12" font-weight="500" fill="#0A0A0A" style="fill:var(--markvis-ink,#0A0A0A)">
+    <rect x="301.91" y="435" width="10" height="10" fill="#F54900" rx="3" style="fill:var(--markvis-series-1,#F54900)"/>
     <text x="315.91" y="444" data-legend="walk-up">walk-up</text>
-    <rect x="380.5" y="435" width="10" height="10" fill="#009689" rx="3"/>
+    <rect x="380.5" y="435" width="10" height="10" fill="#009689" rx="3" style="fill:var(--markvis-series-2,#009689)"/>
     <text x="394.5" y="444" data-legend="member">member</text>
   </g>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1">
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1" style="stroke:var(--markvis-grid,#0A0A0A)">
     <line x1="48" x2="700" y1="290.67" y2="290.67"/>
     <line x1="48" x2="700" y1="50" y2="50"/>
   </g>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#737373)">
     <text x="40" y="411" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="40" y="290.67" text-anchor="end" dominant-baseline="middle">50</text>
     <text x="40" y="170.33" text-anchor="end" dominant-baseline="middle">100</text>
@@ -28,7 +28,7 @@
     <text x="659.25" y="423" text-anchor="middle" font-size="12" data-full-label="W8"><title>W8</title>W8</text>
   </g>
   <g fill="none">
-    <path d="M88.75 256.97 C115.92 253.76 143.08 250.1 170.25 247.35 C197.42 244.6 224.58 240.13 251.75 240.13 C278.92 240.13 306.08 244.94 333.25 244.94 C360.42 244.94 387.58 232.91 414.75 232.91 C441.92 232.91 469.08 237.72 496.25 237.72 C523.42 237.72 550.58 230.5 577.75 230.5 C604.92 230.5 632.08 233.71 659.25 235.31" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="walk-up" data-layout="stacked"/>
-    <path d="M88.75 189.59 C115.92 183.17 143.08 175.83 170.25 170.33 C197.42 164.83 224.58 157.27 251.75 155.89 C278.92 154.52 306.08 154.91 333.25 153.49 C360.42 152.06 387.58 135.66 414.75 134.23 C441.92 132.81 469.08 133.2 496.25 131.83 C523.42 130.45 550.58 118.76 577.75 117.39 C604.92 116.01 632.08 115.78 659.25 114.98" fill="none" stroke="#009689" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="member" data-layout="stacked"/>
+    <path d="M88.75 256.97 C115.92 253.76 143.08 250.1 170.25 247.35 C197.42 244.6 224.58 240.13 251.75 240.13 C278.92 240.13 306.08 244.94 333.25 244.94 C360.42 244.94 387.58 232.91 414.75 232.91 C441.92 232.91 469.08 237.72 496.25 237.72 C523.42 237.72 550.58 230.5 577.75 230.5 C604.92 230.5 632.08 233.71 659.25 235.31" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="walk-up" data-layout="stacked" style="stroke:var(--markvis-series-1,#F54900)"/>
+    <path d="M88.75 189.59 C115.92 183.17 143.08 175.83 170.25 170.33 C197.42 164.83 224.58 157.27 251.75 155.89 C278.92 154.52 306.08 154.91 333.25 153.49 C360.42 152.06 387.58 135.66 414.75 134.23 C441.92 132.81 469.08 133.2 496.25 131.83 C523.42 130.45 550.58 118.76 577.75 117.39 C604.92 116.01 632.08 115.78 659.25 114.98" fill="none" stroke="#009689" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="member" data-layout="stacked" style="stroke:var(--markvis-series-2,#009689)"/>
   </g>
 </svg>

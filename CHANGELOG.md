@@ -11,6 +11,7 @@ Draw a chart block anywhere Markdown is shown: one call from JavaScript, React w
 
 ### Added
 
+- Charts follow the host page through CSS variables, with fixed-color fallbacks. A chart drawn in a page writes each color as a fixed attribute plus a `style` that reads `--markvis-ink`, `--markvis-muted`, `--markvis-grid`, `--markvis-paper`, `--markvis-series-1` … `--markvis-series-8`, and the rest of 18 names (and an opt-in `--markvis-font`), so light, dark, and brand colors carry into the chart. The list ships as `CSS_VARIABLES` and `PAINT_NAMES` from `markvis/themes`. `colors: "host" | "static"` on `render()`, `renderSvg()`, `initialize()`, and `<Markvis>`; `--colors host|static` on `markvis render` and `bake`. Page: Theming.
 - `parseBlock(text, { filename? })` parses one chart block: the inside a Markdown renderer hands a code-block plugin, or the whole block.
 - `render(text, options?)` returns `{ ok, svg, html, chart }` or `{ ok: false, error, html, table }` in one call and never throws. `html` is the same figure, or table and one error line, that every adapter emits. Options: `width`, and `theme` / `palette` / `surface` for blocks that leave them out.
 - `markvis/react`: `<Markvis source>` or `<Markvis chart data>` draws one block at the width of its container; `markvisComponents` draws chart code blocks in react-markdown; `remarkMarkvisStreaming` shows a placeholder and the rows so far while a block streams, never an error. `react` is an optional peer.
@@ -26,6 +27,7 @@ Draw a chart block anywhere Markdown is shown: one call from JavaScript, React w
 
 ### Changed
 
+- Inline SVG bytes: a chart drawn in a page (`render()`, the drop-in, React, markdown-it, remark, rehype, `renderSvg()`) carries one `style` attribute per colored element and a `font-family` variable on the root, about 0.8 kB more per chart (about 0.1–0.2 kB gzip). `bake`, `markvis render`, and `surface: export` write fixed colors by default, the same bytes as before.
 - The drop-in renders through `render()`: an empty block's error table shows the block as the page holds it, not a fence wrapped around it.
 - The browser drop-in keeps cells past the header width in the error table, like every other path.
 - markdown-it, remark, rehype, React, the drop-in, the Playground, and the command line's `render --html` and `gallery` share one HTML module, so their output is the same. The command line's error table now keeps cells past the header width too.

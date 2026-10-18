@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="306" viewBox="0 0 720 306" role="img" aria-label="bullet chart: Two of five readers already passed their 2026 goal (books), 5 rows" aria-labelledby="mv-e8c40170994cd529-title" aria-describedby="mv-e8c40170994cd529-desc" data-markvis="2" data-chart-type="bullet" data-id="mv-e8c40170994cd529" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="306" viewBox="0 0 720 306" role="img" aria-label="bullet chart: Two of five readers already passed their 2026 goal (books), 5 rows" aria-labelledby="mv-e8c40170994cd529-title" aria-describedby="mv-e8c40170994cd529-desc" data-markvis="2" data-chart-type="bullet" data-id="mv-e8c40170994cd529" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-e8c40170994cd529-title">Two of five readers already passed their 2026 goal</title>
   <desc id="mv-e8c40170994cd529-desc">bullet chart. Two of five readers already passed their 2026 goal. x=reader. y=read. unit=books. 5 rows.</desc>
-  <rect x="0.5" y="0.5" width="719" height="305" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
-  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Two of five readers already passed their 2026 goal</title>Two of five readers already passed their 2026 goal</text>
-  <text x="48" y="51" text-anchor="start" font-size="13" font-weight="400" fill="#737373" data-subtitle="1">books</text>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1">
+  <rect x="0.5" y="0.5" width="719" height="305" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1" style="stroke:var(--markvis-grid,#0A0A0A)"/>
+  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A" style="fill:var(--markvis-ink,#0A0A0A)"><title>Two of five readers already passed their 2026 goal</title>Two of five readers already passed their 2026 goal</text>
+  <text x="48" y="51" text-anchor="start" font-size="13" font-weight="400" fill="#737373" data-subtitle="1" style="fill:var(--markvis-muted,#737373)">books</text>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1" style="stroke:var(--markvis-grid,#0A0A0A)">
     <line x1="203.91" x2="203.91" y1="72" y2="242"/>
     <line x1="353.81" x2="353.81" y1="72" y2="242"/>
     <line x1="503.72" x2="503.72" y1="72" y2="242"/>
     <line x1="653.63" x2="653.63" y1="72" y2="242"/>
   </g>
-  <line x1="54" x2="54" y1="72" y2="242" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-baseline="0"/>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <line x1="54" x2="54" y1="72" y2="242" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-baseline="0" style="stroke:var(--markvis-ink,#0A0A0A)"/>
+  <g fill="#737373" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#737373)">
     <text x="46" y="89" text-anchor="end" dominant-baseline="middle" data-full-label="Ana"><title>Ana</title><tspan x="46" dy="0">Ana</tspan></text>
     <text x="46" y="123" text-anchor="end" dominant-baseline="middle" data-full-label="Ben"><title>Ben</title><tspan x="46" dy="0">Ben</tspan></text>
     <text x="46" y="157" text-anchor="end" dominant-baseline="middle" data-full-label="Chloe"><title>Chloe</title><tspan x="46" dy="0">Chloe</tspan></text>
@@ -23,33 +23,33 @@
     <text x="503.72" y="260" text-anchor="middle">30</text>
     <text x="653.63" y="260" text-anchor="middle">40</text>
   </g>
-  <g font-size="12" font-weight="500" fill="#0A0A0A">
-    <circle cx="309.37" cy="280" r="4.5" fill="#F54900"/>
+  <g font-size="12" font-weight="500" fill="#0A0A0A" style="fill:var(--markvis-ink,#0A0A0A)">
+    <circle cx="309.37" cy="280" r="4.5" fill="#F54900" style="fill:var(--markvis-series-1,#F54900)"/>
     <text x="318.37" y="284" data-legend="read">read</text>
-    <rect x="365.59" y="274" width="2.5" height="12" fill="#0A0A0A"/>
+    <rect x="365.59" y="274" width="2.5" height="12" fill="#0A0A0A" style="fill:var(--markvis-ink,#0A0A0A)"/>
     <text x="375.59" y="284" data-legend="goal">goal</text>
   </g>
   <g data-bullet="1">
-    <rect x="54" y="77" width="599.63" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Ana"/>
-    <path d="M54 84 L513.71 84 Q518.71 84 518.71 89 L518.71 89 Q518.71 94 513.71 94 L54 94 Z" fill="#F54900" data-x="Ana" data-y="31"/>
-    <line x1="413.78" x2="413.78" y1="79" y2="99" stroke="#0A0A0A" stroke-width="2.5" data-target="24"/>
-    <rect x="54" y="111" width="599.63" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Ben"/>
-    <path d="M54 118 L228.89 118 Q233.89 118 233.89 123 L233.89 123 Q233.89 128 228.89 128 L54 128 Z" fill="#F54900" data-x="Ben" data-y="12"/>
-    <line x1="353.81" x2="353.81" y1="113" y2="133" stroke="#0A0A0A" stroke-width="2.5" data-target="20"/>
-    <rect x="54" y="145" width="599.63" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Chloe"/>
-    <path d="M54 152 L438.76 152 Q443.76 152 443.76 157 L443.76 157 Q443.76 162 438.76 162 L54 162 Z" fill="#F54900" data-x="Chloe" data-y="26"/>
-    <line x1="428.77" x2="428.77" y1="147" y2="167" stroke="#0A0A0A" stroke-width="2.5" data-target="25"/>
-    <rect x="54" y="179" width="599.63" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Dev"/>
-    <path d="M54 186 L183.92 186 Q188.92 186 188.92 191 L188.92 191 Q188.92 196 183.92 196 L54 196 Z" fill="#F54900" data-x="Dev" data-y="9"/>
-    <rect x="54" y="213" width="599.63" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Eli"/>
-    <path d="M54 220 L273.86 220 Q278.86 220 278.86 225 L278.86 225 Q278.86 230 273.86 230 L54 230 Z" fill="#F54900" data-x="Eli" data-y="15"/>
-    <line x1="503.72" x2="503.72" y1="215" y2="235" stroke="#0A0A0A" stroke-width="2.5" data-target="30"/>
+    <rect x="54" y="77" width="599.63" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Ana" style="fill:var(--markvis-ink,#0A0A0A)"/>
+    <path d="M54 84 L513.71 84 Q518.71 84 518.71 89 L518.71 89 Q518.71 94 513.71 94 L54 94 Z" fill="#F54900" data-x="Ana" data-y="31" style="fill:var(--markvis-series-1,#F54900)"/>
+    <line x1="413.78" x2="413.78" y1="79" y2="99" stroke="#0A0A0A" stroke-width="2.5" data-target="24" style="stroke:var(--markvis-ink,#0A0A0A)"/>
+    <rect x="54" y="111" width="599.63" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Ben" style="fill:var(--markvis-ink,#0A0A0A)"/>
+    <path d="M54 118 L228.89 118 Q233.89 118 233.89 123 L233.89 123 Q233.89 128 228.89 128 L54 128 Z" fill="#F54900" data-x="Ben" data-y="12" style="fill:var(--markvis-series-1,#F54900)"/>
+    <line x1="353.81" x2="353.81" y1="113" y2="133" stroke="#0A0A0A" stroke-width="2.5" data-target="20" style="stroke:var(--markvis-ink,#0A0A0A)"/>
+    <rect x="54" y="145" width="599.63" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Chloe" style="fill:var(--markvis-ink,#0A0A0A)"/>
+    <path d="M54 152 L438.76 152 Q443.76 152 443.76 157 L443.76 157 Q443.76 162 438.76 162 L54 162 Z" fill="#F54900" data-x="Chloe" data-y="26" style="fill:var(--markvis-series-1,#F54900)"/>
+    <line x1="428.77" x2="428.77" y1="147" y2="167" stroke="#0A0A0A" stroke-width="2.5" data-target="25" style="stroke:var(--markvis-ink,#0A0A0A)"/>
+    <rect x="54" y="179" width="599.63" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Dev" style="fill:var(--markvis-ink,#0A0A0A)"/>
+    <path d="M54 186 L183.92 186 Q188.92 186 188.92 191 L188.92 191 Q188.92 196 183.92 196 L54 196 Z" fill="#F54900" data-x="Dev" data-y="9" style="fill:var(--markvis-series-1,#F54900)"/>
+    <rect x="54" y="213" width="599.63" height="24" fill="#0A0A0A" fill-opacity="0.07" data-track="Eli" style="fill:var(--markvis-ink,#0A0A0A)"/>
+    <path d="M54 220 L273.86 220 Q278.86 220 278.86 225 L278.86 225 Q278.86 230 273.86 230 L54 230 Z" fill="#F54900" data-x="Eli" data-y="15" style="fill:var(--markvis-series-1,#F54900)"/>
+    <line x1="503.72" x2="503.72" y1="215" y2="235" stroke="#0A0A0A" stroke-width="2.5" data-target="30" style="stroke:var(--markvis-ink,#0A0A0A)"/>
   </g>
-  <g fill="#0A0A0A" font-size="12" font-weight="500">
-    <text x="665.63" y="89" dominant-baseline="middle" data-value-label="Ana">31<tspan fill="#737373" font-weight="400"> / 24</tspan></text>
-    <text x="665.63" y="123" dominant-baseline="middle" data-value-label="Ben">12<tspan fill="#737373" font-weight="400"> / 20</tspan></text>
-    <text x="665.63" y="157" dominant-baseline="middle" data-value-label="Chloe">26<tspan fill="#737373" font-weight="400"> / 25</tspan></text>
+  <g fill="#0A0A0A" font-size="12" font-weight="500" style="fill:var(--markvis-ink,#0A0A0A)">
+    <text x="665.63" y="89" dominant-baseline="middle" data-value-label="Ana">31<tspan fill="#737373" font-weight="400" style="fill:var(--markvis-muted,#737373)"> / 24</tspan></text>
+    <text x="665.63" y="123" dominant-baseline="middle" data-value-label="Ben">12<tspan fill="#737373" font-weight="400" style="fill:var(--markvis-muted,#737373)"> / 20</tspan></text>
+    <text x="665.63" y="157" dominant-baseline="middle" data-value-label="Chloe">26<tspan fill="#737373" font-weight="400" style="fill:var(--markvis-muted,#737373)"> / 25</tspan></text>
     <text x="665.63" y="191" dominant-baseline="middle" data-value-label="Dev">9</text>
-    <text x="665.63" y="225" dominant-baseline="middle" data-value-label="Eli">15<tspan fill="#737373" font-weight="400"> / 30</tspan></text>
+    <text x="665.63" y="225" dominant-baseline="middle" data-value-label="Eli">15<tspan fill="#737373" font-weight="400" style="fill:var(--markvis-muted,#737373)"> / 30</tspan></text>
   </g>
 </svg>

@@ -872,7 +872,9 @@ describe("site visual chrome", () => {
     expect(theming).toMatch(/theme vs palette/i);
     expect(theming).toContain("second axis");
     expect(theming).toContain("Contributing themes");
-    expect(theming).not.toMatch(/#[0-9A-Fa-f]{6}/);
+    // Pack hex tables live in docs/themes.md; "Your colors" shows example host values only.
+    expect(theming.slice(theming.indexOf("## Themes"))).not.toMatch(/#[0-9A-Fa-f]{6}/);
+    expect(theming.indexOf("## Your colors")).toBeLessThan(theming.indexOf("## Themes"));
 
     // The model instruction lives on Integrate, as its last section.
     const tell = integrate.slice(integrate.indexOf("## Tell a model"));

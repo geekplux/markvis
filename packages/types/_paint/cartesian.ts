@@ -55,6 +55,7 @@ import {
   FONT_NUMERIC,
   GRID,
   GROUP_GAP_PX,
+  GRID_INK,
   HAIRLINE_OPACITY,
   INK,
   LABEL_ROTATE_DEG,
@@ -708,7 +709,7 @@ function drawGridAndAxes(prepared: Prepared): string[] {
       lines.push(
         `  <g ${attrs({
           fill: "none",
-          stroke: INK,
+          stroke: GRID_INK,
           "stroke-opacity": HAIRLINE_OPACITY,
           "stroke-width": GRID.width,
           "stroke-dasharray": GRID.dash || undefined,
@@ -733,7 +734,7 @@ function drawGridAndAxes(prepared: Prepared): string[] {
     lines.push(
       `  <g ${attrs({
         fill: "none",
-        stroke: INK,
+        stroke: GRID_INK,
         "stroke-opacity": HAIRLINE_OPACITY,
         "stroke-width": GRID.width,
         "stroke-dasharray": GRID.dash || undefined,

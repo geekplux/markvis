@@ -1,4 +1,4 @@
-import { hexOf, type Color } from "./paint.js";
+import { hexOf, isPaint, paint, type Color } from "./paint.js";
 import { PAPER, SEMANTIC } from "./tokens.js";
 
 function channels(color: Color): [number, number, number] {
@@ -54,17 +54,19 @@ function hex([r, g, b]: [number, number, number]): string {
 
 /**
  * A series color used as text on the paper, moved toward the ink just far
- * enough to read (4.5:1), so the label keeps its hue.
+ * enough to read (4.5:1), so the label keeps its hue. A darkened Paint keeps
+ * its name, so on a host page the label takes the page's series color.
  */
 export function legibleOnPaper(color: Color, paper: Color = PAPER): Color {
+  const named = (value: string): Color => (isPaint(color) ? paint(color.name, value) : value);
   const c = channels(color);
   const p = luminance(channels(paper));
   const toward = channels(p > 0.4 ? SEMANTIC.inkOnLight : SEMANTIC.inkOnDark);
   for (let step = 0; step <= 10; step++) {
     const candidate = mix(c, toward, step / 10);
     if (ratio(luminance(candidate), p) >= TEXT_CONTRAST) {
-      return step === 0 ? color : hex(candidate);
+      return step === 0 ? color : named(hex(candidate));
     }
   }
-  return hex(toward);
+  return named(hex(toward));
 }

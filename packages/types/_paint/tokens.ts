@@ -27,11 +27,18 @@ export type LiveType = {
   note: LiveTypeRole;
   legend: LiveTypeRole;
 };
-/** Semantic colors; the waterfall roles are live Paints. */
-export type LiveSemantic = Omit<SemanticColors, "up" | "down" | "total"> & {
+/**
+ * Semantic colors. The waterfall roles are live Paints, and so is the
+ * treemap tile gap, which every pack sets to the surface paper. The heatmap
+ * and calendar ramp, missing hatch, and cell rule stay fixed: cell fills are
+ * mixes computed from them, so they keep one fixed look together. The
+ * on-mark inks stay fixed: they are picked for the fixed fill under them.
+ */
+export type LiveSemantic = Omit<SemanticColors, "up" | "down" | "total" | "cellGap"> & {
   readonly up: Paint;
   readonly down: Paint;
   readonly total: Paint;
+  readonly cellGap: Paint;
 };
 export type LiveHero = { readonly rule: HeroTokens["rule"]; readonly color: Paint };
 
@@ -39,7 +46,11 @@ function role(r: TypeRole, fill: Paint): LiveTypeRole {
   return { size: r.size, weight: r.weight, fill };
 }
 
-/** Title, value, and legend text read as ink; unit, note, and tick text as muted. */
+/**
+ * Title, value, and legend text read as ink; unit, note, and tick text as
+ * muted. Each keeps its own fixed hex (a pack or surface may set tick text
+ * apart from other muted text); the name is the role a host variable fills.
+ */
 function liveType(t: ThemeTokens["TYPE"]): LiveType {
   return {
     title: role(t.title, paint("ink", t.title.fill)),
@@ -61,6 +72,7 @@ function liveSemantic(s: SemanticColors): LiveSemantic {
     up: paint("up", s.up),
     down: paint("down", s.down),
     total: paint("total", s.total),
+    cellGap: paint("paper", s.cellGap),
   };
 }
 
@@ -86,6 +98,8 @@ export let FONT = base.FONT;
 export let FONT_NUMERIC: string | undefined = base.FONT_NUMERIC ?? undefined;
 
 export let INK: Paint = paint("ink", base.INK);
+/** Grid lines: ink drawn at the hairline opacity, named `grid` so a host can set them apart. */
+export let GRID_INK: Paint = paint("grid", base.INK);
 export let QUIET: Paint = paint("muted", base.QUIET);
 export let HAIRLINE_OPACITY: string = base.HAIRLINE_OPACITY;
 export let STRUCTURE_OPACITY = base.STRUCTURE_OPACITY;
@@ -148,6 +162,11 @@ export let PIE_SEPARATOR = base.PIE_SEPARATOR;
 export let COMPACT_SPAN = base.COMPACT_SPAN;
 
 export let PLOT_BG: Paint | null = livePlot(base.PLOT_BG);
+/**
+ * Plot border (export surface in the built-in packs). Fixed: it is a solid
+ * pale rule, while `grid` is drawn at the hairline opacity, so the two cannot
+ * share one host color.
+ */
 export let PLOT_BORDER: string | null = base.PLOT_BORDER;
 export let PLOT_BORDER_WIDTH: number = base.PLOT_BORDER_WIDTH;
 export type SurfaceName = "light" | "dark" | "export";
@@ -177,6 +196,7 @@ export function applyThemeTokens(t: ThemeTokens): void {
   FONT = t.FONT;
   FONT_NUMERIC = t.FONT_NUMERIC ?? undefined;
   INK = paint("ink", t.INK);
+  GRID_INK = paint("grid", t.INK);
   QUIET = paint("muted", t.QUIET);
   HAIRLINE_OPACITY = t.HAIRLINE_OPACITY;
   STRUCTURE_OPACITY = t.STRUCTURE_OPACITY;
@@ -290,6 +310,7 @@ export function applyFrame(opts: {
     return;
   }
   INK = paint("ink", s.INK);
+  GRID_INK = paint("grid", s.INK);
   QUIET = s.QUIET === undefined ? QUIET : paint("muted", s.QUIET);
   TYPE = {
     title: { ...TYPE.title, fill: INK },

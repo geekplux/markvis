@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="funnel chart: Follow-up still lands 160 of 900 Emory referrals, 6 rows" aria-labelledby="mv-e2e3831aad1282d3-title" aria-describedby="mv-e2e3831aad1282d3-desc" data-markvis="2" data-chart-type="funnel" data-id="mv-e2e3831aad1282d3" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="funnel chart: Follow-up still lands 160 of 900 Emory referrals, 6 rows" aria-labelledby="mv-e2e3831aad1282d3-title" aria-describedby="mv-e2e3831aad1282d3-desc" data-markvis="2" data-chart-type="funnel" data-id="mv-e2e3831aad1282d3" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-e2e3831aad1282d3-title">Follow-up still lands 160 of 900 Emory referrals</title>
   <desc id="mv-e2e3831aad1282d3-desc">funnel chart. Follow-up still lands 160 of 900 Emory referrals. x=stage. y=patients. 6 rows.</desc>
-  <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>Follow-up still lands 160 of 900 Emory referrals</title>Follow-up still lands 160 of 900 Emory referrals</text>
+  <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19" style="fill:var(--markvis-ink,#1B1B19)"><title>Follow-up still lands 160 of 900 Emory referrals</title>Follow-up still lands 160 of 900 Emory referrals</text>
   <g data-funnel="1">
-    <path d="M52 52 L583.38 52 L477.1 118.67 L158.28 118.67 Z" fill="#1B1B19" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Referral" data-y="900"/>
-    <path d="M158.28 118.67 L477.1 118.67 L429.87 185.33 L205.51 185.33 Z" fill="#4A4945" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Scheduled" data-y="540"/>
-    <path d="M205.51 185.33 L429.87 185.33 L379.68 252 L255.69 252 Z" fill="#6E6D68" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Arrived" data-y="380"/>
-    <path d="M255.69 252 L379.68 252 L372.3 318.67 L263.07 318.67 Z" fill="#8E8D87" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Visit" data-y="210"/>
-    <path d="M263.07 318.67 L372.3 318.67 L364.92 385.33 L270.45 385.33 Z" fill="#AEADA7" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Labs ordered" data-y="185"/>
-    <path d="M270.45 385.33 L364.92 385.33 L364.92 452 L270.45 452 Z" fill="#C8C7C1" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Follow-up" data-y="160"/>
+    <path d="M52 52 L583.38 52 L477.1 118.67 L158.28 118.67 Z" fill="#1B1B19" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Referral" data-y="900" style="fill:var(--markvis-series-1,#1B1B19);stroke:var(--markvis-ink,#1B1B19)"/>
+    <path d="M158.28 118.67 L477.1 118.67 L429.87 185.33 L205.51 185.33 Z" fill="#4A4945" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Scheduled" data-y="540" style="fill:var(--markvis-series-2,#4A4945);stroke:var(--markvis-ink,#1B1B19)"/>
+    <path d="M205.51 185.33 L429.87 185.33 L379.68 252 L255.69 252 Z" fill="#6E6D68" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Arrived" data-y="380" style="fill:var(--markvis-series-3,#6E6D68);stroke:var(--markvis-ink,#1B1B19)"/>
+    <path d="M255.69 252 L379.68 252 L372.3 318.67 L263.07 318.67 Z" fill="#8E8D87" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Visit" data-y="210" style="fill:var(--markvis-series-4,#8E8D87);stroke:var(--markvis-ink,#1B1B19)"/>
+    <path d="M263.07 318.67 L372.3 318.67 L364.92 385.33 L270.45 385.33 Z" fill="#AEADA7" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Labs ordered" data-y="185" style="fill:var(--markvis-series-5,#AEADA7);stroke:var(--markvis-ink,#1B1B19)"/>
+    <path d="M270.45 385.33 L364.92 385.33 L364.92 452 L270.45 452 Z" fill="#C8C7C1" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Follow-up" data-y="160" style="fill:var(--markvis-series-6,#C8C7C1);stroke:var(--markvis-ink,#1B1B19)"/>
   </g>
-  <g fill="#1B1B19" font-size="12" font-weight="800">
+  <g fill="#1B1B19" font-size="12" font-weight="800" style="fill:var(--markvis-ink,#1B1B19)">
     <text x="591.38" y="85.33" text-anchor="start" dominant-baseline="middle" data-label="Referral"><title>Referral · 900</title>Referral · 900</text>
     <text x="591.38" y="152" text-anchor="start" dominant-baseline="middle" data-label="Scheduled"><title>Scheduled · 540</title>Scheduled · 540</text>
     <text x="591.38" y="218.67" text-anchor="start" dominant-baseline="middle" data-label="Arrived"><title>Arrived · 380</title>Arrived · 380</text>

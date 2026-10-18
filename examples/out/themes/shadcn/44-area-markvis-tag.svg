@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="area chart: RSS climbed then eased after noon (hits), 7 rows" aria-labelledby="mv-6c937ae59f8d092f-title" aria-describedby="mv-6c937ae59f8d092f-desc" data-markvis="2" data-chart-type="area" data-id="mv-6c937ae59f8d092f" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="area chart: RSS climbed then eased after noon (hits), 7 rows" aria-labelledby="mv-6c937ae59f8d092f-title" aria-describedby="mv-6c937ae59f8d092f-desc" data-markvis="2" data-chart-type="area" data-id="mv-6c937ae59f8d092f" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-6c937ae59f8d092f-title">RSS climbed then eased after noon</title>
   <desc id="mv-6c937ae59f8d092f-desc">area chart. RSS climbed then eased after noon. x=hour. y=hits. unit=hits. 7 rows.</desc>
-  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
-  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>RSS climbed then eased after noon</title>RSS climbed then eased after noon</text>
-  <text x="48" y="51" text-anchor="start" font-size="13" font-weight="400" fill="#737373" data-subtitle="1">hits</text>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1">
+  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1" style="stroke:var(--markvis-grid,#0A0A0A)"/>
+  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A" style="fill:var(--markvis-ink,#0A0A0A)"><title>RSS climbed then eased after noon</title>RSS climbed then eased after noon</text>
+  <text x="48" y="51" text-anchor="start" font-size="13" font-weight="400" fill="#737373" data-subtitle="1" style="fill:var(--markvis-muted,#737373)">hits</text>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1" style="stroke:var(--markvis-grid,#0A0A0A)">
     <line x1="48" x2="700" y1="314" y2="314"/>
     <line x1="48" x2="700" y1="72" y2="72"/>
   </g>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#737373)">
     <text x="40" y="435" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="40" y="314" text-anchor="end" dominant-baseline="middle">50</text>
     <text x="40" y="193" text-anchor="end" dominant-baseline="middle">100</text>
@@ -20,7 +20,7 @@
     <text x="692" y="447" text-anchor="middle" font-size="12" data-full-label="30"><title>30</title>30</text>
   </g>
   <g fill="none">
-    <path d="M215 338.2 C246.8 326.1 278.6 323.37 310.4 301.9 C326.3 291.16 342.2 247.32 358.1 217.2 C374 187.08 389.9 120.4 405.8 120.4 C421.7 120.4 437.6 136.72 453.5 149.44 C469.4 162.16 485.3 185.77 501.2 205.1 C517.1 224.43 533 245.43 548.9 265.6 L548.9 435 L215 435 Z" fill="#F54900" fill-opacity="0.3" stroke="none" data-series="hits"/>
-    <path d="M215 338.2 C246.8 326.1 278.6 323.37 310.4 301.9 C326.3 291.16 342.2 247.32 358.1 217.2 C374 187.08 389.9 120.4 405.8 120.4 C421.7 120.4 437.6 136.72 453.5 149.44 C469.4 162.16 485.3 185.77 501.2 205.1 C517.1 224.43 533 245.43 548.9 265.6" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="hits"/>
+    <path d="M215 338.2 C246.8 326.1 278.6 323.37 310.4 301.9 C326.3 291.16 342.2 247.32 358.1 217.2 C374 187.08 389.9 120.4 405.8 120.4 C421.7 120.4 437.6 136.72 453.5 149.44 C469.4 162.16 485.3 185.77 501.2 205.1 C517.1 224.43 533 245.43 548.9 265.6 L548.9 435 L215 435 Z" fill="#F54900" fill-opacity="0.3" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M215 338.2 C246.8 326.1 278.6 323.37 310.4 301.9 C326.3 291.16 342.2 247.32 358.1 217.2 C374 187.08 389.9 120.4 405.8 120.4 C421.7 120.4 437.6 136.72 453.5 149.44 C469.4 162.16 485.3 185.77 501.2 205.1 C517.1 224.43 533 245.43 548.9 265.6" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="hits" style="stroke:var(--markvis-series-1,#F54900)"/>
   </g>
 </svg>

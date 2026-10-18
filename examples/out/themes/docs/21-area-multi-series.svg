@@ -1,21 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: Queue A stays deeper than queue B, 6 rows, series queue" aria-labelledby="mv-8c2fdefb06435294-title" aria-describedby="mv-8c2fdefb06435294-desc" data-markvis="2" data-chart-type="area" data-id="mv-8c2fdefb06435294" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: Queue A stays deeper than queue B, 6 rows, series queue" aria-labelledby="mv-8c2fdefb06435294-title" aria-describedby="mv-8c2fdefb06435294-desc" data-markvis="2" data-chart-type="area" data-id="mv-8c2fdefb06435294" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-8c2fdefb06435294-title">Queue A stays deeper than queue B</title>
   <desc id="mv-8c2fdefb06435294-desc">area chart. Queue A stays deeper than queue B. x=minute. y=depth. series=queue. 6 rows.</desc>
-  <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>Queue A stays deeper than queue B</title>QUEUE A STAYS DEEPER THAN QUEUE B</text>
-  <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <g font-size="11" font-weight="500" fill="#18181B">
-    <rect x="40" y="458.5" width="10" height="3" fill="#475569" rx="1.5"/>
+  <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B" style="fill:var(--markvis-ink,#18181B)"><title>Queue A stays deeper than queue B</title>QUEUE A STAYS DEEPER THAN QUEUE B</text>
+  <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1" style="stroke:var(--markvis-ink,#18181B)"/>
+  <g font-size="11" font-weight="500" fill="#18181B" style="fill:var(--markvis-ink,#18181B)">
+    <rect x="40" y="458.5" width="10" height="3" fill="#475569" rx="1.5" style="fill:var(--markvis-series-1,#475569)"/>
     <text x="54" y="464" data-legend="A">A</text>
-    <rect x="77.94" y="458.5" width="10" height="3" fill="#64748B" rx="1.5"/>
+    <rect x="77.94" y="458.5" width="10" height="3" fill="#64748B" rx="1.5" style="fill:var(--markvis-series-2,#64748B)"/>
     <text x="91.94" y="464" data-legend="B">B</text>
   </g>
-  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3" data-grid="1">
+  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3" data-grid="1" style="stroke:var(--markvis-grid,#18181B)">
     <line x1="40" x2="704" y1="334.5" y2="334.5"/>
     <line x1="40" x2="704" y1="139.5" y2="139.5"/>
     <line x1="40" x2="704" y1="42" y2="42"/>
   </g>
-  <path d="M40 432 L704 432" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
-  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400">
+  <path d="M40 432 L704 432" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" style="stroke:var(--markvis-ink,#18181B)"/>
+  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400" style="fill:var(--markvis-muted,#64748B)">
     <text x="32" y="432" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="32" y="334.5" text-anchor="end" dominant-baseline="middle">2</text>
     <text x="32" y="237" text-anchor="end" dominant-baseline="middle">4</text>
@@ -28,15 +28,15 @@
     <text x="696" y="443" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="3"><title>3</title>3</text>
   </g>
   <g fill="none">
-    <path d="M210 188.25 L372 90.75 L534 139.5 L534 432 L210 432 Z" fill="#475569" fill-opacity="0.12" stroke="none" data-series="A"/>
-    <path d="M210 188.25 L372 90.75 L534 139.5" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="A"/>
-    <circle cx="210" cy="188.25" r="2" fill="#475569" stroke="none" data-series="A"/>
-    <circle cx="372" cy="90.75" r="2" fill="#475569" stroke="none" data-series="A"/>
-    <circle cx="534" cy="139.5" r="2" fill="#475569" stroke="none" data-series="A"/>
-    <path d="M210 334.5 L372 285.75 L534 237 L534 432 L210 432 Z" fill="#64748B" fill-opacity="0.12" stroke="none" data-series="B"/>
-    <path d="M210 334.5 L372 285.75 L534 237" fill="none" stroke="#64748B" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6 4" data-series="B"/>
-    <circle cx="210" cy="334.5" r="2" fill="#64748B" stroke="none" data-series="B"/>
-    <circle cx="372" cy="285.75" r="2" fill="#64748B" stroke="none" data-series="B"/>
-    <circle cx="534" cy="237" r="2" fill="#64748B" stroke="none" data-series="B"/>
+    <path d="M210 188.25 L372 90.75 L534 139.5 L534 432 L210 432 Z" fill="#475569" fill-opacity="0.12" stroke="none" data-series="A" style="fill:var(--markvis-series-1,#475569)"/>
+    <path d="M210 188.25 L372 90.75 L534 139.5" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="A" style="stroke:var(--markvis-series-1,#475569)"/>
+    <circle cx="210" cy="188.25" r="2" fill="#475569" stroke="none" data-series="A" style="fill:var(--markvis-series-1,#475569)"/>
+    <circle cx="372" cy="90.75" r="2" fill="#475569" stroke="none" data-series="A" style="fill:var(--markvis-series-1,#475569)"/>
+    <circle cx="534" cy="139.5" r="2" fill="#475569" stroke="none" data-series="A" style="fill:var(--markvis-series-1,#475569)"/>
+    <path d="M210 334.5 L372 285.75 L534 237 L534 432 L210 432 Z" fill="#64748B" fill-opacity="0.12" stroke="none" data-series="B" style="fill:var(--markvis-series-2,#64748B)"/>
+    <path d="M210 334.5 L372 285.75 L534 237" fill="none" stroke="#64748B" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6 4" data-series="B" style="stroke:var(--markvis-series-2,#64748B)"/>
+    <circle cx="210" cy="334.5" r="2" fill="#64748B" stroke="none" data-series="B" style="fill:var(--markvis-series-2,#64748B)"/>
+    <circle cx="372" cy="285.75" r="2" fill="#64748B" stroke="none" data-series="B" style="fill:var(--markvis-series-2,#64748B)"/>
+    <circle cx="534" cy="237" r="2" fill="#64748B" stroke="none" data-series="B" style="fill:var(--markvis-series-2,#64748B)"/>
   </g>
 </svg>

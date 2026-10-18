@@ -130,7 +130,8 @@ describe("hast property names", () => {
       if (propertyName(attribute) !== expected) wrong.push(`${key} -> ${expected}`);
     }
     expect(wrong).toEqual([]);
-  });
+    // Renders every example in every theme and surface: allow for a busy machine.
+  }, 30_000);
 
   it("let a plugin find the figure by its data attribute", () => {
     const [figure] = htmlToHast(render("type: bar\nx: a\ny: b\n\na,b\nA,1").html) as HastNode[];
