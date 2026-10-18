@@ -1,4 +1,4 @@
-import { escapeHtml } from "./format.js";
+import { escapeHtml } from "@markvis/html";
 
 export type GalleryItem = {
   name: string;

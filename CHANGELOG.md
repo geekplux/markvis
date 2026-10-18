@@ -7,6 +7,7 @@ Draw a chart block anywhere Markdown is shown: one call from JavaScript, React w
 ### Breaking
 
 - The ES module `markvis.mjs` no longer draws on import. A page that loads it with `<script type="module" src=".../markvis@2/dist/markvis.mjs">` and relied on charts drawing by themselves now draws nothing. Import it and call `run()`, or load the classic `markvis.min.js`, which still draws once the page is ready.
+- The drop-in's global (`window.markvis`) and `markvis.mjs` export `run`, `init`, `initialize`, `render`, and `parseBlock`, and nothing else. `replaceLanguageBlocks`, `replaceInDocument`, `autoReplace`, `wrapFence`, `chartBlockHtml`, `resultToHtml`, `htmlTable`, `escapeHtml`, `parseMarkdown`, `renderSvg`, `isChartBlock`, `enhanceChartSvg`, and `tipTextForMark` are gone from it. The `markvis` npm package still exports the parser and renderer functions.
 
 ### Added
 
@@ -17,7 +18,7 @@ Draw a chart block anywhere Markdown is shown: one call from JavaScript, React w
 - `markvis/rehype`: chart code blocks become real hast (figure, SVG, table) for MDX hosts such as Docusaurus and Astro. No raw HTML nodes, no new runtime dependency.
 - A GitHub Action for any repository: `uses: geekplux/markvis@master` bakes chart blocks to SVG and commits them, so github.com shows the charts. Inputs `paths`, `commit`, `message`; a second run commits nothing. It runs the markvis release it ships with, commits only the files bake writes, and never pushes for a pull request from a fork.
 - A 250-token model instruction (`docs/prompt.md`, also the opening of `llms.txt` and the site AI page). `pnpm eval-prompts --outputs <dir>` scores a directory of model answers: valid blocks, error codes, and chart type against `examples/prompts.md`.
-- Site: an Integrations page and one generated page per chart type.
+- Site: a live, editable block on the home page, and one generated page per chart type.
 - **Wave 4 types:** `dumbbell` (two values per category, first hollow and second filled, signed change at the right) `bullet` (actual against an optional `target:` column, optional `min` / `max`), `boxplot` (distributions from raw rows, type-7 quartiles, Tukey whiskers), and `calendar` (one cell per `YYYY-MM-DD` day; new code `E_BAD_DATE`).
 - `graphite` theme: editorial mono with a gray ladder, one accent on the largest value, pill bars, and heavy numbers. Inspired by lieflat-charts.
 - Playground **Surface** control (`?surface=dark`).
@@ -27,7 +28,7 @@ Draw a chart block anywhere Markdown is shown: one call from JavaScript, React w
 
 - The drop-in renders through `render()`: an empty block's error table shows the block as the page holds it, not a fence wrapped around it.
 - The browser drop-in keeps cells past the header width in the error table, like every other path.
-- markdown-it, remark, and the drop-in share one HTML module, so their output is the same.
+- markdown-it, remark, rehype, React, the drop-in, the Playground, and the command line's `render --html` and `gallery` share one HTML module, so their output is the same. The command line's error table now keeps cells past the header width too.
 - The six themes now look distinct in structure, not just color: each owns its type ramp (floor: title 15, other roles 11), title alignment and subtitle, grid dash, axis lines and ticks, curve, point markers, legend keys, card frame, and dark paper. Every pair differs on at least four structural switches. See `docs/themes.md`.
 - Readable type, wrapped labels, explicit paper/dark/export surfaces, gauge range 0–100 when `max` is omitted, sankey thickness. Funnel stays a centered silhouette.
 

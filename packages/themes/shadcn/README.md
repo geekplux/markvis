@@ -15,6 +15,6 @@ Static SVG grammar: a card with a title and muted description, no axis line, smo
 - Highcharts plot border `#ccd6eb` / Arial demo look
 - Folio blue-first palette
 - Loud grid or axis field titles
-- Opaque plot wallpaper (U6: transparent fill)
+- Opaque plot wallpaper (transparent fill)
 
 See `docs/themes.md`.

@@ -56,10 +56,10 @@ describe("markvis.min.js as a classic script", () => {
     const sandbox: Record<string, unknown> = { TextEncoder };
     runInNewContext(readFileSync(minPath, "utf8"), sandbox);
     const api = sandbox["markvis"] as
-      | { init?: unknown; parseMarkdown?: unknown; render?: (text: string) => { ok: boolean; html: string } }
+      | { init?: unknown; parseBlock?: unknown; render?: (text: string) => { ok: boolean; html: string } }
       | undefined;
     expect(typeof api?.init).toBe("function");
-    expect(typeof api?.parseMarkdown).toBe("function");
+    expect(typeof api?.parseBlock).toBe("function");
     const result = api?.render?.(BODY);
     expect(result?.ok).toBe(true);
     expect(result?.html).toContain("<svg");

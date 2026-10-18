@@ -1,5 +1,5 @@
 import { extractCharts } from "@markvis/parser";
-import { chartBlockHtml } from "@markvis/html";
+import { render, type RenderOptions } from "@markvis/html";
 
 const LANGS = new Set(["chart", "markvis", "vis"]);
 
@@ -87,6 +87,10 @@ function replaceInParent(parent: PosNode, reps: Rep[]): void {
   }
 }
 
+function options(filename: string | undefined): RenderOptions {
+  return filename === undefined ? {} : { filename };
+}
+
 function replaceRemainingFences(
   node: PosNode,
   filename: string | undefined,
@@ -100,9 +104,7 @@ function replaceRemainingFences(
     if (child.type === "code") {
       const lang = (child.lang ?? "").toLowerCase();
       if (LANGS.has(lang)) {
-        const body = child.value ?? "";
-        const raw = `\`\`\`${lang}\n${body}\n\`\`\``;
-        children[i] = htmlNode(chartBlockHtml(raw, filename));
+        children[i] = htmlNode(render(child.value ?? "", options(filename)).html);
         continue;
       }
     }
@@ -118,7 +120,7 @@ function transform(tree: PosNode, file: VFileLike): void {
     const reps: Rep[] = charts.map((chart) => ({
       start: chart.index,
       end: chart.index + chart.raw.length,
-      html: chartBlockHtml(chart.raw, filename),
+      html: render(chart.raw, options(filename)).html,
     }));
     if (reps.length > 0) {
       replaceInParent(tree, reps);

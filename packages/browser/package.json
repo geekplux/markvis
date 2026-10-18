@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "description": "Zero-network browser drop-in: language-chart|markvis|vis -> SVG (W14b B1)",
+  "description": "Browser drop-in: draws chart code blocks and chart comments in the page",
   "exports": {
     ".": "./src/index.ts",
     "./enhance": "./src/enhance.ts",

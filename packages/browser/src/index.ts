@@ -1,42 +1,17 @@
-import { parseMarkdown } from "@markvis/parser";
-import { renderSvg } from "@markvis/render-svg";
+import { parseBlock } from "@markvis/parser";
 import {
-  autoReplace,
   init,
   initialize,
-  isChartBlock,
   renderWithDefaults as render,
-  replaceInDocument,
-  replaceLanguageBlocks,
   run,
+  type PageDefaults,
+  type RunOptions,
 } from "./dom.js";
-import { enhanceChartSvg, tipTextForMark } from "./enhance.js";
-import {
-  chartBlockHtml,
-  escapeHtml,
-  htmlTable,
-  resultToHtml,
-  wrapFence,
-} from "./html.js";
 
-// The ES module draws nothing on import; call run() (the classic script
-// in iife.ts runs on load).
-export {
-  autoReplace,
-  chartBlockHtml,
-  enhanceChartSvg,
-  escapeHtml,
-  htmlTable,
-  init,
-  initialize,
-  isChartBlock,
-  parseMarkdown,
-  render,
-  renderSvg,
-  replaceInDocument,
-  replaceLanguageBlocks,
-  resultToHtml,
-  run,
-  tipTextForMark,
-  wrapFence,
-};
+export type { RenderOptions, RenderResult } from "@markvis/html";
+export type { PageDefaults, RunOptions };
+
+// The drop-in's whole API, on `window.markvis` and on the ES module. The
+// ES module draws nothing on import; the classic script (iife.ts) runs
+// once the page is ready. Everything else is in the `markvis` package.
+export { init, initialize, parseBlock, render, run };

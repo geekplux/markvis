@@ -4,11 +4,7 @@ import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import { parseMarkdown } from "@markvis/parser";
 import { renderSvg } from "@markvis/render-svg";
-import {
-  chartBlockHtml,
-  replaceLanguageBlocks,
-  wrapFence,
-} from "../src/index.js";
+import { render } from "../src/index.js";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const repoRoot = join(here, "../../..");
@@ -29,9 +25,9 @@ function fenceBody(source: string): string {
 
 const BODY = fenceBody(valid01);
 
-describe("wrapFence + chartBlockHtml", () => {
+describe("render on the drop-in", () => {
   it("renders a valid body as figure + svg + table", () => {
-    const html = chartBlockHtml(BODY);
+    const html = render(BODY).html;
     expect(html).toContain("<figure");
     expect(html).toContain("<svg");
     expect(html).toContain("</svg>");
@@ -40,7 +36,7 @@ describe("wrapFence + chartBlockHtml", () => {
   });
 
   it("matches render-svg bytes for the same IR", () => {
-    const html = chartBlockHtml(wrapFence(BODY, "chart"));
+    const html = render(BODY).html;
     const result = parseMarkdown(valid01);
     expect(result.ok).toBe(true);
     if (!result.ok) {
@@ -50,36 +46,10 @@ describe("wrapFence + chartBlockHtml", () => {
   });
 
   it("keeps data on invalid input", () => {
-    const html = chartBlockHtml(invalid01);
+    const html = render(invalid01).html;
     expect(html).toContain("markvis-error");
     expect(html).toContain("E_UNKNOWN_TYPE");
     expect(html).toContain("<table");
-  });
-});
-
-describe("replaceLanguageBlocks", () => {
-  it("replaces language-chart pre/code", () => {
-    const html = `<pre><code class="language-chart">${BODY}</code></pre>`;
-    const out = replaceLanguageBlocks(html);
-    expect(out).toContain("<svg");
-    expect(out).toContain('data-chart-type="bar"');
-    expect(out).not.toContain("language-chart");
-  });
-
-  it("replaces language-vis and language-markvis", () => {
-    const vis = replaceLanguageBlocks(
-      `<pre class="language-vis">${BODY}</pre>`,
-    );
-    const mv = replaceLanguageBlocks(
-      `<code class="language-markvis">${BODY}</code>`,
-    );
-    expect(vis).toContain("<svg");
-    expect(mv).toContain("<svg");
-  });
-
-  it("leaves language-js alone", () => {
-    const src = `<pre><code class="language-js">const x = 1;</code></pre>`;
-    expect(replaceLanguageBlocks(src)).toBe(src);
   });
 });
 

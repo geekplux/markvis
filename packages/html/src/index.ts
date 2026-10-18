@@ -1,7 +1,6 @@
 import type { ChartIR, ChartPalette, ChartTheme } from "@markvis/ir";
 import {
   parseBlock,
-  parseMarkdown,
   type FallbackTable,
   type ParseDefaults,
   type ParseError,
@@ -74,15 +73,6 @@ export function resultToHtml(result: ParseResult): string {
   return failureHtml(fallbackTable(result), result.error);
 }
 
-/** A whole chart block (fence lines or comment included) to HTML. */
-export function chartBlockHtml(raw: string, filename?: string): string {
-  const result =
-    filename === undefined
-      ? parseMarkdown(raw)
-      : parseMarkdown(raw, { filename });
-  return resultToHtml(result);
-}
-
 export type RenderOptions = {
   /** Display width in px. Default 720. */
   width?: number;
@@ -144,4 +134,9 @@ export function render(text: string, options: RenderOptions = {}): RenderResult 
     html: figureHtml(result.chart, svg),
     chart: result.chart,
   };
+}
+
+/** `render(text, { filename }).html`: the older name, kept for the 2.1 adapters. */
+export function chartBlockHtml(raw: string, filename?: string): string {
+  return render(raw, filename === undefined ? {} : { filename }).html;
 }

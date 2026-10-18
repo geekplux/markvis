@@ -1,29 +1,4 @@
 import { render, type RenderOptions } from "@markvis/html";
-import { unescapeHtml } from "./html.js";
-
-const LANG_CLASS = /\blanguage-(chart|markvis|vis)\b/i;
-
-const PRE_RE =
-  /<pre([^>]*)>(?:\s*<code([^>]*)>)?([\s\S]*?)(?:<\/code>\s*)?<\/pre>/gi;
-
-const CODE_RE =
-  /<code([^>]*\blanguage-(?:chart|markvis|vis)\b[^>]*)>([\s\S]*?)<\/code>/gi;
-
-function classAttr(attrs: string): string {
-  const dq = attrs.match(/\bclass\s*=\s*"([^"]*)"/i);
-  if (dq) {
-    return dq[1] ?? "";
-  }
-  const sq = attrs.match(/\bclass\s*=\s*'([^']*)'/i);
-  return sq?.[1] ?? "";
-}
-
-function decodeBody(html: string): string {
-  return unescapeHtml(html.replace(/<br\s*\/?>/gi, "\n")).replace(
-    /^\n+|\n+$/g,
-    "",
-  );
-}
 
 /** Page defaults set by `initialize`. A block's own fields still win. */
 export type PageDefaults = Pick<RenderOptions, "theme" | "palette" | "surface" | "width">;
@@ -47,22 +22,6 @@ export function initialize(defaults: PageDefaults = {}): void {
 /** `render` with the page defaults under the call's own options. */
 export function renderWithDefaults(text: string, options: RenderOptions = {}) {
   return render(text, { ...pageDefaults, ...options });
-}
-
-/** HTML from a Markdown renderer, with chart code blocks drawn. */
-export function replaceLanguageBlocks(html: string): string {
-  const replacedPre = html.replace(
-    PRE_RE,
-    (full, preAttrs: string, codeAttrs: string | undefined, inner: string) => {
-      const lang =
-        LANG_CLASS.test(classAttr(preAttrs ?? "")) ||
-        LANG_CLASS.test(classAttr(codeAttrs ?? ""));
-      return lang ? renderWithDefaults(decodeBody(inner)).html : full;
-    },
-  );
-  return replacedPre.replace(CODE_RE, (full, attrs: string, inner: string) =>
-    LANG_CLASS.test(classAttr(attrs ?? "")) ? renderWithDefaults(decodeBody(inner)).html : full,
-  );
 }
 
 const CHART_LANG = /^(?:chart|markvis|vis)$/i;
@@ -278,11 +237,6 @@ export function run(options: RunOptions = {}): number {
 /** Short form of `run({ root })`. */
 export function init(root?: ParentNode): number {
   return run(root === undefined ? {} : { root });
-}
-
-/** @deprecated Same as `init(root)`. */
-export function replaceInDocument(root: ParentNode = document): number {
-  return init(root);
 }
 
 /** Run once the DOM is ready (now, if it already is). */

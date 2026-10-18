@@ -4,27 +4,21 @@ Put a chart in any Markdown preview or rendered page. Save a picture so any view
 
 ## Public site
 
-markvis.js.org is the VitePress site in apps/web, built from branch master. GitHub Pages source must be GitHub Actions (not docsify). Do not change markvis-editor.js.org. Workflow: `.github/workflows/pages.yml` (`pnpm --filter web build`, upload `apps/web/.vitepress/dist`). `check.yml` stays the CI contract; Pages only deploys the site.
+markvis.js.org is the VitePress site in `apps/web`, deployed from `master` by `.github/workflows/pages.yml`. `check.yml` stays the CI contract; Pages only deploys the site.
 
 ## GitHub README
 
-GitHub will not grow a native chart fence. Use markvis bake on README.md and docs/landing.md. Keeps the fence; inserts a markdown image after it. Second bake is a no-op. CI workflow bake.yml runs on master push and PR, with this branch's own build.
+github.com runs no scripts, so a README shows a picture or a table. `markvis bake` keeps the block and inserts a Markdown image after it; a second bake is a no-op. `.github/workflows/bake.yml` bakes this repository's own README with the branch's build.
 
-Other repositories use the root `action.yml` (composite): `uses: geekplux/markvis@master` with inputs `paths` (space-separated, default `README.md`), `commit` (default `true`), `message` (default `chore: bake markvis charts`). It sets up Node 20 and runs `npx --yes markvis@<version> bake <paths>`, pinned to the package version (`scripts/action.test.ts` checks the two match, so bump both together). It stages only the files bake wrote or removed: the list of changed files before bake is diffed against the list after, so other changes in the tree are never committed. If anything changed, it commits those paths as github-actions[bot] and pushes `HEAD` to the branch. A pull request from another repository, under any `pull_request*` event (`pull_request_target` too), is baked without a commit. On a pull request, `HEAD` must be the pull request head; a merge-commit checkout fails rather than push the base into the branch. Inputs and context reach the shell through `env` only. `scripts/action.test.ts` runs the action's own steps twice in a scratch repository with a bare remote. bake.yml stays as is: it bakes with the branch's build, not the published package. Release tags for `uses: geekplux/markvis@v2` are the maintainer's call.
+Other repositories use the root `action.yml`: `uses: geekplux/markvis@master` with inputs `paths`, `commit`, `message`. It runs the published package pinned to this repository's version (`scripts/action.test.ts` checks the two match, so bump both together), commits only the files bake wrote, and never pushes for a pull request from a fork. The guards and their reasons are commented in `action.yml`; `scripts/action.test.ts` runs its steps twice in a scratch repository.
 
 Without the Action, the comment + table form shows as a plain table on github.com.
 
 ## Any JS preview
 
-After `pnpm build` (or a packed install), drop in `dist/markvis.min.js` (or `.mjs`). Zero network. Load it with a classic `<script>` (the CDN copy is `https://cdn.jsdelivr.net/npm/markvis@2/dist/markvis.min.js`); it defines `window.markvis`, and `type="module"` hides it.
+`dist/markvis.min.js` (CDN: `https://cdn.jsdelivr.net/npm/markvis@2/dist/markvis.min.js`) loads with a classic `<script>` and defines `window.markvis`; `type="module"` hides it. `dist/markvis.mjs` is the ES module and never draws on import.
 
-Detection (`packages/browser/src/dom.ts`): a `pre` is a chart block when `chart`, `markvis`, or `vis` appears as `language-X`, `lang-X`, or `data-lang="X"` on its `code`, on the `pre`, or on a wrapper `div` up to two levels out, or as a bare class on the `pre` (Pandoc). A chart `code` outside any `pre` counts too. The outermost highlighter wrapper (`highlight`, `highlighter-rouge`, `sourceCode`, `codehilite`, `code-block`, `language-*`) is replaced, so its chrome goes with it, but only while everything else in the wrapper is chrome (`button`, `span`, `small`, `label`, `svg`, or blank text). A wrapper that holds any other content stays, and only the block inside it is replaced. Text is read with `textContent`, so highlighter spans do not matter. Every block renders through `render()`.
-
-Comment form: a comment whose text starts with `chart:`, `markvis:`, or `vis:`, followed (only whitespace between) by a `<table>` or by a paragraph of pipe rows (kramdown leaves the table unparsed right after a comment, and turns `---` into dashes), is rebuilt as a block and replaced with the figure, which keeps the table.
-
-API on the global and the ES module: `run({ nodes?, querySelector?, root? })` returns how many it drew; `init(root)` is `run({ root })`; `initialize({ theme, palette, surface, width })` sets page defaults (a block's own field wins); `render(text, options?)` uses the same defaults. The classic script runs once the DOM is ready (at `DOMContentLoaded` while the page loads, at once after); `data-start-on-load="false"` on its tag turns that off. The ES module never runs on import. A drawn block leaves the page, so a second run draws nothing new.
-
-Host fixtures: `packages/browser/test/fixtures/hosts/*.html`, each rendered from `source.md` by the real tool (marked, markdown-it, markdown-it + highlight.js, Jekyll with kramdown GFM + rouge, Hugo with goldmark + chroma, MkDocs with a custom fence, MkDocs with defaults, Pandoc, docsify); the first line names the tool, version, and command. Hugo needs `markup.goldmark.renderer.unsafe = true` for raw HTML. MkDocs with Pygments keeps no language name unless a superfences custom fence sets the class; `pygments_lang_class` names the lexer (`language-text`), not the fence. docsify renders after load: call `markvis.run()` from a `doneEach` hook.
+The whole API is `run({ nodes?, querySelector?, root? })`, `init(root)`, `initialize({ theme, palette, surface, width })`, `render(text, options?)`, and `parseBlock`. Every block renders through `render()`. How a chart block or a chart comment is found in a host's HTML is commented in `packages/browser/src/dom.ts`, and each supported host has a fixture in `packages/browser/test/fixtures/hosts/` whose first line names the tool, version, and command that produced it (`hosts.test.ts` draws every one). Host notes for users are on the site's Integrate page.
 
 In this monorepo: `pnpm build`, then open `apps/playground/dropin.html`. `dist/` is gitignored — without that build the script 404s.
 
@@ -58,34 +52,6 @@ Each host example renders at least one valid fence to HTML with svg and table el
 ## VS Code
 
 extensions/vscode-markvis-preview — Markdown preview renders chart / markvis / vis to SVG. Install from folder or vsce package. Publishing to the Marketplace is a maintainer decision. See that folder README.
-
-## GitHub Pages (one-time Settings)
-
-On **github.com/geekplux/markvis** → **Settings** → **Pages**:
-
-1. **Build and deployment → Source:** GitHub Actions. Not “Deploy from a branch”. Docsify must not stay the source.
-2. **Custom domain:** `markvis.js.org` (keep existing DNS).
-3. First green `pages` run on `master` publishes. Until Source is GitHub Actions, the workflow uploads but GitHub still serves the old branch site.
-
-### Environment `github-pages`
-
-The Actions deploy job uses the **github-pages** environment. Under **Settings** → **Environments** → **github-pages** → **Deployment branches and tags**:
-
-- Must **allow branch `master`** (or “All branches”, or a rule that includes `master`).
-- If the allow list is only `v2` / `main` / `gh-pages`, the run fails with: **Branch master is not allowed to deploy to github-pages**.
-
-### Enforce HTTPS vs Cloudflare
-
-**Enforce HTTPS** on the Pages custom-domain screen only works when GitHub sees its own DNS for the domain.
-
-If `markvis.js.org` is **Cloudflare-proxied** (orange cloud):
-
-- Leave **Enforce HTTPS unchecked** in GitHub Pages. GitHub cannot issue/complete HTTPS for a proxied record.
-- In Cloudflare: SSL/TLS mode **Full** (not Flexible). Proxied CNAME/A to GitHub Pages; Cloudflare terminates visitor HTTPS.
-
-If DNS is **grey-cloud / DNS-only** to GitHub Pages, Enforce HTTPS can stay on.
-
-`apps/web/public/CNAME` ships `markvis.js.org` in the artifact. pages.yml must not deploy a red build.
 
 ## Explicit non-goals
 

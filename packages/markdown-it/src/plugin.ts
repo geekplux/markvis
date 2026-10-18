@@ -1,5 +1,5 @@
 import { extractCharts } from "@markvis/parser";
-import { chartBlockHtml } from "@markvis/html";
+import { render } from "@markvis/html";
 
 const LANGS = new Set(["chart", "markvis", "vis"]);
 
@@ -91,7 +91,7 @@ function replaceCharts(state: StateCore): void {
       continue;
     }
     const token = new state.Token("html_block", "", 0);
-    token.content = `${chartBlockHtml(chart.raw)}\n`;
+    token.content = `${render(chart.raw).html}\n`;
     token.map = [startLine, lastLine + 1];
     token.block = true;
     tokens.splice(from, to - from + 1, token);
@@ -106,9 +106,7 @@ export function markdownItMarkvis(md: MarkdownItLike): void {
     const token = tokens[idx]!;
     const lang = fenceLang(token.info);
     if (LANGS.has(lang)) {
-      const body = token.content;
-      const raw = `\`\`\`${lang}\n${body}\`\`\``;
-      return `${chartBlockHtml(raw)}\n`;
+      return `${render(token.content).html}\n`;
     }
     if (defaultFence) {
       return defaultFence(tokens, idx, options, env, slf);

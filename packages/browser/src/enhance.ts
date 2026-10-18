@@ -84,7 +84,7 @@ function ensureStyles(): void {
   opacity: 1;
   transform: translateY(0);
 }
-/* U6: tip shape / face per theme (play + examples detail) */
+/* Tip shape and face per theme (play + examples detail) */
 .${TIP_CLASS}[data-theme="highcharts"] {
   border-radius: 0;
   padding: 5px 9px;

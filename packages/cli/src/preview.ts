@@ -1,5 +1,5 @@
 import type { ParseResult } from "@markvis/parser";
-import { escapeHtml } from "./format.js";
+import { escapeHtml, htmlTable } from "@markvis/html";
 
 export function buildPreviewHtml(opts: {
   file: string;
@@ -63,22 +63,5 @@ function errorPane(
   return `<p class="error">${escapeHtml(message)}</p>\n${gfm}`;
 }
 
-function htmlTable(table: { columns: string[]; rows: string[][] }): string {
-  if (table.columns.length === 0) {
-    return "";
-  }
-  const head = table.columns
-    .map((col) => `<th>${escapeHtml(col)}</th>`)
-    .join("");
-  const body = table.rows
-    .map((row) => {
-      const cells = table.columns
-        .map((_, i) => `<td>${escapeHtml(row[i] ?? "")}</td>`)
-        .join("");
-      return `<tr>${cells}</tr>`;
-    })
-    .join("");
-  return `<table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>`;
-}
 
 

@@ -12,7 +12,7 @@ Static SVG grammar inspired by Recharts demos — without the `recharts` npm pac
 
 ## Don't steal
 - `recharts` npm / vendor runtime
-- Opaque plot wallpaper (U6: transparent fill)
+- Opaque plot wallpaper (transparent fill)
 - HC denser-horiz-only grid or shadcn sparse card look
 - Axis field titles
 

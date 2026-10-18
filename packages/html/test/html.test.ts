@@ -1,6 +1,7 @@
 /**
- * One HTML path: markdown-it, remark, the browser drop-in, and render()
- * all emit the same figure or the same table plus one error line.
+ * One HTML path: markdown-it, remark, and render() all emit the same
+ * figure or the same table plus one error line. The drop-in and React
+ * are checked against render() in their own packages.
  */
 import { readdirSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -12,7 +13,6 @@ import { describe, expect, it } from "vitest";
 import { extractCharts } from "@markvis/parser";
 import { markdownItMarkvis } from "@markvis/markdown-it";
 import { remarkMarkvis } from "@markvis/remark";
-import { chartBlockHtml as browserBlockHtml, replaceLanguageBlocks } from "@markvis/browser";
 import { chartBlockHtml, escapeHtml, htmlTable, render } from "../src/index.js";
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -48,10 +48,8 @@ describe("every adapter emits render().html", () => {
         expect(chartBlockHtml(chart.raw)).toBe(html);
         expect(fromMarkdownIt).toContain(html);
         expect(fromRemark).toContain(render(chart.raw, { filename: path }).html);
-        // The browser sees only the inside of a code block, and draws it as render() does.
+        // A host sees only the inside of a code block; it draws like the whole block.
         if (chart.form === "fence") {
-          const code = `<pre><code class="language-${chart.lang}">${escapeHtml(chart.body)}</code></pre>`;
-          expect(replaceLanguageBlocks(code)).toBe(render(chart.body).html);
           // With no rows read, the raw text is echoed: the body, or the whole block.
           const whole = render(chart.raw);
           if (whole.ok || whole.table.columns.length > 0) {
@@ -69,10 +67,10 @@ describe("extra cells", () => {
     expect(html).toContain("<td>Jan</td><td>120</td><td>extra</td>");
   });
 
-  it("keeps it in the browser drop-in too", () => {
+  it("keeps it when only the inside of the block is given", () => {
     const [, source] = files.find(([path]) => path.endsWith("invalid/04-extra-columns.md"))!;
     const chart = extractCharts(source)[0]!;
-    const html = browserBlockHtml(chart.body, undefined, chart.lang);
+    const html = render(chart.body).html;
     expect(html).toContain("<td>extra</td>");
     expect(html).toContain('<p class="markvis-error">E_EXTRA_COLUMN');
   });

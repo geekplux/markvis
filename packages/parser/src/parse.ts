@@ -1,6 +1,8 @@
 import {
   ChartIRSchema,
   CHART_TYPES,
+  PALETTES,
+  THEMES,
   isChartPalette,
   isChartTheme,
   isChartType,
@@ -625,7 +627,7 @@ function parseBody(
     if (!isChartTheme(themeRaw)) {
       return fail(
         "E_UNKNOWN_THEME",
-        "theme is not one of folio|highcharts|shadcn|docs|ant|recharts|graphite",
+        `theme is not one of ${THEMES.join("|")}`,
         parsed,
         raw,
       );
@@ -636,7 +638,7 @@ function parseBody(
     if (!isChartTheme(opts.defaults.theme)) {
       return fail(
         "E_UNKNOWN_THEME",
-        `the theme option is not one of folio|highcharts|shadcn|docs|ant|recharts|graphite (got ${String(opts.defaults.theme)})`,
+        `the theme option is not one of ${THEMES.join("|")} (got ${String(opts.defaults.theme)})`,
         parsed,
         raw,
       );
@@ -650,7 +652,7 @@ function parseBody(
     if (!isChartPalette(paletteRaw)) {
       return fail(
         "E_UNKNOWN_PALETTE",
-        "palette is not one of ink|porcelain|warm|cool|vivid",
+        `palette is not one of ${PALETTES.join("|")}`,
         parsed,
         raw,
       );
@@ -660,7 +662,7 @@ function parseBody(
     if (!isChartPalette(opts.defaults.palette)) {
       return fail(
         "E_UNKNOWN_PALETTE",
-        `the palette option is not one of ink|porcelain|warm|cool|vivid (got ${String(opts.defaults.palette)})`,
+        `the palette option is not one of ${PALETTES.join("|")} (got ${String(opts.defaults.palette)})`,
         parsed,
         raw,
       );
