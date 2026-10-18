@@ -5,6 +5,11 @@ import { describe, expect, it } from "vitest";
 import { ChartIRSchema, THEMES } from "@markvis/ir";
 import { parseMarkdown } from "@markvis/parser";
 import { renderSvg } from "@markvis/render-svg";
+import { stripVars } from "../../../scripts/svg-normalize.js";
+// Goldens compare stripVars(svg) against the raw committed file. One-sided on
+// purpose: identical today. Before re-baking, the host-theming step uses this
+// to show geometry is unchanged, then switches the goldens back to a raw
+// svg === committed compare.
 
 const here = dirname(fileURLToPath(import.meta.url));
 const repoRoot = join(here, "../../..");
@@ -53,7 +58,7 @@ describe("valid fixture SVGs", () => {
       writeFileSync(outPath, svg, "utf8");
     }
     const committed = readFileSync(outPath, "utf8");
-    expect(svg, `${file} SVG bytes drifted from examples/out`).toBe(
+    expect(stripVars(svg), `${file} SVG bytes drifted from examples/out`).toBe(
       committed,
     );
   });
@@ -80,6 +85,6 @@ describe("theme fixture SVGs", () => {
       writeFileSync(outPath, svg, "utf8");
     }
     const committed = readFileSync(outPath, "utf8");
-    expect(svg, `${theme}/${file} SVG bytes drifted`).toBe(committed);
+    expect(stripVars(svg), `${theme}/${file} SVG bytes drifted`).toBe(committed);
   });
 });

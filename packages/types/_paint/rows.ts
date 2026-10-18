@@ -1,4 +1,5 @@
 import type { ChartIR } from "@markvis/ir";
+import type { Color } from "./paint.js";
 import { drawTitle, reserveTitle, visibleTitle } from "./figure.js";
 import { layoutLegend, titleBlockTop, type LegendLayout, type PlotBox } from "./layout.js";
 import { legendSwatch } from "./legend.js";
@@ -43,7 +44,7 @@ export type RowOptions = {
   /** Room right of the plot for per-row labels. */
   rightPad: number;
   legendNames: string[];
-  legendColors: string[];
+  legendColors: Color[];
   /** Draw the legend key as the mark itself instead of the theme swatch. */
   legendMarks?: readonly ("hollow" | "filled" | "rule")[] | undefined;
 };
@@ -252,7 +253,7 @@ function legendMark(
   mark: "hollow" | "filled" | "rule",
   x: number,
   top: number,
-  color: string,
+  color: Color,
 ): string {
   if (mark === "rule") {
     return `<rect ${attrs({ x: fmtPx(x + 4), y: fmtPx(top - 1), width: 2.5, height: 12, fill: color })}/>`;

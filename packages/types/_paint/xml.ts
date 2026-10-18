@@ -1,4 +1,6 @@
 import type { ChartIR } from "@markvis/ir";
+import { colorAttr, isColorKey, type Paint } from "./paint.js";
+import { COLOR_MODE } from "./tokens.js";
 
 export function escapeXml(value: string): string {
   return value
@@ -35,12 +37,25 @@ export function fmtPx(n: number): string {
   return String(value);
 }
 
+/**
+ * Serialize attributes in insertion order; undefined values are skipped. A
+ * Paint on a color attribute (fill, stroke, stop-color, color) is written by
+ * colorAttr().
+ */
 export function attrs(
-  record: Record<string, string | number | undefined>,
+  record: Record<string, string | number | Paint | undefined>,
 ): string {
   const parts: string[] = [];
   for (const [key, value] of Object.entries(record)) {
     if (value === undefined) {
+      continue;
+    }
+    if (typeof value === "object") {
+      parts.push(
+        isColorKey(key)
+          ? colorAttr(key, value, COLOR_MODE).trimStart()
+          : `${key}="${escapeXml(value.hex)}"`,
+      );
       continue;
     }
     parts.push(`${key}="${escapeXml(String(value))}"`);

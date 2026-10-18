@@ -96,8 +96,8 @@ export function renderHeatmap(chart: ChartIR, svgId: string): Painted {
       width: 6,
       height: 6,
     })}>`,
-    `      <rect width="6" height="6" fill="${SEMANTIC.rampLow}"/>`,
-    `      <path d="M0 6 L6 0" stroke="${SEMANTIC.missing}" stroke-width="1"/>`,
+    `      <rect ${attrs({ width: 6, height: 6, fill: SEMANTIC.rampLow })}/>`,
+    `      <path ${attrs({ d: "M0 6 L6 0", stroke: SEMANTIC.missing, "stroke-width": 1 })}/>`,
     `    </pattern>`,
     `  </defs>`,
   ];

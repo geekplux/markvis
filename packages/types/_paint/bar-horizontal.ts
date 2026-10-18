@@ -1,4 +1,5 @@
 import type { ChartIR } from "@markvis/ir";
+import type { Color } from "./paint.js";
 import {
   categoryNames,
   finiteValues,
@@ -387,7 +388,7 @@ function paintBar(
   y: number,
   h: number,
   val: number,
-  color: string,
+  color: Color,
   cat: string,
   series: string,
 ): void {

@@ -1,3 +1,4 @@
+import type { Color } from "./paint.js";
 import { formatNumber } from "./scale.js";
 import { textWidth, wrapText } from "./text.js";
 import {
@@ -44,7 +45,7 @@ export type Painted = {
 
 export type LegendItem = {
   name: string;
-  color: string;
+  color: Color;
   opacity: number;
   x: number;
   y: number;
@@ -79,7 +80,7 @@ export type Frame = {
 
 export function layoutLegend(
   names: string[],
-  colors: string[],
+  colors: Color[],
   opacities: number[],
   left: number,
   top: number,

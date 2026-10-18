@@ -5,7 +5,7 @@ import { describe, expect, it } from "vitest";
 import { ChartIRSchema, THEMES, type ChartIR } from "@markvis/ir";
 import { parseMarkdown } from "@markvis/parser";
 import {
-  PALETTE,
+  PALETTE as LIVE_PALETTE,
   binHistogram,
   chartId,
   folio,
@@ -21,8 +21,15 @@ import {
   themeTokens,
 } from "../src/index.js";
 import { niceTicks, formatNumber } from "../src/scale.js";
+import { stripVars } from "../../../scripts/svg-normalize.js";
+// Goldens compare stripVars(svg) against the raw committed file. One-sided on
+// purpose: identical today. Before re-baking, the host-theming step uses this
+// to show geometry is unchanged, then switches the goldens back to a raw
+// svg === committed compare.
 
 const here = dirname(fileURLToPath(import.meta.url));
+/** The default series colors as hex, read from the live Paint palette. */
+const PALETTE = LIVE_PALETTE.map((p) => p.hex);
 
 
 function stripPaint(svg: string): string {
@@ -390,7 +397,7 @@ describe("folio tokens", () => {
       writeFileSync(outPath, svg, "utf8");
     }
     const committed = readFileSync(outPath, "utf8");
-    expect(svg).toBe(committed);
+    expect(stripVars(svg)).toBe(committed);
   });
 });
 
@@ -481,7 +488,7 @@ describe("highcharts tokens", () => {
       writeFileSync(outPath, svg, "utf8");
     }
     const committed = readFileSync(outPath, "utf8");
-    expect(svg).toBe(committed);
+    expect(stripVars(svg)).toBe(committed);
     expect(committed).toContain('data-legend="walk-up"');
     expect(committed).toContain('data-legend="member"');
     expect(committed).toContain('data-axis-ticks="1"');
@@ -506,7 +513,7 @@ describe("highcharts tokens", () => {
       writeFileSync(outPath, svg, "utf8");
     }
     const committed = readFileSync(outPath, "utf8");
-    expect(svg).toBe(committed);
+    expect(stripVars(svg)).toBe(committed);
   });
 });
 
@@ -612,7 +619,7 @@ describe("shadcn tokens", () => {
       writeFileSync(outPath, svg, "utf8");
     }
     const committed = readFileSync(outPath, "utf8");
-    expect(svg).toBe(committed);
+    expect(stripVars(svg)).toBe(committed);
   });
 
   it("matches examples/out/themes/shadcn/02-line-multi.svg", () => {
@@ -637,7 +644,7 @@ describe("shadcn tokens", () => {
       writeFileSync(outPath, svg, "utf8");
     }
     const committed = readFileSync(outPath, "utf8");
-    expect(svg).toBe(committed);
+    expect(stripVars(svg)).toBe(committed);
     expect(committed).toContain('data-legend="walk-up"');
     expect(committed).toContain('data-frame="1"');
     expect(committed).not.toContain("data-end-label");
@@ -726,7 +733,7 @@ describe("ant tokens", () => {
       writeFileSync(outPath, svg, "utf8");
     }
     const committed = readFileSync(outPath, "utf8");
-    expect(svg).toBe(committed);
+    expect(stripVars(svg)).toBe(committed);
   });
 
   it("matches examples/out/themes/ant/02-line-multi.svg", () => {
@@ -746,7 +753,7 @@ describe("ant tokens", () => {
       writeFileSync(outPath, svg, "utf8");
     }
     const committed = readFileSync(outPath, "utf8");
-    expect(svg).toBe(committed);
+    expect(stripVars(svg)).toBe(committed);
     expect(committed).toContain('data-legend="walk-up"');
     expect(committed).not.toContain("data-end-label");
   });
@@ -837,7 +844,7 @@ describe("docs tokens", () => {
       writeFileSync(outPath, svg, "utf8");
     }
     const committed = readFileSync(outPath, "utf8");
-    expect(svg).toBe(committed);
+    expect(stripVars(svg)).toBe(committed);
   });
 });
 
@@ -916,7 +923,7 @@ describe("recharts tokens", () => {
       writeFileSync(outPath, svg, "utf8");
     }
     const committed = readFileSync(outPath, "utf8");
-    expect(svg).toBe(committed);
+    expect(stripVars(svg)).toBe(committed);
     expect(committed).toContain('data-v-grid="1"');
   });
 
@@ -942,7 +949,7 @@ describe("recharts tokens", () => {
       writeFileSync(outPath, svg, "utf8");
     }
     const committed = readFileSync(outPath, "utf8");
-    expect(svg).toBe(committed);
+    expect(stripVars(svg)).toBe(committed);
     expect(committed).toContain('data-legend="walk-up"');
     expect(committed).not.toContain("data-end-label");
     expect(committed).toContain('data-v-grid="1"');
@@ -1350,7 +1357,7 @@ describe("U5 palette independence", () => {
       writeFileSync(outPath, svg, "utf8");
     }
     const committed = readFileSync(outPath, "utf8");
-    expect(svg).toBe(committed);
+    expect(stripVars(svg)).toBe(committed);
     return svg;
   }
 

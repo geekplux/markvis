@@ -149,7 +149,7 @@ export function renderBullet(chart: ChartIR, _id: string): Painted {
     const rest =
       label.rest === ""
         ? ""
-        : `<tspan fill="${TYPE.unit.fill}" font-weight="${TYPE.unit.weight}">${escapeXml(label.rest)}</tspan>`;
+        : `<tspan ${attrs({ fill: TYPE.unit.fill, "font-weight": TYPE.unit.weight })}>${escapeXml(label.rest)}</tspan>`;
     labels.push(
       `    <text ${attrs({
         x: fmtPx(plot.right + 12),

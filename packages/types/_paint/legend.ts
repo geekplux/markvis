@@ -1,3 +1,4 @@
+import type { Color } from "./paint.js";
 import { LEGEND } from "./tokens.js";
 import { attrs, fmtPx } from "./xml.js";
 
@@ -5,7 +6,7 @@ import { attrs, fmtPx } from "./xml.js";
 export function legendSwatch(
   x: number,
   top: number,
-  color: string,
+  color: Color,
   opacity?: number,
 ): string {
   const fillOpacity = opacity === undefined || opacity === 1 ? undefined : opacity;

@@ -1,14 +1,15 @@
+import { hexOf, type Color } from "./paint.js";
 import { seriesStyle } from "./palette.js";
 import { SEMANTIC } from "./tokens.js";
 
-function hexChannels(hex: string): [number, number, number] {
-  const body = hex.replace("#", "");
+function hexChannels(color: Color): [number, number, number] {
+  const body = hexOf(color).replace("#", "");
   const n = Number.parseInt(body.length === 3 ? body.split("").map((c) => c + c).join("") : body, 16);
   return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
 }
 
 /** Straight RGB mix from `from` to `to` at t in [0, 1]. */
-export function mixHex(from: string, to: string, t: number): string {
+export function mixHex(from: Color, to: Color, t: number): string {
   const a = hexChannels(from);
   const b = hexChannels(to);
   const u = Math.max(0, Math.min(1, t));

@@ -1,4 +1,5 @@
 import type { ChartIR } from "@markvis/ir";
+import type { Color } from "./paint.js";
 import { loadRows } from "./data.js";
 import { drawTitle, reserveTitle, visibleTitle } from "./figure.js";
 import {
@@ -97,7 +98,7 @@ function fullDonutPath(cx: number, cy: number, rOuter: number, rInner: number): 
 type Slice = {
   label: string;
   value: number;
-  color: string;
+  color: Color;
   opacity: number;
   a0: number;
   a1: number;
@@ -275,7 +276,7 @@ function pieBox(
 
 function drawPieLegend(
   names: string[],
-  colors: string[],
+  colors: Color[],
   opacities: number[],
   left: number,
   top: number,

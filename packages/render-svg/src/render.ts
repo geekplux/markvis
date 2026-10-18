@@ -20,6 +20,11 @@ export type RenderOptions = {
   width?: number;
   /** Overrides the chart's surface field. */
   surface?: SurfaceName;
+  /**
+   * How colors are written. Both modes write fixed hex values today; the
+   * option is accepted so callers can pass it ahead of host-page theming.
+   */
+  colors?: "host" | "static";
 };
 
 export function ariaLabel(chart: ChartIR): string {
@@ -67,7 +72,7 @@ export function renderSvg(chart: ChartIR, options?: RenderOptions): string {
   applyThemeTokens(t);
   const width = options?.width ?? t.SVG_WIDTH;
   const surface = options?.surface ?? chart.surface ?? "light";
-  applyFrame({ width, surface });
+  applyFrame({ width, surface, colors: options?.colors });
   setTitleLineCount(
     countTitleLines(visibleTitle(chart), MARGIN.left, chart.unit),
   );

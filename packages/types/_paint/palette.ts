@@ -1,9 +1,10 @@
+import type { Color, Paint } from "./paint.js";
 import { HERO, PALETTE, WRAP_OPACITY } from "./tokens.js";
 
 export { PALETTE };
 
 export type SeriesStyle = {
-  color: string;
+  color: Paint;
   opacity: number;
 };
 
@@ -13,7 +14,7 @@ export function seriesStyle(index: number): SeriesStyle {
   return { color, opacity };
 }
 
-export function seriesColor(index: number): string {
+export function seriesColor(index: number): Paint {
   return seriesStyle(index).color;
 }
 
@@ -36,6 +37,6 @@ export function heroIndex(values: readonly (number | null)[]): number {
 }
 
 /** Fill for mark `index`: the accent when it is the hero, else the series color. */
-export function heroFill(index: number, hero: number, color: string): string {
+export function heroFill(index: number, hero: number, color: Color): Color {
   return index === hero ? HERO.color : color;
 }

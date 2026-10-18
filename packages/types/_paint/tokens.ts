@@ -10,10 +10,71 @@ import {
   type SemanticColors,
   type ThemeTokens,
   type TitleTokens,
+  type TypeRole,
 } from "@markvis/themes";
+import { paint, seriesPaintName, type ColorMode, type Paint } from "./paint.js";
 
 /** Widened view so the live bindings accept every pack, not only folio literals. */
 const base: ThemeTokens = folio;
+
+/** A type role whose fill is a live Paint. */
+export type LiveTypeRole = { size: number; weight: number; fill: Paint };
+export type LiveType = {
+  title: LiveTypeRole;
+  unit: LiveTypeRole;
+  value: LiveTypeRole;
+  tick: LiveTypeRole;
+  note: LiveTypeRole;
+  legend: LiveTypeRole;
+};
+/** Semantic colors; the waterfall roles are live Paints. */
+export type LiveSemantic = Omit<SemanticColors, "up" | "down" | "total"> & {
+  readonly up: Paint;
+  readonly down: Paint;
+  readonly total: Paint;
+};
+export type LiveHero = { readonly rule: HeroTokens["rule"]; readonly color: Paint };
+
+function role(r: TypeRole, fill: Paint): LiveTypeRole {
+  return { size: r.size, weight: r.weight, fill };
+}
+
+/** Title, value, and legend text read as ink; unit, note, and tick text as muted. */
+function liveType(t: ThemeTokens["TYPE"]): LiveType {
+  return {
+    title: role(t.title, paint("ink", t.title.fill)),
+    unit: role(t.unit, paint("muted", t.unit.fill)),
+    value: role(t.value, paint("ink", t.value.fill)),
+    tick: role(t.tick, paint("muted", t.tick.fill)),
+    note: role(t.note, paint("muted", t.note.fill)),
+    legend: role(t.legend, paint("ink", t.legend.fill)),
+  };
+}
+
+function livePalette(list: readonly string[]): readonly Paint[] {
+  return list.map((hex, i) => paint(seriesPaintName(i), hex));
+}
+
+function liveSemantic(s: SemanticColors): LiveSemantic {
+  return {
+    ...s,
+    up: paint("up", s.up),
+    down: paint("down", s.down),
+    total: paint("total", s.total),
+  };
+}
+
+function liveHero(h: HeroTokens): LiveHero {
+  return { rule: h.rule, color: paint("accent", h.color) };
+}
+
+function livePlot(hex: string | null): Paint | null {
+  return hex === null ? null : paint("plot", hex);
+}
+
+function livePlate(hex: string | null): Paint | null {
+  return hex === null ? null : paint("plate", hex);
+}
 
 export let SVG_WIDTH: number = base.SVG_WIDTH;
 export let SVG_HEIGHT: number = base.SVG_HEIGHT;
@@ -24,23 +85,16 @@ export let FONT = base.FONT;
 /** Font for tick and value labels; undefined inherits FONT. */
 export let FONT_NUMERIC: string | undefined = base.FONT_NUMERIC ?? undefined;
 
-export let INK: string = base.INK;
-export let QUIET: string = base.QUIET;
+export let INK: Paint = paint("ink", base.INK);
+export let QUIET: Paint = paint("muted", base.QUIET);
 export let HAIRLINE_OPACITY: string = base.HAIRLINE_OPACITY;
 export let STRUCTURE_OPACITY = base.STRUCTURE_OPACITY;
 
-export let TYPE: {
-  title: { size: number; weight: number; fill: string };
-  unit: { size: number; weight: number; fill: string };
-  value: { size: number; weight: number; fill: string };
-  tick: { size: number; weight: number; fill: string };
-  note: { size: number; weight: number; fill: string };
-  legend: { size: number; weight: number; fill: string };
-} = base.TYPE;
+export let TYPE: LiveType = liveType(base.TYPE);
 
 export let MARGIN = base.MARGIN;
 
-export let PALETTE = base.PALETTE;
+export let PALETTE: readonly Paint[] = livePalette(base.PALETTE);
 
 export let WRAP_OPACITY = base.WRAP_OPACITY;
 
@@ -93,24 +147,26 @@ export let PIE_SEPARATOR = base.PIE_SEPARATOR;
 
 export let COMPACT_SPAN = base.COMPACT_SPAN;
 
-export let PLOT_BG: string | null = base.PLOT_BG;
+export let PLOT_BG: Paint | null = livePlot(base.PLOT_BG);
 export let PLOT_BORDER: string | null = base.PLOT_BORDER;
 export let PLOT_BORDER_WIDTH: number = base.PLOT_BORDER_WIDTH;
 export type SurfaceName = "light" | "dark" | "export";
 export let SURFACE: SurfaceName = "light";
 /** Full-frame plate for the active surface. null = the host page is the paper. */
-export let PLATE: string | null = base.SURFACES.light.PLATE;
-export let PAPER: string = base.SURFACES.light.PAPER;
-export let SEMANTIC: SemanticColors = base.SURFACES.light.SEMANTIC;
+export let PLATE: Paint | null = livePlate(base.SURFACES.light.PLATE);
+export let PAPER: Paint = paint("paper", base.SURFACES.light.PAPER);
+export let SEMANTIC: LiveSemantic = liveSemantic(base.SURFACES.light.SEMANTIC);
 export let GRID: GridTokens = base.GRID;
 export let AXIS: AxisTokens = base.AXIS;
 export let LEGEND: LegendTokens = base.LEGEND;
 export let FRAME: FrameTokens = base.FRAME;
-export let HERO: HeroTokens = base.HERO;
+export let HERO: LiveHero = liveHero(base.HERO);
 export let AXIS_TITLES = base.AXIS_TITLES;
 export let LEGEND_BELOW = base.LEGEND_BELOW;
 export let TITLE_RULE = base.TITLE_RULE;
 let SURFACES: ThemeTokens["SURFACES"] = base.SURFACES;
+/** How colors are written for the chart being painted. */
+export let COLOR_MODE: ColorMode = "host";
 
 /** Apply a theme pack to the live token bindings used by layout/paint. */
 export function applyThemeTokens(t: ThemeTokens): void {
@@ -120,13 +176,13 @@ export function applyThemeTokens(t: ThemeTokens): void {
   PLOT_MIN_RATIO = t.PLOT_MIN_RATIO;
   FONT = t.FONT;
   FONT_NUMERIC = t.FONT_NUMERIC ?? undefined;
-  INK = t.INK;
-  QUIET = t.QUIET;
+  INK = paint("ink", t.INK);
+  QUIET = paint("muted", t.QUIET);
   HAIRLINE_OPACITY = t.HAIRLINE_OPACITY;
   STRUCTURE_OPACITY = t.STRUCTURE_OPACITY;
-  TYPE = t.TYPE;
+  TYPE = liveType(t.TYPE);
   MARGIN = t.MARGIN;
-  PALETTE = t.PALETTE;
+  PALETTE = livePalette(t.PALETTE);
   WRAP_OPACITY = t.WRAP_OPACITY;
   TITLE = t.TITLE;
   TITLE_BASELINE = t.TITLE_BASELINE;
@@ -171,7 +227,7 @@ export function applyThemeTokens(t: ThemeTokens): void {
   PIE_INNER_RATIO = t.PIE_INNER_RATIO;
   PIE_SEPARATOR = t.PIE_SEPARATOR;
   COMPACT_SPAN = t.COMPACT_SPAN;
-  PLOT_BG = t.PLOT_BG;
+  PLOT_BG = livePlot(t.PLOT_BG);
   PLOT_BORDER = t.PLOT_BORDER;
   PLOT_BORDER_WIDTH = t.PLOT_BORDER_WIDTH;
   AXIS_TITLES = t.AXIS_TITLES;
@@ -181,12 +237,12 @@ export function applyThemeTokens(t: ThemeTokens): void {
   AXIS = t.AXIS;
   LEGEND = t.LEGEND;
   FRAME = t.FRAME;
-  HERO = t.HERO;
+  HERO = liveHero(t.HERO);
   SURFACES = t.SURFACES;
   SURFACE = "light";
-  PLATE = t.SURFACES.light.PLATE;
-  PAPER = t.SURFACES.light.PAPER;
-  SEMANTIC = t.SURFACES.light.SEMANTIC;
+  PLATE = livePlate(t.SURFACES.light.PLATE);
+  PAPER = paint("paper", t.SURFACES.light.PAPER);
+  SEMANTIC = liveSemantic(t.SURFACES.light.SEMANTIC);
 }
 
 /** Hard minimum for every theme. A theme owns its ramp above it. */
@@ -203,9 +259,14 @@ const TYPE_MIN = {
  * Width reflows the frame; type never shrinks below TYPE_MIN. Each theme
  * keeps its own ramp above that. Surface owns ink and paper.
  */
-export function applyFrame(opts: { width: number; surface: SurfaceName }): void {
+export function applyFrame(opts: {
+  width: number;
+  surface: SurfaceName;
+  colors?: ColorMode | undefined;
+}): void {
   SVG_WIDTH = opts.width;
   SURFACE = opts.surface;
+  COLOR_MODE = opts.colors ?? "host";
   TYPE = {
     title: { ...TYPE.title, size: Math.max(TYPE.title.size, TYPE_MIN.title) },
     unit: { ...TYPE.unit, size: Math.max(TYPE.unit.size, TYPE_MIN.unit) },
@@ -217,24 +278,24 @@ export function applyFrame(opts: { width: number; surface: SurfaceName }): void 
   // The first title baseline clears the cap height of the theme's own title.
   TITLE_BASELINE = Math.max(TITLE_BASELINE, TYPE.title.size + 8);
   const s = SURFACES[opts.surface];
-  PLATE = s.PLATE;
-  PAPER = s.PAPER;
-  SEMANTIC = s.SEMANTIC;
-  if (s.PLOT_BG !== undefined) PLOT_BG = s.PLOT_BG;
+  PLATE = livePlate(s.PLATE);
+  PAPER = paint("paper", s.PAPER);
+  SEMANTIC = liveSemantic(s.SEMANTIC);
+  if (s.PLOT_BG !== undefined) PLOT_BG = livePlot(s.PLOT_BG);
   if (s.PLOT_BORDER !== undefined) PLOT_BORDER = s.PLOT_BORDER;
   if (s.PLOT_BORDER_WIDTH !== undefined) PLOT_BORDER_WIDTH = s.PLOT_BORDER_WIDTH;
   if (s.HAIRLINE_OPACITY !== undefined) HAIRLINE_OPACITY = s.HAIRLINE_OPACITY;
-  if (s.PALETTE !== undefined) PALETTE = s.PALETTE;
+  if (s.PALETTE !== undefined) PALETTE = livePalette(s.PALETTE);
   if (s.INK === undefined) {
     return;
   }
-  INK = s.INK;
-  QUIET = s.QUIET ?? QUIET;
+  INK = paint("ink", s.INK);
+  QUIET = s.QUIET === undefined ? QUIET : paint("muted", s.QUIET);
   TYPE = {
     title: { ...TYPE.title, fill: INK },
     unit: { ...TYPE.unit, fill: QUIET },
     value: { ...TYPE.value, fill: INK },
-    tick: { ...TYPE.tick, fill: s.TICK ?? QUIET },
+    tick: { ...TYPE.tick, fill: s.TICK === undefined ? QUIET : paint("muted", s.TICK) },
     note: { ...TYPE.note, fill: QUIET },
     legend: { ...TYPE.legend, fill: INK },
   };

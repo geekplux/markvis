@@ -172,7 +172,7 @@ export function drawTitle(title: string, x: number, unit?: string): string {
   const unitSpan =
     suffix === ""
       ? ""
-      : `<tspan font-size="${TYPE.unit.size}" font-weight="${TYPE.unit.weight}" fill="${TYPE.unit.fill}">${escapeXml(suffix)}</tspan>`;
+      : `<tspan ${attrs({ "font-size": TYPE.unit.size, "font-weight": TYPE.unit.weight, fill: TYPE.unit.fill })}>${escapeXml(suffix)}</tspan>`;
   const body = lines
     .map((line, i) => {
       const tail = i === lines.length - 1 ? unitSpan : "";

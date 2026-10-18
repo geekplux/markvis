@@ -1,7 +1,8 @@
+import { hexOf, type Color } from "./paint.js";
 import { PAPER, SEMANTIC } from "./tokens.js";
 
-function channels(hex: string): [number, number, number] {
-  const body = hex.replace("#", "");
+function channels(color: Color): [number, number, number] {
+  const body = hexOf(color).replace("#", "");
   const full = body.length === 3 ? body.replace(/./g, "$&$&") : body;
   const n = Number.parseInt(full, 16);
   return Number.isFinite(n) ? [(n >> 16) & 255, (n >> 8) & 255, n & 255] : [0, 0, 0];
@@ -28,7 +29,7 @@ function ratio(a: number, b: number): number {
 /** WCAG AA for text of chart label sizes (under 18px regular / 14px bold). */
 export const TEXT_CONTRAST = 4.5;
 
-export function readableInk(fill: string, opacity = 1): string {
+export function readableInk(fill: Color, opacity = 1): string {
   const f = channels(fill);
   const p = channels(PAPER);
   const seen = luminance(
@@ -55,7 +56,7 @@ function hex([r, g, b]: [number, number, number]): string {
  * A series color used as text on the paper, moved toward the ink just far
  * enough to read (4.5:1), so the label keeps its hue.
  */
-export function legibleOnPaper(color: string, paper: string = PAPER): string {
+export function legibleOnPaper(color: Color, paper: Color = PAPER): Color {
   const c = channels(color);
   const p = luminance(channels(paper));
   const toward = channels(p > 0.4 ? SEMANTIC.inkOnLight : SEMANTIC.inkOnDark);

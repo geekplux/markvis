@@ -1,4 +1,5 @@
 import type { ChartIR } from "@markvis/ir";
+import type { Color } from "./paint.js";
 import {
   categoryNames,
   finiteValues,
@@ -101,7 +102,7 @@ type Prepared = {
   bins: HistBin[];
   compact: CompactScale | null;
   titleUnit: string | undefined;
-  styles: { color: string; opacity: number }[];
+  styles: { color: Color; opacity: number }[];
   height: number;
   showValueLabels: boolean;
   showInteriorGrid: boolean;
@@ -200,7 +201,7 @@ function linePath(points: { x: number; y: number }[]): string {
 /** Point mark on a line or area in the theme's marker style. */
 function pointMark(
   pt: { x: number; y: number },
-  color: string,
+  color: Color,
   opacity: number,
   series: string,
 ): string | null {
@@ -1205,9 +1206,9 @@ function opacityAttr(opacity: number): number | undefined {
 
 function lastPointBySeries(
   prepared: Prepared,
-): { name: string; x: number; y: number; color: string }[] {
+): { name: string; x: number; y: number; color: Color }[] {
   const catIndex = new Map(prepared.categories.map((c, i) => [c, i]));
-  const out: { name: string; x: number; y: number; color: string }[] = [];
+  const out: { name: string; x: number; y: number; color: Color }[] = [];
   const stacking =
     prepared.layout === "stacked" || prepared.layout === "percent";
   if (stacking && prepared.categories.length > 0) {
@@ -1256,7 +1257,7 @@ function lastPointBySeries(
 }
 
 function dodgeEndLabelYs(
-  items: { name: string; x: number; y: number; color: string }[],
+  items: { name: string; x: number; y: number; color: Color }[],
 ): number[] {
   const order = items
     .map((item, i) => ({ i, y: item.y }))
@@ -1312,7 +1313,7 @@ function drawLineOrArea(prepared: Prepared, area: boolean): string[] {
   const { rows, series, yScale, styles, layout, categories } = prepared;
   const catIndex = new Map(prepared.categories.map((c, i) => [c, i]));
   const stacking = layout === "stacked" || layout === "percent";
-  const lines: string[] = [`  <g fill="none">`];
+  const lines: string[] = [`  <g ${attrs({ fill: "none" })}>`];
 
   if (stacking) {
     const matrix = segmentMatrix(rows, series, categories, layout === "percent");
