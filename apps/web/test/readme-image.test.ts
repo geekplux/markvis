@@ -1,6 +1,7 @@
 /**
- * The README's chart picture is a site URL, because npmjs.com cannot load a
- * relative image and README.svg is not in the package. The site copy must be
+ * The README's chart picture is a site URL, because npmjs.com does not serve
+ * a relative image (README.svg ships in the tarball, unreachable from the
+ * package page). The site copy must be
  * the same bytes bake writes for the README block, so a renderer change that
  * makes bake.yml rewrite README.svg fails here until the site copy follows.
  */

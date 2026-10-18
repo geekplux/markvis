@@ -277,6 +277,61 @@ describe("streaming", () => {
   }
 });
 
+describe("<Markvis streaming>", () => {
+  const body = "type: bar\ntitle: Visits\nx: day\ny: visits\n\nday,visits\nMon,3\nTue,5\nWed,4\n";
+  const draw = (source: string, streaming?: boolean) =>
+    renderToStaticMarkup(
+      createElement(Markvis, streaming === undefined ? { source } : { source, streaming }),
+    );
+
+  it("shows the placeholder and the whole rows so far, not an error line", () => {
+    const html = draw(body.slice(0, body.indexOf("Wed") + 2), true);
+    expect(html).toContain('class="markvis-pending"');
+    expect(html).toContain("Drawing chart…");
+    expect(html).toContain("<td>Tue</td><td>5</td>");
+    expect(html).not.toContain("<td>We");
+    expect(html).not.toContain("markvis-error");
+    expect(html).not.toContain("<svg");
+  });
+
+  it("shows the placeholder for a body cut before any data row", () => {
+    for (const cut of ["type: ba", "type: bar\nx: day\ny: visits\n", "type: bar\nx: day\ny: visits\n\nday,vis"]) {
+      const html = draw(cut, true);
+      expect(html, cut).toContain("Drawing chart…");
+      expect(html, cut).not.toContain("markvis-error");
+    }
+  });
+
+  it("draws the same HTML as before once streaming is false or left out", () => {
+    const whole = `<div>${render(body).html}</div>`;
+    expect(draw(body, false)).toBe(whole);
+    expect(draw(body)).toBe(whole);
+  });
+
+  it("keeps the error line for a bad block once streaming ends", () => {
+    const bad = "type: donut\nx: a\ny: b\n\na,b\nA,1\n";
+    expect(draw(bad, true)).not.toContain("markvis-error");
+    expect(draw(bad, false).match(/class="markvis-error"/g)).toHaveLength(1);
+  });
+
+  it("holds back the last line, which a host may hand over cut in half", () => {
+    const html = draw("type: bar\nx: day\ny: visits\n\nday,visits\nMon,3\nTue,5", true);
+    expect(html).toContain("<td>Mon</td><td>3</td>");
+    expect(html).not.toContain("<td>Tue");
+    const padded = draw("type: bar\nx: day\ny: visits\n\nday,visits\nMon,3\nTu\n", true);
+    expect(padded).toContain("<td>Mon</td><td>3</td>");
+    expect(padded).not.toContain("<td>Tu");
+  });
+
+  it("works with a chart object and rows", () => {
+    const html = renderToStaticMarkup(
+      createElement(Markvis, { chart: { type: "bar", x: "day", y: "visits" }, data: [{ day: "Mon", visits: 3 }], streaming: true }),
+    );
+    expect(html).toContain("Drawing chart…");
+    expect(html).toContain("<td>Mon</td><td>3</td>");
+  });
+});
+
 describe("text in a block never becomes markup", () => {
   const payloads = [
     "<script>alert(1)</script>",

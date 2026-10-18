@@ -1,0 +1,14 @@
+{
+  "name": "markvis-host-streamdown",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "markvis": "file:../../../markvis.tgz",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "streamdown": "2.7.0"
+  }
+}

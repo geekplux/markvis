@@ -8,3 +8,6 @@ apps/web/public/play-app
 .workbench/
 .pack/
 *.tgz
+
+# host recipes install from a packed tarball; no lockfiles
+examples/hosts/*/package-lock.json

@@ -8,6 +8,7 @@ import { Markvis, markvisComponents, remarkMarkvisStreaming } from "markvis/reac
 
 <Markvis source={blockText} />
 <Markvis chart={{ type: "bar", x: "month", y: "revenue" }} data={rows} />
+<Markvis source={partialCode} streaming={isIncomplete} />
 <Markdown remarkPlugins={streaming ? [remarkMarkvisStreaming] : []} components={markvisComponents}>
   {reply}
 </Markdown>

@@ -32,8 +32,14 @@ type CommonProps = {
   onError?: ((error: ParseError) => void) | undefined;
 };
 
-export type MarkvisProps = CommonProps &
-  (
+export type MarkvisProps = CommonProps & {
+  /**
+   * The block is still arriving: show "Drawing chart…" and the rows read so
+   * far (whole lines only) instead of a chart or an error line. Pass the
+   * host's own flag, such as a renderer's `isIncomplete`. Default false.
+   */
+  streaming?: boolean | undefined;
+} & (
     | { source: string; chart?: undefined; data?: undefined }
     | { source?: undefined; chart: ChartFields; data: readonly DataRow[] }
   );
@@ -117,6 +123,15 @@ function useContainerWidth(
   return fixed ?? measured;
 }
 
+/**
+ * The text a host hands over while a block streams, less its last line:
+ * that line may be a row cut in half, even when the host adds a line break.
+ */
+function wholeLines(text: string): string {
+  const body = text.replace(/[\r\n]+$/, "");
+  return body.slice(0, Math.max(0, body.search(/\r?\n[^\r\n]*$/)));
+}
+
 /** A block still arriving: a quiet note plus the rows read so far. */
 function pendingHtml(text: string): string {
   const result = parseBlock(text);
@@ -175,10 +190,16 @@ export function Chart(props: ChartProps): ReactElement {
 /**
  * One chart. Pass the text of a block as `source`, or a chart object and
  * rows as `chart` + `data`. Both go through the same parser, so a bad
- * block keeps its rows and shows one error line.
+ * block keeps its rows and shows one error line. With `streaming`, a block
+ * cut off mid-reply shows a quiet placeholder until the host says it is done.
  */
 export function Markvis(props: MarkvisProps): ReactElement {
-  const { chart, data, source, ...rest } = props;
-  const text = source ?? chartBlock(chart ?? { type: "" }, data ?? []);
-  return createElement(Chart, { ...rest, source: text });
+  const { chart, data, source, streaming = false, ...rest } = props;
+  const text =
+    source === undefined
+      ? chartBlock(chart ?? { type: "" }, data ?? [])
+      : streaming
+        ? wholeLines(source)
+        : source;
+  return createElement(Chart, { ...rest, source: text, open: streaming });
 }

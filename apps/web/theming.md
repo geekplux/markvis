@@ -112,7 +112,7 @@ In a CSS snippet or a plugin's `styles.css`, map the theme's own variables, so a
 ### What does not follow the page
 
 - Heatmap and calendar cells, their color key, and the hatch for a missing cell. They are mixed from a fixed ramp.
-- Labels drawn on a mark: inside a bar, on a heatmap cell, or on a treemap tile. Each is black or white, picked for the mark's fixed color over the theme's fixed paper. Treemap tiles are translucent, so on a dark page the page shows through them and a tile label can fall below 4.5:1. An opaque, pre-mixed tile fill is planned. If you change a series color a lot, check these labels too.
+- Labels drawn on a mark: inside a bar, on a heatmap cell, or on a treemap tile. Each is black or white, picked for the mark's fixed color over the theme's fixed paper. Treemap tiles are translucent, so on a dark page the page shows through them and a tile label can fall below 4.5:1. If you change a series color a lot, check these labels too.
 - The plot border of the export surface.
 - Opacity. Grid lines, axis lines, and area fills keep the theme's opacity over the color you set.
 

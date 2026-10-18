@@ -203,6 +203,8 @@ import { markvisComponents, remarkMarkvisStreaming } from "markvis/react";
 
 Only `chart` / `markvis` / `vis` code blocks change. Merge your own with `{ ...markvisComponents, ...mine }`. While a reply streams, `remarkMarkvisStreaming` holds a block whose closing fence has not arrived: it shows "Drawing chart…" and the whole rows so far, never an error, and draws when the fence closes. Leave the plugin out once the reply is complete, so a block that was never closed still draws. No `rehype-raw` is needed.
 
+A host that hands its code-block renderer the partial text of a block, with its own flag for "still arriving", passes that flag as `streaming`: `<Markvis source={code} streaming={isIncomplete} />` shows the same placeholder and rows until the flag turns false. Recipe: `examples/hosts/streamdown/`.
+
 A server render uses the default width (720) until the page hydrates. To let the SVG shrink to its box before then, add `.markvis svg { max-width: 100%; height: auto; }`.
 
 Host example: `examples/hosts/react-markdown/`.
