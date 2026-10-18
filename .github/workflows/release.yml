@@ -1,0 +1,68 @@
+# Publish markvis to npm when the maintainer pushes a v<digit>* tag (v2.2.0).
+# Other tags (vscode-0.1.0, a later host tag) do not match.
+# It runs the full check.yml first (scripts/release-check.test.ts there
+# requires the tag to be v<package version> and the CHANGELOG heading to
+# carry a date), then publishes with npm provenance. No token: npm trusted
+# publishing authenticates this workflow through GitHub OIDC.
+name: release
+
+on:
+  push:
+    tags: ["v[0-9]*"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  check:
+    uses: ./.github/workflows/check.yml
+
+  publish:
+    needs: check
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.9
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+
+      # Trusted publishing needs npm 11.5.1 or later; Node 20 ships npm 10.
+      - name: Update npm
+        run: npm install -g npm@11.6.2
+
+      - name: Tag matches package.json
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          version="$(node -p "require('./package.json').version")"
+          if [ "$TAG" != "v$version" ]; then
+            echo "::error::tag $TAG does not match package.json version $version"
+            exit 1
+          fi
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      # prepack builds and checks dist; prepublishOnly checks the tree is clean.
+      - name: Publish
+        run: npm publish --provenance --access public

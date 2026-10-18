@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.2.0
+## 2.2.0 — unreleased
 
 Draw a chart block anywhere Markdown is shown: one call from JavaScript, React with streaming, one script tag in any Markdown page, rehype for MDX hosts, and a GitHub Action. Four more chart types, the graphite theme, and a measured instruction for models. The language stays `markvis: 2`; every 2.1 block still parses.
 
@@ -18,8 +18,8 @@ Draw a chart block anywhere Markdown is shown: one call from JavaScript, React w
 - One script tag in any Markdown page: the drop-in finds chart blocks in the HTML of marked, markdown-it, highlight.js, Jekyll (kramdown + rouge), Hugo, MkDocs (custom fence), Pandoc, and docsify, and draws the comment + table form from the page. `markvis.run({ nodes, querySelector, root })`, `markvis.initialize({ theme, palette, surface, width })`, and `data-start-on-load="false"`.
 - `markvis/rehype`: chart code blocks become real hast (figure, SVG, table) for MDX hosts such as Docusaurus and Astro. No raw HTML nodes, no new runtime dependency.
 - A GitHub Action for any repository: `uses: geekplux/markvis@master` bakes chart blocks to SVG and commits them, so github.com shows the charts. Inputs `paths`, `commit`, `message`; a second run commits nothing. It runs the markvis release it ships with, commits only the files bake writes, and never pushes for a pull request from a fork.
-- A 250-token model instruction (`docs/prompt.md`, also the opening of `llms.txt` and the site AI page). `pnpm eval-prompts --outputs <dir>` scores a directory of model answers: valid blocks, error codes, and chart type against `examples/prompts.md`.
-- Site: a live, editable block on the home page, and one generated page per chart type.
+- A 250-token model instruction (`docs/prompt.md`, also the opening of `llms.txt` and Integrate's Tell a model section). `pnpm eval-prompts --outputs <dir>` scores a directory of model answers: valid blocks, error codes, and chart type against `examples/prompts.md`.
+- Site: a one-screen home whose first screen is a chart block that types itself while `render()` draws it, through each step from writing the block to its table fallback, on real data (the largest US energy flows in 2023, US EIA); a click opens it as a live editor. Below it: four ways in, a Your colors section (one SVG on a light and a dark page), and a card for each of the seventeen chart types. Charts on the site follow the site's light or dark mode, the social card is the hero's finished chart, and a Theming page lists the CSS variables. One generated page per chart type. `/themes` and `/ai` redirect to Theming and Integrate.
 - **Wave 4 types:** `dumbbell` (two values per category, first hollow and second filled, signed change at the right) `bullet` (actual against an optional `target:` column, optional `min` / `max`), `boxplot` (distributions from raw rows, type-7 quartiles, Tukey whiskers), and `calendar` (one cell per `YYYY-MM-DD` day; new code `E_BAD_DATE`).
 - `graphite` theme: editorial mono with a gray ladder, one accent on the largest value, pill bars, and heavy numbers. Inspired by lieflat-charts.
 - Playground **Surface** control (`?surface=dark`).
@@ -27,11 +27,11 @@ Draw a chart block anywhere Markdown is shown: one call from JavaScript, React w
 
 ### Changed
 
-- Inline SVG bytes: a chart drawn in a page (`render()`, the drop-in, React, markdown-it, remark, rehype, `renderSvg()`) carries one `style` attribute per colored element and a `font-family` variable on the root, about 0.8 kB more per chart (about 0.1–0.2 kB gzip). `bake`, `markvis render`, and `surface: export` write fixed colors by default, the same bytes as before.
+- Inline SVG bytes: a chart drawn in a page (`render()`, the drop-in, React, markdown-it, remark, rehype, `renderSvg()`) carries one `style` attribute per colored element and a `font-family` variable on the root, about 0.8 kB more per chart (about 0.1–0.2 kB gzip). `bake`, `markvis render`, and `surface: export` write the attribute only by default; host colors never change a baked file (`--colors host` opts in).
 - The drop-in renders through `render()`: an empty block's error table shows the block as the page holds it, not a fence wrapped around it.
 - The browser drop-in keeps cells past the header width in the error table, like every other path.
-- markdown-it, remark, rehype, React, the drop-in, the Playground, and the command line's `render --html` and `gallery` share one HTML module, so their output is the same. The command line's error table now keeps cells past the header width too.
-- The six themes now look distinct in structure, not just color: each owns its type ramp (floor: title 15, other roles 11), title alignment and subtitle, grid dash, axis lines and ticks, curve, point markers, legend keys, card frame, and dark paper. Every pair differs on at least four structural switches. See `docs/themes.md`.
+- markdown-it, remark, rehype, React, the drop-in, the Playground, and the command line's `preview` and `gallery` share one HTML module, so their output is the same. The command line's error table now keeps cells past the header width too.
+- The themes now look distinct in structure, not just color: each owns its type ramp (floor: title 15, other roles 11), title alignment and subtitle, grid dash, axis lines and ticks, curve, point markers, legend keys, card frame, and dark paper. Every pair differs on at least four structural switches. See `docs/themes.md`.
 - Readable type, wrapped labels, explicit paper/dark/export surfaces, gauge range 0–100 when `max` is omitted, sankey thickness. Funnel stays a centered silhouette.
 
 ### Fixed

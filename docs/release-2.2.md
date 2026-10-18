@@ -1,6 +1,34 @@
 # Release note — 2.2.0
 
-What 2.2.0 ships. Language version stays `markvis: 2`. The new ways to draw a block (`render`, `markvis/react`, the script tag in any Markdown page, `markvis/rehype`, the GitHub Action, the model instruction) are listed in `CHANGELOG.md`; this note covers the chart changes.
+What 2.2.0 ships. Language version stays `markvis: 2`. The new ways to draw a block (`render`, `markvis/react`, the script tag in any Markdown page, `markvis/rehype`, the GitHub Action, the model instruction) are listed in `CHANGELOG.md`; this note covers the chart changes and the site.
+
+## Charts follow the host page
+
+The one chart-visible change beyond layout: a chart drawn in a page takes its colors from the page.
+
+- Every chart drawn in a page (the script tag, `render()`, `renderSvg()`, React, markdown-it, remark, rehype) writes each color twice: a fixed attribute, and a `style` that reads a CSS variable with the same color as its fallback, for example `fill="#3B82F6" style="fill:var(--markvis-series-1,#3B82F6)"`. The root `<svg>` reads `--markvis-font`.
+- Eighteen color variables: `--markvis-ink`, `--markvis-muted`, `--markvis-grid`, `--markvis-paper`, `--markvis-plate`, `--markvis-plot`, `--markvis-series-1` through `--markvis-series-8`, `--markvis-accent`, `--markvis-up`, `--markvis-down`, `--markvis-total`, plus the opt-in `--markvis-font`. They ship as `CSS_VARIABLES` and `PAINT_NAMES` from `markvis/themes`.
+- A page that sets none of them sees the same colors as before. Where styles are stripped, or the SVG is opened as an image, the fixed color shows.
+- Files keep fixed colors: `markvis bake`, `markvis render`, and `surface: export` write the attribute only; host colors never change a baked file (`--colors host` opts in). `colors: "host" | "static"` on `render()`, `renderSvg()`, `initialize()`, and `<Markvis>`, and `--colors host|static` on `render` and `bake`, choose either mode.
+- Heatmap and calendar color mixes, labels drawn on a mark, and the export plot border stay fixed. The Theming page lists every variable and three host snippets (system light or dark mode, a dark class on the page, and an editor theme's own variables).
+- Inline SVG grows by about 0.8 kB per chart (about 0.1 to 0.2 kB gzip).
+
+## Narrow widths
+
+- Below the theme's width (720) a chart's height follows its width at the theme's aspect, never under 200. A title wraps at most once and ends in an ellipsis; the full title stays in the tooltip.
+- A line or area over whole-number x (weeks, years) spans its data with whole-number ticks instead of padding to a value no row has.
+
+## Site
+
+markvis.js.org, not an npm API change:
+
+- The home page fits its point on one screen. The first screen is a chart block that types itself, and the chart beside it is `render()` on that text, step by step: write, paste, change the kind (bar, sankey, treemap, heatmap), stack, theme, palette, page color, dark, width, and the table that stays when a block is invalid. The rows are real: the ten largest US source-to-sector energy flows in 2023 (US EIA, Monthly Energy Review). A click or a key opens the block as a live editor; reduced motion shows the finished chart with a Play button.
+- Below it: four ways in (script tag, JavaScript, React, GitHub), Your colors (one SVG drawn on a light and a dark page, each setting a few `--markvis-*` variables), and "Seventeen kinds of chart": one card per type, each drawing the first example of that type, with its block and an Open in Play link to the same file. A numbers line (`56 kB gzip · 0 dependencies · under 1 ms a chart · plain SVG`) is held to `dist/markvis.min.js` by a test.
+- Charts on the site, in the examples gallery, and in Play follow the site's light or dark mode through the same CSS variables, so no chart sits on a white card in dark mode.
+- The social card (`og.png`) is the hero's finished chart.
+- The docs sidebar runs Get started, Integrate, Theming, Chart types, Spec, Contributing. Theme content and the CSS variables live on the new Theming page; the model instruction moves to Integrate's "Tell a model". `/themes` and `/ai` redirect.
+- The Playground is called Play.
+- The README opens with a chart block and its picture, the numbers line, four ways in, and the model line.
 
 ## User-visible improvements
 
