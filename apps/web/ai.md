@@ -2,6 +2,13 @@
 title: Tell a model
 pageClass: folio-docs
 sidebar: true
+head:
+  - - meta
+    - http-equiv: refresh
+      content: "0; url=/integrate#tell-a-model"
+  - - link
+    - rel: canonical
+      href: "https://markvis.js.org/integrate"
 ---
 
 # Tell a model

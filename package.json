@@ -83,7 +83,8 @@
       "types": "./dist/cli.d.ts",
       "import": "./dist/cli.js"
     },
-    "./min": "./dist/markvis.min.js"
+    "./min": "./dist/markvis.min.js",
+    "./package.json": "./package.json"
   },
   "bin": {
     "markvis": "dist/cli.bin.js"
@@ -91,7 +92,8 @@
   "files": [
     "dist",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
   ],
   "scripts": {
     "build": "tsup && node scripts/copy-dts.mjs && pnpm --filter @markvis/browser build && node scripts/copy-browser-dist.mjs",

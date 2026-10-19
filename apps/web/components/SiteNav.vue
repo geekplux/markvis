@@ -144,7 +144,7 @@ onMounted(() => {
 
 <template>
   <header v-if="show" class="site-header">
-    <a class="skip-link" :href="isHome ? '#features' : '#docs-content'">Skip to content</a>
+    <a class="skip-link" :href="isHome ? '#hero' : '#VPContent'">Skip to content</a>
     <nav
       class="home-nav family-nav site-rail rail-joints rail-joints-bottom"
       :class="{ 'is-open': menuOpen }"

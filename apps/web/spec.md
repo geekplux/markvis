@@ -66,8 +66,8 @@ Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `
 | `surface` | no | `light` | `light` \| `dark` \| `export`. Light, the default, paints no canvas so the host background shows through. Dark paints a dark paper and light ink. Export paints an opaque white card. |
 | `layout` | no | `grouped` when omitted | On `bar` / `line` / `area` only: `grouped` \| `stacked` \| `percent`. |
 | `innerRadius` | no | theme `PIE_INNER_RATIO` | On `pie` only. `[0, 1]`. Omit → theme hole; `0` = solid. |
-| `min` | no | see type | Gauge omit → 0. Heatmap omit → data minimum. Bullet omit → min(0, data). |
-| `max` | no | gauge `100` | Gauge, heatmap, radar, or bullet. Omit on a gauge means a labeled 0–100 range, not the current value. |
+| `min` | no | see type | Gauge omit → 0. Heatmap and calendar omit → data minimum. Bullet omit → min(0, data). |
+| `max` | no | gauge `100` | Gauge, heatmap, radar, bullet, or calendar. Omit on a gauge means a labeled 0–100 range, not the current value. |
 | `orient` | no | `vertical` | On `bar` only: `horizontal` \| `vertical`. |
 | `role` | no | every row is a delta | On `waterfall` only. Names a column of `delta` \| `total` \| `subtotal`. |
 | `target` | no | no target | On `bullet` only. Names a column of targets; an empty cell has no target. |
@@ -143,4 +143,4 @@ Do not invent `donut` or `stacked-bar` type ids.
 | `E_SANKEY_CYCLE` | Sankey links form a cycle. The table is kept. |
 | `E_BAD_DATE` | A calendar date is not `YYYY-MM-DD` or does not exist, or the dates span more than five calendar years. |
 
-`theme` is grammar. `palette` is colors only. Never merge them. Contribute a type: repo `docs/TYPES.md`.
+`theme` is grammar. `palette` is colors only. Never merge them. How types are added: repo `docs/TYPES.md`.

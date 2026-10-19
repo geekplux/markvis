@@ -2,6 +2,13 @@
 title: Theming
 pageClass: folio-docs
 sidebar: true
+head:
+  - - meta
+    - http-equiv: refresh
+      content: "0; url=/theming"
+  - - link
+    - rel: canonical
+      href: "https://markvis.js.org/theming"
 ---
 
 # Theming

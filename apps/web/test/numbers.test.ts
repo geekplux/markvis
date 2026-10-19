@@ -25,7 +25,7 @@ function statedKb(rel: string): number {
 describe("numbers line", () => {
   it("reads the same on the home page and in the README", () => {
     expect(read("apps/web/index.md")).toContain(
-      '<p class="home-numbers">56 kB gzip · 0 dependencies · under 1 ms a chart · plain SVG</p>',
+      '<p class="home-numbers">58 kB gzip · 0 dependencies · under 1 ms a chart · plain SVG</p>',
     );
     expect(statedKb("README.md")).toBe(statedKb("apps/web/index.md"));
   });

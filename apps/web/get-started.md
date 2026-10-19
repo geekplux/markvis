@@ -39,7 +39,7 @@ npm install markvis
 npx markvis bake README.md
 ```
 
-Running bake again does nothing if nothing changed. **2.0.0 replaces 0.0.13.**
+Running bake again does nothing if nothing changed. **2.x replaces 0.0.13.**
 
 ## Put it on a web page (script)
 

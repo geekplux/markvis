@@ -23,7 +23,7 @@ pageClass: folio-home-page
     <a class="home-btn outline" href="https://github.com/geekplux/markvis" target="_blank" rel="noreferrer">GitHub <span class="home-btn-arrow" aria-hidden="true">↗</span></a>
   </p>
   <HeroStage>
-  <p class="home-numbers">56 kB gzip · 0 dependencies · under 1 ms a chart · plain SVG</p>
+  <p class="home-numbers">58 kB gzip · 0 dependencies · under 1 ms a chart · plain SVG</p>
   </HeroStage>
 </section>
 

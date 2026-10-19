@@ -26,7 +26,7 @@ body:
     id: fences
     attributes:
       label: Three example fences
-      description: bar, line, and pie (or three variants) with `theme: <id>`.
+      description: "bar, line, and pie (or three variants) with `theme: <id>`."
       render: markdown
     validations:
       required: true

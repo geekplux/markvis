@@ -17,7 +17,7 @@ npm install markvis
 npx markvis bake path/to.md
 ```
 
-Running bake again does nothing if nothing changed. **2.0.0 replaces 0.0.13.**
+Running bake again does nothing if nothing changed. **2.x replaces 0.0.13.**
 
 Colors: `bake` writes fixed colors, since a picture has no page to follow (`--colors host` keeps the [CSS variables](/theming#your-colors)).
 
@@ -71,7 +71,7 @@ Tue,5
 
 The tag can sit at the top or the bottom, with or without `defer`. It finds the block whatever HTML the renderer made of it — `language-chart`, `lang-chart`, `data-lang="chart"`, or Pandoc's `class="chart"`, on the `code`, the `pre`, or a highlighter wrapper — and replaces the wrapper with the figure, copy buttons and all. The comment form works too: `<!-- chart: bar x=day y=visits -->` right above a Markdown table becomes a chart, and stays a plain table wherever scripts do not run.
 
-**Works** wherever Markdown becomes HTML and the page may run a script: Jekyll and GitHub Pages sites, Hugo, MkDocs, Hexo, Eleventy, docsify, Pandoc HTML, plain HTML pages, and most hand-built Markdown viewers.
+**Works** wherever Markdown becomes HTML and the page may run a script: Jekyll and GitHub Pages sites, Hugo, MkDocs, Eleventy, docsify, Pandoc HTML, plain HTML pages, and most hand-built Markdown viewers.
 
 - Hugo: raw HTML is off by default. Set `markup.goldmark.renderer.unsafe = true` for the script tag and the comment form, or add the script to your layout.
 - MkDocs: add a custom fence so the block keeps its language (see `examples/hosts/mkdocs/`), and the script under `extra_javascript`.

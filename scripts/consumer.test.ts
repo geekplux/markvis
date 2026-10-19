@@ -73,6 +73,7 @@ const SUBPATH_NAMES: Record<string, { entry: string; names: string[] } | "file">
     ],
   },
   "./min": "file",
+  "./package.json": "file",
 };
 
 describe("subpath export table", () => {

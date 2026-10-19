@@ -24,7 +24,7 @@ Set a variable on any element around the chart, `:root` included, and the chart 
 | --- | --- |
 | `--markvis-ink` | Titles, value and legend text, axis lines, tick marks, leader lines, and slice edges. |
 | `--markvis-muted` | Tick labels, units, notes, and subtitles. |
-| `--markvis-grid` | Grid lines, radar rings, and the card outline. They are drawn faint (8–32 % opacity, by theme), so give it a full-strength color, such as your text color, not a pale border color. |
+| `--markvis-grid` | Grid lines, radar rings, and the card outline. They are drawn faint (8–32% opacity, by theme), so give it a full-strength color, such as your text color, not a pale border color. |
 | `--markvis-paper` | The page under the chart: inside hollow points, gaps cut into marks, label halos, and the gaps between treemap tiles. Set it to your background. |
 | `--markvis-plate` | The full-frame background that the dark and export surfaces paint. The light surface paints none and shows your page. A page that sets `--markvis-ink` should set `--markvis-plate` too, or a `surface: dark` block keeps its dark plate under your ink. |
 | `--markvis-plot` | The plot-area fill, on surfaces that paint one. Set it with the plate. |
@@ -145,15 +145,13 @@ Allowed ids: `folio` · `highcharts` · `shadcn` · `docs` · `ant` · `recharts
 
 A **theme** is a grammar: mark form, axes, legend policy, typeface, plot chrome, padding. Hex is one column inside that grammar — not the product.
 
-**Palette** is a second axis (colors only): optional fence `palette:` with `ink` · `porcelain` · `warm` · `cool` · `vivid`. Omit → theme pack default colors. Unknown → `E_UNKNOWN_PALETTE` + table. Play and Examples detail keep **two** controls (Theme + Color) — never one merged dropdown.
-
-Hex tables live in `docs/themes.md` / `packages/themes/palettes.ts`. Do not invent hex lists on this page.
+**Palette** is a second axis (colors only): optional fence `palette:` with `ink` · `porcelain` · `warm` · `cool` · `vivid`. Omit → theme pack default colors. Unknown → `E_UNKNOWN_PALETTE` + table.
 
 Site light/dark mode is chrome only — unrelated to fence `theme=`.
 
 ## Packs on disk
 
-Token packs live in `packages/themes/<id>/theme.ts`, resolved by `packages/themes/registry.ts`. `@markvis/render-svg` imports the registry only. No vendor chart runtimes. Site marketing figures stay folio unless a theme control is on.
+Token packs live in `packages/themes/<id>/theme.ts`, resolved by `packages/themes/registry.ts`. `@markvis/render-svg` imports the registry only. No vendor chart runtimes.
 
 | id | B&W tell (short) |
 | --- | --- |
