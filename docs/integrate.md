@@ -57,5 +57,4 @@ hosts/vscode — the `markvis preview` extension (`geekplux.markvis-preview`). T
 ## Explicit non-goals
 
 - Waiting for github.com to add native markvis fences
-- Docusaurus adapter (skipped for now — use bake or the browser drop-in; MDX surface is not cheap)
 - New chart types, JSON-as-default data, or d3 in packages/ or apps/

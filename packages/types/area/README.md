@@ -4,4 +4,4 @@ Use like `line` when a filled band under the stroke helps show magnitude over an
 
 Do not use for discrete category ranking (`bar`), scatter clouds, or pie slices.
 
-Optional `layout: grouped | stacked | percent` (Wave 1). Stacked/percent fill cumulative bands.
+Optional `layout: grouped | stacked | percent`. Stacked/percent fill cumulative bands.

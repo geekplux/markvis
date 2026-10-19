@@ -22,7 +22,7 @@ Fri,8
 ```
 ![Visits by day](https://markvis.js.org/home/visits-by-day.svg)
 
-56 kB gzip · 0 dependencies · under 1 ms a chart · plain SVG
+58 kB gzip · 0 dependencies · under 1 ms a chart · plain SVG
 
 **One script tag**, in a page or a Markdown file. Every chart block on it draws.
 
@@ -54,7 +54,7 @@ npx markvis bake README.md
 
 **Tell your model.** Put the 250-token [instruction](./docs/prompt.md) in a system prompt and it writes this block instead of an image or JSON. The same text opens [llms.txt](./llms.txt).
 
-**Your colors.** A chart drawn in your page reads your CSS variables (`--markvis-ink`, `--markvis-grid`, `--markvis-series-1` …), so it follows light, dark, and brand colors. Each color keeps a fixed fallback, and `bake` writes fixed colors only.
+**Your colors.** A chart drawn in your page reads your CSS variables (`--markvis-ink`, `--markvis-grid`, `--markvis-series-1` …), so it follows light, dark, and brand colors. Each color keeps a fixed fallback, and `bake` writes fixed colors by default.
 
 [Play](https://markvis.js.org/play) · [Examples](https://markvis.js.org/examples) · [Integrate](https://markvis.js.org/integrate) · [Theming](https://markvis.js.org/theming) · [Chart types](https://markvis.js.org/types/)
 
@@ -88,7 +88,7 @@ npx markvis bake README.md
 
 `bake` writes a picture next to the file and adds a Markdown image so GitHub can show it. The code block stays. Running bake again does nothing if nothing changed. `npx markvis check notes.md` checks every chart block in the file and exits non-zero if any block is invalid.
 
-On GitHub, a workflow step bakes the pictures on every push:
+On GitHub, a workflow step bakes the pictures on every push ([full workflow](https://markvis.js.org/integrate#bake)):
 
 ```yaml
 - uses: geekplux/markvis@master
@@ -103,7 +103,7 @@ In a Markdown site — markdown-it, remark, or rehype. Each returns the picture 
 ```js
 import markdownItMarkvis from "markvis/markdown-it"; // md.use(markdownItMarkvis)
 import remarkMarkvis from "markvis/remark";          // remark().use(remarkMarkvis)
-import rehypeMarkvis from "markvis/rehype";          // MDX, Astro: rehypePlugins: [rehypeMarkvis]
+import rehypeMarkvis from "markvis/rehype";          // MDX, Docusaurus: rehypePlugins: [rehypeMarkvis]
 ```
 
 With an AI: put [docs/prompt.md](./docs/prompt.md) in the system prompt, or point a model at [llms.txt](./llms.txt) or [skills/markvis/SKILL.md](./skills/markvis/SKILL.md). It should write only the fields listed there, not a PNG, and never invent a type id.

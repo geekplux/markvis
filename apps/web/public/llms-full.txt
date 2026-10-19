@@ -1,0 +1,68 @@
+# markvis (full)
+
+Quantitative Markdown charts. Path: fence | GFM | HTML comment → parser → Chart IR → SVG + table fallback.
+
+## Grammar
+
+1. Optional `markvis: 2`
+2. CORE headers: `type`, `title`, `theme`, `palette`, `surface`, `unit`, `x`, `y`, `series`
+3. Type-local encodings when legal: `layout`, `innerRadius`, `min`, `max`, `orient`, `role`, `target`
+4. Blank line
+5. CSV or GFM table with a header row
+
+Language tags `chart`, `markvis`, `vis` share one parser.
+
+## Types (CORE)
+
+| type | notes |
+| --- | --- |
+| bar | keep row order; optional `layout`; optional `orient: horizontal` |
+| line | multi-series via `series`; keep row order; optional `layout`; empty y is a gap |
+| area | same order rule as line; optional `layout`; empty y is a gap |
+| scatter | numeric x and y; repeated rows stay |
+| pie | values ≥ 0; do not normalize to 100; optional `innerRadius`; empty y is E_MISSING_VALUE |
+| hist | continuous x; table keeps raw rows; repeated samples stay |
+| heatmap | x cat × series cat, y intensity; long form; series required; empty y is missing, not zero |
+| funnel | x stage, y ≥ 0; centered bands narrow from each value to the next; label to the right; series ignored |
+| waterfall | x step, y signed delta; optional `role` column; totals are not inferred from the label |
+| radar | x spoke, y ≥ 0; optional series; one shared scale; missing spoke is a gap |
+| gauge | one row (a second row is E_DUP_KEY); omit max → 100; series ignored |
+| sankey | x source, series target (required), y flow ≥ 0; one thickness scale; a cycle is E_SANKEY_CYCLE |
+| treemap | x label, y ≥ 0; optional series parent; two levels max |
+| dumbbell | x category, y number; series required with exactly two values; first hollow, second filled; missing value is a gap |
+| bullet | x label, y actual; optional `target` column; optional `min` / `max`; series ignored |
+| boxplot | x category, y one observation per row; optional series; type-7 quartiles; under five values shows points |
+| calendar | x YYYY-MM-DD date, y number; one row per day; optional `min` / `max`; bad date is E_BAD_DATE |
+
+## Encodings
+
+| field | legal on | values | omit |
+| --- | --- | --- | --- |
+| layout | bar line area | grouped \| stacked \| percent | grouped |
+| innerRadius | pie | [0, 1] | theme PIE_INNER_RATIO (explicit 0 = solid) |
+| min | gauge, heatmap, bullet, calendar | number | gauge 0; heatmap and calendar data min; bullet min(0, data) |
+| max | gauge, heatmap, radar, bullet, calendar | number | gauge 100; heatmap and calendar data max; radar data max; bullet data max |
+| orient | bar | horizontal \| vertical | vertical |
+| role | waterfall | column of delta \| total \| subtotal | every row is a delta |
+| target | bullet | column of numbers | no target marker |
+
+Wrong type / bad value → E_UNKNOWN_FIELD + table. Do not invent donut, stacked-bar, sunburst, or chord type ids. Gauge with both min and max set requires min < max.
+
+`surface` optional: `light` (default, no canvas fill) | `dark` | `export`. Dark and export paint their own paper.
+
+## Errors (stable codes)
+
+E_UNKNOWN_TYPE, E_TYPE_TYPO, E_JSON_DATA, E_MISSING_HEADER, E_EMPTY_DATA, E_EXTRA_COLUMN, E_DUP_COLUMN, E_UNKNOWN_FIELD, E_PIE_NEGATIVE, E_NEGATIVE_VALUE, E_YAML_TABLE_CONFLICT, E_EMPTY_FENCE, E_UNKNOWN_THEME, E_UNKNOWN_PALETTE, E_BAD_VERSION, E_BAD_NUMBER, E_MISSING_VALUE, E_DUP_KEY, E_SANKEY_CYCLE, E_BAD_DATE.
+
+Optional `theme:` grammar pack: folio|highcharts|shadcn|docs|ant|recharts|graphite (default folio).
+Optional `palette:` color table: ink|porcelain|warm|cool|vivid (omit → theme default colors). Theme ≠ palette.
+
+Invalid → table + one-line error. Never drop recovered rows.
+
+## Examples
+
+See examples/valid/01–08 (canonical) and SPEC.md. Natural-language → fence: examples/prompts.md.
+
+## Product boundaries
+
+No chart runtimes in core. No JSON-as-default data. Do not invent donut / sunburst / chord / stacked-bar as type ids. Structure diagrams stay outside this language. The catalog is the seventeen types in the table above. See docs/TYPES.md.

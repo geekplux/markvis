@@ -4,7 +4,7 @@
 
 | Version | Supported |
 | --- | --- |
-| 2.x (this tree, `2.0.2`) | Yes |
+| 2.x (latest 2.x release) | Yes |
 | 0.0.13 (`legacy/`) | No — frozen |
 
 ## Report a vulnerability

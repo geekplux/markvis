@@ -87,7 +87,7 @@ No axis-name layer by default (see Quiet chrome).
 
 ## Quiet chrome
 
-Steal the upside from shadcn area charts: structure that disappears until you look for it.
+Structure that disappears until you look for it.
 
 - **Do not draw** an axis box (no left+bottom rectangle framing the plot).
 - **Baseline only** on the plot floor (structure stroke). No top or right axis strokes.
@@ -122,7 +122,7 @@ Steal the upside from shadcn area charts: structure that disappears until you lo
 
 ## Soft series
 
-Steal the upside from shadcn area charts: soft fill under a quiet stroke.
+Soft fill under a quiet stroke.
 
 ### Bar / hist
 

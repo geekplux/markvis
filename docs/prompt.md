@@ -29,7 +29,7 @@ With this instruction, each of four models gave a valid block for 29 or 30 of th
 
 ## Score your own model
 
-Ask your model each prompt in `examples/prompts.md`, save one answer per prompt as `01.md` … `30.md`, and run:
+In a clone of this repository (the scorer is not in the npm package), ask your model each prompt in `examples/prompts.md`, save one answer per prompt as `01.md` … `30.md`, and run:
 
 ```bash
 pnpm eval-prompts --outputs path/to/answers

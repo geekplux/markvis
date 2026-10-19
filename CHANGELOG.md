@@ -2,12 +2,13 @@
 
 ## 2.2.0 — unreleased
 
-Draw a chart block anywhere Markdown is shown: one call from JavaScript, React with streaming, one script tag in any Markdown page, rehype for MDX hosts, and a GitHub Action. Four more chart types, the graphite theme, and a measured instruction for models. The language stays `markvis: 2`; every 2.1 block still parses.
+Draw a chart block anywhere Markdown is shown: one call from JavaScript, React with streaming, one script tag in any Markdown page, rehype for MDX hosts, and a GitHub Action. Four more chart types, the graphite theme, and a measured instruction for models. The language stays `markvis: 2`. A 2.1 block still parses unless it hits one of the stricter checks listed under Breaking.
 
 ### Breaking
 
 - The ES module `markvis.mjs` no longer draws on import. A page that loads it with `<script type="module" src=".../markvis@2/dist/markvis.mjs">` and relied on charts drawing by themselves now draws nothing. Import it and call `run()`, or load the classic `markvis.min.js`, which still draws once the page is ready.
-- The drop-in's global (`window.markvis`) and `markvis.mjs` export `run`, `init`, `initialize`, `render`, and `parseBlock`, and nothing else. `replaceLanguageBlocks`, `replaceInDocument`, `autoReplace`, `wrapFence`, `chartBlockHtml`, `resultToHtml`, `htmlTable`, `escapeHtml`, `parseMarkdown`, `renderSvg`, `isChartBlock`, `enhanceChartSvg`, and `tipTextForMark` are gone from it. The `markvis` npm package still exports the parser and renderer functions.
+- The drop-in's global (`window.markvis`) and `markvis.mjs` export `run`, `init`, `initialize`, `render`, and `parseBlock`, and nothing else; the classic `markvis.min.js` global also carries `startsOnLoad`, which reads a script tag's `data-start-on-load`. `replaceLanguageBlocks`, `replaceInDocument`, `autoReplace`, `wrapFence`, `chartBlockHtml`, `resultToHtml`, `htmlTable`, `escapeHtml`, `parseMarkdown`, `renderSvg`, `isChartBlock`, `enhanceChartSvg`, and `tipTextForMark` are gone from it. The `markvis` npm package still exports the parser and renderer functions.
+- Stricter input checks. These blocks drew in 2.1 and now fail with a stable code, keeping their table: a non-numeric measure cell such as `N/A` (`E_BAD_NUMBER`); an empty cell on pie, funnel, sankey, treemap, waterfall, gauge, or a stacked/percent layout (`E_MISSING_VALUE`); a repeated category/series key, including a gauge with more than one row (`E_DUP_KEY`); a sankey cycle (`E_SANKEY_CYCLE`); and `markvis:` set to anything but `2` (`E_BAD_VERSION`). A gauge without `max` now draws against 0–100. See `docs/release-2.2.md` (Compatibility, Migration).
 
 ### Added
 

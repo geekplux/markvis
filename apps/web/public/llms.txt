@@ -48,7 +48,7 @@ Fields:
 
 Encodings (optional, type-local — not a new type id):
 
-- On `bar` `line` or `area` only: `layout: grouped|stacked|percent`. Omit means grouped (today's look). Wrong type or bad value → table + `E_UNKNOWN_FIELD`.
+- On `bar` `line` or `area` only: `layout: grouped|stacked|percent`. Omit means grouped. Wrong type or bad value → table + `E_UNKNOWN_FIELD`.
 - On `pie` only: `innerRadius` as a number in `[0, 1]`. Omit means the theme's default hole (`PIE_INNER_RATIO`). Explicit `0` forces a solid pie. Do not invent `donut`.
 - On `bar` only: `orient: horizontal|vertical`. Omit means vertical.
 - On `waterfall` only: `role` names a column of `delta|total|subtotal`. Empty means delta. Do not treat a step label as a total.
@@ -63,7 +63,7 @@ Also valid: an HTML comment immediately followed by a GFM table.
 
 `<!-- chart: bar x=month y=tickets title="Mar led Midtown box office at 9.2k tickets" -->`
 
-Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`, `surface`, and legal encodings (`layout`, `innerRadius`, `min`, `max`, `orient`, `role`). Same meaning as fence headers.
+Comment keys: `type` (required), `x`, `y`, `title`, `unit`, `series`, `theme`, `palette`, `surface`, and legal encodings (`layout`, `innerRadius`, `min`, `max`, `orient`, `role`, `target`). Same meaning as fence headers.
 
 ## Types
 

@@ -1,7 +1,6 @@
 import DefaultTheme from "vitepress/theme";
 import type { Theme } from "vitepress";
-import { h } from "vue";
-import Gallery from "../../components/Gallery.vue";
+import { defineAsyncComponent, h } from "vue";
 import PlayEmbed from "../../components/PlayEmbed.vue";
 import SiteNav from "../../components/SiteNav.vue";
 import FamilyFoot from "../../components/FamilyFoot.vue";
@@ -27,7 +26,12 @@ export default {
     });
   },
   enhanceApp({ app }) {
-    app.component("Gallery", Gallery);
+    // Lazy: Gallery carries every example SVG, so it stays out of the
+    // theme chunk that every page preloads.
+    app.component(
+      "Gallery",
+      defineAsyncComponent(() => import("../../components/Gallery.vue")),
+    );
     app.component("PlayEmbed", PlayEmbed);
     app.component("CopyChip", CopyChip);
     app.component("ThemeStrip", ThemeStrip);

@@ -2,6 +2,13 @@
 title: Docs
 pageClass: folio-docs
 sidebar: true
+head:
+  - - meta
+    - http-equiv: refresh
+      content: "0; url=/get-started"
+  - - link
+    - rel: canonical
+      href: "https://markvis.js.org/get-started"
 ---
 
 # Docs

@@ -82,7 +82,9 @@ packages/types/registry.ts
 
 Mirror themes: register in `registry.ts`; missing packs fail loudly; parser rejects unknown fence ids with a stable error + table fallback — never a silent swap.
 
-## Contributing a type
+## How a type is added (maintainer only)
+
+Outside PRs that add a type id are declined; propose one in an issue.
 
 1. Add `packages/types/<id>/` with `type.ts`, README (when / when not), and examples (valid + invalid).
 2. Register the id in `packages/types/registry.ts`.
@@ -98,5 +100,5 @@ Mirror themes: register in `registry.ts`; missing packs fail loudly; parser reje
 | `llms.txt` | CORE for agents — small |
 | `llms-full.txt` | Full catalog |
 | `SPEC.md` | Normative fence language |
-| `docs/TYPES.md` | This file — IN/OUT + how to contribute |
+| `docs/TYPES.md` | This file — IN/OUT + how a type is added |
 | `docs/themes.md` / contributing themes | Grammar packs |

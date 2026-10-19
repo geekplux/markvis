@@ -85,7 +85,7 @@ flowchart LR
 | `@markvis/themes` | Named grammar packs + palettes |
 | `@markvis/render-svg` | IR → deterministic SVG |
 | `@markvis/html` | One block → figure HTML, or table plus one error line; `render()` |
-| `@markvis/cli` | `check` / `render` / `bake` / `stats` |
+| `@markvis/cli` | `check` / `render` / `bake` / `stats` / `preview` / `to-table` / `gallery` |
 | `@markvis/remark` | remark host plugin |
 | `@markvis/markdown-it` | markdown-it / VitePress plugin |
 | `@markvis/react` | `Markvis` component, react-markdown components, streaming remark plugin |
@@ -95,4 +95,4 @@ flowchart LR
 | `apps/web` | Public VitePress site |
 | `legacy/` | Frozen 0.0.13. Not imported by `packages/*` tests |
 
-Root `markvis` is the packed consumer artifact (`parseMarkdown`, `renderSvg`, `render`, `markvis/remark`, `markvis/markdown-it`, `markvis/react`) and owns the `markvis` bin. Workspace `@markvis/*` packages stay private to this monorepo.
+Root `markvis` is the packed consumer artifact (`parseMarkdown`, `renderSvg`, `render`, `markvis/parser`, `markvis/render-svg`, `markvis/ir`, `markvis/themes`, `markvis/remark`, `markvis/rehype`, `markvis/markdown-it`, `markvis/react`, `markvis/cli`, `markvis/min`) and owns the `markvis` bin. Workspace `@markvis/*` packages stay private to this monorepo.
