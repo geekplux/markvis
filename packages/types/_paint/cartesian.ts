@@ -22,6 +22,7 @@ import {
   type Painted,
   type PlotBox,
   legendTop,
+  PLOT_MIN_WIDTH,
 } from "./layout.js";
 import { legibleOnPaper, readableInk } from "./contrast.js";
 import { heroFill, heroIndex, seriesStyle } from "./palette.js";
@@ -556,7 +557,10 @@ function prepare(chart: ChartIR): Prepared {
         xMax = hi;
       }
     }
-    xScaleNum = scaleLinear([xMin, xMax], [plot.left + 8, plot.right - 8]);
+    // 8 px in from each edge, less when the plot is too narrow to spare it,
+    // so the scale still runs left to right.
+    const inset = Math.min(8, Math.max(0, (plot.width - PLOT_MIN_WIDTH) / 2));
+    xScaleNum = scaleLinear([xMin, xMax], [plot.left + inset, plot.right - inset]);
     const asWritten = (n: number) => rows.find((row) => row.xNum === n)?.xLabel.trim();
     const xLabels = dataTicks
       ? xTickNums.map((n) => asWritten(n) ?? formatNumber(n))

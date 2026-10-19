@@ -117,7 +117,7 @@ export function renderDumbbell(chart: ChartIR, _id: string): Painted {
     }
   });
   lines.push(`  </g>`);
-  if (labels.length > 0) {
+  if (labels.length > 0 && frame.valueColumn) {
     lines.push(
       `  <g ${attrs({
         fill: TYPE.value.fill,

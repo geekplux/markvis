@@ -160,6 +160,9 @@ export function renderBullet(chart: ChartIR, _id: string): Painted {
     );
   });
   lines.push(`  </g>`);
+  if (!frame.valueColumn) {
+    return { lines, height: frame.height };
+  }
   lines.push(
     `  <g ${attrs({
       fill: TYPE.value.fill,

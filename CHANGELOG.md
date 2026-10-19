@@ -43,6 +43,7 @@ Draw a chart block anywhere Markdown is shown: one call from JavaScript, React w
 - Chart ids no longer import `node:crypto`, so `render()` and `markvis/react` bundle for the browser without a shim. Ids are unchanged.
 - A top legend no longer sits on a wrapped title, and the y-axis title no longer runs through tick labels or repeats the unit.
 - Non-numeric cells, duplicate keys, `markvis` version, multi-chart `check`, bake references, ragged fallback cells, and line gaps for missing values.
+- Bullet charts keep a positive track at tiny widths; a value range that overflows to Infinity no longer writes `NaN` into a color or corner radius. Horizontal bar, dumbbell, boxplot, heatmap, pie and the axis charts also keep a positive plot (or radius) at tiny widths, and row charts drop their per-row value labels when there is no room for them.
 
 ## 2.1.0 — 2026-09-25
 

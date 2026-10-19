@@ -106,7 +106,8 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
     const labelTop = barTop - 6 - (TYPE.value.size + 2) - TYPE.value.size;
     topExtra = Math.max(topExtra, Math.ceil(clearOfTitle - labelTop));
   });
-  const frame = topExtra > 0 ? frameFor(topExtra) : firstFrame;
+  // A level that overflowed to Infinity sits off any scale: no extra room.
+  const frame = topExtra > 0 && Number.isFinite(topExtra) ? frameFor(topExtra) : firstFrame;
   const { plot, height, rotateX, show, labelLines } = frame;
   const yScale = scaleLinear(yDomain, [plot.bottom, plot.top]);
   const catStep = plot.width / n;
@@ -224,6 +225,8 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
     const h = Math.max(Math.abs(y1 - y0), 1);
     const isTotal = row.role === "total" || row.role === "subtotal";
     const fill = isTotal ? totalFill : row.y < 0 ? neg : pos;
+    // A level that overflowed to Infinity leaves no height to round: square corners.
+    const rx = Math.min(BAR_RX, 4, barW / 2, h / 2);
     lines.push(
       `    <rect ${attrs({
         x: fmtPx(x),
@@ -233,7 +236,7 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
         fill,
         // Both ends of a floating step are data, so corners stay small
         // whatever the theme's bar radius (graphite's pill would blur them).
-        rx: Math.min(BAR_RX, 4, barW / 2, h / 2),
+        rx: Number.isFinite(rx) ? rx : 0,
         "data-step": row.xLabel,
         "data-y": formatNumber(row.y),
         "data-level": formatNumber(ends[i]!),
