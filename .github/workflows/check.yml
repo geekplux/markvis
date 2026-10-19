@@ -55,6 +55,12 @@ jobs:
       - name: Web build
         run: pnpm --filter web build
 
+      # The site-dist assertions in apps/web/test/chrome.test.ts skip while
+      # apps/web/.vitepress/dist is absent, and the Test step runs before the
+      # web build. Run that file once more against the built site.
+      - name: Test the built site
+        run: pnpm vitest run apps/web/test/chrome.test.ts
+
       - name: Assert theme snapshots
         run: |
           for t in folio highcharts shadcn docs; do
