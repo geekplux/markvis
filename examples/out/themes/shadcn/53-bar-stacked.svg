@@ -20,13 +20,13 @@
     <text x="618.5" y="423" text-anchor="middle" font-size="12" data-full-label="Winter"><title>Winter</title>Winter</text>
   </g>
   <g>
-    <path d="M95.5 266.6 L163.5 266.6 L163.5 403 Q163.5 411 155.5 411 L103.5 411 Q95.5 411 95.5 403 Z" fill="#F54900" data-x="Spring" data-series="East" data-y="120" data-layout="stacked" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M95.5 411 L163.5 411 L163.5 266.6 L95.5 266.6 Z" fill="#F54900" data-x="Spring" data-series="East" data-y="120" data-layout="stacked" style="fill:var(--markvis-series-1,#F54900)"/>
     <path d="M95.5 266.6 L95.5 178.33 Q95.5 170.33 103.5 170.33 L155.5 170.33 Q163.5 170.33 163.5 178.33 L163.5 266.6 Z" fill="#009689" data-x="Spring" data-series="West" data-y="80" data-layout="stacked" style="fill:var(--markvis-series-2,#009689)"/>
-    <path d="M258.5 230.5 L326.5 230.5 L326.5 403 Q326.5 411 318.5 411 L266.5 411 Q258.5 411 258.5 403 Z" fill="#F54900" data-x="Summer" data-series="East" data-y="150" data-layout="stacked" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M258.5 411 L326.5 411 L326.5 230.5 L258.5 230.5 Z" fill="#F54900" data-x="Summer" data-series="East" data-y="150" data-layout="stacked" style="fill:var(--markvis-series-1,#F54900)"/>
     <path d="M258.5 230.5 L258.5 124.18 Q258.5 116.18 266.5 116.18 L318.5 116.18 Q326.5 116.18 326.5 124.18 L326.5 230.5 Z" fill="#009689" data-x="Summer" data-series="West" data-y="95" data-layout="stacked" style="fill:var(--markvis-series-2,#009689)"/>
-    <path d="M421.5 278.63 L489.5 278.63 L489.5 403 Q489.5 411 481.5 411 L429.5 411 Q421.5 411 421.5 403 Z" fill="#F54900" data-x="Fall" data-series="East" data-y="110" data-layout="stacked" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M421.5 411 L489.5 411 L489.5 278.63 L421.5 278.63 Z" fill="#F54900" data-x="Fall" data-series="East" data-y="110" data-layout="stacked" style="fill:var(--markvis-series-1,#F54900)"/>
     <path d="M421.5 278.63 L421.5 202.4 Q421.5 194.4 429.5 194.4 L481.5 194.4 Q489.5 194.4 489.5 202.4 L489.5 278.63 Z" fill="#009689" data-x="Fall" data-series="West" data-y="70" data-layout="stacked" style="fill:var(--markvis-series-2,#009689)"/>
-    <path d="M584.5 302.7 L652.5 302.7 L652.5 403 Q652.5 411 644.5 411 L592.5 411 Q584.5 411 584.5 403 Z" fill="#F54900" data-x="Winter" data-series="East" data-y="90" data-layout="stacked" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M584.5 411 L652.5 411 L652.5 302.7 L584.5 302.7 Z" fill="#F54900" data-x="Winter" data-series="East" data-y="90" data-layout="stacked" style="fill:var(--markvis-series-1,#F54900)"/>
     <path d="M584.5 302.7 L584.5 238.5 Q584.5 230.5 592.5 230.5 L644.5 230.5 Q652.5 230.5 652.5 238.5 L652.5 302.7 Z" fill="#009689" data-x="Winter" data-series="West" data-y="60" data-layout="stacked" style="fill:var(--markvis-series-2,#009689)"/>
   </g>
   <g>

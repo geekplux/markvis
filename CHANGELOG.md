@@ -44,6 +44,7 @@ Draw a chart block anywhere Markdown is shown: one call from JavaScript, React w
 - A top legend no longer sits on a wrapped title, and the y-axis title no longer runs through tick labels or repeats the unit.
 - Non-numeric cells, duplicate keys, `markvis` version, multi-chart `check`, bake references, ragged fallback cells, and line gaps for missing values.
 - Bullet charts keep a positive track at tiny widths; a value range that overflows to Infinity no longer writes `NaN` into a color or corner radius. Horizontal bar, dumbbell, boxplot, heatmap, pie and the axis charts also keep a positive plot (or radius) at tiny widths, and row charts drop their per-row value labels when there is no room for them.
+- A stacked or percent bar reads as one bar in a theme with rounded bars: only its outermost segment is capped, the segments under it are plain rectangles, and the cap sits on the last series that has a value in that category. Before, every segment carried its own rounded end.
 
 ## 2.1.0 — 2026-09-25
 

@@ -25,13 +25,13 @@
     <text x="386" y="380.6" text-anchor="middle" dominant-baseline="hanging" data-axis="x">season</text>
   </g>
   <g>
-    <path d="M118 241 L174 241 L174 353 Q174 355 172 355 L120 355 Q118 355 118 353 Z" fill="#5AD8A6" data-x="Spring" data-series="East" data-y="120" data-layout="stacked" style="fill:var(--markvis-series-1,#5AD8A6)"/>
+    <path d="M118 355 L174 355 L174 241 L118 241 Z" fill="#5AD8A6" data-x="Spring" data-series="East" data-y="120" data-layout="stacked" style="fill:var(--markvis-series-1,#5AD8A6)"/>
     <path d="M118 241 L118 167 Q118 165 120 165 L172 165 Q174 165 174 167 L174 241 Z" fill="#E8684A" data-x="Spring" data-series="West" data-y="80" data-layout="stacked" style="fill:var(--markvis-series-2,#E8684A)"/>
-    <path d="M278 212.5 L334 212.5 L334 353 Q334 355 332 355 L280 355 Q278 355 278 353 Z" fill="#5AD8A6" data-x="Summer" data-series="East" data-y="150" data-layout="stacked" style="fill:var(--markvis-series-1,#5AD8A6)"/>
+    <path d="M278 355 L334 355 L334 212.5 L278 212.5 Z" fill="#5AD8A6" data-x="Summer" data-series="East" data-y="150" data-layout="stacked" style="fill:var(--markvis-series-1,#5AD8A6)"/>
     <path d="M278 212.5 L278 124.25 Q278 122.25 280 122.25 L332 122.25 Q334 122.25 334 124.25 L334 212.5 Z" fill="#E8684A" data-x="Summer" data-series="West" data-y="95" data-layout="stacked" style="fill:var(--markvis-series-2,#E8684A)"/>
-    <path d="M438 250.5 L494 250.5 L494 353 Q494 355 492 355 L440 355 Q438 355 438 353 Z" fill="#5AD8A6" data-x="Fall" data-series="East" data-y="110" data-layout="stacked" style="fill:var(--markvis-series-1,#5AD8A6)"/>
+    <path d="M438 355 L494 355 L494 250.5 L438 250.5 Z" fill="#5AD8A6" data-x="Fall" data-series="East" data-y="110" data-layout="stacked" style="fill:var(--markvis-series-1,#5AD8A6)"/>
     <path d="M438 250.5 L438 186 Q438 184 440 184 L492 184 Q494 184 494 186 L494 250.5 Z" fill="#E8684A" data-x="Fall" data-series="West" data-y="70" data-layout="stacked" style="fill:var(--markvis-series-2,#E8684A)"/>
-    <path d="M598 269.5 L654 269.5 L654 353 Q654 355 652 355 L600 355 Q598 355 598 353 Z" fill="#5AD8A6" data-x="Winter" data-series="East" data-y="90" data-layout="stacked" style="fill:var(--markvis-series-1,#5AD8A6)"/>
+    <path d="M598 355 L654 355 L654 269.5 L598 269.5 Z" fill="#5AD8A6" data-x="Winter" data-series="East" data-y="90" data-layout="stacked" style="fill:var(--markvis-series-1,#5AD8A6)"/>
     <path d="M598 269.5 L598 214.5 Q598 212.5 600 212.5 L652 212.5 Q654 212.5 654 214.5 L654 269.5 Z" fill="#E8684A" data-x="Winter" data-series="West" data-y="60" data-layout="stacked" style="fill:var(--markvis-series-2,#E8684A)"/>
   </g>
   <g>

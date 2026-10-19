@@ -958,22 +958,31 @@ function drawGridAndAxes(prepared: Prepared): string[] {
   return lines;
 }
 
+/** Which end of a bar gets the theme's corner radius: the end away from the baseline, or none. */
+type BarCap = "up" | "down" | "none";
+
+/**
+ * A bar as a path: a plain rectangle, or one with its two corners at `cap`
+ * rounded by the theme's BAR_RX (clamped to half the width and to the
+ * height). In a stack only the outermost segment is capped; the segments
+ * below it are plain rectangles so the stack reads as one bar.
+ */
 function roundedBarPath(
   x: number,
   y: number,
   w: number,
   h: number,
-  roundAwayFromBaselineUp: boolean,
+  cap: BarCap,
 ): string {
   const r = Math.min(BAR_RX, w / 2, Math.max(h, 0));
   const x0 = fmtPx(x);
   const y0 = fmtPx(y);
   const x1 = fmtPx(x + w);
   const y1 = fmtPx(y + h);
-  if (h <= 0.01 || r <= 0) {
+  if (h <= 0.01 || r <= 0 || cap === "none") {
     return `M${x0} ${fmtPx(y + h)} L${x1} ${fmtPx(y + h)} L${x1} ${y0} L${x0} ${y0} Z`;
   }
-  if (roundAwayFromBaselineUp) {
+  if (cap === "up") {
     return `M${x0} ${y1} L${x0} ${fmtPx(y + r)} Q${x0} ${y0} ${fmtPx(x + r)} ${y0} L${fmtPx(x + w - r)} ${y0} Q${x1} ${y0} ${x1} ${fmtPx(y + r)} L${x1} ${y1} Z`;
   }
   return `M${x0} ${y0} L${x1} ${y0} L${x1} ${fmtPx(y + h - r)} Q${x1} ${y1} ${fmtPx(x + w - r)} ${y1} L${fmtPx(x + r)} ${y1} Q${x0} ${y1} ${x0} ${fmtPx(y + h - r)} Z`;
@@ -1052,6 +1061,19 @@ function drawBars(prepared: Prepared): string[] {
     if (stacking && matrix) {
       let base = 0;
       const { x, barW } = barSlot(nCat, 1, catStep, plot.left, ci, 0);
+      // The outermost segment is the last series that draws any height in
+      // this category: a missing, zero, or invisibly thin last series must
+      // not leave the stack uncapped.
+      let outerIndex = -1;
+      {
+        let acc = 0;
+        for (let si = 0; si < series.length; si++) {
+          const v = matrix[si]?.[ci];
+          if (typeof v !== "number") continue;
+          if (Math.abs(yScale(acc + v) - yScale(acc)) > 0.01) outerIndex = si;
+          acc += v;
+        }
+      }
       for (let si = 0; si < series.length; si++) {
         const ser = series[si]!;
         const val = matrix[si]?.[ci];
@@ -1076,12 +1098,13 @@ function drawBars(prepared: Prepared): string[] {
         const y = Math.min(yBottom, yTop);
         const h = Math.abs(yTop - yBottom);
         const style = styles[si]!;
-        const roundUp = val >= 0;
-        // Only round the outermost (top) segment away from baseline.
-        const isOuter = si === series.length - 1;
+        // Only the outermost segment is capped, away from the baseline; the
+        // segments under it are plain rectangles.
+        const isOuter = si === outerIndex;
+        const cap: BarCap = isOuter ? (val >= 0 ? "up" : "down") : "none";
         lines.push(
           `    <path ${attrs({
-            d: roundedBarPath(x, y, barW, h, isOuter && roundUp),
+            d: roundedBarPath(x, y, barW, h, cap),
             fill: style.color,
             "fill-opacity": style.opacity === 1 ? undefined : style.opacity,
             "data-x": cat,
@@ -1178,7 +1201,7 @@ function drawBars(prepared: Prepared): string[] {
       const roundUp = val >= 0;
       lines.push(
         `    <path ${attrs({
-          d: roundedBarPath(x, y, barW, h, roundUp),
+          d: roundedBarPath(x, y, barW, h, roundUp ? "up" : "down"),
           fill: style.color,
           "fill-opacity": style.opacity === 1 ? undefined : style.opacity,
           "data-x": cat,
@@ -1618,7 +1641,7 @@ function drawHist(prepared: Prepared): string[] {
     const h = Math.abs(y1 - y0);
     lines.push(
       `    <path ${attrs({
-        d: roundedBarPath(x, y, barW, h, bin.weight >= 0),
+        d: roundedBarPath(x, y, barW, h, bin.weight >= 0 ? "up" : "down"),
         fill: style.color,
         "fill-opacity": opacityAttr(style.opacity),
         "data-bin-left": String(bin.left),
