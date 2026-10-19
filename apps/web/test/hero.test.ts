@@ -19,11 +19,13 @@ import {
   SCENE_NAMES,
   SWATCHES,
   createHero,
+  emptyState,
   endState,
   posterResult,
   sceneMs,
   showTexts,
   stateAt,
+  steps,
   type HeroController,
 } from "../src/hero";
 
@@ -153,6 +155,21 @@ describe("hero show", () => {
       expect(r.error.code).toBe("E_BAD_NUMBER");
       expect(r.table.rows).toHaveLength(10);
     }
+  });
+
+  it("shows the first chart within 3.5 s of the start, long before scene 1 ends", () => {
+    const st = emptyState();
+    let ms = 0;
+    let first = -1;
+    for (const op of SCENES[0]!) {
+      for (const step of steps(op, st)) {
+        ms += step.ms;
+        if (first < 0 && step.render && render(st.text, { width: 640 }).ok) first = ms;
+      }
+    }
+    expect(first).toBeGreaterThan(0);
+    expect(first, "ms until the first chart").toBeLessThanOrEqual(3500);
+    expect(first, "the chart is up for most of the scene").toBeLessThan(ms / 2);
   });
 
   it("starts each scene from a text that renders, and ends on the poster block", () => {

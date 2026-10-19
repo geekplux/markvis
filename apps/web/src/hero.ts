@@ -52,7 +52,7 @@ export const SCENE_NAMES = [
 ] as const;
 
 export const CAPTIONS: readonly string[] = [
-  "Type the block. The chart grows with every row.",
+  "Type the block. The chart appears with the first row and grows with every line.",
   "Paste the rest. Ten rows, one chart.",
   "One word changes the kind of chart. Same ten rows.",
   "One field changes the layout.",
@@ -99,8 +99,20 @@ const swapWord = (from: string, to: string, hold: number): Op[] => [
 
 /** Scenes 1..10 (index 0..9). */
 export const SCENES: readonly (readonly Op[])[] = [
-  // 01 Write: every finished line redraws; the chart appears with the first row.
-  [{ op: "lines", lines: ["type: bar", ...HEADER, "", COLUMNS, ROWS[0]!, ROWS[1]!] }, wait(800)],
+  // 01 Write: the chart appears four short lines in (type, blank, columns,
+  // first row), then grows while the rest of the header is typed above it.
+  // The header lands in HERO_LINES order: title, unit, x, y, series.
+  [
+    { op: "lines", lines: ["type: bar", "", COLUMNS, ROWS[0]!] },
+    { op: "caret", after: "type: bar" },
+    { op: "type", text: "\nseries: sector" },
+    { op: "caret", after: null },
+    { op: "type", text: "\n" },
+    { op: "lines", lines: [ROWS[1]!] },
+    { op: "caret", after: "type: bar" },
+    { op: "type", text: `\n${HEADER.slice(0, 4).join("\n")}` },
+    wait(800),
+  ],
   // 02 Paste: the other eight rows land at once.
   [{ op: "caret", after: null }, { op: "paste", text: ROWS.slice(2).map((r) => `\n${r}`).join("") }, wait(1600)],
   // 03 Kind: one word, same rows.
