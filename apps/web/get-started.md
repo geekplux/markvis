@@ -70,4 +70,4 @@ Give an agent the Skill or the short brief. It should write the Markdown block �
 - Skill: [skills/markvis/SKILL.md](https://github.com/geekplux/markvis/blob/master/skills/markvis/SKILL.md)
 - Brief: [/llms.txt](/llms.txt) — fetch that URL; emit only the fields it lists
 
-Next: [Integrate](/integrate) · [Spec](/spec) · [Themes](/themes) · [AI](/ai)
+Next: [Integrate](/integrate) · [Theming](/theming) · [Chart types](/types/) · [Spec](/spec) · [Tell a model](/integrate#tell-a-model)

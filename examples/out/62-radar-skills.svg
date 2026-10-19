@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="radar chart: Stage crew still leads box office on coverage, 15 rows, series crew" aria-labelledby="mv-56c6698d43cae5ec-title" aria-describedby="mv-56c6698d43cae5ec-desc" data-markvis="2" data-chart-type="radar" data-id="mv-56c6698d43cae5ec" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="radar chart: Stage crew still leads box office on coverage, 15 rows, series crew" aria-labelledby="mv-56c6698d43cae5ec-title" aria-describedby="mv-56c6698d43cae5ec-desc" data-markvis="2" data-chart-type="radar" data-id="mv-56c6698d43cae5ec" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-56c6698d43cae5ec-title">Stage crew still leads box office on coverage</title>
   <desc id="mv-56c6698d43cae5ec-desc">radar chart. Stage crew still leads box office on coverage. x=skill. y=score. series=crew. 15 rows.</desc>
-  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Stage crew still leads box office on coverage</title>Stage crew still leads box office on coverage</text>
-  <g font-size="13" font-weight="400" fill="#171717">
-    <rect x="48" y="41" width="10" height="10" fill="#3B82F6" rx="1"/>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717" style="fill:var(--markvis-ink,#171717)"><title>Stage crew still leads box office on coverage</title>Stage crew still leads box office on coverage</text>
+  <g font-size="13" font-weight="400" fill="#171717" style="fill:var(--markvis-ink,#171717)">
+    <rect x="48" y="41" width="10" height="10" fill="#3B82F6" rx="1" style="fill:var(--markvis-series-1,#3B82F6)"/>
     <text x="62" y="50" data-legend="Stage">Stage</text>
-    <rect x="115.3" y="41" width="10" height="10" fill="#F97316" rx="1"/>
+    <rect x="115.3" y="41" width="10" height="10" fill="#F97316" rx="1" style="fill:var(--markvis-series-2,#F97316)"/>
     <text x="129.3" y="50" data-legend="Box">Box</text>
-    <rect x="169.32" y="41" width="10" height="10" fill="#10B981" rx="1"/>
+    <rect x="169.32" y="41" width="10" height="10" fill="#10B981" rx="1" style="fill:var(--markvis-series-3,#10B981)"/>
     <text x="183.32" y="50" data-legend="Usher">Usher</text>
   </g>
-  <g fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-grid="1" data-radar-grid="1">
+  <g fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1" data-grid="1" data-radar-grid="1" style="stroke:var(--markvis-grid,#171717)">
     <path d="M363.82 184.36 L431.01 233.17 L405.34 312.15 L322.3 312.15 L296.63 233.17 Z"/>
     <line x1="363.82" y1="255" x2="363.82" y2="127.84"/>
     <line x1="363.82" y1="255" x2="484.76" y2="215.71"/>
@@ -19,16 +19,16 @@
     <line x1="363.82" y1="255" x2="242.88" y2="215.71"/>
   </g>
   <g data-radar="1">
-    <path d="M363.82 141.97 L460.57 223.56 L438.56 357.87 L292.4 353.3 L250.95 218.33 Z" fill="#3B82F6" fill-opacity="0.12" stroke="#3B82F6" stroke-width="1.75" data-series="Stage"/>
-    <path d="M363.82 164.58 L457.88 224.44 L411.99 321.3 L302.36 339.59 L281.85 228.37 Z" fill="#F97316" fill-opacity="0.12" stroke="#F97316" stroke-width="1.75" stroke-dasharray="6 4" data-series="Box"/>
-    <path d="M363.82 154.68 L452.51 226.18 L431.92 348.73 L290.74 355.59 L271.1 224.87 Z" fill="#10B981" fill-opacity="0.12" stroke="#10B981" stroke-width="1.75" stroke-dasharray="2 2" data-series="Usher"/>
+    <path d="M363.82 141.97 L460.57 223.56 L438.56 357.87 L292.4 353.3 L250.95 218.33 Z" fill="#3B82F6" fill-opacity="0.12" stroke="#3B82F6" stroke-width="1.75" data-series="Stage" style="fill:var(--markvis-series-1,#3B82F6);stroke:var(--markvis-series-1,#3B82F6)"/>
+    <path d="M363.82 164.58 L457.88 224.44 L411.99 321.3 L302.36 339.59 L281.85 228.37 Z" fill="#F97316" fill-opacity="0.12" stroke="#F97316" stroke-width="1.75" stroke-dasharray="6 4" data-series="Box" style="fill:var(--markvis-series-2,#F97316);stroke:var(--markvis-series-2,#F97316)"/>
+    <path d="M363.82 154.68 L452.51 226.18 L431.92 348.73 L290.74 355.59 L271.1 224.87 Z" fill="#10B981" fill-opacity="0.12" stroke="#10B981" stroke-width="1.75" stroke-dasharray="2 2" data-series="Usher" style="fill:var(--markvis-series-3,#10B981);stroke:var(--markvis-series-3,#10B981)"/>
   </g>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#737373)">
     <text x="363.82" y="113.84" text-anchor="middle" dominant-baseline="middle" data-spoke="Speed">Speed</text>
     <text x="498.07" y="211.38" text-anchor="middle" dominant-baseline="middle" data-spoke="Range">Range</text>
     <text x="446.79" y="369.2" text-anchor="middle" dominant-baseline="middle" data-spoke="Coverage">Coverage</text>
     <text x="280.85" y="369.2" text-anchor="middle" dominant-baseline="middle" data-spoke="Safety">Safety</text>
     <text x="229.57" y="211.38" text-anchor="middle" dominant-baseline="middle" data-spoke="Cueing">Cueing</text>
-    <text x="363.82" y="180.36" text-anchor="middle" font-size="12" fill="#737373" data-radar-tick="50">50</text>
+    <text x="363.82" y="180.36" text-anchor="middle" font-size="12" fill="#737373" data-radar-tick="50" style="fill:var(--markvis-muted,#737373)">50</text>
   </g>
 </svg>

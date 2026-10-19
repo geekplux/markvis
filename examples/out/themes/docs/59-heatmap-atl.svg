@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="heatmap chart: Eight o&apos;clock still packs Five Points entries, 40 rows, series weekday" aria-labelledby="mv-eb13f98aca2e4a22-title" aria-describedby="mv-eb13f98aca2e4a22-desc" data-markvis="2" data-chart-type="heatmap" data-id="mv-eb13f98aca2e4a22" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="heatmap chart: Eight o&apos;clock still packs Five Points entries, 40 rows, series weekday" aria-labelledby="mv-eb13f98aca2e4a22-title" aria-describedby="mv-eb13f98aca2e4a22-desc" data-markvis="2" data-chart-type="heatmap" data-id="mv-eb13f98aca2e4a22" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-eb13f98aca2e4a22-title">Eight o&apos;clock still packs Five Points entries</title>
   <desc id="mv-eb13f98aca2e4a22-desc">heatmap chart. Eight o&apos;clock still packs Five Points entries. x=hour. y=entries. series=weekday. 40 rows.</desc>
-  <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>Eight o&apos;clock still packs Five Points entries</title>EIGHT O&apos;CLOCK STILL PACKS FIVE POINTS ENTRIES</text>
-  <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
+  <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B" style="fill:var(--markvis-ink,#18181B)"><title>Eight o&apos;clock still packs Five Points entries</title>EIGHT O&apos;CLOCK STILL PACKS FIVE POINTS ENTRIES</text>
+  <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1" style="stroke:var(--markvis-ink,#18181B)"/>
   <defs>
     <pattern id="mv-eb13f98aca2e4a22-missing" patternUnits="userSpaceOnUse" width="6" height="6">
       <rect width="6" height="6" fill="#f4f1ea"/>
@@ -100,10 +100,10 @@
     <rect x="664" y="145.5" width="12" height="52.25" fill="#717a88"/>
     <rect x="664" y="93.75" width="12" height="52.25" fill="#5c6878"/>
     <rect x="664" y="42" width="12" height="52.25" fill="#475569"/>
-    <text x="680" y="46" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#64748B" dominant-baseline="hanging" data-scale-max="1">910</text>
-    <text x="680" y="456" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#64748B" data-scale-min="1">155</text>
+    <text x="680" y="46" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#64748B" dominant-baseline="hanging" data-scale-max="1" style="fill:var(--markvis-muted,#64748B)">910</text>
+    <text x="680" y="456" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#64748B" data-scale-min="1" style="fill:var(--markvis-muted,#64748B)">155</text>
   </g>
-  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400">
+  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400" style="fill:var(--markvis-muted,#64748B)">
     <text x="32" y="83.4" text-anchor="end" dominant-baseline="middle" data-series-label="Mon"><title>Mon</title>Mon</text>
     <text x="32" y="166.2" text-anchor="end" dominant-baseline="middle" data-series-label="Tue"><title>Tue</title>Tue</text>
     <text x="32" y="249" text-anchor="end" dominant-baseline="middle" data-series-label="Wed"><title>Wed</title>Wed</text>

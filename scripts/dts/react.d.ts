@@ -11,9 +11,20 @@ type MarkvisCommonProps = {
   palette?: ChartPalette | undefined;
   /** Used when the block has no `surface:`. */
   surface?: "light" | "dark" | "export" | undefined;
+  /**
+   * "host" (default) reads the page's `--markvis-*` CSS variables, with the
+   * fixed colors as fallbacks; "static" writes fixed colors only.
+   */
+  colors?: "host" | "static" | undefined;
   className?: string | undefined;
   /** Called after a block fails to parse, with its stable error. */
   onError?: ((error: ParseError) => void) | undefined;
+  /**
+   * The block is still arriving: show "Drawing chart…" and the rows read so
+   * far (whole lines only) instead of a chart or an error line. Pass the
+   * host's own flag, such as a renderer's `isIncomplete`. Default false.
+   */
+  streaming?: boolean | undefined;
 };
 
 /** Header fields of a chart given as an object. Same names as a fence header. */

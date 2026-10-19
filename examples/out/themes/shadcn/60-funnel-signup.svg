@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="funnel chart: First ride still keeps 140 of 1,200 Midtown visits, 6 rows" aria-labelledby="mv-14b205fefc301276-title" aria-describedby="mv-14b205fefc301276-desc" data-markvis="2" data-chart-type="funnel" data-id="mv-14b205fefc301276" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="funnel chart: First ride still keeps 140 of 1,200 Midtown visits, 6 rows" aria-labelledby="mv-14b205fefc301276-title" aria-describedby="mv-14b205fefc301276-desc" data-markvis="2" data-chart-type="funnel" data-id="mv-14b205fefc301276" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-14b205fefc301276-title">First ride still keeps 140 of 1,200 Midtown visits</title>
   <desc id="mv-14b205fefc301276-desc">funnel chart. First ride still keeps 140 of 1,200 Midtown visits. x=stage. y=people. 6 rows.</desc>
-  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
-  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>First ride still keeps 140 of 1,200 Midtown visits</title>First ride still keeps 140 of 1,200 Midtown visits</text>
+  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1" style="stroke:var(--markvis-grid,#0A0A0A)"/>
+  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A" style="fill:var(--markvis-ink,#0A0A0A)"><title>First ride still keeps 140 of 1,200 Midtown visits</title>First ride still keeps 140 of 1,200 Midtown visits</text>
   <g data-funnel="1">
-    <path d="M48 50 L588.47 50 L426.33 115 L210.14 115 Z" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Visit" data-y="1,200"/>
-    <path d="M210.14 115 L426.33 115 L388.05 180 L248.42 180 Z" fill="#009689" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Signup" data-y="480"/>
-    <path d="M248.42 180 L388.05 180 L358.77 245 L277.7 245 Z" fill="#104E64" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Verify" data-y="310"/>
-    <path d="M277.7 245 L358.77 245 L349.76 310 L286.71 310 Z" fill="#FFB900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Activate" data-y="180"/>
-    <path d="M286.71 310 L349.76 310 L339.63 375 L296.84 375 Z" fill="#FE9A00" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="First ride" data-y="140"/>
-    <path d="M296.84 375 L339.63 375 L339.63 440 L296.84 440 Z" fill="#F54900" fill-opacity="0.72" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Week-4 return" data-y="95"/>
+    <path d="M48 50 L588.47 50 L426.33 115 L210.14 115 Z" fill="#F54900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Visit" data-y="1,200" style="fill:var(--markvis-series-1,#F54900);stroke:var(--markvis-ink,#0A0A0A)"/>
+    <path d="M210.14 115 L426.33 115 L388.05 180 L248.42 180 Z" fill="#009689" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Signup" data-y="480" style="fill:var(--markvis-series-2,#009689);stroke:var(--markvis-ink,#0A0A0A)"/>
+    <path d="M248.42 180 L388.05 180 L358.77 245 L277.7 245 Z" fill="#104E64" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Verify" data-y="310" style="fill:var(--markvis-series-3,#104E64);stroke:var(--markvis-ink,#0A0A0A)"/>
+    <path d="M277.7 245 L358.77 245 L349.76 310 L286.71 310 Z" fill="#FFB900" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Activate" data-y="180" style="fill:var(--markvis-series-4,#FFB900);stroke:var(--markvis-ink,#0A0A0A)"/>
+    <path d="M286.71 310 L349.76 310 L339.63 375 L296.84 375 Z" fill="#FE9A00" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="First ride" data-y="140" style="fill:var(--markvis-series-5,#FE9A00);stroke:var(--markvis-ink,#0A0A0A)"/>
+    <path d="M296.84 375 L339.63 375 L339.63 440 L296.84 440 Z" fill="#F54900" fill-opacity="0.72" stroke="#0A0A0A" stroke-opacity="0.14" stroke-width="1" data-stage="Week-4 return" data-y="95" style="fill:var(--markvis-series-1,#F54900);stroke:var(--markvis-ink,#0A0A0A)"/>
   </g>
-  <g fill="#0A0A0A" font-size="12" font-weight="500">
+  <g fill="#0A0A0A" font-size="12" font-weight="500" style="fill:var(--markvis-ink,#0A0A0A)">
     <text x="596.47" y="82.5" text-anchor="start" dominant-baseline="middle" data-label="Visit"><title>Visit · 1,200</title>Visit · 1,200</text>
     <text x="596.47" y="147.5" text-anchor="start" dominant-baseline="middle" data-label="Signup"><title>Signup · 480</title>Signup · 480</text>
     <text x="596.47" y="212.5" text-anchor="start" dominant-baseline="middle" data-label="Verify"><title>Verify · 310</title>Verify · 310</text>

@@ -73,6 +73,7 @@ export default defineConfig({
       "apps/web/src/**/*.test.ts",
       "apps/web/test/**/*.test.ts",
       "scripts/**/*.test.ts",
+      "hosts/vscode/test/**/*.test.ts",
     ],
     exclude: ["**/node_modules/**", "legacy/**"],
   },

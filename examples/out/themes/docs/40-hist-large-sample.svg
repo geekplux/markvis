@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="hist chart: Idle CPU clusters near zero, 11 rows" aria-labelledby="mv-622c0e98a61f6195-title" aria-describedby="mv-622c0e98a61f6195-desc" data-markvis="2" data-chart-type="hist" data-id="mv-622c0e98a61f6195" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="hist chart: Idle CPU clusters near zero, 11 rows" aria-labelledby="mv-622c0e98a61f6195-title" aria-describedby="mv-622c0e98a61f6195-desc" data-markvis="2" data-chart-type="hist" data-id="mv-622c0e98a61f6195" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-622c0e98a61f6195-title">Idle CPU clusters near zero</title>
   <desc id="mv-622c0e98a61f6195-desc">hist chart. Idle CPU clusters near zero. x=idle_pct. 11 rows. x is binned with Sturges equal-width bins.</desc>
-  <text x="58" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>Idle CPU clusters near zero</title>IDLE CPU CLUSTERS NEAR ZERO</text>
-  <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <path d="M58 438 L704 438" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
-  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400">
+  <text x="58" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B" style="fill:var(--markvis-ink,#18181B)"><title>Idle CPU clusters near zero</title>IDLE CPU CLUSTERS NEAR ZERO</text>
+  <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1" style="stroke:var(--markvis-ink,#18181B)"/>
+  <path d="M58 438 L704 438" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" style="stroke:var(--markvis-ink,#18181B)"/>
+  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400" style="fill:var(--markvis-muted,#64748B)">
     <text x="50" y="438" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="50" y="339" text-anchor="end" dominant-baseline="middle">1</text>
     <text x="50" y="240" text-anchor="end" dominant-baseline="middle">2</text>
@@ -17,22 +17,22 @@
     <text x="574.8" y="449" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="16"><title>16</title>16</text>
     <text x="704" y="449" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="20"><title>20</title>20</text>
   </g>
-  <g fill="#64748B" font-size="11" font-weight="400" data-axis-titles="1">
+  <g fill="#64748B" font-size="11" font-weight="400" data-axis-titles="1" style="fill:var(--markvis-muted,#64748B)">
     <text x="34.18" y="240" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 34.18 240)" data-axis="y">count</text>
     <text x="381" y="458.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">idle_pct · Sturges bins</text>
   </g>
   <g>
-    <path d="M77.38 438 L167.82 438 L167.82 42 L77.38 42 Z" fill="#475569" data-bin-left="0" data-bin-right="4" data-weight="4" data-count="4"/>
-    <path d="M206.58 438 L297.02 438 L297.02 339 L206.58 339 Z" fill="#475569" data-bin-left="4" data-bin-right="8" data-weight="1" data-count="1"/>
-    <path d="M335.78 438 L426.22 438 L426.22 141 L335.78 141 Z" fill="#475569" data-bin-left="8" data-bin-right="12" data-weight="3" data-count="3"/>
-    <path d="M464.98 438 L555.42 438 L555.42 240 L464.98 240 Z" fill="#475569" data-bin-left="12" data-bin-right="16" data-weight="2" data-count="2"/>
-    <path d="M594.18 438 L684.62 438 L684.62 339 L594.18 339 Z" fill="#475569" data-bin-left="16" data-bin-right="20" data-weight="1" data-count="1"/>
+    <path d="M77.38 438 L167.82 438 L167.82 42 L77.38 42 Z" fill="#475569" data-bin-left="0" data-bin-right="4" data-weight="4" data-count="4" style="fill:var(--markvis-series-1,#475569)"/>
+    <path d="M206.58 438 L297.02 438 L297.02 339 L206.58 339 Z" fill="#475569" data-bin-left="4" data-bin-right="8" data-weight="1" data-count="1" style="fill:var(--markvis-series-1,#475569)"/>
+    <path d="M335.78 438 L426.22 438 L426.22 141 L335.78 141 Z" fill="#475569" data-bin-left="8" data-bin-right="12" data-weight="3" data-count="3" style="fill:var(--markvis-series-1,#475569)"/>
+    <path d="M464.98 438 L555.42 438 L555.42 240 L464.98 240 Z" fill="#475569" data-bin-left="12" data-bin-right="16" data-weight="2" data-count="2" style="fill:var(--markvis-series-1,#475569)"/>
+    <path d="M594.18 438 L684.62 438 L684.62 339 L594.18 339 Z" fill="#475569" data-bin-left="16" data-bin-right="20" data-weight="1" data-count="1" style="fill:var(--markvis-series-1,#475569)"/>
   </g>
   <g>
     <text x="122.6" y="56" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#fafaf9" data-value-label="0–4">4</text>
-    <text x="251.8" y="331" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="4–8">1</text>
-    <text x="381" y="133" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="8–12">3</text>
-    <text x="510.2" y="232" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="12–16">2</text>
-    <text x="639.4" y="331" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="16–20">1</text>
+    <text x="251.8" y="331" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="4–8" style="fill:var(--markvis-ink,#18181B)">1</text>
+    <text x="381" y="133" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="8–12" style="fill:var(--markvis-ink,#18181B)">3</text>
+    <text x="510.2" y="232" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="12–16" style="fill:var(--markvis-ink,#18181B)">2</text>
+    <text x="639.4" y="331" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="16–20" style="fill:var(--markvis-ink,#18181B)">1</text>
   </g>
 </svg>

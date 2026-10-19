@@ -1,4 +1,5 @@
 import type { ChartIR } from "@markvis/ir";
+import type { Color } from "./paint.js";
 import {
   categoryNames,
   finiteValues,
@@ -21,6 +22,7 @@ import {
   type Painted,
   type PlotBox,
   legendTop,
+  PLOT_MIN_WIDTH,
 } from "./layout.js";
 import { legibleOnPaper, readableInk } from "./contrast.js";
 import { heroFill, heroIndex, seriesStyle } from "./palette.js";
@@ -54,6 +56,7 @@ import {
   FONT_NUMERIC,
   GRID,
   GROUP_GAP_PX,
+  GRID_INK,
   HAIRLINE_OPACITY,
   INK,
   LABEL_ROTATE_DEG,
@@ -101,7 +104,7 @@ type Prepared = {
   bins: HistBin[];
   compact: CompactScale | null;
   titleUnit: string | undefined;
-  styles: { color: string; opacity: number }[];
+  styles: { color: Color; opacity: number }[];
   height: number;
   showValueLabels: boolean;
   showInteriorGrid: boolean;
@@ -200,7 +203,7 @@ function linePath(points: { x: number; y: number }[]): string {
 /** Point mark on a line or area in the theme's marker style. */
 function pointMark(
   pt: { x: number; y: number },
-  color: string,
+  color: Color,
   opacity: number,
   series: string,
 ): string | null {
@@ -532,11 +535,36 @@ function prepare(chart: ChartIR): Prepared {
       .map((row) => row.xNum)
       .filter((n): n is number => n !== undefined);
     const xDom = xExtent(xs, chart.type === "scatter" ? 0.08 : 0.05);
-    const xTickNums = niceTicks(xDom[0], xDom[1]);
-    const xMin = xTickNums[0] ?? xDom[0];
-    const xMax = xTickNums[xTickNums.length - 1] ?? xDom[1];
-    xScaleNum = scaleLinear([xMin, xMax], [plot.left + 8, plot.right - 8]);
-    const xLabels = labelTicks(xTickNums);
+    let xTickNums = niceTicks(xDom[0], xDom[1]);
+    let xMin = xTickNums[0] ?? xDom[0];
+    let xMax = xTickNums[xTickNums.length - 1] ?? xDom[1];
+    /** Ticks that are data values read as the data is written (2024, not 2,024). */
+    let dataTicks = false;
+    // A line or area over whole numbers (weeks 1-4, years) is an index:
+    // the axis spans the data, never a padding 0 or 5 that no row has. Up
+    // to 12 distinct values, each one is a tick; past that, the nice ticks
+    // that are whole numbers inside the data.
+    const lo = Math.min(...xs);
+    const hi = Math.max(...xs);
+    if (chart.type !== "scatter" && hi > lo && xs.every(Number.isInteger)) {
+      const distinct = [...new Set(xs)].sort((a, b) => a - b);
+      const inside = xTickNums.filter((n) => n >= lo && n <= hi && Number.isInteger(n));
+      const ticks = distinct.length <= 12 ? distinct : inside;
+      if (ticks.length >= 2) {
+        dataTicks = ticks === distinct;
+        xTickNums = ticks;
+        xMin = lo;
+        xMax = hi;
+      }
+    }
+    // 8 px in from each edge, less when the plot is too narrow to spare it,
+    // so the scale still runs left to right.
+    const inset = Math.min(8, Math.max(0, (plot.width - PLOT_MIN_WIDTH) / 2));
+    xScaleNum = scaleLinear([xMin, xMax], [plot.left + inset, plot.right - inset]);
+    const asWritten = (n: number) => rows.find((row) => row.xNum === n)?.xLabel.trim();
+    const xLabels = dataTicks
+      ? xTickNums.map((n) => asWritten(n) ?? formatNumber(n))
+      : labelTicks(xTickNums);
     xTicks = xTickNums.map((n, i) => ({
       pos: xScaleNum(n),
       label: xLabels[i] ?? formatNumber(n),
@@ -707,7 +735,7 @@ function drawGridAndAxes(prepared: Prepared): string[] {
       lines.push(
         `  <g ${attrs({
           fill: "none",
-          stroke: INK,
+          stroke: GRID_INK,
           "stroke-opacity": HAIRLINE_OPACITY,
           "stroke-width": GRID.width,
           "stroke-dasharray": GRID.dash || undefined,
@@ -732,7 +760,7 @@ function drawGridAndAxes(prepared: Prepared): string[] {
     lines.push(
       `  <g ${attrs({
         fill: "none",
-        stroke: INK,
+        stroke: GRID_INK,
         "stroke-opacity": HAIRLINE_OPACITY,
         "stroke-width": GRID.width,
         "stroke-dasharray": GRID.dash || undefined,
@@ -930,22 +958,31 @@ function drawGridAndAxes(prepared: Prepared): string[] {
   return lines;
 }
 
+/** Which end of a bar gets the theme's corner radius: the end away from the baseline, or none. */
+type BarCap = "up" | "down" | "none";
+
+/**
+ * A bar as a path: a plain rectangle, or one with its two corners at `cap`
+ * rounded by the theme's BAR_RX (clamped to half the width and to the
+ * height). In a stack only the outermost segment is capped; the segments
+ * below it are plain rectangles so the stack reads as one bar.
+ */
 function roundedBarPath(
   x: number,
   y: number,
   w: number,
   h: number,
-  roundAwayFromBaselineUp: boolean,
+  cap: BarCap,
 ): string {
   const r = Math.min(BAR_RX, w / 2, Math.max(h, 0));
   const x0 = fmtPx(x);
   const y0 = fmtPx(y);
   const x1 = fmtPx(x + w);
   const y1 = fmtPx(y + h);
-  if (h <= 0.01 || r <= 0) {
+  if (h <= 0.01 || r <= 0 || cap === "none") {
     return `M${x0} ${fmtPx(y + h)} L${x1} ${fmtPx(y + h)} L${x1} ${y0} L${x0} ${y0} Z`;
   }
-  if (roundAwayFromBaselineUp) {
+  if (cap === "up") {
     return `M${x0} ${y1} L${x0} ${fmtPx(y + r)} Q${x0} ${y0} ${fmtPx(x + r)} ${y0} L${fmtPx(x + w - r)} ${y0} Q${x1} ${y0} ${x1} ${fmtPx(y + r)} L${x1} ${y1} Z`;
   }
   return `M${x0} ${y0} L${x1} ${y0} L${x1} ${fmtPx(y + h - r)} Q${x1} ${y1} ${fmtPx(x + w - r)} ${y1} L${fmtPx(x + r)} ${y1} Q${x0} ${y1} ${x0} ${fmtPx(y + h - r)} Z`;
@@ -1024,6 +1061,19 @@ function drawBars(prepared: Prepared): string[] {
     if (stacking && matrix) {
       let base = 0;
       const { x, barW } = barSlot(nCat, 1, catStep, plot.left, ci, 0);
+      // The outermost segment is the last series that draws any height in
+      // this category: a missing, zero, or invisibly thin last series must
+      // not leave the stack uncapped.
+      let outerIndex = -1;
+      {
+        let acc = 0;
+        for (let si = 0; si < series.length; si++) {
+          const v = matrix[si]?.[ci];
+          if (typeof v !== "number") continue;
+          if (Math.abs(yScale(acc + v) - yScale(acc)) > 0.01) outerIndex = si;
+          acc += v;
+        }
+      }
       for (let si = 0; si < series.length; si++) {
         const ser = series[si]!;
         const val = matrix[si]?.[ci];
@@ -1048,12 +1098,13 @@ function drawBars(prepared: Prepared): string[] {
         const y = Math.min(yBottom, yTop);
         const h = Math.abs(yTop - yBottom);
         const style = styles[si]!;
-        const roundUp = val >= 0;
-        // Only round the outermost (top) segment away from baseline.
-        const isOuter = si === series.length - 1;
+        // Only the outermost segment is capped, away from the baseline; the
+        // segments under it are plain rectangles.
+        const isOuter = si === outerIndex;
+        const cap: BarCap = isOuter ? (val >= 0 ? "up" : "down") : "none";
         lines.push(
           `    <path ${attrs({
-            d: roundedBarPath(x, y, barW, h, isOuter && roundUp),
+            d: roundedBarPath(x, y, barW, h, cap),
             fill: style.color,
             "fill-opacity": style.opacity === 1 ? undefined : style.opacity,
             "data-x": cat,
@@ -1150,7 +1201,7 @@ function drawBars(prepared: Prepared): string[] {
       const roundUp = val >= 0;
       lines.push(
         `    <path ${attrs({
-          d: roundedBarPath(x, y, barW, h, roundUp),
+          d: roundedBarPath(x, y, barW, h, roundUp ? "up" : "down"),
           fill: style.color,
           "fill-opacity": style.opacity === 1 ? undefined : style.opacity,
           "data-x": cat,
@@ -1205,9 +1256,9 @@ function opacityAttr(opacity: number): number | undefined {
 
 function lastPointBySeries(
   prepared: Prepared,
-): { name: string; x: number; y: number; color: string }[] {
+): { name: string; x: number; y: number; color: Color }[] {
   const catIndex = new Map(prepared.categories.map((c, i) => [c, i]));
-  const out: { name: string; x: number; y: number; color: string }[] = [];
+  const out: { name: string; x: number; y: number; color: Color }[] = [];
   const stacking =
     prepared.layout === "stacked" || prepared.layout === "percent";
   if (stacking && prepared.categories.length > 0) {
@@ -1256,7 +1307,7 @@ function lastPointBySeries(
 }
 
 function dodgeEndLabelYs(
-  items: { name: string; x: number; y: number; color: string }[],
+  items: { name: string; x: number; y: number; color: Color }[],
 ): number[] {
   const order = items
     .map((item, i) => ({ i, y: item.y }))
@@ -1312,7 +1363,7 @@ function drawLineOrArea(prepared: Prepared, area: boolean): string[] {
   const { rows, series, yScale, styles, layout, categories } = prepared;
   const catIndex = new Map(prepared.categories.map((c, i) => [c, i]));
   const stacking = layout === "stacked" || layout === "percent";
-  const lines: string[] = [`  <g fill="none">`];
+  const lines: string[] = [`  <g ${attrs({ fill: "none" })}>`];
 
   if (stacking) {
     const matrix = segmentMatrix(rows, series, categories, layout === "percent");
@@ -1590,7 +1641,7 @@ function drawHist(prepared: Prepared): string[] {
     const h = Math.abs(y1 - y0);
     lines.push(
       `    <path ${attrs({
-        d: roundedBarPath(x, y, barW, h, bin.weight >= 0),
+        d: roundedBarPath(x, y, barW, h, bin.weight >= 0 ? "up" : "down"),
         fill: style.color,
         "fill-opacity": opacityAttr(style.opacity),
         "data-bin-left": String(bin.left),

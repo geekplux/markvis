@@ -3,8 +3,9 @@ name: check
 on:
   push:
     branches: [v2, main, master]
+  # Every pull request, whatever its base: a stacked PR whose base is
+  # another PR's branch gets the same check as one against master.
   pull_request:
-    branches: [v2, main, master]
 
   workflow_call:
 
@@ -54,8 +55,18 @@ jobs:
       - name: Web build
         run: pnpm --filter web build
 
+      # The site-dist assertions in apps/web/test/chrome.test.ts skip while
+      # apps/web/.vitepress/dist is absent, and the Test step runs before the
+      # web build. Run that file once more against the built site.
+      - name: Test the built site
+        run: pnpm vitest run apps/web/test/chrome.test.ts
+
       - name: Assert theme snapshots
         run: |
           for t in folio highcharts shadcn docs; do
             test -f "examples/out/themes/${t}/01-bar-basic.svg"
           done
+
+      - name: VS Code extension (compile, list package)
+        working-directory: hosts/vscode
+        run: pnpm --filter markvis-preview compile && npx --yes @vscode/vsce@3.9.2 ls

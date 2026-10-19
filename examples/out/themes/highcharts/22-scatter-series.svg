@@ -1,23 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="scatter chart: Scores rise with study hours, 5 rows, series cohort" aria-labelledby="mv-0a47fcdc661403c6-title" aria-describedby="mv-0a47fcdc661403c6-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-0a47fcdc661403c6" font-family="&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="scatter chart: Scores rise with study hours, 5 rows, series cohort" aria-labelledby="mv-0a47fcdc661403c6-title" aria-describedby="mv-0a47fcdc661403c6-desc" data-markvis="2" data-chart-type="scatter" data-id="mv-0a47fcdc661403c6" font-family="&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif" font-size="12" style="font-family:var(--markvis-font,&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif)">
   <title id="mv-0a47fcdc661403c6-title">Scores rise with study hours</title>
   <desc id="mv-0a47fcdc661403c6-desc">scatter chart. Scores rise with study hours. x=hours. y=score. series=cohort. 5 rows.</desc>
-  <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Scores rise with study hours</title>Scores rise with study hours</text>
-  <g font-size="12" font-weight="700" fill="#333333">
-    <circle cx="360.56" cy="420" r="5" fill="#7cb5ec"/>
+  <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333" style="fill:var(--markvis-ink,#333333)"><title>Scores rise with study hours</title>Scores rise with study hours</text>
+  <g font-size="12" font-weight="700" fill="#333333" style="fill:var(--markvis-ink,#333333)">
+    <circle cx="360.56" cy="420" r="5" fill="#7cb5ec" style="fill:var(--markvis-series-1,#7cb5ec)"/>
     <text x="369.56" y="424" data-legend="A">A</text>
-    <circle cx="399.65" cy="420" r="5" fill="#434348"/>
+    <circle cx="399.65" cy="420" r="5" fill="#434348" style="fill:var(--markvis-series-2,#434348)"/>
     <text x="408.65" y="424" data-legend="B">B</text>
   </g>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1" style="stroke:var(--markvis-grid,#333333)">
     <line x1="74" x2="700" y1="288.8" y2="288.8"/>
     <line x1="74" x2="700" y1="227.6" y2="227.6"/>
     <line x1="74" x2="700" y1="166.4" y2="166.4"/>
     <line x1="74" x2="700" y1="105.2" y2="105.2"/>
     <line x1="74" x2="700" y1="44" y2="44"/>
   </g>
-  <path d="M74 350 L700 350" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
-  <path d="M82 350 L82 356 M234.5 350 L234.5 356 M387 350 L387 356 M539.5 350 L539.5 356 M692 350 L692 356" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
-  <g fill="#666666" font-size="11" font-weight="400">
+  <path d="M74 350 L700 350" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" style="stroke:var(--markvis-ink,#333333)"/>
+  <path d="M82 350 L82 356 M234.5 350 L234.5 356 M387 350 L387 356 M539.5 350 L539.5 356 M692 350 L692 356" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1" style="stroke:var(--markvis-ink,#333333)"/>
+  <g fill="#666666" font-size="11" font-weight="400" style="fill:var(--markvis-muted,#666666)">
     <text x="66" y="350" text-anchor="end" dominant-baseline="middle">30</text>
     <text x="66" y="288.8" text-anchor="end" dominant-baseline="middle">40</text>
     <text x="66" y="227.6" text-anchor="end" dominant-baseline="middle">50</text>
@@ -30,15 +30,15 @@
     <text x="539.5" y="367" text-anchor="middle" font-size="11" data-full-label="6"><title>6</title>6</text>
     <text x="692" y="367" text-anchor="middle" font-size="11" data-full-label="8"><title>8</title>8</text>
   </g>
-  <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
+  <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1" style="fill:var(--markvis-muted,#666666)">
     <text x="42.68" y="197" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 42.68 197)" data-axis="y">score</text>
     <text x="387" y="376.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">hours</text>
   </g>
   <g>
-    <circle cx="234.5" cy="288.8" r="3.5" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="2" data-y="40" data-series="A"/>
-    <circle cx="387" cy="197" r="3.5" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="4" data-y="55" data-series="A"/>
-    <rect x="307.25" y="224.1" width="7" height="7" fill="#434348" fill-opacity="0.85" data-x="3" data-y="50" data-series="B" data-scatter-mark="square"/>
-    <rect x="459.75" y="101.7" width="7" height="7" fill="#434348" fill-opacity="0.85" data-x="5" data-y="70" data-series="B" data-scatter-mark="square"/>
-    <circle cx="539.5" cy="92.96" r="3.5" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="6" data-y="72" data-series="A"/>
+    <circle cx="234.5" cy="288.8" r="3.5" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="2" data-y="40" data-series="A" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <circle cx="387" cy="197" r="3.5" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="4" data-y="55" data-series="A" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <rect x="307.25" y="224.1" width="7" height="7" fill="#434348" fill-opacity="0.85" data-x="3" data-y="50" data-series="B" data-scatter-mark="square" style="fill:var(--markvis-series-2,#434348)"/>
+    <rect x="459.75" y="101.7" width="7" height="7" fill="#434348" fill-opacity="0.85" data-x="5" data-y="70" data-series="B" data-scatter-mark="square" style="fill:var(--markvis-series-2,#434348)"/>
+    <circle cx="539.5" cy="92.96" r="3.5" fill="#7cb5ec" fill-opacity="0.85" stroke="none" data-x="6" data-y="72" data-series="A" style="fill:var(--markvis-series-1,#7cb5ec)"/>
   </g>
 </svg>

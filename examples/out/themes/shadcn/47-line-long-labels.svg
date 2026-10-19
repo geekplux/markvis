@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="line chart: Points climb through beta weeks, 3 rows" aria-labelledby="mv-edeeaf08edaeb9c1-title" aria-describedby="mv-edeeaf08edaeb9c1-desc" data-markvis="2" data-chart-type="line" data-id="mv-edeeaf08edaeb9c1" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="line chart: Points climb through beta weeks, 3 rows" aria-labelledby="mv-edeeaf08edaeb9c1-title" aria-describedby="mv-edeeaf08edaeb9c1-desc" data-markvis="2" data-chart-type="line" data-id="mv-edeeaf08edaeb9c1" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-edeeaf08edaeb9c1-title">Points climb through beta weeks</title>
   <desc id="mv-edeeaf08edaeb9c1-desc">line chart. Points climb through beta weeks. x=milestone. y=points. 3 rows.</desc>
-  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
-  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Points climb through beta weeks</title>Points climb through beta weeks</text>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1">
+  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1" style="stroke:var(--markvis-grid,#0A0A0A)"/>
+  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A" style="fill:var(--markvis-ink,#0A0A0A)"><title>Points climb through beta weeks</title>Points climb through beta weeks</text>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1" style="stroke:var(--markvis-grid,#0A0A0A)">
     <line x1="48" x2="700" y1="338.75" y2="338.75"/>
     <line x1="48" x2="700" y1="50" y2="50"/>
   </g>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#737373)">
     <text x="40" y="435" text-anchor="end" dominant-baseline="middle">20</text>
     <text x="40" y="338.75" text-anchor="end" dominant-baseline="middle">40</text>
     <text x="40" y="242.5" text-anchor="end" dominant-baseline="middle">60</text>
@@ -18,6 +18,6 @@
     <text x="591.33" y="447" text-anchor="middle" font-size="12" data-full-label="Public beta launch week"><title>Public beta launch week</title>Public beta launch week</text>
   </g>
   <g fill="none">
-    <path d="M156.67 338.75 C229.11 298.65 301.56 258.54 374 218.44 C446.44 178.33 518.89 138.23 591.33 98.13" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="points"/>
+    <path d="M156.67 338.75 C229.11 298.65 301.56 258.54 374 218.44 C446.44 178.33 518.89 138.23 591.33 98.13" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="points" style="stroke:var(--markvis-series-1,#F54900)"/>
   </g>
 </svg>

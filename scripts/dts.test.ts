@@ -3,7 +3,8 @@
  * keep up with the code, or TypeScript users see a different API than the
  * one that runs: every runtime export declared, every literal list equal.
  */
-import { readFileSync } from "node:fs";
+import { spawnSync } from "node:child_process";
+import { existsSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
@@ -60,5 +61,32 @@ describe("shipped type declarations", () => {
     expect(declaredTuple("THEMES")).toEqual([...ir.THEMES]);
     expect(declaredTuple("PALETTES")).toEqual([...ir.PALETTES]);
     expect(declaredTuple("ERROR_CODES")).toEqual([...parser.ERROR_CODES]);
+    const themes = await import("@markvis/themes");
+    expect(declaredTuple("PAINT_NAMES")).toEqual([...themes.PAINT_NAMES]);
+  });
+});
+
+const hasDistTypes = ENTRIES.every((name) => existsSync(join(root, "dist", `${name}.d.ts`)));
+
+describe.skipIf(!hasDistTypes)("a consumer of the shipped types", { timeout: 60_000 }, () => {
+  it("imports every typed subpath of package.json#exports", () => {
+    const exports = JSON.parse(readFileSync(join(root, "package.json"), "utf8")).exports as Record<string, unknown>;
+    const use = readFileSync(join(root, "scripts/dts-consumer/use.ts"), "utf8");
+    const typed = Object.entries(exports).filter(([, target]) => typeof target === "object");
+    expect(typed.length).toBeGreaterThan(0);
+    for (const [subpath] of typed) {
+      const specifier = subpath === "." ? "markvis" : `markvis${subpath.slice(1)}`;
+      expect(use, specifier).toContain(`from "${specifier}";`);
+    }
+  });
+
+  it("typechecks code that imports from every subpath", () => {
+    const tsc = join(root, "node_modules/.bin/tsc");
+    const result = spawnSync(tsc, ["-p", join(root, "scripts/dts-consumer")], {
+      cwd: root,
+      encoding: "utf8",
+    });
+    expect(`${result.stdout}${result.stderr}`).toBe("");
+    expect(result.status).toBe(0);
   });
 });

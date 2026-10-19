@@ -166,13 +166,13 @@ export function renderBoxplot(chart: ChartIR, _id: string): Painted {
             y: fmtPx(cy),
             "dominant-baseline": "middle",
             "data-value-label": cat,
-          })}>${escapeXml(label.main)}<tspan fill="${TYPE.unit.fill}" font-weight="${TYPE.unit.weight}">${escapeXml(label.rest)}</tspan></text>`,
+          })}>${escapeXml(label.main)}<tspan ${attrs({ fill: TYPE.unit.fill, "font-weight": TYPE.unit.weight })}>${escapeXml(label.rest)}</tspan></text>`,
         );
       }
     });
   });
   lines.push(`  </g>`);
-  if (labels.length > 0) {
+  if (labels.length > 0 && frame.valueColumn) {
     lines.push(
       `  <g ${attrs({
         fill: TYPE.value.fill,

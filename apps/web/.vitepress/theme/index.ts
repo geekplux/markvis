@@ -6,10 +6,11 @@ import PlayEmbed from "../../components/PlayEmbed.vue";
 import SiteNav from "../../components/SiteNav.vue";
 import FamilyFoot from "../../components/FamilyFoot.vue";
 import CopyChip from "../../components/CopyChip.vue";
-import HomeProof from "../../components/HomeProof.vue";
-import FenceTabs from "../../components/FenceTabs.vue";
 import ThemeStrip from "../../components/ThemeStrip.vue";
 import ChartBlock from "../../components/ChartBlock.vue";
+import TypeGrid from "../../components/TypeGrid.vue";
+import HeroStage from "../../components/HeroStage.vue";
+import ColorsDemo from "../../components/ColorsDemo.vue";
 import { initSiteMode } from "./siteMode";
 import "./site-mode.css";
 import "./site.css";
@@ -29,10 +30,11 @@ export default {
     app.component("Gallery", Gallery);
     app.component("PlayEmbed", PlayEmbed);
     app.component("CopyChip", CopyChip);
-    app.component("HomeProof", HomeProof);
-    app.component("FenceTabs", FenceTabs);
     app.component("ThemeStrip", ThemeStrip);
     app.component("ChartBlock", ChartBlock);
+    app.component("HeroStage", HeroStage);
+    app.component("ColorsDemo", ColorsDemo);
+    app.component("TypeGrid", TypeGrid);
     if (typeof window !== "undefined") {
       initSiteMode();
     }

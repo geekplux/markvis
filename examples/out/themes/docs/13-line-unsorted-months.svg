@@ -1,15 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: December led signups at 55, 4 rows" aria-labelledby="mv-38d53de0cc111dae-title" aria-describedby="mv-38d53de0cc111dae-desc" data-markvis="2" data-chart-type="line" data-id="mv-38d53de0cc111dae" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="line chart: December led signups at 55, 4 rows" aria-labelledby="mv-38d53de0cc111dae-title" aria-describedby="mv-38d53de0cc111dae-desc" data-markvis="2" data-chart-type="line" data-id="mv-38d53de0cc111dae" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-38d53de0cc111dae-title">December led signups at 55</title>
   <desc id="mv-38d53de0cc111dae-desc">line chart. December led signups at 55. x=month. y=signups. 4 rows.</desc>
-  <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>December led signups at 55</title>DECEMBER LED SIGNUPS AT 55</text>
-  <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3" data-grid="1">
+  <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B" style="fill:var(--markvis-ink,#18181B)"><title>December led signups at 55</title>DECEMBER LED SIGNUPS AT 55</text>
+  <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1" style="stroke:var(--markvis-ink,#18181B)"/>
+  <g fill="none" stroke="#18181B" stroke-opacity="0.32" stroke-width="1" stroke-dasharray="1 3" data-grid="1" style="stroke:var(--markvis-grid,#18181B)">
     <line x1="40" x2="704" y1="373.2" y2="373.2"/>
     <line x1="40" x2="704" y1="207.6" y2="207.6"/>
     <line x1="40" x2="704" y1="42" y2="42"/>
   </g>
-  <path d="M40 456 L704 456" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
-  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400">
+  <path d="M40 456 L704 456" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" style="stroke:var(--markvis-ink,#18181B)"/>
+  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400" style="fill:var(--markvis-muted,#64748B)">
     <text x="32" y="456" text-anchor="end" dominant-baseline="middle">10</text>
     <text x="32" y="373.2" text-anchor="end" dominant-baseline="middle">20</text>
     <text x="32" y="290.4" text-anchor="end" dominant-baseline="middle">30</text>
@@ -22,10 +22,10 @@
     <text x="621" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="Jun"><title>Jun</title>Jun</text>
   </g>
   <g fill="none">
-    <path d="M123 207.6 L289 356.64 L455 83.4 L621 290.4" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="signups"/>
-    <circle cx="123" cy="207.6" r="2" fill="#475569" stroke="none" data-series="signups"/>
-    <circle cx="289" cy="356.64" r="2" fill="#475569" stroke="none" data-series="signups"/>
-    <circle cx="455" cy="83.4" r="2" fill="#475569" stroke="none" data-series="signups"/>
-    <circle cx="621" cy="290.4" r="2" fill="#475569" stroke="none" data-series="signups"/>
+    <path d="M123 207.6 L289 356.64 L455 83.4 L621 290.4" fill="none" stroke="#475569" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" data-series="signups" style="stroke:var(--markvis-series-1,#475569)"/>
+    <circle cx="123" cy="207.6" r="2" fill="#475569" stroke="none" data-series="signups" style="fill:var(--markvis-series-1,#475569)"/>
+    <circle cx="289" cy="356.64" r="2" fill="#475569" stroke="none" data-series="signups" style="fill:var(--markvis-series-1,#475569)"/>
+    <circle cx="455" cy="83.4" r="2" fill="#475569" stroke="none" data-series="signups" style="fill:var(--markvis-series-1,#475569)"/>
+    <circle cx="621" cy="290.4" r="2" fill="#475569" stroke="none" data-series="signups" style="fill:var(--markvis-series-1,#475569)"/>
   </g>
 </svg>

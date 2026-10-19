@@ -17,8 +17,7 @@ const show = computed(() => {
       <nav aria-label="Footer">
         <a href="/get-started">Docs</a>
         <a href="/examples">Examples</a>
-        <a href="/play">Playground</a>
-        <a href="/ai">AI</a>
+        <a href="/play">Play</a>
         <a href="https://github.com/geekplux/markvis">GitHub</a>
       </nav>
     </div>

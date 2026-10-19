@@ -1,31 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: Sprint 2 carried the deepest backlog at 24, 4 rows" aria-labelledby="mv-f8a628354e7d0174-title" aria-describedby="mv-f8a628354e7d0174-desc" data-markvis="2" data-chart-type="area" data-id="mv-f8a628354e7d0174" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: Sprint 2 carried the deepest backlog at 24, 4 rows" aria-labelledby="mv-f8a628354e7d0174-title" aria-describedby="mv-f8a628354e7d0174-desc" data-markvis="2" data-chart-type="area" data-id="mv-f8a628354e7d0174" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-f8a628354e7d0174-title">Sprint 2 carried the deepest backlog at 24</title>
   <desc id="mv-f8a628354e7d0174-desc">area chart. Sprint 2 carried the deepest backlog at 24. x=sprint. y=stories. 4 rows.</desc>
-  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>Sprint 2 carried the deepest backlog at 24</title>Sprint 2 carried the deepest backlog at 24</text>
-  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1" data-grid="1">
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717" style="fill:var(--markvis-ink,#171717)"><title>Sprint 2 carried the deepest backlog at 24</title>Sprint 2 carried the deepest backlog at 24</text>
+  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1" data-grid="1" style="stroke:var(--markvis-grid,#171717)">
     <line x1="48" x2="700" y1="318" y2="318"/>
     <line x1="48" x2="700" y1="181" y2="181"/>
     <line x1="48" x2="700" y1="44" y2="44"/>
   </g>
-  <path d="M48 455 L700 455" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <path d="M48 455 L700 455" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1" style="stroke:var(--markvis-ink,#171717)"/>
+  <g fill="#737373" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#737373)">
     <text x="38" y="455" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="38" y="318" text-anchor="end" dominant-baseline="middle">10</text>
     <text x="38" y="181" text-anchor="end" dominant-baseline="middle">20</text>
     <text x="38" y="44" text-anchor="end" dominant-baseline="middle">30</text>
-    <text x="56" y="467" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
-    <text x="183.2" y="467" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
-    <text x="310.4" y="467" text-anchor="middle" font-size="12" data-full-label="2"><title>2</title>2</text>
-    <text x="437.6" y="467" text-anchor="middle" font-size="12" data-full-label="3"><title>3</title>3</text>
-    <text x="564.8" y="467" text-anchor="middle" font-size="12" data-full-label="4"><title>4</title>4</text>
-    <text x="692" y="467" text-anchor="middle" font-size="12" data-full-label="5"><title>5</title>5</text>
+    <text x="56" y="467" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
+    <text x="268" y="467" text-anchor="middle" font-size="12" data-full-label="2"><title>2</title>2</text>
+    <text x="480" y="467" text-anchor="middle" font-size="12" data-full-label="3"><title>3</title>3</text>
+    <text x="692" y="467" text-anchor="middle" font-size="12" data-full-label="4"><title>4</title>4</text>
   </g>
   <g fill="none">
-    <path d="M183.2 181 L310.4 126.2 L437.6 208.4 L564.8 153.6 L564.8 455 L183.2 455 Z" fill="#3B82F6" fill-opacity="0.22" stroke="none" data-series="stories"/>
-    <path d="M183.2 181 L310.4 126.2 L437.6 208.4 L564.8 153.6" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="stories"/>
-    <circle cx="183.2" cy="181" r="2.5" fill="#3B82F6" stroke="none" data-series="stories"/>
-    <circle cx="310.4" cy="126.2" r="2.5" fill="#3B82F6" stroke="none" data-series="stories"/>
-    <circle cx="437.6" cy="208.4" r="2.5" fill="#3B82F6" stroke="none" data-series="stories"/>
-    <circle cx="564.8" cy="153.6" r="2.5" fill="#3B82F6" stroke="none" data-series="stories"/>
+    <path d="M56 181 L268 126.2 L480 208.4 L692 153.6 L692 455 L56 455 Z" fill="#3B82F6" fill-opacity="0.22" stroke="none" data-series="stories" style="fill:var(--markvis-series-1,#3B82F6)"/>
+    <path d="M56 181 L268 126.2 L480 208.4 L692 153.6" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="stories" style="stroke:var(--markvis-series-1,#3B82F6)"/>
+    <circle cx="56" cy="181" r="2.5" fill="#3B82F6" stroke="none" data-series="stories" style="fill:var(--markvis-series-1,#3B82F6)"/>
+    <circle cx="268" cy="126.2" r="2.5" fill="#3B82F6" stroke="none" data-series="stories" style="fill:var(--markvis-series-1,#3B82F6)"/>
+    <circle cx="480" cy="208.4" r="2.5" fill="#3B82F6" stroke="none" data-series="stories" style="fill:var(--markvis-series-1,#3B82F6)"/>
+    <circle cx="692" cy="153.6" r="2.5" fill="#3B82F6" stroke="none" data-series="stories" style="fill:var(--markvis-series-1,#3B82F6)"/>
   </g>
 </svg>

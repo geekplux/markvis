@@ -1,18 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="pie chart: Yes leads survey answers at 60, 3 slices" aria-labelledby="mv-8636ea173fdc9363-title" aria-describedby="mv-8636ea173fdc9363-desc" data-markvis="2" data-chart-type="pie" data-id="mv-8636ea173fdc9363" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="pie chart: Yes leads survey answers at 60, 3 slices" aria-labelledby="mv-8636ea173fdc9363-title" aria-describedby="mv-8636ea173fdc9363-desc" data-markvis="2" data-chart-type="pie" data-id="mv-8636ea173fdc9363" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" style="font-family:var(--markvis-font,-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif)">
   <title id="mv-8636ea173fdc9363-title">Yes leads survey answers at 60</title>
   <desc id="mv-8636ea173fdc9363-desc">pie chart. Yes leads survey answers at 60. x=label. y=n. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="48" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Yes leads survey answers at 60</title>Yes leads survey answers at 60</text>
+  <text x="48" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626" style="fill:var(--markvis-ink,#262626)"><title>Yes leads survey answers at 60</title>Yes leads survey answers at 60</text>
   <g aria-hidden="true" data-pie-label-mode="leaders" data-pie-inner-ratio="0.6">
-    <path d="M377 103.6 A122.4 122.4 0 1 1 305.06 325.02 L333.83 285.41 A73.44 73.44 0 1 0 377 152.56 Z" fill="#5AD8A6" stroke="#262626" stroke-opacity="0.32" stroke-width="1.5" data-label="yes" data-raw-value="60" data-donut="1"/>
-    <path d="M305.06 325.02 A122.4 122.4 0 0 1 305.06 126.98 L333.83 166.59 A73.44 73.44 0 0 0 333.83 285.41 Z" fill="#E8684A" stroke="#262626" stroke-opacity="0.32" stroke-width="1.5" data-label="no" data-raw-value="30" data-donut="1"/>
-    <path d="M305.06 126.98 A122.4 122.4 0 0 1 377 103.6 L377 152.56 A73.44 73.44 0 0 0 333.83 166.59 Z" fill="#5D7092" stroke="#262626" stroke-opacity="0.32" stroke-width="1.5" data-label="other" data-raw-value="10" data-donut="1"/>
+    <path d="M377 103.6 A122.4 122.4 0 1 1 305.06 325.02 L333.83 285.41 A73.44 73.44 0 1 0 377 152.56 Z" fill="#5AD8A6" stroke="#262626" stroke-opacity="0.32" stroke-width="1.5" data-label="yes" data-raw-value="60" data-donut="1" style="fill:var(--markvis-series-1,#5AD8A6);stroke:var(--markvis-ink,#262626)"/>
+    <path d="M305.06 325.02 A122.4 122.4 0 0 1 305.06 126.98 L333.83 166.59 A73.44 73.44 0 0 0 333.83 285.41 Z" fill="#E8684A" stroke="#262626" stroke-opacity="0.32" stroke-width="1.5" data-label="no" data-raw-value="30" data-donut="1" style="fill:var(--markvis-series-2,#E8684A);stroke:var(--markvis-ink,#262626)"/>
+    <path d="M305.06 126.98 A122.4 122.4 0 0 1 377 103.6 L377 152.56 A73.44 73.44 0 0 0 333.83 166.59 Z" fill="#5D7092" stroke="#262626" stroke-opacity="0.32" stroke-width="1.5" data-label="other" data-raw-value="10" data-donut="1" style="fill:var(--markvis-series-3,#5D7092);stroke:var(--markvis-ink,#262626)"/>
   </g>
-  <g fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-leaders="1">
+  <g fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-leaders="1" style="stroke:var(--markvis-ink,#262626)">
     <polyline points="493.41,263.82 508.63,268.77 516.63,268.77"/>
     <polyline points="254.6,226 238.6,226 230.6,226"/>
     <polyline points="339.18,109.59 334.23,94.37 326.23,94.37"/>
   </g>
-  <g font-size="12" font-weight="400" fill="#262626">
+  <g font-size="12" font-weight="400" fill="#262626" style="fill:var(--markvis-ink,#262626)">
     <text x="528.63" y="268.77" text-anchor="start" dominant-baseline="middle" data-label="yes">yes · 60</text>
     <text x="218.6" y="226" text-anchor="end" dominant-baseline="middle" data-label="no">no · 30</text>
     <text x="314.23" y="94.37" text-anchor="end" dominant-baseline="middle" data-label="other">other · 10</text>

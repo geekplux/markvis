@@ -44,6 +44,39 @@ Hex lock (series 0…7), source of truth also `packages/themes/palettes.ts`:
 | **cool** | `#2F6F8F` | `#3D8B8C` | `#4A6FA5` | `#5B9AA8` | `#3A5F7A` | `#6B8FB8` | `#2E7A6E` | `#7A9BB0` |
 | **vivid** | `#E11D48` | `#2563EB` | `#16A34A` | `#D97706` | `#9333EA` | `#0891B2` | `#EA580C` | `#4F46E5` |
 
+## Host colors (fallbacks)
+
+A pack's colors are the fixed values every chart can fall back to. A chart drawn in a page writes each one as an attribute plus a `style` that reads a page variable, `fill="#3B82F6" style="fill:var(--markvis-series-1,#3B82F6)"`; `bake`, `markvis render`, and `surface: export` write the attribute only. Names, frozen in `packages/themes/paint-names.ts` (`PAINT_NAMES`, `CSS_VARIABLES`):
+
+| Name | Pack source |
+| --- | --- |
+| `ink` | `INK`, `TYPE.title/value/legend.fill`, a surface's `INK` |
+| `muted` | `QUIET`, `TYPE.unit/note/tick.fill`, a surface's `QUIET` and `TICK` |
+| `grid` | `INK` on grid lines, radar rings, and the card outline, drawn faint (`HAIRLINE_OPACITY` / `STRUCTURE_OPACITY`) |
+| `paper` | a surface's `PAPER`, and `SEMANTIC.cellGap` (always the paper) |
+| `plate` | a surface's `PLATE` |
+| `plot` | `PLOT_BG` |
+| `series-1` … `series-8` | `PALETTE` (or a surface's `PALETTE`, or `palette:`), by position; a line end label darkened for the paper keeps its series name with the darkened hex |
+| `accent` | `HERO.color` |
+| `up` `down` `total` | `SEMANTIC.up/down/total` |
+| `font` (opt-in) | `FONT`, on the root `<svg>` |
+
+Fixed in every mode: `PLOT_BORDER`, `SEMANTIC.rampLow/missing/cellRule` (heatmap and calendar mixes), and `SEMANTIC.inkOnLight/inkOnDark` (labels on a mark, picked for the fixed fill and paper under them). A pack keeps text at 4.5:1 on each surface paper (`packages/render-svg/test/a11y.test.ts`).
+
+Series colors under 3:1 on their surface paper (1-based), kept because each pack keeps the palette its name promises; position, legend, and labels still separate the series:
+
+| Pack | light | dark | export |
+| --- | --- | --- | --- |
+| `folio` | 2 3 5 6 | — | 2 3 5 6 |
+| `highcharts` | 1 3 4 7 | — | 1 3 4 7 |
+| `shadcn` | 4 5 | 1 | 4 5 |
+| `docs` | — | — | — |
+| `ant` | 1 4 5 7 | — | 1 4 5 7 |
+| `recharts` | 2 3 4 6 7 8 | — | 2 3 4 6 7 8 |
+| `graphite` | 5 6 7 | 6 7 | 4 5 6 7 |
+
+Palettes on a white page / on the default dark paper: `ink` — / 1 2 4 5 6 8 · `porcelain` 2 4 6 8 / — · `warm` 2 4 8 / 3 5 · `cool` 8 / 5 · `vivid` — / 8.
+
 ---
 
 ## folio

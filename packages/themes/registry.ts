@@ -19,6 +19,12 @@ export type {
   TypeRole,
 } from "./contract.js";
 export { folio, highcharts, shadcn, docs, ant, recharts, graphite };
+export {
+  CSS_VARIABLES,
+  PAINT_NAMES,
+  type CssVariable,
+  type PaintName,
+} from "./paint-names.js";
 
 export {
   applyPaletteToTheme,

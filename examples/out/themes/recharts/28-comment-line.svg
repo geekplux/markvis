@@ -1,22 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="line chart: Tuesday peaked error bursts at 5, 3 rows" aria-labelledby="mv-5d71eed81323c10e-title" aria-describedby="mv-5d71eed81323c10e-desc" data-markvis="2" data-chart-type="line" data-id="mv-5d71eed81323c10e" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="line chart: Tuesday peaked error bursts at 5, 3 rows" aria-labelledby="mv-5d71eed81323c10e-title" aria-describedby="mv-5d71eed81323c10e-desc" data-markvis="2" data-chart-type="line" data-id="mv-5d71eed81323c10e" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-5d71eed81323c10e-title">Tuesday peaked error bursts at 5</title>
   <desc id="mv-5d71eed81323c10e-desc">line chart. Tuesday peaked error bursts at 5. x=day. y=errors. 3 rows.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>Tuesday peaked error bursts at 5</title>Tuesday peaked error bursts at 5</text>
-  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-grid="1">
+  <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151" style="fill:var(--markvis-ink,#374151)"><title>Tuesday peaked error bursts at 5</title>Tuesday peaked error bursts at 5</text>
+  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-grid="1" style="stroke:var(--markvis-grid,#374151)">
     <line x1="48" x2="700" y1="342.8" y2="342.8"/>
     <line x1="48" x2="700" y1="266.6" y2="266.6"/>
     <line x1="48" x2="700" y1="114.2" y2="114.2"/>
     <line x1="48" x2="700" y1="38" y2="38"/>
   </g>
-  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-grid="1" data-v-grid="1">
+  <g fill="none" stroke="#374151" stroke-opacity="0.22" stroke-width="1" stroke-dasharray="3 3" data-grid="1" data-v-grid="1" style="stroke:var(--markvis-grid,#374151)">
     <line x1="156.67" x2="156.67" y1="38" y2="419" data-v-grid="1"/>
     <line x1="374" x2="374" y1="38" y2="419" data-v-grid="1"/>
     <line x1="591.33" x2="591.33" y1="38" y2="419" data-v-grid="1"/>
   </g>
-  <path d="M48 419 L700 419" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1"/>
-  <path d="M48 38 L48 419" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-axis-line="y"/>
-  <path d="M156.67 419 L156.67 425 M374 419 L374 425 M591.33 419 L591.33 425 M42 419 L48 419 M42 342.8 L48 342.8 M42 266.6 L48 266.6 M42 190.4 L48 190.4 M42 114.2 L48 114.2 M42 38 L48 38" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-axis-ticks="1"/>
-  <g fill="#6B7280" font-size="12" font-weight="400">
+  <path d="M48 419 L700 419" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1" style="stroke:var(--markvis-ink,#374151)"/>
+  <path d="M48 38 L48 419" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-axis-line="y" style="stroke:var(--markvis-ink,#374151)"/>
+  <path d="M156.67 419 L156.67 425 M374 419 L374 425 M591.33 419 L591.33 425 M42 419 L48 419 M42 342.8 L48 342.8 M42 266.6 L48 266.6 M42 190.4 L48 190.4 M42 114.2 L48 114.2 M42 38 L48 38" fill="none" stroke="#374151" stroke-opacity="0.28" stroke-width="1" data-axis-ticks="1" style="stroke:var(--markvis-ink,#374151)"/>
+  <g fill="#6B7280" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#6B7280)">
     <text x="34" y="419" text-anchor="end" dominant-baseline="middle">1</text>
     <text x="34" y="342.8" text-anchor="end" dominant-baseline="middle">2</text>
     <text x="34" y="266.6" text-anchor="end" dominant-baseline="middle">3</text>
@@ -28,9 +28,9 @@
     <text x="591.33" y="437" text-anchor="middle" font-size="12" data-full-label="Wed"><title>Wed</title>Wed</text>
   </g>
   <g fill="none">
-    <path d="M156.67 266.6 C229.11 215.8 301.56 114.2 374 114.2 C446.44 114.2 518.89 266.6 591.33 342.8" fill="none" stroke="#8884d8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="errors"/>
-    <circle cx="156.67" cy="266.6" r="3.5" fill="#ffffff" stroke="#8884d8" stroke-width="1.5" data-series="errors"/>
-    <circle cx="374" cy="114.2" r="3.5" fill="#ffffff" stroke="#8884d8" stroke-width="1.5" data-series="errors"/>
-    <circle cx="591.33" cy="342.8" r="3.5" fill="#ffffff" stroke="#8884d8" stroke-width="1.5" data-series="errors"/>
+    <path d="M156.67 266.6 C229.11 215.8 301.56 114.2 374 114.2 C446.44 114.2 518.89 266.6 591.33 342.8" fill="none" stroke="#8884d8" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="errors" style="stroke:var(--markvis-series-1,#8884d8)"/>
+    <circle cx="156.67" cy="266.6" r="3.5" fill="#ffffff" stroke="#8884d8" stroke-width="1.5" data-series="errors" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#8884d8)"/>
+    <circle cx="374" cy="114.2" r="3.5" fill="#ffffff" stroke="#8884d8" stroke-width="1.5" data-series="errors" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#8884d8)"/>
+    <circle cx="591.33" cy="342.8" r="3.5" fill="#ffffff" stroke="#8884d8" stroke-width="1.5" data-series="errors" style="fill:var(--markvis-paper,#ffffff);stroke:var(--markvis-series-1,#8884d8)"/>
   </g>
 </svg>

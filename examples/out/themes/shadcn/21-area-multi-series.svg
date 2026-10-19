@@ -1,34 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="area chart: Queue A stays deeper than queue B, 6 rows, series queue" aria-labelledby="mv-8c2fdefb06435294-title" aria-describedby="mv-8c2fdefb06435294-desc" data-markvis="2" data-chart-type="area" data-id="mv-8c2fdefb06435294" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="area chart: Queue A stays deeper than queue B, 6 rows, series queue" aria-labelledby="mv-8c2fdefb06435294-title" aria-describedby="mv-8c2fdefb06435294-desc" data-markvis="2" data-chart-type="area" data-id="mv-8c2fdefb06435294" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-8c2fdefb06435294-title">Queue A stays deeper than queue B</title>
   <desc id="mv-8c2fdefb06435294-desc">area chart. Queue A stays deeper than queue B. x=minute. y=depth. series=queue. 6 rows.</desc>
-  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
-  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Queue A stays deeper than queue B</title>Queue A stays deeper than queue B</text>
-  <g font-size="12" font-weight="500" fill="#0A0A0A">
-    <rect x="342.38" y="435" width="10" height="10" fill="#F54900" rx="3"/>
+  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1" style="stroke:var(--markvis-grid,#0A0A0A)"/>
+  <text x="48" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A" style="fill:var(--markvis-ink,#0A0A0A)"><title>Queue A stays deeper than queue B</title>Queue A stays deeper than queue B</text>
+  <g font-size="12" font-weight="500" fill="#0A0A0A" style="fill:var(--markvis-ink,#0A0A0A)">
+    <rect x="342.38" y="435" width="10" height="10" fill="#F54900" rx="3" style="fill:var(--markvis-series-1,#F54900)"/>
     <text x="356.38" y="444" data-legend="A">A</text>
-    <rect x="381.04" y="435" width="10" height="10" fill="#009689" rx="3"/>
+    <rect x="381.04" y="435" width="10" height="10" fill="#009689" rx="3" style="fill:var(--markvis-series-2,#009689)"/>
     <text x="395.04" y="444" data-legend="B">B</text>
   </g>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1">
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1" style="stroke:var(--markvis-grid,#0A0A0A)">
     <line x1="48" x2="700" y1="320.75" y2="320.75"/>
     <line x1="48" x2="700" y1="50" y2="50"/>
   </g>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#737373)">
     <text x="40" y="411" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="40" y="320.75" text-anchor="end" dominant-baseline="middle">2</text>
     <text x="40" y="230.5" text-anchor="end" dominant-baseline="middle">4</text>
     <text x="40" y="140.25" text-anchor="end" dominant-baseline="middle">6</text>
     <text x="40" y="50" text-anchor="end" dominant-baseline="middle">8</text>
-    <text x="56" y="423" text-anchor="middle" font-size="12" data-full-label="-1"><title>-1</title>-1</text>
-    <text x="215" y="423" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
+    <text x="56" y="423" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
     <text x="374" y="423" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
-    <text x="533" y="423" text-anchor="middle" font-size="12" data-full-label="2"><title>2</title>2</text>
-    <text x="692" y="423" text-anchor="middle" font-size="12" data-full-label="3"><title>3</title>3</text>
+    <text x="692" y="423" text-anchor="middle" font-size="12" data-full-label="2"><title>2</title>2</text>
   </g>
   <g fill="none">
-    <path d="M215 185.38 C268 155.29 321 95.13 374 95.13 C427 95.13 480 125.21 533 140.25 L533 411 L215 411 Z" fill="#F54900" fill-opacity="0.3" stroke="none" data-series="A"/>
-    <path d="M215 185.38 C268 155.29 321 95.13 374 95.13 C427 95.13 480 125.21 533 140.25" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="A"/>
-    <path d="M215 320.75 C268 305.71 321 290.67 374 275.63 C427 260.58 480 245.54 533 230.5 L533 411 L215 411 Z" fill="#009689" fill-opacity="0.3" stroke="none" data-series="B"/>
-    <path d="M215 320.75 C268 305.71 321 290.67 374 275.63 C427 260.58 480 245.54 533 230.5" fill="none" stroke="#009689" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="B"/>
+    <path d="M56 185.38 C162 155.29 268 95.13 374 95.13 C480 95.13 586 125.21 692 140.25 L692 411 L56 411 Z" fill="#F54900" fill-opacity="0.3" stroke="none" data-series="A" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M56 185.38 C162 155.29 268 95.13 374 95.13 C480 95.13 586 125.21 692 140.25" fill="none" stroke="#F54900" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="A" style="stroke:var(--markvis-series-1,#F54900)"/>
+    <path d="M56 320.75 C162 305.71 268 290.67 374 275.63 C480 260.58 586 245.54 692 230.5 L692 411 L56 411 Z" fill="#009689" fill-opacity="0.3" stroke="none" data-series="B" style="fill:var(--markvis-series-2,#009689)"/>
+    <path d="M56 320.75 C162 305.71 268 290.67 374 275.63 C480 260.58 586 245.54 692 230.5" fill="none" stroke="#009689" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="B" style="stroke:var(--markvis-series-2,#009689)"/>
   </g>
 </svg>

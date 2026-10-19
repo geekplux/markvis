@@ -1,0 +1,50 @@
+{
+  "name": "markvis-preview",
+  "displayName": "markvis preview",
+  "description": "Charts in the Markdown preview from a short code block: header lines plus a CSV or table. Seventeen chart types, follows the editor theme, no network. The block stays readable text.",
+  "version": "0.0.1",
+  "publisher": "geekplux",
+  "license": "MIT",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geekplux/markvis.git",
+    "directory": "hosts/vscode"
+  },
+  "homepage": "https://markvis.js.org",
+  "bugs": {
+    "url": "https://github.com/geekplux/markvis/issues"
+  },
+  "keywords": [
+    "markdown",
+    "chart",
+    "charts",
+    "svg",
+    "visualization",
+    "markdown-preview",
+    "csv",
+    "markvis"
+  ],
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "markdown.markdownItPlugins": true,
+    "markdown.previewStyles": [
+      "./preview.css"
+    ]
+  },
+  "scripts": {
+    "compile": "esbuild src/extension.ts --bundle --platform=node --format=cjs --target=node18 --outfile=dist/extension.js --external:vscode"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.7",
+    "markvis": "^2.2.0"
+  }
+}

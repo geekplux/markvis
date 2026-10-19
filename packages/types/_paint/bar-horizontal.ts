@@ -1,4 +1,5 @@
 import type { ChartIR } from "@markvis/ir";
+import type { Color } from "./paint.js";
 import {
   categoryNames,
   finiteValues,
@@ -7,7 +8,7 @@ import {
   seriesNames,
 } from "./data.js";
 import { drawTitle, reserveTitle, visibleTitle } from "./figure.js";
-import { layoutLegend, titleBlockTop, type Painted } from "./layout.js";
+import { fitGutters, layoutLegend, titleBlockTop, type Painted } from "./layout.js";
 import { heroFill, heroIndex, seriesStyle } from "./palette.js";
 import { formatNumber, labelTicks, niceTicks, scaleLinear, yExtent } from "./scale.js";
 import { textWidth, wrapText } from "./text.js";
@@ -16,6 +17,7 @@ import {
   FONT,
   FONT_NUMERIC,
   GRID,
+  GRID_INK,
   HAIRLINE_OPACITY,
   INK,
   MARGIN,
@@ -111,8 +113,7 @@ export function renderHorizontalBar(chart: ChartIR, _id: string): Painted {
       )
     : { items: [], height: 0 };
 
-  const left = Math.max(MARGIN.left, labelW + 16);
-  const right = Math.max(MARGIN.right, 72);
+  const { left, right } = fitGutters(SVG_WIDTH, Math.max(MARGIN.left, labelW + 16), Math.max(MARGIN.right, 72));
   // Title uses the full figure width, above the plot, so a long heading
   // does not wrap into the category gutter and cross the first bar.
   const titleX = MARGIN.left;
@@ -183,7 +184,7 @@ export function renderHorizontalBar(chart: ChartIR, _id: string): Painted {
   lines.push(
     `  <g ${attrs({
       fill: "none",
-      stroke: INK,
+      stroke: GRID_INK,
       "stroke-opacity": HAIRLINE_OPACITY,
       "stroke-width": GRID.width,
       "stroke-dasharray": GRID.dash || undefined,
@@ -387,7 +388,7 @@ function paintBar(
   y: number,
   h: number,
   val: number,
-  color: string,
+  color: Color,
   cat: string,
   series: string,
 ): void {

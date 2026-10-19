@@ -25,7 +25,7 @@ const FORBIDDEN_IMPORT =
 
 function listWorkspacePackageJsons(): string[] {
   const out: string[] = [];
-  for (const top of ["packages", "apps"] as const) {
+  for (const top of ["packages", "apps", "hosts"] as const) {
     const dir = join(repoRoot, top);
     for (const name of readdirSync(dir)) {
       const pkg = join(dir, name, "package.json");
@@ -205,7 +205,7 @@ describe("frozen language", () => {
   });
 });
 
-describe("no d3 in packages or apps", () => {
+describe("no d3 in packages, apps, or hosts", () => {
   it("has no forbidden dependency names", () => {
     const pkgs = listWorkspacePackageJsons();
     expect(pkgs.length).toBeGreaterThan(0);
@@ -229,6 +229,7 @@ describe("no d3 in packages or apps", () => {
     const files = [
       ...walkSourceFiles(join(repoRoot, "packages")),
       ...walkSourceFiles(join(repoRoot, "apps")),
+      ...walkSourceFiles(join(repoRoot, "hosts")),
     ];
     expect(files.length).toBeGreaterThan(0);
     for (const file of files) {
@@ -366,7 +367,7 @@ describe("docs: live grammar, diagrams, unused shims", () => {
       "docs/site.md",
       "docs/themes.md",
       "apps/web/spec.md",
-      "extensions/vscode-markvis-preview/README.md",
+      "hosts/vscode/README.md",
     ];
     const stale = [
       /(?:\*\*)?no(?:\*\*)? `theme:`/,
@@ -721,28 +722,25 @@ describe("public contract", () => {
     expect(bake).toMatch(/branches:\s*\[v2, master\]/);
   });
 
-  it("stamps npm, script, and skill as available now", () => {
-    const home = readRepo("apps/web/index.md");
-    expect(
-      home.match(/home-host-name">npm<\/span>\s*<span class="home-host-status">([^<]+)/)?.[1],
-    ).toBe("available now");
-    expect(
-      home.match(/home-host-name">script<\/span>\s*<span class="home-host-status">([^<]+)/)?.[1],
-    ).toBe("available now");
-    expect(
-      home.match(/home-host-name">skill<\/span>\s*<span class="home-host-status">([^<]+)/)?.[1],
-    ).toBe("available now");
+  it("lists npm, the script tag, and the skill on /integrate", () => {
+    // The home hosts strip is gone; Integrate is the one list of ways in.
+    const integrate = readRepo("apps/web/integrate.md");
+    expect(integrate).toContain("npm install markvis");
+    expect(integrate).toContain("cdn.jsdelivr.net/npm/markvis@2/dist/markvis.min.js");
+    expect(integrate).toContain("skills/markvis/SKILL.md");
+    expect(integrate).toContain("markvis/react");
+    expect(integrate).toContain("rehype");
+    expect(integrate).toContain("uses: geekplux/markvis@master");
+    expect(readRepo("apps/web/index.md")).not.toContain("available now");
   });
 
   it("homepage copy does not say IR or fence", () => {
     const home = readRepo("apps/web/index.md");
     expect(home).not.toMatch(/\bIR\b/);
-    expect(home.replace(/<FenceTabs\s*\/>/g, "")).not.toMatch(/fence/i);
-    expect(home).toContain("The numbers are the picture.");
+    expect(home).not.toMatch(/fence/i);
+    expect(home).toContain("Charts as text in Markdown.");
     expect(readRepo("apps/web/get-started.md")).not.toMatch(/\bIR\b/);
-    expect(readRepo("docs/site.md")).toContain(
-      "Headline: Charts in Markdown. / The numbers are the picture.",
-    );
+    expect(readRepo("docs/site.md")).toContain("Headline: Charts as text in Markdown.");
     const slogan = readRepo("README.md")
       .split("\n")
       .find((line) => line.includes("**Charts in Markdown."));
@@ -781,7 +779,7 @@ describe("public contract", () => {
 
   it("points Skill blob URLs at master, not v2", () => {
     const files = [
-      "apps/web/ai.md",
+      "apps/web/integrate.md",
       "apps/web/get-started.md",
       "README.md",
       "CONTRIBUTING.md",
@@ -791,9 +789,22 @@ describe("public contract", () => {
       const text = readRepo(rel);
       expect(text, rel).not.toContain("/blob/v2/");
     }
-    expect(readRepo("apps/web/ai.md")).toContain(
+    expect(readRepo("apps/web/integrate.md")).toContain(
       "github.com/geekplux/markvis/blob/master/skills/markvis/SKILL.md",
     );
   });
 });
 
+
+describe("theming page", () => {
+  it("documents every CSS variable a chart reads", async () => {
+    const { CSS_VARIABLES } = await import("@markvis/themes");
+    const page = readRepo("apps/web/theming.md");
+    const yours = page.slice(page.indexOf("## Your colors"), page.indexOf("## Themes"));
+    expect(CSS_VARIABLES).toHaveLength(19);
+    for (const name of CSS_VARIABLES) {
+      expect(yours, name).toMatch(new RegExp(`\\| \`${name}\` \\| \\S`));
+    }
+    expect(yours).toContain("### What does not follow the page");
+  });
+});

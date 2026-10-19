@@ -11,6 +11,7 @@ import {
   categoryBottomMargin,
   categoryLayout,
   fitFrameHeight,
+  fitGutters,
   tickLeftMargin,
   titleBlockTop,
   SVG_WIDTH,
@@ -60,8 +61,7 @@ export function renderHeatmap(chart: ChartIR, svgId: string): Painted {
     naturalEnd <= SVG_WIDTH - 8 + 0.5 || shifted >= barEnd + 2
       ? rampW
       : Math.max(rampW, scaleLabelW + 40 - MARGIN.right);
-  const left = tickLeftMargin(yCats);
-  const right = MARGIN.right + legendW;
+  const { left, right } = fitGutters(SVG_WIDTH, tickLeftMargin(yCats), MARGIN.right + legendW);
   reserveTitle(visibleTitle(chart), left, chart.unit);
   const top = titleBlockTop(0);
   const draftW = Math.max(SVG_WIDTH - left - right, 1);
@@ -96,8 +96,8 @@ export function renderHeatmap(chart: ChartIR, svgId: string): Painted {
       width: 6,
       height: 6,
     })}>`,
-    `      <rect width="6" height="6" fill="${SEMANTIC.rampLow}"/>`,
-    `      <path d="M0 6 L6 0" stroke="${SEMANTIC.missing}" stroke-width="1"/>`,
+    `      <rect ${attrs({ width: 6, height: 6, fill: SEMANTIC.rampLow })}/>`,
+    `      <path ${attrs({ d: "M0 6 L6 0", stroke: SEMANTIC.missing, "stroke-width": 1 })}/>`,
     `    </pattern>`,
     `  </defs>`,
   ];

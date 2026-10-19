@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="bar chart: Jul peaked Midtown walks at 22k (walks), 12 rows" aria-labelledby="mv-ac9a8903c1bfbfcc-title" aria-describedby="mv-ac9a8903c1bfbfcc-desc" data-markvis="2" data-chart-type="bar" data-id="mv-ac9a8903c1bfbfcc" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="460" viewBox="0 0 720 460" role="img" aria-label="bar chart: Jul peaked Midtown walks at 22k (walks), 12 rows" aria-labelledby="mv-ac9a8903c1bfbfcc-title" aria-describedby="mv-ac9a8903c1bfbfcc-desc" data-markvis="2" data-chart-type="bar" data-id="mv-ac9a8903c1bfbfcc" font-family="Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,Geist, Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-ac9a8903c1bfbfcc-title">Jul peaked Midtown walks at 22k</title>
   <desc id="mv-ac9a8903c1bfbfcc-desc">bar chart. Jul peaked Midtown walks at 22k. x=month. y=walks. unit=walks. 12 rows.</desc>
-  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1"/>
-  <text x="51.01" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A"><title>Jul peaked Midtown walks at 22k</title>Jul peaked Midtown walks at 22k</text>
-  <text x="51.01" y="51" text-anchor="start" font-size="13" font-weight="400" fill="#737373" data-subtitle="1">walks</text>
-  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1">
+  <rect x="0.5" y="0.5" width="719" height="459" rx="12" fill="none" stroke="#0A0A0A" stroke-opacity="0.08" data-frame="1" style="stroke:var(--markvis-grid,#0A0A0A)"/>
+  <text x="51.01" y="30" text-anchor="start" font-size="16" font-weight="600" fill="#0A0A0A" style="fill:var(--markvis-ink,#0A0A0A)"><title>Jul peaked Midtown walks at 22k</title>Jul peaked Midtown walks at 22k</text>
+  <text x="51.01" y="51" text-anchor="start" font-size="13" font-weight="400" fill="#737373" data-subtitle="1" style="fill:var(--markvis-muted,#737373)">walks</text>
+  <g fill="none" stroke="#0A0A0A" stroke-opacity="0.08" stroke-width="1" data-grid="1" style="stroke:var(--markvis-grid,#0A0A0A)">
     <line x1="51.01" x2="700" y1="314" y2="314"/>
     <line x1="51.01" x2="700" y1="72" y2="72"/>
   </g>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#737373)">
     <text x="43.01" y="435" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="43.01" y="314" text-anchor="end" dominant-baseline="middle">10,000</text>
     <text x="43.01" y="193" text-anchor="end" dominant-baseline="middle">20,000</text>
@@ -27,17 +27,17 @@
     <text x="672.96" y="447" text-anchor="middle" font-size="12" data-full-label="Dec"><title>Dec</title>Dec</text>
   </g>
   <g>
-    <path d="M56.42 435 L56.42 343.78 Q56.42 335.78 64.42 335.78 L91.68 335.78 Q99.68 335.78 99.68 343.78 L99.68 435 Z" fill="#F54900" data-x="Jan" data-series="walks" data-y="8200"/>
-    <path d="M110.5 435 L110.5 332.89 Q110.5 324.89 118.5 324.89 L145.77 324.89 Q153.77 324.89 153.77 332.89 L153.77 435 Z" fill="#F54900" data-x="Feb" data-series="walks" data-y="9100"/>
-    <path d="M164.58 435 L164.58 315.95 Q164.58 307.95 172.58 307.95 L199.85 307.95 Q207.85 307.95 207.85 315.95 L207.85 435 Z" fill="#F54900" data-x="Mar" data-series="walks" data-y="10500"/>
-    <path d="M218.66 435 L218.66 307.48 Q218.66 299.48 226.66 299.48 L253.93 299.48 Q261.93 299.48 261.93 307.48 L261.93 435 Z" fill="#F54900" data-x="Apr" data-series="walks" data-y="11200"/>
-    <path d="M272.75 435 L272.75 263.92 Q272.75 255.92 280.75 255.92 L308.01 255.92 Q316.01 255.92 316.01 263.92 L316.01 435 Z" fill="#F54900" data-x="May" data-series="walks" data-y="14800"/>
-    <path d="M326.83 435 L326.83 217.94 Q326.83 209.94 334.83 209.94 L362.1 209.94 Q370.1 209.94 370.1 217.94 L370.1 435 Z" fill="#F54900" data-x="Jun" data-series="walks" data-y="18600"/>
-    <path d="M380.91 435 L380.91 176.8 Q380.91 168.8 388.91 168.8 L416.18 168.8 Q424.18 168.8 424.18 176.8 L424.18 435 Z" fill="#F54900" data-x="Jul" data-series="walks" data-y="22000"/>
-    <path d="M434.99 435 L434.99 199.79 Q434.99 191.79 442.99 191.79 L470.26 191.79 Q478.26 191.79 478.26 199.79 L478.26 435 Z" fill="#F54900" data-x="Aug" data-series="walks" data-y="20100"/>
-    <path d="M489.08 435 L489.08 240.93 Q489.08 232.93 497.08 232.93 L524.34 232.93 Q532.34 232.93 532.34 240.93 L532.34 435 Z" fill="#F54900" data-x="Sep" data-series="walks" data-y="16700"/>
-    <path d="M543.16 435 L543.16 284.49 Q543.16 276.49 551.16 276.49 L578.43 276.49 Q586.43 276.49 586.43 284.49 L586.43 435 Z" fill="#F54900" data-x="Oct" data-series="walks" data-y="13100"/>
-    <path d="M597.24 435 L597.24 312.32 Q597.24 304.32 605.24 304.32 L632.51 304.32 Q640.51 304.32 640.51 312.32 L640.51 435 Z" fill="#F54900" data-x="Nov" data-series="walks" data-y="10800"/>
-    <path d="M651.33 435 L651.33 292.96 Q651.33 284.96 659.33 284.96 L686.59 284.96 Q694.59 284.96 694.59 292.96 L694.59 435 Z" fill="#F54900" data-x="Dec" data-series="walks" data-y="12400"/>
+    <path d="M56.42 435 L56.42 343.78 Q56.42 335.78 64.42 335.78 L91.68 335.78 Q99.68 335.78 99.68 343.78 L99.68 435 Z" fill="#F54900" data-x="Jan" data-series="walks" data-y="8200" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M110.5 435 L110.5 332.89 Q110.5 324.89 118.5 324.89 L145.77 324.89 Q153.77 324.89 153.77 332.89 L153.77 435 Z" fill="#F54900" data-x="Feb" data-series="walks" data-y="9100" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M164.58 435 L164.58 315.95 Q164.58 307.95 172.58 307.95 L199.85 307.95 Q207.85 307.95 207.85 315.95 L207.85 435 Z" fill="#F54900" data-x="Mar" data-series="walks" data-y="10500" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M218.66 435 L218.66 307.48 Q218.66 299.48 226.66 299.48 L253.93 299.48 Q261.93 299.48 261.93 307.48 L261.93 435 Z" fill="#F54900" data-x="Apr" data-series="walks" data-y="11200" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M272.75 435 L272.75 263.92 Q272.75 255.92 280.75 255.92 L308.01 255.92 Q316.01 255.92 316.01 263.92 L316.01 435 Z" fill="#F54900" data-x="May" data-series="walks" data-y="14800" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M326.83 435 L326.83 217.94 Q326.83 209.94 334.83 209.94 L362.1 209.94 Q370.1 209.94 370.1 217.94 L370.1 435 Z" fill="#F54900" data-x="Jun" data-series="walks" data-y="18600" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M380.91 435 L380.91 176.8 Q380.91 168.8 388.91 168.8 L416.18 168.8 Q424.18 168.8 424.18 176.8 L424.18 435 Z" fill="#F54900" data-x="Jul" data-series="walks" data-y="22000" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M434.99 435 L434.99 199.79 Q434.99 191.79 442.99 191.79 L470.26 191.79 Q478.26 191.79 478.26 199.79 L478.26 435 Z" fill="#F54900" data-x="Aug" data-series="walks" data-y="20100" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M489.08 435 L489.08 240.93 Q489.08 232.93 497.08 232.93 L524.34 232.93 Q532.34 232.93 532.34 240.93 L532.34 435 Z" fill="#F54900" data-x="Sep" data-series="walks" data-y="16700" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M543.16 435 L543.16 284.49 Q543.16 276.49 551.16 276.49 L578.43 276.49 Q586.43 276.49 586.43 284.49 L586.43 435 Z" fill="#F54900" data-x="Oct" data-series="walks" data-y="13100" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M597.24 435 L597.24 312.32 Q597.24 304.32 605.24 304.32 L632.51 304.32 Q640.51 304.32 640.51 312.32 L640.51 435 Z" fill="#F54900" data-x="Nov" data-series="walks" data-y="10800" style="fill:var(--markvis-series-1,#F54900)"/>
+    <path d="M651.33 435 L651.33 292.96 Q651.33 284.96 659.33 284.96 L686.59 284.96 Q694.59 284.96 694.59 292.96 L694.59 435 Z" fill="#F54900" data-x="Dec" data-series="walks" data-y="12400" style="fill:var(--markvis-series-1,#F54900)"/>
   </g>
 </svg>

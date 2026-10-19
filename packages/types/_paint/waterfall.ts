@@ -24,6 +24,7 @@ import {
   FONT,
   FONT_NUMERIC,
   GRID,
+  GRID_INK,
   HAIRLINE_OPACITY,
   INK,
   LABEL_ROTATE_DEG,
@@ -33,10 +34,27 @@ import {
   SEMANTIC,
   STRUCTURE_OPACITY,
   TICK_TEXT_GAP,
+  TITLE_TO_PLOT,
   TYPE,
 } from "./tokens.js";
 import { placeHorizontalLabel, textWidth } from "./text.js";
 import { attrs, escapeXml, fmtPx } from "./xml.js";
+
+type StepRow = { y: number; role: string };
+
+/** A step's label on one line, and as two: the change, then the level. */
+function stepLabel(row: StepRow, end: number): { deltaText: string; head: string; tail: string } {
+  if (row.role === "total" || row.role === "subtotal") {
+    return { deltaText: `${row.role} ${formatNumber(row.y)}`, head: row.role, tail: formatNumber(row.y) };
+  }
+  const signed = row.y > 0 ? `+${formatNumber(row.y)}` : formatNumber(row.y);
+  return { deltaText: `${signed} → ${formatNumber(end)}`, head: signed, tail: `→ ${formatNumber(end)}` };
+}
+
+function splitsStepLabel(row: StepRow, end: number, catStep: number): boolean {
+  const { deltaText } = stepLabel(row, end);
+  return textWidth(deltaText, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT) > catStep - 4;
+}
 
 export function renderWaterfall(chart: ChartIR, _id: string): Painted {
   const loaded = loadRows(chart);
@@ -70,17 +88,28 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
   setTitleLineCount(
     countTitleLines(visibleTitle(chart), tickLeftMargin(yTickLabels), chart.unit),
   );
-  const frame = layoutFrame({
-    yTickLabels,
-    categoryLabels: labels,
-    legendHeight: 0,
-  });
-  const { plot, height, rotateX, show, labelLines } = frame;
-  const yScale = scaleLinear(
-    [yTicksRaw[0] ?? yMin, yTicksRaw[yTicksRaw.length - 1] ?? yMax],
-    [plot.bottom, plot.top],
-  );
+  const frameFor = (topExtra: number) =>
+    layoutFrame({ yTickLabels, categoryLabels: labels, legendHeight: 0, topExtra });
+  const yDomain: [number, number] = [yTicksRaw[0] ?? yMin, yTicksRaw[yTicksRaw.length - 1] ?? yMax];
   const n = Math.max(rows.length, 1);
+  // A step label too wide for its slot takes two lines. Over a bar that
+  // reaches the top of the axis, the first line would rise into the title:
+  // move the plot down until it clears the title baseline.
+  const firstFrame = frameFor(0);
+  const firstScale = scaleLinear(yDomain, [firstFrame.plot.bottom, firstFrame.plot.top]);
+  const firstStep = firstFrame.plot.width / n;
+  const clearOfTitle = firstFrame.plot.top - TITLE_TO_PLOT + 4;
+  let topExtra = 0;
+  rows.forEach((row, i) => {
+    if (!splitsStepLabel(row, ends[i]!, firstStep)) return;
+    const barTop = Math.min(firstScale(starts[i]!), firstScale(ends[i]!));
+    const labelTop = barTop - 6 - (TYPE.value.size + 2) - TYPE.value.size;
+    topExtra = Math.max(topExtra, Math.ceil(clearOfTitle - labelTop));
+  });
+  // A level that overflowed to Infinity sits off any scale: no extra room.
+  const frame = topExtra > 0 && Number.isFinite(topExtra) ? frameFor(topExtra) : firstFrame;
+  const { plot, height, rotateX, show, labelLines } = frame;
+  const yScale = scaleLinear(yDomain, [plot.bottom, plot.top]);
   const catStep = plot.width / n;
   const gapRatio = n <= 6 ? BAR_GAP_FEW : BAR_GAP_MANY;
   let barW = catStep * (1 - gapRatio);
@@ -129,7 +158,7 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
     lines.push(
       `  <g ${attrs({
         fill: "none",
-        stroke: INK,
+        stroke: GRID_INK,
         "stroke-opacity": HAIRLINE_OPACITY,
         "stroke-width": GRID.width,
         "stroke-dasharray": GRID.dash || undefined,
@@ -196,6 +225,8 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
     const h = Math.max(Math.abs(y1 - y0), 1);
     const isTotal = row.role === "total" || row.role === "subtotal";
     const fill = isTotal ? totalFill : row.y < 0 ? neg : pos;
+    // A level that overflowed to Infinity leaves no height to round: square corners.
+    const rx = Math.min(BAR_RX, 4, barW / 2, h / 2);
     lines.push(
       `    <rect ${attrs({
         x: fmtPx(x),
@@ -205,7 +236,7 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
         fill,
         // Both ends of a floating step are data, so corners stay small
         // whatever the theme's bar radius (graphite's pill would blur them).
-        rx: Math.min(BAR_RX, 4, barW / 2, h / 2),
+        rx: Number.isFinite(rx) ? rx : 0,
         "data-step": row.xLabel,
         "data-y": formatNumber(row.y),
         "data-level": formatNumber(ends[i]!),
@@ -213,15 +244,9 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
         "data-baseline": formatNumber(starts[i]!),
       })}/>`,
     );
-    const signed = row.y > 0 ? `+${formatNumber(row.y)}` : formatNumber(row.y);
-    const deltaText = isTotal
-      ? `${row.role} ${formatNumber(row.y)}`
-      : `${signed} → ${formatNumber(ends[i]!)}`;
+    const { deltaText, head, tail } = stepLabel(row, ends[i]!);
     // Too wide for its slot: the change on one line, the level under it.
-    const [head, tail] = isTotal
-      ? [row.role, formatNumber(row.y)]
-      : [signed, `→ ${formatNumber(ends[i]!)}`];
-    const split = textWidth(deltaText, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT) > catStep - 4;
+    const split = splitsStepLabel(row, ends[i]!, catStep);
     const shown = split ? [head, tail] : [deltaText];
     const widest = shown.reduce((w, t) => (t.length > w.length ? t : w), "");
     const placed = placeHorizontalLabel(cx, widest, TYPE.value.size, SVG_WIDTH, 8);

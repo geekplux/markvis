@@ -33,9 +33,15 @@ export type BakeFileResult = {
   errors: string[];
 };
 
+export type BakeOptions = {
+  /** How colors are written. Default "static": a baked file has no host page. */
+  colors?: "host" | "static";
+};
+
 export declare function bakeMarkdown(
   source: string,
   mdAbs: string,
+  options?: BakeOptions,
 ): BakeFileResult;
 export declare function writeBake(result: BakeFileResult): void;
 export declare function collectMarkdownFiles(

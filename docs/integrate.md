@@ -31,6 +31,7 @@ In this monorepo: `pnpm build`, then open `apps/playground/dropin.html`. `dist/`
 - The HTML inside the wrapper `div` is `render().html`, byte for byte. The SVG is inserted as HTML; render-svg escapes every text node and attribute.
 - `markvisComponents` replaces `pre` and `code` only for `language-chart|markvis|vis` (any case, as the other code-block adapters). Other code passes through.
 - `remarkMarkvisStreaming` marks a chart fence that has no closing line and runs to the end of the source. That block shows "Drawing chart…" plus the whole rows so far (a cut-off last line waits) and draws when the closing line arrives. A fence closed early by a list or quote is not held.
+- `<Markvis source={code} streaming={isIncomplete} />` is the same hold for a host that hands a renderer the partial text of a block and its own "still arriving" flag. While `streaming` is true the block shows "Drawing chart…" plus the whole rows so far (the last line waits, since it may be cut in half), never an error line. Default false.
 
 Host example: `examples/hosts/react-markdown/`. Tests: `packages/react/test/`.
 
@@ -51,7 +52,7 @@ Each host example renders at least one valid fence to HTML with svg and table el
 
 ## VS Code
 
-extensions/vscode-markvis-preview — Markdown preview renders chart / markvis / vis to SVG. Install from folder or vsce package. Publishing to the Marketplace is a maintainer decision. See that folder README.
+hosts/vscode — the `markvis preview` extension (`geekplux.markvis-preview`). The built-in Markdown preview renders chart / markvis / vis blocks to SVG in the editor theme's colors (`preview.css` maps the `--vscode-*` theme colors onto the `--markvis-*` variables). CI compiles it and lists the package contents; the maintainer publishes it to the Marketplace and Open VSX. See that folder README.
 
 ## Explicit non-goals
 

@@ -39,6 +39,27 @@ describe("theme registry", () => {
   });
 });
 
+describe("series color cap", () => {
+  // Paint names stop at series-8; a ninth color would share a name with the first.
+  it("every theme pack and surface has at most eight series colors", () => {
+    for (const id of THEMES) {
+      const pack = themeRegistry[id];
+      expect(pack.PALETTE.length, `${id} PALETTE`).toBeLessThanOrEqual(8);
+      for (const [surface, tokens] of Object.entries(pack.SURFACES)) {
+        if (tokens.PALETTE !== undefined) {
+          expect(tokens.PALETTE.length, `${id}.${surface} PALETTE`).toBeLessThanOrEqual(8);
+        }
+      }
+    }
+  });
+
+  it("every named palette has at most eight series colors", () => {
+    for (const id of PALETTES) {
+      expect(resolvePalette(id).SERIES.length, id).toBeLessThanOrEqual(8);
+    }
+  });
+});
+
 describe("palette registry", () => {
   it("resolves all locked palettes with designer hex", () => {
     expect(resolvePalette("ink")).toBe(ink);

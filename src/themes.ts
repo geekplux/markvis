@@ -16,5 +16,7 @@ export {
   resolvePalette,
   vivid,
   warm,
+  PAINT_NAMES,
+  CSS_VARIABLES,
 } from "@markvis/themes";
-export type { ThemeTokens, PaletteTokens } from "@markvis/themes";
+export type { ThemeTokens, PaletteTokens, PaintName, CssVariable } from "@markvis/themes";

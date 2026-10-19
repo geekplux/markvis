@@ -97,8 +97,8 @@ export function renderCalendar(chart: ChartIR, svgId: string): Painted {
     drawTitle(visibleTitle(chart), MARGIN.left, chart.unit),
     `  <defs>`,
     `    <pattern ${attrs({ id: patternId, patternUnits: "userSpaceOnUse", width: 4, height: 4 })}>`,
-    `      <rect width="4" height="4" fill="${SEMANTIC.rampLow}"/>`,
-    `      <path d="M0 4 L4 0" stroke="${SEMANTIC.missing}" stroke-width="1"/>`,
+    `      <rect ${attrs({ width: 4, height: 4, fill: SEMANTIC.rampLow })}/>`,
+    `      <path ${attrs({ d: "M0 4 L4 0", stroke: SEMANTIC.missing, "stroke-width": 1 })}/>`,
     `    </pattern>`,
     `  </defs>`,
   ];

@@ -1,15 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: East still outnumbers West seats by season, 8 rows, series region" aria-labelledby="mv-2ea32752e20e283f-title" aria-describedby="mv-2ea32752e20e283f-desc" data-markvis="2" data-chart-type="bar" data-id="mv-2ea32752e20e283f" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: East still outnumbers West seats by season, 8 rows, series region" aria-labelledby="mv-2ea32752e20e283f-title" aria-describedby="mv-2ea32752e20e283f-desc" data-markvis="2" data-chart-type="bar" data-id="mv-2ea32752e20e283f" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-2ea32752e20e283f-title">East still outnumbers West seats by season</title>
   <desc id="mv-2ea32752e20e283f-desc">bar chart. East still outnumbers West seats by season. x=season. y=seats. series=region. 8 rows.</desc>
-  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>East still outnumbers West seats by season</title>East still outnumbers West seats by season</text>
-  <g font-size="13" font-weight="400" fill="#171717">
-    <rect x="48" y="41" width="10" height="10" fill="#3B82F6" rx="1"/>
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717" style="fill:var(--markvis-ink,#171717)"><title>East still outnumbers West seats by season</title>East still outnumbers West seats by season</text>
+  <g font-size="13" font-weight="400" fill="#171717" style="fill:var(--markvis-ink,#171717)">
+    <rect x="48" y="41" width="10" height="10" fill="#3B82F6" rx="1" style="fill:var(--markvis-series-1,#3B82F6)"/>
     <text x="62" y="50" data-legend="East">East</text>
-    <rect x="106.31" y="41" width="10" height="10" fill="#F97316" rx="1"/>
+    <rect x="106.31" y="41" width="10" height="10" fill="#F97316" rx="1" style="fill:var(--markvis-series-2,#F97316)"/>
     <text x="120.31" y="50" data-legend="West">West</text>
   </g>
-  <path d="M48 455 L700 455" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <path d="M48 455 L700 455" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1" style="stroke:var(--markvis-ink,#171717)"/>
+  <g fill="#737373" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#737373)">
     <text x="38" y="455" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="38" y="326" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="38" y="197" text-anchor="end" dominant-baseline="middle">200</text>
@@ -20,14 +20,14 @@
     <text x="618.5" y="467" text-anchor="middle" font-size="12" data-full-label="Winter"><title>Winter</title>Winter</text>
   </g>
   <g>
-    <path d="M93.5 300.2 L165.5 300.2 L165.5 452 Q165.5 455 162.5 455 L96.5 455 Q93.5 455 93.5 452 Z" fill="#3B82F6" data-x="Spring" data-series="East" data-y="120" data-layout="stacked"/>
-    <path d="M93.5 300.2 L93.5 200 Q93.5 197 96.5 197 L162.5 197 Q165.5 197 165.5 200 L165.5 300.2 Z" fill="#F97316" data-x="Spring" data-series="West" data-y="80" data-layout="stacked"/>
-    <path d="M256.5 261.5 L328.5 261.5 L328.5 452 Q328.5 455 325.5 455 L259.5 455 Q256.5 455 256.5 452 Z" fill="#3B82F6" data-x="Summer" data-series="East" data-y="150" data-layout="stacked"/>
-    <path d="M256.5 261.5 L256.5 141.95 Q256.5 138.95 259.5 138.95 L325.5 138.95 Q328.5 138.95 328.5 141.95 L328.5 261.5 Z" fill="#F97316" data-x="Summer" data-series="West" data-y="95" data-layout="stacked"/>
-    <path d="M419.5 313.1 L491.5 313.1 L491.5 452 Q491.5 455 488.5 455 L422.5 455 Q419.5 455 419.5 452 Z" fill="#3B82F6" data-x="Fall" data-series="East" data-y="110" data-layout="stacked"/>
-    <path d="M419.5 313.1 L419.5 225.8 Q419.5 222.8 422.5 222.8 L488.5 222.8 Q491.5 222.8 491.5 225.8 L491.5 313.1 Z" fill="#F97316" data-x="Fall" data-series="West" data-y="70" data-layout="stacked"/>
-    <path d="M582.5 338.9 L654.5 338.9 L654.5 452 Q654.5 455 651.5 455 L585.5 455 Q582.5 455 582.5 452 Z" fill="#3B82F6" data-x="Winter" data-series="East" data-y="90" data-layout="stacked"/>
-    <path d="M582.5 338.9 L582.5 264.5 Q582.5 261.5 585.5 261.5 L651.5 261.5 Q654.5 261.5 654.5 264.5 L654.5 338.9 Z" fill="#F97316" data-x="Winter" data-series="West" data-y="60" data-layout="stacked"/>
+    <path d="M93.5 455 L165.5 455 L165.5 300.2 L93.5 300.2 Z" fill="#3B82F6" data-x="Spring" data-series="East" data-y="120" data-layout="stacked" style="fill:var(--markvis-series-1,#3B82F6)"/>
+    <path d="M93.5 300.2 L93.5 200 Q93.5 197 96.5 197 L162.5 197 Q165.5 197 165.5 200 L165.5 300.2 Z" fill="#F97316" data-x="Spring" data-series="West" data-y="80" data-layout="stacked" style="fill:var(--markvis-series-2,#F97316)"/>
+    <path d="M256.5 455 L328.5 455 L328.5 261.5 L256.5 261.5 Z" fill="#3B82F6" data-x="Summer" data-series="East" data-y="150" data-layout="stacked" style="fill:var(--markvis-series-1,#3B82F6)"/>
+    <path d="M256.5 261.5 L256.5 141.95 Q256.5 138.95 259.5 138.95 L325.5 138.95 Q328.5 138.95 328.5 141.95 L328.5 261.5 Z" fill="#F97316" data-x="Summer" data-series="West" data-y="95" data-layout="stacked" style="fill:var(--markvis-series-2,#F97316)"/>
+    <path d="M419.5 455 L491.5 455 L491.5 313.1 L419.5 313.1 Z" fill="#3B82F6" data-x="Fall" data-series="East" data-y="110" data-layout="stacked" style="fill:var(--markvis-series-1,#3B82F6)"/>
+    <path d="M419.5 313.1 L419.5 225.8 Q419.5 222.8 422.5 222.8 L488.5 222.8 Q491.5 222.8 491.5 225.8 L491.5 313.1 Z" fill="#F97316" data-x="Fall" data-series="West" data-y="70" data-layout="stacked" style="fill:var(--markvis-series-2,#F97316)"/>
+    <path d="M582.5 455 L654.5 455 L654.5 338.9 L582.5 338.9 Z" fill="#3B82F6" data-x="Winter" data-series="East" data-y="90" data-layout="stacked" style="fill:var(--markvis-series-1,#3B82F6)"/>
+    <path d="M582.5 338.9 L582.5 264.5 Q582.5 261.5 585.5 261.5 L651.5 261.5 Q654.5 261.5 654.5 264.5 L654.5 338.9 Z" fill="#F97316" data-x="Winter" data-series="West" data-y="60" data-layout="stacked" style="fill:var(--markvis-series-2,#F97316)"/>
   </g>
   <g>
     <text x="129.5" y="377.6" text-anchor="middle" dominant-baseline="middle" font-size="13" font-weight="500" fill="#171717" data-value-label="Spring">120</text>

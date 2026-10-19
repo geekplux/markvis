@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: East still outnumbers West seats by season, 8 rows, series region" aria-labelledby="mv-2ea32752e20e283f-title" aria-describedby="mv-2ea32752e20e283f-desc" data-markvis="2" data-chart-type="bar" data-id="mv-2ea32752e20e283f" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: East still outnumbers West seats by season, 8 rows, series region" aria-labelledby="mv-2ea32752e20e283f-title" aria-describedby="mv-2ea32752e20e283f-desc" data-markvis="2" data-chart-type="bar" data-id="mv-2ea32752e20e283f" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-2ea32752e20e283f-title">East still outnumbers West seats by season</title>
   <desc id="mv-2ea32752e20e283f-desc">bar chart. East still outnumbers West seats by season. x=season. y=seats. series=region. 8 rows.</desc>
-  <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>East still outnumbers West seats by season</title>EAST STILL OUTNUMBERS WEST SEATS BY SEASON</text>
-  <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <g font-size="11" font-weight="500" fill="#18181B">
-    <rect x="40" y="458.5" width="10" height="3" fill="#475569" rx="1.5"/>
+  <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B" style="fill:var(--markvis-ink,#18181B)"><title>East still outnumbers West seats by season</title>EAST STILL OUTNUMBERS WEST SEATS BY SEASON</text>
+  <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1" style="stroke:var(--markvis-ink,#18181B)"/>
+  <g font-size="11" font-weight="500" fill="#18181B" style="fill:var(--markvis-ink,#18181B)">
+    <rect x="40" y="458.5" width="10" height="3" fill="#475569" rx="1.5" style="fill:var(--markvis-series-1,#475569)"/>
     <text x="54" y="464" data-legend="East">East</text>
-    <rect x="94.5" y="458.5" width="10" height="3" fill="#64748B" rx="1.5"/>
+    <rect x="94.5" y="458.5" width="10" height="3" fill="#64748B" rx="1.5" style="fill:var(--markvis-series-2,#64748B)"/>
     <text x="108.5" y="464" data-legend="West">West</text>
   </g>
-  <path d="M40 432 L704 432" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
-  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400">
+  <path d="M40 432 L704 432" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" style="stroke:var(--markvis-ink,#18181B)"/>
+  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400" style="fill:var(--markvis-muted,#64748B)">
     <text x="32" y="432" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="32" y="302" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="32" y="172" text-anchor="end" dominant-baseline="middle">200</text>
@@ -21,14 +21,14 @@
     <text x="621" y="443" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="Winter"><title>Winter</title>Winter</text>
   </g>
   <g>
-    <path d="M91 432 L155 432 L155 276 L91 276 Z" fill="#475569" data-x="Spring" data-series="East" data-y="120" data-layout="stacked"/>
-    <path d="M91 276 L155 276 L155 172 L91 172 Z" fill="#64748B" data-x="Spring" data-series="West" data-y="80" data-layout="stacked"/>
-    <path d="M257 432 L321 432 L321 237 L257 237 Z" fill="#475569" data-x="Summer" data-series="East" data-y="150" data-layout="stacked"/>
-    <path d="M257 237 L321 237 L321 113.5 L257 113.5 Z" fill="#64748B" data-x="Summer" data-series="West" data-y="95" data-layout="stacked"/>
-    <path d="M423 432 L487 432 L487 289 L423 289 Z" fill="#475569" data-x="Fall" data-series="East" data-y="110" data-layout="stacked"/>
-    <path d="M423 289 L487 289 L487 198 L423 198 Z" fill="#64748B" data-x="Fall" data-series="West" data-y="70" data-layout="stacked"/>
-    <path d="M589 432 L653 432 L653 315 L589 315 Z" fill="#475569" data-x="Winter" data-series="East" data-y="90" data-layout="stacked"/>
-    <path d="M589 315 L653 315 L653 237 L589 237 Z" fill="#64748B" data-x="Winter" data-series="West" data-y="60" data-layout="stacked"/>
+    <path d="M91 432 L155 432 L155 276 L91 276 Z" fill="#475569" data-x="Spring" data-series="East" data-y="120" data-layout="stacked" style="fill:var(--markvis-series-1,#475569)"/>
+    <path d="M91 276 L155 276 L155 172 L91 172 Z" fill="#64748B" data-x="Spring" data-series="West" data-y="80" data-layout="stacked" style="fill:var(--markvis-series-2,#64748B)"/>
+    <path d="M257 432 L321 432 L321 237 L257 237 Z" fill="#475569" data-x="Summer" data-series="East" data-y="150" data-layout="stacked" style="fill:var(--markvis-series-1,#475569)"/>
+    <path d="M257 237 L321 237 L321 113.5 L257 113.5 Z" fill="#64748B" data-x="Summer" data-series="West" data-y="95" data-layout="stacked" style="fill:var(--markvis-series-2,#64748B)"/>
+    <path d="M423 432 L487 432 L487 289 L423 289 Z" fill="#475569" data-x="Fall" data-series="East" data-y="110" data-layout="stacked" style="fill:var(--markvis-series-1,#475569)"/>
+    <path d="M423 289 L487 289 L487 198 L423 198 Z" fill="#64748B" data-x="Fall" data-series="West" data-y="70" data-layout="stacked" style="fill:var(--markvis-series-2,#64748B)"/>
+    <path d="M589 432 L653 432 L653 315 L589 315 Z" fill="#475569" data-x="Winter" data-series="East" data-y="90" data-layout="stacked" style="fill:var(--markvis-series-1,#475569)"/>
+    <path d="M589 315 L653 315 L653 237 L589 237 Z" fill="#64748B" data-x="Winter" data-series="West" data-y="60" data-layout="stacked" style="fill:var(--markvis-series-2,#64748B)"/>
   </g>
   <g>
     <text x="123" y="354" text-anchor="middle" dominant-baseline="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#fafaf9" data-value-label="Spring">120</text>

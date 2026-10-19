@@ -14,7 +14,7 @@ onMounted(() => {
     <div class="play-embed">
       <iframe
         :src="src"
-        title="Playground"
+        title="Play"
         class="play-embed-frame"
       />
     </div>

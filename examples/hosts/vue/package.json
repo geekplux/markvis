@@ -1,0 +1,12 @@
+{
+  "name": "markvis-host-vue",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "markvis": "file:../../../markvis.tgz",
+    "vue": "3.5.44"
+  }
+}

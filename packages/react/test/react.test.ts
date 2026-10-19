@@ -15,6 +15,7 @@ import { render } from "@markvis/html";
 import { extractCharts } from "@markvis/parser";
 import { Markvis, markvisComponents, remarkMarkvisStreaming } from "../src/index.js";
 import { chartBlock } from "../src/block.js";
+import { OPEN_FENCE } from "../src/streaming.js";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const repoRoot = join(here, "../../..");
@@ -69,6 +70,17 @@ describe("<Markvis source>", () => {
     );
     expect(html).toBe(`<div class="answer-chart">${render(source, options).html}</div>`);
     expect(html).toContain('width="480"');
+  });
+
+  it("reads the page's CSS variables by default, and not with colors static", () => {
+    const source = "type: bar\nx: day\ny: visits\n\nday,visits\nMon,3\n";
+    const host = renderToStaticMarkup(createElement(Markvis, { source, width: 480 }));
+    expect(host).toContain("var(--markvis-series-1,");
+    const fixed = renderToStaticMarkup(
+      createElement(Markvis, { source, width: 480, colors: "static" }),
+    );
+    expect(fixed).toBe(`<div>${render(source, { width: 480, colors: "static" }).html}</div>`);
+    expect(fixed).not.toContain("var(");
   });
 });
 
@@ -237,6 +249,86 @@ describe("streaming", () => {
     expect(closed).toContain("<svg");
   });
 
+  it("reads an opening fence behind a list marker, a quote, or indentation", () => {
+    for (const line of ["```chart", "  ```chart", "> ```chart", "- ```chart", "* ```chart", "+ ~~~chart",
+      "1. ```chart", "12) ````chart", "  - ```chart", "> - ```chart", ">  1. ```chart title=x"]) {
+      expect(OPEN_FENCE.exec(line)?.[1], line).toMatch(/^(`{3,}|~{3,})$/);
+    }
+    for (const line of ["-```chart", "Text ``` not a fence", "- item", "1.```chart", "``chart"]) {
+      expect(OPEN_FENCE.test(line), line).toBe(false);
+    }
+  });
+
+  const body = ["type: bar", "x: a", "y: b", "", "a,b", "A,1", "B,2"];
+  const indent = (prefix: string, rest: string, lines: string[]): string =>
+    lines.map((line, i) => `${i === 0 ? prefix : rest}${line}`).join("\n");
+
+  for (const [prefix, rest] of [["- ", "  "], ["* ", "  "], ["1. ", "   "], ["  - ", "    "], ["> - ", ">   "]]) {
+    it(`holds a fence inside a list item "${prefix}" until it closes`, () => {
+      const open = indent(prefix!, rest!, ["```chart", ...body]);
+      const reply = `Steps:\n\n${open}\n${rest}\`\`\`\n\nDone.\n`;
+      const closeAt = reply.indexOf(`${rest}\`\`\`\n\nDone`);
+      for (let cut = reply.indexOf("```chart") + 8; cut < closeAt + rest!.length + 3; cut++) {
+        const html = markdown(reply.slice(0, cut), true);
+        expect(html, JSON.stringify(reply.slice(0, cut))).not.toContain("markvis-error");
+        expect(html, JSON.stringify(reply.slice(0, cut))).not.toContain("<svg");
+      }
+      const mid = markdown(reply.slice(0, reply.indexOf("B,2") + 2), true);
+      expect(mid).toContain('class="markvis-pending"');
+      expect(mid).toContain("<td>A</td><td>1</td>");
+      expect(mid).not.toContain("<td>B</td>");
+      const done = markdown(reply, true);
+      expect(done).toContain("<svg");
+      expect(done).not.toContain("markvis-pending");
+    });
+  }
+
+  it("holds a fence in a quoted list item when the reply so far ends on a bare >", () => {
+    const html = markdown("Steps:\n\n> - ```chart\n>   type: bar\n>   x: a\n>   y: b\n>", true);
+    expect(html).toContain('class="markvis-pending"');
+    expect(html).not.toContain("markvis-error");
+  });
+
+  it("draws the first of two fences and holds the second while it streams", () => {
+    const first = `\`\`\`chart\n${body.join("\n")}\n\`\`\`\n`;
+    const second = `\`\`\`chart\n${body.join("\n").replace("type: bar", "type: line")}\n\`\`\`\n`;
+    const reply = `One:\n\n${first}\nTwo:\n\n${second}`;
+    const both = markdown(reply.slice(0, reply.lastIndexOf("B,2") + 3), true);
+    expect(both.match(/<svg/g)).toHaveLength(1);
+    expect(both.match(/class="markvis-pending"/g)).toHaveLength(1);
+    expect(both).not.toContain("markvis-error");
+    const firstOpen = markdown(reply.slice(0, reply.indexOf("B,2") + 3), true);
+    expect(firstOpen).not.toContain("<svg");
+    expect(firstOpen).toContain("markvis-pending");
+    const done = markdown(reply, true);
+    expect(done.match(/<svg/g)).toHaveLength(2);
+    expect(done).not.toContain("markvis-pending");
+  });
+
+  it("holds a fence whose info string has text after the language", () => {
+    const reply = `\`\`\`chart title=Visits\n${body.join("\n")}\n\`\`\`\n`;
+    const open = markdown(reply.slice(0, reply.indexOf("B,2")), true);
+    expect(open).toContain('class="markvis-pending"');
+    expect(open).not.toContain("markvis-error");
+    expect(markdown(reply, true)).toContain("<svg");
+  });
+
+  it("holds and then draws a reply with CRLF line endings", () => {
+    const reply = `Sales.\r\n\r\n\`\`\`chart\r\n${body.join("\r\n")}\r\n\`\`\`\r\n\r\nDone.\r\n`;
+    const closeAt = reply.indexOf("```\r\n\r\nDone");
+    for (let cut = reply.indexOf("```chart") + 8; cut < closeAt + 3; cut++) {
+      const html = markdown(reply.slice(0, cut), true);
+      expect(html, JSON.stringify(reply.slice(0, cut))).not.toContain("markvis-error");
+      expect(html, JSON.stringify(reply.slice(0, cut))).not.toContain("<svg");
+    }
+    const mid = markdown(reply.slice(0, reply.indexOf("B,2") + 2), true);
+    expect(mid).toContain("<td>A</td><td>1</td>");
+    expect(mid).not.toContain("<td>B</td>");
+    const done = markdown(reply, true);
+    expect(done).toContain("<svg");
+    expect(done).not.toContain("markvis-pending");
+  });
+
   for (const [path, source] of files) {
     const fence = extractCharts(source).find((chart) => chart.form === "fence");
     if (!fence) {
@@ -264,6 +356,61 @@ describe("streaming", () => {
       expect(done).toContain(render(bodyOf(fence.raw)).html);
     });
   }
+});
+
+describe("<Markvis streaming>", () => {
+  const body = "type: bar\ntitle: Visits\nx: day\ny: visits\n\nday,visits\nMon,3\nTue,5\nWed,4\n";
+  const draw = (source: string, streaming?: boolean) =>
+    renderToStaticMarkup(
+      createElement(Markvis, streaming === undefined ? { source } : { source, streaming }),
+    );
+
+  it("shows the placeholder and the whole rows so far, not an error line", () => {
+    const html = draw(body.slice(0, body.indexOf("Wed") + 2), true);
+    expect(html).toContain('class="markvis-pending"');
+    expect(html).toContain("Drawing chart…");
+    expect(html).toContain("<td>Tue</td><td>5</td>");
+    expect(html).not.toContain("<td>We");
+    expect(html).not.toContain("markvis-error");
+    expect(html).not.toContain("<svg");
+  });
+
+  it("shows the placeholder for a body cut before any data row", () => {
+    for (const cut of ["type: ba", "type: bar\nx: day\ny: visits\n", "type: bar\nx: day\ny: visits\n\nday,vis"]) {
+      const html = draw(cut, true);
+      expect(html, cut).toContain("Drawing chart…");
+      expect(html, cut).not.toContain("markvis-error");
+    }
+  });
+
+  it("draws the same HTML as before once streaming is false or left out", () => {
+    const whole = `<div>${render(body).html}</div>`;
+    expect(draw(body, false)).toBe(whole);
+    expect(draw(body)).toBe(whole);
+  });
+
+  it("keeps the error line for a bad block once streaming ends", () => {
+    const bad = "type: donut\nx: a\ny: b\n\na,b\nA,1\n";
+    expect(draw(bad, true)).not.toContain("markvis-error");
+    expect(draw(bad, false).match(/class="markvis-error"/g)).toHaveLength(1);
+  });
+
+  it("holds back the last line, which a host may hand over cut in half", () => {
+    const html = draw("type: bar\nx: day\ny: visits\n\nday,visits\nMon,3\nTue,5", true);
+    expect(html).toContain("<td>Mon</td><td>3</td>");
+    expect(html).not.toContain("<td>Tue");
+    const padded = draw("type: bar\nx: day\ny: visits\n\nday,visits\nMon,3\nTu\n", true);
+    expect(padded).toContain("<td>Mon</td><td>3</td>");
+    expect(padded).not.toContain("<td>Tu");
+  });
+
+  it("works with a chart object and rows", () => {
+    const html = renderToStaticMarkup(
+      createElement(Markvis, { chart: { type: "bar", x: "day", y: "visits" }, data: [{ day: "Mon", visits: 3 }], streaming: true }),
+    );
+    expect(html).toContain("Drawing chart…");
+    expect(html).toContain("<td>Mon</td><td>3</td>");
+  });
 });
 
 describe("text in a block never becomes markup", () => {

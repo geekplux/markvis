@@ -1,6 +1,14 @@
 import type { ChartIR } from "@markvis/ir";
+import type { Color } from "./paint.js";
 import { drawTitle, reserveTitle, visibleTitle } from "./figure.js";
-import { layoutLegend, titleBlockTop, type LegendLayout, type PlotBox } from "./layout.js";
+import {
+  fitGutters,
+  layoutLegend,
+  PLOT_MIN_WIDTH,
+  titleBlockTop,
+  type LegendLayout,
+  type PlotBox,
+} from "./layout.js";
 import { legendSwatch } from "./legend.js";
 import { formatNumber, labelTicks, niceTicks, scaleLinear } from "./scale.js";
 import { textWidth, wrapText, type WrappedText } from "./text.js";
@@ -8,6 +16,7 @@ import {
   FONT,
   FONT_NUMERIC,
   GRID,
+  GRID_INK,
   HAIRLINE_OPACITY,
   INK,
   MARGIN,
@@ -32,6 +41,8 @@ export type RowFrame = {
   wrapped: WrappedText[];
   legend: LegendLayout;
   legendMarks: RowOptions["legendMarks"];
+  /** False when the width cannot spare `rightPad`: draw no per-row labels right of the plot. */
+  valueColumn: boolean;
 };
 
 export type RowOptions = {
@@ -43,7 +54,7 @@ export type RowOptions = {
   /** Room right of the plot for per-row labels. */
   rightPad: number;
   legendNames: string[];
-  legendColors: string[];
+  legendColors: Color[];
   /** Draw the legend key as the mark itself instead of the theme swatch. */
   legendMarks?: readonly ("hollow" | "filled" | "rule")[] | undefined;
 };
@@ -98,8 +109,12 @@ export function layoutRows(chart: ChartIR, opts: RowOptions): RowFrame {
         )
       : { items: [], height: 0 };
 
-  const left = Math.max(MARGIN.left, labelW + TICK_TEXT_GAP + 6);
-  const right = Math.max(MARGIN.right, opts.rightPad);
+  // At a tiny width the value column goes first, then the label column
+  // narrows, so the plot keeps PLOT_MIN_WIDTH and its scale runs left to right.
+  const labelLeft = Math.max(MARGIN.left, labelW + TICK_TEXT_GAP + 6);
+  const valueRight = Math.max(MARGIN.right, opts.rightPad);
+  const valueColumn = SVG_WIDTH - labelLeft - valueRight >= PLOT_MIN_WIDTH;
+  const { left, right } = fitGutters(SVG_WIDTH, labelLeft, valueColumn ? valueRight : MARGIN.right);
   reserveTitle(visibleTitle(chart), MARGIN.left, chart.unit);
   const top = titleBlockTop(0);
   const title = drawTitle(visibleTitle(chart), MARGIN.left, chart.unit);
@@ -143,6 +158,7 @@ export function layoutRows(chart: ChartIR, opts: RowOptions): RowFrame {
     wrapped,
     legend: placedLegend,
     legendMarks: opts.legendMarks,
+    valueColumn,
   };
 }
 
@@ -152,7 +168,7 @@ export function drawRowAxes(frame: RowFrame, categories: string[]): string[] {
   const lines: string[] = [
     `  <g ${attrs({
       fill: "none",
-      stroke: INK,
+      stroke: GRID_INK,
       "stroke-opacity": HAIRLINE_OPACITY,
       "stroke-width": GRID.width,
       "stroke-dasharray": GRID.dash || undefined,
@@ -252,7 +268,7 @@ function legendMark(
   mark: "hollow" | "filled" | "rule",
   x: number,
   top: number,
-  color: string,
+  color: Color,
 ): string {
   if (mark === "rule") {
     return `<rect ${attrs({ x: fmtPx(x + 4), y: fmtPx(top - 1), width: 2.5, height: 12, fill: color })}/>`;

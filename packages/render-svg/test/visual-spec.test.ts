@@ -105,7 +105,7 @@ describe("visual-spec tokens", () => {
     expect(svg).toMatch(/<desc id="mv-[a-f0-9]+-desc">/);
     expect(svg).not.toContain("theme");
     expect(TYPE.title).toEqual({ size: 21, weight: 600, fill: INK });
-    expect(svg).toContain(`stroke="${INK}"`);
+    expect(svg).toContain(`stroke="${INK.hex}"`);
     expect(svg).toContain(`stroke-opacity="${STRUCTURE_OPACITY}"`);
   });
 
@@ -158,8 +158,8 @@ describe("visual-spec tokens", () => {
     expect(title.size).toBe("21");
     expect(title.anchor).toBe("start");
     expect(title.x).toBeCloseTo(plot.left, 2);
-    expect(svg).toContain(PALETTE[0]);
-    expect(svg).not.toContain(PALETTE[1]);
+    expect(svg).toContain(PALETTE[0]!.hex);
+    expect(svg).not.toContain(PALETTE[1]!.hex);
     expect(svg).toContain(" · tickets");
     expect(svg).not.toContain('data-legend=');
     expect(svg).not.toContain('shape-rendering="crispEdges"');
@@ -186,8 +186,8 @@ describe("visual-spec tokens", () => {
     expect(svg).toContain("Walk-up still leads member through week 12");
     expect(title.anchor).toBe("start");
     expect(title.x).toBeCloseTo(plot.left, 2);
-    expect(svg).toContain(PALETTE[0]);
-    expect(svg).toContain(PALETTE[1]);
+    expect(svg).toContain(PALETTE[0]!.hex);
+    expect(svg).toContain(PALETTE[1]!.hex);
     expect(svg).toContain('stroke-width="1.75"');
     expect(svg).toContain('r="2.5"');
     expect(svg).toContain('data-end-label="walk-up"');
@@ -203,7 +203,7 @@ describe("visual-spec tokens", () => {
     expect(svg).not.toContain(">Share<");
     expect(title.anchor).toBe("start");
     expect(title.size).toBe("21");
-    expect(svg).toContain(`stroke="${INK}"`);
+    expect(svg).toContain(`stroke="${INK.hex}"`);
     expect(svg).toContain(`stroke-opacity="${STRUCTURE_OPACITY}"`);
     expect(svg).toContain("MARTA · 38");
     expect(svg).toContain("Walk · 24");
@@ -221,7 +221,7 @@ describe("visual-spec tokens", () => {
     expect(svg).not.toContain("rotate(-55");
     expect(svg).not.toContain("…");
     expect(svg).not.toContain("data-value-label=");
-    expect(svg).toContain(`stroke="${INK}"`);
+    expect(svg).toContain(`stroke="${INK.hex}"`);
     expect(svg).toContain(`stroke-opacity="${HAIRLINE_OPACITY}"`);
     expect(plot.share).toBeGreaterThanOrEqual(PLOT_MIN_RATIO);
     for (const month of [

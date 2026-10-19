@@ -5,7 +5,7 @@ import { describe, expect, it } from "vitest";
 import { ChartIRSchema, THEMES, type ChartIR } from "@markvis/ir";
 import { parseMarkdown } from "@markvis/parser";
 import {
-  PALETTE,
+  PALETTE as LIVE_PALETTE,
   binHistogram,
   chartId,
   folio,
@@ -23,6 +23,8 @@ import {
 import { niceTicks, formatNumber } from "../src/scale.js";
 
 const here = dirname(fileURLToPath(import.meta.url));
+/** The default series colors as hex, read from the live Paint palette. */
+const PALETTE = LIVE_PALETTE.map((p) => p.hex);
 
 
 function stripPaint(svg: string): string {

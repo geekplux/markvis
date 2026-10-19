@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="246" viewBox="0 0 720 246" role="img" aria-label="bullet chart: Payments missed its 99.95% uptime SLA in September (%), 4 rows" aria-labelledby="mv-41d7c697f82ccc88-title" aria-describedby="mv-41d7c697f82ccc88-desc" data-markvis="2" data-chart-type="bullet" data-id="mv-41d7c697f82ccc88" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="246" viewBox="0 0 720 246" role="img" aria-label="bullet chart: Payments missed its 99.95% uptime SLA in September (%), 4 rows" aria-labelledby="mv-41d7c697f82ccc88-title" aria-describedby="mv-41d7c697f82ccc88-desc" data-markvis="2" data-chart-type="bullet" data-id="mv-41d7c697f82ccc88" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" style="font-family:var(--markvis-font,-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif)">
   <title id="mv-41d7c697f82ccc88-title">Payments missed its 99.95% uptime SLA in September</title>
   <desc id="mv-41d7c697f82ccc88-desc">bullet chart. Payments missed its 99.95% uptime SLA in September. x=service. y=uptime. unit=%. 4 rows.</desc>
-  <text x="48" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Payments missed its 99.95% uptime SLA in September</title>Payments missed its 99.95% uptime SLA in September<tspan font-size="12" font-weight="400" fill="#737373"> · %</tspan></text>
-  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4" data-grid="1">
+  <text x="48" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626" style="fill:var(--markvis-ink,#262626)"><title>Payments missed its 99.95% uptime SLA in September</title>Payments missed its 99.95% uptime SLA in September<tspan font-size="12" font-weight="400" fill="#737373" style="fill:var(--markvis-muted,#737373)"> · %</tspan></text>
+  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4" data-grid="1" style="stroke:var(--markvis-grid,#262626)">
     <line x1="88.66" x2="88.66" y1="46" y2="182"/>
     <line x1="351.44" x2="351.44" y1="46" y2="182"/>
     <line x1="614.22" x2="614.22" y1="46" y2="182"/>
   </g>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <g fill="#737373" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#737373)">
     <text x="80.66" y="63" text-anchor="end" dominant-baseline="middle" data-full-label="Checkout"><title>Checkout</title><tspan x="80.66" dy="0">Checkout</tspan></text>
     <text x="80.66" y="97" text-anchor="end" dominant-baseline="middle" data-full-label="Payments"><title>Payments</title><tspan x="80.66" dy="0">Payments</tspan></text>
     <text x="80.66" y="131" text-anchor="end" dominant-baseline="middle" data-full-label="Search"><title>Search</title><tspan x="80.66" dy="0">Search</tspan></text>
@@ -16,30 +16,30 @@
     <text x="351.44" y="200" text-anchor="middle">99.5</text>
     <text x="614.22" y="200" text-anchor="middle">100</text>
   </g>
-  <g font-size="12" font-weight="400" fill="#262626">
-    <circle cx="93.66" cy="220" r="4.5" fill="#5AD8A6"/>
+  <g font-size="12" font-weight="400" fill="#262626" style="fill:var(--markvis-ink,#262626)">
+    <circle cx="93.66" cy="220" r="4.5" fill="#5AD8A6" style="fill:var(--markvis-series-1,#5AD8A6)"/>
     <text x="102.66" y="224" data-legend="uptime">uptime</text>
-    <rect x="163.2" y="214" width="2.5" height="12" fill="#262626"/>
+    <rect x="163.2" y="214" width="2.5" height="12" fill="#262626" style="fill:var(--markvis-ink,#262626)"/>
     <text x="173.2" y="224" data-legend="sla">sla</text>
   </g>
   <g data-bullet="1">
-    <rect x="88.66" y="51" width="525.56" height="24" fill="#262626" fill-opacity="0.07" data-track="Checkout"/>
-    <path d="M88.66 58 L601.71 58 Q603.71 58 603.71 60 L603.71 66 Q603.71 68 601.71 68 L88.66 68 Z" fill="#5AD8A6" data-x="Checkout" data-y="99.98"/>
-    <line x1="587.94" x2="587.94" y1="53" y2="73" stroke="#262626" stroke-width="2.5" data-target="99.95"/>
-    <rect x="88.66" y="85" width="525.56" height="24" fill="#262626" fill-opacity="0.07" data-track="Payments"/>
-    <path d="M88.66 92 L564.92 92 Q566.92 92 566.92 94 L566.92 100 Q566.92 102 564.92 102 L88.66 102 Z" fill="#5AD8A6" data-x="Payments" data-y="99.91"/>
-    <line x1="587.94" x2="587.94" y1="87" y2="107" stroke="#262626" stroke-width="2.5" data-target="99.95"/>
-    <rect x="88.66" y="119" width="525.56" height="24" fill="#262626" fill-opacity="0.07" data-track="Search"/>
-    <path d="M88.66 126 L596.45 126 Q598.45 126 598.45 128 L598.45 134 Q598.45 136 596.45 136 L88.66 136 Z" fill="#5AD8A6" data-x="Search" data-y="99.97"/>
-    <line x1="561.66" x2="561.66" y1="121" y2="141" stroke="#262626" stroke-width="2.5" data-target="99.9"/>
-    <rect x="88.66" y="153" width="525.56" height="24" fill="#262626" fill-opacity="0.07" data-track="Notifications"/>
-    <path d="M88.66 160 L412.51 160 Q414.51 160 414.51 162 L414.51 168 Q414.51 170 412.51 170 L88.66 170 Z" fill="#5AD8A6" data-x="Notifications" data-y="99.62"/>
-    <line x1="351.44" x2="351.44" y1="155" y2="175" stroke="#262626" stroke-width="2.5" data-target="99.5"/>
+    <rect x="88.66" y="51" width="525.56" height="24" fill="#262626" fill-opacity="0.07" data-track="Checkout" style="fill:var(--markvis-ink,#262626)"/>
+    <path d="M88.66 58 L601.71 58 Q603.71 58 603.71 60 L603.71 66 Q603.71 68 601.71 68 L88.66 68 Z" fill="#5AD8A6" data-x="Checkout" data-y="99.98" style="fill:var(--markvis-series-1,#5AD8A6)"/>
+    <line x1="587.94" x2="587.94" y1="53" y2="73" stroke="#262626" stroke-width="2.5" data-target="99.95" style="stroke:var(--markvis-ink,#262626)"/>
+    <rect x="88.66" y="85" width="525.56" height="24" fill="#262626" fill-opacity="0.07" data-track="Payments" style="fill:var(--markvis-ink,#262626)"/>
+    <path d="M88.66 92 L564.92 92 Q566.92 92 566.92 94 L566.92 100 Q566.92 102 564.92 102 L88.66 102 Z" fill="#5AD8A6" data-x="Payments" data-y="99.91" style="fill:var(--markvis-series-1,#5AD8A6)"/>
+    <line x1="587.94" x2="587.94" y1="87" y2="107" stroke="#262626" stroke-width="2.5" data-target="99.95" style="stroke:var(--markvis-ink,#262626)"/>
+    <rect x="88.66" y="119" width="525.56" height="24" fill="#262626" fill-opacity="0.07" data-track="Search" style="fill:var(--markvis-ink,#262626)"/>
+    <path d="M88.66 126 L596.45 126 Q598.45 126 598.45 128 L598.45 134 Q598.45 136 596.45 136 L88.66 136 Z" fill="#5AD8A6" data-x="Search" data-y="99.97" style="fill:var(--markvis-series-1,#5AD8A6)"/>
+    <line x1="561.66" x2="561.66" y1="121" y2="141" stroke="#262626" stroke-width="2.5" data-target="99.9" style="stroke:var(--markvis-ink,#262626)"/>
+    <rect x="88.66" y="153" width="525.56" height="24" fill="#262626" fill-opacity="0.07" data-track="Notifications" style="fill:var(--markvis-ink,#262626)"/>
+    <path d="M88.66 160 L412.51 160 Q414.51 160 414.51 162 L414.51 168 Q414.51 170 412.51 170 L88.66 170 Z" fill="#5AD8A6" data-x="Notifications" data-y="99.62" style="fill:var(--markvis-series-1,#5AD8A6)"/>
+    <line x1="351.44" x2="351.44" y1="155" y2="175" stroke="#262626" stroke-width="2.5" data-target="99.5" style="stroke:var(--markvis-ink,#262626)"/>
   </g>
-  <g fill="#262626" font-size="12" font-weight="400">
-    <text x="626.22" y="63" dominant-baseline="middle" data-value-label="Checkout">99.98<tspan fill="#737373" font-weight="400"> / 99.95</tspan></text>
-    <text x="626.22" y="97" dominant-baseline="middle" data-value-label="Payments">99.91<tspan fill="#737373" font-weight="400"> / 99.95</tspan></text>
-    <text x="626.22" y="131" dominant-baseline="middle" data-value-label="Search">99.97<tspan fill="#737373" font-weight="400"> / 99.9</tspan></text>
-    <text x="626.22" y="165" dominant-baseline="middle" data-value-label="Notifications">99.62<tspan fill="#737373" font-weight="400"> / 99.5</tspan></text>
+  <g fill="#262626" font-size="12" font-weight="400" style="fill:var(--markvis-ink,#262626)">
+    <text x="626.22" y="63" dominant-baseline="middle" data-value-label="Checkout">99.98<tspan fill="#737373" font-weight="400" style="fill:var(--markvis-muted,#737373)"> / 99.95</tspan></text>
+    <text x="626.22" y="97" dominant-baseline="middle" data-value-label="Payments">99.91<tspan fill="#737373" font-weight="400" style="fill:var(--markvis-muted,#737373)"> / 99.95</tspan></text>
+    <text x="626.22" y="131" dominant-baseline="middle" data-value-label="Search">99.97<tspan fill="#737373" font-weight="400" style="fill:var(--markvis-muted,#737373)"> / 99.9</tspan></text>
+    <text x="626.22" y="165" dominant-baseline="middle" data-value-label="Notifications">99.62<tspan fill="#737373" font-weight="400" style="fill:var(--markvis-muted,#737373)"> / 99.5</tspan></text>
   </g>
 </svg>

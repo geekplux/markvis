@@ -1,21 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="pie chart: Billing leads support tickets at 40, 4 slices" aria-labelledby="mv-084d4e3d9bba4f2b-title" aria-describedby="mv-084d4e3d9bba4f2b-desc" data-markvis="2" data-chart-type="pie" data-id="mv-084d4e3d9bba4f2b" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="450" viewBox="0 0 720 450" role="img" aria-label="pie chart: Billing leads support tickets at 40, 4 slices" aria-labelledby="mv-084d4e3d9bba4f2b-title" aria-describedby="mv-084d4e3d9bba4f2b-desc" data-markvis="2" data-chart-type="pie" data-id="mv-084d4e3d9bba4f2b" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-084d4e3d9bba4f2b-title">Billing leads support tickets at 40</title>
   <desc id="mv-084d4e3d9bba4f2b-desc">pie chart. Billing leads support tickets at 40. x=topic. y=tickets. 4 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151"><title>Billing leads support tickets at 40</title>Billing leads support tickets at 40</text>
-  <g font-size="12" font-weight="400" fill="#374151">
-    <rect x="87.67" y="407" width="10" height="10" fill="#8884d8" rx="1"/>
+  <text x="48" y="24" text-anchor="start" font-size="16" font-weight="600" fill="#374151" style="fill:var(--markvis-ink,#374151)"><title>Billing leads support tickets at 40</title>Billing leads support tickets at 40</text>
+  <g font-size="12" font-weight="400" fill="#374151" style="fill:var(--markvis-ink,#374151)">
+    <rect x="87.67" y="407" width="10" height="10" fill="#8884d8" rx="1" style="fill:var(--markvis-series-1,#8884d8)"/>
     <text x="101.67" y="416" data-legend="Billing and invoice disputes">Billing and invoice disputes</text>
-    <rect x="278.02" y="407" width="10" height="10" fill="#82ca9d" rx="1"/>
+    <rect x="278.02" y="407" width="10" height="10" fill="#82ca9d" rx="1" style="fill:var(--markvis-series-2,#82ca9d)"/>
     <text x="292.02" y="416" data-legend="Account access and MFA reset">Account access and MFA reset</text>
-    <rect x="490.78" y="407" width="10" height="10" fill="#ffc658" rx="1"/>
+    <rect x="490.78" y="407" width="10" height="10" fill="#ffc658" rx="1" style="fill:var(--markvis-series-3,#ffc658)"/>
     <text x="504.78" y="416" data-legend="Product how-to questions">Product how-to questions</text>
-    <rect x="305.8" y="425" width="10" height="10" fill="#ff7300" rx="1"/>
+    <rect x="305.8" y="425" width="10" height="10" fill="#ff7300" rx="1" style="fill:var(--markvis-series-4,#ff7300)"/>
     <text x="319.8" y="434" data-legend="Other miscellaneous">Other miscellaneous</text>
   </g>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0">
-    <path d="M374 213 L374 94 A119 119 0 0 1 443.95 309.27 Z" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="Billing and invoice disputes" data-raw-value="40"/>
-    <path d="M374 213 L443.95 309.27 A119 119 0 0 1 277.73 282.95 Z" fill="#82ca9d" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="Account access and MFA reset" data-raw-value="25"/>
-    <path d="M374 213 L277.73 282.95 A119 119 0 0 1 277.73 143.05 Z" fill="#ffc658" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="Product how-to questions" data-raw-value="20"/>
-    <path d="M374 213 L277.73 143.05 A119 119 0 0 1 374 94 Z" fill="#ff7300" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="Other miscellaneous" data-raw-value="15"/>
+    <path d="M374 213 L374 94 A119 119 0 0 1 443.95 309.27 Z" fill="#8884d8" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="Billing and invoice disputes" data-raw-value="40" style="fill:var(--markvis-series-1,#8884d8);stroke:var(--markvis-ink,#374151)"/>
+    <path d="M374 213 L443.95 309.27 A119 119 0 0 1 277.73 282.95 Z" fill="#82ca9d" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="Account access and MFA reset" data-raw-value="25" style="fill:var(--markvis-series-2,#82ca9d);stroke:var(--markvis-ink,#374151)"/>
+    <path d="M374 213 L277.73 282.95 A119 119 0 0 1 277.73 143.05 Z" fill="#ffc658" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="Product how-to questions" data-raw-value="20" style="fill:var(--markvis-series-3,#ffc658);stroke:var(--markvis-ink,#374151)"/>
+    <path d="M374 213 L277.73 143.05 A119 119 0 0 1 374 94 Z" fill="#ff7300" stroke="#374151" stroke-opacity="0.28" stroke-width="1.5" data-label="Other miscellaneous" data-raw-value="15" style="fill:var(--markvis-series-4,#ff7300);stroke:var(--markvis-ink,#374151)"/>
   </g>
 </svg>

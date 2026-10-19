@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="funnel chart: First ride still keeps 140 of 1,200 Midtown visits, 6 rows" aria-labelledby="mv-14b205fefc301276-title" aria-describedby="mv-14b205fefc301276-desc" data-markvis="2" data-chart-type="funnel" data-id="mv-14b205fefc301276" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="funnel chart: First ride still keeps 140 of 1,200 Midtown visits, 6 rows" aria-labelledby="mv-14b205fefc301276-title" aria-describedby="mv-14b205fefc301276-desc" data-markvis="2" data-chart-type="funnel" data-id="mv-14b205fefc301276" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-14b205fefc301276-title">First ride still keeps 140 of 1,200 Midtown visits</title>
   <desc id="mv-14b205fefc301276-desc">funnel chart. First ride still keeps 140 of 1,200 Midtown visits. x=stage. y=people. 6 rows.</desc>
-  <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19"><title>First ride still keeps 140 of 1,200 Midtown visits</title>First ride still keeps 140 of 1,200 Midtown visits</text>
+  <text x="52" y="30" text-anchor="start" font-size="19" font-weight="700" letter-spacing="-0.02em" fill="#1B1B19" style="fill:var(--markvis-ink,#1B1B19)"><title>First ride still keeps 140 of 1,200 Midtown visits</title>First ride still keeps 140 of 1,200 Midtown visits</text>
   <g data-funnel="1">
-    <path d="M52 52 L580.87 52 L422.21 118.67 L210.66 118.67 Z" fill="#1B1B19" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Visit" data-y="1,200"/>
-    <path d="M210.66 118.67 L422.21 118.67 L384.75 185.33 L248.12 185.33 Z" fill="#4A4945" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Signup" data-y="480"/>
-    <path d="M248.12 185.33 L384.75 185.33 L356.1 252 L276.77 252 Z" fill="#6E6D68" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Verify" data-y="310"/>
-    <path d="M276.77 252 L356.1 252 L347.28 318.67 L285.58 318.67 Z" fill="#8E8D87" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Activate" data-y="180"/>
-    <path d="M285.58 318.67 L347.28 318.67 L337.37 385.33 L295.5 385.33 Z" fill="#AEADA7" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="First ride" data-y="140"/>
-    <path d="M295.5 385.33 L337.37 385.33 L337.37 452 L295.5 452 Z" fill="#C8C7C1" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Week-4 return" data-y="95"/>
+    <path d="M52 52 L580.87 52 L422.21 118.67 L210.66 118.67 Z" fill="#1B1B19" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Visit" data-y="1,200" style="fill:var(--markvis-series-1,#1B1B19);stroke:var(--markvis-ink,#1B1B19)"/>
+    <path d="M210.66 118.67 L422.21 118.67 L384.75 185.33 L248.12 185.33 Z" fill="#4A4945" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Signup" data-y="480" style="fill:var(--markvis-series-2,#4A4945);stroke:var(--markvis-ink,#1B1B19)"/>
+    <path d="M248.12 185.33 L384.75 185.33 L356.1 252 L276.77 252 Z" fill="#6E6D68" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Verify" data-y="310" style="fill:var(--markvis-series-3,#6E6D68);stroke:var(--markvis-ink,#1B1B19)"/>
+    <path d="M276.77 252 L356.1 252 L347.28 318.67 L285.58 318.67 Z" fill="#8E8D87" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Activate" data-y="180" style="fill:var(--markvis-series-4,#8E8D87);stroke:var(--markvis-ink,#1B1B19)"/>
+    <path d="M285.58 318.67 L347.28 318.67 L337.37 385.33 L295.5 385.33 Z" fill="#AEADA7" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="First ride" data-y="140" style="fill:var(--markvis-series-5,#AEADA7);stroke:var(--markvis-ink,#1B1B19)"/>
+    <path d="M295.5 385.33 L337.37 385.33 L337.37 452 L295.5 452 Z" fill="#C8C7C1" stroke="#1B1B19" stroke-opacity="0.6" stroke-width="1" data-stage="Week-4 return" data-y="95" style="fill:var(--markvis-series-6,#C8C7C1);stroke:var(--markvis-ink,#1B1B19)"/>
   </g>
-  <g fill="#1B1B19" font-size="12" font-weight="800">
+  <g fill="#1B1B19" font-size="12" font-weight="800" style="fill:var(--markvis-ink,#1B1B19)">
     <text x="588.87" y="85.33" text-anchor="start" dominant-baseline="middle" data-label="Visit"><title>Visit · 1,200</title>Visit · 1,200</text>
     <text x="588.87" y="152" text-anchor="start" dominant-baseline="middle" data-label="Signup"><title>Signup · 480</title>Signup · 480</text>
     <text x="588.87" y="218.67" text-anchor="start" dominant-baseline="middle" data-label="Verify"><title>Verify · 310</title>Verify · 310</text>

@@ -94,7 +94,8 @@ export function wrapTitle(title: string, x: number, unit?: string): string[] {
   const suffixW =
     unitSuffix(unit) === "" ? 0 : textWidth(unitSuffix(unit), TYPE.unit.size, TYPE.unit.weight);
   const lastMax = Math.max(12, maxWidth - suffixW);
-  const cap = 4;
+  // A title wraps at most once; the second line ends in an ellipsis.
+  const cap = 2;
   const source = titleCase(title.trim());
   if (source === "") {
     return [""];
@@ -172,7 +173,7 @@ export function drawTitle(title: string, x: number, unit?: string): string {
   const unitSpan =
     suffix === ""
       ? ""
-      : `<tspan font-size="${TYPE.unit.size}" font-weight="${TYPE.unit.weight}" fill="${TYPE.unit.fill}">${escapeXml(suffix)}</tspan>`;
+      : `<tspan ${attrs({ "font-size": TYPE.unit.size, "font-weight": TYPE.unit.weight, fill: TYPE.unit.fill })}>${escapeXml(suffix)}</tspan>`;
   const body = lines
     .map((line, i) => {
       const tail = i === lines.length - 1 ? unitSpan : "";

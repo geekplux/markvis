@@ -1,18 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="pie chart: Budget lines overrun the 100% pie, 3 slices" aria-labelledby="mv-2e7a703e9d22ed38-title" aria-describedby="mv-2e7a703e9d22ed38-desc" data-markvis="2" data-chart-type="pie" data-id="mv-2e7a703e9d22ed38" font-family="&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="pie chart: Budget lines overrun the 100% pie, 3 slices" aria-labelledby="mv-2e7a703e9d22ed38-title" aria-describedby="mv-2e7a703e9d22ed38-desc" data-markvis="2" data-chart-type="pie" data-id="mv-2e7a703e9d22ed38" font-family="&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif" font-size="12" style="font-family:var(--markvis-font,&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif)">
   <title id="mv-2e7a703e9d22ed38-title">Budget lines overrun the 100% pie</title>
   <desc id="mv-2e7a703e9d22ed38-desc">pie chart. Budget lines overrun the 100% pie. x=bucket. y=pct. 3 rows. slice sizes are raw values and are not normalized to 100.</desc>
-  <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Budget lines overrun the 100% pie</title>Budget lines overrun the 100% pie</text>
-  <g font-size="12" font-weight="700" fill="#333333">
-    <circle cx="292.94" cy="420" r="5" fill="#7cb5ec"/>
+  <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333" style="fill:var(--markvis-ink,#333333)"><title>Budget lines overrun the 100% pie</title>Budget lines overrun the 100% pie</text>
+  <g font-size="12" font-weight="700" fill="#333333" style="fill:var(--markvis-ink,#333333)">
+    <circle cx="292.94" cy="420" r="5" fill="#7cb5ec" style="fill:var(--markvis-series-1,#7cb5ec)"/>
     <text x="301.94" y="424" data-legend="Infra">Infra</text>
-    <circle cx="352.71" cy="420" r="5" fill="#434348"/>
+    <circle cx="352.71" cy="420" r="5" fill="#434348" style="fill:var(--markvis-series-2,#434348)"/>
     <text x="361.71" y="424" data-legend="Product">Product</text>
-    <circle cx="431.71" cy="420" r="5" fill="#90ed7d"/>
+    <circle cx="431.71" cy="420" r="5" fill="#90ed7d" style="fill:var(--markvis-series-3,#90ed7d)"/>
     <text x="440.71" y="424" data-legend="Ops">Ops</text>
   </g>
   <g aria-hidden="true" data-pie-label-mode="legend" data-pie-inner-ratio="0">
-    <path d="M378 220 L378 100.32 A119.68 119.68 0 0 1 429.93 327.83 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Infra" data-raw-value="45"/>
-    <path d="M378 220 L429.93 327.83 A119.68 119.68 0 0 1 258.65 211.06 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Product" data-raw-value="35"/>
-    <path d="M378 220 L258.65 211.06 A119.68 119.68 0 0 1 378 100.32 Z" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Ops" data-raw-value="25"/>
+    <path d="M378 220 L378 100.32 A119.68 119.68 0 0 1 429.93 327.83 Z" fill="#7cb5ec" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Infra" data-raw-value="45" style="fill:var(--markvis-series-1,#7cb5ec);stroke:var(--markvis-ink,#333333)"/>
+    <path d="M378 220 L429.93 327.83 A119.68 119.68 0 0 1 258.65 211.06 Z" fill="#434348" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Product" data-raw-value="35" style="fill:var(--markvis-series-2,#434348);stroke:var(--markvis-ink,#333333)"/>
+    <path d="M378 220 L258.65 211.06 A119.68 119.68 0 0 1 378 100.32 Z" fill="#90ed7d" stroke="#333333" stroke-opacity="0.42" stroke-width="1.5" data-label="Ops" data-raw-value="25" style="fill:var(--markvis-series-3,#90ed7d);stroke:var(--markvis-ink,#333333)"/>
   </g>
 </svg>

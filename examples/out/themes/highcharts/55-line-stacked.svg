@@ -1,21 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="line chart: Walk-up plus member still climb through week 8, 16 rows, series channel" aria-labelledby="mv-61cebd44b0368518-title" aria-describedby="mv-61cebd44b0368518-desc" data-markvis="2" data-chart-type="line" data-id="mv-61cebd44b0368518" font-family="&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" role="img" aria-label="line chart: Walk-up plus member still climb through week 8, 16 rows, series channel" aria-labelledby="mv-61cebd44b0368518-title" aria-describedby="mv-61cebd44b0368518-desc" data-markvis="2" data-chart-type="line" data-id="mv-61cebd44b0368518" font-family="&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif" font-size="12" style="font-family:var(--markvis-font,&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Arial, Helvetica, sans-serif)">
   <title id="mv-61cebd44b0368518-title">Walk-up plus member still climb through week 8</title>
   <desc id="mv-61cebd44b0368518-desc">line chart. Walk-up plus member still climb through week 8. x=week. y=count. series=channel. 16 rows.</desc>
-  <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333"><title>Walk-up plus member still climb through week 8</title>Walk-up plus member still climb through week 8</text>
-  <g font-size="12" font-weight="700" fill="#333333">
-    <circle cx="315.85" cy="420" r="5" fill="#7cb5ec"/>
+  <text x="360" y="26" text-anchor="middle" font-size="18" font-weight="400" fill="#333333" style="fill:var(--markvis-ink,#333333)"><title>Walk-up plus member still climb through week 8</title>Walk-up plus member still climb through week 8</text>
+  <g font-size="12" font-weight="700" fill="#333333" style="fill:var(--markvis-ink,#333333)">
+    <circle cx="315.85" cy="420" r="5" fill="#7cb5ec" style="fill:var(--markvis-series-1,#7cb5ec)"/>
     <text x="324.85" y="424" data-legend="walk-up">walk-up</text>
-    <circle cx="399.85" cy="420" r="5" fill="#434348"/>
+    <circle cx="399.85" cy="420" r="5" fill="#434348" style="fill:var(--markvis-series-2,#434348)"/>
     <text x="408.85" y="424" data-legend="member">member</text>
   </g>
-  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1">
+  <g fill="none" stroke="#333333" stroke-opacity="0.14" stroke-width="1" data-grid="1" style="stroke:var(--markvis-grid,#333333)">
     <line x1="74" x2="700" y1="248" y2="248"/>
     <line x1="74" x2="700" y1="146" y2="146"/>
     <line x1="74" x2="700" y1="44" y2="44"/>
   </g>
-  <path d="M74 350 L700 350" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1"/>
-  <path d="M113.13 350 L113.13 356 M191.38 350 L191.38 356 M269.63 350 L269.63 356 M347.88 350 L347.88 356 M426.13 350 L426.13 356 M504.38 350 L504.38 356 M582.63 350 L582.63 356 M660.88 350 L660.88 356" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1"/>
-  <g fill="#666666" font-size="11" font-weight="400">
+  <path d="M74 350 L700 350" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" style="stroke:var(--markvis-ink,#333333)"/>
+  <path d="M113.13 350 L113.13 356 M191.38 350 L191.38 356 M269.63 350 L269.63 356 M347.88 350 L347.88 356 M426.13 350 L426.13 356 M504.38 350 L504.38 356 M582.63 350 L582.63 356 M660.88 350 L660.88 356" fill="none" stroke="#333333" stroke-opacity="0.42" stroke-width="1" data-axis-ticks="1" style="stroke:var(--markvis-ink,#333333)"/>
+  <g fill="#666666" font-size="11" font-weight="400" style="fill:var(--markvis-muted,#666666)">
     <text x="66" y="350" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="66" y="248" text-anchor="end" dominant-baseline="middle">50</text>
     <text x="66" y="146" text-anchor="end" dominant-baseline="middle">100</text>
@@ -29,28 +29,28 @@
     <text x="582.63" y="367" text-anchor="middle" font-size="11" data-full-label="W7"><title>W7</title>W7</text>
     <text x="660.88" y="367" text-anchor="middle" font-size="11" data-full-label="W8"><title>W8</title>W8</text>
   </g>
-  <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1">
+  <g fill="#666666" font-size="12" font-weight="400" data-axis-titles="1" style="fill:var(--markvis-muted,#666666)">
     <text x="35.52" y="197" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 35.52 197)" data-axis="y">count</text>
     <text x="387" y="376.3" text-anchor="middle" dominant-baseline="hanging" data-axis="x">week</text>
   </g>
   <g fill="none">
-    <path d="M113.13 219.44 L191.38 211.28 L269.63 205.16 L347.88 209.24 L426.13 199.04 L504.38 203.12 L582.63 197 L660.88 201.08" fill="none" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="walk-up" data-layout="stacked"/>
-    <circle cx="113.13" cy="219.44" r="4" fill="#7cb5ec" stroke="none" data-series="walk-up"/>
-    <circle cx="191.38" cy="211.28" r="4" fill="#7cb5ec" stroke="none" data-series="walk-up"/>
-    <circle cx="269.63" cy="205.16" r="4" fill="#7cb5ec" stroke="none" data-series="walk-up"/>
-    <circle cx="347.88" cy="209.24" r="4" fill="#7cb5ec" stroke="none" data-series="walk-up"/>
-    <circle cx="426.13" cy="199.04" r="4" fill="#7cb5ec" stroke="none" data-series="walk-up"/>
-    <circle cx="504.38" cy="203.12" r="4" fill="#7cb5ec" stroke="none" data-series="walk-up"/>
-    <circle cx="582.63" cy="197" r="4" fill="#7cb5ec" stroke="none" data-series="walk-up"/>
-    <circle cx="660.88" cy="201.08" r="4" fill="#7cb5ec" stroke="none" data-series="walk-up"/>
-    <path d="M113.13 162.32 L191.38 146 L269.63 133.76 L347.88 131.72 L426.13 115.4 L504.38 113.36 L582.63 101.12 L660.88 99.08" fill="none" stroke="#434348" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="member" data-layout="stacked"/>
-    <circle cx="113.13" cy="162.32" r="4" fill="#434348" stroke="none" data-series="member"/>
-    <circle cx="191.38" cy="146" r="4" fill="#434348" stroke="none" data-series="member"/>
-    <circle cx="269.63" cy="133.76" r="4" fill="#434348" stroke="none" data-series="member"/>
-    <circle cx="347.88" cy="131.72" r="4" fill="#434348" stroke="none" data-series="member"/>
-    <circle cx="426.13" cy="115.4" r="4" fill="#434348" stroke="none" data-series="member"/>
-    <circle cx="504.38" cy="113.36" r="4" fill="#434348" stroke="none" data-series="member"/>
-    <circle cx="582.63" cy="101.12" r="4" fill="#434348" stroke="none" data-series="member"/>
-    <circle cx="660.88" cy="99.08" r="4" fill="#434348" stroke="none" data-series="member"/>
+    <path d="M113.13 219.44 L191.38 211.28 L269.63 205.16 L347.88 209.24 L426.13 199.04 L504.38 203.12 L582.63 197 L660.88 201.08" fill="none" stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="walk-up" data-layout="stacked" style="stroke:var(--markvis-series-1,#7cb5ec)"/>
+    <circle cx="113.13" cy="219.44" r="4" fill="#7cb5ec" stroke="none" data-series="walk-up" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <circle cx="191.38" cy="211.28" r="4" fill="#7cb5ec" stroke="none" data-series="walk-up" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <circle cx="269.63" cy="205.16" r="4" fill="#7cb5ec" stroke="none" data-series="walk-up" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <circle cx="347.88" cy="209.24" r="4" fill="#7cb5ec" stroke="none" data-series="walk-up" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <circle cx="426.13" cy="199.04" r="4" fill="#7cb5ec" stroke="none" data-series="walk-up" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <circle cx="504.38" cy="203.12" r="4" fill="#7cb5ec" stroke="none" data-series="walk-up" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <circle cx="582.63" cy="197" r="4" fill="#7cb5ec" stroke="none" data-series="walk-up" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <circle cx="660.88" cy="201.08" r="4" fill="#7cb5ec" stroke="none" data-series="walk-up" style="fill:var(--markvis-series-1,#7cb5ec)"/>
+    <path d="M113.13 162.32 L191.38 146 L269.63 133.76 L347.88 131.72 L426.13 115.4 L504.38 113.36 L582.63 101.12 L660.88 99.08" fill="none" stroke="#434348" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="member" data-layout="stacked" style="stroke:var(--markvis-series-2,#434348)"/>
+    <circle cx="113.13" cy="162.32" r="4" fill="#434348" stroke="none" data-series="member" style="fill:var(--markvis-series-2,#434348)"/>
+    <circle cx="191.38" cy="146" r="4" fill="#434348" stroke="none" data-series="member" style="fill:var(--markvis-series-2,#434348)"/>
+    <circle cx="269.63" cy="133.76" r="4" fill="#434348" stroke="none" data-series="member" style="fill:var(--markvis-series-2,#434348)"/>
+    <circle cx="347.88" cy="131.72" r="4" fill="#434348" stroke="none" data-series="member" style="fill:var(--markvis-series-2,#434348)"/>
+    <circle cx="426.13" cy="115.4" r="4" fill="#434348" stroke="none" data-series="member" style="fill:var(--markvis-series-2,#434348)"/>
+    <circle cx="504.38" cy="113.36" r="4" fill="#434348" stroke="none" data-series="member" style="fill:var(--markvis-series-2,#434348)"/>
+    <circle cx="582.63" cy="101.12" r="4" fill="#434348" stroke="none" data-series="member" style="fill:var(--markvis-series-2,#434348)"/>
+    <circle cx="660.88" cy="99.08" r="4" fill="#434348" stroke="none" data-series="member" style="fill:var(--markvis-series-2,#434348)"/>
   </g>
 </svg>

@@ -17,6 +17,7 @@ import {
   FONT,
   FONT_NUMERIC,
   GRID,
+  GRID_INK,
   INK,
   LEGEND_BELOW,
   MARGIN,
@@ -205,7 +206,7 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
   lines.push(
     `  <g ${attrs({
       fill: "none",
-      stroke: INK,
+      stroke: GRID_INK,
       "stroke-opacity": STRUCTURE_OPACITY,
       "stroke-width": GRID.width,
       "stroke-dasharray": GRID.dash || undefined,

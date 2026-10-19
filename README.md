@@ -1,53 +1,44 @@
 # markvis
 
-<p align="center">
-  <img src="https://markvis.js.org/logo.png" width="128" height="128" alt="MarkVis" />
-</p>
-
 [![check](https://github.com/geekplux/markvis/actions/workflows/check.yml/badge.svg)](https://github.com/geekplux/markvis/actions/workflows/check.yml)
 [![npm](https://img.shields.io/npm/v/markvis.svg)](https://www.npmjs.com/package/markvis)
 
 **Charts in Markdown. The numbers are the picture.**
 
-Write a short chart block in Markdown; markvis draws it as SVG — from a script tag, JavaScript, React, or any Markdown renderer. Where it cannot draw, the numbers stay as a table.
+Write a short chart block in Markdown. markvis draws it wherever the Markdown is shown: a page, a note, a chat reply, a docs site. Where it cannot draw, the numbers stay as a table.
 
 ```chart
-markvis: 2
 type: bar
-title: Mar led Midtown box office at 9.2k tickets
-unit: tickets
-x: month
-y: tickets
+title: Visits by day
+x: day
+y: visits
 
-month,tickets
-Sep,5200
-Oct,6100
-Nov,7800
-Dec,8500
-Jan,4800
-Feb,7200
-Mar,9200
-Apr,6900
+day,visits
+Mon,3
+Tue,5
+Wed,4
+Thu,6
+Fri,8
 ```
-![Mar led Midtown box office at 9.2k tickets](https://markvis.js.org/home/01-bar-basic.svg)
+![Visits by day](https://markvis.js.org/home/visits-by-day.svg)
 
-**The data never disappears.** Without markvis the block is readable text, and the comment form (a one-line comment above a Markdown table) shows as a plain table, on github.com too. A block that cannot draw keeps its rows and shows one error line with a stable code.
+56 kB gzip · 0 dependencies · under 1 ms a chart · plain SVG
 
-**In a Markdown file or page** — one script tag:
+**One script tag**, in a page or a Markdown file. Every chart block on it draws.
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/markvis@2/dist/markvis.min.js"></script>
 ```
 
-**From JavaScript:**
+**JavaScript.** One call. It never throws: a wrong block comes back as its rows and one error line.
 
 ```js
 import { render } from "markvis";
 
-element.innerHTML = render(blockText).html; // a figure, or the rows and one error line
+element.innerHTML = render(blockText).html;
 ```
 
-**In React:**
+**React.** Follows its container, and draws while a reply streams.
 
 ```jsx
 import { Markvis } from "markvis/react";
@@ -55,23 +46,25 @@ import { Markvis } from "markvis/react";
 <Markvis source={blockText} />
 ```
 
-**On GitHub** — a workflow step bakes the pictures, so README charts show on github.com:
+**GitHub.** github.com runs no scripts, so bake a picture next to the block. A workflow step can do it on every push.
 
-```yaml
-- uses: geekplux/markvis@master
+```bash
+npx markvis bake README.md
 ```
 
-**Try:** [Play](https://markvis.js.org/play) · [Examples](https://markvis.js.org/examples) · [Integrate](https://markvis.js.org/integrate) · [Chart types](https://markvis.js.org/types/) · [For AI](./docs/prompt.md)
+**Tell your model.** Put the 250-token [instruction](./docs/prompt.md) in a system prompt and it writes this block instead of an image or JSON. The same text opens [llms.txt](./llms.txt).
+
+**Your colors.** A chart drawn in your page reads your CSS variables (`--markvis-ink`, `--markvis-grid`, `--markvis-series-1` …), so it follows light, dark, and brand colors. Each color keeps a fixed fallback, and `bake` writes fixed colors only.
+
+[Play](https://markvis.js.org/play) · [Examples](https://markvis.js.org/examples) · [Integrate](https://markvis.js.org/integrate) · [Theming](https://markvis.js.org/theming) · [Chart types](https://markvis.js.org/types/)
 
 ## Why markvis
 
 - **The chart is a table of text.** Readable in raw Markdown, changed by editing one number, and a model can read the numbers back.
-- **It runs wherever Markdown runs:** a script tag, JavaScript, React and react-markdown (with streaming), markdown-it, remark and rehype (MDX), the command line, a GitHub Action.
+- **The data never disappears.** Without markvis the block is readable text, and the comment form (a one-line comment above a Markdown table) shows as a plain table, on github.com too. A block that cannot draw keeps its rows and shows one error line with a stable code.
 - **Models write it from a short instruction.** A 250-token [model instruction](./docs/prompt.md) for a system prompt; the same text opens [llms.txt](./llms.txt).
 - **Safe by design.** A block holds data only: no HTML, no scripts. Every title, label, and cell is escaped in the SVG and the table.
 - **Seventeen chart types** with readable defaults, and no d3.
-
-In 2017 this project was a renderer (GitHub Trending). This is the rewrite: the same name, for people and for AI.
 
 ## What you can write
 
@@ -95,6 +88,12 @@ npx markvis bake README.md
 
 `bake` writes a picture next to the file and adds a Markdown image so GitHub can show it. The code block stays. Running bake again does nothing if nothing changed. `npx markvis check notes.md` checks every chart block in the file and exits non-zero if any block is invalid.
 
+On GitHub, a workflow step bakes the pictures on every push:
+
+```yaml
+- uses: geekplux/markvis@master
+```
+
 A blank measure cell is missing, not zero. Text such as `N/A` is an error (`E_BAD_NUMBER`) and the table stays. Omit `markvis` for version 2; any other version is rejected.
 
 To parse without drawing, `parseBlock(text)` returns the chart or a stable error code with the rows. To read every chart in a document, `parseDocument(markdown)`.
@@ -113,4 +112,4 @@ With an AI: put [docs/prompt.md](./docs/prompt.md) in the system prompt, or poin
 
 [Get started](https://markvis.js.org/get-started) · [Integrate](https://markvis.js.org/integrate) · [SPEC.md](./SPEC.md) · [Themes](./docs/themes.md) · [Architecture](./docs/architecture.md) · [Contributing](./CONTRIBUTING.md) · [Changelog](./CHANGELOG.md)
 
-0.0.13 (the old d3 renderer): [legacy/](./legacy/).
+In 2017 this project was a renderer (GitHub Trending). This is the rewrite: the same name, for people and for AI. 0.0.13 (the old d3 renderer): [legacy/](./legacy/).

@@ -53,6 +53,9 @@ html {
     monospace;
 }
 
+/* [data-site-mode] re-scopes the tokens on one element, e.g. the hero stage
+   when it shows the other mode than the page. */
+[data-site-mode="light"],
 html.light {
   color-scheme: light;
   --site-bg: #f5f7fc;
@@ -63,6 +66,7 @@ html.light {
   --site-mint: #059669;
   --site-primary: #002fa7;
   --site-primary-fg: #ffffff;
+  --site-card: #ffffff;
   --site-card-2: #eef1f8;
   --site-secondary: #e8ecf6;
   --site-dot: rgba(0, 47, 167, 0.18);
@@ -88,6 +92,7 @@ html.light {
   --paper: var(--site-bg);
 }
 
+[data-site-mode="dark"],
 html.dark {
   color-scheme: dark;
   --site-bg: #0b1020;
@@ -98,6 +103,7 @@ html.dark {
   --site-mint: #34d399;
   --site-primary: #7aa2ff;
   --site-primary-fg: #0b1020;
+  --site-card: #141a2e;
   --site-card-2: #141a2e;
   --site-secondary: #141a2e;
   --site-dot: rgba(122, 162, 255, 0.22);
@@ -133,6 +139,7 @@ html:not(.light):not(.dark) {
   --site-mint: #34d399;
   --site-primary: #7aa2ff;
   --site-primary-fg: #0b1020;
+  --site-card: #141a2e;
   --site-card-2: #141a2e;
   --site-secondary: #141a2e;
   --site-dot: rgba(122, 162, 255, 0.22);

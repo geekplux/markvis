@@ -36,6 +36,8 @@ Commands:
 
 Options:
   -o, --out <path>  render: output directory; preview/gallery: html file
+  --colors <mode>   render/bake: static (default) writes fixed colors;
+                    host also reads the page's --markvis-* CSS variables
   --no-open         preview: do not open the html
   -h, --help
   -v, --version
@@ -60,6 +62,8 @@ export type CliContext = {
 
 type Flags = {
   out: string | undefined;
+  /** render / bake: how colors are written. A file has no host page, so static by default. */
+  colors: "host" | "static";
   noOpen: boolean;
   help: boolean;
   version: boolean;
@@ -98,6 +102,7 @@ function parseArgv(argv: string[]): {
 } {
   const flags: Flags = {
     out: undefined,
+    colors: "static",
     noOpen: false,
     help: false,
     version: false,
@@ -132,6 +137,14 @@ function parseArgv(argv: string[]): {
     }
     if (arg.startsWith("--out=")) {
       flags.out = arg.slice("--out=".length);
+      continue;
+    }
+    if (arg === "--colors" || arg.startsWith("--colors=")) {
+      const value = arg === "--colors" ? argv[++i] : arg.slice("--colors=".length);
+      if (value !== "host" && value !== "static") {
+        throw new CliError("--colors takes host or static");
+      }
+      flags.colors = value;
       continue;
     }
     if (arg.startsWith("-") && arg !== "-") {
@@ -262,7 +275,7 @@ function cmdRender(
       ctx.stderr.write(`error\t${file}\t${result.error.code}\n`);
       continue;
     }
-    const svg = renderSvg(result.chart);
+    const svg = renderSvg(result.chart, { colors: flags.colors });
     if (outDir) {
       const dest = join(outDir, basename(abs).replace(/\.md$/i, ".svg"));
       writeFileSync(dest, svg, "utf8");
@@ -352,7 +365,7 @@ function cmdGallery(
   return 0;
 }
 
-function cmdBake(paths: string[], ctx: CliContext): number {
+function cmdBake(paths: string[], flags: Flags, ctx: CliContext): number {
   const files = collectMarkdownFiles(paths, ctx.cwd);
   if (files.length === 0) {
     throw new CliError("no markdown files");
@@ -361,7 +374,7 @@ function cmdBake(paths: string[], ctx: CliContext): number {
   for (const abs of files) {
     const file = displayPath(abs, ctx.cwd);
     const source = readFileSync(abs, "utf8");
-    const baked = bakeMarkdown(source, abs);
+    const baked = bakeMarkdown(source, abs, { colors: flags.colors });
     writeBake(baked);
     if (baked.errors.length > 0) {
       errCount += 1;
@@ -408,7 +421,7 @@ export function runCli(argv: string[], ctx: Partial<CliContext> = {}): number {
       case "gallery":
         return cmdGallery(paths, flags, io);
       case "bake":
-        return cmdBake(paths, io);
+        return cmdBake(paths, flags, io);
       default:
         throw new CliError(`unknown command: ${command}`);
     }

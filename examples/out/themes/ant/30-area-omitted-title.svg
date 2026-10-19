@@ -1,36 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="area chart: Day 4 peaked warehouse intake at 120, 4 rows" aria-labelledby="mv-cdbac949a672f636-title" aria-describedby="mv-cdbac949a672f636-desc" data-markvis="2" data-chart-type="area" data-id="mv-cdbac949a672f636" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="area chart: Day 4 peaked warehouse intake at 120, 4 rows" aria-labelledby="mv-cdbac949a672f636-title" aria-describedby="mv-cdbac949a672f636-desc" data-markvis="2" data-chart-type="area" data-id="mv-cdbac949a672f636" font-family="-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif" font-size="12" style="font-family:var(--markvis-font,-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif)">
   <title id="mv-cdbac949a672f636-title">Day 4 peaked warehouse intake at 120</title>
   <desc id="mv-cdbac949a672f636-desc">area chart. Day 4 peaked warehouse intake at 120. x=day. y=intake. 4 rows.</desc>
-  <text x="66" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626"><title>Day 4 peaked warehouse intake at 120</title>Day 4 peaked warehouse intake at 120</text>
-  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4" data-grid="1">
+  <text x="66" y="26" text-anchor="start" font-size="17" font-weight="600" fill="#262626" style="fill:var(--markvis-ink,#262626)"><title>Day 4 peaked warehouse intake at 120</title>Day 4 peaked warehouse intake at 120</text>
+  <g fill="none" stroke="#262626" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="4 4" data-grid="1" style="stroke:var(--markvis-grid,#262626)">
     <line x1="66" x2="706" y1="252" y2="252"/>
     <line x1="66" x2="706" y1="149" y2="149"/>
     <line x1="66" x2="706" y1="46" y2="46"/>
   </g>
-  <path d="M66 355 L706 355" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1"/>
-  <path d="M74 355 L74 359 M198.8 355 L198.8 359 M323.6 355 L323.6 359 M448.4 355 L448.4 359 M573.2 355 L573.2 359 M698 355 L698 359" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-axis-ticks="1"/>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <path d="M66 355 L706 355" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" style="stroke:var(--markvis-ink,#262626)"/>
+  <path d="M74 355 L74 359 M282 355 L282 359 M490 355 L490 359 M698 355 L698 359" fill="none" stroke="#262626" stroke-opacity="0.32" stroke-width="1" data-axis-ticks="1" style="stroke:var(--markvis-ink,#262626)"/>
+  <g fill="#737373" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#737373)">
     <text x="58" y="355" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="58" y="252" text-anchor="end" dominant-baseline="middle">50</text>
     <text x="58" y="149" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="58" y="46" text-anchor="end" dominant-baseline="middle">150</text>
-    <text x="74" y="371" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
-    <text x="198.8" y="371" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
-    <text x="323.6" y="371" text-anchor="middle" font-size="12" data-full-label="2"><title>2</title>2</text>
-    <text x="448.4" y="371" text-anchor="middle" font-size="12" data-full-label="3"><title>3</title>3</text>
-    <text x="573.2" y="371" text-anchor="middle" font-size="12" data-full-label="4"><title>4</title>4</text>
-    <text x="698" y="371" text-anchor="middle" font-size="12" data-full-label="5"><title>5</title>5</text>
+    <text x="74" y="371" text-anchor="middle" font-size="12" data-full-label="1"><title>1</title>1</text>
+    <text x="282" y="371" text-anchor="middle" font-size="12" data-full-label="2"><title>2</title>2</text>
+    <text x="490" y="371" text-anchor="middle" font-size="12" data-full-label="3"><title>3</title>3</text>
+    <text x="698" y="371" text-anchor="middle" font-size="12" data-full-label="4"><title>4</title>4</text>
   </g>
-  <g fill="#737373" font-size="12" font-weight="400" data-axis-titles="1">
+  <g fill="#737373" font-size="12" font-weight="400" data-axis-titles="1" style="fill:var(--markvis-muted,#737373)">
     <text x="26.4" y="200.5" text-anchor="middle" dominant-baseline="middle" transform="rotate(-90 26.4 200.5)" data-axis="y">intake</text>
     <text x="386" y="380.6" text-anchor="middle" dominant-baseline="hanging" data-axis="x">day</text>
   </g>
   <g fill="none">
-    <path d="M198.8 149 L323.6 128.4 L448.4 138.7 L573.2 107.8 L573.2 355 L198.8 355 Z" fill="#5AD8A6" fill-opacity="0.25" stroke="none" data-series="intake"/>
-    <path d="M198.8 149 L323.6 128.4 L448.4 138.7 L573.2 107.8" fill="none" stroke="#5AD8A6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="intake"/>
-    <circle cx="198.8" cy="149" r="3.5" fill="#5AD8A6" stroke="#ffffff" stroke-width="1.5" data-series="intake"/>
-    <circle cx="323.6" cy="128.4" r="3.5" fill="#5AD8A6" stroke="#ffffff" stroke-width="1.5" data-series="intake"/>
-    <circle cx="448.4" cy="138.7" r="3.5" fill="#5AD8A6" stroke="#ffffff" stroke-width="1.5" data-series="intake"/>
-    <circle cx="573.2" cy="107.8" r="3.5" fill="#5AD8A6" stroke="#ffffff" stroke-width="1.5" data-series="intake"/>
+    <path d="M74 149 L282 128.4 L490 138.7 L698 107.8 L698 355 L74 355 Z" fill="#5AD8A6" fill-opacity="0.25" stroke="none" data-series="intake" style="fill:var(--markvis-series-1,#5AD8A6)"/>
+    <path d="M74 149 L282 128.4 L490 138.7 L698 107.8" fill="none" stroke="#5AD8A6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" data-series="intake" style="stroke:var(--markvis-series-1,#5AD8A6)"/>
+    <circle cx="74" cy="149" r="3.5" fill="#5AD8A6" stroke="#ffffff" stroke-width="1.5" data-series="intake" style="fill:var(--markvis-series-1,#5AD8A6);stroke:var(--markvis-paper,#ffffff)"/>
+    <circle cx="282" cy="128.4" r="3.5" fill="#5AD8A6" stroke="#ffffff" stroke-width="1.5" data-series="intake" style="fill:var(--markvis-series-1,#5AD8A6);stroke:var(--markvis-paper,#ffffff)"/>
+    <circle cx="490" cy="138.7" r="3.5" fill="#5AD8A6" stroke="#ffffff" stroke-width="1.5" data-series="intake" style="fill:var(--markvis-series-1,#5AD8A6);stroke:var(--markvis-paper,#ffffff)"/>
+    <circle cx="698" cy="107.8" r="3.5" fill="#5AD8A6" stroke="#ffffff" stroke-width="1.5" data-series="intake" style="fill:var(--markvis-series-1,#5AD8A6);stroke:var(--markvis-paper,#ffffff)"/>
   </g>
 </svg>

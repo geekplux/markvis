@@ -84,6 +84,13 @@ export type RenderOptions = {
   palette?: ChartPalette;
   /** For a derived title when the block has no `title:`. */
   filename?: string;
+  /**
+   * How colors are written. "host" (default) adds a `style` that reads the
+   * page's `--markvis-*` CSS variables, with the fixed colors as fallbacks.
+   * "static" writes fixed colors only. `surface: export` defaults to
+   * "static".
+   */
+  colors?: "host" | "static";
 };
 
 export type RenderResult =
@@ -127,7 +134,10 @@ export function render(text: string, options: RenderOptions = {}): RenderResult 
     options.width !== undefined && Number.isFinite(options.width) && options.width > 0
       ? options.width
       : undefined;
-  const svg = renderSvg(result.chart, width === undefined ? {} : { width });
+  const svg = renderSvg(result.chart, {
+    ...(width === undefined ? {} : { width }),
+    ...(options.colors === undefined ? {} : { colors: options.colors }),
+  });
   return {
     ok: true,
     svg,

@@ -1,4 +1,5 @@
 import type { ChartIR } from "@markvis/ir";
+import type { Color } from "./paint.js";
 import { loadRows } from "./data.js";
 import { drawTitle, reserveTitle, visibleTitle } from "./figure.js";
 import {
@@ -97,7 +98,7 @@ function fullDonutPath(cx: number, cy: number, rOuter: number, rInner: number): 
 type Slice = {
   label: string;
   value: number;
-  color: string;
+  color: Color;
   opacity: number;
   a0: number;
   a1: number;
@@ -269,13 +270,14 @@ function pieBox(
     height: plotH,
     cx: (plotLeft + plotRight) / 2,
     cy: (plotTop + plotBottom) / 2,
-    r: Math.min(plotW, plotH) * PIE_RADIUS_RATIO,
+    // A width narrower than the gutters leaves no room: radius 0, never negative.
+    r: Math.max(0, Math.min(plotW, plotH) * PIE_RADIUS_RATIO),
   };
 }
 
 function drawPieLegend(
   names: string[],
-  colors: string[],
+  colors: Color[],
   opacities: number[],
   left: number,
   top: number,
@@ -475,7 +477,7 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
   }
 
   const { cx, cy, r } = box;
-  const rInner = isDonut ? r * innerRatio : 0;
+  const rInner = isDonut ? Math.max(0, r * innerRatio) : 0;
   const lines: string[] = [drawTitle(visibleTitle(chart), box.left, chart.unit)];
   lines.push(...legendLines);
 

@@ -1,33 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: RSS climbed then eased after noon (hits), 7 rows" aria-labelledby="mv-6c937ae59f8d092f-title" aria-describedby="mv-6c937ae59f8d092f-desc" data-markvis="2" data-chart-type="area" data-id="mv-6c937ae59f8d092f" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="area chart: RSS climbed then eased after noon (hits), 7 rows" aria-labelledby="mv-6c937ae59f8d092f-title" aria-describedby="mv-6c937ae59f8d092f-desc" data-markvis="2" data-chart-type="area" data-id="mv-6c937ae59f8d092f" font-family="ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-6c937ae59f8d092f-title">RSS climbed then eased after noon</title>
   <desc id="mv-6c937ae59f8d092f-desc">area chart. RSS climbed then eased after noon. x=hour. y=hits. unit=hits. 7 rows.</desc>
-  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717"><title>RSS climbed then eased after noon</title>RSS climbed then eased after noon<tspan font-size="13" font-weight="400" fill="#737373"> · hits</tspan></text>
-  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1" data-grid="1">
+  <text x="48" y="32" text-anchor="start" font-size="21" font-weight="600" fill="#171717" style="fill:var(--markvis-ink,#171717)"><title>RSS climbed then eased after noon</title>RSS climbed then eased after noon<tspan font-size="13" font-weight="400" fill="#737373" style="fill:var(--markvis-muted,#737373)"> · hits</tspan></text>
+  <g fill="none" stroke="#171717" stroke-opacity="0.10" stroke-width="1" data-grid="1" style="stroke:var(--markvis-grid,#171717)">
     <line x1="48" x2="700" y1="318" y2="318"/>
     <line x1="48" x2="700" y1="181" y2="181"/>
     <line x1="48" x2="700" y1="44" y2="44"/>
   </g>
-  <path d="M48 455 L700 455" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1"/>
-  <g fill="#737373" font-size="12" font-weight="400">
+  <path d="M48 455 L700 455" fill="none" stroke="#171717" stroke-opacity="0.28" stroke-width="1" style="stroke:var(--markvis-ink,#171717)"/>
+  <g fill="#737373" font-size="12" font-weight="400" style="fill:var(--markvis-muted,#737373)">
     <text x="38" y="455" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="38" y="318" text-anchor="end" dominant-baseline="middle">50</text>
     <text x="38" y="181" text-anchor="end" dominant-baseline="middle">100</text>
     <text x="38" y="44" text-anchor="end" dominant-baseline="middle">150</text>
-    <text x="56" y="467" text-anchor="middle" font-size="12" data-full-label="-10"><title>-10</title>-10</text>
-    <text x="215" y="467" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
-    <text x="374" y="467" text-anchor="middle" font-size="12" data-full-label="10"><title>10</title>10</text>
-    <text x="533" y="467" text-anchor="middle" font-size="12" data-full-label="20"><title>20</title>20</text>
-    <text x="692" y="467" text-anchor="middle" font-size="12" data-full-label="30"><title>30</title>30</text>
+    <text x="56" y="467" text-anchor="middle" font-size="12" data-full-label="0"><title>0</title>0</text>
+    <text x="237.71" y="467" text-anchor="middle" font-size="12" data-full-label="6"><title>6</title>6</text>
+    <text x="328.57" y="467" text-anchor="middle" font-size="12" data-full-label="9"><title>9</title>9</text>
+    <text x="419.43" y="467" text-anchor="middle" font-size="12" data-full-label="12"><title>12</title>12</text>
+    <text x="510.29" y="467" text-anchor="middle" font-size="12" data-full-label="15"><title>15</title>15</text>
+    <text x="601.14" y="467" text-anchor="middle" font-size="12" data-full-label="18"><title>18</title>18</text>
+    <text x="692" y="467" text-anchor="middle" font-size="12" data-full-label="21"><title>21</title>21</text>
   </g>
   <g fill="none">
-    <path d="M215 345.4 L310.4 304.3 L358.1 208.4 L405.8 98.8 L453.5 131.68 L501.2 194.7 L548.9 263.2 L548.9 455 L215 455 Z" fill="#3B82F6" fill-opacity="0.22" stroke="none" data-series="hits"/>
-    <path d="M215 345.4 L310.4 304.3 L358.1 208.4 L405.8 98.8 L453.5 131.68 L501.2 194.7 L548.9 263.2" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="hits"/>
-    <circle cx="215" cy="345.4" r="2.5" fill="#3B82F6" stroke="none" data-series="hits"/>
-    <circle cx="310.4" cy="304.3" r="2.5" fill="#3B82F6" stroke="none" data-series="hits"/>
-    <circle cx="358.1" cy="208.4" r="2.5" fill="#3B82F6" stroke="none" data-series="hits"/>
-    <circle cx="405.8" cy="98.8" r="2.5" fill="#3B82F6" stroke="none" data-series="hits"/>
-    <circle cx="453.5" cy="131.68" r="2.5" fill="#3B82F6" stroke="none" data-series="hits"/>
-    <circle cx="501.2" cy="194.7" r="2.5" fill="#3B82F6" stroke="none" data-series="hits"/>
-    <circle cx="548.9" cy="263.2" r="2.5" fill="#3B82F6" stroke="none" data-series="hits"/>
+    <path d="M56 345.4 L237.71 304.3 L328.57 208.4 L419.43 98.8 L510.29 131.68 L601.14 194.7 L692 263.2 L692 455 L56 455 Z" fill="#3B82F6" fill-opacity="0.22" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#3B82F6)"/>
+    <path d="M56 345.4 L237.71 304.3 L328.57 208.4 L419.43 98.8 L510.29 131.68 L601.14 194.7 L692 263.2" fill="none" stroke="#3B82F6" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round" data-series="hits" style="stroke:var(--markvis-series-1,#3B82F6)"/>
+    <circle cx="56" cy="345.4" r="2.5" fill="#3B82F6" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#3B82F6)"/>
+    <circle cx="237.71" cy="304.3" r="2.5" fill="#3B82F6" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#3B82F6)"/>
+    <circle cx="328.57" cy="208.4" r="2.5" fill="#3B82F6" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#3B82F6)"/>
+    <circle cx="419.43" cy="98.8" r="2.5" fill="#3B82F6" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#3B82F6)"/>
+    <circle cx="510.29" cy="131.68" r="2.5" fill="#3B82F6" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#3B82F6)"/>
+    <circle cx="601.14" cy="194.7" r="2.5" fill="#3B82F6" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#3B82F6)"/>
+    <circle cx="692" cy="263.2" r="2.5" fill="#3B82F6" stroke="none" data-series="hits" style="fill:var(--markvis-series-1,#3B82F6)"/>
   </g>
 </svg>

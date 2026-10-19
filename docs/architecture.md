@@ -40,6 +40,12 @@ flowchart TD
 4. Success: `@markvis/render-svg` resolves `@markvis/themes` tokens and emits the same SVG bytes for the same IR.
 5. Failure: table fallback of recovered rows plus one line that names the error code. Never drop the numbers.
 
+## Paint: how colors are written
+
+Every theme color a chart paints is a `Paint`: its fixed hex plus one of 18 frozen names (`ink` `muted` `grid` `paper` `plate` `plot` `series-1`…`series-8` `accent` `up` `down` `total`, in `packages/themes/paint-names.ts`). Paint code passes Paints around and writes markup only through `attrs()` (`packages/types/_paint/xml.ts`), which calls `colorAttr()` (`packages/types/_paint/paint.ts`). Color math (contrast, ramps) reads the hex through `hexOf()`; a computed mix is a plain string and stays fixed.
+
+`renderSvg(chart, { colors })` picks the mode. `host` (the default) writes `fill="#hex"` and merges `fill:var(--markvis-<name>,#hex)` for every Paint on the element into one `style` attribute, and puts `font-family:var(--markvis-font,<theme font>)` on the root `<svg>`. `static` writes the attribute only; `surface: export`, `bake`, and `markvis render` default to it. Removing the variables from host output (`scripts/svg-normalize.ts` `stripVars`) gives the static output byte for byte, which `packages/render-svg/test/colors.test.ts` checks for every example, theme, and surface.
+
 ## Package / code structure
 
 ```mermaid

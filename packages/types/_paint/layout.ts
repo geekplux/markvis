@@ -1,3 +1,4 @@
+import type { Color } from "./paint.js";
 import { formatNumber } from "./scale.js";
 import { textWidth, wrapText } from "./text.js";
 import {
@@ -37,6 +38,22 @@ export type PlotBox = {
   height: number;
 };
 
+/** No plot is narrower than this, so a scale never runs right to left. */
+export const PLOT_MIN_WIDTH = 1;
+
+/**
+ * Side gutters that leave the plot at least PLOT_MIN_WIDTH wide at `width`.
+ * The left gutter (row or tick labels) gives way first, then the right one.
+ * Unchanged whenever the plot already fits, so only a tiny width differs.
+ */
+export function fitGutters(width: number, left: number, right: number): { left: number; right: number } {
+  if (width - left - right >= PLOT_MIN_WIDTH) {
+    return { left, right };
+  }
+  const fitLeft = Math.max(0, width - right - PLOT_MIN_WIDTH);
+  return { left: fitLeft, right: Math.max(0, Math.min(right, width - fitLeft - PLOT_MIN_WIDTH)) };
+}
+
 export type Painted = {
   lines: string[];
   height: number;
@@ -44,7 +61,7 @@ export type Painted = {
 
 export type LegendItem = {
   name: string;
-  color: string;
+  color: Color;
   opacity: number;
   x: number;
   y: number;
@@ -79,7 +96,7 @@ export type Frame = {
 
 export function layoutLegend(
   names: string[],
-  colors: string[],
+  colors: Color[],
   opacities: number[],
   left: number,
   top: number,
@@ -262,12 +279,17 @@ export function layoutFrame(opts: {
   legendHeight: number;
   rightMin?: number;
   axisTitles?: boolean;
+  /** Extra room above the plot, for labels that sit over the tallest mark. */
+  topExtra?: number;
 }): Frame {
   const width = SVG_WIDTH;
   const axisTitles = opts.axisTitles ?? AXIS_TITLES;
-  const left = tickLeftMargin(opts.yTickLabels, axisTitles);
-  const right = Math.max(MARGIN.right, opts.rightMin ?? MARGIN.right);
-  const top = titleBlockTop(opts.legendHeight, LEGEND_BELOW);
+  const { left, right } = fitGutters(
+    width,
+    tickLeftMargin(opts.yTickLabels, axisTitles),
+    Math.max(MARGIN.right, opts.rightMin ?? MARGIN.right),
+  );
+  const top = titleBlockTop(opts.legendHeight, LEGEND_BELOW) + (opts.topExtra ?? 0);
   const draftW = Math.max(width - left - right, 1);
   const nCat = Math.max(opts.categoryLabels.length, 1);
   const catLay =

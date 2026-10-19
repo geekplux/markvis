@@ -9,11 +9,11 @@ sidebar: true
 Same family as the rest of the site. Start here, then follow the side links.
 
 - [Get started](/get-started) — play, bake, script, skill
-- [Integrate](/integrate) — script tag, JavaScript, React, Markdown plugins, bake
+- [Integrate](/integrate) — script tag, JavaScript, React, Markdown plugins, bake, and the model instruction
+- [Theming](/theming) — theme vs palette, packs
+- [Chart types](/types/) — one page per type
 - [Spec](/spec) — grammar, fields, types, errors
-- [Themes](/themes) — theme vs palette, packs
-- [AI](/ai) — fetch `/llms.txt`, emit only those fields
-- [Contributing themes](/contributing-themes) — how to add a pack
+- [Contributing](/contributing-themes) — how to add a theme pack
 
 <script setup>
 import { onMounted } from "vue";

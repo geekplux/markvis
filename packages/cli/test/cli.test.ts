@@ -16,6 +16,7 @@ import { chartStats } from "../src/stats.js";
 import { tableToGfm } from "../src/format.js";
 import { collectMarkdownFiles, collectSvgFiles } from "../src/files.js";
 import { buildGalleryHtml } from "../src/gallery.js";
+import { stripVars } from "../../../scripts/svg-normalize.js";
 import { runCli, USAGE } from "../src/cli.js";
 import { parseMarkdown } from "@markvis/parser";
 
@@ -244,12 +245,34 @@ describe("render", () => {
   it("writes SVG to stdout for a single file", () => {
     const { code, stdout } = capture(["render", valid01]);
     expect(code).toBe(0);
+    // A file has no host page: fixed colors unless --colors host.
     const snapshot = readFileSync(
-      join(repoRoot, "examples/out/01-bar-basic.svg"),
+      join(repoRoot, "examples/out/static/01-bar-basic.svg"),
       "utf8",
     );
     expect(stdout).toBe(snapshot);
+    expect(stdout).not.toContain("var(");
     expect(stdout.startsWith("<svg ")).toBe(true);
+  });
+
+  it("writes host colors with --colors host", () => {
+    const host = readFileSync(join(repoRoot, "examples/out/01-bar-basic.svg"), "utf8");
+    for (const argv of [
+      ["render", valid01, "--colors", "host"],
+      ["render", "--colors=host", valid01],
+    ]) {
+      const { code, stdout } = capture(argv);
+      expect(code).toBe(0);
+      expect(stdout).toBe(host);
+    }
+    const fixed = capture(["render", valid01, "--colors", "static"]);
+    expect(fixed.stdout).not.toContain("var(");
+  });
+
+  it("rejects an unknown --colors value", () => {
+    const { code, stderr } = capture(["render", valid01, "--colors", "dark"]);
+    expect(code).toBe(1);
+    expect(stderr).toContain("--colors takes host or static");
   });
 
   it("writes SVG files into --out for a directory", () => {
@@ -268,7 +291,7 @@ describe("render", () => {
     expect(stdout).toContain("01-bar-basic.svg");
     const rendered = readFileSync(join(outDir, "01-bar-basic.svg"), "utf8");
     const snapshot = readFileSync(
-      join(repoRoot, "examples/out/01-bar-basic.svg"),
+      join(repoRoot, "examples/out/static/01-bar-basic.svg"),
       "utf8",
     );
     expect(rendered).toBe(snapshot);
@@ -511,6 +534,29 @@ Feb,4
     expect(readFileSync(mdPath, "utf8")).toBe(mdOnce);
     expect(readFileSync(join(dir, "one.svg"), "utf8")).toBe(svgOnce);
     expect(mdOnce.match(/!\[Q3\]\(\.\/one\.svg\)/g)?.length).toBe(1);
+  });
+
+  it("writes fixed colors by default, and host colors with --colors host", () => {
+    const dir = tmp();
+    const mdPath = join(dir, "one.md");
+    writeFileSync(mdPath, oneFence);
+    expect(capture(["bake", mdPath], dir).code).toBe(0);
+    const fixed = readFileSync(join(dir, "one.svg"), "utf8");
+    expect(fixed).not.toContain("var(");
+    expect(fixed).not.toContain("style=");
+
+    const again = capture(["bake", mdPath], dir);
+    expect(again.stdout).toContain("unchanged");
+    expect(readFileSync(join(dir, "one.svg"), "utf8")).toBe(fixed);
+
+    expect(capture(["bake", "--colors", "host", mdPath], dir).code).toBe(0);
+    const host = readFileSync(join(dir, "one.svg"), "utf8");
+    expect(host).toContain("fill:var(--markvis-series-1,");
+    expect(host).toContain("font-family:var(--markvis-font,");
+    expect(stripVars(host)).toBe(fixed);
+    const hostAgain = capture(["bake", "--colors", "host", mdPath], dir);
+    expect(hostAgain.code).toBe(0);
+    expect(readFileSync(join(dir, "one.svg"), "utf8")).toBe(host);
   });
 
   it("bakes a copy of README.md and docs/landing.md with exit 0", () => {

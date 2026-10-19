@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Tokyo leads regional RSVPs at 92, 4 rows" aria-labelledby="mv-729521da1ac38812-title" aria-describedby="mv-729521da1ac38812-desc" data-markvis="2" data-chart-type="bar" data-id="mv-729521da1ac38812" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-label="bar chart: Tokyo leads regional RSVPs at 92, 4 rows" aria-labelledby="mv-729521da1ac38812-title" aria-describedby="mv-729521da1ac38812-desc" data-markvis="2" data-chart-type="bar" data-id="mv-729521da1ac38812" font-family="Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" font-size="12" style="font-family:var(--markvis-font,Inter, ui-sans-serif, system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif)">
   <title id="mv-729521da1ac38812-title">Tokyo leads regional RSVPs at 92</title>
   <desc id="mv-729521da1ac38812-desc">bar chart. Tokyo leads regional RSVPs at 92. x=city. y=rsvps. 4 rows.</desc>
-  <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B"><title>Tokyo leads regional RSVPs at 92</title>TOKYO LEADS REGIONAL RSVPS AT 92</text>
-  <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1"/>
-  <path d="M40 456 L704 456" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1"/>
-  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400">
+  <text x="40" y="24" text-anchor="start" font-size="15" font-weight="600" letter-spacing="0.06em" fill="#18181B" style="fill:var(--markvis-ink,#18181B)"><title>Tokyo leads regional RSVPs at 92</title>TOKYO LEADS REGIONAL RSVPS AT 92</text>
+  <line x1="40" x2="704" y1="30" y2="30" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" data-title-rule="1" style="stroke:var(--markvis-ink,#18181B)"/>
+  <path d="M40 456 L704 456" fill="none" stroke="#18181B" stroke-opacity="0.16" stroke-width="1" style="stroke:var(--markvis-ink,#18181B)"/>
+  <g fill="#64748B" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="400" style="fill:var(--markvis-muted,#64748B)">
     <text x="32" y="456" text-anchor="end" dominant-baseline="middle">0</text>
     <text x="32" y="249" text-anchor="end" dominant-baseline="middle">50</text>
     <text x="32" y="42" text-anchor="end" dominant-baseline="middle">100</text>
@@ -14,15 +14,15 @@
     <text x="621" y="467" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" data-full-label="München"><title>München</title>München</text>
   </g>
   <g>
-    <path d="M91 456 L155 456 L155 91.68 L91 91.68 Z" fill="#475569" data-x="北京" data-series="rsvps" data-y="88"/>
-    <path d="M257 456 L321 456 L321 75.12 L257 75.12 Z" fill="#475569" data-x="東京" data-series="rsvps" data-y="92"/>
-    <path d="M423 456 L487 456 L487 104.1 L423 104.1 Z" fill="#475569" data-x="서울" data-series="rsvps" data-y="85"/>
-    <path d="M589 456 L653 456 L653 128.94 L589 128.94 Z" fill="#475569" data-x="München" data-series="rsvps" data-y="79"/>
+    <path d="M91 456 L155 456 L155 91.68 L91 91.68 Z" fill="#475569" data-x="北京" data-series="rsvps" data-y="88" style="fill:var(--markvis-series-1,#475569)"/>
+    <path d="M257 456 L321 456 L321 75.12 L257 75.12 Z" fill="#475569" data-x="東京" data-series="rsvps" data-y="92" style="fill:var(--markvis-series-1,#475569)"/>
+    <path d="M423 456 L487 456 L487 104.1 L423 104.1 Z" fill="#475569" data-x="서울" data-series="rsvps" data-y="85" style="fill:var(--markvis-series-1,#475569)"/>
+    <path d="M589 456 L653 456 L653 128.94 L589 128.94 Z" fill="#475569" data-x="München" data-series="rsvps" data-y="79" style="fill:var(--markvis-series-1,#475569)"/>
   </g>
   <g>
-    <text x="123" y="83.68" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="北京">88</text>
-    <text x="289" y="67.12" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="東京">92</text>
-    <text x="455" y="96.1" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="서울">85</text>
-    <text x="621" y="120.94" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="München">79</text>
+    <text x="123" y="83.68" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="北京" style="fill:var(--markvis-ink,#18181B)">88</text>
+    <text x="289" y="67.12" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="東京" style="fill:var(--markvis-ink,#18181B)">92</text>
+    <text x="455" y="96.1" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="서울" style="fill:var(--markvis-ink,#18181B)">85</text>
+    <text x="621" y="120.94" text-anchor="middle" font-size="11" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-weight="500" fill="#18181B" data-value-label="München" style="fill:var(--markvis-ink,#18181B)">79</text>
   </g>
 </svg>

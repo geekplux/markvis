@@ -8,7 +8,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { runInNewContext } from "node:vm";
 import { describe, expect, it } from "vitest";
-import { init } from "../src/dom.js";
+import { init, initialize } from "../src/dom.js";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const repoRoot = join(here, "../../..");
@@ -45,6 +45,47 @@ describe("init on content added after load", () => {
     root.innerHTML = codeBlock("js", "const x = 1;");
     expect(init(root)).toBe(0);
     expect(root.querySelector("code.language-js")?.textContent).toBe("const x = 1;");
+  });
+});
+
+describe("colors from the page", () => {
+  // happy-dom resolves custom properties in getComputedStyle, so this reads
+  // the color a page would paint, not just the style attribute text.
+  function drawIn(style: string): { host: HTMLDivElement; bar: Element } {
+    const host = document.createElement("div");
+    host.setAttribute("style", style);
+    host.innerHTML = codeBlock("chart", BODY);
+    document.body.appendChild(host);
+    expect(init(host)).toBe(1);
+    const bar = host.querySelector("path[data-y]");
+    expect(bar).not.toBeNull();
+    return { host, bar: bar! };
+  }
+
+  it("paints a bar with the page's --markvis-series-1", () => {
+    const { host, bar } = drawIn("--markvis-series-1: rgb(1, 2, 3)");
+    expect(bar.getAttribute("fill")).toBe("#3B82F6");
+    expect(bar.getAttribute("style")).toBe("fill:var(--markvis-series-1,#3B82F6)");
+    expect(getComputedStyle(bar).fill).toBe("rgb(1, 2, 3)");
+    host.remove();
+  });
+
+  it("falls back to the fixed color when the page sets no variable", () => {
+    const { host, bar } = drawIn("");
+    expect(getComputedStyle(bar).fill.toLowerCase()).toMatch(/^(#3b82f6|rgb\(59, 130, 246\))$/);
+    host.remove();
+  });
+
+  it("writes fixed colors after initialize({ colors: \"static\" })", () => {
+    initialize({ colors: "static" });
+    try {
+      const { host, bar } = drawIn("--markvis-series-1: rgb(1, 2, 3)");
+      expect(bar.getAttribute("style")).toBeNull();
+      expect(host.innerHTML).not.toContain("var(");
+      host.remove();
+    } finally {
+      initialize();
+    }
   });
 });
 

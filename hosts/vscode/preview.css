@@ -1,0 +1,43 @@
+/*
+ * Charts take the editor theme's colors. Each --markvis-* name is one of the
+ * frozen paint variables; an SVG reads it with its own fixed color as the
+ * fallback, so a variable the theme leaves unset still draws correctly.
+ */
+.markvis {
+  --markvis-ink: var(--vscode-editor-foreground);
+  --markvis-muted: var(--vscode-descriptionForeground);
+  /* Grid lines and the outline are drawn from this color at a faint opacity, so it is ink, not a border color. */
+  --markvis-grid: var(--vscode-editor-foreground);
+  --markvis-paper: var(--vscode-editor-background);
+  --markvis-plate: var(--vscode-editor-background);
+  --markvis-plot: var(--vscode-editor-background);
+  --markvis-series-1: var(--vscode-charts-blue);
+  --markvis-series-2: var(--vscode-charts-orange);
+  --markvis-series-3: var(--vscode-charts-green);
+  --markvis-series-4: var(--vscode-charts-purple);
+  --markvis-series-5: var(--vscode-charts-red);
+  --markvis-series-6: var(--vscode-charts-yellow);
+  --markvis-series-7: var(--vscode-terminal-ansiCyan);
+  --markvis-series-8: var(--vscode-terminal-ansiMagenta);
+  --markvis-accent: var(--vscode-charts-blue);
+  --markvis-up: var(--vscode-charts-green);
+  --markvis-down: var(--vscode-charts-red);
+  --markvis-total: var(--vscode-charts-foreground);
+}
+
+figure.markvis {
+  margin: 1em 0;
+}
+
+figure.markvis svg {
+  max-width: 100%;
+  height: auto;
+}
+
+figure.markvis table {
+  margin-top: 0.5em;
+}
+
+p.markvis-error {
+  color: var(--vscode-errorForeground, #b42318);
+}
