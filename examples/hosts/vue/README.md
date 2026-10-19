@@ -38,7 +38,7 @@ The chart reads `--markvis-*` CSS variables, with fixed colors as fallbacks. Map
 
 ## Run it
 
-The published package is `markvis@^2.2.0`. Until it is on npm, this recipe installs the tarball packed from this repository:
+In your own project, `npm install markvis` (2.2.0 or later). This recipe installs the tarball packed from this repository instead, so it tests the current tree:
 
 ```bash
 pnpm install && pnpm build && npm pack --ignore-scripts && mv markvis-*.tgz markvis.tgz   # from the repository root

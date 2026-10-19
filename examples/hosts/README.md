@@ -34,7 +34,7 @@ For a host that loads the script tag, also save its HTML under `packages/browser
 
 `.github/workflows/hosts.yml` runs every week and on demand. It builds the repository, packs `markvis.tgz` at the root, and for each folder here with a `package.json` runs `npm install` and `npm run build`, then checks `dist/index.html` for `<svg`. It is not a required check: it catches a recipe that stopped building against a new host release.
 
-Until `markvis@^2.2.0` is on npm, those recipes install the packed tarball (`"markvis": "file:../../../markvis.tgz"`). Run them locally the same way:
+In your own project, `npm install markvis` (2.2.0 or later). The recipes here install the tarball packed from this repository instead (`"markvis": "file:../../../markvis.tgz"`), so the weekly build tests the current tree, not the registry. Run them locally the same way:
 
 ```bash
 pnpm install && pnpm build && npm pack --ignore-scripts && mv markvis-*.tgz markvis.tgz
