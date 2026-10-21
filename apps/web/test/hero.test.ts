@@ -157,18 +157,19 @@ describe("hero show", () => {
     }
   });
 
-  it("shows the first chart within 3.5 s of the start, long before scene 1 ends", () => {
+  it("shows the first chart within 1.6 s of the start, long before scene 1 ends", () => {
     const st = emptyState();
     let ms = 0;
     let first = -1;
     for (const op of SCENES[0]!) {
       for (const step of steps(op, st)) {
-        ms += step.ms;
+        // A step draws, then waits its ms.
         if (first < 0 && step.render && render(st.text, { width: 640 }).ok) first = ms;
+        ms += step.ms;
       }
     }
     expect(first).toBeGreaterThan(0);
-    expect(first, "ms until the first chart").toBeLessThanOrEqual(3500);
+    expect(first, "ms until the first chart").toBeLessThanOrEqual(1600);
     expect(first, "the chart is up for most of the scene").toBeLessThan(ms / 2);
   });
 

@@ -27,8 +27,6 @@ const props = withDefaults(
   {
     lines: () => [...HERO_LINES],
     autoplay: true,
-    charMs: 40,
-    lineMs: 250,
     playHref: "/play",
   },
 );
