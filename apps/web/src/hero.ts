@@ -175,7 +175,8 @@ export interface Timing {
   paste: number;
 }
 
-export const DEFAULT_TIMING: Timing = { char: 40, line: 250, select: 250, paste: 150 };
+/** Fast enough that the first chart is up about 1.6 s into scene 1. */
+export const DEFAULT_TIMING: Timing = { char: 24, line: 110, select: 250, paste: 150 };
 
 export interface ShowState {
   text: string;
