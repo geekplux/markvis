@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.2.1 — 2026-10-22
+
+### Fixed
+
+- A block with more than about 120,000 rows threw `RangeError: Maximum call stack size exceeded` out of `render()` (and every adapter built on it) instead of drawing. It now draws; output for every other block is byte-identical.
+
+### Site (markvis.js.org — not an npm API change)
+
+- The home hero's first chart is up 1.6 s after the stage starts (was 2.8 s); the loop is 36.5 s.
+
 ## 2.2.0 — 2026-10-19
 
 Draw a chart block anywhere Markdown is shown: one call from JavaScript, React with streaming, one script tag in any Markdown page, rehype for MDX hosts, and a GitHub Action. Four more chart types, the graphite theme, and a measured instruction for models. The language stays `markvis: 2`. A 2.1 block still parses unless it hits one of the stricter checks listed under Breaking.
