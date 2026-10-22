@@ -255,6 +255,22 @@ export function unitWithCompact(
   return `${trimmed} ${compact.suffix}`;
 }
 
+/**
+ * Math.min / Math.max over any number of values. Spreading an array into
+ * Math.min throws a RangeError past roughly 100k arguments.
+ */
+export function minOf(values: readonly number[]): number {
+  let m = Infinity;
+  for (const v of values) m = Math.min(m, v);
+  return m;
+}
+
+export function maxOf(values: readonly number[]): number {
+  let m = -Infinity;
+  for (const v of values) m = Math.max(m, v);
+  return m;
+}
+
 export function yExtent(
   values: number[],
   forceZero: boolean,
@@ -263,8 +279,8 @@ export function yExtent(
   if (finite.length === 0) {
     return [0, 1];
   }
-  let lo = Math.min(...finite);
-  let hi = Math.max(...finite);
+  let lo = minOf(finite);
+  let hi = maxOf(finite);
   if (forceZero) {
     if (lo > 0) {
       lo = 0;
@@ -296,8 +312,8 @@ export function xExtent(
   if (finite.length === 0) {
     return [0, 1];
   }
-  let lo = Math.min(...finite);
-  let hi = Math.max(...finite);
+  let lo = minOf(finite);
+  let hi = maxOf(finite);
   if (lo === hi) {
     return [lo - 1, hi + 1];
   }

@@ -3,7 +3,7 @@ import { categoryNames, loadRows, seriesNames } from "./data.js";
 import type { Painted } from "./layout.js";
 import { seriesStyle } from "./palette.js";
 import { drawRowAxes, layoutRows, niceDomain } from "./rows.js";
-import { formatNumber } from "./scale.js";
+import { formatNumber, maxOf } from "./scale.js";
 import { boxStats, type BoxStats } from "./stats.js";
 import { textWidth } from "./text.js";
 import {
@@ -14,7 +14,7 @@ import {
   PAPER,
   TYPE,
 } from "./tokens.js";
-import { attrs, escapeXml, fmtPx } from "./xml.js";
+import { attrs, escapeXml, fmtPx, pushAll } from "./xml.js";
 
 /** Fewer observations than this draw their points, not a box. */
 const MIN_BOX_N = 5;
@@ -49,11 +49,11 @@ export function renderBoxplot(chart: ChartIR, _id: string): Painted {
   const rightPad = single
     ? Math.max(
         0,
-        ...groups.flat().map((box) => {
+        maxOf(groups.flat().map((box) => {
           if (!box) return 0;
           const label = medianLabel(box);
           return textWidth(label.main + label.rest, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT);
-        }),
+        })),
       ) + 24
     : 20;
   const styles = series.map((_, i) => seriesStyle(i));
@@ -180,9 +180,9 @@ export function renderBoxplot(chart: ChartIR, _id: string): Painted {
         "font-family": FONT_NUMERIC,
         "font-weight": TYPE.value.weight,
       })}>`,
-      ...labels,
-      `  </g>`,
     );
+    pushAll(lines, labels);
+    lines.push(`  </g>`);
   }
   return { lines, height: frame.height };
 }

@@ -10,7 +10,7 @@ import {
   type PlotBox,
 } from "./layout.js";
 import { legendSwatch } from "./legend.js";
-import { formatNumber, labelTicks, niceTicks, scaleLinear } from "./scale.js";
+import { formatNumber, labelTicks, maxOf, minOf, niceTicks, scaleLinear } from "./scale.js";
 import { textWidth, wrapText, type WrappedText } from "./text.js";
 import {
   FONT,
@@ -65,8 +65,8 @@ export function niceDomain(values: number[], includeZero: boolean): {
   ticks: number[];
 } {
   const finite = values.filter((value) => Number.isFinite(value));
-  let lo = finite.length > 0 ? Math.min(...finite) : 0;
-  let hi = finite.length > 0 ? Math.max(...finite) : 1;
+  let lo = finite.length > 0 ? minOf(finite) : 0;
+  let hi = finite.length > 0 ? maxOf(finite) : 1;
   if (includeZero) {
     lo = Math.min(lo, 0);
     hi = Math.max(hi, 0);
@@ -89,13 +89,13 @@ export function layoutRows(chart: ChartIR, opts: RowOptions): RowFrame {
   );
   const labelW = Math.max(
     40,
-    ...wrapped.map((item) =>
-      Math.max(0, ...item.lines.map((line) => textWidth(line, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT))),
-    ),
+    maxOf(wrapped.map((item) =>
+      Math.max(0, maxOf(item.lines.map((line) => textWidth(line, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT)))),
+    )),
   );
   const rowH = Math.max(
     34,
-    ...wrapped.map((item) => item.lines.length * (TYPE.tick.size + 3) + 12),
+    maxOf(wrapped.map((item) => item.lines.length * (TYPE.tick.size + 3) + 12)),
   );
   const legend =
     opts.legendNames.length > 0

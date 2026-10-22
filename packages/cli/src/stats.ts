@@ -16,8 +16,8 @@ export function chartStats(chart: ChartIR): ChartStats {
   return {
     type: chart.type,
     n: chart.table.rows.length,
-    min: nums.length === 0 ? Number.NaN : Math.min(...nums),
-    max: nums.length === 0 ? Number.NaN : Math.max(...nums),
+    min: nums.length === 0 ? Number.NaN : nums.reduce((a, b) => Math.min(a, b)),
+    max: nums.length === 0 ? Number.NaN : nums.reduce((a, b) => Math.max(a, b)),
     series: chart.series ?? "-",
   };
 }

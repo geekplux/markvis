@@ -18,7 +18,7 @@ import {
   type Painted,
 } from "./layout.js";
 import { seriesStyle } from "./palette.js";
-import { formatNumber } from "./scale.js";
+import { formatNumber, maxOf, minOf } from "./scale.js";
 import { textWidth } from "./text.js";
 import {
   FONT,
@@ -38,8 +38,8 @@ export function renderHeatmap(chart: ChartIR, svgId: string): Painted {
   const xCats = categoryNames(rows);
   const yCats = seriesNames(rows);
   const present = finiteValues(rows.map((row) => row.y));
-  const dataMin = present.length > 0 ? Math.min(...present) : 0;
-  const dataMax = present.length > 0 ? Math.max(...present) : 1;
+  const dataMin = present.length > 0 ? minOf(present) : 0;
+  const dataMax = present.length > 0 ? maxOf(present) : 1;
   const ymin = chart.min ?? dataMin;
   const ymax = chart.max ?? dataMax;
   const span = ymax - ymin;

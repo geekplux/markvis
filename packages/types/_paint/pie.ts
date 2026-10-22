@@ -36,7 +36,7 @@ import {
   TYPE,
 } from "./tokens.js";
 import { legendSwatch } from "./legend.js";
-import { attrs, escapeXml, fmtPx } from "./xml.js";
+import { attrs, escapeXml, fmtPx, pushAll } from "./xml.js";
 
 function slicePath(
   cx: number,
@@ -479,7 +479,7 @@ export function renderPie(chart: ChartIR, _id: string): Painted {
   const { cx, cy, r } = box;
   const rInner = isDonut ? Math.max(0, r * innerRatio) : 0;
   const lines: string[] = [drawTitle(visibleTitle(chart), box.left, chart.unit)];
-  lines.push(...legendLines);
+  pushAll(lines, legendLines);
 
   if (PLOT_BG) {
     lines.push(

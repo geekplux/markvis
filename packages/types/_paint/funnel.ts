@@ -8,7 +8,7 @@ import {
   type Painted,
 } from "./layout.js";
 import { seriesStyle } from "./palette.js";
-import { formatNumber } from "./scale.js";
+import { formatNumber, maxOf } from "./scale.js";
 import { textWidth, truncateLabel } from "./text.js";
 import {
   FONT,
@@ -34,7 +34,7 @@ export function renderFunnel(chart: ChartIR, _id: string): Painted {
     row.y === null ? null : Math.max(0, row.y),
   );
   const finiteVals = values.filter((value): value is number => value !== null);
-  const maxY = Math.max(0, ...finiteVals);
+  const maxY = Math.max(0, maxOf(finiteVals));
   const scaleMax = maxY > 0 ? maxY : 1;
 
   const labelText = rows.map((row, i) => {
@@ -46,7 +46,7 @@ export function renderFunnel(chart: ChartIR, _id: string): Painted {
   });
   const labelW = Math.max(
     0,
-    ...labelText.map((label) => textWidth(label, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT)),
+    maxOf(labelText.map((label) => textWidth(label, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT))),
   );
   const left = MARGIN.left;
   const right = Math.min(

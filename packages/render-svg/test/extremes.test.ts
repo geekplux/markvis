@@ -161,3 +161,20 @@ describe("tiny widths keep every plot the right way round", () => {
     expect(checked).toBeGreaterThanOrEqual(10);
   });
 });
+
+describe("long tables never throw", () => {
+  // Past about 120k rows, Math.min(...values) and lines.push(...marks) throw a
+  // RangeError. One block per paint path that walks every row.
+  const N = 150_000;
+  const rows = (make: (i: number) => string) => Array.from({ length: N }, (_, i) => make(i)).join("\n");
+  it.each([
+    ["scatter", `type: scatter\nx: a\ny: b\n\na,b\n${rows((i) => `${i},${i % 97}`)}`],
+    ["waterfall", `type: waterfall\nx: k\ny: v\n\nk,v\n${rows((i) => `k${i},${(i % 7) - 3}`)}`],
+    ["bullet", `type: bullet\nx: k\ny: v\n\nk,v\n${rows((i) => `k${i},${i % 97}`)}`],
+    ["boxplot", `type: boxplot\nx: k\ny: v\n\nk,v\n${rows((i) => `g${i % 5},${i % 97}`)}`],
+    ["funnel", `type: funnel\nx: k\ny: v\n\nk,v\n${rows((i) => `k${i},${N - i}`)}`],
+  ])("%s with 150k rows draws", (_type, text) => {
+    const result = render(`markvis: 2\n${text}`, { width: 720 });
+    expect(result.ok).toBe(true);
+  }, 30_000);
+});

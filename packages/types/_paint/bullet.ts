@@ -3,7 +3,7 @@ import { classifyNumeric, loadRows } from "./data.js";
 import type { Painted } from "./layout.js";
 import { seriesStyle } from "./palette.js";
 import { drawRowAxes, layoutRows, niceDomain, roundedEndPath } from "./rows.js";
-import { formatNumber, niceTicks } from "./scale.js";
+import { formatNumber, maxOf, niceTicks } from "./scale.js";
 import { textWidth } from "./text.js";
 import {
   BAR_RX,
@@ -12,7 +12,7 @@ import {
   INK,
   TYPE,
 } from "./tokens.js";
-import { attrs, escapeXml, fmtPx } from "./xml.js";
+import { attrs, escapeXml, fmtPx, pushAll } from "./xml.js";
 
 /** The track is a quiet band behind the bar, lighter than any grid. */
 const TRACK_OPACITY = 0.07;
@@ -69,10 +69,10 @@ export function renderBullet(chart: ChartIR, _id: string): Painted {
   const rightPad =
     Math.max(
       0,
-      ...rows.map((row) => {
+      maxOf(rows.map((row) => {
         const label = labelOf(row);
         return textWidth(label.main + label.rest, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT);
-      }),
+      })),
     ) + 24;
   const barColor = seriesStyle(0).color;
   const hasTarget = rows.some((row) => row.target !== null);
@@ -170,8 +170,8 @@ export function renderBullet(chart: ChartIR, _id: string): Painted {
       "font-family": FONT_NUMERIC,
       "font-weight": TYPE.value.weight,
     })}>`,
-    ...labels,
-    `  </g>`,
   );
+  pushAll(lines, labels);
+  lines.push(`  </g>`);
   return { lines, height: frame.height };
 }

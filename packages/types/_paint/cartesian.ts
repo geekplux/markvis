@@ -30,6 +30,8 @@ import {
   compactScale,
   formatNumber,
   labelTicks,
+  maxOf,
+  minOf,
   niceTicks,
   scaleLinear,
   unitWithCompact,
@@ -82,7 +84,7 @@ import {
   TYPE,
 } from "./tokens.js";
 import { legendSwatch } from "./legend.js";
-import { attrs, escapeXml, fmtPx } from "./xml.js";
+import { attrs, escapeXml, fmtPx, pushAll } from "./xml.js";
 
 type LayoutMode = "grouped" | "stacked" | "percent";
 
@@ -357,7 +359,7 @@ function usesColorLegend(chart: ChartIR, seriesCount: number): boolean {
 function endLabelRightMin(series: string[]): number {
   const widest = Math.max(
     0,
-    ...series.map((name) => textWidth(name, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT)),
+    maxOf(series.map((name) => textWidth(name, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT))),
   );
   return END_LABEL_GAP + widest;
 }
@@ -544,8 +546,8 @@ function prepare(chart: ChartIR): Prepared {
     // the axis spans the data, never a padding 0 or 5 that no row has. Up
     // to 12 distinct values, each one is a tick; past that, the nice ticks
     // that are whole numbers inside the data.
-    const lo = Math.min(...xs);
-    const hi = Math.max(...xs);
+    const lo = minOf(xs);
+    const hi = maxOf(xs);
     if (chart.type !== "scatter" && hi > lo && xs.every(Number.isInteger)) {
       const distinct = [...new Set(xs)].sort((a, b) => a - b);
       const inside = xTickNums.filter((n) => n >= lo && n <= hi && Number.isInteger(n));
@@ -805,7 +807,7 @@ function drawGridAndAxes(prepared: Prepared): string[] {
       })}/>`,
     );
   }
-  lines.push(...drawTickMarks(prepared));
+  pushAll(lines, drawTickMarks(prepared));
 
   const zeroTick = yTicks.find((tick) => tick.label === "0");
   if (
@@ -916,7 +918,7 @@ function drawGridAndAxes(prepared: Prepared): string[] {
       // Center the rotated title in the gutter left of the widest tick label.
       const widestTick = Math.max(
         0,
-        ...yTicks.map((tick) => textWidth(tick.label, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT)),
+        maxOf(yTicks.map((tick) => textWidth(tick.label, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT))),
       );
       const cx = Math.max(
         TYPE.unit.size / 2 + 2,
@@ -938,7 +940,7 @@ function drawGridAndAxes(prepared: Prepared): string[] {
       // Below the last line of the x labels, which sit under any tick marks.
       const labelLines = Math.max(
         1,
-        ...xTicks.filter((tick) => tick.show).map((tick) => Math.max(tick.lines.length, 1)),
+        maxOf(xTicks.filter((tick) => tick.show).map((tick) => Math.max(tick.lines.length, 1))),
       );
       const lastBaseline =
         plot.bottom + AXIS.tick + TYPE.tick.size + (labelLines - 1) * (TYPE.tick.size + 3);
@@ -1232,7 +1234,7 @@ function drawBars(prepared: Prepared): string[] {
   lines.push(`  </g>`);
   if (labels.length > 0) {
     lines.push(`  <g>`);
-    lines.push(...labels);
+    pushAll(lines, labels);
     lines.push(`  </g>`);
   }
   return lines;
@@ -1457,7 +1459,7 @@ function drawLineOrArea(prepared: Prepared, area: boolean): string[] {
       }
     }
     lines.push(`  </g>`);
-    lines.push(...drawEndLabels(prepared));
+    pushAll(lines, drawEndLabels(prepared));
     return lines;
   }
 
@@ -1530,7 +1532,7 @@ function drawLineOrArea(prepared: Prepared, area: boolean): string[] {
     }
   }
   lines.push(`  </g>`);
-  lines.push(...drawEndLabels(prepared));
+  pushAll(lines, drawEndLabels(prepared));
   return lines;
 }
 
@@ -1678,7 +1680,7 @@ function drawHist(prepared: Prepared): string[] {
   lines.push(`  </g>`);
   if (labels.length > 0) {
     lines.push(`  <g>`);
-    lines.push(...labels);
+    pushAll(lines, labels);
     lines.push(`  </g>`);
   }
   return lines;
@@ -1690,17 +1692,17 @@ export function renderCartesian(chart: ChartIR, _id: string): Painted {
     drawTitle(visibleTitle(chart), prepared.plot.left, prepared.titleUnit),
     ...drawLegend(prepared),
   ];
-  lines.push(...drawGridAndAxes(prepared));
+  pushAll(lines, drawGridAndAxes(prepared));
   if (chart.type === "bar") {
-    lines.push(...drawBars(prepared));
+    pushAll(lines, drawBars(prepared));
   } else if (chart.type === "line") {
-    lines.push(...drawLineOrArea(prepared, false));
+    pushAll(lines, drawLineOrArea(prepared, false));
   } else if (chart.type === "area") {
-    lines.push(...drawLineOrArea(prepared, true));
+    pushAll(lines, drawLineOrArea(prepared, true));
   } else if (chart.type === "scatter") {
-    lines.push(...drawScatter(prepared));
+    pushAll(lines, drawScatter(prepared));
   } else if (chart.type === "hist") {
-    lines.push(...drawHist(prepared));
+    pushAll(lines, drawHist(prepared));
   }
   return { lines, height: prepared.height };
 }

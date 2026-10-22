@@ -12,6 +12,8 @@ import {
 import { seriesStyle } from "./palette.js";
 import {
   formatNumber,
+  maxOf,
+  minOf,
   niceTicks,
   scaleLinear,
 } from "./scale.js";
@@ -80,8 +82,8 @@ export function renderWaterfall(chart: ChartIR, _id: string): Painted {
     running += row.y;
     ends.push(running);
   }
-  const yMin = Math.min(0, ...starts, ...ends);
-  const yMax = Math.max(0, ...starts, ...ends);
+  const yMin = Math.min(0, minOf(starts), minOf(ends));
+  const yMax = Math.max(0, maxOf(starts), maxOf(ends));
   const yTicksRaw = niceTicks(yMin, yMax);
   const yTickLabels = yTicksRaw.map((n) => formatTickLabel(n));
   const labels = rows.map((row) => row.xLabel);

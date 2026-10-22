@@ -9,7 +9,7 @@ import {
 } from "./date.js";
 import { drawTitle, reserveTitle, visibleTitle } from "./figure.js";
 import { titleBlockTop, type Painted } from "./layout.js";
-import { formatNumber } from "./scale.js";
+import { formatNumber, maxOf } from "./scale.js";
 import { textWidth } from "./text.js";
 import {
   FONT,
@@ -78,9 +78,9 @@ export function renderCalendar(chart: ChartIR, svgId: string): Painted {
   const hi = chart.max ?? (Number.isFinite(dataHi) ? dataHi : 1);
   const shade = (value: number) => rampFill(hi === lo ? 1 : (value - lo) / (hi - lo));
 
-  const gutter = Math.max(...WEEKDAY_LABELS.map(([, label]) => textWidth(label, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT))) + 10;
+  const gutter = maxOf(WEEKDAY_LABELS.map(([, label]) => textWidth(label, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT))) + 10;
   const left = MARGIN.left + gutter;
-  const maxWeeks = Math.max(1, ...bands.map((band) => band.weeks));
+  const maxWeeks = Math.max(1, maxOf(bands.map((band) => band.weeks)));
   const step = Math.max(7, Math.min(18, Math.floor((SVG_WIDTH - left - MARGIN.right) / maxWeeks)));
   const cell = step - (step >= 10 ? 2 : 1);
   const monthRow = TYPE.tick.size + 8;
