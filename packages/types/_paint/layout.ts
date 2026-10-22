@@ -1,5 +1,5 @@
 import type { Color } from "./paint.js";
-import { formatNumber } from "./scale.js";
+import { formatNumber, maxOf } from "./scale.js";
 import { textWidth, wrapText } from "./text.js";
 import {
   AXIS,
@@ -184,9 +184,9 @@ export function categoryLayout(
   const widest = labels.map((label) =>
     Math.max(
       0,
-      ...wrapText(label, TYPE.tick.size, maxWidth, 3, TYPE.tick.weight, family).lines.map((line) =>
+      maxOf(wrapText(label, TYPE.tick.size, maxWidth, 3, TYPE.tick.weight, family).lines.map((line) =>
         textWidth(line, TYPE.tick.size, TYPE.tick.weight, family),
-      ),
+      )),
     ),
   );
   // Room a label leaves free on each side of its slot.
@@ -223,7 +223,7 @@ export function tickLeftMargin(
 ): number {
   const yTickWidth = Math.max(
     0,
-    ...yTickLabels.map((label) => textWidth(label, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT)),
+    maxOf(yTickLabels.map((label) => textWidth(label, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT))),
   );
   const axisPad = axisTitles ? 18 : 0;
   return Math.max(MARGIN.left, yTickWidth + TICK_TEXT_GAP + yTickPad()) + axisPad;
@@ -233,7 +233,7 @@ export function categoryBottomMargin(layout: CategoryLayout): number {
   const axisPad = AXIS_TITLES ? 18 : 0;
   const lineCount = Math.max(
     1,
-    ...layout.lines.map((lines) => Math.max(lines.length, 1)),
+    maxOf(layout.lines.map((lines) => Math.max(lines.length, 1))),
   );
   return lineCount * (TYPE.tick.size + 3) + 10 + axisPad + AXIS.tick;
 }

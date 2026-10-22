@@ -10,7 +10,7 @@ import {
   legendTop,
 } from "./layout.js";
 import { seriesStyle } from "./palette.js";
-import { formatNumber, niceTicks } from "./scale.js";
+import { formatNumber, maxOf, niceTicks } from "./scale.js";
 import { textWidth } from "./text.js";
 import {
   AREA_OPACITY,
@@ -48,7 +48,7 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
   const spokes = uniqueInOrder(rows.map((row) => row.xLabel));
   const names = seriesNames(rows);
   const present = finiteValues(rows.map((row) => row.y));
-  const dataMax = present.length > 0 ? Math.max(...present) : 1;
+  const dataMax = present.length > 0 ? maxOf(present) : 1;
   const scaleMax = Math.max(dataMax > 0 ? dataMax : 1, chart.max ?? 0);
   const n = Math.max(spokes.length, 1);
 
@@ -67,7 +67,7 @@ export function renderRadar(chart: ChartIR, _id: string): Painted {
 
   const labelPad = Math.max(
     36,
-    ...spokes.map((s) => textWidth(s, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT) / 2 + 12),
+    maxOf(spokes.map((s) => textWidth(s, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT) / 2 + 12)),
   );
   let left = Math.max(MARGIN.left, labelPad);
   let right = Math.max(MARGIN.right, labelPad);

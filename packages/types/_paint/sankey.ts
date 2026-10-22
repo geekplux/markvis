@@ -8,7 +8,7 @@ import {
   type Painted,
 } from "./layout.js";
 import { seriesStyle } from "./palette.js";
-import { formatNumber } from "./scale.js";
+import { formatNumber, maxOf } from "./scale.js";
 import { textWidth, truncateLabel } from "./text.js";
 import {
   FONT,
@@ -269,7 +269,7 @@ export function renderSankey(chart: ChartIR, _id: string): Painted {
 
   const labelSize = TYPE.tick.size;
   const widest = (ids: string[]) =>
-    Math.max(0, ...ids.map((id) => textWidth(id, labelSize)));
+    Math.max(0, maxOf(ids.map((id) => textWidth(id, labelSize))));
   const leftLabels = byCol.get(0) ?? [];
   const rightLabels = byCol.get(maxCol) ?? [];
   const left = Math.max(MARGIN.left, Math.min(widest(leftLabels) + 18, SVG_WIDTH * 0.34));

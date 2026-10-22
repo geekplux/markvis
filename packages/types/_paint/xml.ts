@@ -2,6 +2,11 @@ import type { ChartIR } from "@markvis/ir";
 import { colorAttr, isColorKey, type Paint } from "./paint.js";
 import { COLOR_MODE } from "./tokens.js";
 
+/** lines.push(...items) for any number of items; a spread throws a RangeError past roughly 100k. */
+export function pushAll<T>(lines: T[], items: readonly T[]): void {
+  for (const item of items) lines.push(item);
+}
+
 export function escapeXml(value: string): string {
   return value
     .replace(/&/g, "&amp;")

@@ -6,7 +6,7 @@ import {
   weekdayMonday0,
 } from "../_paint/date.js";
 import { binHistogram } from "../_paint/hist.js";
-import { niceTicks } from "../_paint/scale.js";
+import { maxOf, minOf, niceTicks } from "../_paint/scale.js";
 import { boxStats, quantile } from "../_paint/stats.js";
 
 describe("quantile (type 7)", () => {
@@ -90,5 +90,21 @@ describe("scales near the largest double", () => {
     expect(bins.every((bin) => Number.isFinite(bin.left) && Number.isFinite(bin.right))).toBe(true);
     expect(bins[0]!.left).toBe(-1e308);
     expect(bins.at(-1)!.right).toBe(1e308);
+  });
+});
+
+describe("minOf / maxOf", () => {
+  it("equal Math.min / Math.max over the same values", () => {
+    for (const values of [[], [3], [2, -7, 5], [0, -0], [-0, 0], [1, Number.NaN, 2], [Infinity, -Infinity]]) {
+      expect(Object.is(minOf(values), Math.min(...values)), String(values)).toBe(true);
+      expect(Object.is(maxOf(values), Math.max(...values)), String(values)).toBe(true);
+    }
+  });
+
+  it("take more values than a call can spread", () => {
+    const values = Array.from({ length: 500_000 }, (_, i) => (i * 7919) % 500_000);
+    expect(() => Math.max(...values)).toThrow(RangeError);
+    expect(minOf(values)).toBe(0);
+    expect(maxOf(values)).toBe(499_999);
   });
 });

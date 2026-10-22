@@ -10,7 +10,7 @@ import {
 import { drawTitle, reserveTitle, visibleTitle } from "./figure.js";
 import { fitGutters, layoutLegend, titleBlockTop, type Painted } from "./layout.js";
 import { heroFill, heroIndex, seriesStyle } from "./palette.js";
-import { formatNumber, labelTicks, niceTicks, scaleLinear, yExtent } from "./scale.js";
+import { formatNumber, labelTicks, maxOf, niceTicks, scaleLinear, yExtent } from "./scale.js";
 import { textWidth, wrapText } from "./text.js";
 import {
   BAR_RX,
@@ -89,16 +89,16 @@ export function renderHorizontalBar(chart: ChartIR, _id: string): Painted {
   );
   const labelW = Math.max(
     48,
-    ...wrapped.map((item) =>
-      Math.max(...item.lines.map((line) => textWidth(line, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT)), 0),
-    ),
+    maxOf(wrapped.map((item) =>
+      Math.max(maxOf(item.lines.map((line) => textWidth(line, TYPE.tick.size, TYPE.tick.weight, FONT_NUMERIC ?? FONT))), 0),
+    )),
   );
   const nS = Math.max(series.length, 1);
   const barH = stacking ? 18 : 14;
   const rowH = Math.max(
     32,
     (stacking ? barH : barH * nS + 4 * Math.max(nS - 1, 0)) + 12,
-    ...wrapped.map((item) => item.lines.length * (TYPE.tick.size + 3) + 10),
+    maxOf(wrapped.map((item) => item.lines.length * (TYPE.tick.size + 3) + 10)),
   );
   const styles = series.map((_, i) => seriesStyle(i));
   const showLegend = series.length > 1;

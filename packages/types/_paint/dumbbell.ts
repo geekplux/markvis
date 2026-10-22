@@ -3,7 +3,7 @@ import { categoryNames, groupedValue, loadRows, seriesNames } from "./data.js";
 import type { Painted } from "./layout.js";
 import { seriesStyle } from "./palette.js";
 import { drawRowAxes, layoutRows, niceDomain } from "./rows.js";
-import { formatNumber } from "./scale.js";
+import { formatNumber, maxOf } from "./scale.js";
 import { textWidth } from "./text.js";
 import {
   FONT,
@@ -13,7 +13,7 @@ import {
   STRUCTURE_OPACITY,
   TYPE,
 } from "./tokens.js";
-import { attrs, escapeXml, fmtPx } from "./xml.js";
+import { attrs, escapeXml, fmtPx, pushAll } from "./xml.js";
 
 const DOT_R = 6;
 
@@ -45,7 +45,7 @@ export function renderDumbbell(chart: ChartIR, _id: string): Painted {
     pair.from !== null && pair.to !== null ? deltaLabel(pair.from, pair.to) : "",
   );
   const rightPad =
-    Math.max(0, ...deltas.map((label) => textWidth(label, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT))) + 24;
+    Math.max(0, maxOf(deltas.map((label) => textWidth(label, TYPE.value.size, TYPE.value.weight, FONT_NUMERIC ?? FONT)))) + 24;
   const fromStyle = seriesStyle(0);
   const toStyle = seriesStyle(1);
   const frame = layoutRows(chart, {
@@ -125,9 +125,9 @@ export function renderDumbbell(chart: ChartIR, _id: string): Painted {
         "font-family": FONT_NUMERIC,
         "font-weight": TYPE.value.weight,
       })}>`,
-      ...labels,
-      `  </g>`,
     );
+    pushAll(lines, labels);
+    lines.push(`  </g>`);
   }
   return { lines, height: frame.height };
 }
