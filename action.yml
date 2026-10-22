@@ -36,7 +36,7 @@ runs:
         # What was already changed, so the commit step stages only bake's files.
         { git -c core.quotePath=false diff HEAD --name-only; git -c core.quotePath=false ls-files -o --exclude-standard; } | LC_ALL=C sort -u > "$MARKVIS_BEFORE"
         # Space-separated paths, split on purpose. Pinned to this release.
-        npx --yes markvis@2.2.0 bake $MARKVIS_PATHS
+        npx --yes markvis@2.2.1 bake $MARKVIS_PATHS
 
     - name: Commit and push
       if: inputs.commit == 'true'
