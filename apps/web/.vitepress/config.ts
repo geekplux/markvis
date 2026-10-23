@@ -59,6 +59,11 @@ function frontmatterCanonical(head: unknown): string | undefined {
   return undefined;
 }
 
+// Google Analytics 4. Client-side route changes are counted by the property's
+// enhanced measurement (browser history events), so one config call is enough.
+const gaId = "G-TD85LK5TX0";
+const gaBoot = `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${gaId}');`;
+
 const siteModeBoot = `(function(){try{var k='markvis-site-mode';var m=localStorage.getItem(k);if(m!=='light'&&m!=='dark'){m=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.classList.remove('light','dark');document.documentElement.classList.add(m);}catch(e){document.documentElement.classList.add('dark');}})();`;
 
 export default defineConfig({
@@ -86,6 +91,11 @@ export default defineConfig({
   description: "Charts as text in Markdown. Where they cannot draw, the numbers stay as a table.",
   head: [
     ["script", {}, siteModeBoot],
+    [
+      "script",
+      { async: "", src: `https://www.googletagmanager.com/gtag/js?id=${gaId}` },
+    ],
+    ["script", {}, gaBoot],
     ["link", { rel: "icon", href: "/favicon.png", type: "image/png" }],
     ["link", { rel: "apple-touch-icon", href: "/apple-touch-icon.png" }],
     [
