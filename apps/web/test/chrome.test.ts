@@ -436,7 +436,10 @@ describe("site visual chrome", () => {
     expect(config).toContain('rel: "icon"');
     expect(config).toContain("/favicon.png");
     expect(config).toContain("/apple-touch-icon.png");
-    expect(config).toContain("https://markvis.js.org/og.png");
+    expect(config).toContain("https://markvis.js.org/og.jpg");
+    expect(config).toContain("https://markvis.js.org/og.mp4");
+    expect(existsSync(join(webRoot, "public/og.jpg"))).toBe(true);
+    expect(existsSync(join(webRoot, "public/og.mp4"))).toBe(true);
     expect(config).toContain('title: "MarkVis"');
     expect(config).toContain('siteTitle: "MarkVis"');
     expect(existsSync(join(webRoot, "public/logo.svg"))).toBe(false);
