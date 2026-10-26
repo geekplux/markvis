@@ -107,16 +107,25 @@ export default defineConfig({
     ],
     [
       "meta",
-      { property: "og:image", content: "https://markvis.js.org/og.png" },
+      { property: "og:image", content: "https://markvis.js.org/og.jpg" },
     ],
-    // The hero poster, captured from the built home page at 1200 x 630.
+    // The link-preview card, 1200 x 630, and the same card moving as og:video
+    // (silent H.264) for the platforms that play it; the rest show og:image.
     ["meta", { property: "og:image:width", content: "1200" }],
     ["meta", { property: "og:image:height", content: "630" }],
+    ["meta", { property: "og:video", content: "https://markvis.js.org/og.mp4" }],
+    [
+      "meta",
+      { property: "og:video:secure_url", content: "https://markvis.js.org/og.mp4" },
+    ],
+    ["meta", { property: "og:video:type", content: "video/mp4" }],
+    ["meta", { property: "og:video:width", content: "1200" }],
+    ["meta", { property: "og:video:height", content: "630" }],
     ["meta", { property: "og:type", content: "website" }],
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
     [
       "meta",
-      { name: "twitter:image", content: "https://markvis.js.org/og.png" },
+      { name: "twitter:image", content: "https://markvis.js.org/og.jpg" },
     ],
   ],
   vite: {

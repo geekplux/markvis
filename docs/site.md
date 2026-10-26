@@ -58,7 +58,7 @@ Close (`#cta`): logo, Write the numbers. Get the chart., Play / GitHub ↗.
 
 Charts follow the site mode: `ChartBlock`, the examples gallery, and Play set `--markvis-ink`, `--markvis-muted`, `--markvis-grid` (the text color: grid lines are drawn at the theme's faint opacity), `--markvis-paper`, and `--markvis-plate` from the site tokens, so no chart sits on a white card in dark mode. Play leaves a block that asks for the dark or export surface on that surface's own colors.
 
-Social card: `apps/web/public/og.png` (1200 × 630) is the hero poster, captured from the built home page.
+Social card: `apps/web/public/og.jpg` (1200 × 630) is the link-preview card, and `apps/web/public/og.mp4` the same card moving, served as `og:video` for the platforms that play it. `apps/web/public/og.png` is the hero poster, captured from the built home page.
 
 Manual check before a site PR is merged: build (`pnpm --filter web build`), serve `apps/web/.vitepress/dist`, and take screenshots of `/` at 1280 and 390 wide, in light and dark site mode, of the poster (reduced motion) and mid-typing (scene 01); also `/play`, `/examples`, `/types/bar`, and `/theming` in dark mode. At 1280 × 900 the stage foot sits inside the first screen.
 
